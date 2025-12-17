@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     u = n(433517),
     d = n(481060),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(38618),
     h = n(197344),
     m = n(460181),
-    _ = n(474873),
-    b = n(108427),
+    b = n(474873),
+    _ = n(108427),
     E = n(706454),
     O = n(215427),
     v = n(820254),
@@ -23,7 +23,7 @@ var r = n(54381),
     C = n(905656),
     S = n(981631),
     T = n(388032),
-    N = n(744749);
+    N = n(528195);
 function j(e, t, n) {
     return (
         t in e
@@ -49,10 +49,10 @@ class P extends i.PureComponent {
     componentDidUpdate(e, t) {
         let { ready: n, hide: r, problems: i } = this.state,
             { connected: l, soundpack: a } = this.props,
-            s = l && n && !r && !i;
+            o = l && n && !r && !i;
         e.soundpack !== a && (this._connectedSound = this.createSound()),
-            e.connected !== l || s
-                ? (l && (0, b.t)(),
+            e.connected !== l || o
+                ? (l && (0, _.t)(),
                   l && null != this.videoRef && u.K.get(S.wli) && this._connectedSound.play(),
                   this.setState({
                       problems: !1,
@@ -346,7 +346,7 @@ class P extends i.PureComponent {
                     ];
                     return (
                         E.default.locale.startsWith("en-") && e.push(T.intl.string(T.t.dQ9Wqk)),
-                        e[o().random(e.length - 1)]
+                        e[s().random(e.length - 1)]
                     );
                 })(),
             ),
@@ -355,7 +355,7 @@ class P extends i.PureComponent {
                 "_eventLoadingText",
                 (function () {
                     let e = h.Z.getLoadingTips();
-                    if (null != e && e.length > 0) return e[o().random(e.length - 1)];
+                    if (null != e && e.length > 0) return e[s().random(e.length - 1)];
                 })(),
             ),
             j(this, "handleReady", () => {
@@ -384,11 +384,11 @@ class P extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let x = c.ZP.connectStores([g.Z, O.Z, _.Z, f.Z], () => ({
+let x = c.ZP.connectStores([g.Z, O.Z, b.Z, f.Z], () => ({
     isTryingToConnect: g.Z.isTryingToConnect(),
     connected: g.Z.isConnected(),
     incident: O.Z.getIncident(),
-    soundpack: _.Z.getSoundpack(),
+    soundpack: b.Z.getSoundpack(),
     reducedMotion: f.Z.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: l, reducedMotion: a } = e;

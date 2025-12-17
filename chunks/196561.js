@@ -1,4 +1,4 @@
-n.d(e, { G: () => c });
+n.d(e, { G: () => S });
 var i = n(442837),
     l = n(435064),
     s = n(39604),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(313789),
     a = n(356659),
     o = n(388032);
-let c = (0, u.Em)(r.n.CLIPS_LENGTH, {
+let S = (0, u.Em)(r.n.CLIPS_LENGTH, {
     useTitle: () => o.intl.string(o.t.OgfUio),
     useSubtitle: () => o.intl.string(o.t.H7j4tY),
     useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().clipsLength),

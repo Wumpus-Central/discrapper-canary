@@ -7,16 +7,16 @@ var r = n(54381);
 n(473749);
 var l = n(481060),
     i = n(489813),
-    s = n(592286),
-    a = n(388032);
+    a = n(592286),
+    s = n(388032);
 function o(e) {
-    let { value: t, placeholder: n, onChange: i, disabled: a, autofocus: o } = e;
+    let { value: t, placeholder: n, onChange: i, disabled: s, autofocus: o } = e;
     return (0, r.jsx)(l.oil, {
-        maxLength: s.tL,
+        maxLength: a.tL,
         value: null != t ? t : "",
         placeholder: n,
         onChange: i,
-        disabled: a,
+        disabled: s,
         autoFocus: o,
     });
 }
@@ -38,7 +38,7 @@ function u(e) {
             onChange: l,
             value: t.response,
             autofocus: n,
-            placeholder: a.intl.string(a.t["Sqn+Wh"]),
+            placeholder: s.intl.string(s.t["Sqn+Wh"]),
         }),
     });
 }

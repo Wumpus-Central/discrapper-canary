@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => S });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -10,65 +10,65 @@ var r = n(442837),
     u = n(430824),
     d = n(358221),
     p = n(225653),
-    h = n(843638),
-    f = n(441061),
+    f = n(843638),
+    h = n(441061),
     m = n(167675),
     g = n(532239),
     b = n(811423),
     C = n(418469),
     y = n(673539),
-    _ = n(589049),
-    v = n(354459),
+    v = n(589049),
+    x = n(354459),
     O = n(981631),
-    x = n(388032),
-    E = n(895634);
-function j(e) {
-    let { onClose: t, onSelect: n, channel: j, remoteMode: S, onInteraction: P } = e,
+    E = n(388032),
+    j = n(898742);
+function S(e) {
+    let { onClose: t, onSelect: n, channel: S, remoteMode: _, onInteraction: P } = e,
         I = (0, s.bp)(),
-        { id: Z, type: T } = j,
-        N = (0, r.e7)([u.Z], () => u.Z.getGuild(j.guild_id), [j.guild_id]),
+        { id: Z, type: T } = S,
+        N = (0, r.e7)([u.Z], () => u.Z.getGuild(S.guild_id), [S.guild_id]),
         A = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(Z)),
-        w = (null == A ? void 0 : A.type) === v.fO.STREAM ? A.stream : null,
+        w = (null == A ? void 0 : A.type) === x.fO.STREAM ? A.stream : null,
         M = (0, r.e7)([a.Z], () =>
-            (null == A ? void 0 : A.type) === v.fO.ACTIVITY ? a.Z.getApplication(A.applicationId) : void 0,
+            (null == A ? void 0 : A.type) === x.fO.ACTIVITY ? a.Z.getApplication(A.applicationId) : void 0,
         ),
-        R = (0, f.Z)(Z),
+        R = (0, h.Z)(Z),
         L = (0, y.Z)(Z),
-        D = (0, g.Z)(j, N, null == w ? void 0 : w.ownerId, null == M ? void 0 : M.id),
-        k = (0, h.Z)(Z),
-        U = (0, _.Z)(),
+        D = (0, g.Z)(S, N, null == w ? void 0 : w.ownerId, null == M ? void 0 : M.id),
+        k = (0, f.Z)(Z),
+        U = (0, v.Z)(),
         V = (0, c.$A)(Z),
         F = (0, c.j8)(Z),
-        B = (0, C.Z)(w, I),
-        H = (0, b.Z)(M, Z),
+        H = (0, C.Z)(w, I),
+        B = (0, b.Z)(M, Z),
         G = (0, m.Z)(),
-        W = (0, o.Z)(j),
-        z = (0, p.m)(Z);
+        z = (0, o.Z)(S),
+        W = (0, p.m)(Z);
     return (0, i.jsxs)(l.v2r, {
-        className: E.menu,
+        className: j.menu,
         onClose: t,
         onSelect: n,
         onInteraction: P,
         navId: "more-settings-context",
-        "aria-label": x.intl.string(x.t.FTLzdR),
+        "aria-label": E.intl.string(E.t.FTLzdR),
         children: [
             (0, i.jsx)(l.kSQ, { children: T !== O.d4z.GUILD_STAGE_VOICE ? D : null }),
             (0, i.jsxs)(l.kSQ, {
                 children: [
                     T === O.d4z.GUILD_STAGE_VOICE ? V : null,
                     T === O.d4z.GUILD_STAGE_VOICE ? F : null,
-                    S || T === O.d4z.GUILD_STAGE_VOICE ? null : k,
+                    _ || T === O.d4z.GUILD_STAGE_VOICE ? null : k,
                     G,
                     T !== O.d4z.GUILD_STAGE_VOICE ? R : null,
                     T === O.d4z.GUILD_STAGE_VOICE || T === O.d4z.GUILD_VOICE ? L : null,
                 ],
             }),
-            (0, i.jsx)(l.kSQ, { children: W }),
+            (0, i.jsx)(l.kSQ, { children: z }),
             (0, i.jsxs)(l.kSQ, {
-                children: [!j.isManaged() && j.isPrivate() ? z : null, U],
+                children: [!S.isManaged() && S.isPrivate() ? W : null, U],
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != w ? B : null, null != M ? H : null],
+                children: [null != w ? H : null, null != M ? B : null],
             }),
         ],
     });

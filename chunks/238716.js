@@ -1,46 +1,46 @@
-e.d(n, { default: () => h }), e(388685), e(953529);
-var i = e(54381),
-    l = e(473749),
-    a = e(442837),
-    s = e(159691),
-    r = e(481060),
-    o = e(933557),
-    c = e(592125),
-    u = e(853856),
-    d = e(117984),
-    x = e(388032),
-    p = e(589253);
-function h(t) {
-    let { channelId: n, onClose: e, transitionState: h, heading: m, formTitle: f, allowReset: v = !1 } = t,
-        C = (0, a.e7)([c.Z], () => c.Z.getChannel(n)),
+n.d(e, { default: () => f }), n(388685), n(953529);
+var i = n(54381),
+    a = n(473749),
+    l = n(442837),
+    s = n(159691),
+    r = n(481060),
+    o = n(933557),
+    c = n(592125),
+    u = n(853856),
+    d = n(117984),
+    x = n(388032),
+    p = n(231009);
+function f(t) {
+    let { channelId: e, onClose: n, transitionState: f, heading: h, formTitle: m, allowReset: v = !1 } = t,
+        C = (0, l.e7)([c.Z], () => c.Z.getChannel(e)),
         k = (0, o.ZP)(C),
-        g = u.Z.getNickname(n),
-        [j, b] = l.useState(null != g ? g : "");
-    function _(t) {
-        t.preventDefault(), (0, d.UT)(n, j), e();
+        g = u.Z.getNickname(e),
+        [j, b] = a.useState(null != g ? g : "");
+    function y(t) {
+        t.preventDefault(), (0, d.UT)(e, j), n();
     }
     return (0, i.jsx)("form", {
-        onSubmit: _,
+        onSubmit: y,
         children: (0, i.jsxs)(s.u_l, {
-            title: m,
+            title: h,
             actions: [
                 {
                     text: x.intl.string(x.t["ETE/oC"]),
-                    onClick: e,
+                    onClick: n,
                     variant: "secondary",
                 },
                 {
-                    text: m,
-                    onClick: _,
+                    text: h,
+                    onClick: y,
                     variant: "primary",
                     type: "submit",
                 },
             ],
-            onClose: e,
-            transitionState: h,
+            onClose: n,
+            transitionState: f,
             children: [
                 (0, i.jsx)(r.oil, {
-                    label: f,
+                    label: m,
                     value: j,
                     onChange: b,
                     placeholder: null != k ? k : void 0,
@@ -53,7 +53,7 @@ function h(t) {
                           children: (0, i.jsx)(r.Avr, {
                               text: x.intl.string(x.t.aE02Rz),
                               onClick: function () {
-                                  (0, d.UT)(n, null), e();
+                                  (0, d.UT)(e, null), n();
                               },
                               textVariant: "text-sm/normal",
                           }),

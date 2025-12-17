@@ -6,8 +6,8 @@ var i = n(54381),
     a = n(704215),
     l = n(481060),
     u = n(243778),
-    c = n(690221),
-    d = n(138201),
+    d = n(690221),
+    c = n(138201),
     _ = n(420846),
     E = n(63063),
     R = n(168107),
@@ -18,23 +18,23 @@ var i = n(54381),
     C = n(981631),
     m = n(800530),
     I = n(388032),
-    M = n(678189);
+    M = n(320463);
 let T = function (e) {
     let { transitionState: t, entryPoint: n, onClose: T } = e,
         [g, h] = r.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         U = r.useRef(g),
-        [k, L] = (0, u.US)([g], void 0, !0),
-        { loading: S, initiateAgeVerification: N } = (0, f.WD)({
+        [b, k] = (0, u.US)([g], void 0, !0),
+        { loading: L, initiateAgeVerification: S } = (0, f.WD)({
             onComplete: T,
             entryPoint: n,
         }),
-        b = r.useMemo(() => (0, s.Z)(), []),
+        N = r.useMemo(() => (0, s.Z)(), []),
         G = (0, p.W)("age_verification_get_started_modal"),
         O = r.useRef(!1);
     return (
         r.useEffect(() => {
-            U.current = k;
-        }, [k]),
+            U.current = b;
+        }, [b]),
         r.useLayoutEffect(
             () => () => {
                 if (O.current) return;
@@ -49,8 +49,8 @@ let T = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, A.lA)(b, A.d_.PRIMARY, n);
-        }, [b, n]),
+            (0, A.lA)(N, A.d_.PRIMARY, n);
+        }, [N, n]),
         (0, i.jsxs)(o.Modal, {
             transitionState: t,
             onClose: T,
@@ -59,20 +59,20 @@ let T = function (e) {
             actions: [
                 {
                     text: I.intl.string(I.t.SJMnkX),
-                    loading: S,
+                    loading: L,
                     icon: l.Gr1,
                     iconPosition: "end",
                     onClick: async () => {
-                        (0, A.x3)(b, A.d_.PRIMARY, A.sU.GET_STARTED),
+                        (0, A.x3)(N, A.d_.PRIMARY, A.sU.GET_STARTED),
                             h(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
-                            await N();
+                            await S();
                     },
                 },
             ],
-            actionBarInput: (0, i.jsxs)(c.Z, {
+            actionBarInput: (0, i.jsxs)(d.Z, {
                 onClick: () => {
                     R.Z.openUrl(E.Z.getArticleURL(C.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, A.x3)(b, A.d_.PRIMARY, A.sU.LEARN_MORE);
+                        (0, A.x3)(N, A.d_.PRIMARY, A.sU.LEARN_MORE);
                 },
                 className: M.learnMoreButton,
                 children: [
@@ -84,10 +84,10 @@ let T = function (e) {
                 ],
             }),
             children: [
-                (0, x.uH)(b).map((e, t) => {
+                (0, x.uH)(N).map((e, t) => {
                     let { title: n, description: r } = e;
                     return (0, i.jsx)(
-                        d.JZ,
+                        c.JZ,
                         {
                             title: n,
                             description: r,
@@ -104,7 +104,7 @@ let T = function (e) {
                         className: M.requestContainer,
                         children: I.intl.format(I.t.pJAxgQ, {
                             handleOnRequestHook: () => {
-                                R.Z.openUrl(m.sQ.APPEALS_LINK), (0, A.x3)(b, A.d_.PRIMARY, A.sU.MANUAL_REVIEW_REQUEST);
+                                R.Z.openUrl(m.sQ.APPEALS_LINK), (0, A.x3)(N, A.d_.PRIMARY, A.sU.MANUAL_REVIEW_REQUEST);
                             },
                         }),
                     }),

@@ -13,31 +13,31 @@ function d(e) {
             dismissed: n,
             onDismiss: d,
             renderComponent: p,
-            nudgeAlignIntoViewport: h = !1,
-            skipForceHide: f = !1,
+            nudgeAlignIntoViewport: f = !1,
+            skipForceHide: h = !1,
         } = e,
         m = r.useContext(c.h9),
         [g, b] = r.useState(""),
         [C, y] = r.useState(!1),
-        _ = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
-        v = r.useRef(null),
+        v = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
+        x = r.useRef(null),
         O = r.useRef(0);
     r.useEffect(() => {
         let e = t.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         r.useEffect(() => {
-            if (!f) {
+            if (!h) {
                 var e, t;
                 b(String(O.current)),
                     y(
-                        void 0 !== _ &&
-                            _ < (null != (t = null == (e = v.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
+                        void 0 !== v &&
+                            v < (null != (t = null == (e = x.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
                     ),
                     (O.current += 1);
             }
-        }, [_, v, f]);
-    let { preventIdle: x, allowIdle: E } = (0, u.Y)("popup");
+        }, [v, x, h]);
+    let { preventIdle: E, allowIdle: j } = (0, u.Y)("popup");
     return (null == t ? void 0 : t.current) == null
         ? null
         : (0, i.jsx)(o.ZP, {
@@ -47,14 +47,14 @@ function d(e) {
                   align: "center",
                   spacing: 0,
                   positionKey: g,
-                  nudgeAlignIntoViewport: h,
+                  nudgeAlignIntoViewport: f,
                   children: () =>
                       (0, i.jsx)("div", {
-                          ref: v,
-                          onMouseOver: x,
-                          onFocus: x,
-                          onBlur: E,
-                          onMouseLeave: E,
+                          ref: x,
+                          onMouseOver: E,
+                          onFocus: E,
+                          onBlur: j,
+                          onMouseLeave: j,
                           children: p({
                               hidden: C || m || n,
                               onDismiss: d,

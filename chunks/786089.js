@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(979554),
-    o = n(887003),
+    o = n(979554),
+    s = n(887003),
     c = n(442837),
     u = n(780384),
     d = n(481060),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(204418),
     h = n(70097),
     m = n(594174),
-    _ = n(626135),
-    b = n(617136),
+    b = n(626135),
+    _ = n(617136),
     E = n(49436),
     O = n(968843),
     v = n(475595),
@@ -23,7 +23,7 @@ var r = n(54381),
     C = n(685613),
     S = n(981631),
     T = n(388032),
-    N = n(199679);
+    N = n(271660);
 let j = (0, i.memo)(function (e) {
     var t, n, l, j, P, x;
     let { quest: A } = e,
@@ -33,8 +33,8 @@ let j = (0, i.memo)(function (e) {
         k = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
-        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: H, height: V = 0 } = (0, p.ZP)(),
+        H = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: B, height: V = 0 } = (0, p.ZP)(),
         F = (0, f.ZP)(),
         z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
@@ -42,11 +42,11 @@ let j = (0, i.memo)(function (e) {
         }),
         Y = null != (P = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? P : 0,
         W = A.config.rewards[Y],
-        q = (null == W ? void 0 : W.type) === o.w.FRACTIONAL_PREMIUM,
-        K = (null == W ? void 0 : W.type) === o.w.COLLECTIBLE,
-        Q = (null == W ? void 0 : W.type) === o.w.VIRTUAL_CURRENCY,
+        q = (null == W ? void 0 : W.type) === s.w.FRACTIONAL_PREMIUM,
+        K = (null == W ? void 0 : W.type) === s.w.COLLECTIBLE,
+        Q = (null == W ? void 0 : W.type) === s.w.VIRTUAL_CURRENCY,
         J = null == W || null == (j = W.collectibleProduct) || null == (l = j.items) ? void 0 : l[0],
-        X = (null == J ? void 0 : J.type) === s.Z.AVATAR_DECORATION ? J : null;
+        X = (null == J ? void 0 : J.type) === o.Z.AVATAR_DECORATION ? J : null;
     (0, p.PM)(k, (e) => {
         let { height: t } = e;
         if (!K || null == t || null == U.current || null == k.current || null == G.current) return;
@@ -59,7 +59,7 @@ let j = (0, i.memo)(function (e) {
         ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
         et = (0, i.useMemo)(() => (0, v.fh)(A, v.eC.REWARD), [A]),
         en = Z ? V + 8 : 0,
-        er = (0, b.mH)(E.jn.TROPHY_CASE_CARD),
+        er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
         ea = (function (e, t) {
             if (null == e) return {};
@@ -82,9 +82,9 @@ let j = (0, i.memo)(function (e) {
             }
             return i;
         })(er, ["content_position", "row_index"]),
-        es = () => {
+        eo = () => {
             w(!0),
-                _.default.track(
+                b.default.track(
                     S.rMx.QUEST_HOVER,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -113,12 +113,12 @@ let j = (0, i.memo)(function (e) {
                     })({ quest_id: A.id }, ea),
                 );
         },
-        eo = () => {
+        es = () => {
             w(!1);
         },
         ec = (e) => {
             M(!0),
-                _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                b.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: A.id,
@@ -130,13 +130,13 @@ let j = (0, i.memo)(function (e) {
               children: (0, r.jsxs)("div", {
                   ref: k,
                   tabIndex: 0,
-                  onFocus: es,
-                  onBlur: eo,
-                  onMouseEnter: es,
-                  onMouseLeave: eo,
+                  onFocus: eo,
+                  onBlur: es,
+                  onMouseEnter: eo,
+                  onMouseLeave: es,
                   className: a()(N.container, { [N.hovered]: Z }),
                   children: [
-                      null != B &&
+                      null != H &&
                           K &&
                           null != X &&
                           (0, r.jsx)("div", {
@@ -145,7 +145,7 @@ let j = (0, i.memo)(function (e) {
                               style: { top: L },
                               children: (0, r.jsx)(g.Z, {
                                   avatarDecorationOverride: X,
-                                  user: B,
+                                  user: H,
                                   guildId: null,
                                   animateOnHover: !Z,
                               }),
@@ -191,7 +191,7 @@ let j = (0, i.memo)(function (e) {
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          ref: H,
+                          ref: B,
                           className: N.details,
                           children: [
                               (0, r.jsx)(d.Heading, {

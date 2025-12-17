@@ -1,15 +1,15 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => x });
 var a = n(54381),
     r = n(473749),
-    i = n(660815),
-    l = n(442837),
+    l = n(660815),
+    i = n(442837),
     s = n(481060),
     o = n(570140),
     c = n(905551),
     d = n(60482),
     u = n(430824),
     m = n(914010),
-    p = n(238642);
+    p = n(510726);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,59 +53,59 @@ function x(e, t) {
         e
     );
 }
-function f() {
-    let e = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, l.e7)([u.Z], () => {
+function x() {
+    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, i.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.e7)([d.Z], () => {
+        n = (0, i.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
-        f = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        g = r.useCallback(
+        x = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
+        b = r.useCallback(
             (t) => {
-                null != f &&
+                null != x &&
                     null != e &&
                     o.Z.dispatch({
                         type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                         guildId: e,
-                        instance: x(h({}, f), { status: t }),
+                        instance: f(h({}, x), { status: t }),
                     });
             },
-            [f, e],
+            [x, e],
         ),
-        b = r.useMemo(
+        g = r.useMemo(
             () =>
-                Object.values(i.V).map((e) =>
+                Object.values(l.V).map((e) =>
                     (0, a.jsx)(
                         s.Button,
                         {
                             variant: "primary",
                             text: e,
                             onClick: () => {
-                                g(e);
+                                b(e);
                             },
                         },
                         e,
                     ),
                 ),
-            [g],
+            [b],
         ),
         v = r.useCallback(() => {
-            null != f &&
+            null != x &&
                 null != e &&
                 o.Z.dispatch({
                     type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                     guildId: e,
-                    instance: x(h({}, f), {
+                    instance: f(h({}, x), {
                         serverIP: void 0,
                         port: void 0,
                         gameServerPanelUrl: void 0,
                     }),
                 });
-        }, [f, e]);
+        }, [x, e]);
     return null == e
         ? null
         : (0, a.jsxs)(s.zJl, {
@@ -123,11 +123,11 @@ function f() {
                       children: [
                           (0, a.jsx)(s.Text, {
                               variant: "eyebrow",
-                              children: "Set server state for first server: ".concat(null == f ? void 0 : f.name),
+                              children: "Set server state for first server: ".concat(null == x ? void 0 : x.name),
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: b,
+                              children: g,
                           }),
                           (0, a.jsx)(s.Text, {
                               variant: "eyebrow",

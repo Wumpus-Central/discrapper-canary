@@ -49,12 +49,12 @@ function d(e, t, n) {
         { focusableProps: N } = (0, c.kc)((0, i.d)(e, { onFocus: () => t.setLastFocusedValue(d) }), n),
         P = (0, i.d)(I, N),
         R = (0, a.z)(e, { labelable: !0 }),
-        D = -1;
+        w = -1;
     null != t.selectedValue
-        ? t.selectedValue === d && (D = 0)
-        : (t.lastFocusedValue === d || null == t.lastFocusedValue) && (D = 0),
-        O && (D = void 0);
-    let { name: w, form: x, descriptionId: L, errorMessageId: j, validationBehavior: M } = r.H.get(t);
+        ? t.selectedValue === d && (w = 0)
+        : (t.lastFocusedValue === d || null == t.lastFocusedValue) && (w = 0),
+        O && (w = void 0);
+    let { name: D, form: x, descriptionId: L, errorMessageId: j, validationBehavior: M } = r.H.get(t);
     return (
         (0, o.y)(n, t.defaultSelectedValue, t.setSelectedValue),
         (0, u.Q)({ validationBehavior: M }, t, n),
@@ -72,9 +72,9 @@ function d(e, t, n) {
             inputProps: (0, i.d)(R, {
                 ...P,
                 type: "radio",
-                name: w,
+                name: D,
                 form: x,
-                tabIndex: D,
+                tabIndex: w,
                 disabled: O,
                 required: t.isRequired && "native" === M,
                 checked: v,

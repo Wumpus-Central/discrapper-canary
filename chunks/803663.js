@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(496675),
     d = n(979651),
     f = n(652853),
-    p = n(732380),
+    p = n(475413),
     _ = n(671955),
     m = n(388032);
 function h(e) {
@@ -30,7 +30,7 @@ function h(e) {
             (0, a.Kh)(y),
             null == h || h();
     };
-    return (0, r.jsx)(p.O1, {
+    return (0, r.jsx)(p.i6, {
         text: m.intl.string(m.t.ZYO5OK),
         fullWidth: !E,
         disabled: v,

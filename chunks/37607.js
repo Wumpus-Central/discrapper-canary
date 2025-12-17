@@ -8,12 +8,12 @@ var i = n(54381),
     c = n(835473),
     d = n(471445),
     u = n(925329),
-    p = n(163400),
-    m = n(63063),
-    b = n(466070),
+    m = n(163400),
+    b = n(63063),
+    p = n(466070),
     g = n(981631),
     f = n(388032),
-    h = n(588993);
+    h = n(389968);
 function x(e) {
     let { applicationId: t, channels: n } = e,
         r = (0, c.q)(t);
@@ -38,7 +38,7 @@ function x(e) {
                   n.map((e) => {
                       var t;
                       return (0, i.jsx)(
-                          b.t,
+                          p.t,
                           {
                               channel: e,
                               application: r,
@@ -56,7 +56,7 @@ function x(e) {
 }
 function j(e) {
     let { guild: t } = e,
-        n = (0, p.F)(t.id),
+        n = (0, m.F)(t.id),
         l = a().groupBy(n, (e) => {
             var t;
             return null == (t = e.linkedLobby) ? void 0 : t.application_id;
@@ -71,7 +71,7 @@ function j(e) {
                 (0, i.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     children: f.intl.format(f.t["9gsSLu"], {
-                        helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
+                        helpdeskArticle: b.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
                     }),
                 }),
                 (0, i.jsx)(o.izJ, { className: h.headerDivider }),

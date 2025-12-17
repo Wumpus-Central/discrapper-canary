@@ -1,18 +1,18 @@
 n.d(t, {
-    M: () => l,
-    Z: () => c,
+    M: () => c,
+    Z: () => l,
 }),
     n(35282);
-var r = n(54381);
+var a = n(54381);
 n(473749);
-var a = n(828700),
-    i = n(860911),
-    o = n(981631),
+var r = n(828700),
+    o = n(860911),
+    i = n(981631),
     s = n(188785);
-function l() {
+function c() {
     let e = location.pathname + location.search;
-    return s.a ? o.Z5c.REGISTER : (0, i.Ui)(e, !1);
+    return s.a ? i.Z5c.REGISTER : (0, o.Ui)(e, !1);
 }
-let c = function () {
-    return (0, r.jsx)(a.l_, { to: l() });
+let l = function () {
+    return (0, a.jsx)(r.l_, { to: c() });
 };

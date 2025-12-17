@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(570140),
     l = n(765250),
     a = n(317770),
-    s = n(7291),
-    o = n(663993),
+    o = n(7291),
+    s = n(663993),
     c = n(355863),
     u = n(788983),
     d = n(981631),
@@ -22,28 +22,28 @@ function f(e, t, n) {
         e
     );
 }
-n(966117);
-let g = (0, o.Un)({
+n(101713);
+let g = (0, s.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
         name: "PopoutWindowChannelCall",
     }),
-    h = (0, o.Un)({
+    h = (0, s.Un)({
         createPromise: () => n.e("31688").then(n.bind(n, 205557)),
         webpackId: 205557,
         name: "PopoutWindowCallTile",
     }),
-    m = (0, o.Un)({
+    m = (0, s.Un)({
         createPromise: () => n.e("20176").then(n.bind(n, 432472)),
         webpackId: 432472,
         name: "PopoutWindowStageChannelCall",
     }),
-    _ = (0, o.Un)({
+    b = (0, s.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 945778)),
         webpackId: 945778,
         name: "PopoutWindowRTCDebug",
     }),
-    b = (0, o.Un)({
+    _ = (0, s.Un)({
         createPromise: () => Promise.all([n.e("50751"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: "PopoutWindowActivity",
@@ -101,14 +101,14 @@ class E extends a.Z {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        u.open(d.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(_, { windowKey: e }), {
+        u.open(d.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
         (0, l.te)(p.$S, c.Z.getDefaultLayout(p.$S, p.HN), p.HN),
-            u.open(d.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
+            u.open(d.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(_, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480,
             });
@@ -118,7 +118,7 @@ class E extends a.Z {
             f(this, "_observer", null),
             f(this, "handleOpenCallTilePopout", (e) => {
                 let { channelId: t, participantId: n } = e,
-                    i = (0, s.Z)(t, n);
+                    i = (0, o.Z)(t, n);
                 u.open(
                     i,
                     (e) =>

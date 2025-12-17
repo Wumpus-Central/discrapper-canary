@@ -36,19 +36,19 @@ function d(e) {
     return e;
 }
 let p = {},
-    h = {};
-function f(e) {
+    f = {};
+function h(e) {
     let t = d({}, p);
     delete t[e], (p = t);
-    let n = d({}, h);
-    delete n[e], (h = n);
+    let n = d({}, f);
+    delete n[e], (f = n);
 }
 class m extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(a.default, o.ZP), null != e)) {
             var t, n;
             (p = null != (t = e.upcomingEventDismissals) ? t : {}),
-                (h = null != (n = e.upcomingEventSeenTimestamps) ? n : {});
+                (f = null != (n = e.upcomingEventSeenTimestamps) ? n : {});
         }
     }
     getGuildEventNoticeDismissalTime(e) {
@@ -58,15 +58,15 @@ class m extends (i = r.ZP.PersistedStore) {
         return p;
     }
     getUpcomingNoticeSeenTime(e) {
-        return h[e];
+        return f[e];
     }
     getAllUpcomingNoticeSeenTimes() {
-        return h;
+        return f;
     }
     getState() {
         return {
             upcomingEventDismissals: p,
-            upcomingEventSeenTimestamps: h,
+            upcomingEventSeenTimestamps: f,
         };
     }
 }
@@ -79,18 +79,18 @@ let g = new m(l.Z, {
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
-        (t.status === c.p1.CANCELED || t.status === c.p1.COMPLETED) && f(t.id);
+        (t.status === c.p1.CANCELED || t.status === c.p1.COMPLETED) && h(t.id);
     },
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: t } = e;
-        f(t.id);
+        h(t.id);
     },
     GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
         let { userId: t, guildEventId: n } = e;
         if (t !== a.default.getId()) return;
         let i = o.ZP.getGuildScheduledEvent(n);
         if (null == i || i.status !== c.p1.SCHEDULED || null != p[n]) return;
-        let r = h[n];
+        let r = f[n];
         if ((0, s.M)(i, void 0, r, !1) === c.X_.NEW_EVENT) {
             let e = d({}, p);
             (e[n] = Date.now()), (p = e);
@@ -98,7 +98,7 @@ let g = new m(l.Z, {
     },
     UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (e) {
         let { guildEventId: t } = e,
-            n = d({}, h);
-        (n[t] = Date.now()), (h = n);
+            n = d({}, f);
+        (n[t] = Date.now()), (f = n);
     },
 });

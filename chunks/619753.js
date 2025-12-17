@@ -2,8 +2,8 @@ n.d(t, { Z: () => G }), n(35282), n(539854), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    a = n(837969),
+    a = n.n(i),
+    s = n(837969),
     o = n(681715),
     u = n(481060),
     c = n(904245),
@@ -14,23 +14,23 @@ var r = n(54381),
     T = n(255269),
     I = n(937889),
     m = n(804063),
-    g = n(703656),
-    N = n(359110),
-    h = n(411405),
-    O = n(695346),
-    f = n(131704),
+    f = n(703656),
+    g = n(359110),
+    N = n(411405),
+    h = n(695346),
+    O = n(131704),
     R = n(592125),
     S = n(430824),
     p = n(496675),
     C = n(699516),
-    D = n(944486),
-    U = n(594174),
-    L = n(607802),
-    M = n(101695),
-    x = n(683101),
-    b = n(981631),
+    b = n(944486),
+    D = n(594174),
+    U = n(607802),
+    L = n(101695),
+    M = n(683101),
+    x = n(981631),
     v = n(388032),
-    P = n(858283);
+    P = n(738883);
 function j(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;
@@ -51,9 +51,9 @@ function j(e) {
             }),
         ],
     });
-    return (0, f.Em)(t.type)
+    return (0, O.Em)(t.type)
         ? (0, r.jsx)(u.P3F, {
-              className: s()(P.parentChannelName, P.parentChannelNameClickable),
+              className: a()(P.parentChannelName, P.parentChannelNameClickable),
               onClick: (e) => {
                   e.stopPropagation(), n(t.id);
               },
@@ -67,31 +67,31 @@ function j(e) {
 function y(e) {
     var t, n, i;
     let {
-            channel: s,
-            messages: a,
+            channel: a,
+            messages: s,
             highlighter: c,
             startIndex: E,
             resultRefs: d,
             totalResults: m,
-            scrollTo: g,
-            renderEmbeds: f,
-            offset: L,
-            jumpToMessage: M,
+            scrollTo: f,
+            renderEmbeds: O,
+            offset: U,
+            jumpToMessage: L,
             listNavigator: v,
             favoriteSearch: y,
         } = e,
-        G = O.cC.useSetting(),
+        G = h.cC.useSetting(),
         k = l.useCallback((e) => {
-            if (e === D.Z.getChannelId()) return;
+            if (e === b.Z.getChannelId()) return;
             let t = R.Z.getChannel(e);
-            null != t && (p.Z.can(b.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, N.Kh)(t.id);
+            null != t && (p.Z.can(x.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, g.Kh)(t.id);
         }, []),
-        F = null != s ? (0, _.F6)(s, U.default, C.Z, !1) : "???",
-        w = y && null != s.guild_id ? (null == (t = S.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
-        z = (null == s ? void 0 : s.parent_id) != null ? R.Z.getChannel(s.parent_id) : null,
+        F = null != a ? (0, _.F6)(a, D.default, C.Z, !1) : "???",
+        w = y && null != a.guild_id ? (null == (t = S.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
+        z = (null == a ? void 0 : a.parent_id) != null ? R.Z.getChannel(a.parent_id) : null,
         V = null != (n = null == z ? void 0 : z.name) ? n : null,
-        Z = null != (i = (0, A.KS)(s)) ? i : u.VL1,
-        B = p.Z.can(b.Plq.MANAGE_MESSAGES, s),
+        Z = null != (i = (0, A.KS)(a)) ? i : u.VL1,
+        B = p.Z.can(x.Plq.MANAGE_MESSAGES, a),
         { content: H } = (0, I.ZP)(
             {
                 content: F,
@@ -106,7 +106,7 @@ function y(e) {
         null != e && null != e.offsetWidth && null != e.scrollWidth && q(e.offsetWidth < e.scrollWidth);
     }, []);
     let Y = [F, V, w].filter((e) => null != e).join(", ");
-    return (0, r.jsx)(h.aQ.Provider, {
+    return (0, r.jsx)(N.aQ.Provider, {
         value: (0, T.Z)(G, B),
         children: (0, r.jsxs)("ul", {
             role: "group",
@@ -114,7 +114,7 @@ function y(e) {
             "aria-label": Y,
             children: [
                 (0, r.jsx)(u.P3F, {
-                    onClick: () => k(s.id),
+                    onClick: () => k(a.id),
                     children: (0, r.jsxs)("div", {
                         className: P.channelNameContainer,
                         children: [
@@ -140,22 +140,22 @@ function y(e) {
                         ],
                     }),
                 }),
-                a.map((e, t) => {
+                s.map((e, t) => {
                     let n = E + t;
                     return (0, r.jsx)(
-                        x.Z,
+                        M.Z,
                         {
                             ref: (e) => {
                                 d.current[n] = e;
                             },
                             totalResults: m,
-                            scrollTo: g,
-                            renderEmbeds: f,
-                            searchOffset: L,
-                            pageResultsLength: a.length,
+                            scrollTo: f,
+                            renderEmbeds: O,
+                            searchOffset: U,
+                            pageResultsLength: s.length,
                             message: e,
                             index: n,
-                            onJump: M,
+                            onJump: L,
                             listItemProps: v.getItemProps({ index: n }),
                         },
                         "search-result-".concat(n),
@@ -168,34 +168,34 @@ function y(e) {
 let G = l.memo(function (e) {
     var t, n, i;
     let {
-            search: s,
+            search: a,
             renderEmbeds: o,
             scrollTo: _,
             messages: A,
             blockCount: T,
             ignoreCount: I,
-            onPageChange: N,
-            onClick: h,
-            paginationTotalCount: O,
-            renderPageWrapper: f,
+            onPageChange: g,
+            onClick: N,
+            paginationTotalCount: h,
+            renderPageWrapper: O,
             onBlockedResultsClick: S,
             searchRequestAnalyticsId: p,
-            searchResultsQuery: D,
-            isFavoritesSearch: U,
+            searchResultsQuery: b,
+            isFavoritesSearch: D,
         } = e,
-        { offset: x, totalResults: j, isSearching: G, showBlockedResults: k } = s,
+        { offset: M, totalResults: j, isSearching: G, showBlockedResults: k } = a,
         F = l.useCallback(
             (e, t) => {
-                null == h || h(e, t);
+                null == N || N(e, t);
                 let n = () => {
                     let t = R.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
-                        (0, g.uL)(b.Z5c.CHANNEL(n, e.channel_id, e.id));
+                        (0, f.uL)(x.Z5c.CHANNEL(n, e.channel_id, e.id));
                 };
                 (0, m.Z)(e, n) && n();
             },
-            [h, p],
+            [N, p],
         ),
         w = l.useMemo(() => {
             let e,
@@ -238,14 +238,14 @@ let G = l.memo(function (e) {
             let t = z.current[e];
             null == t || t.jumpTo();
         }, []),
-        H = (0, a.ZP)({
+        H = (0, s.ZP)({
             navId: "search-results",
             itemCount: V,
             focusedIndex: 0,
             setFocus: Z,
             onSelect: B,
         }),
-        K = (0, E.nC)(null != (t = (0, L.UP)(D)) ? t : ""),
+        K = (0, E.nC)(null != (t = (0, U.UP)(b)) ? t : ""),
         W = w.map((e) => {
             let { channel: t, messages: n, startIndex: l } = e;
             return (0, r.jsx)(
@@ -259,10 +259,10 @@ let G = l.memo(function (e) {
                     totalResults: j,
                     scrollTo: _,
                     renderEmbeds: o,
-                    offset: x,
+                    offset: M,
                     jumpToMessage: F,
                     listNavigator: H,
-                    favoriteSearch: null != U && U,
+                    favoriteSearch: null != D && D,
                 },
                 "".concat(t.id, "-").concat(l),
             );
@@ -349,13 +349,13 @@ let G = l.memo(function (e) {
                   })
                 : null,
             !G &&
-                !U &&
-                (0, r.jsx)(M.Z, {
-                    renderPageWrapper: f,
-                    onPageChange: N,
-                    offset: x,
-                    totalCount: null != O ? O : j,
-                    pageSize: b.vpv,
+                !D &&
+                (0, r.jsx)(L.Z, {
+                    renderPageWrapper: O,
+                    onPageChange: g,
+                    offset: M,
+                    totalCount: null != h ? h : j,
+                    pageSize: x.vpv,
                 }),
         ],
     });

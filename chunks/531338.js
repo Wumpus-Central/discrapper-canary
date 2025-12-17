@@ -5,17 +5,17 @@ var r = o(755721),
     a = o(481060),
     l = o(457330),
     i = o(726542),
-    s = o(77987),
-    c = o(787025),
+    c = o(77987),
+    s = o(787025),
     d = o(656649),
     u = o(388032),
-    f = o(736902);
-let v = (0, s.e)(function (e) {
+    f = o(467591);
+let v = (0, c.e)(function (e) {
     let { match: t } = e,
         o = t.params.type,
-        s = i.Z.get(o);
-    if (null == s)
-        return (0, n.jsx)(c.G, {
+        c = i.Z.get(o);
+    if (null == c)
+        return (0, n.jsx)(s.G, {
             children: (0, n.jsx)(a.Text, {
                 className: f.error,
                 variant: "text-md/normal",
@@ -35,24 +35,24 @@ let v = (0, s.e)(function (e) {
             });
         window.location = a.url;
     }
-    return (0, n.jsx)(c.G, {
+    return (0, n.jsx)(s.G, {
         wrapperClassName: f.wrapper,
         children: (0, n.jsxs)("div", {
             className: f.root,
             children: [
                 (0, n.jsx)(d.KJ, {
                     className: f.logos,
-                    platform: s,
+                    platform: c,
                 }),
                 (0, n.jsx)(a.Heading, {
                     variant: "text-lg/bold",
                     className: f.header,
-                    children: u.intl.format(u.t.Pw4vee, { provider: s.name }),
+                    children: u.intl.format(u.t.Pw4vee, { provider: c.name }),
                 }),
                 (0, n.jsx)(a.Text, {
                     variant: "text-md/normal",
                     className: f.body,
-                    children: u.intl.format(u.t.rHlSVB, { provider: s.name }),
+                    children: u.intl.format(u.t.rHlSVB, { provider: c.name }),
                 }),
                 (0, n.jsx)(r.zx, {
                     size: r.zx.Sizes.LARGE,

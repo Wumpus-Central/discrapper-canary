@@ -182,7 +182,7 @@ var r = (function (e) {
         }
         return m(s), s;
     }
-    function D(e, n) {
+    function w(e, n) {
         var r,
             i,
             a,
@@ -223,7 +223,7 @@ var r = (function (e) {
         }
         return (E = x(E, g)[0]), [_(p), _(E)];
     }
-    function w(e, n) {
+    function D(e, n) {
         for (var r, i, a, o, s, l = e.length, c = n.length, u = [], d = [], f = t; l; ) {
             if ((d.unshift(e[--l]), m(d), 0 > j(d, n))) {
                 u.push(0);
@@ -278,7 +278,7 @@ var r = (function (e) {
         var E = j(o, f);
         if (-1 === E) return [l[0], e];
         if (0 === E) return [l[e.sign === a.sign ? 1 : -1], l[0]];
-        r = (i = o.length + f.length <= 200 ? D(o, f) : w(o, f))[0];
+        r = (i = o.length + f.length <= 200 ? w(o, f) : D(o, f))[0];
         var b = e.sign !== a.sign,
             y = i[1],
             O = e.sign;
@@ -715,10 +715,10 @@ var r = (function (e) {
     for (var U = [1]; 2 * U[U.length - 1] <= t; ) U.push(2 * U[U.length - 1]);
     var G = U.length,
         Z = U[G - 1];
-    function B(e) {
+    function F(e) {
         return Math.abs(e) <= t;
     }
-    function F(e, t, n) {
+    function B(e, t, n) {
         t = ea(t);
         for (
             var i = e.isNegative(),
@@ -745,7 +745,7 @@ var r = (function (e) {
     }
     (c.prototype.shiftLeft = function (e) {
         var t = ea(e).toJSNumber();
-        if (!B(t)) throw Error(String(t) + " is too large for shifting.");
+        if (!F(t)) throw Error(String(t) + " is too large for shifting.");
         if (t < 0) return this.shiftRight(-t);
         var n = this;
         if (n.isZero()) return n;
@@ -756,7 +756,7 @@ var r = (function (e) {
         (c.prototype.shiftRight = function (e) {
             var t,
                 n = ea(e).toJSNumber();
-            if (!B(n)) throw Error(String(n) + " is too large for shifting.");
+            if (!F(n)) throw Error(String(n) + " is too large for shifting.");
             if (n < 0) return this.shiftLeft(-n);
             for (var r = this; n >= G; ) {
                 if (r.isZero() || (r.isNegative() && r.isUnit())) return r;
@@ -770,19 +770,19 @@ var r = (function (e) {
         }),
         (d.prototype.not = u.prototype.not = c.prototype.not),
         (c.prototype.and = function (e) {
-            return F(this, e, function (e, t) {
+            return B(this, e, function (e, t) {
                 return e & t;
             });
         }),
         (d.prototype.and = u.prototype.and = c.prototype.and),
         (c.prototype.or = function (e) {
-            return F(this, e, function (e, t) {
+            return B(this, e, function (e, t) {
                 return e | t;
             });
         }),
         (d.prototype.or = u.prototype.or = c.prototype.or),
         (c.prototype.xor = function (e) {
-            return F(this, e, function (e, t) {
+            return B(this, e, function (e, t) {
                 return e ^ t;
             });
         }),

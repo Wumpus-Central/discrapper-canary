@@ -3,10 +3,10 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(570140),
-    o = n(317770),
-    a = n(175281),
+    a = n(317770),
+    o = n(175281),
     s = n(285371);
-class c extends o.Z {
+class c extends a.Z {
     _initialize() {
         l.Z.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
             l.Z.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
@@ -19,7 +19,7 @@ class c extends o.Z {
         (0, i.h7j)(
             (e) =>
                 (0, r.jsx)(
-                    a.Z,
+                    o.Z,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},

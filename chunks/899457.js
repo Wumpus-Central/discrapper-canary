@@ -1,11 +1,11 @@
 n.d(t, {
     Z: () => s,
-    a: () => l,
+    a: () => i,
 });
 var a,
     r = n(54381),
-    i = n(199849),
-    l =
+    l = n(199849),
+    i =
         (((a = {})[(a.UNENROLLED = 0)] = "UNENROLLED"),
         (a[(a.ENROLLED = 1)] = "ENROLLED"),
         (a[(a.COMPLETED_25 = 2)] = "COMPLETED_25"),
@@ -16,7 +16,7 @@ var a,
         a);
 let s = function (e) {
     let { onChange: t, value: n } = e;
-    return (0, r.jsx)(i.B6, {
+    return (0, r.jsx)(l.B6, {
         label: "User State",
         options: [
             {

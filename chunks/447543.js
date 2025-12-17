@@ -44,8 +44,8 @@ var r = n(525654),
     U = n(314897),
     G = n(592125),
     Z = n(984933),
-    B = n(271383),
-    F = n(430824),
+    F = n(271383),
+    B = n(430824),
     V = n(341165),
     H = n(496675),
     Y = n(914010),
@@ -132,7 +132,7 @@ function ef(e) {
             c.targetType = e.target_type;
     }
     return (
-        (null == F.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) &&
+        (null == B.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) &&
             null != e.channel &&
             (0, k.zi)(e.channel.type) &&
             (c.welcomeModalChannelId = e.channel.id),
@@ -174,7 +174,7 @@ function em(e, t) {
 }
 function eh(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
-        o = F.Z.getGuild(t),
+        o = B.Z.getGuild(t),
         s = null == o ? void 0 : o.features.has(ee.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         {
             targetUserId: l,
@@ -222,7 +222,7 @@ function eh(e) {
                                           commandOrigin: O.bB.CHAT,
                                       }));
                           };
-                      !d && (0, T.n)(t, [F.Z, W.default, B.ZP]) ? (0, I.hk)(t, o) : o();
+                      !d && (0, T.n)(t, [B.Z, W.default, F.ZP]) ? (0, I.hk)(t, o) : o();
                   });
           })
         : (0, g.l5)(m) &&

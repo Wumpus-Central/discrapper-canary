@@ -9,26 +9,26 @@ var i = n(54381),
     u = n(43267),
     d = n(933557),
     p = n(821795),
-    h = n(892567),
-    f = n(266076),
+    f = n(892567),
+    h = n(266076),
     m = n(187237),
     g = n(769409),
     b = n(518311),
     C = n(518950),
     y = n(967128),
-    _ = n(388032),
-    v = n(963392);
+    v = n(388032),
+    x = n(701766);
 function O(e) {
     var t;
-    let { channel: n, children: O, user: x } = e,
-        E = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        j = null != (t = (0, d.ZP)(n)) ? t : "",
+    let { channel: n, children: O, user: E } = e,
+        j = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        S = null != (t = (0, d.ZP)(n)) ? t : "",
         {
-            avatarDecorationSrc: S,
+            avatarDecorationSrc: _,
             eventHandlers: P,
             isAnimating: I,
         } = (0, C.Z)({
-            userId: null == x ? void 0 : x.id,
+            userId: null == E ? void 0 : E.id,
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
         }),
@@ -39,58 +39,58 @@ function O(e) {
         A = r.useCallback(() => {
             P.onMouseLeave(), T(!1);
         }, [P]),
-        w = !n.isMultiUserDM() && (null == x ? void 0 : x.displayNameStyles) != null;
+        w = !n.isMultiUserDM() && (null == E ? void 0 : E.displayNameStyles) != null;
     return (0, i.jsxs)(y.ZP, {
         channelId: n.id,
         onMouseEnter: N,
         onMouseLeave: A,
         children: [
             (() => {
-                let e = !E && I;
+                let e = !j && I;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(m.v, {
                           channel: n,
                           editable: !0,
                           location: c.Z.EMPTY_GROUP_DM,
-                          children: (0, i.jsx)(f.Z, {
+                          children: (0, i.jsx)(h.Z, {
                               channel: n,
                               size: o.EFr.SIZE_80,
                               animated: e,
-                              "aria-label": j,
+                              "aria-label": S,
                           }),
                       })
                     : (0, i.jsx)(o.qEK, {
-                          "aria-label": j,
+                          "aria-label": S,
                           size: o.EFr.SIZE_80,
                           src: (0, u.x)(n, 80, e),
-                          avatarDecoration: S,
+                          avatarDecoration: _,
                       });
             })(),
             (0, i.jsx)(y.Ot, {
                 children: w
-                    ? (0, i.jsx)(h.Z, {
-                          userName: j,
-                          displayNameStyles: null == x ? void 0 : x.displayNameStyles,
+                    ? (0, i.jsx)(f.Z, {
+                          userName: S,
+                          displayNameStyles: null == E ? void 0 : E.displayNameStyles,
                           effectDisplayType: Z ? p.F.ANIMATED : p.F.STATIC,
                           loop: !0,
                       })
-                    : j,
+                    : S,
             }),
             (0, i.jsx)(y.jz, { children: O }),
             n.isMultiUserDM() &&
                 (0, i.jsxs)(a.hE2, {
-                    className: v.buttonContainer,
+                    className: x.buttonContainer,
                     children: [
                         (0, i.jsx)(b.l, {
                             channel: n,
-                            text: _.intl.string(_.t["6Qgrev"]),
+                            text: v.intl.string(v.t["6Qgrev"]),
                             icon: o.ejJ,
                         }),
                         (0, i.jsx)(a.zxk, {
                             icon: o.vdY,
                             variant: "secondary",
-                            text: _.intl.string(_.t["5Q9+/L"]),
-                            "aria-label": _.intl.string(_.t["5Q9+/L"]),
+                            text: v.intl.string(v.t["5Q9+/L"]),
+                            "aria-label": v.intl.string(v.t["5Q9+/L"]),
                             onClick: () => (0, g.B)(n.id, c.Z.EMPTY_GROUP_DM),
                         }),
                     ],

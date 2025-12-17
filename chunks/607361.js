@@ -15,13 +15,13 @@ function p(e, t) {
         if (null == i) return !1;
         let l = c.Z.can(d.Plq.SEND_MESSAGES, i),
             p = o.ZP.getMember(i.guild_id, e),
-            h = r().keyBy(s.Z.getManyRoles(i.guild_id, null != (n = null == p ? void 0 : p.roles) ? n : []), "id"),
-            f = u.BT({
+            f = r().keyBy(s.Z.getManyRoles(i.guild_id, null != (n = null == p ? void 0 : p.roles) ? n : []), "id"),
+            h = u.BT({
                 permission: d.Plq.STREAM,
                 user: e,
                 context: i,
-                roles: h,
+                roles: f,
             });
-        return l && f;
+        return l && h;
     });
 }

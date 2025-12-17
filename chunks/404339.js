@@ -6,14 +6,14 @@ var r = n(990547),
     a = n(785232),
     o = n(592125),
     l = n(594174),
-    d = n(626135),
-    c = n(33194),
+    c = n(626135),
+    d = n(33194),
     u = n(343544),
     m = n(14251),
-    _ = n(110223),
-    f = n(981631),
+    f = n(110223),
+    _ = n(981631),
     g = n(388032),
-    N = n(405842);
+    N = n(729861);
 function x(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: x, transitionState: h, onClose: p, onJoin: E } = e,
         v = Array.from(n)
@@ -40,8 +40,8 @@ function x(e) {
               infoRows: ((e) => {
                   let { channelId: t, blockedUsers: n, ignoredUsers: r } = e,
                       l = o.Z.getChannel(t),
-                      d = n.length > 0,
-                      c = r.length > 0,
+                      c = n.length > 0,
+                      d = r.length > 0,
                       u = [
                           {
                               icon: (0, i.jsx)("div", {
@@ -52,7 +52,7 @@ function x(e) {
                               className: N.row,
                           },
                       ];
-                  if (d && c) {
+                  if (c && d) {
                       let e = [...n, ...r],
                           o = e.slice(0, 2).map((e) => e.id);
                       u.unshift({
@@ -67,8 +67,8 @@ function x(e) {
                           className: N.row,
                       });
                   } else {
-                      let e = d ? n.slice(0, 2).map((e) => e.id) : r.slice(0, 2).map((e) => e.id),
-                          s = d ? n.length : r.length;
+                      let e = c ? n.slice(0, 2).map((e) => e.id) : r.slice(0, 2).map((e) => e.id),
+                          s = c ? n.length : r.length;
                       u.unshift({
                           icon: (0, i.jsx)("div", {
                               className: N.icon,
@@ -87,23 +87,23 @@ function x(e) {
               onDismissAndStay: () => {
                   E(),
                       p(),
-                      (0, c.dI)(new Set([...n, ...x])),
-                      d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                          action: _.q.CLICK_TO_JOIN,
+                      (0, d.dI)(new Set([...n, ...x])),
+                      c.default.track(_.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                          action: f.q.CLICK_TO_JOIN,
                           channel_id: t,
                           blocked_user_ids: Array.from(n),
                           ignored_user_ids: Array.from(x),
-                          warning_surface: _.fz.PRE_JOIN_MODAL,
+                          warning_surface: f.fz.PRE_JOIN_MODAL,
                       });
               },
               onDismissAndLeave: () => {
                   p(),
-                      d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                          action: _.q.CLICK_TO_LEAVE,
+                      c.default.track(_.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                          action: f.q.CLICK_TO_LEAVE,
                           channel_id: t,
                           blocked_user_ids: Array.from(n),
                           ignored_user_ids: Array.from(x),
-                          warning_surface: _.fz.PRE_JOIN_MODAL,
+                          warning_surface: f.fz.PRE_JOIN_MODAL,
                       });
               },
               leaveButtonText: g.intl.string(g.t.rOXspL),
@@ -115,7 +115,7 @@ function x(e) {
                   impressionProperties: {
                       channel_id: t,
                       blocked_user_ids: Array.from(n),
-                      warning_surface: _.fz.PRE_JOIN_MODAL,
+                      warning_surface: f.fz.PRE_JOIN_MODAL,
                   },
               },
           });

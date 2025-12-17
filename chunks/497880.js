@@ -5,18 +5,18 @@ var l = n(54381),
     a = n.n(r),
     u = n(793030),
     o = n(442837),
-    s = n(199849),
-    c = n(481060),
+    c = n(199849),
+    s = n(481060),
     d = n(749210),
-    _ = n(910693),
-    g = n(592125),
+    g = n(910693),
+    _ = n(592125),
     v = n(70956),
     b = n(5192),
     f = n(501517),
     E = n(981631),
-    p = n(864309),
+    p = n(792389),
     M = n(388032),
-    h = n(144736);
+    h = n(577651);
 function S() {
     return [
         {
@@ -66,8 +66,8 @@ function C(t) {
         [k, x] = i.useState(null != j ? A : m),
         [D, I] = i.useState(""),
         [R, U] = i.useState(null),
-        { isModReportClosed: N, isModReport: Z } = (0, o.cj)([g.Z], () => {
-            let t = g.Z.getChannel(j);
+        { isModReportClosed: N, isModReport: Z } = (0, o.cj)([_.Z], () => {
+            let t = _.Z.getChannel(j);
             return {
                 isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
                 isModReport: null == t ? void 0 : t.isModeratorReportChannel(),
@@ -75,7 +75,7 @@ function C(t) {
         }),
         [P, Y] = i.useState(!1),
         [F, L] = i.useState(!1),
-        B = (0, _.sE)(e, {
+        B = (0, g.sE)(e, {
             location: r,
             targetUserId: null == n ? void 0 : n.id,
             targets: v,
@@ -92,7 +92,7 @@ function C(t) {
                     F && null != j && f.Z.resolveFlag(j);
                 });
             }
-            B(_.jQ.BAN), y();
+            B(g.jQ.BAN), y();
         }, [R, D, C, B, y, v, T, P, e, k, n, j, F]),
         H = i.useCallback((t) => {
             x(t);
@@ -156,26 +156,26 @@ function C(t) {
             );
         })(),
         actionBarInput: V
-            ? (0, l.jsx)(c.Checkbox, {
+            ? (0, l.jsx)(s.Checkbox, {
                   checked: F,
                   onChange: (t) => L(t),
                   label: M.intl.string(p.default["8yIKem"]),
               })
             : void 0,
-        children: (0, l.jsxs)(c.Kqy, {
+        children: (0, l.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 24,
             children: [
-                (0, l.jsxs)(c.Kqy, {
+                (0, l.jsxs)(s.Kqy, {
                     direction: "vertical",
                     gap: 8,
                     children: [
                         P &&
-                            (0, l.jsx)(c.M14, {
+                            (0, l.jsx)(s.M14, {
                                 type: "critical",
                                 children: M.intl.string(M.t.IrYX1y),
                             }),
-                        (0, l.jsx)(c.FXm, {
+                        (0, l.jsx)(s.FXm, {
                             required: !0,
                             label: M.intl.string(null != j ? M.t["+KCLVp"] : M.t.w4Ivys),
                             value: D,
@@ -210,7 +210,7 @@ function C(t) {
                         }),
                         (0, l.jsx)("div", {
                             className: a()(h.reasonFreeText, { [h.hidden]: "other" !== D }),
-                            children: (0, l.jsx)(c.Kx8, {
+                            children: (0, l.jsx)(s.Kx8, {
                                 maxLength: E.GNZ,
                                 onChange: G,
                                 value: null != R ? R : "",
@@ -220,7 +220,7 @@ function C(t) {
                         }),
                     ],
                 }),
-                (0, l.jsx)(s.y6, {
+                (0, l.jsx)(c.y6, {
                     label: M.intl.string(null != j ? M.t.ERSM8H : M.t["8l3W0y"]),
                     options: S(),
                     value: k,

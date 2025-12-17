@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(736530),
     O = n(981631),
     v = n(388032),
-    S = n(225753);
+    S = n(517319);
 function I(e) {
     let { ingress: t, guildId: n } = e,
         E = (0, p.c_)(),
@@ -47,9 +47,9 @@ function I(e) {
         });
     }
     let R = (e) => {
-            D(!e);
+            w(!e);
         },
-        D = (e) => {
+        w = (e) => {
             let t = () => {
                     d.gR.updateSetting(e), d.h2.updateSetting(e ? s.Z.getGuildIds() : []), P(e, !0);
                 },
@@ -66,13 +66,13 @@ function I(e) {
                 onCancel: t,
             });
         },
-        w = C ? v.intl.string(v.t.PMsfcH) : v.intl.string(v.t.RAQUSN);
+        D = C ? v.intl.string(v.t.PMsfcH) : v.intl.string(v.t.RAQUSN);
     return (0, r.jsx)(_.U, {
         setting: b.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             n === y.T
                 ? (0, r.jsx)(m.ZP, {
-                      title: w,
+                      title: D,
                       note: C ? v.intl.string(v.t.XXGmuB) : v.intl.string(v.t.wbYDfT),
                       value: !T,
                       onChange: R,
@@ -80,7 +80,7 @@ function I(e) {
                       tooltipText: A ? v.intl.string(S.default["6Af/cw"]) : void 0,
                   })
                 : (0, r.jsx)(m.ZP, {
-                      title: w,
+                      title: D,
                       note: E ? v.intl.string(v.t.V0ka0Q) : C ? v.intl.string(v.t.F9WY3f) : v.intl.string(v.t.G7c3Xo),
                       value: !I,
                       onChange: N,

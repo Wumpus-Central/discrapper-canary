@@ -31,9 +31,9 @@ let v = (0, O.createContext)(null),
                 validationBehavior: A,
             }),
             P = (0, O.useRef)(null),
-            [R, D] = (0, a.xc)(!e["aria-label"] && !e["aria-labelledby"]),
+            [R, w] = (0, a.xc)(!e["aria-label"] && !e["aria-labelledby"]),
             {
-                groupProps: w,
+                groupProps: D,
                 labelProps: x,
                 fieldProps: L,
                 buttonProps: j,
@@ -45,15 +45,15 @@ let v = (0, O.createContext)(null),
             } = (0, m.k)(
                 {
                     ...(0, a.vl)(e),
-                    label: D,
+                    label: w,
                     validationBehavior: A,
                 },
                 N,
                 P,
             ),
-            [B, F] = (0, O.useState)(null),
+            [F, B] = (0, O.useState)(null),
             V = (0, O.useCallback)(() => {
-                P.current && F(P.current.offsetWidth + "px");
+                P.current && B(P.current.offsetWidth + "px");
             }, []);
         (0, E.y)({
             ref: P,
@@ -84,7 +84,7 @@ let v = (0, O.createContext)(null),
                         [
                             u.E,
                             {
-                                ...w,
+                                ...D,
                                 ref: P,
                                 isInvalid: N.isInvalid,
                             },
@@ -113,7 +113,7 @@ let v = (0, O.createContext)(null),
                                 trigger: "DatePicker",
                                 triggerRef: P,
                                 placement: "bottom start",
-                                style: { "--trigger-width": B },
+                                style: { "--trigger-width": F },
                                 clearContexts: I,
                             },
                         ],

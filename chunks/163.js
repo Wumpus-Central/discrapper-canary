@@ -1,36 +1,36 @@
-t.d(n, { Z: () => h }), t(388685);
-var r = t(473749),
-    l = t(442837),
-    i = t(570140),
-    a = t(211739),
-    o = t(680089),
-    s = t(9156),
-    c = t(152376),
-    d = t(724213),
-    u = t(981631);
-function p(e) {
-    i.Z.dispatch({
+n.d(t, { Z: () => p }), n(388685);
+var a = n(473749),
+    r = n(442837),
+    l = n(570140),
+    i = n(211739),
+    o = n(680089),
+    c = n(9156),
+    d = n(152376),
+    s = n(724213),
+    u = n(981631);
+function b(e) {
+    l.Z.dispatch({
         type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES",
         guildId: e,
     });
 }
-function h(e) {
-    let n = (0, l.e7)([s.ZP], () => s.ZP.getPendingChannelUpdates(e));
+function p(e) {
+    let t = (0, r.e7)([c.ZP], () => c.ZP.getPendingChannelUpdates(e));
     return (
-        r.useEffect(() => (p(e), () => p(e)), [e]),
-        r.useEffect(() => {
-            null != n && (0, c.C1)(e, n);
-        }, [e, n]),
+        a.useEffect(() => (b(e), () => b(e)), [e]),
+        a.useEffect(() => {
+            null != t && (0, d.C1)(e, t);
+        }, [e, t]),
         {
-            onChannelClick: r.useCallback((e, n, t) => {
-                let r = s.ZP.isChannelOptedIn(e, n),
-                    l = n === t;
-                !r && o.Z.isCollapsed(t) && null != t && (0, a.mJ)(t),
-                    (0, d.hi)(e)
-                        ? l
-                            ? (0, d.rz)(e, { include: new Set([n]) })
-                            : (0, d.rz)(e, { exclude: new Set([n]) })
-                        : (0, c.k$)(e, n, !r, { section: u.jXE.CHANNEL_BROWSER });
+            onChannelClick: a.useCallback((e, t, n) => {
+                let a = c.ZP.isChannelOptedIn(e, t),
+                    r = t === n;
+                !a && o.Z.isCollapsed(n) && null != n && (0, i.mJ)(n),
+                    (0, s.hi)(e)
+                        ? r
+                            ? (0, s.rz)(e, { include: new Set([t]) })
+                            : (0, s.rz)(e, { exclude: new Set([t]) })
+                        : (0, d.k$)(e, t, !a, { section: u.jXE.CHANNEL_BROWSER });
             }, []),
         }
     );

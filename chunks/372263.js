@@ -1,9 +1,9 @@
-t.d(i, { Z: () => a });
+t.d(e, { Z: () => l });
 var n = t(54381);
 t(473749);
-var r = t(835255),
-    l = t(688192);
-function a(e) {
-    let { cardSize: i = l.U.MEDIUM } = e;
-    return (0, n.jsx)(r.w_, { cardSize: i });
+var s = t(835255),
+    r = t(688192);
+function l(i) {
+    let { cardSize: e = r.U.MEDIUM } = i;
+    return (0, n.jsx)(s.w_, { cardSize: e });
 }

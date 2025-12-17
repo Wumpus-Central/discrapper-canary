@@ -160,11 +160,11 @@ function R(e) {
         return null != (r = null == i ? void 0 : i.includes(e.toLocaleLowerCase())) && r;
     };
 }
-function D(e, t) {
+function w(e, t) {
     let n = m.Z.getScoreWithoutLoadingLatest(e.id);
     return m.Z.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function w(e, t) {
+function D(e, t) {
     let n = (0, y.$d)(e),
         r = (0, y.$d)(t);
     return (0, f.un)(n, r);
@@ -268,15 +268,15 @@ function G(e) {
     };
 }
 function Z(e) {
-    return [B(e), F];
+    return [F(e), B];
 }
-function B(e) {
+function F(e) {
     return (t, n) => {
         let r = d.ZP.getScoreWithoutLoadingLatest(e, t);
         return d.ZP.getScoreWithoutLoadingLatest(e, n) - r;
     };
 }
-function F(e, t) {
+function B(e, t) {
     return (0, f.un)(e.displayName, t.displayName);
 }
 function V(e) {
@@ -363,7 +363,7 @@ function V(e) {
                 limit: o,
                 filterPredicates: [T(t)],
                 bucketPredicates: C(n),
-                sortComparers: [D, w],
+                sortComparers: [w, D],
             });
         }, [l, c, o, t, n, _, m]),
         y = g.length > 0,

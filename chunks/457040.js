@@ -27,14 +27,14 @@ var r = n(54381),
     N = n(373228),
     P = n(462109),
     R = n(422195),
-    D = n(657795),
-    w = n(489762),
+    w = n(657795),
+    D = n(489762),
     x = n(31543),
     L = n(15350),
     j = n(151189),
     M = n(611480),
     k = n(981631),
-    U = n(349778);
+    U = n(807290);
 function G(e, t, n) {
     return (
         t in e
@@ -64,7 +64,7 @@ function Z(e) {
     }
     return e;
 }
-function B(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -104,7 +104,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     er = i.forwardRef(function (e, t) {
         var a;
         let { containerWidth: o, channel: c, onSelectSticker: v, closePopout: G } = e,
-            { location: B } = (0, d.O)(),
+            { location: F } = (0, d.O)(),
             { analyticsLocations: z } = (0, p.ZP)(f.Z.STICKER_PICKER),
             q = (null == (a = (0, E.N)()) ? void 0 : a.subscription_trial) != null,
             Q = i.useRef(null),
@@ -161,10 +161,10 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         case N.al.CREATE_STICKER:
                             O.default.track(k.rMx.OPEN_MODAL, {
                                 type: k.jXE.CREATE_STICKER_MODAL,
-                                location: B,
+                                location: F,
                             }),
                                 (0, u.ZDy)(async () => {
-                                    let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
+                                    let { default: t } = await Promise.all([n.e("93626"), n.e("47985")]).then(
                                         n.bind(n, 136735),
                                     );
                                     return (n) => (0, r.jsx)(t, Z({ guildId: e.guild_id }, n));
@@ -174,13 +174,13 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             null != e.sticker && (0, I.kl)(e.sticker, ep, c) && eO(e);
                     }
                 },
-                [B, ep, c, eO],
+                [F, ep, c, eO],
             ),
             {
                 getItemProps: eP,
                 getRowProps: eR,
-                gridContainerProps: eD,
-                handleGridContainerKeyDown: ew,
+                gridContainerProps: ew,
+                handleGridContainerKeyDown: eD,
                 isUsingKeyboardNavigation: ex,
             } = (0, P.t)({
                 columnCounts: eA,
@@ -235,13 +235,13 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         className: U.header,
                         children: (0, r.jsx)(x.Z, {
                             ref: er,
-                            onKeyDown: ew,
+                            onKeyDown: eD,
                             stickersListRef: ee,
                             channel: c,
                         }),
                     }),
                 ec
-                    ? (0, r.jsx)(D.Z, {
+                    ? (0, r.jsx)(w.Z, {
                           className: U.emptyState,
                           onClose: G,
                       })
@@ -249,19 +249,19 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                           children: [
                               (0, r.jsx)(
                                   "div",
-                                  F(
+                                  B(
                                       Z(
                                           {
                                               ref: Q,
                                               className: U.listWrapper,
                                               id: M.Vr,
                                           },
-                                          eD,
+                                          ew,
                                       ),
                                       {
                                           children:
                                               null != eu
-                                                  ? (0, r.jsx)(w.Z, {
+                                                  ? (0, r.jsx)(D.Z, {
                                                         ref: ee,
                                                         collapsedStickersCategories: ef,
                                                         filteredStickers: e_,
@@ -300,7 +300,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             role: "tabpanel",
             children: e.isLoading
                 ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator })
-                : (0, r.jsx)(er, F(Z({}, e), { ref: t })),
+                : (0, r.jsx)(er, B(Z({}, e), { ref: t })),
         })
     ),
     ea = i.forwardRef(ei);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -18,8 +18,8 @@ var r = n(120356),
     C = n(897669),
     y = n(665149),
     v = n(984370),
-    O = n(910611),
-    x = n(728285),
+    x = n(910611),
+    O = n(728285),
     E = n(454585),
     j = n(801604),
     S = n(210975),
@@ -39,7 +39,7 @@ var r = n(120356),
     U = n(960324);
 function V(e) {
     let { focusedParticipant: t, channel: n } = e,
-        r = (0, x.bp)(),
+        r = (0, O.bp)(),
         l = (0, a.e7)([I.Z], () => I.Z.getLayout(n.id, r));
     return (0, i.jsx)(P.Z, {
         children: (0, i.jsx)(A.Z, {
@@ -73,7 +73,7 @@ function F(e) {
               ],
           });
 }
-function B(e) {
+function H(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -132,7 +132,7 @@ function B(e) {
         children: t,
     });
 }
-function H(e) {
+function B(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -143,7 +143,7 @@ function H(e) {
             [t.id],
         ),
         C = (0, f.ZP)(t),
-        x = (0, h.KS)(t),
+        O = (0, h.KS)(t),
         [_] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         P = D.intl.string(D.t.BVZqJl);
     t.isDM() ? (P = D.intl.string(D.t.jN2DfZ)) : t.isGroupDM() && (P = D.intl.string(D.t["e5y+gm"]));
@@ -243,9 +243,9 @@ function H(e) {
                                 wrapperClassName: k.title,
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        null != x
+                                        null != O
                                             ? (0, i.jsx)(y.ZP.ChannelIcon, {
-                                                  icon: x,
+                                                  icon: O,
                                                   "aria-label": P,
                                               })
                                             : null,
@@ -263,11 +263,11 @@ function H(e) {
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(O.TS, {
+                            (0, i.jsx)(x.TS, {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(B, {
+                            (0, i.jsx)(H, {
                                 focusedApplication: _,
                                 focusedParticipant: b,
                                 channel: t,

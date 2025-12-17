@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var i,
     r,
     l = n(442837),
@@ -9,7 +9,7 @@ var i,
     u = n(709054),
     d = n(522579);
 let p = new Set();
-class h extends (i = l.ZP.Store) {
+class f extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(s.default, c.Z, o.Z);
     }
@@ -17,15 +17,15 @@ class h extends (i = l.ZP.Store) {
         return p.has(e);
     }
 }
-(r = "displayName") in h
-    ? Object.defineProperty(h, r, {
+(r = "displayName") in f
+    ? Object.defineProperty(f, r, {
           value: "MediaPostSharePromptStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (h[r] = "MediaPostSharePromptStore");
-let f = new h(a.Z, {
+    : (f[r] = "MediaPostSharePromptStore");
+let h = new f(a.Z, {
     CONNECTION_OPEN: function () {
         p = new Set();
     },

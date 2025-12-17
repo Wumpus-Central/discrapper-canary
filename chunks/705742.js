@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(522651),
     y = n(243778),
     v = n(728285),
-    O = n(579185),
-    x = n(301076),
+    x = n(579185),
+    O = n(301076),
     E = n(127379),
     j = n(981631),
     S = n(921944),
@@ -29,7 +29,7 @@ function P(e) {
         T = (0, p.KF)(t.id),
         N = (0, p.g5)(T),
         A = T !== p.jy.CAN_LAUNCH || Z,
-        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, O.Z)(200, 300),
+        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, x.Z)(200, 300),
         D = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
         k = (0, l.e7)(
             [u.ZP],
@@ -43,9 +43,9 @@ function P(e) {
             [R],
         ),
         F = (0, v.bp)() === j.IlC.POPOUT,
-        { parentAnalyticsLocation: B, newestAnalyticsLocation: H } = (0, g.ZP)(),
+        { parentAnalyticsLocation: H, newestAnalyticsLocation: B } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, C.v)(B, C.d.ACTIVITY),
+            (0, C.v)(H, C.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -55,9 +55,9 @@ function P(e) {
                               }
                             : { type: "contextless" },
                     openInPopout: F,
-                    analyticsLocation: H,
+                    analyticsLocation: B,
                 });
-        }, [t, F, H, B]),
+        }, [t, F, B, H]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, f.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
@@ -114,7 +114,7 @@ function P(e) {
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {
                                                 ref: q,
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(O.Z, {
                                                     disabled: A,
                                                     "aria-label": N,
                                                     label: U ? void 0 : N,

@@ -12,7 +12,7 @@ var r = n(54381),
     m = n(485386),
     b = n(496675),
     f = n(388032),
-    p = n(797966);
+    p = n(180746);
 let h = (e) => {
     let { guild: t, transitionState: n, onClose: i } = e,
         [h, g] = l.useState(7),
@@ -27,7 +27,7 @@ let h = (e) => {
     let H = l.useCallback(() => {
             d.Z.prune(t.id, h, v), i();
         }, [t.id, h, v, i]),
-        _ = (0, a.Wu)([b.Z, m.Z], () => {
+        w = (0, a.Wu)([b.Z, m.Z], () => {
             let e = b.Z.getHighestRole(t);
             return o()(m.Z.getSortedRoles(t.id))
                 .filter((n) => !(0, C.fI)(n) && b.Z.isRoleHigher(t, e, n))
@@ -85,7 +85,7 @@ let h = (e) => {
                         multi: !0,
                         value: v,
                         onChange: (e) => y(e),
-                        options: _,
+                        options: w,
                     }),
                 }),
                 (0, r.jsx)(u.Text, {

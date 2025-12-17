@@ -49,7 +49,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -98,14 +98,14 @@ function Z() {
     }
     return e;
 }
-function B(e) {
+function F(e) {
     let { applicationStreamState: t } = e;
     (i = t.streamsByUserAndGuild),
         (r = new Map(t.activeStreams)),
         (a = t.rtcStreams),
         (o = t.streamerActiveStreamMetadatas);
 }
-function F(e) {
+function B(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n, guildId: r, channelId: i, sessionId: a, selfStream: o, discoverable: s } = t;
@@ -130,7 +130,7 @@ function V(e) {
     let { streamKey: t } = e,
         n = (0, _.my)(t);
     r.delete(t),
-        r.set(t, w(R({}, n), { state: A.jm8.CONNECTING })),
+        r.set(t, D(R({}, n), { state: A.jm8.CONNECTING })),
         n.ownerId === b.default.getId() && (L[n.channelId] = !1);
 }
 function H(e) {
@@ -206,7 +206,7 @@ function W(e) {
         null != t &&
             (r.set(
                 e,
-                w(R({}, t), {
+                D(R({}, t), {
                     state: A.jm8.FAILED,
                     endReason: n,
                     errorCode: i,
@@ -239,7 +239,7 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: o } = e;
-    r.set(t, w(R({}, (0, _.my)(t)), { state: o ? A.jm8.PAUSED : A.jm8.ACTIVE })),
+    r.set(t, D(R({}, (0, _.my)(t)), { state: o ? A.jm8.PAUSED : A.jm8.ACTIVE })),
         (a[t] = {
             streamKey: t,
             region: n,
@@ -277,13 +277,13 @@ function J(e) {
             }),
             (l = A.jm8.ENDED);
     } else s.state === A.jm8.FAILED && o === A.si2.USER_REQUESTED && (l = A.jm8.FAILED);
-    r.set(t, w(R({}, s), { state: l })), l === A.jm8.ENDED && x !== t && G(t);
+    r.set(t, D(R({}, s), { state: l })), l === A.jm8.ENDED && x !== t && G(t);
 }
 function $(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
-    r.set(t, w(R({}, n), { state: A.jm8.FAILED }));
+    r.set(t, D(R({}, n), { state: A.jm8.FAILED }));
 }
 function ee(e) {
     let { streamKey: t, state: n } = e;
@@ -300,7 +300,7 @@ function ee(e) {
             a = A.jm8.ACTIVE;
     }
     if (a === i.state) return !1;
-    r.set(t, w(R({}, i), { state: a }));
+    r.set(t, D(R({}, i), { state: a }));
 }
 function et(e) {
     let { channelId: t, selfStreamHidden: n } = e;
@@ -443,8 +443,8 @@ P(ea, "displayName", "ApplicationStreamingStore"), P(ea, "persistKey", "Applicat
 let eo = new ea(d.Z, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: W,
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: K,
-    OVERLAY_INITIALIZE: B,
-    VOICE_STATE_UPDATES: F,
+    OVERLAY_INITIALIZE: F,
+    VOICE_STATE_UPDATES: B,
     STREAM_WATCH: V,
     STREAM_START: H,
     STREAM_STOP: z,

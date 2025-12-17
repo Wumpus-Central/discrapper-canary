@@ -1,83 +1,83 @@
-t.d(n, { Z: () => f });
+t.d(n, { Z: () => p });
 var l = t(54381);
 t(473749);
 var i = t(572691),
     o = t(906732),
     r = t(444141),
-    s = t(705556),
-    a = t(30556),
-    c = t(664794),
+    a = t(705556),
+    c = t(30556),
+    s = t(664794),
     d = t(522182),
     u = t(821706),
-    m = t(562831),
-    p = t(981631);
-function f(e) {
-    let { user: n, currentUser: t, guildId: f, channelId: x, displayProfile: h, relationshipType: v, onClose: j } = e,
-        { newestAnalyticsLocation: g } = (0, o.ZP)(),
-        b = (0, r.Z)({
+    f = t(562831),
+    m = t(981631);
+function p(e) {
+    let { user: n, currentUser: t, guildId: p, channelId: x, displayProfile: h, relationshipType: v, onClose: b } = e,
+        { newestAnalyticsLocation: j } = (0, o.ZP)(),
+        g = (0, r.Z)({
             user: n,
-            guildId: f,
+            guildId: p,
             channelId: x,
             displayProfile: h,
-            onClose: j,
+            onClose: b,
         }),
         {
             gameFriends: I,
             hasOutgoingPendingGameFriends: y,
             hasIncomingPendingGameFriends: Z,
-        } = (0, m.H)({ userId: n.id }),
-        _ = I.length > 0 || y || Z;
-    return v === p.OGo.BLOCKED
+        } = (0, f.H)({ userId: n.id }),
+        O = I.length > 0 || y || Z;
+    return v === m.OGo.BLOCKED
         ? null
         : n.id === t.id
           ? (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(s.Z, {
+                    (0, l.jsx)(a.Z, {
                         user: n,
-                        guildId: f,
-                        onClose: j,
+                        guildId: p,
+                        onClose: b,
                     }),
-                    (0, l.jsx)(d.Z, { onClose: j }),
-                    (0, l.jsx)(c.wV, {
+                    (0, l.jsx)(d.Z, { onClose: b }),
+                    (0, l.jsx)(s.wV, {
                         user: n,
-                        guildId: f,
-                        viewProfileItem: b,
+                        guildId: p,
+                        viewProfileItem: g,
                     }),
                 ],
             })
           : n.bot
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
-                      (0, l.jsx)(a.H, {
+                      (0, l.jsx)(c.H, {
                           userId: n.id,
                           onClose: i.Z.popAll,
                           autoFocus: !0,
                       }),
-                      (0, l.jsx)(c.wV, {
+                      (0, l.jsx)(s.wV, {
                           user: n,
-                          guildId: f,
-                          viewProfileItem: b,
+                          guildId: p,
+                          viewProfileItem: g,
                       }),
                   ],
               })
-            : v === p.OGo.PENDING_INCOMING
+            : v === m.OGo.PENDING_INCOMING
               ? (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(a.H, {
+                        (0, l.jsx)(c.H, {
                             userId: n.id,
                             onClose: i.Z.popAll,
                             autoFocus: !0,
                         }),
-                        (0, l.jsx)(c.wV, {
+                        (0, l.jsx)(s.wV, {
                             user: n,
-                            guildId: f,
+                            guildId: p,
                         }),
                     ],
                 })
-              : v === p.OGo.FRIEND || v === p.OGo.PENDING_OUTGOING
+              : v === m.OGo.FRIEND || v === m.OGo.PENDING_OUTGOING
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(a.H, {
+                          (0, l.jsx)(c.H, {
                               userId: n.id,
                               onClose: i.Z.popAll,
                               autoFocus: !0,
@@ -85,36 +85,36 @@ function f(e) {
                           (0, l.jsx)(u.n1, {
                               user: n,
                               relationshipType: v,
-                              analyticsLocation: g,
+                              analyticsLocation: j,
                           }),
-                          (0, l.jsx)(c.wV, {
+                          (0, l.jsx)(s.wV, {
                               user: n,
-                              guildId: f,
-                              viewProfileItem: b,
+                              guildId: p,
+                              viewProfileItem: g,
                           }),
                       ],
                   })
-                : v === p.OGo.NONE && _
+                : v === m.OGo.NONE && O
                   ? (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(a.H, {
+                            (0, l.jsx)(c.H, {
                                 userId: n.id,
                                 onClose: i.Z.popAll,
                                 autoFocus: !0,
                             }),
                             (0, l.jsx)(u.C0, {
                                 user: n,
-                                analyticsLocation: g,
+                                analyticsLocation: j,
                                 gameFriends: I,
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 hasIncomingPendingGameFriends: Z,
                                 hasOutgoingPendingGameFriends: y,
                             }),
-                            (0, l.jsx)(c.wV, {
+                            (0, l.jsx)(s.wV, {
                                 user: n,
-                                guildId: f,
-                                viewProfileItem: b,
+                                guildId: p,
+                                viewProfileItem: g,
                             }),
                         ],
                     })
@@ -123,18 +123,18 @@ function f(e) {
                             (0, l.jsx)(u.Z7, {
                                 variant: "primary",
                                 userId: n.id,
-                                analyticsLocation: g,
+                                analyticsLocation: j,
                                 autoFocus: !0,
                             }),
-                            (0, l.jsx)(a.v, {
+                            (0, l.jsx)(c.v, {
                                 userId: n.id,
                                 onClose: i.Z.popAll,
                                 variant: "secondary",
                             }),
-                            (0, l.jsx)(c.wV, {
+                            (0, l.jsx)(s.wV, {
                                 user: n,
-                                guildId: f,
-                                viewProfileItem: b,
+                                guildId: p,
+                                viewProfileItem: g,
                             }),
                         ],
                     });

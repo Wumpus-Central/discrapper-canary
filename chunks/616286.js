@@ -1,4 +1,4 @@
-n.d(t, { T: () => E }), n(388685), n(539854);
+n.d(t, { T: () => j }), n(388685), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -9,23 +9,23 @@ var i = n(54381),
     u = n(906732),
     d = n(358221),
     p = n(522651),
-    h = n(306680),
-    f = n(944486),
+    f = n(306680),
+    h = n(944486),
     m = n(111583),
     g = n(459273),
     b = n(880831),
     C = n(774168),
     y = n(871499),
-    _ = n(981631),
-    v = n(388032);
+    v = n(981631),
+    x = n(388032);
 function O(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
-        n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
+        n = (0, s.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: r } = (0, s.cj)(
-            [h.ZP],
+            [f.ZP],
             () => ({
-                unreadCount: h.ZP.getUnreadCount(e),
-                mentionCount: h.ZP.getMentionCount(e),
+                unreadCount: f.ZP.getUnreadCount(e),
+                mentionCount: f.ZP.getMentionCount(e),
             }),
             [e],
         );
@@ -36,7 +36,7 @@ function O(e) {
         isTyping: t,
     };
 }
-function x(e) {
+function E(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = O(n);
     return (0, i.jsx)(C.Z, {
@@ -47,18 +47,18 @@ function x(e) {
         canBadge: o,
     });
 }
-function E(e) {
+function j(e) {
     let t;
     var {
             channelId: n,
             className: l,
             showingClassName: o,
-            onClick: h,
-            inPopout: f,
+            onClick: f,
+            inPopout: h,
             showRequestToSpeakSidebar: m,
             toggleRequestToSpeakSidebar: C,
         } = e,
-        E = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -87,8 +87,8 @@ function E(e) {
             "showRequestToSpeakSidebar",
             "toggleRequestToSpeakSidebar",
         ]);
-    let { parentAnalyticsLocation: j } = (0, u.ZP)(),
-        { disabled: S } = E,
+    let { parentAnalyticsLocation: S } = (0, u.ZP)(),
+        { disabled: _ } = j,
         P = r.useRef(null),
         I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
@@ -116,12 +116,12 @@ function E(e) {
             );
         })(n),
         A = r.useCallback(() => {
-            (0, p.v)(j, p.d.CHAT, !I), null == h || h(), !I && m && (null == C || C()), c.Z.updateChatOpen(n, !I);
-        }, [n, I, h, m, C, j]),
+            (0, p.v)(S, p.d.CHAT, !I), null == f || f(), !I && m && (null == C || C()), c.Z.updateChatOpen(n, !I);
+        }, [n, I, f, m, C, S]),
         w = r.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, i.jsx)(x, {
+                return (0, i.jsx)(E, {
                     className: t,
                     channelId: n,
                 });
@@ -133,15 +133,15 @@ function E(e) {
             null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: _.CkL.FOCUS_CHAT_BUTTON,
-        handler: S ? null : M,
+        event: v.CkL.FOCUS_CHAT_BUTTON,
+        handler: _ ? null : M,
     });
     let [R, L] = r.useState(!1),
         D = r.useCallback(() => {
-            f && L(!0);
-        }, [f]);
+            h && L(!0);
+        }, [h]);
     (0, g.yp)({
-        event: _.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: v.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: D,
     }),
         r.useEffect(() => {
@@ -156,10 +156,10 @@ function E(e) {
                 }
             );
         }, [R]);
-    let k = [(t = f && S ? v.intl.string(v.t.DPgc5h) : I ? v.intl.string(v.t.nthdxB) : v.intl.string(v.t["5KxXrK"]))];
+    let k = [(t = h && _ ? x.intl.string(x.t.DPgc5h) : I ? x.intl.string(x.t.nthdxB) : x.intl.string(x.t["5KxXrK"]))];
     return (
-        N > 0 && k.push(v.intl.formatToPlainString(v.t["3l1GOx"], { mentionCount: N })),
-        T > 0 && k.push(v.intl.string(v.t.x5zAGZ)),
+        N > 0 && k.push(x.intl.formatToPlainString(x.t["3l1GOx"], { mentionCount: N })),
+        T > 0 && k.push(x.intl.string(x.t.x5zAGZ)),
         (0, i.jsx)(
             y.Z,
             (function (e) {
@@ -197,7 +197,7 @@ function E(e) {
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
                     forceTooltipOpen: R,
                 },
-                E,
+                j,
             ),
         )
     );

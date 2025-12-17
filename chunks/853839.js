@@ -34,15 +34,15 @@ var r = n(98405),
     N = b.set,
     P = b.getterFor(v),
     R = "stack" in new I(v),
-    D = function (e) {
+    w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
-    w = function () {
+    D = function () {
         p(this, x);
         var e = arguments.length,
             t = h(e < 1 ? void 0 : arguments[0]),
             n = h(e < 2 ? void 0 : arguments[1], "Error"),
-            r = D(n);
+            r = w(n);
         if (
             (N(this, {
                 type: v,
@@ -57,7 +57,7 @@ var r = n(98405),
             (i.name = v), c(this, "stack", l(1, E(i.stack, 1)));
         }
     },
-    x = (w.prototype = s(A)),
+    x = (D.prototype = s(A)),
     L = function (e) {
         return {
             enumerable: !0,
@@ -70,7 +70,7 @@ var r = n(98405),
             return P(this)[e];
         });
     };
-y && (d(x, "code", j("code")), d(x, "message", j("message")), d(x, "name", j("name"))), c(x, "constructor", l(1, w));
+y && (d(x, "code", j("code")), d(x, "message", j("message")), d(x, "name", j("name"))), c(x, "constructor", l(1, D));
 var M = o(function () {
         return !(new T() instanceof I);
     }),
@@ -92,19 +92,19 @@ r(
         constructor: !0,
         forced: Z,
     },
-    { DOMException: Z ? w : T },
+    { DOMException: Z ? D : T },
 );
-var B = i(v),
-    F = B.prototype;
-for (var V in (k && (O || T === B) && u(F, "toString", m),
+var F = i(v),
+    B = F.prototype;
+for (var V in (k && (O || T === F) && u(B, "toString", m),
 U &&
     y &&
-    T === B &&
+    T === F &&
     d(
-        F,
+        B,
         "code",
         L(function () {
-            return D(_(this).name);
+            return w(_(this).name);
         }),
     ),
 g))
@@ -112,5 +112,5 @@ g))
         var H = g[V],
             Y = H.s,
             W = l(6, H.c);
-        f(B, Y) || c(B, Y, W), f(F, Y) || c(F, Y, W);
+        f(F, Y) || c(F, Y, W), f(B, Y) || c(B, Y, W);
     }

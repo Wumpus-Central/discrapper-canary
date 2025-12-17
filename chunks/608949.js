@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
-    o = n(430824),
-    a = n(60482),
+    a = n(430824),
+    o = n(60482),
     s = n(905128),
     c = n(19394);
 function u(e, t, n) {
@@ -25,7 +25,7 @@ class f extends (r = i.ZP.PersistedStore) {
         return d;
     }
     initialize(e) {
-        this.waitFor(a.Z, s.Z, o.Z), null != e && (d = e);
+        this.waitFor(o.Z, s.Z, a.Z), null != e && (d = e);
     }
     getNotificationStateForGuild(e) {
         return d[e];
@@ -46,12 +46,12 @@ let h = new f(l.Z, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
         var t, n, r, i, l, f, h, p;
         let { guildId: g } = e,
-            m = null != (r = null == (t = o.Z.getGuild(g)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
-            b = s.Z.getStateForGuild(g),
-            _ = a.Z.getStateForGuild(g),
-            y = (0, c.h)([
-                ...Object.values(null != (i = null == b ? void 0 : b.unlockedPowerups) ? i : {}),
-                ...Object.values(null != (l = null == _ ? void 0 : _.entitlements) ? l : {}),
+            b = null != (r = null == (t = a.Z.getGuild(g)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
+            m = s.Z.getStateForGuild(g),
+            y = o.Z.getStateForGuild(g),
+            O = (0, c.h)([
+                ...Object.values(null != (i = null == m ? void 0 : m.unlockedPowerups) ? i : {}),
+                ...Object.values(null != (l = null == y ? void 0 : y.entitlements) ? l : {}),
             ]);
         (h = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -73,9 +73,9 @@ let h = new f(l.Z, {
                 {
                     [g]: {
                         lastSeenWarningNotification: new Date(
-                            null != (f = null == (n = y[y.length - 1]) ? void 0 : n.ends_at) ? f : Date.now(),
+                            null != (f = null == (n = O[O.length - 1]) ? void 0 : n.ends_at) ? f : Date.now(),
                         ).getTime(),
-                        lastBoostCount: m,
+                        lastBoostCount: b,
                     },
                 }),
             Object.getOwnPropertyDescriptors

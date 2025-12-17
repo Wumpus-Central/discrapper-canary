@@ -9,14 +9,14 @@ var a = n(54381),
     d = n(388032);
 function u(e) {
     var t, n;
-    let { invite: u, trackClick: m, closeModal: g } = e,
-        f = i.useCallback(() => {
+    let { invite: u, trackClick: m, closeModal: f } = e,
+        g = i.useCallback(() => {
             (null == u ? void 0 : u.guild) != null &&
                 (0, o.eagerNavigateToSocialLayerStorefront)({ guildId: u.guild.id });
         }, [u]),
         p = i.useCallback(() => {
-            (null == u ? void 0 : u.guild) != null && ((0, o.default)({ invite: u }), g(), m(s.as.GameShop));
-        }, [g, u, m]);
+            (null == u ? void 0 : u.guild) != null && ((0, o.default)({ invite: u }), f(), m(s.as.GameShop));
+        }, [f, u, m]);
     return new Set(null == u || null == (t = u.guild) ? void 0 : t.features).has(
         c.GuildFeatures.SOCIAL_LAYER_STOREFRONT,
     )
@@ -28,7 +28,7 @@ function u(e) {
                       : d.intl.string(d.t.v8UpgE),
               icon: r.EOn,
               onClick: p,
-              onMouseDown: f,
+              onMouseDown: g,
               fullWidth: !0,
           })
         : null;

@@ -2,8 +2,8 @@ var r = n(816925),
     i = n(445299),
     s = n(961123);
 e.exports = function (e, t, n) {
-    for (var l = -1, a = t.length, o = {}; ++l < a; ) {
-        var c = t[l],
+    for (var a = -1, l = t.length, o = {}; ++a < l; ) {
+        var c = t[a],
             u = r(e, c);
         n(u, c) && i(o, s(c, e), u);
     }

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(322665),
-    s = n(17845),
-    o = n(374939),
+    o = n(17845),
+    s = n(374939),
     c = n(283293),
     u = n(726115),
     d = n(294330),
@@ -17,8 +17,8 @@ let g = {
 };
 function h(e) {
     let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: b } = e,
-        E = (0, u.Mf)(t),
-        _ = (0, u.a$)(t),
+        _ = (0, u.Mf)(t),
+        E = (0, u.a$)(t),
         O = (0, u.QW)(t),
         v = (0, u.lg)(t),
         y = i.useMemo(() => {
@@ -44,12 +44,12 @@ function h(e) {
     return (0, r.jsxs)(c.Z, {
         onScroll: h,
         children: [
-            (0, r.jsx)(s.Z, {
-                title: E,
-                description: _,
+            (0, r.jsx)(o.Z, {
+                title: _,
+                description: E,
                 children: (0, r.jsx)(a.Z, {}),
             }),
-            (0, r.jsxs)(o.Z, {
+            (0, r.jsxs)(s.Z, {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         className: f.sectionTitle,

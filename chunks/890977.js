@@ -9,9 +9,9 @@ var i,
     u = n.n(c),
     d = n(442837),
     p = n(607070),
-    h = n(484334),
-    f = n(158877),
-    m = n(505723);
+    f = n(484334),
+    h = n(158877),
+    m = n(459140);
 function g(e) {
     let t = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         n = a.useRef(null);
@@ -38,14 +38,14 @@ function g(e) {
 function b(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
-        ref: g(i || (i = n.t(h, 2))),
+        ref: g(i || (i = n.t(f, 2))),
         className: s()(m.glow, t),
     });
 }
 function C(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
-        ref: g(r || (r = n.t(f, 2))),
+        ref: g(r || (r = n.t(h, 2))),
         className: s()(m.trinkets, t),
     });
 }

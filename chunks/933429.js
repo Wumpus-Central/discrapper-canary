@@ -35,8 +35,8 @@ var r,
     N = n(160404),
     P = n(41776),
     R = n(332473),
-    D = n(30684),
-    w = n(616106),
+    w = n(30684),
+    D = n(616106),
     x = n(2109),
     L = n(518638),
     j = n(1844),
@@ -45,8 +45,8 @@ var r,
     U = n(616022),
     G = n(523255),
     Z = n(867003),
-    B = n(768419),
-    F = n(590415),
+    F = n(768419),
+    B = n(590415),
     V = n(865066),
     H = n(581883),
     Y = n(15980),
@@ -101,7 +101,7 @@ function eR(e, t, n) {
         e
     );
 }
-function eD(e) {
+function ew(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -117,7 +117,7 @@ function eD(e) {
     }
     return e;
 }
-function ew(e, t) {
+function eD(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -134,7 +134,7 @@ function ex(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ew(Object(t)).forEach(function (n) {
+            : eD(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -188,8 +188,8 @@ let eL = {
         eI.kVF.BLOCKED_BY_PROXY,
     ]),
     eZ = {},
-    eB = {},
-    eF = Object.freeze({
+    eF = {},
+    eB = Object.freeze({
         id: null,
         message: null,
         buttonText: null,
@@ -343,7 +343,7 @@ let eQ = [
         [eI.kVF.INVITED_TO_SPEAK]: {
             predicate: (e) => {
                 let { voiceState: t } = e;
-                return (0, F.gf)(t) === F.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                return (0, B.gf)(t) === B.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
             },
         },
         [eI.kVF.LURKING_GUILD]: {
@@ -377,7 +377,7 @@ let eQ = [
             predicate: () => null != ev.Z.getLastProgress(),
             metadata: () => ev.Z.getLastProgress(),
         },
-        [eI.kVF.SPOTIFY_AUTO_PAUSED]: { predicate: () => B.Z.wasAutoPaused() },
+        [eI.kVF.SPOTIFY_AUTO_PAUSED]: { predicate: () => F.Z.wasAutoPaused() },
         [eI.kVF.BLOCKED_BY_PROXY]: {
             predicate: () =>
                 !eq(eI.kVF.BLOCKED_BY_PROXY) &&
@@ -466,7 +466,7 @@ let eQ = [
         },
         [eI.kVF.CONNECT_SPOTIFY]: {
             predicate: () =>
-                !B.Z.hasConnectedAccount() &&
+                !F.Z.hasConnectedAccount() &&
                 O.ZP.isObservedAppRunning(f.Z.get(eI.ABu.SPOTIFY).name) &&
                 !eq(eI.kVF.CONNECT_SPOTIFY),
         },
@@ -657,7 +657,7 @@ let eQ = [
             },
         },
         [eI.kVF.PREMIUM_REACTIVATE]: {
-            predicate: () => !eq(eI.kVF.PREMIUM_REACTIVATE) && w.Z.shouldShowReactivateNotice(),
+            predicate: () => !eq(eI.kVF.PREMIUM_REACTIVATE) && D.Z.shouldShowReactivateNotice(),
         },
         [eI.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT]: {
             predicate: (e) => {
@@ -740,7 +740,7 @@ let eQ = [
                 var t;
                 let { currentUser: n } = e,
                     r = null != (t = e_.Z.paymentSources) ? t : {};
-                return D.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
+                return w.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
             },
         },
         [eI.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -798,7 +798,7 @@ function e$() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eV = ex(eD({}, eF), {
+            eV = ex(ew({}, eB), {
                 type: n,
                 metadata: o,
             });
@@ -806,9 +806,9 @@ function e$() {
         }
     if (null != eV) {
         (null == (n = eV.metadata) ? void 0 : n.sampleRate) != null &&
-            null == eB[eV.type] &&
-            (eB[eV.type] = Math.random() <= eV.metadata.sampleRate);
-        let e = !1 === eB[eV.type];
+            null == eF[eV.type] &&
+            (eF[eV.type] = Math.random() <= eV.metadata.sampleRate);
+        let e = !1 === eF[eV.type];
         (eq(eV.type) || e) && (eV = null);
     }
 }
@@ -852,7 +852,7 @@ function e9(e) {
     return e.user.id === K.default.getId() && e$();
 }
 function te() {
-    (eZ = {}), (eB = {}), (eV = null);
+    (eZ = {}), (eF = {}), (eV = null);
 }
 class tt extends (r = o.ZP.Store) {
     initialize() {
@@ -865,7 +865,7 @@ class tt extends (r = o.ZP.Store) {
                 z.default,
                 q.Z,
                 Q.Z,
-                D.Z,
+                w.Z,
                 X.Z,
                 m.Z,
                 J.Z,
@@ -893,10 +893,10 @@ class tt extends (r = o.ZP.Store) {
                 O.ZP,
                 eo.Z,
                 es.Z,
-                B.Z,
+                F.Z,
                 el.Z,
                 ec.Z,
-                w.Z,
+                D.Z,
                 em.Z,
                 eu.ZP,
                 eE.Z,

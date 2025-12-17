@@ -3,8 +3,8 @@ var r = n(95015),
     i = n(544891),
     l = n(115130),
     a = n(287545),
-    s = n(812206),
-    o = n(695103),
+    o = n(812206),
+    s = n(695103),
     c = n(626135),
     u = n(996106),
     d = n(914946),
@@ -28,18 +28,18 @@ let m = {
                 args: { event_name: i, event_properties: l },
             } = e;
             (0, d.bu)(n.transport), (0, d._f)(n.application);
-            let o = n.application.id,
+            let s = n.application.id,
                 p = (0, f.Z)(),
                 g = null == p ? void 0 : p.getGuildId(),
-                m = s.Z.getApplication(o);
+                m = o.Z.getApplication(s);
             if (!(0, r.yE)(null != (t = null == m ? void 0 : m.flags) ? t : 0, h.udG.EMBEDDED_FIRST_PARTY))
                 throw new u.Z({ errorCode: h.lTL.INVALID_COMMAND }, "This application cannot access this API");
-            let _ = (0, a.U)(o),
-                b = {
-                    activity_application_id: o,
+            let b = (0, a.U)(s),
+                _ = {
+                    activity_application_id: s,
                     activity_channel_type: null == p ? void 0 : p.type,
                     activity_guild_id: g,
-                    activity_user_session_id: null == _ ? void 0 : _.activityUserSessionId,
+                    activity_user_session_id: null == b ? void 0 : b.activityUserSessionId,
                 };
             c.default.track(
                 i,
@@ -67,7 +67,7 @@ let m = {
                             });
                     }
                     return e;
-                })({}, b, l),
+                })({}, _, l),
             );
         },
     },
@@ -80,7 +80,7 @@ let m = {
             return i.tn
                 .post({
                     url: h.ANM.APPLICATION_TICKET(n),
-                    body: { test_mode: o.Z.inTestModeForApplication(n) || l.Z.inDevModeForApplication(n) },
+                    body: { test_mode: s.Z.inTestModeForApplication(n) || l.Z.inDevModeForApplication(n) },
                     retries: 3,
                     oldFormErrors: !0,
                     rejectWithError: !1,

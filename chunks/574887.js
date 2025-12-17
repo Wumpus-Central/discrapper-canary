@@ -14,15 +14,15 @@ var i = t(120356),
     p = t(768762),
     x = t(706454),
     h = t(49012),
-    b = t(981631),
-    v = t(856651),
+    v = t(981631),
+    b = t(856651),
     j = t(388032),
     g = t(980120);
 function I(e) {
     var n;
     let { account: t, locale: i, userId: o } = e,
         r = null != (n = t.metadata) ? n : {},
-        x = (0, f.FI)(r[v.PC.CREATED_AT], i),
+        x = (0, f.FI)(r[b.PC.CREATED_AT], i),
         I = s.Z.get((0, u.rR)(t.type));
     return (0, l.jsxs)("li", {
         className: g.connection,
@@ -68,14 +68,14 @@ function I(e) {
                                                         .concat(j.intl.string(j.t.q5jLJB))
                                                   : "".concat(t.name, ", ").concat(j.intl.string(j.t.q5jLJB)),
                                           onClick: (e) => {
-                                              (0, d.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              (0, d.yw)(v.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: t.type,
                                                   other_user_id: o,
                                               }),
                                                   (0, h.q)(
                                                       {
                                                           href: n,
-                                                          trusted: (null == I ? void 0 : I.type) !== b.ABu.DOMAIN,
+                                                          trusted: (null == I ? void 0 : I.type) !== v.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -110,17 +110,17 @@ function I(e) {
                     (0, l.jsx)("div", {
                         className: g.metadata,
                         children:
-                            t.type === b.ABu.REDDIT
+                            t.type === v.ABu.REDDIT
                                 ? (0, m.oP)(r)
-                                : t.type === b.ABu.STEAM
+                                : t.type === v.ABu.STEAM
                                   ? (0, m.Dq)(r)
-                                  : t.type === b.ABu.BLUESKY || t.type === b.ABu.MASTODON || t.type === b.ABu.TWITTER
+                                  : t.type === v.ABu.BLUESKY || t.type === v.ABu.MASTODON || t.type === v.ABu.TWITTER
                                     ? (0, m.rJ)(r)
-                                    : t.type === b.ABu.PAYPAL
+                                    : t.type === v.ABu.PAYPAL
                                       ? (0, m.li)(r)
-                                      : t.type === b.ABu.EBAY
+                                      : t.type === v.ABu.EBAY
                                         ? (0, m.ul)(r)
-                                        : t.type === b.ABu.TIKTOK
+                                        : t.type === v.ABu.TIKTOK
                                           ? (0, m.hf)(r)
                                           : null,
                     }),

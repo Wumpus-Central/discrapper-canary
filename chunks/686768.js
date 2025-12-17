@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(539854);
+n.d(e, { default: () => R }), n(539854);
 var i = n(54381),
     r = n(473749),
     o = n(772848),
@@ -12,13 +12,13 @@ var i = n(54381),
     p = n(257639),
     g = n(981631),
     x = n(800530),
-    m = n(388032),
-    E = n(740076),
-    R = n(736056);
-let b = function (t) {
-    let { transitionState: e, entryPoint: n, onClose: b } = t,
+    b = n(388032),
+    m = n(252153),
+    E = n(765896);
+let R = function (t) {
+    let { transitionState: e, entryPoint: n, onClose: R } = t,
         { loading: _, initiateAgeVerification: O } = (0, f.WD)({
-            onComplete: b,
+            onComplete: R,
             entryPoint: u.cU.RETRY_MODAL,
             isRetry: !0,
         }),
@@ -30,9 +30,9 @@ let b = function (t) {
     let y = r.useMemo(() => {
         let t = [
             {
-                title: m.intl.string(m.t.FYkioq),
-                description: m.intl.string(m.t.xMfbRz),
-                buttonText: m.intl.string(m.t.RtOE1v),
+                title: b.intl.string(b.t.FYkioq),
+                description: b.intl.string(b.t.xMfbRz),
+                buttonText: b.intl.string(b.t.RtOE1v),
                 buttonLoading: _,
                 onButtonPress: () => {
                     O(), (0, u.x3)(h, u.d_.RETRY, u.sU.GET_STARTED);
@@ -42,9 +42,9 @@ let b = function (t) {
         return (
             T ||
                 t.push({
-                    title: m.intl.string(m.t["LZO+Hd"]),
-                    description: m.intl.string(m.t.N2mHaK),
-                    buttonText: m.intl.string(m.t["LZO+Hd"]),
+                    title: b.intl.string(b.t["LZO+Hd"]),
+                    description: b.intl.string(b.t.N2mHaK),
+                    buttonText: b.intl.string(b.t["LZO+Hd"]),
                     buttonLoading: _,
                     onButtonPress: () => {
                         d.Z.openUrl(x.sQ.APPEALS_LINK), (0, u.x3)(h, u.d_.RETRY, u.sU.MANUAL_REVIEW_REQUEST);
@@ -55,24 +55,24 @@ let b = function (t) {
     }, [O, h, _, T]);
     return (0, i.jsx)(l.ExpressiveModal, {
         transitionState: e,
-        onClose: b,
+        onClose: R,
         gradientColor: "blue",
         graphic: {
-            src: R.Z,
+            src: E.Z,
             type: "image",
         },
-        title: m.intl.string(m.t["5l3R/m"]),
-        subtitle: m.intl.string(m.t.O7SO0D),
+        title: b.intl.string(b.t["5l3R/m"]),
+        subtitle: b.intl.string(b.t.O7SO0D),
         children: (0, i.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 16,
             children: [
                 (0, i.jsx)(s.Wn, {
                     messageType: s.QYI.INFO,
-                    className: E.infoBox,
+                    className: m.infoBox,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: m.intl.string(m.t.El4aXl),
+                    children: b.intl.string(b.t.El4aXl),
                 }),
                 y.map((t, e) =>
                     (0, i.jsx)(
@@ -108,7 +108,7 @@ let b = function (t) {
                 (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: m.intl.format(m.t["L+FgkZ"], {
+                    children: b.intl.format(b.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
                             d.Z.openUrl(c.Z.getArticleURL(g.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                                 (0, u.x3)(h, u.d_.RETRY, u.sU.LEARN_MORE);

@@ -4,11 +4,11 @@ function i(e, t, n) {
     let i = r.useRef(null),
         l = r.useRef(new Map()),
         a = r.useRef(new Set()),
-        s = r.useRef(t),
-        o = r.useRef(e);
+        o = r.useRef(t),
+        s = r.useRef(e);
     return (
         r.useEffect(() => {
-            (s.current = t), (o.current = e);
+            (o.current = t), (s.current = e);
         }, [t, e]),
         r.useEffect(() => {
             var e;
@@ -26,7 +26,7 @@ function i(e, t, n) {
                             }),
                             t)
                         ) {
-                            let e = o.current,
+                            let e = s.current,
                                 t = Array.from(a.current)
                                     .map((t) => {
                                         let n = e.findIndex((e) => e.id === t);
@@ -39,7 +39,7 @@ function i(e, t, n) {
                                     })
                                     .filter((e) => null !== e)
                                     .sort((e, t) => e.index - t.index);
-                            s.current({ viewableItems: t });
+                            o.current({ viewableItems: t });
                         }
                     },
                     {

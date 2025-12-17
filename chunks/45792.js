@@ -4,17 +4,17 @@ var r = n(137006),
 function l(e, t) {
     var n;
     let { scope: l, handler: a } = t,
-        s = {
+        o = {
             scope: l,
             handler: a,
         },
-        o = null == (n = r.m[e]) ? void 0 : n.request,
+        s = null == (n = r.m[e]) ? void 0 : n.request,
         c = null;
     return (
-        null != o &&
-            (s.validation = function (e) {
-                return null == c && (c = (0, i.C5)(e.object(o(e)))), c;
+        null != s &&
+            (o.validation = function (e) {
+                return null == c && (c = (0, i.C5)(e.object(s(e)))), c;
             }),
-        s
+        o
     );
 }

@@ -18,7 +18,7 @@ let c = (e) => {
     }
 };
 function d(e, t) {
-    var n, c, d, u, g, m;
+    var n, c, d, u, g, f;
     return null != e &&
         ((e) => {
             switch (e) {
@@ -35,7 +35,7 @@ function d(e, t) {
         })(e)
         ? {
               headerText:
-                  null !== (n = null != (m = null == t ? void 0 : t.name) ? m : a.I6[e].getDefaultRuleName()) &&
+                  null !== (n = null != (f = null == t ? void 0 : t.name) ? f : a.I6[e].getDefaultRuleName()) &&
                   void 0 !== n
                       ? n
                       : "",

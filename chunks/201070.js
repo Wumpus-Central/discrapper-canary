@@ -117,7 +117,7 @@ function R(e) {
         });
     });
 }
-function D(e, t, n, r, i) {
+function w(e, t, n, r, i) {
     let a = N(e);
     if ((null == a ? void 0 : a.requestState) === 2) {
         var o;
@@ -133,7 +133,7 @@ function D(e, t, n, r, i) {
         sort: i,
     });
 }
-function w(e) {
+function D(e) {
     null != N(e) &&
         A(e, {
             requestState: 0,
@@ -233,7 +233,7 @@ function Z(e) {
         nextPageChunkNumber: G(i, t),
     };
 }
-function B(e, t) {
+function F(e, t) {
     var n;
     let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: a } = Z(t),
         { previousPagination: o } = P(I(e)),
@@ -255,9 +255,9 @@ function B(e, t) {
             return 1;
     }
 }
-function F(e, t, n) {
+function B(e, t, n) {
     var r, i, a, o, s, l;
-    let c = B(e, n),
+    let c = F(e, n),
         u = g.Z.getElasticSearchPaginationByGuildId(e),
         f = (0, p.t3)(n);
     switch (c) {
@@ -301,11 +301,11 @@ async function H(e) {
         o = g.Z.getPaginationStateByGuildId(e),
         s = I(e),
         l = P(s),
-        [c, u] = F(e, l, o),
+        [c, u] = B(e, l, o),
         d = U(k(i), u),
         f = null != (t = i.selectedSort) ? t : m.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (V(s, d) && (0, a.isEqual)(c, l.cursor)) return;
-    let p = D(s, d, c, o, f);
+    let p = w(s, d, c, o, f);
     try {
         if (
             (S.info("Making member search request", {
@@ -320,7 +320,7 @@ async function H(e) {
         });
     } catch (e) {
         if (v === e.code) return;
-        w(s);
+        D(s);
         return;
     }
     await x(s);

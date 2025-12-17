@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(481060),
@@ -47,14 +47,14 @@ function c(e, t) {
         e
     );
 }
-function u(e) {
+function d(e) {
     let { setSlide: t } = e,
-        [n, u] = l.useState(10);
+        [n, d] = l.useState(10);
     return (
         l.useEffect(() => {
             if (n > 0) {
                 let e = setTimeout(() => {
-                    u((e) => e - 1);
+                    d((e) => e - 1);
                 }, 1000);
                 return () => clearTimeout(e);
             }

@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => j,
-    T: () => x,
+    H: () => v,
+    T: () => j,
 }),
     n(388685);
 var r = n(473749),
@@ -18,28 +18,28 @@ var r = n(473749),
     g = n(590026),
     m = n(178762),
     b = n(206583),
-    _ = n(809017),
-    y = n(981631),
-    O = n(388032);
-let x = 0;
-function j(e) {
+    y = n(809017),
+    O = n(981631),
+    x = n(388032);
+let j = 0;
+function v(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: x },
-            channelId: j,
-            guildId: v,
+            memberStoreProps: { groups: t, rows: n, version: j },
+            channelId: v,
+            guildId: C,
         } = e,
-        [C, I] = r.useState(!1),
-        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(j),
+        [I, _] = r.useState(!1),
+        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(v),
         P = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        N = (0, i.e7)([s.Z], () => s.Z.getChannel(j)),
-        R = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
+        N = (0, i.e7)([s.Z], () => s.Z.getChannel(v)),
+        R = (0, i.e7)([o.Z], () => o.Z.getGuild(C), [C]),
         w = (0, h.E)(R),
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, x];
-            let r = C ? E.length : 3,
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, j];
+            let r = I ? E.length : 3,
                 i = E.slice(0, r);
             e = P
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
@@ -49,31 +49,31 @@ function j(e) {
                       requestId: S,
                   }));
             let l = {
-                id: _.G,
+                id: y.G,
                 type: a.so.CONTENT_INVENTORY_GROUP,
-                key: _.G,
+                key: y.G,
                 count: e.length,
                 index: n.length,
-                title: O.intl.string(O.t["6gwSFY"]),
+                title: x.intl.string(x.t["6gwSFY"]),
                 onToggleExpand: () => {
-                    I((e) => {
+                    _((e) => {
                         let t = !e;
                         return (
-                            d.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: j,
-                                guild_id: v,
+                            d.default.track(O.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                                channel_id: v,
+                                guild_id: C,
                                 expanded: t,
                             }),
                             t
                         );
                     });
                 },
-                expanded: C,
+                expanded: I,
                 expandedCount: E.length,
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [j, E, C, t, v, S, n, x, P, A]),
+        }, [v, E, I, t, C, S, n, j, P, A]),
         U = r.useRef(0),
         G = r.useRef(E),
         H = r.useRef(void 0),
@@ -106,13 +106,13 @@ function j(e) {
                     !P &&
                         T &&
                         A &&
-                        ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        ((0, f.e)(O.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
                             first_shown_at: H.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
-                            channel_id: j,
-                            guild_id: v,
+                            channel_id: v,
+                            guild_id: C,
                             all_item_ids: n,
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
                         }),
@@ -123,7 +123,7 @@ function j(e) {
                             }));
                 }
             ),
-            [S, j, v, P, T, A],
+            [S, v, C, P, T, A],
         ),
         {
             groups: D,

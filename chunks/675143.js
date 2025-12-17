@@ -44,8 +44,8 @@ function E(e, t, n) {
                 : t.value && (0, a.KC)(t.value, b));
     P && (T = !0), (b = (0, o.v)(b, a.N9));
     let R = (0, h.useMemo)(() => b.toDate(t.timeZone), [b, t.timeZone]),
-        D = (0, a.zk)(b, t.timeZone),
-        w = (0, h.useMemo)(() => {
+        w = (0, a.zk)(b, t.timeZone),
+        D = (0, h.useMemo)(() => {
             let e = "";
             return (
                 "highlightedRange" in t &&
@@ -54,7 +54,7 @@ function E(e, t, n) {
                     ((0, a.KC)(b, t.value.start) || (0, a.KC)(b, t.value.end)) &&
                     (e = v + ", "),
                 (e += I.format(R)),
-                D
+                w
                     ? (e = S.format(T ? "todayDateSelected" : "todayDate", { date: e }))
                     : T && (e = S.format("dateSelected", { date: e })),
                 t.minValue && (0, a.KC)(b, t.minValue)
@@ -62,7 +62,7 @@ function E(e, t, n) {
                     : t.maxValue && (0, a.KC)(b, t.maxValue) && (e += ", " + S.format("maximumDate")),
                 e
             );
-        }, [I, R, S, T, D, b, t, v]),
+        }, [I, R, S, T, w, b, t, v]),
         x = "";
     "anchorDate" in t &&
         C &&
@@ -141,7 +141,7 @@ function E(e, t, n) {
             timeZone: t.timeZone,
             calendar: b.calendar.identifier,
         }),
-        B = (0, h.useMemo)(() => Z.formatToParts(R).find((e) => "day" === e.type).value, [Z, R]);
+        F = (0, h.useMemo)(() => Z.formatToParts(R).find((e) => "day" === e.type).value, [Z, R]);
     return {
         cellProps: {
             role: "gridcell",
@@ -156,7 +156,7 @@ function E(e, t, n) {
             tabIndex: E,
             role: "button",
             "aria-disabled": !N || void 0,
-            "aria-label": w,
+            "aria-label": D,
             "aria-invalid": P || void 0,
             "aria-describedby": [P ? O : void 0, L["aria-describedby"]].filter(Boolean).join(" ") || void 0,
             onPointerEnter(e) {
@@ -176,6 +176,6 @@ function E(e, t, n) {
         isUnavailable: A,
         isOutsideVisibleRange: 0 > b.compare(t.visibleRange.start) || b.compare(t.visibleRange.end) > 0,
         isInvalid: P,
-        formattedDate: B,
+        formattedDate: F,
     };
 }

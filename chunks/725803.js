@@ -8,10 +8,10 @@ function o(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.getGuildApplication(e, t)),
         [o, c] = r.useState(null == n),
         [d, u] = r.useState(),
-        [g, m] = r.useState(!1),
-        p = r.useCallback(async () => {
+        [g, f] = r.useState(!1),
+        m = r.useCallback(async () => {
             if (null == n && null != e) {
-                m(!0), c(!0);
+                f(!0), c(!0);
                 try {
                     await a.ZP.getApplicationsForGuild(e, {
                         type: t,
@@ -26,8 +26,8 @@ function o(e, t) {
         }, [n, t, e]);
     return (
         r.useEffect(() => {
-            g || p();
-        }, [g, p]),
+            g || m();
+        }, [g, m]),
         {
             application: n,
             error: d,

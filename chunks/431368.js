@@ -10,14 +10,14 @@ var r = n(442837),
     u = n(388032);
 function d(e, t) {
     let [n, d, p] = (0, o.Z)(e, t),
-        h = (0, r.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+        f = (0, r.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
         ? (0, i.jsx)(l.S89, {
               id: "self-stream-hide",
               label: u.intl.string(u.t.aol7iW),
               checked: !d,
               action: () => {
-                  if (h || d) return p(!d);
+                  if (f || d) return p(!d);
                   (0, l.h7j)((e) => {
                       var t, n;
                       return (0, i.jsx)(

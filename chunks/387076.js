@@ -1,4 +1,4 @@
-n.d(e, { q: () => d });
+n.d(e, { q: () => T });
 var i = n(846027),
     l = n(509613),
     s = n(131951),
@@ -6,10 +6,10 @@ var i = n(846027),
     r = n(325808),
     a = n(595373),
     o = n(981631),
-    c = n(388032);
-let d = (0, l.UO)(u.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
-    useTitle: () => c.intl.string(c.t.GCNMM8),
-    useSearchTerms: () => [c.intl.string(c.t["pS+K2L"]), c.intl.string(c.t.nuFtHH)],
+    S = n(388032);
+let T = (0, l.UO)(u.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
+    useTitle: () => S.intl.string(S.t.GCNMM8),
+    useSearchTerms: () => [S.intl.string(S.t["pS+K2L"]), S.intl.string(S.t.nuFtHH)],
     setValue: function (t) {
         i.Z.setMode(o.pM4.PUSH_TO_TALK, { delay: t });
     },

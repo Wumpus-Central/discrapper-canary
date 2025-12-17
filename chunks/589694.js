@@ -3,13 +3,13 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(924301),
-    s = n(703656),
-    o = n(359110),
+    o = n(703656),
+    s = n(359110),
     c = n(892001),
     u = n(540086),
     d = n(860160),
     p = n(981631),
-    f = n(715632);
+    f = n(261154);
 function g(e) {
     let { item: t } = e,
         n = i.useCallback(
@@ -22,18 +22,18 @@ function g(e) {
                 )
                     switch (t.data.kind) {
                         case "message":
-                            (0, o.jd)(t.data.message.channel_id, t.data.message.id);
+                            (0, s.jd)(t.data.message.channel_id, t.data.message.id);
                             break;
                         case "guildEvent": {
                             let e = a.ZP.getGuildScheduledEvent(t.data.eventId);
-                            null != e && (0, s.uL)(p.Z5c.GUILD_EVENT_DETAILS(e.guild_id, e.id));
+                            null != e && (0, o.uL)(p.Z5c.GUILD_EVENT_DETAILS(e.guild_id, e.id));
                             break;
                         }
                         case "forumThread":
-                            (0, o.jd)(t.data.threadChannel.id, t.data.message.id);
+                            (0, s.jd)(t.data.threadChannel.id, t.data.message.id);
                             break;
                         case "generatedCandidate":
-                            (0, o.jd)(t.data.item.channel_id, t.data.item.message_ids[0]);
+                            (0, s.jd)(t.data.item.channel_id, t.data.item.message_ids[0]);
                             break;
                         case "contentInventory":
                             (0, c.openUserProfileModal)({ userId: t.data.content.author_id });

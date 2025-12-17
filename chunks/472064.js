@@ -11,16 +11,16 @@ var l = s(54381),
     c = s(672971),
     p = s(812206),
     I = s(600164),
-    m = s(925329),
-    g = s(703656),
-    f = s(173747),
+    f = s(925329),
+    m = s(703656),
+    g = s(173747),
     P = s(850840),
-    _ = s(391690),
-    A = s(424218),
-    T = s(94692),
-    C = s(981631),
-    Z = s(388032),
-    b = s(912278);
+    A = s(391690),
+    T = s(424218),
+    C = s(94692),
+    Z = s(981631),
+    _ = s(388032),
+    b = s(467721);
 function S(t, e, s) {
     return (
         e in t
@@ -59,7 +59,7 @@ class N extends n.Component {
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
         return (0, l.jsx)(i.Button, {
             variant: "active",
-            text: Z.intl.string(Z.t.nL0WvC),
+            text: _.intl.string(_.t.nL0WvC),
             disabled: e || null == t || !s,
             onClick: this.handleInstall,
         });
@@ -71,7 +71,7 @@ class N extends n.Component {
         return (0, l.jsxs)(i.Y0X, {
             transitionState: s,
             size: i.CgR.SMALL,
-            "aria-label": Z.intl.string(Z.t.PphjtJ),
+            "aria-label": _.intl.string(_.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
                 null != r
@@ -87,7 +87,7 @@ class N extends n.Component {
                             grow: 1,
                             children: (0, l.jsx)(i.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: Z.intl.string(Z.t.PphjtJ),
+                                children: _.intl.string(_.t.PphjtJ),
                             }),
                         }),
                         (0, l.jsx)(I.Z.Child, {
@@ -101,9 +101,9 @@ class N extends n.Component {
                         (0, l.jsxs)(I.Z, {
                             align: I.Z.Align.CENTER,
                             children: [
-                                (0, l.jsx)(m.Z, {
+                                (0, l.jsx)(f.Z, {
                                     game: t,
-                                    size: m.A.MEDIUM,
+                                    size: f.A.MEDIUM,
                                     className: b.gameIcon,
                                 }),
                                 (0, l.jsx)("div", {
@@ -113,13 +113,13 @@ class N extends n.Component {
                                 null != e
                                     ? (0, l.jsx)("div", {
                                           className: b.installSize,
-                                          children: (0, A.BU)(e, { useKibibytes: !0 }),
+                                          children: (0, T.BU)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
                         (0, l.jsx)("div", { className: b.divider }),
-                        (0, l.jsx)(T.Z, {
+                        (0, l.jsx)(C.Z, {
                             autoFocus: !0,
                             className: b.selector,
                             value: n,
@@ -165,7 +165,7 @@ class N extends n.Component {
                     installationPath: this.state.selectedInstallationPath,
                     analyticsLocation: n,
                 }),
-                    (0, g.uL)(C.Z5c.APPLICATION_LIBRARY),
+                    (0, m.uL)(Z.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
             S(this, "handleInstall", () => {
@@ -182,15 +182,15 @@ class N extends n.Component {
             });
     }
 }
-let E = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {
+let E = a.ZP.connectStores([g.Z, A.Z, P.Z, p.Z], (t) => {
     let { applicationId: e, branchId: s } = t,
-        l = f.Z.getTargetBuildId(e, s);
+        l = g.Z.getTargetBuildId(e, s);
     return {
         application: p.Z.getApplication(e),
-        defaultInstallationPath: _.Z.defaultInstallationPath,
+        defaultInstallationPath: A.Z.defaultInstallationPath,
         buildId: l,
-        manifestIds: f.Z.getTargetManifests(e, s),
-        buildSizeKB: null != l ? f.Z.getBuildSize(l) : null,
+        manifestIds: g.Z.getTargetManifests(e, s),
+        buildSizeKB: null != l ? g.Z.getBuildSize(l) : null,
         hasPreviouslyAcceptedStoreTerms: P.Z.hasAcceptedStoreTerms,
     };
 })(N);

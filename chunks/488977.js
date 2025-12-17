@@ -25,7 +25,7 @@ var r = n(54381),
     C = n(314734),
     A = n(981631),
     N = n(388032),
-    P = n(820607);
+    P = n(437773);
 function R(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function x(e, t) {
 }
 function L(e) {
     var t;
-    let { application: a, context: R, className: w, sectionName: L } = e,
+    let { application: a, context: R, className: D, sectionName: L } = e,
         j = i.useRef(null),
         M = (0, l.e7)([S.Z], () => S.Z.entrypoint()),
         k = (0, I.L1)(a),
@@ -90,13 +90,13 @@ function L(e) {
             var e;
             return null != (e = E.Z.getGuildId()) ? e : void 0;
         }, []),
-        B = {
+        F = {
             location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: a.id,
             section_name: L,
             source: S.Z.lastShownEntrypoint(),
         },
-        F = b.default.getCurrentUser(),
+        B = b.default.getCurrentUser(),
         V = (0, m.Z)({
             id: a.id,
             label: N.intl.string(N.t["+NP/b2"]),
@@ -112,9 +112,9 @@ function L(e) {
                     let e = Y
                         ? (0, p.H)({
                               applicationId: a.id,
-                              referrerId: null == F ? void 0 : F.id,
+                              referrerId: null == B ? void 0 : B.id,
                           })
-                        : (0, p.J)(D({ id: a.id }, k));
+                        : (0, p.J)(w({ id: a.id }, k));
                     (0, O.JG)(e, () =>
                         (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                     ),
@@ -123,7 +123,7 @@ function L(e) {
                             source: M,
                         });
                 },
-                className: o()(P.clickable, w),
+                className: o()(P.clickable, D),
                 "aria-label": N.intl.string(N.t.WqhZss),
                 children: (0, r.jsx)(c.xPt, {
                     size: "sm",
@@ -151,7 +151,7 @@ function L(e) {
                                                 (0, c.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("77803"),
-                                                        n.e("42124"),
+                                                        n.e("65672"),
                                                     ]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, r.jsx)(e, {
@@ -169,15 +169,15 @@ function L(e) {
                                               label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
                                                   null == k.customInstallUrl &&
-                                                      (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
+                                                      (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, F),
                                                       (0, v.L)(
-                                                          x(D({}, k), {
+                                                          x(w({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
                                                                       (0, u.yw)(
                                                                           A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
-                                                                          B,
+                                                                          F,
                                                                       );
                                                               },
                                                               source: "app_launcher_app_details",
@@ -217,9 +217,9 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         c.P3F,
-                        x(D({ innerRef: j }, e), {
+                        x(w({ innerRef: j }, e), {
                             onClick: e.onClick,
-                            className: o()(P.clickable, w),
+                            className: o()(P.clickable, D),
                             "aria-label": N.intl.string(N.t["UKOtz+"]),
                             children: (0, r.jsx)(c.xhG, {
                                 size: "sm",

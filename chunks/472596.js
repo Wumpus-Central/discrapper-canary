@@ -9,15 +9,15 @@ n.d(t, {
 var r,
     l = n(473749),
     i = n(399606),
-    s = n(906732),
-    a = n(892001),
+    a = n(906732),
+    s = n(892001),
     o = n(485386),
     u = n(430824),
     c = n(594174),
     E = n(91047);
 let d = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
-    (0, a.openUserProfileModal)({
+    (0, s.openUserProfileModal)({
         userId: r,
         guildId: n,
         sourceAnalyticsLocations: t,
@@ -25,15 +25,15 @@ let d = (e, t) => {
     });
 };
 function _(e, t, n, r) {
-    let { analyticsLocations: i } = (0, s.ZP)();
+    let { analyticsLocations: i } = (0, a.ZP)();
     return l.useCallback(
         (l) => {
             if (null == e) return;
-            let s = c.default.getUser(e.userId);
-            null != s &&
+            let a = c.default.getUser(e.userId);
+            null != a &&
                 (l.stopPropagation(),
                 (0, E.nm)(l, {
-                    user: s,
+                    user: a,
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : i,
                     onCloseContextMenu: r,
@@ -44,7 +44,7 @@ function _(e, t, n, r) {
     );
 }
 function A(e, t, n) {
-    let { analyticsLocations: r } = (0, s.ZP)();
+    let { analyticsLocations: r } = (0, a.ZP)();
     return l.useCallback(
         (l) => {
             if (null == e) return;

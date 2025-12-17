@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(56314),
     f = n(566006),
     p = n(287151),
-    _ = n(127947),
-    m = n(893973);
+    _ = n(860302),
+    m = n(378369);
 function h(e, t, n) {
     return (
         t in e
@@ -108,9 +108,9 @@ let v = i.memo(function (e) {
         N = C === f.O.BURST,
         P = (0, p.y4)(E, b, C),
         R = (0, d.v)(N && null != O ? O : []),
-        D = i ? m : _,
-        w = N ? y : g,
-        x = (0, u.y)(w, p.aO),
+        w = i ? m : _,
+        D = N ? y : g,
+        x = (0, u.y)(D, p.aO),
         L = {};
     if (N && null != R) {
         var j;
@@ -124,23 +124,23 @@ let v = i.memo(function (e) {
         borderColor: n,
     };
     return (0, r.jsxs)("div", {
-        className: o()(D.reaction, D.reactionInner, h, {
-            [D.reactionMe]: P,
-            [D.reactionReadOnly]: v && !S && !T && !I,
+        className: o()(w.reaction, w.reactionInner, h, {
+            [w.reactionMe]: P,
+            [w.reactionReadOnly]: v && !S && !T && !I,
         }),
         style: L,
         children: [
             (0, r.jsx)(c.Z, {
-                className: o()({ [D.hideEmoji]: a }),
+                className: o()({ [w.hideEmoji]: a }),
                 emojiId: s.id,
                 emojiName: s.name,
                 size: A,
                 animated: N && s.animated,
             }),
             (0, r.jsx)("div", {
-                className: D.reactionCount,
+                className: w.reactionCount,
                 style: M,
-                children: w,
+                children: D,
             }),
         ],
     });

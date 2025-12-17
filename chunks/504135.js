@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(743236),
     d = n(525220),
     f = n(939350),
-    p = n(334405);
+    p = n(564546);
 function _(e, t, n) {
     return (
         t in e
@@ -82,8 +82,8 @@ function E(e) {
             className: N,
             focusedClassName: P,
             subMenuIconClassName: R,
-            dontCloseOnActionIfHoldingShiftKey: D,
-            dontCloseOnAction: w,
+            dontCloseOnActionIfHoldingShiftKey: w,
+            dontCloseOnAction: D,
             iconProps: x,
         } = e,
         { onSelect: L, onInteraction: j } = i.useContext(c.p),
@@ -92,12 +92,12 @@ function E(e) {
             (e) => {
                 var t;
                 if ((null == j || j({ type: c.U.DEFAULT }), null == T)) return !1;
-                (e.shiftKey && D) || w || C(),
+                (e.shiftKey && w) || D || C(),
                     e.persist(),
                     null == L || L(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => T(e));
             },
-            [T, C, L, D, w, j],
+            [T, C, L, w, D, j],
         );
     return (
         i.useEffect(() => {

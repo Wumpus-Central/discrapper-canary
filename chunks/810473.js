@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(473749),
     i = n(296009),
-    l = n(442837),
-    a = n(594174),
+    a = n(442837),
+    l = n(594174),
     o = n(836197),
     c = n(880421),
     s = n(172416),
     u = n(517157);
 function d() {
-    let e = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+    let e = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
         t = (0, u.Z)(null == e ? void 0 : e.id),
         n = t.some((e) => o.Ki.includes(e.type)),
         d = (0, s.Un)({ location: "useAvailableWidgetTypes" }),

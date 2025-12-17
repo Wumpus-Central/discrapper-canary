@@ -1,4 +1,4 @@
-n.d(e, { u: () => L });
+n.d(e, { u: () => P });
 var i = n(755721),
     l = n(168107),
     s = n(480916),
@@ -6,8 +6,8 @@ var i = n(755721),
     r = n(509613),
     a = n(430824),
     o = n(626135),
-    T = n(63063),
-    S = n(88658),
+    S = n(63063),
+    T = n(88658),
     c = n(750832),
     E = n(976978),
     d = n(695346),
@@ -25,12 +25,12 @@ let R = (t, e) => {
             applied_to_existing_guilds: e,
         });
     },
-    L = (0, r.qs)(g.n.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
+    P = (0, r.qs)(g.n.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
         useTitle: () => f.intl.string(f.t["3o2ojh"]),
         useSubtitle: () =>
             (0, I.c_)()
-                ? f.intl.format(f.t.WpnWLc, { helpdeskArticle: T.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
-                : f.intl.format(f.t.wkm9a3, { helpdeskArticle: T.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }),
+                ? f.intl.format(f.t.WpnWLc, { helpdeskArticle: S.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                : f.intl.format(f.t.wkm9a3, { helpdeskArticle: S.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }),
         useValue: () => {
             let t = (0, I.is)(),
                 e = (0, E.q)(),
@@ -67,7 +67,7 @@ let R = (t, e) => {
                         },
                     });
             } else {
-                let n = (0, S.gl)();
+                let n = (0, T.gl)();
                 t ? n.delete(e) : n.add(e),
                     d.zA.updateSetting(Array.from(n)),
                     o.default.track(C.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {

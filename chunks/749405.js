@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(359110),
-    s = n(6025),
-    o = n(433355),
+    o = n(6025),
+    s = n(433355),
     c = n(26373),
     u = n(486622),
     d = n(376191),
@@ -17,13 +17,13 @@ function g(e) {
             (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
         }, []),
         b = i.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ);
+            o.Z.closeChannelSidebar(s.uZ);
         }, []),
-        E = i.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ), h && (0, a.Kh)(g.id);
+        _ = i.useCallback(() => {
+            o.Z.closeChannelSidebar(s.uZ), h && (0, a.Kh)(g.id);
         }, [g.id, h]),
         {
-            acceptMessageRequest: _,
+            acceptMessageRequest: E,
             rejectMessageRequest: O,
             isAcceptLoading: v,
             isRejectLoading: y,
@@ -32,7 +32,7 @@ function g(e) {
             isOptimisticRejected: S,
         } = (0, u.m)({
             user: n,
-            onAcceptSuccess: E,
+            onAcceptSuccess: _,
             onRejectSuccess: b,
             onError: m,
         }),
@@ -70,7 +70,7 @@ function g(e) {
                             size: "sm",
                             text: p.intl.string(p.t.Kz8Pwr),
                             onClick: (e) => {
-                                e.stopPropagation(), _(g.id);
+                                e.stopPropagation(), E(g.id);
                             },
                             disabled: T,
                             loading: v || I || C,

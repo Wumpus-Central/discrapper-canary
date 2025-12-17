@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(442837),
     l = n(481060),
@@ -9,7 +9,7 @@ var r = n(54381),
     d = n(443106),
     u = n(796814),
     g = n(388032);
-function m(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,11 +52,11 @@ function p(e, t) {
         e
     );
 }
-function f(e) {
+function b(e) {
     let { guild: t } = e,
-        f = (0, i.e7)([a.Z], () => a.Z.isUploadingEmoji()),
-        h = (0, u.Z)(t.id),
-        b = (0, d.Z)(t) - h.length,
+        b = (0, i.e7)([a.Z], () => a.Z.isUploadingEmoji()),
+        p = (0, u.Z)(t.id),
+        h = (0, d.Z)(t) - p.length,
         x = (0, c.mY)();
     return (0, r.jsxs)(l.gNt, {
         label: g.intl.string(g.t["LDT0Q/"]),
@@ -73,7 +73,7 @@ function f(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     l,
-                                    p(m({}, n), {
+                                    m(f({}, n), {
                                         data: e,
                                         file: i,
                                         guildId: t.id,
@@ -81,27 +81,27 @@ function f(e) {
                                 );
                         });
                 },
-                disabled: x || f || 0 === b,
+                disabled: x || b || 0 === h,
                 size: "md",
                 variant: "primary",
                 text: g.intl.string(g.t.AuPtov),
-                loading: f,
+                loading: b,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(s.L3, {
                 title: g.intl.string(g.t.lu1ZQ2),
                 maxSlots: (0, d.Z)(t),
-                emojiCount: h.length,
+                emojiCount: p.length,
                 children: (0, r.jsx)(s.FT, {
                     guild: t,
-                    emojis: h,
+                    emojis: p,
                     onEdit: (e, t) => {
                         (0, l.ZDy)(async () => {
                             let { UpdateEmojiRolesModal: i } = await n.e("9007").then(n.bind(n, 604623));
                             return (n) =>
                                 (0, r.jsx)(
                                     i,
-                                    p(m({}, n), {
+                                    m(f({}, n), {
                                         emoji: e,
                                         guildId: t,
                                     }),

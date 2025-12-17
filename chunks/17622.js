@@ -1,12 +1,12 @@
 o.d(t, { Z: () => d }), o(953529);
 var n = o(54381);
 o(473749);
-var r = o(120356),
-    a = o.n(r),
+var a = o(120356),
+    r = o.n(a),
     c = o(793030),
     s = o(119331),
     i = o(336227),
-    l = o(467541);
+    l = o(287416);
 function d(e) {
     let { powerup: t } = e,
         o = (0, i.Z)(t);
@@ -21,7 +21,7 @@ function d(e) {
                     children: [
                         (0, n.jsx)(t, {
                             color: "currentColor",
-                            className: a()(l.perkIcon, o),
+                            className: r()(l.perkIcon, o),
                         }),
                         (0, n.jsx)(c.xvT, {
                             className: l.perkText,

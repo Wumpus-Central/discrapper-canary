@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+n.d(t, { Z: () => b }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,29 +9,29 @@ var r = n(54381),
     d = n(456268),
     u = n(999382),
     g = n(185923),
-    m = n(388032);
-let p = (e) => {
+    f = n(388032);
+let m = (e) => {
         var t;
         let {
                 reason: n = "",
                 emoji_name: d,
-                onSetReason: m,
-                onSelectEmoji: p,
-                onClearPressed: f,
-                reasonMinLength: h,
-                reasonMaxLength: b,
+                onSetReason: f,
+                onSelectEmoji: m,
+                onClearPressed: b,
+                reasonMinLength: p,
+                reasonMaxLength: h,
                 placeholder: x,
                 position: j,
             } = e,
-            _ = i.useRef(null),
-            [v, O] = i.useState(!1),
-            C = (0, l.e7)([u.Z], () => u.Z.isGuildMetadataLoaded()),
-            y = (0, r.jsx)(a.yRy, {
-                targetElementRef: _,
+            v = i.useRef(null),
+            [O, C] = i.useState(!1),
+            y = (0, l.e7)([u.Z], () => u.Z.isGuildMetadataLoaded()),
+            N = (0, r.jsx)(a.yRy, {
+                targetElementRef: v,
                 onRequestClose: () => {
-                    O(!1);
+                    C(!1);
                 },
-                shouldShow: v,
+                shouldShow: O,
                 position: "right",
                 align: "top",
                 animation: a.yRy.Animation.NONE,
@@ -42,7 +42,7 @@ let p = (e) => {
                         closePopout: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: r } = e;
-                            null != n && p(n), r && t();
+                            null != n && m(n), r && t();
                         },
                     });
                 },
@@ -50,7 +50,7 @@ let p = (e) => {
                     (0, r.jsx)(o.Z, {
                         active: !1,
                         onClick: () => {
-                            O(!0);
+                            C(!0);
                         },
                         tabIndex: 0,
                         renderButtonContents:
@@ -61,7 +61,7 @@ let p = (e) => {
                                           animated: !1,
                                       })
                                 : null,
-                        ref: _,
+                        ref: v,
                     }),
             });
         return (0, r.jsx)(
@@ -69,35 +69,35 @@ let p = (e) => {
             {
                 placeholder: x,
                 value: n,
-                minLength: h,
-                maxLength: b,
+                minLength: p,
+                maxLength: h,
                 defaultDirty: (null == n ? void 0 : n.length) > 0,
                 leading: {
                     type: "emoji",
-                    button: y,
+                    button: N,
                 },
                 onChange: (e) => {
-                    m(e);
+                    f(e);
                 },
                 clearable: { show: (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d },
-                onClear: f,
+                onClear: b,
             },
-            "text-input-".concat(j, "-").concat(C),
+            "text-input-".concat(j, "-").concat(y),
         );
     },
-    f = (e) => {
+    b = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
             s = [
-                m.intl.string(m.t["9dhBGo"]),
-                m.intl.string(m.t["8RmhKF"]),
-                m.intl.string(m.t["2t0V83"]),
-                m.intl.string(m.t.l8WqCR),
+                f.intl.string(f.t["9dhBGo"]),
+                f.intl.string(f.t["8RmhKF"]),
+                f.intl.string(f.t["2t0V83"]),
+                f.intl.string(f.t.l8WqCR),
             ],
             o = [];
         for (let e = 0; e < 4; e++)
             o.push(
                 (0, r.jsx)(
-                    p,
+                    m,
                     (function (e, t) {
                         return (
                             (t = null != t ? t : {}),

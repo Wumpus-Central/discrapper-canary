@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(215016),
     O = n(981631),
     v = n(388032),
-    S = n(774802);
+    S = n(370101);
 function I(e, t, n) {
     return (
         t in e
@@ -222,7 +222,7 @@ class R extends i.PureComponent {
             });
     }
 }
-function D(e) {
+function w(e) {
     let t = (0, c.e7)([m.Z], () => m.Z.getTrendingCategories()),
         n = (0, g.gG)(),
         i = (0, y.PY)();

@@ -34,7 +34,7 @@ var r = n(54381),
     N = n(268010),
     P = n(797342),
     R = n(206583);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -117,22 +117,22 @@ let Z = (e) => {
             n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(E.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(E.Z, L(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(A.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(T.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(T.ZP, L(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(S.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, L(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(O.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(O.ZP, L(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(h.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(h.Z, L(D({}, n), { entry: t }));
             default:
                 return null;
         }
     },
-    B = (e) => {
+    F = (e) => {
         var t,
             { entry: n, targetElementRef: i } = e,
             a = j(e, ["entry", "targetElementRef"]);
@@ -144,12 +144,12 @@ let Z = (e) => {
               })
             : null;
     },
-    F = (e) => {
+    B = (e) => {
         var { closePopout: t } = e,
             n = j(e, ["closePopout"]);
         return (0, r.jsx)(
             V,
-            w(
+            D(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -175,17 +175,17 @@ let Z = (e) => {
             n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(b.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(b.Z, L(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(N.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(N.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(C.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(I.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(I.Z, L(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(v.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(v.Z, L(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.ZP, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(g.ZP, L(D({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -213,7 +213,7 @@ let Z = (e) => {
             ),
             C = i.useRef(!1),
             [A, N] = i.useState(!1),
-            [D, x] = i.useState(!1),
+            [w, x] = i.useState(!1),
             M = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
             A && M && x(!0);
@@ -241,7 +241,7 @@ let Z = (e) => {
             V = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, m.L)(e, w({}, T, t));
+                    (0, m.L)(e, D({}, T, t));
                 },
                 [T],
             ),
@@ -267,7 +267,7 @@ let Z = (e) => {
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(B, L(w({}, p), { targetElementRef: h })),
+                b && (0, r.jsx)(F, L(D({}, p), { targetElementRef: h })),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
@@ -284,8 +284,8 @@ let Z = (e) => {
                             return (0, r.jsx)(H.Provider, {
                                 value: W,
                                 children: (0, r.jsx)(
-                                    F,
-                                    w(
+                                    B,
+                                    D(
                                         {
                                             closePopout: t,
                                             updatePopoutPosition: G,
@@ -301,14 +301,14 @@ let Z = (e) => {
                         positionKey: g,
                         onRequestOpen: () => Y(T),
                         onRequestClose: () => {
-                            D && W();
+                            w && W();
                         },
                         spacing: 8,
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, r.jsx)(
                                 u.P3F,
-                                L(w({}, e, O), {
+                                L(D({}, e, O), {
                                     innerRef: h,
                                     focusProps: {
                                         offset: {
@@ -324,7 +324,7 @@ let Z = (e) => {
                                     onContextMenu: k,
                                     children: (0, r.jsx)(
                                         Z,
-                                        L(w({}, p), {
+                                        L(D({}, p), {
                                             selected: n,
                                             hovered: C.current,
                                         }),

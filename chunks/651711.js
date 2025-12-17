@@ -13,15 +13,15 @@ function u(e) {
             actions: n,
             sortedByIneligible: u,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { isUserMFAEnabled: g, isModerationMFAEnabled: m } = (0, o.N)(),
-        p = r.useCallback(async () => {
+        { isUserMFAEnabled: g, isModerationMFAEnabled: f } = (0, o.N)(),
+        m = r.useCallback(async () => {
             var e, r;
             g
-                ? m || (await (null == n || null == (r = n.onRequireModeratorMFAClick) ? void 0 : r.call(n)))
+                ? f || (await (null == n || null == (r = n.onRequireModeratorMFAClick) ? void 0 : r.call(n)))
                 : await (null == n || null == (e = n.onEnableMFAClick) ? void 0 : e.call(n)),
                 null == t || t();
-        }, [g, m, t, n]),
-        f = (0, s.R)({ onEnableMFAClick: p });
+        }, [g, f, t, n]),
+        b = (0, s.R)({ onEnableMFAClick: m });
     return r.useMemo(() => {
         if (null == e) return null;
         let { minimumOwnerAgeInYears: t, minimumSize: r } = e,
@@ -93,18 +93,18 @@ function u(e) {
             null != e.hasEnabled2FA)
         ) {
             let t = !e.hasEnabled2FA && !g && (null == n ? void 0 : n.onEnableMFAClick) != null,
-                r = !e.hasEnabled2FA && !m && (null == n ? void 0 : n.onRequireModeratorMFAClick) != null,
+                r = !e.hasEnabled2FA && !f && (null == n ? void 0 : n.onRequireModeratorMFAClick) != null,
                 i = t || r;
             o.push({
                 key: "2fa_requirement",
                 checkedLabel: d.intl.string(d.t.NqVyFk),
                 uncheckedLabel: d.intl.string(d.t.VcDNIV),
-                description: d.intl.format(d.t["7NzkfV"], { enableMFAHook: f }),
+                description: d.intl.format(d.t["7NzkfV"], { enableMFAHook: b }),
                 checked: e.hasEnabled2FA,
                 actionLabel: i ? d.intl.string(d.t.BU4Diu) : void 0,
-                actionHandler: i ? p : void 0,
+                actionHandler: i ? m : void 0,
             });
         }
         return !0 === u && o.sort((e) => (e.checked ? 0 : -1)), o;
-    }, [e, u, g, n, m, f, p]);
+    }, [e, u, g, n, f, b, m]);
 }

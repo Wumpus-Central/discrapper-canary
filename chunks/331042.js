@@ -21,8 +21,8 @@ var r = n(921254),
     m = n(58201),
     T = n(29121),
     Z = n(391594),
-    _ = n(215023),
-    R = n(222311);
+    R = n(215023),
+    _ = n(505281);
 let I = (t) => {
     let {
             transitionState: e,
@@ -31,11 +31,11 @@ let I = (t) => {
             analyticsLocations: N,
             overrideTitle: O,
             overrideDescription: P,
-            shouldShowPromotionalExperience: j,
-            purchaseType: k = _.o8.FIAT,
-            overrideGraphic: w,
-            rentalDuration: y,
-            rentalExpiresAt: b,
+            shouldShowPromotionalExperience: b,
+            purchaseType: j = R.o8.FIAT,
+            overrideGraphic: k,
+            rentalDuration: w,
+            rentalExpiresAt: y,
         } = t,
         D = (0, d.o)(n),
         S = (0, m.W)(n, D),
@@ -68,7 +68,7 @@ let I = (t) => {
             confettiCanvas: G,
             setConfettiCanvas: X,
             customConfettiDisplayOptions: $,
-        } = (0, Z.$0)(S, k),
+        } = (0, Z.$0)(S, j),
         q = (0, T.kd)(S);
     (0, Z.f1)(S, g);
     let { handleUseNow: H, isApplying: K } = (0, E.W)({
@@ -80,18 +80,18 @@ let I = (t) => {
             product: S,
             overrideTitle: O,
             isVariantsGroupEnabled: !0,
-            shouldShowPromotionalExperience: j,
+            shouldShowPromotionalExperience: b,
             productName: q,
-            rentalDuration: y,
+            rentalDuration: w,
         }),
         z = (0, Z.ys)({
             product: S,
             overrideDescription: P,
             productName: q,
-            shouldShowPromotionalExperience: j,
+            shouldShowPromotionalExperience: b,
             promotionalRewardCollectedText: F,
-            isRental: null != y,
-            expiresAt: b,
+            isRental: null != w,
+            expiresAt: y,
         }),
         J = (0, Z.cf)({
             product: S,
@@ -115,8 +115,8 @@ let I = (t) => {
     }
     let { confettiColors: Y } = (0, v.Z)(S.styles),
         tt =
-            null != w
-                ? w
+            null != k
+                ? k
                 : {
                       type: "dynamic",
                       component: o.AX$.COLLECTIBLES_PREVIEW,
@@ -133,7 +133,7 @@ let I = (t) => {
             children: [
                 (0, l.jsx)(r.O_, {
                     ref: X,
-                    className: R.confettiCanvas,
+                    className: _.confettiCanvas,
                     environment: V,
                 }),
                 (0, l.jsx)(i.ExpressiveModal, {

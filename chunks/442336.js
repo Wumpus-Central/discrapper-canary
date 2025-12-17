@@ -57,14 +57,14 @@ function m(e, t) {
 function b(e) {
     let { channel: t } = e,
         n = i.useRef(null),
-        [b, _] = (0, l.Wu)(
+        [b, y] = (0, l.Wu)(
             [o.ZP],
             () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)],
             [t],
         ),
-        [y, O] = i.useState(!1);
+        [O, x] = i.useState(!1);
     i.useEffect(() => {
-        let e = () => O(!0);
+        let e = () => x(!0);
         return (
             c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -72,20 +72,20 @@ function b(e) {
             }
         );
     }, []);
-    let x = (e) => {
+    let j = (e) => {
             e.shiftKey
                 ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, d.UE.muted(!b))
-                : O((e) => !e);
+                : x((e) => !e);
         },
-        j = f.intl.string(f.t.h850Ss);
+        v = f.intl.string(f.t.h850Ss);
     return (0, r.jsx)(a.yRy, {
         targetElementRef: n,
-        shouldShow: y,
+        shouldShow: O,
         animation: a.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => O(!1),
+        onRequestClose: () => x(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 p.Z,
@@ -102,10 +102,10 @@ function b(e) {
                 u.ZP.Icon,
                 m(g({}, e), {
                     ref: n,
-                    onClick: x,
-                    tooltip: i ? null : j,
-                    icon: b || _ !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
-                    "aria-label": j,
+                    onClick: j,
+                    tooltip: i ? null : v,
+                    icon: b || y !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
+                    "aria-label": v,
                     selected: i,
                 }),
             );

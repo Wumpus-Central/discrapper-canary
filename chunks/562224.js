@@ -95,10 +95,10 @@ async function N(e, t) {
     var n, _, E, b, v, I, C, N;
     let P = p.default.getCurrentUser(),
         R = f.Z.getVoiceChannelId(),
-        D = c.Z.getChannel(R),
-        w = null == D ? void 0 : D.getGuildId(),
-        x = null == (n = u.Z.getGuild(w)) ? void 0 : n.premiumTier;
-    if (null == P || null == D || null == R) return [!1, "no user or channel"];
+        w = c.Z.getChannel(R),
+        D = null == w ? void 0 : w.getGuildId(),
+        x = null == (n = u.Z.getGuild(D)) ? void 0 : n.premiumTier;
+    if (null == P || null == w || null == R) return [!1, "no user or channel"];
     let L = null;
     if (null == (L = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
@@ -110,14 +110,14 @@ async function N(e, t) {
         G = null != (E = null == t ? void 0 : t.preset) ? E : j,
         { allowAutoQuality: Z } = (0, m.IK)({ location: "startStreamWithSource" });
     G !== y.ApplicationStreamPresets.PRESET_AUTO || Z || (G = y.ApplicationStreamPresets.PRESET_VIDEO);
-    let B = G === y.ApplicationStreamPresets.PRESET_AUTO ? y.ApplicationStreamPresets.PRESET_VIDEO : G,
-        [F, V] = null != (b = (0, g.Z)(B, P, x)) ? b : [],
-        H = null != (v = null != F ? F : null == t ? void 0 : t.resolution) ? v : M,
+    let F = G === y.ApplicationStreamPresets.PRESET_AUTO ? y.ApplicationStreamPresets.PRESET_VIDEO : G,
+        [B, V] = null != (b = (0, g.Z)(F, P, x)) ? b : [],
+        H = null != (v = null != B ? B : null == t ? void 0 : t.resolution) ? v : M,
         Y = null != (I = null != V ? V : null == t ? void 0 : t.fps) ? I : k,
         W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (
-        (0, h.Z)(B, H, Y, P, x, D) ||
+        (0, h.Z)(F, H, Y, P, x, w) ||
             ((G = y.ApplicationStreamPresets.PRESET_VIDEO),
             (H = y.ApplicationStreamResolutions.RESOLUTION_720),
             (Y = y.ApplicationStreamFPS.FPS_30)),
@@ -128,7 +128,7 @@ async function N(e, t) {
             soundshareEnabled: K,
         }),
         (0, i.WH)(
-            w,
+            D,
             R,
             T(S({}, A(L)), {
                 audioSourceId: (null == (_ = L.id) ? void 0 : _.startsWith(r.vA.CAMERA))

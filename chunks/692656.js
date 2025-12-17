@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(425986),
     P = n(216780),
     R = n(857192),
-    D = n(823379),
-    w = n(541099),
+    w = n(823379),
+    D = n(541099),
     x = n(827498),
     L = n(87005),
     j = n(219066),
@@ -37,8 +37,8 @@ var r = n(54381),
     U = n(695676),
     G = n(98880),
     Z = n(804307),
-    B = n(888617),
-    F = n(561160),
+    F = n(888617),
+    B = n(561160),
     V = n(41558),
     H = n(105862),
     Y = n(28147),
@@ -46,7 +46,7 @@ var r = n(54381),
     K = n(981631),
     z = n(689079),
     q = n(388032),
-    Q = n(729755);
+    Q = n(598484);
 let X = [],
     J = 4,
     $ = 4,
@@ -139,7 +139,7 @@ function ea(e) {
                                       onEmptyState: T,
                                   }),
                               C &&
-                                  (0, r.jsx)(F.A, {
+                                  (0, r.jsx)(B.A, {
                                       type: x.LG.HOME_EMPTY,
                                       textContent:
                                           n === x._b.TEXT ? q.intl.string(q.t.iKZctW) : q.intl.string(q.t.RL7Ncg),
@@ -174,7 +174,7 @@ function es(e) {
                     (e) => {
                         (0, v.yw)(K.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
-                            source: w.Z.entrypoint(),
+                            source: D.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME,
                         });
                     },
@@ -190,7 +190,7 @@ function es(e) {
         f = i.useCallback(() => {
             c(!0),
                 (0, v.yw)(K.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-                    source: w.Z.entrypoint(),
+                    source: D.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME,
                 });
         }, []),
@@ -341,7 +341,7 @@ function eu(e) {
     (0, y.g)();
     let o = (0, b.Z)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 }),
         s = G.U4.LARGE_BANNER,
-        { trackSectionImpressionRef: l } = (0, B.Z)({
+        { trackSectionImpressionRef: l } = (0, F.Z)({
             sectionName: x.L3.ACTIVITIES,
             numItems: o.length,
             numVisibleItems: o.length,
@@ -396,7 +396,7 @@ function ed(e) {
             limit: J,
             sectionName: a,
         }),
-        { trackSectionImpressionRef: u } = (0, B.Z)({
+        { trackSectionImpressionRef: u } = (0, F.Z)({
             sectionName: a,
             numItems: o.length,
             numVisibleItems: l.length,
@@ -524,7 +524,7 @@ function ep(e) {
                             installOnDemand: s(e.application),
                         };
                 })
-                .filter(D.lm);
+                .filter(w.lm);
             return (
                 (0, p.yE)(a.flags, l.b.APPENDS_REMAINING_ACTIVITIES) &&
                     e.push(
@@ -560,7 +560,7 @@ function ep(e) {
             sectionName: g,
             sectionOverallPosition: u,
         }),
-        { trackSectionImpressionRef: y } = (0, B.Z)({
+        { trackSectionImpressionRef: y } = (0, F.Z)({
             sectionName: g,
             numItems: h.length,
             numVisibleItems: E.length,
@@ -707,7 +707,7 @@ function eE(e) {
                       handleViewMore: () => {
                           (0, v.yw)(K.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: o,
-                              source: w.Z.entrypoint(),
+                              source: D.Z.entrypoint(),
                               num: r.length,
                           }),
                               l({

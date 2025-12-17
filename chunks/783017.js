@@ -1,4 +1,4 @@
-n.d(e, { Z: () => m });
+n.d(e, { Z: () => Z });
 var l = n(54381),
     s = n(512722),
     i = n.n(s),
@@ -13,17 +13,17 @@ var l = n(54381),
     H = n(741245),
     M = n(388032),
     h = n(353516),
-    Z = n(530641),
+    p = n(530641),
     g = n(491567),
-    p = n(419698);
-let m = (t) => {
-    let { type: e, text: n, buttonText: s, buttonLoading: m, hideClose: N, onClose: f } = t,
+    m = n(419698);
+let Z = (t) => {
+    let { type: e, text: n, buttonText: s, buttonLoading: Z, hideClose: N, onClose: f } = t,
         x = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, a.e7)([u.default], () => {
+        _ = (0, a.e7)([u.default], () => {
             let t = u.default.getCurrentUser();
             return i()(null != t, "UserSettingsProfileCustomization: user cannot be undefined"), t;
         }),
-        _ = (0, L.rO)() ? Z.Z : g.Z,
+        E = (0, L.rO)() ? p.Z : g.Z,
         I = ((t) => {
             switch (t) {
                 case H.Yk.PREMIUM_UPDATED:
@@ -48,7 +48,7 @@ let m = (t) => {
                 children: [
                     x
                         ? (0, l.jsx)("img", {
-                              src: p.Z,
+                              src: m.Z,
                               alt: "",
                               className: h.nameplateGlow,
                           })
@@ -58,13 +58,13 @@ let m = (t) => {
                               autoPlay: !0,
                               loop: !0,
                               className: h.nameplateGlow,
-                              children: (0, l.jsx)("source", { src: _ }),
+                              children: (0, l.jsx)("source", { src: E }),
                           }),
                     (0, l.jsx)(o.Z, {
-                        user: E,
+                        user: _,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: E.nameplate,
+                        nameplateData: _.nameplate,
                         className: h.nameplatePreview,
                         nameplatePreviewSize: "large",
                     }),
@@ -82,7 +82,7 @@ let m = (t) => {
                         fullWidth: !0,
                         text: s,
                         onClick: f,
-                        loading: m,
+                        loading: Z,
                     }),
                 }),
         ],

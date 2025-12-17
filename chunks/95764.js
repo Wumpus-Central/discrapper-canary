@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(88479),
     d = n(592125),
     p = n(15274),
-    h = n(482241),
-    f = n(389303),
+    f = n(482241),
+    h = n(389303),
     m = n(554747),
     g = n(388032);
 function b(e) {
@@ -18,18 +18,18 @@ function b(e) {
         b = (0, o.bp)(),
         C = (0, m.qY)(t),
         y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: _ } = (0, s.XJ)(y),
-        v = _(C),
+        { canManageGuildEvent: v } = (0, s.XJ)(y),
+        x = v(C),
         O = r.useRef(null);
     if (null == C) return null;
-    let x = () => {
-            if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
+    let E = () => {
+            if (null != y && (0, h.Z)(y)) return void (0, p.lC)(y, b);
             n();
         },
-        E = () => {
-            h.Z.endEvent(C.id, C.guild_id);
+        j = () => {
+            f.Z.endEvent(C.id, C.guild_id);
         };
-    return v
+    return x
         ? (0, i.jsx)(a.yRy, {
               targetElementRef: O,
               renderPopout: (e) => {
@@ -43,7 +43,7 @@ function b(e) {
                           children: (0, i.jsx)(a.sNh, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: E,
+                              action: j,
                               label: g.intl.string(g.t.qaYzPA),
                               icon: a.k$p,
                           }),
@@ -58,7 +58,7 @@ function b(e) {
                   return (0, i.jsx)(u.Z, {
                       buttonRef: O,
                       label: g.intl.string(g.t["6vrfgt"]),
-                      onClick: x,
+                      onClick: E,
                       onPopoutClick: t,
                   });
               },

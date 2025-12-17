@@ -1,115 +1,115 @@
-r.d(t, { default: () => g }), r(388685);
-var n = r(54381),
-    o = r(473749),
-    s = r(120356),
-    i = r.n(s),
-    a = r(512722),
-    c = r.n(a),
-    l = r(481060),
-    d = r(493773),
-    u = r(198993),
-    f = r(626135),
-    p = r(985002),
-    C = r(880257),
-    b = r(631885),
-    y = r(292352),
-    m = r(981631),
-    x = r(372807),
-    h = r(388032),
-    v = r(129916),
-    O = r(478411);
-let g = (e) => {
-    let { transitionState: t, onClose: r } = e,
-        s = (0, C.Z)(),
-        [a, g] = o.useState(!1),
-        { getLinkCode: j, isGetLinkCodeLoading: _ } = (0, p.G)({}),
-        q = (0, b.rW)(),
-        E = (0, b.gU)(),
-        P = o.useRef(E);
-    c()(!s, "FamilyCenterQRCodeModal should only be rendered for teens.");
+t.d(r, { default: () => O }), t(388685);
+var n = t(54381),
+    o = t(473749),
+    s = t(120356),
+    l = t.n(s),
+    a = t(512722),
+    i = t.n(a),
+    c = t(481060),
+    d = t(493773),
+    f = t(198993),
+    u = t(626135),
+    C = t(985002),
+    b = t(880257),
+    x = t(631885),
+    m = t(292352),
+    p = t(981631),
+    v = t(517319),
+    y = t(388032),
+    g = t(129916),
+    h = t(478411);
+let O = (e) => {
+    let { transitionState: r, onClose: t } = e,
+        s = (0, b.Z)(),
+        [a, O] = o.useState(!1),
+        { getLinkCode: j, isGetLinkCodeLoading: q } = (0, C.G)({}),
+        _ = (0, x.rW)(),
+        N = (0, x.gU)(),
+        z = o.useRef(N);
+    i()(!s, "FamilyCenterQRCodeModal should only be rendered for teens.");
     let S = () => {
-        g(
+        O(
             (e) => (
-                f.default.track(m.rMx.FAMILY_CENTER_ACTION, { action: a ? y.YC.HideQRCode : y.YC.RevealQRCode }), !e
+                u.default.track(p.rMx.FAMILY_CENTER_ACTION, { action: a ? m.YC.HideQRCode : m.YC.RevealQRCode }), !e
             ),
         ),
             a ||
                 setTimeout(() => {
-                    r();
-                }, y.f2);
+                    t();
+                }, m.f2);
     };
     (0, d.ZP)(() => {
         j();
     }),
         o.useEffect(() => {
-            E > P.current && r();
-        }, [P, E, r]);
-    let N = a && !_ && null != q;
-    return (0, n.jsxs)(l.IX, {
-        transitionState: t,
-        onClose: r,
+            N > z.current && t();
+        }, [z, N, t]);
+    let E = a && !q && null != _;
+    return (0, n.jsxs)(c.IX, {
+        transitionState: r,
+        onClose: t,
         children: [
-            (0, n.jsxs)(l.qXd, {
-                className: v.notice,
-                color: l.DM8.WARNING,
+            (0, n.jsxs)(c.qXd, {
+                className: g.notice,
+                color: c.DM8.WARNING,
                 children: [
-                    (0, n.jsx)(l.d3s, {
+                    (0, n.jsx)(c.d3s, {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    h.intl.string(x.default.iHYMAz),
+                    y.intl.string(v.default.iHYMAz),
                 ],
             }),
-            (0, n.jsxs)(l.fef, {
+            (0, n.jsxs)(c.fef, {
                 children: [
-                    (0, n.jsx)(l.Text, {
-                        className: O.marginBottom8,
+                    (0, n.jsx)(c.Text, {
+                        className: h.marginBottom8,
                         variant: "text-lg/bold",
                         color: "text-strong",
-                        children: h.intl.string(x.default.AVTZaN),
+                        children: y.intl.string(v.default.AVTZaN),
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: O.marginBottom20,
+                    (0, n.jsx)(c.Text, {
+                        className: h.marginBottom20,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: h.intl.format(x.default.LyyCsE, {
+                        children: y.intl.format(v.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
                     (0, n.jsx)("div", {
-                        className: v.qrCodeContainer,
-                        children: (0, n.jsx)(l.P3F, {
-                            className: i()(v.qrCodeObscure, { [v.visible]: N }),
+                        className: g.qrCodeContainer,
+                        children: (0, n.jsx)(c.P3F, {
+                            className: l()(g.qrCodeObscure, { [g.visible]: E }),
                             onClick: S,
-                            children: (0, n.jsx)(u.c2, {
+                            children: (0, n.jsx)(f.c2, {
                                 size: 272,
-                                text: N ? q : y.vH,
-                                overlaySize: u.cK.SIZE_60,
-                                className: v.qrCodeOverlay,
+                                text: E ? _ : m.vH,
+                                overlaySize: f.cK.SIZE_60,
+                                className: g.qrCodeOverlay,
                             }),
                         }),
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: v.reminder,
+                    (0, n.jsx)(c.Text, {
+                        className: g.reminder,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: h.intl.string(x.default.goDyoe),
+                        children: y.intl.string(v.default.goDyoe),
                     }),
                 ],
             }),
-            (0, n.jsx)(l.Go$, {
+            (0, n.jsx)(c.Go$, {
                 actionsFullWidth: !0,
                 actions: [
                     {
                         variant: "secondary",
-                        text: h.intl.string(h.t.cpT0Cq),
-                        onClick: r,
+                        text: y.intl.string(y.t.cpT0Cq),
+                        onClick: t,
                     },
                     {
                         variant: "primary",
-                        text: a ? h.intl.string(x.default.wg2xwQ) : h.intl.string(x.default["10dX6U"]),
+                        text: a ? y.intl.string(v.default.wg2xwQ) : y.intl.string(v.default["10dX6U"]),
                         onClick: S,
-                        loading: a && _,
+                        loading: a && q,
                     },
                 ],
             }),

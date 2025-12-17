@@ -4,8 +4,8 @@ var n = r(54381),
     l = r(851397),
     o = r(541699),
     s = r(321947),
-    a = r(835255),
-    c = r(688192);
+    c = r(835255),
+    a = r(688192);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -32,7 +32,7 @@ function u(e) {
     return e;
 }
 let d = i.memo(function (e) {
-    var { item: t, cardSize: r = c.U.MEDIUM, showOverlayButton: i = !0, isDragging: d = !1 } = e,
+    var { item: t, cardSize: r = a.U.MEDIUM, showOverlayButton: i = !0, isDragging: d = !1 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -56,7 +56,7 @@ let d = i.memo(function (e) {
         })(e, ["item", "cardSize", "showOverlayButton", "isDragging"]);
     return (0, o.Q)(t)
         ? (0, n.jsx)(
-              a.ZP,
+              c.ZP,
               u(
                   {
                       item: t,

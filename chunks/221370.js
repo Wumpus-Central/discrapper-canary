@@ -7,7 +7,7 @@ var a = n(54381),
     s = n(657707),
     c = n(28664),
     d = n(388032),
-    u = n(226788);
+    u = n(452379);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,8 +33,8 @@ function m(e) {
     }
     return e;
 }
-let g = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
-function f(e) {
+let f = [o.z.DESKTOP, o.z.XBOX, o.z.PLAYSTATION, o.z.NINTENDO];
+function g(e) {
     var { platform: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -93,7 +93,7 @@ function p(e) {
                                 return null;
                         }
                     })(e),
-                    children: (0, a.jsx)(f, { platform: e }),
+                    children: (0, a.jsx)(g, { platform: e }),
                 },
                 e,
             ),
@@ -107,7 +107,7 @@ function x(e) {
                 n = [...e];
             return (
                 !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && n.push(o.z.DESKTOP),
-                n.filter((e) => g.includes(e))
+                n.filter((e) => f.includes(e))
             );
         }, [t.platforms]);
     return 0 === r.length

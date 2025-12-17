@@ -1,8 +1,8 @@
 n.d(t, {
     HR: () => M,
-    PR: () => D,
+    PR: () => w,
     default: () => U,
-    sF: () => w,
+    sF: () => D,
 });
 var r = n(54381),
     i = n(473749),
@@ -87,14 +87,14 @@ let R = (e) => {
             ? (0, r.jsx)(l.Vq, { onClose: t })
             : null;
     },
-    D = (e) => {
+    w = (e) => {
         let { handleClose: t } = e,
             { purchaseState: n } = (0, f.JL)();
         (0, i.useEffect)(() => {
             n === _.A.COMPLETED && t();
         }, [n, t]);
     },
-    w = (e) => {
+    D = (e) => {
         var t;
         let {
                 skuId: n,
@@ -165,7 +165,7 @@ let R = (e) => {
                 analyticsSourceLocation: u,
                 rentalDuration: d,
             } = (0, O.CH)();
-        D({ handleClose: t });
+        w({ handleClose: t });
         let {
             orbPriceAmount: f,
             orbBalanceToDisplay: p,
@@ -173,7 +173,7 @@ let R = (e) => {
             isStepLoading: m,
             showCollectiblesDiscountWarning: h,
             errorMessage: b,
-        } = w({
+        } = D({
             skuId: n,
             onRedeemVirtualCurrency: i,
             orbRedemptionError: s,

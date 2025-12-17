@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(347904),
     f = n(620652),
     p = n(815605),
-    _ = n(537509),
-    m = n(491726);
+    _ = n(719426),
+    m = n(791541);
 function h(e) {
     let { channelId: t, messageId: n, emoji: h, useChatFontScaling: g, color: E, count: b, emojiSize: y } = e,
         O = (0, a.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, h)),

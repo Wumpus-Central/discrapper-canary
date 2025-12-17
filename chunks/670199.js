@@ -1,4 +1,4 @@
-e.d(t, { Z: () => h }), e(953529);
+e.d(t, { Z: () => N }), e(953529);
 var i = e(54381);
 e(473749);
 var a = e(120356),
@@ -12,13 +12,13 @@ var a = e(120356),
     m = e(97568),
     g = e(800530),
     u = e(388032),
-    p = e(186425);
-function h(n) {
+    p = e(420418);
+function N(n) {
     var t, e;
     let {
             classification: a,
-            isDsaEligible: h = !1,
-            isSpam: N = !1,
+            isDsaEligible: N = !1,
+            isSpam: h = !1,
             isCoppa: C = !1,
             appealIngestionType: j,
             className: _,
@@ -29,7 +29,7 @@ function h(n) {
         T = null != (t = null == a ? void 0 : a.explainer_link) ? t : "",
         S = null != a && null != a.flagged_content && a.flagged_content.length > 0,
         A = (0, c.c7)(null == a ? void 0 : a.description),
-        k = !N && !C && (null == j || j === o.j4.IN_APP),
+        k = !h && !C && (null == j || j === o.j4.IN_APP),
         Z = null != a && ((0, c.FB)(a) || S);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -83,7 +83,7 @@ function h(n) {
                             text: u.intl.string(u.t["gJs+kf"]),
                             onClick: () => v(g.n0.ClickAgeVerificationLink),
                         }),
-                    N &&
+                    h &&
                         !C &&
                         (0, i.jsx)(x.Z, {
                             url: g.sQ.SPAM_LINK,
@@ -97,7 +97,7 @@ function h(n) {
                             onClick: () => v(g.n0.ClickLearnMoreLink),
                         }),
                     k &&
-                        h &&
+                        N &&
                         (0, i.jsx)(l.Text, {
                             className: p.learnMore,
                             variant: "text-xs/normal",

@@ -3,12 +3,12 @@ var r,
     i,
     l = n(442837),
     a = n(570140),
-    s = n(810788),
-    o = n(430824),
+    o = n(810788),
+    s = n(430824),
     c = n(981631);
 let u = !1;
 function d(e) {
-    let t = o.Z.getGuild(e);
+    let t = s.Z.getGuild(e);
     return null != t && !!t.features.has(c.GuildFeatures.HUB) && ((u = !0), !0);
 }
 function p() {
@@ -16,7 +16,7 @@ function p() {
 }
 class f extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, s.Z), this.syncWith([s.Z], p);
+        this.waitFor(s.Z, o.Z), this.syncWith([o.Z], p);
     }
     channelNoticePredicate(e) {
         return !!e.features.has(c.GuildFeatures.LINKED_TO_HUB) && !u;

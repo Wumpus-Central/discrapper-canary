@@ -1,9 +1,9 @@
 r.d(t, { default: () => a }), r(388685);
 var n = r(54381),
-    o = r(473749),
-    c = r(481060),
+    c = r(473749),
+    o = r(481060),
     i = r(388032),
-    l = r(905935);
+    l = r(513318);
 function a(e) {
     var t,
         r,
@@ -12,26 +12,26 @@ function a(e) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                c = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        c = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (c[r] = e[r]);
+                    return c;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (c[r] = e[r]);
             }
-            return o;
+            return c;
         })(e, ["header", "body", "onSubmit"]);
-    let [p, f] = o.useState(!1);
+    let [p, f] = c.useState(!1);
     return (0, n.jsxs)(
-        c.VoidConfirmModal,
+        o.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -70,13 +70,13 @@ function a(e) {
         (r = r =
             {
                 children: [
-                    (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(o.Text, {
                         variant: "text-md/normal",
                         children: b,
                     }),
                     (0, n.jsx)("div", {
                         className: l.checkbox,
-                        children: (0, n.jsx)(c.Checkbox, {
+                        children: (0, n.jsx)(o.Checkbox, {
                             checked: p,
                             onChange: () => f((e) => !e),
                             label: i.intl.string(i.t.bq3JXs),

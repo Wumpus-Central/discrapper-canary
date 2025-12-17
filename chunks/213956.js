@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,20 +9,20 @@ var r = n(54381),
     d = n(768762),
     u = n(430824),
     g = n(999382),
-    m = n(84613),
-    p = n(392885),
-    f = n(740903),
-    h = n(464610),
-    b = n(733629),
+    f = n(84613),
+    m = n(392885),
+    b = n(740903),
+    p = n(464610),
+    h = n(733629),
     x = n(598622),
     j = n(921944),
-    _ = n(388032),
-    v = n(824804);
-function O() {
+    v = n(388032),
+    O = n(146473);
+function C() {
     let e,
         t = (0, l.e7)([g.Z], () => g.Z.getGuildId()),
         n = (0, l.e7)([u.Z], () => u.Z.getGuild(t)),
-        O = (0, l.e7)([p.Z], () => p.Z.getCurrentPage());
+        C = (0, l.e7)([m.Z], () => m.Z.getCurrentPage());
     if (
         (i.useEffect(() => {
             (0, o.Q3)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: j.L.AUTO });
@@ -30,48 +30,48 @@ function O() {
         null == n)
     )
         return null;
-    let C = (0, x.Q)(n);
-    switch (O) {
-        case f.u.OVERVIEW:
-            e = (0, r.jsx)(h.Z, { guild: n });
+    let y = (0, x.Q)(n);
+    switch (C) {
+        case b.u.OVERVIEW:
+            e = (0, r.jsx)(p.Z, { guild: n });
             break;
-        case f.u.CAPTCHA_AND_RAID_PROTECTION:
-            e = (0, r.jsx)(b.Z, {
-                title: _.intl.string(_.t["53eF5o"]),
-                settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION],
+        case b.u.CAPTCHA_AND_RAID_PROTECTION:
+            e = (0, r.jsx)(h.Z, {
+                title: v.intl.string(v.t["53eF5o"]),
+                settings: y[b.u.CAPTCHA_AND_RAID_PROTECTION],
             });
             break;
-        case f.u.DM_AND_SPAM_PROTECTION:
-            e = (0, r.jsx)(b.Z, {
-                title: _.intl.string(_.t.O0SfFy),
-                settings: C[f.u.DM_AND_SPAM_PROTECTION],
+        case b.u.DM_AND_SPAM_PROTECTION:
+            e = (0, r.jsx)(h.Z, {
+                title: v.intl.string(v.t.O0SfFy),
+                settings: y[b.u.DM_AND_SPAM_PROTECTION],
             });
             break;
-        case f.u.AUTOMOD:
+        case b.u.AUTOMOD:
             e = (0, r.jsx)(c.Z, { guildId: n.id });
             break;
-        case f.u.PERMISSIONS:
-            e = (0, r.jsx)(b.Z, {
-                title: _.intl.string(_.t.BXoNiT),
-                settings: C[f.u.PERMISSIONS],
+        case b.u.PERMISSIONS:
+            e = (0, r.jsx)(h.Z, {
+                title: v.intl.string(v.t.BXoNiT),
+                settings: y[b.u.PERMISSIONS],
             });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            O !== f.u.OVERVIEW &&
+            C !== b.u.OVERVIEW &&
                 (0, r.jsx)(s.P3F, {
-                    className: v.back,
+                    className: O.back,
                     onClick: () => {
-                        (0, m.K)(f.u.OVERVIEW);
+                        (0, f.K)(b.u.OVERVIEW);
                     },
                     children: (0, r.jsxs)("div", {
-                        className: v.backButton,
+                        className: O.backButton,
                         children: [
                             (0, r.jsx)(d.Z, { direction: d.Z.Directions.LEFT }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
                                 color: "interactive-text-default",
-                                children: _.intl.string(_.t["13/7kX"]),
+                                children: v.intl.string(v.t["13/7kX"]),
                             }),
                         ],
                     }),

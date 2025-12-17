@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(53691),
     P = n(75145),
     R = n(695346),
-    D = n(594174),
-    w = n(626135),
+    w = n(594174),
+    D = n(626135),
     x = n(176354),
     L = n(111361),
     j = n(74538),
@@ -37,13 +37,13 @@ var r = n(54381),
     U = n(883661),
     G = n(880949),
     Z = n(784222),
-    B = n(172800),
-    F = n(149203),
+    F = n(172800),
+    B = n(149203),
     V = n(981631),
     H = n(957825),
     Y = n(474936),
     W = n(388032),
-    K = n(751466);
+    K = n(417205);
 let z = 0,
     q = 0,
     Q = (0, M.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
@@ -73,7 +73,7 @@ let z = 0,
                 isScrolling: C,
                 isUsingKeyboardNavigation: N,
                 allowAnimatedEmoji: R,
-                channelGuildId: D,
+                channelGuildId: w,
                 channelId: L,
                 messageId: j,
                 isBurstReaction: M,
@@ -110,14 +110,14 @@ let z = 0,
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
                         null != n &&
-                            w.default.track(V.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                            D.default.track(V.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: es.location,
                                 tab: H.X1.EMOJI,
                                 collapsed: !i,
                                 guild_id: n.id,
                             }),
-                        e === F.UX.SOUNDMOJI &&
-                            w.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
+                        e === B.UX.SOUNDMOJI &&
+                            D.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
                         g(r);
                 },
                 [es, t, g],
@@ -143,7 +143,7 @@ let z = 0,
                                 null == (e = eo.current) || e.scrollToSectionTop(t.sectionIndex, { animate: !0 });
                             };
                         return (0, r.jsx)(
-                            B.Z,
+                            F.Z,
                             {
                                 emojiDescriptors: n,
                                 emojiSize: s,
@@ -158,7 +158,7 @@ let z = 0,
                                 rowIndex: e,
                                 allowAnimatedEmoji: R,
                                 showEmojiFavoriteTooltip: em,
-                                channelGuildId: D,
+                                channelGuildId: w,
                                 category: i.sectionId,
                                 selectedItemClassName: K.__invalid_selectedItem,
                                 channelId: L,
@@ -170,7 +170,7 @@ let z = 0,
                             e,
                         );
                     }),
-                [a, h, s, ec, e_, c, f, O, v, C, N, R, em, D, L, j, M, eo],
+                [a, h, s, ec, e_, c, f, O, v, C, N, R, em, w, L, j, M, eo],
             );
         i.useEffect(
             () => () => {
@@ -185,9 +185,9 @@ let z = 0,
                         let n = h[e];
                         if (null == n) return;
                         let { guild: i, categoryId: a, type: s, sectionId: l } = n;
-                        if (s === F.En.SEARCH_RESULTS) return;
+                        if (s === B.En.SEARCH_RESULTS) return;
                         let c =
-                                s === F.En.GUILD
+                                s === B.En.GUILD
                                     ? null != i
                                         ? (0, r.jsx)(G.Z, {
                                               guild: i,
@@ -210,12 +210,12 @@ let z = 0,
                             _ = f && !d,
                             m = f && d,
                             g =
-                                s === F.En.SOUNDMOJI
+                                s === B.En.SOUNDMOJI
                                     ? (0, r.jsx)(p.P3F, {
                                           className: K.soundmojiViewMore,
                                           onClick: () => {
                                               (0, b.hr)(H.X1.SOUNDBOARD),
-                                                  w.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                                  D.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
                                           },
                                           children: W.intl.string(W.t.rUEjBe),
                                       })
@@ -292,7 +292,7 @@ let z = 0,
             renderSectionHeader: eg,
             renderSectionFooter: ey,
             sectionMarginBottom: ev,
-            sectionHeaderHeight: i.useCallback((e) => (h[e].type === F.En.SEARCH_RESULTS ? 0 : ee), [h]),
+            sectionHeaderHeight: i.useCallback((e) => (h[e].type === B.En.SEARCH_RESULTS ? 0 : ee), [h]),
             sectionFooterHeight: eO,
         };
     },
@@ -320,10 +320,10 @@ let z = 0,
                 listHeaderClassName: U,
             } = e,
             G = i.useRef(!1),
-            B = E.kJ.useStore((e) => e.activeCategoryIndex),
-            F = (0, b.Iu)((e) => e.searchQuery),
+            F = E.kJ.useStore((e) => e.activeCategoryIndex),
+            B = (0, b.Iu)((e) => e.searchQuery),
             H = R.Yk.useSetting(),
-            q = (0, u.e7)([D.default], () => D.default.getCurrentUser()),
+            q = (0, u.e7)([w.default], () => w.default.getCurrentUser()),
             Q = (0, L.I5)(q),
             { location: X } = (0, m.O)(),
             { analyticsLocations: J } = (0, h.ZP)(),
@@ -346,7 +346,7 @@ let z = 0,
                 emojiSize: o,
                 onEmojiSelect: s,
                 onSelectSoundmoji: l,
-                searchQuery: F,
+                searchQuery: B,
                 sectionDescriptors: f,
                 setCollapsedSections: O,
                 getEmojiItemProps: S,
@@ -364,26 +364,26 @@ let z = 0,
                 emojiListRef: a,
             }),
             eh = (e) => {
-                ee(e), "" === F && E.kJ.setActiveCategoryIndex(e);
+                ee(e), "" === B && E.kJ.setActiveCategoryIndex(e);
             },
             eg = (0, v.fe)({
                 listRef: a,
-                searchQuery: F,
+                searchQuery: B,
                 nitroLockedSectionStates: f,
                 setUpsellGlowOpacity: ei,
             }),
             eE = (0, v.Qs)({
-                activeCategoryIndex: B,
+                activeCategoryIndex: F,
                 isScrolling: G,
                 listRef: a,
                 onActiveCategoryIndexChange: eh,
                 scrollOffset: z,
-                searchQuery: F,
+                searchQuery: B,
                 disableForSearch: !1,
             });
         (0, v.Xs)({
-            searchQuery: F,
-            activeCategoryIndex: B,
+            searchQuery: B,
+            activeCategoryIndex: F,
             listRef: a,
         });
         let eb = i.useCallback(
@@ -394,11 +394,11 @@ let z = 0,
                             emojiListRef: a,
                             sectionDescriptors: f,
                             scrollTop: e,
-                            searchQuery: F,
+                            searchQuery: B,
                             setShowUpsell: en,
                         });
                 },
-                [eg, eE, a, f, F, en],
+                [eg, eE, a, f, B, en],
             ),
             ey = f.length > 0;
         function eO() {
@@ -421,15 +421,15 @@ let z = 0,
         return (
             i.useEffect(() => {
                 et &&
-                    w.default.track(V.rMx.PREMIUM_UPSELL_VIEWED, {
+                    D.default.track(V.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: Y.cd.EMOJI_PICKER_FLOATING_UPSELL,
                         location: X,
                         location_stack: J,
                     });
             }, [X, J, et]),
             i.useEffect(() => {
-                "" !== F && (ei(0), en(!1));
-            }, [F]),
+                "" !== B && (ei(0), en(!1));
+            }, [B]),
             (0, r.jsxs)("div", {
                 className: K.listWrapper,
                 children: [

@@ -46,8 +46,8 @@ var r = n(990547),
     N = n(813370),
     P = n(957730),
     R = n(48854),
-    D = n(522474),
-    w = n(835873),
+    w = n(522474),
+    D = n(835873),
     x = n(973616),
     L = n(314897),
     j = n(592125),
@@ -56,8 +56,8 @@ var r = n(990547),
     U = n(594174),
     G = n(979651),
     Z = n(626135),
-    B = n(823379),
-    F = n(573261),
+    F = n(823379),
+    B = n(573261),
     V = n(595519),
     H = n(317381),
     Y = n(882347),
@@ -134,11 +134,11 @@ async function el(e) {
         S = j.Z.getChannel(a),
         P = null != (t = null == S ? void 0 : S.getGuildId()) ? t : void 0;
     if (null == P && !(null != (r = null == S ? void 0 : S.isPrivate()) && r)) return !1;
-    let w = b.Z.getApplication(o),
-        x = null != w && (0, N.g)(w),
+    let D = b.Z.getApplication(o),
+        x = null != D && (0, N.g)(D),
         L = (0, R.r)();
     try {
-        if (D.Z.getWindowOpen(ee.KJ3.ACTIVITY_POPOUT)) {
+        if (w.Z.getWindowOpen(ee.KJ3.ACTIVITY_POPOUT)) {
             let { close: e } = n(788983);
             e(ee.KJ3.ACTIVITY_POPOUT);
         }
@@ -418,7 +418,7 @@ async function ed(e) {
         let e = 4;
         return (
             _ === z.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? ((e = 5), (0, w.w)())
+                ? ((e = 5), (0, D.w)())
                 : _ === z.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   c.Z.show({
@@ -487,7 +487,7 @@ async function ed(e) {
         rejectWithError: !0,
     };
     return null != i
-        ? (await F.Z.post(
+        ? (await B.Z.post(
               eo(
                   {
                       url: ee.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
@@ -587,7 +587,7 @@ async function eh(e) {
     var t, n, i, a;
     let { guildId: o, force: s = !1 } = e,
         c = H.ZP.getShelfActivities(o),
-        u = c.map((e) => b.Z.getApplication(e.application_id)).filter(B.lm);
+        u = c.map((e) => b.Z.getApplication(e.application_id)).filter(F.lm);
     if (!s && !H.ZP.shouldFetchShelf(o)) {
         if (null == (t = H.ZP.getShelfFetchStatus(o)) ? void 0 : t.isFetching) {
             let e,
@@ -613,7 +613,7 @@ async function eh(e) {
             guildId: o,
         });
         let e = void 0 !== o && "" !== o ? { guild_id: o } : void 0,
-            t = await F.Z.get({
+            t = await B.Z.get({
                 url: ee.ANM.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {

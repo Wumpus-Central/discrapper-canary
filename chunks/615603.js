@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(981631),
     T = n(474936),
     C = n(388032),
-    A = n(387473);
+    A = n(502846);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-function w(e) {
+function D(e) {
     let {
             guildBoostSlot: t,
             isCancellable: n,
@@ -134,7 +134,7 @@ function w(e) {
                                         className: A.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             c.Avr,
-                                            D(P({}, e), {
+                                            w(P({}, e), {
                                                 variant: "primary",
                                                 text: C.intl.string(C.t.twFU3R),
                                                 onClick: () => a(t),
@@ -154,7 +154,7 @@ function w(e) {
                                         className: A.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             c.Avr,
-                                            D(P({}, e), {
+                                            w(P({}, e), {
                                                 variant: "primary",
                                                 text: C.intl.string(C.t["2glQNp"]),
                                                 onClick: () => o(t),
@@ -176,7 +176,7 @@ function x(e) {
         async () => (t) =>
             (0, r.jsx)(
                 p.default,
-                D(P({}, t), {
+                w(P({}, t), {
                     guildBoostSlots: [e],
                     locationSection: I.jXE.SETTINGS_PREMIUM,
                 }),
@@ -184,10 +184,10 @@ function x(e) {
     );
 }
 function L(e) {
-    (0, u.ZDy)(async () => (t) => (0, r.jsx)(_.default, D(P({}, t), { guildBoostSlot: e })));
+    (0, u.ZDy)(async () => (t) => (0, r.jsx)(_.default, w(P({}, t), { guildBoostSlot: e })));
 }
 function j(e) {
-    (0, u.ZDy)(async () => (t) => (0, r.jsx)(m.default, D(P({}, t), { guildBoostSlotId: e.id })));
+    (0, u.ZDy)(async () => (t) => (0, r.jsx)(m.default, w(P({}, t), { guildBoostSlotId: e.id })));
 }
 let M = function (e) {
     let t,
@@ -229,10 +229,10 @@ let M = function (e) {
             );
         }, [c]),
         Z = null != p ? y.ZP.getNumIncludedPremiumGuildSubscriptionSlots(p.planId) : 0,
-        B = Math.max(0, Z - R.length),
-        F = k > Z,
+        F = Math.max(0, Z - R.length),
+        B = k > Z,
         V = Z === c.length,
-        H = V ? B : 1,
+        H = V ? F : 1,
         Y = i.useMemo(() => {
             let e = [];
             for (let t = 0; t < H; t++)
@@ -324,7 +324,7 @@ let M = function (e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             u.Button,
-                                            D(
+                                            w(
                                                 P(
                                                     {
                                                         variant: "primary",
@@ -347,10 +347,10 @@ let M = function (e) {
                             className: A.unappliedBoostSlots,
                             children: M.map((e) =>
                                 (0, r.jsx)(
-                                    w,
+                                    D,
                                     {
                                         guildBoostSlot: e,
-                                        isCancellable: F,
+                                        isCancellable: B,
                                         onCancel: L,
                                         onUncancel: j,
                                         premiumSubscription: p,

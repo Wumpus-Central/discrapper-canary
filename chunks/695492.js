@@ -6,10 +6,10 @@ var r = n(481060),
     a = n(112560),
     o = n(981631),
     s = n(388032),
-    c = n(105740),
+    c = n(978769),
     u = n(800350);
 function d(e) {
-    let { channel: t, guild: d, width: p, inPopout: h } = e;
+    let { channel: t, guild: d, width: p, inPopout: f } = e;
     return (0, i.jsx)(l.Z, {
         className: c.root,
         children: (0, i.jsx)(a.Z, {
@@ -19,7 +19,7 @@ function d(e) {
             onCTAClick: () =>
                 (0, r.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                        let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("97016")]).then(
                             n.bind(n, 560114),
                         );
                         return (n) => {
@@ -73,7 +73,7 @@ function d(e) {
                             );
                         };
                     },
-                    { contextKey: h ? r.u1M : r.z1l },
+                    { contextKey: f ? r.u1M : r.z1l },
                 ),
             callToAction: s.intl.string(s.t.VINpSK),
         }),

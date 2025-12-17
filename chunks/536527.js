@@ -1,4 +1,4 @@
-n.d(e, { r: () => E });
+n.d(e, { r: () => g });
 var i = n(442837),
     l = n(493773),
     s = n(972959),
@@ -6,42 +6,42 @@ var i = n(442837),
     r = n(607070),
     a = n(627845),
     o = n(509613),
-    c = n(63063),
+    S = n(63063),
     T = n(313789),
-    d = n(981631),
-    S = n(388032);
-let g = (0, s.H)(() => ({
+    c = n(981631),
+    E = n(388032);
+let d = (0, s.H)(() => ({
         syncEnabled: null,
         updateTimeout: null,
     })),
-    E = (0, o.qs)(T.n.SYNC_FORCED_COLORS, {
-        useTitle: () => S.intl.string(S.t.cguiec),
-        useSubtitle: () => S.intl.format(S.t.GwEVE2, { learnMoreLink: c.Z.getArticleURL(d.BhN.FORCED_COLORS) }),
+    g = (0, o.qs)(T.n.SYNC_FORCED_COLORS, {
+        useTitle: () => E.intl.string(E.t.cguiec),
+        useSubtitle: () => E.intl.format(E.t.GwEVE2, { learnMoreLink: S.Z.getArticleURL(c.BhN.FORCED_COLORS) }),
         useValue: () => {
             var t;
             let e = (0, i.e7)([r.Z], () => r.Z.syncForcedColors);
             return (
                 (0, l.ZP)(() => {
-                    g.setState({ syncEnabled: r.Z.syncForcedColors });
+                    d.setState({ syncEnabled: r.Z.syncForcedColors });
                 }),
-                null != (t = g.useState((t) => t.syncEnabled)) ? t : e
+                null != (t = d.useState((t) => t.syncEnabled)) ? t : e
             );
         },
         setValue: (t) => {
-            let { updateTimeout: e } = g.getState();
+            let { updateTimeout: e } = d.getState();
             if (null != e) {
                 clearTimeout(e),
-                    g.setState({
+                    d.setState({
                         syncEnabled: t,
                         updateTimeout: null,
                     });
                 return;
             }
-            if (t === r.Z.syncForcedColors) return void g.setState({ syncEnabled: t });
+            if (t === r.Z.syncForcedColors) return void d.setState({ syncEnabled: t });
             let n = setTimeout(() => {
-                (0, u.qz)(t), g.setState({ updateTimeout: null });
+                (0, u.qz)(t), d.setState({ updateTimeout: null });
             }, 150);
-            g.setState({
+            d.setState({
                 syncEnabled: t,
                 updateTimeout: n,
             });

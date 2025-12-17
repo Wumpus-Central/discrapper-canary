@@ -1,12 +1,12 @@
 n.d(t, {
-    D2: () => o,
+    D2: () => s,
     SE: () => c,
 });
 var r = n(442837),
     i = n(818083),
     l = n(496675),
     a = n(981631);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: "guild",
     id: "2022-11_default_disable_mass_mention",
     label: "Disable mass mentions for communities by default",
@@ -19,8 +19,8 @@ let s = (0, i.B)({
         },
     ],
 });
-function o(e) {
-    return s.useExperiment(
+function s(e) {
+    return o.useExperiment(
         {
             guildId: e,
             location: "dd4beb_1",
@@ -31,7 +31,7 @@ function o(e) {
 function c(e) {
     var t;
     let n = (0, r.e7)([l.Z], () => l.Z.can(a.Plq.MANAGE_GUILD, e)),
-        { enabled: i } = s.useExperiment(
+        { enabled: i } = o.useExperiment(
             {
                 guildId: null != (t = null == e ? void 0 : e.id) ? t : a.lds,
                 location: "dd4beb_3",
@@ -39,6 +39,6 @@ function c(e) {
             { autoTrackExposure: !0 },
         );
     if (null == e) return !1;
-    let o = e.features.has(a.GuildFeatures.COMMUNITY);
-    return n && o && i;
+    let s = e.features.has(a.GuildFeatures.COMMUNITY);
+    return n && s && i;
 }

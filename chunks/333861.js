@@ -10,8 +10,8 @@ function a(e) {
     let {
         applicationId: t,
         channel: a,
-        command: s,
-        previewMessage: o,
+        command: o,
+        previewMessage: s,
         requireLaunchChannel: c,
         contextKey: u,
         onShareResult: d,
@@ -50,8 +50,8 @@ function a(e) {
                         {
                             applicationId: t,
                             channel: a,
-                            command: s,
-                            previewMessage: o,
+                            command: o,
+                            previewMessage: s,
                             onShareResult: d,
                             requireLaunchChannel: c,
                         },

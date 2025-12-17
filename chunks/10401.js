@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var i,
     r = n(873546),
     l = n(442837),
@@ -53,16 +53,16 @@ function p(e, t) {
         e
     );
 }
-let h = {},
-    f = {},
+let f = {},
+    h = {},
     m = !0,
     g = {},
     b = !1;
 function C() {
     if (((g = {}), !m))
         for (let [e, t] of Object.entries(s.Z)) {
-            let n = !1 !== h[e];
-            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (g[e] = !1);
+            let n = !1 !== f[e];
+            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== f[n] && (g[e] = !1);
         }
 }
 class y extends (i = l.ZP.Store) {
@@ -76,7 +76,7 @@ class y extends (i = l.ZP.Store) {
         return !m;
     }
     getIndicators() {
-        return f;
+        return h;
     }
     getData() {
         return s.Z;
@@ -87,26 +87,26 @@ class y extends (i = l.ZP.Store) {
     }
 }
 u(y, "displayName", "TutorialIndicatorStore");
-let _ = new y(a.Z, {
+let v = new y(a.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         (b = !0),
             (m = !0),
-            (h = {}),
-            null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))),
+            (f = {}),
+            null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (f[e] = !1))),
             C();
     },
     CONNECTION_CLOSED: function () {
         b = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], C();
+        (f = p(d({}, f), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], C();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
-        f = p(d({}, f), { [e.tutorialId]: e.renderData });
+        h = p(d({}, h), { [e.tutorialId]: e.renderData });
     },
     TUTORIAL_INDICATOR_HIDE: function (e) {
-        (f = d({}, f)), delete f[e.tutorialId];
+        (h = d({}, h)), delete h[e.tutorialId];
     },
     TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
         m = !0;

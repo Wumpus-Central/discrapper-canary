@@ -15,7 +15,7 @@ var i = n(120356),
     m = n(970184),
     h = n(280501),
     g = n(388032),
-    E = n(392061);
+    E = n(296786);
 function b(e, t, n) {
     return (
         t in e
@@ -106,9 +106,9 @@ function T(e) {
         N = (0, f.s)(O),
         P = null != O && i === d.ZJ.PREMIUM,
         R = P && (null == N ? void 0 : N.disabled),
-        D = P ? (null == N ? void 0 : N.label) : n,
-        w = null != g,
-        x = null != D && D.length > 0,
+        w = P ? (null == N ? void 0 : N.label) : n,
+        D = null != g,
+        x = null != w && w.length > 0,
         L = i === d.ZJ.LINK && null != b && b.length > 0,
         j = C === h.gH.LOADING || (P && null == N);
     return (
@@ -151,7 +151,7 @@ function T(e) {
                                   }),
                               })
                             : null,
-                        w
+                        D
                             ? (0, r.jsx)(u.Z, {
                                   className: a()({ [E.textEmoji]: x }),
                                   src: g.src,
@@ -163,7 +163,7 @@ function T(e) {
                         x
                             ? (0, r.jsx)("div", {
                                   className: E.label,
-                                  children: D,
+                                  children: w,
                               })
                             : null,
                         L

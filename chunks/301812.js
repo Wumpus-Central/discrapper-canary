@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(736530),
     m = n(981631),
     h = n(388032),
-    g = n(856785);
+    g = n(418924);
 function E(e) {
     let { ingress: t, guildId: n } = e,
         l = s.SE.useSetting().includes(n),

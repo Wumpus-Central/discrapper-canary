@@ -17,15 +17,15 @@ var i = n(54381),
     C = n(981631),
     y = n(486014),
     v = n(388032),
-    O = n(67103);
-function x(e) {
+    x = n(67103);
+function O(e) {
     let t,
         { activity: n, channel: l, userId: a } = e,
         u = (0, d.IX)(n.application_id).data,
         [p, f] = r.useState(!1),
         [m, g] = r.useState(0),
         b = (0, o.e7)([h.Z], () => h.Z.getChannelId() !== l.id);
-    async function x() {
+    async function O() {
         g(1);
         try {
             await c.Z.sendActivityInvite({
@@ -45,10 +45,10 @@ function x(e) {
     if ((b && (t = v.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
         return (0, i.jsxs)("div", {
-            className: O.activityRow,
+            className: x.activityRow,
             children: [
                 (0, i.jsxs)("div", {
-                    className: O.activityRowContent,
+                    className: x.activityRowContent,
                     children: [
                         p || null == e
                             ? (0, i.jsx)(s.IMN, {
@@ -82,11 +82,11 @@ function x(e) {
                     fullWidth: !0,
                     size: "sm",
                     text: 2 === m ? v.intl.string(y.default["8HU1M2"]) : v.intl.string(y.default.DKHhec),
-                    onClick: x,
+                    onClick: O,
                 }),
                 null != t &&
                     (0, i.jsx)(s.Text, {
-                        className: O.disabledReason,
+                        className: x.disabledReason,
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: t,
@@ -124,12 +124,12 @@ function E(e) {
         : (0, i.jsx)(p.Z.Provider, {
               value: n.guild_id,
               children: (0, i.jsx)("div", {
-                  className: O.root,
+                  className: x.root,
                   children: (0, i.jsx)("div", {
-                      className: O.activityList,
+                      className: x.activityList,
                       children: h.map((e) =>
                           (0, i.jsx)(
-                              x,
+                              O,
                               {
                                   activity: e,
                                   channel: n,

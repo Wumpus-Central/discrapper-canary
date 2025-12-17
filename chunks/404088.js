@@ -8,10 +8,10 @@ var s = i(54381),
     o = i(304696),
     u = i(981631),
     d = i(388032),
-    m = i(923132);
+    m = i(838462);
 function x(t) {
-    let { transitionState: e, onClose: i, questContent: x, quest: T } = t,
-        h = ((t) => {
+    let { transitionState: e, onClose: i, questContent: x, quest: f } = t,
+        T = ((t) => {
             switch (t) {
                 case l.jn.QUEST_BAR:
                 case l.jn.QUEST_BAR_V2:
@@ -28,15 +28,15 @@ function x(t) {
                     return;
             }
         })(x),
-        p = n.useMemo(() => {
+        h = n.useMemo(() => {
             var t;
             return (0, o.Fs)({
-                isTargetedDisclosure: null != h,
-                gamePublisher: T.config.messages.gamePublisher,
-                gameTitle: T.config.messages.gameTitle,
-                cosponsorName: null == (t = T.config.cosponsorMetadata) ? void 0 : t.name,
+                isTargetedDisclosure: null != T,
+                gamePublisher: f.config.messages.gamePublisher,
+                gameTitle: f.config.messages.gameTitle,
+                cosponsorName: null == (t = f.config.cosponsorMetadata) ? void 0 : t.name,
             });
-        }, [T, h]);
+        }, [f, T]);
     return (0, s.jsxs)(r.Modal, {
         size: "sm",
         transitionState: e,
@@ -53,9 +53,9 @@ function x(t) {
                 variant: "text-sm/medium",
                 color: "text-default",
                 className: m.upperBodyText,
-                children: p,
+                children: h,
             }),
-            (0, s.jsx)(g, { targetedTraits: h }),
+            (0, s.jsx)(g, { targetedTraits: T }),
             (0, s.jsx)(a.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
@@ -75,17 +75,17 @@ function g(t) {
             className: m.targetList,
             children: [
                 t &&
-                    (0, s.jsx)(T, {
+                    (0, s.jsx)(f, {
                         icon: a.enf,
                         children: d.intl.string(d.t.xQSdPv),
                     }),
                 i &&
-                    (0, s.jsx)(T, {
+                    (0, s.jsx)(f, {
                         icon: a.tBG,
                         children: d.intl.string(d.t.mYt7hQ),
                     }),
                 n &&
-                    (0, s.jsx)(T, {
+                    (0, s.jsx)(f, {
                         icon: a.iWm,
                         children: d.intl.string(d.t.XAsWxQ),
                     }),
@@ -93,7 +93,7 @@ function g(t) {
         });
     }
 }
-function T(t) {
+function f(t) {
     let { icon: e, children: i } = t;
     return (0, s.jsxs)(a.Text, {
         variant: "text-sm/medium",

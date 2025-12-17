@@ -34,8 +34,8 @@ var r,
     N = n(585483),
     P = n(55935),
     R = n(408433),
-    D = n(956664),
-    w = n(624138),
+    w = n(956664),
+    D = n(624138),
     x = n(591759),
     L = n(468846),
     j = n(401419),
@@ -43,9 +43,9 @@ var r,
     k = n(981631),
     U = n(217702),
     G = n(388032),
-    Z = n(781452),
-    B = n(430864);
-function F(e, t, n) {
+    Z = n(838983),
+    F = n(960324);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,7 +69,7 @@ function V(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
@@ -138,33 +138,33 @@ function et(e) {
             onControlsHide: A,
             onControlsShow: P,
             onVolumeChange: R,
-            onMute: w,
+            onMute: D,
             href: x,
             placeholder: j,
             placeholderVersion: M,
             sourceMetadata: U,
         } = e,
-        [G, B] = a.useState(y),
-        F = null != d && null == d.proxyURL,
-        V = a.useCallback(() => B(!1), [B]),
+        [G, F] = a.useState(y),
+        B = null != d && null == d.proxyURL,
+        V = a.useCallback(() => F(!1), [F]),
         H = (e) => {
             e.preventDefault(),
                 e.stopPropagation(),
                 null == S || S(!1),
-                B(!0),
-                F &&
+                F(!0),
+                B &&
                     (N.S.dispatch(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
                     N.S.subscribeOnce(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V));
         };
     a.useEffect(
         () => () => {
-            F && N.S.unsubscribe(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
+            B && N.S.unsubscribe(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
         },
-        [F, V],
+        [B, V],
     );
     let { width: Y, height: W } = u;
     null != d && ((Y = d.width), (W = d.height));
-    let K = (0, D.Tj)({
+    let K = (0, w.Tj)({
         width: Y,
         height: W,
         maxWidth: l,
@@ -193,7 +193,7 @@ function et(e) {
                 volume: v,
                 onPlay: S,
                 onPause: I,
-                onMute: w,
+                onMute: D,
                 onControlsHide: A,
                 onControlsShow: P,
                 sourceMetadata: U,
@@ -847,7 +847,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: r, maxMediaHeight: a } = this.state,
             o = null != (e = n.image) ? e : n.video;
         if (null == o) return null;
-        let { width: s, height: c } = (0, D.Tj)({
+        let { width: s, height: c } = (0, w.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: r,
@@ -940,7 +940,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: o, maxMediaHeight: s } = this.state,
             l = null != t ? t : r;
         if (null == l) return;
-        let { width: c } = (0, D.Tj)({
+        let { width: c } = (0, w.Tj)({
             width: l.width,
             height: l.height,
             maxWidth: o,
@@ -950,7 +950,7 @@ class er extends (r = a.PureComponent) {
         if (i === k.hBH.RICH && void 0 !== n) return Q;
         if (i === k.hBH.GIFV) {
             var u, d, f, p;
-            let { width: e } = (0, D.Tj)({
+            let { width: e } = (0, w.Tj)({
                 width:
                     null != (d = null != (u = null == r ? void 0 : r.width) ? u : null == a ? void 0 : a.width) ? d : 0,
                 height:
@@ -1013,7 +1013,7 @@ class er extends (r = a.PureComponent) {
             let e = null != r ? r : a;
             if (void 0 !== e) {
                 let { minWidth: n, minHeight: r } = null != (t = this.getMinSize()) ? t : {},
-                    { width: i } = (0, D.Tj)({
+                    { width: i } = (0, w.Tj)({
                         width: e.width,
                         height: e.height,
                         maxWidth: l,
@@ -1025,7 +1025,7 @@ class er extends (r = a.PureComponent) {
             }
         }
         let f = J / (c.Z.fontScale / 100),
-            p = (null != s ? (0, w.TZ)(s) : 0) >= f,
+            p = (null != s ? (0, D.TZ)(s) : 0) >= f,
             _ = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= X,
             m = p || _;
         return {
@@ -1095,7 +1095,7 @@ class er extends (r = a.PureComponent) {
         var t;
         super(...e),
             (t = this),
-            F(
+            B(
                 this,
                 "state",
                 V(
@@ -1113,13 +1113,13 @@ class er extends (r = a.PureComponent) {
                     (0, R.vP)(this.props.embed),
                 ),
             ),
-            F(this, "onReveal", () => {
+            B(this, "onReveal", () => {
                 this.setState({ isVisible: !0 });
             }),
-            F(this, "onToggleObscurity", () => {
+            B(this, "onToggleObscurity", () => {
                 this.setState({ isVisible: !this.state.isVisible });
             }),
-            F(this, "renderInlineMediaEmbed", function () {
+            B(this, "renderInlineMediaEmbed", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     { obscureReason: n, className: r } = t.props,
                     a = t.getMaxWidth(!0);
@@ -1135,7 +1135,7 @@ class er extends (r = a.PureComponent) {
                     children: t.renderMedia(e),
                 });
             }),
-            F(this, "renderEmbedContent", function () {
+            B(this, "renderEmbedContent", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     { className: n, onSuppressEmbed: r, obscureReason: a } = t.props,
                     {
@@ -1149,7 +1149,7 @@ class er extends (r = a.PureComponent) {
                         footer: m,
                     } = t.renderAll();
                 return (0, i.jsx)("article", {
-                    className: s()(n, Z.embedFull, B.markup, {
+                    className: s()(n, Z.embedFull, F.markup, {
                         [Z.isHidden]: e,
                         [Z.spoilerEmbed]: a === f.wk.SPOILER,
                         [Z.hiddenExplicitEmbed]: t.shouldObscure,
@@ -1174,7 +1174,7 @@ class er extends (r = a.PureComponent) {
             });
     }
 }
-F(er, "defaultProps", {
+B(er, "defaultProps", {
     hideMedia: !1,
     allowFullScreen: !0,
     maxThumbnailWidth: 80,

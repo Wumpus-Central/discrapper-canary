@@ -27,10 +27,10 @@ var r = n(54381),
     N = n(739566),
     P = n(421399),
     R = n(310423),
-    D = n(223021),
-    w = n(981631),
+    w = n(223021),
+    D = n(981631),
     x = n(388032),
-    L = n(724913);
+    L = n(549578);
 function j(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ function Z(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function B(e) {
+function F(e) {
     let { width: t = 6, height: n = 10, color: i = "currentColor", className: a, foreground: o } = e;
     return (0, r.jsx)("svg", {
         className: a,
@@ -120,7 +120,7 @@ function B(e) {
         }),
     });
 }
-function F(e) {
+function B(e) {
     let { user: t, guildId: n, guildAvatar: i, onClick: a, onContextMenu: s, onMouseDown: l, ref: c } = e;
     return (0, r.jsx)("img", {
         alt: "",
@@ -155,7 +155,7 @@ function V(e, t, n, i, a, o) {
     if ((d && null == u.activityInstance) || _ || m)
         return (0, r.jsx)("div", {
             className: L.replyBadge,
-            children: (0, r.jsx)(B, { className: L.commandIcon }),
+            children: (0, r.jsx)(F, { className: L.commandIcon }),
         });
     let S =
             null !=
@@ -167,7 +167,7 @@ function V(e, t, n, i, a, o) {
                 ? c
                 : void 0,
         I = () =>
-            F({
+            B({
                 user: t,
                 guildId: p.guild_id,
                 guildAvatar: S,
@@ -228,7 +228,7 @@ function Y(e, t, n) {
         children: (e) => {
             var { onClick: t } = e,
                 i = G(e, ["onClick"]);
-            if (a.type === w.uaV.CHAT_INPUT_COMMAND || a.type === w.uaV.INTERACTION_PREMIUM_UPSELL)
+            if (a.type === D.uaV.CHAT_INPUT_COMMAND || a.type === D.uaV.INTERACTION_PREMIUM_UPSELL)
                 return (0, r.jsx)(
                     f.P3F,
                     U(M({}, i), {
@@ -258,7 +258,7 @@ function Y(e, t, n) {
                 });
             {
                 let e = () => {
-                        C.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
+                        C.S.dispatchToLastSubscribed(D.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
                     },
                     t = (0, E.XZ)(c);
                 return (0, r.jsx)(
@@ -300,7 +300,7 @@ function K(e) {
         T = (0, d.e7)([I.default], () => I.default.getCurrentUser()),
         C = i.useRef(null),
         P = i.useRef(null),
-        w = i.useMemo(
+        D = i.useMemo(
             () => (e, t, n) => (
                 l()(null != t, "ExecutedCommand: user cannot be undefined"),
                 l()(null != T, "ExecutedCommand: currentUser cannot be undefined"),
@@ -342,15 +342,15 @@ function K(e) {
             (null == k ? void 0 : k.type) === p.B8.APPLICATION_COMMAND &&
             null != a.messageReference &&
             null != e.renderTargetMessage,
-        B = (0, N.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),
-        F = (0, N.Sw)(G, s),
-        K = i.useMemo(() => (e.compact ? (0, D.Z)((0, A.vc)(u()(), "LT")) : null), [e.compact]),
+        F = (0, N.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),
+        B = (0, N.Sw)(G, s),
+        K = i.useMemo(() => (e.compact ? (0, w.Z)((0, A.vc)(u()(), "LT")) : null), [e.compact]),
         z = (0, _.NX)(s.id),
         q = a.interaction;
-    if (null == q || null == B) return null;
+    if (null == q || null == F) return null;
     let Q = () => {
-            let t = V(e, q.user, 0, B, (e) => w(e, q.user, [h.Z.AVATAR]), C),
-                n = H(e, q.user, 0, B, (e) => w(e, q.user));
+            let t = V(e, q.user, 0, F, (e) => D(e, q.user, [h.Z.AVATAR]), C),
+                n = H(e, q.user, 0, F, (e) => D(e, q.user));
             return (0, r.jsxs)(
                 i.Fragment,
                 {
@@ -361,8 +361,8 @@ function K(e) {
         },
         X = () => {
             if (null == G) return null;
-            let t = V(e, G, 1, F, (e) => w(e, G, [h.Z.AVATAR]), C),
-                n = H(e, G, 1, F, (e) => w(e, G));
+            let t = V(e, G, 1, B, (e) => D(e, G, [h.Z.AVATAR]), C),
+                n = H(e, G, 1, B, (e) => D(e, G));
             return (0, r.jsxs)(
                 i.Fragment,
                 {

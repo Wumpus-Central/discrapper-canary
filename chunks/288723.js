@@ -54,8 +54,8 @@ let d = {
                     N = t.rects.reference,
                     P = t.rects.popper,
                     R = new Map(),
-                    D = !0,
-                    w = A[0],
+                    w = !0,
+                    D = A[0],
                     x = 0;
                 x < A.length;
                 x++
@@ -74,21 +74,21 @@ let d = {
                     }),
                     Z = k ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
                 N[U] > P[U] && (Z = (0, r.Z)(Z));
-                var B = (0, r.Z)(Z),
-                    F = [];
+                var F = (0, r.Z)(Z),
+                    B = [];
                 if (
-                    (f && F.push(G[j] <= 0),
-                    _ && F.push(G[Z] <= 0, G[B] <= 0),
-                    F.every(function (e) {
+                    (f && B.push(G[j] <= 0),
+                    _ && B.push(G[Z] <= 0, G[F] <= 0),
+                    B.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (w = L), (D = !1);
+                    (D = L), (w = !1);
                     break;
                 }
-                R.set(L, F);
+                R.set(L, B);
             }
-            if (D)
+            if (w)
                 for (
                     var V = O ? 3 : 1,
                         H = function (e) {
@@ -99,13 +99,13 @@ let d = {
                                         return e;
                                     });
                             });
-                            if (t) return (w = t), "break";
+                            if (t) return (D = t), "break";
                         },
                         Y = V;
                     Y > 0 && "break" !== H(Y);
                     Y--
                 );
-            t.placement !== w && ((t.modifiersData[a]._skip = !0), (t.placement = w), (t.reset = !0));
+            t.placement !== D && ((t.modifiersData[a]._skip = !0), (t.placement = D), (t.reset = !0));
         }
     },
     requiresIfExists: ["offset"],

@@ -16,12 +16,12 @@ function a(e, t, n) {
         e
     );
 }
-let s = null,
-    c = null,
+let c = null,
+    s = null,
     u = { reportedMessages: {} };
 function d() {
     let e = o.Z.getLastSelectedGuildId();
-    e !== s && ((c = null), (s = null != e ? e : null));
+    e !== c && ((s = null), (c = null != e ? e : null));
 }
 class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -39,7 +39,7 @@ class f extends (r = i.ZP.PersistedStore) {
     }
     isUserBanned(e) {
         var t;
-        return null != (t = null == c ? void 0 : c.get(e)) ? t : null;
+        return null != (t = null == s ? void 0 : s.get(e)) ? t : null;
     }
     getReportedMessages() {
         return u.reportedMessages;
@@ -64,15 +64,15 @@ let g = new f(l.Z, {
     },
     GUILD_BAN_ADD: function (e) {
         let { user: t, guildId: n } = e;
-        n === s && null != c && c.set(t.id, !0);
+        n === c && null != s && s.set(t.id, !0);
     },
     GUILD_BAN_REMOVE: function (e) {
         let { user: t, guildId: n } = e;
-        n === s && null != c && c.set(t.id, !1);
+        n === c && null != s && s.set(t.id, !1);
     },
     GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
         let { bans: t, guildId: n, userIds: r } = e;
-        if (n !== s) return;
+        if (n !== c) return;
         let i = new Set(
                 t.map((e) => {
                     var t;
@@ -80,15 +80,15 @@ let g = new f(l.Z, {
                 }),
             ),
             l = Array.from(new Set(null != r ? r : [])).filter((e) => !i.has(e));
-        null == c && (c = new Map()),
+        null == s && (s = new Map()),
             i.forEach((e) => {
-                null == c || c.set(e, !0);
+                null == s || s.set(e, !0);
             }),
             l.forEach((e) => {
-                null == c || c.set(e, !1);
+                null == s || s.set(e, !1);
             });
     },
     LOGOUT: function () {
-        (s = null), (c = null), (u.reportedMessages = {});
+        (c = null), (s = null), (u.reportedMessages = {});
     },
 });

@@ -1,5 +1,5 @@
-n.d(t, { J: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { J: () => i });
+let l = (0, n(818083).B)({
     kind: "guild",
     id: "2025-08_invite_role_assignment",
     label: "Invite Role Assignment",
@@ -12,8 +12,8 @@ let i = (0, n(818083).B)({
         },
     ],
 });
-function r(e, t) {
-    return i.useExperiment({
+function i(e, t) {
+    return l.useExperiment({
         guildId: e,
         location: t,
     });

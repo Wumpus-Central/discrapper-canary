@@ -71,7 +71,7 @@ function S(e) {
         if (null !== r(u)) (h = !0), I || ((I = !0), o());
         else {
             var t = r(d);
-            null !== t && w(S, t.startTime - e);
+            null !== t && D(S, t.startTime - e);
         }
 }
 var I = !1,
@@ -108,7 +108,7 @@ function P() {
                         if (null !== p) n = !0;
                         else {
                             var c = r(d);
-                            null !== c && w(S, c.startTime - e), (n = !1);
+                            null !== c && D(S, c.startTime - e), (n = !1);
                         }
                     }
                     break e;
@@ -127,16 +127,16 @@ if ("function" == typeof O)
     };
 else if ("undefined" != typeof MessageChannel) {
     var R = new MessageChannel(),
-        D = R.port2;
+        w = R.port2;
     (R.port1.onmessage = P),
         (o = function () {
-            D.postMessage(null);
+            w.postMessage(null);
         });
 } else
     o = function () {
         b(P, 0);
     };
-function w(e, n) {
+function D(e, n) {
     T = b(function () {
         e(t.unstable_now());
     }, n);
@@ -233,7 +233,7 @@ function w(e, n) {
             a > s
                 ? ((e.sortIndex = a),
                   n(d, e),
-                  null === r(u) && e === r(d) && (g ? (y(T), (T = -1)) : (g = !0), w(S, a - s)))
+                  null === r(u) && e === r(d) && (g ? (y(T), (T = -1)) : (g = !0), D(S, a - s)))
                 : ((e.sortIndex = l), n(u, e), h || m || ((h = !0), I || ((I = !0), o()))),
             e
         );

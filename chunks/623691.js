@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(953529), n(388685);
+n.d(t, { Z: () => _ }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -9,22 +9,22 @@ var r = n(54381),
     d = n(481060),
     u = n(668781),
     g = n(749210),
-    m = n(409513),
-    p = n(266454),
-    f = n(494620),
-    h = n(496675),
-    b = n(55935),
+    f = n(409513),
+    m = n(266454),
+    b = n(494620),
+    p = n(496675),
+    h = n(55935),
     x = n(63063),
     j = n(434404),
-    _ = n(714939),
-    v = n(569657),
-    O = n(494831),
-    C = n(981631),
-    y = n(921944),
-    N = n(231338),
-    E = n(388032),
-    I = n(297827);
-function S(e) {
+    v = n(714939),
+    O = n(569657),
+    C = n(494831),
+    y = n(981631),
+    N = n(921944),
+    E = n(231338),
+    I = n(388032),
+    S = n(499899);
+function _(e) {
     let {
             guild: t,
             everyoneRole: n,
@@ -35,39 +35,39 @@ function S(e) {
             setHeaderHeight: c,
         } = e,
         u = i.useRef(null),
-        { enabled: g } = m.Z.useExperiment({
+        { enabled: g } = f.Z.useExperiment({
             guildId: t.id,
             location: "GuildSettingsRolesOverviewHeader",
         });
     i.useEffect(() => {
         var e, t;
-        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : O.Cl);
+        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : C.Cl);
     }, [c]);
-    let p = i.useCallback(() => {
+    let m = i.useCallback(() => {
             a(n.id);
         }, [a, n.id]),
-        f = g ? v.Z : T;
+        b = g ? O.Z : T;
     return (0, r.jsxs)("div", {
         ref: u,
         children: [
             (0, r.jsx)(d.Heading, {
                 variant: "heading-lg/semibold",
-                children: E.intl.string(E.t["LPJmL/"]),
+                children: I.intl.string(I.t["LPJmL/"]),
             }),
             (0, r.jsx)(d.Text, {
-                className: I.description,
+                className: S.description,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: E.intl.string(E.t["1ydhVp"]),
+                children: I.intl.string(I.t["1ydhVp"]),
             }),
-            (0, r.jsx)(f, { guild: t }),
+            (0, r.jsx)(b, { guild: t }),
             (0, r.jsx)(P, {
                 guild: t,
                 everyoneRole: n,
                 filteredRoles: l,
                 query: s,
                 setQuery: o,
-                onEveryoneRoleClick: p,
+                onEveryoneRoleClick: m,
             }),
         ],
     });
@@ -75,28 +75,28 @@ function S(e) {
 function T(e) {
     let { guild: t } = e;
     i.useEffect(() => {
-        (0, p.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
-            dismissAction: y.L.INDIRECT_ACTION,
+        (0, m.wE)(c.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION, t.id, {
+            dismissAction: N.L.INDIRECT_ACTION,
             guildId: t.id,
             forceTrack: !0,
         });
     }, [t]);
-    let n = (0, b.vc)(o()(C.zQD), "LL"),
-        l = t.features.has(C.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
+    let n = (0, h.vc)(o()(y.zQD), "LL"),
+        l = t.features.has(y.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
-                  children: E.intl.format(E.t.Vg2oTN, { breakingChangeDate: n }),
+                  children: I.intl.format(I.t.Vg2oTN, { breakingChangeDate: n }),
               })
-            : h.Z.can(N.Pl.ADMINISTRATOR, t)
+            : p.Z.can(E.Pl.ADMINISTRATOR, t)
               ? (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: E.intl.format(E.t.HYM8OE, {
+                    children: I.intl.format(I.t.HYM8OE, {
                         onClickMigrate: () => {
                             u.Z.show({
-                                title: E.intl.string(E.t.nFE8dD),
-                                body: E.intl.format(E.t["1PAzQ6"], { guildName: t.name }),
-                                cancelText: E.intl.string(E.t["ETE/oC"]),
-                                confirmText: E.intl.string(E.t["cY+Oob"]),
+                                title: I.intl.string(I.t.nFE8dD),
+                                body: I.intl.format(I.t["1PAzQ6"], { guildName: t.name }),
+                                cancelText: I.intl.string(I.t["ETE/oC"]),
+                                confirmText: I.intl.string(I.t["cY+Oob"]),
                                 onConfirm: () => {
                                     j.Z.migratePinPermission(t.id);
                                 },
@@ -107,11 +107,11 @@ function T(e) {
                 })
               : (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: E.intl.format(E.t.cAuU1S, { breakingChangeDate: n }),
+                    children: I.intl.format(I.t.cAuU1S, { breakingChangeDate: n }),
                 });
-    return (0, r.jsx)(f.Z, {
-        look: f.z.WARNING,
-        className: I.migrationInfoBox,
+    return (0, r.jsx)(b.Z, {
+        look: b.z.WARNING,
+        className: S.migrationInfoBox,
         children: l,
     });
 }
@@ -119,7 +119,7 @@ function P(e) {
     let { guild: t, everyoneRole: n, filteredRoles: i, query: l, setQuery: s, onEveryoneRoleClick: o } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(v.Z, {
                 role: n,
                 onClick: o,
             }),
@@ -129,28 +129,28 @@ function P(e) {
                 setQuery: s,
             }),
             (0, r.jsx)(d.Text, {
-                className: I.helpText,
+                className: S.helpText,
                 color: "text-default",
                 variant: "text-sm/normal",
-                children: E.intl.format(E.t.xkC3Yf, { articleURL: x.Z.getArticleURL(C.BhN.PERMISSIONS_TUTORIAL) }),
+                children: I.intl.format(I.t.xkC3Yf, { articleURL: x.Z.getArticleURL(y.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
-                className: I.rolesTable,
+                className: S.rolesTable,
                 children: (0, r.jsxs)("div", {
-                    className: I.tableHeader,
+                    className: S.tableHeader,
                     children: [
-                        (0, r.jsx)("div", { className: I.dragSpacing }),
+                        (0, r.jsx)("div", { className: S.dragSpacing }),
                         (0, r.jsx)(d.Text, {
-                            className: a()(I.tableTitle, I.roleNameSpacing),
+                            className: a()(S.tableTitle, S.roleNameSpacing),
                             variant: "text-sm/normal",
-                            children: E.intl.format(E.t["38N3Vz"], { numRoles: String(i.length) }),
+                            children: I.intl.format(I.t["38N3Vz"], { numRoles: String(i.length) }),
                         }),
                         (0, r.jsx)(d.Text, {
-                            className: a()(I.tableTitle, I.memberSpacing),
+                            className: a()(S.tableTitle, S.memberSpacing),
                             variant: "text-sm/normal",
-                            children: E.intl.string(E.t["9Oq93m"]),
+                            children: I.intl.string(I.t["9Oq93m"]),
                         }),
-                        (0, r.jsx)("div", { className: I.buttonsSpacing }),
+                        (0, r.jsx)("div", { className: S.buttonsSpacing }),
                     ],
                 }),
             }),
@@ -173,22 +173,22 @@ function w(e) {
             s(!0), await g.Z.createRole(t.id), s(!1);
         };
     return (0, r.jsx)("div", {
-        className: I.__invalid_rolesList,
+        className: S.__invalid_rolesList,
         children: (0, r.jsxs)("div", {
-            className: I.searchContainer,
+            className: S.searchContainer,
             children: [
                 (0, r.jsx)(d.E1j, {
                     query: n,
                     onChange: o,
                     onClear: c,
-                    placeholder: E.intl.string(E.t.Sojqsr),
-                    "aria-label": E.intl.string(E.t.Sojqsr),
+                    placeholder: I.intl.string(I.t.Sojqsr),
+                    "aria-label": I.intl.string(I.t.Sojqsr),
                 }),
                 (0, r.jsx)(d.Button, {
                     size: "sm",
                     onClick: u,
                     loading: a,
-                    text: E.intl.string(E.t.JZZjQK),
+                    text: I.intl.string(I.t.JZZjQK),
                 }),
             ],
         }),

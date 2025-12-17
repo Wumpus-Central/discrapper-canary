@@ -204,10 +204,10 @@ function P() {
 function R(e) {
     return (i = e.sessionId), (b = null), (O = null), P(), !1;
 }
-function D() {
+function w() {
     (i = null), (b = null), (O = null), P();
 }
-function w(e) {
+function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, a, o;
@@ -280,10 +280,10 @@ function G(e) {
 function Z(e) {
     return e.state === _.$7l.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
 }
-function B(e) {
+function F(e) {
     return e.state === _.hes.RTC_CONNECTED && (I = !0), !0;
 }
-function F(e) {
+function B(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
 }
 function V() {
@@ -422,8 +422,8 @@ let q = new z(
         ? {}
         : {
               CONNECTION_OPEN: R,
-              CONNECTION_CLOSED: D,
-              RTC_CONNECTION_STATE: B,
+              CONNECTION_CLOSED: w,
+              RTC_CONNECTION_STATE: F,
               RTC_CONNECTION_PING: V,
               RTC_CONNECTION_LOSS_RATE: V,
               RTC_CONNECTION_UPDATE_ID: Y,
@@ -432,9 +432,9 @@ let q = new z(
               RTC_CONNECTION_CLIENT_DISCONNECT: V,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: H,
               VIDEO_SIZE_UPDATE: K,
-              VOICE_STATE_UPDATES: w,
+              VOICE_STATE_UPDATES: D,
               VOICE_CHANNEL_SELECT: G,
-              AUDIO_SET_NOISE_CANCELLATION: F,
+              AUDIO_SET_NOISE_CANCELLATION: B,
               VOICE_SERVER_UPDATE: x,
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
               REMOTE_SESSION_CONNECT: L,

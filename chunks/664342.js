@@ -14,14 +14,14 @@ var r = n(54381),
     g = n(214906),
     m = n(612856),
     b = n(137591),
-    _ = n(299206),
-    y = n(727429),
-    O = n(665149),
-    x = n(359110),
-    j = n(585483),
-    v = n(407908),
-    C = n(739830),
-    I = n(488131),
+    y = n(299206),
+    O = n(727429),
+    x = n(665149),
+    j = n(359110),
+    v = n(585483),
+    C = n(407908),
+    I = n(739830),
+    _ = n(488131),
     S = n(981631),
     E = n(388032);
 function Z(e) {
@@ -89,7 +89,7 @@ function T(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                O.ZP.Icon,
+                x.ZP.Icon,
                 P(Z({}, e), {
                     ref: s,
                     onClick: o,
@@ -104,24 +104,24 @@ function T(e) {
 }
 function N(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
-        y = (0, c.Z)(t, "Sidebar Overflow"),
-        O = (0, u.Z)(t),
-        v = (0, g.Z)(t),
-        C = (0, m.Z)(t),
-        I = (0, a.Z)(t),
+        O = (0, c.Z)(t, "Sidebar Overflow"),
+        x = (0, u.Z)(t),
+        C = (0, g.Z)(t),
+        I = (0, m.Z)(t),
+        _ = (0, a.Z)(t),
         Z = (0, d.Z)(t),
         P = (0, f.Z)(t.id),
         T = (0, h.Z)(t),
         N = (0, o.Z)(t),
         R = (0, s.Z)(t),
-        w = (0, _.Z)({
+        w = (0, y.Z)({
             id: t.id,
             label: E.intl.string(E.t.DQ797g),
         }),
         A = (0, b.Z)(t),
         D = (0, p.Z)(t);
     function L() {
-        (0, x.Kh)(t.id);
+        (0, j.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "thread-context",
@@ -131,7 +131,7 @@ function N(e) {
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    y,
+                    O,
                     (0, r.jsx)(l.sNh, {
                         id: "open",
                         label: E.intl.string(E.t.IxVmZi),
@@ -140,10 +140,10 @@ function N(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [v, C],
+                children: [C, I],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [T, O, P, D],
+                children: [T, x, P, D],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -154,7 +154,7 @@ function N(e) {
                         action: function () {
                             L(),
                                 setTimeout(() => {
-                                    j.S.dispatch(S.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    v.S.dispatch(S.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         },
                     }),
@@ -163,13 +163,13 @@ function N(e) {
                         label: E.intl.string(E.t["2BSH7n"]),
                         icon: l.rgF,
                         action: function () {
-                            L(), j.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
+                            L(), v.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
                         },
                     }),
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [A, I, Z, N],
+                children: [A, _, Z, N],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [R, w],
@@ -181,13 +181,13 @@ function R(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, r.jsx)(C.Z, { channel: t }),
-            t.isModeratorReportChannel() ? (0, r.jsx)(v.Z, { channel: t }) : null,
+            t.isForumPost() ? null : (0, r.jsx)(I.Z, { channel: t }),
+            t.isModeratorReportChannel() ? (0, r.jsx)(C.Z, { channel: t }) : null,
             (0, r.jsx)(T, { channel: t }),
-            (0, r.jsx)(O.ZP.Icon, {
+            (0, r.jsx)(x.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: E.intl.string(E.t.cpT0Cq),
-                onClick: () => (0, I.vN)((0, y.e)(t), null != n ? n : t.parent_id),
+                onClick: () => (0, _.vN)((0, O.e)(t), null != n ? n : t.parent_id),
             }),
         ],
     });

@@ -4,13 +4,13 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(70097),
-    s = n(306247),
-    o = n(97794);
+    o = n(306247),
+    s = n(97794);
 let c = (e) => {
     let { className: t, isAnimated: n = !1, questName: i } = e,
-        c = n ? o.Z : o.Z + "?format=webp";
+        c = n ? s.Z : s.Z + "?format=webp";
     return (0, r.jsx)("div", {
-        className: l()(s.container, t),
+        className: l()(o.container, t),
         children: n
             ? (0, r.jsx)(a.Z, {
                   autoPlay: !0,
@@ -18,7 +18,7 @@ let c = (e) => {
                   muted: !0,
                   preload: "auto",
                   playsInline: !0,
-                  className: s.asset,
+                  className: o.asset,
                   controls: !1,
                   children: (0, r.jsx)("source", {
                       src: c,
@@ -26,7 +26,7 @@ let c = (e) => {
                   }),
               })
             : (0, r.jsx)("img", {
-                  className: s.asset,
+                  className: o.asset,
                   src: c,
                   alt: i,
               }),

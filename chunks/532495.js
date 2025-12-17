@@ -28,10 +28,10 @@ var i = n(512722),
     N = n(687158),
     P = n(477448),
     R = n(25990),
-    D = n(594174),
-    w = n(74538),
+    w = n(594174),
+    D = n(74538),
     x = n(388032),
-    L = n(436360);
+    L = n(485344);
 function j(e, t, n) {
     return (
         t in e
@@ -85,12 +85,12 @@ function U(e, t) {
     );
 }
 function G() {
-    var e, t, n, i, j, k, G, Z, B;
-    let F = (0, o.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+    var e, t, n, i, j, k, G, Z, F;
+    let B = (0, o.e7)([w.default], () => {
+            let e = w.default.getCurrentUser();
             return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
-        V = (0, o.e7)([A.Z], () => A.Z.getUserProfile(F.id)),
+        V = (0, o.e7)([A.Z], () => A.Z.getUserProfile(B.id)),
         {
             pendingAvatar: H,
             pendingGlobalName: Y,
@@ -108,14 +108,14 @@ function G() {
             return U(M({}, e), { errors: t });
         }),
         ee = (0, I.SD)({
-            userId: F.id,
+            userId: B.id,
             image: H,
         }),
         et = (0, l.gS)(),
-        en = w.ZP.canUsePremiumProfileCustomization(F),
-        er = (0, d.gd)(H, F.avatar),
+        en = D.ZP.canUsePremiumProfileCustomization(B),
+        er = (0, d.gd)(H, B.avatar),
         ei = (0, d.f$)(W, null == V ? void 0 : V.banner),
-        ea = (0, N.ZP)(F.id),
+        ea = (0, N.ZP)(B.id),
         eo = null == ea ? void 0 : ea.getLegacyUsername(),
         es =
             (null != (i = null == (e = $.global_name) ? void 0 : e.length) ? i : 0) > 0
@@ -148,7 +148,7 @@ function G() {
                               "banner",
                           ),
                           (0, r.jsx)(O.Z, {
-                              user: F,
+                              user: B,
                               pendingAvatarSrc: ee,
                               pendingColors: Q,
                               onThemeColorsChange: T.z5,
@@ -159,7 +159,7 @@ function G() {
                 : (0, r.jsx)(
                       b.Z,
                       {
-                          user: F,
+                          user: B,
                           savedUserColor: null == V ? void 0 : V.accentColor,
                           pendingColor: q,
                           setPendingAccentColor: T.CM,
@@ -170,12 +170,12 @@ function G() {
         className: L.sectionsContainer,
         children: [
             (0, r.jsx)(m.Z, {
-                placeholder: F.username,
+                placeholder: B.username,
                 errors: es,
-                currentGlobalName: F.globalName,
+                currentGlobalName: B.globalName,
                 pendingGlobalName: Y,
                 onGlobalNameChange: s.W0,
-                user: F,
+                user: B,
             }),
             (0, r.jsx)(
                 S.Z,
@@ -203,16 +203,16 @@ function G() {
             (0, r.jsx)(
                 p.Z,
                 {
-                    user: F,
+                    user: B,
                     sectionTitle: x.intl.string(x.t["7v0T9P"]),
                 },
                 "decoration",
             ),
-            (0, r.jsx)(g.Z, { user: F }),
+            (0, r.jsx)(g.Z, { user: B }),
             (0, r.jsx)(
                 y.Z,
                 {
-                    user: F,
+                    user: B,
                     sectionTitle: x.intl.string(x.t.wR5wOo),
                 },
                 "effect",
@@ -225,7 +225,7 @@ function G() {
                     errors: el,
                     onBioChange: (e) => (0, d.xQ)(e, null == V ? void 0 : V.bio),
                     pendingBio: K,
-                    currentBio: null != (B = null == V ? void 0 : V.bio) ? B : "",
+                    currentBio: null != (F = null == V ? void 0 : V.bio) ? F : "",
                 },
                 "bio",
             ),

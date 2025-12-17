@@ -8,8 +8,8 @@ var l = n(54381),
     o = n(311819),
     c = n(835473),
     d = n(957730),
-    b = n(987509),
-    f = n(72214),
+    f = n(987509),
+    b = n(72214),
     h = n(592125),
     m = n(594174),
     p = n(572004),
@@ -18,21 +18,21 @@ var l = n(54381),
     y = n(207003),
     j = n(959517),
     v = n(388032),
-    S = n(834505),
+    S = n(925969),
     P = n(621054);
 function O(e) {
     let {
             applicationId: t,
             customId: n,
             linkId: O,
-            message: _,
-            onClose: Z,
-            onCopyLink: E,
-            onShare: L,
-            transitionState: T,
+            message: Z,
+            onClose: E,
+            onCopyLink: L,
+            onShare: T,
+            transitionState: C,
         } = e,
-        [C] = (0, c.Z)([t]),
-        w = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        [w] = (0, c.Z)([t]),
+        _ = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         [k, N] = r.useState(!1),
         [R, M] = r.useState(""),
         [D, A] = r.useState("");
@@ -40,12 +40,12 @@ function O(e) {
         A(
             (0, o.H)({
                 applicationId: t,
-                referrerId: null == w ? void 0 : w.id,
+                referrerId: null == _ ? void 0 : _.id,
                 customId: n,
                 linkId: O,
             }),
         );
-    }, [t, w, n, O, A]);
+    }, [t, _, n, O, A]);
     let I = r.useRef(0),
         [F, U] = r.useState([]),
         q = F.length,
@@ -60,7 +60,7 @@ function O(e) {
             M("");
         }, [M]),
         z = r.useRef(null),
-        { results: W, updateSearchText: V } = (0, f.s)({
+        { results: W, updateSearchText: V } = (0, b.s)({
             selectedDestinations: F,
             includeMissingDMs: !0,
         }),
@@ -86,30 +86,30 @@ function O(e) {
         ),
         X = r.useCallback(
             async (e) => {
-                if (null == C) return;
-                let t = (0, x.P)(_, C, D);
+                if (null == w) return;
+                let t = (0, x.P)(Z, w, D);
                 N(!0),
-                    (await Promise.all(e.map(b.qx))).filter(g.lm).forEach(async (e) => {
+                    (await Promise.all(e.map(f.qx))).filter(g.lm).forEach(async (e) => {
                         let n = h.Z.getChannel(e);
                         null != n &&
                             (await u.Z.sendMessage(e, d.ZP.parse(n, t), !1, { location: j.dy.ACTIVITY_SHARE }));
                     }),
                     (0, i.showToast)(
                         (0, i.createToast)(
-                            v.intl.formatToPlainString(v.t.jQULqL, { applicationName: C.name }),
+                            v.intl.formatToPlainString(v.t.jQULqL, { applicationName: w.name }),
                             i.ToastType.SUCCESS,
                         ),
                     ),
-                    L(!0),
-                    Z();
+                    T(!0),
+                    E();
             },
-            [_, D, Z, L, C],
+            [Z, D, E, T, w],
         ),
         B = r.useCallback(() => {
             (0, p.JG)(D, () => {
-                E(), (0, i.showToast)((0, i.createToast)(v.intl.string(v.t.t5VZ88), i.ToastType.SUCCESS));
+                L(), (0, i.showToast)((0, i.createToast)(v.intl.string(v.t.t5VZ88), i.ToastType.SUCCESS));
             });
-        }, [D, E]),
+        }, [D, L]),
         Y =
             W.length > 0
                 ? (0, l.jsx)(y.Q, {
@@ -136,10 +136,10 @@ function O(e) {
                       ],
                   });
     return (0, l.jsx)(s.Modal, {
-        transitionState: T,
-        onClose: Z,
+        transitionState: C,
+        onClose: E,
         title: v.intl.string(v.t.r9qKow),
-        subtitle: _,
+        subtitle: Z,
         size: "md",
         input: (0, l.jsx)(i.E1j, {
             ref: z,

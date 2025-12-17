@@ -1,5 +1,5 @@
 n.d(t, {
-    W2: () => w,
+    W2: () => D,
     ZP: () => k,
     rT: () => j,
     xI: () => M,
@@ -29,7 +29,7 @@ var r = n(54381),
     I = n(981631),
     T = n(65154),
     C = n(388032),
-    A = n(197571);
+    A = n(478411);
 function N(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function D(e, t) {
         e
     );
 }
-async function w() {
+async function D() {
     let e = await p.Z.fileManager.getLogPath();
     p.Z.fileManager.showItemInFolder(e);
 }
@@ -103,7 +103,7 @@ function L(e) {
     (0, c.h7j)((e) =>
         (0, r.jsx)(
             c.VoidConfirmModal,
-            D(
+            w(
                 P(
                     {
                         header: n,
@@ -240,7 +240,7 @@ function k() {
                                 (0, r.jsx)(c.Button, {
                                     variant: "secondary",
                                     text: C.intl.string(C.t.nuPtYi),
-                                    onClick: w,
+                                    onClick: D,
                                 }),
                             ],
                         }),

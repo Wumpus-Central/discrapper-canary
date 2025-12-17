@@ -9,22 +9,22 @@ var r = n(54381),
     d = n(481060),
     u = n(726542),
     g = n(100527),
-    m = n(933557),
-    p = n(670188),
-    f = n(210887),
-    h = n(598077),
-    b = n(699516),
+    f = n(933557),
+    m = n(670188),
+    b = n(210887),
+    p = n(598077),
+    h = n(699516),
     x = n(594174),
     j = n(259580),
-    _ = n(411198),
-    v = n(51144),
-    O = n(426563),
-    C = n(909746),
-    y = n(501801),
-    N = n(981631),
-    E = n(388032),
-    I = n(404211);
-function S(e) {
+    v = n(411198),
+    O = n(51144),
+    C = n(426563),
+    y = n(909746),
+    N = n(501801),
+    E = n(981631),
+    I = n(388032),
+    S = n(876334);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,16 +72,16 @@ class P extends i.PureComponent {
         let { user: e, onContextMenu: t } = this.props;
         return (0, r.jsxs)("span", {
             onContextMenu: t,
-            className: I.userHook,
+            className: S.userHook,
             children: [
                 (0, r.jsx)(d.Text, {
                     variant: "text-md/normal",
-                    children: v.ZP.getUserTag(e, { mode: "username" }),
+                    children: O.ZP.getUserTag(e, { mode: "username" }),
                 }),
                 "0" !== e.discriminator &&
                     (0, r.jsxs)(d.Text, {
                         variant: "text-xs/normal",
-                        className: I.discrim,
+                        className: S.discrim,
                         children: ["#", e.discriminator],
                     }),
             ],
@@ -93,8 +93,8 @@ let w = i.forwardRef((e, t) => {
         {
             log: l,
             className: o,
-            expanded: f,
-            guildId: v,
+            expanded: b,
+            guildId: O,
             guild: w,
             onChannelContextMenu: Z,
             onContentClick: R,
@@ -107,52 +107,52 @@ let w = i.forwardRef((e, t) => {
         M = (function () {
             let { changes: e } = l;
             return (
-                (l.actionType !== N.vB8.DELETE ||
-                    l.action === N.rsA.MEMBER_BAN_ADD ||
-                    l.action === N.rsA.MEMBER_KICK ||
-                    l.action === N.rsA.MEMBER_PRUNE) &&
+                (l.actionType !== E.vB8.DELETE ||
+                    l.action === E.rsA.MEMBER_BAN_ADD ||
+                    l.action === E.rsA.MEMBER_KICK ||
+                    l.action === E.rsA.MEMBER_PRUNE) &&
                 null != e &&
-                e.some((e) => !(0, y.xO)(l, e))
+                e.some((e) => !(0, N.xO)(l, e))
             );
         })(),
-        U = I.headerDefault;
-    f ? (U = I.headerExpanded) : M && (U = I.headerClickable);
+        U = S.headerDefault;
+    b ? (U = S.headerExpanded) : M && (U = S.headerClickable);
     let B = l.timestampStart.calendar(),
         F = l.timestampEnd.calendar();
     n =
         B === F
             ? (0, r.jsx)(d.Text, {
-                  className: I.timestamp,
+                  className: S.timestamp,
                   variant: "text-sm/normal",
                   children: B,
               })
             : (0, r.jsxs)(d.Text, {
-                  className: I.timestamp,
+                  className: S.timestamp,
                   variant: "text-sm/normal",
                   children: [B, "\u2014", F],
               });
-    let H = M ? D : N.dG4;
+    let H = M ? D : E.dG4;
     return (0, r.jsx)(s.mh, {
         id: l.id,
         children: (e) =>
             (0, r.jsxs)("div", {
                 ref: t,
-                className: a()(I.auditLog, o),
+                className: a()(S.auditLog, o),
                 children: [
                     (0, r.jsxs)(
                         d.P3F,
                         T(
-                            S(
+                            _(
                                 {
                                     className: U,
-                                    "aria-expanded": f,
+                                    "aria-expanded": b,
                                     onClick: H,
                                 },
                                 e,
                             ),
                             {
                                 children: [
-                                    (0, r.jsx)(y.mp, {
+                                    (0, r.jsx)(N.mp, {
                                         action: l.action,
                                         actionType: l.actionType,
                                         targetType: l.targetType,
@@ -164,31 +164,31 @@ let w = i.forwardRef((e, t) => {
                                             options: { integration_type: n },
                                         } = l;
                                         if (null != e && null != t)
-                                            return (0, r.jsx)(p.Z, {
+                                            return (0, r.jsx)(m.Z, {
                                                 targetElementRef: G,
                                                 user: e,
-                                                guildId: v,
+                                                guildId: O,
                                                 newAnalyticsLocations: [g.Z.AVATAR],
                                                 children: (e) => {
                                                     var t;
                                                     return (0, r.jsx)(
                                                         d.qEK,
-                                                        T(S({}, e), {
+                                                        T(_({}, e), {
                                                             ref: G,
                                                             onClick: (t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
-                                                            className: I.avatar,
+                                                            className: S.avatar,
                                                             src:
-                                                                l.action === N.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                                l.action === N.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                                l.action === E.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                                l.action === E.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
                                                                 l.action ===
-                                                                    N.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                                l.action === N.rsA.AUTO_MODERATION_QUARANTINE_USER
-                                                                    ? (0, O.j)()
+                                                                    E.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                                l.action === E.rsA.AUTO_MODERATION_QUARANTINE_USER
+                                                                    ? (0, C.j)()
                                                                     : null == (t = l.user)
                                                                       ? void 0
-                                                                      : t.getAvatarURL(v, 40),
+                                                                      : t.getAvatarURL(O, 40),
                                                             "aria-hidden": !0,
                                                             size: d.EFr.SIZE_40,
                                                         }),
@@ -200,7 +200,7 @@ let w = i.forwardRef((e, t) => {
                                             if (null != e) {
                                                 let t = (0, c.wj)(k) ? e.icon.darkSVG : e.icon.lightSVG;
                                                 return (0, r.jsx)(d.qEK, {
-                                                    className: I.avatar,
+                                                    className: S.avatar,
                                                     src: t,
                                                     "aria-hidden": !0,
                                                     size: d.EFr.SIZE_40,
@@ -210,20 +210,20 @@ let w = i.forwardRef((e, t) => {
                                         return null;
                                     })(),
                                     (0, r.jsxs)("div", {
-                                        className: I.timeWrap,
+                                        className: S.timeWrap,
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: I.title,
+                                                className: S.title,
                                                 children: (function () {
                                                     var e;
                                                     let t,
                                                         { user: n, target: i, options: a } = l;
-                                                    t = (0, _.lM)(i) ? i.name : i.toString();
-                                                    let s = C.N5(l);
+                                                    t = (0, v.lM)(i) ? i.name : i.toString();
+                                                    let s = y.N5(l);
                                                     return null != s
                                                         ? (0, r.jsx)("div", {
-                                                              className: I.overflowEllipsis,
-                                                              children: E.intl.format(s, {
+                                                              className: S.overflowEllipsis,
+                                                              children: I.intl.format(s, {
                                                                   user: n,
                                                                   target: t,
                                                                   userHook: (e, t) => {
@@ -242,13 +242,13 @@ let w = i.forwardRef((e, t) => {
                                                                           return null !=
                                                                               (n = null == e ? void 0 : e.name)
                                                                               ? n
-                                                                              : E.intl.string(E.t["n+olu7"]);
+                                                                              : I.intl.string(I.t["n+olu7"]);
                                                                       }
-                                                                      return E.intl.string(E.t["30mdIx"]);
+                                                                      return I.intl.string(I.t["30mdIx"]);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      l.targetType === N.KFR.USER &&
-                                                                      l.target instanceof h.Z
+                                                                      l.targetType === E.KFR.USER &&
+                                                                      l.target instanceof p.Z
                                                                           ? (0, r.jsx)(
                                                                                 P,
                                                                                 {
@@ -269,7 +269,7 @@ let w = i.forwardRef((e, t) => {
                                                                   channel:
                                                                       null == a.channel || "string" == typeof a.channel
                                                                           ? a.channel
-                                                                          : (0, m.F6)(a.channel, x.default, b.Z, !0),
+                                                                          : (0, f.F6)(a.channel, x.default, h.Z, !0),
                                                                   channelHook: (e, t) =>
                                                                       (0, r.jsx)(
                                                                           "span",
@@ -290,9 +290,9 @@ let w = i.forwardRef((e, t) => {
                                     }),
                                     M
                                         ? (0, r.jsx)(j.Z, {
-                                              className: I.expand,
-                                              foreground: I.expandForeground,
-                                              expanded: f,
+                                              className: S.expand,
+                                              foreground: S.expandForeground,
+                                              expanded: b,
                                               "aria-hidden": !0,
                                           })
                                         : null,
@@ -300,9 +300,9 @@ let w = i.forwardRef((e, t) => {
                             },
                         ),
                     ),
-                    f ? (0, r.jsx)("div", { className: I.divider }) : null,
-                    f && null != w
-                        ? (0, r.jsx)(y.tP, {
+                    b ? (0, r.jsx)("div", { className: S.divider }) : null,
+                    b && null != w
+                        ? (0, r.jsx)(N.tP, {
                               log: l,
                               guild: w,
                               onContentClick: R,
@@ -313,4 +313,4 @@ let w = i.forwardRef((e, t) => {
     });
 });
 w.displayName = "GuildSettingsAuditLogEntry";
-let Z = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }), { forwardRef: !0 })(w);
+let Z = o.ZP.connectStores([b.Z], () => ({ theme: b.Z.theme }), { forwardRef: !0 })(w);

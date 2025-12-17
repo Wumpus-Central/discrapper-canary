@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(474936),
     T = n(981631),
     C = n(388032),
-    A = n(144867),
+    A = n(509716),
     N = n(769860);
 function P(e, t) {
     if (null == e) return {};
@@ -46,7 +46,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function D(e) {
+function w(e) {
     switch (e) {
         case I.cd.ANIMATED_AVATAR_MODAL_UPSELL:
         case I.cd.ANIMATED_BANNER_MODAL_UPSELL:
@@ -60,13 +60,13 @@ function D(e) {
             return !1;
     }
 }
-function w(e) {
+function D(e) {
     var t,
         n,
         a,
         {
             title: R,
-            type: w,
+            type: D,
             guildBoostProps: x,
             analyticsSource: L,
             analyticsLocation: j,
@@ -75,8 +75,8 @@ function w(e) {
             glowUp: U,
             modalClassName: G,
             modalContentClassName: Z,
-            artContainerClassName: B,
-            artClassName: F,
+            artContainerClassName: F,
+            artClassName: B,
             headerClassName: V,
             bodyClassName: H,
             transitionState: Y,
@@ -157,7 +157,7 @@ function w(e) {
             analyticsLocations: ey,
             analyticsSource: L,
             guildBoostProps: x,
-            type: w,
+            type: D,
         },
         ev = i.useRef(eO);
     i.useEffect(() => {
@@ -189,7 +189,7 @@ function w(e) {
                   });
         }, [eh, en, er]);
     let eS = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eI = eS.length > 1 && D(w),
+        eI = eS.length > 1 && w(D),
         eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         eT || u.MH();
@@ -224,12 +224,12 @@ function w(e) {
                 textOptions: { textOverride: null != J ? J : e },
             });
         },
-        eA = et ? o()(A.artContainer, A.artContainerBoxShadow, B) : o()(A.artContainer, B),
+        eA = et ? o()(A.artContainer, A.artContainerBoxShadow, F) : o()(A.artContainer, F),
         eN = null;
     return (
         null != em.artURL
             ? (eN = (0, r.jsx)("img", {
-                  className: o()(F, A.art),
+                  className: o()(B, A.art),
                   alt: "",
                   src: em.artURL,
               }))
@@ -264,7 +264,7 @@ function w(e) {
                         : eb
                           ? (0, r.jsx)(v.ZP, {
                                 onClose: W,
-                                type: w,
+                                type: D,
                                 subscriptionTier:
                                     null != (a = null == eg || null == (n = eg.subscription_trial) ? void 0 : n.sku_id)
                                         ? a

@@ -6,15 +6,15 @@ var r,
     i,
     l,
     a,
-    s = n(54381),
-    o = n(473749),
+    o = n(54381),
+    s = n(473749),
     c = n(442837),
     u = n(570140),
     d = n(16084),
     p = n(855775),
     f = n(388032),
     g = (((r = {}).SHORT = "SHORT"), (r.LONG = "LONG"), r);
-class h extends (a = o.PureComponent) {
+class h extends (a = s.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
@@ -37,7 +37,7 @@ class h extends (a = o.PureComponent) {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
         return null == t
             ? null
-            : (0, s.jsx)("div", {
+            : (0, o.jsx)("div", {
                   className: e,
                   children: this.getText(t, n),
               });

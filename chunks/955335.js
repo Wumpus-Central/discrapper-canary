@@ -1,11 +1,11 @@
 t.d(n, { r: () => p });
 var r = t(54381);
 t(473749);
-var i = t(95015),
-    l = t(481060),
+var l = t(95015),
+    i = t(481060),
     s = t(981631),
     o = t(388032),
-    u = t(703824);
+    u = t(181165);
 function a(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -51,21 +51,21 @@ function c(e, n) {
 }
 let d = {
     size: "md",
-    color: l.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
+    color: i.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
 };
 function p(e) {
     let { subscriptions: n, color: t = "text-default" } = e,
-        p = n.some((e) => (0, i.yE)(e.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
-    return (0, r.jsx)(l.Heading, {
+        p = n.some((e) => (0, l.yE)(e.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
+    return (0, r.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
         color: t,
         className: u.heading,
         children: p
             ? (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(l.QTo, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.XIhSoj)],
+                  children: [(0, r.jsx)(i.QTo, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.XIhSoj)],
               })
             : (0, r.jsxs)(r.Fragment, {
-                  children: [(0, r.jsx)(l.tBG, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.dxfZph)],
+                  children: [(0, r.jsx)(i.tBG, c(a({}, d), { color: "currentColor" })), o.intl.string(o.t.dxfZph)],
               }),
     });
 }

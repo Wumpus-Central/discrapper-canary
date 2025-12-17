@@ -9,34 +9,34 @@ var i = n(54381),
     u = n(28664),
     d = n(481060),
     p = n(475179),
-    h = n(100527),
-    f = n(906732),
+    f = n(100527),
+    h = n(906732),
     m = n(194082),
     g = n(236091),
     b = n(517525),
     C = n(2818),
     y = n(954551),
-    _ = n(44136),
-    v = n(651183),
+    v = n(44136),
+    x = n(651183),
     O = n(853476),
-    x = n(390322),
-    E = n(616286),
-    j = n(975146),
-    S = n(597998),
+    E = n(390322),
+    j = n(616286),
+    S = n(975146),
+    _ = n(597998),
     P = n(606304),
     I = n(358221),
     Z = n(355827),
     T = n(185935),
     N = n(354459),
     A = n(388032),
-    w = n(956235);
+    w = n(116388);
 function M(e) {
     let { channelId: t, guildId: n } = e,
         r = (0, c.Wu)([P.Z, I.Z], () => {
             let e = Date.now();
             return s()(P.Z.getSpeakers())
                 .map((e) => I.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, _.ZP)(e))
+                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, v.ZP)(e))
                 .sortBy((t) => -P.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -51,7 +51,7 @@ function M(e) {
                       {
                           position: "bottom",
                           text: A.intl.formatToPlainString(A.t.JjdizN, { username: e.user.username }),
-                          children: (0, i.jsx)(S.ZP, {
+                          children: (0, i.jsx)(_.ZP, {
                               user: e.user,
                               speaking: !0,
                               collapsed: !0,
@@ -66,12 +66,12 @@ function M(e) {
 function R(e) {
     let { channel: t, isChatOpen: n } = e,
         l = r.useRef(null),
-        { analyticsLocations: o } = (0, f.ZP)(h.Z.VOICE_CHANNEL_HEADER),
+        { analyticsLocations: o } = (0, h.ZP)(f.Z.VOICE_CHANNEL_HEADER),
         s = t.id,
         {
             voiceParticipantsHidden: u,
-            selectedParticipant: _,
-            userParticipantCount: S,
+            selectedParticipant: v,
+            userParticipantCount: _,
             participantsListOpen: P,
         } = (0, c.cj)(
             [I.Z],
@@ -110,13 +110,13 @@ function R(e) {
                 "clips-enabled-indicator",
             ),
         ),
-        (null == _ ? void 0 : _.type) === N.fO.STREAM &&
+        (null == v ? void 0 : v.type) === N.fO.STREAM &&
             (U.push(
                 (0, i.jsx)(
-                    v.Z,
+                    x.Z,
                     {
                         className: w.button,
-                        participant: _,
+                        participant: v,
                     },
                     "warning",
                 ),
@@ -127,20 +127,20 @@ function R(e) {
                     {
                         size: m.ZP.Sizes.LARGE,
                         className: w.button,
-                        participant: _,
+                        participant: v,
                         showQuality: !0,
                         premiumIndicator: !1,
                     },
                     "live-indicator",
                 ),
             )),
-        (null == _ ? void 0 : _.type) === N.fO.USER &&
+        (null == v ? void 0 : v.type) === N.fO.USER &&
             U.push(
                 (0, i.jsx)(
                     O.Z,
                     {
                         className: w.button,
-                        userId: _.id,
+                        userId: v.id,
                     },
                     "video-warning",
                 ),
@@ -153,12 +153,12 @@ function R(e) {
                     {
                         targetElementRef: l,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(x.Z, { children: (0, i.jsx)(Z.Z, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(E.Z, { children: (0, i.jsx)(Z.Z, { channel: t }) }),
                         children: (e, t) => {
                             var n, i;
                             let { isShown: a } = t;
                             return (0, r.createElement)(
-                                j.Z,
+                                S.Z,
                                 ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -188,7 +188,7 @@ function R(e) {
                                     {
                                         buttonRef: l,
                                         isActive: a,
-                                        count: S,
+                                        count: _,
                                         key: "call-members",
                                         className: w.button,
                                     }),
@@ -215,7 +215,7 @@ function R(e) {
         L &&
             U.push(
                 (0, i.jsx)(
-                    j.Z,
+                    S.Z,
                     {
                         className: a()(w.button, { [w.lastButton]: n }),
                         onClick: () => p.Z.toggleParticipantsList(t.id, !P),
@@ -226,7 +226,7 @@ function R(e) {
         A &&
             U.push(
                 (0, i.jsx)(
-                    E.T,
+                    j.T,
                     {
                         channelId: t.id,
                         className: a()(w.button, { [w.lastButton]: P }),
@@ -235,7 +235,7 @@ function R(e) {
                     "chat-spacer",
                 ),
             ),
-        (0, i.jsx)(f.Gt, {
+        (0, i.jsx)(h.Gt, {
             value: o,
             children: U,
         })

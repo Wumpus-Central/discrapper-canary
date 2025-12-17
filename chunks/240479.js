@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(981631),
     S = n(710111),
     I = n(388032),
-    T = n(937309);
+    T = n(258462);
 function C(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         o = i.useCallback(async () => {
@@ -59,21 +59,21 @@ function A(e) {
         [A, N] = i.useState(),
         P = (0, b.V2)({ location: "SoundmojiGuildInfo" }),
         R = E || v || null != A || !P,
-        [D, w] = i.useState(!R);
+        [w, D] = i.useState(!R);
     i.useEffect(() => {
         R ||
-            (w(!0),
+            (D(!0),
             (0, _.xU)(t.soundId, t.guildId)
                 .then((e) => {
                     N(e);
                 })
                 .finally(() => {
-                    w(!1), u();
+                    D(!1), u();
                 }));
     }, [u, R, t.guildId, t.soundId]);
     let { buttonType: x, description: L } = (0, y.Z)(t, n, v, A),
         j = x === y.y.JOIN_GUILD,
-        M = !E && D,
+        M = !E && w,
         k = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != A ? d.JO.createFromDiscoverableGuild(A) : void 0),
             [O, v, A],

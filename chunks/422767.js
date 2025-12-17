@@ -1,4 +1,4 @@
-n.d(e, { n: () => c });
+n.d(e, { n: () => S });
 var i = n(442837),
     l = n(153867),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(313789),
     a = n(569550),
     o = n(388032);
-let c = (0, s.qs)(r.n.VOICE_SWITCH_CHANNEL_ALERT_SETTING, {
+let S = (0, s.qs)(r.n.VOICE_SWITCH_CHANNEL_ALERT_SETTING, {
     useTitle: () => o.intl.string(o.t.jrWHD3),
     useSubtitle: () => o.intl.string(o.t.YCCMkJ),
     useValue: function () {

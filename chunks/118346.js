@@ -6,11 +6,11 @@ n.d(t, {
 var r = n(54381),
     l = n(473749),
     i = n(28664),
-    s = n(481060),
-    a = n(893776),
+    a = n(481060),
+    s = n(893776),
     o = n(489813),
     c = n(388032),
-    u = n(624463);
+    u = n(888327);
 function d() {
     let [e, t] = l.useState(!1),
         [n, i] = l.useState(!1),
@@ -31,7 +31,7 @@ function d() {
         if (!e) {
             t(!0);
             try {
-                await a.Z.verifyResend(), i(!0), d(!0);
+                await s.Z.verifyResend(), i(!0), d(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -39,13 +39,13 @@ function d() {
         }
     };
     return n
-        ? (0, r.jsx)(s.Text, {
+        ? (0, r.jsx)(a.Text, {
               className: u.verifyConfirmText,
               variant: "text-sm/normal",
               color: "text-feedback-positive",
               children: c.intl.string(c.t.H3Q7U8),
           })
-        : (0, r.jsx)(s.Button, {
+        : (0, r.jsx)(a.Button, {
               variant: "primary",
               size: "sm",
               text: o ? c.intl.string(c.t.WnX4J2) : c.intl.string(c.t["13ofGu"]),
@@ -56,14 +56,14 @@ function d() {
 function m() {
     return (0, r.jsx)(o.PU, {
         className: u.editableRequirementContainer,
-        icon: s._XJ,
+        icon: a._XJ,
         text: c.intl.string(c.t.c6EUJI),
         footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: !1,
         children: (0, r.jsx)(i.u, {
             asContainer: !0,
             text: c.intl.string(c.t.mGlP30),
-            children: (0, r.jsx)(s.Button, {
+            children: (0, r.jsx)(a.Button, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
@@ -77,7 +77,7 @@ function f(e) {
         n = t ? c.intl.string(c.t.qY1jHN) : c.intl.string(c.t.c6EUJI);
     return (0, r.jsx)(o.PU, {
         className: u.editableRequirementContainer,
-        icon: s._XJ,
+        icon: a._XJ,
         text: n,
         footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: t,

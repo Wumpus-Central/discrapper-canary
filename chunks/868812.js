@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(54381),
     r = n(473749),
     l = n(996146),
@@ -9,35 +9,35 @@ var i = n(54381),
     u = n(621586),
     d = n(871499),
     p = n(127379),
-    h = n(388032);
-function f(e) {
-    let { channel: t, themeable: n, whichPopoutIsOpen: f, setWhichPopoutIsOpen: m } = e,
+    f = n(388032);
+function h(e) {
+    let { channel: t, themeable: n, whichPopoutIsOpen: h, setWhichPopoutIsOpen: m } = e,
         { parentAnalyticsLocation: g } = (0, o.ZP)(),
         b = r.useRef(null),
-        { isHovered: C, setIsHovered: y, onMouseEnter: _, onMouseLeave: v } = (0, c.Z)(200, 300),
+        { isHovered: C, setIsHovered: y, onMouseEnter: v, onMouseLeave: x } = (0, c.Z)(200, 300),
         {
             Component: O,
-            play: x,
-            events: { onMouseEnter: E, onMouseLeave: j },
+            play: E,
+            events: { onMouseEnter: j, onMouseLeave: S },
         } = (0, l.$)(),
-        S = r.useCallback(
+        _ = r.useCallback(
             (e) => {
-                "focus" !== e.type && (_(), E());
+                "focus" !== e.type && (v(), j());
             },
-            [_, E],
+            [v, j],
         ),
         P = r.useCallback(() => {
-            null == f && (v(), j());
-        }, [v, j, f]),
+            null == h && (x(), S());
+        }, [x, S, h]),
         I = r.useCallback(() => {
             (0, s.v)(g, s.d.GIFTING),
-                f === p.D.GIFTING
-                    ? (null == m || m(void 0), v())
-                    : (null != f ? (x(), _()) : x(), null == m || m(p.D.GIFTING));
-        }, [_, v, g, x, m, f]);
+                h === p.D.GIFTING
+                    ? (null == m || m(void 0), x())
+                    : (null != h ? (E(), v()) : E(), null == m || m(p.D.GIFTING));
+        }, [v, x, g, E, m, h]);
     return (0, i.jsx)(a.y, {
         targetElementRef: b,
-        shouldShow: (C && (f === p.D.GIFTING || null == f)) || f === p.D.GIFTING,
+        shouldShow: (C && (h === p.D.GIFTING || null == h)) || h === p.D.GIFTING,
         animation: a.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
@@ -52,8 +52,8 @@ function f(e) {
                 channel: t,
                 closePopout: n,
                 isHovered: C,
-                onMouseEnter: _,
-                onMouseLeave: v,
+                onMouseEnter: v,
+                onMouseLeave: x,
             });
         },
         children: () =>
@@ -61,13 +61,13 @@ function f(e) {
                 ref: b,
                 isTrayButton: !0,
                 themeable: n,
-                "aria-label": h.intl.string(h.t.PEjaCx),
+                "aria-label": f.intl.string(f.t.PEjaCx),
                 iconComponent: O,
                 onClick: I,
-                onMouseEnter: S,
+                onMouseEnter: _,
                 onMouseLeave: P,
-                isActive: C || f === p.D.GIFTING,
-                color: C || f === p.D.GIFTING ? "primaryDark" : void 0,
+                isActive: C || h === p.D.GIFTING,
+                color: C || h === p.D.GIFTING ? "primaryDark" : void 0,
             }),
     });
 }

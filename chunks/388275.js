@@ -10,50 +10,50 @@ var l = n(54381),
     d = n(822869),
     h = n(912332),
     m = n(388032),
-    g = n(773921);
+    g = n(614934);
 function f(e) {
-    let { message: t, canSend: n, selectedDestinations: f, onSend: p, inputValue: v, setInputValue: w } = e,
+    let { message: t, canSend: n, selectedDestinations: f, onSend: p, inputValue: v, setInputValue: x } = e,
         b = (0, o.Z)(),
-        x = (0, c.nm)(f),
-        C = (0, d.Ad)(),
-        { textValue: y, richValue: O } = v,
-        [j, T] = a.useState(!1),
-        _ = a.useCallback(() => T(!0), []),
-        E = a.useCallback(() => T(!1), []),
-        P = a.useCallback(
+        w = (0, c.nm)(f),
+        j = (0, d.Ad)(),
+        { textValue: C, richValue: y } = v,
+        [P, O] = a.useState(!1),
+        S = a.useCallback(() => O(!0), []),
+        T = a.useCallback(() => O(!1), []),
+        k = a.useCallback(
             (e, n, l) => {
-                w({
+                x({
                     textValue: n,
                     richValue: l,
                 }),
-                    null != t && (r.Z.saveDraft(t.channel_id, n, u.d.ForwardContextMessage), C(t.channel_id, t.id));
+                    null != t && (r.Z.saveDraft(t.channel_id, n, u.d.ForwardContextMessage), j(t.channel_id, t.id));
             },
-            [C, t, w],
+            [j, t, x],
         ),
-        S = a.useCallback(() => {
-            null != t && (r.Z.clearDraft(t.channel_id, u.d.ForwardContextMessage), p(y));
-        }, [t, p, y]),
+        Z = a.useCallback(() => {
+            null != t && (r.Z.clearDraft(t.channel_id, u.d.ForwardContextMessage), p(C));
+        }, [t, p, C]),
         D = a.useCallback(
             () => (
-                !n || y.length > b || S(),
+                !n || C.length > b || Z(),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [S, y, b, n],
+            [Z, C, b, n],
         );
     return (0, l.jsx)(s.ZP, {
         innerClassName: g.messageInput,
-        onChange: P,
+        onChange: k,
         placeholder: m.intl.string(m.t.ZroO3G),
-        channel: x,
-        textValue: y,
-        richValue: O,
+        channel: w,
+        textValue: C,
+        richValue: y,
         type: i.Ie.FORWARD_MESSAGE_INPUT,
-        onBlur: E,
-        onFocus: _,
-        focused: j,
+        onBlur: T,
+        onFocus: S,
+        focused: P,
         onSubmit: D,
         parentModalKey: h.so,
         autoCompletePosition: "bottom",

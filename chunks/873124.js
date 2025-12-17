@@ -5,25 +5,25 @@ var r = n(54381),
     s = n(507453),
     a = n(388032);
 function o(e) {
-    let { mfaChallenge: t, finish: n, setSlide: o, onClose: c, isSlideReady: u, headerAlignStart: d } = e,
+    let { mfaChallenge: t, finish: n, setSlide: o, onClose: c, isSlideReady: d, headerAlignStart: u } = e,
         [f, h] = l.useState(!1),
         [g, m] = l.useState(null),
-        [b, p] = l.useState(""),
+        [p, b] = l.useState(""),
         j = l.useRef(null);
     return (
         l.useEffect(() => {
-            if (u) {
+            if (d) {
                 var e;
                 null == (e = j.current) || e.focus();
             }
-        }, [u]),
+        }, [d]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     h(!0),
                     n({
                         mfaType: "password",
-                        data: b,
+                        data: p,
                     })
                         .catch((e) => {
                             var t, n;
@@ -36,15 +36,15 @@ function o(e) {
             children: [
                 (0, r.jsx)(s.Z.SlideHeader, {
                     onClose: c,
-                    headerAlignStart: d,
+                    headerAlignStart: u,
                 }),
                 (0, r.jsxs)(s.Z.SlideContent, {
                     children: [
                         (0, r.jsx)(i.oil, {
                             label: a.intl.string(a.t["CIGa+7"]),
                             inputRef: j,
-                            onChange: p,
-                            value: b,
+                            onChange: b,
+                            value: p,
                             type: "password",
                             autoComplete: "password",
                             spellCheck: "false",
@@ -57,7 +57,7 @@ function o(e) {
                     mfaChallenge: t,
                     setSlide: o,
                     showConfirm: !0,
-                    disabled: 0 === b.length,
+                    disabled: 0 === p.length,
                     submitting: f,
                 }),
             ],

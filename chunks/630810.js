@@ -1,42 +1,42 @@
 n.d(t, {
-    Z: () => g,
+    Z: () => p,
     m: () => d,
 });
-var r,
-    l = n(493683),
+var l,
+    r = n(493683),
     i = n(904245),
     a = n(710845),
     s = n(592125),
     o = n(70956),
-    c = n(651655);
-let u = +o.Z.Millis.SECOND + 10;
-var d = (((r = {})[(r.GROUP_DM = 0)] = "GROUP_DM"), (r[(r.USER = 1)] = "USER"), (r[(r.CHANNEL = 2)] = "CHANNEL"), r);
-class h extends c.Z {
-    _sendInvite(e, t, n, r, l) {
-        i.Z.sendInvite(e.id, t, n, r).then(
-            () => l(null, !0),
-            () => l(null, !1),
+    u = n(651655);
+let c = +o.Z.Millis.SECOND + 10;
+var d = (((l = {})[(l.GROUP_DM = 0)] = "GROUP_DM"), (l[(l.USER = 1)] = "USER"), (l[(l.CHANNEL = 2)] = "CHANNEL"), l);
+class h extends u.Z {
+    _sendInvite(e, t, n, l, r) {
+        i.Z.sendInvite(e.id, t, n, l).then(
+            () => r(null, !0),
+            () => r(null, !1),
         );
     }
     drain(e, t) {
-        let { location: n, inviteAnalyticsMetadata: r } = e;
+        let { location: n, inviteAnalyticsMetadata: l } = e;
         switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(e.channel, e.inviteKey, n, r, t);
+                this._sendInvite(e.channel, e.inviteKey, n, l, t);
                 break;
             case 1:
-                l.Z.ensurePrivateChannel(e.user.id).then(
-                    (l) => {
-                        let i = s.Z.getChannel(l);
-                        null != i && this._sendInvite(i, e.inviteKey, n, r, t);
+                r.Z.ensurePrivateChannel(e.user.id).then(
+                    (r) => {
+                        let i = s.Z.getChannel(r);
+                        null != i && this._sendInvite(i, e.inviteKey, n, l, t);
                     },
                     () => t(null, !1),
                 );
         }
     }
     constructor() {
-        super(new a.Z("InviteQueue"), u);
+        super(new a.Z("InviteQueue"), c);
     }
 }
-let g = new h();
+let p = new h();

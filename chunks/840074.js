@@ -1,11 +1,11 @@
-n.d(t, { _: () => s });
+n.d(t, { _: () => o });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(812206),
     a = n(531826);
-function s(e) {
-    let { applicationId: t, customId: s, linkId: o, message: c, onShare: u } = e,
+function o(e) {
+    let { applicationId: t, customId: o, linkId: s, message: c, onShare: u } = e,
         d = l.Z.getApplication(t);
     if (null == d) return void u(!1, !1);
     let p = null != (0, a.jA)({ applicationId: d.id }) ? i.u1M : i.z1l,
@@ -49,8 +49,8 @@ function s(e) {
                     })(
                         {
                             applicationId: t,
-                            customId: s,
-                            linkId: o,
+                            customId: o,
+                            linkId: s,
                             message: c,
                             onCopyLink: h,
                             onShare: g,

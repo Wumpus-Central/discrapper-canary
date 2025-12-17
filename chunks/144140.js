@@ -87,7 +87,7 @@ function A(e, t) {
 }
 function N(e) {
     var t, n;
-    null == (t = e.threads) || t.forEach(D), null == (n = e.threadMessages) || n.forEach(R);
+    null == (t = e.threads) || t.forEach(w), null == (n = e.threadMessages) || n.forEach(R);
 }
 function P(e) {
     if (!(e.id in v)) {
@@ -110,7 +110,7 @@ function R(e) {
             (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
         });
 }
-function D(e) {
+function w(e) {
     C(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -120,10 +120,10 @@ function D(e) {
             ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null));
     });
 }
-function w(e) {
+function D(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return D(t), !0;
+        if (null != t) return w(t), !0;
     }
     return !1;
 }
@@ -147,11 +147,11 @@ function M(e) {
 }
 function k(e) {
     let { channel: t } = e;
-    D(t);
+    w(t);
 }
 function U(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(D),
+    t.forEach(w),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);
@@ -164,7 +164,7 @@ function U(e) {
 }
 function G(e) {
     let { threads: t } = e;
-    t.forEach(w);
+    t.forEach(D);
 }
 function Z(e) {
     let { data: t } = e;
@@ -172,17 +172,17 @@ function Z(e) {
         let { messages: t, threads: n } = e;
         t.forEach((e) => {
             e.forEach((e) => {
-                w(e.thread);
+                D(e.thread);
             });
         }),
-            n.forEach(w);
+            n.forEach(D);
     });
 }
-function B(e) {
+function F(e) {
     let { channel: t } = e;
     T(t.id);
 }
-function F(e) {
+function B(e) {
     let { channel: t } = e;
     delete v[t.id];
 }
@@ -246,7 +246,7 @@ function K(e) {
 }
 function z(e) {
     let t = !1;
-    for (let n of e.messages) t = w(n.thread) || t;
+    for (let n of e.messages) t = D(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
@@ -316,8 +316,8 @@ let X = new Q(s.Z, {
     RELATIONSHIP_REMOVE: q,
     SEARCH_MESSAGES_SUCCESS: Z,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Z,
-    THREAD_DELETE: F,
-    CHANNEL_DELETE: B,
+    THREAD_DELETE: B,
+    CHANNEL_DELETE: F,
     MESSAGE_CREATE: V,
     MESSAGE_UPDATE: Y,
     MESSAGE_DELETE: W,

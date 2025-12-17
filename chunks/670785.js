@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -83,16 +83,16 @@ function P(e) {
 function R(e, t) {
     if (!f.Z.isOverlayEnabled) {
         if (0 === y.length) return;
-        D("overlay_disabled");
+        w("overlay_disabled");
         return;
     }
     C(e, t), (y = e), (O = [...e]);
 }
-function D(e) {
+function w(e) {
     for (let e of Object.values(v)) null != e && clearTimeout(e);
     (v = {}), (y = []), (O = []), C([], e);
 }
-function w() {
+function D() {
     0 !== y.length && ((O = [...y]), (y = []), C([], "store_click_zones"));
 }
 function x() {
@@ -115,14 +115,14 @@ function L(e, t, n, r) {
     null != l && l.dispatchEvent(s);
 }
 function j(e) {
-    return D("crashed"), !0;
+    return w("crashed"), !0;
 }
 function M(e) {
     let { zones: t } = e;
     return R(t, "set_click_zones"), !0;
 }
 function k() {
-    return D("refresh_host_window"), !0;
+    return w("refresh_host_window"), !0;
 }
 function U() {
     return null == (b = f.Z.getNativeModule()) || !!S || ((S = !0), b.setCaptureZoneCallback(L), !0);
@@ -132,9 +132,9 @@ function G() {
 }
 function Z(e) {
     let { pid: t } = e;
-    return 0 === t ? w() : x(), !0;
+    return 0 === t ? D() : x(), !0;
 }
-class B extends (r = o.ZP.Store) {
+class F extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, c.Z);
     }
@@ -145,8 +145,8 @@ class B extends (r = o.ZP.Store) {
         return O;
     }
 }
-h(B, "displayName", "Overlay-v3-Native-Debug-Module-Store");
-let F = new B(
+h(F, "displayName", "Overlay-v3-Native-Debug-Module-Store");
+let B = new F(
     l.Z,
     __OVERLAY__ || !_.iP
         ? {}

@@ -67,10 +67,11 @@ function R(e) {
             disableUserProfileLink: M = __OVERLAY__,
             newAnalyticsLocations: k = [],
             disableAutoFocus: U = !1,
+            onClickContainer: G,
         } = e,
-        G = (0, m.ZP)(n.id, N),
-        { analyticsLocations: Z } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
-        F = (0, p.ZB)({
+        Z = (0, m.ZP)(n.id, N),
+        { analyticsLocations: F } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
+        B = (0, p.ZB)({
             layout: "POPOUT",
             userId: n.id,
             guildId: N,
@@ -78,73 +79,74 @@ function R(e) {
             messageId: w,
             roleId: D,
         }),
-        B = i.useRef(null),
-        V = (0, u.X)(B);
+        V = i.useRef(null),
+        H = (0, u.X)(V);
     i.useEffect(() => {
-        null == L || L(null == B ? void 0 : B.current);
-    }, [B, L]);
-    let H = () => {
+        null == L || L(null == V ? void 0 : V.current);
+    }, [V, L]);
+    let Y = () => {
             null == j || j(),
                 (0, h.openUserProfileModal)(
                     P(
                         {
-                            sourceAnalyticsLocations: Z,
+                            sourceAnalyticsLocations: F,
                             hideRestrictedProfile: !0,
                         },
-                        F,
+                        B,
                     ),
                 );
         },
-        Y = !M && (0, l.Z)(n.id),
-        W = () =>
-            Y
+        W = !M && (0, l.Z)(n.id),
+        K = () =>
+            W
                 ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
                       label: C.intl.string(C.t["+Xp3hq"]),
                       action: () => {
-                          H(),
+                          Y(),
                               (0, _.pQ)(
                                   P(
                                       {
                                           action: "PRESS_VIEW_PROFILE",
-                                          analyticsLocations: Z,
+                                          analyticsLocations: F,
                                       },
-                                      F,
+                                      B,
                                   ),
                               );
                       },
                   })
                 : null,
-        K = U ? "div" : a.VqE,
-        z = (0, c.Dt)(),
-        q = f.ZP.useName(N, R, n);
+        z = U ? "div" : a.VqE,
+        q = (0, c.Dt)(),
+        Q = f.ZP.useName(N, R, n);
     return (0, r.jsx)(s.Gt, {
-        value: Z,
+        value: F,
         children: (0, r.jsx)(p.Mt, {
-            value: F,
+            value: B,
             openedAt: x,
-            fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
-            fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
-            isLoaded: null == G ? void 0 : G.isLoaded,
-            children: (0, r.jsxs)(K, {
-                ref: B,
-                "aria-labelledby": z,
+            fetchStartedAt: null == Z ? void 0 : Z.fetchStartedAt,
+            fetchEndedAt: null == Z ? void 0 : Z.fetchEndedAt,
+            isLoaded: null == Z ? void 0 : Z.isLoaded,
+            children: (0, r.jsxs)(z, {
+                ref: V,
+                "aria-labelledby": q,
+                onClick: G,
                 children: [
                     (0, r.jsx)(a.nn4, {
                         children: (0, r.jsx)(a.H, {
-                            id: z,
-                            children: C.intl.format(C.t.KRe1Fk, { name: q }),
+                            id: q,
+                            children: C.intl.format(C.t.KRe1Fk, { name: Q }),
                         }),
                     }),
                     (0, r.jsxs)(O.Z, {
                         user: n,
-                        displayProfile: G,
+                        displayProfile: Z,
                         themeType: T.l.POPOUT,
                         children: [
                             (0, r.jsx)(I.Z, {
                                 children: (0, r.jsx)(S.Z, {
                                     user: n,
-                                    viewProfileItem: W(),
+                                    viewProfileItem: K(),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -152,17 +154,17 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         user: n,
-                                        displayProfile: G,
+                                        displayProfile: Z,
                                         guildId: N,
                                         themeType: T.l.POPOUT,
                                     }),
                                     (0, r.jsx)(g.Z, {
                                         user: n,
-                                        displayProfile: G,
+                                        displayProfile: Z,
                                         guildId: N,
                                         channelId: R,
                                         themeType: T.l.POPOUT,
-                                        onOpenProfile: Y ? H : void 0,
+                                        onOpenProfile: W ? Y : void 0,
                                     }),
                                 ],
                             }),
@@ -174,16 +176,16 @@ function R(e) {
                                         user: n,
                                         guildId: N,
                                         nickname: f.ZP.getName(N, R, n),
-                                        onOpenProfile: Y ? H : void 0,
+                                        onOpenProfile: W ? Y : void 0,
                                         tags: (0, r.jsx)(E.Z, {
-                                            displayProfile: G,
+                                            displayProfile: Z,
                                             themeType: T.l.POPOUT,
                                             onClose: j,
                                         }),
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         userId: n.id,
-                                        userBio: null == G ? void 0 : G.bio,
+                                        userBio: null == Z ? void 0 : Z.bio,
                                         setLineClamp: !1,
                                         textColor: "text-strong",
                                     }),
@@ -192,10 +194,10 @@ function R(e) {
                             (0, r.jsx)("div", { className: A.footer }),
                         ],
                     }),
-                    (null == G ? void 0 : G.profileEffect) != null &&
+                    (null == Z ? void 0 : Z.profileEffect) != null &&
                         (0, r.jsx)(d.Z, {
-                            skuId: null == G || null == (t = G.profileEffect) ? void 0 : t.skuId,
-                            isHovering: V,
+                            skuId: null == Z || null == (t = Z.profileEffect) ? void 0 : t.skuId,
+                            isHovering: H,
                         }),
                 ],
             }),

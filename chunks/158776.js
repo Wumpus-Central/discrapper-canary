@@ -66,16 +66,16 @@ let P = (e) => {
 function R(e, t) {
     return P(t) - P(e);
 }
-let D = (e) => +!!(0, u.Z)(e);
-function w(e, t) {
-    return D(t) - D(e);
+let w = (e) => +!!(0, u.Z)(e);
+function D(e, t) {
+    return w(t) - w(e);
 }
 function x(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
 function L(e, t) {
-    return R(e, t) || w(e, t) || x(e, t);
+    return R(e, t) || D(e, t) || x(e, t);
 }
 function j(e) {
     if (0 === e.length) return e;
@@ -166,7 +166,7 @@ function Z(e) {
               ).values(),
           ];
 }
-function B(e) {
+function F(e) {
     let t = O[e];
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
@@ -178,7 +178,7 @@ function B(e) {
             null != n.clientStatus && (C[e] = n.clientStatus);
     }
 }
-function F(e) {
+function B(e) {
     let {
         guildId: t,
         userId: n,
@@ -322,7 +322,7 @@ function K(e) {
                 i.add(t.id));
         }),
         i.delete(r),
-        i.forEach(B);
+        i.forEach(F);
 }
 function z(e) {
     let { presences: t } = e;
@@ -345,7 +345,7 @@ function q(e) {
                 processedAtTimestamp: o,
             } = e;
             null != t &&
-                F({
+                B({
                     guildId: E.ME,
                     userId: t.id,
                     status: n,
@@ -360,7 +360,7 @@ function Q(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-        F({
+        B({
             guildId: t.id,
             userId: n.id,
             status: r,
@@ -392,7 +392,7 @@ function $(e) {
                 hiddenActivities: o,
                 processedAtTimestamp: s,
             } = e;
-            return F({
+            return B({
                 guildId: null != t ? t : E.ME,
                 userId: n.id,
                 status: r,
@@ -408,7 +408,7 @@ function ee(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
         null != e.presence &&
-            F({
+            B({
                 guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
@@ -424,7 +424,7 @@ function et(e) {
     null == n ||
         n.forEach((e) => {
             null != e.presence &&
-                F({
+                B({
                     guildId: t,
                     userId: e.userId,
                     status: e.presence.status,

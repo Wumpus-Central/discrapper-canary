@@ -71,8 +71,8 @@ let A = (e) => {
                 onClick: P,
             },
         ],
-        D = C >= y && C <= O ? Math.max(1, Math.min(100, ((O - C) / O) * 100)) : 1,
-        w = C <= 10 ? "critical" : "warning";
+        w = C >= y && C <= O ? Math.max(1, Math.min(100, ((O - C) / O) * 100)) : 1,
+        D = C <= 10 ? "critical" : "warning";
     return (0, r.jsx)(m.Z, {
         badgeId: A,
         targetElementRef: p,
@@ -81,8 +81,8 @@ let A = (e) => {
         tooltipDelay: f,
         markAsDismissed: n,
         progressCircleText: "" + C,
-        progressCirclePercent: D,
-        progressCircleUrgency: w,
+        progressCirclePercent: w,
+        progressCircleUrgency: D,
         actions: R,
         onShow: "tooltip" === u ? N : void 0,
         estimatedTooltipHeight: 300,

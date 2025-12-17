@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(28664),
-    o = n(481060),
+    o = n(28664),
+    s = n(481060),
     c = n(100527),
     u = n(707409),
     d = n(670188),
@@ -12,8 +12,8 @@ var r = n(54381),
     f = n(51144),
     g = n(981631),
     h = n(388032),
-    m = n(157684);
-function _(e, t, n) {
+    m = n(807770);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -110,7 +110,7 @@ class O extends i.PureComponent {
                     var n, i;
                     return (0, r.jsx)(
                         "span",
-                        ((n = b(
+                        ((n = _(
                             {
                                 ref: this.activityDiscordTagRef,
                                 className: m.username,
@@ -164,9 +164,9 @@ class O extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "activityDiscordTagRef", i.createRef()),
-            _(this, "playerAvatarRef", i.createRef()),
-            _(this, "renderUserTooltip", (e, t, n) =>
+            b(this, "activityDiscordTagRef", i.createRef()),
+            b(this, "playerAvatarRef", i.createRef()),
+            b(this, "renderUserTooltip", (e, t, n) =>
                 (0, r.jsxs)("div", {
                     className: m.tooltip,
                     children: [
@@ -180,7 +180,7 @@ class O extends i.PureComponent {
                     ],
                 }),
             ),
-            _(this, "renderPlayer", (e, t, n, i) => {
+            b(this, "renderPlayer", (e, t, n, i) => {
                 if (null == e) return null;
                 let l = this.props.reason.userInfo.find((t) => t.user === e);
                 return null == l
@@ -193,18 +193,18 @@ class O extends i.PureComponent {
                               newAnalyticsLocations: [c.Z.AVATAR],
                               clickTrap: !0,
                               children: (t) =>
-                                  (0, r.jsx)(s.u, {
+                                  (0, r.jsx)(o.u, {
                                       __unsupportedReactNodeAsText: this.renderUserTooltip(e, l.startTime, l.endTime),
                                       "aria-label": (0, f.W5)(e, { decoration: "never" }),
                                       children: (0, r.jsx)(
-                                          o.qEK,
-                                          b(
+                                          s.qEK,
+                                          _(
                                               {
                                                   ref: this.playerAvatarRef,
                                                   className: a()(m.playerAvatar, { [m.avatarMasked]: !i }),
                                                   src: e.getAvatarURL(void 0, 32),
                                                   "aria-label": e.username,
-                                                  size: o.EFr.SIZE_32,
+                                                  size: s.EFr.SIZE_32,
                                               },
                                               t,
                                           ),
@@ -214,7 +214,7 @@ class O extends i.PureComponent {
                           e.id,
                       );
             }),
-            _(this, "renderPlayerOverflow", (e, t, n) =>
+            b(this, "renderPlayerOverflow", (e, t, n) =>
                 (0, r.jsx)(
                     "div",
                     {

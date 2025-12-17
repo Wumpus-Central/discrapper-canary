@@ -4,8 +4,8 @@ n(473749);
 var i = n(481060),
     l = n(570140),
     a = n(710845),
-    s = n(536442),
-    o = n(810788),
+    o = n(536442),
+    s = n(810788),
     c = n(592125),
     u = n(131951),
     d = n(944486),
@@ -14,8 +14,8 @@ var i = n(481060),
     g = n(208049),
     h = n(763296),
     m = n(641015),
-    _ = n(22382),
-    b = n(747071),
+    b = n(22382),
+    _ = n(747071),
     E = n(49230),
     O = n(981631),
     v = n(65154);
@@ -74,8 +74,8 @@ class C extends f.Z {
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
-                            soundURL: (0, _.Z)(e),
-                            soundVolume: (0, b.Z)(n),
+                            soundURL: (0, b.Z)(e),
+                            soundVolume: (0, _.Z)(n),
                             reportSoundStartedPlaying: () => (0, g.xR)(e, r),
                         };
                         u.Z.supports(v.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(i) : await (0, E.h)(i, t.playingSoundsWeb);
@@ -95,7 +95,7 @@ class C extends f.Z {
                 null != l &&
                     (0, m.Z)(l) &&
                     null != a &&
-                    o.Z.hasHotspot(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+                    s.Z.hasHotspot(o.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e("69208").then(n.bind(n, 490166));
                         return (n) =>

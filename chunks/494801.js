@@ -4,8 +4,8 @@ n(473749);
 var r = n(212598),
     i = n(981631),
     s = n(388032),
-    a = n(250331),
-    c = n(300778);
+    a = n(903072),
+    c = n(844434);
 function l(e) {
     let {
             isWaitingForConnection: t,
@@ -15,7 +15,7 @@ function l(e) {
             onError: u,
             onClose: p,
         } = e,
-        f = t
+        b = t
             ? (0, o.jsx)("img", {
                   src: c.Z,
                   width: "231",
@@ -28,7 +28,7 @@ function l(e) {
                   height: "160",
                   alt: "",
               }),
-        b = t ? s.intl.string(s.t.EuwcxO) : s.intl.string(s.t["e/z3na"]),
+        f = t ? s.intl.string(s.t.EuwcxO) : s.intl.string(s.t["e/z3na"]),
         x = t ? s.intl.string(s.t["1GjS/W"]) : s.intl.string(s.t["7tXu0i"]);
     return (0, o.jsx)(r.t, {
         platformType: i.ABu.XBOX,
@@ -38,8 +38,8 @@ function l(e) {
         onAuthToken: d,
         onError: u,
         onClose: p,
-        img: f,
-        title: b,
+        img: b,
+        title: f,
         body: x,
     });
 }

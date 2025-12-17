@@ -1,20 +1,20 @@
-n.d(t, { x: () => s });
+n.d(t, { x: () => o });
 var r = n(447543),
     i = n(38618),
     l = n(652898),
     a = n(430824);
-async function s(e) {
+async function o(e) {
     let { code: t } = e,
-        s = (await (0, l.Z)(t)).invite;
+        o = (await (0, l.Z)(t)).invite;
     if (
-        null == s ||
-        null == s.guild ||
+        null == o ||
+        null == o.guild ||
         (await new Promise((e) => {
             i.Z.addChangeListener(() => !i.Z.isConnected() || (e(), !1));
         }),
-        null == a.Z.getGuild(s.guild.id))
+        null == a.Z.getGuild(o.guild.id))
     )
         return;
-    let { default: o } = await Promise.resolve().then(n.bind(n, 17181));
-    await o({ guildId: s.guild.id }), r.ZP.transitionToInvite(s, void 0, !0);
+    let { default: s } = await Promise.resolve().then(n.bind(n, 17181));
+    await s({ guildId: o.guild.id }), r.ZP.transitionToInvite(o, void 0, !0);
 }

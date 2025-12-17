@@ -3,26 +3,26 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(846519),
-    s = n(28664),
-    o = n(481060),
+    o = n(28664),
+    s = n(481060),
     c = n(293245),
     u = n(863969),
     d = n(563593),
     p = n(981631),
     f = n(388032);
-let g = (0, o.GSL)(u.Z),
-    h = (0, o.GSL)(d.Z),
+let g = (0, s.GSL)(u.Z),
+    h = (0, s.GSL)(d.Z),
     m = new Set([p.TzF.PUSHING, p.TzF.PULLING]),
-    _ = Object.freeze({
+    b = Object.freeze({
         [p.TzF.DONE]: g,
         [p.TzF.PLANNING]: g,
         [p.TzF.PREPARING]: g,
-        [p.TzF.PUSHING]: o.rG2,
-        [p.TzF.PULLING]: o._8t,
+        [p.TzF.PUSHING]: s.rG2,
+        [p.TzF.PULLING]: s._8t,
         [p.TzF.CONFLICT]: g,
         [p.TzF.ERROR]: g,
     });
-class b extends i.PureComponent {
+class _ extends i.PureComponent {
     componentDidMount() {
         this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
     }
@@ -80,8 +80,8 @@ class b extends i.PureComponent {
             i = null == e ? { type: p.TzF.DONE } : e,
             l = this.getIsRecentlySynced();
         (m.has(i.type) || l) && (t.id, this.getStop(i, l));
-        let a = l ? h : _[i.type];
-        return (0, r.jsx)(s.u, {
+        let a = l ? h : b[i.type];
+        return (0, r.jsx)(o.u, {
             text: this.getTooltip(i, l),
             children: (0, r.jsx)(a, { className: n }),
         });
@@ -103,4 +103,4 @@ class b extends i.PureComponent {
 let E = l.ZP.connectStores([c.Z], (e) => {
     let { libraryApplication: t } = e;
     return { cloudSyncState: c.Z.getState(t.id, t.branchId) };
-})(b);
+})(_);

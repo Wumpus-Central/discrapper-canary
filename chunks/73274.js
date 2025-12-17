@@ -46,7 +46,7 @@ function d(e) {
                       e.scrollToTop({ callback: () => requestAnimationFrame(t) });
                   });
         }),
-        h = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 var i, r, l;
                 if (!n.keyboardModeEnabled) return;
@@ -62,17 +62,17 @@ function d(e) {
             },
             [n.keyboardModeEnabled, t],
         ),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             n.hasMoreAfter || o.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
         m = (0, r.ZP)({
             id: s.W,
             preserveFocusPosition: !1,
-            setFocus: h,
+            setFocus: f,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
             scrollToStart: p,
             scrollToEnd: d,
-            onNavigateNextAtEnd: f,
+            onNavigateNextAtEnd: h,
         }),
         g = i.useCallback(
             (e) => {

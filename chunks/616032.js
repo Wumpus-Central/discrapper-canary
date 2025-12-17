@@ -2,17 +2,17 @@ n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     l = n(990547),
-    o = n(91192),
-    a = n(481060),
+    a = n(91192),
+    o = n(481060),
     s = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    f = n(837284);
+    f = n(383094);
 function h(e) {
     let { initialized: t, items: n, loading: h, loadMore: p } = e,
         g = i.useRef(null),
-        m = (0, s.Z)("for-you", g);
+        b = (0, s.Z)("for-you", g);
     (0, c.Z)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -22,7 +22,7 @@ function h(e) {
         { disableTrack: !t },
         [t],
     );
-    let b = () => {
+    let m = () => {
         var e;
         let t = null == (e = g.current) ? void 0 : e.getScrollerState();
         null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && p();
@@ -30,14 +30,14 @@ function h(e) {
     return t
         ? 0 === n.length
             ? (0, r.jsx)(u.v, {})
-            : (0, r.jsx)(o.bG, {
-                  navigator: m,
-                  children: (0, r.jsx)(o.SJ, {
+            : (0, r.jsx)(a.bG, {
+                  navigator: b,
+                  children: (0, r.jsx)(a.SJ, {
                       children: (e) => {
                           var t,
                               i,
                               { ref: l } = e,
-                              o = (function (e, t) {
+                              a = (function (e, t) {
                                   if (null == e) return {};
                                   var n,
                                       r,
@@ -61,7 +61,7 @@ function h(e) {
                                   return i;
                               })(e, ["ref"]);
                           return (0, r.jsxs)(
-                              a.Den,
+                              o.Den,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -96,14 +96,14 @@ function h(e) {
                                                   null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                       },
                                   },
-                                  o,
+                                  a,
                               )),
                               (i = i =
                                   {
-                                      onScroll: b,
+                                      onScroll: m,
                                       children: [
                                           (0, r.jsx)(d.U, { items: n }),
-                                          h ? (0, r.jsx)(a.$jN, { className: f.spinner }) : null,
+                                          h ? (0, r.jsx)(o.$jN, { className: f.spinner }) : null,
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -123,5 +123,5 @@ function h(e) {
                       },
                   }),
               })
-        : (0, r.jsx)(a.$jN, { className: f.loadingPlaceholder });
+        : (0, r.jsx)(o.$jN, { className: f.loadingPlaceholder });
 }

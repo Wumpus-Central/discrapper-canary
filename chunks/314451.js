@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(782568),
-    s = n(63063),
-    o = n(665149),
+    o = n(63063),
+    s = n(665149),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,7 +56,7 @@ function p(e) {
                     id: "staff-help-center",
                     label: "Go to Help Center",
                     icon: l.rgF,
-                    action: () => (0, a.Z)(s.w),
+                    action: () => (0, a.Z)(o.w),
                 }),
             ],
         }),
@@ -64,14 +64,14 @@ function p(e) {
 }
 function f(e) {
     let { className: t, focusSectionProps: n } = e,
-        [a, s] = i.useState(!1),
+        [a, o] = i.useState(!1),
         [f, g] = i.useState(0),
         h = i.useRef(null),
         m = (e) => {
             clearTimeout(f),
                 g(
                     setTimeout(() => {
-                        s(e);
+                        o(e);
                     }, 100),
                 );
         };
@@ -85,13 +85,13 @@ function f(e) {
             position: "bottom",
             align: "right",
             autoInvert: !1,
-            onRequestOpen: () => s(!0),
-            onRequestClose: () => s(!1),
-            renderPopout: () => (0, r.jsx)(p, { onClose: () => s(!1) }),
+            onRequestOpen: () => o(!0),
+            onRequestClose: () => o(!1),
+            renderPopout: () => (0, r.jsx)(p, { onClose: () => o(!1) }),
             children: (e, i) => {
                 let { isShown: a } = i;
                 return (0, r.jsx)(
-                    o.JO,
+                    s.JO,
                     u(
                         {
                             ref: h,

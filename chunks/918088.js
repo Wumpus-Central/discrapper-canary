@@ -1,6 +1,6 @@
 n.d(t, {
     Tk: () => R,
-    ZP: () => D,
+    ZP: () => w,
     ef: () => C,
     r8: () => P,
 }),
@@ -138,15 +138,15 @@ function R(e, t) {
         A = O.some((e) => !0 === e.me_vote),
         N = !b && A,
         R = N || m || y,
-        D = p && I && (!A || b || R),
-        w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
-        x = null != w ? d.ZP.getSelfMember(w) : null,
+        w = p && I && (!A || b || R),
+        D = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
+        x = null != D ? d.ZP.getSelfMember(D) : null,
         L = (0, l.EY)(x),
         j = (0, c.b)(x),
         M = !E && C && !N && p && !L && !j;
     return {
         poll: s,
-        canTapAnswers: D,
+        canTapAnswers: w,
         canRemoveVote: N && p && !m,
         canShowVoteCounts: R,
         canSubmitVote: M,
@@ -165,7 +165,7 @@ function R(e, t) {
         showResults: y,
     };
 }
-function D(e, t) {
+function w(e, t) {
     var n, o;
     let {
             animateEmoji: s = !1,
@@ -185,8 +185,8 @@ function D(e, t) {
     if (null == T) return;
     let {
             canTapAnswers: P,
-            canRemoveVote: D,
-            canShowVoteCounts: w,
+            canRemoveVote: w,
+            canShowVoteCounts: D,
             canSubmitVote: x,
             expirationLabel: L = I.intl.string(I.t["e+J3JZ"]),
             hasSelectedAnswer: j,
@@ -195,8 +195,8 @@ function D(e, t) {
             isExpired: U,
             isInteractive: G,
             reactions: Z,
-            selectedAnswerIds: B,
-            submitting: F,
+            selectedAnswerIds: F,
+            submitting: B,
             tapShouldOpenVotersModal: V,
             showResults: H,
         } = T,
@@ -215,7 +215,7 @@ function D(e, t) {
                 l = C(Z, o),
                 c = null != (n = null == l || null == (t = l.count_details) ? void 0 : t.vote) ? n : 0,
                 u = 0 === Y ? 0 : c / Y,
-                d = B.has(o),
+                d = F.has(o),
                 f = c >= K && 0 !== c,
                 p = M && null != (a = null == l ? void 0 : l.me_vote) && a,
                 m = A({
@@ -238,7 +238,7 @@ function D(e, t) {
                 isVictor: U && f,
                 didSelfVote: p,
                 style: m,
-                shouldAnimateTransition: F && !_,
+                shouldAnimateTransition: B && !_,
                 votesPercentage: Math.round(100 * u),
                 votes: (0, r.EQ)(S)
                     .with(i.C.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")"))
@@ -250,7 +250,7 @@ function D(e, t) {
             canSubmitVote: x,
             hasVoted: M,
             isEditingVote: k,
-            canRemoveVote: D,
+            canRemoveVote: w,
             isInteractive: G,
             showResults: H,
         })
@@ -362,7 +362,7 @@ function D(e, t) {
         canTapAnswers: P,
         canSelectMultipleAnswers: $,
         hasSelectedAnswer: j,
-        canShowVoteCounts: w,
+        canShowVoteCounts: D,
         hasVoted: M,
         isExpired: U,
         myAvatarUrl: g,

@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(670188),
     c = n(210887),
     u = n(5192),
-    d = n(263884);
+    d = n(935418);
 function f(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ function h(e) {
                     nick: u.ZP.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
                     onContextMenu: (t) => {
                         (0, o.jW)(t, async () => {
-                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
+                            let { default: t } = await Promise.all([n.e("79695"), n.e("69220"), n.e("26465")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) => (0, r.jsx)(t, m(p({}, n), { user: e }));

@@ -1,12 +1,12 @@
 t.d(n, { Z: () => u }), t(953529);
 var r = t(54381),
     i = t(473749),
-    l = t(793030),
-    a = t(441494),
+    a = t(793030),
+    l = t(441494),
     o = t(296643),
     s = t(343312),
     d = t(162190),
-    c = t(333275);
+    c = t(879125);
 function u() {
     let { currentGame: e, planId: n } = (0, s.JL)(),
         t = (0, d.Z)(null == e ? void 0 : e.gameId, "cover");
@@ -29,12 +29,12 @@ function u() {
                             (0, r.jsxs)("div", {
                                 className: c.header,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(a.X6q, {
                                         variant: "heading-lg/semibold",
                                         color: "text-strong",
                                         children: e.name,
                                     }),
-                                    (0, r.jsx)(l.xvT, {
+                                    (0, r.jsx)(a.xvT, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",
                                         children: null == u ? void 0 : u.name,
@@ -55,12 +55,12 @@ function u() {
                                             (0, r.jsxs)("div", {
                                                 className: c.statItem,
                                                 children: [
-                                                    (0, r.jsx)(l.X6q, {
+                                                    (0, r.jsx)(a.X6q, {
                                                         variant: "heading-sm/semibold",
                                                         color: "text-strong",
                                                         children: e.title,
                                                     }),
-                                                    (0, r.jsx)(l.xvT, {
+                                                    (0, r.jsx)(a.xvT, {
                                                         variant: "text-sm/medium",
                                                         color: "text-muted",
                                                         children: e.description,
@@ -84,7 +84,7 @@ function u() {
             }),
             (0, r.jsx)("div", {
                 className: c.imageBackground,
-                children: (0, r.jsx)(a.b, { imageUrl: null != t ? t : "" }),
+                children: (0, r.jsx)(l.b, { imageUrl: null != t ? t : "" }),
             }),
         ],
     });

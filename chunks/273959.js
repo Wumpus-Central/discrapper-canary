@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(828700),
-    o = n(442837),
+    o = n(828700),
+    s = n(442837),
     c = n(681715),
     u = n(481060),
     d = n(812206),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(565138),
     m = n(370774),
     b = n(51596),
-    E = n(592125),
-    _ = n(430824),
+    _ = n(592125),
+    E = n(430824),
     O = n(944486),
     v = n(914010),
     y = n(768581),
@@ -28,23 +28,23 @@ function j(e) {
     var t, n;
     let l,
         { withFastTravel: j, focusSectionProps: P } = e,
-        x = (0, s.TH)(),
-        A = (0, o.e7)([v.Z], () => v.Z.getGuildId()),
-        Z = (0, o.e7)([O.Z], () => O.Z.getChannelId()),
-        w = (0, o.e7)([E.Z], () => E.Z.getChannel(Z), [Z]),
+        x = (0, o.TH)(),
+        A = (0, s.e7)([v.Z], () => v.Z.getGuildId()),
+        Z = (0, s.e7)([O.Z], () => O.Z.getChannelId()),
+        w = (0, s.e7)([_.Z], () => _.Z.getChannel(Z), [Z]),
         L = null != A ? A : null == w ? void 0 : w.guild_id,
-        R = (0, o.e7)([_.Z], () => _.Z.getGuild(L), [L]),
+        R = (0, s.e7)([E.Z], () => E.Z.getGuild(L), [L]),
         D = (0, f.Z)(),
         M = (0, m.D)(),
         { guildTitleIconSize: k, guildIconSize: U } = (0, p.T)({ location: "GuildTitle" }),
-        { application: G, isFrameInFocusedMode: B } = (0, o.cj)([d.Z, g.Z], () => {
+        { application: G, isFrameInFocusedMode: H } = (0, s.cj)([d.Z, g.Z], () => {
             let e = g.Z.getConnectedFrame();
             return {
                 application: d.Z.getApplication(null == e ? void 0 : e.applicationId),
                 isFrameInFocusedMode: g.Z.getFrameLayoutMode() === C.U.FOCUSED,
             };
         }),
-        H =
+        B =
             null != G
                 ? y.ZP.getApplicationIconURL({
                       id: G.id,
@@ -53,12 +53,12 @@ function j(e) {
                   })
                 : void 0,
         V = null;
-    null != G && B
+    null != G && H
         ? ((l = G.name),
           (V = (0, r.jsx)("img", {
               className: N.appIcon,
               alt: S.intl.string(S.t.X4IxWL),
-              src: H,
+              src: B,
               "aria-hidden": !0,
               draggable: !1,
           })))

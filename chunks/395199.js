@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(78839),
     p = n(709054),
     _ = n(388032),
-    m = n(542886);
+    m = n(811337);
 function h(e) {
     let { imageClass: t, children: n, error: i } = e;
     return (0, r.jsxs)("div", {

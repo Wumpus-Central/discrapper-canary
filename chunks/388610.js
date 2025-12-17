@@ -70,8 +70,8 @@ let A = v.QZA.CLOSED,
     N = {},
     P = {},
     R = !1,
-    D = !1,
-    w = null,
+    w = !1,
+    D = null,
     x = [
         "name",
         "type",
@@ -116,7 +116,7 @@ function j(e) {
     if (null == t) return k();
     (A = v.QZA.OPEN),
         (o = a = t),
-        (w = "location" in e && null != e.location ? e.location : null),
+        (D = "location" in e && null != e.location ? e.location : null),
         (i = "subsection" in e ? e.subsection : null),
         null != o && (o = o.set("nsfw", o.isNSFW())),
         (s = O.Z.getChannel(o.parent_id)),
@@ -156,7 +156,7 @@ function M(e) {
                 ));
 }
 function k() {
-    (D = !1), (A = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (P = {});
+    (w = !1), (A = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (P = {});
 }
 function U() {
     (A = v.QZA.SUBMITTING), (N = {});
@@ -172,13 +172,13 @@ function Z(e) {
             return (0, u.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
         }, {}));
 }
-let B = d().debounce(() => {
+let F = d().debounce(() => {
     if (null == o || null == a) return !1;
     let e = o.toJS(),
         t = a.toJS();
     x.every((n) => e[n] === t[n]) && o !== a && ((o = a), $.emitChange());
 }, 500);
-function F(e) {
+function B(e) {
     let {
         name: t,
         channelType: n,
@@ -228,7 +228,7 @@ function F(e) {
         null != O && (o = o.set("defaultForumLayout", O)),
         void 0 !== S && (o = o.set("iconEmoji", S)),
         null != T && (o = o.set("themeColor", T)),
-        B();
+        F();
 }
 function V(e) {
     return new E.Z({
@@ -290,7 +290,7 @@ class J extends (c = _.ZP.Store) {
         return o !== a;
     }
     isOpen() {
-        return D;
+        return w;
     }
     getSection() {
         return r;
@@ -323,7 +323,7 @@ class J extends (c = _.ZP.Store) {
             invites: P,
             selectedOverwriteId: l,
             hasChanges: this.hasChanges(),
-            analyticsLocation: w,
+            analyticsLocation: D,
         };
     }
 }
@@ -337,7 +337,7 @@ let $ = new J(h.Z, {
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: X,
-        CHANNEL_SETTINGS_UPDATE: F,
+        CHANNEL_SETTINGS_UPDATE: B,
         CHANNEL_SETTINGS_SET_SECTION: M,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,

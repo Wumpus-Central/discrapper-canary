@@ -52,9 +52,9 @@ function b(e, t, n) {
             onFocusWithinChange: e.onFocusChange,
         }),
         R = (0, _.q)(m(r.Z), "@react-aria/datepicker"),
-        D = "hour" === t.maxGranularity ? "selectedTimeDescription" : "selectedDateDescription",
-        w = "hour" === t.maxGranularity ? "time" : "date",
-        x = t.value ? R.format(D, { [w]: t.formatValue({ month: "long" }) }) : "",
+        w = "hour" === t.maxGranularity ? "selectedTimeDescription" : "selectedDateDescription",
+        D = "hour" === t.maxGranularity ? "time" : "date",
+        x = t.value ? R.format(w, { [D]: t.formatValue({ month: "long" }) }) : "",
         L = (0, o.P)(x),
         j =
             "presentation" === e[g]
@@ -101,7 +101,7 @@ function b(e, t, n) {
     };
     "native" === e.validationBehavior &&
         ((Z.type = "text"), (Z.hidden = !0), (Z.required = e.isRequired), (Z.onChange = () => {}));
-    let B = (0, c.z)(e);
+    let F = (0, c.z)(e);
     return {
         labelProps: {
             ...I,
@@ -109,7 +109,7 @@ function b(e, t, n) {
                 k.focusFirst();
             },
         },
-        fieldProps: (0, s.d)(B, y, U, P, {
+        fieldProps: (0, s.d)(F, y, U, P, {
             onKeyDown(t) {
                 e.onKeyDown && e.onKeyDown(t);
             },

@@ -18,21 +18,21 @@ function u(e, t, n) {
         e
     );
 }
-let p = {},
-    m = {},
-    b = !1;
+let m = {},
+    b = {},
+    p = !1;
 function g() {
-    (i = void 0), (p = {}), (m = {}), (r = void 0), (l = void 0), (b = !1);
+    (i = void 0), (m = {}), (b = {}), (r = void 0), (l = void 0), (p = !1);
 }
 class f extends (a = o.ZP.Store) {
     getApplicationPermissions() {
-        return p;
-    }
-    getCommands() {
         return m;
     }
+    getCommands() {
+        return b;
+    }
     getCommand(e) {
-        return null == m ? void 0 : m[e];
+        return null == b ? void 0 : b[e];
     }
     getEditedApplication() {
         return r;
@@ -41,7 +41,7 @@ class f extends (a = o.ZP.Store) {
         return l;
     }
     isUnavailable() {
-        return b;
+        return p;
     }
     getApplicationId() {
         return i;
@@ -53,7 +53,7 @@ let h = new f(s.Z, {
     INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
         if (t !== i) return !1;
-        b = !0;
+        p = !0;
     },
     INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
@@ -65,12 +65,12 @@ let h = new f(s.Z, {
         let { applicationId: r, commandId: l, permissions: a } = e;
         if (r !== i) return !1;
         if (l === i) {
-            p = (0, d.tk)(a);
+            m = (0, d.tk)(a);
             return;
         }
-        let o = m[l];
+        let o = b[l];
         if (null == o) return !1;
-        m[l] =
+        b[l] =
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -119,7 +119,7 @@ let h = new f(s.Z, {
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
         if (t !== i) return !1;
-        b = !0;
+        p = !0;
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS: function (e) {
         let { applicationId: t, commands: n, permissions: r } = e;
@@ -136,6 +136,6 @@ let h = new f(s.Z, {
                     n = l[e.id];
                 null != n && (t.permissions = (0, d.tk)(n)), (a[e.id] = t);
             }
-        m = a;
+        b = a;
     },
 });

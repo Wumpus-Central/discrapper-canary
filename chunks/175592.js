@@ -62,7 +62,7 @@ function y(e) {
                 (0, r.jsx)(
                     s.Text,
                     {
-                        variant: "text-xs/normal",
+                        variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
                         className: E.label,
@@ -75,7 +75,7 @@ function y(e) {
                 (0, r.jsxs)(
                     s.Text,
                     {
-                        variant: "text-xs/normal",
+                        variant: "text-sm/normal",
                         color: "text-subtle",
                         lineClamp: 1,
                         className: E.label,

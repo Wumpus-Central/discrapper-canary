@@ -5,8 +5,8 @@ var i = n(325767);
 function l(e) {
     var t,
         n,
-        { width: l = 32, height: a = 32, color: s = "currentColor" } = e,
-        o = (function (e, t) {
+        { width: l = 32, height: a = 32, color: o = "currentColor" } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -53,7 +53,7 @@ function l(e) {
                     });
             }
             return e;
-        })({}, (0, i.Z)(o))),
+        })({}, (0, i.Z)(s))),
         (n = n =
             {
                 width: l,
@@ -64,7 +64,7 @@ function l(e) {
                     fillRule: "evenodd",
                     clipRule: "evenodd",
                     d: "M8 3C7.44772 3 7 3.44772 7 4V12C7 12.5523 7.44772 13 8 13C8.55228 13 9 12.5523 9 12V4C9 3.44772 8.55228 3 8 3ZM3 6C3 5.44772 3.44772 5 4 5C4.55228 5 5 5.44772 5 6V10C5 10.5523 4.55228 11 4 11C3.44772 11 3 10.5523 3 10V6ZM11 6C11 5.44772 11.4477 5 12 5C12.5523 5 13 5.44772 13 6V10C13 10.5523 12.5523 11 12 11C11.4477 11 11 10.5523 11 10V6Z",
-                    fill: s,
+                    fill: o,
                 }),
             }),
         Object.getOwnPropertyDescriptors

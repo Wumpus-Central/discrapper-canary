@@ -8,8 +8,8 @@ var l = n(54381),
     o = n(91192),
     c = n(442837),
     d = n(481060),
-    b = n(700582),
-    f = n(724757),
+    f = n(700582),
+    b = n(724757),
     h = n(212819),
     m = n(933557),
     p = n(266076),
@@ -21,16 +21,16 @@ var l = n(54381),
     S = n(430824),
     P = n(496675),
     O = n(158776),
-    _ = n(306680),
-    Z = n(699516),
-    E = n(594174),
-    L = n(55935),
-    T = n(823379),
-    C = n(51144),
-    w = n(981631),
+    Z = n(306680),
+    E = n(699516),
+    L = n(594174),
+    T = n(55935),
+    C = n(823379),
+    w = n(51144),
+    _ = n(981631),
     k = n(490897),
     N = n(388032),
-    R = n(834505);
+    R = n(925969);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -102,14 +102,14 @@ function I(e) {
             subLabel: i,
             selected: u,
             disabled: c,
-            onPressDestination: b,
-            "aria-setsize": f,
+            onPressDestination: f,
+            "aria-setsize": b,
             "aria-posinset": h,
         } = e,
         m = (0, o.JA)(t.id),
         p = r.useCallback(() => {
-            c || null == b || b(t);
-        }, [b, c, t]);
+            c || null == f || f(t);
+        }, [f, c, t]);
     return (0, l.jsxs)(
         d.P3F,
         D(
@@ -118,7 +118,7 @@ function I(e) {
                     className: a()(R.destinationRow, { [R.disabled]: c }),
                     onClick: p,
                     "aria-selected": u,
-                    "aria-setsize": f,
+                    "aria-setsize": b,
                     "aria-posinset": h,
                 },
                 m,
@@ -164,14 +164,14 @@ function I(e) {
 function F(e) {
     var { user: t, subLabel: n } = e,
         r = A(e, ["user", "subLabel"]);
-    let s = C.ZP.useName(t),
-        a = C.ZP.useUserTag(t, { decoration: "never" }),
-        i = (0, c.e7)([Z.Z], () => Z.Z.getNickname(t.id)),
+    let s = w.ZP.useName(t),
+        a = w.ZP.useUserTag(t, { decoration: "never" }),
+        i = (0, c.e7)([E.Z], () => E.Z.getNickname(t.id)),
         u = (0, c.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, l.jsx)(
         I,
         D(M({}, r), {
-            icon: (0, l.jsx)(b.Z, {
+            icon: (0, l.jsx)(f.Z, {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 user: t,
@@ -205,15 +205,15 @@ function q(e) {
         r = A(e, ["channel", "subLabel"]);
     let s = (0, c.e7)([S.Z], () => S.Z.getGuild(null == t ? void 0 : t.guild_id)),
         a = (0, m.ZP)(t),
-        i = (0, c.e7)([v.Z, E.default, Z.Z], () => {
+        i = (0, c.e7)([v.Z, L.default, E.Z], () => {
             let e = v.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, m.F6)(e, E.default, Z.Z, !1);
+            return null == e ? null : (0, m.F6)(e, L.default, E.Z, !1);
         }),
-        o = (0, c.e7)([_.ZP], () => _.ZP.lastMessageTimestamp(t.id, k.W.CHANNEL)),
-        b = null == s ? void 0 : s.name;
+        o = (0, c.e7)([Z.ZP], () => Z.ZP.lastMessageTimestamp(t.id, k.W.CHANNEL)),
+        f = null == s ? void 0 : s.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
-        b = (0, l.jsxs)("div", {
+        f = (0, l.jsxs)("div", {
             className: R.threadSubLabel,
             children: [
                 (0, l.jsx)(e, {
@@ -238,7 +238,7 @@ function q(e) {
                               (0, l.jsx)(d.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, L.Xf)(u()(o)),
+                                  children: (0, T.Xf)(u()(o)),
                               }),
                           ],
                       })
@@ -255,7 +255,7 @@ function q(e) {
                 channel: t,
             }),
             label: a,
-            subLabel: null != n ? n : b,
+            subLabel: null != n ? n : f,
         }),
     );
 }
@@ -264,7 +264,7 @@ function G(e) {
         i = A(e, ["rowData", "selectedDestinations", "handleToggleDestination", "disableSelection"]);
     let u = r.useMemo(() => [t.length], [t.length]),
         c = r.useCallback(() => 48, []),
-        b = r.useMemo(() => {
+        f = r.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.map(y.hC)) ? e : [];
         }, [n]),
@@ -291,17 +291,17 @@ function G(e) {
                             (0, j.Km)(e.type) &&
                             null != e.rateLimitPerUser &&
                             e.rateLimitPerUser > 0 &&
-                            !(P.Z.can(w.Plq.MANAGE_CHANNELS, e) || P.Z.can(w.Plq.MANAGE_MESSAGES, e))
+                            !(P.Z.can(_.Plq.MANAGE_CHANNELS, e) || P.Z.can(_.Plq.MANAGE_MESSAGES, e))
                         )
                             return { label: N.intl.string(N.t.Icu3bf) };
                     })(u),
-                    f = b.includes(c),
+                    b = f.includes(c),
                     m = {
                         key: c,
                         destination: o,
                         subLabel: null != d ? d.label : void 0,
-                        disabled: (a && !f) || null != d,
-                        selected: f,
+                        disabled: (a && !b) || null != d,
+                        selected: b,
                         onPressDestination: s,
                         "aria-posinset": r + 1,
                         "aria-setsize": t.length,
@@ -312,12 +312,12 @@ function G(e) {
                       ? (0, l.jsx)(U, M({ channel: u }, m))
                       : i === h.h8.TEXT_CHANNEL || i === h.h8.VOICE_CHANNEL
                         ? (0, l.jsx)(q, M({ channel: u }, m))
-                        : void (0, T.vE)(i);
+                        : void (0, C.vE)(i);
             },
-            [a, s, t, b],
+            [a, s, t, f],
         ),
         p = r.useRef(null),
-        g = (0, f.Z)("share-command-modal", p);
+        g = (0, b.Z)("share-command-modal", p);
     return (0, l.jsx)(o.bG, {
         navigator: g,
         children: (0, l.jsx)(o.SJ, {

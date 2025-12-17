@@ -1,62 +1,62 @@
 n.d(t, { Z: () => p });
-var o = n(54381);
+var i = n(54381);
 n(473749);
-var i = n(442837),
-    r = n(481060),
-    a = n(906732),
+var a = n(442837),
+    o = n(481060),
+    r = n(906732),
     l = n(48217),
-    s = n(26323),
-    c = n(430824),
-    u = n(914010),
-    b = n(981631),
-    d = n(30513),
-    f = n(388032),
-    m = n(861203);
+    c = n(26323),
+    s = n(430824),
+    d = n(914010),
+    u = n(981631),
+    f = n(30513),
+    b = n(388032),
+    g = n(861203);
 function p(e) {
-    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: g } = e,
-        v = (0, i.e7)([u.Z], () => u.Z.getGuildId()),
-        _ = (0, i.e7)([c.Z], () => c.Z.getGuild(v)),
-        { analyticsLocations: x } = (0, a.ZP)();
-    return null == _ ||
-        _.features.has(b.GuildFeatures.ANIMATED_BANNER) ||
-        (!p && _.features.has(b.GuildFeatures.BANNER))
+    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: x } = e,
+        N = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        m = (0, a.e7)([s.Z], () => s.Z.getGuild(N)),
+        { analyticsLocations: _ } = (0, r.ZP)();
+    return null == m ||
+        m.features.has(u.GuildFeatures.ANIMATED_BANNER) ||
+        (!p && m.features.has(u.GuildFeatures.BANNER))
         ? null
-        : (0, o.jsxs)("div", {
-              className: m.container,
+        : (0, i.jsxs)("div", {
+              className: g.container,
               children: [
-                  (0, o.jsx)(r.Ucv, {
-                      color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: m.guildBoostingIcon,
+                  (0, i.jsx)(o.Ucv, {
+                      color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                      className: g.guildBoostingIcon,
                   }),
-                  (0, o.jsx)(r.Text, {
+                  (0, i.jsx)(o.Text, {
                       color: "text-strong",
                       variant: "text-sm/semibold",
-                      children: f.intl.string(f.t["56M7xe"]),
+                      children: b.intl.string(b.t["56M7xe"]),
                   }),
-                  (0, o.jsx)("div", {
-                      className: m.subscribeButton,
-                      children: (0, o.jsx)(r.Avr, {
-                          text: f.intl.string(f.t.WUHdZV),
+                  (0, i.jsx)("div", {
+                      className: g.subscribeButton,
+                      children: (0, i.jsx)(o.Avr, {
+                          text: b.intl.string(b.t.WUHdZV),
                           onClick: () => {
-                              if (null == _) return;
+                              if (null == m) return;
                               let e = {
                                   section: t,
                                   page: n,
-                                  object: b.qAy.UPSELL_HEADER,
+                                  object: u.qAy.UPSELL_HEADER,
                               };
-                              null != g
+                              null != x
                                   ? (0, l.c)({
-                                        analyticsLocations: x,
+                                        analyticsLocations: _,
                                         analyticsLocation: e,
-                                        guild: _,
+                                        guild: m,
                                         isGIF: p,
-                                        banner: g,
+                                        banner: x,
                                     })
-                                  : (0, s.Z)({
-                                        analyticsLocations: x,
+                                  : (0, c.Z)({
+                                        analyticsLocations: _,
                                         analyticsSourceLocation: e,
-                                        guild: _,
-                                        perks: p ? (0, d.zC)() : (0, d.XO)(),
+                                        guild: m,
+                                        perks: p ? (0, f.zC)() : (0, f.XO)(),
                                     });
                           },
                           textVariant: "text-sm/semibold",

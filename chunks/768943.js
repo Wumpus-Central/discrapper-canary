@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(415506), n(388685);
+n.d(t, { Z: () => F }), n(415506), n(388685);
 var r,
     i = n(442837),
     a = n(759174),
@@ -120,14 +120,14 @@ function R(e) {
     let a = d({}, i);
     return (a.message = null), m.set(r, a), !0;
 }
-function D(e) {
+function w(e) {
     let { id: t, channelId: n } = e;
     return R({
         messageId: t,
         channelId: n,
     });
 }
-function w(e) {
+function D(e) {
     let { ids: t, channelId: n } = e;
     for (let e of t)
         R({
@@ -234,14 +234,14 @@ class Z extends (r = i.ZP.Store) {
     }
 }
 u(Z, "displayName", "SavedMessagesStore");
-let B = new Z(o.Z, {
+let F = new Z(o.Z, {
     POST_CONNECTION_OPEN: T,
     LOGOUT: C,
     SAVED_MESSAGES_UPDATE: A,
     SAVED_MESSAGE_CREATE: N,
     SAVED_MESSAGE_DELETE: P,
-    MESSAGE_DELETE: D,
-    MESSAGE_DELETE_BULK: w,
+    MESSAGE_DELETE: w,
+    MESSAGE_DELETE_BULK: D,
     MESSAGE_UPDATE: x,
     GUILD_CREATE: L,
     GUILD_UPDATE: L,

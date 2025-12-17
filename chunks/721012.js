@@ -2,23 +2,23 @@ n.d(t, { i: () => d }), n(388685);
 var l = n(54381),
     i = n(473749);
 n(120356);
-var r = n(467721),
-    a = n(481060),
-    s = n(388032),
-    o = n(490369);
+var r = n(236726),
+    s = n(481060),
+    a = n(388032),
+    o = n(298596);
 function c(e) {
     let { testimonial: t, className: n } = e,
         { message: i, profilePic: r, adminTitle: c, emphasisColor: d = "interactive-text-default" } = t;
     return (0, l.jsxs)("div", {
         className: n,
         children: [
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: s.intl.format(i, {
+                children: a.intl.format(i, {
                     testimonialHook: (e, t) =>
                         (0, l.jsx)(
-                            a.Text,
+                            s.Text,
                             {
                                 tag: "span",
                                 variant: "text-sm/bold",
@@ -32,12 +32,12 @@ function c(e) {
             (0, l.jsxs)("div", {
                 className: o.userContainer,
                 children: [
-                    (0, l.jsx)(a.qEK, {
+                    (0, l.jsx)(s.qEK, {
                         src: r,
-                        size: a.EFr.SIZE_16,
+                        size: s.EFr.SIZE_16,
                         "aria-hidden": !0,
                     }),
-                    (0, l.jsx)(a.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
                         children: c,
@@ -82,13 +82,13 @@ function d(e) {
         children: [
             (0, l.jsx)("div", {
                 className: o.animatedContainer,
-                children: (0, l.jsx)(a.W3x, {
+                children: (0, l.jsx)(s.W3x, {
                     items: [g],
                     renderItem: f,
                     getItemKey: (e) => e.adminTitle,
                 }),
             }),
-            (0, l.jsx)(a.Text, {
+            (0, l.jsx)(s.Text, {
                 variant: "text-lg/bold",
                 className: o.heroQuotes,
                 children: "\u201C",
@@ -96,19 +96,19 @@ function d(e) {
             (0, l.jsxs)("div", {
                 className: o.testimonialsControls,
                 children: [
-                    (0, l.jsx)(a.hU, {
+                    (0, l.jsx)(s.hU, {
                         size: "sm",
                         variant: "secondary",
-                        icon: a.whL,
+                        icon: s.whL,
                         onClick: d,
-                        "aria-label": s.intl.string(s.t["13/7kX"]),
+                        "aria-label": a.intl.string(a.t["13/7kX"]),
                     }),
-                    (0, l.jsx)(a.hU, {
+                    (0, l.jsx)(s.hU, {
                         size: "sm",
                         variant: "secondary",
-                        icon: a.ZSh,
+                        icon: s.ZSh,
                         onClick: m,
-                        "aria-label": s.intl.string(s.t.PDTjLN),
+                        "aria-label": a.intl.string(a.t.PDTjLN),
                     }),
                 ],
             }),
@@ -116,19 +116,19 @@ function d(e) {
     });
 }
 function u(e) {
-    let { item: t, state: n, cleanup: i, direction: s } = e,
-        [d] = (0, a.q_F)(
+    let { item: t, state: n, cleanup: i, direction: a } = e,
+        [d] = (0, s.q_F)(
             () => {
                 switch (n) {
-                    case a.pJH.ENTERED:
+                    case s.pJH.ENTERED:
                         return {
-                            from: { transform: "right" === s ? "translateX(150%)" : "translate(-150%)" },
+                            from: { transform: "right" === a ? "translateX(150%)" : "translate(-150%)" },
                             to: { transform: "translateX(0%)" },
                         };
-                    case a.pJH.YEETED:
+                    case s.pJH.YEETED:
                         return {
                             from: { transform: "translateX(0%)" },
-                            to: { transform: "right" === s ? "translateX(-150%)" : "translate(150%)" },
+                            to: { transform: "right" === a ? "translateX(-150%)" : "translate(150%)" },
                             onRest: i,
                         };
                     default:

@@ -1,5 +1,5 @@
-t.d(n, { Z: () => a });
-var r = t(763600);
-function a(e, n) {
-    return null == e || e !== r.Z.SHOCKBYTE ? null : null != n ? "".concat(n, "/support") : null;
+t.d(n, { Z: () => r });
+var a = t(763600);
+function r(e, n) {
+    return null == e || e !== a.Z.SHOCKBYTE ? null : null != n ? "".concat(n, "/support") : null;
 }

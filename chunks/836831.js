@@ -1,38 +1,38 @@
 n.d(t, { Z: () => m });
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
-    s = n(467721),
+    l = n(120356),
+    i = n.n(l),
+    s = n(236726),
     o = n(481060),
     c = n(617889),
     d = n(642145),
-    u = n(316464);
+    u = n(189140);
 let m = r.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: r,
-            size: i = 42,
+            size: l = 42,
             strokeWidth: m = 3,
             glowBlur: p = 0.4,
             percentCompleteText: h,
-            percentCompleteTextVariant: x = "text-lg/medium",
-            children: f,
+            percentCompleteTextVariant: f = "text-lg/medium",
+            children: x,
         } = e,
-        g = (0, c.EK)(n, r > 0),
-        b = i / 2,
-        v = i / 2 - m / 2,
+        b = (0, c.EK)(n, r > 0),
+        g = l / 2,
+        v = l / 2 - m / 2,
         j = 2 * Math.PI * v,
-        _ = j - r * j,
-        y = {
-            strokeDasharray: "".concat(j, " ").concat(j),
-            strokeDashoffset: _,
-        },
+        y = j - r * j,
         C = {
+            strokeDasharray: "".concat(j, " ").concat(j),
+            strokeDashoffset: y,
+        },
+        _ = {
             strokeDasharray: "".concat(j, " ").concat(j),
             strokeDashoffset: -r * j,
         },
-        S = { boxShadow: "0 0 20px 0px ".concat(g.glow) },
+        S = { boxShadow: "0 0 20px 0px ".concat(b.glow) },
         { progressTextAnimation: E } = (0, o.q_F)({
             progressTextAnimation: +(null != h && 1 !== r),
             config: d.Y,
@@ -45,14 +45,14 @@ let m = r.forwardRef((e, t) => {
                 className: u.inner,
                 style: S,
                 children: [
-                    f,
+                    x,
                     (0, a.jsxs)(s.animated.div, {
                         style: { opacity: E },
-                        className: l()(u.coverContent, u.progressTextWrapper),
+                        className: i()(u.coverContent, u.progressTextWrapper),
                         children: [
-                            (0, a.jsx)("div", { className: l()(u.coverContent, u.progressTextOverlay) }),
+                            (0, a.jsx)("div", { className: i()(u.coverContent, u.progressTextOverlay) }),
                             (0, a.jsx)(o.Text, {
-                                variant: x,
+                                variant: f,
                                 color: "text-strong",
                                 className: u.progressText,
                                 children: h,
@@ -63,8 +63,8 @@ let m = r.forwardRef((e, t) => {
             }),
             (0, a.jsxs)("svg", {
                 className: u.progressBar,
-                height: i,
-                width: i,
+                height: l,
+                width: l,
                 children: [
                     (0, a.jsxs)("defs", {
                         children: [
@@ -94,11 +94,11 @@ let m = r.forwardRef((e, t) => {
                                 children: [
                                     (0, a.jsx)("stop", {
                                         offset: "0%",
-                                        stopColor: g.backgroundTop,
+                                        stopColor: b.backgroundTop,
                                     }),
                                     (0, a.jsx)("stop", {
                                         offset: "100%",
-                                        stopColor: g.backgroundBottom,
+                                        stopColor: b.backgroundBottom,
                                     }),
                                 ],
                             }),
@@ -109,20 +109,20 @@ let m = r.forwardRef((e, t) => {
                         strokeWidth: m,
                         fill: "transparent",
                         r: v,
-                        cx: b,
-                        cy: b,
+                        cx: g,
+                        cy: g,
                         stroke: "url(#linear)",
-                        style: C,
+                        style: _,
                     }),
                     (0, a.jsx)("circle", {
                         className: u.progress,
                         strokeWidth: m,
                         fill: "transparent",
                         r: v,
-                        cx: b,
-                        cy: b,
-                        stroke: g.foreground,
-                        style: y,
+                        cx: g,
+                        cy: g,
+                        stroke: b.foreground,
+                        style: C,
                     }),
                 ],
             }),

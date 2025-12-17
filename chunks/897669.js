@@ -8,22 +8,22 @@ var r = n(481060),
     s = n(854698),
     c = n(390966),
     u = n(388032),
-    d = n(719188);
+    d = n(853561);
 function p(e) {
     let { guildEvent: t, recurrenceId: n } = e,
         p = (0, o.ZP)(t, n),
-        h = (0, a.Z)(n, t.id);
+        f = (0, a.Z)(n, t.id);
     if (null == t) return null;
-    let f =
+    let h =
         (null == t ? void 0 : t.scheduled_start_time) != null
-            ? (0, s.lh)(h, p.startTime, new Date(null == t ? void 0 : t.scheduled_start_time))
+            ? (0, s.lh)(f, p.startTime, new Date(null == t ? void 0 : t.scheduled_start_time))
             : null;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.ZP.Divider, { className: d.divider }),
             (0, i.jsx)(c.z, {
                 startTime: p.startTime.toISOString(),
-                status: null != f ? f : t.status,
+                status: null != h ? h : t.status,
                 liveText: u.intl.string(u.t.kM6e4G),
                 className: d.eventSchedule,
                 textVariant: "text-lg/semibold",

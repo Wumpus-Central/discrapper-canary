@@ -8,33 +8,33 @@ var i = n(54381),
     d = n(626135),
     c = n(799352),
     u = n(343544),
-    _ = n(14251),
-    m = n(110223),
-    x = n(981631),
-    f = n(388032),
-    g = n(405842);
+    m = n(14251),
+    _ = n(110223),
+    f = n(981631),
+    x = n(388032),
+    g = n(729861);
 function h(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: h = [], transitionState: E, onClose: N } = e;
     return (
         s.useEffect(() => {
-            d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
                 channel_id: t,
-                warning_medium: m.WR.MODAL,
+                warning_medium: _.WR.MODAL,
                 blocked_user_ids: n,
                 ignored_user_ids: h,
             });
         }, [t, n, h]),
         (0, i.jsx)(u.Z, {
-            headerText: f.intl.string(f.t["mwJJ+f"]),
+            headerText: x.intl.string(x.t["mwJJ+f"]),
             descriptionText: ((e, t) => {
                 let n = e > 0,
                     i = t > 0;
                 return n && i
-                    ? f.intl.string(f.t["0dP7Fk"])
+                    ? x.intl.string(x.t["0dP7Fk"])
                     : n
-                      ? f.intl.formatToPlainString(f.t.OpIG9d, { n: e })
+                      ? x.intl.formatToPlainString(x.t.OpIG9d, { n: e })
                       : i
-                        ? f.intl.formatToPlainString(f.t["D+V4jI"], { n: t })
+                        ? x.intl.formatToPlainString(x.t["D+V4jI"], { n: t })
                         : null;
             })(n.length, h.length),
             infoRows: ((e) => {
@@ -48,7 +48,7 @@ function h(e) {
                                 className: g.icon,
                                 children: (0, i.jsx)(r.owK, {}),
                             }),
-                            text: f.intl.string(f.t.RIMw54),
+                            text: x.intl.string(x.t.RIMw54),
                             className: g.row,
                         },
                         {
@@ -56,7 +56,7 @@ function h(e) {
                                 className: g.icon,
                                 children: (0, i.jsx)(r.d3s, {}),
                             }),
-                            text: f.intl.string(f.t.bejNWN),
+                            text: x.intl.string(x.t.bejNWN),
                             className: g.row,
                         },
                     ];
@@ -71,7 +71,7 @@ function h(e) {
                                 size: r.EFr.SIZE_32,
                             }),
                         }),
-                        text: (0, _.a)(o, e.length, null == a ? void 0 : a.guild_id, t),
+                        text: (0, m.a)(o, e.length, null == a ? void 0 : a.guild_id, t),
                         className: g.row,
                     });
                 } else {
@@ -80,9 +80,9 @@ function h(e) {
                     u.unshift({
                         icon: (0, i.jsx)("div", {
                             className: g.icon,
-                            children: (0, _.r)(e, null == a ? void 0 : a.guild_id),
+                            children: (0, m.r)(e, null == a ? void 0 : a.guild_id),
                         }),
-                        text: (0, _.a)(e, r, null == a ? void 0 : a.guild_id, t),
+                        text: (0, m.a)(e, r, null == a ? void 0 : a.guild_id, t),
                         className: g.row,
                     });
                 }
@@ -95,10 +95,10 @@ function h(e) {
             onDismissAndStay: () => {
                 N(),
                     (0, c.O)(t),
-                    d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: m.q.CLICK_TO_STAY,
+                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: _.q.CLICK_TO_STAY,
                         channel_id: t,
-                        warning_medium: m.WR.MODAL,
+                        warning_medium: _.WR.MODAL,
                         blocked_user_ids: n,
                         ignored_user_ids: h,
                     });
@@ -107,16 +107,16 @@ function h(e) {
                 N(),
                     (0, c.O)(t),
                     a.Z.closePrivateChannel(t, !0, !0),
-                    d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: m.q.CLICK_TO_LEAVE,
+                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: _.q.CLICK_TO_LEAVE,
                         channel_id: t,
-                        warning_medium: m.WR.MODAL,
+                        warning_medium: _.WR.MODAL,
                         blocked_user_ids: n,
                         ignored_user_ids: h,
                     });
             },
-            leaveButtonText: f.intl.string(f.t["Hi1/aQ"]),
-            stayButtonText: f.intl.string(f.t.SW3lpH),
+            leaveButtonText: x.intl.string(x.t["Hi1/aQ"]),
+            stayButtonText: x.intl.string(x.t.SW3lpH),
             transitionState: E,
             onClose: N,
         })

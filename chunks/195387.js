@@ -11,7 +11,7 @@ var i = n(442837),
     d = n(359110),
     f = n(314897),
     p = n(944486),
-    _ = n(732380),
+    _ = n(475413),
     m = n(176505),
     h = n(50493),
     g = n(388032);
@@ -23,7 +23,7 @@ function E(e) {
         I = (0, i.e7)([p.Z], () => (null != E ? E : p.Z.getChannelId(n, !0)), [E, n]);
     return null == n || !S || v
         ? null
-        : (0, r.jsx)(_.f6, {
+        : (0, r.jsx)(_.oY, {
               action: "PRESS_MOD_VIEW",
               icon: a.HI3,
               tooltipText: g.intl.string(g.t.kj3tz2),

@@ -1,34 +1,34 @@
-n.d(t, { CustomThemesShareModalWrapper: () => y }), n(388685), n(704826), n(35282);
+n.d(t, { CustomThemesShareModalWrapper: () => O }), n(388685), n(704826), n(35282);
 var r = n(54381),
     a = n(473749),
     o = n(663042),
     l = n(106351),
-    s = n(442837),
-    i = n(786761),
-    c = n(3148),
+    c = n(442837),
+    s = n(786761),
+    i = n(3148),
     u = n(210887),
     d = n(131704),
-    f = n(626135),
-    b = n(233398),
+    b = n(626135),
+    f = n(233398),
     p = n(824988),
     g = n(135102),
     h = n(975919),
-    _ = n(595830),
-    m = n(981631);
-let y = (e) => {
+    m = n(595830),
+    y = n(981631);
+let O = (e) => {
     let { transitionState: t, onClose: n } = e,
-        y = (0, a.useRef)((0, g.sf)()).current,
+        O = (0, a.useRef)((0, g.sf)()).current,
         {
-            selectedDestinations: O,
-            messageText: C,
-            canSend: j,
+            selectedDestinations: C,
+            messageText: j,
+            canSend: _,
             setSend: w,
             updateMessage: v,
             updateChannel: S,
-        } = (0, o.o)(y),
+        } = (0, o.o)(O),
         [P, x] = a.useState(!1),
-        { colors: E, chassisMixAmount: M, gradientAngle: k } = (0, b.Ig)(),
-        I = (0, s.e7)([u.Z], () => u.Z.theme),
+        { colors: E, chassisMixAmount: M, gradientAngle: k } = (0, f.Ig)(),
+        I = (0, c.e7)([u.Z], () => u.Z.theme),
         D = (0, a.useMemo)(
             () => ({
                 colors: E.map((e) => e.replace("#", "")),
@@ -48,7 +48,7 @@ let y = (e) => {
         ),
         R = a.useMemo(
             () =>
-                (0, i.e5)(
+                (0, s.e5)(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ let y = (e) => {
                         return e;
                     })(
                         {},
-                        (0, c.ZP)({
+                        (0, i.ZP)({
                             channelId: T.id,
                             content: "",
                         }),
@@ -87,15 +87,15 @@ let y = (e) => {
         v(R), S(T), x(!0);
     }, [R, T, v, S]);
     let Z = a.useCallback(async () => {
-        if (!j()) return Promise.reject();
-        await (0, _.O)(O, D, C), f.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: O.length }), await n();
-    }, [D, O, C, j, n]);
+        if (!_()) return Promise.reject();
+        await (0, m.O)(C, D, j), b.default.track(y.rMx.CUSTOM_THEME_SHARED, { num_destinations: C.length }), await n();
+    }, [D, C, j, _, n]);
     return ((0, a.useEffect)(() => {
         w(Z);
     }, [Z, w]),
     P)
         ? (0, r.jsx)(g.fm.Provider, {
-              value: y,
+              value: O,
               children: (0, r.jsx)(h._, {
                   transitionState: t,
                   onClose: n,

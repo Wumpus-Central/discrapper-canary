@@ -1,13 +1,13 @@
 n.d(t, {
     Bg: () => U,
     E5: () => ee,
-    Fp: () => B,
+    Fp: () => F,
     JT: () => $,
     L2: () => z,
     MY: () => M,
     Nz: () => V,
     QW: () => et,
-    Q_: () => F,
+    Q_: () => B,
     TO: () => W,
     Z0: () => G,
     bT: () => H,
@@ -85,9 +85,9 @@ let y = ["discordapp.com/gifts", "discord.com/gifts"],
     N = A(4, 4),
     P = A(4, 6),
     R = A(5, 3),
-    D = "WUMP-?",
-    w = [N, P, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-    x = new RegExp("^(".concat(D, ")?(").concat(w, ")$")),
+    w = "WUMP-?",
+    D = [N, P, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+    x = new RegExp("^(".concat(w, ")?(").concat(D, ")$")),
     L = "-";
 var j = (function (e) {
     return (
@@ -118,7 +118,7 @@ function G(e) {
 function Z(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
-let B = (e) => {
+let F = (e) => {
         var t;
         return (
             (null == e ? void 0 : e.type) === m.uaV.CUSTOM_GIFT &&
@@ -126,7 +126,7 @@ let B = (e) => {
             (null == e ? void 0 : e.embeds[0].type) === m.hBH.GIFT
         );
     },
-    F = (e) => {
+    B = (e) => {
         let t;
         if (null == e) return [];
         let n = new Set();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(953529), n(539854);
+n.d(t, { Z: () => b }), n(388685), n(953529), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(481060);
@@ -10,7 +10,7 @@ var a = n(723047),
     d = n(861345),
     u = n(293810),
     g = n(388032);
-function m(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,11 +53,11 @@ function p(e, t) {
         e
     );
 }
-function f() {
+function b() {
     let { editStateId: e, guildId: t } = (0, s.N)(),
-        [n, f] = o.UE(e),
-        h = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
-    function b(e, t) {
+        [n, b] = o.UE(e),
+        p = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
+    function h(e, t) {
         let { channelId: r, description: i, emojiId: l, emojiName: a } = e,
             s = [...n],
             o = {
@@ -68,7 +68,7 @@ function f() {
                 ref_type: u.Qs.CHANNEL,
                 ref_id: r,
             };
-        null != t ? (s[t] = o) : s.push(o), f(s);
+        null != t ? (s[t] = o) : s.push(o), b(s);
     }
     let x = (0, a.mY)();
     return (0, r.jsxs)(r.Fragment, {
@@ -79,15 +79,15 @@ function f() {
                     (0, l.h7j)((i) =>
                         (0, r.jsx)(
                             c.x3,
-                            p(m({}, i), {
+                            m(f({}, i), {
                                 guildId: t,
-                                omitChannelIds: h,
+                                omitChannelIds: p,
                                 initialData: n[e],
-                                onSave: (t) => b(t, e),
+                                onSave: (t) => h(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        t.splice(e, 1), f(t);
+                                        t.splice(e, 1), b(t);
                                     })(e),
                             }),
                         ),
@@ -96,7 +96,7 @@ function f() {
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    r.splice(t, 0, i), f(r);
+                    r.splice(t, 0, i), b(r);
                 },
                 guildId: t,
             }),
@@ -106,10 +106,10 @@ function f() {
                     (0, l.h7j)((e) =>
                         (0, r.jsx)(
                             c.x3,
-                            p(m({}, e), {
+                            m(f({}, e), {
                                 guildId: t,
-                                omitChannelIds: h,
-                                onSave: (e) => b(e),
+                                omitChannelIds: p,
+                                onSave: (e) => h(e),
                             }),
                         ),
                     );

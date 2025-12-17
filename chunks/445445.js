@@ -5,11 +5,11 @@ var r = n(473749),
 function o(e, t) {
     var n, o;
     let a = (0, l.Z)(e, t),
-        s = (0, i.Z)(e, t);
-    if (null == a) return s;
-    if (null == s) return a;
-    let c = a.props,
-        { children: u } = c,
+        c = (0, i.Z)(e, t);
+    if (null == a) return c;
+    if (null == c) return a;
+    let s = a.props,
+        { children: u } = s,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -30,10 +30,10 @@ function o(e, t) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(c, ["children"]),
+        })(s, ["children"]),
         f = r.Children.toArray(u);
     return (
-        f.push(s),
+        f.push(c),
         r.cloneElement(
             a,
             ((n = (function (e) {

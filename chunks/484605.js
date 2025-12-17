@@ -4,8 +4,8 @@ n(473749);
 var i = n(264418),
     l = n(481060),
     a = n(100527),
-    s = n(906732),
-    o = n(74538),
+    o = n(906732),
+    s = n(74538),
     c = n(230916),
     u = n(45474),
     d = n(474936),
@@ -13,8 +13,8 @@ var i = n(264418),
     f = n(388032),
     g = n(942257);
 let h = (e) => {
-    let { targetElementRef: t, discountOffer: h, premiumSubscription: m, dismissCoachmark: b, children: E } = e,
-        { analyticsLocations: _ } = (0, s.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
+    let { targetElementRef: t, discountOffer: h, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
+        { analyticsLocations: E } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
         O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, h, m),
         v = (0, r.jsx)(i.Z, {
             targetElementRef: t,
@@ -25,7 +25,7 @@ let h = (e) => {
             title: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: O,
-                billingPeriod: (0, o.JP)(h.discount.user_usage_limit_interval),
+                billingPeriod: (0, s.JP)(h.discount.user_usage_limit_interval),
                 numMonths: h.discount.user_usage_limit,
             }),
             graphic: {
@@ -75,7 +75,7 @@ let h = (e) => {
                                         (i = i =
                                             {
                                                 premiumSubscription: m,
-                                                analyticsLocations: _,
+                                                analyticsLocations: E,
                                                 initialStep: u.R.CONFIRM_DISCOUNT,
                                             }),
                                         Object.getOwnPropertyDescriptors
@@ -103,6 +103,6 @@ let h = (e) => {
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: E }), v],
+        children: [(0, r.jsx)("div", { children: _ }), v],
     });
 };

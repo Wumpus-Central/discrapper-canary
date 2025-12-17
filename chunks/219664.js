@@ -24,8 +24,8 @@ var a = n(54381),
     S = n(699516),
     N = n(456269),
     O = n(109590),
-    P = n(368844),
-    I = n(73315),
+    I = n(368844),
+    P = n(73315),
     E = n(404616),
     _ = n(510060),
     R = n(983200),
@@ -125,9 +125,9 @@ function G(e) {
         { firstMessage: v, loaded: C } = (0, O.cl)(n),
         { messageCountText: T } = (0, N.nP)(n),
         { isNew: w, hasUnreads: S } = (0, N.J$)(n),
-        P = r.useRef(null),
-        { handleLeftClick: I, handleRightClick: R } = (0, A.Z)({
-            facepileRef: P,
+        I = r.useRef(null),
+        { handleLeftClick: P, handleRightClick: R } = (0, A.Z)({
+            facepileRef: I,
             goToThread: i,
             channel: n,
         });
@@ -167,7 +167,7 @@ function G(e) {
         })(B, ["onFocus"]);
     return (0, a.jsxs)("li", {
         ref: p,
-        onClick: I,
+        onClick: P,
         onFocus: U,
         onContextMenu: R,
         className: l()(H.container, m, { [H.isOpen]: j }),
@@ -177,7 +177,7 @@ function G(e) {
                 d.P3F,
                 z(
                     {
-                        onClick: I,
+                        onClick: P,
                         focusProps: { ringTarget: p },
                         onContextMenu: R,
                         "aria-label": D.intl.formatToPlainString(D.t.pgYN6c, {
@@ -248,7 +248,7 @@ function G(e) {
                     children: (0, a.jsx)(q, {
                         channel: n,
                         firstMessage: v,
-                        facepileRef: P,
+                        facepileRef: I,
                     }),
                 }),
             }),
@@ -294,7 +294,7 @@ function W(e) {
         m = C.QK.useSetting(),
         f = C.cC.useSetting(),
         h = (0, p.Z)(f, u),
-        g = (0, P.aU)(n, s, !1),
+        g = (0, I.aU)(n, s, !1),
         x = t.isMediaPost(),
         [b, j] = (0, _.rI)(l.width - 2 * _.LT, x ? _.Lv.SIXTEEN_BY_NINE : _.Lv.THREE_BY_TWO);
     return (null == n ? void 0 : n.blocked) || null == (null != i ? i : c)
@@ -397,8 +397,8 @@ function q(e) {
         ],
     });
 }
-let K = (e) => e.preventDefault(),
-    X = r.memo(function (e) {
+let X = (e) => e.preventDefault(),
+    K = r.memo(function (e) {
         return (0, a.jsx)(a.Fragment, {
             children: (0, v.Yi)(B(z({}, e), { analyticsSource: "ForumPostMediaPreviewImage" })),
         });
@@ -412,7 +412,7 @@ let K = (e) => e.preventDefault(),
                 canAutoPlay: o,
                 shouldMaintainAspectRatio: c = !1,
             } = e,
-            { containsVideo: u, containsGif: m } = r.useMemo(() => (0, P.cp)(t), [t]),
+            { containsVideo: u, containsGif: m } = r.useMemo(() => (0, I.cp)(t), [t]),
             p = r.useMemo(() => t.slice(R.$x, R.GV), [t]),
             j = (0, R.tu)({
                 numAttachments: p.length,
@@ -436,7 +436,7 @@ let K = (e) => e.preventDefault(),
                                 width: e.width,
                                 height: e.height,
                                 alt: null != e.alt && i ? h : e.alt,
-                                onClick: K,
+                                onClick: X,
                                 shouldRenderAccessory: !m && !u,
                             }),
                             p = (0, x.d$)(e.src) ? "".concat(e.src, "?format=png") : e.src,
@@ -468,7 +468,7 @@ let K = (e) => e.preventDefault(),
                                                 }),
                                             )
                                           : (0, a.jsx)(
-                                                X,
+                                                K,
                                                 B(z({}, g), {
                                                     autoPlay: o && !i,
                                                     containerClassName: H.mosaicMediaContainer,
@@ -479,7 +479,7 @@ let K = (e) => e.preventDefault(),
                                     i &&
                                         (0, a.jsx)("div", {
                                             className: H.obscuredTagContainer,
-                                            children: (0, a.jsx)(I.Z, {
+                                            children: (0, a.jsx)(P.Z, {
                                                 obscureReason: s,
                                                 iconClassname: H.obscuredTag,
                                             }),

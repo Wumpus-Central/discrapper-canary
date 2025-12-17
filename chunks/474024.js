@@ -9,55 +9,55 @@ var r = n(54381),
     d = n(314852),
     u = n(330705),
     g = n(423252),
-    m = n(434404),
-    p = n(436879),
-    f = n(981631),
-    h = n(388032),
-    b = n(109229);
+    f = n(434404),
+    m = n(436879),
+    b = n(981631),
+    p = n(388032),
+    h = n(651801);
 function x(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         x = n.id,
         j = s.Y.VISIBLE.has(n.visibility),
-        _ = (0, o.e7)([d.Z], () => {
+        v = (0, o.e7)([d.Z], () => {
             var e;
             return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
         }, [x]),
-        v = i.useRef(null);
-    (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
-    let O = i.useCallback(() => {
+        O = i.useRef(null);
+    (0, m.Z)(O, b.KsC.PROFILE_VISIBILITY);
+    let C = i.useCallback(() => {
             j
-                ? m.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED })
-                : m.Z.updateGuildProfile(x, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [x, _, j]),
-        C = i.useCallback(() => {
-            m.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
+                ? f.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED })
+                : f.Z.updateGuildProfile(x, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [x, v, j]),
+        y = i.useCallback(() => {
+            f.Z.setSection(b.pNK.ACCESS, b.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        y = null == (t = n.features) ? void 0 : t.includes(f.GuildFeatures.DISCOVERABLE);
+        N = null == (t = n.features) ? void 0 : t.includes(b.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
-        className: b.twoColumnContainer,
-        ref: v,
+        className: h.twoColumnContainer,
+        ref: O,
         children: [
             (0, r.jsxs)("div", {
-                className: b.column,
+                className: h.column,
                 children: [
                     (0, r.jsx)(c.rsf, {
-                        label: h.intl.string(h.t.fjHWen),
-                        description: h.intl.string(h.t.J1YOV6),
+                        label: p.intl.string(p.t.fjHWen),
+                        description: p.intl.string(p.t.J1YOV6),
                         checked: !j,
-                        onChange: O,
-                        disabled: y || !l,
+                        onChange: C,
+                        disabled: N || !l,
                     }),
-                    y &&
+                    N &&
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: h.intl.format(h.t.R8jY9g, {
+                            children: p.intl.format(p.t.R8jY9g, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.Anchor,
                                         {
-                                            onClick: C,
+                                            onClick: y,
                                             children: e,
                                         },
                                         t,
@@ -67,7 +67,7 @@ function x(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: a()(b.column, { [b.profileViewDisabled]: j }),
+                className: a()(h.column, { [h.profileViewDisabled]: j }),
                 children: (0, r.jsx)(g.Z, {
                     guildId: x,
                     name: null,

@@ -1,22 +1,22 @@
-a.d(e, { Z: () => o });
+a.d(r, { Z: () => o });
 var c = a(54381);
 a(473749);
-var n = a(289556);
-let o = (r) => {
+var n = a(106184);
+let o = (e) => {
     let {
-            innerRingPercent: e,
+            innerRingPercent: r,
             outerRingColor: a = "currentColor",
             innerRingColor: o = "currentColor",
             strokeWidth: t = 4,
             children: s,
             backgroundCircleColor: i,
             backgroundCircleBlurAmount: l = 0,
-        } = r,
-        d = Math.min(Math.max(e, 0), 100),
+        } = e,
+        d = Math.min(Math.max(r, 0), 100),
         g = (100 - t) / 2,
         u = g * Math.PI * 2,
         v = (100 - t) / 2,
-        h = v * Math.PI * 2;
+        b = v * Math.PI * 2;
     return (0, c.jsxs)("div", {
         className: n.container,
         children: [
@@ -56,8 +56,8 @@ let o = (r) => {
                         strokeLinecap: "round",
                         transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),
                         style: {
-                            strokeDasharray: h,
-                            strokeDashoffset: (1 - d / 100) * h,
+                            strokeDasharray: b,
+                            strokeDashoffset: (1 - d / 100) * b,
                         },
                     }),
                 ],

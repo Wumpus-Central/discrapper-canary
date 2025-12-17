@@ -1,4 +1,4 @@
-n.d(t, { default: () => b });
+n.d(t, { default: () => f });
 var l = n(54381);
 n(473749);
 var r = n(481060),
@@ -10,18 +10,18 @@ var r = n(481060),
     d = n(931617),
     s = n(981631),
     _ = n(388032);
-let b = (0, u.Z)(
+let f = (0, u.Z)(
     (0, i.Z)(
         function (e) {
             var t;
-            let { user: n, guildId: i, onSelect: u, analyticsLocations: s, onCloseContextMenu: b, isViewOnly: f } = e,
+            let { user: n, guildId: i, onSelect: u, analyticsLocations: s, onCloseContextMenu: f, isViewOnly: b } = e,
                 { analyticsLocations: E } = (0, a.ZP)(c.Z.CONTEXT_MENU),
                 g = null != (t = null == s ? void 0 : s[0]) ? t : E[0],
-                O = (0, d.Z)(n.id, i, !0, g, f);
+                O = (0, d.Z)(n.id, i, !0, g, b);
             return (0, l.jsx)(r.v2r, {
                 navId: "guild-moderation-roles",
                 onClose: () => {
-                    (0, o.Zy)(), null == b || b();
+                    (0, o.Zy)(), null == f || f();
                 },
                 "aria-label": _.intl.string(_.t.liqwPJ),
                 onSelect: u,

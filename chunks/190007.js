@@ -1,9 +1,9 @@
 n.d(t, {
     HE: () => u,
-    HZ: () => m,
-    Pk: () => f,
-    e$: () => h,
-    l_: () => p,
+    HZ: () => f,
+    Pk: () => b,
+    e$: () => p,
+    l_: () => m,
     ss: () => x,
     xI: () => g,
 }),
@@ -30,38 +30,38 @@ function g(e) {
         index: e,
     });
 }
-function m(e, t) {
+function f(e, t) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_UPDATE",
         index: e,
         updates: t,
     });
 }
-function p(e) {
+function m(e) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REORDER",
         connections: e,
     });
 }
-function f() {
+function b() {
     r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET" });
 }
-async function h(e) {
+async function p(e) {
     var t, n, u;
     let g = s.Z.getEditedConnections(),
-        m = [];
+        f = [];
     if (
         (g.forEach((e) => {
             let t = (0, c.t9)(e);
-            m.push(...t);
+            f.push(...t);
         }),
-        m.length > 0)
+        f.length > 0)
     )
         throw (
-            (b(m),
+            (h(f),
             i.Z.show({
                 title: d.intl.string(d.t.ISppXw),
-                body: m.join("\n"),
+                body: f.join("\n"),
             }),
             Error("failed to validate connections"))
         );
@@ -79,7 +79,7 @@ async function h(e) {
         let { fieldName: e, error: t } = null != (u = new l.Hx(r).getAnyErrorMessageAndField()) ? u : {},
             n = [e, t].filter(a.lm).join(": ");
         throw (
-            (b([n]),
+            (h([n]),
             i.Z.show({
                 title: d.intl.string(d.t.iLdiqY),
                 body: n,
@@ -88,7 +88,7 @@ async function h(e) {
         );
     }
 }
-function b(e) {
+function h(e) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_FAILED",
         errors: e,
@@ -96,5 +96,5 @@ function b(e) {
 }
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t || s.Z.hasChanges() ? h(e) : Promise.resolve();
+    return t || s.Z.hasChanges() ? p(e) : Promise.resolve();
 }

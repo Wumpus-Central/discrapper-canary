@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(665149),
-    o = n(618158),
+    o = n(665149),
+    s = n(618158),
     c = n(819640),
     u = n(131951),
     d = n(924557),
@@ -14,9 +14,9 @@ var r = n(54381),
     h = n(203259),
     m = n(356659),
     b = n(388032);
-function E(e) {
-    let { canShowReminder: t = !1, className: E } = e,
-        _ = (0, f.Z)(u.Z),
+function _(e) {
+    let { canShowReminder: t = !1, className: _ } = e,
+        E = (0, f.Z)(u.Z),
         { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
             hasNewClips: v,
@@ -33,7 +33,7 @@ function E(e) {
         T = (0, g.n)((e) => e.clipsButtonRef),
         N = (0, g.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: P, allowIdle: x } = (0, o.Y)("animation");
+        { preventIdle: P, allowIdle: x } = (0, s.Y)("animation");
     function A() {
         (0, a.ZDy)(
             async () => {
@@ -71,7 +71,7 @@ function E(e) {
             { modalKey: m.Qr },
         );
     }
-    return (i.useEffect(() => (C ? P() : x(), () => x()), [C, P, x]), O && _)
+    return (i.useEffect(() => (C ? P() : x(), () => x()), [C, P, x]), O && E)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != T &&
@@ -87,8 +87,8 @@ function E(e) {
                       }),
                   (0, r.jsx)("div", {
                       ref: N,
-                      children: (0, r.jsx)(s.JO, {
-                          className: E,
+                      children: (0, r.jsx)(o.JO, {
+                          className: _,
                           icon: a.AlX,
                           showBadge: v,
                           tooltip: b.intl.string(b.t.MXaLEM),

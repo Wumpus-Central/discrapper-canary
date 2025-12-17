@@ -9,8 +9,8 @@ n.d(t, {
     bj: () => O,
     g0: () => N,
     gD: () => A,
-    kJ: () => D,
-    l6: () => w,
+    kJ: () => w,
+    l6: () => D,
     pY: () => R,
     sf: () => v,
     yo: () => I,
@@ -86,14 +86,14 @@ function R(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
-function D() {
+function w() {
     let e = p.default.getCurrentUser();
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function w() {
+function D() {
     let e = (0, i.e7)([p.default], () => p.default.getCurrentUser());
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&

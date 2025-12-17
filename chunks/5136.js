@@ -1,9 +1,9 @@
-n.d(t, { r: () => a });
+n.d(t, { r: () => l });
 var r = n(473749),
     i = n(85707),
-    l = n(481060);
-function a(e) {
-    let { containerRef: t, itemType: n = "WIDGET", edgeDistance: a = 130, maxSpeed: o = 1700, power: c = 2.2 } = e,
+    a = n(481060);
+function l(e) {
+    let { containerRef: t, itemType: n = "WIDGET", edgeDistance: l = 130, maxSpeed: o = 1700, power: c = 2.2 } = e,
         s = (0, r.useRef)(null),
         u = (0, r.useRef)(0),
         d = (0, r.useRef)({
@@ -19,15 +19,15 @@ function a(e) {
             }),
             [],
         ),
-        { isDragging: p, clientOffset: m, item: b } = (0, i.f)(g);
+        { isDragging: p, clientOffset: b, item: m } = (0, i.f)(g);
     (0, r.useEffect)(() => {
-        f.current = m;
-    }, [m]);
-    let h = (0, l.zPA)();
+        f.current = b;
+    }, [b]);
+    let h = (0, a.zPA)();
     (0, r.useEffect)(() => {
         let e = t.current;
         if (null == e) return;
-        if (!(!0 === p && (null == b ? void 0 : b.itemType) === n && !h)) {
+        if (!(!0 === p && (null == m ? void 0 : m.itemType) === n && !h)) {
             null !== s.current && cancelAnimationFrame(s.current),
                 (s.current = null),
                 (e.style.overflowAnchor = "auto"),
@@ -52,15 +52,15 @@ function a(e) {
                 }
                 let i = Math.min(32, 0 !== u.current ? n - u.current : 16) / 1000;
                 u.current = n;
-                let { top: l, bottom: g } = d.current,
+                let { top: a, bottom: g } = d.current,
                     p = r.y,
-                    m = p - l,
-                    b = g - p,
+                    b = p - a,
+                    m = g - p,
                     h = 0;
                 if (
-                    (m >= 0 && m < a
-                        ? (h = -o * Math.pow(1 - m / a, c))
-                        : b >= 0 && b < a && (h = o * Math.pow(1 - b / a, c)),
+                    (b >= 0 && b < l
+                        ? (h = -o * Math.pow(1 - b / l, c))
+                        : m >= 0 && m < l && (h = o * Math.pow(1 - m / l, c)),
                     0 !== h)
                 ) {
                     let t = h * i;
@@ -74,5 +74,5 @@ function a(e) {
                     null != e && ((e.style.overflowAnchor = "auto"), (e.style.overscrollBehavior = "auto"));
             }
         );
-    }, [t, p, null == b ? void 0 : b.itemType, n, a, o, c, h]);
+    }, [t, p, null == m ? void 0 : m.itemType, n, l, o, c, h]);
 }

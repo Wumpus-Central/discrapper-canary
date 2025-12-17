@@ -1,9 +1,9 @@
 n.d(t, {
     Df: () => d,
     S_: () => u,
-    V5: () => a,
-    VX: () => o,
-    ZP: () => h,
+    V5: () => o,
+    VX: () => l,
+    ZP: () => f,
     ih: () => s,
     xc: () => c,
 });
@@ -12,15 +12,15 @@ let r = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000,
     },
-    l = (0, i.H)(() => r),
-    o = 10000,
-    a = 20000,
+    a = (0, i.H)(() => r),
+    l = 10000,
+    o = 20000,
     s = 500,
     c = 1000;
 function u(e) {
-    l.setState({ timeToLiveMs: e });
+    a.setState({ timeToLiveMs: e });
 }
 function d(e) {
-    l.setState({ reappearTimeMs: e });
+    a.setState({ reappearTimeMs: e });
 }
-let h = l;
+let f = a;

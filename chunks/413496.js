@@ -26,8 +26,8 @@ var r = n(507604),
     N = i.SyntaxError,
     P = a(A.exec),
     R = a("".charAt),
-    D = a("".replace),
-    w = a("".indexOf),
+    w = a("".replace),
+    D = a("".indexOf),
     x = a("".slice),
     L = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
     j = /a/g,
@@ -44,7 +44,7 @@ var r = n(507604),
             E(function () {
                 return (M[T] = !1), C(j) !== j || C(M) === M || "/a/i" !== String(C(j, "i"));
             })),
-    B = function (e) {
+    F = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = !1; r <= n; r++) {
             if ("\\" === (t = R(e, r))) {
                 i += t + R(e, ++r);
@@ -54,7 +54,7 @@ var r = n(507604),
         }
         return i;
     },
-    F = function (e) {
+    B = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = [], o = c(null), s = !1, l = !1, u = 0, d = ""; r <= n; r++) {
             if ("\\" === (t = R(e, r))) t += R(e, ++r);
             else if ("]" === t) s = !1;
@@ -96,14 +96,14 @@ if (o("RegExp", Z)) {
                     (e = void 0 === e ? "" : p(e)),
                     (t = void 0 === t ? "" : p(t)),
                     (E = e),
-                    S && "dotAll" in j && (r = !!t && w(t, "s") > -1) && (t = D(t, /s/g, "")),
+                    S && "dotAll" in j && (r = !!t && D(t, "s") > -1) && (t = w(t, /s/g, "")),
                     (n = t),
-                    U && "sticky" in j && (i = !!t && w(t, "y") > -1) && G && (t = D(t, /y/g, "")),
-                    I && ((e = (a = F(e))[0]), (g = a[1])),
+                    U && "sticky" in j && (i = !!t && D(t, "y") > -1) && G && (t = w(t, /y/g, "")),
+                    I && ((e = (a = B(e))[0]), (g = a[1])),
                     (o = s(C(e, t), u ? this : A, V)),
                     (r || i || g.length) &&
                         ((c = y(o)),
-                        r && ((c.dotAll = !0), (c.raw = V(B(e), n))),
+                        r && ((c.dotAll = !0), (c.raw = V(F(e), n))),
                         i && (c.sticky = !0),
                         g.length && (c.groups = g)),
                     e !== E)

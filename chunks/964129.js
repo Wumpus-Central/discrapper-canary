@@ -1,7 +1,7 @@
 n.d(t, { default: () => C }), n(388685);
-var r = n(54381),
-    i = n(473749),
-    a = n(481060),
+var a = n(54381),
+    r = n(473749),
+    i = n(481060),
     o = n(22095),
     s = n(968843),
     l = n(115179),
@@ -10,41 +10,41 @@ var r = n(54381),
     u = n(285910),
     m = n(324805),
     f = n(388032),
-    x = n(772052);
+    x = n(897619);
 function p(e) {
-    let { quest: t, rewardName: n, location: i, sourceQuestContent: o } = e;
-    return (0, r.jsxs)("div", {
+    let { quest: t, rewardName: n, location: r, sourceQuestContent: o } = e;
+    return (0, a.jsxs)("div", {
         className: x.contentContainer,
         children: [
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: x.rewardTileContainer,
-                children: (0, r.jsx)(c.Z, {
+                children: (0, a.jsx)(c.Z, {
                     autoplay: !0,
                     className: x.rewardTile,
                     learnMoreStyle: null,
                     quest: t,
-                    questContent: i,
+                    questContent: r,
                     location: m.dr.INGAME_REWARD_MODAL,
                     sourceQuestContent: o,
                 }),
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: x.copyContainer,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, a.jsx)(i.Heading, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
                         className: x.heading,
                         children: f.intl.string(f.t["0/Yz+Y"]),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
                         children: f.intl.format(f.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Button, {
+            (0, a.jsx)(i.Button, {
                 variant: "secondary",
                 size: "sm",
                 text: f.intl.string(f.t.OD6Tvf),
@@ -56,34 +56,34 @@ function p(e) {
 }
 function C(e) {
     var t, n;
-    let { initialQuest: a, onClose: c, transitionState: f, location: x, sourceQuestContent: C } = e,
-        g = null != (n = (0, s.B4)(a.id)) ? n : a,
-        h = i.useMemo(() => (0, l.K)(g.config), [g]),
-        _ = (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null,
-        j = !g.preview && !_,
-        [v, N] = i.useState(j ? "loading" : "claimed");
-    i.useEffect(() => {
-        if (j) {
+    let { initialQuest: i, onClose: c, transitionState: f, location: x, sourceQuestContent: C } = e,
+        g = null != (n = (0, s.B4)(i.id)) ? n : i,
+        h = r.useMemo(() => (0, l.K)(g.config), [g]),
+        j = (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null,
+        b = !g.preview && !j,
+        [v, N] = r.useState(b ? "loading" : "claimed");
+    r.useEffect(() => {
+        if (b) {
             let e = (0, l.zG)(g.config);
             (0, o.QB)(g.id, e, x)
                 .then(() => N("claimed"))
                 .catch(() => N("error"));
         }
-    }, [g, x, j]);
-    let y = "error" === v || null == h;
-    return (0, r.jsx)(u.Z, {
+    }, [g, x, b]);
+    let _ = "error" === v || null == h;
+    return (0, a.jsx)(u.Z, {
         onClose: c,
         transitionState: f,
         quest: g,
         sourceQuestContent: C,
         location: m.dr.INGAME_REWARD_MODAL,
         isRewardContentLoading: "loading" === v,
-        rewardContentHasError: y,
-        rewardContent: y
+        rewardContentHasError: _,
+        rewardContent: _
             ? null
-            : (0, r.jsx)(d.Z, {
+            : (0, a.jsx)(d.Z, {
                   rewardName: h.messages.name,
-                  children: (0, r.jsx)(p, {
+                  children: (0, a.jsx)(p, {
                       quest: g,
                       rewardName: h.messages.name,
                       location: x,

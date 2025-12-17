@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     o = n(473749),
     l = n(442837),
@@ -15,10 +15,10 @@ var r = n(54381),
     E = n(215113),
     g = n(324805),
     O = n(388032),
-    h = n(559072);
+    h = n(969937);
 let b = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
-function C(e) {
-    var t, n, C, S;
+function S(e) {
+    var t, n, S, C;
     let { tooltipPosition: _ } = e,
         { quest: y, sourceQuestContent: x, onClose: j } = o.useContext(E.VideoQuestModalContext),
         { enabled: P } = u.EO.useConfig({ location: g.dr.VIDEO_MODAL }),
@@ -29,13 +29,13 @@ function C(e) {
         w = (0, m.w8)(y.config),
         { completedRatio: L, completedRatioDisplay: k } = (0, d.I)(y),
         M = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
-        V = (null == (C = y.userStatus) ? void 0 : C.claimedAt) != null,
+        V = (null == (S = y.userStatus) ? void 0 : S.claimedAt) != null,
         Z = O.intl.formatToPlainString(M && !V && P ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: w });
     o.useEffect(() => {
         var e, t;
         null == I.current && (null == (e = y.userStatus) ? void 0 : e.completedAt) != null && P && A(!0),
             (I.current = null == (t = y.userStatus) ? void 0 : t.completedAt);
-    }, [null == (S = y.userStatus) ? void 0 : S.completedAt, P]);
+    }, [null == (C = y.userStatus) ? void 0 : C.completedAt, P]);
     let F = (0, v.D)({
             quest: y,
             questContent: c.jn.QUEST_HOME_DESKTOP,

@@ -3,8 +3,8 @@ n.d(t, { Z: () => p });
 var i,
     l = n(442837),
     a = n(570140),
-    s = n(133080);
-function o(e, t, n) {
+    o = n(133080);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,11 +17,11 @@ function o(e, t, n) {
         e
     );
 }
-let c = (0, s.K4)();
+let c = (0, o.K4)();
 function u(e) {
     var t;
     let { countryCode: n } = e;
-    null != n && (c = null != (t = (0, s.Zz)(n)) ? t : (0, s.K4)());
+    null != n && (c = null != (t = (0, o.Zz)(n)) ? t : (0, o.K4)());
 }
 class d extends (i = l.ZP.DeviceSettingsStore) {
     initialize(e) {
@@ -34,7 +34,7 @@ class d extends (i = l.ZP.DeviceSettingsStore) {
         return null != r ? r : c;
     }
 }
-o(d, "displayName", "PhoneStore"), o(d, "persistKey", "PhoneStore");
+s(d, "displayName", "PhoneStore"), s(d, "persistKey", "PhoneStore");
 let p = new d(a.Z, {
     PHONE_SET_COUNTRY_CODE: function (e) {
         let { countryCode: t } = e;

@@ -2,12 +2,12 @@ n.d(t, { Z: () => u }), n(388685);
 var r,
     i = n(54381),
     s = n(473749),
-    l = n(796075),
-    a = n(467721),
+    a = n(796075),
+    l = n(236726),
     o = n(481060);
-let c = null != (r = window.ResizeObserver) ? r : l.d;
+let c = null != (r = window.ResizeObserver) ? r : a.d;
 function u(e) {
-    let { show: t, children: n, top: r = 0, bottom: l = 0 } = e,
+    let { show: t, children: n, top: r = 0, bottom: a = 0 } = e,
         { ref: u, height: d } = (() => {
             let e = s.useRef(null),
                 [t, n] = s.useState(0),
@@ -35,7 +35,7 @@ function u(e) {
             },
             to: {
                 height: t ? d : 0,
-                paddingBottom: t ? "".concat(l, "px") : "0px",
+                paddingBottom: t ? "".concat(a, "px") : "0px",
                 marginTop: t ? "".concat(r, "px") : "0px",
             },
             config: {
@@ -43,7 +43,7 @@ function u(e) {
                 friction: 26,
             },
         }),
-        g = (0, o.q_F)({
+        f = (0, o.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
@@ -51,15 +51,15 @@ function u(e) {
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e),
             },
         });
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(l.animated.div, {
         style: {
             overflow: "hidden",
             height: h.height,
             paddingBottom: h.paddingBottom,
             marginTop: h.marginTop,
         },
-        children: (0, i.jsx)(a.animated.div, {
-            style: { opacity: g.opacity },
+        children: (0, i.jsx)(l.animated.div, {
+            style: { opacity: f.opacity },
             ref: u,
             children: n,
         }),

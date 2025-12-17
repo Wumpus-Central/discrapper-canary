@@ -21,7 +21,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,7 +37,7 @@ function h(e) {
     }
     return e;
 }
-class f extends (i = l.Component) {
+class h extends (i = l.Component) {
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
         null == t && this.show(e);
@@ -106,7 +106,7 @@ class f extends (i = l.Component) {
                       i &&
                           (0, r.jsx)(
                               u.V,
-                              h(
+                              f(
                                   {
                                       autoInvert: s,
                                       position: o,
@@ -129,8 +129,8 @@ function m(e) {
         a = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         s = (0, o.e7)([c.Z], () => c.Z.windowSize(), []);
     return (0, r.jsx)(
-        f,
-        ((t = h({}, e)),
+        h,
+        ((t = f({}, e)),
         (n = n =
             {
                 visible: l,
@@ -152,7 +152,7 @@ function m(e) {
         t),
     );
 }
-p(f, "defaultProps", {
+p(h, "defaultProps", {
     position: "top",
     offsetX: 0,
     offsetY: 0,

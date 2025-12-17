@@ -160,10 +160,10 @@ function P(e) {
 function R() {
     return c;
 }
-function D() {
+function w() {
     return Object.keys(b);
 }
-function w(e) {
+function D(e) {
     let t = I(e);
     return null != t ? A(t) : null;
 }
@@ -199,7 +199,7 @@ function k(e) {
 let U = String.fromCodePoint(917631),
     G = String.fromCodePoint(127988),
     Z = RegExp("^[\\u{E0061}-\\u{E007A}]$", "u");
-function B(e, t) {
+function F(e, t) {
     var n;
     if (!0 !== t && !j(e))
         return [
@@ -235,14 +235,14 @@ function B(e, t) {
     }
     return null != r && "" !== r && i.push(k(r)), i;
 }
-function F(e) {
-    return B(e)
+function B(e) {
+    return F(e)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
 }
 function V(e) {
     if (!j(e)) return null;
-    let t = B(e, !0)
+    let t = F(e, !0)
         .map((e) => ("text" === e.type ? e.text : e.emojiName))
         .join("");
     return t === e ? null : t;
@@ -260,7 +260,7 @@ function Y(e) {
     return r ? ":".concat(a, ":") : a;
 }
 function W(e) {
-    return w(
+    return D(
         Y(
             d.reduce((e, t) => e.replace(t, ""), e),
             !1,
@@ -270,14 +270,14 @@ function W(e) {
 let K = {
     getDefaultDiversitySurrogate: R,
     setDefaultDiversitySurrogate: P,
-    getCategories: D,
-    getByName: w,
+    getCategories: w,
+    getByName: D,
     getByCategory: L,
     contentHasUnicodeOrEmoji: j,
     translateInlineEmojiToSurrogates: M,
     maybeTranslateSurrogatesToInlineEmoji: V,
-    findInlineEmojisFromSurrogates: B,
-    translateSurrogatesToInlineEmoji: F,
+    findInlineEmojisFromSurrogates: F,
+    translateSurrogatesToInlineEmoji: B,
     convertNameToSurrogate: H,
     convertSurrogateToName: Y,
     convertShortcutToName: function e(e) {

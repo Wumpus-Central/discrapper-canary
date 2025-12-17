@@ -3,20 +3,20 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(239091),
-    a = n(984933),
-    c = n(904483),
+    c = n(984933),
+    a = n(904483),
     o = n(522762),
-    u = n(466330),
-    s = n(981631),
+    s = n(466330),
+    u = n(981631),
     d = n(388032);
 function p(e) {
     let { guild: t, onSelect: n } = e,
-        p = a.ZP.getDefaultChannel(t.id, !0, s.Plq.CREATE_INSTANT_INVITE),
+        p = c.ZP.getDefaultChannel(t.id, !0, u.Plq.CREATE_INSTANT_INVITE),
         b = (0, o.Z)(t.id),
-        y = (0, c.Z)(t),
-        f = (0, u.Z)({
+        y = (0, a.Z)(t),
+        O = (0, s.Z)({
             guild: t,
-            source: s.t4x.GUILD_CONTEXT_MENU,
+            source: u.t4x.GUILD_CONTEXT_MENU,
             channel: p,
         });
     return (0, r.jsxs)(i.v2r, {
@@ -27,7 +27,7 @@ function p(e) {
         children: [
             (0, r.jsx)(i.kSQ, { children: b }),
             (0, r.jsxs)(i.kSQ, {
-                children: [y, f],
+                children: [y, O],
             }),
         ],
     });

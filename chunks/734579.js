@@ -1,9 +1,9 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(704215),
     c = n(692547),
     u = n(952265),
@@ -12,22 +12,22 @@ var r = n(54381),
     h = n(243778),
     p = n(703656),
     g = n(164670),
-    m = n(210218),
-    b = n(705338),
-    _ = n(445606),
-    y = n(633667),
-    O = n(819640),
-    v = n(434479),
-    j = n(981631),
+    b = n(210218),
+    m = n(705338),
+    y = n(445606),
+    O = n(633667),
+    v = n(819640),
+    j = n(434479),
+    C = n(981631),
     x = n(921944),
-    C = n(388032),
-    E = n(509612);
-let S = i.memo(function (e) {
+    E = n(388032),
+    S = n(323453);
+let I = i.memo(function (e) {
     let { guild: t, selected: l } = e,
-        S = i.useRef(null),
         I = i.useRef(null),
+        _ = i.useRef(null),
         P = (0, u.useHasAnyModalOpen)(),
-        N = (0, a.e7)([O.Z], () => O.Z.hasLayers()),
+        N = (0, o.e7)([v.Z], () => v.Z.hasLayers()),
         [Z, w] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {
         l && Z === s.z.GAME_SHOP_NEW_BADGE && w(x.L.INDIRECT_ACTION);
@@ -35,11 +35,11 @@ let S = i.memo(function (e) {
     let T = i.useCallback(() => {
             var e, n;
             w(x.L.USER_DISMISS);
-            let r = null != (n = null == (e = m.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, p.uL)(j.Z5c.CHANNELS_GAME_SHOP(t.id, r));
+            let r = null != (n = null == (e = b.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
+            (0, p.uL)(C.Z5c.CHANNELS_GAME_SHOP(t.id, r));
         }, [t, w]),
         A = i.useCallback(() => {
-            (0, b.eagerNavigateToSocialLayerStorefront)({ guildId: t.id });
+            (0, m.eagerNavigateToSocialLayerStorefront)({ guildId: t.id });
         }, [t.id]),
         R = i.useCallback(() => {
             w(x.L.USER_DISMISS);
@@ -98,15 +98,15 @@ let S = i.memo(function (e) {
             },
             [t],
         ),
-        L = i.useCallback(() => {
+        M = i.useCallback(() => {
             var e;
-            null == (e = S.current) || e.onMouseEnter(null, 500);
-        }, [S]),
-        M = i.useCallback(
-            (e, n, i, a) =>
-                (0, r.jsx)(v.m, {
+            null == (e = I.current) || e.onMouseEnter(null, 500);
+        }, [I]),
+        L = i.useCallback(
+            (e, n, i, o) =>
+                (0, r.jsx)(j.m, {
                     innerClassName: e,
-                    ref: I,
+                    ref: _,
                     id: "game-shop-".concat(t.id),
                     renderIcon: (e) =>
                         (0, r.jsx)(d.EOn, {
@@ -114,15 +114,15 @@ let S = i.memo(function (e) {
                             color: "currentColor",
                             width: 20,
                             height: 20,
-                            className: o()(e, i),
+                            className: a()(e, i),
                         }),
                     text: (0, r.jsx)(d.Text, {
                         variant: "text-md/medium",
-                        className: o()(E.name, n),
+                        className: a()(S.name, n),
                         children:
                             (null == t ? void 0 : t.id) === (0, g.ac)()
-                                ? C.intl.string(C.t.xFQAPs)
-                                : C.intl.string(C.t.vyaWs7),
+                                ? E.intl.string(E.t.xFQAPs)
+                                : E.intl.string(E.t.vyaWs7),
                     }),
                     selected: l,
                     onMouseDown: A,
@@ -131,10 +131,10 @@ let S = i.memo(function (e) {
                     trailing: (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(d.IGR, {
-                                text: C.intl.string(C.t.y2b7CA),
+                                text: E.intl.string(E.t.y2b7CA),
                                 color: c.Z.colors.BACKGROUND_BRAND.css,
                             }),
-                            a,
+                            o,
                         ],
                     }),
                 }),
@@ -142,17 +142,17 @@ let S = i.memo(function (e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.Z, {
-                ref: S,
-                children: M,
+            (0, r.jsx)(O.Z, {
+                ref: I,
+                children: L,
             }),
             P || N || (null == t ? void 0 : t.id) !== (0, g.ac)() || Z !== s.z.GAME_SHOP_NEW_BADGE
                 ? null
-                : (0, r.jsx)(_.Z, {
+                : (0, r.jsx)(y.Z, {
                       onActionClick: T,
-                      onRender: L,
+                      onRender: M,
                       onRequestClose: R,
-                      targetElementRef: I,
+                      targetElementRef: _,
                   }),
         ],
     });

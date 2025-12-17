@@ -61,10 +61,10 @@
         function R(e) {
             return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : u;
         }
-        function D(e, t) {
+        function w(e, t) {
             return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
         }
-        function w(e, t, n) {
+        function D(e, t, n) {
             var r = 0;
             for (e = n ? S(e / _) : e >> 1, e += S(e / t); e > (v * f) >> 1; r += u) e = S(e / v);
             return S(r + ((v + 1) * e) / (e + p));
@@ -97,7 +97,7 @@
                     s += u
                 )
                     o > S(c / (_ = u - p)) && T("overflow"), (o *= _);
-                (v = w(y - a, (t = E.length + 1), 0 == a)),
+                (v = D(y - a, (t = E.length + 1), 0 == a)),
                     S(y / t) > c - O && T("overflow"),
                     (O += S(y / t)),
                     (y %= t),
@@ -128,8 +128,8 @@
                 for (s - t > S((c - n) / (y = r + 1)) && T("overflow"), n += (s - t) * y, t = s, o = 0; o < b; ++o)
                     if (((E = e[o]) < t && ++n > c && T("overflow"), E == t)) {
                         for (l = n, p = u; !(l < (_ = p <= a ? d : p >= a + f ? f : p - a)); p += u)
-                            (v = l - _), (O = u - _), C.push(I(D(_ + (v % O), 0))), (l = S(v / O));
-                        C.push(I(D(l, 0))), (a = w(n, y, r == i)), (n = 0), ++r;
+                            (v = l - _), (O = u - _), C.push(I(w(_ + (v % O), 0))), (l = S(v / O));
+                        C.push(I(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }

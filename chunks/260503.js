@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l });
-var r = n(473749),
-    i = n(924826);
-function l(e) {
-    let { listRef: t, padding: n, channel: l, isEnabled: a } = e,
-        s = r.useCallback(
+n.d(t, { Z: () => i });
+var a = n(473749),
+    r = n(924826);
+function i(e) {
+    let { listRef: t, padding: n, channel: i, isEnabled: l } = e,
+        s = a.useCallback(
             (e) => {
-                let r = t.current,
-                    i = document.querySelector(e);
-                null != i &&
-                    (null == r ||
-                        r.scrollIntoViewNode({
-                            node: i,
+                let a = t.current,
+                    r = document.querySelector(e);
+                null != r &&
+                    (null == a ||
+                        a.scrollIntoViewNode({
+                            node: r,
                             padding: n,
                             callback: () => {
                                 var t;
@@ -20,7 +20,7 @@ function l(e) {
             },
             [n, t],
         ),
-        o = r.useCallback(
+        o = a.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -28,7 +28,7 @@ function l(e) {
                 }),
             [t],
         ),
-        c = r.useCallback(
+        c = a.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -36,9 +36,9 @@ function l(e) {
                 }),
             [t],
         );
-    return (0, i.ZP)({
-        id: "forum-channel-list-".concat(l.id),
-        isEnabled: a,
+    return (0, r.ZP)({
+        id: "forum-channel-list-".concat(i.id),
+        isEnabled: l,
         scrollToStart: o,
         scrollToEnd: c,
         setFocus: s,

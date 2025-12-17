@@ -27,13 +27,13 @@ var r = n(54381),
     N = n(221292),
     P = n(485341),
     R = n(687158),
-    D = n(228168),
-    w = n(981631),
+    w = n(228168),
+    D = n(981631),
     x = n(215023),
     L = n(474936),
     j = n(681642),
     M = n(388032),
-    k = n(517793);
+    k = n(112287);
 function U(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function Z(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function B(e, t) {
         e
     );
 }
-let F = (e) => {
+let B = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === O.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(v.Z, { showSubtext: !i && !t.isPreviewMode })
@@ -149,7 +149,7 @@ function V(e) {
                     if (u) {
                         if (
                             (t.preventDefault(),
-                            I.default.track(w.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                            I.default.track(D.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
                                 premium_type: q,
                                 viewed_user_id: null == v ? void 0 : v.userId,
@@ -157,7 +157,7 @@ function V(e) {
                             q)
                         ) {
                             p
-                                ? (0, y.uL)(w.Z5c.NITRO_HOME)
+                                ? (0, y.uL)(D.Z5c.NITRO_HOME)
                                 : (0, g.k)({
                                       analyticsLocations: Y,
                                       displayProfile: v,
@@ -184,8 +184,8 @@ function V(e) {
                 T = () => {
                     e.id === P.i &&
                         I.default.track(
-                            w.rMx.QUEST_CONTENT_VIEWED,
-                            B(G({}, (0, E.mH)(b.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            D.rMx.QUEST_CONTENT_VIEWED,
+                            F(G({}, (0, E.mH)(b.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         K({ action: "HOVER_BADGE" }),
                         (0, N.Qf)(
@@ -203,7 +203,7 @@ function V(e) {
                 Q = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
-                    src: null != (n = e.iconSrc) ? n : (0, D.Ej)(e.icon),
+                    src: null != (n = e.iconSrc) ? n : (0, w.Ej)(e.icon),
                     className: o()(k.badge, h),
                 }),
                 ee = {
@@ -215,7 +215,7 @@ function V(e) {
             if (R) {
                 let n = (0, r.jsx)(
                     s.Anchor,
-                    B(G({}, ee), {
+                    F(G({}, ee), {
                         ref: H,
                         children: Q,
                     }),
@@ -227,7 +227,7 @@ function V(e) {
                         children: (0, r.jsx)(_.Z, {
                             targetElementRef: H,
                             mode: "tooltip",
-                            tooltipDelay: D.vB,
+                            tooltipDelay: w.vB,
                             children: n,
                         }),
                     },
@@ -237,7 +237,7 @@ function V(e) {
             if (A) {
                 let n = (0, r.jsx)(
                         s.Anchor,
-                        B(G({}, ee), {
+                        F(G({}, ee), {
                             ref: H,
                             children: Q,
                         }),
@@ -270,11 +270,11 @@ function V(e) {
                             badgeId: e.id,
                             targetElementRef: H,
                             mode: "tooltip",
-                            tooltipDelay: D.vB,
+                            tooltipDelay: w.vB,
                             body: e.description,
                             actions: o,
                             onShow: () => {
-                                I.default.track(w.rMx.TOOLTIP_VIEWED, {
+                                I.default.track(D.rMx.TOOLTIP_VIEWED, {
                                     type: "tiered_tenure_badge_profile_" + (p ? "self" : "other"),
                                 });
                             },
@@ -285,8 +285,8 @@ function V(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            let et = (0, r.jsx)(s.Anchor, B(G({}, ee), { children: Q })),
-                en = F({
+            let et = (0, r.jsx)(s.Anchor, F(G({}, ee), { children: Q })),
+                en = B({
                     badge: e,
                     tieredTenureBadge: u && e.id !== j.a ? a : void 0,
                     currentUserOwnsOrbBadge: X,
@@ -297,7 +297,7 @@ function V(e) {
                     text: en,
                     "aria-label": e.description,
                     forceOpen: null != Z && Z(e.id),
-                    delay: D.vB,
+                    delay: w.vB,
                     children: et,
                 },
                 "".concat(e.id, "-").concat(t),

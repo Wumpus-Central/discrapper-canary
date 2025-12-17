@@ -11,19 +11,19 @@ var i = n(399606),
     u = n(430824),
     p = n(709054),
     h = n(388032),
-    f = n(131806);
+    f = n(864715);
 function g(e) {
     let { userId: t, guildId: n, textClassName: g, tooltipDelay: m } = e,
         b = (0, i.e7)([c.default], () => c.default.locale),
-        _ = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        y = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
-        O = (0, s.FI)(p.default.extractTimestamp(t), b),
-        x = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
-    return null == _ || null == y
+        y = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        O = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
+        x = (0, s.FI)(p.default.extractTimestamp(t), b),
+        j = (0, s.FI)(null == O ? void 0 : O.joinedAt, b);
+    return null == y || null == O
         ? (0, r.jsx)(a.Text, {
               variant: "text-sm/normal",
               className: g,
-              children: O,
+              children: x,
           })
         : (0, r.jsxs)("div", {
               className: f.memberSinceWrapper,
@@ -45,7 +45,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: O,
+                              children: x,
                           }),
                       ],
                   }),
@@ -54,10 +54,10 @@ function g(e) {
                       className: f.memberSince,
                       children: [
                           (0, r.jsx)(l.u, {
-                              text: _.name,
+                              text: y.name,
                               delay: m,
                               children: (0, r.jsx)(o.Z, {
-                                  guild: _,
+                                  guild: y,
                                   size: o.Z.Sizes.SMOL,
                                   className: f.guildIcon,
                               }),
@@ -65,7 +65,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: x,
+                              children: j,
                           }),
                       ],
                   }),

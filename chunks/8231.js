@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(694338),
     y = n(474936),
     O = n(388032),
-    v = n(893296),
+    v = n(234798),
     S = n(102655),
     I = n(768236),
     T = n(314907),
@@ -75,7 +75,7 @@ function R(e, t) {
         e
     );
 }
-let D = () =>
+let w = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -84,7 +84,7 @@ let D = () =>
                 children: O.intl.string(O.t.TR2B4T),
             }),
         }),
-    w = () =>
+    D = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -275,8 +275,8 @@ let D = () =>
             k = (0, m.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
             Z = (0, b.e)();
         if (!S || !I) return null;
-        n = l ? null : null != T ? (0, r.jsx)(w, {}) : (0, r.jsx)(D, {});
-        let B = C === y.Si.TIER_0 || u === y.PremiumTypes.TIER_0;
+        n = l ? null : null != T ? (0, r.jsx)(D, {}) : (0, r.jsx)(w, {});
+        let F = C === y.Si.TIER_0 || u === y.PremiumTypes.TIER_0;
         return (0, r.jsx)(f.Gt, {
             value: O,
             children: (0, r.jsx)("div", {
@@ -287,15 +287,15 @@ let D = () =>
                     children: [
                         (0, r.jsxs)("div", {
                             className: o()(c, {
-                                [v.tier0ColumnPosition]: B,
-                                [v.tier2ColumnPosition]: !B,
+                                [v.tier0ColumnPosition]: F,
+                                [v.tier2ColumnPosition]: !F,
                             }),
                             children: [
-                                !B && n,
+                                !F && n,
                                 (0, r.jsx)("div", {
                                     className: o()({
-                                        [v.tier0ColumnOuter]: B,
-                                        [v.tier2ColumnOuter]: !B,
+                                        [v.tier0ColumnOuter]: F,
+                                        [v.tier2ColumnOuter]: !F,
                                     }),
                                 }),
                             ],

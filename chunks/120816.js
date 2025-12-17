@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g }), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var a,
     r,
-    i = n(772848),
-    l = n(756647),
+    l = n(772848),
+    i = n(756647),
     s = n(442837),
     o = n(570140),
     c = n(314897),
@@ -11,8 +11,8 @@ let u = 0,
     m = [],
     p = 0,
     h = [],
-    x = !1;
-class f extends (a = s.ZP.Store) {
+    f = !1;
+class x extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.default, d.Z);
     }
@@ -26,18 +26,18 @@ class f extends (a = s.ZP.Store) {
         return h;
     }
     get trackTriggers() {
-        return x;
+        return f;
     }
 }
-(r = "displayName") in f
-    ? Object.defineProperty(f, r, {
+(r = "displayName") in x
+    ? Object.defineProperty(x, r, {
           value: "AnalyticsLogStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (f[r] = "AnalyticsLogStore");
-let g = new f(o.Z, {
+    : (x[r] = "AnalyticsLogStore");
+let b = new x(o.Z, {
     TRACK: function (e) {
         let { event: t, properties: n, fingerprint: a } = e;
         d.Z.isDeveloper &&
@@ -45,25 +45,25 @@ let g = new f(o.Z, {
                 key: (u++).toString(),
                 event: t,
                 properties: n,
-                fingerprint: null != a ? (0, l.s)(a) : c.default.getId(),
+                fingerprint: null != a ? (0, i.s)(a) : c.default.getId(),
                 timestamp: new Date(),
             }),
             p++,
             m.length > 500 && (m = m.slice(-Math.floor(250))));
     },
     TRACK_TRIGGER: function (e) {
-        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: s } = e;
+        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: i, previouslyTracked: s } = e;
         d.Z.isDeveloper &&
-            x &&
+            f &&
             (h = [
                 ...h,
                 {
-                    key: (0, i.Z)(),
+                    key: (0, l.Z)(),
                     experimentId: t,
                     descriptor: n,
                     exposureType: a,
                     excluded: r,
-                    location: l,
+                    location: i,
                     previouslyTracked: s,
                     timestamp: new Date(),
                 },
@@ -72,7 +72,7 @@ let g = new f(o.Z, {
     },
     SET_TRACK_TRIGGERS: function (e) {
         let { enabled: t } = e;
-        x = t;
+        f = t;
     },
     ANALYTICS_LOG_CLEAR: function () {
         (m = []), p++, (h = []);

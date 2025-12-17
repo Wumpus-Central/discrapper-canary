@@ -6,7 +6,7 @@ var n = a(755721),
     r = a(600164),
     i = a(424071),
     o = a(388032),
-    c = a(771831),
+    c = a(926375),
     d = a(387852);
 function u(e) {
     let { onContinue: t, onClose: a, title: u, body: x } = e;

@@ -21,15 +21,15 @@ var l = n(54381),
     S = n(496675),
     O = n(158776),
     P = n(306680),
-    _ = n(699516),
-    w = n(594174),
-    C = n(55935),
-    Z = n(823379),
-    L = n(51144),
-    E = n(981631),
-    N = n(490897),
-    T = n(388032),
-    k = n(963354);
+    w = n(699516),
+    C = n(594174),
+    Z = n(55935),
+    L = n(823379),
+    E = n(51144),
+    N = n(981631),
+    T = n(490897),
+    _ = n(388032),
+    k = n(497387);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -164,9 +164,9 @@ function I(e) {
 function D(e) {
     var { user: t, subLabel: n } = e,
         r = A(e, ["user", "subLabel"]);
-    let i = L.ZP.useName(t),
-        a = L.ZP.useUserTag(t, { decoration: "never" }),
-        s = (0, u.e7)([_.Z], () => _.Z.getNickname(t.id)),
+    let i = E.ZP.useName(t),
+        a = E.ZP.useUserTag(t, { decoration: "never" }),
+        s = (0, u.e7)([w.Z], () => w.Z.getNickname(t.id)),
         o = (0, u.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, l.jsx)(
         I,
@@ -205,11 +205,11 @@ function R(e) {
         r = A(e, ["channel", "subLabel"]);
     let i = (0, u.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
         a = (0, m.ZP)(t),
-        s = (0, u.e7)([y.Z, w.default, _.Z], () => {
+        s = (0, u.e7)([y.Z, C.default, w.Z], () => {
             let e = y.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, m.F6)(e, w.default, _.Z, !1);
+            return null == e ? null : (0, m.F6)(e, C.default, w.Z, !1);
         }),
-        d = (0, u.e7)([P.ZP], () => P.ZP.lastMessageTimestamp(t.id, N.W.CHANNEL)),
+        d = (0, u.e7)([P.ZP], () => P.ZP.lastMessageTimestamp(t.id, T.W.CHANNEL)),
         b = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? c.Mmi : c.VL1;
@@ -238,7 +238,7 @@ function R(e) {
                               (0, l.jsx)(c.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: (0, C.Xf)(o()(d)),
+                                  children: (0, Z.Xf)(o()(d)),
                               }),
                           ],
                       })
@@ -293,13 +293,13 @@ function z(e) {
                                   if (
                                       null != t.rateLimitPerUser &&
                                       t.rateLimitPerUser > 0 &&
-                                      !(S.Z.can(E.Plq.MANAGE_CHANNELS, t) || S.Z.can(E.Plq.MANAGE_MESSAGES, t))
+                                      !(S.Z.can(N.Plq.MANAGE_CHANNELS, t) || S.Z.can(N.Plq.MANAGE_MESSAGES, t))
                                   )
-                                      return { label: T.intl.string(T.t.Icu3bf) };
-                                  if (t.isThread() || t.isForumPost() || !S.Z.can(E.Plq.USE_APPLICATION_COMMANDS, t))
-                                      return { label: T.intl.string(T.t.v8MLqz) };
+                                      return { label: _.intl.string(_.t.Icu3bf) };
+                                  if (t.isThread() || t.isForumPost() || !S.Z.can(N.Plq.USE_APPLICATION_COMMANDS, t))
+                                      return { label: _.intl.string(_.t.v8MLqz) };
                                   let n = (0, v.dL)(t.id);
-                                  if (e.id === n.id) return { label: T.intl.string(T.t.mD4gqe) };
+                                  if (e.id === n.id) return { label: _.intl.string(_.t.mD4gqe) };
                               }
                           })(s, u)
                         : null,
@@ -319,7 +319,7 @@ function z(e) {
                   ? (0, l.jsx)(q, M({ channel: u }, p), d)
                   : r === f.h8.TEXT_CHANNEL || r === f.h8.VOICE_CHANNEL
                     ? (0, l.jsx)(R, M({ channel: u }, p), d)
-                    : void (0, Z.vE)(r);
+                    : void (0, L.vE)(r);
         });
     }, [a, i, s, t, o]);
 }

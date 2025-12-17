@@ -1,4 +1,4 @@
-a.d(e, { default: () => C }), a(388685);
+a.d(n, { default: () => C }), a(388685);
 var t = a(54381),
     o = a(473749),
     i = a(481060),
@@ -12,7 +12,7 @@ var t = a(54381),
     m = a(956664),
     f = a(185923),
     x = a(388032),
-    I = a(759415),
+    I = a(292215),
     g = a(84717);
 function h() {
     return [
@@ -22,27 +22,27 @@ function h() {
         },
     ];
 }
-async function j(n) {
-    let e = (0, p.gT)({
-            id: n.id,
+async function j(e) {
+    let n = (0, p.gT)({
+            id: e.id,
             animated: !1,
             size: 48,
             forcePNG: !0,
         }),
-        a = await fetch(e),
+        a = await fetch(n),
         t = await a.blob();
     return await (0, m.fD)(t);
 }
-let C = function (n) {
-    let { guildId: e, onUploadIcon: a, onSelectUnicodeEmoji: p, onClose: m, transitionState: C } = n,
+let C = function (e) {
+    let { guildId: n, onUploadIcon: a, onSelectUnicodeEmoji: p, onClose: m, transitionState: C } = e,
         v = (0, d.Dt)(),
-        b = u.ZP.getDefaultChannel(e),
+        b = u.ZP.getDefaultChannel(n),
         [N, y] = o.useState("tab-id-role-icon-file-upload"),
-        [_, k] = o.useState(!1),
-        z = (0, l.Z)(h);
+        [k, z] = o.useState(!1),
+        E = (0, l.Z)(h);
     return (
         o.useEffect(() => {
-            k(!1);
+            z(!1);
         }, [N]),
         (0, t.jsx)(i.Y0X, {
             transitionState: C,
@@ -100,19 +100,19 @@ let C = function (n) {
                                           children: x.intl.string(x.t["mz++Qq"]),
                                       }),
                                       (0, t.jsx)(c.Z, {
-                                          onChange: (n) => {
-                                              k(!1), a(n), m();
+                                          onChange: (e) => {
+                                              z(!1), a(e), m();
                                           },
                                           onFileSizeError: () => {
-                                              k(!0);
+                                              z(!0);
                                           },
                                           maxFileSizeBytes: 256000,
-                                          filters: z,
+                                          filters: E,
                                           text: x.intl.string(x.t.sdCQY4),
                                           size: "md",
                                           variant: "primary",
                                       }),
-                                      _
+                                      k
                                           ? (0, t.jsx)(i.Text, {
                                                 className: I.uploadError,
                                                 color: "text-feedback-critical",
@@ -128,16 +128,16 @@ let C = function (n) {
                         ? (0, t.jsx)(r.Z, {
                               hasTabWrapper: !0,
                               closePopout: () => m(),
-                              onSelectEmoji: async (n) => {
-                                  let { emoji: e } = n;
-                                  if ((null == e ? void 0 : e.id) != null)
-                                      (null == e ? void 0 : e.type) === s.B.GUILD && a(await j(e));
-                                  else if ((null == e ? void 0 : e.surrogates) != null) {
+                              onSelectEmoji: async (e) => {
+                                  let { emoji: n } = e;
+                                  if ((null == n ? void 0 : n.id) != null)
+                                      (null == n ? void 0 : n.type) === s.B.GUILD && a(await j(n));
+                                  else if ((null == n ? void 0 : n.surrogates) != null) {
                                       var t, o;
                                       p(
-                                          null != (o = null == (t = e.defaultDiversityChild) ? void 0 : t.surrogates)
+                                          null != (o = null == (t = n.defaultDiversityChild) ? void 0 : t.surrogates)
                                               ? o
-                                              : e.surrogates,
+                                              : n.surrogates,
                                       );
                                   }
                                   m();

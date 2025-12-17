@@ -4,8 +4,8 @@ n(473749);
 var i = n(442837),
     l = n(139117),
     a = n(481060),
-    s = n(129861),
-    o = n(607070),
+    o = n(129861),
+    s = n(607070),
     c = n(570928),
     u = n(388905),
     d = n(1585),
@@ -14,14 +14,14 @@ var i = n(442837),
     g = n(699516),
     h = n(51144),
     m = n(998502),
-    _ = n(620924),
-    b = n(332712),
+    b = n(620924),
+    _ = n(332712),
     E = n(81471),
     O = n(388032),
-    v = n(79072);
+    v = n(68599);
 let y = (e) => {
         let { userId: t } = e,
-            n = (0, b.O)(t);
+            n = (0, _.O)(t);
         return null == n || 0 === n.length
             ? (0, r.jsx)(a.Text, {
                   className: v.mutualGuilds,
@@ -51,10 +51,10 @@ let y = (e) => {
 function C(e) {
     var t;
     let { channel: n, otherUser: l, active: u } = e,
-        m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        b = (0, i.e7)([g.Z], () => (null == l ? null : g.Z.getNickname(l.id))),
+        m = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        _ = (0, i.e7)([g.Z], () => (null == l ? null : g.Z.getNickname(l.id))),
         C = !m && u,
-        S = (0, _.c)(n),
+        S = (0, b.c)(n),
         { avatarDecorationSrc: T } = (0, p.Z)({
             user: l,
             size: (0, d.y9)(a.EFr.SIZE_40),
@@ -75,8 +75,8 @@ function C(e) {
                     (0, r.jsxs)("div", {
                         className: v.userContainerWithPreview,
                         children: [
-                            (0, r.jsx)(s.Z, {
-                                nick: b,
+                            (0, r.jsx)(o.Z, {
+                                nick: _,
                                 user: l,
                                 showAccountIdentifier: !0,
                                 className: v.tagContainer,

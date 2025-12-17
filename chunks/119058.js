@@ -30,8 +30,8 @@ function b(e, t, n) {
         N,
         P,
         R,
-        D,
         w,
+        D,
         x,
         L,
         j,
@@ -67,9 +67,9 @@ function b(e, t, n) {
                 (P =
                     null !=
                     (R =
-                        null != (D = null == n ? void 0 : n.weekStartsOn)
-                            ? D
-                            : null == n || null == (w = n.locale) || null == (x = w.options)
+                        null != (w = null == n ? void 0 : n.weekStartsOn)
+                            ? w
+                            : null == n || null == (D = n.locale) || null == (x = D.options)
                               ? void 0
                               : x.weekStartsOn)
                         ? R
@@ -84,15 +84,15 @@ function b(e, t, n) {
     if (!(Z >= 0 && Z <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
     if (!U.localize) throw RangeError("locale must contain localize property");
     if (!U.formatLong) throw RangeError("locale must contain formatLong property");
-    var B = (0, a.default)(e);
-    if (!(0, r.default)(B)) throw RangeError("Invalid time value");
-    var F = (0, l.Z)(B),
-        V = (0, i.Z)(B, F),
+    var F = (0, a.default)(e);
+    if (!(0, r.default)(F)) throw RangeError("Invalid time value");
+    var B = (0, l.Z)(F),
+        V = (0, i.Z)(F, B),
         H = {
             firstWeekContainsDate: G,
             weekStartsOn: Z,
             locale: U,
-            _originalDate: B,
+            _originalDate: F,
         };
     return M.match(m)
         .map(function (e) {

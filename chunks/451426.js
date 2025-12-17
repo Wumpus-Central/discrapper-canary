@@ -1,4 +1,4 @@
-e.d(t, { Z: () => N }), e(953529), e(388685);
+e.d(t, { Z: () => h }), e(953529), e(388685);
 var i = e(54381),
     a = e(473749),
     s = e(442837),
@@ -11,10 +11,10 @@ var i = e(54381),
     m = e(613734),
     g = e(981631),
     u = e(388032),
-    p = e(545833),
-    h = e(186425);
-function N(n) {
-    let { className: t, isDsaEligible: e, onClose: N, onNext: C, onBack: j } = n,
+    p = e(210097),
+    N = e(420418);
+function h(n) {
+    let { className: t, isDsaEligible: e, onClose: h, onNext: C, onBack: j } = n,
         _ = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
         { classification: E } = (0, m.YG)(null != _ ? _ : g.lds),
         I = (0, x.c7)(null == E ? void 0 : E.description),
@@ -43,25 +43,25 @@ function N(n) {
             (0, i.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 direction: o.Z.Direction.VERTICAL,
-                className: h.header,
+                className: N.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(l.Heading, {
-                        className: h.title,
+                        className: N.title,
                         variant: "heading-xl/semibold",
                         children: u.intl.string(u.t["C5q+pW"]),
                     }),
                     (0, i.jsx)(l.Text, {
-                        className: h.subtitle,
+                        className: N.subtitle,
                         color: "text-default",
                         variant: "text-md/normal",
                         children: u.intl.string(u.t["G2g/g5"]),
                     }),
-                    null != N &&
+                    null != h &&
                         (0, i.jsx)(l.olH, {
                             "data-migration-pending": !0,
-                            className: h.closeButton,
-                            onClick: N,
+                            className: N.closeButton,
+                            onClick: h,
                         }),
                 ],
             }),
@@ -111,7 +111,7 @@ function N(n) {
                             }),
                         }),
                     (0, i.jsx)("div", {
-                        className: h.policyContainer,
+                        className: N.policyContainer,
                         children: (0, i.jsx)(l.Text, {
                             variant: "text-md/semibold",
                             children: I,

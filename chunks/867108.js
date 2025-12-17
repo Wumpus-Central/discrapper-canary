@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -9,7 +9,7 @@ var r = n(442837),
     c = n(496675),
     d = n(981631),
     u = n(388032);
-function p(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
     return (0, r.e7)([c.Z], () => c.Z.canImpersonateRole(e, t))
         ? (0, i.jsx)(

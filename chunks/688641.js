@@ -6,7 +6,7 @@ var i = n(54381),
     o = n(159691),
     s = n(481060),
     c = n(388032),
-    u = n(367390);
+    u = n(761589);
 function d(e) {
     let {
             className: t,
@@ -14,8 +14,8 @@ function d(e) {
             icon: l,
             title: d,
             description: p,
-            userCount: h,
-            onClick: f,
+            userCount: f,
+            onClick: h,
             highlight: m,
             onDismiss: g,
         } = e,
@@ -27,7 +27,7 @@ function d(e) {
         );
     return (0, i.jsxs)(s.P3F, {
         className: a()(u.container, t, null != m && { [u.pulse]: m }),
-        onClick: f,
+        onClick: h,
         children: [
             (0, i.jsx)("div", {
                 className: a()(u.icon, n),
@@ -47,7 +47,7 @@ function d(e) {
                         className: u.inline,
                         children: p,
                     }),
-                    null != h && h > 0
+                    null != f && f > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(s.Text, {
@@ -60,7 +60,7 @@ function d(e) {
                                       variant: "text-xs/normal",
                                       color: "text-strong",
                                       className: u.inline,
-                                      children: c.intl.format(c.t.NywdIj, { count: h }),
+                                      children: c.intl.format(c.t.NywdIj, { count: f }),
                                   }),
                               ],
                           })

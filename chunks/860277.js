@@ -4,7 +4,7 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(481743),
+    l = n(594931),
     c = n(793030),
     u = n(442837),
     d = n(379649),
@@ -25,42 +25,42 @@ var r = n(54381),
     C = n(225055),
     A = n(391876),
     N = n(612776),
-    P = n(860076),
+    P = n(638398),
     R = n(388032),
-    D = n(417788),
-    w = n(300494);
+    w = n(554445),
+    D = n(556329);
 let x = 1000,
     L = 50,
     j = 250;
 function M(e) {
     let { primaryColor: t } = e;
     return (0, r.jsxs)("div", {
-        className: w.content,
+        className: D.content,
         children: [
             (0, r.jsxs)("div", {
-                className: D.title,
+                className: w.title,
                 children: [
                     (0, r.jsx)(c.iFz, {
                         size: "refresh_sm",
                         color: t,
-                        colorClass: D.iconColor,
-                        className: D.titleIcon,
+                        colorClass: w.iconColor,
+                        className: w.titleIcon,
                     }),
                     (0, r.jsx)(A.Z, {
                         variant: "eyebrow",
-                        className: D.eyebrow,
+                        className: w.eyebrow,
                         children: R.intl.string(P.default.ZQakPR),
                     }),
                 ],
             }),
             (0, r.jsx)(A.Z, {
                 variant: "display-lg",
-                className: w.display,
+                className: D.display,
                 children: R.intl.string(P.default.OzY5Ns),
             }),
             (0, r.jsx)(A.Z, {
                 variant: "heading-xxl/medium",
-                className: w.subtitle,
+                className: D.subtitle,
                 children: R.intl.string(P.default.sEPtGY),
             }),
             (0, r.jsx)(I.o, { slide: N.yD.FRIENDS }),
@@ -69,7 +69,7 @@ function M(e) {
 }
 function k() {
     return (0, r.jsx)("div", {
-        className: w.content,
+        className: D.content,
         children: (0, r.jsx)(A.Z, {
             variant: "heading-xxl/medium",
             children: R.intl.string(P.default.d5HUsD),
@@ -81,31 +81,31 @@ function U(e) {
     let { primaryColor: n, sidekick: i } = e,
         { unit: a, duration: s } = (0, v.Bi)(null != (t = null == i ? void 0 : i.numVoiceMinutes) ? t : 0);
     return (0, r.jsxs)("div", {
-        className: w.content,
+        className: D.content,
         children: [
             (0, r.jsxs)("div", {
-                className: D.title,
+                className: w.title,
                 children: [
                     (0, r.jsx)(c.iFz, {
                         size: "refresh_sm",
                         color: n,
-                        colorClass: D.iconColor,
-                        className: D.titleIcon,
+                        colorClass: w.iconColor,
+                        className: w.titleIcon,
                     }),
                     (0, r.jsx)(A.Z, {
                         variant: "eyebrow",
-                        className: D.eyebrow,
+                        className: w.eyebrow,
                         children: R.intl.string(P.default.ZQakPR),
                     }),
                 ],
             }),
             (0, r.jsx)(A.Z, {
                 variant: "display-lg",
-                className: o()(w.display, w.subtitle),
+                className: o()(D.display, D.subtitle),
                 children: R.intl.string(P.default["+uwOHt"]),
             }),
             (0, r.jsxs)("div", {
-                className: w.stats,
+                className: D.stats,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
@@ -115,7 +115,7 @@ function U(e) {
                             }),
                             (0, r.jsx)(A.Z, {
                                 variant: "heading-xxl/normal",
-                                className: D.numeric,
+                                className: w.numeric,
                                 children: null == i ? void 0 : i.numMessagesSent,
                             }),
                         ],
@@ -131,7 +131,7 @@ function U(e) {
                             }),
                             (0, r.jsx)(A.Z, {
                                 variant: "heading-xxl/normal",
-                                className: D.numeric,
+                                className: w.numeric,
                                 children: s,
                             }),
                         ],
@@ -154,26 +154,26 @@ function G(e) {
         A = (0, i.useRef)(0),
         P = (0, i.useRef)(!0),
         R = (0, i.useRef)(null),
-        D = null != (t = (0, E._T)(null == _ ? void 0 : _.user)) ? t : "",
+        w = null != (t = (0, E._T)(null == _ ? void 0 : _.user)) ? t : "",
         j = null != (n = (0, E._T)(v)) ? n : "",
         G = null != (a = (0, E._T)(S)) ? a : "",
         Z = 1 === d.length,
-        B = (0, u.e7)([p.Z], () => p.Z.useReducedMotion);
+        F = (0, u.e7)([p.Z], () => p.Z.useReducedMotion);
     (0, i.useEffect)(
         () => (
             o === N.ij.FRIENDS_LEAVE &&
                 (P.current
                     ? l()
-                    : B
+                    : F
                       ? (s(), (P.current = !0))
                       : (A.current = setTimeout(() => {
                             s(), (P.current = !0);
                         }, x))),
             () => clearTimeout(A.current)
         ),
-        [s, l, B, o],
+        [s, l, F, o],
     );
-    let F = (0, i.useMemo)(() => {
+    let B = (0, i.useMemo)(() => {
             switch (o) {
                 case N.ij.FRIENDS_INTRO:
                     return 1;
@@ -182,11 +182,11 @@ function G(e) {
                 case N.ij.FRIENDS_BEST:
                     return 3;
                 case N.ij.FRIENDS_LEAVE:
-                    return B ? 3 : 4;
+                    return F ? 3 : 4;
                 default:
                     return 0;
             }
-        }, [o, B]),
+        }, [o, F]),
         V = (0, i.useCallback)((e) => (null != e ? g.ZP.getUserAvatarURL(e, !1, 64, "png") : void 0), []);
     (0, i.useEffect)(() => () => clearTimeout(A.current), []),
         (0, i.useEffect)(() => {
@@ -198,11 +198,11 @@ function G(e) {
                 let r = null == (t = R.current) ? void 0 : t.getProperties();
                 null != R.current &&
                     (null == r ? void 0 : r.twoFriends.value) === Z &&
-                    (null == r ? void 0 : r.reducedMotion.value) === B &&
+                    (null == r ? void 0 : r.reducedMotion.value) === F &&
                     (null == (n = R.current) || n.play(), clearInterval(e));
             }, L);
             return () => clearInterval(e);
-        }, [B, Z]),
+        }, [F, Z]),
         Y = (0, i.useMemo)(
             () => (o < N.ij.FRIENDS_INTRO ? N.ij.FRIENDS_INTRO : o >= N.ij.FRIENDS_BEST ? N.ij.FRIENDS_BEST : o),
             [o],
@@ -211,32 +211,32 @@ function G(e) {
         children: [
             (0, r.jsx)(c.jxI, {
                 ref: R,
-                className: w.rive,
+                className: D.rive,
                 fit: "contain",
                 autoplay: !1,
                 onLoad: H,
                 dataBinding: {
-                    AnimationState: F,
+                    AnimationState: B,
                     "Avatar01/img": V(null == _ ? void 0 : _.user),
                     "Avatar02/img": V(v),
                     "Avatar03/img": V(S),
                     "Avatar04/img": V(null == _ ? void 0 : _.user),
                     "Avatar05/img": V(I),
-                    "Avatar01/Username": D,
+                    "Avatar01/Username": w,
                     "Avatar02/Username": j,
                     "Avatar03/Username": G,
-                    "Avatar04/Username": D,
+                    "Avatar04/Username": w,
                     twoFriends: Z,
-                    reducedMotion: B,
+                    reducedMotion: F,
                 },
                 withReducedMotion: "play",
             }),
             (0, r.jsx)("div", {
-                className: w.container,
+                className: D.container,
                 children: (0, r.jsxs)(C.ZP, {
                     activeSlide: Y,
-                    className: w.animatedSlides,
-                    slideClassName: w.animatedSlide,
+                    className: D.animatedSlides,
+                    slideClassName: D.animatedSlide,
                     children: [
                         (0, r.jsx)(f.Mi4, {
                             id: N.ij.FRIENDS_INTRO,
@@ -295,11 +295,11 @@ function Z() {
         }, [x, L, p, null == E ? void 0 : E.id]);
     return T
         ? (0, r.jsxs)("div", {
-              className: w.inputWrapper,
+              className: D.inputWrapper,
               children: [
                   (0, r.jsx)(f.Text, {
                       variant: "text-sm/semibold",
-                      className: w.inputCTA,
+                      className: D.inputCTA,
                       style: { backgroundColor: a },
                       children: R.intl.string(P.default["//ZYM/"]),
                   }),
@@ -307,7 +307,7 @@ function Z() {
                       ref: d,
                       onChange: U,
                       value: null != p ? p : M,
-                      className: w.input,
+                      className: D.input,
                       style: {
                           color: a,
                           scrollbarColor: "".concat(a, " black"),
@@ -316,24 +316,24 @@ function Z() {
                       disabled: C,
                   }),
                   (0, r.jsxs)("div", {
-                      className: w.actions,
+                      className: D.actions,
                       children: [
                           (0, r.jsx)(c.P3F, {
                               onClick: k,
                               "aria-disabled": C,
-                              className: o()(D.clickable, { [w.disabled]: C }),
+                              className: o()(w.clickable, { [D.disabled]: C }),
                               children: (0, r.jsx)(c.kBK, {
                                   color: a,
-                                  colorClass: D.iconColor,
+                                  colorClass: w.iconColor,
                               }),
                           }),
                           (0, r.jsx)(c.P3F, {
                               onClick: G,
                               "aria-disabled": C || x,
-                              className: o()(D.clickable, { [w.disabled]: C || x }),
+                              className: o()(w.clickable, { [D.disabled]: C || x }),
                               children: (0, r.jsx)(c.Uuj, {
                                   color: a,
-                                  colorClass: D.iconColor,
+                                  colorClass: w.iconColor,
                               }),
                           }),
                       ],

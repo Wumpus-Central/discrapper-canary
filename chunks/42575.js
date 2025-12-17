@@ -4,18 +4,18 @@ n(473749);
 var i = n(481060),
     l = n(194359),
     a = n(906732),
-    s = n(388380),
-    o = n(892001),
+    o = n(388380),
+    s = n(892001),
     c = n(321488),
     u = n(417183),
     d = n(170245),
     p = n(981631),
     f = n(388032),
-    g = n(475823);
+    g = n(626019);
 function h(e) {
     let { user: t, nickname: n, status: h, isFocused: m } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        b = (e) => {
+        { analyticsLocations: b } = (0, a.ZP)(),
+        _ = (e) => {
             null == e || e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
@@ -25,16 +25,16 @@ function h(e) {
                 });
         },
         E = (e) => {
-            null == e || e.stopPropagation(), s.Z.ignore(t.id);
+            null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
         O = h === p.Skl.OFFLINE ? p.Skl.UNKNOWN : h;
     return (0, r.jsx)(u.Z, {
         isFocused: m,
         user: t,
         onClick: () =>
-            (0, o.openUserProfileModal)({
+            (0, s.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: _,
+                sourceAnalyticsLocations: b,
             }),
         children: (e) => {
             let l = (0, r.jsxs)(r.Fragment, {
@@ -43,7 +43,7 @@ function h(e) {
                         icon: i.dz2,
                         actionType: c.Z.ActionTypes.ACCEPT,
                         tooltip: f.intl.string(f.t.Zcibdf),
-                        onClick: b,
+                        onClick: _,
                         shouldHighlight: e,
                     }),
                     (0, r.jsx)(c.Z, {

@@ -270,10 +270,10 @@ let R = {
                       },
         },
     },
-    D = /(-# +)/,
-    w = (0, p.Z)([C, R]),
+    w = /(-# +)/,
+    D = (0, p.Z)([C, R]),
     x = (0, p.Z)([A, R]),
-    L = l._p(w),
+    L = l._p(D),
     j = l._p(x),
     M = {
         max: 1 / 0,
@@ -309,8 +309,8 @@ function G(e, t, n) {
             type: "paragraph",
             content: a(l, !0, i),
         };
-    F(r, l, c, 0, []);
-    let u = B(r);
+    B(r, l, c, 0, []);
+    let u = F(r);
     return o.set(e, u), u;
 }
 function Z(e, t) {
@@ -342,7 +342,7 @@ function Z(e, t) {
     }
     return s;
 }
-function B(e) {
+function F(e) {
     if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
     let t = [e[0]];
     for (let n = 1; n < e.length; n++) {
@@ -355,7 +355,7 @@ function B(e) {
     }
     return t;
 }
-function F(e, t, n, r, a) {
+function B(e, t, n, r, a) {
     let { content: o, type: s, originalMatch: l } = n;
     switch ((i()(null != l, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), s)) {
         case "newline":
@@ -508,7 +508,7 @@ function V(e, t, n, r) {
         };
     if ("subtext" === t)
         return {
-            before: D.exec(r.input)[1],
+            before: w.exec(r.input)[1],
             after: "",
         };
     let i = I["link" === t ? "url" : t];
@@ -528,7 +528,7 @@ function H(e, t, n, r, i) {
               }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  r = F(e, t, n, r, i);
+                  r = B(e, t, n, r, i);
               })),
         K(t, r)
     );

@@ -27,12 +27,12 @@ var r = n(54381),
     N = n(937579),
     P = n(283066),
     R = n(622909),
-    D = n(639119),
-    w = n(2359),
+    w = n(639119),
+    D = n(2359),
     x = n(132547),
     L = n(474936),
     j = n(981631),
-    M = n(166893);
+    M = n(350549);
 let k = function (e) {
     let { entrypoint: t = L.EZ.UserSettings } = e;
     (0, y.z)(b.X);
@@ -41,8 +41,8 @@ let k = function (e) {
         U = (0, s.e7)([I.Z], () => I.Z.hasFetchedSubscriptions()),
         G = (0, s.e7)([S.Z], () => S.Z.hasFetchedPaymentSources),
         Z = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        B = null == Z ? void 0 : Z.id,
-        F = (0, D.N)(),
+        F = null == Z ? void 0 : Z.id,
+        B = (0, w.N)(),
         V = (0, R.N)(),
         H = (0, g.V)(L.nS),
         [Y, W] = i.useState(!0),
@@ -69,8 +69,8 @@ let k = function (e) {
                 });
         }, [a, Y]),
         i.useEffect(() => {
-            n && (null != F || null != V) && (0, N.ab)(F, V);
-        }, [n, F, V]);
+            n && (null != B || null != V) && (0, N.ab)(B, V);
+        }, [n, B, V]);
     let X = (0, s.e7)([O.Z], () => O.Z.enabled),
         J = t === L.EZ.ApplicationStoreHome,
         $ = X
@@ -80,7 +80,7 @@ let k = function (e) {
               : J && z
                 ? (0, r.jsx)(m.Gt, {
                       value: k,
-                      children: (0, r.jsx)(x.Z, { userId: B }),
+                      children: (0, r.jsx)(x.Z, { userId: F }),
                   })
                 : U && H && G
                   ? null
@@ -94,6 +94,6 @@ let k = function (e) {
           })
         : (0, r.jsxs)(m.Gt, {
               value: k,
-              children: [J && !q && (0, r.jsx)(p.Z, {}), (0, r.jsx)(w.Z, { entrypoint: t })],
+              children: [J && !q && (0, r.jsx)(p.Z, {}), (0, r.jsx)(D.Z, { entrypoint: t })],
           });
 };

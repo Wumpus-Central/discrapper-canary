@@ -1,35 +1,35 @@
 n.d(t, { Z: () => c }), n(314940);
-var i = n(54381);
+var r = n(54381);
 n(473749);
-var l = n(278074),
+var i = n(278074),
     a = n(481060),
-    r = n(409813),
+    o = n(409813),
     s = n(388032),
-    o = n(525214);
+    l = n(849925);
 function c(e) {
     let { step: t, onClose: n, isGift: c } = e,
-        d = (0, l.EQ)(t)
-            .with(r.h8.REVIEW, () => (c ? s.intl.string(s.t.wKaVLC) : s.intl.string(s.t.Whxhpm)))
-            .with(r.h8.ADD_PAYMENT_STEPS, () => s.intl.string(s.t.QiGOak))
-            .with(r.h8.GIFT_CUSTOMIZATION, () => s.intl.string(s.t["JCFN/y"]))
-            .with(r.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => s.intl.string(s.t.lDbi6H))
-            .with(r.h8.CONFIRM, () => "")
+        u = (0, i.EQ)(t)
+            .with(o.h8.REVIEW, () => (c ? s.intl.string(s.t.wKaVLC) : s.intl.string(s.t.Whxhpm)))
+            .with(o.h8.ADD_PAYMENT_STEPS, () => s.intl.string(s.t.QiGOak))
+            .with(o.h8.GIFT_CUSTOMIZATION, () => s.intl.string(s.t["JCFN/y"]))
+            .with(o.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => s.intl.string(s.t.lDbi6H))
+            .with(o.h8.CONFIRM, () => "")
             .otherwise(() => null);
-    return null == d
+    return null == u
         ? null
-        : (0, i.jsxs)(a.xBx, {
+        : (0, r.jsxs)(a.xBx, {
               "data-migration-pending": !0,
-              className: o.headerContainerGift,
-              separator: t !== r.h8.CONFIRM,
+              className: l.headerContainerGift,
+              separator: t !== o.h8.CONFIRM,
               children: [
-                  (0, i.jsx)(a.Heading, {
+                  (0, r.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
-                      children: d,
+                      children: u,
                   }),
-                  (0, i.jsx)(a.olH, {
+                  (0, r.jsx)(a.olH, {
                       "data-migration-pending": !0,
                       onClick: n,
-                      className: o.closeButtonGift,
+                      className: l.closeButtonGift,
                   }),
               ],
           });

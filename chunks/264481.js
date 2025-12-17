@@ -1,5 +1,5 @@
 n.d(t, {
-    P9: () => I,
+    P9: () => w,
     Uf: () => S,
     b0: () => P,
     s_: () => x,
@@ -15,7 +15,7 @@ var r = n(54381),
     u = n(313789),
     d = n(518596),
     f = n(5192),
-    g = n(732380),
+    g = n(475413),
     p = n(981631),
     b = n(388032),
     m = n(771838);
@@ -112,7 +112,7 @@ function P() {
         bodyText: t,
     });
 }
-function I(e) {
+function w(e) {
     let { user: t, guildId: n, channelId: c, onClose: s } = e,
         u = f.ZP.getName(n, c, t),
         d = b.intl.formatToPlainString(b.t.sjSitP, { name: u }),
@@ -128,7 +128,7 @@ function I(e) {
         bodyText: p,
         children: (0, r.jsx)("div", {
             className: m.buttonRow,
-            children: (0, r.jsx)(g.O1, {
+            children: (0, r.jsx)(g.i6, {
                 icon: l.kBi,
                 text: b.intl.string(b.t["g33r/P"]),
                 onClick: h,
@@ -136,7 +136,7 @@ function I(e) {
         }),
     });
 }
-function w() {
+function I() {
     let e = (0, c.ZP)();
     return (0, r.jsx)("div", {
         className: m.connectionPlatforms,
@@ -172,15 +172,15 @@ function S(e) {
         heading: b.intl.string(b.t.VB6LWY),
         bodyText: b.intl.string(b.t.KpjsU9),
         children: [
-            (0, r.jsx)(w, {}),
+            (0, r.jsx)(I, {}),
             (0, r.jsxs)("div", {
                 className: m.buttonRow,
                 children: [
-                    (0, r.jsx)(g.O1, {
+                    (0, r.jsx)(g.i6, {
                         text: b.intl.string(b.t["/Hl24U"]),
                         onClick: n,
                     }),
-                    (0, r.jsx)(g.O1, {
+                    (0, r.jsx)(g.i6, {
                         text: b.intl.string(b.t.GTCx0p),
                         onClick: a,
                     }),

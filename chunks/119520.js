@@ -3,9 +3,9 @@ var r = n(54381),
     i = n(473749),
     l = n(558381),
     a = n(480916),
-    s = n(986035),
-    o = n(388032),
-    c = n(624066);
+    o = n(986035),
+    s = n(388032),
+    c = n(759731);
 function u(e, t, n) {
     return (
         t in e
@@ -26,14 +26,14 @@ class d extends i.PureComponent {
         } = this.props;
         return (0, r.jsx)("div", {
             className: c.matureListing,
-            children: (0, r.jsx)(s.Z, {
+            children: (0, r.jsx)(o.Z, {
                 modalType: a.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: o.intl.formatToPlainString(o.t.n5PGEY, { name: e }),
-                description: o.intl.string(o.t["bJx/aL"]),
-                agreement: o.intl.string(o.t.odZq8d),
-                disagreement: o.intl.string(o.t.hieTsG),
+                title: s.intl.formatToPlainString(s.t.n5PGEY, { name: e }),
+                description: s.intl.string(s.t["bJx/aL"]),
+                agreement: s.intl.string(s.t.odZq8d),
+                disagreement: s.intl.string(s.t.hieTsG),
             }),
         });
     }

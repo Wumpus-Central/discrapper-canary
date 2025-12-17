@@ -92,10 +92,10 @@ let I = (e) => {
                 : v.subCategory === m.t0.NEWLY_ADDED_EMOJI
                   ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                   : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let D = null != v ? v.emoji : void 0,
-        w = null != D && D.animated,
-        x = null != D && !p.ZP.isInternalEmojiForGuildId(D, null == y ? void 0 : y.getGuildId()),
-        L = null != D ? h.qAy.EMOJI : h.qAy.EMOJI_PICKER_FLOATING_UPSELL,
+    let w = null != v ? v.emoji : void 0,
+        D = null != w && w.animated,
+        x = null != w && !p.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
+        L = null != w ? h.qAy.EMOJI : h.qAy.EMOJI_PICKER_FLOATING_UPSELL,
         j = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
@@ -120,7 +120,7 @@ let I = (e) => {
                 location_stack: R,
                 sku_id: (0, _.Wz)(_.ZP.getSkuIdForPremiumType(E.PremiumTypes.TIER_2)),
                 has_search_query: null != P && "" !== P,
-                is_animated: w,
+                is_animated: D,
             },
             isEmojiPickerOverlay: !0,
         })

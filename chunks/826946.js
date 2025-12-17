@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(857395),
-    s = n(886558);
-let o = function (e) {
+    o = n(886558);
+let s = function (e) {
     let { className: t, guildId: n } = e,
-        o = i.useRef(null),
+        s = i.useRef(null),
         c = i.useCallback((e, t) => {
             e.stopPropagation(), t.onClick(e);
         }, []);
     return (0, r.jsx)(a.Z, {
         guildId: n,
         position: "left",
-        targetElementRef: o,
+        targetElementRef: s,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(
@@ -45,11 +45,11 @@ let o = function (e) {
                 })({}, e)),
                 (i = i =
                     {
-                        innerRef: o,
+                        innerRef: s,
                         className: t,
                         onClick: (t) => c(t, e),
                         children: (0, r.jsx)("div", {
-                            className: s.icon,
+                            className: o.icon,
                             children: (0, r.jsx)(l.bJT, {
                                 size: "xs",
                                 color: "currentColor",

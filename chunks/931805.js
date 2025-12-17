@@ -9,7 +9,7 @@ var r = n(54381),
     s = n(258971),
     o = n(49898),
     c = n(388032),
-    d = n(912743);
+    d = n(984380);
 function u(e) {
     let { guildId: t, section: n } = e;
     (0, a.transitionToGlobalDiscovery)({

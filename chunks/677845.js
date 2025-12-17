@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(539854);
+n.d(t, { Z: () => _ }), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(990547),
@@ -9,24 +9,24 @@ var i = n(54381),
     u = n(374065),
     d = n(213609),
     p = n(358221),
-    h = n(266454),
-    f = n(159300),
+    f = n(266454),
+    h = n(159300),
     m = n(728285),
     g = n(800329),
     b = n(470956),
     C = n(430824),
     y = n(496675),
-    _ = n(434488),
-    v = n(27457),
+    v = n(434488),
+    x = n(27457),
     O = n(251564),
-    x = n(695492),
-    E = n(981631),
-    j = n(312439);
-function S(e) {
+    E = n(695492),
+    j = n(981631),
+    S = n(106076);
+function _(e) {
     let {
             participants: t,
             onClick: n,
-            onDoubleClick: S,
+            onDoubleClick: _,
             onContextMenu: P,
             channel: I,
             className: Z,
@@ -34,7 +34,7 @@ function S(e) {
             totalNumberOfParticipants: N,
             popoutType: A,
         } = e,
-        w = (0, m.bp)() === E.IlC.POPOUT,
+        w = (0, m.bp)() === j.IlC.POPOUT,
         M = (0, o.e7)([C.Z], () => C.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, O.d)(),
         L = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
@@ -51,23 +51,23 @@ function S(e) {
                 O.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [I.id, R]);
-    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, f.b)(y.Z, M, I), [M, I]),
+    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, h.b)(y.Z, M, I), [M, I]),
         V = (null == M ? void 0 : M.afkChannelId) === I.id,
         F = I.userLimit <= 0 || I.userLimit > 1,
-        B = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        H = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        H = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        B = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
-        W = null != R && R === I.id,
-        z = D.map(
+        z = null != R && R === I.id,
+        W = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    v.ZP,
+                    x.ZP,
                     {
                         participant: e,
                         channel: I,
-                        className: j.tile,
+                        className: S.tile,
                         onClick: n,
-                        onDoubleClick: S,
+                        onDoubleClick: _,
                         onContextMenu: P,
                         inCall: T,
                         width: t,
@@ -92,13 +92,13 @@ function S(e) {
     ),
         null != M &&
             !V &&
-            (!(L >= 2) || !B || G || H || W
+            (!(L >= 2) || !H || G || B || z
                 ? F &&
                   1 === L &&
                   U &&
-                  (B && !G
-                      ? z.push((e) =>
-                            (0, i.jsx)(_.h, {
+                  (H && !G
+                      ? W.push((e) =>
+                            (0, i.jsx)(v.h, {
                                 channel: I,
                                 guild: M,
                                 width: e,
@@ -107,16 +107,16 @@ function S(e) {
                                 userParticipantCount: L,
                             }),
                         )
-                      : z.push((e) =>
-                            (0, i.jsx)(x.Z, {
+                      : W.push((e) =>
+                            (0, i.jsx)(E.Z, {
                                 width: e,
                                 channel: I,
                                 guild: M,
                                 inPopout: w,
                             }),
                         ))
-                : z.push((e) =>
-                      (0, i.jsx)(_.h, {
+                : W.push((e) =>
+                      (0, i.jsx)(v.h, {
                           channel: I,
                           guild: M,
                           width: e,
@@ -137,6 +137,6 @@ function S(e) {
         keyExtractor: q,
         paddingTop: 64,
         paddingBottom: 64,
-        children: z,
+        children: W,
     });
 }

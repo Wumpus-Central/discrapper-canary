@@ -24,7 +24,7 @@ var r = n(54381),
     T = n(324805),
     C = n(981631),
     A = n(388032),
-    N = n(879048);
+    N = n(578362);
 function P(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ function Z(e) {
         i = null != (t = null != r ? n[r] : null) ? t : A.t["D+DkEH"];
     return A.intl.string(i);
 }
-let B = (e) => {
+let F = (e) => {
         let { quest: t, onClose: n } = e,
             i = (0, a.e7)([E.Z], () => E.Z.getState().theme),
             o = (0, l.wj)(i) ? C.BRd.DARK : C.BRd.LIGHT;
@@ -143,7 +143,7 @@ let B = (e) => {
             ],
         });
     },
-    F = (e) => {
+    B = (e) => {
         let { quest: t, game: o, sourceQuestContent: l, onGameProfileModalOpen: u, onGameProfileModalClose: p } = e,
             _ = (0, y.O5)(),
             h = (0, a.e7)([f.Z], () => f.Z.getApplication(o.applicationId)),
@@ -299,7 +299,7 @@ function H(e) {
         return (0, r.jsxs)("div", {
             className: N.container,
             children: [
-                (0, r.jsx)(B, {
+                (0, r.jsx)(F, {
                     quest: t,
                     onClose: s,
                 }),
@@ -318,7 +318,7 @@ function H(e) {
               },
               className: N.container,
               children: [
-                  (0, r.jsx)(B, {
+                  (0, r.jsx)(F, {
                       quest: t,
                       onClose: s,
                   }),
@@ -327,7 +327,7 @@ function H(e) {
                       children: [
                           y.map((e) =>
                               (0, r.jsx)(
-                                  F,
+                                  B,
                                   {
                                       quest: t,
                                       game: e,
@@ -413,6 +413,6 @@ let W = function (e) {
               questOrQuests: e.quest,
               questContent: O.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(Y, w(R({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(Y, D(R({}, e), { impressionRef: t })),
           });
 };

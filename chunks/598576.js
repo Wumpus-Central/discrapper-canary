@@ -1,4 +1,4 @@
-n.d(t, { default: () => b });
+n.d(t, { default: () => f });
 var o = n(54381);
 n(473749);
 var r = n(481060),
@@ -10,20 +10,20 @@ var r = n(481060),
     d = n(319392),
     u = n(798930),
     p = n(981631),
-    f = n(771831);
-function b(e) {
-    let { transitionState: t, onClose: n, analyticsLocation: b } = e,
+    b = n(926375);
+function f(e) {
+    let { transitionState: t, onClose: n, analyticsLocation: f } = e,
         {
             slide: x,
             gotoNext: g,
             gotoError: h,
             handleWaitingForConnection: C,
-            handleAuthToken: _,
-            expectedCallbackState: m,
-            callbackData: v,
-        } = (0, i.k)(b, p.ABu.XBOX);
+            handleAuthToken: m,
+            expectedCallbackState: v,
+            callbackData: O,
+        } = (0, i.k)(f, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
-        className: f.modal,
+        className: b.modal,
         transitionState: t,
         disableTrack: !0,
         parentComponent: "XboxLinkModal",
@@ -43,7 +43,7 @@ function b(e) {
                     children: (0, o.jsx)(l.Z, {
                         isWaitingForConnection: !1,
                         onWaitingForConnection: C,
-                        onAuthToken: _,
+                        onAuthToken: m,
                         onError: h,
                         onClose: n,
                     }),
@@ -52,8 +52,8 @@ function b(e) {
                     id: u.O.PRE_CONNECT_WAITING,
                     children: (0, o.jsx)(l.Z, {
                         isWaitingForConnection: !0,
-                        expectedCallbackState: m,
-                        onAuthToken: _,
+                        expectedCallbackState: v,
+                        onAuthToken: m,
                         onError: h,
                         onClose: n,
                     }),
@@ -61,7 +61,7 @@ function b(e) {
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.DISCORD_CONSENT,
                     children: (0, o.jsx)(s.Z, {
-                        authToken: v,
+                        authToken: O,
                         onContinue: g,
                         onError: h,
                         onClose: n,

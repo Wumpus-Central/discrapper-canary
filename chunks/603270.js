@@ -32,7 +32,7 @@ var r = n(54381),
     C = n(981631),
     A = n(979007),
     N = n(388032),
-    P = n(561498);
+    P = n(951709);
 let R = (0, s.Kb)([E.Z, b.Z, h.Z], {
         getQueryId: C.McO.SKU,
         get: (e) => {
@@ -51,7 +51,7 @@ let R = (0, s.Kb)([E.Z, b.Z, h.Z], {
             o()(null != e, "skuId is null"), await (0, u.km)(e);
         },
     }),
-    D = (0, s.Kb)([E.Z], {
+    w = (0, s.Kb)([E.Z], {
         getQueryId: C.McO.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
         get: (e) => {
             var t;
@@ -61,13 +61,13 @@ let R = (0, s.Kb)([E.Z, b.Z, h.Z], {
             o()(null != e && null != t, "appId is null"), await (0, u.oJ)(t);
         },
     });
-function w(e, t) {
+function D(e, t) {
     var n, r;
     let { data: i } = R(e),
         a = null == i ? void 0 : i.sku,
         o = null == i ? void 0 : i.subscriptionPlan,
         s = null == i ? void 0 : i.storeListing,
-        { data: l } = D(
+        { data: l } = w(
             e,
             null != (r = null == a || null == (n = a.application) ? void 0 : n.id)
                 ? r
@@ -115,7 +115,7 @@ function x(e) {
     if (!o || null == u) return null;
     let R = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("65672")]).then(n.bind(n, 7225));
                 return (n) =>
                     (0, r.jsx)(e, {
                         transitionState: n.transitionState,
@@ -125,14 +125,14 @@ function x(e) {
                     });
             });
         },
-        D = () => {
+        w = () => {
             R(),
                 y.default.track(C.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: "app_icon",
                 });
         },
-        w = () => {
+        D = () => {
             R(),
                 y.default.track(C.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
@@ -152,11 +152,11 @@ function x(e) {
             .concat(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, A.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: x,
         iconSrc: E,
-        onIconClick: D,
+        onIconClick: w,
         children: (0, r.jsx)("div", {
             className: P.openStoreButton,
             children: (0, r.jsx)(l.Button, {
-                onClick: w,
+                onClick: D,
                 text: N.intl.string(N.t.kRvlKJ),
             }),
         }),
@@ -165,24 +165,24 @@ function x(e) {
 function L(e) {
     var t, a;
     let { appId: o, skuId: c, message: u } = e,
-        { parentSku: f, sku: h, subscriptionPlan: g, storeListing: E } = w(c, o),
+        { parentSku: f, sku: h, subscriptionPlan: g, storeListing: E } = D(c, o),
         { data: b } = (0, d.IX)(null == h ? void 0 : h.applicationId),
         O = (0, s.e7)([m.Z], () => {
             var e;
             return null == (e = m.Z.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
         }, [u]),
         R = i.useMemo(() => (null != b ? (0, v.y)(b, 45) : void 0), [b]),
-        D = (0, I.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
+        w = (0, I.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
         { openModal: x, subscriptionPurchaseButtonState: L } = (0, _.Z)({
             skuId: c,
             initialSubscribeForGuild: O,
         });
-    if (!D || null == b || null == h) return null;
+    if (!w || null == b || null == h) return null;
     let M = h.type === C.epS.SUBSCRIPTION,
         k = !!M && (0, p.KW)(h.flags),
         U = () => {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
+                let { default: e } = await Promise.all([n.e("77803"), n.e("65672")]).then(n.bind(n, 7225));
                 return (t) =>
                     (0, r.jsx)(e, {
                         transitionState: t.transitionState,
@@ -223,7 +223,7 @@ function L(e) {
             });
         },
         Z = 12,
-        B = M
+        F = M
             ? k
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -250,8 +250,8 @@ function L(e) {
             : null == E || null == (t = E.description)
               ? void 0
               : t.trim();
-    "" === B && (B = void 0);
-    let F = () => {
+    "" === F && (F = void 0);
+    let B = () => {
             U(),
                 y.default.track(C.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: b.id,
@@ -280,14 +280,14 @@ function L(e) {
     return (0, r.jsx)(j, {
         appName: b.name,
         title: h.name,
-        description: B,
+        description: F,
         link: ""
             .concat(location.protocol, "//")
             .concat(location.host)
             .concat(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(b.id, A.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: Y,
         iconSrc: R,
-        onIconClick: F,
+        onIconClick: B,
         children: (0, r.jsxs)("div", {
             className: P.skuPurchaseButtons,
             children: [

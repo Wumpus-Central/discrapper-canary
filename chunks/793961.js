@@ -6,17 +6,17 @@ var i = n(945577),
     r = n(695346),
     a = n(313789),
     o = n(981631),
-    c = n(388032);
+    S = n(388032);
 let T = (0, u.J9)(a.n.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
-    useTitle: () => c.intl.string(c.t["NxjN+q"]),
-    useSearchTerms: () => [c.intl.string(c.t["t4+fbe"])],
+    useTitle: () => S.intl.string(S.t["NxjN+q"]),
+    useSearchTerms: () => [S.intl.string(S.t["t4+fbe"])],
     useOptions: () => [
         {
-            name: c.intl.string(c.t["t+fGsk"]),
+            name: S.intl.string(S.t["t+fGsk"]),
             value: 0,
         },
         {
-            name: c.intl.string(c.t.MwlEGN),
+            name: S.intl.string(S.t.MwlEGN),
             value: 1,
         },
     ],

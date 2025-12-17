@@ -7,8 +7,8 @@ function i(e) {
         guildId: i,
         avatar: l,
         avatarDecoration: a,
-        banner: s,
-        bio: o,
+        banner: o,
+        bio: s,
         pronouns: c,
         colorString: u,
     } = e;
@@ -18,8 +18,8 @@ function i(e) {
         guild_id: i,
         avatar: l,
         avatar_decoration_data: (0, r.FG)(a),
-        banner: s,
-        bio: o,
+        banner: o,
+        bio: s,
         pronouns: c,
         color_string: u,
     };

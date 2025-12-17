@@ -13,7 +13,7 @@ var r = n(54381),
     d = n(841878),
     f = n(897037),
     p = n(388032),
-    _ = n(430490);
+    _ = n(715523);
 function m(e, t, n) {
     return (
         t in e
@@ -191,8 +191,8 @@ function I(e) {
             defaultDirty: N = !1,
             leading: P,
             trailing: R,
-            validateOn: D = "change",
-            size: w = "md",
+            validateOn: w = "change",
+            size: D = "md",
             fullWidth: x = !1,
             clearable: L = !1,
             showCharacterCount: j = !1,
@@ -221,7 +221,7 @@ function I(e) {
         ]),
         { fieldProps: k } = (0, s.XF_)(M),
         U = (0, f.m)({
-            validateOn: D,
+            validateOn: w,
             error: A,
             value: y,
             minLength: C,
@@ -230,8 +230,8 @@ function I(e) {
         }),
         { setShouldValidate: G } = U,
         Z = O(y, I),
-        B = "object" == typeof P && "type" in P && "tags" === P.type,
-        F = (e) => {
+        F = "object" == typeof P && "type" in P && "tags" === P.type,
+        B = (e) => {
             var t, n;
             let r = e.currentTarget.value;
             null == (t = M.onChange) || t.call(M, r, u), G(!0), null == (n = Z.setHasValue) || n.call(Z, "" !== r);
@@ -257,19 +257,19 @@ function I(e) {
     let z = null;
     ("boolean" == typeof L ? L && null != y && "" !== y && !K : L.show)
         ? (z = (0, r.jsx)(S, {
-              inputSize: w,
+              inputSize: D,
               onClick: Y,
           }))
         : null != R &&
           (z = (0, r.jsx)(v, {
               accessory: R,
-              inputSize: w,
+              inputSize: D,
           }));
     let q = null;
     null != P &&
         (q = (0, r.jsx)(v, {
             accessory: P,
-            inputSize: w,
+            inputSize: D,
         }));
     let Q = j
         ? (0, r.jsx)(d.H, {
@@ -288,10 +288,10 @@ function I(e) {
                 validation: U,
                 fullWidth: x,
                 readOnly: K,
-                className: o()(_.container, _[w], {
+                className: o()(_.container, _[D], {
                     [_.hasLeading]: null != q,
                     [_.hasTrailing]: null != z,
-                    [_.hasTags]: B,
+                    [_.hasTags]: F,
                 }),
                 children: [
                     q,
@@ -319,7 +319,7 @@ function I(e) {
                                         M,
                                     ),
                                     {
-                                        onChange: F,
+                                        onChange: B,
                                         onBlur: H,
                                         onFocus: V,
                                         ref: l,

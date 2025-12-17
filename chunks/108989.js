@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(921254);
 let a = [n(123353)],
-    s = ["#FFFFFF"],
-    o = 1000 / 60,
+    o = ["#FFFFFF"],
+    s = 1000 / 60,
     c = {
         velocity: {
             type: "static-random",
@@ -55,17 +55,17 @@ let a = [n(123353)],
         },
     };
 function u(e) {
-    let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = s, confettiConfig: f } = e,
+    let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = o, confettiConfig: f } = e,
         [g, h] = i.useState(null),
-        [m, _] = i.useState(null),
-        b = (0, l.uR)(m, g),
+        [m, b] = i.useState(null),
+        _ = (0, l.uR)(m, g),
         E = i.useMemo(() => new l.qA({ wind: u }), [u]),
         O = i.useCallback(() => {
             var e, t;
             let n = null == m ? void 0 : m.getCanvas();
             if (null == n) return;
             let r = n.getBoundingClientRect();
-            b.createConfetti(
+            _.createConfetti(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -119,16 +119,16 @@ function u(e) {
                       }),
                 e),
             );
-        }, [b, m, f]);
+        }, [_, m, f]);
     return (
         i.useEffect(() => {
-            let e = n ? setInterval(O, o) : null;
+            let e = n ? setInterval(O, s) : null;
             return () => clearInterval(e);
         }, [n, O]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.O_, {
-                    ref: _,
+                    ref: b,
                     className: t,
                     environment: E,
                 }),

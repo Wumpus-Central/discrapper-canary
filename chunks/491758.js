@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(981631),
     T = n(37113),
     C = n(388032),
-    A = n(556865);
+    A = n(263753);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,12 +76,12 @@ function D(e, t) {
         e
     );
 }
-function w() {
+function D() {
     let e = (0, O.nq)(),
         t = (0, O.z8)(),
         n = (0, h.isWindows)(),
         { remindersEnabled: a, clipsLength: N, clipsQuality: R } = (0, s.cj)([E.Z], () => E.Z.getSettings()),
-        w = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
+        D = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
         x = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
         L = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0)),
         j = (0, y.Z)(_.Z),
@@ -142,7 +142,7 @@ function w() {
             ],
             [U],
         ),
-        B = i.useMemo(
+        F = i.useMemo(
             () => [
                 {
                     value: T.ApplicationStreamFPS.FPS_15,
@@ -159,22 +159,22 @@ function w() {
             ],
             [U],
         ),
-        F = i.useCallback(
+        B = i.useCallback(
             (e) => {
-                u.Z.setKeybind(D(P({}, x), { shortcut: e }));
+                u.Z.setKeybind(w(P({}, x), { shortcut: e }));
             },
             [x],
         ),
         V = i.useCallback(
             (e) => {
-                u.Z.setKeybind(D(P({}, L), { shortcut: e }));
+                u.Z.setKeybind(w(P({}, L), { shortcut: e }));
             },
             [L],
         );
     return (0, r.jsxs)(c.C3N, {
         children: [
             (0, r.jsx)(p.Z, { children: C.intl.string(C.t["Z+MfqT"]) }),
-            w === b.xH.BELOW_MINIMUM
+            D === b.xH.BELOW_MINIMUM
                 ? (0, r.jsx)(p.Z, {
                       look: p.z.WARNING,
                       children: C.intl.string(C.t.SIxrIF),
@@ -238,7 +238,7 @@ function w() {
                 label: C.intl.string(C.t["2wScL1"]),
                 description: C.intl.string(C.t["Rf9+fy"]),
                 value: R.frameRate,
-                options: B,
+                options: F,
             }),
             (0, r.jsx)(c.gNt, {
                 label: C.intl.string(C.t.pf54EU),
@@ -248,7 +248,7 @@ function w() {
                     className: A.keyRecorder,
                     children: (0, r.jsx)(d.Z, {
                         defaultValue: x.shortcut,
-                        onChange: F,
+                        onChange: B,
                     }),
                 }),
             }),

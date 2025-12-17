@@ -4,14 +4,14 @@ n(473749);
 var i = n(481060),
     l = n(565138),
     a = n(695346),
-    s = n(506071),
-    o = n(353254),
+    o = n(506071),
+    s = n(353254),
     c = n(64436);
 function u(e) {
     let { coverImageAsset: t, title: n, guild: u, description: d, children: p } = e,
         f = a.QK.useSetting(),
-        g = (0, s.n)(),
-        [h, m] = (0, o.Z)(t, g && f);
+        g = (0, o.n)(),
+        [h, m] = (0, s.Z)(t, g && f);
     return (0, r.jsxs)("div", {
         className: c.container,
         children: [

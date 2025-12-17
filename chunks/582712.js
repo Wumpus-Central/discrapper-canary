@@ -1,4 +1,4 @@
-i.d(e, { default: () => p });
+i.d(e, { default: () => h });
 var n = i(54381),
     l = i(473749),
     a = i(286379),
@@ -8,50 +8,50 @@ var n = i(54381),
     c = i(565138),
     o = i(797614),
     u = i(695346),
-    m = i(430824),
-    g = i(88658),
-    x = i(401416),
-    S = i(920133),
-    h = i(388032),
-    f = i(956051);
-function p(t) {
-    let { transitionState: e, guildId: i, onClose: p } = t,
-        D = (0, r.e7)([m.Z], () => m.Z.getGuild(i));
+    f = i(430824),
+    m = i(88658),
+    g = i(401416),
+    x = i(920133),
+    S = i(388032),
+    b = i(578671);
+function h(t) {
+    let { transitionState: e, guildId: i, onClose: h } = t,
+        p = (0, r.e7)([f.Z], () => f.Z.getGuild(i));
     if (
         (l.useEffect(() => {
-            (0, x.Y)(i), (0, S.L)(S.Q.MODAL_VIEWED, i), o.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW });
+            (0, g.Y)(i), (0, x.L)(x.Q.MODAL_VIEWED, i), o.Z.increment({ name: a.V.DM_SETTINGS_UPSELL_VIEW });
         }, [i]),
-        null == D)
+        null == p)
     )
         return null;
-    let _ = (t) => {
+    let D = (t) => {
         t.preventDefault();
-        let e = (0, g.YK)();
+        let e = (0, m.YK)();
         e.add(i),
             u.h2
                 .updateSetting(Array.from(e))
-                .then(() => (0, d.showToast)((0, d.createToast)(h.intl.string(h.t.rlYD1W), d.ToastType.SUCCESS))),
-            p(),
-            (0, S.L)(S.Q.MODAL_DISABLED_DMS, i);
+                .then(() => (0, d.showToast)((0, d.createToast)(S.intl.string(S.t.rlYD1W), d.ToastType.SUCCESS))),
+            h(),
+            (0, x.L)(x.Q.MODAL_DISABLED_DMS, i);
     };
     return (0, n.jsx)("form", {
-        onSubmit: _,
+        onSubmit: D,
         children: (0, n.jsx)(s.Modal, {
             transitionState: e,
-            onClose: p,
-            title: h.intl.string(h.t.w2BvnL),
-            subtitle: h.intl.format(h.t.Depjkv, { guild_name: D.name }),
+            onClose: h,
+            title: S.intl.string(S.t.w2BvnL),
+            subtitle: S.intl.format(S.t.Depjkv, { guild_name: p.name }),
             actions: [
                 {
-                    text: h.intl.string(h.t.PsWbcp),
+                    text: S.intl.string(S.t.PsWbcp),
                     onClick: () => {
-                        p(), (0, S.L)(S.Q.MODAL_DISMISSED, i);
+                        h(), (0, x.L)(x.Q.MODAL_DISMISSED, i);
                     },
                     variant: "secondary",
                 },
                 {
-                    text: h.intl.string(h.t.TD7iUx),
-                    onClick: _,
+                    text: S.intl.string(S.t.TD7iUx),
+                    onClick: D,
                 },
             ],
             children: (0, n.jsxs)(d.Kqy, {
@@ -61,21 +61,21 @@ function p(t) {
                     (0, n.jsx)(d.Text, {
                         variant: "text-md/medium",
                         color: "text-muted",
-                        children: h.intl.string(h.t.KPB2iw),
+                        children: S.intl.string(S.t.KPB2iw),
                     }),
                     (0, n.jsx)("div", {
-                        className: f.guildContainer,
+                        className: b.guildContainer,
                         children: (0, n.jsxs)("div", {
-                            className: f.guildInfo,
+                            className: b.guildInfo,
                             children: [
                                 (0, n.jsx)(c.Z, {
-                                    guild: D,
+                                    guild: p,
                                     size: c.Z.Sizes.SMALL,
                                 }),
                                 (0, n.jsx)(d.Text, {
-                                    className: f.guildName,
+                                    className: b.guildName,
                                     variant: "text-md/semibold",
-                                    children: D.name,
+                                    children: p.name,
                                 }),
                             ],
                         }),

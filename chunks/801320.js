@@ -1,46 +1,46 @@
-r.d(t, { default: () => d });
-var n = r(54381),
-    o = r(473749),
-    c = r(481060),
-    a = r(957115),
-    i = r(332664),
-    l = r(626135),
-    b = r(981631),
-    _ = r(531578),
-    s = r(388032);
+a.d(t, { default: () => f });
+var c = a(54381),
+    r = a(473749),
+    n = a(481060),
+    o = a(957115),
+    d = a(332664),
+    i = a(626135),
+    l = a(981631),
+    b = a(531578),
+    s = a(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var a = null != arguments[t] ? arguments[t] : {},
+            c = Object.keys(a);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (c = c.concat(
+                Object.getOwnPropertySymbols(a).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            c.forEach(function (t) {
+                var c;
+                (c = a[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: c,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = c);
             });
     }
     return e;
 }
 let p = ["OTHER"];
-function d(e) {
-    let { analyticsData: t, transitionState: d, onClose: f } = e;
+function f(e) {
+    let { analyticsData: t, transitionState: f, onClose: _ } = e;
     return (
-        o.useEffect(() => {
-            l.default.track(b.rMx.OPEN_MODAL, { type: "Video Background Feedback" });
+        r.useEffect(() => {
+            i.default.track(l.rMx.OPEN_MODAL, { type: "Video Background Feedback" });
         }, []),
-        (0, n.jsx)(i.Z, {
+        (0, c.jsx)(d.Z, {
             modalType: "video_background",
             header: s.intl.string(s.t.Wl8qXg),
             body: s.intl.string(s.t.vPw6j0),
@@ -69,46 +69,46 @@ function d(e) {
             ],
             freeformNeededProblems: p,
             onSubmit: function (e) {
-                var o, i, p, d;
-                let { rating: f, problem: m, dontShowAgain: O, feedback: y } = e;
+                var r, d, p, f;
+                let { rating: _, problem: m, dontShowAgain: O, feedback: y } = e;
                 O &&
-                    (0, a.Uv)({
-                        feedbackType: _.nw.VIDEO_BACKGROUND,
+                    (0, o.Uv)({
+                        feedbackType: b.nw.VIDEO_BACKGROUND,
                         location: "VideoBackgroundFeedbackModal",
                     }),
-                    null != f &&
-                        ((i = null != (o = null == m ? void 0 : m.value) ? o : null),
-                        l.default.track(
-                            b.rMx.VIDEO_BACKGROUND_FEEDBACK,
+                    null != _ &&
+                        ((d = null != (r = null == m ? void 0 : m.value) ? r : null),
+                        i.default.track(
+                            l.rMx.VIDEO_BACKGROUND_FEEDBACK,
                             ((p = u({}, t)),
-                            (d = d =
+                            (f = f =
                                 {
-                                    reason: i,
-                                    rating: f,
+                                    reason: d,
+                                    rating: _,
                                     feedback: y,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(d))
+                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(f))
                                 : (function (e, t) {
-                                      var r = Object.keys(e);
+                                      var a = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var n = Object.getOwnPropertySymbols(e);
-                                          r.push.apply(r, n);
+                                          var c = Object.getOwnPropertySymbols(e);
+                                          a.push.apply(a, c);
                                       }
-                                      return r;
-                                  })(Object(d)).forEach(function (e) {
-                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(d, e));
+                                      return a;
+                                  })(Object(f)).forEach(function (e) {
+                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(f, e));
                                   }),
                             p),
                         ),
                         null != m &&
-                            (0, c.ZDy)(async () => {
-                                let { default: e } = await r.e("14466").then(r.bind(r, 729328));
-                                return (t) => (0, n.jsx)(e, u({ body: s.intl.string(s.t.aHB11f) }, t));
+                            (0, n.ZDy)(async () => {
+                                let { default: e } = await a.e("14466").then(a.bind(a, 729328));
+                                return (t) => (0, c.jsx)(e, u({ body: s.intl.string(s.t.aHB11f) }, t));
                             }));
             },
-            onClose: f,
-            transitionState: d,
+            onClose: _,
+            transitionState: f,
             otherKey: "OTHER",
         })
     );

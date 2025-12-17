@@ -1,13 +1,13 @@
 n.d(t, { Z: () => o });
 var a = n(54381),
     r = n(515753),
-    i = n(82892),
-    l = n(131704),
+    l = n(82892),
+    i = n(131704),
     s = n(981631);
 function o(e) {
     let { selected: t, nameplate: n } = e,
-        o = (0, i.x)(),
-        c = new l.mn({
+        o = (0, l.x)(),
+        c = new i.mn({
             id: "0",
             type: s.d4z.DM,
             name: "self",

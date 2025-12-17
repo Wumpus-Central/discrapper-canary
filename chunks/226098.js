@@ -77,7 +77,7 @@ function A(e) {
             isDisabled: u,
             isPressed: v,
             preventFocusOnPress: A,
-            shouldCancelOnPointerExit: D,
+            shouldCancelOnPointerExit: w,
             allowTextSelectionOnPress: x,
             ref: L,
             ...j
@@ -95,7 +95,7 @@ function A(e) {
             disposables: [],
         }),
         { addGlobalListener: G, removeAllGlobalListeners: Z } = (0, d.x)(),
-        B = (0, f.i)((e, t) => {
+        F = (0, f.i)((e, t) => {
             let r = U.current;
             if (u || r.didFirePressStart) return !1;
             let i = !0;
@@ -105,7 +105,7 @@ function A(e) {
             }
             return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), k(!0), i;
         }),
-        F = (0, f.i)((e, r, i = !0) => {
+        B = (0, f.i)((e, r, i = !0) => {
             let a = U.current;
             if (!a.didFirePressStart) return !1;
             (a.didFirePressStart = !1), (a.isTriggeringEvent = !0);
@@ -133,7 +133,7 @@ function A(e) {
         H = (0, f.i)((e) => {
             let t = U.current;
             if (t.isPressed && t.target) {
-                for (let n of (t.didFirePressStart && null != t.pointerType && F(R(t.target, e), t.pointerType, !1),
+                for (let n of (t.didFirePressStart && null != t.pointerType && B(R(t.target, e), t.pointerType, !1),
                 (t.isPressed = !1),
                 (t.isOverTarget = !1),
                 (t.activePointerId = null),
@@ -146,7 +146,7 @@ function A(e) {
             }
         }),
         Y = (0, f.i)((e) => {
-            D && H(e);
+            w && H(e);
         }),
         W = (0, f.i)((e) => {
             u || null == l || l(e);
@@ -163,13 +163,13 @@ function A(e) {
                     onKeyDown(t) {
                         if (P(t.nativeEvent, t.currentTarget) && (0, p.bE)(t.currentTarget, (0, p.NI)(t.nativeEvent))) {
                             var r;
-                            w((0, p.NI)(t.nativeEvent), t.key) && t.preventDefault();
+                            D((0, p.NI)(t.nativeEvent), t.key) && t.preventDefault();
                             let i = !0;
                             if (!e.isPressed && !t.repeat) {
                                 (e.target = t.currentTarget),
                                     (e.isPressed = !0),
                                     (e.pointerType = "keyboard"),
-                                    (i = B(t, "keyboard"));
+                                    (i = F(t, "keyboard"));
                                 let r = t.currentTarget,
                                     a = (t) => {
                                         P(t, r) &&
@@ -201,14 +201,14 @@ function A(e) {
                                     !e.isPressed &&
                                     ("virtual" === e.pointerType || (0, E.Z)(t.nativeEvent)))
                             ) {
-                                let e = B(t, "virtual"),
+                                let e = F(t, "virtual"),
                                     r = V(t, "virtual"),
-                                    i = F(t, "virtual");
+                                    i = B(t, "virtual");
                                 W(t), (n = e && r && i);
                             } else if (e.isPressed && "keyboard" !== e.pointerType) {
                                 let r = e.pointerType || t.nativeEvent.pointerType || "virtual",
                                     i = V(R(t.currentTarget, t), r),
-                                    a = F(R(t.currentTarget, t), r, !0);
+                                    a = B(R(t.currentTarget, t), r, !0);
                                 (n = i && a), (e.isOverTarget = !1), W(t), H(t);
                             }
                             (e.ignoreEmulatedMouseEvents = !1), n && t.stopPropagation();
@@ -218,10 +218,10 @@ function A(e) {
                 n = (t) => {
                     var n, r, i;
                     if (e.isPressed && e.target && P(t, e.target)) {
-                        w((0, p.NI)(t), t.key) && t.preventDefault();
+                        D((0, p.NI)(t), t.key) && t.preventDefault();
                         let n = (0, p.NI)(t),
                             i = (0, p.bE)(e.target, (0, p.NI)(t));
-                        F(R(e.target, t), "keyboard", i),
+                        B(R(e.target, t), "keyboard", i),
                             i && K(t, e.target),
                             Z(),
                             "Enter" !== t.key &&
@@ -252,7 +252,7 @@ function A(e) {
                             (e.activePointerId = t.pointerId),
                             (e.target = t.currentTarget),
                             x || (0, i.l)(e.target),
-                            (r = B(t, e.pointerType));
+                            (r = F(t, e.pointerType));
                         let o = (0, p.NI)(t.nativeEvent);
                         "releasePointerCapture" in o && o.releasePointerCapture(t.pointerId),
                             G((0, _.r3)(t.currentTarget), "pointerup", n, !1),
@@ -279,14 +279,14 @@ function A(e) {
                             e.target &&
                             !e.isOverTarget &&
                             null != e.pointerType &&
-                            ((e.isOverTarget = !0), B(R(e.target, t), e.pointerType));
+                            ((e.isOverTarget = !0), F(R(e.target, t), e.pointerType));
                     }),
                     (t.onPointerLeave = (t) => {
                         t.pointerId === e.activePointerId &&
                             e.target &&
                             e.isOverTarget &&
                             null != e.pointerType &&
-                            ((e.isOverTarget = !1), F(R(e.target, t), e.pointerType, !1), Y(t));
+                            ((e.isOverTarget = !1), B(R(e.target, t), e.pointerType, !1), Y(t));
                     });
                 let n = (t) => {
                         if (t.pointerId === e.activePointerId && e.isPressed && 0 === t.button && e.target) {
@@ -311,7 +311,7 @@ function A(e) {
                 };
             }
             return t;
-        }, [G, u, A, Z, x, H, Y, F, B, V, W, K]);
+        }, [G, u, A, Z, x, H, Y, B, F, V, W, K]);
     return (
         (0, y.useEffect)(() => {
             if (!L) return;
@@ -372,14 +372,14 @@ function R(e, t) {
         clientY: r,
     };
 }
-function D(e) {
+function w(e) {
     return (
         !(e instanceof HTMLInputElement) &&
         (e instanceof HTMLButtonElement ? "submit" !== e.type && "reset" !== e.type : !N(e))
     );
 }
-function w(e, t) {
-    return e instanceof HTMLInputElement ? !L(e, t) : D(e);
+function D(e, t) {
+    return e instanceof HTMLInputElement ? !L(e, t) : w(e);
 }
 let x = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
 function L(e, t) {

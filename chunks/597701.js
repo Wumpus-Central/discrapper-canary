@@ -13,8 +13,8 @@ function i(e, t, n) {
         e
     );
 }
-var l = !1,
-    a = !1,
+var a = !1,
+    l = !1,
     o = (function () {
         var e;
         function t(e) {
@@ -39,13 +39,13 @@ var l = !1,
                     key: "canDrag",
                     value: function () {
                         (0, r.k)(
-                            !l,
+                            !a,
                             "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (l = !0), this.internalMonitor.canDragSource(this.sourceId);
+                            return (a = !0), this.internalMonitor.canDragSource(this.sourceId);
                         } finally {
-                            l = !1;
+                            a = !1;
                         }
                     },
                 },
@@ -54,13 +54,13 @@ var l = !1,
                     value: function () {
                         if (!this.sourceId) return !1;
                         (0, r.k)(
-                            !a,
+                            !l,
                             "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (a = !0), this.internalMonitor.isDraggingSource(this.sourceId);
+                            return (l = !0), this.internalMonitor.isDraggingSource(this.sourceId);
                         } finally {
-                            a = !1;
+                            l = !1;
                         }
                     },
                 },

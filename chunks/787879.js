@@ -39,8 +39,8 @@ function R(e, t, n) {
         e
     );
 }
-let D = {},
-    w = null,
+let w = {},
+    D = null,
     x = [],
     L = new C.Z(),
     j = !1,
@@ -49,8 +49,8 @@ let D = {},
     U = !1,
     G = S.default.fromTimestamp(Date.now()),
     Z = !0,
-    B = null,
     F = null,
+    B = null,
     V = !0;
 function H() {
     let e = y.ZP.getFlattenedGuildIds().flatMap((e) => g.ZP.getSelectableChannelIds(e)),
@@ -108,12 +108,12 @@ function Y(e) {
         );
 }
 function W() {
-    if (null == w) {
+    if (null == D) {
         G = S.default.fromTimestamp(Date.now());
         return;
     }
-    for (let e of w.toSorted((e, t) => S.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
-        let t = D[e];
+    for (let e of D.toSorted((e, t) => S.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
+        let t = w[e];
         if (t.loadState === A.a7.UNLOADED && null != t.mostRecentMessageId) {
             G = t.mostRecentMessageId;
             return;
@@ -123,14 +123,14 @@ function W() {
 }
 function K() {
     let { notifyingChannelIds: e, staleChannelIds: t } = H();
-    (w = e), (x = t), a()(null != w, "notifyingChannelIds should not be null");
-    let n = w.filter((e) => null == D[e]),
-        r = Object.keys(D).filter((e) => !(null == w ? void 0 : w.includes(e)));
-    if (0 !== w.length && 0 === n.length && 0 === r.length) return !1;
-    for (let e of r) delete D[e];
+    (D = e), (x = t), a()(null != D, "notifyingChannelIds should not be null");
+    let n = D.filter((e) => null == w[e]),
+        r = Object.keys(w).filter((e) => !(null == D ? void 0 : D.includes(e)));
+    if (0 !== D.length && 0 === n.length && 0 === r.length) return !1;
+    for (let e of r) delete w[e];
     for (let e of n)
         if (
-            ((D[e] = {
+            ((w[e] = {
                 loadState: A.a7.UNLOADED,
                 mostRecentMessageId: b.ZP.lastMessageId(e),
             }),
@@ -139,16 +139,16 @@ function K() {
             let t = Y(e);
             if (null != t) {
                 var i, o;
-                (D[e].loadState = A.a7.LOADED),
-                    (D[e].mostRecentMessageId =
-                        null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : D[e].mostRecentMessageId);
+                (w[e].loadState = A.a7.LOADED),
+                    (w[e].mostRecentMessageId =
+                        null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : w[e].mostRecentMessageId);
             }
         }
-    L.updateChannelIds(w), W();
+    L.updateChannelIds(D), W();
 }
 function z() {
-    (D = {}),
-        (w = null),
+    (w = {}),
+        (D = null),
         (x = []),
         (L = new C.Z()),
         (j = !1),
@@ -157,16 +157,16 @@ function z() {
         (G = S.default.fromTimestamp(Date.now())),
         (Z = !0),
         (U = !1),
-        (F = null),
-        (B = null);
+        (B = null),
+        (F = null);
 }
 function q() {
     var e, t, n;
-    for (let n of (K(), null != w ? w : [])) {
+    for (let n of (K(), null != D ? D : [])) {
         let r = Y(n);
         null != r &&
-            ((D[n].loadState = A.a7.LOADED),
-            (D[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
+            ((w[n].loadState = A.a7.LOADED),
+            (w[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
             W());
     }
     let r = null != (n = u.ZP.getSettingsFilteredMentions()) ? n : [];
@@ -198,11 +198,11 @@ function $(e) {
     var t, n, r;
     let { channelId: i, message: a } = e;
     if (
-        null == w ||
+        null == D ||
         (null == (t = a.author) ? void 0 : t.id) === (null == (n = v.default.getCurrentUser()) ? void 0 : n.id)
     )
         return !1;
-    let o = w.includes(i);
+    let o = D.includes(i);
     if ((0, l.zd)(i)) return !1;
     let s = J(a),
         c = s.mentioned;
@@ -221,11 +221,11 @@ function $(e) {
 }
 function ee(e) {
     let { channelId: t } = e;
-    if (!(null == w ? void 0 : w.includes(t))) return !1;
+    if (!(null == D ? void 0 : D.includes(t))) return !1;
     let n = Y(t);
     if (null == n) return !1;
     let r = n.length >= A.AQ || (n.hasFetched && !n.hasMoreBefore);
-    D[t].loadState !== A.a7.LOADED && (D[t].loadState = r ? A.a7.LOADED : A.a7.LOADED_UNREAD), W();
+    w[t].loadState !== A.a7.LOADED && (w[t].loadState = r ? A.a7.LOADED : A.a7.LOADED_UNREAD), W();
 }
 function et(e) {
     let { messages: t } = e;
@@ -258,7 +258,7 @@ function ei() {
 }
 function ea(e) {
     let { preload: t, hasMoreToLoad: n, analyticsPayload: r } = e;
-    (j = !1), t ? (U = !0) : (null != n && (Z = n), (k = !0)), (F = null != r ? r : null);
+    (j = !1), t ? (U = !0) : (null != n && (Z = n), (k = !0)), (B = null != r ? r : null);
 }
 function eo(e) {
     var t;
@@ -272,7 +272,7 @@ function eo(e) {
             }))
                 ? void 0
                 : t.notificationCenterVariant) &&
-        null != w &&
+        null != D &&
         !j &&
         !M &&
         (!n || !U) &&
@@ -280,12 +280,12 @@ function eo(e) {
     );
 }
 function es() {
-    (j = !1), (F = null), (M = !0);
+    (j = !1), (B = null), (M = !0);
 }
 function el(e) {
     let { messageId: t, channelId: n, isUnread: r } = e,
         i = (0, I.Ag)({ location: "handleInboxItemClick" }).notificationCenterVariant;
-    B =
+    F =
         r && i === I.jP.SIDEBAR
             ? {
                   channelId: n,
@@ -300,14 +300,14 @@ function ec(e) {
             channelId: t,
             id: n,
         },
-        B,
-    ) && (B = null);
+        F,
+    ) && (F = null);
 }
 function eu() {
     M = !1;
 }
 function ed() {
-    B = null;
+    F = null;
 }
 function ef(e) {
     let { channel: t } = e;
@@ -357,10 +357,10 @@ class eE extends (r = o.ZP.Store) {
         return L.getMessages();
     }
     getNotifyingChannelIds() {
-        return w;
+        return D;
     }
     getChannelInfoMap() {
-        return D;
+        return w;
     }
     get oldestDisplayedMessageId() {
         return G;
@@ -381,10 +381,10 @@ class eE extends (r = o.ZP.Store) {
         return !j && !Z;
     }
     get selectedItemInfo() {
-        return B;
+        return F;
     }
     get currentRequestAnalyticsPayload() {
-        return F;
+        return B;
     }
     getDevOverrides() {
         return { navOnClick: V };

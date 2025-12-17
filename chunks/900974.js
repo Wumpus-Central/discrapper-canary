@@ -1,22 +1,22 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(570140);
 let a = !1,
-    s = null,
-    o = {
+    o = null,
+    s = {
         init() {
             l.Z.subscribe("CONNECTION_OPEN", (e) => {
                 let { pendingPayments: t } = e;
                 if (null != t && t.length > 0) {
                     var l;
-                    if (s === t[0] || null == (s = t[0])) return;
-                    (l = s),
+                    if (o === t[0] || null == (o = t[0])) return;
+                    (l = o),
                         a ||
                             ((a = !0),
                             (0, i.ZDy)(async () => {
-                                let { default: e } = await n.e("7232").then(n.bind(n, 645586));
+                                let { default: e } = await n.e("7232").then(n.bind(n, 747988));
                                 return (t) => {
                                     let { transitionState: n, onClose: i } = t;
                                     return (0, r.jsx)(e, {

@@ -14,7 +14,7 @@ var r = n(54381),
     c = n(22202),
     u = n(777207),
     d = n(590154),
-    f = n(877222);
+    f = n(910654);
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -134,7 +134,7 @@ function g(e) {
             ref: C,
         } = e,
         A = m(e),
-        { labelId: N, controlId: P, errorMessageId: R, describedById: D, helperTextId: w, descriptionId: x } = A,
+        { labelId: N, controlId: P, errorMessageId: R, describedById: w, helperTextId: D, descriptionId: x } = A,
         L = null == y ? void 0 : y.horizontalControlColumnWidth,
         j = "group" === g || "radiogroup" === g,
         M = j ? "span" : "label",
@@ -147,7 +147,7 @@ function g(e) {
             : null,
         G = null != t && "" !== t,
         Z = null != l && "" !== l,
-        B = G
+        F = G
             ? (0, r.jsxs)(u.x, {
                   "aria-hidden": j,
                   "data-interactive": S,
@@ -183,12 +183,12 @@ function g(e) {
                   ],
               })
             : null,
-        F = (0, r.jsx)(E, {
+        B = (0, r.jsx)(E, {
             successMessage: h,
             errorMessage: _,
             helperText: c,
             trailing: T,
-            helperTextId: w,
+            helperTextId: D,
             errorMessageId: R,
         });
     return (0, r.jsx)(d.z.Provider, {
@@ -200,16 +200,16 @@ function g(e) {
             "data-layout": b,
             style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
             "data-disabled": a,
-            "aria-describedby": j ? D : void 0,
+            "aria-describedby": j ? w : void 0,
             disabled: j ? a : void 0,
             children: [
                 U,
-                G && n ? (0, r.jsx)(s.n, { children: B }) : null,
+                G && n ? (0, r.jsx)(s.n, { children: F }) : null,
                 (G && !n) || Z
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? null : B,
+                              n ? null : F,
                               Z &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
@@ -218,13 +218,13 @@ function g(e) {
                                       id: x,
                                       children: l,
                                   }),
-                              "under-label" === I ? F : null,
+                              "under-label" === I ? B : null,
                           ],
                       })
                     : null,
                 (0, r.jsxs)("div", {
                     className: f.control,
-                    children: ["function" == typeof p ? p(A) : p, "under-control" === I ? F : null],
+                    children: ["function" == typeof p ? p(A) : p, "under-control" === I ? B : null],
                 }),
             ],
         }),

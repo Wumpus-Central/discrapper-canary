@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         Playground: () => j,
-        PlaygroundStore: () => w,
+        PlaygroundStore: () => D,
     }),
     n(388685),
     n(361932),
@@ -30,7 +30,7 @@ var r = n(54381),
     I = n(561466),
     T = n(231338),
     C = n(388032),
-    A = n(409738);
+    A = n(629709);
 function N(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function D(e, t) {
         e
     );
 }
-let w = (0, h.H)(() => ({
+let D = (0, h.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
@@ -92,7 +92,7 @@ function x() {
     let e = (0, b.Z)(),
         t = (0, E.Z)(),
         n = (0, y.Z)(),
-        a = w.useField("controlsLayout"),
+        a = D.useField("controlsLayout"),
         o = i.useMemo(
             () =>
                 (0, r.jsxs)(
@@ -104,21 +104,21 @@ function x() {
                                 id: "controls-right",
                                 group: "controls-layout",
                                 label: "Right Side",
-                                action: () => w.setState({ controlsLayout: "right" }),
+                                action: () => D.setState({ controlsLayout: "right" }),
                                 checked: "right" === a,
                             }),
                             (0, r.jsx)(u.k5, {
                                 id: "controls-bottom",
                                 group: "controls-layout",
                                 label: "Bottom",
-                                action: () => w.setState({ controlsLayout: "bottom" }),
+                                action: () => D.setState({ controlsLayout: "bottom" }),
                                 checked: "bottom" === a,
                             }),
                             (0, r.jsx)(u.k5, {
                                 id: "controls-hidden",
                                 group: "controls-layout",
                                 label: "Hidden",
-                                action: () => w.setState({ controlsLayout: "hidden" }),
+                                action: () => D.setState({ controlsLayout: "hidden" }),
                                 checked: "hidden" === a,
                             }),
                         ],
@@ -163,7 +163,7 @@ function L() {
         children: (t) =>
             (0, r.jsx)(
                 m.hU,
-                D(
+                w(
                     P(
                         {
                             size: "sm",
@@ -181,9 +181,9 @@ function L() {
 function j(e) {
     var t;
     let { configs: n } = e,
-        c = w.useField("selectedCollection"),
-        u = w.useField("selectedStory"),
-        f = w.useField("controlsLayout"),
+        c = D.useField("selectedCollection"),
+        u = D.useField("selectedStory"),
+        f = D.useField("controlsLayout"),
         h = i.useMemo(() => n.flatMap((e) => e.collections), [n]),
         {
             collection: E,
@@ -207,13 +207,13 @@ function j(e) {
             };
         }, [c, u, h]),
         T = (e) => {
-            w.setState({
+            D.setState({
                 selectedCollection: e,
                 selectedStory: null,
             });
         },
         C = (e) => {
-            w.setState({ selectedStory: e });
+            D.setState({ selectedStory: e });
         },
         N = null != (t = null == E ? void 0 : E.name) ? t : "Design System",
         P = null == y ? void 0 : y.name,

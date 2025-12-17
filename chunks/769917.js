@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(518929),
-    s = n(797394);
-function o(e, t, n) {
+    o = n(797394);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
     }
     getDoubleTapBehavior() {
         var e;
-        return null != (e = c.doubleTapBehavior) ? e : s.m.DEFAULT;
+        return null != (e = c.doubleTapBehavior) ? e : o.m.DEFAULT;
     }
     getState() {
         return c;
@@ -41,7 +41,7 @@ class u extends (r = i.ZP.DeviceSettingsStore) {
         return c;
     }
 }
-o(u, "displayName", "ICYMIFiltersStore"), o(u, "persistKey", "ICYMIFiltersStore");
+s(u, "displayName", "ICYMIFiltersStore"), s(u, "persistKey", "ICYMIFiltersStore");
 let d = new u(l.Z, {
     SET_ICYMI_FILTERS: function (e) {
         c = e.filters;

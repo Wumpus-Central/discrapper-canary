@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
     l = n(286379),
     a = n(481060),
-    s = n(797614),
-    o = n(359110),
+    o = n(797614),
+    s = n(359110),
     c = n(6025),
     u = n(433355),
     d = n(26373),
@@ -12,20 +12,20 @@ var r = n(54381),
     f = n(376191),
     g = n(86203),
     h = n(388032),
-    m = n(539410);
-function _(e) {
-    let { active: t, user: n, channel: _ } = e,
-        b = (0, d.V)(),
+    m = n(282850);
+function b(e) {
+    let { active: t, user: n, channel: b } = e,
+        _ = (0, d.V)(),
         E = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(h.intl.string(h.t.pIQ3h4), a.ToastType.FAILURE)),
-                s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+                o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
         v = i.useCallback(() => {
-            c.Z.closeChannelSidebar(u.uZ), b && (0, o.Kh)(_.id);
-        }, [_.id, b]),
+            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
+        }, [b.id, _]),
         {
             acceptMessageRequest: y,
             isAcceptLoading: I,
@@ -44,7 +44,7 @@ function _(e) {
         children: [
             (0, r.jsx)(f.Z, {
                 otherUser: n,
-                channel: _,
+                channel: b,
                 active: t,
             }),
             (0, r.jsxs)("div", {
@@ -55,12 +55,12 @@ function _(e) {
                         size: "sm",
                         text: h.intl.string(h.t.vicfl6),
                         onClick: (e) => {
-                            y(_.id), e.stopPropagation();
+                            y(b.id), e.stopPropagation();
                         },
                         disabled: N,
                         loading: T,
                     }),
-                    (0, r.jsx)(g.Z, { channel: _ }),
+                    (0, r.jsx)(g.Z, { channel: b }),
                 ],
             }),
         ],

@@ -14,7 +14,7 @@ var i,
     d = n(858597),
     u = n(486213),
     S = n(388032),
-    x = n(767770),
+    x = n(169418),
     _ =
         (((i = {}).ACTIONS = "ACTIONS"),
         (i.SAFETY_TIPS = "SAFETY_TIPS"),
@@ -24,7 +24,7 @@ let E = (t) => {
     let { onClose: e, channelId: n, warningId: i, warningType: _, otherUserId: E, transitionState: g } = t,
         A = null != (0, o.M)(n),
         [O, h] = r.useState("ACTIONS"),
-        m = r.useCallback(
+        b = r.useCallback(
             (t) => {
                 (0, c.qc)({
                     channelId: n,
@@ -37,7 +37,7 @@ let E = (t) => {
             },
             [n, i, _, E, A],
         ),
-        p = r.useCallback((t) => {
+        N = r.useCallback((t) => {
             let { text: e, onClick: n } = t;
             return (0, s.jsx)(l.Avr, {
                 onClick: n,
@@ -46,19 +46,19 @@ let E = (t) => {
                 textVariant: "text-sm/normal",
             });
         }, []),
-        b = r.useCallback(() => {
+        m = r.useCallback(() => {
             switch (O) {
                 case "SAFETY_TIPS":
                 case "ABOUT_SAFETY_ALERTS":
-                    return (0, s.jsx)(p, {
+                    return (0, s.jsx)(N, {
                         text: S.intl.string(S.t["13/7kX"]),
                         onClick: () => h("ACTIONS"),
                     });
                 default:
                     return null;
             }
-        }, [O, p]),
-        N = r.useCallback(() => {
+        }, [O, N]),
+        p = r.useCallback(() => {
             switch (O) {
                 case "SAFETY_TIPS":
                     return S.intl.string(S.t.EtNxi6);
@@ -88,7 +88,7 @@ let E = (t) => {
                 justify: a.Z.Justify.CENTER,
                 children: (0, s.jsx)(l.Heading, {
                     variant: "heading-xl/semibold",
-                    children: N(),
+                    children: p(),
                 }),
             }),
             (0, s.jsx)(l.Ttm, {
@@ -111,7 +111,7 @@ let E = (t) => {
                             children: (0, s.jsx)(T.Z, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), m(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    e(), b(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
                                 },
                             }),
                         }),
@@ -126,13 +126,13 @@ let E = (t) => {
                 "data-migration-pending": !0,
                 justify: a.Z.Justify.BETWEEN,
                 children: [
-                    (0, s.jsx)(p, {
+                    (0, s.jsx)(N, {
                         text: S.intl.string(S.t.cpT0Cq),
                         onClick: () => {
-                            e(), m(c.NM.USER_SAFETY_TOOLS_DISMISS);
+                            e(), b(c.NM.USER_SAFETY_TOOLS_DISMISS);
                         },
                     }),
-                    b(),
+                    m(),
                 ],
             }),
         ],

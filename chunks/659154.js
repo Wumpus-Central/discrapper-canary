@@ -1,41 +1,41 @@
-n.d(t, { c: () => l });
-var r = n(54381);
+n.d(t, { c: () => c });
+var a = n(54381);
 n(473749);
-var a = n(481060),
-    i = n(388032),
-    o = n(359059),
+var r = n(481060),
+    o = n(388032),
+    i = n(406096),
     s = n(387852);
-let l = (e) => {
+let c = (e) => {
     let { onTryAgain: t } = e;
-    return (0, r.jsxs)("div", {
-        className: o.content,
+    return (0, a.jsxs)("div", {
+        className: i.content,
         children: [
-            (0, r.jsx)("img", {
+            (0, a.jsx)("img", {
                 src: s,
                 width: "254",
                 height: "127",
                 alt: "",
             }),
-            (0, r.jsxs)("div", {
-                className: o.innerContent,
+            (0, a.jsxs)("div", {
+                className: i.innerContent,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, a.jsx)(r.Heading, {
                         variant: "heading-xl/extrabold",
-                        children: i.intl.string(i.t["3dgwPD"]),
+                        children: o.intl.string(o.t["3dgwPD"]),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: i.intl.string(i.t["/GAO1P"]),
+                        children: o.intl.string(o.t["/GAO1P"]),
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: o.footerButton,
-                children: (0, r.jsx)(a.Button, {
+                className: i.footerButton,
+                children: (0, a.jsx)(r.Button, {
                     variant: "primary",
-                    text: i.intl.string(i.t["7NqTJn"]),
+                    text: o.intl.string(o.t["7NqTJn"]),
                     onClick: t,
                 }),
             }),

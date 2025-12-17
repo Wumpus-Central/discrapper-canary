@@ -76,7 +76,7 @@ function Z(e) {
     }
     return e;
 }
-function B(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -88,12 +88,12 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -213,8 +213,8 @@ function Y() {
         U = (0, L.bC)(),
         G = (0, l.w9)(),
         [Z] = (0, c.cv)(G ? [a.z.CLIPS_SETTINGS_BETA_TAG] : []),
-        { shouldMergeGameSettings: B } = P.b.useExperiment({ location: "settings" }),
-        F = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
+        { shouldMergeGameSettings: F } = P.b.useExperiment({ location: "settings" }),
+        B = null != (n = null == (e = A.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
         V = (0, y.y0)({ location: "settings" }),
         H = (0, b.v4)({ location: "settings" }),
         Y = (0, s.Q)(),
@@ -251,8 +251,8 @@ function Y() {
                 numOfPendingFamilyRequests: M,
                 isOverlaySupported: U,
                 isClipsBetaTagShowing: Z === a.z.CLIPS_SETTINGS_BETA_TAG,
-                shouldMergeGameSettings: B,
-                isStaff: F,
+                shouldMergeGameSettings: F,
+                isStaff: B,
                 isInappropriateConversationWarningEnabled: V,
                 isInapproprateConversationsDefaultOn: H,
                 paymentsBlocked: Y,
@@ -273,7 +273,7 @@ function Y() {
                 isCrossDMSearchEnabledSettingVisible: eo,
                 isRedesignedNotificationsEnabled: es,
             }),
-        [q, Z, $, ee, K, J, z, j, X, W, H, V, U, F, Q, M, Y, B, R, v, et, en, er, ei, ea, eo, es],
+        [q, Z, $, ee, K, J, z, j, X, W, H, V, U, B, Q, M, Y, F, R, v, et, en, er, ei, ea, eo, es],
     );
 }
 function W(e) {
@@ -345,7 +345,7 @@ function z(e, t, n) {
                         label: e.header,
                     }),
                 e.settings.forEach((e) => {
-                    r.push(F(Z({}, t[e]), { tabPredicate: () => null == n || K(e, n, a) }));
+                    r.push(B(Z({}, t[e]), { tabPredicate: () => null == n || K(e, n, a) }));
                 }));
         }),
         r

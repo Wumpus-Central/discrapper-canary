@@ -4,8 +4,8 @@ n(473749);
 var i = n(92951),
     l = n(442837),
     a = n(481060),
-    s = n(607070),
-    o = n(314910),
+    o = n(607070),
+    s = n(314910),
     c = n(324060),
     u = n(830960),
     d = n(840767),
@@ -15,14 +15,14 @@ var i = n(92951),
     h = n(638398),
     m = n(388032),
     b = n(306541),
-    E = n(900268),
-    _ = n(35446);
+    _ = n(900268),
+    E = n(35446);
 function O(e) {
     var t, n;
     let { markAsDismissed: O } = e,
         v = u.E[f.yD.WELCOME],
         y = (0, a.dQu)(v.primaryColor).hex(),
-        I = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
+        I = (0, l.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, r.jsx)(c.Q.Provider, {
         value:
             ((t = (function (e) {
@@ -64,11 +64,11 @@ function O(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t),
-        children: (0, r.jsx)(o.ZP, {
+        children: (0, r.jsx)(s.ZP, {
             children: (0, r.jsxs)("div", {
                 className: b.container,
                 style: {
-                    backgroundImage: "url(".concat(_.Z, "), linear-gradient(").concat(y, "80, black)"),
+                    backgroundImage: "url(".concat(E.Z, "), linear-gradient(").concat(y, "80, black)"),
                     borderColor: y,
                     boxShadow: "0 0 15px 5px ".concat(y, "50"),
                 },
@@ -80,7 +80,7 @@ function O(e) {
                         loop: !0,
                         className: b.logo,
                         children: (0, r.jsx)("source", {
-                            src: E.Z,
+                            src: _.Z,
                             type: "video/webm",
                         }),
                     }),

@@ -31,9 +31,9 @@ function f(e) {
             assetLoader: P,
             onLoad: R,
         } = e,
-        D = i.useContext(l.S),
-        w = (0, s.C)(),
-        x = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : w,
+        w = i.useContext(l.S),
+        D = (0, s.C)(),
+        x = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : D,
         [L, j] = i.useState(void 0),
         M = i.useRef(null),
         { rive: k, RiveComponent: U } = (0, o.useRive)({
@@ -123,7 +123,7 @@ function f(e) {
             onDataBindingChange: I,
         }),
         i.useEffect(() => {
-            if (null != k && "short-loop" === y && D.reducedMotion.enabled) {
+            if (null != k && "short-loop" === y && w.reducedMotion.enabled) {
                 let e = () => {
                         k.isPlaying &&
                             (M.current = setTimeout(() => {
@@ -142,7 +142,7 @@ function f(e) {
                     }
                 );
             }
-        }, [k, y, D.reducedMotion.enabled]),
+        }, [k, y, w.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
             null != k &&
                 "layout" === m &&
@@ -171,7 +171,7 @@ function f(e) {
                 "number" == typeof t.data &&
                 ((G.current = t.data),
                 t.data > 0 &&
-                    ("halt" === y && D.reducedMotion.enabled && k.isPlaying && k.pause(),
+                    ("halt" === y && w.reducedMotion.enabled && k.isPlaying && k.pause(),
                     k.off(o.EventType.Advance, e)));
         };
         return (
@@ -181,7 +181,7 @@ function f(e) {
                 k.off(o.EventType.Advance, e);
             }
         );
-    }, [k, D.reducedMotion.enabled, y, p]);
+    }, [k, w.reducedMotion.enabled, y, p]);
     let Z = i.useRef(!1);
     return (
         i.useEffect(() => {

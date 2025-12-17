@@ -6,12 +6,12 @@ var i = t(481060),
     l = t(168107),
     o = t(480916),
     c = t(81643),
-    s = t(63063),
-    d = t(430104),
+    d = t(63063),
+    s = t(430104),
     u = t(981631),
     b = t(388032),
     f = t(372881);
-function p() {
+function h() {
     return (0, c.Jm)()
         ? b.intl.format(b.t.iWGjcg, {
               hook: (e) =>
@@ -20,7 +20,7 @@ function p() {
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
-                              (0, r.Z)(s.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_LEARN_MORE));
+                              (0, r.Z)(d.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_LEARN_MORE));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -41,14 +41,14 @@ function p() {
                   }),
           });
 }
-function h(e) {
+function p(e) {
     let { className: n } = e,
         t = (0, c.Jm)();
     return (0, a.jsx)("div", {
         className: n,
         children: (0, a.jsx)(i.M14, {
             type: t ? "info" : "warning",
-            children: (0, a.jsx)(p, {}),
+            children: (0, a.jsx)(h, {}),
         }),
     });
 }
@@ -68,7 +68,7 @@ function m(e) {
                 (0, a.jsx)(i.Text, {
                     color: "text-default",
                     variant: "text-sm/medium",
-                    children: (0, a.jsx)(p, {}),
+                    children: (0, a.jsx)(h, {}),
                 }),
             ],
         }),
@@ -76,10 +76,10 @@ function m(e) {
 }
 function g(e) {
     let { className: n, noBackground: t } = e;
-    return (0, d.to)()
+    return (0, s.to)()
         ? (0, a.jsx)("div", {
               className: n,
-              children: t ? (0, a.jsx)(m, {}) : (0, a.jsx)(h, {}),
+              children: t ? (0, a.jsx)(m, {}) : (0, a.jsx)(p, {}),
           })
         : null;
 }

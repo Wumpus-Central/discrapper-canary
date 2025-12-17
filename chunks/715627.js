@@ -21,20 +21,20 @@ let o = {
                 offsetXPercentageMax: p,
                 offsetXPercentageMin: m,
                 offsetYPercentageMax: h,
-                offsetYPercentageMin: g,
-                customConfettiCanvas: b,
+                offsetYPercentageMin: b,
+                customConfettiCanvas: g,
                 speedValues: y = o,
                 dragCoefficientValue: O = 1.66,
                 onAnimationEnd: j,
             } = e,
             [P, v] = r.useState(null),
             { confettiCanvas: S } = r.useContext(s.h),
-            x = (0, l.uR)(null != b ? b : S, P),
-            [w, _] = r.useState(!1);
+            x = (0, l.uR)(null != g ? g : S, P),
+            [w, C] = r.useState(!1);
         r.useEffect(() => {
             w && (null == j || j());
         });
-        let C = r.useMemo(() => {
+        let Z = r.useMemo(() => {
             if (null != u)
                 return [
                     {
@@ -59,7 +59,7 @@ let o = {
                                         p = c(e.height, 75, r),
                                         m = c(e.width, 350, t),
                                         h = c(e.height, 75, i),
-                                        { xMin: g, xMax: b, yMin: y, yMax: O } = u;
+                                        { xMin: b, xMax: g, yMin: y, yMax: O } = u;
                                     return (
                                         (l = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
@@ -102,11 +102,11 @@ let o = {
                                                 velocity: {
                                                     type: "static-random",
                                                     minValue: {
-                                                        x: g,
+                                                        x: b,
                                                         y: y,
                                                     },
                                                     maxValue: {
-                                                        x: b,
+                                                        x: g,
                                                         y: O,
                                                     },
                                                 },
@@ -134,20 +134,20 @@ let o = {
                                               }),
                                         l
                                     );
-                                })(t.getBoundingClientRect(), p, m, h, g, y, O),
+                                })(t.getBoundingClientRect(), p, m, h, b, y, O),
                                 null != f ? f : 50,
                             ),
-                                i === e.length - 1 && null != j && _(!0);
+                                i === e.length - 1 && null != j && C(!0);
                         }, 60 * i),
                     )),
                     () => {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [x, t, d, f, p, m, h, g, y, O, j]),
+            }, [x, t, d, f, p, m, h, b, y, O, j]),
             (0, i.jsx)(l.Ji, {
                 ref: v,
-                sprites: null != C ? C : a.CA,
+                sprites: null != Z ? Z : a.CA,
                 colors: null != n ? n : a.Br,
                 spriteWidth: a.Ko,
                 spriteHeight: a.Ko,

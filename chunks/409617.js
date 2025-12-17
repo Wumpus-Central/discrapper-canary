@@ -12,8 +12,8 @@ var i = e(54381),
     g = e(613734),
     u = e(800530),
     p = e(388032),
-    h = e(707489),
-    N = e(186425);
+    N = e(327805),
+    h = e(420418);
 function C(n) {
     let { className: t, isDsaEligible: e = !1, onClose: s, onNext: C, onBack: j } = n,
         _ = (0, g.U0)(),
@@ -32,16 +32,16 @@ function C(n) {
             (0, i.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
                 direction: d.Z.Direction.VERTICAL,
-                className: N.header,
+                className: h.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(o.Heading, {
-                        className: N.title,
+                        className: h.title,
                         variant: "heading-xl/semibold",
                         children: p.intl.string(p.t["C5q+pW"]),
                     }),
                     (0, i.jsx)(o.Text, {
-                        className: N.subtitle,
+                        className: h.subtitle,
                         color: "text-default",
                         variant: "text-md/normal",
                         children: p.intl.string(p.t.VEcRhw),
@@ -49,14 +49,14 @@ function C(n) {
                     null != s &&
                         (0, i.jsx)(o.olH, {
                             "data-migration-pending": !0,
-                            className: N.closeButton,
+                            className: h.closeButton,
                             onClick: s,
                         }),
                 ],
             }),
             (0, i.jsxs)(o.hzk, {
                 "data-migration-pending": !0,
-                className: l()(h.modalContent, t),
+                className: l()(N.modalContent, t),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(o.FXm, {
@@ -97,7 +97,7 @@ function C(n) {
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        className: h.disclaimer,
+                        className: N.disclaimer,
                         children: p.intl.format(p.t["8k9GCW"], {}),
                     }),
                 ],

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(828700),
     a = n(442837),
-    s = n(252618),
-    o = n(353926),
+    o = n(252618),
+    s = n(353926),
     c = n(319443),
     u = n(106075),
     d = n(121711),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(766219),
     m = n(49898),
     b = n(10531);
-let E = function () {
-    let e = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+let _ = function () {
+    let e = (0, a.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         t = g.Z.useField("selectedTab"),
         n = (function (e) {
             switch (e) {
@@ -29,19 +29,19 @@ let E = function () {
                     (0, p.vE)(e);
             }
         })(t),
-        E = (0, l.TH)();
+        _ = (0, l.TH)();
     return (
         i.useEffect(() => {
-            let e = E.pathname,
+            let e = _.pathname,
                 t = (0, h.I)(e);
             t !== g.Z.getField("selectedTab") && g.Z.setState({ selectedTab: t });
-        }, [E.pathname]),
+        }, [_.pathname]),
         i.useEffect(() => {
             e && (0, f.RI)({ selectedTab: t });
         }, [t, e]),
         (0, r.jsxs)("section", {
             className: b.container,
-            children: [(0, r.jsx)(s.yY, { location: (0, h.s)(t) }), (0, r.jsx)("div", { className: b.dragRegion }), n],
+            children: [(0, r.jsx)(o.yY, { location: (0, h.s)(t) }), (0, r.jsx)("div", { className: b.dragRegion }), n],
         })
     );
 };

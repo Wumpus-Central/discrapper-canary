@@ -1,4 +1,4 @@
-n.d(t, { C: () => m });
+n.d(t, { C: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,7 +9,7 @@ var r = n(54381),
     d = n(566084),
     u = n(196961),
     g = n(203377);
-function m() {
+function f() {
     let {
             vanityURLCode: e,
             hasChanges: t,
@@ -19,24 +19,24 @@ function m() {
             hasChanges: d.Z.hasChanges(),
             errorDetails: d.Z.errorDetails,
         })),
-        { guild: m, submitting: p, errors: f, hasChanges: h } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        b = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, g.LG)(f)), [f, n]),
+        { guild: f, submitting: m, errors: b, hasChanges: p } = (0, l.cj)([o.Z], () => o.Z.getProps()),
+        h = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, g.LG)(b)), [b, n]),
         x = i.useCallback(async () => {
-            if (null != m && (t && (await (0, c.en)(m.id, e, { throwErr: !0 })), h)) {
+            if (null != f && (t && (await (0, c.en)(f.id, e, { throwErr: !0 })), p)) {
                 let e = {
-                    premiumProgressBarEnabled: m.premiumProgressBarEnabled,
-                    banner: m.banner,
-                    splash: m.splash,
+                    premiumProgressBarEnabled: f.premiumProgressBarEnabled,
+                    banner: f.banner,
+                    splash: f.splash,
                 };
-                await s.Z.saveGuild(m.id, e, { throwErr: !0 });
+                await s.Z.saveGuild(f.id, e, { throwErr: !0 });
             }
-        }, [m, h, t, e]),
+        }, [f, p, t, e]),
         j = i.useCallback(() => {
-            null != m && (s.Z.init(m.id), (0, c.H7)());
-        }, [m]);
+            null != f && (s.Z.init(f.id), (0, c.H7)());
+        }, [f]);
     return (0, r.jsx)(a.Z, {
-        submitting: p,
-        errorMessage: b,
+        submitting: m,
+        errorMessage: h,
         onSave: x,
         onReset: j,
     });

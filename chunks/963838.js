@@ -2,7 +2,7 @@ n.d(t, {
     Iu: () => G,
     Jw: () => k,
     _r: () => Z,
-    cX: () => F,
+    cX: () => B,
     lv: () => U,
     v: () => L,
 });
@@ -34,8 +34,8 @@ var r = n(392711),
     N = n(134432),
     P = n(594174),
     R = n(768581),
-    D = n(176354),
-    w = n(353368),
+    w = n(176354),
+    D = n(353368),
     x = n(388032);
 let L = {
         start: 10,
@@ -44,8 +44,8 @@ let L = {
     j = [a],
     M = [o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C],
     k = {
-        [w.q.BASIC]: j,
-        [w.q.PREMIUM]: M,
+        [D.q.BASIC]: j,
+        [D.q.PREMIUM]: M,
     },
     U = i().memoize(
         (e) =>
@@ -54,7 +54,7 @@ let L = {
                 (n.src = e),
                     (n.crossOrigin = "Anonymous"),
                     (n.onload = () => {
-                        let r = w.v * (0, N.x_)();
+                        let r = D.v * (0, N.x_)();
                         if (n.width === r && n.height === r) t(e);
                         else {
                             var i;
@@ -69,14 +69,14 @@ let L = {
     ),
     G = (e, t) => {
         let n = k[e];
-        if (null != t && e === w.q.PREMIUM) {
+        if (null != t && e === D.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
         }
         return Math.floor(Math.random() * n.length);
     };
 function Z(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.v;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D.v;
     if (null != e.id) {
         var n;
         return R.ZP.getEmojiURL({
@@ -87,9 +87,9 @@ function Z(e) {
     }
     let r = A.ZP.convertSurrogateToName(e.name, !1),
         i = A.ZP.getByName(r);
-    return null != i ? D.ZP.getURL(i.surrogates) : "";
+    return null != i ? w.ZP.getURL(i.surrogates) : "";
 }
-function B(e, t) {
+function F(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -99,11 +99,11 @@ function B(e, t) {
         .uniq()
         .value();
 }
-function F(e) {
+function B(e) {
     var t, n, r, i, a, o;
     if (e.length < 1) return "";
-    let s = B(e, "userId"),
-        l = B(e, "emojiName"),
+    let s = F(e, "userId"),
+        l = F(e, "emojiName"),
         c = l.length < 2 ? (null != (t = null == l ? void 0 : l[0]) ? t : "") : l.join(", ");
     return s.length < 1
         ? ""

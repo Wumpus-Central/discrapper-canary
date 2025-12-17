@@ -3,16 +3,16 @@ var r = n(54381);
 n(473749);
 var i = n(399606),
     s = n(481060),
-    l = n(700582),
-    a = n(594174),
+    a = n(700582),
+    l = n(594174),
     o = n(388032),
-    c = n(105156);
+    c = n(929903);
 function u(e) {
     let { friendMemberIds: t } = e,
-        n = (0, i.Wu)([a.default], () =>
+        n = (0, i.Wu)([l.default], () =>
             t
                 .slice(0, 3)
-                .map((e) => a.default.getUser(e))
+                .map((e) => l.default.getUser(e))
                 .filter((e) => null != e),
         );
     if (0 === n.length) return null;
@@ -34,7 +34,7 @@ function u(e) {
                         {
                             className: c.avatarWrapper,
                             style: { zIndex: n.length - t },
-                            children: (0, r.jsx)(l.Z, {
+                            children: (0, r.jsx)(a.Z, {
                                 user: e,
                                 size: s.EFr.SIZE_16,
                             }),

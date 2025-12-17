@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(243778),
     g = n(921944),
     E = n(388032),
-    b = n(627261);
+    b = n(964056);
 let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
@@ -33,8 +33,8 @@ let y = (0, a.U)((e) => ({
             { activeEntryId: C, setActiveEntryId: A } = y(),
             N = C === t.id,
             P = T && N ? [s.z.CLOUD_PLAY_POPOVER] : [],
-            [R, D] = (0, h.US)(P),
-            w = R === s.z.CLOUD_PLAY_POPOVER;
+            [R, w] = (0, h.US)(P),
+            D = R === s.z.CLOUD_PLAY_POPOVER;
         i.useEffect(() => {
             T && null === C && A(t.id);
         }, [C, T, t.id, A]);
@@ -43,14 +43,14 @@ let y = (0, a.U)((e) => ({
         };
         i.useEffect(
             () => () => {
-                w && (D(g.L.USER_DISMISS), A(null));
+                D && (w(g.L.USER_DISMISS), A(null));
             },
-            [w, D, A],
+            [D, w, A],
         );
         let [L, j] = i.useState(!1);
         i.useEffect(() => {
-            w && !L && j(!0);
-        }, [w, L]),
+            D && !L && j(!0);
+        }, [D, L]),
             (0, p.Z)(
                 {
                     name: o.ImpressionNames.CLOUD_PLAY_CTA,
@@ -61,13 +61,13 @@ let y = (0, a.U)((e) => ({
                 [L],
             );
         let M = () => {
-            D(g.L.USER_DISMISS), A(null);
+            w(g.L.USER_DISMISS), A(null);
         };
         return (0, r.jsx)(l.J2, {
             title: E.intl.string(E.t["+WNDtV"]),
             body: E.intl.string(E.t["5QKxGI"]),
             targetElementRef: a,
-            shouldShow: w,
+            shouldShow: D,
             position: "left",
             caretConfig: { align: "center" },
             gradientColor: "pink",

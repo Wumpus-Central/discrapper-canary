@@ -15,7 +15,7 @@ var r = n(54381),
     f = n(82856),
     p = n(981631),
     _ = n(388032),
-    m = n(152935);
+    m = n(461207);
 let h = {
         START: m.alignLeft,
         END: m.alignRight,
@@ -50,8 +50,8 @@ let h = {
             R = i.useCallback(() => {
                 I && P();
             }, [I, P]),
-            D = (0, s.Z)(null, R),
-            w = i.useMemo(
+            w = (0, s.Z)(null, R),
+            D = i.useMemo(
                 () =>
                     (0, r.jsx)(d.L, {
                         analyticsPage: g,
@@ -85,8 +85,8 @@ let h = {
                             [m.hidden]: C,
                             [m.visible]: !C,
                         }),
-                        ref: D,
-                        children: w,
+                        ref: w,
+                        children: D,
                     }),
             ],
         });

@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(716534),
     d = n(664891),
     m = n(171246),
-    p = n(430824),
-    f = n(563132),
+    f = n(430824),
+    p = n(563132),
     b = n(409813),
     h = n(45572),
     g = n(51499),
@@ -19,7 +19,7 @@ var i = n(54381),
     v = n(614277),
     y = n(698708),
     O = n(388032),
-    C = n(633290);
+    C = n(301120);
 function S(e) {
     var t, n;
     let {
@@ -30,9 +30,9 @@ function S(e) {
             reviewWarningMessage: E,
             planGroup: T,
             openInvoiceId: k,
-            analyticsData: _,
-            analyticsLocation: w,
-            handleClose: Z,
+            analyticsData: w,
+            analyticsLocation: Z,
+            handleClose: _,
         } = e,
         {
             activeSubscription: A,
@@ -53,12 +53,12 @@ function S(e) {
             purchaseState: Q,
             subscriptionMetadataRequest: V,
             setHasAcceptedTerms: K,
-        } = (0, f.JL)();
+        } = (0, p.JL)();
     a()(null != W, "Expected plan to be selected");
     let U = r.useRef(null),
         [X, $] = (0, c.Z)(!1, 500),
         ee = null == V ? void 0 : V.guild_id,
-        et = (0, o.e7)([p.Z], () => p.Z.getGuild(ee), [ee]),
+        et = (0, o.e7)([f.Z], () => f.Z.getGuild(ee), [ee]),
         [en, ei] = r.useState(null),
         er = (0, m.KW)(null != (t = null == z ? void 0 : z.flags) ? t : 0);
     r.useEffect(() => {
@@ -141,7 +141,7 @@ function S(e) {
                               metadata: er ? void 0 : V,
                               purchaseState: Q,
                               hideSubscriptionDetails: !0,
-                              handleClose: Z,
+                              handleClose: _,
                           })
                         : (0, i.jsx)(d.Z, {
                               premiumSubscription: A,
@@ -161,7 +161,7 @@ function S(e) {
                               onCurrencyChange: (e) => G(e),
                               hasOpenInvoice: null != k,
                               purchaseState: Q,
-                              handleClose: Z,
+                              handleClose: _,
                           }),
                 ],
             }),
@@ -174,8 +174,8 @@ function S(e) {
                     onPurchaseError: (e) => J(e),
                     legalTermsNodeRef: ea,
                     flashLegalTerms: () => $(!0),
-                    analyticsLocation: w,
-                    baseAnalyticsData: _,
+                    analyticsLocation: Z,
+                    baseAnalyticsData: w,
                     flowStartTime: B.startTime,
                     planGroup: T,
                     purchaseTokenAuthState: M,

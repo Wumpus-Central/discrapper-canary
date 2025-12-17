@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(953529);
+n.d(t, { Z: () => b }), n(388685), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
@@ -21,7 +21,7 @@ function c(e, t, n) {
 let d = [],
     u = !1,
     g = [];
-function m() {
+function f() {
     let e = s.Z.getGuildId();
     if (null == e) {
         (d = []), (g = []), (u = !1);
@@ -29,7 +29,7 @@ function m() {
     }
     (d = [...a.Z.getConnections(e)]), (g = []), (u = !1);
 }
-class p extends (r = i.ZP.Store) {
+class m extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(a.Z, s.Z);
     }
@@ -67,11 +67,11 @@ class p extends (r = i.ZP.Store) {
         return g.length > 0;
     }
 }
-c(p, "displayName", "GuildSettingsOnboardingConnectionsStore");
-let f = new p(l.Z, {
-    GUILD_SETTINGS_INIT: m,
-    GUILD_SETTINGS_SET_SECTION: m,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: m,
+c(m, "displayName", "GuildSettingsOnboardingConnectionsStore");
+let b = new m(l.Z, {
+    GUILD_SETTINGS_INIT: f,
+    GUILD_SETTINGS_SET_SECTION: f,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: f,
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_ADD: function (e) {
         let { connection: t } = e;
         if (d.length >= o.yx) {

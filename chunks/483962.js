@@ -1,45 +1,45 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => b });
 var i = n(54381),
     r = n(473749),
-    s = n(442837),
-    o = n(831218),
-    l = n(840780),
-    a = n(51596),
+    a = n(442837),
+    s = n(831218),
+    o = n(840780),
+    l = n(51596),
     c = n(905423),
     d = n(237997),
     u = n(145597),
-    h = n(981631),
-    p = n(388032),
-    f = n(537074);
-let g = () => (0, a.$Z)("DM_SEARCH"),
-    m = r.memo(function () {
-        let e = (0, s.e7)([d.default], () => (d.default.isLocked((0, u.getPID)()) ? "true" : "false")),
+    f = n(981631),
+    h = n(388032),
+    p = n(808006);
+let g = () => (0, l.$Z)("DM_SEARCH"),
+    b = r.memo(function () {
+        let e = (0, a.e7)([d.default], () => (d.default.isLocked((0, u.getPID)()) ? "true" : "false")),
             t = (0, c.Z)((e) => {
                 let { channelId: t } = e;
                 return t;
             });
         return (0, i.jsxs)("div", {
-            className: f.privateChannels,
+            className: p.privateChannels,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.searchBar,
+                    className: p.searchBar,
                     children: (0, i.jsx)("button", {
                         type: "button",
-                        className: f.searchBarComponent,
+                        className: p.searchBarComponent,
                         onClick: g,
-                        children: p.intl.string(p.t.LzcpeZ),
+                        children: h.intl.string(h.t.LzcpeZ),
                     }),
                 }),
-                (0, i.jsx)(o.Z, {
+                (0, i.jsx)(s.Z, {
                     padding: 8,
-                    theme: h.BRd.DARK,
+                    theme: f.BRd.DARK,
                     version: e,
                     selectedChannelId: t,
                 }),
                 (0, i.jsx)("section", {
-                    className: f.panels,
-                    "aria-label": p.intl.string(p.t.StREWK),
-                    children: (0, i.jsx)(l.Z, { guildId: null }),
+                    className: p.panels,
+                    "aria-label": h.intl.string(h.t.StREWK),
+                    children: (0, i.jsx)(o.Z, { guildId: null }),
                 }),
             ],
         });

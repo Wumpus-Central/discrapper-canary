@@ -1,37 +1,37 @@
-n.d(e, { J: () => O });
+n.d(e, { J: () => N });
 var i = n(657707),
     l = n(704215),
     s = n(509613),
-    r = n(970013),
-    u = n(313789),
+    u = n(970013),
+    r = n(313789),
     a = n(526665),
     o = n(327192),
-    c = n(984975),
-    d = n(105429),
-    T = n(726985),
-    S = n(388032);
-let g = (0, s.k4)(u.n.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [c.u] }),
-    I = (0, s.k4)(u.n.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [d.T] }),
-    E = (0, s.wf)(u.n.CONNECTIONS_PANEL, {
+    S = n(984975),
+    T = n(105429),
+    c = n(726985),
+    E = n(388032);
+let d = (0, s.k4)(r.n.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [S.u] }),
+    g = (0, s.k4)(r.n.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [T.T] }),
+    _ = (0, s.wf)(r.n.CONNECTIONS_PANEL, {
         usePredicate: () => !(0, a.gN)("LegacyConnectionsPanel"),
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
+        useTitle: () => E.intl.string(E.t["3fe7U5"]),
         hideInStreamerMode: !0,
         StronglyDiscouragedCustomComponent: o.ZP,
         buildLayout: () => [],
     }),
-    _ = (0, s.wf)(u.n.CONNECTIONS_PANEL, {
+    I = (0, s.wf)(r.n.CONNECTIONS_PANEL, {
         usePredicate: () => (0, a.gN)("ConnectionsPanel"),
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
+        useTitle: () => E.intl.string(E.t["3fe7U5"]),
         hideInStreamerMode: !0,
-        buildLayout: () => [g, I],
+        buildLayout: () => [d, g],
     }),
-    O = (0, s.m7)(u.n.CONNECTIONS_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
-        getLegacySearchKey: () => ((0, a.Gl)("ConnectionsPanel") ? void 0 : T.s6.CONNECTIONS),
+    N = (0, s.m7)(r.n.CONNECTIONS_SIDEBAR_ITEM, {
+        useTitle: () => E.intl.string(E.t["3fe7U5"]),
+        getLegacySearchKey: () => ((0, a.Gl)("ConnectionsPanel") ? void 0 : c.s6.CONNECTIONS),
         icon: i.xPt,
         trailing: {
-            type: r.W.BADGE_NEW,
+            type: u.W.BADGE_NEW,
             getDismissibleContentTypes: () => [l.z.NEW_CRUNCHYROLL_CONNECTION],
         },
-        buildLayout: () => ((0, a.Gl)("ConnectionsPanel") ? [_] : [E]),
+        buildLayout: () => ((0, a.Gl)("ConnectionsPanel") ? [I] : [_]),
     });

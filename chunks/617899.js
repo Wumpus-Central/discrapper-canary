@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(904245),
-    s = n(944486),
-    o = n(82950),
+    o = n(944486),
+    s = n(82950),
     c = n(981631),
     u = n(921944),
     d = n(388032),
@@ -25,7 +25,7 @@ function f(e, t, n) {
 class g extends i.PureComponent {
     render() {
         let e = "".concat(d.intl.string(d.t.VWqWZQ), "\n").concat(d.intl.string(d.t["0Lgb/K"]));
-        return (0, r.jsx)(o.Z, {
+        return (0, r.jsx)(s.Z, {
             guild: this.props.guild,
             onDismissed: this.handleClose,
             onClick: this.handleInvite,
@@ -42,7 +42,7 @@ class g extends i.PureComponent {
             f(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e("7654"), n.e("45965")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -89,7 +89,7 @@ class g extends i.PureComponent {
                 });
             }),
             f(this, "handleClose", () => {
-                let e = s.Z.getChannelId(),
+                let e = o.Z.getChannelId(),
                     t = d.intl.formatToPlainString(d.t.DEn7nu, { invitePeople: d.intl.string(d.t.Sd8Ixw) });
                 this.props.markAsDismissed(u.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t);
             });

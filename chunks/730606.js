@@ -1,7 +1,7 @@
 n.d(t, {
     Qk: () => A,
     WG: () => R,
-    ZP: () => D,
+    ZP: () => w,
 }),
     n(388685);
 var r = n(54381),
@@ -27,7 +27,7 @@ var r = n(54381),
     S = n(549635),
     I = n(981631),
     T = n(388032),
-    C = n(810348);
+    C = n(107390);
 function A(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: o, height: s } = (0, b.p)(i, {
@@ -91,7 +91,7 @@ function R(e, t) {
         });
     }
 }
-function D(e) {
+function w(e) {
     let {
             items: t,
             onIndexChange: n,
@@ -119,11 +119,11 @@ function D(e) {
             }
         );
     }, [R, A]);
-    let D = t[f],
-        w = (0, u.g4)(
+    let w = t[f],
+        D = (0, u.g4)(
             {
                 type: l.l.GenericMedia,
-                media: D,
+                media: w,
             },
             c,
         ),
@@ -165,11 +165,11 @@ function D(e) {
                 currentIndex: f,
                 children: (e, t) =>
                     (0, r.jsx)(P, {
-                        isObscured: !h && w,
-                        src: D.url,
+                        isObscured: !h && D,
+                        src: w.url,
                         children: (n) =>
                             (0, r.jsx)(S.ZP, {
-                                media: D,
+                                media: w,
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,

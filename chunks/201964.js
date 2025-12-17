@@ -1,10 +1,10 @@
-n.d(t, { o: () => i });
+n.d(t, { o: () => l });
 var a = n(979554),
     r = n(429368);
-let i = (e, t) => {
+let l = (e, t) => {
     let n = (0, r.o)(e),
-        i = null != t ? t : n;
-    return (null == e ? void 0 : e.type) === a.Z.VARIANTS_GROUP && null != e.variants && e.variants.length > i
-        ? e.variants[i].items[0]
+        l = null != t ? t : n;
+    return (null == e ? void 0 : e.type) === a.Z.VARIANTS_GROUP && null != e.variants && e.variants.length > l
+        ? e.variants[l].items[0]
         : e.items[0];
 };

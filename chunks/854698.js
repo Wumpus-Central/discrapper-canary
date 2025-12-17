@@ -2,10 +2,10 @@ n.d(t, {
     BP: () => X,
     DK: () => H,
     G3: () => _,
-    Ho: () => B,
+    Ho: () => F,
     Ib: () => m,
     P8: () => N,
-    PJ: () => F,
+    PJ: () => B,
     Rp: () => Y,
     Uq: () => G,
     Y4: () => Z,
@@ -14,7 +14,7 @@ n.d(t, {
     ib: () => P,
     lh: () => J,
     mF: () => q,
-    ub: () => w,
+    ub: () => D,
     v1: () => k,
     x6: () => M,
     zi: () => Q,
@@ -109,17 +109,17 @@ let P = () => {
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
     R = (e, t) => (0, l.vc)(e, e.get("years") === t.get("years") ? h : g),
-    D = (e, t) => {
+    w = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
         return n > 1 || n < 0 ? R(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? "sameDay" : "nextDay", e, t));
     };
-function w(e, t, n) {
+function D(e, t, n) {
     null == n && (n = a()());
     let r = a()(e),
         i = null != t && "" !== t ? a()(t) : void 0,
         o = null != t && r.isSame(i, "day");
     return {
-        startDateTimeString: D(r, n),
+        startDateTimeString: w(r, n),
         endDateTimeString: null != i ? (o ? i.format(E) : R(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, "hour"),
@@ -172,7 +172,7 @@ function G(e, t) {
 function Z(e, t) {
     return null == e || null == t ? null == e && null == t : G(e.startDate, t.startDate) && G(e.endDate, t.endDate);
 }
-function B(e) {
+function F(e) {
     var t;
     let n = null != e.byWeekday ? [...e.byWeekday] : null,
         r = null == (t = e.byNWeekday) ? void 0 : t.map((e) => new o.OG(e.day, e.n)),
@@ -192,7 +192,7 @@ function B(e) {
         })
     );
 }
-function F(e, t, n) {
+function B(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = n > new Date() ? n : new Date(),
         a = new Date();
@@ -319,7 +319,7 @@ function q(e, t) {
 }
 function Q(e, t) {
     if (null == t) return d.z.NONE;
-    let n = B(t);
+    let n = F(t);
     switch (n.options.freq) {
         case o.Ci.WEEKLY:
             if (n.options.interval < 1 || n.options.interval > 2) return d.z.NONE;

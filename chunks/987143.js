@@ -1,4 +1,4 @@
-n.d(e, { A: () => S });
+n.d(e, { A: () => c });
 var i = n(54381);
 n(473749);
 var l = n(442837),
@@ -7,10 +7,10 @@ var l = n(442837),
     r = n(435064),
     a = n(39604),
     o = n(509613),
-    c = n(313789),
-    d = n(388032);
-let S = (0, o.ON)(c.n.CLIPS_STORAGE_LOCATION, {
-    useSearchTerms: () => [d.intl.string(d.t.s4773E), d.intl.string(d.t.svjwGh)],
+    S = n(313789),
+    T = n(388032);
+let c = (0, o.ON)(S.n.CLIPS_STORAGE_LOCATION, {
+    useSearchTerms: () => [T.intl.string(T.t.s4773E), T.intl.string(T.t.svjwGh)],
     Component: () => {
         let t = (0, l.e7)([r.Z], () => r.Z.getSettings().storageLocation),
             e = async () => {
@@ -20,11 +20,11 @@ let S = (0, o.ON)(c.n.CLIPS_STORAGE_LOCATION, {
                 t.length > 0 && a.T1(t[0]);
             };
         return (0, i.jsx)(s.gNt, {
-            label: d.intl.string(d.t.s4773E),
-            description: d.intl.string(d.t.svjwGh),
+            label: T.intl.string(T.t.s4773E),
+            description: T.intl.string(T.t.svjwGh),
             layout: "horizontal",
             children: (0, i.jsx)(s.P3F, {
-                "aria-label": d.intl.formatToPlainString(d.t.iMONTj, { storageLocation: t }),
+                "aria-label": T.intl.formatToPlainString(T.t.iMONTj, { storageLocation: t }),
                 onClick: e,
                 children: (0, i.jsx)(s.oil, {
                     tabIndex: -1,

@@ -1,38 +1,38 @@
 n.d(t, { Z: () => g });
 var r = n(54381),
     o = n(473749),
-    i = n(120356),
-    l = n.n(i),
-    a = n(481060),
+    a = n(120356),
+    i = n.n(a),
+    l = n(481060),
     c = n(782568),
     s = n(163379),
     u = n(63063),
-    b = n(604227),
-    f = n(981631),
-    d = n(388032),
-    y = n(989281);
+    f = n(604227),
+    d = n(981631),
+    b = n(388032),
+    y = n(205904);
 function p(e) {
     let { onClose: t } = e;
-    return (0, r.jsx)(a.v2r, {
+    return (0, r.jsx)(l.v2r, {
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, r.jsxs)(a.kSQ, {
+        children: (0, r.jsxs)(l.kSQ, {
             children: [
-                (0, r.jsx)(a.sNh, {
+                (0, r.jsx)(l.sNh, {
                     id: "changelog",
-                    label: d.intl.string(d.t.LRmNAl),
+                    label: b.intl.string(b.t.LRmNAl),
                     action: () => (0, s.Z)(!0),
                 }),
-                (0, r.jsx)(a.sNh, {
+                (0, r.jsx)(l.sNh, {
                     id: "acknowledgements",
-                    label: d.intl.string(d.t["0nUKy3"]),
-                    action: () => (0, c.Z)(f.EYA.ACKNOWLEDGEMENTS),
+                    label: b.intl.string(b.t["0nUKy3"]),
+                    action: () => (0, c.Z)(d.EYA.ACKNOWLEDGEMENTS),
                 }),
-                (0, r.jsx)(a.sNh, {
+                (0, r.jsx)(l.sNh, {
                     id: "support",
-                    label: d.intl.string(d.t["Yl/Riu"]),
+                    label: b.intl.string(b.t["Yl/Riu"]),
                     action: () => (0, c.Z)(u.w),
                 }),
             ],
@@ -43,17 +43,17 @@ function g() {
     let e = o.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(b.Z, { compact: !0 }),
+            (0, r.jsx)(f.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
                 className: y.links,
                 children: [
-                    (0, r.jsx)(a.Anchor, {
-                        href: f.EYA.PRIVACY,
-                        children: (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(l.Anchor, {
+                        href: d.EYA.PRIVACY,
+                        children: (0, r.jsx)(l.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: d.intl.string(d.t["Knf/f/"]),
+                            children: b.intl.string(b.t["Knf/f/"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -61,13 +61,13 @@ function g() {
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(a.Anchor, {
-                        href: f.EYA.TERMS,
-                        children: (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(l.Anchor, {
+                        href: d.EYA.TERMS,
+                        children: (0, r.jsx)(l.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: d.intl.string(d.t.uFSTGq),
+                            children: b.intl.string(b.t.uFSTGq),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -75,20 +75,20 @@ function g() {
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(a.yRy, {
+                    (0, r.jsx)(l.yRy, {
                         targetElementRef: e,
                         position: "top",
                         align: "center",
                         spacing: 0,
-                        animation: a.yRy.Animation.NONE,
+                        animation: l.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, r.jsx)(p, { onClose: t });
                         },
                         children: (t, n) => {
-                            var o, i;
+                            var o, a;
                             return (0, r.jsx)(
-                                a.Anchor,
+                                l.Anchor,
                                 ((o = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,20 +114,20 @@ function g() {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i =
+                                (a = a =
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: l()(y.moreButton, { [y.active]: n.isShown }),
-                                        children: (0, r.jsx)(a.Text, {
+                                        className: i()(y.moreButton, { [y.active]: n.isShown }),
+                                        children: (0, r.jsx)(l.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: d.intl.string(d.t["UKOtz+"]),
+                                            children: b.intl.string(b.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
+                                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -135,8 +135,8 @@ function g() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
                                 o),
                             );

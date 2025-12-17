@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(467721),
-    l = n(442837),
+    l = n(236726),
+    i = n(442837),
     s = n(481060),
     o = n(393238),
     c = n(110924),
@@ -32,29 +32,29 @@ function p(e) {
     var t;
     let { children: n } = e,
         { springConfig: m, isExpanded: p } = r.useContext(u),
-        h = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: x, height: f = null } = (0, o.ZP)(),
-        g = null != (t = (0, c.Z)(f)) ? t : null,
-        [{ height: b }, v] = (0, s.q_F)(() => ({
+        h = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        { ref: f, height: x = null } = (0, o.ZP)(),
+        b = null != (t = (0, c.Z)(x)) ? t : null,
+        [{ height: g }, v] = (0, s.q_F)(() => ({
             from: { height: 0 },
             config: m,
         }));
     return (
         r.useLayoutEffect(() => {
-            null !== f &&
+            null !== x &&
                 v({
-                    height: f,
-                    immediate: !p || h || null === g,
+                    height: x,
+                    immediate: !p || h || null === b,
                 });
-        }, [f, v, p, h, g]),
-        (0, a.jsx)(i.animated.div, {
+        }, [x, v, p, h, b]),
+        (0, a.jsx)(l.animated.div, {
             style: {
-                height: null === g ? "auto" : b,
+                height: null === b ? "auto" : g,
                 overflow: "hidden",
             },
             children: (0, a.jsx)("div", {
                 style: { overflow: "hidden" },
-                ref: x,
+                ref: f,
                 children: n,
             }),
         })

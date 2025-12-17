@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => es,
-    b2: () => w,
+    b2: () => D,
 }),
     n(388685);
 var r = n(952639),
@@ -31,7 +31,7 @@ var r = n(952639),
     N = n(799525),
     P = n(981631),
     R = n(526761);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function D(e, t, n) {
         e
     );
 }
-let w = 3000,
+let D = 3000,
     x = 800,
     L = {};
 function j(e) {
@@ -122,12 +122,12 @@ let Z = (e, t) => {
         );
     }
 };
-function B(e) {
+function F(e) {
     return null == L[j(e)];
 }
-function F(e, t) {
+function B(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
-        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, C.MD)(e)).filter(B) : e.filter(B);
+        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, C.MD)(e)).filter(F) : e.filter(F);
     i.forEach((e) => {
         let t = j(e);
         null == L[t] &&
@@ -136,7 +136,7 @@ function F(e, t) {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     G(e);
-                }, w),
+                }, D),
             }));
     });
     let a = n || new Set(i.map((e) => e.channel_id)).size > 1;
@@ -359,7 +359,7 @@ function W(e, t) {
                     numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
-        n.length > 0 && (F(n, t), !0)
+        n.length > 0 && (B(n, t), !0)
     );
 }
 function K(e) {
@@ -391,7 +391,7 @@ function K(e) {
                     numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
-        t.length > 0 && (F(t), !0)
+        t.length > 0 && (B(t), !0)
     );
 }
 function z(e) {
@@ -496,7 +496,7 @@ function ea(e) {
 class eo extends c.Z {
     constructor(...e) {
         super(...e),
-            D(this, "actions", {
+            w(this, "actions", {
                 LOAD_MESSAGES_SUCCESS: Q,
                 LOAD_FORUM_POSTS: $,
                 LOAD_THREADS_SUCCESS: ee,

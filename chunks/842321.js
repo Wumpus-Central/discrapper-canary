@@ -1,4 +1,4 @@
-var r = n(970711);
+var r = n(555619);
 e.exports = n.v(t, e.id, "3fe010e7d5db0465", {
     "./libdiscore_wasm_bg.js": {
         __wbindgen_string_new: r.h4,

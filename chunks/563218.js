@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(16609),
     f = n(917107),
     p = n(716600),
-    m = n(918559),
-    _ = n(981631);
+    b = n(918559),
+    m = n(981631);
 let g = (e, t) => {
     a.Z.wait(() => {
         (0, o.Cz)(e, t);
@@ -20,12 +20,12 @@ let g = (e, t) => {
 function v(e) {
     let t,
         { embedId: n, className: a, style: o } = e,
-        v = (0, l.e7)([c.Z], () => c.Z.getWindow(_.KJ3.CHANNEL_CALL_POPOUT)),
-        b = (0, p.Z)(),
-        h = (0, l.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null == b || (0, f.Z)((0, d.p)(b.location)) || h !== m.Ez.PANEL) {
-        var E;
-        t = null != (E = null == v ? void 0 : v.window) ? E : window;
+        v = (0, l.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
+        h = (0, p.Z)(),
+        E = (0, l.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+    if (null == h || (0, f.Z)((0, d.p)(h.location)) || E !== b.Ez.PANEL) {
+        var _;
+        t = null != (_ = null == v ? void 0 : v.window) ? _ : window;
     } else t = window;
     let y = i.useRef(null),
         S = i.useMemo(() => {
@@ -43,9 +43,9 @@ function v(e) {
         i.useEffect(
             () => (
                 t.addEventListener("resize", S),
-                s.S.subscribe(_.CkL.REMEASURE_TARGET, S),
+                s.S.subscribe(m.CkL.REMEASURE_TARGET, S),
                 () => {
-                    t.removeEventListener("resize", S), s.S.unsubscribe(_.CkL.REMEASURE_TARGET, S);
+                    t.removeEventListener("resize", S), s.S.unsubscribe(m.CkL.REMEASURE_TARGET, S);
                 }
             ),
             [S, t],

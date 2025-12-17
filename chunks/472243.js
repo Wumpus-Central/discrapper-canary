@@ -16,7 +16,7 @@ var i = n(120356),
     h = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(781990);
+    b = n(384214);
 function y(e) {
     var t, n, i, y;
     let { type: O, textValue: v, maxCharacterCount: S, showRemainingCharsAfterCount: I, className: T } = e,
@@ -25,8 +25,8 @@ function y(e) {
         N = null != S ? S : A,
         P = null != (y = null != I ? I : S) ? y : A / 10,
         R = v.length,
-        D = null != O.upsellLongMessages && (null != R ? R : 0) > h.J6R && C,
-        w = null != O.upsellLongMessages && !C,
+        w = null != O.upsellLongMessages && (null != R ? R : 0) > h.J6R && C,
+        D = null != O.upsellLongMessages && !C,
         x = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
         L = N - R,
         j = L > P,
@@ -38,7 +38,7 @@ function y(e) {
                   ? E.intl.formatToPlainString(E.t.qH8uFW, { count: L })
                   : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(c.Z.CHARACTER_COUNT);
-    if (!((D && L >= 0) || !j || (w && !j))) return null;
+    if (!((w && L >= 0) || !j || (D && !j))) return null;
     let G = L >= 0;
     return (0, r.jsx)(u.Gt, {
         value: U,
@@ -48,7 +48,7 @@ function y(e) {
                 (0, r.jsxs)("div", {
                     className: b.flairContainer,
                     children: [
-                        D && G
+                        w && G
                             ? (0, r.jsx)(s.u, {
                                   text: E.intl.formatToPlainString(E.t.vcvHa0, { maxLength: N }),
                                   position: "top",
@@ -75,7 +75,7 @@ function y(e) {
                     ],
                 }),
                 (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: L }) }),
-                w && !j
+                D && !j
                     ? (0, r.jsx)(m.Z, {
                           className: b.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,

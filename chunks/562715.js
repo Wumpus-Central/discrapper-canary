@@ -14,8 +14,8 @@ var l = n(54381),
 function f(e) {
     var t, n;
     let { connection: f, guildId: g, location: j } = e,
-        v = (0, a.ZP)(),
-        x =
+        x = (0, a.ZP)(),
+        v =
             null != (n = null != f.provider_id ? (null == (t = c.Z.get(f.provider_id)) ? void 0 : t.name) : null)
                 ? n
                 : h.intl.string(h.t.NzCoRx),
@@ -76,14 +76,14 @@ function f(e) {
                 let e = c.Z.get(f.provider_id),
                     t =
                         (null == e ? void 0 : e.icon) != null
-                            ? (0, r.wj)(v)
+                            ? (0, r.wj)(x)
                                 ? e.icon.darkPNG
                                 : e.icon.lightPNG
                             : null;
                 if (null != t)
                     return (0, l.jsx)("img", {
                         src: t,
-                        alt: x,
+                        alt: v,
                         width: 40,
                         height: 40,
                     });
@@ -94,9 +94,9 @@ function f(e) {
                 height: 40,
                 color: "currentColor",
             });
-        }, [f.provider_id, v, x]);
+        }, [f.provider_id, x, v]);
     return (0, l.jsx)(m.Z, {
-        displayName: x,
+        displayName: v,
         description: f.description,
         icon: w,
         isLoading: O,

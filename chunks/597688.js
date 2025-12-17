@@ -37,23 +37,23 @@ let h = new Map(),
     N = !1,
     P = new Set(),
     R = new Map(),
-    D = new Map(),
-    w = {},
+    w = new Map(),
+    D = {},
     x = 0,
     L = (e) => {
         let { skuId: t } = e;
-        (P = new Set(P)).add(t), (R = new Map(R)).delete(t), (D = new Map(D)).delete(t);
+        (P = new Set(P)).add(t), (R = new Map(R)).delete(t), (w = new Map(w)).delete(t);
     },
     j = (e) => {
         let { skuId: t, error: n } = e;
-        (P = new Set(P)).delete(t), (R = new Map(R)).set(t, n), (D = new Map(D)).set(t, Date.now());
+        (P = new Set(P)).delete(t), (R = new Map(R)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
     M = (e) => {
         let { skuId: t, product: n } = e;
-        v.set(t, n), (P = new Set(P)).delete(t), (R = new Map(R)).delete(t), (D = new Map(D)).delete(t);
+        v.set(t, n), (P = new Set(P)).delete(t), (R = new Map(R)).delete(t), (w = new Map(w)).delete(t);
     },
     k = (e) => {
-        (N = !0), (r = void 0), (a = void 0), (w = e.options);
+        (N = !0), (r = void 0), (a = void 0), (D = e.options);
     },
     U = (e) => {
         let { error: t } = e;
@@ -72,7 +72,7 @@ let h = new Map(),
                 (v = new Map((0, p.Cs)(O, !0).map((e) => [e.skuId, e]))),
                 (I = [...(S = new Map((0, p.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
-        B(t, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        F(t, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
     Z = (e) => {
         if (0 === e.shopHome.categories.length) return;
@@ -80,7 +80,7 @@ let h = new Map(),
         (T = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))),
             (v = new Map((0, p.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
-    B = (e, t) => {
+    F = (e, t) => {
         if (0 === e.length) {
             C = y;
             return;
@@ -97,7 +97,7 @@ let h = new Map(),
                 C = y;
         }
     },
-    F = () => {
+    B = () => {
         (O = h),
             (v = g),
             (C = y),
@@ -106,7 +106,7 @@ let h = new Map(),
             (P = new Set()),
             (r = void 0),
             (a = void 0),
-            (w = {}),
+            (D = {}),
             (x = 0);
     },
     V = () => {
@@ -122,7 +122,7 @@ let h = new Map(),
     };
 class Y extends (o = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], F), this.syncWith([u.Z], V);
+        this.syncWith([f.default], B), this.syncWith([u.Z], V);
     }
     get isFetchingCategories() {
         return N;
@@ -140,7 +140,7 @@ class Y extends (o = l.ZP.Store) {
         return i;
     }
     get lastFetchOptions() {
-        return w;
+        return D;
     }
     get categories() {
         return O;
@@ -170,7 +170,7 @@ class Y extends (o = l.ZP.Store) {
         return null != e ? R.get(e) : void 0;
     }
     getProductFetchErrorTimestamp(e) {
-        return null != e ? D.get(e) : void 0;
+        return null != e ? w.get(e) : void 0;
     }
     getProductByStoreListingId(e) {
         return null != e ? S.get(e) : void 0;
@@ -193,5 +193,5 @@ let W = new Y(c.Z, {
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: j,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: Z,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: H,
-    LOGOUT: F,
+    LOGOUT: B,
 });

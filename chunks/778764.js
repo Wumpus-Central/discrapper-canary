@@ -1,6 +1,6 @@
 n.d(t, {
     RegisterWebAuthnCredentialModal: () => R,
-    Z: () => w,
+    Z: () => D,
 }),
     n(388685),
     n(49124),
@@ -27,7 +27,7 @@ var r = n(54381),
     v = n(755733),
     S = n(981631),
     I = n(388032),
-    T = n(421156);
+    T = n(689471);
 function C(e, t, n) {
     return (
         t in e
@@ -92,12 +92,12 @@ function R(e) {
         O = (0, d.Dt)(),
         [C, A] = i.useState(I.intl.string(I.t["I/sJtJ"])),
         [N, P] = i.useState(!1),
-        [R, D] = i.useState(h),
-        [w, x] = i.useState(""),
+        [R, w] = i.useState(h),
+        [D, x] = i.useState(""),
         [L, j] = i.useState(null),
         M = async () => {
             let e;
-            D(v.x.REGISTER);
+            w(v.x.REGISTER);
             let t =
                 g.isPlatformEmbedded && b.ZP.supportsFeature(S.eRX.WEBAUTHN)
                     ? b.ZP.webAuthnRegister(c)
@@ -105,10 +105,10 @@ function R(e) {
             try {
                 e = await t;
             } catch (e) {
-                E.Z.captureException(e), j(I.intl.string(I.t.xSCvBf)), D(v.x.INIT);
+                E.Z.captureException(e), j(I.intl.string(I.t.xSCvBf)), w(v.x.INIT);
                 return;
             }
-            x(e), D(v.x.NAME);
+            x(e), w(v.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -214,12 +214,12 @@ function R(e) {
                             onSubmit: (e) => {
                                 e.preventDefault(),
                                     y
-                                        .Sr(C, s, w)
+                                        .Sr(C, s, D)
                                         .then(async () => {
-                                            u ? D(v.x.SUCCESS) : (await (0, _.Yn)(!1), o());
+                                            u ? w(v.x.SUCCESS) : (await (0, _.Yn)(!1), o());
                                         })
                                         .catch(() => {
-                                            j(I.intl.string(I.t.fEptJP)), D(v.x.INIT);
+                                            j(I.intl.string(I.t.fEptJP)), w(v.x.INIT);
                                         });
                             },
                             children: [
@@ -267,7 +267,7 @@ function R(e) {
                                                 variant: "secondary",
                                                 text: I.intl.string(I.t["13/7kX"]),
                                                 onClick: () => {
-                                                    D(v.x.INIT);
+                                                    w(v.x.INIT);
                                                 },
                                             }),
                                         ],
@@ -327,7 +327,7 @@ function R(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(l.v2r, {
         navId: "webauthn-credential-actions",
@@ -356,7 +356,7 @@ function D(e) {
         ],
     });
 }
-function w() {
+function D() {
     let {
         credentials: e,
         hasFetchedCredentials: t,
@@ -449,7 +449,7 @@ function L(e) {
                     color: s.zx.Colors.TRANSPARENT,
                     size: s.zx.Sizes.ICON,
                     onClick: (t) => {
-                        (0, c.vq)(t, (t) => (0, r.jsx)(D, P(A({}, t), { credential: e })));
+                        (0, c.vq)(t, (t) => (0, r.jsx)(w, P(A({}, t), { credential: e })));
                     },
                     "aria-label": I.intl.string(I.t["+nrTbK"]),
                     innerClassName: T.credentialOptions,

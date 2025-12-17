@@ -1,11 +1,11 @@
 n.d(t, {
     GB: () => S,
     JI: () => N,
-    UM: () => T,
+    UM: () => O,
     V6: () => C,
     WT: () => b,
     X7: () => j,
-    jq: () => O,
+    jq: () => T,
     mx: () => _,
 }),
     n(415506);
@@ -91,7 +91,7 @@ function C(e) {
               flat: !0,
           });
 }
-function O(e) {
+function T(e) {
     let { invite: t, showBigUserIcon: n } = e,
         s = i.useMemo(
             () =>
@@ -138,7 +138,7 @@ function O(e) {
         ],
     });
 }
-function T(e) {
+function O(e) {
     let t,
         n,
         i,

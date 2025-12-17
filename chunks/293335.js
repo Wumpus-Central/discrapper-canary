@@ -4,8 +4,8 @@ var r = n(54381),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
-    s = n(481060),
-    c = n(543241),
+    c = n(481060),
+    s = n(543241),
     u = n(222677),
     d = n(995774),
     f = n(665906),
@@ -19,10 +19,10 @@ var r = n(54381),
     h = n(388032),
     j = n(438166);
 function S(e, t) {
-    let { reducedMotion: n } = i.useContext(s.Sfi),
+    let { reducedMotion: n } = i.useContext(c.Sfi),
         l = (0, f.$R)(t),
         o = (0, a.e7)([b.Z], () => (t.isPrivate() || b.Z.can(m.Plq.ADD_REACTIONS, t)) && l, [t, l]),
-        p = (0, c.MZ)(t.getGuildId());
+        p = (0, s.MZ)(t.getGuildId());
     if (!g.nc.getSetting() || !o) return null;
     let j = p
         .filter(
@@ -37,7 +37,7 @@ function S(e, t) {
         .map((i, l) => {
             var o, a;
             return (0, r.jsx)(
-                s.sNh,
+                c.sNh,
                 {
                     color: "default",
                     id: null != (a = null != (o = i.id) ? o : i.optionallyDiverseSequence) ? a : i.name,
@@ -99,7 +99,7 @@ function S(e, t) {
                 l,
             );
         });
-    return (0, r.jsx)(s.sNh, {
+    return (0, r.jsx)(c.sNh, {
         id: "add-reaction",
         label: h.intl.string(h.t.lfIHs4),
         action: () => {
@@ -109,12 +109,12 @@ function S(e, t) {
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 j,
-                (0, r.jsx)(s.Clw, {}),
-                (0, r.jsx)(s.sNh, {
+                (0, r.jsx)(c.Clw, {}),
+                (0, r.jsx)(c.sNh, {
                     color: "default",
                     id: "other-reactions",
                     label: h.intl.string(h.t["OBCR+p"]),
-                    icon: s.EO4,
+                    icon: c.EO4,
                     action: () => {
                         O.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     },

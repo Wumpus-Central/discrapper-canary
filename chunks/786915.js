@@ -10,8 +10,8 @@ var r = n(512722),
     u = n(522651),
     d = n(728285),
     p = n(430824),
-    h = n(293273),
-    f = n(496675),
+    f = n(293273),
+    h = n(496675),
     m = n(871499),
     g = n(981631),
     b = n(388032);
@@ -45,13 +45,13 @@ function y(e) {
             applicationId: t,
             stream: r,
             channel: y,
-            exitFullScreen: _,
-            appContext: v,
+            exitFullScreen: v,
+            appContext: x,
             analyticsLocation: O,
-            guildScheduledEvent: x,
-            shouldPrioritizeGroupPlusIcon: E = !1,
-            isRichPresenceInvite: j = !1,
-            iconClassName: S,
+            guildScheduledEvent: E,
+            shouldPrioritizeGroupPlusIcon: j = !1,
+            isRichPresenceInvite: S = !1,
+            iconClassName: _,
             look: P,
             size: I,
             buttonText: Z,
@@ -97,23 +97,23 @@ function y(e) {
         { parentAnalyticsLocation: w } = (0, c.ZP)(),
         M = null == y ? void 0 : y.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
-        L = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        D = null == t || E ? o.ejJ : o.gQj,
+        L = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0)),
+        D = null == t || j ? o.ejJ : o.gQj,
         k = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
-    return null != L && j
+    return null != L && S
         ? (0, i.jsx)(m.Z, {
               onClick: () => {
                   null != w && (0, u.v)(w, u.d.INVITE), s.h7(L, !1, A);
               },
               iconComponent: D,
               label: k,
-              iconClassName: S,
+              iconClassName: _,
               look: P,
               size: I,
               buttonText: Z,
               color: null != T ? T : void 0,
           })
-        : null != R && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
+        : null != R && null != y && h.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, i.jsx)(
                 m.Z,
                 C(
@@ -139,7 +139,7 @@ function y(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("49049"),
                                                     n.e("7654"),
-                                                    n.e("68971"),
+                                                    n.e("97016"),
                                                 ]).then(n.bind(n, 560114));
                                                 return (n) => {
                                                     var o, s;
@@ -191,15 +191,15 @@ function y(e) {
                                     channel: y,
                                     streamUserId: null == r ? void 0 : r.ownerId,
                                     applicationId: t,
-                                    appContext: null != v ? v : A,
-                                    exitFullScreen: _,
+                                    appContext: null != x ? x : A,
+                                    exitFullScreen: v,
                                     analyticsLocation: O,
-                                    guildScheduledEvent: x,
+                                    guildScheduledEvent: E,
                                 });
                         },
                         iconComponent: D,
                         label: k,
-                        iconClassName: S,
+                        iconClassName: _,
                         look: P,
                         size: I,
                         color: T,

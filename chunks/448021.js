@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g });
-var r = n(54381),
-    a = n(473749),
+n.d(t, { Z: () => f });
+var a = n(54381),
+    r = n(473749),
     i = n(793030),
     l = n(442837),
     s = n(445986),
@@ -9,39 +9,39 @@ var r = n(54381),
     d = n(451478),
     u = n(981631),
     p = n(388032),
-    m = n(489060),
+    m = n(603262),
     h = n(516450);
-function g(e) {
+function f(e) {
     let { application: t, carouselItems: n } = e,
-        g = (0, l.e7)([d.Z], () => d.Z.isFocused()),
-        f = (0, r.jsxs)(r.Fragment, {
+        f = (0, l.e7)([d.Z], () => d.Z.isFocused()),
+        g = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, r.jsx)("img", {
+                (0, a.jsx)("img", {
                     className: m.errorImage,
                     src: h,
                     "aria-hidden": !0,
                     alt: "",
                 }),
-                (0, r.jsx)(i.X6q, {
+                (0, a.jsx)(i.X6q, {
                     variant: "heading-xl/semibold",
                     children: p.intl.string(p.t.UvDfMz),
                 }),
             ],
         });
-    n.forEach((e, r) => {
+    n.forEach((e, a) => {
         e.alt = p.intl.formatToPlainString(p.t.sSEhHb, {
-            index: r + 1,
+            index: a + 1,
             totalImages: n.length,
             name: t.name,
         });
     });
-    let _ = a.useCallback(
+    let b = r.useCallback(
         (e, t) => {
             if (e.type === u.s9s.IMG) {
                 let t = n.filter((e) => e.type === u.s9s.IMG),
-                    r = t.findIndex((t) => t === e);
-                if (r < 0) return;
-                let a = t.map((e) => ({
+                    a = t.findIndex((t) => t === e);
+                if (a < 0) return;
+                let r = t.map((e) => ({
                     url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
@@ -49,8 +49,8 @@ function g(e) {
                     type: "IMAGE",
                 }));
                 (0, c.K)({
-                    items: a,
-                    startingIndex: r,
+                    items: r,
+                    startingIndex: a,
                     shouldHideMediaOptions: !0,
                     location: "GlobalDiscoveryAppsDetailCarousel",
                 });
@@ -60,14 +60,14 @@ function g(e) {
     );
     return 0 === n.length
         ? null
-        : (0, r.jsx)(o.Z, {
+        : (0, a.jsx)(o.Z, {
               className: m.carousel,
               themedPagination: !0,
               items: n,
               autoplayInterval: 8000,
-              paused: !g,
+              paused: !f,
               videoAutoPlay: !0,
-              onCurrentItemClick: _,
-              errorComponent: f,
+              onCurrentItemClick: b,
+              errorComponent: g,
           });
 }

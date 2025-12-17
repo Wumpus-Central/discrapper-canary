@@ -1,16 +1,16 @@
 function r(e, t, n, r) {
-    var i, l, a, o, c, s, u, d;
+    var i, a, l, o, c, s, u, d;
     let f = null,
         g = null;
     n < r
-        ? ((f = null != (a = null == (i = t[r]) ? void 0 : i.skuId) ? a : null),
-          (g = null != (o = null == (l = t[r + 1]) ? void 0 : l.skuId) ? o : null))
+        ? ((f = null != (l = null == (i = t[r]) ? void 0 : i.skuId) ? l : null),
+          (g = null != (o = null == (a = t[r + 1]) ? void 0 : a.skuId) ? o : null))
         : ((f = null != (u = null == (c = t[r - 1]) ? void 0 : c.skuId) ? u : null),
           (g = null != (d = null == (s = t[r]) ? void 0 : s.skuId) ? d : null));
     let p = [...t],
-        [m] = p.splice(n, 1);
+        [b] = p.splice(n, 1);
     return (
-        p.splice(r, 0, m),
+        p.splice(r, 0, b),
         {
             newWishlistData: e.set("items", p),
             previousSkuId: f,

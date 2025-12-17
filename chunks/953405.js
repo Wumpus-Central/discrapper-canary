@@ -1,16 +1,16 @@
 n.d(t, { a: () => m });
 var r = n(54381),
     i = n(481060),
-    l = n(558060),
-    a = n(539598),
+    a = n(558060),
+    l = n(539598),
     o = n(409116),
     s = n(231338),
     c = n(388032),
-    u = n(551909);
+    u = n(390252);
 function d(e) {
-    let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: l } = e,
-        a = n ? c.intl.string(c.t.wu4gyV) : c.intl.string(c.t.eFNRzU),
-        s = n || !l;
+    let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: a } = e,
+        l = n ? c.intl.string(c.t.wu4gyV) : c.intl.string(c.t.eFNRzU),
+        s = n || !a;
     return (0, r.jsxs)("div", {
         className: u.priceLine,
         children: [
@@ -19,7 +19,7 @@ function d(e) {
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-xs/normal",
                     className: s ? u.disabled : void 0,
-                    children: a,
+                    children: l,
                 }),
             }),
             (0, r.jsx)(o.F, {
@@ -36,16 +36,16 @@ function m(e) {
             discount: i,
             product: c,
             hasSufficientOrbs: m,
-            isProductDisabled: p,
-            discountOfferAmount: f,
+            isProductDisabled: f,
+            discountOfferAmount: p,
         } = e,
-        v = null != f;
+        v = null != p;
     return 0 === t.length
         ? null
         : t[0].currency === s.pK.DISCORD_ORB
           ? (0, r.jsx)(d, {
                 orbPrice: t[0],
-                isProductDisabled: p,
+                isProductDisabled: f,
                 hasSufficientOrbs: m,
             })
           : (0, r.jsxs)("div", {
@@ -54,23 +54,23 @@ function m(e) {
                     (0, r.jsxs)("div", {
                         className: u.priceTagContainer,
                         children: [
-                            (0, r.jsx)(l.Z, {
+                            (0, r.jsx)(a.Z, {
                                 product: c,
                                 discount: i,
                                 isPremiumUser: n,
                                 hideStrikethroughPrice: !n || v,
                                 nitroIconType: "tooltip",
                                 nitroIconSize: "xs",
-                                discountOfferAmount: f,
+                                discountOfferAmount: p,
                             }),
-                            n || v ? null : (0, r.jsx)(a.Z, { product: c }),
+                            n || v ? null : (0, r.jsx)(l.Z, { product: c }),
                         ],
                     }),
                     t.length > 1 &&
                         t[1].currency === s.pK.DISCORD_ORB &&
                         (0, r.jsx)(o.F, {
                             price: t[1],
-                            className: p || !m ? u.disabled : void 0,
+                            className: f || !m ? u.disabled : void 0,
                         }),
                 ],
             });

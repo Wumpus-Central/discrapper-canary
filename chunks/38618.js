@@ -40,8 +40,8 @@ function P(e, t, n) {
 }
 let R = window.DiscordNative;
 I.Wb.dispatcher.getDispatchHandler = C.Z;
-let D = new c.Z("ConnectionStore"),
-    w = 100,
+let w = new c.Z("ConnectionStore"),
+    D = 100,
     x = 0,
     L = null,
     j = !0,
@@ -49,19 +49,19 @@ let D = new c.Z("ConnectionStore"),
     k = null;
 function U() {
     return I.Wb.isClosed()
-        ? (D.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
-        : (D.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+        ? (w.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
+        : (w.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
 }
 function G(e) {
-    e.isSwitchingAccount && I.RR.handleAccountSwitch(), D.verbose("Closing socket because of logout"), I.Wb.close();
+    e.isSwitchingAccount && I.RR.handleAccountSwitch(), w.verbose("Closing socket because of logout"), I.Wb.close();
 }
 function Z() {
     return (
-        D.verbose("session refresh dispatched", { isEstablished: I.Wb.isSessionEstablished() }),
+        w.verbose("session refresh dispatched", { isEstablished: I.Wb.isSessionEstablished() }),
         !!I.Wb.isSessionEstablished() && (I.Wb.close(), I.Wb.connect())
     );
 }
-async function B(e) {
+async function F(e) {
     (x = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
     let t = {},
         n = b.Z.getVoiceChannelId();
@@ -94,8 +94,8 @@ async function B(e) {
     }
     I.GC.update(t, !0), (j = !1), (k = null);
 }
-function F() {
-    D.verbose("connection closed dispatched"), (x = Date.now());
+function B() {
+    w.verbose("connection closed dispatched"), (x = Date.now());
 }
 function V() {
     k = null;
@@ -130,7 +130,7 @@ function z(e) {
     return t.reduce((e, t) => {
         if (p.default.getId() !== t.userId) return e;
         if (t.sessionId === L) {
-            if (null != k) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
+            if (null != k) return w.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
             I.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
@@ -201,7 +201,7 @@ function en(e) {
         I.Wb.isSessionEstablished() &&
             ("userIds" in e
                 ? a()(e.userIds)
-                      .chunk(w)
+                      .chunk(D)
                       .forEach((t) => {
                           I.Wb.requestGuildMembers(e.guildIds, {
                               userIds: t,
@@ -329,10 +329,10 @@ let ey = new eb(s.Z, {
     LOGOUT: G,
     CLEAR_CACHES: H,
     CONNECTION_OPEN: (e) => {
-        B(e);
+        F(e);
     },
     CONNECTION_RESUMED: V,
-    CONNECTION_CLOSED: F,
+    CONNECTION_CLOSED: B,
     RTC_CONNECTION_STATE: J,
     VOICE_CHANNEL_SELECT: Y,
     VOICE_STATE_UPDATES: z,

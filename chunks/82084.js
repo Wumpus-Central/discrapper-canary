@@ -1,19 +1,19 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     o = n(473749),
-    i = n(442837),
-    l = n(352065),
-    a = n(481060),
+    a = n(442837),
+    i = n(352065),
+    l = n(481060),
     c = n(607070),
     s = n(451478),
     u = n(585483),
-    b = n(79808),
-    f = n(981631);
-function d(e) {
+    f = n(79808),
+    d = n(981631);
+function b(e) {
     var t,
         n,
         {
-            partialRoot: d,
+            partialRoot: b,
             target: y,
             defaultTarget: p,
             onPanelChange: g,
@@ -31,14 +31,14 @@ function d(e) {
                     var n,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
@@ -54,32 +54,32 @@ function d(e) {
         ]);
     let [x, S] = o.useState(!1),
         [P, C] = o.useState(1.4),
-        _ = o.useRef(null),
-        w = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        T = (0, i.e7)([s.Z], () => s.Z.isFocused());
+        w = o.useRef(null),
+        T = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        k = (0, a.e7)([s.Z], () => s.Z.isFocused());
     return (
         o.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
-                !w &&
-                    T &&
+                !T &&
+                    k &&
                     (S(!0),
                     C(null != t ? t : 1.4),
-                    clearTimeout(_.current),
-                    (_.current = setTimeout(() => S(!1), null != n ? n : 1000)));
+                    clearTimeout(w.current),
+                    (w.current = setTimeout(() => S(!1), null != n ? n : 1000)));
             };
             return (
-                u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
+                u.S.subscribe(d.CkL.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
+                    u.S.unsubscribe(d.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(w.current);
                 }
             );
-        }, [w, T]),
-        (0, r.jsx)(a.UkV, {
+        }, [T, k]),
+        (0, r.jsx)(l.UkV, {
             isShaking: x,
             intensity: P,
             children: (0, r.jsx)(
-                l.A,
+                i.A,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -107,9 +107,9 @@ function d(e) {
                 })({}, h)),
                 (n = n =
                     {
-                        children: (0, r.jsx)(b.Z, {
+                        children: (0, r.jsx)(f.Z, {
                             onClose: h.onClose,
-                            partialRoot: d,
+                            partialRoot: b,
                             target: y,
                             defaultTarget: p,
                             onPanelChange: g,

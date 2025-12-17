@@ -232,13 +232,13 @@ function R(e) {
     }
     return n;
 }
-function D(e) {
+function w(e) {
     var t;
     let { channel: n } = e;
     if (!(n.id in y) || (null == (t = n.threadMetadata) ? void 0 : t.archived) !== !0) return !1;
     delete y[n.id];
 }
-function w(e) {
+function D(e) {
     let { channel: t } = e;
     if (!(t.id in y)) return !1;
     delete y[t.id];
@@ -290,8 +290,8 @@ b(j, "displayName", "ThreadMemberListStore");
 let M = new j(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: S,
-    THREAD_UPDATE: D,
-    THREAD_DELETE: w,
+    THREAD_UPDATE: w,
+    THREAD_DELETE: D,
     CHANNEL_UPDATES: L,
     THREAD_MEMBER_LIST_UPDATE: I,
     USER_UPDATE: T,

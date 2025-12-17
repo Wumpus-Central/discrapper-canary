@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(364833),
     a = n(388032),
-    s = n(818923);
-let o = function (e) {
+    o = n(683103);
+let s = function (e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: s.previewBackground,
+        className: o.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: s.previewCard,
+            className: o.previewCard,
             children: [
                 (0, r.jsx)(i.Heading, {
-                    className: s.heading,
+                    className: o.heading,
                     variant: "heading-md/semibold",
                     children: a.intl.string(a.t.L2mlUb),
                 }),

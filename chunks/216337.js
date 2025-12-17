@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(496675),
     d = n(981631),
     p = n(388032),
-    h = n(456645);
-let f = () =>
+    f = n(506739);
+let h = () =>
         n
             .e("43841")
             .then(n.t.bind(n, 737848, 19))
@@ -27,15 +27,15 @@ let f = () =>
         return n
             ? m && !g && t.ownerId !== b
                 ? (0, i.jsxs)("div", {
-                      className: h.box,
+                      className: f.box,
                       children: [
                           (0, i.jsx)(a.Fmz, {
-                              importData: f,
+                              importData: h,
                               shouldAnimate: !r,
-                              className: h.animation,
+                              className: f.animation,
                           }),
                           (0, i.jsxs)("div", {
-                              className: h.textContainer,
+                              className: f.textContainer,
                               children: [
                                   (0, i.jsx)(a.Heading, {
                                       variant: "heading-md/semibold",
@@ -51,5 +51,5 @@ let f = () =>
                       ],
                   })
                 : null
-            : (0, i.jsx)("div", { className: h.divider });
+            : (0, i.jsx)("div", { className: f.divider });
     });

@@ -1,46 +1,46 @@
-t.r(n), t.d(n, { default: () => Z });
-var r = t(54381),
+t.r(n), t.d(n, { default: () => y });
+var l = t(54381),
     i = t(473749),
-    o = t(442837),
-    a = t(37234),
-    c = t(503089),
-    s = t(100527),
-    l = t(367907),
-    u = t(906732),
+    r = t(442837),
+    s = t(37234),
+    u = t(503089),
+    o = t(100527),
+    a = t(367907),
+    c = t(906732),
     d = t(456268),
-    h = t(745752),
-    g = t(45966),
-    f = t(526120),
-    v = t(751189),
-    p = t(409059),
-    _ = t(918658),
-    b = t(163400),
-    y = t(194201),
-    I = t(984802),
-    m = t(210887),
-    S = t(524329),
-    C = t(995532),
-    O = t(984933),
-    w = t(650774),
-    P = t(496675),
-    k = t(434404),
-    D = t(999382),
-    M = t(359191),
-    T = t(896007),
-    N = t(978946),
-    E = t(981631),
-    R = t(388032);
-function j(e) {
+    E = t(745752),
+    I = t(45966),
+    _ = t(526120),
+    S = t(751189),
+    N = t(409059),
+    O = t(918658),
+    g = t(163400),
+    f = t(194201),
+    T = t(984802),
+    G = t(210887),
+    h = t(524329),
+    A = t(995532),
+    D = t(984933),
+    M = t(650774),
+    b = t(496675),
+    C = t(434404),
+    p = t(999382),
+    m = t(359191),
+    R = t(896007),
+    P = t(978946),
+    U = t(981631),
+    v = t(388032);
+function L(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         t = arguments.length > 2 ? arguments[2] : void 0;
-    l.ZP.trackWithMetadata(E.rMx.SETTINGS_PANE_VIEWED, {
+    a.ZP.trackWithMetadata(U.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         origin_pane: n,
         destination_pane: e,
         location: t,
     });
 }
-let G = {
+let w = {
     canManageGuild: !1,
     canManageChannels: !1,
     canManageRoles: !1,
@@ -55,203 +55,203 @@ let G = {
     isOwnerWithRequiredMfaLevel: !1,
     isGuildAdmin: !1,
 };
-class x extends i.PureComponent {
+class Z extends i.PureComponent {
     componentDidMount() {
-        j(this.props.section, null, this.props.analyticsLocation);
+        L(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
-        k.Z.close();
+        C.Z.close();
     }
     componentDidUpdate(e) {
         let { section: n } = e,
             {
                 section: t,
-                isGuildAdmin: r,
+                isGuildAdmin: l,
                 canManageGuild: i,
-                canManageRoles: o,
-                canManageBans: c,
-                canManageNicknames: s,
-                canManageGuildExpressions: l,
-                canViewAuditLog: u,
+                canManageRoles: r,
+                canManageBans: u,
+                canManageNicknames: o,
+                canManageGuildExpressions: a,
+                canViewAuditLog: c,
                 canManageWebhooks: d,
-                canUnlinkChannels: h,
-                canAccessMembersPage: g,
-                canViewGuildAnalytics: f,
+                canUnlinkChannels: E,
+                canAccessMembersPage: I,
+                canViewGuildAnalytics: _,
             } = this.props;
-        t !== n && j(t, n),
-            ((r || i || o || c || s || l || u || g || d || h) &&
-                (u || t !== E.pNK.AUDIT_LOG) &&
-                (o || t !== E.pNK.ROLES) &&
-                (l || t !== E.pNK.EMOJI) &&
-                (l || t !== E.pNK.STICKERS) &&
-                (l || t !== E.pNK.SOUNDBOARD) &&
-                (c || t !== E.pNK.BANS) &&
-                (f || t !== E.pNK.ANALYTICS) &&
-                (g || t !== E.pNK.MEMBERS)) ||
-                (0, a.xf)();
+        t !== n && L(t, n),
+            ((l || i || r || u || o || a || c || I || d || E) &&
+                (c || t !== U.pNK.AUDIT_LOG) &&
+                (r || t !== U.pNK.ROLES) &&
+                (a || t !== U.pNK.EMOJI) &&
+                (a || t !== U.pNK.STICKERS) &&
+                (a || t !== U.pNK.SOUNDBOARD) &&
+                (u || t !== U.pNK.BANS) &&
+                (_ || t !== U.pNK.ANALYTICS) &&
+                (I || t !== U.pNK.MEMBERS)) ||
+                (0, s.xf)();
     }
     render() {
         var e, n;
         let {
             theme: t,
             sidebarTheme: i,
-            section: o,
-            guild: s,
-            isGuildAdmin: l,
-            canManageGuild: u,
+            section: r,
+            guild: o,
+            isGuildAdmin: a,
+            canManageGuild: c,
             canViewAuditLog: d,
-            canManageRoles: h,
-            canManageGuildExpressions: g,
-            canManageWebhooks: f,
-            canUnlinkChannels: v,
-            canManageBans: p,
-            canAccessMembersPage: b,
-            canViewGuildAnalytics: y,
-            isOwner: I,
-            isOwnerWithRequiredMfaLevel: m,
-            showDirtyGuildTemplateIndicator: S,
-            memberCount: C,
-            onboardingStep: O,
-            onboardingEnabled: w,
-            welcomeScreenEmpty: P,
-            guildMetadata: D,
-            permissionMigrationAvailable: M,
+            canManageRoles: E,
+            canManageGuildExpressions: I,
+            canManageWebhooks: _,
+            canUnlinkChannels: S,
+            canManageBans: N,
+            canAccessMembersPage: g,
+            canViewGuildAnalytics: f,
+            isOwner: T,
+            isOwnerWithRequiredMfaLevel: G,
+            showDirtyGuildTemplateIndicator: h,
+            memberCount: A,
+            onboardingStep: D,
+            onboardingEnabled: M,
+            welcomeScreenEmpty: b,
+            guildMetadata: p,
+            permissionMigrationAvailable: m,
         } = this.props;
-        if (null == s) return null;
-        let E = (0, T.vE)({
-                guild: s,
-                isGuildAdmin: l,
-                canManageGuild: u,
+        if (null == o) return null;
+        let U = (0, R.vE)({
+                guild: o,
+                isGuildAdmin: a,
+                canManageGuild: c,
                 canViewAuditLog: d,
-                canManageRoles: h,
-                canManageGuildExpressions: g,
-                canManageWebhooks: f,
-                canUnlinkChannels: v,
-                canManageBans: p,
-                canAccessMembersPage: b,
-                canViewGuildAnalytics: y,
-                isOwner: I,
-                isOwnerWithRequiredMfaLevel: m,
-                showDirtyGuildTemplateIndicator: S,
-                memberCount: C,
-                onboardingStep: O,
-                onboardingEnabled: w,
-                welcomeScreenEmpty: P,
-                guildMetadata: D,
-                section: o,
-                permissionMigrationAvailable: M,
+                canManageRoles: E,
+                canManageGuildExpressions: I,
+                canManageWebhooks: _,
+                canUnlinkChannels: S,
+                canManageBans: N,
+                canAccessMembersPage: g,
+                canViewGuildAnalytics: f,
+                isOwner: T,
+                isOwnerWithRequiredMfaLevel: G,
+                showDirtyGuildTemplateIndicator: h,
+                memberCount: A,
+                onboardingStep: D,
+                onboardingEnabled: M,
+                welcomeScreenEmpty: b,
+                guildMetadata: p,
+                section: r,
+                permissionMigrationAvailable: m,
             }),
-            j = (null == (n = E.find((e) => e.section === o)) || null == (e = n.predicate) ? void 0 : e.call(n)) !== !1,
-            G = (0, N.r)();
-        return (0, r.jsxs)("div", {
+            L = (null == (n = U.find((e) => e.section === r)) || null == (e = n.predicate) ? void 0 : e.call(n)) !== !1,
+            w = (0, P.r)();
+        return (0, l.jsxs)("div", {
             children: [
-                (0, r.jsx)(c.ZP, {
+                (0, l.jsx)(u.ZP, {
                     theme: t,
                     sidebarTheme: i,
-                    section: j && null != o ? o : G,
-                    onSetSection: k.Z.setSection,
-                    onClose: a.xf,
-                    title: "" !== s.name ? s.name : R.intl.string(R.t["154/bL"]),
-                    sections: E,
+                    section: L && null != r ? r : w,
+                    onSetSection: C.Z.setSection,
+                    onClose: s.xf,
+                    title: "" !== o.name ? o.name : v.intl.string(v.t["154/bL"]),
+                    sections: U,
                 }),
-                (0, r.jsx)(_.d, { guildId: s.id }),
+                (0, l.jsx)(O.d, { guildId: o.id }),
             ],
         });
     }
 }
-function Z() {
+function y() {
     var e, n, t;
     let {
-            guild: a,
-            section: c,
-            analyticsLocation: l,
-            guildMetadata: _,
-            isGuildMetadataLoaded: T,
-        } = (0, o.cj)([D.Z], () => D.Z.getProps()),
-        { analyticsLocations: N } = (0, u.ZP)(s.Z.GUILD_SETTINGS),
-        R = (0, o.e7)([m.Z], () => m.Z.theme),
-        j = (0, I.Ll)(),
-        Z = (0, o.e7)([O.ZP], () => (null != a ? O.ZP.getChannels(a.id).SELECTABLE : null), [a]),
-        A = (0, o.cj)([P.Z], () => (null != a ? P.Z.getGuildPermissionProps(a) : G)),
-        L = null == a ? void 0 : a.id,
-        W = (0, o.e7)([P.Z], () => null != a && P.Z.canAccessGuildSettings(a));
+            guild: s,
+            section: u,
+            analyticsLocation: a,
+            guildMetadata: O,
+            isGuildMetadataLoaded: R,
+        } = (0, r.cj)([p.Z], () => p.Z.getProps()),
+        { analyticsLocations: P } = (0, c.ZP)(o.Z.GUILD_SETTINGS),
+        v = (0, r.e7)([G.Z], () => G.Z.theme),
+        L = (0, T.Ll)(),
+        y = (0, r.e7)([D.ZP], () => (null != s ? D.ZP.getChannels(s.id).SELECTABLE : null), [s]),
+        j = (0, r.cj)([b.Z], () => (null != s ? b.Z.getGuildPermissionProps(s) : w)),
+        B = null == s ? void 0 : s.id,
+        x = (0, r.e7)([b.Z], () => null != s && b.Z.canAccessGuildSettings(s));
     i.useEffect(() => {
-        T || null == L || (0, d.aC)(L);
-    }, [T, L]);
-    let U = null != (e = null == a ? void 0 : a.features.has(E.GuildFeatures.COMMUNITY)) && e;
+        R || null == B || (0, d.aC)(B);
+    }, [R, B]);
+    let W = null != (e = null == s ? void 0 : s.features.has(U.GuildFeatures.COMMUNITY)) && e;
     i.useEffect(() => {
-        null != L && U && ((0, h.eM)(L), (0, S.RM)(L));
-    }, [L, U]),
+        null != B && W && ((0, E.eM)(B), (0, h.RM)(B));
+    }, [B, W]),
         i.useEffect(() => {
-            null != L && (0, f.cP)(L);
-        }, [L]);
-    let H = (0, o.e7)([p.Z], () => {
+            null != B && (0, _.cP)(B);
+        }, [B]);
+    let H = (0, r.e7)([N.Z], () => {
             var e;
             return (
-                (null == a ? void 0 : a.id) != null && (null == (e = p.Z.getForGuild(a.id)) ? void 0 : e.isDirty) === !0
+                (null == s ? void 0 : s.id) != null && (null == (e = N.Z.getForGuild(s.id)) ? void 0 : e.isDirty) === !0
             );
-        }, [a]),
-        B = (0, o.e7)([w.Z], () => w.Z.getMemberCount(null == a ? void 0 : a.id), [a]);
+        }, [s]),
+        F = (0, r.e7)([M.Z], () => M.Z.getMemberCount(null == s ? void 0 : s.id), [s]);
     i.useEffect(() => {
-        null != L && A.canManageGuild && v.Z.loadTemplatesForGuild(L);
-    }, [L, A.canManageGuild]),
+        null != B && j.canManageGuild && S.Z.loadTemplatesForGuild(B);
+    }, [B, j.canManageGuild]),
         i.useEffect(() => {
-            W || k.Z.close();
-        }, [W]);
-    let F = (0, o.e7)([M.Z], () => M.Z.getCurrentPage()),
-        K = (0, o.e7)([g.Z], () => null != L && g.Z.getEnabled(L)),
-        V = (0, o.e7)([C.Z], () => null != L && C.Z.isEmpty(L)),
-        Y = (0, b.F)(L).length > 0,
-        q = (0, y.Z)(a);
-    return (0, r.jsx)(u.Gt, {
-        value: N,
-        children: (0, r.jsx)(
-            x,
+            x || C.Z.close();
+        }, [x]);
+    let K = (0, r.e7)([m.Z], () => m.Z.getCurrentPage()),
+        k = (0, r.e7)([I.Z], () => null != B && I.Z.getEnabled(B)),
+        V = (0, r.e7)([A.Z], () => null != B && A.Z.isEmpty(B)),
+        Y = (0, g.F)(B).length > 0,
+        q = (0, f.Z)(s);
+    return (0, l.jsx)(c.Gt, {
+        value: P,
+        children: (0, l.jsx)(
+            Z,
             ((n = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
-                        r = Object.keys(t);
+                        l = Object.keys(t);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (l = l.concat(
                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (n) {
-                            var r;
-                            (r = t[n]),
+                        l.forEach(function (n) {
+                            var l;
+                            (l = t[n]),
                                 n in e
                                     ? Object.defineProperty(e, n, {
-                                          value: r,
+                                          value: l,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[n] = r);
+                                    : (e[n] = l);
                         });
                 }
                 return e;
             })(
                 {
-                    guild: a,
-                    section: c,
-                    theme: R,
-                    sidebarTheme: j,
-                    channels: Z,
+                    guild: s,
+                    section: u,
+                    theme: v,
+                    sidebarTheme: L,
+                    channels: y,
                     showDirtyGuildTemplateIndicator: H,
-                    analyticsLocation: l,
-                    memberCount: B,
+                    analyticsLocation: a,
+                    memberCount: F,
                 },
-                A,
+                j,
             )),
             (t = t =
                 {
                     canUnlinkChannels: Y,
-                    canViewGuildAnalytics: A.canViewGuildAnalytics,
-                    onboardingStep: F,
-                    onboardingEnabled: K,
+                    canViewGuildAnalytics: j.canViewGuildAnalytics,
+                    onboardingStep: K,
+                    onboardingEnabled: k,
                     welcomeScreenEmpty: V,
-                    guildMetadata: _,
+                    guildMetadata: O,
                     permissionMigrationAvailable: q,
                 }),
             Object.getOwnPropertyDescriptors
@@ -259,8 +259,8 @@ function Z() {
                 : (function (e, n) {
                       var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          t.push.apply(t, r);
+                          var l = Object.getOwnPropertySymbols(e);
+                          t.push.apply(t, l);
                       }
                       return t;
                   })(Object(t)).forEach(function (e) {

@@ -69,7 +69,7 @@ let d = {
             applicationId: e,
         });
     },
-    notifyPendingWidgets() {
+    notifyUnsavedWidgets() {
         s.S.dispatch(c.CkL.SHAKE_PROFILE_MODAL),
             s.S.dispatch(c.CkL.EMPHASIZE_NOTICE),
             i.uv.announce("".concat(u.intl.string(u.t.GP7JLE), " ").concat(u.intl.string(u.t.gKoO1D)));

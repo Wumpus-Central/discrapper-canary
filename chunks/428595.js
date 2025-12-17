@@ -27,8 +27,8 @@ var r = n(392711),
     N = n(303694),
     P = n(660199),
     R = n(364458),
-    D = n(981631),
-    w = n(689079),
+    w = n(981631),
+    D = n(689079),
     x = n(388032);
 function L(e, t, n) {
     return (
@@ -85,8 +85,8 @@ function k(e, t) {
 let U = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     G = /^$|\n *$/,
     Z = /^ *>>> ?/,
-    B = /^ *> ?/gm,
-    F = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+    F = /^ *> ?/gm,
+    B = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
 function V(e) {
     let t = (0, v.yw)(e[1]);
     if (null == t)
@@ -131,7 +131,7 @@ let H = (e) => {
             parse(e, t, n) {
                 let r = e[0],
                     i = !!Z.exec(r),
-                    a = i ? Z : B,
+                    a = i ? Z : F,
                     o = r.replace(a, ""),
                     s = n.inQuote || !1,
                     l = n.inline || !1;
@@ -185,7 +185,7 @@ let H = (e) => {
             requiredFirstCharacters: ["h", "s"],
             match(e, t) {
                 if (!t.inline) return null;
-                let n = F.exec(e);
+                let n = B.exec(e);
                 if (null != n) {
                     let e = 0,
                         t = n[0];
@@ -309,7 +309,7 @@ let H = (e) => {
                     r = null != (s = g.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? s : E.ZP.getName(a);
                 }
                 let l = e[1],
-                    c = null != l && D.Xyh.test(l.trim()),
+                    c = null != l && w.Xyh.test(l.trim()),
                     u = c && n.unknownUserMentionPlaceholder ? "@".concat(x.intl.string(x.t.sKdZ6U)) : e[0];
                 return {
                     userId: i,
@@ -358,7 +358,7 @@ let H = (e) => {
                         id: e[2],
                     };
                 let [, ...r] = e[1].split(" "),
-                    i = "".concat(e[2]).concat([...r].map((e) => "".concat(w.oQ).concat(e)).join(""));
+                    i = "".concat(e[2]).concat([...r].map((e) => "".concat(D.oQ).concat(e)).join(""));
                 return {
                     channelId: n.channelId,
                     commandId: e[2],
@@ -480,7 +480,7 @@ let H = (e) => {
         spoiler: {
             order: C.ZP.order,
             requiredFirstCharacters: ["|"],
-            match: (e) => D.$92.exec(e),
+            match: (e) => w.$92.exec(e),
             parse: (e, t, n) => ({
                 content: t(e[1], n),
                 channelId: n.channelId,
@@ -489,7 +489,7 @@ let H = (e) => {
         staticRouteLink: {
             order: C.ZP.order,
             requiredFirstCharacters: ["<"],
-            match: (e) => D.PEY.exec(e),
+            match: (e) => w.PEY.exec(e),
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,

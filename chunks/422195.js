@@ -22,16 +22,16 @@ var r = n(54381),
     S = n(981631),
     I = n(957825),
     T = n(388032),
-    C = n(163289);
+    C = n(747691);
 let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     N = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     P = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
     R = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    D = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    w = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    w = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    D = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     x = [A, A, A, A],
     L = (N + P) * 2 + A,
-    j = D + 2 * w,
+    j = w + 2 * D,
     M = 7,
     k = (e) => {
         let {
@@ -50,19 +50,19 @@ let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         E = (null == (u = n[0]) ? void 0 : u.type) === y.Ih.FAVORITE,
                         A = +!!E,
                         P = (null == (f = n[A]) ? void 0 : f.type) === y.Ih.RECENT,
-                        D = n.length > 0,
-                        w = n.length;
+                        w = n.length > 0,
+                        D = n.length;
                     if (0 === a && E)
                         return (0, r.jsx)(
                             "div",
                             {
                                 role: "listitem",
-                                "aria-setsize": w,
+                                "aria-setsize": D,
                                 "aria-posinset": a,
                                 children: (0, r.jsx)(c.P3F, {
                                     "aria-label": T.intl.string(T.t.y3LQCG),
                                     className: o()(C.stickerCategory, C.stickerCategoryGeneric, {
-                                        [C.stickerCategoryGenericDisabled]: D && !E,
+                                        [C.stickerCategoryGenericDisabled]: w && !E,
                                         [C.stickerCategoryGenericSelected]: !g && E && 0 === t,
                                         [C.stickerCategoryGenericLast]: !P,
                                     }),
@@ -83,7 +83,7 @@ let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             "div",
                             {
                                 role: "listitem",
-                                "aria-setsize": w,
+                                "aria-setsize": D,
                                 "aria-posinset": a,
                                 children: (0, r.jsx)(c.P3F, {
                                     "aria-label": T.intl.string(T.t.RxAmVC),
@@ -92,7 +92,7 @@ let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         C.stickerCategoryGeneric,
                                         C.stickerCategoryGenericLast,
                                         {
-                                            [C.stickerCategoryGenericDisabled]: D && !P,
+                                            [C.stickerCategoryGenericDisabled]: w && !P,
                                             [C.stickerCategoryGenericSelected]: !g && P && t === A,
                                         },
                                     ),
@@ -143,7 +143,7 @@ let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                     text: U,
                                     children: (0, r.jsx)("div", {
                                         role: "listitem",
-                                        "aria-setsize": w,
+                                        "aria-setsize": D,
                                         "aria-posinset": a,
                                         children: (0, r.jsx)(c.P3F, {
                                             "aria-label": U,
@@ -189,7 +189,7 @@ let A = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 (e) => {
                     var t;
                     let n = null == (t = a.current) ? void 0 : t.getListDimensions();
-                    null != n && f(e + n.height - D < l);
+                    null != n && f(e + n.height - w < l);
                 },
                 [l, a, f],
             ),

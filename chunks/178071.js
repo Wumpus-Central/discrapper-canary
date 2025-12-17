@@ -7,8 +7,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(239091),
-    o = n(585237),
+    o = n(239091),
+    s = n(585237),
     c = n(551428),
     u = n(388032);
 function d(e, t, n) {
@@ -25,10 +25,10 @@ function d(e, t, n) {
     );
 }
 let p = {
-    DropdownSizes: o.Z.DropdownSizes,
-    Sizes: o.Z.Sizes,
-    Colors: o.Z.Colors,
-    Looks: o.Z.Looks,
+    DropdownSizes: s.Z.DropdownSizes,
+    Sizes: s.Z.Sizes,
+    Colors: s.Z.Colors,
+    Looks: s.Z.Looks,
 };
 class f extends i.PureComponent {
     render() {
@@ -38,7 +38,7 @@ class f extends i.PureComponent {
                 storeListings: i,
                 primaryStoreListing: l,
                 skuId: a,
-                onStoreListingSelect: s,
+                onStoreListingSelect: o,
                 currentStoreListingId: c,
             } = n,
             p = (function (e, t) {
@@ -66,7 +66,7 @@ class f extends i.PureComponent {
         return (f += i.length) < 2
             ? null
             : (0, r.jsx)(
-                  o.Z,
+                  s.Z,
                   ((e = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
@@ -121,7 +121,7 @@ class f extends i.PureComponent {
                                   id: "".concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      s.Zy(), null == t || t(e);
+                                      o.Zy(), null == t || t(e);
                                   },
                               })
                             : null,
@@ -130,12 +130,12 @@ class f extends i.PureComponent {
                     onSelect: i,
                     navId: "test-store-listing",
                     "aria-label": u.intl.string(u.t.ogxXGq),
-                    onClose: s.Zy,
+                    onClose: o.Zy,
                     children: l,
                 });
             }),
             d(this, "handleContextMenu", (e) => {
-                e.stopPropagation(), s.vq(e, this.renderContextMenu);
+                e.stopPropagation(), o.vq(e, this.renderContextMenu);
             });
     }
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
     l = n(392711),
@@ -14,31 +14,31 @@ var r = n(54381),
     g = n(585483),
     m = n(665149),
     b = n(981631),
-    _ = n(388032);
-let y = i.memo(function (e) {
+    y = n(388032);
+let O = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, d.Z)(),
         l = (0, s.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        y = (0, s.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        O = (0, s.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: x } = (0, u.Z)(t.id),
-        j = (0, p.$R)(t),
-        v = i.useCallback(() => {
+        O = (0, s.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        x = (0, s.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: j } = (0, u.Z)(t.id),
+        v = (0, p.$R)(t),
+        C = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: l,
-                needSubscriptionToAccess: x,
+                needSubscriptionToAccess: j,
                 locked: !1,
             });
-        }, [t, l, x]);
+        }, [t, l, j]);
     return (i.useEffect(
         () => (
-            g.S.subscribe(b.CkL.CALL_START, v),
+            g.S.subscribe(b.CkL.CALL_START, C),
             () => {
-                g.S.unsubscribe(b.CkL.CALL_START, v);
+                g.S.unsubscribe(b.CkL.CALL_START, C);
             }
         ),
-        [v],
+        [C],
     ),
     p.tM.useExperiment(
         {
@@ -49,13 +49,13 @@ let y = i.memo(function (e) {
     ).enabled &&
         !n &&
         !l &&
-        O &&
-        j &&
+        x &&
+        v &&
         t.isVocalThread())
         ? (0, r.jsx)(m.ZP.Icon, {
               icon: o.Csw,
-              onClick: v,
-              tooltip: y ? _.intl.string(_.t.fdEeb5) : _.intl.string(_.t.focH1t),
+              onClick: C,
+              tooltip: O ? y.intl.string(y.t.fdEeb5) : y.intl.string(y.t.focH1t),
           })
         : null;
 });

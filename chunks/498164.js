@@ -4,8 +4,8 @@ n(473749);
 var i = n(772848),
     l = n(756647),
     a = n(481060),
-    s = n(570140),
-    o = n(355467),
+    o = n(570140),
+    s = n(355467),
     c = n(899742),
     u = n(493683),
     d = n(457330),
@@ -14,8 +14,8 @@ var i = n(772848),
     g = n(122613),
     h = n(649256),
     m = n(100527),
-    _ = n(728345),
-    b = n(962220),
+    b = n(728345),
+    _ = n(962220),
     E = n(69580),
     O = n(53144),
     v = n(36243),
@@ -84,13 +84,13 @@ let M = {
                 args: { code: t },
             } = e;
             if (null == S.default.getCurrentUser()) return;
-            let { guildTemplate: i } = await b.Z.resolveGuildTemplate(t);
+            let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i)
                 throw new x.Z({ errorCode: w.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
             return (
                 P.ZP.focus(),
                 (0, a.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("93099")]).then(n.bind(n, 766775));
                     return (t) => {
                         var n, l;
                         return (0, r.jsx)(
@@ -127,7 +127,7 @@ let M = {
                 args: { code: t },
             } = e;
             return new Promise((e, i) => {
-                s.Z.wait(() => {
+                o.Z.wait(() => {
                     p.Z.resolveGiftCode(t, !0, !0)
                         .then((i) => {
                             let { giftCode: l } = i;
@@ -272,16 +272,16 @@ let M = {
                                             failure_reason: "activity_already_running",
                                             attempt_id: n,
                                         });
-                                    let a = await _.ZP.fetchApplication(e),
-                                        s = null == a || null == (r = a.bot) ? void 0 : r.id;
-                                    if (null == s)
+                                    let a = await b.ZP.fetchApplication(e),
+                                        o = null == a || null == (r = a.bot) ? void 0 : r.id;
+                                    if (null == o)
                                         return void T.default.track(w.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "no_bot_user",
                                             attempt_id: n,
                                         });
-                                    let o = await u.Z.openPrivateChannel({ recipientIds: s }),
+                                    let s = await u.Z.openPrivateChannel({ recipientIds: o }),
                                         c = new URL(t),
                                         d = null != (i = c.searchParams.get("referrer_id")) ? i : void 0,
                                         { customId: p } = await (0, h.ur)(
@@ -291,7 +291,7 @@ let M = {
                                         );
                                     await (0, g.Z)({
                                         targetApplicationId: e,
-                                        channelId: o,
+                                        channelId: s,
                                         analyticsLocations: [m.Z.DEEPLINK],
                                         customId: p,
                                         referrerId: d,
@@ -362,7 +362,7 @@ let M = {
             let {
                 args: { state: t, path: n, query: r },
             } = e;
-            return (0, o.rt)({
+            return (0, s.rt)({
                 paymentSourceType: w.HeQ.PAYPAL,
                 state: t,
                 path: n,
@@ -376,7 +376,7 @@ let M = {
             let {
                 args: { state: t, path: n, query: r, payment_source_type: i },
             } = e;
-            return (0, o.rt)({
+            return (0, s.rt)({
                 paymentSourceType: i,
                 state: t,
                 path: n,

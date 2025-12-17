@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(979233),
-    s = n(88693),
-    o = n(611928),
+    o = n(88693),
+    s = n(611928),
     c = (n(763433), n(175118)),
     u = n(680180),
     d = n(164991),
@@ -39,20 +39,20 @@ function C() {
             onCollapsedSearchBarClick: M,
             onSearchBarBlur: k,
             tabsClassName: U,
-        } = (0, s.U)({
+        } = (0, o.U)({
             isSearchBarVisible: P,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: R,
             setSearchBarState: (e) => g.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
-        B = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 N(e), L && Z();
             },
             [L, Z, N],
         ),
-        H = i.useMemo(
+        B = i.useMemo(
             () =>
                 L
                     ? S.filter((e) => {
@@ -80,22 +80,22 @@ function C() {
         (0, r.jsxs)("div", {
             className: I.container,
             children: [
-                (0, r.jsxs)(o.ZP, {
-                    variant: L ? o._6.RELATIVE : o._6.OVERLAY,
+                (0, r.jsxs)(s.ZP, {
+                    variant: L ? s._6.RELATIVE : s._6.OVERLAY,
                     children: [
-                        !L && (0, r.jsx)(o.z6, { scrollPosition: n }),
+                        !L && (0, r.jsx)(s.z6, { scrollPosition: n }),
                         L
-                            ? (0, r.jsx)(o.Cm, {
+                            ? (0, r.jsx)(s.Cm, {
                                   icon: l.j9r,
                                   onClick: Z,
                               })
-                            : (0, r.jsx)(o.aV, { icon: l.QTo }),
+                            : (0, r.jsx)(s.aV, { icon: l.QTo }),
                         !L &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: H,
+                                tabs: B,
                                 selectedTab: L ? null : T,
-                                onTabSelect: B,
+                                onTabSelect: H,
                                 onAvailableWidthChange: D,
                             }),
                         L &&

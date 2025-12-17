@@ -1,14 +1,14 @@
-n.d(t, { Z: () => b }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(781311);
+n.d(t, { Z: () => p }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(781311);
 var r = n(473749),
-    l = n(263568),
-    a = n(935369),
+    a = n(263568),
+    l = n(935369),
     i = n(398805),
     o = n(524100),
     c = n(316758),
     s = n(203143),
     u = n(79390),
-    f = n(489887),
-    d = n(388032);
+    d = n(489887),
+    f = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,27 +52,27 @@ function p(e, t) {
         e
     );
 }
-function b(e, t, n, b) {
+function p(e, t, n, p) {
     var j, O;
     let y = e.id,
         [v, h] = r.useState(() => {
             var e, t;
             return null !=
-                (t = null == b || null == (e = b.initialAnswers) ? void 0 : e.map((e) => m({}, (0, u.Uu)(), e)))
+                (t = null == p || null == (e = p.initialAnswers) ? void 0 : e.map((e) => m({}, (0, u.Uu)(), e)))
                 ? t
                 : [(0, u.Uu)(), (0, u.Uu)()];
         }),
-        [P, w] = r.useState(null != (j = null == b ? void 0 : b.initialQuestion) ? j : ""),
+        [P, w] = r.useState(null != (j = null == p ? void 0 : p.initialQuestion) ? j : ""),
         [C, k] = r.useState(!1),
-        [x, R] = r.useState(null != (O = null == b ? void 0 : b.initialDuration) ? O : f.lc.ONE_DAY),
+        [x, R] = r.useState(null != (O = null == p ? void 0 : p.initialDuration) ? O : d.lc.ONE_DAY),
         [E, S] = r.useState({}),
-        [_, D] = r.useState(!1),
-        A = v.filter((e) => (0, u.cS)(e)),
-        I = v.filter((e) => (0, u.uY)(e)),
-        N = P.length > 0 && A.length >= f.gY && 0 === I.length,
-        [U, { error: L, loading: T }] = (0, a.Z)(s.Z.createPoll),
-        Z = v.length < f.fw,
-        B = v.length > f.gY,
+        [D, A] = r.useState(!1),
+        I = v.filter((e) => (0, u.cS)(e)),
+        N = v.filter((e) => (0, u.uY)(e)),
+        _ = P.length > 0 && I.length >= d.gY && 0 === N.length,
+        [U, { error: L, loading: T }] = (0, l.Z)(s.Z.createPoll),
+        Z = v.length < d.fw,
+        B = v.length > d.gY,
         K = r.useCallback((e) => {
             S((e) => {
                 let t = m({}, e);
@@ -88,23 +88,23 @@ function b(e, t, n, b) {
             }),
                 h((e) => {
                     let r = [...e];
-                    return (r[n] = p(m({}, r[n]), { text: t })), r;
+                    return (r[n] = b(m({}, r[n]), { text: t })), r;
                 });
         }, []),
         M = r.useCallback((e, t) => {
             h((n) => {
                 let r = [...n];
-                return (r[t] = p(m({}, r[t]), { image: e })), r;
+                return (r[t] = b(m({}, r[t]), { image: e })), r;
             });
         }, []),
         z = r.useCallback(
             (e, t, n) => {
                 var r;
-                let l = v[t],
-                    a = null == (r = l.image) ? void 0 : r.mediaAttachmentState;
-                null != a &&
-                    a.mediaURL !== n &&
-                    c.P(e, l.localCreationAnswerId, (0, i.Yk)(l.localCreationAnswerId, a.mediaURL));
+                let a = v[t],
+                    l = null == (r = a.image) ? void 0 : r.mediaAttachmentState;
+                null != l &&
+                    l.mediaURL !== n &&
+                    c.P(e, a.localCreationAnswerId, (0, i.Yk)(a.localCreationAnswerId, l.mediaURL));
             },
             [v],
         ),
@@ -120,8 +120,8 @@ function b(e, t, n, b) {
         W = r.useCallback(
             (e, t, n) => {
                 let r = v[t].localCreationAnswerId,
-                    l = URL.createObjectURL(n);
-                z(e, t), M(g(l, o._.PREPARING), t), c.fH(e, r, n), M(g(l, o._.READY_TO_UPLOAD), t);
+                    a = URL.createObjectURL(n);
+                z(e, t), M(g(a, o._.PREPARING), t), c.fH(e, r, n), M(g(a, o._.READY_TO_UPLOAD), t);
             },
             [v, M, z],
         ),
@@ -142,7 +142,7 @@ function b(e, t, n, b) {
         F = r.useCallback((e) => {
             h((t) => {
                 let n = [...t];
-                return (n[e] = p(m({}, n[e]), { image: void 0 })), n;
+                return (n[e] = b(m({}, n[e]), { image: void 0 })), n;
             });
         }, []),
         G = r.useCallback(() => {
@@ -175,15 +175,15 @@ function b(e, t, n, b) {
             let e = !0,
                 t = {};
             return (
-                0 === P.trim().length && ((e = !1), (t.question = d.intl.string(d.t.gPX3oI))),
-                v.filter((e) => (0, u.cS)(e)).length < f.gY &&
-                    ((e = !1), (t["answer-".concat(v[0].localCreationAnswerId)] = d.intl.string(d.t.fYvzEX))),
+                0 === P.trim().length && ((e = !1), (t.question = f.intl.string(f.t.gPX3oI))),
+                v.filter((e) => (0, u.cS)(e)).length < d.gY &&
+                    ((e = !1), (t["answer-".concat(v[0].localCreationAnswerId)] = f.intl.string(f.t.fYvzEX))),
                 v.forEach((n) => {
                     (0, u.uY)(n) &&
-                        ((e = !1), (t["answer-".concat(n.localCreationAnswerId)] = d.intl.string(d.t["8Qqkc+"])));
+                        ((e = !1), (t["answer-".concat(n.localCreationAnswerId)] = f.intl.string(f.t["8Qqkc+"])));
                 }),
                 S(t),
-                D(!e),
+                A(!e),
                 e
             );
         }, [v, P]),
@@ -191,13 +191,13 @@ function b(e, t, n, b) {
             await U({
                 channel: e,
                 question: P,
-                answers: A,
+                answers: I,
                 allowMultiSelect: C,
                 duration: x,
-                layout: l.C.DEFAULT,
+                layout: a.C.DEFAULT,
                 onClose: t,
             });
-        }, [P, A, C, x, U, e, t]),
+        }, [P, I, C, x, U, e, t]),
         Q = r.useCallback(() => {
             !T && X() && J();
         }, [J, T, X]);
@@ -209,7 +209,7 @@ function b(e, t, n, b) {
         setAllowMultiSelect: k,
         duration: x,
         setDuration: R,
-        canPost: N,
+        canPost: _,
         canAddMoreAnswers: Z,
         canRemoveMoreAnswers: B,
         handleQuestionChange: K,
@@ -225,8 +225,8 @@ function b(e, t, n, b) {
         handleSubmitPoll: Q,
         submitting: T,
         createPollError: L,
-        shouldFocusOnInvalidField: _,
-        setShouldFocusOnInvalidField: D,
+        shouldFocusOnInvalidField: D,
+        setShouldFocusOnInvalidField: A,
     };
 }
 function g(e, t) {

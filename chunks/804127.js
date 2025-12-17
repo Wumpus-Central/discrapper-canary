@@ -10,20 +10,20 @@ var r = n(473749),
     s = n(49436);
 function l(e) {
     let { isClaimingReward: t, isFetchingRewardCode: n, questContent: a, quest: o, rewardCode: l, preview: c } = e,
-        [u, d] = r.useState(!1),
+        [d, u] = r.useState(!1),
         [m, p] = r.useState(!1),
         C = r.useCallback(async (e, t, n) => {
             try {
-                p(!0), await (0, i.QB)(e, t, n), d(!1), p(!1);
+                p(!0), await (0, i.QB)(e, t, n), u(!1), p(!1);
             } catch (e) {
-                d(!0), p(!1);
+                u(!0), p(!1);
             }
         }, []),
         f = r.useCallback((e) => {
             try {
                 (0, i.pf)(e);
             } catch (e) {
-                d(!0);
+                u(!0);
             }
         }, []);
     return (
@@ -31,20 +31,20 @@ function l(e) {
             var e, r;
             !0 === c ||
                 null != l ||
-                u ||
+                d ||
                 t ||
                 m ||
                 n ||
-                (d(!1),
+                (u(!1),
                 (null == (e = o.userStatus) ? void 0 : e.claimedAt) == null
                     ? C(o.id, s.y$.CROSS_PLATFORM, a)
                     : (null == (r = o.userStatus) ? void 0 : r.claimedAt) != null && f(o.id));
-        }, [C, f, u, t, m, n, a, o, l, c]),
+        }, [C, f, d, t, m, n, a, o, l, c]),
         {
             claimCode: C,
             fetchCode: f,
-            hasError: u,
-            setHasError: d,
+            hasError: d,
+            setHasError: u,
         }
     );
 }

@@ -5,8 +5,8 @@ var r = n(54381),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    c = n(124252),
-    d = n(197571);
+    c = n(647889),
+    d = n(478411);
 let u = (e) => {
         let {
                 data: {
@@ -14,15 +14,15 @@ let u = (e) => {
                     subtitle: n,
                     description: u,
                     placeholder: m,
-                    rows: p,
-                    character_limit: g,
-                    pattern: _,
+                    rows: b,
+                    character_limit: p,
+                    pattern: g,
                 },
-                onChange: x,
-                initialText: b,
+                onChange: f,
+                initialText: x,
                 isRequired: h,
             } = e,
-            f = l.useMemo(() => {
+            v = l.useMemo(() => {
                 var e, t;
                 return a.Z.reactParserFor(
                     ((e = (function (e) {
@@ -66,30 +66,30 @@ let u = (e) => {
                     e),
                 );
             }, []),
-            [v, j] = l.useState(""),
+            [j, _] = l.useState(""),
             [y, O] = l.useState(null);
         l.useEffect(() => {
             var e;
-            j(null != (e = null == b ? void 0 : b.value) ? e : "");
-        }, [b]);
+            _(null != (e = null == x ? void 0 : x.value) ? e : "");
+        }, [x]);
         let Z = l.useCallback(
             (e) => {
-                let t = null != _ ? new RegExp(_) : null;
+                let t = null != g ? new RegExp(g) : null;
                 null == t || t.test(e)
                     ? null != e &&
                       (O(null),
-                      j(e),
-                      x({
+                      _(e),
+                      f({
                           value: e,
                           isValid: !0,
                       }))
                     : (O(o.intl.string(o.t["24xrGb"])),
-                      x({
+                      f({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [x, _],
+            [f, g],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -120,21 +120,21 @@ let u = (e) => {
                             }),
                     ],
                 }),
-                1 === p
+                1 === b
                     ? (0, r.jsx)(i.oil, {
-                          maxLength: g,
+                          maxLength: p,
                           onChange: Z,
-                          value: v,
+                          value: j,
                           error: y,
                           placeholder: m,
                           autoFocus: !0,
                       })
                     : (0, r.jsx)(i.Kx8, {
-                          maxLength: g,
+                          maxLength: p,
                           onChange: Z,
-                          value: v,
+                          value: j,
                           error: y,
-                          rows: p,
+                          rows: b,
                           placeholder: m,
                           autoFocus: !0,
                       }),
@@ -144,7 +144,7 @@ let u = (e) => {
                         children: (0, r.jsx)(i.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: f(n),
+                            children: v(n),
                         }),
                     }),
             ],

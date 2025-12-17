@@ -31,7 +31,7 @@ let P = (0, d.Z)(
                         a = o.useCallback(() => {
                             if ((null == e ? void 0 : e.id) == null) return null;
                             (0, c.ZDy)(async () => {
-                                let { default: o } = await Promise.all([n.e("56035"), n.e("87262")]).then(
+                                let { default: o } = await Promise.all([n.e("56035"), n.e("48899")]).then(
                                     n.bind(n, 758961),
                                 );
                                 return (n) => {

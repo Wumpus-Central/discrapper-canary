@@ -3,8 +3,8 @@ var r,
     i,
     l = n(442837),
     a = n(570140),
-    s = n(358085),
-    o = n(998502),
+    o = n(358085),
+    s = n(998502),
     c = n(869614),
     u = n(281083),
     d = n(672598);
@@ -13,9 +13,9 @@ let p = !1,
     g = !1;
 class h extends (i = l.ZP.Store) {
     initialize() {
-        !s.isPlatformEmbedded ||
+        !o.isPlatformEmbedded ||
             __OVERLAY__ ||
-            o.ZP.getGPUDriverVersions().then((e) => {
+            s.ZP.getGPUDriverVersions().then((e) => {
                 (p = (0, d.Z)(e)), (f = (0, c.Z)(e)), (g = (0, u.Z)(e)), this.emitChange();
             });
     }

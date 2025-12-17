@@ -74,10 +74,10 @@ function R(e) {
     let { billingAddressInfo: n } = s.az(f);
     P(n);
 }
-function D() {
+function w() {
     (c = ""), (u = null);
 }
-function w(e) {
+function D(e) {
     let { email: t, nonce: n, billingAddress: r } = e;
     (c = t), (u = n), P(r), (S = m.length > 0);
 }
@@ -120,13 +120,13 @@ function Z(e) {
     let { message: t } = e;
     I = new o.HF(t);
 }
-function B(e) {
+function F(e) {
     let { query: t } = e;
     (null == t ? void 0 : t.payment_id) != null
         ? ((C = !0), (T = t.payment_id))
         : (null == t ? void 0 : t.payment_source_id) != null && ((C = !0), (A = t.payment_source_id));
 }
-function F() {
+function B() {
     (C = !1), (T = null);
 }
 class V extends (r = i.ZP.Store) {
@@ -187,8 +187,8 @@ let H = new V(a.Z, {
     NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: R,
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: j,
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: M,
-    BRAINTREE_TOKENIZE_PAYPAL_START: D,
-    BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: w,
+    BRAINTREE_TOKENIZE_PAYPAL_START: w,
+    BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: D,
     BRAINTREE_TOKENIZE_VENMO_START: x,
     BRAINTREE_TOKENIZE_VENMO_SUCCESS: L,
     BRAINTREE_TOKENIZE_PAYPAL_FAIL: Z,
@@ -201,6 +201,6 @@ let H = new V(a.Z, {
     STRIPE_TOKEN_FAILURE: G,
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: N,
     LOGOUT: N,
-    BILLING_POPUP_BRIDGE_CALLBACK: B,
-    RESET_PAYMENT_ID: F,
+    BILLING_POPUP_BRIDGE_CALLBACK: F,
+    RESET_PAYMENT_ID: B,
 });

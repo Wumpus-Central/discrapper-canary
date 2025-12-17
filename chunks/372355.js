@@ -11,13 +11,13 @@ var n = r(54381),
     m = r(600164),
     f = r(434404),
     p = r(706454),
-    _ = r(768581),
-    b = r(5192),
+    b = r(768581),
+    _ = r(5192),
     E = r(51144),
     h = r(981631),
     O = r(179839),
     x = r(388032),
-    g = r(883287);
+    g = r(898216);
 let N = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.default.locale;
     return "https://".concat(h.xr4, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511");
@@ -114,7 +114,7 @@ function j(e) {
         type: a.ImpressionTypes.MODAL,
         name: a.ImpressionNames.GUILD_TRANSFER_OWNERSHIP,
     });
-    let Z = b.ZP.getNickname(t.id, void 0, p),
+    let Z = _.ZP.getNickname(t.id, void 0, p),
         F = p.hasAvatarForGuild(t.id),
         G = () =>
             (0, n.jsxs)("span", {
@@ -122,7 +122,7 @@ function j(e) {
                 children: [
                     null != t.icon
                         ? (0, n.jsx)(l.qEK, {
-                              src: _.ZP.getGuildIconURL({
+                              src: b.ZP.getGuildIconURL({
                                   id: t.id,
                                   icon: t.icon,
                                   size: 16,

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     o = n(473749),
-    i = n(55160),
-    l = n(493773),
-    a = n(636298),
+    a = n(55160),
+    i = n(493773),
+    l = n(636298),
     c = n(404975),
     s = n(924052),
     u = n(59662),
-    b = n(131051),
-    f = n(996435),
-    d = n(990757);
+    f = n(131051),
+    d = n(996435),
+    b = n(785766);
 function y(e) {
     var t;
     let {
@@ -23,36 +23,36 @@ function y(e) {
             searchQuery: v,
             onSearchChange: h,
         } = e,
-        x = f.Z.useField("currentPanelKey"),
-        { node: S, visibleDirectory: P, accessibleDirectory: C } = (0, b.ZP)(n, null != v ? v : ""),
-        _ = null != y && (null == (t = P.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : p,
-        w = o.useMemo(() => C.get(null != x ? x : _), [x, C, _]),
-        { navigateWithValidation: T } = (0, s.Cu)();
-    (0, l.ZP)(() => {
+        x = d.Z.useField("currentPanelKey"),
+        { node: S, visibleDirectory: P, accessibleDirectory: C } = (0, f.ZP)(n, null != v ? v : ""),
+        w = null != y && (null == (t = P.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : p,
+        T = o.useMemo(() => C.get(null != x ? x : w), [x, C, w]),
+        { navigateWithValidation: k } = (0, s.Cu)();
+    (0, i.ZP)(() => {
         var e, t, n;
-        let r = P.entry(_).parentPanelKey,
-            o = null == (e = P.entry(_)) ? void 0 : e.parentTabKey,
-            i = null == (t = P.entry(_)) ? void 0 : t.parentCategoryKey,
-            l = null == (n = P.entry(_)) ? void 0 : n.parentAccordionKey;
+        let r = P.entry(w).parentPanelKey,
+            o = null == (e = P.entry(w)) ? void 0 : e.parentTabKey,
+            a = null == (t = P.entry(w)) ? void 0 : t.parentCategoryKey,
+            i = null == (n = P.entry(w)) ? void 0 : n.parentAccordionKey;
         return (
-            f.Z.setState({
+            d.Z.setState({
                 currentPanelKey: r,
                 currentTabKeys: null != o ? new Map([[r, o]]) : new Map(),
-                currentCategoryKey: i,
+                currentCategoryKey: a,
                 disableSidebarCategoryAutoSelect: !0,
                 navTransition: {
-                    targetKey: _,
-                    targetAccordionKey: l,
+                    targetKey: w,
+                    targetAccordionKey: i,
                     animateScroll: !1,
                 },
                 showNavigationMobile: null == y,
             }),
-            () => f.Z.resetState()
+            () => d.Z.resetState()
         );
     }),
         o.useEffect(
             () =>
-                f.Z.subscribe(
+                d.Z.subscribe(
                     (e) => ({
                         requestedTargetKey: e.requestedTargetKey,
                         currentPanelKey: e.currentPanelKey,
@@ -66,59 +66,59 @@ function y(e) {
                             return;
                         }
                         let o = r.parentPanelKey;
-                        if (null == o) return void f.Z.setState({ requestedTargetKey: void 0 });
-                        let i = f.Z.getField("currentTabKeys"),
-                            l = null != r.parentTabKey ? new Map(i).set(o, r.parentTabKey) : i,
-                            a = r.parentPanelKey === n && (null == r.parentTabKey || r.parentTabKey === i.get(o)),
+                        if (null == o) return void d.Z.setState({ requestedTargetKey: void 0 });
+                        let a = d.Z.getField("currentTabKeys"),
+                            i = null != r.parentTabKey ? new Map(a).set(o, r.parentTabKey) : a,
+                            l = r.parentPanelKey === n && (null == r.parentTabKey || r.parentTabKey === a.get(o)),
                             c = () => {
-                                f.Z.setState({
+                                d.Z.setState({
                                     requestedTargetKey: void 0,
                                     currentPanelKey: r.parentPanelKey,
-                                    currentTabKeys: l,
+                                    currentTabKeys: i,
                                     currentCategoryKey: r.parentCategoryKey,
                                     disableSidebarCategoryAutoSelect: !0,
                                     navTransition: {
                                         targetKey: t,
                                         targetAccordionKey: r.parentAccordionKey,
-                                        animateScroll: a,
+                                        animateScroll: l,
                                     },
                                 });
                             };
                         r.parentPanelKey !== n
-                            ? T(() => {
+                            ? k(() => {
                                   c(), null == m || m(o);
                               })
                             : c();
                     },
-                    { equalityFn: i.X },
+                    { equalityFn: a.X },
                 ),
-            [P, T, m, h],
+            [P, k, m, h],
         );
-    let k = o.useMemo(
+    let E = o.useMemo(
             () => ({
                 visibleDirectory: P,
                 accessibleDirectory: C,
             }),
             [P, C],
         ),
-        E = () => T(g),
-        N = null != x ? P.get(x) : void 0;
+        N = () => k(g),
+        Z = null != x ? P.get(x) : void 0;
     return (0, r.jsx)(u.j.Provider, {
-        value: k,
+        value: E,
         children: (0, r.jsxs)("div", {
-            className: d.container,
+            className: b.container,
             children: [
                 (0, r.jsx)(c.P, {
                     root: S,
                     footer: O,
-                    onClose: E,
+                    onClose: N,
                     emptyState: j,
                     searchQuery: v,
                     onSearchChange: h,
                 }),
-                (0, r.jsx)(a.Z, {
-                    onClose: E,
-                    setting: null != N ? N : w,
+                (0, r.jsx)(l.Z, {
+                    onClose: N,
+                    setting: null != Z ? Z : T,
                 }),
             ],
         }),

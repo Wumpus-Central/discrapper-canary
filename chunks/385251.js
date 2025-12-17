@@ -16,7 +16,7 @@ var i = n(481060),
     h = n(474936),
     g = n(981631),
     E = n(388032),
-    b = n(355758),
+    b = n(817843),
     y = n(22767);
 function O(e, t, n) {
     return (
@@ -168,7 +168,7 @@ let N = function (e) {
                     );
             });
         },
-        D = () => {
+        w = () => {
             let e = d.ZP.isSwitchingPlansDisabled(t),
                 n = d.ZP.getSwitchingPlansDisabledMessage(t);
             return d.ZP.isBaseSubscriptionCanceled(t)
@@ -214,9 +214,9 @@ let N = function (e) {
                       ],
                   });
         },
-        w = d.ZP.getPlanIdFromInvoice(t, c),
+        D = d.ZP.getPlanIdFromInvoice(t, c),
         x = (0, _.eQ)(null == S ? void 0 : S.expires_at);
-    return (0, l.Q0)(w)
+    return (0, l.Q0)(D)
         ? null
         : (0, r.jsx)("div", {
               className: b.churnDiscountBannerBackground,
@@ -262,7 +262,7 @@ let N = function (e) {
                                                 }),
                                           (0, r.jsx)("div", {
                                               className: b.churnDiscountBannerButton,
-                                              children: D(),
+                                              children: w(),
                                           }),
                                       ],
                                   }),

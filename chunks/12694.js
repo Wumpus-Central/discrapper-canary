@@ -2,13 +2,13 @@ n.d(t, { V: () => u });
 var r = n(473749),
     i = n(442837),
     l = n(481060),
-    o = n(695346),
-    a = n(885110),
+    a = n(695346),
+    o = n(885110),
     s = n(626135),
     c = n(981631);
 function u() {
-    let e = o.G6.useSetting(),
-        t = (0, i.e7)([a.Z], () => a.Z.getStatus());
+    let e = a.G6.useSetting(),
+        t = (0, i.e7)([o.Z], () => o.Z.getStatus());
     (0, r.useEffect)(() => {
         s.default.track(c.rMx.RUNNING_GAME_CARD_STATE_CHANGED, {
             show_current_game: e,

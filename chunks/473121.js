@@ -1,18 +1,18 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381),
     l = n(473749),
     i = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    d = n(316515);
-let c = (e) => {
+    c = n(316515);
+let d = (e) => {
     let {
-            node: { header: t, subheader: n, button: c },
+            node: { header: t, subheader: n, button: d },
             isModeratorReport: u,
             isTidaReport: m = !1,
         } = e,
-        b = (null == c ? void 0 : c.type) === "submit",
+        b = (null == d ? void 0 : d.type) === "submit",
         p = l.useMemo(() => {
             var e, t;
             return a.Z.reactParserFor(
@@ -58,7 +58,7 @@ let c = (e) => {
             );
         }, []);
     return (0, r.jsxs)("div", {
-        className: d.headerContainer,
+        className: c.headerContainer,
         children: [
             null != t && "" !== t
                 ? (0, r.jsx)(i.Heading, {

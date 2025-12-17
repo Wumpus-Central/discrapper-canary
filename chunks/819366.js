@@ -103,9 +103,9 @@ function I(e) {
         { analyticsLocations: N } = (0, c.ZP)(l.Z.USER_MENTION),
         P = (0, o.e7)([h.default], () => h.default.getUser(u)),
         R = (0, o.e7)([p.Z], () => p.Z.getChannel(b)),
-        D = null != R ? R.getGuildId() : null,
-        w =
-            T || null == P || null == D || null == b
+        w = null != R ? R.getGuildId() : null,
+        D =
+            T || null == P || null == w || null == b
                 ? void 0
                 : (e) => {
                       null != R &&
@@ -116,7 +116,7 @@ function I(e) {
                                   n.e("6915"),
                                   n.e("8982"),
                                   n.e("7717"),
-                                  n.e("20037"),
+                                  n.e("75548"),
                               ]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
@@ -125,13 +125,13 @@ function I(e) {
                                           viewingChannelId: C,
                                           user: P,
                                           channel: R,
-                                          guildId: D,
+                                          guildId: w,
                                       }),
                                   );
                           });
                   },
         x = E.ZP.useName(P),
-        L = (0, o.e7)([p.Z, _.ZP, m.Z], () => g.ZP.getNickname(D, b, P));
+        L = (0, o.e7)([p.Z, _.ZP, m.Z], () => g.ZP.getNickname(w, b, P));
     if (null == P)
         return (0, r.jsx)(S, {
             userId: O,
@@ -146,7 +146,7 @@ function I(e) {
                     {
                         ref: A,
                         className: t,
-                        onContextMenu: w,
+                        onContextMenu: D,
                     },
                     e,
                 ),
@@ -163,7 +163,7 @@ function I(e) {
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: A,
                   user: P,
-                  guildId: null != D ? D : void 0,
+                  guildId: null != w ? w : void 0,
                   channelId: b,
                   position: a.tq ? "top" : "right",
                   clickTrap: !0,

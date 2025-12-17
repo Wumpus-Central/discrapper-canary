@@ -1,9 +1,9 @@
-t.d(n, { Z: () => s });
+t.d(n, { Z: () => a });
 var l = t(806729),
     i = t(146078),
     o = t(228168),
     r = t(388032);
-function s(e) {
+function a(e) {
     let { mutualGuilds: n } = (0, l.Z)(e),
         t = null == n ? void 0 : n.length;
     return [

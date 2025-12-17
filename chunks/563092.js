@@ -6,15 +6,15 @@ var i = n(54381),
     r = n(915009),
     a = n(631885),
     o = n(509613),
-    T = n(970013),
-    S = n(313789),
+    S = n(970013),
+    T = n(313789),
     c = n(342386),
     E = n(122145),
     d = n(523044),
     g = n(56404),
     _ = n(388032),
     I = n(517319);
-let N = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
+let N = (0, o.k4)(T.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
     useTitle: () => _.intl.string(_.t["1Qn8iV"]),
     buildLayout: () => [E.Y, d.y, g.Z],
     useNotice: () => {
@@ -26,7 +26,7 @@ let N = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
         return l.useMemo(() => {
             if (t)
                 return {
-                    type: T.v.INLINE_NOTICE,
+                    type: S.v.INLINE_NOTICE,
                     noticeType: "info",
                     useText: () =>
                         _.intl.format(I.default.i284fU, {

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(54381),
     i = n(28664),
     l = n(821020),
-    o = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     let { children: t } = e,
         { notificationCenterVariant: n } = (0, l.pN)({ location: "NotificationsInboxTooltip" }),
-        a = n === l.jP.LEGACY ? o.intl.string(o.t.GSmTKJ) : o.intl.string(o.t.HcoRu0);
+        o = n === l.jP.LEGACY ? a.intl.string(a.t.GSmTKJ) : a.intl.string(a.t.HcoRu0);
     return (0, r.jsx)(i.u, {
         spacing: 12,
         position: "right",
-        text: a,
+        text: o,
         children: (0, r.jsx)("div", { children: t }),
     });
 }

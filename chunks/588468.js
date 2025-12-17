@@ -1,5 +1,5 @@
 n.d(t, {
-    DJ: () => F,
+    DJ: () => B,
     ZP: () => eu,
     rp: () => V,
 }),
@@ -34,11 +34,11 @@ var r,
     N = n(594174),
     P = n(768581),
     R = n(51144),
-    D = n(965386),
-    w = n(981631),
+    w = n(965386),
+    D = n(981631),
     x = n(185923),
     L = n(388032),
-    j = n(512746);
+    j = n(962051);
 function M(e, t, n) {
     return (
         t in e
@@ -95,7 +95,7 @@ function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = B(e, t);
+        i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -103,7 +103,7 @@ function Z(e, t) {
     }
     return i;
 }
-function B(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,7 +112,7 @@ function B(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function F(e) {
+function B(e) {
     return null != e ? "autocomplete-".concat(e) : null;
 }
 function V(e) {
@@ -137,7 +137,7 @@ class Y extends a.PureComponent {
             f.P3F,
             G(k({}, e), {
                 className: s()(j.clickable, r, n),
-                id: null != (t = F(a)) ? t : void 0,
+                id: null != (t = B(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l
                     ? () => {
@@ -182,14 +182,14 @@ class Y extends a.PureComponent {
 class W extends Y {
     renderContent() {
         let { text: e, description: t, badge: n } = this.props;
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.z5, {
-                    children: (0, i.jsxs)(D.BR, {
+                (0, i.jsx)(w.z5, {
+                    children: (0, i.jsxs)(w.BR, {
                         children: [e, " ", null != n && (0, i.jsx)(d.C, { type: n })],
                     }),
                 }),
-                null != t ? (0, i.jsx)(D.dY, { children: t }) : null,
+                null != t ? (0, i.jsx)(w.dY, { children: t }) : null,
             ],
         });
     }
@@ -199,9 +199,9 @@ function K(e) {
     return (0, i.jsx)("div", {
         className: j.base,
         "aria-busy": !0,
-        children: (0, i.jsx)(D.RX, {
-            children: (0, i.jsx)(D.z5, {
-                children: (0, i.jsx)(D.BR, {
+        children: (0, i.jsx)(w.RX, {
+            children: (0, i.jsx)(w.z5, {
+                children: (0, i.jsx)(w.BR, {
                     children: (0, i.jsx)("div", {
                         className: j.autocompletePlaceholder,
                         style: { width: t },
@@ -238,9 +238,9 @@ class Q extends Y {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: o } = this.props,
             s = null == o ? A.Z.getNickname(t.id) : null;
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.Tw, {
+                (0, i.jsx)(w.Tw, {
                     children: (0, i.jsx)(f.qEK, {
                         size: f.EFr.SIZE_24,
                         src: t.getAvatarURL(o, 24),
@@ -248,10 +248,10 @@ class Q extends Y {
                         status: r,
                     }),
                 }),
-                (0, i.jsx)(D.z5, {
-                    children: (0, i.jsx)(D.BR, { children: null != (e = null != n ? n : s) ? e : R.ZP.getName(t) }),
+                (0, i.jsx)(w.z5, {
+                    children: (0, i.jsx)(w.BR, { children: null != (e = null != n ? n : s) ? e : R.ZP.getName(t) }),
                 }),
-                (0, i.jsxs)(D.dY, {
+                (0, i.jsxs)(w.dY, {
                     children: [
                         R.ZP.getUserTag(t, {
                             mode: "username",
@@ -284,10 +284,10 @@ class X extends Y {
             } = this.props,
             d = null == l ? A.Z.getNickname(t.id) : null,
             p = null != (e = null != n ? n : d) ? e : R.ZP.getName(t);
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             className: s()({ [j.verticalLayout]: "vertical-suggestion" === u }),
             children: [
-                (0, i.jsx)(D.Tw, {
+                (0, i.jsx)(w.Tw, {
                     children: (0, i.jsx)(f.qEK, {
                         size: f.EFr.SIZE_32,
                         src: t.getAvatarURL(l, 32),
@@ -299,7 +299,7 @@ class X extends Y {
                     className: j.autocompleteContentWrapper,
                     "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], { name: p }),
                     children: [
-                        (0, i.jsx)(D.z5, {
+                        (0, i.jsx)(w.z5, {
                             children: (0, i.jsx)(f.Text, {
                                 className: j.autocompleteRowHeading,
                                 color: "interactive-text-active",
@@ -307,7 +307,7 @@ class X extends Y {
                                 children: p,
                             }),
                         }),
-                        (0, i.jsx)(D.dY, {
+                        (0, i.jsx)(w.dY, {
                             children:
                                 null == r || r === p.toLocaleLowerCase() || r === t.username.toLocaleLowerCase()
                                     ? (0, i.jsxs)(i.Fragment, {
@@ -359,10 +359,10 @@ class J extends Y {
                 includeConvenienceGlow: !0,
             }),
             m = l ? k({}, u ? d : { color: null != r ? r : void 0 }) : void 0;
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.z5, {
-                    children: (0, i.jsxs)(D.BR, {
+                (0, i.jsx)(w.z5, {
+                    children: (0, i.jsxs)(w.BR, {
                         children: [
                             o &&
                                 (0, i.jsx)(f.FhE, {
@@ -380,7 +380,7 @@ class J extends Y {
                         ],
                     }),
                 }),
-                t ? null : (0, i.jsx)(D.dY, { children: L.intl.string(L.t["/91tbr"]) }),
+                t ? null : (0, i.jsx)(w.dY, { children: L.intl.string(L.t["/91tbr"]) }),
             ],
         });
     }
@@ -388,17 +388,17 @@ class J extends Y {
 class $ extends Y {
     renderContent() {
         let { timestamp: e, description: t } = this.props;
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.z5, {
-                    children: (0, i.jsx)(D.BR, {
+                (0, i.jsx)(w.z5, {
+                    children: (0, i.jsx)(w.BR, {
                         children: (0, i.jsx)(y.Z, {
                             node: e,
                             showTooltip: !1,
                         }),
                     }),
                 }),
-                null != t ? (0, i.jsx)(D.dY, { children: t }) : null,
+                null != t ? (0, i.jsx)(w.dY, { children: t }) : null,
             ],
         });
     }
@@ -406,12 +406,12 @@ class $ extends Y {
 class ee extends Y {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === w.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
-        return (0, i.jsxs)(D.RX, {
+            n = e.type === D.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
+        return (0, i.jsxs)(w.RX, {
             children: [
-                null != n && (0, i.jsx)(D.Tw, { children: (0, i.jsx)(n, { className: j.icon }) }),
-                (0, i.jsx)(D.z5, { children: (0, i.jsx)(D.BR, { children: (0, g.F6)(e, N.default, A.Z) }) }),
-                null != t ? (0, i.jsx)(D.dY, { children: t.name }) : null,
+                null != n && (0, i.jsx)(w.Tw, { children: (0, i.jsx)(n, { className: j.icon }) }),
+                (0, i.jsx)(w.z5, { children: (0, i.jsx)(w.BR, { children: (0, g.F6)(e, N.default, A.Z) }) }),
+                null != t ? (0, i.jsx)(w.dY, { children: t.name }) : null,
             ],
         });
     }
@@ -419,9 +419,9 @@ class ee extends Y {
 class et extends Y {
     renderContent() {
         let { command: e } = this.props;
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.Tw, {
+                (0, i.jsx)(w.Tw, {
                     children: (0, i.jsx)(f.XZC, {
                         size: "xs",
                         color: "currentColor",
@@ -429,8 +429,8 @@ class et extends Y {
                         colorClass: j.iconForeground,
                     }),
                 }),
-                (0, i.jsx)(D.z5, { children: (0, i.jsx)(D.BR, { children: e.displayName }) }),
-                (0, i.jsx)(D.dY, { children: e.displayDescription }),
+                (0, i.jsx)(w.z5, { children: (0, i.jsx)(w.BR, { children: e.displayName }) }),
+                (0, i.jsx)(w.dY, { children: e.displayDescription }),
             ],
         });
     }
@@ -477,12 +477,12 @@ class er extends Y {
                           className: j.emojiRaw,
                           children: e.surrogates,
                       }),
-            o = null != n ? (0, i.jsx)(D.dY, { children: n.name }) : null;
-        return (0, i.jsxs)(D.RX, {
+            o = null != n ? (0, i.jsx)(w.dY, { children: n.name }) : null;
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.Tw, { children: a }),
-                (0, i.jsx)(D.z5, {
-                    children: (0, i.jsxs)(D.BR, {
+                (0, i.jsx)(w.Tw, { children: a }),
+                (0, i.jsx)(w.z5, {
+                    children: (0, i.jsxs)(w.BR, {
                         children: [t, e.name, t],
                     }),
                 }),
@@ -504,16 +504,16 @@ class ei extends Y {
             (0, I.jl)(s)
                 ? (n = null == (e = S.Z.getStickerPack(s.pack_id)) ? void 0 : e.name)
                 : (0, I.J8)(s) && (n = null == (t = C.Z.getGuild(s.guild_id)) ? void 0 : t.name),
-            (0, i.jsxs)(D.RX, {
+            (0, i.jsxs)(w.RX, {
                 children: [
-                    (0, i.jsx)(D.Tw, { children: a(s, l || !0 === o) }),
-                    (0, i.jsxs)(D.z5, {
+                    (0, i.jsx)(w.Tw, { children: a(s, l || !0 === o) }),
+                    (0, i.jsxs)(w.z5, {
                         children: [
-                            (0, i.jsx)(D.BR, { children: s.name }),
-                            null != r && (0, i.jsx)(D.wL, { children: L.intl.format(L.t.PAutaQ, { queryMatch: r }) }),
+                            (0, i.jsx)(w.BR, { children: s.name }),
+                            null != r && (0, i.jsx)(w.wL, { children: L.intl.format(L.t.PAutaQ, { queryMatch: r }) }),
                         ],
                     }),
-                    null != n && (0, i.jsx)(D.dY, { children: n }),
+                    null != n && (0, i.jsx)(w.dY, { children: n }),
                 ],
             })
         );
@@ -558,10 +558,10 @@ class el extends Y {
                     size: 32,
                 }),
             });
-        return (0, i.jsxs)(D.RX, {
+        return (0, i.jsxs)(w.RX, {
             children: [
-                (0, i.jsx)(D.Tw, { children: t }),
-                (0, i.jsx)(D.z5, { children: (0, i.jsx)(D.BR, { children: e.name }) }),
+                (0, i.jsx)(w.Tw, { children: t }),
+                (0, i.jsx)(w.z5, { children: (0, i.jsx)(w.BR, { children: e.name }) }),
             ],
         });
     }

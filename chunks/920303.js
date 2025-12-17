@@ -56,10 +56,10 @@ function R() {
         (A = []),
         (P = s.z.MATCH_SOME);
 }
-function D(e, t) {
+function w(e, t) {
     return t === l.z.LATEST_ACTIVITY ? h.ZP.lastMessageId(e.id) : e.id;
 }
-function w(e) {
+function D(e) {
     (e.channelId === T && e.sortOrder === C && (0, c.O)(e.tagFilter, r) && e.tagSetting === P) || R(),
         (T = e.channelId),
         (C = e.sortOrder),
@@ -96,7 +96,7 @@ function j() {
     if (null == T) return !1;
     let e = !S,
         t = m.Z.getChannel(A[A.length - 1]),
-        n = null == t ? null : D(t, C);
+        n = null == t ? null : w(t, C);
     A = o()(m.Z.getAllThreadsForParent(T))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
@@ -111,11 +111,11 @@ function j() {
             }
             if (e || null == n) return !0;
             {
-                let e = null == t ? null : D(t, C);
+                let e = null == t ? null : w(t, C);
                 return null != e && g.default.compare(e, n) >= 0;
             }
         })
-        .sort((e, t) => g.default.compare(D(e, C), D(t, C)))
+        .sort((e, t) => g.default.compare(w(e, C), w(t, C)))
         .map((e) => e.id)
         .reverse()
         .value();
@@ -140,8 +140,8 @@ function Z(e) {
     let { channel: t } = e;
     return T === t.parent_id && !!(0, f.yv)(t.id) && void U(t.id);
 }
-let B = [];
-class F extends (i = u.ZP.Store) {
+let F = [];
+class B extends (i = u.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, E.Z, h.ZP);
     }
@@ -158,16 +158,16 @@ class F extends (i = u.ZP.Store) {
         return T === e && C === t && (0, c.O)(r, n) && P === i ? O : (R(), !1);
     }
     getThreads(e, t, n, i) {
-        return T === e && C === t && (0, c.O)(r, n) && P === i ? A : B;
+        return T === e && C === t && (0, c.O)(r, n) && P === i ? A : F;
     }
 }
-b(F, "displayName", "ArchivedThreadsStore");
-let V = new F(d.Z, {
+b(B, "displayName", "ArchivedThreadsStore");
+let V = new B(d.Z, {
     CONNECTION_OPEN: R,
     THREAD_DELETE: G,
     THREAD_UPDATE: Z,
     CHANNEL_DELETE: k,
-    LOAD_ARCHIVED_THREADS: w,
+    LOAD_ARCHIVED_THREADS: D,
     LOAD_ARCHIVED_THREADS_SUCCESS: x,
     LOAD_ARCHIVED_THREADS_FAIL: M,
     RESORT_THREADS: L,

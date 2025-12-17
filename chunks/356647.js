@@ -1,4 +1,4 @@
-n.d(t, { f: () => f }), n(388685), n(997841);
+n.d(t, { f: () => h }), n(388685), n(997841);
 var i = n(602715),
     r = n(95015),
     l = n(924557),
@@ -9,7 +9,7 @@ var i = n(602715),
     u = n(3148),
     d = n(981631);
 let p = new Map();
-function h(e, t) {
+function f(e, t) {
     let n = (0, u.ZP)({
             channelId: t,
             type: d.uaV.IN_GAME_MESSAGE_NUX,
@@ -21,10 +21,10 @@ function h(e, t) {
         i = (0, c.e5)(n);
     return (i.applicationId = e.applicationId), (i.timestamp = e.timestamp), i;
 }
-function f(e, t) {
+function h(e, t) {
     let n = (function (e, t) {
         var n, l;
-        if (p.get(t.id) === e.id) return h(e, t.id);
+        if (p.get(t.id) === e.id) return f(e, t.id);
         if (
             null == e.applicationId ||
             !(0, r.yE)(e.flags, d.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ||
@@ -35,7 +35,7 @@ function f(e, t) {
             p.has(t.id)
         )
             return null;
-        let a = h(e, t.id);
+        let a = f(e, t.id);
         p.set(t.id, e.id);
         let c = (0, r.mB)(null != (l = t.recipientFlags) ? l : 0, i.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
         return o.Z.updatePrivateChannelRecipientFlags(t.id, c), a;
@@ -45,7 +45,7 @@ function f(e, t) {
             message: n,
             position: "before",
         };
-    let f = (function (e, t) {
+    let h = (function (e, t) {
         if (
             !(0, l.NS)() ||
             null ==
@@ -76,26 +76,26 @@ function f(e, t) {
         let o = a.Z.getMatchingGroupClip(n, i);
         if (null == o || a.Z.wasClipSharedInChannel(o.id, t.id)) return null;
         var p = t.id;
-        let h = (0, u.ZP)({
+        let f = (0, u.ZP)({
                 channelId: p,
                 type: 65,
                 content: "",
                 author: e.author,
                 state: d.yb.SENT,
             }),
-            f = (0, c.e5)(h);
+            h = (0, c.e5)(f);
         return (
-            (f.timestamp = e.timestamp),
-            (f.messageReference = {
+            (h.timestamp = e.timestamp),
+            (h.messageReference = {
                 channel_id: p,
                 message_id: e.id,
             }),
-            f
+            h
         );
     })(e, t);
-    return null != f
+    return null != h
         ? {
-              message: f,
+              message: h,
               position: "after",
           }
         : null;

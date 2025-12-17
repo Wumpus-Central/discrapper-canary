@@ -16,7 +16,7 @@ function d(e) {
             [n],
             r.Lc,
         ),
-        h = (0, i.e7)([o.Z], () => {
+        f = (0, i.e7)([o.Z], () => {
             for (let e of p)
                 if ((0, u.Io)(e) || (0, u._5)(e)) {
                     for (let t of o.Z.getActivities(e.user.id))
@@ -24,8 +24,8 @@ function d(e) {
                 }
             return !1;
         }, [p]),
-        f = (0, i.e7)([a.ZP], () =>
+        h = (0, i.e7)([a.ZP], () =>
             a.ZP.getRunningGames().some((e) => null != e.id && c.RI.has(e.id) && a.ZP.isDetectionEnabled(e)),
         );
-    return d && (f || h);
+    return d && (h || f);
 }

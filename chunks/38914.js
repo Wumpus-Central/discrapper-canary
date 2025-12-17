@@ -2,12 +2,12 @@ n.d(t, { q: () => c });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    l = n(483444),
-    a = n(388032),
-    o = n(156716),
-    s = n(302681);
+    a = n(483444),
+    l = n(388032),
+    o = n(110739),
+    s = n(133988);
 let c = () => {
-    let e = [a.t.E1NP2x, a.t.kpMomJ, a.t.xT1Vfn, a.t.myyAEr, a.t.zTk8Ul];
+    let e = [l.t.E1NP2x, l.t.kpMomJ, l.t.xT1Vfn, l.t.myyAEr, l.t.zTk8Ul];
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
@@ -16,7 +16,7 @@ let c = () => {
                 alt: "",
                 className: o.headerAsset,
             }),
-            (0, r.jsx)(l.Z, { color: "white" }),
+            (0, r.jsx)(a.Z, { color: "white" }),
             (0, r.jsx)("div", {
                 className: o.benefits,
                 children: e.map((e, t) =>
@@ -29,7 +29,7 @@ let c = () => {
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-sm/medium",
                                     color: "always-white",
-                                    children: a.intl.string(e),
+                                    children: l.intl.string(e),
                                 }),
                             ],
                         },

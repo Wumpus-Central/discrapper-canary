@@ -3,7 +3,7 @@ var i = e(54381);
 e(473749);
 var a = e(481060),
     s = e(259580),
-    l = e(452847);
+    l = e(110024);
 function r(n) {
     let { url: t, text: e, onClick: r } = n;
     return (0, i.jsx)(a.Anchor, {

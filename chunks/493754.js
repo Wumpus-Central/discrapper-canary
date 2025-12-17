@@ -104,11 +104,11 @@ function C(e) {
             appContext: C,
             analyticsLocation: y,
             className: v,
-            size: O = "sm",
+            size: x = "sm",
         } = e,
-        x = null == r ? void 0 : r.getGuildId(),
+        O = null == r ? void 0 : r.getGuildId(),
         E = null == r ? void 0 : r.id,
-        j = (0, s.e7)([p.Z], () => (null != x ? p.Z.getGuild(x) : null), [x]),
+        j = (0, s.e7)([p.Z], () => (null != O ? p.Z.getGuild(O) : null), [O]),
         S = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(E), [E]);
     if (!(null != j && null != r && f.Z.can(h.Plq.CREATE_INSTANT_INVITE, r))) return null;
     let _ = m.intl.string(m.t.VINpSK);
@@ -119,7 +119,7 @@ function C(e) {
                 (0, i.jsx)("div", {
                     className: l()(v, g.textButton),
                     children: (0, i.jsx)(c.Button, {
-                        size: O,
+                        size: x,
                         variant: "secondary",
                         text: _,
                         onClick: () => {

@@ -1,8 +1,8 @@
 n.d(t, { U: () => S }), n(388685), n(49124), n(415506);
 var a = n(54381),
     r = n(473749),
-    i = n(663042),
-    l = n(442837),
+    l = n(663042),
+    i = n(442837),
     s = n(544891),
     o = n(199849),
     c = n(159691),
@@ -11,25 +11,25 @@ var a = n(54381),
     m = n(535664),
     p = n(5900),
     h = n(299886),
-    x = n(848984),
-    f = n(773275),
-    g = n(261538),
-    b = n(868802),
+    f = n(848984),
+    x = n(773275),
+    b = n(261538),
+    g = n(868802),
     v = n(594174),
     j = n(246992),
-    _ = n(474936);
-let y = r.forwardRef((e, t) => {
-    let [n, i] = r.useState(null),
-        [l, o] = r.useState(null),
+    y = n(474936);
+let C = r.forwardRef((e, t) => {
+    let [n, l] = r.useState(null),
+        [i, o] = r.useState(null),
         [d, u] = r.useState(!1),
         m = r.useCallback(async () => {
-            u(!0), o(null), i(null);
+            u(!0), o(null), l(null);
             try {
                 let e = await s.tn.get({
                     url: "/users/@me/debug/warp/license",
                     rejectWithError: !0,
                 });
-                i(e.body);
+                l(e.body);
             } catch (r) {
                 var e, t;
                 let n =
@@ -56,7 +56,7 @@ let y = r.forwardRef((e, t) => {
                     onClick: m,
                     disabled: d,
                 }),
-                null != l &&
+                null != i &&
                     (0, a.jsx)("div", {
                         style: {
                             padding: "12px",
@@ -66,7 +66,7 @@ let y = r.forwardRef((e, t) => {
                             fontFamily: "monospace",
                             fontSize: "12px",
                         },
-                        children: l,
+                        children: i,
                     }),
                 null != n &&
                     (0, a.jsx)("pre", {
@@ -91,22 +91,22 @@ let y = r.forwardRef((e, t) => {
         })
     );
 });
-y.displayName = "DebugWarpLicenseInfo";
-let C = (e) => {
+C.displayName = "DebugWarpLicenseInfo";
+let _ = (e) => {
         let { onSuccess: t } = e,
-            [n, i] = r.useState(!1),
-            [l, o] = r.useState(0),
+            [n, l] = r.useState(!1),
+            [i, o] = r.useState(0),
             [d, u] = r.useState(null);
         r.useEffect(() => {
-            if (l > 0) {
+            if (i > 0) {
                 let e = setTimeout(() => {
-                    o(l - 1), 1 === l && t();
+                    o(i - 1), 1 === i && t();
                 }, 1000);
                 return () => clearTimeout(e);
             }
-        }, [l, t]);
+        }, [i, t]);
         let m = async () => {
-            i(!0), u(null);
+            l(!0), u(null);
             try {
                 await s.tn.post({
                     url: "/users/@me/debug/warp/license/extension-task",
@@ -122,7 +122,7 @@ let C = (e) => {
                     a = (null == r ? void 0 : r.status) || (null == r || null == (t = r.body) ? void 0 : t.code);
                 u("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
-                i(!1);
+                l(!1);
             }
         };
         return (0, a.jsxs)("div", {
@@ -135,11 +135,11 @@ let C = (e) => {
                 (0, a.jsx)(c.zxk, {
                     text: n
                         ? "Triggering Task..."
-                        : l > 0
-                          ? "Refreshing in ".concat(l, "s...")
+                        : i > 0
+                          ? "Refreshing in ".concat(i, "s...")
                           : "Trigger License Extension Task",
                     onClick: m,
-                    disabled: n || l > 0,
+                    disabled: n || i > 0,
                 }),
                 null != d &&
                     (0, a.jsx)("div", {
@@ -160,21 +160,21 @@ let C = (e) => {
         let [e, t] = r.useState(-1),
             [n, s] = r.useState(-1),
             [S, E] = r.useState(!1),
-            [O, T] = r.useState(5000),
-            [N, P] = r.useState(!1),
-            w = r.useRef(null),
-            I = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
-            k = (0, x.u)(),
+            [T, O] = r.useState(5000),
+            [N, w] = r.useState(!1),
+            P = r.useRef(null),
+            I = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
+            k = (0, f.u)(),
             [R] = r.useState(() =>
-                (0, f.o8)({
+                (0, x.o8)({
                     finishSetup: async () => !0,
                     perkAvailableToUser: k,
                 }),
             ),
             {
                 installationStatus: A,
-                setInstallationStatus: D,
-                connectionStatus: Z,
+                setInstallationStatus: Z,
+                connectionStatus: D,
                 setConnectionStatus: L,
                 setConnect: M,
                 setDisconnect: U,
@@ -183,11 +183,11 @@ let C = (e) => {
                 setIsSupportedPrivateBrowsingPerkPlatform: G,
                 isWeb: V,
                 isSupportedPrivateBrowsingPerkPlatform: H,
-                setGetWarpInstallationStatus: W,
-                perkAvailableToUser: z,
-                setPerkAvailableToUser: q,
-            } = (0, i.o)(R),
-            K = r.useCallback(
+                setGetWarpInstallationStatus: z,
+                perkAvailableToUser: W,
+                setPerkAvailableToUser: K,
+            } = (0, l.o)(R),
+            q = r.useCallback(
                 async () => (
                     L(p.Ij.INITIALIZING),
                     t(
@@ -200,35 +200,35 @@ let C = (e) => {
                 [L, t],
             );
         r.useEffect(() => {
-            M(K);
-        }, [K, M]);
-        let Q = r.useCallback(async () => p._n.INSTALLING, []);
+            M(q);
+        }, [q, M]);
+        let Y = r.useCallback(async () => p._n.INSTALLING, []);
         r.useEffect(() => {
-            q(k);
-        }, [k, q]),
+            K(k);
+        }, [k, K]),
             r.useEffect(() => {
-                W(Q);
-            }, [W, Q]);
-        let Y = r.useCallback(async () => (clearTimeout(e), L(p.Ij.DISCONNECTED), !0), [e, L]),
+                z(Y);
+            }, [z, Y]);
+        let Q = r.useCallback(async () => (clearTimeout(e), L(p.Ij.DISCONNECTED), !0), [e, L]),
             X = r.useCallback(
                 () =>
                     new Promise((e, t) => {
-                        D(p._n.INSTALLING),
+                        Z(p._n.INSTALLING),
                             s(
                                 setTimeout(() => {
                                     if (S) return void t(Error("Installation failed"));
                                     e();
-                                }, O),
+                                }, T),
                             );
                     }),
-                [S, O, D, s],
+                [S, T, Z, s],
             );
         r.useEffect(() => {
-            V && A !== p._n.UNKNOWN && D(p._n.UNKNOWN);
-        }, [V, D, A]),
+            V && A !== p._n.UNKNOWN && Z(p._n.UNKNOWN);
+        }, [V, Z, A]),
             r.useEffect(() => {
-                U(Y);
-            }, [Y, U]),
+                U(Q);
+            }, [Q, U]),
             r.useEffect(() => {
                 B(X);
             }, [X, B]),
@@ -236,8 +236,8 @@ let C = (e) => {
                 A !== p._n.INSTALLING && clearTimeout(n);
             }, [n, A]),
             r.useEffect(() => {
-                if (A !== p._n.INSTALLED && Z !== p.Ij.INITIALIZING) return void L(p.Ij.INITIALIZING);
-            }, [A, Z, L]);
+                if (A !== p._n.INSTALLED && D !== p.Ij.INITIALIZING) return void L(p.Ij.INITIALIZING);
+            }, [A, D, L]);
         let { enabled: J } = h.H.useConfig({ location: "private_browsing_perk_settings_page" });
         return J
             ? (0, a.jsxs)("div", {
@@ -247,15 +247,15 @@ let C = (e) => {
                           style: { marginTop: "16px" },
                           children: "Private Browsing Perk Components",
                       }),
-                      (0, a.jsxs)(g.$0, {
+                      (0, a.jsxs)(b.$0, {
                           children: [
                               (0, a.jsx)(c.X6q, {
                                   variant: "heading-lg/semibold",
                                   children: "Configure Private Browsing Perk State",
                               }),
-                              (0, a.jsxs)(g.pg, {
+                              (0, a.jsxs)(b.pg, {
                                   children: [
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(b.BZ, {
                                           children: [
                                               (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
@@ -265,14 +265,14 @@ let C = (e) => {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(c.rsf, {
                                                       onChange: () => {
-                                                          z ? (0, m.C)(null, I) : (0, m.C)(_.F_, I);
+                                                          W ? (0, m.C)(null, I) : (0, m.C)(y.F_, I);
                                                       },
-                                                      checked: z,
+                                                      checked: W,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(b.BZ, {
                                           children: [
                                               (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
@@ -287,7 +287,7 @@ let C = (e) => {
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(b.BZ, {
                                           children: [
                                               (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
@@ -302,14 +302,14 @@ let C = (e) => {
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(b.BZ, {
                                           children: [
                                               (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
                                                   children: "Installation Status",
                                               }),
                                               (0, a.jsx)(o.B6, {
-                                                  select: (e) => D(e),
+                                                  select: (e) => Z(e),
                                                   isSelected: (e) => e === A,
                                                   serialize: (e) => "".concat(e),
                                                   disabled: V,
@@ -356,7 +356,7 @@ let C = (e) => {
                                           ],
                                       }),
                                       A === p._n.INSTALLED &&
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(b.BZ, {
                                               children: [
                                                   (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
@@ -364,7 +364,7 @@ let C = (e) => {
                                                   }),
                                                   (0, a.jsx)(o.B6, {
                                                       select: (e) => L(e),
-                                                      isSelected: (e) => e === Z,
+                                                      isSelected: (e) => e === D,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {
@@ -391,9 +391,9 @@ let C = (e) => {
                                   ],
                               }),
                               A === p._n.NOT_INSTALLED &&
-                                  (0, a.jsxs)(g.pg, {
+                                  (0, a.jsxs)(b.pg, {
                                       children: [
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(b.BZ, {
                                               children: [
                                                   (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
@@ -408,15 +408,15 @@ let C = (e) => {
                                                   }),
                                               ],
                                           }),
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(b.BZ, {
                                               children: [
                                                   (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(o.B6, {
-                                                      select: (e) => T(e),
-                                                      isSelected: (e) => e === O,
+                                                      select: (e) => O(e),
+                                                      isSelected: (e) => e === T,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {
@@ -452,19 +452,19 @@ let C = (e) => {
                                   }),
                           ],
                       }),
-                      (0, a.jsxs)(f.xz.Provider, {
+                      (0, a.jsxs)(x.xz.Provider, {
                           value: R,
                           children: [
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(b.$0, {
                                   children: [
                                       (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk Settings Component",
                                       }),
-                                      (0, a.jsx)(b.M, {}),
+                                      (0, a.jsx)(g.M, {}),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(b.$0, {
                                   children: [
                                       (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
@@ -473,44 +473,44 @@ let C = (e) => {
                                       (0, a.jsx)(c.zxk, {
                                           text: "Show exit modal",
                                           onClick: () => {
-                                              P(!0);
+                                              w(!0);
                                           },
                                       }),
                                       N &&
                                           (0, a.jsx)(u.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,
-                                              onCancel: () => P(!1),
+                                              onCancel: () => w(!1),
                                               isProtocol: !1,
                                               onConfirm: () => {},
                                               onClose: async () => {
-                                                  P(!1);
+                                                  w(!1);
                                               },
                                               transitionState: d.Dvm.ENTERED,
                                           }),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(b.$0, {
                                   children: [
                                       (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk License Extension Task",
                                       }),
-                                      (0, a.jsx)(C, {
+                                      (0, a.jsx)(_, {
                                           onSuccess: () => {
                                               var e;
-                                              null == (e = w.current) || e.refresh();
+                                              null == (e = P.current) || e.refresh();
                                           },
                                       }),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(b.$0, {
                                   children: [
                                       (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk WARP License Info",
                                       }),
-                                      (0, a.jsx)(y, { ref: w }),
+                                      (0, a.jsx)(C, { ref: P }),
                                   ],
                               }),
                           ],

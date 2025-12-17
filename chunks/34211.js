@@ -1,4 +1,4 @@
-a.d(t, { o: () => N }), a(388685);
+a.d(t, { o: () => m }), a(388685);
 var n,
     r = a(54381),
     s = a(473749),
@@ -20,13 +20,13 @@ function u(e, t, a) {
         e
     );
 }
-let _ = c.j_.MAIN_NAVIGATION_MENU;
-class N extends (n = s.PureComponent) {
+let N = c.j_.MAIN_NAVIGATION_MENU;
+class m extends (n = s.PureComponent) {
     render() {
         let e,
             t = (0, l.fQ)(this.context.router),
-            { isMobile: a, isVisible: n, styles: s, TrackClick: u, avoidRouter: N } = this.props,
-            { sectionShown: m } = this.state;
+            { isMobile: a, isVisible: n, styles: s, TrackClick: u, avoidRouter: m } = this.props,
+            { sectionShown: f } = this.state;
         return ((e = null != d.Z ? d.Z.getLocale().toLowerCase() : ""),
         [
             {
@@ -132,9 +132,9 @@ class N extends (n = s.PureComponent) {
                       {
                           title: e.title,
                           links: e.links,
-                          isOpen: m === e.title,
+                          isOpen: f === e.title,
                           isMobile: a,
-                          avoidRouter: N,
+                          avoidRouter: m,
                           TrackClick: u,
                           onClose: this.closeSubNav,
                           onOpen: this.openSubNav,
@@ -149,7 +149,7 @@ class N extends (n = s.PureComponent) {
                             role: "none",
                             children: (0, r.jsx)(u, {
                                 className: s.mainNavLink,
-                                eventName: _,
+                                eventName: N,
                                 data: e.linkClicked ? { linkClicked: e.linkClicked } : {},
                                 href: e.route,
                                 rel: "me",
@@ -165,7 +165,7 @@ class N extends (n = s.PureComponent) {
                               className: t(e.route) ? s.listItemActive : s.listItemInactive,
                               role: "none",
                               children: (0, r.jsx)(i.Z, {
-                                  avoidRouter: N,
+                                  avoidRouter: m,
                                   to: e.route,
                                   from: c.j_.MAIN_NAVIGATION_MENU,
                                   tabIndex: n ? 0 : -1,
@@ -173,7 +173,7 @@ class N extends (n = s.PureComponent) {
                                   children: (0, r.jsx)(u, {
                                       tag: "span",
                                       className: s.mainNavLink,
-                                      eventName: _,
+                                      eventName: N,
                                       data: { linkClicked: e.linkClicked },
                                       children: e.title,
                                   }),
@@ -197,7 +197,7 @@ class N extends (n = s.PureComponent) {
             });
     }
 }
-u(N, "defaultProps", {
+u(m, "defaultProps", {
     isMobile: !1,
     isVisible: !0,
 });

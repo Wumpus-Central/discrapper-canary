@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(953529);
+n.d(t, { Z: () => h }), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -9,45 +9,45 @@ var r = n(54381),
     d = n(858457),
     u = n(273504),
     g = n(981631),
-    m = n(388032),
-    p = n(140876);
-let f = o.Z.getArticleURL(g.BhN.GUILD_AUTOMOD_REGEX);
-function h(e) {
+    f = n(388032),
+    m = n(363605);
+let b = o.Z.getArticleURL(g.BhN.GUILD_AUTOMOD_REGEX);
+function p(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
         ? (0, r.jsx)("div", {
-              className: p.subtext,
+              className: m.subtext,
               children: (0, r.jsx)(s.Text, {
-                  className: p.errorSpan,
+                  className: m.errorSpan,
                   variant: "text-xs/medium",
                   color: "text-feedback-critical",
-                  children: null != i ? i : m.intl.format(m.t.jKYAPu, { helpArticle: f }),
+                  children: null != i ? i : f.intl.format(f.t.jKYAPu, { helpArticle: b }),
               }),
           })
         : (0, r.jsx)(s.Text, {
-              className: p.subtext,
+              className: m.subtext,
               variant: "text-xs/medium",
               color: "text-muted",
               children: n,
           });
 }
-function b(e) {
+function h(e) {
     var t, n;
     let { rule: l, onChangeText: s, className: o } = e,
         {
             patterns: g,
-            valueError: b,
+            valueError: h,
             errors: x,
             validatePatternsChanged: j,
-            validateEditingValueChanged: _,
+            validateEditingValueChanged: v,
         } = (0, d.Z)(l, s),
-        [v] = i.useState(() => ({
+        [O] = i.useState(() => ({
             tags: g,
             value: "",
             selections: [],
             isSelecting: !1,
         })),
-        O = i.useMemo(
+        C = i.useMemo(
             () =>
                 x.reduce((e, t) => {
                     let {
@@ -70,32 +70,32 @@ function b(e) {
                 }, {}),
             [x, g],
         ),
-        C = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 j(e, g);
             },
             [j, g],
         ),
-        y = i.useCallback(
+        N = i.useCallback(
             (e) => {
-                _(e);
+                v(e);
             },
-            [_],
+            [v],
         );
     return (0, r.jsxs)("div", {
-        className: a()(p.keywordsContainer, o),
+        className: a()(m.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
                 placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-                initialValue: v,
-                onChangeTags: C,
-                onChangeNewTagValue: y,
-                tagErrors: O,
+                initialValue: O,
+                onChangeTags: y,
+                onChangeNewTagValue: N,
+                tagErrors: C,
                 maxTags: u.VW,
             }),
-            (0, r.jsx)(h, {
-                text: m.intl.format(m.t["PGC/AJ"], { helpArticle: f }),
-                hasErrors: x.length > 0 || null != b,
+            (0, r.jsx)(p, {
+                text: f.intl.format(f.t["PGC/AJ"], { helpArticle: b }),
+                hasErrors: x.length > 0 || null != h,
                 errorText:
                     null !=
                     (n =
@@ -107,9 +107,9 @@ function b(e) {
                             ? void 0
                             : t.message)
                         ? n
-                        : null == b
+                        : null == h
                           ? void 0
-                          : b.message,
+                          : h.message,
             }),
         ],
     });

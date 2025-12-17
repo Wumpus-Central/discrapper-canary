@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i = n(54381),
     r = n(473749),
     l = n(399606),
@@ -19,7 +19,7 @@ function p() {
             return e;
         }).apply(this, arguments);
 }
-function h() {
+function f() {
     let e = (0, l.e7)([s.Z], () => !s.Z.visibleOverlayCanvas),
         t = r.useRef(null);
     return (0, i.jsx)(u.Z, {

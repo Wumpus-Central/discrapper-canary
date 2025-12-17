@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(704215),
     a = n(481060),
-    s = n(785697),
-    o = n(626135),
+    o = n(785697),
+    s = n(626135),
     c = n(700785),
     u = n(645041),
     d = n(981631),
@@ -13,14 +13,14 @@ var r = n(54381),
     g = n(135899);
 function h(e) {
     var t;
-    let h = (0, s.SE)(e),
+    let h = (0, o.SE)(e),
         m = g.$X.some((t) => (null == e ? void 0 : e.id) !== f._ && c.oz(t, e)),
-        _ = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
-        b = (0, u.FT)(
+        b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
+        _ = (0, u.FT)(
             l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
             null != (t = null == e ? void 0 : e.id) ? t : d.lds,
         ),
-        E = h && (m || _) && !b,
+        E = h && (m || b) && !_,
         O = i.useCallback(() => {
             var t;
             (0, u.Qd)(
@@ -68,7 +68,7 @@ function h(e) {
                                 {
                                     guild: e,
                                     canEveryoneModerate: m,
-                                    isDefaultNotificationsAllMessages: _,
+                                    isDefaultNotificationsAllMessages: b,
                                 },
                                 n,
                             ),
@@ -76,11 +76,11 @@ function h(e) {
                 },
                 { onCloseCallback: O },
             ),
-                o.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                s.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds,
                 }),
                 (v.current = !0);
         }
-    }, [m, e, O, _, E]);
+    }, [m, e, O, b, E]);
 }

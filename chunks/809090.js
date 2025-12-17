@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(271383),
     u = n(768581),
     d = n(895924),
-    f = n(557545),
+    f = n(817070),
     p = n(970952);
 function _(e, t, n) {
     return (
@@ -119,10 +119,10 @@ function y(e) {
         R = i.useCallback(() => {
             N(!1), null == S || S();
         }, [S]),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             N(!0), null == I || I();
         }, [I]),
-        w = i.useCallback(() => {
+        D = i.useCallback(() => {
             N(!1), null == T || T();
         }, [T]),
         x = (0, s.e7)([c.ZP], () => {
@@ -153,8 +153,8 @@ function y(e) {
             }),
             onFocus: P,
             onBlur: R,
-            onMouseOver: D,
-            onMouseLeave: w,
+            onMouseOver: w,
+            onMouseLeave: D,
             children: (0, r.jsx)(l.ZP, {
                 className: f.mask,
                 mask: O || (y && (a || A)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,

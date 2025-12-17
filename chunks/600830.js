@@ -1,60 +1,60 @@
-e.d(t, { default: () => g });
-var l = e(54381);
-e(473749);
-var i = e(442837),
-    r = e(481060),
-    o = e(239091),
-    u = e(109764),
-    c = e(367722),
-    a = e(522474),
-    s = e(788983),
-    d = e(695346),
-    p = e(393431),
-    b = e(430824),
-    f = e(981631),
-    E = e(388032);
-function g(n) {
-    let { channel: t, onSelect: e, onInteraction: g } = n,
-        y = (0, p.Z)(),
+n.d(e, { default: () => O });
+var r = n(54381);
+n(473749);
+var l = n(442837),
+    i = n(481060),
+    o = n(239091),
+    u = n(109764),
+    c = n(367722),
+    a = n(522474),
+    s = n(788983),
+    d = n(695346),
+    p = n(393431),
+    b = n(430824),
+    f = n(981631),
+    j = n(388032);
+function O(t) {
+    let { channel: e, onSelect: n, onInteraction: O } = t,
+        g = (0, p.Z)(),
         h = d.Fg.useSetting(),
-        j = (function (n) {
-            let t = (0, i.e7)([a.Z], () => a.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT));
-            return null == n || null != t
+        v = (function (t) {
+            let e = (0, l.e7)([a.Z], () => a.Z.getWindow(f.KJ3.CHANNEL_CALL_POPOUT));
+            return null == t || null != e
                 ? null
-                : (0, l.jsx)(r.sNh, {
+                : (0, r.jsx)(i.sNh, {
                       id: "popout-call",
-                      label: E.intl.string(E.t.JzWezz),
-                      icon: r.rgF,
-                      action: () => s.openChannelCallPopout(n),
+                      label: j.intl.string(j.t.JzWezz),
+                      icon: i.rgF,
+                      action: () => s.openChannelCallPopout(t),
                   });
-        })(null != t ? t : void 0),
-        O = (function (n) {
-            let t = (0, i.e7)([b.Z], () => b.Z.getGuild(null == n ? void 0 : n.guild_id)),
-                e = (0, c.Z)(null != n ? n : null, null != t ? t : null),
-                o = (0, u.Z)(null != n ? n : null);
-            return null != n && n.isGuildVocal()
-                ? (0, l.jsxs)(r.kSQ, {
-                      children: [e, o],
+        })(null != e ? e : void 0),
+        y = (function (t) {
+            let e = (0, l.e7)([b.Z], () => b.Z.getGuild(null == t ? void 0 : t.guild_id)),
+                n = (0, c.Z)(null != t ? t : null, null != e ? e : null),
+                o = (0, u.Z)(null != t ? t : null);
+            return null != t && t.isGuildVocal()
+                ? (0, r.jsxs)(i.kSQ, {
+                      children: [n, o],
                   })
                 : null;
-        })(t);
-    return (0, l.jsxs)(r.v2r, {
+        })(e);
+    return (0, r.jsxs)(i.v2r, {
         navId: "rtc-channel",
-        "aria-label": E.intl.string(E.t.ogxXGq),
+        "aria-label": j.intl.string(j.t.ogxXGq),
         onClose: o.Zy,
-        onSelect: e,
-        onInteraction: g,
+        onSelect: n,
+        onInteraction: O,
         children: [
+            g,
             y,
-            O,
-            (0, l.jsxs)(r.kSQ, {
+            (0, r.jsxs)(i.kSQ, {
                 children: [
-                    j,
-                    (0, l.jsx)(r.S89, {
+                    v,
+                    (0, r.jsx)(i.S89, {
                         id: "show-voice-states",
                         checked: h,
                         action: () => d.Fg.updateSetting(!h),
-                        label: E.intl.string(E.t.vkbSB0),
+                        label: j.intl.string(j.t.vkbSB0),
                     }),
                 ],
             }),

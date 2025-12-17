@@ -5,7 +5,7 @@ var a = n(54381),
     l = n.n(i),
     s = n(913527),
     o = n.n(s),
-    c = n(467721),
+    c = n(236726),
     d = n(55160),
     u = n(149765),
     m = n(442837),
@@ -24,8 +24,8 @@ var a = n(54381),
     S = n(430824),
     N = n(186523),
     O = n(585483),
-    P = n(70956),
-    I = n(709054),
+    I = n(70956),
+    P = n(709054),
     E = n(961675),
     _ = n(883429),
     R = n(993259),
@@ -95,10 +95,10 @@ let W = {
         height: 20,
         borderRadius: 10,
     },
-    K = (e) => {
+    X = (e) => {
         (0, k.e5)({ onboardingCTA: e });
     };
-class X {
+class K {
     addStep(e) {
         ++this.currentIndex, this.steps.push(G({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
     }
@@ -220,7 +220,7 @@ let Y = (e) => {
                             o = (0, m.e7)([w.Z], () => (null != s ? w.Z.getSortedRoles(s) : void 0));
                         return r.useMemo(() => {
                             let r,
-                                s = new X(),
+                                s = new K(),
                                 c = (null == t ? void 0 : t.isMediaChannel()) === !0;
                             return (
                                 null == e ||
@@ -254,7 +254,7 @@ let Y = (e) => {
                                                       })
                                                     : null,
                                                 clickHandler: () => {
-                                                    K(D.ZI.PERMISSIONS),
+                                                    X(D.ZI.PERMISSIONS),
                                                         (0, h.ZDy)(
                                                             async () => {
                                                                 let { default: t } = await n
@@ -292,7 +292,7 @@ let Y = (e) => {
                                                 name: z.intl.string(z.t.UgJu1e),
                                                 description: z.intl.string(z.t["3C6/G1"]),
                                                 clickHandler: () => {
-                                                    K(D.ZI.GUIDELINES), g.ZP.open(e.id, void 0, H.ZfP.TOPIC);
+                                                    X(D.ZI.GUIDELINES), g.ZP.open(e.id, void 0, H.ZfP.TOPIC);
                                                 },
                                                 isDone: t,
                                             };
@@ -305,7 +305,7 @@ let Y = (e) => {
                                             name: z.intl.string(z.t.xiBFCi),
                                             description: z.intl.string(z.t.wCv4Oz),
                                             clickHandler: () => {
-                                                K(D.ZI.TAGS),
+                                                X(D.ZI.TAGS),
                                                     g.ZP.open(e.id),
                                                     (0, h.ZDy)(async () => {
                                                         let { default: t } = await n.e("21971").then(n.bind(n, 201049));
@@ -330,7 +330,7 @@ let Y = (e) => {
                                             name: z.intl.string(z.t.QlyC9s),
                                             description: z.intl.string(z.t["+50LJg"]),
                                             clickHandler: () => {
-                                                K(D.ZI.DEFAULT_REACTION),
+                                                X(D.ZI.DEFAULT_REACTION),
                                                     (0, h.ZDy)(async () => {
                                                         let { default: t } = await n.e("80404").then(n.bind(n, 158586));
                                                         return (n) => (0, a.jsx)(t, V(G({}, n), { channel: e }));
@@ -361,7 +361,7 @@ let Y = (e) => {
                                                   },
                                               }),
                                         clickHandler: () => {
-                                            K(D.ZI.CREATE_POST), O.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
+                                            X(D.ZI.CREATE_POST), O.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
                                         },
                                         isDone: i,
                                     }),
@@ -375,7 +375,7 @@ let Y = (e) => {
                         f ||
                         x ||
                         !((e) => {
-                            let t = I.default.extractTimestamp(e);
+                            let t = P.default.extractTimestamp(e);
                             return o()().isBefore(o()(t).add(o().duration(15, "days")));
                         })(i.id),
                     C = r.useRef(0);
@@ -386,7 +386,7 @@ let Y = (e) => {
                                 ? clearTimeout(C.current)
                                 : (C.current = setTimeout(() => {
                                       s();
-                                  }, 60 * P.Z.Millis.SECOND)),
+                                  }, 60 * I.Z.Millis.SECOND)),
                             () => clearTimeout(C.current)
                         ),
                         [j, v, s, c],

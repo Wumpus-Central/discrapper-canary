@@ -1,4 +1,4 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => m });
 var r = t(54381);
 t(473749);
 var i = t(442837),
@@ -10,9 +10,9 @@ var i = t(442837),
     u = t(981631),
     d = t(388032),
     g = t(435663);
-function p(e) {
+function m(e) {
     let { guildId: n, onClose: t } = e,
-        p = (0, i.e7)([o.Z, s.Z], () => {
+        m = (0, i.e7)([o.Z, s.Z], () => {
             let e = o.Z.getGuild(n);
             return s.Z.can(u.Plq.MANAGE_ROLES, e);
         }, [n]);
@@ -43,7 +43,7 @@ function p(e) {
                 className: g.subtitle,
                 children: d.intl.string(d.t["v/S/PG"]),
             }),
-            p &&
+            m &&
                 (0, r.jsx)(l.Text, {
                     color: "text-default",
                     variant: "text-sm/normal",

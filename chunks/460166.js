@@ -158,10 +158,10 @@ function P(e) {
 }
 function R(e, t) {
     if (Array.isArray(e)) {
-        let n = D(e);
+        let n = w(e);
         return t && "function" == typeof i.Z[t] ? i.Z[t](e, n) : n;
     }
-    if ("object" == typeof e) return w(e);
+    if ("object" == typeof e) return D(e);
     try {
         if (t && "function" == typeof i.Z[t]) return i.Z[t](e);
         return decodeURIComponent(escape(e));
@@ -169,10 +169,10 @@ function R(e, t) {
         return e;
     }
 }
-function D(e) {
+function w(e) {
     return e.map((e) => (void 0 !== e.value ? R(e.value) : R(e))).join(", ");
 }
-function w(e) {
+function D(e) {
     let t = [];
     for (let n in e) t.push(`${x(n)}: ${R(e[n].value)}`);
     return t.join("; ");
@@ -239,8 +239,8 @@ function G(e) {
     );
 }
 function Z(e, t) {
-    let n = B(e);
-    void 0 !== e.value["rdf:Description"] && (e = e.value["rdf:Description"]), (0, r.wB)(n, B(e), F(e));
+    let n = F(e);
+    void 0 !== e.value["rdf:Description"] && (e = e.value["rdf:Description"]), (0, r.wB)(n, F(e), B(e));
     let i = V(e);
     return {
         value: i,
@@ -248,12 +248,12 @@ function Z(e, t) {
         description: R(i, t),
     };
 }
-function B(e) {
+function F(e) {
     let t = {};
     for (let n in e.attributes) "rdf:parseType" === n || "rdf:resource" === n || N(n) || (t[P(n)] = e.attributes[n]);
     return t;
 }
-function F(e) {
+function B(e) {
     let t = {};
     for (let n in e.value) "rdf:value" === n || N(n) || (t[P(n)] = e.value[n].value);
     return t;
@@ -275,7 +275,7 @@ function Y(e, t) {
     return (
         void 0 !== e.value["rdf:Description"] &&
             ((0, r.wB)(n.value, C(e.value["rdf:Description"].attributes)),
-            (0, r.wB)(n.attributes, B(e)),
+            (0, r.wB)(n.attributes, F(e)),
             (e = e.value["rdf:Description"])),
         (0, r.wB)(n.value, L(e.value)),
         (n.description = R(n.value, t)),
@@ -305,7 +305,7 @@ function q(e) {
 }
 function Q(e, t) {
     let n = q(e.value).value["rdf:li"],
-        r = B(e),
+        r = F(e),
         i = [];
     return (
         void 0 === n ? (n = []) : Array.isArray(n) || (n = [n]),
@@ -326,7 +326,7 @@ function J(e, t) {
     let n = $(e) || T(e.value);
     return {
         value: n,
-        attributes: B(e),
+        attributes: F(e),
         description: R(n, t),
     };
 }

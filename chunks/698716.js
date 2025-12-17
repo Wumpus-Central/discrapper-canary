@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(981631),
     P = n(231338),
     R = n(388032);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -104,8 +104,8 @@ function k(e) {
     var t;
     let n = (0, a.e7)([h.Z], () => h.Z.questDeliveryOverride, []),
         u = (0, O.GN)(e.questContent),
-        D = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
-        w = (0, _.O5)(),
+        w = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
+        D = (0, _.O5)(),
         x = (0, m.aM)(),
         L = (0, y.V_)(e.quest),
         j = !0 === e.showShareLink && (0, I.VB)(e.quest.config),
@@ -116,10 +116,10 @@ function k(e) {
             handleResetStatusClick: G,
             handleOverrideDeliveryClick: Z,
         } = (0, b.kJ)(e.quest.id),
-        B = () => {
+        F = () => {
             k(0.9 * Math.random() + 0.03);
         },
-        F = i.useCallback(() => {
+        B = i.useCallback(() => {
             if (e.quest.id === A.V6) return void window.open(f.Z.getArticleURL(N.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             (0, v.nc)(e.quest, {
                 content: e.questContent,
@@ -152,7 +152,7 @@ function k(e) {
             });
         },
         Y = () => {
-            w({
+            D({
                 questId: e.quest.id,
                 questContent: e.questContent,
                 questContentPosition: e.questContentPosition,
@@ -168,7 +168,7 @@ function k(e) {
             null != e.onSelect ? e.onSelect() : (0, s.Zy)();
         },
         K = () => {
-            w({
+            D({
                 questId: e.quest.id,
                 questContent: e.questContent,
                 questContentPosition: e.questContentPosition,
@@ -176,7 +176,7 @@ function k(e) {
                 sourceQuestContent: e.sourceQuestContent,
             }),
                 (0, O.GN)(e.questContent) &&
-                    ((0, p.gl)(e.quest.id, e.questContent), D && (0, C.maybeShowSurveyForQuest)(e.quest));
+                    ((0, p.gl)(e.quest.id, e.questContent), w && (0, C.maybeShowSurveyForQuest)(e.quest));
         },
         z = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
         q = () => (0, p.CS)(e.quest.id, !0).catch(z),
@@ -213,7 +213,7 @@ function k(e) {
                         (0, r.jsx)(o.sNh, {
                             id: "play-game",
                             label: L,
-                            action: F,
+                            action: B,
                             icon: o.zFc,
                         }),
                         j &&
@@ -275,7 +275,7 @@ function k(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "progress",
                                 label: R.intl.string(R.t.cKSLr4),
-                                action: B,
+                                action: F,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
@@ -367,7 +367,7 @@ function U(e) {
                 ? (0, r.jsx)(u.Z, {
                       children: (0, r.jsx)(
                           k,
-                          L(w({}, p), {
+                          L(D({}, p), {
                               quest: l,
                               questContent: c,
                               questContentPosition: d,
@@ -378,7 +378,7 @@ function U(e) {
                   })
                 : (0, r.jsx)(
                       k,
-                      L(w({}, p), {
+                      L(D({}, p), {
                           quest: l,
                           questContent: c,
                           questContentPosition: d,

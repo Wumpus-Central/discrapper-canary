@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(768581),
     _ = n(474936),
     m = n(388032),
-    h = n(520816);
+    h = n(811578);
 let g = {
     XXSMALL: h.xxsmall,
     XSMALL: h.xsmall,
@@ -87,14 +87,14 @@ let O = i.forwardRef(function (e, t) {
         } = e,
         [A, N] = i.useState(null),
         [P, R] = i.useState(!1),
-        D = i.useCallback((e) => {
+        w = i.useCallback((e) => {
             R(e);
         }, []),
-        w = i.useRef(null);
+        D = i.useRef(null);
     i.useEffect(() => {
-        null != w.current && P && (cancelIdleCallback(w.current), (w.current = null));
+        null != D.current && P && (cancelIdleCallback(D.current), (D.current = null));
     }, [P]);
-    let x = (0, s.O)(D);
+    let x = (0, s.O)(w);
     if (
         (null != O && (n = b(O)),
         null != a &&
@@ -119,12 +119,12 @@ let O = i.forwardRef(function (e, t) {
                 });
             if (P) return e();
             let t = requestIdleCallback(() => {
-                (w.current = null), e();
+                (D.current = null), e();
             });
             return (
-                (w.current = t),
+                (D.current = t),
                 () => {
-                    null != w.current && (cancelIdleCallback(w.current), (w.current = null));
+                    null != D.current && (cancelIdleCallback(D.current), (D.current = null));
                 }
             );
         }, [n, P]),

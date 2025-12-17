@@ -109,8 +109,8 @@ let N = Object.freeze({
     }),
     P = null,
     R = {},
-    D = null,
-    w = new Set(),
+    w = null,
+    D = new Set(),
     x = !1,
     L = !1,
     j = !1,
@@ -199,7 +199,7 @@ let G = S({}, N),
         "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
         "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
     ]),
-    B = new Set([
+    F = new Set([
         ...Z.values(),
         "ACTIVITY_INVITE_MODAL_CLOSE",
         "CALL_DELETE",
@@ -216,7 +216,7 @@ let G = S({}, N),
         "SOUNDBOARD_SET_OVERLAY_ENABLED",
         "STREAM_STOP",
     ]);
-function F(e) {
+function B(e) {
     return (
         (null == e.version && 1 === E.OVERLAY_VERSION) ||
         e.version === E.OVERLAY_VERSION ||
@@ -224,7 +224,7 @@ function F(e) {
     );
 }
 function V(e) {
-    if (("OVERLAY_INITIALIZE" === e.type && F(e) && (j = !0), j)) {
+    if (("OVERLAY_INITIALIZE" === e.type && B(e) && (j = !0), j)) {
         var t, n;
         switch (e.type) {
             case "CHANNEL_CREATE":
@@ -294,7 +294,7 @@ function Y(e) {
     e.userId in R && delete R[e.userId];
 }
 function W() {
-    w.clear();
+    D.clear();
 }
 function K(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
@@ -327,13 +327,13 @@ function z() {
 function q() {
     if (!__OVERLAY__) return !1;
     let e = P === (0, E.getPID)(),
-        t = w.has((0, E.getPID)()) || M.size > 0;
+        t = D.has((0, E.getPID)()) || M.size > 0;
     e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
 }
 function Q() {}
 function X(e) {
     let { locked: t, pid: n } = e;
-    t ? w.delete(n) : w.add(n), $(), q(), (k = !1);
+    t ? D.delete(n) : D.add(n), $(), q(), (k = !1);
 }
 function J(e) {
     let { region: t } = e;
@@ -354,10 +354,10 @@ function et(e) {
 }
 function en(e) {
     let { callId: t } = e;
-    D = t;
+    w = t;
 }
 function er() {
-    D = null;
+    w = null;
 }
 function ei() {
     if (__OVERLAY__) {
@@ -415,7 +415,7 @@ function eh() {
 }
 function eg() {
     o.Z.addInterceptor((e) => {
-        if (L || !B.has(e.type)) return !1;
+        if (L || !F.has(e.type)) return !1;
         if ("CHANNEL_SELECT" === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
@@ -485,7 +485,7 @@ function ev(e) {
         });
 }
 function eS(e) {
-    w.delete(e.previousAssociatedGamePID);
+    D.delete(e.previousAssociatedGamePID);
 }
 class eI extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -495,7 +495,7 @@ class eI extends (r = i.ZP.PersistedStore) {
                 let e = p.default.getId();
                 G = null != e ? U(e) : S({}, N);
             }),
-            __OVERLAY__ && w.delete((0, E.getPID)()),
+            __OVERLAY__ && D.delete((0, E.getPID)()),
             null != e)
         ) {
             R = e;
@@ -510,10 +510,10 @@ class eI extends (r = i.ZP.PersistedStore) {
         return R;
     }
     isLocked(e) {
-        return !w.has(e);
+        return !D.has(e);
     }
     isInstanceLocked() {
-        return !w.has((0, E.getPID)());
+        return !D.has((0, E.getPID)());
     }
     isInstanceFocused() {
         return P === (0, E.getPID)();
@@ -539,7 +539,7 @@ class eI extends (r = i.ZP.PersistedStore) {
         return G.selectedChannelId;
     }
     getSelectedCallId() {
-        return D;
+        return w;
     }
     getDisplayUserMode() {
         return G.displayUserMode;

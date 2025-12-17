@@ -3,36 +3,36 @@ var n,
     i,
     c = a(442837),
     o = a(570140);
-let s = {
+let d = {
     canPlayWowMoment: !1,
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null,
 };
-class d extends (i = c.ZP.Store) {
+class s extends (i = c.ZP.Store) {
     getState() {
-        return s;
+        return d;
     }
     get canPlayWowMoment() {
-        return s.canPlayWowMoment;
+        return d.canPlayWowMoment;
     }
     get isFetchingWowMomentMedia() {
-        return s.isFetchingWowMomentMedia;
+        return d.isFetchingWowMomentMedia;
     }
     get wowMomentWumpusMedia() {
-        return s.wowMomentWumpusMediaUrl;
+        return d.wowMomentWumpusMediaUrl;
     }
 }
-(n = "displayName") in d
-    ? Object.defineProperty(d, n, {
+(n = "displayName") in s
+    ? Object.defineProperty(s, n, {
           value: "PurchasedItemsFestivityStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (d[n] = "PurchasedItemsFestivityStore");
-let r = new d(o.Z, {
+    : (s[n] = "PurchasedItemsFestivityStore");
+let r = new s(o.Z, {
     LOGOUT: function () {
-        s = {
+        d = {
             canPlayWowMoment: !1,
             isFetchingWowMomentMedia: !1,
             wowMomentWumpusMediaUrl: null,
@@ -40,16 +40,16 @@ let r = new d(o.Z, {
     },
     PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT: function (e) {
         let { value: t } = e;
-        s.canPlayWowMoment = t;
+        d.canPlayWowMoment = t;
     },
     PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function () {
-        s.isFetchingWowMomentMedia = !0;
+        d.isFetchingWowMomentMedia = !0;
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
         let { wumpusMedia: t } = e;
-        (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
+        (d.wowMomentWumpusMediaUrl = t), (d.isFetchingWowMomentMedia = !1);
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-        (s.isFetchingWowMomentMedia = !1), (s.canPlayWowMoment = !1);
+        (d.isFetchingWowMomentMedia = !1), (d.canPlayWowMoment = !1);
     },
 });

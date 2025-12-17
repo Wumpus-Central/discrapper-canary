@@ -4,19 +4,19 @@ n.d(t, {
 }),
     n(388685);
 var r = n(54381),
-    o = n(473749),
-    a = n(494497),
+    a = n(473749),
+    o = n(494497),
     i = n(793030),
     c = n(481060),
     l = n(870246),
     s = n(268574),
     u = n(448222),
     d = n(795338),
-    f = n(17622),
-    b = n(535396),
-    m = n(265397),
+    b = n(17622),
+    f = n(535396),
+    m = n(556970),
     p = n(388032),
-    k = n(514186);
+    k = n(259819);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,43 +46,43 @@ function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        o = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-            return o;
+                a = {},
+                o = Object.keys(e);
+            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
     }
-    return o;
+    return a;
 }
 function x(e) {
     var t,
         n,
         {
-            size: a,
+            size: o,
             title: l,
             body: s,
             warningText: u,
             acknowledgementText: d,
-            error: f,
-            isLoading: b,
+            error: b,
+            isLoading: f,
             onDeactivate: x,
         } = e,
         I = v(e, ["size", "title", "body", "warningText", "acknowledgementText", "error", "isLoading", "onDeactivate"]);
-    let [O, _] = o.useState(!1);
+    let [O, j] = a.useState(!1);
     return (0, r.jsxs)(
         i.Modal,
         ((t = g({}, I)),
         (n = n =
             {
-                size: a,
+                size: o,
                 title: p.intl.formatToPlainString(m.default.iEBw1M, { perk: l }),
                 subtitle: p.intl.formatToPlainString(m.default["7o0K+2"], { perk: l }),
                 actions: [
@@ -94,7 +94,7 @@ function x(e) {
                     {
                         variant: "critical-primary",
                         text: p.intl.string(m.default.PYPdl4),
-                        loading: b,
+                        loading: f,
                         onClick: x,
                         disabled: null != d && !O,
                     },
@@ -117,19 +117,19 @@ function x(e) {
                             }),
                         ],
                     }),
-                    null != f &&
+                    null != b &&
                         (0, r.jsx)(i.xvT, {
                             className: k.errorText,
                             color: "text-feedback-critical",
                             variant: "text-sm/semibold",
-                            children: f,
+                            children: b,
                         }),
                     null != d &&
                         (0, r.jsx)("div", {
                             className: k.acknowledgementContainer,
                             children: (0, r.jsx)(c.Checkbox, {
                                 checked: O,
-                                onChange: _,
+                                onChange: j,
                                 label: d,
                                 labelType: "secondary",
                             }),
@@ -156,7 +156,7 @@ function I(e) {
         c = v(e, ["guildId", "powerup"]);
     let { onDeactivate: m, error: p, isLoading: I } = (0, u.Z)(t, n),
         { onClose: O } = c,
-        _ = o.useCallback(
+        j = a.useCallback(
             (e) => {
                 e.stopPropagation(),
                     m().then(() => {
@@ -165,11 +165,11 @@ function I(e) {
             },
             [O, m],
         ),
-        j = (function (e, t) {
+        T = (function (e, t) {
             let { warningText: n, vanityUrlWarning: c } = (0, s.Z)(e, t);
-            return o.useMemo(
+            return a.useMemo(
                 () =>
-                    t.skuId === a.A$
+                    t.skuId === o.A$
                         ? (0, r.jsx)(i.xvT, {
                               color: "text-feedback-critical",
                               variant: "text-sm/semibold",
@@ -196,23 +196,23 @@ function I(e) {
             x,
             g(
                 {
-                    size: n.type === b.Us.LEVEL ? "md" : "sm",
+                    size: n.type === f.Us.LEVEL ? "md" : "sm",
                     title: n.title,
                     body: (() => {
                         switch (n.type) {
-                            case b.Us.LEVEL:
-                                return (0, r.jsx)(f.Z, { powerup: n });
-                            case b.Us.PERK:
+                            case f.Us.LEVEL:
+                                return (0, r.jsx)(b.Z, { powerup: n });
+                            case f.Us.PERK:
                                 return (0, r.jsx)(d.m, {
                                     className: k.image,
                                     powerup: n,
                                 });
                         }
                     })(),
-                    warningText: j,
+                    warningText: T,
                     error: p,
                     isLoading: I,
-                    onDeactivate: _,
+                    onDeactivate: j,
                 },
                 c,
             ),

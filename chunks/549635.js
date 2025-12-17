@@ -17,7 +17,7 @@ var r = n(54381),
     p = n(591759),
     _ = n(212459),
     m = n(116475),
-    h = n(899359);
+    h = n(586657);
 function g(e, t, n) {
     return (
         t in e
@@ -110,12 +110,12 @@ function T(e) {
         N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: P } = (0, _.Y)(),
         R = A(P, g, b, n.contentType, n.originalContentType),
-        D = null != d && 0 !== d && null != p && 0 !== p;
-    if ("VIDEO" === S && D && null != b) {
-        var w;
+        w = null != d && 0 !== d && null != p && 0 !== p;
+    if ("VIDEO" === S && w && null != b) {
+        var D;
         let e = I(b);
         if (null == e) return null;
-        let t = null != (w = n.renderLinkComponent) ? w : u.iT;
+        let t = null != (D = n.renderLinkComponent) ? D : u.iT;
         return (0, r.jsx)(
             l.Z,
             y(E({}, N), {
@@ -141,7 +141,7 @@ function T(e) {
     }
     return (
         "IMAGE" === S &&
-            (t = D
+            (t = w
                 ? (0, r.jsx)(
                       s.ZP,
                       y(E({}, N), {

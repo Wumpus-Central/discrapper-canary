@@ -26,8 +26,8 @@ var r,
     N = 15,
     P = 8,
     R = 286,
-    D = 30,
-    w = 19,
+    w = 30,
+    D = 19,
     x = 573,
     L = 15,
     j = 3,
@@ -36,8 +36,8 @@ var r,
     U = 32,
     G = 42,
     Z = 69,
-    B = 73,
-    F = 91,
+    F = 73,
+    B = 91,
     V = 103,
     H = 113,
     Y = 666,
@@ -397,8 +397,8 @@ function ep() {
         (this.good_match = 0),
         (this.nice_match = 0),
         (this.dyn_ltree = new i.Buf16(2 * x)),
-        (this.dyn_dtree = new i.Buf16((2 * D + 1) * 2)),
-        (this.bl_tree = new i.Buf16((2 * w + 1) * 2)),
+        (this.dyn_dtree = new i.Buf16((2 * w + 1) * 2)),
+        (this.bl_tree = new i.Buf16((2 * D + 1) * 2)),
         $(this.dyn_ltree),
         $(this.dyn_dtree),
         $(this.bl_tree),
@@ -549,9 +549,9 @@ function eE(e, t) {
             )
                 en(i, 255 & i.gzhead.extra[i.gzindex]), i.gzindex++;
             i.gzhead.hcrc && i.pending > o && (e.adler = s(e.adler, i.pending_buf, i.pending - o, o)),
-                i.gzindex === i.gzhead.extra.length && ((i.gzindex = 0), (i.status = B));
-        } else i.status = B;
-    if (i.status === B)
+                i.gzindex === i.gzhead.extra.length && ((i.gzindex = 0), (i.status = F));
+        } else i.status = F;
+    if (i.status === F)
         if (i.gzhead.name) {
             o = i.pending;
             do {
@@ -568,9 +568,9 @@ function eE(e, t) {
                 (l = i.gzindex < i.gzhead.name.length ? 255 & i.gzhead.name.charCodeAt(i.gzindex++) : 0), en(i, l);
             } while (0 !== l);
             i.gzhead.hcrc && i.pending > o && (e.adler = s(e.adler, i.pending_buf, i.pending - o, o)),
-                0 === l && ((i.gzindex = 0), (i.status = F));
-        } else i.status = F;
-    if (i.status === F)
+                0 === l && ((i.gzindex = 0), (i.status = B));
+        } else i.status = B;
+    if (i.status === B)
         if (i.gzhead.comment) {
             o = i.pending;
             do {
@@ -639,7 +639,7 @@ function eE(e, t) {
 function eb(e) {
     var t;
     return e && e.state
-        ? (t = e.state.status) !== G && t !== Z && t !== B && t !== F && t !== V && t !== H && t !== Y
+        ? (t = e.state.status) !== G && t !== Z && t !== F && t !== B && t !== V && t !== H && t !== Y
             ? X(e, h)
             : ((e.state = null), t === H ? X(e, g) : _)
         : h;

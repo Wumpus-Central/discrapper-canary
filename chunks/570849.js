@@ -1,10 +1,10 @@
-n.d(t, {
+a.d(t, {
     l: () => l,
     u: () => s,
 });
-var a = n(544891),
-    r = n(570140),
-    i = n(981631);
+var n = a(544891),
+    r = a(570140),
+    i = a(981631);
 function l(e, t) {
     r.Z.dispatch({
         type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
@@ -14,7 +14,7 @@ function l(e, t) {
 }
 async function s(e) {
     let t = (
-        await a.tn.get({
+        await n.tn.get({
             url: i.ANM.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e),
             rejectWithError: !1,
         })

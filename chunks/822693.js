@@ -9,25 +9,25 @@ var r = n(54381),
     d = n(496675),
     u = n(699516),
     g = n(594174),
-    m = n(434404),
-    p = n(800223),
-    f = n(981631),
-    h = n(388032);
-let b = "NO_CHANNEL",
-    x = l.$e(f.Plq.VIEW_CHANNEL, f.Plq.CREATE_INSTANT_INVITE);
+    f = n(434404),
+    m = n(800223),
+    b = n(981631),
+    p = n(388032);
+let h = "NO_CHANNEL",
+    x = l.$e(b.Plq.VIEW_CHANNEL, b.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
     let {
             label: t,
             description: n,
             guildId: l,
-            widgetEnabled: f,
+            widgetEnabled: b,
             widgetChannelId: j,
-            className: _,
-            enableLocalUpdate: v,
+            className: v,
+            enableLocalUpdate: O,
         } = e,
-        O = (0, a.e7)([c.ZP], () => c.ZP.getChannels(l)),
-        C = i.useMemo(() => {
-            let e = [...O[c.sH], ...O[c.Zb]]
+        C = (0, a.e7)([c.ZP], () => c.ZP.getChannels(l)),
+        y = i.useMemo(() => {
+            let e = [...C[c.sH], ...C[c.Zb]]
                 .filter((e) => {
                     let { channel: t } = e;
                     return t.guild_id === l;
@@ -45,24 +45,24 @@ function j(e) {
                 });
             return (
                 e.unshift({
-                    value: b,
-                    label: h.intl.string(h.t.u197b7),
+                    value: h,
+                    label: p.intl.string(p.t.u197b7),
                 }),
                 e
             );
-        }, [O, l, j]),
-        y = i.useCallback(
+        }, [C, l, j]),
+        N = i.useCallback(
             (e) => {
-                v ? (0, p.c)(l, f, e !== b ? e : null) : m.Z.updateEmbed(l, f, e !== b ? e : null);
+                O ? (0, m.c)(l, b, e !== h ? e : null) : f.Z.updateEmbed(l, b, e !== h ? e : null);
             },
-            [l, f, v],
+            [l, b, O],
         );
     return (0, r.jsx)(s.y6, {
         label: t,
         description: n,
-        options: C,
+        options: y,
         value: j,
-        onChange: y,
-        className: _,
+        onChange: N,
+        className: v,
     });
 }

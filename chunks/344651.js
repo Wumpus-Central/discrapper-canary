@@ -130,7 +130,7 @@ let G = new d.Z("ConnectionStore"),
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    B = new w.Z(
+    F = new w.Z(
         D.Wb,
         (e, t) => (
             (e =
@@ -156,7 +156,7 @@ let G = new d.Z("ConnectionStore"),
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    F = new w.Z(
+    B = new w.Z(
         D.Wb,
         (e, t) => (
             (e =
@@ -811,7 +811,7 @@ W(
             });
     }),
     Y(["SOUNDBOARD_SOUNDS"], (e) => {
-        B.add(e);
+        F.add(e);
     }),
     Y(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
         let n = v.Z.getBasicChannel(e.channel_id);
@@ -890,7 +890,7 @@ W(
     }),
     Y(["GUILD_MEMBERS_CHUNK"], (e) => {
         a.ZP.Emitter.batched(() => {
-            F.add({
+            B.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found,

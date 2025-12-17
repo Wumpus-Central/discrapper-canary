@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => D,
+    ZP: () => w,
     ag: () => I,
     u8: () => b,
 }),
@@ -16,7 +16,7 @@ var r,
     d = n(598077),
     f = n(594174),
     p = n(426563),
-    _ = n(245141);
+    _ = n(608908);
 function m(e, t, n) {
     return (
         t in e
@@ -300,4 +300,4 @@ m(R, "defaultProps", {
     showDefaultAvatarsForNullUsers: !1,
     size: b.SIZE_24,
 });
-let D = R;
+let w = R;

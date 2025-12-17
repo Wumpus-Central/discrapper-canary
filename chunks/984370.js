@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => N,
-    Z: () => w,
+    Z: () => D,
 }),
     n(35282);
 var r = n(54381);
@@ -22,7 +22,7 @@ var i = n(873546),
     E = n(665149),
     b = n(981631),
     y = n(176505),
-    O = n(979905);
+    O = n(350724);
 function v(e, t, n) {
     return (
         t in e
@@ -125,8 +125,8 @@ function P(e) {
             "aria-labelledby": A,
             scrollable: P,
             role: R,
-            hideSearch: D,
-            showDivider: w,
+            hideSearch: w,
+            showDivider: D,
             disableDoubleClick: x,
         } = e,
         L = null == s || (0, y.AB)(s) ? null : s,
@@ -136,7 +136,7 @@ function P(e) {
         { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
     function Z() {
         if (null == I) return null;
-        let e = null != s && !D;
+        let e = null != s && !w;
         return i.tq
             ? T
             : (0, r.jsxs)(r.Fragment, {
@@ -153,7 +153,7 @@ function P(e) {
                                 null != h ? h : s,
                             )
                           : null,
-                      w && (0, r.jsx)(E.ZP.Divider, {}),
+                      D && (0, r.jsx)(E.ZP.Divider, {}),
                       k && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
                           j &&
@@ -195,7 +195,7 @@ function R(e) {
         children: t,
     });
 }
-function D(e) {
+function w(e) {
     var { isAuthenticated: t = !0 } = e,
         n = C(e, ["isAuthenticated"]);
     let { analyticsLocations: i } = (0, l.ZP)(s.Z.HEADER_BAR);
@@ -206,9 +206,9 @@ function D(e) {
             : (0, r.jsx)(R, T(S({}, n), { className: n.className })),
     });
 }
-(D.Title = E.ZP.Title),
-    (D.Icon = E.ZP.Icon),
-    (D.ChannelIcon = E.ZP.ChannelIcon),
-    (D.Divider = E.ZP.Divider),
-    (D.Caret = E.ZP.Caret);
-let w = D;
+(w.Title = E.ZP.Title),
+    (w.Icon = E.ZP.Icon),
+    (w.ChannelIcon = E.ZP.ChannelIcon),
+    (w.Divider = E.ZP.Divider),
+    (w.Caret = E.ZP.Caret);
+let D = w;

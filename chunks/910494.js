@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -7,32 +7,32 @@ var r = n(54381),
     o = n(441536),
     c = n(434404),
     d = n(353857),
-    u = n(713328),
+    u = n(551199),
     g = n(388032);
-function m(e) {
-    let { className: t, guildId: n, selectedBadge: m } = e,
-        p = i.useCallback(
+function f(e) {
+    let { className: t, guildId: n, selectedBadge: f } = e,
+        m = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(n, { badge: e });
             },
             [n],
         ),
-        f = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, o.Z)(n, a.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS, "guildTagsBadgePacks"), c.Z.close();
         }, [n]),
-        h = (0, s.Z)(),
-        b = i.useId();
+        p = (0, s.Z)(),
+        h = i.useId();
     return (0, r.jsx)("div", {
         className: t,
         children: (0, r.jsx)(l.gNt, {
             label: g.intl.string(u.default.pb7lpK),
-            id: b,
+            id: h,
             children: (0, r.jsx)(d.g, {
-                badgeCollection: h,
-                handleBoostUpsellClick: f,
-                onBadgeClicked: p,
-                selectedBadge: m,
-                headingId: b,
+                badgeCollection: p,
+                handleBoostUpsellClick: b,
+                onBadgeClicked: m,
+                selectedBadge: f,
+                headingId: h,
             }),
         }),
     });

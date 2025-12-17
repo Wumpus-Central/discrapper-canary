@@ -9,7 +9,7 @@ n.d(t, {
     eu: () => R,
     hW: () => L,
     lY: () => N,
-    qB: () => D,
+    qB: () => w,
 }),
     n(415506),
     n(953529),
@@ -220,21 +220,21 @@ function R(e, t, n) {
         draftType: n,
     });
 }
-function D(e, t) {
+function w(e, t) {
     o.Z.dispatch({
         type: "CLEAR_STICKER_PREVIEW",
         channelId: e,
         draftType: t,
     });
 }
-function w(e) {
+function D(e) {
     return d.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != _.Z.getStickerById(e));
 }
 function x(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = w(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+            ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
                 ? (s.Z.show({
                       title: E.intl.string(E.t["+XYXtZ"]),
                       body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
@@ -248,7 +248,7 @@ function L(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = w(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = D(t.stickerIds));
         },
         g.fy.INFREQUENT_USER_ACTION,
     );

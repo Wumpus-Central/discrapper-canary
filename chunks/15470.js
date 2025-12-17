@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => y,
-    i: () => x,
+    i: () => v,
 }),
     n(35282),
     n(388685),
     n(953529);
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(159635),
@@ -16,8 +16,8 @@ var r = n(54381),
     u = n(241209),
     p = n(73346),
     m = n(388032),
-    h = n(395155);
-function g(e, t, n) {
+    h = n(697110);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,23 +30,23 @@ function g(e, t, n) {
         e
     );
 }
-function f(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
+            a.forEach(function (t) {
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,8 +54,8 @@ function _(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -64,15 +64,15 @@ function _(e, t) {
         e
     );
 }
-let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    x = _(f({}, u.Z.rules), {
-        heading: _(f({}, u.Z.rules.heading), {
+let x = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
+    v = b(g({}, u.Z.rules), {
+        heading: b(g({}, u.Z.rules.heading), {
             react(e, t, n) {
-                let a = "h".concat(Math.min(Math.max(2, e.level + 1), 4));
-                return (0, r.jsx)(
+                let r = "h".concat(Math.min(Math.max(2, e.level + 1), 4));
+                return (0, a.jsx)(
                     d.Z,
                     {
-                        tag: a,
+                        tag: r,
                         children: t(e.content, n),
                     },
                     n.key,
@@ -82,11 +82,11 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
         assetImage: {
             order: 5,
             match(e, t) {
-                let n = e.match(b);
+                let n = e.match(x);
                 if (null != n) {
                     let e = n[2],
-                        r = t.assets.find((t) => t.id === e);
-                    return null != r && [...n, r, t.applicationId];
+                        a = t.assets.find((t) => t.id === e);
+                    return null != a && [...n, a, t.applicationId];
                 }
                 return !1;
             },
@@ -96,11 +96,11 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 applicationId: e[4],
             }),
             react: (e, t, n) =>
-                (0, r.jsx)(
+                (0, a.jsx)(
                     "div",
                     {
                         className: h.assetWrapper,
-                        children: (0, r.jsx)("img", {
+                        children: (0, a.jsx)("img", {
                             alt: e.alt,
                             src: (0, p._W)(e.applicationId, e.asset, 800),
                             className: h.asset,
@@ -110,9 +110,9 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 ),
         },
     }),
-    v = o().parserFor(x),
-    C = o().reactFor(o().ruleOutput(x, "react"));
-class j extends a.PureComponent {
+    C = o().parserFor(v),
+    j = o().reactFor(o().ruleOutput(v, "react"));
+class _ extends r.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
@@ -120,24 +120,24 @@ class j extends a.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: n, className: a, assets: i } = this.props,
+        let { applicationId: e, description: t, blurb: n, className: r, assets: i } = this.props,
             { collapsed: s, collapsable: o } = this.state;
-        return (0, r.jsxs)("div", {
-            className: a,
+        return (0, a.jsxs)("div", {
+            className: r,
             children: [
-                (0, r.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: l()({ [h.collapsed]: o && s }),
-                    children: (0, r.jsxs)("div", {
+                    children: (0, a.jsxs)("div", {
                         ref: this.setContentContainerRef,
                         children: [
-                            (0, r.jsx)("div", {
+                            (0, a.jsx)("div", {
                                 className: h.blurb,
                                 children: n,
                             }),
-                            (0, r.jsx)(u.Z, {
+                            (0, a.jsx)(u.Z, {
                                 className: h.description,
-                                parser: v,
-                                output: C,
+                                parser: C,
+                                output: j,
                                 state: {
                                     assets: i,
                                     applicationId: e,
@@ -148,7 +148,7 @@ class j extends a.PureComponent {
                     }),
                 }),
                 o
-                    ? (0, r.jsx)(c.zx, {
+                    ? (0, a.jsx)(c.zx, {
                           className: h.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
                           color: c.zx.Colors.PRIMARY,
@@ -160,17 +160,17 @@ class j extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, "state", {
+            f(this, "state", {
                 collapsed: !0,
                 collapsable: !0,
             }),
-            g(this, "_container", void 0),
-            g(this, "handleToggleCollapse", () => {
+            f(this, "_container", void 0),
+            f(this, "handleToggleCollapse", () => {
                 this.setState({ collapsed: !this.state.collapsed });
             }),
-            g(this, "setContentContainerRef", (e) => {
+            f(this, "setContentContainerRef", (e) => {
                 this._container = e;
             });
     }
 }
-let y = j;
+let y = _;

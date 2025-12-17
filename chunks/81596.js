@@ -3,9 +3,9 @@ var e = i(54381),
     r = i(473749),
     s = i(793030),
     l = i(442837),
-    a = i(481060),
-    c = i(485267),
-    d = i(564990),
+    d = i(481060),
+    a = i(485267),
+    c = i(564990),
     o = i(353647),
     E = i(313789),
     u = i(518596),
@@ -14,12 +14,12 @@ var e = i(54381),
     C = i(365583),
     N = i(981631),
     R = i(388032),
-    h = i(569162);
+    h = i(616874);
 function O(t) {
     let { user: n, entry: i, transitionState: O, onAction: p, onClose: I, onOpenGameSettings: f } = t,
         [x, S] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => c.Bt, []),
+        r.useEffect(() => a.Bt, []),
         (0, e.jsxs)(s.Modal, {
             title: (0, T.y)(i),
             subtitle: R.intl.format(R.t.KV72oe, {
@@ -29,7 +29,7 @@ function O(t) {
                         onOpenGameSettings: f,
                     });
                     return (0, e.jsx)(
-                        a.Anchor,
+                        d.Anchor,
                         {
                             onClick: () => {
                                 null == p || p({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
@@ -57,7 +57,7 @@ function O(t) {
                 {
                     text: null != S ? R.intl.string(R.t["5911Lb"]) : R.intl.string(R.t.VkKicb),
                     onClick: () => {
-                        null == p || p({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, d.CV)(i, n.id, I);
+                        null == p || p({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.CV)(i, n.id, I);
                     },
                     disabled: x,
                     variant: "critical-primary",
@@ -71,8 +71,8 @@ function O(t) {
                     ? (0, e.jsxs)("div", {
                           className: h.error,
                           children: [
-                              (0, e.jsx)(a.k$p, { color: a.TVs.colors.STATUS_DANGER }),
-                              (0, e.jsx)(a.Text, {
+                              (0, e.jsx)(d.k$p, { color: d.TVs.colors.STATUS_DANGER }),
+                              (0, e.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   children: R.intl.string(R.t.FMbL3s),
                               }),

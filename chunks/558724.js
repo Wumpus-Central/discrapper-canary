@@ -85,8 +85,8 @@ let v = {
     N = !1,
     P = d.Z.Millis.DAY,
     R = 10 * d.Z.Millis.HOUR,
-    D = 7;
-var w = (function (e) {
+    w = 7;
+var D = (function (e) {
     return (
         (e.IS_OWNER = "is_owner"),
         (e.IS_ADMIN = "is_admin"),
@@ -98,8 +98,8 @@ var w = (function (e) {
         (e.GUILD_SIZE_ALL = "guild_size_all"),
         e
     );
-})(w || {});
-let x = new Set(Object.values(w));
+})(D || {});
+let x = new Set(Object.values(D));
 function L() {
     return null == S.lastFetched || Date.now() - S.lastFetched >= P;
 }
@@ -168,15 +168,15 @@ function Z(e) {
     let r = null != t,
         i = r && null == S.hiddenSurveys[t.key],
         a = r && M(t);
-    G(D);
+    G(w);
     let o = !1;
     A = i && a && !o ? t : null;
 }
-function B(e) {
+function F(e) {
     let { id: t } = e;
     (S.surveyOverride = t), null != t && delete S.hiddenSurveys[t], (0, u.wk)(S.surveyOverride, !0);
 }
-function F() {
+function B() {
     I = !0;
 }
 function V() {
@@ -257,8 +257,8 @@ let X = new Q(c.Z, {
     CONNECTION_RESUMED: j,
     SURVEY_FETCHED: Z,
     SURVEY_HIDE: H,
-    SURVEY_OVERRIDE: B,
-    PUSH_NOTIFICATION_CLICK: F,
+    SURVEY_OVERRIDE: F,
+    PUSH_NOTIFICATION_CLICK: B,
     DISPLAYED_INVITE_SHOW: V,
     LOGOUT: Y,
     SURVEY_SEEN: q,

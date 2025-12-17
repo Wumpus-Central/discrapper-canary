@@ -11,15 +11,15 @@ var r = n(54381),
 function g(e) {
     let { guild: t, discoverableGuild: n } = e,
         g = null == t ? void 0 : t.id,
-        { memberCount: m, onlineCount: p } = (0, a.cj)([d.Z], () => {
+        { memberCount: f, onlineCount: m } = (0, a.cj)([d.Z], () => {
             var e, t;
             return {
                 memberCount: null != (e = d.Z.getMemberCount(g)) ? e : 1234,
                 onlineCount: null != (t = d.Z.getOnlineCount(g)) ? t : 1234,
             };
         }, [g]),
-        f = i.useRef((0, l.Z)()),
-        h = i.useMemo(() => {
+        b = i.useRef((0, l.Z)()),
+        p = i.useMemo(() => {
             var e, r;
             if (null != n) return o.JO.createFromDiscoverableGuild(n);
             if (null == t) return null;
@@ -55,8 +55,8 @@ function g(e) {
                         premiumSubscriptionCount: null == t ? void 0 : t.premiumSubscriberCount,
                         emojis: i,
                         emojiCount: i.length,
-                        presenceCount: p,
-                        memberCount: m,
+                        presenceCount: m,
+                        memberCount: f,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -72,10 +72,10 @@ function g(e) {
                       }),
                 e),
             );
-        }, [n, t, m, p]),
-        b = i.useMemo(() => {
+        }, [n, t, f, m]),
+        h = i.useMemo(() => {
             var e;
-            let t = null == h || null == (e = h.emojis) ? void 0 : e[0];
+            let t = null == p || null == (e = p.emojis) ? void 0 : e[0];
             return null != t
                 ? {
                       name: t.require_colons ? ":".concat(t.name, ":") : t.name,
@@ -84,15 +84,15 @@ function g(e) {
                       jumboable: !0,
                   }
                 : {};
-        }, [null == h ? void 0 : h.emojis]);
-    return null != h && h.isDiscoverable()
+        }, [null == p ? void 0 : p.emojis]);
+    return null != p && p.isDiscoverable()
         ? (0, r.jsx)(c.UA, {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
-              expressionSourceGuild: h,
-              node: b,
+              expressionSourceGuild: p,
+              node: h,
               closePopout: u.dG,
-              nonce: f.current,
+              nonce: b.current,
               demoMode: !0,
           })
         : null;

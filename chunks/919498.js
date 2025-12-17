@@ -4,12 +4,12 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(810568),
-    l = n(168524),
-    a = n(5192),
+    a = n(168524),
+    l = n(5192),
     o = n(971082),
     c = n(853072),
     s = n(388032),
-    u = n(885486);
+    u = n(912747);
 function d(e) {
     var { applicationId: t } = e,
         n = (function (e, t) {
@@ -21,14 +21,14 @@ function d(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
@@ -75,9 +75,9 @@ function d(e) {
 function f(e) {
     let { userId: t, applicationId: n, guildId: d, channelId: f, className: g } = e,
         p = (0, c.Z)(n),
-        m = p.length > 0,
-        b = (function (e, t, n) {
-            let r = e.slice(0, 3).map((e) => a.ZP.getName(t, n, e));
+        b = p.length > 0,
+        m = (function (e, t, n) {
+            let r = e.slice(0, 3).map((e) => l.ZP.getName(t, n, e));
             return 1 === e.length
                 ? s.intl.formatToPlainString(s.t.FURqTU, { name: r[0] })
                 : 2 === e.length
@@ -98,22 +98,22 @@ function f(e) {
                           numPeople: e.length - 3,
                       });
         })(p, d, f),
-        h = (0, l.Z)({
+        h = (0, a.Z)({
             location: "SocialProofButton",
             applicationId: n,
             source: i.m1.UserProfile,
             sourceUserId: t,
             trackEntryPointImpression: !0,
         });
-    return m && null != h
+    return b && null != h
         ? (0, r.jsx)(o.$, {
               users: p,
-              label: b,
+              label: m,
               className: g,
               onClick: h,
               guildId: d,
               channelId: f,
-              "aria-label": b,
+              "aria-label": m,
               overflowCountColor: "text-strong",
               overflowCountClassName: u.gameCoverOverflowCount,
           })

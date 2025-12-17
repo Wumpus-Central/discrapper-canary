@@ -2,8 +2,8 @@ n.d(t, { Z: () => A }), n(539854), n(388685), n(290780);
 var i = n(54381);
 n(473749);
 var r = n(120356),
-    l = n.n(r),
-    a = n(793030),
+    a = n.n(r),
+    l = n(793030),
     o = n(704215),
     s = n(952265),
     c = n(24124),
@@ -120,7 +120,7 @@ function A(e, t) {
             case x.nc.GO_LIVE_VOICE:
             case x.nc.GO_LIVE_NON_VOICE: {
                 let { oneClickGoLiveEnabled: e, useStreamCtaCopy: t } = (0, g.tU)("welcomeNotification"),
-                    l = _.intl.string(t ? _.t.pEuzii : _.t.U76Ft2),
+                    a = _.intl.string(t ? _.t.pEuzii : _.t.U76Ft2),
                     c = e
                         ? (e) => {
                               let t = () => {
@@ -167,14 +167,14 @@ function A(e, t) {
                           };
                 r
                     ? k.push(
-                          (0, i.jsx)(a.zxk, {
+                          (0, i.jsx)(l.zxk, {
                               size: "sm",
                               variant: "active",
                               onClick: (e) => c(e),
-                              text: l,
+                              text: a,
                           }),
                       )
-                    : ((j.confirmText = l),
+                    : ((j.confirmText = a),
                       (j.onConfirmClick = (e, t) => {
                           u.Z.updateNotificationStatus(t), c(e);
                       }));
@@ -192,7 +192,7 @@ function A(e, t) {
                         gamingId: null == e ? void 0 : e.id,
                         maxUserShowCount: 5,
                         variant: r ? "subtle" : "default",
-                        className: l()({
+                        className: a()({
                             [N.container]: !0,
                             [N.containerFaint]: r,
                         }),
@@ -203,7 +203,7 @@ function A(e, t) {
     k.length > 0 &&
         A.unshift(() =>
             (0, i.jsx)("div", {
-                className: l()(N.container, N.containerFaint, N.keybindStreamContainer),
+                className: a()(N.container, N.containerFaint, N.keybindStreamContainer),
                 children: k,
             }),
         ),
@@ -222,7 +222,7 @@ function A(e, t) {
                       highlightAdminWarningIfElevated: !0,
                   }),
         L = r
-            ? (0, i.jsx)(a.X6q, {
+            ? (0, i.jsx)(l.X6q, {
                   variant: "heading-md/semibold",
                   color: "text-strong",
                   children: _.intl.string(_.t.KWDIrh),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(539854), n(472816), n(794429);
+n.d(t, { Z: () => F }), n(539854), n(472816), n(794429);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -118,7 +118,7 @@ function A(e) {
         onboardingResponsesSeen: s,
         connections: null != u ? u : [],
     }),
-        d || D(t, a),
+        d || w(t, a),
         (O[t] = Date.now());
 }
 function N() {
@@ -154,7 +154,7 @@ function R(e) {
             !0))
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == y[e]) return;
     let n = {};
     Object.keys(y[e]).forEach((r) => {
@@ -167,9 +167,9 @@ function D(e, t) {
     }),
         (b[e] = E(h({}, b[e]), { responses: r }));
 }
-function w(e) {
+function D(e) {
     let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
-    D(t, n);
+    w(t, n);
     let a = b[t];
     if (null == a) return !1;
     let o = C(a.prompts, r, i);
@@ -299,13 +299,13 @@ class Z extends (r = o.ZP.Store) {
     }
 }
 m(Z, "displayName", "GuildOnboardingPromptsStore");
-let B = new Z(s.Z, {
+let F = new Z(s.Z, {
     CONNECTION_OPEN: I,
     GUILD_ONBOARDING_PROMPTS_FETCH_START: S,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: A,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: N,
     GUILD_ONBOARDING_SELECT_OPTION: R,
-    GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: w,
+    GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: P,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: P,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: x,

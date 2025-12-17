@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(26033),
     p = n(178762),
     _ = n(388032),
-    m = n(709516);
+    m = n(214226);
 function h(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ function O(e) {
             label: _.intl.string(_.t["FfCL+6"]),
         }),
         R = (0, f.dX)(O),
-        D = (0, u.Z)({
+        w = (0, u.Z)({
             location: "ContentPopoutContextMenu",
             applicationId: R && !0 !== S ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
             source: c.m1.ActivityCardContextMenu,
@@ -115,12 +115,12 @@ function O(e) {
                         (0, r.jsxs)(o.kSQ, {
                             children: [
                                 C,
-                                null != D &&
+                                null != w &&
                                     (0, r.jsx)(o.sNh, {
                                         id: "game-profile",
                                         label: _.intl.string(_.t.f7aVGn),
                                         action: (e) => {
-                                            D(e), null == T || T();
+                                            w(e), null == T || T();
                                         },
                                     }),
                             ],

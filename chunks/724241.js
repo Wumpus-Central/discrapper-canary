@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(246946),
     d = n(654904),
     f = n(671955),
-    p = n(116649);
+    p = n(155493);
 function _(e) {
     let {
             user: t,
@@ -38,7 +38,7 @@ function _(e) {
             user: t,
             guildMember: C,
         }),
-        D = () => {
+        w = () => {
             if (null != C && null !== m && (null != C.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: t,
@@ -52,7 +52,7 @@ function _(e) {
             (0, r.jsx)(o.Z, {
                 user: t,
                 guildId: null == _ ? void 0 : _.id,
-                usernameIcon: D(),
+                usernameIcon: w(),
                 nickname: R,
                 pendingDisplayNameStyles: v,
                 pronouns: P,

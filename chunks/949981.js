@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(358595),
     E = n(981631),
     b = n(388032),
-    y = n(105341);
+    y = n(222922);
 function O(e) {
     let t,
         { invite: n, message: a, currentUserId: O, onTransitionToInviteChannel: v, onAcceptInstantInvite: S } = e,
@@ -59,9 +59,9 @@ function O(e) {
                       .map((e) => e.username)
                       .join(", ")
                 : b.intl.string(b.t.LJpTRF));
-    let D = b.intl.string(b.t.XpeFYr),
-        w = "active";
-    N && ((D = b.intl.string(b.t.cEnaWx)), (w = "secondary"));
+    let w = b.intl.string(b.t.XpeFYr),
+        D = "active";
+    N && ((w = b.intl.string(b.t.cEnaWx)), (D = "secondary"));
     let x = b.intl.string(b.t["3p3/BK"]);
     return (
         I && (x = b.intl.string(b.t.qmtuXE)),
@@ -88,8 +88,8 @@ function O(e) {
                             onClick: P,
                             loading: T,
                             disabled: N,
-                            variant: w,
-                            text: D,
+                            variant: D,
+                            text: w,
                             fullWidth: !0,
                         }),
                     ],

@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var i = n(793030),
     l = n(481060),
-    o = n(570140),
-    a = n(317770),
+    a = n(570140),
+    o = n(317770),
     s = n(981631),
     c = n(388032);
 function u(e) {
@@ -34,24 +34,24 @@ function u(e) {
 }
 let d = "ActivityInviteManager",
     f = () => {
-        o.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
+        a.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
-class h extends a.Z {
+class h extends o.Z {
     _initialize() {
-        o.Z.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.Z.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        a.Z.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            a.Z.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     _terminate() {
-        o.Z.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.Z.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        a.Z.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            a.Z.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: o, context: a } = e,
-            h = a === s.IlC.POPOUT ? l.u1M : l.z1l;
-        o
+        let { activity: t, isPrivate: a, context: o } = e,
+            h = o === s.IlC.POPOUT ? l.u1M : l.z1l;
+        a
             ? (0, l.h7j)(
                   (e) => {
-                      var n, o;
+                      var n, a;
                       return (0, r.jsx)(
                           i.Modal,
                           ((n = u(
@@ -68,7 +68,7 @@ class h extends a.Z {
                               },
                               e,
                           )),
-                          (o = o =
+                          (a = a =
                               {
                                   children: (0, r.jsx)(l.Text, {
                                       variant: "text-md/normal",
@@ -76,7 +76,7 @@ class h extends a.Z {
                                   }),
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -84,8 +84,8 @@ class h extends a.Z {
                                         n.push.apply(n, r);
                                     }
                                     return n;
-                                })(Object(o)).forEach(function (e) {
-                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                                })(Object(a)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                                 }),
                           n),
                       );

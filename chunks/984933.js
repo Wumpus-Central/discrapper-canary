@@ -46,8 +46,8 @@ let I = "SELECTABLE",
     N = {},
     P = {},
     R = null,
-    D = {},
-    w = {
+    w = {},
+    D = {
         comparator: -1,
         channel: (0, p.createChannelRecord)({
             id: v.Sc2,
@@ -63,7 +63,7 @@ function M(e) {
         id: e,
         [I]: [],
         [T]: [],
-        [v.d4z.GUILD_CATEGORY]: [w],
+        [v.d4z.GUILD_CATEGORY]: [D],
         count: 0,
     };
 }
@@ -82,7 +82,7 @@ function G(e) {
 function Z(e) {
     return (0, p.r8)(e) ? I : (0, p.bw)(e) ? T : e;
 }
-function B() {
+function F() {
     let e = {},
         t = d.Z.getFavoriteChannels();
     for (let n in t) {
@@ -97,8 +97,8 @@ function B() {
     }
     return e;
 }
-function F(e) {
-    if (e === v.I_8) return B();
+function B(e) {
+    if (e === v.I_8) return F();
     let t = {},
         n = h.Z.getMutableGuildChannelsForGuild(e);
     for (let e in n)
@@ -110,7 +110,7 @@ function F(e) {
 }
 function V(e) {
     let { id: t } = e,
-        n = F(t);
+        n = B(t);
     return (
         a().forEach(n, (n) => {
             let r = n.channel;
@@ -123,18 +123,18 @@ function V(e) {
             )
                 return;
             let i = Z(r.type);
-            r.type === v.d4z.GUILD_DIRECTORY && (null == D[t] && (D[t] = []), D[t].push(n)),
+            r.type === v.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)),
                 null != e[i] && e[i].push(n);
         }),
         e
     );
 }
 function H() {
-    (A = {}), (D = {}), (N = {}), (P = {}), null != C && Y(C);
+    (A = {}), (w = {}), (N = {}), (P = {}), null != C && Y(C);
 }
 function Y(e) {
     let t = M(e);
-    return (A[e] = t), (D[e] = []), V(t), G(t), W(t), en(e), t;
+    return (A[e] = t), (w[e] = []), V(t), G(t), W(t), en(e), t;
 }
 function W(e) {
     let t = (N[e.id] = {}),
@@ -161,7 +161,7 @@ function z(e) {
     let {
         guild: { id: t },
     } = e;
-    return delete A[t], delete N[t], delete P[t], delete D[t], !0;
+    return delete A[t], delete N[t], delete P[t], delete w[t], !0;
 }
 function q(e) {
     let { guildId: t, user: n } = e;
@@ -289,7 +289,7 @@ class el extends (r = s.ZP.Store) {
         var t, n;
         return null !=
             (n =
-                null == (t = D[e])
+                null == (t = w[e])
                     ? void 0
                     : t.map((e) => {
                           let { channel: t } = e;

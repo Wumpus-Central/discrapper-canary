@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(828700),
-    o = n(91192),
-    a = n(442837),
+    a = n(91192),
+    o = n(442837),
     s = n(481060),
     c = n(944486),
     u = n(55589),
@@ -12,29 +12,29 @@ var r = n(54381),
     h = n(662146),
     p = n(981631),
     g = n(388032),
-    m = n(815141);
-function b() {
+    b = n(992397);
+function m() {
     var e, t;
     let { pathname: n } = (0, l.TH)(),
-        b = n.startsWith(p.Z5c.CHANNEL(p.ME)) && n !== p.Z5c.CHANNEL(p.ME) && n !== p.Z5c.ME_ACTIVITY,
-        _ = (0, a.e7)([u.Z], () => u.Z.getPrivateChannelIds()[0]),
-        y = (0, a.e7)([c.Z], () => {
+        m = n.startsWith(p.Z5c.CHANNEL(p.ME)) && n !== p.Z5c.CHANNEL(p.ME) && n !== p.Z5c.ME_ACTIVITY,
+        y = (0, o.e7)([u.Z], () => u.Z.getPrivateChannelIds()[0]),
+        O = (0, o.e7)([c.Z], () => {
             var e;
-            return null != (e = c.Z.getChannelId(p.ME)) ? e : _;
+            return null != (e = c.Z.getChannelId(p.ME)) ? e : y;
         }),
-        [O, v] = i.useState(!1),
-        j = (0, o.Ie)("dms");
+        [v, j] = i.useState(!1),
+        C = (0, a.Ie)("dms");
     return (0, r.jsxs)(f.H, {
         children: [
             (0, r.jsx)(d.Z, {
-                selected: b,
-                hovered: O,
-                className: m.pill,
+                selected: m,
+                hovered: v,
+                className: b.pill,
             }),
             (0, r.jsx)(h.Z, {
                 hideOnClick: !0,
                 text: g.intl.string(g.t.YUU0RF),
-                selected: b,
+                selected: m,
                 children: (0, r.jsx)(s.aRk, {
                     selected: !0,
                     lowerBadge: null,
@@ -67,20 +67,20 @@ function b() {
                             return e;
                         })(
                             {
-                                onMouseEnter: () => v(!0),
-                                onMouseLeave: () => v(!1),
+                                onMouseEnter: () => j(!0),
+                                onMouseLeave: () => j(!1),
                                 onClick: p.dG4,
-                                selected: b || O,
+                                selected: m || v,
                                 ariaLabel: g.intl.string(g.t.YUU0RF),
                                 "aria-owns": "guild-list-dms",
-                                "aria-selected": b || O,
+                                "aria-selected": m || v,
                             },
-                            j,
+                            C,
                         )),
                         (t = t =
                             {
                                 to: {
-                                    pathname: null != y ? p.Z5c.CHANNEL(p.ME, y) : p.Z5c.ME_DMS,
+                                    pathname: null != O ? p.Z5c.CHANNEL(p.ME, O) : p.Z5c.ME_DMS,
                                     state: {
                                         analyticsSource: {
                                             page: p.ZY5.GUILD_CHANNEL,

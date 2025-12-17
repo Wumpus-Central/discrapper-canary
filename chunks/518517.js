@@ -1,4 +1,4 @@
-n.d(e, { b: () => c });
+n.d(e, { b: () => S });
 var i = n(442837),
     l = n(924557),
     s = n(435064),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(509613),
     a = n(313789),
     o = n(388032);
-let c = (0, r.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
+let S = (0, r.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
     useTitle: () => o.intl.string(o.t["3zwNf6"]),
     useSubtitle: () => o.intl.string(o.t.m4Cjj9),
     useValue: () => (0, i.e7)([s.Z], () => s.Z.getSettings().remindersEnabled),

@@ -9,7 +9,7 @@ var i = n(54381),
     u = n(375954),
     d = n(921944);
 function p(e) {
-    let { children: t, enabled: n, animationContainerClassName: p, glowClassName: h, trinketsClassName: f } = e,
+    let { children: t, enabled: n, animationContainerClassName: p, glowClassName: f, trinketsClassName: h } = e,
         m = (0, l.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
         g = r.useMemo(() => {
             let e = [];
@@ -25,8 +25,8 @@ function p(e) {
             return n === a.z.ACTIVITIES_CHAT_BUTTON_NUX_V2
                 ? (0, i.jsx)(o.b, {
                       animationContainerClassName: p,
-                      glowClassName: h,
-                      trinketsClassName: f,
+                      glowClassName: f,
+                      trinketsClassName: h,
                       onMount: b,
                       children: t,
                   })

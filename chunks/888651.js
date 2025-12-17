@@ -1,6 +1,6 @@
 if (
     (n.d(t, {
-        $: () => h,
+        $: () => f,
         Q: () => p,
     }),
     12633 == n.j)
@@ -40,7 +40,7 @@ function p(e) {
         }),
     )(e);
 }
-function h(e) {
+function f(e) {
     return (0, r.E)(
         d,
         {

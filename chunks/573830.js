@@ -1,9 +1,9 @@
-n.d(t, { J: () => D }), n(388685), n(583741);
+n.d(t, { J: () => w }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
     a = n(74361),
     o = n(69771),
-    s = n(467721),
+    s = n(236726),
     l = n(698369),
     c = n(692547),
     u = n(251052),
@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(213305),
     p = n(155127),
     _ = n(635041),
-    m = n(571755);
+    m = n(816811);
 function h(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ function R(e, t, n) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let {
             checked: t,
             disabled: n,
@@ -119,9 +119,9 @@ function D(e) {
             innerRef: I,
         } = e,
         { reducedMotion: T } = i.useContext(f.S),
-        D = i.useRef(null),
         w = i.useRef(null),
-        x = null != I ? I : w,
+        D = i.useRef(null),
+        x = null != I ? I : D,
         L = (0, l.l)({
             isSelected: t,
             onChange: E,
@@ -143,8 +143,8 @@ function D(e) {
         ),
         { hoverProps: U, isHovered: G } = (0, o.X)({ isDisabled: n }),
         Z = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
-        B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
-        F = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT).spring(),
+        F = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
+        B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT).spring(),
         V = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_ACTIVE).spring(),
         H = (0, d.d)(c.Z.colors.SWITCH_BORDER_DEFAULT).spring(),
         Y = (0, d.d)(c.Z.colors.SWITCH_BORDER_SELECTED_DEFAULT).spring(),
@@ -179,7 +179,7 @@ function D(e) {
     return (0, r.jsx)(
         p.tE,
         b(g({}, y), {
-            ringTarget: D,
+            ringTarget: w,
             focusTarget: x,
             within: !0,
             offset: -2,
@@ -191,7 +191,7 @@ function D(e) {
                         (0, r.jsx)(
                             s.animated.div,
                             b(g({}, U), {
-                                ref: D,
+                                ref: w,
                                 className: m.switchIndicator,
                                 "data-size": "md",
                                 "data-mana-component": "switch",
@@ -199,7 +199,7 @@ function D(e) {
                                     opacity: et,
                                     backgroundColor: ee.to({
                                         range: A,
-                                        output: [G ? W : Z, B, V, G ? K : F],
+                                        output: [G ? W : Z, F, V, G ? K : B],
                                         extrapolate: "clamp",
                                     }),
                                     border: "1px solid",

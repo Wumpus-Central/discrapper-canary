@@ -3,7 +3,7 @@ n.d(t, {
     Mo: () => A,
     QG: () => N,
     XQ: () => S,
-    _U: () => D,
+    _U: () => w,
     dM: () => P,
     k$: () => I,
 }),
@@ -240,7 +240,7 @@ function R(e) {
         f.fy.INFREQUENT_USER_ACTION,
     );
 }
-function D(e, t) {
+function w(e, t) {
     o.Z.dispatch({
         type: "DISMISS_FAVORITE_SUGGESTION",
         guildId: e,

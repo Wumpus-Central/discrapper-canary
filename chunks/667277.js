@@ -102,9 +102,9 @@ function T(e, t, n, g) {
     if (!T.match) throw RangeError("locale must contain match property");
     var A = (0, u.Z)(
         null !=
-            (D =
+            (w =
                 null !=
-                (w =
+                (D =
                     null !=
                     (x =
                         null != (L = null == g ? void 0 : g.firstWeekContainsDate)
@@ -114,11 +114,11 @@ function T(e, t, n, g) {
                               : M.firstWeekContainsDate)
                         ? x
                         : v.firstWeekContainsDate)
-                    ? w
+                    ? D
                     : null == (k = v.locale) || null == (U = k.options)
                       ? void 0
                       : U.firstWeekContainsDate)
-            ? D
+            ? w
             : 1,
     );
     if (!(A >= 1 && A <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
@@ -128,13 +128,13 @@ function T(e, t, n, g) {
                 null !=
                 (Z =
                     null !=
-                    (B =
-                        null != (F = null == g ? void 0 : g.weekStartsOn)
-                            ? F
+                    (F =
+                        null != (B = null == g ? void 0 : g.weekStartsOn)
+                            ? B
                             : null == g || null == (V = g.locale) || null == (H = V.options)
                               ? void 0
                               : H.weekStartsOn)
-                        ? B
+                        ? F
                         : v.weekStartsOn)
                     ? Z
                     : null == (Y = v.locale) || null == (W = Y.options)
@@ -149,8 +149,8 @@ function T(e, t, n, g) {
         else return new Date(NaN);
     var P,
         R,
-        D,
         w,
+        D,
         x,
         L,
         j,
@@ -159,8 +159,8 @@ function T(e, t, n, g) {
         U,
         G,
         Z,
-        B,
         F,
+        B,
         V,
         H,
         Y,

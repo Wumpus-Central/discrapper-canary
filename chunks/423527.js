@@ -24,8 +24,8 @@ var r,
     y = n(853268),
     S = n(639946),
     C = n(616952),
-    O = n(792766),
-    T = n(692483),
+    T = n(792766),
+    O = n(692483),
     A = n(100159),
     Z = n(473855),
     P = n(726745),
@@ -41,8 +41,8 @@ var r,
     F = n(314897),
     V = n(480294),
     W = n(896797),
-    K = n(626135),
-    H = n(585483),
+    H = n(626135),
+    K = n(585483),
     z = n(70956),
     q = n(624138),
     Y = n(481153),
@@ -114,7 +114,7 @@ class eu extends (r = s.PureComponent) {
     componentDidMount() {
         this.redirectIfAuthenticated();
         let { giftCodeSKU: e, invite: t } = this.props;
-        K.default.track(
+        H.default.track(
             X.rMx.REGISTER_VIEWED,
             el(
                 {
@@ -182,9 +182,9 @@ class eu extends (r = s.PureComponent) {
             h = null != o ? o.skuId : null,
             f = b.MD.getState(),
             g = (0, q.Ew)(u) ? null : t === u,
-            m = ee.a ? await (0, T.K)(t) : t,
-            x = ee.a ? await (0, T.K)(n) : n;
-        H.S.dispatch(X.CkL.WAVE_EMPHASIZE),
+            m = ee.a ? await (0, O.K)(t) : t,
+            x = ee.a ? await (0, O.K)(n) : n;
+        K.S.dispatch(X.CkL.WAVE_EMPHASIZE),
             this.setState({
                 registering: !0,
                 apiErrors: {},
@@ -409,7 +409,7 @@ class eu extends (r = s.PureComponent) {
                 null != e && u
                     ? (0, i.jsx)(N.ZP, {
                           className: es.marginTop20,
-                          children: (0, i.jsx)(O.y, {
+                          children: (0, i.jsx)(T.y, {
                               guild: e.guild,
                               onlineCount: e.approximate_presence_count,
                           }),
@@ -445,7 +445,7 @@ class eu extends (r = s.PureComponent) {
                 registering: _,
                 apiErrors: { email: v, username: b, global_name: j, password: I, date_of_birth: y } = {},
             } = this.state,
-            { consentRequired: S, authBoxClassName: O, hasLoggedInAccounts: T } = this.props,
+            { consentRequired: S, authBoxClassName: T, hasLoggedInAccounts: O } = this.props,
             A = this.renderErrorMessage(),
             Z = (0, i.jsx)(f.u, {
                 text: !c && S ? er.intl.string(er.t.AY4IVA) : null,
@@ -604,7 +604,7 @@ class eu extends (r = s.PureComponent) {
             ? (0, i.jsx)(Q.Z, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: l()(O, ei.horizontalAuthBox),
+                  className: l()(T, ei.horizontalAuthBox),
                   children: () => [
                       L,
                       (0, i.jsxs)(
@@ -626,9 +626,9 @@ class eu extends (r = s.PureComponent) {
             : (0, i.jsxs)(N.ZP, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: O,
+                  className: T,
                   children: [
-                      T
+                      O
                           ? (0, i.jsx)("div", {
                                 className: ei.goBackButton,
                                 children: (0, i.jsx)(g.Button, {
@@ -705,7 +705,7 @@ class eu extends (r = s.PureComponent) {
                         source: "register",
                     }),
                     null == l || l(e),
-                    H.S.dispatch(X.CkL.WAVE_EMPHASIZE);
+                    K.S.dispatch(X.CkL.WAVE_EMPHASIZE);
             }),
             ea(this, "handleSubmit", (e) => {
                 null == e || e.preventDefault();
@@ -727,10 +727,10 @@ class eu extends (r = s.PureComponent) {
                     o || this.handleRegister();
             }),
             ea(this, "trackInputFocus", (e) => {
-                K.default.track(X.rMx.REGISTER_INPUT_FOCUS, { field: e });
+                H.default.track(X.rMx.REGISTER_INPUT_FOCUS, { field: e });
             }),
             ea(this, "trackInputBlur", (e) => {
-                K.default.track(X.rMx.REGISTER_INPUT_BLUR, { field: e });
+                H.default.track(X.rMx.REGISTER_INPUT_BLUR, { field: e });
             }),
             ea(this, "handleBirthdayChange", (e) => {
                 this.setState({ parsedDateOfBirth: e }), null != e && this.setState({ dateOfBirthClientError: null });

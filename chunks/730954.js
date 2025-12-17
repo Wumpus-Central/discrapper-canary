@@ -4,16 +4,16 @@ var r = n(904245),
     l = n(959517);
 function o(e, t, n) {
     var o, a;
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    let c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
-        null != t.interactionData && null != s.applicationId && (0, i.d)(t, e, s);
+        null != t.interactionData && null != c.applicationId && (0, i.d)(t, e, c);
         return;
     }
-    let { content: c, tts: u, messageReference: d, flags: f, nonce: g } = t;
+    let { content: s, tts: u, messageReference: d, flags: f, nonce: g } = t;
     r.Z.sendMessage(
         e.id,
         {
-            content: c,
+            content: s,
             tts: u,
             invalidEmojis: [],
             validNonShortcutEmojis: [],
@@ -49,7 +49,7 @@ function o(e, t, n) {
                 flags: f,
                 messageReference: null != d ? d : void 0,
             },
-            s,
+            c,
         )),
         (a = a = { location: l.dy.RETRY }),
         Object.getOwnPropertyDescriptors

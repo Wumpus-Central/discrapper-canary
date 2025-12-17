@@ -109,8 +109,8 @@ var A = (function (e) {
 let N = (e) => 0 === e.type || 3 === e.type,
     P = (e) => 1 === e.type,
     R = (e) => (N(e) ? e.message.nonce : P(e) ? e.message.messageId : e.message.data.id),
-    D = [+_.Z.Millis.MINUTE, 5 * _.Z.Millis.MINUTE];
-class w extends h.Z {
+    w = [+_.Z.Millis.MINUTE, 5 * _.Z.Millis.MINUTE];
+class D extends h.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -147,7 +147,7 @@ class w extends h.Z {
         return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = D.map((e) =>
+        let t = w.map((e) =>
             setTimeout(() => {
                 (0, s.yw)(b.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e),
@@ -343,4 +343,4 @@ class w extends h.Z {
             });
     }
 }
-let x = new w();
+let x = new D();

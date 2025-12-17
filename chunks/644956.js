@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F });
+n.d(t, { Z: () => B });
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -27,10 +27,10 @@ var r = n(54381),
     N = n(485386),
     P = n(430824),
     R = n(594174),
-    D = n(51144),
-    w = n(388032),
-    x = n(430864),
-    L = n(329072);
+    w = n(51144),
+    D = n(388032),
+    x = n(960324),
+    L = n(325842);
 function j(e, t, n) {
     return (
         t in e
@@ -142,7 +142,7 @@ function Z(e) {
                                               n.e("6915"),
                                               n.e("8982"),
                                               n.e("7717"),
-                                              n.e("20037"),
+                                              n.e("75548"),
                                           ]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
@@ -166,7 +166,7 @@ function Z(e) {
               t.userId,
           );
 }
-function B(e) {
+function F(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         d = i.useRef(null);
     (0, p.ZP)(() => {
@@ -189,7 +189,7 @@ function B(e) {
                 .filter((e) => null != R.default.getUser(e.userId))
                 .sortBy((e) => {
                     var t;
-                    return null != (t = e.nick) ? t : D.ZP.getName(R.default.getUser(e.userId));
+                    return null != (t = e.nick) ? t : w.ZP.getName(R.default.getUser(e.userId));
                 })
                 .value();
         }, [a, n, _]),
@@ -220,7 +220,7 @@ function B(e) {
     let O =
         null == E
             ? h.name
-            : w.intl.formatToPlainString(w.t.CuAQkJ, {
+            : D.intl.formatToPlainString(D.t.CuAQkJ, {
                   title: h.name,
                   count: E,
               });
@@ -242,7 +242,7 @@ function B(e) {
                         children: [
                             (0, r.jsx)(g.Z, {
                                 className: x.roleHeader,
-                                "aria-label": w.intl.formatToPlainString(w.t.Uaqbke, {
+                                "aria-label": D.intl.formatToPlainString(D.t.Uaqbke, {
                                     title: h.name,
                                     count: y.length,
                                 }),
@@ -256,7 +256,7 @@ function B(e) {
                                 ? null
                                 : (0, r.jsx)(g.Z, {
                                       className: x.roleHeader,
-                                      children: w.intl.formatToPlainString(w.t["9oMmZC"], { count: E - y.length }),
+                                      children: D.intl.formatToPlainString(D.t["9oMmZC"], { count: E - y.length }),
                                   }),
                         ],
                     }),
@@ -265,7 +265,7 @@ function B(e) {
         ),
     });
 }
-function F(e) {
+function B(e) {
     let { roleId: t, channelId: n, roleName: a, guildId: o, children: c, inlinePreview: d = !1 } = e,
         { analyticsLocations: f } = (0, h.ZP)(m.Z.ROLE_MENTION),
         p = (0, l.e7)([_.Z], () => _.Z.roleStyle),
@@ -319,7 +319,7 @@ function F(e) {
                       null != t && (await (0, y.H)(o, t));
                   },
                   renderPopout: (e) =>
-                      (0, r.jsx)(B, {
+                      (0, r.jsx)(F, {
                           guildId: o,
                           channelId: n,
                           roleId: t,

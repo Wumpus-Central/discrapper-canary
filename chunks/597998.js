@@ -163,8 +163,8 @@ function k(e) {
         disconnected: M,
         hangStatusActivity: k,
         showHangStatus: U,
-        isSelf: B,
-        handleHoverHangStatus: F,
+        isSelf: F,
+        handleHoverHangStatus: B,
         handleHoverIcons: V,
         onAddHangStatusClicked: H,
     } = e;
@@ -273,8 +273,8 @@ function k(e) {
                   U || z
                       ? (0, r.jsx)("div", {
                             className: A.iconGroup,
-                            onMouseEnter: () => (null == F ? void 0 : F(!0)),
-                            onMouseLeave: () => (null == F ? void 0 : F(!1)),
+                            onMouseEnter: () => (null == B ? void 0 : B(!0)),
+                            onMouseLeave: () => (null == B ? void 0 : B(!1)),
                             children: z
                                 ? (0, r.jsx)(
                                       G,
@@ -291,7 +291,7 @@ function k(e) {
                                       userId: L.id,
                                       hangStatusActivity: k,
                                       iconClassName: v,
-                                      isSelf: B,
+                                      isSelf: F,
                                       onAddHangStatusClicked: H,
                                   }),
                         })
@@ -328,8 +328,8 @@ let U = function (e) {
             serverMute: U,
             guildId: G,
             nick: Z,
-            isGuest: B,
-            flipped: F,
+            isGuest: F,
+            flipped: B,
             className: V,
             overlap: H,
             "aria-label": Y,
@@ -385,7 +385,7 @@ let U = function (e) {
                 className: o()(i, A.username, q, { [A.usernameSpeaking]: !M && !U && R }),
                 children: [
                     null != Z ? Z : v.ZP.getName(K),
-                    B
+                    F
                         ? (0, r.jsxs)("span", {
                               className: A.guestSuffix,
                               children: ["\xA0", C.intl.string(C.t["pFO/Ph"])],
@@ -428,7 +428,7 @@ let U = function (e) {
         "aria-label": null != (t = null != Y ? Y : Z) ? t : K.username,
         focusProps: { offset: { right: 4 } },
         children: (0, r.jsxs)("div", {
-            className: o()(A.content, { [A.flipped]: F }),
+            className: o()(A.content, { [A.flipped]: B }),
             children: [en(), er(), ei(), ea()],
         }),
     });

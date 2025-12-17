@@ -77,10 +77,10 @@ function R(e) {
     }
     (b = null), (I = _.QZA.OPEN), (T = {}), (C = !1);
 }
-function D() {
+function w() {
     (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (I = _.QZA.CLOSED), (C = !1);
 }
-let w = s().debounce(() => {
+let D = s().debounce(() => {
     C &&
         (null != y ? s().isEqual(y, K(y.id)) && (C = !1) : null != O && s().isEqual(O, z(O.id)) && (C = !1),
         C || Q.emitChange());
@@ -98,7 +98,7 @@ function x(e) {
         null != t.expireGracePeriod &&
             y.expire_grace_period !== t.expireGracePeriod &&
             ((y.expire_grace_period = t.expireGracePeriod), (C = !0)),
-        C && w();
+        C && D();
 }
 function L(e) {
     let { settings: t } = e;
@@ -107,7 +107,7 @@ function L(e) {
         null != t.name && O.name !== t.name && ((O.name = t.name), (C = !0)),
         void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (C = !0)),
         null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (C = !0)),
-        C && w();
+        C && D();
 }
 function j() {
     (I = _.QZA.SUBMITTING), (T = {});
@@ -145,7 +145,7 @@ function k(e) {
             (null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : C || (y = n)), (g[e] = n);
         } else (null == y ? void 0 : y.id) === t.id && (y = null), g.splice(e, 1);
     }
-    (g = [...g]), w();
+    (g = [...g]), D();
 }
 function U(e) {
     let { guildId: t, channelId: n, webhooks: i } = e;
@@ -168,7 +168,7 @@ function U(e) {
                     let { id: n } = t;
                     if (n === e.id) return !0;
                 }) && E.push(e);
-        (E = [...E]), w();
+        (E = [...E]), D();
     }
 }
 function G(e) {
@@ -180,13 +180,13 @@ function Z(e) {
     if (null == b || b !== t) return !1;
     (b = null), (T = {}), (C = !1);
 }
-function B(e) {
+function F(e) {
     let { integrationId: t } = e,
         n = K(t);
     if (null == n) return !1;
     (y = n), (b = null), (O = null), (T = {}), (C = !1);
 }
-function F() {
+function B() {
     (y = null), (T = {}), (C = !1);
 }
 function V(e) {
@@ -289,13 +289,13 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SET_SECTION: P,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: Z,
-                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: B,
-                  INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: F,
+                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: F,
+                  INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: B,
                   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: x,
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: L,
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: V,
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: H,
-                  GUILD_SETTINGS_CLOSE: D,
+                  GUILD_SETTINGS_CLOSE: w,
                   GUILD_SETTINGS_LOADED_INTEGRATIONS: k,
                   WEBHOOKS_UPDATE: U,
                   INTEGRATION_SETTINGS_SUBMITTING: j,

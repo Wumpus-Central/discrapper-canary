@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(237872),
     f = n(562618),
     p = n(388032),
-    _ = n(254477);
+    _ = n(770966);
 function m(e, t, n) {
     return (
         t in e
@@ -117,31 +117,31 @@ function O(e) {
         i.useEffect(() => {
             null == S || S(P);
         }, [P, S]);
-    let D = y[P],
-        w = P + 1 === y.length,
+    let w = y[P],
+        D = P + 1 === y.length,
         x = i.useCallback(() => {
             var e;
-            null == D || null == (e = D.onCta) || e.call(D), w ? null == I || I() : R((e) => e + 1);
-        }, [D, w, I]),
+            null == w || null == (e = w.onCta) || e.call(w), D ? null == I || I() : R((e) => e + 1);
+        }, [w, D, I]),
         L = i.useCallback(() => {
             null == I || I();
         }, [I]),
         j = i.useCallback(() => {
             null == I || I();
         }, [I]);
-    if (!C || null == D) return null;
+    if (!C || null == w) return null;
     let M = h(
             {
                 text:
-                    null != (a = null == (t = D.action) ? void 0 : t.text)
+                    null != (a = null == (t = w.action) ? void 0 : t.text)
                         ? a
-                        : w
+                        : D
                           ? p.intl.string(p.t.i4jeWR)
                           : p.intl.string(p.t.PDTjLN),
-                variant: null != (m = null == (n = D.action) ? void 0 : n.variant) ? m : "primary",
+                variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : "primary",
                 onClick: x,
             },
-            D.action,
+            w.action,
         ),
         k = h(
             {
@@ -151,7 +151,7 @@ function O(e) {
                 position: A,
                 shouldShow: C,
                 onRequestClose: L,
-                gradientColor: D.gradientColor,
+                gradientColor: w.gradientColor,
                 caretConfig: O,
             },
             "edge" === N.alignmentStrategy
@@ -169,23 +169,23 @@ function O(e) {
                 children: [
                     (0, r.jsx)(d.u, {
                         onClick: j,
-                        variant: null != D.gradientColor ? "color-mix" : void 0,
+                        variant: null != w.gradientColor ? "color-mix" : void 0,
                     }),
-                    null != D.graphic &&
+                    null != w.graphic &&
                         (0, r.jsx)("div", {
                             className: o()(_.graphic, { [_["graphic--".concat(v)]]: null != v }),
                             children: (0, r.jsx)(
                                 s.zsu,
-                                E(h({}, D.graphic), {
-                                    aspectRatio: null != (g = D.graphic.aspectRatio) ? g : "sm" === v ? "2/1" : "16/9",
+                                E(h({}, w.graphic), {
+                                    aspectRatio: null != (g = w.graphic.aspectRatio) ? g : "sm" === v ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
                     (0, r.jsx)(f.Y, {
-                        title: D.title,
-                        body: D.body,
-                        badge: D.badge,
-                        textLink: D.textLink,
+                        title: w.title,
+                        body: w.body,
+                        badge: w.badge,
+                        textLink: w.textLink,
                     }),
                     (0, r.jsx)("div", {
                         className: _.actionBar,

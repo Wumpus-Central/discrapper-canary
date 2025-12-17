@@ -142,7 +142,7 @@ function R(e) {
         I.moveInto(a, e, r);
     } else I.moveNextTo(a, o, r);
 }
-function D(e) {
+function w(e) {
     let { sourceIds: t, name: n } = e,
         r = t.shift();
     if (null == r) return !1;
@@ -155,7 +155,7 @@ function D(e) {
             null != t && I.moveInto(t, a, !0);
         });
 }
-function w(e) {
+function D(e) {
     var { targetId: t, sourceIds: n } = e,
         r = v(e, ["targetId", "sourceIds"]);
     let i = I.getNode(t);
@@ -228,7 +228,7 @@ function U(e, t) {
 }
 let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     Z = (0, f.oH)((e, t) => e.getRoots().map(C)),
-    B = (0, f.oH)((e, t) => {
+    F = (0, f.oH)((e, t) => {
         let n = [];
         function r(e) {
             switch (e.type) {
@@ -240,7 +240,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         }
         return r(e.root), n;
     }),
-    F = (0, f.oH)((e, t) => e.root.children.map(C));
+    B = (0, f.oH)((e, t) => e.root.children.map(C));
 class V extends E.Z {
     initialize() {
         this.waitFor(g.Z, b.ZP, d.Z, m.Z, u.Z, _.Z, l.Z);
@@ -258,10 +258,10 @@ class V extends E.Z {
         return G(I, I.version);
     }
     getFlattenedGuildFolderList() {
-        return B(I, I.version);
+        return F(I, I.version);
     }
     getCompatibleGuildFolders() {
-        return F(I, I.version);
+        return B(I, I.version);
     }
     getFastListGuildFolders() {
         return I.getRoots();
@@ -282,8 +282,8 @@ class V extends E.Z {
             GUILD_MEMBER_ADD: L,
             USER_SETTINGS_PROTO_UPDATE: P,
             GUILD_MOVE_BY_ID: R,
-            GUILD_FOLDER_CREATE_LOCAL: D,
-            GUILD_FOLDER_EDIT_LOCAL: w,
+            GUILD_FOLDER_CREATE_LOCAL: w,
+            GUILD_FOLDER_EDIT_LOCAL: D,
             GUILD_FOLDER_DELETE_LOCAL: x,
             TOGGLE_GUILD_FOLDER_EXPAND: j,
             SET_GUILD_FOLDER_EXPANDED: M,

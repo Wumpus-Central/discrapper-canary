@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(481060),
     l = n(570140),
     a = n(317770),
-    s = n(19780),
-    o = n(594174),
+    o = n(19780),
+    s = n(594174),
     c = n(960048),
     u = n(981631);
 function d(e, t, n) {
@@ -36,7 +36,7 @@ class f extends a.Z {
             d(this, "timeout", null),
             d(this, "handleMaybeOpenModal", () => {
                 var e;
-                let t = o.default.getCurrentUser(),
+                let t = s.default.getCurrentUser(),
                     n = null == t || null == (e = t.avatarDecoration) ? void 0 : e.expiresAt;
                 null != n &&
                     (this.maybeOpenModal() ||
@@ -45,8 +45,8 @@ class f extends a.Z {
             }),
             d(this, "maybeOpenModal", () => {
                 var e, t;
-                let l = o.default.getCurrentUser(),
-                    a = s.Z.getState(),
+                let l = s.default.getCurrentUser(),
+                    a = o.Z.getState(),
                     f = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
                     g = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
                 return (

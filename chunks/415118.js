@@ -3,8 +3,8 @@ var l = n(54381);
 n(473749);
 var i = n(481060),
     r = n(239091),
-    o = n(883385),
-    a = n(108843),
+    a = n(883385),
+    o = n(108843),
     s = n(947440),
     u = n(100527),
     d = n(299206),
@@ -30,14 +30,14 @@ var i = n(481060),
     N = n(332031),
     _ = n(981631),
     A = n(388032);
-let T = (0, a.Z)(
-    (0, o.Z)(
+let T = (0, o.Z)(
+    (0, a.Z)(
         function (e) {
             let {
                     user: t,
                     guildId: n,
-                    showModalItems: o = !0,
-                    showMediaItems: a = !1,
+                    showModalItems: a = !0,
+                    showMediaItems: o = !1,
                     showChatItems: u = !0,
                     context: T,
                     onSelect: D,
@@ -112,12 +112,12 @@ let T = (0, a.Z)(
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [o && L, u && w, k, B, o && V, o && q, R],
+                                    children: [a && L, u && w, k, B, a && V, a && q, R],
                                 }),
-                                a && (0, l.jsx)(i.kSQ, { children: G }),
-                                (0, l.jsx)(i.kSQ, { children: o && H }),
+                                o && (0, l.jsx)(i.kSQ, { children: G }),
+                                (0, l.jsx)(i.kSQ, { children: a && H }),
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [a && F, o && Y, o && Q, W, X, J, K, o && $, o && z],
+                                    children: [o && F, a && Y, a && Q, W, X, J, K, a && $, a && z],
                                 }),
                                 (0, l.jsx)(i.kSQ, { children: ee }),
                                 (0, l.jsxs)(i.kSQ, {

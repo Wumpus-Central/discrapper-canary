@@ -9,25 +9,25 @@ var r = n(473749),
 let u = 20 * c.Z.Millis.SECOND;
 function d(e) {
     let { streamId: t, userId: n, videoSpinnerContext: c, streamKey: d, loading: f, paused: p = !1 } = e,
-        m = r.useRef(new l.V7()),
-        _ = c === a.m.SELF_STREAM || c === a.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
+        b = r.useRef(new l.V7()),
+        m = c === a.m.SELF_STREAM || c === a.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
     return (
         r.useEffect(() => {
             if (!f || p || !o.w.isIncomingVideoEnabled()) return;
-            let e = m.current;
+            let e = b.current;
             return (
                 e.start(u, () => {
-                    (0, s.K)(t, n, _, d);
+                    (0, s.K)(t, n, m, d);
                 }),
                 () => {
                     e.stop();
                 }
             );
-        }, [p, t, f, _, d, n]),
+        }, [p, t, f, m, d, n]),
         {
             onReady: r.useCallback(() => {
-                m.current.stop(), (0, s.w)(_, n);
-            }, [n, _]),
+                b.current.stop(), (0, s.w)(m, n);
+            }, [n, m]),
         }
     );
 }

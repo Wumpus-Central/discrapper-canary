@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(981631),
     d = n(474936),
     f = n(388032),
-    p = n(137435);
+    p = n(923540);
 function _(e) {
     let {
         hasAppliedGuildBoosts: t,

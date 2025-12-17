@@ -1,4 +1,4 @@
-n.d(t, { default: () => x }), n(388685), n(953529), n(539854);
+n.d(t, { default: () => E }), n(388685), n(953529), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(793030),
@@ -9,15 +9,15 @@ var i = n(54381),
     u = n(131704),
     d = n(592125),
     p = n(430824),
-    h = n(626135),
-    f = n(934415),
+    f = n(626135),
+    h = n(934415),
     m = n(974339),
     g = n(215157),
     b = n(71080),
     C = n(981631),
     y = n(388032),
-    _ = n(257803);
-function v(e) {
+    v = n(828494);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,19 +62,19 @@ function O(e, t) {
     }
     return r;
 }
-function x(e) {
+function E(e) {
     var { channelId: t } = e,
         n = O(e, ["channelId"]);
     let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
     return (r.useEffect(() => {
-        h.default.track(C.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
+        f.default.track(C.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
     null == l || null == o)
         ? null
         : (0, i.jsx)(
-              E,
-              v(
+              j,
+              x(
                   {
                       guild: o,
                       channel: l,
@@ -83,24 +83,24 @@ function x(e) {
               ),
           );
 }
-function E(e) {
+function j(e) {
     var t,
         n,
-        { guild: a, channel: d, onClose: p, newChannel: h, inSettings: C } = e,
-        x = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
-    let [E, j] = r.useState(""),
-        [S, P] = r.useState({}),
+        { guild: a, channel: d, onClose: p, newChannel: f, inSettings: C } = e,
+        E = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
+    let [j, S] = r.useState(""),
+        [_, P] = r.useState({}),
         [I, Z] = r.useState(!1),
         [T, N] = r.useState(null),
         A = r.useRef(null),
-        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, E),
+        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
         L = m.Z.useSections({
             roles: w,
             members: M,
         }),
-        D = h && 0 === Object.keys(S).length;
+        D = f && 0 === Object.keys(_).length;
     async function k() {
-        if (null == d || 0 === Object.keys(S).length) return void p();
+        if (null == d || 0 === Object.keys(_).length) return void p();
         Z(!0);
         try {
             await (function (e, t, n) {
@@ -111,12 +111,12 @@ function E(e) {
                         null != n.id &&
                             "" !== n.id &&
                             (n.rowType === b.aC.ROLE
-                                ? i.push((0, f.rX)(n.id, e.type))
-                                : n.rowType === b.aC.MEMBER && i.push((0, f.jZ)(n.id, e.type)));
+                                ? i.push((0, h.rX)(n.id, e.type))
+                                : n.rowType === b.aC.MEMBER && i.push((0, h.jZ)(n.id, e.type)));
                     }),
                     (0, s.hw)(e.id, i, n)
                 );
-            })(d, S, C),
+            })(d, _, C),
                 p(),
                 Z(!1);
         } catch (t) {
@@ -127,16 +127,16 @@ function E(e) {
     let U = (0, u.zi)(d.type) ? o.W4G : o.gjC;
     return (0, i.jsx)(m.Z.Provider, {
         listRef: A,
-        query: E,
-        setQuery: j,
-        pendingAdditions: S,
+        query: j,
+        setQuery: S,
+        pendingAdditions: _,
         setPendingAdditions: P,
         roles: w,
         members: M,
         getRichTag: R,
         children: (0, i.jsx)(
             l.Modal,
-            ((t = v({}, x)),
+            ((t = x({}, E)),
             (n = n =
                 {
                     title: y.intl.string(y.t.dMJ3Y6),
@@ -144,12 +144,12 @@ function E(e) {
                     input: (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsxs)(o.Text, {
-                                className: _.channelName,
+                                className: v.channelName,
                                 variant: "text-lg/normal",
                                 color: "text-default",
                                 children: [
                                     (0, i.jsx)(U, {
-                                        className: _.channelIcon,
+                                        className: v.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -159,19 +159,19 @@ function E(e) {
                             d.isGuildStageVoice() &&
                                 (0, i.jsx)(o.Text, {
                                     color: "text-default",
-                                    className: _.description,
+                                    className: v.description,
                                     variant: "text-sm/normal",
                                     children: y.intl.string(y.t.f7VbhF),
                                 }),
                             (0, i.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
                             (0, i.jsx)(o.Text, {
-                                className: _.subtext,
+                                className: v.subtext,
                                 variant: "text-xs/normal",
                                 children: y.intl.string(y.t.rwFx85),
                             }),
                             null != T
                                 ? (0, i.jsx)(o.Text, {
-                                      className: _.subtext,
+                                      className: v.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-feedback-critical",
                                       children: T.getAnyErrorMessage(),

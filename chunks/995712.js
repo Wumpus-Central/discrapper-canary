@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(54381);
 n(473749);
 var l = n(481060),
@@ -6,15 +6,15 @@ var l = n(481060),
     a = n(768581),
     s = n(388032),
     o = n(637462);
-let d = (e) => {
+let c = (e) => {
     var t;
     let { entry: n } = e,
-        { id: d, icon: c, name: u } = n,
+        { id: c, icon: d, name: u } = n,
         m =
             null !=
             (t = a.ZP.getGuildIconURL({
-                id: d,
-                icon: c,
+                id: c,
+                icon: d,
                 size: 32,
             }))
                 ? t

@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    l = n.n(i),
-    a = n(85707),
+    a = n.n(i),
+    l = n(85707),
     o = n(442837),
     c = n(681715),
     s = n(481060),
@@ -12,11 +12,11 @@ var i = n(120356),
     f = n(313201),
     g = n(314897),
     p = n(785717),
-    m = n(86419),
-    b = n(872269),
+    b = n(86419),
+    m = n(872269),
     h = n(228168),
     y = n(388032),
-    v = n(680604);
+    v = n(203742);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,22 +61,22 @@ function j(e, t) {
     );
 }
 function x(e) {
-    let { widget: t, className: n, buttonRef: i, additionalMenuItems: a } = e,
-        o = (0, m.mR)(t),
+    let { widget: t, className: n, buttonRef: i, additionalMenuItems: l } = e,
+        o = (0, b.mR)(t),
         c = (0, f.Dt)();
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(w, {
         targetRef: i,
         widget: t,
-        additionalMenuItems: a,
+        additionalMenuItems: l,
         children: (e) =>
-            (0, r.jsx)(_, {
+            (0, r.jsx)(P, {
                 children: (0, r.jsxs)(
                     s.P3F,
                     j(
                         O(
                             {
                                 innerRef: i,
-                                className: l()(v.button, n),
+                                className: a()(v.button, n),
                                 "data-dnd-name": o,
                                 "aria-label": y.intl.formatToPlainString(y.t.HWNJJN, { widgetTitle: o }),
                                 "aria-describedby": c,
@@ -98,10 +98,10 @@ function x(e) {
             }),
     });
 }
-let _ = (e) => {
+let P = (e) => {
         let { children: t } = e,
             n = (0, o.e7)([d.Z], () => d.Z.keyboardModeEnabled),
-            { isDragging: i } = (0, a.f)((e) => ({ isDragging: e.isDragging() }));
+            { isDragging: i } = (0, l.f)((e) => ({ isDragging: e.isDragging() }));
         return (0, r.jsx)(c.u, {
             __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
                 className: v.tooltipText,
@@ -128,14 +128,14 @@ let _ = (e) => {
             children: t,
         });
     },
-    P = (e) => {
-        let { children: t, widget: i, targetRef: l, additionalMenuItems: a } = e,
+    w = (e) => {
+        let { children: t, widget: i, targetRef: a, additionalMenuItems: l } = e,
             { trackUserProfileEditAction: o } = (0, p.KZ)(),
             c = (e) => {
                 if (e.shiftKey) {
-                    (0, m.y8)(i.type),
+                    (0, b.y8)(i.type),
                         o(O({ action: "WIDGET_REMOVED" }, i.getProfileEditAnalyticsOptions())),
-                        (0, b.L$)(h.qb.WIDGET_REMOVED);
+                        (0, m.L$)(h.qb.WIDGET_REMOVED);
                     return;
                 }
                 (0, s.ZDy)(
@@ -155,7 +155,7 @@ let _ = (e) => {
                 );
             };
         return (0, r.jsx)(s.yRy, {
-            targetElementRef: l,
+            targetElementRef: a,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
@@ -171,7 +171,7 @@ let _ = (e) => {
                     className: v.menu,
                     children: (0, r.jsxs)(s.kSQ, {
                         children: [
-                            a,
+                            l,
                             (0, r.jsx)(s.sNh, {
                                 id: "remove-widget",
                                 label: y.intl.string(y.t.Mm07Yc),

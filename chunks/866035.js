@@ -4,9 +4,9 @@ t(473749);
 var i = t(788111),
     o = t(752342),
     r = t(886794),
-    s = t(858970),
-    a = t(595145);
-function c(e) {
+    a = t(858970),
+    c = t(595145);
+function s(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -55,12 +55,12 @@ function d(e) {
             return i;
         })(e, ["hideRestrictedProfile"]);
     let { user: d } = t,
-        [u, m] = (0, i.Z)(d.id);
+        [u, f] = (0, i.Z)(d.id);
     return u && !n
-        ? (0, l.jsx)(s.Z, c({ onHide: m }, t))
+        ? (0, l.jsx)(a.Z, s({ onHide: f }, t))
         : d.isNonUserBot()
-          ? (0, l.jsx)(r.Z, c({}, t))
+          ? (0, l.jsx)(r.Z, s({}, t))
           : d.bot
-            ? (0, l.jsx)(o.Z, c({}, t))
-            : (0, l.jsx)(a.Z, c({}, t));
+            ? (0, l.jsx)(o.Z, s({}, t))
+            : (0, l.jsx)(c.Z, s({}, t));
 }

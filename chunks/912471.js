@@ -60,8 +60,8 @@ let I = 27,
     N = "user",
     P = new c.Z("SessionHeartbeatScheduler"),
     R = null,
-    D = null,
-    w = 0,
+    w = null,
+    D = 0,
     x = 0,
     L = { state: "uninitialized" },
     j = p.Z.getState(),
@@ -79,11 +79,11 @@ function U() {
         (R = {
             type: "timeout",
             id: setTimeout(() => {
-                F(),
+                B(),
                     (R = {
                         type: "interval",
                         id: setInterval(() => {
-                            F();
+                            B();
                         }, T),
                     });
             }, e),
@@ -111,7 +111,7 @@ function Z() {
         }),
         (0, l.Z)());
 }
-function B() {
+function F() {
     var e;
     let t = null != (e = f.Z.getIdleSince()) ? e : 0;
     return {
@@ -122,7 +122,7 @@ function B() {
         is_system_locked: f.Z.getSystemLocked(),
     };
 }
-async function F() {
+async function B() {
     let e = Date.now(),
         t = await eo(),
         n = Date.now();
@@ -141,7 +141,7 @@ async function F() {
             client_heartbeat_version: I,
         },
         (0, g.O)(),
-        B(),
+        F(),
     );
     _.default.track(O.rMx.CLIENT_HEARTBEAT, r), (x = performance.now()), (0, l.Z)();
 }
@@ -169,8 +169,8 @@ function K() {
     W() ? U() : Z(), J();
 }
 function z() {
-    null == D &&
-        (D = {
+    null == w &&
+        (w = {
             id: setInterval(() => {
                 V();
             }, T),
@@ -179,9 +179,9 @@ function z() {
 }
 function q(e) {
     let t = performance.now();
-    if (!(t - w < C))
+    if (!(t - D < C))
         try {
-            o.K.set(A, e), (w = t);
+            o.K.set(A, e), (D = t);
         } catch (e) {
             h.Z.captureException(e);
         }
@@ -268,7 +268,7 @@ async function eo() {
                           lastUsedTimestamp: e,
                           version: b.EI,
                       }),
-                      (w = 0)),
+                      (D = 0)),
                   (n.lastUsedTimestamp = e),
                   q(n))
                 : null != n && (0, b.qK)(n) && (n = null),

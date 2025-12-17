@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => w });
 var r = n(54381);
 n(473749);
 var i = n(990547),
@@ -16,19 +16,19 @@ var i = n(990547),
     g = n(131951),
     v = n(19780),
     y = n(556296),
-    O = n(358085),
-    j = n(130067),
+    j = n(358085),
+    O = n(130067),
     h = n(822556),
     x = n(981631),
     _ = n(345655),
     P = n(65154),
     C = n(388032),
-    w = n(895634);
-function E(e) {
+    E = n(898742);
+function w(e) {
     let {
             appContext: t,
             onInteraction: n,
-            onSelect: E,
+            onSelect: w,
             onClose: I,
             maybeRenderPTTCheckbox: T = !1,
             renderDeafenCheckbox: S = !1,
@@ -40,27 +40,27 @@ function E(e) {
             maybeRenderInputMeter: A = !1,
             renderSettingsButton: R = !1,
         } = e,
-        { analyticsLocations: L } = (0, u.ZP)();
+        { analyticsLocations: V } = (0, u.ZP)();
     (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: L },
+        properties: { location_stack: V },
     });
-    let V = (0, h.Z)(t),
+    let L = (0, h.Z)(t),
         F = (0, p.M)({
             deviceType: P.h7.AUDIO_INPUT,
-            analyticsLocations: L,
+            analyticsLocations: V,
             asSubmenu: !0,
         }),
         U = (0, p.M)({
             deviceType: P.h7.AUDIO_OUTPUT,
-            analyticsLocations: L,
+            analyticsLocations: V,
             asSubmenu: !0,
         }),
         Y = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
-        H = (0, f.Z)(L),
-        z = (0, m.Z)(L),
-        B = (0, b.Z)(L),
+        H = (0, f.Z)(V),
+        z = (0, m.Z)(V),
+        B = (0, b.Z)(V),
         q = l.Yn.DEFAULT,
         W = g.Z.isSelfDeaf(q),
         X = (0, o.e7)([g.Z], () => g.Z.getMode()),
@@ -76,13 +76,13 @@ function E(e) {
     return (0, r.jsx)(c.Z, {
         object: x.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
-            onSelect: E,
+            onSelect: w,
             onInteraction: n,
             onClose: I,
             navId: "audio-device-context",
             variant: "fixed",
             "aria-label": C.intl.string(C.t.ZR1Ss6),
-            className: w.menu,
+            className: E.menu,
             children: [
                 (0, r.jsxs)(a.kSQ, {
                     children: [D && F, N && H, Z && U],
@@ -95,12 +95,12 @@ function E(e) {
                             (0, r.jsx)(a.II_, {
                                 id: "input-device-meter",
                                 control: () =>
-                                    (0, r.jsx)(j.Z, {
-                                        notchBackground: j._.BLACK,
+                                    (0, r.jsx)(O.Z, {
+                                        notchBackground: O._.BLACK,
                                         location: { section: x.jXE.CONTEXT_MENU },
                                         meterOnly: !0,
-                                        containerClassName: w.customMenuItem,
-                                        notchClassName: w.customNotches,
+                                        containerClassName: E.customMenuItem,
+                                        notchClassName: E.customNotches,
                                     }),
                             }),
                         k && B,
@@ -108,12 +108,12 @@ function E(e) {
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        T && O.isPlatformEmbedded && K
+                        T && j.isPlatformEmbedded && K
                             ? (0, r.jsx)(a.S89, {
                                   checked: X === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: C.intl.string(C.t.Q8gkVL),
-                                  action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: L }),
+                                  action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: V }),
                                   disabled: Y === _._.STUDIO,
                               })
                             : null,
@@ -132,7 +132,7 @@ function E(e) {
                                 },
                                 "self-deafen",
                             ),
-                        R && V,
+                        R && L,
                     ],
                 }),
             ],

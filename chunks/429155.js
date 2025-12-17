@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(28546),
     c = n(122567),
     u = n(98528),
-    d = n(557340);
+    d = n(889230);
 let f = 20,
     p = i.forwardRef(function (e, t) {
         let {
@@ -32,8 +32,8 @@ let f = 20,
             N = i.useRef(!1),
             P = i.useRef(null),
             R = (0, l.Iu)((e) => e.searchQuery),
-            D = a.useStore((e) => e.activeCategoryIndex),
-            w = i.useMemo(
+            w = a.useStore((e) => e.activeCategoryIndex),
+            D = i.useMemo(
                 () =>
                     n.map((e) =>
                         (0, s._O)(e.categoryInfo)
@@ -43,7 +43,7 @@ let f = 20,
                 [n],
             ),
             x = (0, u.Qs)({
-                activeCategoryIndex: D,
+                activeCategoryIndex: w,
                 isScrolling: N,
                 listRef: P,
                 onActiveCategoryIndexChange: a.setActiveCategoryIndex,
@@ -56,12 +56,12 @@ let f = 20,
                         _({
                             listRef: P,
                             searchQuery: R,
-                            nitroLockedSectionStates: w,
+                            nitroLockedSectionStates: D,
                             scrollTop: e,
                         }),
                         null == A || A(e);
                 },
-                [x, R, w, A],
+                [x, R, D, A],
             );
         return (
             i.useEffect(() => {
@@ -69,7 +69,7 @@ let f = 20,
             }, [L, P]),
             (0, u.Xs)({
                 searchQuery: R,
-                activeCategoryIndex: D,
+                activeCategoryIndex: w,
                 listRef: P,
             }),
             i.useImperativeHandle(

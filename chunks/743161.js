@@ -9,7 +9,7 @@ var n = r(54381),
     s = r(496977),
     u = r(314734),
     b = r(388032),
-    f = r(604590);
+    f = r(207425);
 let O = o.memo(function (e) {
     var t,
         r,
@@ -39,7 +39,7 @@ let O = o.memo(function (e) {
     o.useEffect(() => {
         j || (0, i.Fvk)(u.e9);
     });
-    let g = (0, s.Z)();
+    let d = (0, s.Z)();
     return (0, n.jsx)("span", {
         style: u.u$,
         children: (0, n.jsx)(
@@ -83,7 +83,7 @@ let O = o.memo(function (e) {
                     children: (0, n.jsx)(l.Z, {
                         context: O,
                         entrypoint: a._b.VOICE,
-                        initHistory: g,
+                        initHistory: d,
                     }),
                 }),
             Object.getOwnPropertyDescriptors

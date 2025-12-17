@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    e: () => h,
+    e: () => f,
 });
 var i,
     r = n(54381),
@@ -10,7 +10,7 @@ var i,
     s = n(481060),
     c = n(600164),
     u = n(507675),
-    d = n(349364);
+    d = n(848390);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,8 +36,8 @@ function p(e) {
     }
     return e;
 }
-var h = (((i = {})[(i.TOP = 0)] = "TOP"), (i[(i.BOTTOM = 1)] = "BOTTOM"), i);
-function f(e) {
+var f = (((i = {})[(i.TOP = 0)] = "TOP"), (i[(i.BOTTOM = 1)] = "BOTTOM"), i);
+function h(e) {
     let {
             disableGradients: t = !1,
             renderHeader: n,
@@ -97,7 +97,7 @@ function m(e) {
             idle: a,
             children: s,
             renderChatToasts: c,
-            renderVoiceChannelEffects: h,
+            renderVoiceChannelEffects: f,
             style: m,
         } = e,
         g = (function (e, t) {
@@ -141,9 +141,9 @@ function m(e) {
         children: [
             s,
             null != t ? (0, r.jsx)(u.Z, p({ size: "large" }, t)) : null,
-            (0, r.jsx)(f, p({}, g)),
+            (0, r.jsx)(h, p({}, g)),
             null == c ? void 0 : c(),
-            null == h ? void 0 : h(),
+            null == f ? void 0 : f(),
         ],
     });
 }

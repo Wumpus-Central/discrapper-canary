@@ -3,8 +3,8 @@ var l = t(54381),
     i = t(473749),
     r = t(442837),
     a = t(481060),
-    u = t(616780),
-    o = t(728285),
+    o = t(616780),
+    u = t(728285),
     s = t(300284),
     d = t(484459),
     c = t(314897),
@@ -14,7 +14,7 @@ var l = t(54381),
     b = t(594174),
     O = t(981631),
     m = t(388032),
-    h = t(766509);
+    h = t(267999);
 function p(e) {
     let { guildId: n, userId: p, analyticsLocation: P, analyticsLocations: j, context: v, icon: N } = e,
         y = Z.Z.getGuild(n),
@@ -23,13 +23,13 @@ function p(e) {
         _ = (0, r.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, p), [n, p]);
     (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
     let C = i.useMemo(() => ({ [n]: [p] }), [n, p]);
-    (0, u.$)(C, "useChangeIdentityItem");
+    (0, o.$)(C, "useChangeIdentityItem");
     let I = v === O.IlC.POPOUT,
         S = (0, s.Z)({
             guild: y,
             analyticsLocations: j,
         }),
-        T = (0, o.Aq)();
+        T = (0, u.Aq)();
     if (null == y || I) return null;
     let A = x === p && (f.Z.can(O.Plq.CHANGE_NICKNAME, y) || f.Z.can(O.Plq.MANAGE_NICKNAMES, y)),
         U = x === p,

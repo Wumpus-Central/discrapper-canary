@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
     a = n(105960);
-let s = (e) => {
+let o = (e) => {
     let { hasHub: t } = e;
     return (0, r.jsxs)("div", {
         className: a.container,

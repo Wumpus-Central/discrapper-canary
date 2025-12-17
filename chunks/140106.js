@@ -1,7 +1,7 @@
 n.d(t, {
     ND: () => p,
-    P5: () => h,
-    g6: () => f,
+    P5: () => f,
+    g6: () => h,
 });
 var i = n(54381);
 n(473749);
@@ -15,7 +15,7 @@ var r = n(347715),
     d = n(388032);
 let p = (e, t) =>
         (0, l.ZDy)(async () => {
-            let { default: r } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(n.bind(n, 28130));
+            let { default: r } = await Promise.all([n.e("91689"), n.e("89289"), n.e("32603")]).then(n.bind(n, 28130));
             return (n) =>
                 (0, i.jsx)(
                     r,
@@ -58,15 +58,15 @@ let p = (e, t) =>
                     ),
                 );
         }),
-    h = (e, t) => {
+    f = (e, t) => {
         p(
             (n) => {
-                o.Z.setIcon(e, n.imageUri, t).catch(f);
+                o.Z.setIcon(e, n.imageUri, t).catch(h);
             },
             [t],
         );
     },
-    f = (e) => {
+    h = (e) => {
         var t;
         if ((null == e || null == (t = e.body) ? void 0 : t.retry_after) != null) {
             let t = (0, r.Z)(new Date(), e.body.retry_after);

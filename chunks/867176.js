@@ -20,7 +20,7 @@ var r = n(54381),
     g = n(768581),
     E = n(28660),
     b = n(934424),
-    y = n(572425);
+    y = n(468234);
 function O(e, t, n) {
     return (
         t in e
@@ -113,8 +113,8 @@ function N(e) {
             bannerWidth: N,
             bannerHeight: P,
             themePadding: R,
-            pendingAccentColor: D,
-            animateOnHoverOrFocusOnly: w = !1,
+            pendingAccentColor: w,
+            animateOnHoverOrFocusOnly: D = !1,
         } = e,
         x = (0, p.Dt)(),
         [L, j] = i.useState(!1),
@@ -124,12 +124,12 @@ function N(e) {
             displayProfile: a,
             pendingBanner: O,
             size: N,
-            canAnimate: w || !k ? L : M,
+            canAnimate: D || !k ? L : M,
         }),
         Z = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        B = n.getAvatarURL(b, (0, u.dcp)(I)),
-        F = (0, s._i)((0, d.ZP)(B, Z, !1)),
-        V = (0, f.Z)(null != (t = null != D ? D : null == a ? void 0 : a.primaryColor) ? t : F).hex,
+        F = n.getAvatarURL(b, (0, u.dcp)(I)),
+        B = (0, s._i)((0, d.ZP)(F, Z, !1)),
+        V = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : B).hex,
         H = A(I),
         Y = H + T - R,
         W = P - C - R;

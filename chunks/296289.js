@@ -1,40 +1,40 @@
 n.d(t, { default: () => d }), n(388685), n(457542);
 var r = n(54381),
-    o = n(473749),
-    a = n(625651),
+    a = n(473749),
+    o = n(625651),
     i = n(905551),
     c = n(162190),
-    l = n(816632),
+    l = n(914820),
     s = n(388032),
-    u = n(924889);
+    u = n(535684);
 function d(e) {
     var { guildId: t, gameInstance: n } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        a = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return o;
+            return a;
         })(e, ["guildId", "gameInstance"]);
-    let [f, b] = o.useState(!1),
-        [m, p] = o.useState(void 0),
+    let [f, b] = a.useState(!1),
+        [m, p] = a.useState(void 0),
         g = (0, c.Z)(n.gameId, "cover");
     return (0, r.jsx)(
-        a.f,
+        o.f,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

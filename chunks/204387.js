@@ -1,37 +1,37 @@
-r.d(t, { default: () => p }), r(388685);
-var a = r(54381),
-    i = r(473749),
-    s = r(481060),
-    n = r(100527),
-    l = r(906732),
-    o = r(626135),
-    C = r(281494),
-    d = r(687555),
-    c = r(258104),
-    x = r(981631);
+a.d(t, { default: () => p }), a(388685);
+var r = a(54381),
+    i = a(473749),
+    s = a(481060),
+    n = a(100527),
+    l = a(906732),
+    d = a(626135),
+    o = a(281494),
+    C = a(687555),
+    c = a(596583),
+    x = a(981631);
 let p = (e) => {
     let t,
-        { transitionState: r, onClose: p, sourceAnalyticsLocations: f } = e,
+        { transitionState: a, onClose: p, sourceAnalyticsLocations: f } = e,
         [h, u] = i.useState(1),
-        [m, j] = i.useState(new Set()),
+        [j, m] = i.useState(new Set()),
         [_, g] = i.useState(new Map()),
         { analyticsLocations: L } = (0, l.ZP)([...f, n.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
     switch (h) {
         case 1:
-            t = (0, a.jsx)(d.ZP, {
+            t = (0, r.jsx)(C.ZP, {
                 onShare: async (e) => {
                     try {
-                        o.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
-                        let t = await (0, C.jy)(e.map((e) => e.id));
-                        u(2), j(new Set(e)), g(t);
+                        d.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
+                        let t = await (0, o.jy)(e.map((e) => e.id));
+                        u(2), m(new Set(e)), g(t);
                     } catch (e) {}
                 },
                 onClose: p,
             });
             break;
         case 2:
-            t = (0, a.jsx)(c.Z, {
-                selectedUsers: m,
+            t = (0, r.jsx)(c.Z, {
+                selectedUsers: j,
                 trialCreationResult: _,
                 onClose: p,
             });
@@ -39,9 +39,9 @@ let p = (e) => {
         default:
             p();
     }
-    return (0, a.jsx)(s.Y0X, {
+    return (0, r.jsx)(s.Y0X, {
         "data-migration-pending": !0,
-        transitionState: r,
+        transitionState: a,
         parentComponent: "ReferralProgramShareModal",
         children: t,
     });

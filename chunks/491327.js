@@ -3,8 +3,8 @@ var r = n(392711),
     i = n.n(r),
     l = n(243814),
     a = n(447543),
-    s = n(287734),
-    o = n(703656),
+    o = n(287734),
+    s = n(703656),
     c = n(131704),
     u = n(592125),
     d = n(430824),
@@ -13,8 +13,8 @@ var r = n(392711),
     g = n(979651),
     h = n(934415),
     m = n(996106),
-    _ = n(914946),
-    b = n(452426),
+    b = n(914946),
+    _ = n(452426),
     E = n(561205),
     O = n(186901),
     v = n(981631);
@@ -35,7 +35,7 @@ let y = {
                 if (!e.includes(l.x.RPC) && !e.includes(l.x.DM_CHANNELS_READ))
                     throw new m.Z({ errorCode: v.lTL.INVALID_PERMISSIONS }, "Invalid scope");
             }
-            return (0, _.T5)(r, (0, _.zM)(r, n.application.id, n.authorization.scopes));
+            return (0, b.T5)(r, (0, b.zM)(r, n.application.id, n.authorization.scopes));
         },
     },
     [v.Etm.GET_CHANNELS]: {
@@ -80,7 +80,7 @@ let y = {
     [v.Etm.SELECT_VOICE_CHANNEL]: {
         scope: l.x.RPC,
         validation: (e) =>
-            (0, b.Z)(e)
+            (0, _.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),
@@ -94,9 +94,9 @@ let y = {
                 socket: n,
                 args: { channel_id: r, timeout: i = 0, force: l = !1, navigate: a = !1 },
             } = e;
-            if (!r) return s.default.selectVoiceChannel(null), null;
-            let b = f.Z.getVoiceChannelId();
-            if (null != b && b !== r && !1 === l)
+            if (!r) return o.default.selectVoiceChannel(null), null;
+            let _ = f.Z.getVoiceChannelId();
+            if (null != _ && _ !== r && !1 === l)
                 throw new m.Z(
                     { errorCode: v.lTL.SELECT_VOICE_FORCE_REQUIRED },
                     "User is already joined to a voice channel.",
@@ -116,7 +116,7 @@ let y = {
                         throw new m.Z({ errorCode: v.lTL.INVALID_CHANNEL }, "Channel is not a voice channel");
                     return Promise.all([
                         Promise.resolve(e),
-                        (0, _.T5)(e, (0, _.zM)(e, n.application.id, n.authorization.scopes)),
+                        (0, b.T5)(e, (0, b.zM)(e, n.application.id, n.authorization.scopes)),
                     ]);
                 })
                 .then((e) => {
@@ -130,7 +130,7 @@ let y = {
                                 "Connect permission required to join channel",
                             );
                     }
-                    return s.default.selectVoiceChannel(t.id), a && (0, o.dL)(v.Z5c.CHANNEL(t.guild_id, t.id)), n;
+                    return o.default.selectVoiceChannel(t.id), a && (0, s.dL)(v.Z5c.CHANNEL(t.guild_id, t.id)), n;
                 });
         },
     },
@@ -142,13 +142,13 @@ let y = {
             let { socket: t } = e,
                 n = f.Z.getVoiceChannelId(),
                 r = null != n ? u.Z.getChannel(n) : null;
-            return null != r ? (0, _.T5)(r, (0, _.zM)(r, t.application.id, t.authorization.scopes)) : null;
+            return null != r ? (0, b.T5)(r, (0, b.zM)(r, t.application.id, t.authorization.scopes)) : null;
         },
     },
     [v.Etm.SELECT_TEXT_CHANNEL]: {
         scope: l.x.RPC,
         validation: (e) =>
-            (0, b.Z)(e)
+            (0, _.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),
@@ -176,7 +176,7 @@ let y = {
                               throw new m.Z({ errorCode: v.lTL.INVALID_CHANNEL }, "Channel is not a text channel");
                           return Promise.all([
                               Promise.resolve(e),
-                              (0, _.T5)(e, (0, _.zM)(e, n.application.id, n.authorization.scopes)),
+                              (0, b.T5)(e, (0, b.zM)(e, n.application.id, n.authorization.scopes)),
                           ]);
                       })
                       .then((e) => {
@@ -185,12 +185,12 @@ let y = {
                               throw new m.Z({ errorCode: v.lTL.INVALID_CHANNEL }, "No permission to see channel");
                           return (
                               n.guild_id
-                                  ? (0, o.dL)(v.Z5c.CHANNEL(n.guild_id, t.id))
-                                  : s.default.selectPrivateChannel(t.id),
+                                  ? (0, s.dL)(v.Z5c.CHANNEL(n.guild_id, t.id))
+                                  : o.default.selectPrivateChannel(t.id),
                               n
                           );
                       })
-                : ((0, o.uL)(v.Z5c.ME), null);
+                : ((0, s.uL)(v.Z5c.ME), null);
         },
     },
     [v.Etm.CREATE_CHANNEL_INVITE]: {

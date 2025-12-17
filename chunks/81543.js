@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => h,
-    n: () => m,
+    Z: () => p,
+    n: () => f,
 });
 var r,
     i = n(54381),
@@ -9,7 +9,7 @@ var r,
     s = n.n(a),
     o = n(748780),
     c = n(215569),
-    d = n(248881);
+    d = n(272392);
 function u(e, t, n) {
     return (
         t in e
@@ -39,18 +39,18 @@ function g(e) {
     }
     return e;
 }
-var m = (((r = {})[(r.RIGHT = -1)] = "RIGHT"), (r[(r.LEFT = 1)] = "LEFT"), r);
-let p = {
+var f = (((r = {})[(r.RIGHT = -1)] = "RIGHT"), (r[(r.LEFT = 1)] = "LEFT"), r);
+let m = {
     friction: 10,
     tension: 40,
     overshootClamping: !0,
 };
-class f extends l.PureComponent {
+class b extends l.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
             this._animated.setValue(-this.props.direction),
-            o.Z.spring(this._animated, g({ toValue: 0 }, p)).start(() => {
+            o.Z.spring(this._animated, g({ toValue: 0 }, m)).start(() => {
                 var t, n;
                 e(), null == (t = (n = this.props).onAnimationEnd) || t.call(n);
             });
@@ -59,7 +59,7 @@ class f extends l.PureComponent {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        o.Z.spring(this._animated, g({ toValue: this.props.direction }, p)).start(e);
+        o.Z.spring(this._animated, g({ toValue: this.props.direction }, m)).start(e);
     }
     getStyle() {
         return o.Z.accelerate({
@@ -84,13 +84,13 @@ class f extends l.PureComponent {
         super(e), u(this, "_animated", void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let h = (e) => {
+let p = (e) => {
     let { children: t, step: n, direction: r, className: l, onAnimationStart: a, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: "div",
         className: s()(d.animator, l),
         children: (0, i.jsx)(
-            f,
+            b,
             {
                 direction: r,
                 onAnimationStart: a,

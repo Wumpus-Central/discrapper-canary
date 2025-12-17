@@ -12,8 +12,8 @@ n.d(t, {
     n(97749),
     n(388685),
     n(35282);
-var r = n(860911),
-    a = n(442837),
+var a = n(860911),
+    r = n(442837),
     i = n(703656),
     l = n(314897),
     s = n(594174),
@@ -21,38 +21,38 @@ var r = n(860911),
     c = n(258971),
     d = n(981631);
 function u(e, t) {
-    var n, r, a;
+    var n, a, r;
     let i = c.z8.getField("sessionId"),
         l = c.z8.getField("guildId"),
         d = null == (n = c.z8.getField("entrypoint")) ? void 0 : n.name,
         u = s.default.getCurrentUser(),
         p =
-            ((r = (function (e) {
+            ((a = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        a = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (a = a.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        a.forEach(function (t) {
+                            var a;
+                            (a = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: a,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = a);
                         });
                 }
                 return e;
             })({}, t)),
-            (a = a =
+            (r = r =
                 {
                     guild_id: l,
                     directory_session_id: i,
@@ -60,33 +60,33 @@ function u(e, t) {
                     user_id: null == u ? void 0 : u.id,
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var a = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, a);
                       }
                       return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
-            r);
+            a);
     return o.default.track(e, p);
 }
 function p() {
-    return (0, a.e7)([l.default], () => l.default.isAuthenticated());
+    return (0, r.e7)([l.default], () => l.default.isAuthenticated());
 }
 function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = new URL(location.href);
     for (let n in e) {
-        let r = e[n];
-        t.searchParams.set(n, r);
+        let a = e[n];
+        t.searchParams.set(n, a);
     }
     let n = t.pathname + t.search,
-        a = (0, r.Ui)(n, !1);
-    (0, i.uL)(a);
+        r = (0, a.Ui)(n, !1);
+    (0, i.uL)(r);
 }
 function h() {
     let e = new URL(location.href),

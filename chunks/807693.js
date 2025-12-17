@@ -1,10 +1,10 @@
 t.d(n, { Z: () => c });
 var r,
-    i,
-    a = t(442837),
+    a,
+    i = t(442837),
     s = t(570140);
 let l = {};
-class o extends (i = a.ZP.Store) {
+class o extends (a = i.ZP.Store) {
     getEULA(e) {
         return l[e];
     }

@@ -10,10 +10,10 @@ var r = t(54381),
     d = t(317381),
     p = t(426419),
     f = t(16609),
-    m = t(781780),
-    v = t(325749),
-    b = t(981631),
-    h = t(427509);
+    b = t(781780),
+    m = t(325749),
+    v = t(981631),
+    h = t(350325);
 function O() {
     let {
             embeddedActivity: e,
@@ -37,18 +37,18 @@ function O() {
             : null != j &&
               null == e &&
               (O.current = window.setTimeout(() => {
-                  (0, s.close)(b.KJ3.ACTIVITY_POPOUT);
+                  (0, s.close)(v.KJ3.ACTIVITY_POPOUT);
               }, 5000));
     }, [e, j]);
-    let P = (0, i.e7)([c.Z], () => {
+    let x = (0, i.e7)([c.Z], () => {
             let n = null == e ? void 0 : e.applicationId;
             return null == n ? void 0 : c.Z.getApplication(n);
         }),
-        x = (0, p.P)();
+        P = (0, p.P)();
     return (0, r.jsx)("div", {
         className: h.container,
         children:
-            null == e || null == P
+            null == e || null == x
                 ? (0, r.jsx)(l.$jN, { className: h.iframe })
                 : (0, r.jsx)("div", {
                       className: h.loadedContentContainer,
@@ -57,21 +57,21 @@ function O() {
                           children: [
                               (0, r.jsx)("div", {
                                   className: h.headerContainer,
-                                  children: (0, r.jsx)(v.Z, {
-                                      applicationId: P.id,
+                                  children: (0, r.jsx)(m.Z, {
+                                      applicationId: x.id,
                                       channelId: n,
                                   }),
                               }),
                               (0, r.jsx)("div", {
                                   className: h.iframeContainer,
-                                  children: (0, r.jsx)(m.Z, {
+                                  children: (0, r.jsx)(b.Z, {
                                       channelId: n,
                                       guildId: t,
                                       embeddedActivity: e,
-                                      application: P,
+                                      application: x,
                                   }),
                               }),
-                              x ? (0, r.jsx)(u.Z, { isEmbeddedActivity: !0 }) : null,
+                              P ? (0, r.jsx)(u.Z, { isEmbeddedActivity: !0 }) : null,
                           ],
                       }),
                   }),

@@ -3,7 +3,7 @@ n.d(t, {
     e5: () => P,
     gx: () => R,
     lp: () => k,
-    wi: () => D,
+    wi: () => w,
 }),
     n(997841),
     n(388685);
@@ -101,7 +101,7 @@ function N(e) {
         I(v({}, e), {
             timestamp: new Date(e.timestamp),
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
-            attachments: w(e),
+            attachments: D(e),
             embeds: L(e),
             components: (0, o.uZ)(null != (t = e.components) ? t : []),
             codedLinks: y.V$x.NON_PARSED.has(e.type) ? [] : (0, a.ZP)(e.content),
@@ -117,25 +117,25 @@ function P(e) {
         T = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
         P = null != (a = e.mention_roles) ? a : [],
         R = null != (o = e.mention_channels) ? o : [],
-        D = null != (l = e.mention_games) ? l : [],
-        w = e.message_reference,
+        w = null != (l = e.mention_games) ? l : [],
+        D = e.message_reference,
         L = C(e),
         k = null,
         U = null == e ? void 0 : e.gift_info,
         G = e.gifting_prompt,
         Z = null != e.interaction ? c.Z.createFromServer(e.interaction) : null,
-        B =
+        F =
             e.type === y.uaV.THREAD_STARTER_MESSAGE
                 ? null == (r = e.referenced_message) || null == (n = r.author)
                     ? void 0
                     : n.id
                 : void 0,
-        F = e.content;
+        B = e.content;
     return new u.ZP(
         (e.type === y.uaV.PREMIUM_REFERRAL &&
-            ((_ = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = "")),
+            ((_ = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (B = "")),
         e.type === y.uaV.PREMIUM_GROUP_INVITE &&
-            ((m = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = "")),
+            ((m = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (B = "")),
         A(e))
             ? I(v({}, k), {
                   id: e.id,
@@ -148,24 +148,24 @@ function P(e) {
             : I(v({}, e, k, S.toJS()), {
                   author: L,
                   webhookId: e.webhook_id,
-                  blocked: p.Z.isBlockedForMessage(e) || (null != B && p.Z.isBlocked(B)),
-                  ignored: p.Z.isIgnoredForMessage(e) || (null != B && p.Z.isIgnored(B)),
+                  blocked: p.Z.isBlockedForMessage(e) || (null != F && p.Z.isBlocked(F)),
+                  ignored: p.Z.isIgnoredForMessage(e) || (null != F && p.Z.isIgnored(F)),
                   mentionEveryone: e.mention_everyone,
                   mentions: T,
                   mentionRoles: P,
                   mentionChannels: R,
-                  mentionGames: D,
-                  messageReference: w,
+                  mentionGames: w,
+                  messageReference: D,
                   mentioned: (0, E.Sz)({
                       userId: f.default.getId(),
                       channelId: e.channel_id,
                       mentionEveryone: null != (d = e.mention_everyone) && d,
                       mentionUsers: T,
                       mentionRoles: P,
-                      mentionGames: D.map((e) => e.id),
+                      mentionGames: w.map((e) => e.id),
                   }),
                   giftCodes: (0, h.Fp)(e) ? (0, h.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, h.Q_)(e.content),
-                  content: F,
+                  content: B,
                   referralTrialOfferId: _,
                   premiumGroupInviteId: m,
                   call: x(e.call, S.timestamp),
@@ -192,7 +192,7 @@ function R(e, t) {
           })
         : v({}, e, t);
 }
-function D(e, t) {
+function w(e, t) {
     if (null != t.edited_timestamp)
         return P(t, {
             reactions: e.reactions,
@@ -202,7 +202,7 @@ function D(e, t) {
         r = !1;
     if (
         (null != t.call && (n = n.set("call", x(t.call, e.timestamp))),
-        null != t.attachments && (n = n.set("attachments", w(t))),
+        null != t.attachments && (n = n.set("attachments", D(t))),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
@@ -241,7 +241,7 @@ function D(e, t) {
         n
     );
 }
-function w(e) {
+function D(e) {
     return null == e.attachments ? [] : e.attachments.map((e) => I(v({}, e), { spoiler: e.filename.startsWith(b._j) }));
 }
 function x(e, t) {

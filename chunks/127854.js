@@ -220,15 +220,15 @@ e.exports = (function (e) {
                 }, []));
             var P = r.getKey(),
                 R = u.encode(P, 0, 0),
-                D = T(r, o),
-                w = D.CustomComponent,
+                w = T(r, o),
+                D = w.CustomComponent,
                 x =
-                    null != w
+                    null != D
                         ? d.createElement(
-                              w,
+                              D,
                               i({}, this.props, {
                                   tree: m.getBlockTree(P),
-                                  blockProps: D.customProps,
+                                  blockProps: w.customProps,
                                   offsetKey: R,
                                   block: r,
                               }),
@@ -248,7 +248,7 @@ e.exports = (function (e) {
                           });
             if (r.getParentKey()) return x;
             var L = I(r, a).Element,
-                j = C(r, _, R, l, D, this.wrapperRef);
+                j = C(r, _, R, l, w, this.wrapperRef);
             return d.createElement(L, j, x);
         }),
         t

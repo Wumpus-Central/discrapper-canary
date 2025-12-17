@@ -75,8 +75,8 @@ let m = null,
     N = [],
     P = null,
     R = null,
-    D = {},
-    w = {};
+    w = {},
+    D = {};
 function x() {
     var e, t, n, r;
     return (null == (t = window) || null == (e = t.location) ? void 0 : e.pathname) === u.ix.FAMILY_CENTER_MY_FAMILY
@@ -133,17 +133,17 @@ function U(e, t) {
     );
 }
 function G(e) {
-    w = e.reduce((e, t) => {
+    D = e.reduce((e, t) => {
         var n;
         return _(f({}, e), {
             [t.id]: _(f({}, (0, o.dangerouslyConstructGuildRecordFromUntypedObject)(t)), {
                 approximateMemberCount: null != (n = t.approximate_member_count) ? n : 0,
             }),
         });
-    }, w);
+    }, D);
 }
 function Z(e) {
-    D = e.reduce((e, t) => {
+    w = e.reduce((e, t) => {
         if (null != t.invoice_items && t.invoice_items.length > 0) {
             let n = t.invoice_items[0],
                 r = n.sku_id,
@@ -159,10 +159,10 @@ function Z(e) {
         return e;
     }, {});
 }
-function B() {
+function F() {
     I = !0;
 }
-function F(e) {
+function B(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n } = e,
         {
             actions: r,
@@ -297,7 +297,7 @@ function er() {
         (g = {}),
         (b = L()),
         (y = j()),
-        (w = {}),
+        (D = {}),
         (I = !1),
         (T = null),
         (v = x()),
@@ -306,7 +306,7 @@ function er() {
         (N = []),
         (P = null),
         (R = null),
-        (D = {});
+        (w = {});
 }
 class ei extends i.Z {
     initialize() {
@@ -323,7 +323,7 @@ class ei extends i.Z {
                 linkedUsers: Object.values(g),
                 teenActivityTotals: et(),
                 teenActivity: ee(),
-                guilds: Object.values(w),
+                guilds: Object.values(D),
             },
         };
     }
@@ -352,7 +352,7 @@ class ei extends i.Z {
         return O;
     }
     getGuild(e) {
-        return w[e];
+        return D[e];
     }
     getSelectedTab() {
         return v;
@@ -385,7 +385,7 @@ class ei extends i.Z {
         return R;
     }
     getPurchaseInfo(e) {
-        return D[e];
+        return w[e];
     }
     canRefetch() {
         return null === T || s.default.age(T) > u.Of;
@@ -395,8 +395,8 @@ class ei extends i.Z {
             CONNECTION_OPEN: J,
             CURRENT_USER_UPDATE: X,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            FAMILY_CENTER_INITIAL_LOAD: F,
-            FAMILY_CENTER_FETCH_START: B,
+            FAMILY_CENTER_INITIAL_LOAD: B,
+            FAMILY_CENTER_FETCH_START: F,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: V,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: Y,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: W,

@@ -4,8 +4,8 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(442837),
-    s = n(681715),
-    o = n(481060),
+    o = n(681715),
+    s = n(481060),
     c = n(185514),
     u = n(719961),
     d = n(365355),
@@ -18,20 +18,20 @@ let h = c.Nx.binds["0"],
         var t, n;
         let { firstElementFocusJumpSectionProps: i = {} } = e,
             { titlebarIconSize: c } = (0, u.T)({ location: "BackForwardButtons" }),
-            { canGoBack: b, canGoForward: E } = (0, a.cj)([d.Z], () => ({
+            { canGoBack: b, canGoForward: _ } = (0, a.cj)([d.Z], () => ({
                 canGoBack: d.Z.canGoBack,
                 canGoForward: d.Z.canGoForward,
             }));
         return (0, r.jsxs)("div", {
             className: g.backForwardButtons,
             children: [
-                (0, r.jsx)(s.u, {
+                (0, r.jsx)(o.u, {
                     ariaHidden: !0,
                     shouldShow: b,
                     text: f.intl.string(f.t.B9vzIP),
                     keyboardShortcut: h,
                     children: (0, r.jsx)(
-                        o.P3F,
+                        s.P3F,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ let h = c.Nx.binds["0"],
                         )),
                         (n = n =
                             {
-                                children: (0, r.jsx)(o.whL, {
+                                children: (0, r.jsx)(s.whL, {
                                     size: c,
                                     color: "currentColor",
                                 }),
@@ -87,17 +87,17 @@ let h = c.Nx.binds["0"],
                         t),
                     ),
                 }),
-                (0, r.jsx)(s.u, {
+                (0, r.jsx)(o.u, {
                     ariaHidden: !0,
-                    shouldShow: E,
+                    shouldShow: _,
                     text: f.intl.string(f.t["9KJ29e"]),
                     keyboardShortcut: m,
-                    children: (0, r.jsx)(o.P3F, {
+                    children: (0, r.jsx)(s.P3F, {
                         "aria-label": f.intl.string(f.t["9KJ29e"]),
-                        "aria-disabled": !E,
-                        className: l()(g.button, g.forward, { [g.disabled]: !E }),
+                        "aria-disabled": !_,
+                        className: l()(g.button, g.forward, { [g.disabled]: !_ }),
                         onClick: () => (0, p.TL)("nav_button"),
-                        children: (0, r.jsx)(o.ZSh, {
+                        children: (0, r.jsx)(s.ZSh, {
                             size: c,
                             color: "currentColor",
                         }),

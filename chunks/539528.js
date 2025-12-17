@@ -189,10 +189,10 @@ function C(e) {
         return Math.random().toString(36).substr(2, C);
     }
     var R = h();
-    function D(e) {
+    function w(e) {
         (0, r.Z)(Q, e), (Q.length = t.length), R.notifyListeners(Q.location, Q.action);
     }
-    function w(e) {
+    function D(e) {
         v(e) || j(N(e.state));
     }
     function x() {
@@ -200,12 +200,12 @@ function C(e) {
     }
     var L = !1;
     function j(e) {
-        if (L) (L = !1), D();
+        if (L) (L = !1), w();
         else {
             var t = "POP";
             R.confirmTransitionTo(e, t, m, function (n) {
                 n
-                    ? D({
+                    ? w({
                           action: t,
                           location: e,
                       })
@@ -220,7 +220,7 @@ function C(e) {
         var r = U.indexOf(e.key);
         -1 === r && (r = 0);
         var i = n - r;
-        i && ((L = !0), F(i));
+        i && ((L = !0), B(i));
     }
     var k = N(T()),
         U = [k.key];
@@ -253,7 +253,7 @@ function C(e) {
                             u = U.slice(0, l + 1);
                         u.push(a.key),
                             (U = u),
-                            D({
+                            w({
                                 action: i,
                                 location: a,
                             });
@@ -262,7 +262,7 @@ function C(e) {
             }
         });
     }
-    function B(e, r) {
+    function F(e, r) {
         var i = "REPLACE",
             a = _(e, r, P(), Q.location);
         R.confirmTransitionTo(a, i, m, function (e) {
@@ -286,7 +286,7 @@ function C(e) {
                     else {
                         var l = U.indexOf(Q.location.key);
                         -1 !== l && (U[l] = a.key),
-                            D({
+                            w({
                                 action: i,
                                 location: a,
                             });
@@ -295,20 +295,20 @@ function C(e) {
             }
         });
     }
-    function F(e) {
+    function B(e) {
         t.go(e);
     }
     function V() {
-        F(-1);
+        B(-1);
     }
     function H() {
-        F(1);
+        B(1);
     }
     var Y = 0;
     function W(e) {
         1 === (Y += e) && 1 === e
-            ? (window.addEventListener(S, w), i && window.addEventListener(I, x))
-            : 0 === Y && (window.removeEventListener(S, w), i && window.removeEventListener(I, x));
+            ? (window.addEventListener(S, D), i && window.addEventListener(I, x))
+            : 0 === Y && (window.removeEventListener(S, D), i && window.removeEventListener(I, x));
     }
     var K = !1;
     function z(e) {
@@ -336,8 +336,8 @@ function C(e) {
         location: k,
         createHref: G,
         push: Z,
-        replace: B,
-        go: F,
+        replace: F,
+        go: B,
         goBack: V,
         goForward: H,
         block: z,
@@ -373,10 +373,10 @@ function R() {
         t = e.indexOf("#");
     return -1 === t ? "" : e.substring(t + 1);
 }
-function D(e) {
+function w(e) {
     window.location.hash = e;
 }
-function w(e) {
+function D(e) {
     window.location.replace(P(window.location.href) + "#" + e);
 }
 function x(e) {
@@ -408,7 +408,7 @@ function x(e) {
     function L() {
         var e = R(),
             t = b(e);
-        if (e !== t) w(t);
+        if (e !== t) D(t);
         else {
             var n = v(),
                 r = J.location;
@@ -441,15 +441,15 @@ function x(e) {
     }
     var k = R(),
         U = b(k);
-    k !== U && w(U);
+    k !== U && D(U);
     var G = v(),
         Z = [p(G)];
-    function B(e) {
+    function F(e) {
         var t = document.querySelector("base"),
             n = "";
         return t && t.getAttribute("href") && (n = P(window.location.href)), n + "#" + b(f + p(e));
     }
-    function F(e, t) {
+    function B(e, t) {
         var n = "PUSH",
             r = _(e, void 0, void 0, J.location);
         S.confirmTransitionTo(r, n, a, function (e) {
@@ -458,7 +458,7 @@ function x(e) {
                     i = b(f + t),
                     a = R() !== i;
                 if (a) {
-                    (C = t), D(i);
+                    (C = t), w(i);
                     var o = Z.lastIndexOf(p(J.location)),
                         s = Z.slice(0, o + 1);
                     s.push(t),
@@ -479,7 +479,7 @@ function x(e) {
                 var t = p(r),
                     i = b(f + t),
                     a = R() !== i;
-                a && ((C = t), w(i));
+                a && ((C = t), D(i));
                 var o = Z.indexOf(p(J.location));
                 -1 !== o && (Z[o] = t),
                     I({
@@ -526,8 +526,8 @@ function x(e) {
         length: t.length,
         action: "POP",
         location: G,
-        createHref: B,
-        push: F,
+        createHref: F,
+        push: B,
         replace: V,
         go: H,
         goBack: Y,

@@ -2,11 +2,11 @@ n.d(t, { U: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    o = n(686546),
-    a = n(598077),
+    a = n(686546),
+    o = n(598077),
     s = n(430824),
-    c = n(865112),
-    u = n(121099);
+    c = n(609412),
+    u = n(858504);
 let d = (e) => {
         let { mask: t } = e;
         return null == t
@@ -33,7 +33,7 @@ let d = (e) => {
                 src: c.VH[(0, c.RB)(i.icon_name)],
             });
         else if (null != i.other_user) {
-            let e = i.other_user instanceof a.Z ? i.other_user : new a.Z(i.other_user),
+            let e = i.other_user instanceof o.Z ? i.other_user : new o.Z(i.other_user),
                 n = null != (t = e.globalName) ? t : e.username;
             (f = (0, r.jsx)("img", {
                 alt: n,
@@ -57,8 +57,8 @@ let d = (e) => {
         return (0, r.jsxs)("div", {
             className: u.container,
             children: [
-                (0, r.jsx)(o.ZP, {
-                    mask: null == g ? o.QS.AVATAR_DEFAULT : o.QS.AVATAR_STATUS_ROUND_16,
+                (0, r.jsx)(a.ZP, {
+                    mask: null == g ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,

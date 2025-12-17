@@ -41,7 +41,7 @@ let C = +_.Z.Millis.MINUTE,
 function R(e) {
     return !(0, O.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
-function D(e) {
+function w(e) {
     for (let r of E.Z.quests.values()) {
         var t, n;
         let a = (0, v.Mo)(r);
@@ -62,7 +62,7 @@ function D(e) {
             });
     }
 }
-function w(e, t) {
+function D(e, t) {
     return null != t && e.some((e) => e === c.eB) && (0, u.le)(t);
 }
 function x(e) {
@@ -125,7 +125,7 @@ class L extends a.Z {
                 let r = (0, v.vj)(i);
                 if (!R(i) || null == r) continue;
                 let a = r.find((e) => e === t);
-                null != a ? e.set(i.id, { applicationId: a }) : w(r, n) && e.set(i.id, { applicationId: c.eB });
+                null != a ? e.set(i.id, { applicationId: a }) : D(r, n) && e.set(i.id, { applicationId: c.eB });
             }
         }
         return (
@@ -301,7 +301,7 @@ class L extends a.Z {
                 VOICE_STATE_UPDATES: () => this.syncHeartbeats([r.X.STREAM_ON_DESKTOP], "VOICE_STATE_UPDATES"),
                 EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: (e) => {
                     let { applicationId: t } = e;
-                    D(t);
+                    w(t);
                 },
                 EMBEDDED_ACTIVITY_UPDATE_V2: () =>
                     this.syncHeartbeats([r.X.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !x(e)),

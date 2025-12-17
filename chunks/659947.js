@@ -14,7 +14,7 @@ var r = n(54381),
     m = n(914010),
     h = n(727785),
     g = n(388032),
-    E = n(704563);
+    E = n(331924);
 function b(e, t, n) {
     return (
         t in e
@@ -127,7 +127,7 @@ function N(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: E.selectedVoiceChannel,
-                        children: (0, r.jsx)(D, { channelId: c }),
+                        children: (0, r.jsx)(w, { channelId: c }),
                     }),
                     (0, r.jsx)(u.Z.Child, {
                         grow: 0,
@@ -238,7 +238,7 @@ function R(e) {
                     O >= S - 1 ? v(0) : v(O + 1);
             }
     }
-    let D = (() => {
+    let w = (() => {
             if (null != y) {
                 var e;
                 return null == (e = y[O]) ? void 0 : e.id;
@@ -246,7 +246,7 @@ function R(e) {
             let t = b[O];
             if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
         })(),
-        w =
+        D =
             S > 0 || "" === p
                 ? {
                       innerId: l,
@@ -278,15 +278,15 @@ function R(e) {
             role: "combobox",
             "aria-controls": l,
             "aria-expanded": S > 0,
-            "aria-activedescendant": S > 0 && null != D ? D : void 0,
+            "aria-activedescendant": S > 0 && null != w ? w : void 0,
             "aria-autocomplete": "list",
             spellCheck: !1,
             autoFocus: !0,
         }),
-        listProps: w,
+        listProps: D,
     });
 }
-function D(e) {
+function w(e) {
     let { channelId: t } = e,
         {
             channel: n,

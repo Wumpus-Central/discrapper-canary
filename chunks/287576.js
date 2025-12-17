@@ -14,8 +14,8 @@ function c(e) {
         }),
         {
             currentPeriod: g,
-            previousPeriods: m,
-            metrics: p,
+            previousPeriods: f,
+            metrics: m,
         } = r.useMemo(() => {
             let { currentPeriod: e, previousPeriods: t } = (0, l.Br)(d),
                 n = (0, l.Uj)(e, t[0]);
@@ -29,8 +29,8 @@ function c(e) {
         loading: c || u,
         payoutsByPeriod: d,
         currentPeriod: g,
-        previousPeriods: m,
-        metrics: p,
+        previousPeriods: f,
+        metrics: m,
         application: n,
     };
 }

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(913527),
     i = n.n(r),
     l = n(704215),
     a = n(951716),
-    s = n(266454),
-    o = n(605236),
+    o = n(266454),
+    s = n(605236),
     c = n(972830),
     u = n(430824),
     d = n(594174),
@@ -13,7 +13,7 @@ var r = n(913527),
     g = n(645792),
     h = n(981631),
     m = n(921944);
-let _ = {
+let b = {
     init(e) {
         let { hasModalOpen: t, openModal: n } = e;
         p.s.isDisallowPopupsSet() ||
@@ -22,13 +22,13 @@ let _ = {
                 let e = d.default.getCurrentUser(),
                     r = null != e && 7 > i()().diff(i()(f.default.extractTimestamp(e.id)), "days"),
                     c = null != u.Z.getGuildsArray().find((e) => e.features.has(h.GuildFeatures.HUB)),
-                    p = !(0, s.zu)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
+                    p = !(0, o.zu)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(r || t() || c || !p) &&
                     (0, g.b)() &&
-                    (g.Z.trackExposure({ location: "8b792a_1" }), n(), (0, o.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
+                    (g.Z.trackExposure({ location: "8b792a_1" }), n(), (0, s.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {
-        (0, s.Q3)(l.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: m.L.AUTO });
+        (0, o.Q3)(l.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: m.L.AUTO });
     },
 };

@@ -1,8 +1,8 @@
 n.d(t, { e: () => v });
 var a = n(54381),
     r = n(473749),
-    i = n(442837),
-    l = n(264418),
+    l = n(442837),
+    i = n(264418),
     s = n(906732),
     o = n(710845),
     c = n(313789),
@@ -19,7 +19,7 @@ function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.ZP)(),
         j = (0, r.useRef)(null),
-        y = (0, i.e7)([u.Z], () => u.Z.isFocused()),
+        y = (0, l.e7)([u.Z], () => u.Z.isFocused()),
         C = (0, r.useCallback)(() => {
             t(h.L.TAKE_ACTION),
                 (0, d.openUserSettings)(
@@ -46,7 +46,7 @@ function v(e) {
         (0, a.jsxs)(a.Fragment, {
             children: [
                 o,
-                (0, a.jsx)(l.J, {
+                (0, a.jsx)(i.J, {
                     targetElementRef: n,
                     shouldShow: !0,
                     onRequestClose: _,

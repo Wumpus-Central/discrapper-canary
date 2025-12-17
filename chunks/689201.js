@@ -8,8 +8,8 @@ var n = r(473749),
     l = r(525302),
     o = r(594174),
     s = r(823379),
-    a = r(51144),
-    c = r(602733),
+    c = r(51144),
+    a = r(602733),
     u = r(981631),
     d = r(388032);
 function f(e, t) {
@@ -22,7 +22,7 @@ function f(e, t) {
                     renderIcon: l.Q,
                 };
             }),
-            n = a.ZP.getName(t),
+            n = c.ZP.getName(t),
             { hasMultipleTypes: i, hasMultipleSources: o } = (function (e) {
                 if (0 === e.length)
                     return {
@@ -40,7 +40,7 @@ function f(e, t) {
                   !i && o
                       ? {
                             title:
-                                e.source === c.lr.WISHLIST
+                                e.source === a.lr.WISHLIST
                                     ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
                                     : d.intl.string(d.t.Ig6VDH),
                             renderIcon: e.productLine !== u.POd.COLLECTIBLES ? e.renderIcon : void 0,
@@ -61,7 +61,7 @@ function f(e, t) {
                                       ? d.intl.string(d.t["4yiU7x"])
                                       : d.intl.string(d.t.HFhcqh),
                               body:
-                                  e.source === c.lr.WISHLIST
+                                  e.source === a.lr.WISHLIST
                                       ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
                                       : d.intl.string(d.t.Ig6VDH),
                               renderIcon: e.renderIcon,
@@ -73,12 +73,12 @@ function f(e, t) {
 }
 function m(e, t) {
     let r = (0, i.Wu)([o.default], () => e.map((e) => o.default.getUser(e.gifterUserId)).filter(s.lm), [e]),
-        a = n.useMemo(() => r.reduce((e, t) => ((e[t.id] = t), e), {}), [r]);
+        c = n.useMemo(() => r.reduce((e, t) => ((e[t.id] = t), e), {}), [r]);
     return n.useMemo(
         () =>
             new Set(e.map((e) => e.skuProductLine)).size > 1
                 ? e.map((e) => {
-                      let r = t && e.isOwned && null != e.gifterUserId && null != a[e.gifterUserId];
+                      let r = t && e.isOwned && null != e.gifterUserId && null != c[e.gifterUserId];
                       return {
                           title:
                               e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM
@@ -89,6 +89,6 @@ function m(e, t) {
                       };
                   })
                 : e.map(() => ({ shouldShow: !1 })),
-        [e, t, a],
+        [e, t, c],
     );
 }

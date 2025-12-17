@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(703656),
-    s = n(769654),
-    o = n(430824),
+    o = n(769654),
+    s = n(430824),
     c = n(626135),
     u = n(768581),
     d = n(125631),
@@ -43,7 +43,7 @@ function h(e, t, n) {
     );
 }
 function m() {
-    let e = o.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
+    let e = s.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
@@ -76,7 +76,7 @@ function m() {
                                 var t;
                                 (t = e.id),
                                     c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
-                                    (0, s.X)(t);
+                                    (0, o.X)(t);
                             },
                         ),
                     ),

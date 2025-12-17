@@ -1,9 +1,9 @@
 n.d(t, { Z: () => C });
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
-    s = n(467721),
+    l = n(120356),
+    i = n.n(l),
+    s = n(236726),
     o = n(481060),
     c = n(617136),
     d = n(915750),
@@ -23,7 +23,7 @@ let y = (0, s.animated)(h.ZP),
             { expansionSpring: t } = r.useContext(x.xo),
             {
                 onCtxMenuOpen: n,
-                onCtxMenuClose: i,
+                onCtxMenuClose: l,
                 onCtxMenuSelect: h,
                 isExpanded: C,
                 isExpansionAnimationComplete: _,
@@ -47,7 +47,7 @@ let y = (0, s.animated)(h.ZP),
             O = C && _,
             N = (0, a.jsx)(o.P3F, {
                 onClick: T,
-                className: l()(j.clickable, { [j.logo]: O }),
+                className: i()(j.clickable, { [j.logo]: O }),
                 children: (0, a.jsx)(y, {
                     quest: S,
                     withGameTile: !1,
@@ -68,7 +68,7 @@ let y = (0, s.animated)(h.ZP),
                 }),
             });
         return (0, a.jsxs)(s.animated.div, {
-            className: l()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: O }),
+            className: i()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: O }),
             style: {
                 transform: (0, s.to)(
                     [
@@ -120,7 +120,7 @@ let y = (0, s.animated)(h.ZP),
                         }),
                         (0, a.jsx)(p.i, {
                             onOpen: n,
-                            onClose: i,
+                            onClose: l,
                             onSelect: h,
                             questContent: u.jn.QUEST_BAR_V2,
                             quest: S,
@@ -163,7 +163,7 @@ let y = (0, s.animated)(h.ZP),
                                             children: (0, a.jsx)(o.xhG, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: l()(j.submenuIcon, j.white),
+                                                className: i()(j.submenuIcon, j.white),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

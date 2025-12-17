@@ -8,8 +8,8 @@ n.d(t, {
     n(997841);
 var i = n(54381),
     r = n(473749),
-    l = n(512722),
-    a = n.n(l),
+    a = n(512722),
+    l = n.n(a),
     o = n(661869),
     s = n(876215),
     c = n(884439),
@@ -96,7 +96,7 @@ function K(e, t) {
 }
 function X(e) {
     let t,
-        { entry: n, currentUserActivity: l, idx: o, variant: s } = e,
+        { entry: n, currentUserActivity: a, idx: o, variant: s } = e,
         c = (0, d.e7)([L.default], () => L.default.getUser(n.author_id)),
         [u, m] = r.useState("unsent"),
         [y, O] = r.useState(!1);
@@ -106,7 +106,7 @@ function X(e) {
             return () => clearTimeout(e);
         }
     }, [u]);
-    let E = null != l && (0, v.Z)(l, F.xjy.JOIN),
+    let E = null != a && (0, v.Z)(a, F.xjy.JOIN),
         S = async (e) => {
             if (null != c && "unsent" === u) {
                 e.stopPropagation();
@@ -115,14 +115,14 @@ function X(e) {
                         await p.Z.sendActivityInviteUser({
                             type: F.mFx.JOIN,
                             userId: c.id,
-                            activity: l,
+                            activity: a,
                             location: F.Sbl.UNLOCKED_OVERLAY,
                         });
                     else {
                         var t;
                         let e = await g.Z.getOrEnsurePrivateChannel(c.id),
                             i = null != (t = A.Z.getChannel(e)) ? t : null;
-                        a()(null != i, "Send channel must be defined"),
+                        l()(null != i, "Send channel must be defined"),
                             (0, Z.uL)(F.Z5c.CHANNEL(i.guild_id, i.id)),
                             (0, j.i)(F.IlC.OVERLAY, !0),
                             !0 === n.extra.fake_inventory_item
@@ -163,7 +163,7 @@ function X(e) {
             if (null == c) return;
             let t = await g.Z.getOrEnsurePrivateChannel(c.id),
                 n = null != (e = A.Z.getChannel(t)) ? e : null;
-            a()(null != n, "Send channel must be defined"),
+            l()(null != n, "Send channel must be defined"),
                 (0, Z.uL)(F.Z5c.CHANNEL(n.guild_id, n.id)),
                 (0, j.i)(F.IlC.OVERLAY, !0),
                 (0, W.Ws)(F.Odu.ACTIVITY, {
@@ -191,9 +191,9 @@ function X(e) {
 }
 function J(e) {
     var t;
-    let { entry: n, currentUserActivity: l, variant: a } = e,
+    let { entry: n, currentUserActivity: a, variant: l } = e,
         o = (0, d.e7)([L.default], () => L.default.getUser(n.author_id)),
-        s = null != (t = null == l ? void 0 : l.application_id) ? t : n.extra.application_id,
+        s = null != (t = null == a ? void 0 : a.application_id) ? t : n.extra.application_id,
         c = (0, d.e7)([D.Z], () => (null != o ? D.Z.getApplicationActivity(o.id, s) : null), [s, o]),
         [u, m] = r.useState("unsent");
     if (!(null != c && (0, v.Z)(c, F.xjy.JOIN))) return null;
@@ -228,37 +228,37 @@ function J(e) {
             "aria-label": b,
             loading: "sending" === u,
             onClick: g,
-            variant: "subtle" === a ? "icon-only" : "secondary",
+            variant: "subtle" === l ? "icon-only" : "secondary",
             size: "sm",
         }),
     });
 }
 function q(e) {
-    let { entry: t, currentUserActivity: n, idx: r, variant: l } = e,
-        a = (0, d.e7)([L.default], () => L.default.getUser(t.author_id)),
-        o = (0, d.e7)([P.Z], () => (null != a ? P.Z.getAnyStreamForUser(a.id) : null), [a]),
+    let { entry: t, currentUserActivity: n, idx: r, variant: a } = e,
+        l = (0, d.e7)([L.default], () => L.default.getUser(t.author_id)),
+        o = (0, d.e7)([P.Z], () => (null != l ? P.Z.getAnyStreamForUser(l.id) : null), [l]),
         { isMobileOnline: s, status: c } = (0, d.cj)(
             [D.Z],
             () =>
-                null == a
+                null == l
                     ? {
                           isMobileOnline: void 0,
                           status: void 0,
                       }
                     : {
-                          isMobileOnline: D.Z.isMobileOnline(a.id),
-                          status: D.Z.getStatus(a.id),
+                          isMobileOnline: D.Z.isMobileOnline(l.id),
+                          status: D.Z.getStatus(l.id),
                       },
-            [a],
+            [l],
         );
-    return null == a
+    return null == l
         ? null
         : (0, i.jsxs)("div", {
               className: Y.row,
               children: [
                   (0, i.jsx)(y.Z, {
                       className: Y.avatar,
-                      user: a,
+                      user: l,
                       isMobile: s,
                       status: c,
                   }),
@@ -272,7 +272,7 @@ function q(e) {
                                       className: Y.username,
                                       variant: "text-md/medium",
                                       color: "text-strong",
-                                      children: V.ZP.getName(void 0, void 0, a),
+                                      children: V.ZP.getName(void 0, void 0, l),
                                   }),
                                   null != o && (0, i.jsx)(S.ZP, { className: Y.liveIndicator }),
                               ],
@@ -293,13 +293,13 @@ function q(e) {
                               entry: t,
                               currentUserActivity: n,
                               idx: r,
-                              variant: l,
+                              variant: a,
                           }),
                           (0, i.jsx)(X, {
                               entry: t,
                               currentUserActivity: n,
                               idx: r,
-                              variant: l,
+                              variant: a,
                           }),
                       ],
                   }),
@@ -310,7 +310,7 @@ function $(e) {
     return new Set(e.map((e) => e.author_id));
 }
 function ee(e) {
-    let { entries: t, currentUserActivity: n, className: l, hideHeader: a = !1, variant: o = "default" } = e,
+    let { entries: t, currentUserActivity: n, className: a, hideHeader: l = !1, variant: o = "default" } = e,
         s = (0, W.ee)(() => $(t), [t]),
         u = (0, W.ee)(
             () =>
@@ -343,9 +343,9 @@ function ee(e) {
     0 === t.length)
         ? null
         : (0, i.jsxs)("div", {
-              className: l,
+              className: a,
               children: [
-                  !a &&
+                  !l &&
                       (0, i.jsx)("div", {
                           className: Y.contentInventoryHeader,
                           children: (0, i.jsx)(h.Text, {
@@ -372,11 +372,11 @@ function ee(e) {
 }
 function et(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        l = (0, C.Z)(t);
+        a = (0, C.Z)(t);
     (0, O.ZP)(() => {
         (0, N._)();
     });
-    let a = (0, d.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
+    let l = (0, d.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         u = (0, d.Wu)([M.Z, R.Z, w.Z], () => {
             if (null == t) return [];
             let e = M.Z.nowPlayingCards,
@@ -397,14 +397,14 @@ function et(e) {
                         if (null == e) return t;
                         let {
                             communicationProbability: r,
-                            dmProbability: l,
-                            serverMessageProbability: a,
+                            dmProbability: a,
+                            serverMessageProbability: l,
                             vcProbability: o,
                         } = e;
                         switch (!0) {
                             case r > i:
-                            case l > i:
                             case a > i:
+                            case l > i:
                             case o > i:
                                 return !0;
                             default:
@@ -417,15 +417,15 @@ function et(e) {
         (0, O.ZP)(() => (_.L(), () => _.v())),
         {
             entries: r.useMemo(() => {
-                let e = l.filter((e) => !u.some((t) => t.activityUser.id === e.author_id)),
+                let e = a.filter((e) => !u.some((t) => t.activityUser.id === e.author_id)),
                     t = [
                         ...u.map((e) =>
                             (function (e) {
-                                var t, n, i, r, l, a, u;
+                                var t, n, i, r, a, l, u;
                                 let d =
                                     null !=
-                                    (l = null == (n = e.activity) || null == (t = n.timestamps) ? void 0 : t.start)
-                                        ? l
+                                    (a = null == (n = e.activity) || null == (t = n.timestamps) ? void 0 : t.start)
+                                        ? a
                                         : Date.now();
                                 return {
                                     id: U.default.fromTimestamp(d),
@@ -433,7 +433,7 @@ function et(e) {
                                     extra: {
                                         type: "played_game_extra",
                                         game_name:
-                                            null != (a = null == (i = e.activity) ? void 0 : i.name) ? a : e.game.name,
+                                            null != (l = null == (i = e.activity) ? void 0 : i.name) ? l : e.game.name,
                                         application_id:
                                             null != (u = null == (r = e.activity) ? void 0 : r.application_id)
                                                 ? u
@@ -455,8 +455,8 @@ function et(e) {
                         ...e,
                     ];
                 return null != n ? t.slice(0, n) : t;
-            }, [l, u, n]),
-            currentUserActivity: a,
+            }, [a, u, n]),
+            currentUserActivity: l,
         }
     );
 }
@@ -472,9 +472,9 @@ function en(e) {
 }
 function ei(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
-        l = null != t && (0, v.Z)(t, F.xjy.JOIN),
-        a = (0, E.q)(null == t ? void 0 : t.application_id),
-        o = null != a && (0, u.yE)(a.flags, F.udG.EMBEDDED);
+        a = null != t && (0, v.Z)(t, F.xjy.JOIN),
+        l = (0, E.q)(null == t ? void 0 : t.application_id),
+        o = null != l && (0, u.yE)(l.flags, F.udG.EMBEDDED);
     return null == t || null == n
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -486,7 +486,7 @@ function ei(e) {
                       currentUser: n,
                       appContext: F.IlC.OVERLAY,
                   }),
-                  l && !o && r
+                  a && !o && r
                       ? (0, i.jsx)("div", {
                             className: Y.inviteFriendsButton,
                             children: (0, i.jsx)(h.Button, {
@@ -510,10 +510,10 @@ function er(e) {
     let { locked: t } = e,
         n = (0, G.II)(),
         r = null == n ? void 0 : n.id,
-        l = null == n ? void 0 : n.altId,
-        a = (0, C.Z)(r),
+        a = null == n ? void 0 : n.altId,
+        l = (0, C.Z)(r),
         o = (0, d.e7)([L.default], () => L.default.getCurrentUser()),
-        s = null != l ? l : r,
+        s = null != a ? a : r,
         c = (0, d.e7)([k.Z], () => (null == s ? null : k.Z.getApplicationActivity(s)), [s]);
     (0, O.ZP)(() => (_.L(), () => _.v()));
     let u = et({
@@ -521,7 +521,7 @@ function er(e) {
         userAffinityThresholdV2: 0.00145,
         maxUserShowCount: 12,
     });
-    return t || (0 === a.length && null == c)
+    return t || (0 === l.length && null == c)
         ? null
         : (0, i.jsxs)("div", {
               className: Y.container,

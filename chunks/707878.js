@@ -1,33 +1,33 @@
 n.d(t, { Z: () => y }), n(388685);
 var i = n(54381),
     r = n(473749),
-    s = n(442837),
-    o = n(481060),
-    l = n(13245),
-    a = n(313201),
+    a = n(442837),
+    s = n(481060),
+    o = n(13245),
+    l = n(313201),
     c = n(237997),
     d = n(766032),
     u = n(987650),
-    h = n(981631),
-    p = n(388032),
-    f = n(264815);
+    f = n(981631),
+    h = n(388032),
+    p = n(103918);
 let g = Object.values(u.wF).map((e) => 100 * e),
-    m = (0, a.hQ)();
-class _ extends r.PureComponent {
+    b = (0, l.hQ)();
+class m extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
-            l.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        o.Z.setTextWidgetOpacity((0, d.Z)(e / 100)),
+            o.Z.track(f.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        l.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
+        o.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
     }
     render() {
         return (0, i.jsx)("div", {
-            className: f.container,
+            className: p.container,
             children: (0, i.jsx)("div", {
-                className: f.sliderContainer,
-                children: (0, i.jsx)(o.iRW, {
-                    label: p.intl.string(p.t.OVovCb),
+                className: p.sliderContainer,
+                children: (0, i.jsx)(s.iRW, {
+                    label: h.intl.string(h.t.OVovCb),
                     mini: !0,
                     initialValue: this.initialValue,
                     defaultValue: this.initialValue,
@@ -37,10 +37,10 @@ class _ extends r.PureComponent {
                     onValueChange: this.handleUpdateBackgroundOpacity,
                     asValueChanges: this.handlePreviewBackgroundOpacity,
                     markers: g,
-                    onMarkerRender: h.dG4,
+                    onMarkerRender: f.dG4,
                     equidistant: !0,
                     stickToMarkers: !0,
-                    "aria-labelledby": m,
+                    "aria-labelledby": b,
                 }),
             }),
         });
@@ -59,4 +59,4 @@ class _ extends r.PureComponent {
             })(this, "initialValue", 100 * this.props.opacity);
     }
 }
-let y = s.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(_);
+let y = a.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(m);

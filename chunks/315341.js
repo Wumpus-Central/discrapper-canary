@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }),
+n.d(t, { Z: () => b }),
     n(410992),
     n(227481),
     n(730884),
@@ -15,8 +15,8 @@ var r = n(442837),
     i = n(704215),
     l = n(524437),
     a = n(381499),
-    s = n(433517),
-    o = n(581364),
+    o = n(433517),
+    s = n(581364),
     c = n(536442),
     u = n(592125),
     d = n(915486),
@@ -41,7 +41,7 @@ function h(e, t) {
 function m(e, t, n) {
     return !!c.qc.hasHiddenHotspot(t) && h(e, n);
 }
-let _ = [
+let b = [
     {
         version: 2,
         run(e) {
@@ -49,12 +49,12 @@ let _ = [
             if (null != e.inbox) return !1;
             let r = !1,
                 i = l.f9.create();
-            (e.inbox = i), s.K.get("seenInboxTutorial", !1) && ((i.viewedTutorial = !0), (r = !0));
-            let a = s.K.get("recentsButtonTab2");
+            (e.inbox = i), o.K.get("seenInboxTutorial", !1) && ((i.viewedTutorial = !0), (r = !0));
+            let a = o.K.get("recentsButtonTab2");
             null != a && ((i.currentTab = "Recent Mentions" === a ? l.X.MENTIONS : l.X.UNREADS), (r = !0));
-            let o = null != (t = s.K.get("unread-messages-collapsed-channels")) ? t : {};
-            for (let t in o) {
-                if (!o[t]) continue;
+            let s = null != (t = o.K.get("unread-messages-collapsed-channels")) ? t : {};
+            for (let t in s) {
+                if (!s[t]) continue;
                 let i = u.Z.getChannel(t);
                 null != i &&
                     ((r = !0),
@@ -65,16 +65,16 @@ let _ = [
             return r;
         },
         cleanup() {
-            s.K.remove("seenInboxTutorial"),
-                s.K.remove("recentsButtonTab2"),
-                s.K.remove("unread-messages-collapsed-channels");
+            o.K.remove("seenInboxTutorial"),
+                o.K.remove("recentsButtonTab2"),
+                o.K.remove("unread-messages-collapsed-channels");
         },
     },
     {
         version: 3,
         run(e) {
             let { state: t } = r.ZP.PersistedStore.migrateAndReadStoreState("EmojiStore", [
-                () => ({ diversitySurrogate: s.K.get("EmojiDiversitySurrogate") || "" }),
+                () => ({ diversitySurrogate: o.K.get("EmojiDiversitySurrogate") || "" }),
             ]);
             if (null == t) return !1;
             let n = !1;
@@ -95,28 +95,28 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                (!0 === s.K.get("HAS_SEEN_HUB_UPSELL") ||
+                (!0 === o.K.get("HAS_SEEN_HUB_UPSELL") ||
                     c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) &&
                     (t = h(e, i.z.HUB_WAITLIST_UPSELL)),
                 t
             );
         },
         cleanup() {
-            s.K.remove("HAS_SEEN_HUB_UPSELL");
+            o.K.remove("HAS_SEEN_HUB_UPSELL");
         },
     },
     {
         version: 5,
         run(e) {
-            var t, n, r, i, o, c, u;
+            var t, n, r, i, s, c, u;
             let d = !1;
             (e.textAndImages = null != (t = e.textAndImages) ? t : l.Me.create()),
                 (e.notifications = null != (n = e.notifications) ? n : l.sf.create()),
                 (e.privacy = null != (r = e.privacy) ? r : l.bE.create()),
                 (e.voiceAndVideo = null != (i = e.voiceAndVideo) ? i : l.v_.create()),
-                (e.gameLibrary = null != (o = e.gameLibrary) ? o : l.Fm.create()),
+                (e.gameLibrary = null != (s = e.gameLibrary) ? s : l.Fm.create()),
                 (e.debug = null != (c = e.debug) ? c : l.tA.create());
-            let p = null != (u = s.K.get("UserSettingsStore")) ? u : {};
+            let p = null != (u = o.K.get("UserSettingsStore")) ? u : {};
             return (
                 "boolean" == typeof p.useRichChatTextBox &&
                     ((e.textAndImages.useRichChatInput = a.D5.create({ value: p.useRichChatTextBox })), (d = !0)),
@@ -178,7 +178,7 @@ let _ = [
     {
         version: 9,
         run: (e) => (
-            c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(g.Ip, "true"),
+            c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && o.K.set(g.Ip, "true"),
             m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)
         ),
         cleanup() {},
@@ -188,7 +188,7 @@ let _ = [
         run(e) {
             var t;
             let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, i.z.CHANNEL_NOTICE_HUBLINK),
-                r = null != (t = s.K.get("channelNotices")) ? t : {};
+                r = null != (t = o.K.get("channelNotices")) ? t : {};
             return (
                 !1 === r[f.vID.INVITE] && h(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0),
                 !1 === r[f.vID.QUICKSWITCHER] && h(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0),
@@ -197,7 +197,7 @@ let _ = [
             );
         },
         cleanup() {
-            s.K.remove("channelNotices");
+            o.K.remove("channelNotices");
         },
     },
     {
@@ -218,14 +218,14 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                s.K.get("hideNag") && h(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
-                s.K.get("hideConnectSpotify") && h(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
-                s.K.get("hideConnectPlayStation") && h(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
+                o.K.get("hideNag") && h(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
+                o.K.get("hideConnectSpotify") && h(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
+                o.K.get("hideConnectPlayStation") && h(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
                 t
             );
         },
         cleanup() {
-            s.K.remove("hideNag"), s.K.remove("hideConnectSpotify"), s.K.remove("hideConnectPlayStation");
+            o.K.remove("hideNag"), o.K.remove("hideConnectSpotify"), o.K.remove("hideConnectPlayStation");
         },
     },
     {
@@ -233,18 +233,18 @@ let _ = [
         run(e) {
             let t = !1;
             return (
-                s.K.get("hidePremiumPromo") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
-                s.K.get("hidePremiumTier2TrialEnding") &&
+                o.K.get("hidePremiumPromo") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0),
+                o.K.get("hidePremiumTier2TrialEnding") &&
                     h(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
                     (t = !0),
-                s.K.get("hidePremiumReactivateNotice") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
+                o.K.get("hidePremiumReactivateNotice") && h(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0),
                 t
             );
         },
         cleanup() {
-            s.K.remove("hidePremiumPromo"),
-                s.K.remove("hidePremiumTier2TrialEnding"),
-                s.K.remove("hidePremiumReactivateNotice");
+            o.K.remove("hidePremiumPromo"),
+                o.K.remove("hidePremiumTier2TrialEnding"),
+                o.K.remove("hidePremiumReactivateNotice");
         },
     },
     {
@@ -260,7 +260,7 @@ let _ = [
     {
         version: 16,
         run(e) {
-            let t = s.K.get("PromotionsPersistedStore");
+            let t = o.K.get("PromotionsPersistedStore");
             if (null == t) return !1;
             let n = t._state.lastDismissedOutboundPromotionStartDate;
             return (
@@ -289,7 +289,7 @@ let _ = [
             );
         },
         cleanup() {
-            s.K.remove("ExpressionSuggestionsPersistedStore");
+            o.K.remove("ExpressionSuggestionsPersistedStore");
         },
     },
     {
@@ -310,30 +310,30 @@ let _ = [
             var t;
             let n = !1;
             return (
-                null != (t = s.K.get("forumHelperCardStorageKey")) && t && (n = h(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n
+                null != (t = o.K.get("forumHelperCardStorageKey")) && t && (n = h(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n
             );
         },
         cleanup() {
-            s.K.remove("forumHelperCardStorageKey");
+            o.K.remove("forumHelperCardStorageKey");
         },
     },
     {
         version: 20,
         run(e) {
-            let t = s.K.get("lastChangeLogId");
+            let t = o.K.get("lastChangeLogId");
             if (null == t) return !1;
-            if (!(0, o.BH)(t)) return s.K.remove("lastChangeLogId"), !1;
+            if (!(0, s.BH)(t)) return o.K.remove("lastChangeLogId"), !1;
             if (null == e.userContent) e.userContent = l.az.create();
             else if (
                 null != e.userContent &&
                 null != e.userContent.lastReceivedChangelogId &&
                 "0" !== e.userContent.lastReceivedChangelogId
             )
-                return s.K.remove("lastChangeLogId"), !1;
+                return o.K.remove("lastChangeLogId"), !1;
             return (e.userContent.lastReceivedChangelogId = t), !0;
         },
         cleanup() {
-            s.K.remove("lastChangeLogId");
+            o.K.remove("lastChangeLogId");
         },
     },
     {

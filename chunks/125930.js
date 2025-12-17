@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(755721),
-    o = n(770146),
+    o = n(755721),
+    s = n(770146),
     c = n(600164),
     u = n(424218),
     d = n(823379),
@@ -12,18 +12,18 @@ var r = n(54381),
     f = n(843445),
     g = n(981631),
     h = n(388032),
-    m = n(688510);
-let _ = {
+    m = n(175496);
+let b = {
     [g.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
     [g.TaA.MACOS]: p.PlatformTypes.OSX,
     [g.TaA.LINUX]: p.PlatformTypes.LINUX,
 };
-class b extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: i } = this.props,
             l = n === f.b.LARGE;
-        return (0, r.jsx)(s.zx, {
-            size: l ? s.zx.Sizes.MIN : s.zx.Sizes.LARGE,
+        return (0, r.jsx)(o.zx, {
+            size: l ? o.zx.Sizes.MIN : o.zx.Sizes.LARGE,
             fullWidth: !l,
             color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
             className: a()({
@@ -56,7 +56,7 @@ class E extends i.PureComponent {
                       (0, r.jsx)("div", { className: m.separator }),
                       i.map((t) =>
                           (0, r.jsx)(
-                              b,
+                              _,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
@@ -142,7 +142,7 @@ class E extends i.PureComponent {
         return (0, r.jsxs)("div", {
             className: m.requirements,
             children: [
-                (0, r.jsx)(o.Z, {
+                (0, r.jsx)(s.Z, {
                     tag: "h4",
                     children: t,
                 }),
@@ -163,7 +163,7 @@ class E extends i.PureComponent {
     render() {
         return (0, r.jsxs)("div", {
             className: this.props.className,
-            children: [(0, r.jsx)(o.Z, { children: h.intl.string(h.t.IkOAol) }), this.renderTabs(), this.renderBody()],
+            children: [(0, r.jsx)(s.Z, { children: h.intl.string(h.t.IkOAol) }), this.renderTabs(), this.renderBody()],
         });
     }
     constructor(e) {
@@ -183,7 +183,7 @@ class E extends i.PureComponent {
         let t = (0, p.getPlatform)(),
             n = Object.keys(e.systemRequirements),
             r = n[0];
-        for (let e of n) _[e] === t && (r = e);
+        for (let e of n) b[e] === t && (r = e);
         this.state = { selectedOperatingSystem: r };
     }
 }

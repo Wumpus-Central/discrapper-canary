@@ -1,35 +1,35 @@
 n.d(i, { default: () => p }), n(539854);
-var a = n(54381),
-    c = n(473749),
-    r = n(793030),
-    e = n(481060),
+var e = n(54381),
+    a = n(473749),
+    c = n(793030),
+    r = n(481060),
     l = n(434404),
     s = n(703656),
     o = n(246364),
-    u = n(981631),
-    x = n(176505),
-    d = n(388032),
-    C = n(820954);
+    d = n(981631),
+    u = n(176505),
+    x = n(388032),
+    C = n(667932);
 let p = function (t) {
     let { guildId: i, submittedGuildJoinRequestsCount: n, onClose: p, transitionState: E, onConfirm: k } = t,
-        T = c.useCallback(
+        T = a.useCallback(
             (t) => {
                 p(), k(t);
             },
             [p, k],
         ),
-        f = c.useCallback(() => {
-            p(), l.Z.close(), (0, s.uL)(u.Z5c.CHANNEL(i, x.oC.MEMBER_SAFETY));
+        f = a.useCallback(() => {
+            p(), l.Z.close(), (0, s.uL)(d.Z5c.CHANNEL(i, u.oC.MEMBER_SAFETY));
         }, [i, p]),
         h = n > 200,
         b = [
             {
-                text: d.intl.string(d.t["ETE/oC"]),
+                text: x.intl.string(x.t["ETE/oC"]),
                 onClick: p,
                 variant: "secondary",
             },
             {
-                text: d.intl.string(d.t.Gfg0rT),
+                text: x.intl.string(x.t.Gfg0rT),
                 onClick: () => T(o.wB.REJECTED),
                 variant: "critical-primary",
             },
@@ -37,23 +37,23 @@ let p = function (t) {
     return (
         h ||
             b.push({
-                text: d.intl.string(d.t.VWqCvL),
+                text: x.intl.string(x.t.VWqCvL),
                 onClick: () => T(o.wB.APPROVED),
                 variant: "primary",
             }),
-        (0, a.jsx)(r.Modal, {
-            title: d.intl.formatToPlainString(d.t.chV4Jb, { count: n }),
+        (0, e.jsx)(c.Modal, {
+            title: x.intl.formatToPlainString(x.t.chV4Jb, { count: n }),
             onClose: p,
-            subtitle: h ? d.intl.string(d.t.EPoNRs) : d.intl.string(d.t["8+nq/G"]),
+            subtitle: h ? x.intl.string(x.t.EPoNRs) : x.intl.string(x.t["8+nq/G"]),
             transitionState: E,
             actions: b,
-            children: (0, a.jsx)(e.P3F, {
+            children: (0, e.jsx)(r.P3F, {
                 className: C.actionText,
                 onClick: f,
-                children: (0, a.jsx)(e.Text, {
+                children: (0, e.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "text-link",
-                    children: d.intl.string(d.t.szESVF),
+                    children: x.intl.string(x.t.szESVF),
                 }),
             }),
         })

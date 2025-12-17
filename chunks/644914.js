@@ -1,6 +1,6 @@
 n.d(t, {
     TE: () => y,
-    h_: () => _,
+    h_: () => v,
 }),
     n(388685);
 var i = n(473749),
@@ -13,8 +13,8 @@ var i = n(473749),
     u = n(592125),
     d = n(984933),
     p = n(650774),
-    h = n(430824),
-    f = n(819640),
+    f = n(430824),
+    h = n(819640),
     m = n(375954),
     g = n(496675),
     b = n(709054),
@@ -31,7 +31,7 @@ function y(e, t) {
         [t, e],
     );
 }
-function _(e) {
+function v(e) {
     return {
         guildPopulated: (function (e) {
             let t = (0, a.e7)([u.Z], () => u.Z.getChannel(null == e ? void 0 : e.systemChannelId)),
@@ -55,8 +55,8 @@ function _(e) {
             );
         })(e),
         guildPersonalized: (function (e) {
-            let t = (0, a.e7)([f.Z], () => f.Z.hasLayers()),
-                n = (0, a.e7)([h.Z], () => h.Z.getGuild(null == e ? void 0 : e.id));
+            let t = (0, a.e7)([h.Z], () => h.Z.hasLayers()),
+                n = (0, a.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.id));
             return (null == n ? void 0 : n.icon) != null && !t;
         })(e),
         guildChannelCreated: (0, a.e7)([d.ZP], () => {

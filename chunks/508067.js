@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(448986),
     u = n(939389),
     d = n(295907),
-    m = n(171214);
+    m = n(238384);
 function f(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
@@ -26,8 +26,8 @@ function v(e) {
             rounded: O,
             maxSeekableTime: h,
             onClick: b,
-            onScrubBack: C,
-            onScrubForward: S,
+            onScrubBack: S,
+            onScrubForward: C,
         } = e,
         [_, y] = o.useState(null),
         [x, j] = o.useState(null),
@@ -59,11 +59,11 @@ function v(e) {
         k = o.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === d.mR.ArrowLeft && null != C
-                    ? (e.preventDefault(), e.stopPropagation(), C())
-                    : t === d.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
+                t === d.mR.ArrowLeft && null != S
+                    ? (e.preventDefault(), e.stopPropagation(), S())
+                    : t === d.mR.ArrowRight && null != C && (e.preventDefault(), e.stopPropagation(), C());
             },
-            [C, S],
+            [S, C],
         ),
         M = null != x && null != _ ? f(x, _, g) : 0,
         V = (0, u.yv)(M),

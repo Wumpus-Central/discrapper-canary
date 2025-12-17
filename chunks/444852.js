@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => F,
+    A: () => B,
     Z: () => V,
 }),
     n(388685),
@@ -32,8 +32,8 @@ var r = n(392711),
     N = n(756315),
     P = n(569545),
     R = n(502286),
-    D = n(297733),
-    w = n(981631),
+    w = n(297733),
+    D = n(981631),
     x = n(65154);
 function L(e, t, n) {
     return (
@@ -90,8 +90,8 @@ function k(e, t) {
 let U = 10,
     G = 1500000,
     Z = 1500000,
-    B = 5 * A.Z.Millis.SECOND;
-class F {
+    F = 5 * A.Z.Millis.SECOND;
+class B {
     setActionContext(e) {
         this.actionContext = e;
     }
@@ -281,7 +281,7 @@ class V extends c.Z {
                         { streamKey: this.streamKey },
                     ),
                 ),
-                e === w.hes.RTC_CONNECTED)
+                e === D.hes.RTC_CONNECTED)
             ) {
                 var r, i, s, c, u, d, f, p;
                 null == (r = this._connection) ||
@@ -314,7 +314,7 @@ class V extends c.Z {
                                 (null != p ? p : 0) +
                                 (null != f ? f : 0);
                             T.default.track(
-                                w.rMx.SCREENSHARE_FINISHED,
+                                D.rMx.SCREENSHARE_FINISHED,
                                 j(
                                     {
                                         screenshare_frames: e,
@@ -354,7 +354,7 @@ class V extends c.Z {
                             let e = y.Z.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 T.default.track(
-                                    w.rMx.SOUNDSHARE_ATTACHED,
+                                    D.rMx.SOUNDSHARE_ATTACHED,
                                     j(
                                         {},
                                         (0, R.Z)(null == e ? void 0 : e.desktopSource),
@@ -373,14 +373,14 @@ class V extends c.Z {
                             let e = y.Z.getGoLiveSource();
                             (null == e ? void 0 : e.desktopSource) != null &&
                                 (T.default.track(
-                                    w.rMx.SOUNDSHARE_TRANSMITTING,
+                                    D.rMx.SOUNDSHARE_TRANSMITTING,
                                     j(
                                         {},
                                         (0, R.Z)(null == e ? void 0 : e.desktopSource),
                                         this.getSoundshareAnalyticsProperties(),
                                     ),
                                 ),
-                                null != b.Z.getHookError(w.K3D.SOUND) &&
+                                null != b.Z.getHookError(D.K3D.SOUND) &&
                                     l.Z.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                         }),
                     null == (u = this._connection) ||
@@ -395,7 +395,7 @@ class V extends c.Z {
                                 e.type)
                             ) {
                                 case "soundshare_attach_requested":
-                                    this.errorTimer.start(B, () => {
+                                    this.errorTimer.start(F, () => {
                                         l.Z.dispatch({
                                             type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                             errorMessage: "Sound Hook Failed",
@@ -427,7 +427,7 @@ class V extends c.Z {
                             if (this._firstFrameDelivered) return;
                             this._firstFrameDelivered = !0;
                             let t = this.getStreamAnalyticsProperties();
-                            T.default.track(w.rMx.RECEIVER_FIRST_FRAME_DELIVERED, {
+                            T.default.track(D.rMx.RECEIVER_FIRST_FRAME_DELIVERED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.channel_id,
                                 rtc_connection_id: t.rtc_connection_id,
@@ -479,7 +479,7 @@ class V extends c.Z {
                     null == (f = this._connection) ||
                         f.on(a.Sh.FirstFrameEncryptedStats, (e) => {
                             let t = this.getStreamAnalyticsProperties();
-                            T.default.track(w.rMx.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                            T.default.track(D.rMx.STREAMER_FIRST_FRAME_ENCRYPTED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.channel_id,
                                 rtc_connection_id: t.rtc_connection_id,
@@ -558,7 +558,7 @@ class V extends c.Z {
         o && this.soundshareFailuresReported[a].add(t),
             (null == t || o) &&
                 T.default.track(
-                    w.rMx.SOUNDSHARE_FAILED,
+                    D.rMx.SOUNDSHARE_FAILED,
                     j(
                         {
                             soundshare_failure_code: t,
@@ -606,9 +606,9 @@ class V extends c.Z {
         };
     }
     trackVideoStartStats() {
-        let e = this.isOwner ? (0, D.Z)() : null;
+        let e = this.isOwner ? (0, w.Z)() : null;
         T.default.track(
-            w.rMx.VIDEO_STREAM_STARTED,
+            D.rMx.VIDEO_STREAM_STARTED,
             k(j({}, this.getStreamAnalyticsProperties(), e), {
                 connection_type: O.Z.getType(),
                 effective_connection_speed: O.Z.getEffectiveConnectionSpeed(),
@@ -641,7 +641,7 @@ class V extends c.Z {
             var r;
             (null != (r = t.num_frames) ? r : 0) > 0 &&
                 T.default.track(
-                    w.rMx.VIDEO_STREAM_ENDED,
+                    D.rMx.VIDEO_STREAM_ENDED,
                     k(
                         j(
                             {},
@@ -674,7 +674,7 @@ class V extends c.Z {
                 let l = o.getInboundStats(t);
                 (null != (r = null == l ? void 0 : l.num_frames) ? r : 0) > 0 &&
                     T.default.track(
-                        w.rMx.VIDEO_STREAM_ENDED,
+                        D.rMx.VIDEO_STREAM_ENDED,
                         k(
                             j(
                                 {},

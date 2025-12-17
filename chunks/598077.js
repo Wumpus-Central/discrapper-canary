@@ -232,7 +232,7 @@ class O extends o.Z {
             : a.bF.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, o, s, u, f, p, _, h, E, b, y, O, v, S, I, T, C, A, N, P, R, D, w, x, L, j, M, k, U, G, Z;
+        var t, n, i, a, o, s, u, f, p, _, h, E, b, y, O, v, S, I, T, C, A, N, P, R, w, D, x, L, j, M, k, U, G, Z;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -267,7 +267,7 @@ class O extends o.Z {
             g(this, "isStaff", () => !1),
             g(this, "isStaffPersonal", () => !1),
             g(this, "hasAnyStaffLevel", () => !1);
-        let B = null != (n = e.premium_type) ? n : e.premiumType;
+        let F = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null != (i = e.username) ? i : ""),
             (this.discriminator = null != (a = e.discriminator) ? a : m.fo$),
@@ -280,7 +280,7 @@ class O extends o.Z {
             (this.mfaEnabled = null != (E = null != (h = e.mfa_enabled) ? h : e.mfaEnabled) && E),
             (this.mobile = null != (b = e.mobile) && b),
             (this.desktop = null != (y = e.desktop) && y),
-            (this.premiumType = B === m.WND ? null : B),
+            (this.premiumType = F === m.WND ? null : F),
             (this.flags = null != (O = e.flags) ? O : 0),
             (this.publicFlags = null != (S = null != (v = e.public_flags) ? v : e.publicFlags) ? S : 0),
             (this.purchasedFlags = null != (T = null != (I = e.purchased_flags) ? I : e.purchasedFlags) ? T : 0),
@@ -289,8 +289,8 @@ class O extends o.Z {
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (P = e.nsfw_allowed) ? P : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (D = e.guildMemberAvatars) ? D : {}),
-            (this.hasBouncedEmail = null != (x = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && x),
+            (this.guildMemberAvatars = null != (w = e.guildMemberAvatars) ? w : {}),
+            (this.hasBouncedEmail = null != (x = null != (D = e.has_bounced_email) ? D : e.hasBouncedEmail) && x),
             (this.personalConnectionId =
                 null != (j = null != (L = e.personal_connection_id) ? L : e.personalConnectionId) ? j : null),
             (this.globalName = null != (M = e.global_name) ? M : e.globalName),

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(28664),
-    o = n(481060),
+    o = n(28664),
+    s = n(481060),
     c = n(100527),
     u = n(600164),
     d = n(670188),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(345243),
     m = n(115530),
     b = n(981631),
-    E = n(388032),
-    _ = n(139661);
+    _ = n(388032),
+    E = n(139661);
 function O(e, t, n) {
     return (
         t in e
@@ -73,10 +73,10 @@ class I extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Z, {
                     children: this.isHost()
-                        ? E.intl.formatToPlainString(E.t["6UJ7mh"], { count: this.props.party.length })
-                        : E.intl.string(E.t.RZufbH),
+                        ? _.intl.formatToPlainString(_.t["6UJ7mh"], { count: this.props.party.length })
+                        : _.intl.string(_.t.RZufbH),
                 }),
-                (0, r.jsx)(h.Z, { children: E.intl.string(E.t["0ZHLIi"]) }),
+                (0, r.jsx)(h.Z, { children: _.intl.string(_.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -85,30 +85,30 @@ class I extends i.PureComponent {
         return this.isHost()
             ? null
             : (0, r.jsx)(g.Z, {
-                  tooltipText: E.intl.string(E.t.LeZSpz),
+                  tooltipText: _.intl.string(_.t.LeZSpz),
                   onClick: e,
-                  icon: o.Dio,
+                  icon: s.Dio,
               });
     }
     renderHelpIcon() {
         return this.isHost()
             ? (0, r.jsx)(g.Z, {
-                  tooltipText: E.intl.string(E.t.U7N2Hs),
+                  tooltipText: _.intl.string(_.t.U7N2Hs),
                   onClick: () => {
                       window.open(f.Z.getArticleURL(b.BhN.SPOTIFY_CONNECTION), "_blank");
                   },
-                  icon: o.d3s,
+                  icon: s.d3s,
               })
             : null;
     }
     render() {
         return (0, r.jsxs)("div", {
-            className: _.listeningAlong,
+            className: E.listeningAlong,
             children: [
                 this.renderTitle(),
                 (0, r.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
-                    className: _.party,
+                    className: E.party,
                     children: (0, r.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
@@ -117,7 +117,7 @@ class I extends i.PureComponent {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: _.icons,
+                    className: E.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
@@ -134,8 +134,8 @@ class I extends i.PureComponent {
                 return (
                     (n =
                         (null == l ? void 0 : l.id) === e.id
-                            ? E.intl.string(E.t["N9bqD+"])
-                            : E.intl.string(E.t.Z2Y4c9)),
+                            ? _.intl.string(_.t["N9bqD+"])
+                            : _.intl.string(_.t.Z2Y4c9)),
                     (0, r.jsx)(
                         d.Z,
                         {
@@ -146,15 +146,15 @@ class I extends i.PureComponent {
                             align: "center",
                             clickTrap: !0,
                             children: (l) =>
-                                (0, r.jsx)(s.u, {
+                                (0, r.jsx)(o.u, {
                                     text: n,
                                     children: (0, i.createElement)(
-                                        o.qEK,
+                                        s.qEK,
                                         y(v({}, l), {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
-                                            size: o.EFr.SIZE_24,
-                                            className: a()(_.avatar, t),
+                                            size: s.EFr.SIZE_24,
+                                            className: a()(E.avatar, t),
                                             "aria-label": e.username,
                                             onContextMenu: (t) => void (null != e && (null == u || u(t, e))),
                                             avatarContentRef: this.partyMemberAvatarRef,
@@ -169,18 +169,18 @@ class I extends i.PureComponent {
             O(this, "renderPartyMemberOverflow", (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
-                    o.yRy,
+                    s.yRy,
                     {
                         renderPopout: i,
                         targetElementRef: this.partyMemberOverflowRef,
                         children: (n) =>
-                            (0, r.jsx)(s.u, {
-                                text: E.intl.string(E.t.Zf4NPe),
+                            (0, r.jsx)(o.u, {
+                                text: _.intl.string(_.t.Zf4NPe),
                                 children: (0, r.jsx)(
                                     "div",
                                     y(v({}, n), {
                                         ref: this.partyMemberOverflowRef,
-                                        className: a()(_.overflow, t),
+                                        className: a()(E.overflow, t),
                                         children: e,
                                     }),
                                 ),

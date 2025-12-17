@@ -1,9 +1,9 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
     l = n(636977),
-    o = n(481060),
-    a = n(571457),
+    a = n(481060),
+    o = n(571457),
     s = n(836768),
     c = n(749681),
     u = n(258971),
@@ -12,18 +12,18 @@ var r = n(54381),
     h = n(128449),
     p = n(324805),
     g = n(388032);
-let m = i.forwardRef(function (e, t) {
-    let { selected: n, onClick: m, questId: b, className: _ } = e,
-        y = i.useCallback(() => {
-            (0, a.k5)({ source: f.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== b ? f.GlobalDiscoveryTab.QUESTS : s.Z.getField("selectedTab");
+let b = i.forwardRef(function (e, t) {
+    let { selected: n, onClick: b, questId: m, className: y } = e,
+        O = i.useCallback(() => {
+            (0, o.k5)({ source: f.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            let e = void 0 !== m ? f.GlobalDiscoveryTab.QUESTS : s.Z.getField("selectedTab");
             switch (e) {
                 case f.GlobalDiscoveryTab.QUESTS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: f.GlobalDiscoveryTab.QUESTS,
                         location: p.dr.DISCOVERY_COMPASS,
                         questContent: l.j.DISCOVERY_COMPASS,
-                        questId: b,
+                        questId: m,
                     });
                 case f.GlobalDiscoveryTab.SERVERS:
                     return (0, c.transitionToGlobalDiscovery)({
@@ -41,16 +41,16 @@ let m = i.forwardRef(function (e, t) {
                 default:
                     return (0, c.transitionToGlobalDiscovery)({ tab: e });
             }
-        }, [b]);
+        }, [m]);
     return (0, r.jsx)(d.Z, {
         id: "guild-discover-button",
         ref: t,
-        className: _,
+        className: y,
         onClick: () => {
-            y(), void 0 !== m && m();
+            O(), void 0 !== b && b();
         },
         selected: n,
         tooltip: g.intl.string(g.t["4nEZLk"]),
-        icon: o.Jmo,
+        icon: a.Jmo,
     });
 });

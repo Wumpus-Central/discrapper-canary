@@ -173,7 +173,7 @@ function R(e) {
     }),
         O(e.id);
 }
-function D(e) {
+function w(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
     if (u.default.getId() !== n || null === r) return !1;
     i
@@ -187,7 +187,7 @@ function D(e) {
           })
         : delete m[t];
 }
-function w(e) {
+function D(e) {
     var t, n;
     let r = !1;
     return (
@@ -254,7 +254,7 @@ let L = new x(s.Z, {
         LOAD_ARCHIVED_THREADS_SUCCESS: A,
         THREAD_DELETE: P,
         THREAD_MEMBER_UPDATE: R,
-        THREAD_MEMBER_LOCAL_UPDATE: D,
-        THREAD_MEMBERS_UPDATE: w,
+        THREAD_MEMBER_LOCAL_UPDATE: w,
+        THREAD_MEMBERS_UPDATE: D,
     }),
     j = L;

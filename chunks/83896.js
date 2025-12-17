@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(797156),
     y = n(223135),
     v = n(505905),
-    O = n(981631),
-    x = n(388032),
+    x = n(981631),
+    O = n(388032),
     E = n(527019),
     j = n(770966);
 function S(e) {
@@ -68,14 +68,14 @@ function P(e) {
     let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: P } = e,
         I = r.useRef(null),
         Z = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId() === n.id),
-        T = (0, o.e7)([d.Z], () => d.Z.can(O.Plq.CONNECT, n)),
+        T = (0, o.e7)([d.Z], () => d.Z.can(x.Plq.CONNECT, n)),
         N = (null == t ? void 0 : t.emoji) == null || (0, g.K)(t.emoji, n);
     r.useEffect(() => {
         null == P || P(null == I ? void 0 : I.current);
     }, [I, P]),
         r.useEffect(() => {
             f.default.track(
-                O.rMx.VIEW_HANG_STATUS,
+                x.rMx.VIEW_HANG_STATUS,
                 S(
                     {
                         source: "HangStatusPopout",
@@ -90,7 +90,7 @@ function P(e) {
                 T &&
                 (u.default.selectVoiceChannel(n.id),
                 f.default.track(
-                    O.rMx.HANG_STATUS_CTA_CLICKED,
+                    x.rMx.HANG_STATUS_CTA_CLICKED,
                     _(S({ source: "HangStatusPopout" }, (0, b.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
@@ -106,7 +106,7 @@ function P(e) {
                     (0, h._s)(t.details, t.emoji, !0);
                 } else (0, h.Zx)(e, !0);
                 f.default.track(
-                    O.rMx.HANG_STATUS_CTA_CLICKED,
+                    x.rMx.HANG_STATUS_CTA_CLICKED,
                     _(S({ source: "HangStatusPopout" }, (0, b.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
@@ -131,12 +131,12 @@ function P(e) {
             }),
             Z
                 ? (0, i.jsx)(s.u, {
-                      text: N ? void 0 : x.intl.string(x.t["0LMpW+"]),
+                      text: N ? void 0 : O.intl.string(O.t["0LMpW+"]),
                       children: (0, i.jsx)("div", {
                           children: (0, i.jsx)(c.Button, {
                               size: "sm",
                               variant: "secondary",
-                              text: x.intl.string(x.t["0eHzpm"]),
+                              text: O.intl.string(O.t["0eHzpm"]),
                               onClick: w,
                               disabled: !N,
                           }),
@@ -146,7 +146,7 @@ function P(e) {
                   (0, i.jsx)(c.Button, {
                       size: "sm",
                       variant: "secondary",
-                      text: x.intl.string(x.t["B/dHXL"]),
+                      text: O.intl.string(O.t["B/dHXL"]),
                       onClick: A,
                   }),
         ],

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => F,
+    Z: () => B,
     d: () => H,
 }),
     n(781311),
@@ -39,8 +39,8 @@ var r = n(512722),
     N = n(555573),
     P = n(160062),
     R = n(456007),
-    D = n(10718),
-    w = n(998698),
+    w = n(10718),
+    D = n(998698),
     x = n(895924),
     L = n(581364),
     j = n(981631),
@@ -87,7 +87,7 @@ function Z(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,22 +98,22 @@ function B(e, t) {
         e
     );
 }
-async function F(e) {
+async function B(e) {
     var t, n, r, o, l, u, d, _, m, h, g, E, b, v, I, T, C;
     let {
         command: A,
-        optionValues: D,
+        optionValues: w,
         context: M,
         commandTargetId: k,
         maxSizeCallback: U,
         commandOrigin: G = x.bB.CHAT,
         sectionName: Z,
-        interactionLifecycleOptionsFactory: B = K,
-        source: F,
+        interactionLifecycleOptionsFactory: F = K,
+        source: B,
     } = e;
     if (null == M.channel) return;
-    let H = null != (r = w.Z.getSource(M.channel.id)) ? r : F,
-        W = null != (o = w.Z.getCommandOrigin(M.channel.id)) ? o : G;
+    let H = null != (r = D.Z.getSource(M.channel.id)) ? r : B,
+        W = null != (o = D.Z.getCommandOrigin(M.channel.id)) ? o : G;
     null == M.autocomplete &&
         a.Z.dispatch({
             type: "APPLICATION_COMMAND_USED",
@@ -128,10 +128,10 @@ async function F(e) {
     if (null != A.options)
         for (let e of A.options) {
             let t;
-            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in D)) continue;
+            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in w)) continue;
             let n = (null == (l = M.autocomplete) ? void 0 : l.name) === e.name || void 0;
             if (e.type === c.jw.STRING) {
-                let r = null != (d = null == (u = R.li(D, e.name)) ? void 0 : u.trim()) ? d : "";
+                let r = null != (d = null == (u = R.li(w, e.name)) ? void 0 : u.trim()) ? d : "";
                 if (
                     (null != e.choices
                         ? (t = (0, P.cT)(e.choices, r))
@@ -164,7 +164,7 @@ async function F(e) {
                     });
                 continue;
             }
-            let r = R.OU(D[e.name]);
+            let r = R.OU(w[e.name]);
             if (
                 (i()(
                     null != M.autocomplete || 1 === r.length,
@@ -320,7 +320,7 @@ async function F(e) {
             application_command: A.rootCommand,
         },
         $ = () => {
-            V(D);
+            V(w);
         };
     null != k && (J.target_id = k),
         null != M.autocomplete
@@ -336,7 +336,7 @@ async function F(e) {
                   analytics_location: z(W),
                   sectionName: Z,
                   source: H,
-                  interactionLifecycleOptions: await B(A, M, J),
+                  interactionLifecycleOptions: await F(A, M, J),
               }));
 }
 let V = (e) => {
@@ -438,7 +438,7 @@ function W(e, t) {
 async function K(e, t, n) {
     var r;
     if (null == t.channel) return {};
-    let i = D.Nk(
+    let i = w.Nk(
         {
             channel: t.channel,
             type: "channel",
@@ -452,7 +452,7 @@ async function K(e, t, n) {
         try {
             await l.PR(i.botId);
         } catch (e) {}
-    let u = B(
+    let u = F(
         G(
             {},
             (0, E.ZP)({

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => O });
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -18,8 +18,8 @@ var r = n(120356),
     C = n(933557),
     y = n(354459),
     v = n(388032),
-    O = n(943856);
-function x(e) {
+    x = n(943856);
+function O(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         r = (0, C.ZP)(n),
         s = (0, f.s)(t, "RingToVoiceBanner", n.id),
@@ -33,8 +33,8 @@ function x(e) {
                 }
             );
         }),
-        x = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        j = null != x ? (0, g.EB)(x, 32, !0) : null,
+        O = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        j = null != O ? (0, g.EB)(O, 32, !0) : null,
         S = !s || (u && !m);
     return ((0, d.Z)(
         {
@@ -51,33 +51,33 @@ function x(e) {
     S)
         ? null
         : (0, i.jsxs)("div", {
-              className: l()(O.themed, O.chatHeaderBar),
+              className: l()(x.themed, x.chatHeaderBar),
               children: [
                   (0, i.jsxs)("div", {
-                      className: O.chatHeaderBarInfo,
+                      className: x.chatHeaderBarInfo,
                       children: [
                           (0, i.jsx)(h.ZP, {
-                              className: O.mask,
+                              className: x.mask,
                               mask: h.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
                                   null == j
                                       ? (0, i.jsx)("div", {
-                                            className: l()(O.guildIcon, O.guildIconWithoutImage),
+                                            className: l()(x.guildIcon, x.guildIconWithoutImage),
                                             children: (0, i.jsx)("div", {
-                                                className: O.guildAcronym,
-                                                children: null != x ? (0, g.gM)(x) : null,
+                                                className: x.guildAcronym,
+                                                children: null != O ? (0, g.gM)(O) : null,
                                             }),
                                         })
                                       : (0, i.jsx)("img", {
-                                            alt: null == x ? void 0 : x.name,
+                                            alt: null == O ? void 0 : O.name,
                                             src: j,
-                                            className: O.guildIcon,
+                                            className: x.guildIcon,
                                         }),
                           }),
                           (0, i.jsx)(c.Text, {
-                              className: O.chatHeaderBarText,
+                              className: x.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "text-default",
                               children: v.intl.format(v.t.f2tNxH, {

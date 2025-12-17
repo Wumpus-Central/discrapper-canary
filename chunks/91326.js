@@ -4,15 +4,15 @@ n(473749);
 var i = n(442837),
     l = n(471445),
     a = n(862099),
-    s = n(938475),
-    o = n(388032),
-    c = n(561223);
+    o = n(938475),
+    s = n(388032),
+    c = n(311630);
 let u = function (e) {
     let { name: t, channel: n } = e,
         u = (0, i.Wu)(
-            [s.ZP],
+            [o.ZP],
             () =>
-                s.ZP.getVoiceStatesForChannel(n).map((e) => {
+                o.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -20,9 +20,9 @@ let u = function (e) {
         ),
         d = (0, l.KS)(n);
     return (0, r.jsx)(a.gt, {
-        heading: o.intl.string(o.t["X2K3/4"]),
+        heading: s.intl.string(s.t["X2K3/4"]),
         topic: t,
-        location: o.intl.string(o.t.LZA6Na),
+        location: s.intl.string(s.t.LZA6Na),
         locationIcon:
             null != d
                 ? (0, r.jsx)(d, {

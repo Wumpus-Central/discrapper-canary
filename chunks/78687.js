@@ -3,8 +3,8 @@ var r = n(392711),
     i = n.n(r),
     l = n(442837),
     a = n(377108),
-    s = n(433517),
-    o = n(709054),
+    o = n(433517),
+    s = n(709054),
     c = n(48481),
     u = n(526761),
     d = n(981631);
@@ -91,14 +91,14 @@ let g = [
             );
         },
         cleanup() {
-            s.K.remove("StickersPersistedStore");
+            o.K.remove("StickersPersistedStore");
         },
     },
     {
         version: 4,
         run(e) {
             let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState("EmojiStore", [
-                () => ({ usageHistory: s.K.get("EmojiUsageHistory") || {} }),
+                () => ({ usageHistory: o.K.get("EmojiUsageHistory") || {} }),
             ]);
             if (null == t) return !1;
             let n = !1;
@@ -116,7 +116,7 @@ let g = [
             );
         },
         cleanup() {
-            s.K.remove("EmojiStore"), s.K.remove("EmojiUsageHistory"), s.K.remove("EmojiDiversitySurrogate");
+            o.K.remove("EmojiStore"), o.K.remove("EmojiUsageHistory"), o.K.remove("EmojiDiversitySurrogate");
         },
     },
     {
@@ -137,8 +137,8 @@ let g = [
                     e.favoriteGifs.gifs[i].order = l.order;
                     continue;
                 }
-                let s = a.JM.toBinary(l).length + i.length + 7;
-                n + s > u.vY || ((n += s), (e.favoriteGifs.gifs[i] = l));
+                let o = a.JM.toBinary(l).length + i.length + 7;
+                n + o > u.vY || ((n += o), (e.favoriteGifs.gifs[i] = l));
             }
             for (n = a.wK.toBinary(e.favoriteGifs).length; n > u.vY; ) {
                 let t = 0;
@@ -164,7 +164,7 @@ let g = [
             );
         },
         cleanup() {
-            s.K.remove("ApplicationCommandFrecency");
+            o.K.remove("ApplicationCommandFrecency");
         },
     },
     {
@@ -176,7 +176,7 @@ let g = [
             return (
                 i().size(t.favoriteSounds) > 0 &&
                     ((e.favoriteSoundboardSounds = a.h_.create()),
-                    o.default.keys(t.favoriteSounds).forEach((n) => {
+                    s.default.keys(t.favoriteSounds).forEach((n) => {
                         new Set(t.favoriteSounds[n]).forEach((t) => {
                             var n;
                             null == (n = e.favoriteSoundboardSounds) || n.soundIds.push(t);
@@ -187,13 +187,13 @@ let g = [
             );
         },
         cleanup() {
-            s.K.remove("SoundboardFavoriteStore");
+            o.K.remove("SoundboardFavoriteStore");
         },
     },
     {
         version: 9,
         run(e) {
-            let t = s.K.get(p);
+            let t = o.K.get(p);
             if (null == t) return !1;
             for (let e in t) d.Xyh.test(e) || delete t[e];
             return (
@@ -203,7 +203,7 @@ let g = [
             );
         },
         cleanup() {
-            s.K.remove(p);
+            o.K.remove(p);
         },
     },
     {

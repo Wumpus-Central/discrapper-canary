@@ -37,11 +37,11 @@ function y(e) {
         }),
         P = (0, a.e7)([d.Z], () => d.Z.getState().soundshareEnabled),
         R = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
-        D = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
-        w = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
+        w = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
+        D = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
         x = (0, m.Z)(O, C),
         L = (0, _.Z)(O, C, g.Vq),
-        j = null != A && D && (!A.startsWith("screen") || w),
+        j = null != A && w && (!A.startsWith("screen") || D),
         M = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)()),
         k = i.useCallback(() => {
             (null == A ? void 0 : A.startsWith("prepicked:"))
@@ -61,14 +61,14 @@ function y(e) {
             p.isPlatformEmbedded &&
             U &&
             (null != (y = null == N ? void 0 : N.applications.length) ? y : 0) > 0,
-        B = G
+        F = G
             ? b.intl.string(b.t.qDK8gQ)
             : Z
               ? b.intl.string(b.t["3m8w+Q"])
               : T
                 ? b.intl.string(b.t.eAktHv)
                 : b.intl.string(b.t.qntSal),
-        F = i.useCallback(() => {
+        B = i.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = d.Z.getState(),
                 r = {
                     qualityOptions: {
@@ -110,7 +110,7 @@ function y(e) {
                   id: "stream-settings-audio-enable",
                   label: T ? b.intl.string(b.t.af2Tw1) : b.intl.string(b.t.ZJEHt7),
                   checked: P,
-                  action: F,
+                  action: B,
               })
             : null,
         Y =
@@ -118,7 +118,7 @@ function y(e) {
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "change-windows",
-                      label: B,
+                      label: F,
                       icon: o.hGI,
                       action: k,
                   }),

@@ -9,12 +9,12 @@ var l,
     u = n(607070),
     d = n(745510),
     g = n(96698),
-    m = n(313201),
-    x = n(984933),
+    x = n(313201),
+    m = n(984933),
     h = n(430824),
     v = n(971130),
-    p = n(981888),
-    f = n(924301),
+    f = n(981888),
+    p = n(924301),
     j = n(482241),
     b = n(951539),
     y = n(545165),
@@ -30,8 +30,8 @@ var l,
     w = n(765305),
     k = n(981631),
     D = n(388032),
-    R = n(869939);
-function _(e) {
+    R = n(723009);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -56,7 +56,7 @@ function _(e) {
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: A, INVITE_OPTIONS_UNLIMITED: G } = v.ZP;
+let { INVITE_OPTIONS_7_DAYS: _, INVITE_OPTIONS_UNLIMITED: G } = v.ZP;
 var U =
     (((l = U || {})[(l.ENTITY = 0)] = "ENTITY"),
     (l[(l.SETTINGS = 1)] = "SETTINGS"),
@@ -136,15 +136,15 @@ function z(e) {
             guildEventId: l,
             isEdit: c,
             formErrors: d,
-            transitionState: x,
+            transitionState: m,
             loading: h,
             error: v,
-            onChange: p,
+            onChange: f,
             onSave: j,
             onClose: b,
             createdEvent: y,
         } = e,
-        O = (0, m.Dt)(),
+        O = (0, x.Dt)(),
         E = i.useRef(n),
         N = !(0, a.isEqual)(E.current, n),
         T = i.useMemo(
@@ -170,24 +170,24 @@ function z(e) {
             [d, c, N],
         ),
         w = Object.keys(U).length,
-        k = (0, f.xt)(n),
-        _ = (e) => Math.max(0, Math.min(e, w - 1)),
-        [A, G] = i.useState(+!!k),
+        k = (0, p.xt)(n),
+        A = (e) => Math.max(0, Math.min(e, w - 1)),
+        [_, G] = i.useState(+!!k),
         [z, F] = i.useState(!1),
         M = i.useMemo(
             () =>
-                T.slice(0, A + 1)
+                T.slice(0, _ + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
-            [T, A],
+            [T, _],
         ),
-        V = A >= T.length ? 3 : T[_(A)].slideId,
+        V = _ >= T.length ? 3 : T[A(_)].slideId,
         B = 3 === V;
     (0, C.l)((e) => e.onUpdateCanCloseModal)(B);
     let X = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         W = i.useRef(null),
         q = (e) => {
-            F(!1), G(_(e));
+            F(!1), G(A(e));
         },
         H = i.useRef(q);
     i.useEffect(() => {
@@ -197,16 +197,16 @@ function z(e) {
             (null == y ? void 0 : y.id) != null && H.current(3);
         }, [null == y ? void 0 : y.id]);
     let Y = () => {
-            M && (2 === V ? j() : B ? b() : q(A + 1));
+            M && (2 === V ? j() : B ? b() : q(_ + 1));
         },
         K = () => {
-            q(A - 1);
+            q(_ - 1);
         },
         J = D.intl.string(D.t.PDTjLN);
     return (
         2 === V && (J = c ? D.intl.string(D.t.e5VEcE) : D.intl.string(D.t["60lJ0C"])),
         (0, r.jsxs)(o.Y0X, {
-            transitionState: x,
+            transitionState: m,
             "aria-labelledby": O,
             size: o.CgR.DYNAMIC,
             parentComponent: "ScheduleEventModal",
@@ -221,9 +221,9 @@ function z(e) {
                         !B &&
                             (0, r.jsx)(g.Z, {
                                 steps: T.map((e) => e.label),
-                                stepIndex: A,
+                                stepIndex: _,
                                 onClick: (e) => {
-                                    e < A ? K() : e > A && Y();
+                                    e < _ ? K() : e > _ && Y();
                                 },
                             }),
                         (0, r.jsxs)(o.MyZ, {
@@ -240,7 +240,7 @@ function z(e) {
                                         guildEvent: n,
                                         validationErrorMessage: d.entity,
                                         isSlideReady: z,
-                                        onChange: p,
+                                        onChange: f,
                                     }),
                                 }),
                                 (0, r.jsx)(o.Mi4, {
@@ -249,7 +249,7 @@ function z(e) {
                                         guildEvent: n,
                                         guildEventId: l,
                                         guildId: t,
-                                        onChange: p,
+                                        onChange: f,
                                         error: v,
                                         validationErrorMessage: d.schedule,
                                         isSlideReady: z,
@@ -320,13 +320,13 @@ function z(e) {
 function F(e) {
     let { guildId: t, guildScheduledEventId: l, transitionState: a, onClose: u } = e;
     (0, s.e7)([h.Z], () => h.Z.getGuild(t));
-    let d = (0, s.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(l), [l]),
-        g = (0, s.e7)([x.ZP], () => x.ZP.getDefaultChannel(t), [t]),
-        m = (0, O.j$)(d, g),
-        [v, C] = i.useState(m),
+    let d = (0, s.e7)([p.ZP], () => p.ZP.getGuildScheduledEvent(l), [l]),
+        g = (0, s.e7)([m.ZP], () => m.ZP.getDefaultChannel(t), [t]),
+        x = (0, O.j$)(d, g),
+        [v, C] = i.useState(x),
         [P] = i.useState((0, O.Ql)(d)),
         [S, I] = i.useState(null),
-        [Z, { loading: R, error: U }] = (0, p.Z)(async () => {
+        [Z, { loading: R, error: U }] = (0, f.Z)(async () => {
             if (null != S) return;
             if (P && null != l) return await j.Z.saveEvent(l, v, t), u();
             let e = await j.Z.createGuildEvent(v, t);
@@ -339,7 +339,7 @@ function F(e) {
                         c.ZP.createInvite(
                             l,
                             {
-                                max_age: A.value,
+                                max_age: _.value,
                                 max_uses: G.value,
                             },
                             k.t4x.GUILD_EVENTS,
@@ -367,7 +367,7 @@ function F(e) {
                 (e.channelId = null != (n = null == r ? void 0 : r.id) ? n : null),
                     e.entityType !== w.WX.EXTERNAL && v.entityType === w.WX.EXTERNAL && (e.entityMetadata = null);
             }
-            C((t) => _({}, t, e));
+            C((t) => A({}, t, e));
         },
         onSave: () => {
             null != v.recurrenceRule && P && (0, N.BP)(d, v)
@@ -377,7 +377,7 @@ function F(e) {
                           var n, l;
                           return (0, r.jsxs)(
                               e,
-                              ((n = _({}, t)),
+                              ((n = A({}, t)),
                               (l = l =
                                   {
                                       header: D.intl.string(D.t.BW1Qoh),

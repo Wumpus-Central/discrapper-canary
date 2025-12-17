@@ -12,18 +12,18 @@ var l = n(54381),
     g = n(471445),
     m = n(313201),
     p = n(565138),
-    x = n(592125),
-    b = n(984933),
-    _ = n(430824),
-    f = n(496675),
-    C = n(699516),
-    j = n(944486),
-    y = n(594174),
+    f = n(592125),
+    x = n(984933),
+    b = n(430824),
+    C = n(496675),
+    j = n(699516),
+    y = n(944486),
+    _ = n(594174),
     N = n(626135),
     Z = n(709054),
     v = n(981631),
     M = n(388032),
-    S = n(394330);
+    S = n(481073);
 function O(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ class w extends r.PureComponent {
     getDefaultChannelId(e) {
         let t = e.find((e) => {
                 let { channel: t } = e;
-                return "general" === (0, u.F6)(t, y.default, C.Z);
+                return "general" === (0, u.F6)(t, _.default, j.Z);
             }),
             n = null != t ? t : e[0];
         return null != n ? n.channel.id : null;
@@ -89,7 +89,7 @@ class w extends r.PureComponent {
                 let { channel: t, category: n } = e;
                 return {
                     value: t.id,
-                    label: (0, u.F6)(t, y.default, C.Z),
+                    label: (0, u.F6)(t, _.default, j.Z),
                     channel: t,
                     category: n,
                 };
@@ -303,16 +303,16 @@ class w extends r.PureComponent {
     }
 }
 let F = s.ZP.connectStores(
-    [_.Z, x.Z, b.ZP, f.Z, j.Z],
+    [b.Z, f.Z, x.ZP, C.Z, y.Z],
     (e) => {
         let { channel: t } = e,
-            n = _.Z.getGuild(t.guild_id),
-            l = _.Z.getGuildsArray().reduce((e, t) => {
-                let n = b.ZP.getChannels(t.id)
+            n = b.Z.getGuild(t.guild_id),
+            l = b.Z.getGuildsArray().reduce((e, t) => {
+                let n = x.ZP.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
-                    .filter((e) => e.type === v.d4z.GUILD_TEXT && f.Z.can(v.Plq.MANAGE_WEBHOOKS, e))
+                    .filter((e) => e.type === v.d4z.GUILD_TEXT && C.Z.can(v.Plq.MANAGE_WEBHOOKS, e))
                     .map((e) => {
-                        let t = x.Z.getChannel(e.parent_id);
+                        let t = f.Z.getChannel(e.parent_id);
                         return {
                             channel: e,
                             category: null != t ? t.name : null,
@@ -327,7 +327,7 @@ let F = s.ZP.connectStores(
                     e
                 );
             }, {}),
-            r = j.Z.getLastChannelFollowingDestination();
+            r = y.Z.getLastChannelFollowingDestination();
         return {
             guildToFollow: n,
             channelNameToFollow: t.name,

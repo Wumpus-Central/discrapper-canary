@@ -8,25 +8,25 @@ var i = n(54381),
     c = n(668781),
     d = n(139387),
     u = n(308063),
-    p = n(259580),
-    m = n(768581),
-    b = n(486199),
+    m = n(259580),
+    b = n(768581),
+    p = n(486199),
     g = n(981631),
     f = n(388032),
-    h = n(941678);
+    h = n(546151);
 function x(e) {
     let { webhook: t, editedWebhook: n, channelOptions: x, isExpanded: j, errors: v, onToggleExpand: O } = e,
         y = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
-                : (0, m.ov)({
+                : (0, b.ov)({
                       id: t.id,
                       avatar: e,
                       discriminator: g.fo$,
                   });
         }, [t]),
-        _ = r.useCallback(() => {
+        C = r.useCallback(() => {
             (0, o.Z)({
                 title: f.intl.formatToPlainString(f.t.gBKqZ0, { name: t.name }),
                 subtitle: f.intl.string(f.t.zO9jrD),
@@ -41,14 +41,14 @@ function x(e) {
                 },
             });
         }, [t.guild_id, t.id, t.name]),
-        C = [];
+        N = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (C.push({
+        (N.push({
             icon: s.MqZ,
             text: t.source_channel.name,
         }),
-        C.push({
+        N.push({
             text: (0, i.jsx)(
                 "span",
                 {
@@ -68,11 +68,11 @@ function x(e) {
                 "guild-source",
             ),
         }));
-    let N = null;
+    let S = null;
     return (
         j &&
             null != n &&
-            (N = (0, i.jsxs)("div", {
+            (S = (0, i.jsxs)("div", {
                 className: h.body,
                 children: [
                     (0, i.jsx)(s.izJ, { className: h.topDivider }),
@@ -104,7 +104,7 @@ function x(e) {
                             }),
                             (0, i.jsx)(s.izJ, { className: h.bottomDivider }),
                             (0, i.jsx)(l.Avr, {
-                                onClick: _,
+                                onClick: C,
                                 size: "sm",
                                 variant: "critical",
                                 text: f.intl.string(f.t.CMy0Cj),
@@ -127,12 +127,12 @@ function x(e) {
                             justify: "space-between",
                             align: "center",
                             children: [
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(p.Z, {
                                     name: t.name,
                                     imageSrc: y,
-                                    details: C,
+                                    details: N,
                                 }),
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(m.Z, {
                                     className: h.expandIcon,
                                     expanded: j,
                                     "aria-hidden": !0,
@@ -140,7 +140,7 @@ function x(e) {
                             ],
                         }),
                     }),
-                    N,
+                    S,
                 ],
             }),
         })

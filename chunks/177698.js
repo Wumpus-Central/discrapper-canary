@@ -4,8 +4,8 @@ n(473749);
 var i = n(481060),
     l = n(531826),
     a = n(812206),
-    s = n(69580),
-    o = n(787025),
+    o = n(69580),
+    s = n(787025),
     c = n(397394),
     u = n(358085),
     d = n(998502),
@@ -14,7 +14,7 @@ var i = n(481060),
     g = n(852926),
     h = n(981631),
     m = n(388032);
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,17 +95,17 @@ let E = (0, f.Z)(
                 : a.context === h.IlC.POPOUT && (w = i.u1M);
             let R = !1,
                 D = (l) => {
-                    let { clientId: s, location: o } = l;
-                    if (null == s || s === n) {
-                        if (((R = !0), null == o)) {
+                    let { clientId: o, location: s } = l;
+                    if (null == o || o === n) {
+                        if (((R = !0), null == s)) {
                             t(new p.Z({ errorCode: h.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 a.lock();
                             return;
                         }
-                        if ((e(o), null == O || null == L)) return void a.lock();
-                        null == new URL(o).searchParams.get("error")
+                        if ((e(s), null == O || null == L)) return void a.lock();
+                        null == new URL(s).searchParams.get("error")
                             ? (0, i.h7j)(
-                                  (e) => (0, r.jsx)(c.$0, _({ application: L }, e)),
+                                  (e) => (0, r.jsx)(c.$0, b({ application: L }, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
@@ -114,7 +114,7 @@ let E = (0, f.Z)(
                                   w,
                               )
                             : (0, i.h7j)(
-                                  (e) => (0, r.jsx)(c.ks, _({}, e)),
+                                  (e) => (0, r.jsx)(c.ks, b({}, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
@@ -129,8 +129,8 @@ let E = (0, f.Z)(
                         (0, i.Mr3)(e) &&
                             (0, i.h7j)((e) =>
                                 (0, r.jsx)(
-                                    o.j,
-                                    b(_({}, e), {
+                                    s.j,
+                                    _(b({}, e), {
                                         title: m.intl.string(m.t.j2d6Km),
                                         subtitle: m.intl.string(m.t["4LKmN5"]),
                                         actions: [
@@ -155,8 +155,8 @@ let E = (0, f.Z)(
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
-                        s.OAuth2AuthorizeModal,
-                        b(_({}, e), {
+                        o.OAuth2AuthorizeModal,
+                        _(b({}, e), {
                             authorizations: u,
                             clientId: n,
                             scopes: null != d ? d : [],

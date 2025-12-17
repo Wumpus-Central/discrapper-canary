@@ -123,14 +123,14 @@ async function R(e) {
     }
     throw Error("could not find launchable");
 }
-function D(e, t, n) {
+function w(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (e()) return void t();
     setTimeout(() => {
-        r * I <= T ? D(e, t, n, r + 1) : n();
+        r * I <= T ? w(e, t, n, r + 1) : n();
     }, I);
 }
-function w(e) {
+function D(e) {
     return (
         y.info("launch", e),
         new Promise((t, n) => {
@@ -141,15 +141,15 @@ function w(e) {
     );
 }
 let x = {
-    waitSubscribed: (e, t) => new Promise((n, r) => D(() => o.Z.isSubscribed(e, t), n, r)),
+    waitSubscribed: (e, t) => new Promise((n, r) => w(() => o.Z.isSubscribed(e, t), n, r)),
     waitConnected(e) {
-        return new Promise(D.bind(this, () => l.Z.isConnected(e)));
+        return new Promise(w.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
         R(N(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => R(N(e)).then(w),
+    launch: (e) => R(N(e)).then(D),
     launchDispatchApplication(e, t, n, i, o) {
         let {
             launchOptions: l,
@@ -205,7 +205,7 @@ let x = {
         R(P(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : R(P(e)).then(w)),
+    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : R(P(e)).then(D)),
     isProtocolRegistered: (e) =>
         A()
             .then((t) => {

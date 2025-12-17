@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(203143),
     o = n(615669),
     a = n(388032);
-let s = {
+let c = {
     [o.z.END_EARLY]: (e) =>
         (0, r.jsx)(i.sNh, {
             id: "end-poll-early",
@@ -20,7 +20,7 @@ let s = {
             iconProps: { color: "currentColor" },
         }),
 };
-function c(e) {
+function s(e) {
     let t = (0, o.Z)(e);
-    return 0 === t.length ? null : (0, r.jsx)(r.Fragment, { children: t.map((t) => s[t](e)) });
+    return 0 === t.length ? null : (0, r.jsx)(r.Fragment, { children: t.map((t) => c[t](e)) });
 }

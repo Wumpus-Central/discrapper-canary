@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => a,
+    G: () => s,
     Z: () => o,
 });
 var r,
@@ -29,7 +29,7 @@ function i(e) {
     }
     return e;
 }
-function s(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -47,26 +47,26 @@ function s(e, t) {
         e
     );
 }
-var a = (((r = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (r.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX"), r);
+var s = (((r = {}).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT"), (r.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX"), r);
 function o(e, t) {
     switch (t.type) {
         case l.Us.NAVIGATE_UP:
-            return s(i({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
+            return a(i({}, e), { focusedIndex: Math.max(0, e.focusedIndex - 1) });
         case l.Us.NAVIGATE_DOWN:
-            return s(i({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
+            return a(i({}, e), { focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1) });
         case l.Us.NAVIGATE_START:
-            return s(i({}, e), { focusedIndex: 0 });
+            return a(i({}, e), { focusedIndex: 0 });
         case l.Us.NAVIGATE_END:
-            return s(i({}, e), { focusedIndex: e.itemCount - 1 });
+            return a(i({}, e), { focusedIndex: e.itemCount - 1 });
         case "UPDATE_ITEM_COUNT":
             let { itemCount: n } = t;
-            return s(i({}, e), {
+            return a(i({}, e), {
                 itemCount: n,
                 focusedIndex: Math.min(n - 1, e.focusedIndex),
             });
         case "SET_FOCUSED_INDEX":
             let { index: r } = t;
-            return s(i({}, e), { focusedIndex: Math.max(0, Math.min(r, e.itemCount - 1)) });
+            return a(i({}, e), { focusedIndex: Math.max(0, Math.min(r, e.itemCount - 1)) });
         case l.Us.SELECT_FOCUSED_ITEM:
             break;
         default:

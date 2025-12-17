@@ -80,12 +80,12 @@ function I(e) {
         A = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
         [N, P] = i.useState(null),
         R = (0, _.Z)(),
-        D = c.ZP.canUseCustomBackgrounds(A);
+        w = c.ZP.canUseCustomBackgrounds(A);
     i.useEffect(() => {
         (0, u.XV)();
     }, []);
-    let w = (0, a.cj)([d.Z], () => (D ? d.Z.videoFilterAssets : {})),
-        x = i.useMemo(() => Object.values(w).filter((e) => e.type === h.xV.BACKGROUND), [w]),
+    let D = (0, a.cj)([d.Z], () => (w ? d.Z.videoFilterAssets : {})),
+        x = i.useMemo(() => Object.values(D).filter((e) => e.type === h.xV.BACKGROUND), [D]),
         L = (0, s.O)(),
         j = {
             isVideoBackgroundSupported: R,
@@ -140,7 +140,7 @@ function I(e) {
                   label: b.intl.string(b.t.lZTUPs),
                   errorMessage: N,
                   children: (0, r.jsx)(m.Z, {
-                      canUseCustomBackgrounds: D,
+                      canUseCustomBackgrounds: w,
                       customBackgroundOptions: x,
                       selectedOption: y,
                       onSelectOption: U,

@@ -9,12 +9,12 @@ var a = n(54381),
     d = n(944486),
     u = n(594174),
     m = n(5192),
-    g = n(178762),
-    f = n(91140),
+    f = n(178762),
+    g = n(91140),
     p = n(297781),
     x = n(388032),
-    v = n(192025),
-    h = n(226788);
+    v = n(320677),
+    h = n(452379);
 let j = (e) => {
     let {
             entry: t,
@@ -22,30 +22,30 @@ let j = (e) => {
             onReaction: r,
             onRequestOpen: j,
             disableActivityProfileLinks: b,
-            customCTA: _,
-            popoutClassname: y,
-            popoutPosition: I = "right",
+            customCTA: I,
+            popoutClassname: O,
+            popoutPosition: y = "right",
         } = e,
-        O = i.useRef(null),
-        P = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
-        w = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
-        { nick: E, avatar: C } = i.useMemo(() => {
-            let e = null == w ? void 0 : w.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
+        P = i.useRef(null),
+        w = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
+        E = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
+        { nick: C, avatar: N } = i.useMemo(() => {
+            let e = null == E ? void 0 : E.getAvatarURL(null == w ? void 0 : w.guild_id, 48, !1);
             return {
-                nick: m.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, w),
+                nick: m.ZP.getName(null == w ? void 0 : w.guild_id, null == w ? void 0 : w.id, E),
                 avatar: e,
             };
-        }, [w, P]);
-    return null == w
+        }, [E, w]);
+    return null == E
         ? null
         : (0, a.jsx)(s.yRy, {
-              targetElementRef: O,
-              position: I,
+              targetElementRef: P,
+              position: y,
               renderPopout: (e) => {
                   let { closePopout: i, updatePosition: l } = e;
                   return (0, a.jsx)("div", {
-                      className: y,
-                      children: (0, a.jsx)(g.J, {
+                      className: O,
+                      children: (0, a.jsx)(f.J, {
                           entry: t,
                           closePopout: i,
                           updatePopoutPosition: l,
@@ -90,7 +90,7 @@ let j = (e) => {
                                   });
                           }
                           return e;
-                      })({ innerRef: O }, e)),
+                      })({ innerRef: P }, e)),
                       (i = i =
                           {
                               className: v.profileEntryCard,
@@ -105,8 +105,8 @@ let j = (e) => {
                                       children: [
                                           (0, a.jsx)("img", {
                                               className: v.avatar,
-                                              src: C,
-                                              alt: x.intl.formatToPlainString(x.t.IzVXxY, { userName: E }),
+                                              src: N,
+                                              alt: x.intl.formatToPlainString(x.t.IzVXxY, { userName: C }),
                                           }),
                                           (0, a.jsx)("div", {
                                               className: v.playerInfo,
@@ -117,17 +117,17 @@ let j = (e) => {
                                                           variant: "text-md/medium",
                                                           color: "text-strong",
                                                           lineClamp: 1,
-                                                          children: E,
+                                                          children: C,
                                                       }),
                                                       (0, a.jsx)(p.Gk, {
                                                           location: p.Gt.APP_LAUNCHER,
-                                                          children: f.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n)),
+                                                          children: g.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n)),
                                                       }),
                                                   ],
                                               }),
                                           }),
-                                          null != _
-                                              ? _
+                                          null != I
+                                              ? I
                                               : (0, a.jsx)("div", {
                                                     className: v.reactions,
                                                     children: (0, a.jsx)(s.n$P, { size: "sm" }),

@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(96848),
     g = n(703926),
     E = n(388032),
-    b = n(611344);
+    b = n(940909);
 function y(e, t, n) {
     return (
         t in e
@@ -100,8 +100,8 @@ let C = (e) => {
             setEmojiConfetti: N,
             setSoundEffect: P,
         } = (0, c.wD)(),
-        [R, D] = i.useState(!1),
-        w = i.useRef(null),
+        [R, w] = i.useState(!1),
+        D = i.useRef(null),
         x = (0, s.Jb)({ orientation: "horizontal" }),
         { ref: L } = x,
         j = I(x, ["ref"]),
@@ -110,7 +110,7 @@ let C = (e) => {
         U = M !== d.xr.DEFAULT,
         G = (0, _.m)(),
         Z = (0, p.Z)({ location: "GiftAnimationOptions" }),
-        B = (e) => {
+        F = (e) => {
             null != P && P(null == e ? void 0 : e);
         };
     return (0, r.jsxs)("div", {
@@ -134,7 +134,7 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(u.Z, {
                                         sound: A,
-                                        onSelect: B,
+                                        onSelect: F,
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         setEmojiConfetti: N,
@@ -152,7 +152,7 @@ let C = (e) => {
                             tabIndex: null != v || R ? void 0 : 0,
                             onFocus: (e) => {
                                 var t;
-                                e.target === e.currentTarget && (null == (t = w.current) || t.focus());
+                                e.target === e.currentTarget && (null == (t = D.current) || t.focus());
                             },
                             className: o()(b.giftBoxOptionContainer, a),
                             "aria-label": E.intl.string(E.t.v54NrN),
@@ -171,9 +171,9 @@ let C = (e) => {
                                         isSelected: v === e,
                                         giftStyle: e,
                                         setSelectedGiftStyle: T,
-                                        ref: 0 === t ? w : null,
-                                        onFocus: () => D(!0),
-                                        onBlur: () => D(!1),
+                                        ref: 0 === t ? D : null,
+                                        onFocus: () => w(!0),
+                                        onBlur: () => w(!1),
                                     },
                                     e,
                                 ),

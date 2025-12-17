@@ -1,27 +1,27 @@
 n.d(t, { Z: () => m }), n(388685);
 var i = n(54381),
     r = n(473749),
-    l = n(442837),
-    o = n(638730),
-    a = n(167762),
+    a = n(442837),
+    l = n(638730),
+    o = n(167762),
     s = n(293273),
     c = n(594174),
     u = n(444295),
     d = n(603618),
-    h = n(388627),
-    p = n(981631),
-    f = n(275525);
+    f = n(388627),
+    h = n(981631),
+    p = n(370892);
 function m(e) {
     let { locked: t } = e,
-        n = (0, h.II)(),
+        n = (0, f.II)(),
         m = null == n ? void 0 : n.id,
         g = null == n ? void 0 : n.altId,
-        y = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        O = null != g ? g : m,
-        [v, E] = r.useState(new Set()),
-        [b, _] = r.useState(new Set()),
-        S = r.useCallback((e, t, n) => {
-            E((n) => {
+        b = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        y = null != g ? g : m,
+        [O, v] = r.useState(new Set()),
+        [E, S] = r.useState(new Set()),
+        x = r.useCallback((e, t, n) => {
+            v((n) => {
                 if (t) {
                     if (n.has(e)) return n;
                     n.add(e);
@@ -31,7 +31,7 @@ function m(e) {
                 }
                 return new Set(n);
             }),
-                _((i) => {
+                S((i) => {
                     if (n && t) {
                         if (i.has(e)) return i;
                         i.add(e);
@@ -42,74 +42,74 @@ function m(e) {
                     return new Set(i);
                 });
         }, []),
-        x = (0, u.ee)(() => v, [v]),
-        I = (0, u.ee)(() => b, [b]),
-        j = (0, o.h)(u.zi, 3000, []);
+        I = (0, u.ee)(() => O, [O]),
+        C = (0, u.ee)(() => E, [E]),
+        j = (0, l.h)(u.zi, 3000, []);
     r.useEffect(() => {
-        0 === x.size ||
+        0 === I.size ||
             t ||
-            j(p.Odu.FRIENDS, {
+            j(h.Odu.FRIENDS, {
                 locked: t,
-                shownUserIds: Array.from(x),
-                liveUserIds: Array.from(I),
+                shownUserIds: Array.from(I),
+                liveUserIds: Array.from(C),
                 contentInventoryIds: [],
             });
-    }, [x, I, t, j]);
-    let C = (0, l.e7)([s.Z], () => (null == O ? null : s.Z.getApplicationActivity(O)), [O]),
+    }, [I, C, t, j]);
+    let _ = (0, a.e7)([s.Z], () => (null == y ? null : s.Z.getApplicationActivity(y)), [y]),
         Z = (0, r.useCallback)((e, t) => {
             let n = (function (e) {
                 switch (e) {
-                    case a.sG.OPEN_DIRECT_MESSAGE:
+                    case o.sG.OPEN_DIRECT_MESSAGE:
                         return {
                             type: u.Qu.FRIEND_LIST,
                             value: u.bk.CHAT,
                         };
-                    case a.sG.ACCEPT_FRIEND_REQUEST:
+                    case o.sG.ACCEPT_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
                             value: u.bk.ACCEPT_REQUEST,
                         };
-                    case a.sG.DECLINE_FRIEND_REQUEST:
+                    case o.sG.DECLINE_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
                             value: u.bk.DECLINE_REQUEST,
                         };
-                    case a.sG.CANCEL_FRIEND_REQUEST:
+                    case o.sG.CANCEL_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
                             value: u.bk.CANCEL_REQUEST,
                         };
-                    case a.sG.SEND_FRIEND_REQUEST:
+                    case o.sG.SEND_FRIEND_REQUEST:
                         return {
                             type: u.Qu.FRIEND_REQUEST,
                             value: u.bk.SEND_REQUEST,
                         };
-                    case a.sG.SEND_ACTIVITY_INVITE:
+                    case o.sG.SEND_ACTIVITY_INVITE:
                         return {
                             type: u.Qu.INVITE,
                             value: u.bk.INVITE_SENT,
                         };
-                    case a.sG.ASK_TO_JOIN:
+                    case o.sG.ASK_TO_JOIN:
                         return {
                             type: u.Qu.INVITE,
                             value: u.bk.JOIN_REQUEST_SENT,
                         };
-                    case a.sG.USER_CONTEXT_MENU:
+                    case o.sG.USER_CONTEXT_MENU:
                         return {
                             type: u.Qu.FRIEND_LIST,
                             value: u.bk.SETTINGS_OPENED,
                         };
-                    case a.sG.OPEN_FRIEND_MODAL:
+                    case o.sG.OPEN_FRIEND_MODAL:
                         return {
                             type: u.Qu.FRIEND_LIST,
                             value: u.bk.PROFILE_OPENED,
                         };
-                    case a.sG.OPEN_SETTINGS_MODAL:
+                    case o.sG.OPEN_SETTINGS_MODAL:
                         return {
                             type: u.Qu.FRIEND_LIST,
                             value: u.bk.SETTINGS_OPENED,
                         };
-                    case a.sG.SEARCH_FRIENDS:
+                    case o.sG.SEARCH_FRIENDS:
                         return {
                             type: u.Qu.FRIEND_LIST,
                             value: u.bk.SEARCH,
@@ -121,7 +121,7 @@ function m(e) {
             if (null != n) {
                 var i, r;
                 (0, u.Ws)(
-                    p.Odu.FRIENDS,
+                    h.Odu.FRIENDS,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -168,21 +168,21 @@ function m(e) {
         w = (0, r.useCallback)(
             () =>
                 (0, i.jsx)(d.lE, {
-                    activity: C,
-                    currentUser: y,
+                    activity: _,
+                    currentUser: b,
                     showInviteButton: !1,
                 }),
-            [C, y],
+            [_, b],
         );
     return t
         ? null
-        : (0, i.jsx)(a.r1, {
-              containerClassName: f.container,
-              listClassName: f.list,
+        : (0, i.jsx)(o.r1, {
+              containerClassName: p.container,
+              listClassName: p.list,
               closePopout: N,
               renderHeader: w,
-              appContext: p.IlC.OVERLAY,
+              appContext: h.IlC.OVERLAY,
               onAction: Z,
-              onFriendVisible: S,
+              onFriendVisible: x,
           });
 }

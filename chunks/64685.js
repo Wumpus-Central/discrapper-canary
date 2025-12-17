@@ -4,9 +4,9 @@ r(473749);
 var i = r(159691),
     o = r(481060),
     l = r(847033),
-    s = r(544978),
-    c = r(388032),
-    a = r(790632);
+    c = r(544978),
+    s = r(388032),
+    a = r(250210);
 function d() {
     let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, l.m)();
     return t
@@ -23,14 +23,14 @@ function d() {
                               variant: "text-sm/normal",
                               className: a.previewNoticeText,
                               children:
-                                  e === s.y.GUILD_PRODUCTS_PREVIEW
-                                      ? c.intl.string(c.t.F4Z0nV)
-                                      : c.intl.string(c.t.pzTFpM),
+                                  e === c.y.GUILD_PRODUCTS_PREVIEW
+                                      ? s.intl.string(s.t.F4Z0nV)
+                                      : s.intl.string(s.t.pzTFpM),
                           }),
                       ],
                   }),
                   (0, n.jsx)(i.zxk, {
-                      text: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pV) : c.intl.string(c.t.r30bky),
+                      text: e === c.y.GUILD_PRODUCTS_PREVIEW ? s.intl.string(s.t.YF35pV) : s.intl.string(s.t.r30bky),
                       size: "sm",
                       variant: "secondary",
                       onClick: r,

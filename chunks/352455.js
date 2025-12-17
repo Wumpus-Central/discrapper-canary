@@ -4,17 +4,17 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    s = n(924628),
-    o = n(548816),
+    o = n(924628),
+    s = n(548816),
     c = n(313789),
     u = n(518596),
     d = n(981631),
     p = n(921944),
     f = n(388032),
-    g = n(466653);
+    g = n(915724);
 function h(e) {
     let { className: t, markAsDismissed: n } = e;
-    return (0, r.jsxs)(o.Z, {
+    return (0, r.jsxs)(s.Z, {
         className: l()(g.card, t),
         children: [
             (0, r.jsx)(a.Heading, {
@@ -38,7 +38,7 @@ function h(e) {
                         size: "sm",
                         fullWidth: !0,
                         text: f.intl.string(f.t.ebojgD),
-                        onClick: () => (0, s.g)([d.pjP.PERSONALIZATION], []),
+                        onClick: () => (0, o.g)([d.pjP.PERSONALIZATION], []),
                     }),
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",

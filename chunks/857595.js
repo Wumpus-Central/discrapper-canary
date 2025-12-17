@@ -12,7 +12,7 @@ n.d(t, {
     eN: () => N,
     f1: () => m,
     gs: () => I,
-    ky: () => D,
+    ky: () => w,
     lq: () => h,
     o2: () => b,
     oL: () => u,
@@ -156,7 +156,7 @@ function R(e) {
         contrastMode: e,
     });
 }
-function D(e) {
+function w(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED",
         switchIconsEnabled: e,

@@ -24,7 +24,7 @@ var r = n(54381),
     T = n(666984),
     C = n(670451),
     A = n(671955),
-    N = n(704543);
+    N = n(251806);
 function P(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,19 +66,19 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function x(e) {
-    let { user: t, currentUser: n, activity: a, className: P, onClose: D } = e,
+    let { user: t, currentUser: n, activity: a, className: P, onClose: w } = e,
         x = (0, _.Dt)(),
         L = (0, _.Dt)(),
         { themeType: j } = (0, b.z)(),
@@ -90,16 +90,16 @@ function x(e) {
         U = null != k.text && "" !== k.text,
         { largeImage: G } = (0, d.FO)(a),
         { analyticsLocations: Z } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        B = (0, h.Z)({
+        F = (0, h.Z)({
             display: "live",
             user: t,
             activity: a,
             entry: M,
             analyticsLocations: Z,
         }),
-        F = (0, g.Z)({
+        B = (0, g.Z)({
             userId: t.id,
-            onAction: B,
+            onAction: F,
         });
     if (!(0, l.Z)(a)) return null;
     let V = () => {
@@ -123,7 +123,7 @@ function x(e) {
                                             className: o()(N.clickableText, N.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(),
-                                                    B({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                    F({ action: "OPEN_SPOTIFY_ARTIST" }),
                                                     (0, m.d$)(a, t.id, n);
                                             },
                                             children: e,
@@ -155,27 +155,27 @@ function x(e) {
                       children: (0, r.jsx)(T.Z, {
                           user: t,
                           activity: a,
-                          onAction: B,
+                          onAction: F,
                       }),
                   });
     return (0, r.jsx)(u.Gt, {
         value: Z,
         children: (0, r.jsxs)(O.Z, {
-            ref: F,
+            ref: B,
             className: o()(N.card, P),
-            onAction: B,
-            onClose: D,
+            onAction: F,
+            onClose: w,
             "aria-labelledby": U ? "".concat(L, " ").concat(x) : x,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    w(R({ textId: L }, k), {
+                    D(R({ textId: L }, k), {
                         contextMenu: (0, r.jsx)(C.Z, {
                             display: "live",
                             user: t,
                             activity: a,
                             entry: M,
-                            onClose: D,
+                            onClose: w,
                         }),
                     }),
                 ),
@@ -189,7 +189,7 @@ function x(e) {
                                 size: j === A.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: N.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), B({ action: "OPEN_SPOTIFY_ALBUM" }), (0, m.Z5)(a, t.id);
+                                    e.stopPropagation(), F({ action: "OPEN_SPOTIFY_ALBUM" }), (0, m.Z5)(a, t.id);
                                 },
                             }),
                             (0, r.jsxs)("div", {
@@ -201,7 +201,7 @@ function x(e) {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    B({ action: "OPEN_SPOTIFY_TRACK" }), (0, m.aG)(a);
+                                                    F({ action: "OPEN_SPOTIFY_TRACK" }), (0, m.aG)(a);
                                                 },
                                                 id: x,
                                             }),

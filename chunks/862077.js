@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(907179),
     E = n(671955),
     b = n(388032),
-    y = n(637079),
+    y = n(854000),
     O = n(609440);
 function v(e, t, n) {
     return (
@@ -59,10 +59,11 @@ function I(e) {
             onHide: N,
             newAnalyticsLocations: P = [],
             disableAutoFocus: R = !1,
+            onClickContainer: w,
         } = e,
         D = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        { analyticsLocations: w } = (0, l.ZP)([...P, D ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
-        x = (0, d.ZB)({
+        { analyticsLocations: x } = (0, l.ZP)([...P, D ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
+        L = (0, d.ZB)({
             layout: "POPOUT",
             userId: t.id,
             guildId: n,
@@ -70,27 +71,28 @@ function I(e) {
             messageId: T,
             roleId: C,
         }),
-        L = i.useRef(null),
-        j = (0, p.ZP)(t.id, n);
+        j = i.useRef(null),
+        M = (0, p.ZP)(t.id, n);
     i.useEffect(() => {
-        null == v || v(null == L ? void 0 : L.current);
-    }, [L, v]);
-    let M = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        k = R ? "div" : o.VqE;
+        null == v || v(null == j ? void 0 : j.current);
+    }, [j, v]);
+    let k = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        U = R ? "div" : o.VqE;
     return (0, r.jsx)(l.Gt, {
-        value: w,
+        value: x,
         children: (0, r.jsx)(d.Mt, {
-            value: x,
+            value: L,
             openedAt: A,
-            fetchStartedAt: null == j ? void 0 : j.fetchStartedAt,
-            fetchEndedAt: null == j ? void 0 : j.fetchEndedAt,
-            isLoaded: null == j ? void 0 : j.isLoaded,
-            children: (0, r.jsx)(k, {
-                ref: L,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
+            children: (0, r.jsx)(U, {
+                ref: j,
                 "aria-label": t.username,
+                onClick: w,
                 children: (0, r.jsx)(m.Z, {
                     user: t,
-                    displayProfile: j,
+                    displayProfile: M,
                     themeType: E.l.POPOUT,
                     children: (0, r.jsxs)("div", {
                         className: y.container,
@@ -133,10 +135,10 @@ function I(e) {
                                                         (0, f.pQ)(
                                                             S(
                                                                 {
-                                                                    action: M,
-                                                                    analyticsLocations: w,
+                                                                    action: k,
+                                                                    analyticsLocations: x,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },
@@ -149,9 +151,9 @@ function I(e) {
                                                             S(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                                    analyticsLocations: w,
+                                                                    analyticsLocations: x,
                                                                 },
-                                                                x,
+                                                                L,
                                                             ),
                                                         );
                                                 },

@@ -27,13 +27,13 @@ var r = n(54381),
     N = n(594174),
     P = n(626135),
     R = n(74538),
-    D = n(413182),
-    w = n(695346),
+    w = n(413182),
+    D = n(695346),
     x = n(265159),
     L = n(532495),
     j = n(981631),
     M = n(388032),
-    k = n(391371);
+    k = n(581571);
 function U(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function Z(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function B(e, t) {
         e
     );
 }
-function F(e, t) {
+function B(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -116,7 +116,7 @@ function H() {
         n = (0, s.e7)([C.Z], () => C.Z.hidePersonalInformation),
         a = (0, s.cj)([A.Z], () => A.Z.getAllPending()),
         { pendingBio: U, pendingAvatar: Z, pendingNameplate: V } = a,
-        H = F(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        H = B(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
         Y = (0, T.SD)({
             userId: t.id,
             image: Z,
@@ -126,12 +126,12 @@ function H() {
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
         K = (0, s.e7)([A.Z], () => A.Z.showNotice()),
-        z = w.dN.useSetting() && null != U ? h.ZP.parse(void 0, U).content : U,
+        z = D.dN.useSetting() && null != U ? h.ZP.parse(void 0, U).content : U,
         q = R.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: Q, newestAnalyticsLocation: X } = (0, _.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
     i.useEffect(() => () => u.Z.wait(d.W3), []);
     let [J, $] = i.useState(!1),
-        { showRedesign: ee } = D.b.useExperiment({ location: "profile customization" }),
+        { showRedesign: ee } = w.b.useExperiment({ location: "profile customization" }),
         et = !q,
         en = i.useRef(null);
     return n
@@ -143,7 +143,7 @@ function H() {
                   (0, r.jsx)(O.Z, {
                       profilePreview: (0, r.jsx)(
                           v.Z,
-                          B(
+                          F(
                               G(
                                   {
                                       user: t,
@@ -158,7 +158,7 @@ function H() {
                       ),
                       nameplatePreview: (0, r.jsx)(
                           g.Z,
-                          B(
+                          F(
                               G(
                                   {
                                       user: t,

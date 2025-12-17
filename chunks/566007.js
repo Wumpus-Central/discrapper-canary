@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var r = n(54381);
 n(473749);
 var i = n(436846),
-    l = n(750312),
-    a = n(623132);
+    a = n(750312),
+    l = n(623132);
 function o(e) {
     var t,
         n,
@@ -17,21 +17,21 @@ function o(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["user", "widget", "guildId", "channelId", "disableInteraction"]);
     let g = c.games[0];
     return (0, r.jsx)(
-        l.Z,
+        a.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +68,7 @@ function o(e) {
             {
                 children:
                     null != g
-                        ? (0, r.jsx)(a.Z, {
+                        ? (0, r.jsx)(l.Z, {
                               user: o,
                               widgetType: c.type,
                               game: g,

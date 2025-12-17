@@ -5,15 +5,15 @@ var r = n(54381),
     o = n(793030),
     a = n(442837),
     s = n(692547),
-    u = n(899667),
-    c = n(317169),
-    d = n(265397),
-    p = n(388032),
-    f = n(874622);
+    c = n(899667),
+    u = n(317169),
+    d = n(556970),
+    f = n(388032),
+    p = n(183742);
 function m(e) {
     let { guildId: t, powerupNames: n, warnings: m } = e,
-        { spent: g } = (0, c.Z)(t),
-        v = (0, a.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
+        { spent: g } = (0, u.Z)(t),
+        v = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t), [t]),
         x =
             g -
             i.useMemo(() => {
@@ -31,21 +31,21 @@ function m(e) {
     return x <= 0
         ? null
         : (0, r.jsxs)("div", {
-              className: f.container,
+              className: p.container,
               children: [
                   (0, r.jsx)(l.Mgn, {
                       color: s.Z.colors.TEXT_FEEDBACK_WARNING,
-                      className: f.icon,
+                      className: p.icon,
                   }),
                   (0, r.jsx)(o.xvT, {
                       variant: "text-md/semibold",
                       color: "text-feedback-warning",
-                      children: p.intl.string(d.default.n5hQhc),
+                      children: f.intl.string(d.default.n5hQhc),
                   }),
                   (0, r.jsxs)(o.xvT, {
                       variant: "text-sm/medium",
                       children: [
-                          p.intl.formatToPlainString(d.default.iAaAiG, {
+                          f.intl.formatToPlainString(d.default.iAaAiG, {
                               boostCount: x,
                               perksString: n.join(", "),
                           }),
@@ -57,7 +57,7 @@ function m(e) {
                                         {
                                             variant: "text-sm/medium",
                                             color: "text-feedback-warning",
-                                            className: f.warning,
+                                            className: p.warning,
                                             children: e,
                                         },
                                         "warning-".concat(t),

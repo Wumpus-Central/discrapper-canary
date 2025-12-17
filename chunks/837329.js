@@ -1,11 +1,11 @@
 t.d(n, { u: () => s }), t(415506), t(539854);
 var r = t(473749),
     i = t(442837),
-    l = t(905551),
-    a = t(802659),
-    o = t(817121);
+    a = t(905551),
+    l = t(802659),
+    o = t(430511);
 function s(e) {
-    let n = (0, i.e7)([a.Z], () => a.Z.getRegionStateForPingUrl(e)),
+    let n = (0, i.e7)([l.Z], () => l.Z.getRegionStateForPingUrl(e)),
         t = r.useRef(null),
         s = r.useCallback(
             async (n) => {
@@ -15,11 +15,11 @@ function s(e) {
                 try {
                     if (
                         (await new Promise((e, t) => {
-                            let l = () => {
+                            let a = () => {
                                     n.readyState === WebSocket.OPEN && n.close();
                                 },
-                                a = setTimeout(() => {
-                                    i || ((i = !0), l(), t(Error("WebSocket timeout")));
+                                l = setTimeout(() => {
+                                    i || ((i = !0), a(), t(Error("WebSocket timeout")));
                                 }, 5000);
                             (n.onopen = () => {
                                 if (n.readyState === WebSocket.OPEN)
@@ -34,27 +34,27 @@ function s(e) {
                                     if (!isNaN(t)) {
                                         let n = performance.now(),
                                             o = Math.round(n - t);
-                                        r.push(o), !i && r.length >= 3 && ((i = !0), clearTimeout(a), l(), e());
+                                        r.push(o), !i && r.length >= 3 && ((i = !0), clearTimeout(l), a(), e());
                                     }
                                 }),
                                 (n.onerror = () => {
-                                    i || ((i = !0), clearTimeout(a), l(), t(Error("WebSocket error")));
+                                    i || ((i = !0), clearTimeout(l), a(), t(Error("WebSocket error")));
                                 }),
                                 (n.onclose = () => {
-                                    i || ((i = !0), clearTimeout(a), t(Error("WebSocket closed")));
+                                    i || ((i = !0), clearTimeout(l), t(Error("WebSocket closed")));
                                 });
                         }),
                         r.length > 0)
                     ) {
                         let n = Math.round(r.reduce((e, n) => e + n, 0) / r.length);
-                        (0, l.hz)(e, {
+                        (0, a.hz)(e, {
                             rtt: n,
                             loading: !1,
                             error: !1,
                         });
                     } else throw Error("No successful pings");
                 } catch (n) {
-                    (0, l.hz)(e, {
+                    (0, a.hz)(e, {
                         rtt: null,
                         loading: !1,
                         error: !0,
@@ -75,9 +75,9 @@ function s(e) {
     return (
         r.useEffect(() => {
             if ("" === e || d) return;
-            let n = a.Z.getRegionStateForPingUrl(e);
+            let n = l.Z.getRegionStateForPingUrl(e);
             if ((null == n ? void 0 : n.rtt) != null || (null == n ? void 0 : n.loading) === !0) return;
-            (0, l.hz)(e, {
+            (0, a.hz)(e, {
                 rtt: null,
                 loading: !0,
                 error: !1,

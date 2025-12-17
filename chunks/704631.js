@@ -4,17 +4,17 @@ n(473749);
 var i = n(481060),
     l = n(82950),
     a = n(981631),
-    s = n(921944),
-    o = n(388032),
+    o = n(921944),
+    s = n(388032),
     c = n(524094);
 function u(e) {
     let { guild: t, markAsDismissed: u } = e;
     return (0, r.jsx)(l.Z, {
         guild: t,
-        onDismissed: () => u(s.L.UNKNOWN),
+        onDismissed: () => u(o.L.UNKNOWN),
         onClick: function () {
             (0, i.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("7082"), n.e("60903")]).then(n.bind(n, 650233));
+                let { default: e } = await Promise.all([n.e("7082"), n.e("32454")]).then(n.bind(n, 650233));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -46,8 +46,8 @@ function u(e) {
                     );
             });
         },
-        message: o.intl.string(o.t["1+hiP6"]),
-        cta: o.intl.string(o.t.hvVgAZ),
+        message: s.intl.string(s.t["1+hiP6"]),
+        cta: s.intl.string(s.t.hvVgAZ),
         trackingSource: a.PsQ.HUB_LINK_NOTICE,
         type: a.vID.HUB_LINK,
         image: c,

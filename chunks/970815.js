@@ -12,7 +12,7 @@ var r = n(54381),
     c = n(317257),
     u = n(583478),
     d = n(976845),
-    f = n(647917);
+    f = n(663261);
 function p(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ let m = () =>
             C = (0, i.useMemo)(() => g(p, I), [p, I]),
             [A, N] = (0, i.useState)(!1),
             [P, R] = (0, i.useState)(!1),
-            [D, w] = (0, i.useState)(0.9 * l.D2),
+            [w, D] = (0, i.useState)(0.9 * l.D2),
             x = null === a;
         (0, i.useEffect)(() => {
             x &&
@@ -93,10 +93,10 @@ let m = () =>
                 },
                 [k, M],
             ),
-            B = {
+            F = {
                 currentAnimationType: M,
                 animationTypeRef: U,
-                onSetAnimationDurationMS: w,
+                onSetAnimationDurationMS: D,
             };
         return (0, r.jsx)(s.P3F, {
             onClick: L ? void 0 : b,
@@ -115,13 +115,13 @@ let m = () =>
                 children: [
                     (0, r.jsx)("div", {
                         className: o()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
-                        children: (0, r.jsx)(d.ZP, _({}, B)),
+                        children: (0, r.jsx)(d.ZP, _({}, F)),
                     }),
                     (0, r.jsx)(u.Z, {
                         value: j,
                         onValueChange: Z,
                         onValueReached: G,
-                        targetTotalCounterTime: D,
+                        targetTotalCounterTime: w,
                         className: L ? f.counterLoading : void 0,
                     }),
                     E && (0, r.jsx)(m, {}),

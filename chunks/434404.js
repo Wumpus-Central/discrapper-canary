@@ -127,7 +127,7 @@ let A = new s.Z("GuildSettingsActionCreators"),
                 n.e("93375"),
                 n.e("22516"),
                 n.e("76844"),
-                n.e("96537"),
+                n.e("22556"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(y.GuildFeatures.COMMUNITY)) &&
                     (t === y.pNK.GUILD_AUTOMOD && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_AUTOMOD)),

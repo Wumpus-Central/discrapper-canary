@@ -102,8 +102,8 @@ function P(e) {
             onComplete: N,
             onSubscriptionConfirmation: P,
             analyticsLocations: R,
-            analyticsObject: D,
-            analyticsLocation: w,
+            analyticsObject: w,
+            analyticsLocation: D,
             analyticsSourceLocation: x,
             confirmationFooter: L,
             isGift: j = !1,
@@ -112,8 +112,8 @@ function P(e) {
             giftingOrigin: U,
             subscriptionTier: G,
             trialId: Z,
-            postSuccessGuild: B,
-            openInvoiceId: F,
+            postSuccessGuild: F,
+            openInvoiceId: B,
             applicationId: V,
             referralTrialOfferId: H,
             giftRecipient: Y,
@@ -130,7 +130,7 @@ function P(e) {
         et = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("23242"), n.e("81520")]).then(
+            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("23242"), n.e("98587")]).then(
                 n.bind(n, 7305),
             );
             return (t) => {
@@ -176,14 +176,14 @@ function P(e) {
                         },
                         onSubscriptionConfirmation: P,
                         analyticsLocations: R,
-                        analyticsObject: D,
-                        analyticsLocation: w,
+                        analyticsObject: w,
+                        analyticsLocation: D,
                         analyticsSourceLocation: x,
                         confirmationFooter: L,
                         trialId: Z,
-                        postSuccessGuild: B,
+                        postSuccessGuild: F,
                         planGroup: v.Y1,
-                        openInvoiceId: F,
+                        openInvoiceId: B,
                         applicationId: V,
                         referralTrialOfferId: H,
                         returnRef: W,
@@ -211,7 +211,7 @@ function P(e) {
                     h.default.track(O.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: Q,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
-                        location: null != w ? w : D,
+                        location: null != D ? D : w,
                         source: x,
                         subscription_type: O.NYc.PREMIUM,
                         is_gift: j,

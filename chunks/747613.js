@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(467721),
+    c = n(236726),
     u = n(91192),
     d = n(336317),
     f = n(477690),
@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(624138),
     O = n(295907),
     v = n(388032),
-    S = n(330580);
+    S = n(922943);
 function I(e, t, n) {
     return (
         t in e
@@ -94,8 +94,8 @@ function P(e, t) {
     return i;
 }
 let R = 20,
-    D = 125,
-    w = (0, g.hQ)(),
+    w = 125,
+    D = (0, g.hQ)(),
     x = d.Z.convert.fromCodePoint("1f44f"),
     L = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     j = (0, y.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
@@ -148,7 +148,7 @@ let k = (e) => {
             s = (0, p.q_F)({
                 height: (j + 2 * L) * (E.gw.length + 1),
                 from: { height: j },
-                config: { duration: D },
+                config: { duration: w },
             });
         i.useEffect(() => {
             o.focusFirstVisibleItem();
@@ -218,7 +218,7 @@ let k = (e) => {
                     "aria-label": v.intl.string(v.t.pAVHxa),
                     "aria-haspopup": !0,
                     "aria-expanded": l,
-                    "aria-controls": w,
+                    "aria-controls": D,
                     tabIndex: l ? -1 : 0,
                     children: (0, r.jsx)("div", {
                         className: S.diversityEmojiItemImage,
@@ -229,7 +229,7 @@ let k = (e) => {
                     ? (0, r.jsx)("div", {
                           onKeyDown: h,
                           children: (0, r.jsx)(U, {
-                              id: w,
+                              id: D,
                               selectedSurrogate: n,
                               onClick: g,
                           }),

@@ -4,7 +4,7 @@ n.d(t, {
     Nj: () => a.Z,
     a5: () => L,
     c4: () => x,
-    g7: () => D,
+    g7: () => w,
     jZ: () => A,
     mE: () => Z,
     oQ: () => C,
@@ -109,7 +109,7 @@ function R(e, t, n) {
     let h = e.userLimit > 0 && u >= e.userLimit;
     return m || (h && !p);
 }
-function D(e, t) {
+function w(e, t) {
     return t.isGuildStageVoice()
         ? g.epw
         : null == e
@@ -119,7 +119,7 @@ function D(e, t) {
                 E.HO[e.premiumTier].limits.bitrate,
             );
 }
-function w(e) {
+function D(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e,
         a = [];
     return (
@@ -138,7 +138,7 @@ function w(e) {
 }
 function x(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e;
-    return w({
+    return D({
         channels: t,
         selectedChannelId: n,
         selectedVoiceChannelId: r,

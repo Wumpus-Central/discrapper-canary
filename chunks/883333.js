@@ -26,7 +26,7 @@ var i = n(120356),
     C = n(324805),
     A = n(981631),
     N = n(388032),
-    P = n(467415);
+    P = n(804982);
 let R = (e, t, n) =>
     (0, T.uq)(e) && !n && "lg" === t
         ? "text-lg/medium"
@@ -35,7 +35,7 @@ let R = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function D(e) {
+function w(e) {
     let { containerSize: t, onClick: n, text: i, tabIndex: a } = e;
     return "xs" === t
         ? (0, r.jsx)(u.P3F, {
@@ -57,7 +57,7 @@ function D(e) {
               text: i,
           });
 }
-function w(e) {
+function D(e) {
     var t, n, r, i, a;
     let {
             quest: o,
@@ -210,7 +210,7 @@ let j = (e) => {
             sourceQuestContent: O,
         }),
         Z = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
-        B = () => {
+        F = () => {
             (0, I.navigateToQuestHome)({
                 fromContent: i,
                 questId: n.id,
@@ -223,7 +223,7 @@ let j = (e) => {
                     sourceQuestContent: O,
                 });
         },
-        F = (0, s.e7)([f.default], () => f.default.locale),
+        B = (0, s.e7)([f.default], () => f.default.locale),
         V = p && !L;
     return (0, r.jsx)("div", {
         className: P.root,
@@ -276,9 +276,9 @@ let j = (e) => {
                         (0, r.jsx)(u.Text, {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-muted",
-                            children: w({
+                            children: D({
                                 quest: n,
-                                locale: F,
+                                locale: B,
                                 isQuestExpired: p,
                                 collectibleQuestRewardDescription: G,
                                 formattedCompletionDate: T,
@@ -310,9 +310,9 @@ let j = (e) => {
                           justify: "end",
                           fullWidth: "lg" !== c,
                           children: [
-                              (0, r.jsx)(D, {
+                              (0, r.jsx)(w, {
                                   containerSize: c,
-                                  onClick: B,
+                                  onClick: F,
                                   text: N.intl.string(N.t.LLLLPD),
                               }),
                               !V &&

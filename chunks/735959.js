@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(469571),
-    l = n(913527),
-    s = n.n(l),
+    l = n(354012),
+    i = n(913527),
+    s = n.n(i),
     o = n(330711),
     c = n(442837),
     d = n(481060),
@@ -11,12 +11,12 @@ var a = n(54381),
     m = n(706454),
     p = n(428530),
     h = n(257785),
-    x = n(388032);
-function f() {
+    f = n(388032);
+function x() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = r.useState(),
-        l = (0, i.runtimeHashMessageKey)(null != t ? t : ""),
-        f = r.useMemo(() => x.t[l], [l]);
+        i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
+        x = r.useMemo(() => f.t[i], [i]);
     return (0, a.jsxs)("div", {
         children: [
             (0, a.jsxs)(u.ZP, {
@@ -40,11 +40,11 @@ function f() {
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "System",
-                        children: x.systemLocale,
+                        children: f.systemLocale,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "@discord/intl",
-                        children: x.intl.currentLocale,
+                        children: f.intl.currentLocale,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "common i18n",
@@ -68,7 +68,7 @@ function f() {
             (0, a.jsx)(h.E, {
                 children: (0, a.jsx)(h.Z9, {
                     name: "Unique Rendered Main Messages",
-                    children: Object.keys(x.t).length,
+                    children: Object.keys(f.t).length,
                 }),
             }),
             (0, a.jsx)("div", {
@@ -85,15 +85,15 @@ function f() {
                 children: [
                     (0, a.jsx)(h.Z9, {
                         name: "Hashed key",
-                        children: l,
+                        children: i,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "Exists?",
-                        children: null != f ? "yes" : "no",
+                        children: null != x ? "yes" : "no",
                     }),
                 ],
             }),
-            (0, a.jsx)(p.Z, { data: null == f ? void 0 : f(e) }),
+            (0, a.jsx)(p.Z, { data: null == x ? void 0 : x(e) }),
         ],
     });
 }

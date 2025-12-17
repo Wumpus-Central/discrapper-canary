@@ -1,4 +1,4 @@
-n.d(e, { U: () => c });
+n.d(e, { U: () => S });
 var i = n(125900),
     l = n(509613),
     s = n(626135),
@@ -6,7 +6,7 @@ var i = n(125900),
     r = n(313789),
     a = n(981631),
     o = n(388032);
-let c = (0, l.qs)(r.n.CHAT_SOUNDMOJI_AUTOCOMPLETE, {
+let S = (0, l.qs)(r.n.CHAT_SOUNDMOJI_AUTOCOMPLETE, {
     useTitle: () => o.intl.string(o.t["CtYr+U"]),
     useSubtitle: () => o.intl.string(o.t.hrSIhN),
     useValue: u.eR.useSetting,

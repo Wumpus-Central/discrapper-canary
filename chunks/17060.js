@@ -5,8 +5,8 @@ var l = n(54381),
     i = n.n(a),
     u = n(793030),
     o = n(442837),
-    s = n(379649),
-    d = n(199849),
+    d = n(379649),
+    s = n(199849),
     c = n(481060),
     m = n(13245),
     g = n(593472),
@@ -14,9 +14,9 @@ var l = n(54381),
     v = n(579806),
     p = n(353926),
     y = n(594190),
-    _ = n(953848),
-    h = n(77498),
-    x = n(19780),
+    h = n(953848),
+    x = n(77498),
+    _ = n(19780),
     b = n(808506),
     N = n(626135),
     S = n(499533),
@@ -32,7 +32,7 @@ var l = n(54381),
     T = n(388627),
     D = n(981631),
     C = n(388032),
-    M = n(603841);
+    M = n(714367);
 function R(e, t) {
     return i()(e, t);
 }
@@ -66,7 +66,7 @@ function W(e) {
 }
 function B(e) {
     var t, n;
-    let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [h.Z];
+    let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [x.Z];
     if (null == e) return null;
     if (null != e.gameId) {
         let t = l.getDetectableGame(e.gameId);
@@ -118,8 +118,8 @@ function B(e) {
 }
 function A(e) {
     let { selectedGame: t, setSelectedGame: n } = e,
-        r = (0, o.Wu)([h.Z, y.ZP], () => {
-            let e = h.Z.games,
+        r = (0, o.Wu)([x.Z, y.ZP], () => {
+            let e = x.Z.games,
                 t = e.reduce((e, t) => ((e[t.id] = t), e), {});
             return [
                 ...e,
@@ -135,8 +135,8 @@ function A(e) {
                 }, []),
             ];
         }, []),
-        a = (0, o.e7)([h.Z], () => B(t, [h.Z]), [t]);
-    return (0, l.jsx)(_.g, {
+        a = (0, o.e7)([x.Z], () => B(t, [x.Z]), [t]);
+    return (0, l.jsx)(h.g, {
         games: r,
         selectedGame: null != a ? a : null,
         onGameSelected: (e) => {
@@ -182,7 +182,7 @@ let K = {
 };
 function z(e) {
     var t, a;
-    let { onClose: i, transitionState: _, location: h, appContext: E } = e,
+    let { onClose: i, transitionState: h, location: x, appContext: E } = e,
         J = (0, o.e7)([b.default], () => b.default.getFocusedPID()),
         L = null != J ? J : (0, I.getPID)(),
         B = (0, o.e7)([G.default], () => G.default.getTrackedGameByPid(L), [L]),
@@ -199,14 +199,14 @@ function z(e) {
                 case null != l:
                     return {
                         gameId: null != (u = l.applicationId) ? u : void 0,
-                        gameName: null != (s = l.gameName) ? s : void 0,
+                        gameName: null != (d = l.gameName) ? d : void 0,
                         gamePid: l.pid,
                         fullscreenType: l.fullscreenType,
                         trackedGame: l,
-                        runningGame: null != l.gameName && null != (d = y.ZP.getGameForName(l.gameName)) ? d : void 0,
+                        runningGame: null != l.gameName && null != (s = y.ZP.getGameForName(l.gameName)) ? s : void 0,
                     };
                 case null != e:
-                    var i, u, s, d, c, m;
+                    var i, u, d, s, c, m;
                     let g = y.ZP.getGameForName(e.name),
                         f = null == g ? void 0 : g.pid;
                     return {
@@ -262,7 +262,7 @@ function z(e) {
                 [],
                 R,
             )),
-        es = r.useMemo(() => {
+        ed = r.useMemo(() => {
             let e = {
                 game_crashes_occurred: C.t["1UWmCV"],
                 poor_performance: C.t["4owu+4"],
@@ -278,7 +278,7 @@ function z(e) {
                 value: t,
             }));
         }, []),
-        ed = r.useMemo(() => {
+        es = r.useMemo(() => {
             let e = {
                 [g.Jx.FULLSCREEN]: C.t.AjBsPe,
                 [g.Jx.WINDOWED]: C.t["0oYq2i"],
@@ -293,7 +293,7 @@ function z(e) {
             }));
         }, []),
         ec = async () => {
-            er(!0), await (0, s._v)(500), er(!1);
+            er(!0), await (0, d._v)(500), er(!1);
         },
         em = async () => {
             var e, t, r, a, u;
@@ -303,11 +303,11 @@ function z(e) {
             }
             en(!0);
             let o = null != (r = b.default.getFocusedPID()) ? r : (0, I.getPID)(),
-                d = G.default.getTrackedGameByPid(o),
+                s = G.default.getTrackedGameByPid(o),
                 m = w.Z.getPopoutInitializationStages(),
-                f = (null == d ? void 0 : d.overlayMethod) != null ? P.gl[d.overlayMethod] : null,
-                y = null != (a = null == d ? void 0 : d.fullscreenType) ? a : g.Jx.UNKNOWN,
-                _ = (0, O.y2)(eo, (e) => {
+                f = (null == s ? void 0 : s.overlayMethod) != null ? P.gl[s.overlayMethod] : null,
+                y = null != (a = null == s ? void 0 : s.fullscreenType) ? a : g.Jx.UNKNOWN,
+                h = (0, O.y2)(eo, (e) => {
                     for (let t of Object.values(K))
                         try {
                             if (!t(e, o)) return !1;
@@ -322,9 +322,9 @@ function z(e) {
                     new Date(Date.now() - 7776000000),
                 ),
                 C =
-                    (null == d ? void 0 : d.fullscreenHistory) == null
+                    (null == s ? void 0 : s.fullscreenHistory) == null
                         ? null
-                        : Object.entries(d.fullscreenHistory)
+                        : Object.entries(s.fullscreenHistory)
                               .sort((e, t) => {
                                   let [n] = e,
                                       [l] = t;
@@ -349,22 +349,22 @@ function z(e) {
                             ? u
                             : null,
                     detected_fullscreen_type: g.Jx[y],
-                    application_id: null == d ? void 0 : d.applicationId,
-                    application_name: null == d ? void 0 : d.gameName,
-                    game_pid: null == d ? void 0 : d.pid,
+                    application_id: null == s ? void 0 : s.applicationId,
+                    application_name: null == s ? void 0 : s.gameName,
+                    game_pid: null == s ? void 0 : s.pid,
                     recent_overlay_flux_actions: k,
-                    overlay_module_state: null == d ? void 0 : d.state,
+                    overlay_module_state: null == s ? void 0 : s.state,
                     overlay_native_state: JSON.stringify(eu),
                     overlay_module_oop_initialization_state: JSON.stringify(m),
                     overlay_module_error_message: j.Z.errorMessage,
-                    overlay_module_breadcrumbs: JSON.stringify(_),
+                    overlay_module_breadcrumbs: JSON.stringify(h),
                     fullscreen_history_for_pid: C,
-                    media_session_id: x.Z.getMediaSessionId(),
+                    media_session_id: _.Z.getMediaSessionId(),
                     recent_experiment_buckets: JSON.stringify(T),
-                    location: h,
+                    location: x,
                 };
             await N.default.track(D.rMx.OVERLAY_BUG_REPORT, M),
-                await (0, s._v)(1000),
+                await (0, d._v)(1000),
                 en(!1),
                 null == i || i(),
                 (0, c.ZDy)(
@@ -407,11 +407,11 @@ function z(e) {
         (0, f.ZP)(() => {
             N.default.track(D.rMx.OPEN_MODAL, {
                 type: "overlay_bug_reporter_modal",
-                location: h,
+                location: x,
             });
         }),
         (0, l.jsx)(u.Modal, {
-            transitionState: _,
+            transitionState: h,
             title: C.intl.string(C.t.OKmenM),
             actions: [
                 {
@@ -443,9 +443,9 @@ function z(e) {
                                     children: C.intl.string(C.t.Trx7eJ),
                                 }),
                             }),
-                            (0, l.jsx)(d.B6, {
+                            (0, l.jsx)(s.B6, {
                                 placeholder: C.intl.string(C.t.mKTzjI),
-                                options: es,
+                                options: ed,
                                 isSelected: (e) => e === z,
                                 select: (e) => {
                                     H(e), ei(!1), er(!1);
@@ -496,9 +496,9 @@ function z(e) {
                                 selectedGame: $,
                                 setSelectedGame: ee,
                             }),
-                            (0, l.jsx)(d.B6, {
+                            (0, l.jsx)(s.B6, {
                                 placeholder: C.intl.string(C.t.IjlqrF),
-                                options: ed,
+                                options: es,
                                 isSelected: (e) => e === Y,
                                 select: Q,
                                 serialize: (e) => "".concat(e),

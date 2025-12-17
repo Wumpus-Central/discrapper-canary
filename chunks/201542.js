@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(94432),
     y = n(981631),
     O = n(388032),
-    v = n(589826);
+    v = n(173957);
 let S = i.lazy(() => n.e("89792").then(n.bind(n, 711635)));
 function I(e) {
     let t = (b.TC.indexOf(e) + 1) % b.TC.length,
@@ -78,8 +78,8 @@ let N = i.memo(function (e) {
             onVolumeShow: N,
             onVolumeHide: P,
             onPlay: R,
-            onPause: D,
-            onError: w,
+            onPause: w,
+            onError: D,
             playbackCacheKey: x,
         } = e,
         L = i.useRef(null),
@@ -87,7 +87,7 @@ let N = i.memo(function (e) {
         M = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
         [k, U] = i.useState(j > 0),
         [G, Z] = i.useState(j),
-        [B, F] = i.useState(y),
+        [F, B] = i.useState(y),
         [V, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
@@ -103,7 +103,7 @@ let N = i.memo(function (e) {
         }, []),
         ei = i.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || F(t);
+            isNaN(t) || B(t);
         }, []),
         ea = i.useCallback(
             (e) => {
@@ -129,8 +129,8 @@ let N = i.memo(function (e) {
             let e = L.current;
             if (null == e) return;
             let t = e.error;
-            null == w || w(t);
-        }, [w]),
+            null == D || D(t);
+        }, [D]),
         eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
@@ -145,14 +145,14 @@ let N = i.memo(function (e) {
             z(!0);
         }, []),
         ep = i.useCallback(() => {
-            z(!1), G === B && eo(), ea(G);
-        }, [G, B, eo, ea]),
+            z(!1), G === F && eo(), ea(G);
+        }, [G, F, eo, ea]),
         e_ = i.useCallback(
             (e) => {
                 let t = L.current;
-                null != B && null != t && (el(e * B), clearTimeout(et.current), (et.current = void 0));
+                null != F && null != t && (el(e * F), clearTimeout(et.current), (et.current = void 0));
             },
-            [B, el],
+            [F, el],
         );
     i.useEffect(() => {
         !k && Y && U(!0);
@@ -161,7 +161,7 @@ let N = i.memo(function (e) {
         eh = {
             played: q,
             currentTime: G,
-            onPause: D,
+            onPause: w,
             onPlay: R,
         },
         eg = i.useRef(eh);
@@ -204,7 +204,7 @@ let N = i.memo(function (e) {
                         i = null != r ? (e - r) / 1000 : 0;
                     null == n || n(t, i), ea(t), (em.current = null);
                 }
-        }, [Y, n, B, ea]),
+        }, [Y, n, F, ea]),
         C(L, Y, Z),
         A(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
@@ -265,7 +265,7 @@ let N = i.memo(function (e) {
                 className: v.waveform,
                 waveform: b,
                 currentTime: G,
-                duration: null != B ? B : 1,
+                duration: null != F ? F : 1,
                 playing: Y,
                 played: k,
                 onDrag: e_,
@@ -275,7 +275,7 @@ let N = i.memo(function (e) {
             (0, r.jsx)(T, {
                 played: k,
                 currentTime: G,
-                duration: B,
+                duration: F,
             }),
             (0, r.jsx)(l.P3F, {
                 className: v.playbackRateContainer,

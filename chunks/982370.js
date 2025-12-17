@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(164662),
     d = n(732728),
     f = n(388032),
-    p = n(527552);
+    p = n(719097);
 let _ = (e) => {
     let { className: t, onBackClick: n } = e,
         i = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),

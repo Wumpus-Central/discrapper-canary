@@ -1,6 +1,6 @@
 n.d(t, {
-    $r: () => b,
-    JA: () => h,
+    $r: () => h,
+    JA: () => p,
     ZP: () => x,
 });
 var r = n(54381);
@@ -14,29 +14,29 @@ var i = n(392711),
     d = n(434404),
     u = n(999382),
     g = n(981631),
-    m = n(388032),
-    p = n(703662);
-function f(e) {
+    f = n(388032),
+    m = n(429578);
+function b(e) {
     if (null == e) return !1;
     let t = e.features.has(g.GuildFeatures.COMMUNITY),
         n = e.features.has(g.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     return t || n;
 }
-function h() {
+function p() {
     let e = u.Z.getProps().guild;
-    null != e && (f(e) ? (d.Z.close(), (0, o._X)(e.id)) : d.Z.open(e.id, g.pNK.MEMBERS));
+    null != e && (b(e) ? (d.Z.close(), (0, o._X)(e.id)) : d.Z.open(e.id, g.pNK.MEMBERS));
 }
-function b() {
-    let e = f((0, l.e7)([u.Z], () => u.Z.getProps().guild, []));
+function h() {
+    let e = b((0, l.e7)([u.Z], () => u.Z.getProps().guild, []));
     return (0, r.jsxs)("div", {
-        className: p.rowContainer,
+        className: m.rowContainer,
         children: [
-            (0, r.jsx)("div", { children: m.intl.string(m.t["9Oq93m"]) }),
+            (0, r.jsx)("div", { children: f.intl.string(f.t["9Oq93m"]) }),
             e &&
                 (0, r.jsx)(a.rgF, {
                     size: "xs",
                     color: "currentColor",
-                    className: p.linkIcon,
+                    className: m.linkIcon,
                 }),
         ],
     });

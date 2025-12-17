@@ -2,23 +2,23 @@ n.r(t), n.d(t, { default: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     o = n(120356),
-    l = n.n(o),
-    s = n(467721),
-    a = n(442837),
+    a = n.n(o),
+    l = n(236726),
+    s = n(442837),
     c = n(481060),
     d = n(749210),
     u = n(393238),
     p = n(877604),
-    m = n(998730),
-    f = n(944163),
-    g = n(480608),
-    h = n(160404),
-    x = n(703656),
-    _ = n(546247),
-    b = n(430824),
-    v = n(768581),
-    O = n(302221),
-    j = n(549817),
+    f = n(998730),
+    m = n(944163),
+    b = n(480608),
+    g = n(160404),
+    h = n(703656),
+    x = n(546247),
+    v = n(430824),
+    O = n(768581),
+    j = n(302221),
+    _ = n(549817),
     y = n(45966),
     N = n(819553),
     P = n(637853),
@@ -28,57 +28,57 @@ var r = n(54381),
     I = n(973051),
     Z = n(981631),
     T = n(388032),
-    w = n(718215);
+    w = n(321347);
 function S(e) {
     let { guildId: t } = e,
         { ref: n, width: o, height: S } = (0, u.ZP)(),
-        k = (0, a.Wu)([y.Z], () => y.Z.getOnboardingPromptsForOnboarding(t)),
-        A = (0, a.e7)([y.Z], () => y.Z.getEnabled(t)),
-        B = (0, a.e7)([y.Z], () => y.Z.getConnections(t)),
-        R = (0, a.e7)([f.Z], () => f.Z.getRulesPrompt(t)),
+        k = (0, s.Wu)([y.Z], () => y.Z.getOnboardingPromptsForOnboarding(t)),
+        A = (0, s.e7)([y.Z], () => y.Z.getEnabled(t)),
+        B = (0, s.e7)([y.Z], () => y.Z.getConnections(t)),
+        R = (0, s.e7)([m.Z], () => m.Z.getRulesPrompt(t)),
         L = i.useCallback(
             (e, n, r) => {
-                j.Z.selectOption(t, e, n, r);
+                _.Z.selectOption(t, e, n, r);
             },
             [t],
         ),
         F = i.useCallback(() => {
-            j.Z.completeOnboarding(t, k);
+            _.Z.completeOnboarding(t, k);
         }, [t, k]),
-        M = (0, a.e7)([b.Z], () => b.Z.getGuild(t)),
+        M = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
         G = i.useMemo(
             () =>
                 null == M
                     ? null
-                    : v.ZP.getGuildSplashURL({
+                    : O.ZP.getGuildSplashURL({
                           id: M.id,
                           splash: M.splash,
                       }),
             [M],
         ),
-        V = (0, m.N)(G),
-        H = (0, a.e7)([N.ZP], () => N.ZP.getCurrentOnboardingStep(t)),
+        V = (0, f.N)(G),
+        H = (0, s.e7)([N.ZP], () => N.ZP.getCurrentOnboardingStep(t)),
         [U, q] = i.useState(null != G ? null : "cover"),
         W = i.useCallback(
             (e) => {
-                q(H), j.Z.setUserOnboardingStep(t, e);
+                q(H), _.Z.setUserOnboardingStep(t, e);
             },
             [t, H],
         ),
-        z = (0, a.e7)([h.Z], () => h.Z.isFullServerPreview(t)),
-        J = (0, a.e7)([N.ZP], () => N.ZP.getOnboardingStatus(t)),
+        z = (0, s.e7)([g.Z], () => g.Z.isFullServerPreview(t)),
+        J = (0, s.e7)([N.ZP], () => N.ZP.getOnboardingStatus(t)),
         X = null != k && k.length > 0,
         Y = i.useCallback(() => {
             (0, N.kp)(J) && A && (X || 0 !== B.length) ? (B.length > 0 ? W("connections") : W(0)) : F();
         }, [J, A, X, B.length, W, F]);
     i.useEffect(() => {
         if (!N.ZP.shouldShowOnboarding(t)) return d.Z.escapeToDefaultChannel(t);
-        (0, g.E)(t);
+        (0, b.E)(t);
     }, [t]);
     let Q = (0, c.Yzy)(
             H,
             {
-                config: s.config.default,
+                config: l.config.default,
                 from: {
                     scale: 0.8,
                     opacity: 0,
@@ -95,14 +95,14 @@ function S(e) {
     return (i.useEffect(() => {
         if (!$ || K) {
             let e = setTimeout(() => {
-                (0, x.uL)(Z.Z5c.CHANNEL(t));
+                (0, h.uL)(Z.Z5c.CHANNEL(t));
             }, 1000);
             return () => clearTimeout(e);
         }
     }, [$, K, t]),
     N.ZP.shouldShowOnboarding(t) && null != M)
         ? (0, r.jsxs)("div", {
-              className: l()(w.main, { [w.fullBorderWithGradient]: null == G }),
+              className: a()(w.main, { [w.fullBorderWithGradient]: null == G }),
               ref: n,
               children: [
                   null != G
@@ -113,21 +113,21 @@ function S(e) {
                             height: S,
                             imageClassName: w.cover,
                         })
-                      : (0, r.jsx)(_.Z, {}),
+                      : (0, r.jsx)(x.Z, {}),
                   null != V &&
                       (0, r.jsx)("div", {
                           className: w.gradient,
                           style: {
                               background: "linear-gradient(180deg, "
-                                  .concat((0, O.aD)(V, 0.16), " 0%, ")
-                                  .concat((0, O.aD)(V, 1), " 100%)"),
+                                  .concat((0, j.aD)(V, 0.16), " 0%, ")
+                                  .concat((0, j.aD)(V, 1), " 100%)"),
                           },
                       }),
                   null == G ? null : (0, r.jsx)("div", { className: w.gradient }),
                   Q((e, n, i) => {
                       let { key: o } = i;
                       return (0, r.jsx)(
-                          s.animated.div,
+                          l.animated.div,
                           {
                               style: e,
                               children: (() => {

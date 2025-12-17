@@ -1,21 +1,21 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i = n(278323),
     r = n(13245),
-    s = n(45114),
-    o = n(593481),
-    l = n(237997),
-    a = n(312839),
+    a = n(45114),
+    s = n(593481),
+    o = n(237997),
+    l = n(312839),
     c = n(981631),
     d = n(987650),
     u = n(388032);
-function h(e, t, n, h) {
-    let p = t.username,
-        f = u.intl.format(u.t.VDODnv, {
+function f(e, t, n, f) {
+    let h = t.username,
+        p = u.intl.format(u.t.VDODnv, {
             username: "",
             game: n.name,
         }),
         g = t.getAvatarURL(e.guild_id, 80),
-        { trackView: m, trackClick: _ } = (0, a.R)(d.n0.ActivityInvite, {
+        { trackView: b, trackClick: m } = (0, l.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: c.mFx.JOIN_REQUEST,
@@ -23,26 +23,26 @@ function h(e, t, n, h) {
         });
     return {
         icon: g,
-        title: p,
-        body: f,
-        hint: (e) => (0, o.QR)(e, (0, a.P)(), u.t.Odi54y),
+        title: h,
+        body: p,
+        hint: (e) => (0, s.QR)(e, (0, l.P)(), u.t.Odi54y),
         confirmText: u.intl.string(u.t["fgP/wX"]),
         cancelText: u.intl.string(u.t["tpXzJ+"]),
         onNotificationShow: () => {
-            m();
+            b();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
                 channelId: e.id,
                 type: c.mFx.JOIN,
-                activity: h,
-                location: l.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY,
+                activity: f,
+                location: o.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY,
             }),
-                _("join"),
+                m("join"),
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, s.ack)(
+            (0, a.ack)(
                 e.id,
                 {
                     section: c.jXE.OVERLAY,
@@ -53,10 +53,10 @@ function h(e, t, n, h) {
                 !0,
             ),
                 r.Z.updateNotificationStatus(n),
-                _("decline");
+                m("decline");
         },
         onDismissClick: () => {
-            _("dismiss");
+            m("dismiss");
         },
     };
 }

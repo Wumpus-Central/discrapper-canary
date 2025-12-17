@@ -4,8 +4,8 @@ t(473749);
 var i = t(442837),
     r = t(481060),
     a = t(239091),
-    u = t(883385),
-    o = t(108843),
+    o = t(883385),
+    u = t(108843),
     s = t(911969),
     d = t(947440),
     c = t(100527),
@@ -36,22 +36,22 @@ var i = t(442837),
     w = t(332031),
     R = t(981631),
     D = t(388032);
-let G = (0, o.Z)(
-    (0, u.Z)(
+let G = (0, u.Z)(
+    (0, o.Z)(
         function (e) {
-            let { user: n, guildId: t, channel: u, context: o, onSelect: G, onHeightUpdate: L } = e,
-                V = u.id,
+            let { user: n, guildId: t, channel: o, context: u, onSelect: G, onHeightUpdate: L } = e,
+                V = o.id,
                 H = (0, M.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: V,
                 }),
-                q = (0, C.Z)(n, t, o),
-                B = (0, I.Z)(n.id, o),
+                q = (0, C.Z)(n, t, u),
+                B = (0, I.Z)(n.id, u),
                 K = (0, w.Z)(n.id),
                 W = (0, x.Z)({
                     user: n,
-                    context: o,
+                    context: u,
                 }),
                 Q = (0, i.e7)([h.Z, m.Z], () => {
                     let e = h.Z.getVoiceChannelId();
@@ -67,7 +67,7 @@ let G = (0, o.Z)(
                     user: n,
                     guildId: t,
                     channelId: V,
-                    context: o,
+                    context: u,
                 }),
                 J = (0, P.Z)({ user: n }),
                 { analyticsLocations: $ } = (0, g.ZP)(c.Z.THREAD_USER_MENU),
@@ -80,7 +80,7 @@ let G = (0, o.Z)(
                         object: R.qAy.CONTEXT_MENU_ITEM,
                     },
                     analyticsLocations: $,
-                    context: o,
+                    context: u,
                 }),
                 en = (0, _.Z)({
                     user: n,
@@ -96,13 +96,13 @@ let G = (0, o.Z)(
                     channelId: V,
                     location: "ThreadUserContextMenu",
                 }),
-                eu = (0, E.Z)({
+                eo = (0, E.Z)({
                     user: n,
                     guildId: t,
                     channelId: V,
                     location: "ThreadUserContextMenu",
                 }),
-                eo = (0, U.Z)(n, t, V),
+                eu = (0, U.Z)(n, t, V),
                 es = (0, k.Z)(n.id, t),
                 ed = (0, S.Z)(n, t),
                 ec = (0, Z.Z)({
@@ -113,7 +113,7 @@ let G = (0, o.Z)(
                 eZ = (0, N.Z)({
                     commandType: s.yU.USER,
                     commandTargetId: n.id,
-                    channel: u,
+                    channel: o,
                     guildId: t,
                     onHeightUpdate: L,
                 }),
@@ -133,9 +133,9 @@ let G = (0, o.Z)(
                                 }),
                                 (0, l.jsx)(r.kSQ, { children: et }),
                                 (0, l.jsxs)(r.kSQ, {
-                                    children: [ee, eZ, en, el, ei, er, eu, ea],
+                                    children: [ee, eZ, en, el, ei, er, eo, ea],
                                 }),
-                                (0, l.jsx)(r.kSQ, { children: eo }),
+                                (0, l.jsx)(r.kSQ, { children: eu }),
                                 (0, l.jsxs)(r.kSQ, {
                                     children: [es, ed],
                                 }),

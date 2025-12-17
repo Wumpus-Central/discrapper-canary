@@ -1,15 +1,15 @@
-n.d(t, { Z: () => y }), n(583741), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(583741), n(388685), n(539854);
 var r,
     i = n(54381),
     l = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(954955),
     c = n.n(s),
     u = n(748780),
     d = n(902704),
     f = n(481060),
-    h = n(247060);
+    h = n(491455);
 function p(e, t, n) {
     return (
         t in e
@@ -39,11 +39,11 @@ function g(e) {
     }
     return e;
 }
-let m = {
+let b = {
     friction: 10,
     tension: 300,
 };
-class b extends l.Component {
+class m extends l.Component {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(this.props, e, ["animate"]) || !(0, d.Z)(this.state, t);
     }
@@ -63,18 +63,18 @@ class b extends l.Component {
         let { translateY: e } = this.state;
         if ((null != this._timeout && clearTimeout(this._timeout), !this.props.animate)) return void e.setValue(0);
         this._timeout = setTimeout(() => {
-            u.Z.spring(e, g({ toValue: 0 }, m)).start();
+            u.Z.spring(e, g({ toValue: 0 }, b)).start();
         }, 100);
     }
     animateOut() {
         let { translateY: e } = this.state;
         if ((null != this._timeout && clearTimeout(this._timeout), !this.props.animate)) return void e.setValue(1);
-        u.Z.spring(e, g({ toValue: 1 }, m)).start();
+        u.Z.spring(e, g({ toValue: 1 }, b)).start();
     }
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
         return (0, i.jsx)(u.Z.div, {
-            className: a()(h.bar, e, { [h.hidden]: n }),
+            className: o()(h.bar, e, { [h.hidden]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,
@@ -107,7 +107,7 @@ class b extends l.Component {
             });
     }
 }
-class _ extends (r = l.PureComponent) {
+class y extends (r = l.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -123,17 +123,17 @@ class _ extends (r = l.PureComponent) {
                 textMention: n,
                 textUnread: r,
                 reverse: l,
-                className: o,
+                className: a,
                 barClassName: s,
                 hide: c,
                 animate: u,
             } = this.props,
             { reducedMotion: d } = this.context;
         return (0, i.jsx)("div", {
-            className: null != o ? o : void 0,
-            children: (0, i.jsx)(b, {
+            className: null != a ? a : void 0,
+            children: (0, i.jsx)(m, {
                 hide: !0 === c || (null == e && null == t),
-                className: a()(s, null != t ? h.mention : h.unread),
+                className: o()(s, null != t ? h.mention : h.unread),
                 text: null != t ? n : r,
                 reverse: l,
                 animate: u && !d.enabled,
@@ -158,9 +158,9 @@ class _ extends (r = l.PureComponent) {
                             isUnread: r,
                             isMentioned: i,
                             reverse: l,
-                            onCalculate: o,
+                            onCalculate: a,
                         } = this.props,
-                        a = null,
+                        o = null,
                         s = null,
                         c = [];
                     e.forEach((e) => {
@@ -173,7 +173,7 @@ class _ extends (r = l.PureComponent) {
                               : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            null == a && i(e, l, c) && (a = e), null == s && r(e, l, c) && (s = e);
+                            null == o && i(e, l, c) && (o = e), null == s && r(e, l, c) && (s = e);
                         },
                         d = l ? c.length - 1 : 0,
                         f = c[d];
@@ -194,9 +194,9 @@ class _ extends (r = l.PureComponent) {
                         }
                         (d += l ? -1 : 1), (f = c[d]);
                     }
-                    null != o && o(a, s, l),
+                    null != a && a(o, s, l),
                         this.setState({
-                            mention: a,
+                            mention: o,
                             unread: s,
                         });
                 }, 200),
@@ -210,11 +210,11 @@ class _ extends (r = l.PureComponent) {
             });
     }
 }
-p(_, "contextType", f.Sfi),
-    p(_, "defaultProps", {
+p(y, "contextType", f.Sfi),
+    p(y, "defaultProps", {
         className: h.container,
         reverse: !1,
         hide: !1,
         animate: !0,
     });
-let y = _;
+let O = y;

@@ -9,16 +9,16 @@ var r = n(54381),
     d = n(734893),
     u = n(150512),
     g = n(314897),
-    m = n(8426),
-    p = n(969632),
-    f = n(535907),
-    h = n(388032),
-    b = n(197530);
+    f = n(8426),
+    m = n(969632),
+    b = n(535907),
+    p = n(388032),
+    h = n(551952);
 let x = function (e) {
     let { guildId: t } = e,
-        l = (0, s.cj)([p.Z], () => {
+        l = (0, s.cj)([m.Z], () => {
             var e;
-            return null != (e = p.Z.getSettings().welcomeMessage) ? e : f.z;
+            return null != (e = m.Z.getSettings().welcomeMessage) ? e : b.z;
         }),
         x = i.useCallback(
             () =>
@@ -57,7 +57,7 @@ let x = function (e) {
                                 {
                                     guildId: t,
                                     welcomeMessage: l,
-                                    onSave: (e) => (0, m._N)(e),
+                                    onSave: (e) => (0, f._N)(e),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
@@ -82,11 +82,11 @@ let x = function (e) {
         ? (0, r.jsx)(c.Button, {
               variant: "primary",
               size: "sm",
-              text: h.intl.string(h.t["9Z+aEP"]),
+              text: p.intl.string(p.t["9Z+aEP"]),
               onClick: x,
           })
         : (0, r.jsxs)(c.P3F, {
-              className: b.editWelcomeSection,
+              className: h.editWelcomeSection,
               onClick: x,
               children: [
                   (0, r.jsx)(u.Z, {
@@ -97,15 +97,15 @@ let x = function (e) {
                       },
                   }),
                   (0, r.jsx)(o.u, {
-                      text: h.intl.string(h.t.bt75uw),
+                      text: p.intl.string(p.t.bt75uw),
                       children: (0, r.jsxs)("div", {
-                          className: a()(b.actionItemEditButton, b.editWelcomeButton),
+                          className: a()(h.actionItemEditButton, h.editWelcomeButton),
                           children: [
                               (0, r.jsx)(c.vdY, {
                                   size: "md",
                                   color: "currentColor",
                               }),
-                              (0, r.jsx)(c.nn4, { children: h.intl.string(h.t.bt75uw) }),
+                              (0, r.jsx)(c.nn4, { children: p.intl.string(p.t.bt75uw) }),
                           ],
                       }),
                   }),

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(990547),
-    o = n(79766),
+    o = n(990547),
+    s = n(79766),
     c = n(442837),
     u = n(704215),
     d = n(159691),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(213609),
     h = n(446411),
     m = n(468846),
-    _ = n(313201),
-    b = n(70097),
+    b = n(313201),
+    _ = n(70097),
     E = n(605236),
     O = n(524444),
     v = n(626135),
@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(981631),
     C = n(921944),
     S = n(388032),
-    T = n(188784);
+    T = n(641635);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,9 +75,9 @@ let P = [],
         });
     },
     A = (e) => {
-        let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: s } = e;
+        let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: o } = e;
         return (0, r.jsxs)("div", {
-            className: a()(T.featureCard, { [T.wideStyle]: s }),
+            className: a()(T.featureCard, { [T.wideStyle]: o }),
             children: [
                 null != l
                     ? (0, r.jsx)(x, {
@@ -87,7 +87,7 @@ let P = [],
                     : null,
                 (0, r.jsx)("img", {
                     alt: "",
-                    className: a()(T.featureCardImg, { [T.wideStyle]: s }),
+                    className: a()(T.featureCardImg, { [T.wideStyle]: o }),
                     src: i,
                 }),
                 (0, r.jsxs)("div", {
@@ -123,11 +123,11 @@ function Z(e) {
             subHeaderExtra: k,
             featureCards: U,
             changeLogId: G,
-            button: B,
-            body: H,
+            button: H,
+            body: B,
         } = e,
         { onClose: V, transitionState: F } = x,
-        z = (0, _.Dt)(),
+        z = (0, b.Dt)(),
         Y = U.length % 2 == 0,
         W = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         [q, K] = i.useState(Date.now()),
@@ -138,8 +138,8 @@ function Z(e) {
         ei = i.useRef(q),
         el = i.useRef(Q),
         ea = i.useRef(X),
-        es = i.useRef(ee),
-        eo = i.useRef(en),
+        eo = i.useRef(ee),
+        es = i.useRef(en),
         [ec, eu] = i.useState(P),
         ed = i.useRef(!1);
     function ep() {
@@ -147,15 +147,15 @@ function Z(e) {
             t = e - ei.current,
             n = el.current,
             r = ea.current;
-        return es.current && (J((n += t)), eo.current || $((r += t))), K(e), [n, r];
+        return eo.current && (J((n += t)), es.current || $((r += t))), K(e), [n, r];
     }
     return (
         (0, g.Z)({
-            type: s.ImpressionTypes.MODAL,
-            name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+            type: o.ImpressionTypes.MODAL,
+            name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
             properties: {
                 component_id: t,
-                component_type: o.I.ANNOUNCEMENT_MODAL,
+                component_type: s.I.ANNOUNCEMENT_MODAL,
             },
         }),
         i.useEffect(() => {
@@ -191,7 +191,7 @@ function Z(e) {
             [ec],
         ),
         i.useEffect(() => {
-            (ei.current = q), (el.current = Q), (ea.current = X), (es.current = ee), (eo.current = en);
+            (ei.current = q), (el.current = Q), (ea.current = X), (eo.current = ee), (es.current = en);
         }, [q, Q, X, ee, en]),
         i.useEffect(
             () => () => {
@@ -245,7 +245,7 @@ function Z(e) {
                         className: T.content,
                         children: [
                             "video" === Z.type
-                                ? (0, r.jsx)(b.Z, {
+                                ? (0, r.jsx)(_.Z, {
                                       className: a()(T.video, w),
                                       autoPlay: !W,
                                       loop: !0,
@@ -325,12 +325,12 @@ function Z(e) {
                                 className: T.subHeader,
                                 children: [M, null == k ? void 0 : k()],
                             }),
-                            null != H &&
-                                "" !== H &&
+                            null != B &&
+                                "" !== B &&
                                 (0, r.jsx)(p.Heading, {
                                     variant: "heading-lg/semibold",
                                     className: T.bodyText,
-                                    children: H,
+                                    children: B,
                                 }),
                             U.length > 0 &&
                                 (0, r.jsx)("div", {
@@ -345,7 +345,7 @@ function Z(e) {
                                 }),
                             (0, r.jsx)("div", {
                                 className: T.buttonContainer,
-                                children: B(),
+                                children: H(),
                             }),
                         ],
                     }),

@@ -9,21 +9,21 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(692547),
-    a = n(481060),
+    a = n(692547),
+    o = n(481060),
     s = n(246364),
     c = n(460562),
-    u = n(816827);
+    u = n(105303);
 function d(e, t, n) {
-    return (0, r.jsx)(a.mAB, {
+    return (0, r.jsx)(o.mAB, {
         count: e,
         color: t,
         "aria-hidden": n,
     });
 }
 function f() {
-    return (0, r.jsx)(a.G2e, {
-        icon: (0, a.GSL)(c.Z),
+    return (0, r.jsx)(o.G2e, {
+        icon: (0, o.GSL)(c.Z),
         disableColor: !0,
         className: u.unavailableBadge,
     });
@@ -35,18 +35,18 @@ function h(e) {
             video: r,
             screenshare: i,
             isCurrentUserConnected: l,
-            liveStage: o,
+            liveStage: a,
             activeEvent: s,
             activity: c,
         } = e;
-    if (s) t = a.Que;
-    else if (o) t = a.ewx;
-    else if (i) t = a.pzj;
-    else if (r) t = a.Odl;
-    else if (n) t = a.gj8;
+    if (s) t = o.Que;
+    else if (a) t = o.ewx;
+    else if (i) t = o.pzj;
+    else if (r) t = o.Odl;
+    else if (n) t = o.gj8;
     else {
         if (!c) return null;
-        t = a.nG3;
+        t = o.nG3;
     }
     return g({
         icon: t,
@@ -58,13 +58,13 @@ function p(e) {
         [n, r] = (function (e) {
             switch (e) {
                 case s.wB.SUBMITTED:
-                    return [void 0, a.T39];
+                    return [void 0, o.T39];
                 case s.wB.REJECTED:
-                    return [o.Z.unsafe_rawColors.RED_400.css, a.Dio];
+                    return [a.Z.unsafe_rawColors.RED_400.css, o.Dio];
                 case s.wB.APPROVED:
-                    return [o.Z.unsafe_rawColors.GREEN_360.css, a.dz2];
+                    return [a.Z.unsafe_rawColors.GREEN_360.css, o.dz2];
                 default:
-                    return [void 0, a.vdY];
+                    return [void 0, o.vdY];
             }
         })(t);
     return g({
@@ -75,7 +75,7 @@ function p(e) {
 function g(e) {
     let { icon: t, color: n, isCurrentUserConnected: i } = e;
     return (0, r.jsx)(
-        a.G2e,
+        o.G2e,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

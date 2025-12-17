@@ -9,8 +9,8 @@ t(473749);
 var i = t(120356),
     r = t.n(i),
     a = t(990547),
-    u = t(442837),
-    o = t(704215),
+    o = t(442837),
+    u = t(704215),
     s = t(692547),
     d = t(481060),
     c = t(26151),
@@ -29,8 +29,8 @@ var i = t(120356),
     y = t(388032),
     x = t(59110);
 function E(e, n) {
-    let t = (0, u.e7)([j.Z], () => j.Z.getVoiceChannelId()),
-        l = (0, u.e7)([P.Z], () => {
+    let t = (0, o.e7)([j.Z], () => j.Z.getVoiceChannelId()),
+        l = (0, o.e7)([P.Z], () => {
             var e, n;
             return null != (n = null == (e = P.Z.getChannel(t)) ? void 0 : e.getGuildId()) ? n : void 0;
         }),
@@ -41,12 +41,12 @@ function E(e, n) {
     return i ? t : e;
 }
 function _(e, n) {
-    let [t, i] = (0, u.Wu)(
+    let [t, i] = (0, o.Wu)(
             [f.Z],
             () => [null != n ? f.Z.getParticipants(n) : null, null != n ? f.Z.getParticipant(n, e.id) : null],
             [n, e.id],
         ),
-        s = (0, u.e7)([P.Z], () => P.Z.getChannel(n)),
+        s = (0, o.e7)([P.Z], () => P.Z.getChannel(n)),
         O = (0, b.s)(e, "context_menu", n),
         { enabled: j } = p.Z.useExperiment({
             guildId: null == s ? void 0 : s.guild_id,
@@ -57,9 +57,9 @@ function _(e, n) {
         S = null == i,
         T = null != i && i.type === v.fO.USER && i.ringing,
         A = [];
-    _ && !E && (S || T) && A.push(o.z.RING_USER_TO_VC_NEW_BADGE);
+    _ && !E && (S || T) && A.push(u.z.RING_USER_TO_VC_NEW_BADGE);
     let [U, M] = (0, m.US)(A),
-        k = U === o.z.RING_USER_TO_VC_NEW_BADGE,
+        k = U === u.z.RING_USER_TO_VC_NEW_BADGE,
         { analyticsLocations: w } = (0, g.ZP)();
     return ((0, Z.Z)(
         {

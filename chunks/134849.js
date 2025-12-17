@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(804570),
     s = n(624864),
     c = n(388627),
@@ -19,12 +19,12 @@ function O(e) {
     return e.notification.id;
 }
 function v(e, t, n, r) {
-    let { index: l, notification: a, locked: o, pinned: s } = t;
+    let { index: a, notification: l, locked: o, pinned: s } = t;
     return (0, i.jsx)(
         d.Z,
         {
-            index: l,
-            notification: a,
+            index: a,
+            notification: l,
             locked: o,
             pinned: s,
             transitionState: n,
@@ -41,7 +41,7 @@ function E(e) {
 }
 let S = r.memo(function (e) {
     let { locked: t, pinned: n, showEmpty: d = !0 } = e,
-        b = (0, l.e7)(
+        b = (0, a.e7)(
             [h.Z, s.Z],
             () => {
                 if (s.Z.isNotificationDisabled(p.n0.TextChat)) return y;
@@ -69,7 +69,7 @@ let S = r.memo(function (e) {
     0 !== b.length || t)
         ? (0, i.jsx)(f.S4.Provider, {
               value: S,
-              children: (0, i.jsx)(a.W3x, {
+              children: (0, i.jsx)(l.W3x, {
                   items: b,
                   renderItem: v,
                   getItemKey: O,
@@ -81,7 +81,7 @@ let S = r.memo(function (e) {
               ? null
               : (0, i.jsx)(o.E, {
                     emptyText: g.intl.string(g.t.O1Nbjq),
-                    icon: a.Dkj,
+                    icon: l.Dkj,
                     absolute: !0,
                 })
           : null;

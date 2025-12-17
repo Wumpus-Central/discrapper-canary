@@ -1,9 +1,9 @@
-n.d(t, { Y: () => s });
+n.d(t, { Y: () => o });
 var r = n(473749),
     i = n(726115),
     l = n(859921),
     a = n(128449);
-function s() {
+function o() {
     let e = l.Z.useField("selectedTab"),
         t = r.useMemo(
             () =>

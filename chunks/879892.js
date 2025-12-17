@@ -101,8 +101,8 @@ async function v(e) {
             handleSubscribeModalClose: N,
             disablePremiumUpsell: P,
             inPopout: R,
-            applicationId: D,
-            intent: w,
+            applicationId: w,
+            intent: D,
         } = e,
         x = R ? i.u1M : i.z1l,
         L = l.default.getCurrentUser();
@@ -154,7 +154,7 @@ async function v(e) {
                                 selectedGuild: A,
                                 locationSection: _.ZY5.PREMIUM_GUILD_USER_MODAL,
                                 guildBoostSlots: e,
-                                intent: w,
+                                intent: D,
                             }),
                         );
                     };
@@ -180,7 +180,7 @@ async function v(e) {
             onSubscriptionConfirmation: T,
             onSubscribeComplete: C,
             inPopout: R,
-            applicationId: D,
-            intent: w,
+            applicationId: w,
+            intent: D,
         });
 }

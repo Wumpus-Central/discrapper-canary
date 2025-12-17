@@ -1,8 +1,8 @@
-n.d(t, { Z: () => W }), n(388685), n(314940);
+n.d(t, { Z: () => z }), n(388685), n(314940);
 var a = n(54381),
     r = n(473749),
-    i = n(512722),
-    l = n.n(i),
+    l = n(512722),
+    i = n.n(l),
     s = n(278074),
     o = n(754700),
     c = n(887003),
@@ -11,25 +11,25 @@ var a = n(54381),
     m = n(481060),
     p = n(49436),
     h = n(115179),
-    x = n(254579),
-    f = n(455357),
-    g = n(210724),
-    b = n(130653),
+    f = n(254579),
+    x = n(455357),
+    b = n(210724),
+    g = n(130653),
     v = n(801604),
     j = n(557843),
-    _ = n(686834),
-    y = n(415104),
-    C = n(478977),
+    y = n(686834),
+    C = n(415104),
+    _ = n(478977),
     S = n(456799),
     E = n(210851),
-    O = n(602683),
-    T = n(916028),
+    T = n(602683),
+    O = n(916028),
     N = n(749912),
-    P = n(815183),
-    w = n(899457),
+    w = n(815183),
+    P = n(899457),
     I = n(110560),
     k = n(70956),
-    R = n(188764);
+    R = n(607814);
 function A(e, t, n) {
     return (
         t in e
@@ -43,7 +43,7 @@ function A(e, t, n) {
         e
     );
 }
-function D(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -59,7 +59,7 @@ function D(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -170,14 +170,14 @@ let F = "1193992107035983872",
         targetedContent: [],
     };
 function V() {
-    var e, t, i, d, u, A;
+    var e, t, l, d, u, A;
     let [F, V] = r.useState(G),
         H = r.useCallback((e) => {
-            V(Z(D({}, e), { preview: !0 }));
+            V(D(Z({}, e), { preview: !0 }));
         }, []),
-        [W, z] = r.useState(w.a.UNENROLLED),
-        [q, K] = r.useState(!1),
-        [Q, Y] = r.useState(!1),
+        [z, W] = r.useState(P.a.UNENROLLED),
+        [K, q] = r.useState(!1),
+        [Y, Q] = r.useState(!1),
         [X, J] = r.useState(null),
         $ =
             ((A = F.config),
@@ -195,12 +195,12 @@ function V() {
         ) {
             var n, a;
             H(
-                Z(D({}, F), {
+                D(Z({}, F), {
                     config:
                         ((n = F.config),
                         (a = { [e]: t }),
                         (0, s.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => Z(D({}, e), { assets: D({}, e.assets, a) }))
+                            .with({ configVersion: 2 }, (e) => D(Z({}, e), { assets: Z({}, e.assets, a) }))
                             .exhaustive()),
                 }),
             );
@@ -210,7 +210,7 @@ function V() {
         let n = F.config.taskConfigV2.tasks,
             a = n[o.X.WATCH_VIDEO];
         if (null == a) return;
-        let r = D({}, a.assets);
+        let r = Z({}, a.assets);
         switch (e) {
             case "videoPlayerVideo":
                 r.video = { url: t };
@@ -219,16 +219,16 @@ function V() {
                 r.videoLowRes = { url: t };
                 break;
             case "videoPlayerThumbnail":
-                r.video = Z(D({}, r.video), { thumbnail: t });
+                r.video = D(Z({}, r.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
         H(
-            Z(D({}, F), {
-                config: Z(D({}, F.config), {
-                    taskConfigV2: Z(D({}, F.config.taskConfigV2), {
-                        tasks: Z(D({}, n), { [o.X.WATCH_VIDEO]: Z(D({}, a), { assets: r }) }),
+            D(Z({}, F), {
+                config: D(Z({}, F.config), {
+                    taskConfigV2: D(Z({}, F.config.taskConfigV2), {
+                        tasks: D(Z({}, n), { [o.X.WATCH_VIDEO]: D(Z({}, a), { assets: r }) }),
                     }),
                 }),
             }),
@@ -238,12 +238,12 @@ function V() {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, a;
             H(
-                Z(D({}, F), {
+                D(Z({}, F), {
                     config:
                         ((n = F.config),
                         (a = { [e]: t }),
                         (0, s.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => Z(D({}, e), { messages: D({}, e.messages, a) }))
+                            .with({ configVersion: 2 }, (e) => D(Z({}, e), { messages: Z({}, e.messages, a) }))
                             .exhaustive()),
                 }),
             );
@@ -253,16 +253,16 @@ function V() {
         if ("name" === e || "nameWithArticle" === e) {
             var a, r;
             H(
-                Z(D({}, F), {
+                D(Z({}, F), {
                     config:
                         ((a = F.config),
                         (r = { [e]: t }),
                         (0, s.EQ)(a)
                             .with({ configVersion: 2 }, (e) =>
-                                Z(D({}, e), {
-                                    rewardsConfig: Z(D({}, e.rewardsConfig), {
+                                D(Z({}, e), {
+                                    rewardsConfig: D(Z({}, e.rewardsConfig), {
                                         rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                            t === n ? Z(D({}, e), { messages: D({}, e.messages, r) }) : e,
+                                            t === n ? D(Z({}, e), { messages: Z({}, e.messages, r) }) : e,
                                         ),
                                     }),
                                 }),
@@ -273,18 +273,18 @@ function V() {
         }
     }
     function er(e, t) {
-        H(Z(D({}, F), { config: Z(D({}, F.config), { colors: Z(D({}, F.config.colors), { [e]: t }) }) }));
+        H(D(Z({}, F), { config: D(Z({}, F.config), { colors: D(Z({}, F.config.colors), { [e]: t }) }) }));
     }
-    function ei() {
+    function el() {
         (0, h.Xv)(F.config) &&
             (0, I.openQuestCollectibleRewardModal)(F, p.jn.GIFT_INVENTORY_FOR_YOU, p.jn.INTERNAL_PREVIEW_TOOL, !0);
     }
-    let el = r.useMemo(() => {
+    let ei = r.useMemo(() => {
             for (let [e, t] of Object.entries(F.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * k.Z.Seconds.MINUTE;
         }, [F.config.taskConfigV2.tasks]),
         es = r.useMemo(() => o.X.WATCH_VIDEO in F.config.taskConfigV2.tasks, [F.config.taskConfigV2.tasks]);
-    l()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
+    i()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
     let eo = F.config.taskConfigV2.tasks[o.X.WATCH_VIDEO];
     return (0, a.jsxs)(m.zJl, {
         className: R.container,
@@ -296,27 +296,27 @@ function V() {
             }),
             (0, a.jsx)("div", {
                 className: R.fields,
-                children: (0, a.jsx)(T.Z, {
+                children: (0, a.jsx)(O.Z, {
                     onSelect: function (e) {
                         J(e),
                             null != e &&
-                                (z(
+                                (W(
                                     (function (e) {
-                                        if (null == e.userStatus) return w.a.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return w.a.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return w.a.COMPLETED_100;
-                                        let t = (0, x.il)(e),
+                                        if (null == e.userStatus) return P.a.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return P.a.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return P.a.COMPLETED_100;
+                                        let t = (0, f.il)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? w.a.COMPLETED_100
+                                            ? P.a.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? w.a.COMPLETED_75
+                                              ? P.a.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? w.a.COMPLETED_50
+                                                ? P.a.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? w.a.COMPLETED_25
-                                                  : w.a.ENROLLED;
+                                                  ? P.a.COMPLETED_25
+                                                  : P.a.ENROLLED;
                                     })(e),
                                 ),
                                 H(e));
@@ -332,10 +332,10 @@ function V() {
             (0, a.jsx)("div", {
                 className: R.fields,
                 children: (0, a.jsx)(N.Z, {
-                    taskDuration: el,
+                    taskDuration: ei,
                     taskConfigV2: F.config.taskConfigV2,
                     onSelect: function (e) {
-                        H(Z(D({}, F), { config: Z(D({}, F.config), { taskConfigV2: e }) }));
+                        H(D(Z({}, F), { config: D(Z({}, F.config), { taskConfigV2: e }) }));
                     },
                 }),
             }),
@@ -347,38 +347,38 @@ function V() {
             (0, a.jsxs)("div", {
                 className: R.fields,
                 children: [
-                    (0, a.jsx)(O.Z, {
+                    (0, a.jsx)(T.Z, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: en,
                         initialValue: F.config.messages.questName,
                     }),
-                    (0, a.jsx)(O.Z, {
+                    (0, a.jsx)(T.Z, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: en,
                         initialValue: F.config.messages.gameTitle,
                     }),
-                    (0, a.jsx)(O.Z, {
+                    (0, a.jsx)(T.Z, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: en,
                         initialValue: F.config.messages.gamePublisher,
                     }),
                     es &&
-                        (0, a.jsx)(O.Z, {
+                        (0, a.jsx)(T.Z, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, t) {
                                 let n = F.config.taskConfigV2.tasks,
                                     a = n[o.X.WATCH_VIDEO];
                                 if (null == a) return;
-                                let r = Z(D({}, a.messages), { [e]: t });
+                                let r = D(Z({}, a.messages), { [e]: t });
                                 H(
-                                    Z(D({}, F), {
-                                        config: Z(D({}, F.config), {
-                                            taskConfigV2: Z(D({}, F.config.taskConfigV2), {
-                                                tasks: Z(D({}, n), { [o.X.WATCH_VIDEO]: Z(D({}, a), { messages: r }) }),
+                                    D(Z({}, F), {
+                                        config: D(Z({}, F.config), {
+                                            taskConfigV2: D(Z({}, F.config.taskConfigV2), {
+                                                tasks: D(Z({}, n), { [o.X.WATCH_VIDEO]: D(Z({}, a), { messages: r }) }),
                                             }),
                                         }),
                                     }),
@@ -479,13 +479,13 @@ function V() {
                             (0, a.jsxs)("div", {
                                 className: R.fields,
                                 children: [
-                                    (0, a.jsx)(O.Z, {
+                                    (0, a.jsx)(T.Z, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, n) => ea(e, n, t),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, a.jsx)(O.Z, {
+                                    (0, a.jsx)(T.Z, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, n) => ea(e, n, t),
@@ -500,20 +500,20 @@ function V() {
                                                     if ("asset" === e) {
                                                         var a;
                                                         H(
-                                                            Z(D({}, F), {
+                                                            D(Z({}, F), {
                                                                 config:
                                                                     ((a = F.config),
                                                                     (0, s.EQ)(a)
                                                                         .with({ configVersion: 2 }, (e) =>
-                                                                            Z(D({}, e), {
-                                                                                rewardsConfig: Z(
-                                                                                    D({}, e.rewardsConfig),
+                                                                            D(Z({}, e), {
+                                                                                rewardsConfig: D(
+                                                                                    Z({}, e.rewardsConfig),
                                                                                     {
                                                                                         rewards:
                                                                                             e.rewardsConfig.rewards.map(
                                                                                                 (e, a) =>
                                                                                                     a === n
-                                                                                                        ? Z(D({}, e), {
+                                                                                                        ? D(Z({}, e), {
                                                                                                               asset: t,
                                                                                                               skuId: "",
                                                                                                           })
@@ -542,7 +542,7 @@ function V() {
                                             (0, a.jsx)(m.Button, {
                                                 variant: "primary",
                                                 text: "Open Reward Modal",
-                                                onClick: ei,
+                                                onClick: el,
                                             }),
                                         ],
                                     }),
@@ -565,13 +565,13 @@ function V() {
                         className: R.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, a.jsx)(C.Z, {
+                            (0, a.jsx)(_.Z, {
                                 title: "Primary",
                                 colorKey: "primary",
                                 onChange: er,
                                 value: F.config.colors.primary,
                             }),
-                            (0, a.jsx)(C.Z, {
+                            (0, a.jsx)(_.Z, {
                                 title: "Secondary",
                                 colorKey: "secondary",
                                 onChange: er,
@@ -581,72 +581,72 @@ function V() {
                     }),
                     (0, a.jsx)("div", {
                         className: R.fields,
-                        children: (0, a.jsx)(P.Z, {}),
+                        children: (0, a.jsx)(w.Z, {}),
                     }),
-                    (0, a.jsx)(w.Z, {
+                    (0, a.jsx)(P.Z, {
                         onChange: function (e) {
-                            switch ((z(e), e)) {
-                                case w.a.UNENROLLED:
-                                    H(Z(D({}, F), { userStatus: null }));
+                            switch ((W(e), e)) {
+                                case P.a.UNENROLLED:
+                                    H(D(Z({}, F), { userStatus: null }));
                                     break;
-                                case w.a.ENROLLED:
-                                    H(Z(D({}, F), { userStatus: B({ enrolledAt: new Date().toISOString() }) }));
+                                case P.a.ENROLLED:
+                                    H(D(Z({}, F), { userStatus: B({ enrolledAt: new Date().toISOString() }) }));
                                     break;
-                                case w.a.COMPLETED_25:
+                                case P.a.COMPLETED_25:
                                     H(
-                                        Z(D({}, F), {
+                                        D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * el,
+                                                streamProgressSeconds: 0.25 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case w.a.COMPLETED_50:
+                                case P.a.COMPLETED_50:
                                     H(
-                                        Z(D({}, F), {
+                                        D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * el,
+                                                streamProgressSeconds: 0.5 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case w.a.COMPLETED_75:
+                                case P.a.COMPLETED_75:
                                     H(
-                                        Z(D({}, F), {
+                                        D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * el,
+                                                streamProgressSeconds: 0.75 * ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case w.a.COMPLETED_100:
+                                case P.a.COMPLETED_100:
                                     H(
-                                        Z(D({}, F), {
+                                        D(Z({}, F), {
                                             userStatus: B({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: el,
+                                                streamProgressSeconds: ei,
                                             }),
                                         }),
                                     );
                                     break;
-                                case w.a.CLAIMED:
+                                case P.a.CLAIMED:
                                     H(
-                                        Z(D({}, F), {
+                                        D(Z({}, F), {
                                             userStatus: B({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: el,
+                                                streamProgressSeconds: ei,
                                             }),
                                         }),
                                     );
                             }
                         },
-                        value: W,
+                        value: z,
                     }),
                 ],
             }),
@@ -676,11 +676,11 @@ function V() {
                                         }),
                                     (0, a.jsx)("div", {
                                         className: R.questBarPreview,
-                                        children: (0, a.jsx)(f.x8, {
+                                        children: (0, a.jsx)(x.x8, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(b.Z, { children: (0, a.jsx)(g.P, { quest: F }) }),
+                                            children: (0, a.jsx)(g.Z, { children: (0, a.jsx)(b.P, { quest: F }) }),
                                         }),
                                     }),
                                 ],
@@ -694,11 +694,11 @@ function V() {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Home Card",
                             }),
-                            (0, a.jsx)(f.x8, {
+                            (0, a.jsx)(x.x8, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, a.jsx)(y.Z, {
+                                children: (0, a.jsx)(C.Z, {
                                     quest: F,
                                     className: R.questTile,
                                     questContent: p.jn.QUEST_HOME_DESKTOP,
@@ -716,7 +716,7 @@ function V() {
                                 variant: "heading-sm/semibold",
                                 children: "Channel Call Header",
                             }),
-                            (null == (i = F.userStatus) ? void 0 : i.claimedAt) != null &&
+                            (null == (l = F.userStatus) ? void 0 : l.claimedAt) != null &&
                                 (0, a.jsx)(m.Text, {
                                     color: "text-subtle",
                                     variant: "text-sm/normal",
@@ -725,7 +725,7 @@ function V() {
                                 }),
                             (0, a.jsx)("div", {
                                 className: R.questBarPreviewWrapper,
-                                children: (0, a.jsx)(f.x8, {
+                                children: (0, a.jsx)(x.x8, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
@@ -734,7 +734,7 @@ function V() {
                                         children: (0, a.jsx)(v.Z, {
                                             channelId: "123",
                                             previewQuest: F,
-                                            isParticipatingOverride: q,
+                                            isParticipatingOverride: K,
                                         }),
                                     }),
                                 }),
@@ -745,9 +745,9 @@ function V() {
                         className: R.toggleSwitch,
                         children: (0, a.jsx)(m.rsf, {
                             label: "Is Participating:",
-                            checked: q,
+                            checked: K,
                             onChange: function (e) {
-                                K(e);
+                                q(e);
                             },
                         }),
                     }),
@@ -758,10 +758,10 @@ function V() {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Card Embed",
                             }),
-                            Q
+                            Y
                                 ? (0, a.jsx)(j.W, { questId: F.id })
                                 : (0, a.jsx)(
-                                      _.X,
+                                      y.X,
                                       {
                                           quest: F,
                                           location: p.jn.QUESTS_EMBED,
@@ -775,8 +775,8 @@ function V() {
                         className: R.toggleSwitch,
                         children: (0, a.jsx)(m.rsf, {
                             label: "Invalid Quests Embed:",
-                            checked: Q,
-                            onChange: Y,
+                            checked: Y,
+                            onChange: Q,
                         }),
                     }),
                     es &&
@@ -796,13 +796,13 @@ function V() {
                                             let { default: e } = await Promise.all([
                                                 n.e("13193"),
                                                 n.e("75909"),
-                                                n.e("67230"),
+                                                n.e("87766"),
                                             ]).then(n.bind(n, 215113));
                                             return (t) => {
                                                 var n;
                                                 return (0, a.jsx)(
                                                     e,
-                                                    Z(D({}, t), {
+                                                    D(Z({}, t), {
                                                         openStartClockTime: performance.now(),
                                                         videoSessionId: "fake-quest-session-id",
                                                         questId: null != (n = F.id) ? n : "fake-quest-id",
@@ -868,4 +868,4 @@ class H extends r.Component {
             });
     }
 }
-let W = H;
+let z = H;

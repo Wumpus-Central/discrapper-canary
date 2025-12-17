@@ -55,17 +55,17 @@ function o(e, t, o) {
             (0, a.B)(i.intl.string(i.t["4hWo0C"]), i.t.Zkhwex);
             break;
         case l.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-            let u, c;
-            null != o ? ((u = i.t.j2VMk6), (c = { url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(o) })) : (u = i.t.ZVV1gg),
-                (0, a.B)(i.intl.string(i.t["+CT/gV"]), u, c);
+            let c, u;
+            null != o ? ((c = i.t.j2VMk6), (u = { url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(o) })) : (c = i.t.ZVV1gg),
+                (0, a.B)(i.intl.string(i.t["+CT/gV"]), c, u);
             break;
         default:
-            let g =
+            let f =
                 null != (d = e.getFirstFieldErrorMessage(["published"]))
                     ? d
                     : (null == (s = e.hasFieldErrors) ? void 0 : s.call(e))
                       ? void 0
                       : e.message;
-            null != g && (0, a.B)(i.intl.string(i.t.bvWf8T), g);
+            null != f && (0, a.B)(i.intl.string(i.t.bvWf8T), f);
     }
 }

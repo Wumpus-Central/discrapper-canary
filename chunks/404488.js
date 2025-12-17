@@ -1,28 +1,28 @@
 t.d(n, {
     Z: () => u,
-    q: () => d,
+    q: () => o,
 });
-var l = t(54381);
+var a = t(54381);
 t(473749);
-var r = t(442837),
-    a = t(325708),
+var l = t(442837),
+    r = t(325708),
     i = t(213557),
-    s = t(433355),
-    c = t(981631),
-    o = t(176505);
-let d = 656;
+    c = t(433355),
+    s = t(981631),
+    d = t(176505);
+let o = 656;
 function u(e) {
     let { pageWidth: n, onSidebarResize: t } = e,
-        u = (0, r.e7)([s.ZP], () => s.ZP.getSidebarState(o.oC.GUILD_HOME));
+        u = (0, l.e7)([c.ZP], () => c.ZP.getSidebarState(d.oC.GUILD_HOME));
     if (null == u || null == u.channelId) return null;
-    let m = n - c.PrS - d;
-    return (0, l.jsx)(a.Z, {
-        sidebarType: a.y.HomeSidebar,
+    let m = n - s.PrS - o;
+    return (0, a.jsx)(r.Z, {
+        sidebarType: r.y.HomeSidebar,
         maxWidth: m,
         onWidthChange: t,
-        children: (0, l.jsx)(i.Z, {
+        children: (0, a.jsx)(i.Z, {
             channelId: u.channelId,
-            baseChannelId: o.oC.GUILD_HOME,
+            baseChannelId: d.oC.GUILD_HOME,
             channelViewSource: "Home View",
             isResourceChannelView: !0,
         }),

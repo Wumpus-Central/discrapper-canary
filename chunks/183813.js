@@ -13,40 +13,40 @@ var r = n(54381),
     h = n(831895),
     f = n(314404),
     g = n(594174),
-    j = n(626135),
-    y = n(987209),
+    y = n(626135),
+    j = n(987209),
     v = n(563132),
     b = n(409813),
     O = n(614277),
-    P = n(981631),
-    S = n(182133);
+    S = n(981631),
+    P = n(182133);
 function x(e) {
     var t, n, i, x, E, w;
     let { handleStepChange: I, handleClose: T } = e,
         { selectedPlan: k, selectedSkuId: C, step: N } = (0, v.JL)(),
         {
             setSelectedGiftingPromotionReward: M,
-            selectedGiftingPromotionReward: R,
-            claimableRewards: _,
+            selectedGiftingPromotionReward: _,
+            claimableRewards: R,
             claimableVariants: A,
-        } = (0, y.wD)(),
+        } = (0, j.wD)(),
         L = (0, d.Z)(),
         Z = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        D = (0, p.ZP)(_, A, R),
+        D = (0, p.ZP)(R, A, _),
         [F, G] = l.useState(null == D || null == (t = D.defaultHighlightedReward) ? void 0 : t.skuId),
-        [B, H] = l.useState(!1),
-        U = (0, m.Z)({
+        [B, U] = l.useState(!1),
+        H = (0, m.Z)({
             claimableVariants: A,
-            claimableRewards: _,
+            claimableRewards: R,
             defaultSelection: D,
-            selectedGiftingPromotionReward: R,
+            selectedGiftingPromotionReward: _,
             setSelectedGiftingPromotionReward: M,
             hasUserMadeSelection: B,
         }),
         z = l.useMemo(() => {
             var e, t;
             if (null == A || 0 === A.length) return null != (e = null == L ? void 0 : L.rewards) ? e : [];
-            let n = null != (t = null == U ? void 0 : U.selectedCategory) ? t : p.KN.Trick;
+            let n = null != (t = null == H ? void 0 : H.selectedCategory) ? t : p.KN.Trick;
             return A.flatMap((e) => {
                 var t, r;
                 return e.variants.length < p.mo
@@ -91,16 +91,16 @@ function x(e) {
                             }),
                       t);
             });
-        }, [A, null == L ? void 0 : L.rewards, null == U ? void 0 : U.selectedCategory]);
+        }, [A, null == L ? void 0 : L.rewards, null == H ? void 0 : H.selectedCategory]);
     l.useEffect(() => {
         let e = null == D ? void 0 : D.defaultHighlightedReward;
-        !B && null == R && null != e && null != e && z.some((t) => t.skuId === e.skuId) && (M(e), G(e.skuId));
-    }, [D, B, R, z, M]),
+        !B && null == _ && null != e && null != e && z.some((t) => t.skuId === e.skuId) && (M(e), G(e.skuId));
+    }, [D, B, _, z, M]),
         a()(null != k, "Expected plan to selected"),
         a()(null != C, "Expected selectedSkuId"),
         a()(null != N, "Step should be set");
-    let K = l.useMemo(() => null != F && (null != _ ? _ : []).some((e) => e.skuId === F), [F, _]),
-        W = l.useMemo(() => null != R && z.some((e) => e.skuId === R.skuId), [z, R]),
+    let K = l.useMemo(() => null != F && (null != R ? R : []).some((e) => e.skuId === F), [F, R]),
+        W = l.useMemo(() => null != _ && z.some((e) => e.skuId === _.skuId), [z, _]),
         V = l.useMemo(() => 0 === z.length || null == F || !W || !K, [z, F, K, W]);
     l.useEffect(() => {
         if (0 === z.length) {
@@ -110,7 +110,7 @@ function x(e) {
         (K && z.some((e) => e.skuId === F)) || null == F || (G(void 0), M(void 0));
     }, [z, K, F, M]);
     let Y = (e) => {
-            M(z.find((t) => t.skuId === e)), G(e), H(!0);
+            M(z.find((t) => t.skuId === e)), G(e), U(!0);
         },
         q = z.map((e) => {
             var t, n;
@@ -121,11 +121,11 @@ function x(e) {
                     assetId: e.assetId,
                     productName: null == (t = e.name) ? void 0 : t.call(e),
                     a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
-                    claimed: null != _ && _.every((t) => t.skuId !== e.skuId),
+                    claimed: null != R && R.every((t) => t.skuId !== e.skuId),
                     user: Z,
                     onSelect: Y,
                     selectedSkuId: F,
-                    category: null == U ? void 0 : U.selectedCategory,
+                    category: null == H ? void 0 : H.selectedCategory,
                     type: e.type,
                     palette: e.palette,
                 },
@@ -135,14 +135,14 @@ function x(e) {
         J = (0, r.jsx)(O.O3, {
             children: (0, r.jsx)(o.mzw, {
                 "data-migration-pending": !0,
-                className: S.modalFooter,
+                className: P.modalFooter,
                 children: (0, r.jsx)(f.y, {
                     onStepChange: (e) => {
                         null != Z &&
-                            null != R &&
-                            j.default.track(P.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            null != _ &&
+                            y.default.track(S.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: Z.id,
-                                reward_sku_id: R.skuId,
+                                reward_sku_id: _.skuId,
                             }),
                             I(e);
                     },
@@ -159,7 +159,7 @@ function x(e) {
         children: [
             (0, r.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
-                className: S.modalHeader,
+                className: P.modalHeader,
                 direction: c.Z.Direction.VERTICAL,
                 align: c.Z.Align.START,
                 separator: !1,
@@ -172,7 +172,7 @@ function x(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: S.headerSubtitle,
+                        className: P.headerSubtitle,
                         children: null == L || null == (i = L.rewardSelection) ? void 0 : i.primarySubtitle(),
                     }),
                     (null == L || null == (E = L.rewardSelection) || null == (x = E.secondarySubtitle)
@@ -185,7 +185,7 @@ function x(e) {
                         }),
                     (0, r.jsx)(o.olH, {
                         "data-migration-pending": !0,
-                        className: S.closeButton,
+                        className: P.closeButton,
                         onClick: T,
                     }),
                 ],
@@ -197,13 +197,13 @@ function x(e) {
                     justify: "center",
                     align: "center",
                     children: [
-                        (null == U ? void 0 : U.shouldRenderCategoryControl) &&
+                        (null == H ? void 0 : H.shouldRenderCategoryControl) &&
                             (0, r.jsx)(h.Z, {
-                                defaultCategory: U.selectedCategory,
-                                onCategoryChange: U.setSelectedCategory,
+                                defaultCategory: H.selectedCategory,
+                                onCategoryChange: H.setSelectedCategory,
                             }),
                         (0, r.jsx)("div", {
-                            className: S.giftRewardShopCardsGrid,
+                            className: P.giftRewardShopCardsGrid,
                             children: q,
                         }),
                     ],

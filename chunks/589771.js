@@ -8,9 +8,9 @@ var i = n(54381),
     c = n(563132),
     u = n(456251);
 function d(e) {
-    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: p } = e,
+    let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: m, handleClose: f } = e,
         {
-            blockedPayments: f,
+            blockedPayments: p,
             setStep: b,
             hasFetchedSubscriptions: h,
             hasFetchedSubscriptionPlans: g,
@@ -33,7 +33,7 @@ function d(e) {
         y(n);
         let e = null != n ? a.Z.get(n) : null;
         P ||
-            f ||
+            p ||
             (m((t) => {
                 var n, i;
                 let r = null != e ? (0, o.aS)(e.id, !1, S, O) : void 0;
@@ -86,10 +86,10 @@ function d(e) {
                 );
             }),
             null != e && (v(null == e ? void 0 : e.skuId), b(t)));
-    }, [f, n, S, P, O, j, m, y, v, b, t]),
+    }, [p, n, S, P, O, j, m, y, v, b, t]),
     P)
         ? (0, i.jsx)(u.Z, {})
-        : f
-          ? (0, i.jsx)(l.Vq, { onClose: p })
+        : p
+          ? (0, i.jsx)(l.Vq, { onClose: f })
           : null;
 }

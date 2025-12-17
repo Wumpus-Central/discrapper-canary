@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,47 +10,47 @@ var i = n(120356),
     d = n(637853),
     u = n(816436),
     g = n(259580),
-    m = n(889369),
-    p = n(838324),
-    f = n(388032),
-    h = n(628682);
-function b(e) {
+    f = n(889369),
+    m = n(838324),
+    b = n(388032),
+    p = n(794558);
+function h(e) {
     let { guild: t, scrollToQuestions: n } = e,
-        i = (0, a.e7)([m.Z], () => m.Z.editedDefaultChannelIds),
+        i = (0, a.e7)([f.Z], () => f.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, i).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: p.container,
         children: [
             (0, r.jsx)("div", {
-                className: h.header,
-                children: (0, r.jsx)(p.Z, {
+                className: p.header,
+                children: (0, r.jsx)(m.Z, {
                     guildId: t.id,
                     scrollToQuestions: n,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.channelList,
-                children: [(0, r.jsx)(_, {}), 0 === l.length && (0, r.jsx)(x, {}), (0, r.jsx)(j, { channels: l })],
+                className: p.channelList,
+                children: [(0, r.jsx)(v, {}), 0 === l.length && (0, r.jsx)(x, {}), (0, r.jsx)(j, { channels: l })],
             }),
         ],
     });
 }
 function x() {
     return (0, r.jsxs)("div", {
-        className: h.emptyState,
+        className: p.emptyState,
         children: [
             (0, r.jsx)("div", {
-                className: h.emptyStateIcon,
+                className: p.emptyStateIcon,
                 children: (0, r.jsx)(s.VL1, {
                     size: "md",
                     color: "currentColor",
                 }),
             }),
             (0, r.jsx)(s.Text, {
-                className: h.channelName,
+                className: p.channelName,
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: f.intl.string(f.t.Qj6O91),
+                children: b.intl.string(b.t.Qj6O91),
             }),
         ],
     });
@@ -59,20 +59,20 @@ function j(e) {
     let { channels: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e) =>
-            e.isCategory() ? (0, r.jsx)(v, { label: e.name }, e.id) : (0, r.jsx)(O, { channel: e }, e.id),
+            e.isCategory() ? (0, r.jsx)(O, { label: e.name }, e.id) : (0, r.jsx)(C, { channel: e }, e.id),
         ),
     });
 }
-function _() {
-    return (0, r.jsx)("div", { className: h.divider });
+function v() {
+    return (0, r.jsx)("div", { className: p.divider });
 }
-function v(e) {
+function O(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
-        className: h.category,
+        className: p.category,
         children: [
             (0, r.jsx)(g.Z, {
-                className: h.caret,
+                className: p.caret,
                 width: 12,
                 height: 12,
                 direction: g.Z.Directions.DOWN,
@@ -86,27 +86,27 @@ function v(e) {
         ],
     });
 }
-function O(e) {
+function C(e) {
     var t;
     let { channel: n } = e,
         i = (0, d.iF)(n),
         a = null != (t = (0, o.KS)(n)) ? t : s.VL1;
     return (0, r.jsxs)("div", {
-        className: h.channel,
+        className: p.channel,
         children: [
             (0, r.jsx)(a, {
-                className: h.channelIcon,
+                className: p.channelIcon,
                 size: "xs",
                 color: "currentColor",
             }),
             (0, r.jsx)(s.Text, {
-                className: h.channelName,
+                className: p.channelName,
                 variant: "text-md/normal",
                 color: "text-muted",
                 lineClamp: 1,
                 children: n.name,
             }),
-            (0, r.jsx)("div", { className: l()({ [h.chattableIndicator]: i }) }),
+            (0, r.jsx)("div", { className: l()({ [p.chattableIndicator]: i }) }),
         ],
     });
 }

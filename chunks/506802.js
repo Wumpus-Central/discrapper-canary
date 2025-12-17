@@ -1,6 +1,6 @@
 n.d(t, {
     aM: () => k,
-    gq: () => w,
+    gq: () => D,
     jS: () => U,
     r6: () => T,
 }),
@@ -12,7 +12,7 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(24156),
-    c = n(467721),
+    c = n(236726),
     u = n(873546),
     d = n(374470),
     f = n(793030),
@@ -21,7 +21,7 @@ var r,
     m = n(481060),
     h = n(607070),
     g = n(314910),
-    E = n(855711);
+    E = n(343978);
 function b(e, t, n) {
     return (
         t in e
@@ -115,7 +115,7 @@ let C = 16,
         green: E.tooltipGreen,
         red: E.tooltipRed,
     });
-function D(e, t, n) {
+function w(e, t, n) {
     let r = "left" === e || "right" === e,
         i = r ? "top" : "left",
         a = r ? "top" : "left",
@@ -127,7 +127,7 @@ function D(e, t, n) {
         { [i]: "calc(".concat(s, " + ").concat(l, "px)") }
     );
 }
-let w = (e) => {
+let D = (e) => {
         let {
                 targetElementRef: t,
                 align: n = "center",
@@ -166,11 +166,11 @@ let w = (e) => {
                     children: [
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, E.tooltipPointerBg, b),
-                            style: D(null != t ? t : r, n, p),
+                            style: w(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, b),
-                            style: D(null != t ? t : r, n, p),
+                            style: w(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: h }, f),
@@ -211,7 +211,7 @@ let w = (e) => {
         )((e, t) =>
             t
                 ? (0, i.jsx)(
-                      w,
+                      D,
                       y(
                           {
                               "data-migration-pending": !0,

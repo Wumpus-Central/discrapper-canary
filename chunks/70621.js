@@ -3,22 +3,22 @@ var r = n(54381),
     i = n(481060),
     l = n(49436),
     a = n(415104),
-    s = n(388032),
-    o = n(818923);
+    o = n(388032),
+    s = n(683103);
 let c = (e) => {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: o.previewBackground,
+        className: s.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: o.previewCard,
+            className: s.previewCard,
             children: [
                 (0, r.jsx)(i.Heading, {
-                    className: o.heading,
+                    className: s.heading,
                     variant: "heading-md/semibold",
-                    children: s.intl.string(s.t["5wnpF3"]),
+                    children: o.intl.string(o.t["5wnpF3"]),
                 }),
                 (0, r.jsx)(a.Z, {
-                    className: o.questTile,
+                    className: s.questTile,
                     quest: t,
                     questContent: l.jn.QUEST_HOME_DESKTOP,
                     contentPosition: 0,

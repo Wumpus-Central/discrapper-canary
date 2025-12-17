@@ -1,66 +1,66 @@
-e.d(t, { default: () => _ });
+e.d(t, { default: () => h });
 var i = e(54381),
-    o = e(473749),
-    l = e(793030),
-    a = e(442837),
-    r = e(481060),
-    s = e(271383),
-    u = e(430824),
-    c = e(594174),
-    d = e(693546),
-    m = e(305325),
-    p = e(937111),
-    f = e(702286),
+    a = e(473749),
+    o = e(793030),
+    l = e(442837),
+    d = e(481060),
+    r = e(271383),
+    c = e(430824),
+    s = e(594174),
+    u = e(693546),
+    f = e(305325),
+    m = e(937111),
+    p = e(702286),
     g = e(388032),
-    v = e(394121);
-let _ = function (n) {
-    let { guildId: t, transitionState: e, onClose: _ } = n,
-        h = (0, a.e7)([p.Z], () => p.Z.getRequest(t), [t]),
-        x = (0, a.e7)([u.Z], () => u.Z.getGuild(t), [t]),
-        C = (0, a.e7)([c.default], () => {
+    v = e(871612);
+let h = function (n) {
+    let { guildId: t, transitionState: e, onClose: h } = n,
+        x = (0, l.e7)([m.Z], () => m.Z.getRequest(t), [t]),
+        C = (0, l.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        R = (0, l.e7)([s.default], () => {
             var n;
-            return null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+            return null == (n = s.default.getCurrentUser()) ? void 0 : n.id;
         }),
-        R = (0, a.e7)([s.ZP], () => (null != C ? s.ZP.getMember(t, C) : null), [C, t]),
-        k = o.useCallback(() => {
-            _(), null == R && (0, f.Z)();
-        }, [R, _]),
-        Z = o.useCallback(async () => {
-            if (null == R ? void 0 : R.isPending) {
+        k = (0, l.e7)([r.ZP], () => (null != R ? r.ZP.getMember(t, R) : null), [R, t]),
+        Z = a.useCallback(() => {
+            h(), null == k && (0, p.Z)();
+        }, [k, h]),
+        j = a.useCallback(async () => {
+            if (null == k ? void 0 : k.isPending) {
                 try {
-                    await d.Z.removeGuildJoinRequest(t);
+                    await u.Z.removeGuildJoinRequest(t);
                 } catch (n) {
                     throw n;
                 }
-                _(), (0, m.hk)(t);
-            } else d.Z.resetGuildJoinRequest(t);
-        }, [t, null == R ? void 0 : R.isPending, _]),
-        j = o.useMemo(
+                h(), (0, f.hk)(t);
+            } else u.Z.resetGuildJoinRequest(t);
+        }, [t, null == k ? void 0 : k.isPending, h]),
+        b = a.useMemo(
             () => [
                 {
                     text: g.intl.string(g.t.I1LYVk),
                     variant: "secondary",
-                    onClick: Z,
+                    onClick: j,
                 },
                 {
                     text: g.intl.string(g.t.BddRzS),
                     variant: "critical-primary",
-                    onClick: k,
+                    onClick: Z,
                 },
             ],
-            [Z, k],
+            [j, Z],
         );
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(o.Modal, {
         transitionState: e,
-        onClose: _,
+        onClose: h,
         title:
-            (null == x ? void 0 : x.name) != null
-                ? g.intl.formatToPlainString(g.t["P+/gzA"], { guildName: x.name })
+            (null == C ? void 0 : C.name) != null
+                ? g.intl.formatToPlainString(g.t["P+/gzA"], { guildName: C.name })
                 : g.intl.string(g.t.gBPcuP),
-        actions: j,
+        actions: b,
         children:
-            (null == h ? void 0 : h.rejectionReason) != null && (null == h ? void 0 : h.rejectionReason) !== ""
-                ? (0, i.jsxs)(r.Text, {
+            (null == x ? void 0 : x.rejectionReason) != null && (null == x ? void 0 : x.rejectionReason) !== ""
+                ? (0, i.jsxs)(d.Text, {
                       variant: "text-md/medium",
                       color: "text-default",
                       children: [
@@ -68,7 +68,7 @@ let _ = function (n) {
                               className: v.rejectionReasonLabel,
                               children: g.intl.string(g.t.cf1psW),
                           }),
-                          (0, i.jsx)("span", { children: null == h ? void 0 : h.rejectionReason }),
+                          (0, i.jsx)("span", { children: null == x ? void 0 : x.rejectionReason }),
                       ],
                   })
                 : null,

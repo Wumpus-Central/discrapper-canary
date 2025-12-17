@@ -3,8 +3,8 @@ var n = r(54381),
     i = r(473749),
     o = r(120356),
     l = r.n(o),
-    s = r(392711),
-    c = r.n(s),
+    c = r(392711),
+    s = r.n(c),
     a = r(481060),
     d = r(100527),
     u = r(267101),
@@ -12,11 +12,11 @@ var n = r(54381),
     p = r(891561),
     f = r(333866),
     b = r(388032),
-    j = r(451489);
+    j = r(579574);
 function g(e) {
     let { guildId: t, productId: r } = e,
         { listingsLoaded: o } = (0, u.eD)(t),
-        s = (0, u.ue)(t),
+        c = (0, u.ue)(t),
         g = i.useRef(null),
         { sortOption: O } = (0, p.s)(),
         h = i.useMemo(
@@ -39,9 +39,9 @@ function g(e) {
                         default:
                             return e;
                     }
-                    return c().orderBy(e, [r], [n]);
-                })(s, O),
-            [s, O],
+                    return s().orderBy(e, [r], [n]);
+                })(c, O),
+            [c, O],
         );
     return o
         ? (0, n.jsx)("ul", {

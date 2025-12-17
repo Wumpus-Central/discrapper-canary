@@ -6,8 +6,8 @@ var r = n(54381),
     a = n(954955),
     s = n.n(a),
     c = n(498607),
-    d = n.n(c),
-    u = n(399606),
+    u = n.n(c),
+    d = n(399606),
     C = n(481060),
     m = n(430824),
     b = n(246946),
@@ -136,10 +136,10 @@ function D(e) {
                     return null;
             }
         })(t, s),
-        d = (0, j.bE)(t, i);
+        u = (0, j.bE)(t, i);
     return (0, r.jsxs)("div", {
         className: O.labelWithIconContainer,
-        "aria-label": d,
+        "aria-label": u,
         children: [
             null != c ? c : null,
             (0, r.jsx)(C.Text, {
@@ -153,14 +153,14 @@ function D(e) {
 function N(e) {
     var t;
     let { guildId: n, onClose: i } = e,
-        a = (0, u.e7)([h.Z], () => h.Z.getSearchStateByGuildId(n), [n], d()),
+        a = (0, d.e7)([h.Z], () => h.Z.getSearchStateByGuildId(n), [n], u()),
         { inviteCodes: c } = (0, x.s)(n),
-        f = (0, u.e7)([m.Z], () => m.Z.getGuild(n)),
+        f = (0, d.e7)([m.Z], () => m.Z.getGuild(n)),
         N = null != (t = null == f ? void 0 : f.vanityURLCode) ? t : null,
         [_, R] = l.useState(!1),
         { selectedSourceInviteCode: L, selectedJoinSourceType: I } = a,
         P = null != I && I !== j.gq.UNSPECIFIED,
-        V = (0, u.e7)([b.Z], () => b.Z.hideInstantInvites, []);
+        V = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
     V && (c = []);
     let M = l.useMemo(
         () =>

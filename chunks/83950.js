@@ -16,8 +16,8 @@ var e = n(54381),
     C = n(335131),
     b = n(981631),
     k = n(388032),
-    y = n(890767),
-    g = n(480443);
+    y = n(725150),
+    g = n(641638);
 function h(t) {
     let { transitionState: a, onClose: n, skuId: h } = t,
         { analyticsLocations: m } = (0, l.ZP)(u.Z.COLLECTIBLES_EXPIRY_MODAL),

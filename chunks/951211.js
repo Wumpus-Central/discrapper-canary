@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => f,
-    r: () => h,
+    Z: () => h,
+    r: () => f,
 }),
     n(539854);
 var i,
@@ -13,7 +13,7 @@ var i,
     u = n(713913),
     d = n(981631),
     p = n(388032),
-    h =
+    f =
         (((i = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (i.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
         (i.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME"),
@@ -28,39 +28,39 @@ var i,
         (i.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
         (i.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         i);
-function f(e) {
+function h(e) {
     let {
             canAttachFiles: t,
             canStartThreads: n,
             useSlate: i,
-            canUseApplicationCommands: h,
-            hasClips: f,
+            canUseApplicationCommands: f,
+            hasClips: h,
             channel: m,
             activities: g,
             newClipsCount: b,
             canPostPolls: C,
             canLaunchActivities: y,
-            appContext: _,
-            canSendScheduledMessages: v,
+            appContext: v,
+            canSendScheduledMessages: x,
             canSummarizeThreads: O,
-            showAppLauncher: x,
+            showAppLauncher: E,
         } = e,
-        E = [];
+        j = [];
     t &&
-        (E.push({
+        (j.push({
             type: "UPLOAD_A_FILE",
             icon: l.xD0,
             display: p.intl.string(p.t["d3+iYs"]),
         }),
-        E.push({
+        j.push({
             type: "UPLOAD_TEXT_AS_FILE",
             icon: l.xD0,
             display: p.intl.string(p.t["G9s+EM"]),
         })),
-        f &&
+        h &&
             t &&
-            _ !== d.IlC.POPOUT &&
-            E.push({
+            v !== d.IlC.POPOUT &&
+            j.push({
                 type: "CLIPS",
                 icon: l.AlX,
                 display: p.intl.string(p.t.o034cv),
@@ -68,37 +68,37 @@ function f(e) {
                 badgeColor: r.Z.colors.BACKGROUND_BRAND.css,
             }),
         n &&
-            E.push({
+            j.push({
                 type: "CREATE_THREAD",
                 icon: l.YPH,
                 display: p.intl.string(p.t.rBIGBL),
             }),
         C &&
-            E.push({
+            j.push({
                 type: "POLL",
                 icon: l.QDj,
                 display: p.intl.string(p.t.Flr51u),
             });
-    let { renameAppsToAppCommandsInOverflow: j, moveAppsEntrypointToOverflow: S } = u.n.getConfig({
+    let { renameAppsToAppCommandsInOverflow: S, moveAppsEntrypointToOverflow: _ } = u.n.getConfig({
         location: "getChannelAttachOptions",
     });
     return (
-        S
-            ? x &&
-              E.push({
+        _
+            ? E &&
+              j.push({
                   type: "APP_LAUNCHER",
                   icon: l.jje,
                   display: p.intl.string(p.t.nqswKn),
               })
             : i &&
-              h &&
-              E.push({
+              f &&
+              j.push({
                   type: "SLASH_COMMAND",
                   icon: l.jje,
-                  display: p.intl.string(j ? p.t["5Y0Fam"] : p.t.Bbvp6G),
+                  display: p.intl.string(S ? p.t["5Y0Fam"] : p.t.Bbvp6G),
               }),
         y &&
-            E.push({
+            j.push({
                 type: "ACTIVITY",
                 icon: l.nG3,
                 display: p.intl.string(p.t["16Lfrb"]),
@@ -107,7 +107,7 @@ function f(e) {
             !(0, a.Z)(e, d.xjy.EMBEDDED) &&
                 (e.type === d.IIU.PLAYING &&
                     (0, a.Z)(e, d.xjy.JOIN) &&
-                    E.push({
+                    j.push({
                         type: "INVITE_TO_GAME",
                         icon: l.xoD,
                         display: p.intl.formatToPlainString(p.t["KHLo+F"], {
@@ -118,7 +118,7 @@ function f(e) {
                     }),
                 e.type === d.IIU.LISTENING &&
                     (0, a.Z)(e, d.xjy.SYNC) &&
-                    E.push({
+                    j.push({
                         type: "INVITE_TO_LISTEN",
                         icon: l.iOO,
                         display: p.intl.formatToPlainString(p.t.I479px, {
@@ -129,7 +129,7 @@ function f(e) {
                     }),
                 e.type === d.IIU.WATCHING &&
                     (0, a.Z)(e, d.xjy.SYNC) &&
-                    E.push({
+                    j.push({
                         type: "INVITE_TO_WATCH",
                         icon: l.tEF,
                         display: p.intl.formatToPlainString(p.t["EvCP/g"], {
@@ -139,19 +139,19 @@ function f(e) {
                         activity: e,
                     }));
         }),
-        v &&
-            E.push({
+        x &&
+            j.push({
                 type: "SCHEDULED_MESSAGE",
                 icon: l.T39,
                 display: p.intl.string(p.t["3+ii4F"]),
             }),
         m.isThread() &&
             O &&
-            E.push({
+            j.push({
                 type: "SUMMARIZE_THREAD",
                 icon: l.$2U,
                 display: p.intl.string(p.t.EXfguE),
             }),
-        E
+        j
     );
 }

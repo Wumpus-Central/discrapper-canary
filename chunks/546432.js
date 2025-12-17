@@ -30,8 +30,8 @@ var r = n(54381),
     v = n(217702),
     S = n(981631),
     I = n(388032),
-    T = n(337595),
-    C = n(374299);
+    T = n(984995),
+    C = n(178490);
 function A(e, t, n) {
     return (
         t in e
@@ -84,11 +84,11 @@ function R(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -96,7 +96,7 @@ function D(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -209,8 +209,8 @@ function U(e) {
             renderVisualPlaceholderComponent: N,
             className: P,
             imgContainerClassName: R,
-            imgClassName: D,
-            focusable: w,
+            imgClassName: w,
+            focusable: D,
             hiddenSpoilers: x,
             mediaLayoutType: L,
             maxWidth: j,
@@ -218,8 +218,8 @@ function U(e) {
             hasFooter: U,
             useFullWidth: G,
             isVisualMediaType: Z,
-            onVideoControlsShow: B,
-            onVideoControlsHide: F,
+            onVideoControlsShow: F,
+            onVideoControlsHide: B,
             forcePlaceholder: V,
         } = e,
         { width: H, height: Y, spoiler: W, type: K, contentType: z } = n,
@@ -307,8 +307,8 @@ function U(e) {
                         renderAdjacentContent: ei,
                         containerClassName: P,
                         className: R,
-                        imageClassName: D,
-                        shouldLink: w,
+                        imageClassName: w,
+                        shouldLink: D,
                         hiddenSpoilers: x,
                         responsive: !0,
                         mediaLayoutType: L,
@@ -332,15 +332,15 @@ function U(e) {
                 naturalWidth: H,
                 naturalHeight: Y,
                 className: o()(P, { [T.hasFooter]: U }),
-                playable: w,
+                playable: D,
                 responsive: !0,
                 mediaLayoutType: L,
                 maxWidth: j,
                 maxHeight: M,
                 useFullWidth: G,
                 mimeType: ee,
-                onControlsShow: B,
-                onControlsHide: F,
+                onControlsShow: F,
+                onControlsHide: B,
                 downloadable: !$,
                 mediaPlayerClassName: U ? T.hasFooter : void 0,
             });
@@ -350,7 +350,7 @@ function U(e) {
                 item: n,
                 message: t,
                 className: R,
-                imageClassName: D,
+                imageClassName: w,
                 maxWidth: j,
                 maxHeight: M,
                 mediaLayoutType: L,
@@ -361,7 +361,7 @@ function U(e) {
                 item: n,
                 message: t,
                 className: P,
-                playable: w,
+                playable: D,
                 mimeType: ee,
                 renderAdjacentContent: ei,
                 onVolumeShow: () => Q(!0),
@@ -420,7 +420,7 @@ let Z = function (e) {
             footer: d,
             displayGridItem: m,
         } = e,
-        h = D(e, [
+        h = w(e, [
             "className",
             "item",
             "message",
@@ -436,16 +436,16 @@ let Z = function (e) {
         [I, C] = i.useState(null != S),
         A = (0, f.JO)(S),
         P = c === v.hV.MOSAIC,
-        w = !P && ((null != E && E < x) || (null != b && b < L)),
+        D = !P && ((null != E && E < x) || (null != b && b < L)),
         M = j(y),
         k = (0, O.R_)(y),
         Z = u && null != S && (0, f.yf)(E, b),
-        [B, F] = i.useState(!1),
+        [F, B] = i.useState(!1),
         V = () => {
-            F(!0);
+            B(!0);
         },
         H = () => {
-            F(!1);
+            B(!1);
         },
         Y = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -457,11 +457,11 @@ let Z = function (e) {
                     getObscureReason: s,
                     hiddenSpoilers: e,
                     className: o()(t, T.mosaicItemContent, {
-                        [T.obscured]: I && !w,
+                        [T.obscured]: I && !D,
                         [T.hiddenSpoiler]: I && S === p.wk.SPOILER,
                         [T.hiddenExplicit]: I && null != S && p.Xh.has(S),
                         [T.hiddenMosaicItem]: I && e,
-                        [T.inline]: I && w,
+                        [T.inline]: I && D,
                     }),
                     focusable: !e,
                     mediaLayoutType: c,
@@ -492,12 +492,12 @@ let Z = function (e) {
             null != S
                 ? (0, r.jsx)(g.ZP, {
                       type: g.ZP.Types.ATTACHMENT,
-                      inline: w,
+                      inline: D,
                       reason: S,
                       isSingleMosaicItem: u,
                       obscured: I,
                       containerStyles: G(n, M, c),
-                      obscurityControlClassName: o()({ [T.obscureVideoSpacing]: "VIDEO" === y && u && !I && B }),
+                      obscurityControlClassName: o()({ [T.obscureVideoSpacing]: "VIDEO" === y && u && !I && F }),
                       onToggleObscurity: () => C((e) => !e),
                       children: (e) => Y(e),
                   })

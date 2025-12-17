@@ -15,7 +15,7 @@ var r = n(54381),
     d = n(689946),
     f = n(207385),
     p = n(388032),
-    _ = n(467250);
+    _ = n(645298);
 function m(e, t, n) {
     return (
         t in e
@@ -131,7 +131,7 @@ function b(e) {
                       }),
             [n, v, I, y],
         ),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             if (null == n || null == v) return;
             let e = (0, d.KZ)(n, {
                 blockId: v,
@@ -141,9 +141,9 @@ function b(e) {
             b(t, R), e.isComplete && l.ZP.submitSurveyResponse(t, y), S(e.blockId), T(e.pageIndex), A(e.isComplete);
         }, [n, v, I, y, t, R, b]);
     i.useEffect(() => {
-        0 === R.length && D();
-    }, [R, D]);
-    let w = (e) =>
+        0 === R.length && w();
+    }, [R, w]);
+    let D = (e) =>
             0 === R.length
                 ? null
                 : (0, r.jsx)("div", {
@@ -212,13 +212,13 @@ function b(e) {
                   {
                       variant: "primary",
                       text: p.intl.string(p.t.PDTjLN),
-                      onClick: D,
+                      onClick: w,
                       disabled: !x,
                   },
               ],
               children: (0, r.jsx)("div", {
                   style: { width: "100%" },
-                  children: w(n),
+                  children: D(n),
               }),
           });
 }

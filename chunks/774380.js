@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(74538),
     d = n(474936),
     u = n(388032),
-    g = n(430666);
-let m = (e) => {
+    g = n(690714);
+let f = (e) => {
         let { onOpenPremiumClick: t } = e,
             n = (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
@@ -43,8 +43,8 @@ let m = (e) => {
             ],
         });
     },
-    p = (e) => {
+    m = (e) => {
         let { onOpenPremiumClick: t } = e,
             n = (0, i.e7)([o.default], () => o.default.getCurrentUser());
-        return c.ZP.isPremium(n, d.PremiumTypes.TIER_2) ? null : (0, r.jsx)(m, { onOpenPremiumClick: t });
+        return c.ZP.isPremium(n, d.PremiumTypes.TIER_2) ? null : (0, r.jsx)(f, { onOpenPremiumClick: t });
     };

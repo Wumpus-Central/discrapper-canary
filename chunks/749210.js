@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => Z,
-    Z: () => F,
+    Z: () => B,
 }),
     n(415506),
     n(358797),
@@ -33,7 +33,7 @@ var r = n(990547),
     N = n(981631),
     P = n(723359),
     R = n(388032);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -132,10 +132,10 @@ function Z(e) {
         }),
     );
 }
-function B(e, t) {
+function F(e, t) {
     return null != t ? t : (0, _.V)(e);
 }
-let F = {
+let B = {
     joinGuild: async function (e) {
         var t, r, i, s, u, d;
         let f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -220,11 +220,11 @@ let F = {
     },
     waitForGuild: Z,
     async transitionToGuildSync(e, t, n, r) {
-        let i = B((await Z(e)).id, n),
+        let i = F((await Z(e)).id, n),
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = L(w({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (a = L(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
             (0, d.Z)(N.Z5c.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
@@ -388,7 +388,7 @@ let F = {
             s = null === r || (null == r ? void 0 : r.startsWith("data:")) ? r : void 0,
             l = await a.tn.patch({
                 url: N.ANM.GUILD_ROLE(e, t),
-                body: L(w({}, o), {
+                body: L(D({}, o), {
                     icon: s,
                     unicode_emoji: i,
                 }),

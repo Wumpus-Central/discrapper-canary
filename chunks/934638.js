@@ -16,7 +16,7 @@ function u(e) {
             },
             [u],
         ),
-        m = (0, a.e7)([c.Z], () => c.Z.getError("description"));
+        f = (0, a.e7)([c.Z], () => c.Z.getError("description"));
     return (0, r.jsx)(s.Kx8, {
         label: d.intl.string(d.t.Z27SCb),
         description: d.intl.string(d.t.pw0MIk),
@@ -25,6 +25,6 @@ function u(e) {
         onChange: g,
         maxLength: l.Us,
         disabled: !n,
-        error: m,
+        error: f,
     });
 }

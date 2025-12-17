@@ -1,15 +1,15 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(442837),
-    l = n(199849),
+    l = n(442837),
+    i = n(199849),
     s = n(481060),
     o = n(570140),
     c = n(178635),
     d = n(115470),
     u = n(246992),
     m = n(531578),
-    p = n(584314);
+    p = n(746234);
 let h = [
     {
         label: "second(s)",
@@ -28,32 +28,32 @@ let h = [
         value: 86400000,
     },
 ];
-function x() {
+function f() {
     let [e, t] = r.useState(null),
-        [n, x] = r.useState(0),
-        [f, g] = r.useState(1000),
-        [b, v] = r.useState(0),
-        j = (0, i.e7)([d.Z], () => {
+        [n, f] = r.useState(0),
+        [x, b] = r.useState(1000),
+        [g, v] = r.useState(0),
+        j = (0, l.e7)([d.Z], () => {
             var t;
             return null === e ? null : null != (t = d.Z.getFeedbackConfig(m.nw[e])) ? t : c.R[m.nw[e]];
         }),
-        _ = Object.entries(m.nw),
-        y = _.slice(_.length / 2).map((e) => {
+        y = Object.entries(m.nw),
+        C = y.slice(y.length / 2).map((e) => {
             let [t] = e;
             return {
                 label: t,
                 value: t,
             };
         }),
-        C = r.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
+        _ = r.useMemo(() => null != e && g >= 0 && g <= 100 && n >= 0, [e, g, n]);
     return (0, a.jsx)("div", {
         className: p.container,
         children: (0, a.jsxs)(s.Kqy, {
             gap: 32,
             children: [
-                (0, a.jsx)(l.y6, {
+                (0, a.jsx)(i.y6, {
                     label: "Feedback Survey",
-                    options: y,
+                    options: C,
                     value: e,
                     onChange: (e) => {
                         t(e);
@@ -99,13 +99,13 @@ function x() {
                                     value: n.toString(),
                                     type: "number",
                                     placeholder: "Duration length",
-                                    onChange: (e) => x(parseFloat(e)),
+                                    onChange: (e) => f(parseFloat(e)),
                                 }),
-                                (0, a.jsx)(l.y6, {
+                                (0, a.jsx)(i.y6, {
                                     options: h,
-                                    value: f,
+                                    value: x,
                                     onChange: (e) => {
-                                        g(e);
+                                        b(e);
                                     },
                                     popoutLayerContext: u.O$,
                                 }),
@@ -122,7 +122,7 @@ function x() {
                         helperText: "As a percentage",
                         min: 0,
                         max: 100,
-                        value: b.toString(),
+                        value: g.toString(),
                         type: "number",
                         onChange: (e) => v(parseFloat(e)),
                     }),
@@ -140,7 +140,7 @@ function x() {
                                         feedbackType: j.feedbackType,
                                     })
                                 ),
-                            disabled: !C,
+                            disabled: !_,
                         }),
                         (0, a.jsx)(s.Button, {
                             variant: "primary",
@@ -151,11 +151,11 @@ function x() {
                                     o.Z.dispatch({
                                         type: "FEEDBACK_OVERRIDE_SET",
                                         feedbackType: j.feedbackType,
-                                        cooldown: n * f,
-                                        chance: b / 100,
+                                        cooldown: n * x,
+                                        chance: g / 100,
                                     })
                                 ),
-                            disabled: !C,
+                            disabled: !_,
                         }),
                     ],
                 }),
@@ -171,7 +171,7 @@ function x() {
                         color: "text-feedback-critical",
                         children: "Error: cooldown needs to be a number greater than 0",
                     }),
-                !(b >= 0 && b <= 100) &&
+                !(g >= 0 && g <= 100) &&
                     (0, a.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-feedback-critical",

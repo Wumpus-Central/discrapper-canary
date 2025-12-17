@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(865066),
     p = n(981631),
     _ = n(388032),
-    m = n(685383);
+    m = n(799214);
 function h(e) {
     let { game: t, application: n } = e;
     return null == t || null == n

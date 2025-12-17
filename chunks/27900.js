@@ -3,8 +3,8 @@ var l = n(54381);
 n(473749);
 var r = n(481060),
     i = n(239091),
-    o = n(883385),
-    a = n(108843),
+    a = n(883385),
+    o = n(108843),
     u = n(947440),
     c = n(100527),
     s = n(299206),
@@ -69,8 +69,8 @@ function A(e) {
     let {
             user: t,
             guildId: n,
-            channelId: o,
-            mediaEngineContext: a,
+            channelId: a,
+            mediaEngineContext: o,
             onSelect: c,
             onShowProfile: S,
             onWatchStream: _,
@@ -91,7 +91,7 @@ function A(e) {
         }),
         M = (0, p.Z)(t.id, _),
         x = (0, j.Z)(t.id),
-        D = (0, m.Z)(t.id, a),
+        D = (0, m.Z)(t.id, o),
         w = (0, v.Z)({ user: t }),
         N = (0, u.Z)(null, t),
         T = (0, f.Z)({
@@ -111,7 +111,7 @@ function A(e) {
             label: h.intl.string(h.t["/AXYnE"]),
         }),
         R = (0, d.Z)(t),
-        B = (0, g.Z)(t, n, o),
+        B = (0, g.Z)(t, n, a),
         V = t.isNonUserBot();
     return (0, l.jsxs)(r.v2r, {
         navId: "user-context",
@@ -139,10 +139,10 @@ function A(e) {
     });
 }
 function I(e) {
-    let { user: t, mediaEngineContext: n, onSelect: o, onShowProfile: a, onWatchStream: c, appContext: g } = e,
+    let { user: t, mediaEngineContext: n, onSelect: a, onShowProfile: o, onWatchStream: c, appContext: g } = e,
         S = (0, E.Z)({
             onAction: () => {
-                null == a || a();
+                null == o || o();
             },
         }),
         _ = (0, y.Z)({
@@ -180,7 +180,7 @@ function I(e) {
         navId: "user-context",
         onClose: i.Zy,
         "aria-label": h.intl.string(h.t.liqwPJ),
-        onSelect: o,
+        onSelect: a,
         children: [
             !U &&
                 (0, l.jsxs)(l.Fragment, {
@@ -200,8 +200,8 @@ function I(e) {
         ],
     });
 }
-let C = (0, a.Z)(
-    (0, o.Z)(
+let C = (0, o.Z)(
+    (0, a.Z)(
         function (e) {
             var { guildId: t, channelId: n } = e,
                 r = (function (e, t) {

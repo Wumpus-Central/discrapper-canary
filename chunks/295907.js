@@ -1,7 +1,7 @@
 n.d(t, {
     Cg: () => p,
     Hs: () => u,
-    LT: () => a,
+    LT: () => o,
     Mo: () => c,
     RE: () => d,
     Sp: () => l,
@@ -26,7 +26,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function o(e) {
     }
     return e;
 }
-let a = r.Key.F6,
+let o = r.Key.F6,
     s = new Map([
         [r.Key.F6, "f6"],
         [r.Key.Tab, "tab"],
@@ -298,7 +298,7 @@ let u = Object.freeze({
         up: 82,
     }),
     f = Object.freeze(
-        o(
+        a(
             {
                 a: 65,
                 s: 83,

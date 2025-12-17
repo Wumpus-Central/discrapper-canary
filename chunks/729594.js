@@ -107,13 +107,13 @@ function O(e, t) {
             (this.hostname = this.hostname || "");
         var R = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
         if (!R)
-            for (var D = this.hostname.split(/\./), N = 0, w = D.length; N < w; N++) {
-                var x = D[N];
+            for (var w = this.hostname.split(/\./), N = 0, D = w.length; N < D; N++) {
+                var x = w[N];
                 if (x && !x.match(f)) {
                     for (var L = "", j = 0, M = x.length; j < M; j++) x.charCodeAt(j) > 127 ? (L += "x") : (L += x[j]);
                     if (!L.match(f)) {
-                        var k = D.slice(0, N),
-                            U = D.slice(N + 1),
+                        var k = w.slice(0, N),
+                            U = w.slice(N + 1),
                             G = x.match(p);
                         G && (k.push(G[1]), U.unshift(G[2])),
                             U.length && (y = "/" + U.join(".") + y),
@@ -125,17 +125,17 @@ function O(e, t) {
         this.hostname.length > d ? (this.hostname = "") : (this.hostname = this.hostname.toLowerCase()),
             R || (this.hostname = r.toASCII(this.hostname));
         var Z = this.port ? ":" + this.port : "",
-            B = this.hostname || "";
-        (this.host = B + Z),
+            F = this.hostname || "";
+        (this.host = F + Z),
             (this.href += this.host),
             R && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), "/" !== y[0] && (y = "/" + y));
     }
     if (!_[S])
-        for (var N = 0, w = l.length; N < w; N++) {
-            var F = l[N];
-            if (-1 !== y.indexOf(F)) {
-                var V = encodeURIComponent(F);
-                V === F && (V = escape(F)), (y = y.split(F).join(V));
+        for (var N = 0, D = l.length; N < D; N++) {
+            var B = l[N];
+            if (-1 !== y.indexOf(B)) {
+                var V = encodeURIComponent(B);
+                V === B && (V = escape(B)), (y = y.split(B).join(V));
             }
         }
     var H = y.indexOf("#");

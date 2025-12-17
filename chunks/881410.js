@@ -84,7 +84,7 @@ function m(e) {
         { trackUserProfileEditAction: O } = (0, s.KZ)(),
         [j, x] = i.useState(""),
         P = i.useRef(""),
-        I = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 (0, u.ES)({
                     widgetType: t,
@@ -100,18 +100,18 @@ function m(e) {
             },
             [t, O, m],
         ),
-        { options: w, matchSorterOptions: S } = (0, c.h)(),
+        { options: I, matchSorterOptions: S } = (0, c.h)(),
         E = i.useMemo(
             () =>
-                w.map((e) => ({
+                I.map((e) => ({
                     id: String(e.value),
                     value: String(e.value),
                     label: e.label,
                     disabled: v.has(e.value),
                 })),
-            [w, v],
+            [I, v],
         ),
-        _ = i.useMemo(
+        T = i.useMemo(
             () =>
                 p(g({}, S), {
                     threshold: a.Lu.rankings.CONTAINS,
@@ -119,7 +119,7 @@ function m(e) {
                 }),
             [S],
         ),
-        T = i.useCallback((e) => ("" === e.trim() ? E.length : (0, a.Lu)(E, e, _).length), [E, _]),
+        _ = i.useCallback((e) => ("" === e.trim() ? E.length : (0, a.Lu)(E, e, T).length), [E, T]),
         C = i.useCallback(
             (e) => {
                 let n = e.target.value;
@@ -129,12 +129,12 @@ function m(e) {
                         action: "GAME_SEARCH_SESSION_STARTED",
                         widgetEdited: t,
                         numCharacters: n.trim().length,
-                        numResults: T(n),
+                        numResults: _(n),
                     }),
                     x(n),
                     (P.current = n);
             },
-            [j, O, t, T],
+            [j, O, t, _],
         );
     return (0, r.jsx)(
         o.yRy,
@@ -152,7 +152,7 @@ function m(e) {
                     action: "GAME_SEARCH_SESSION_ENDED",
                     widgetEdited: t,
                     numCharacters: P.current.trim().length,
-                    numResults: T(P.current),
+                    numResults: _(P.current),
                 });
             },
             renderPopout: (e) => {
@@ -164,10 +164,10 @@ function m(e) {
                         selectionMode: "single",
                         value: null,
                         onSelectionChange: (e) => {
-                            null != e && (I(e), t());
+                            null != e && (w(e), t());
                         },
                         options: E,
-                        matchSorterOptions: _,
+                        matchSorterOptions: T,
                         children: [
                             (0, r.jsx)(l.Ct, {
                                 label: d.intl.string(d.t["5h0QOP"]),

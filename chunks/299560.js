@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(296009),
-    o = n(481060),
+    o = n(296009),
+    s = n(481060),
     c = n(812206),
     u = n(823379),
     d = n(804919),
@@ -19,35 +19,35 @@ var r = n(54381),
     O = n(388032),
     v = n(119078);
 let y = {
-    [s.l.FAVORITE_GAMES]: {
+    [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.LEAGUE_OF_LEGENDS,
         }),
         getAriaLabel: () => O.intl.string(O.t.xJtdIm),
     },
-    [s.l.CURRENT_GAMES]: {
+    [o.l.CURRENT_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.VALORANT,
         }),
         getAriaLabel: () => O.intl.string(O.t.Ae8tRi),
     },
-    [s.l.PLAYED_GAMES]: {
+    [o.l.PLAYED_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.PEAK, d.L.BATTLEFIELD_6, d.L.REPO, d.L.BALDURS_GATE_3],
         }),
         getAriaLabel: () => O.intl.string(O.t["pBR+4j"]),
     },
-    [s.l.WANT_TO_PLAY_GAMES]: {
+    [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.RUST, d.L.SILKSONG],
         }),
         getAriaLabel: () => O.intl.string(O.t.NtoBi1),
     },
-    [s.l.APPLICATION]: {
+    [o.l.APPLICATION]: {
         placeholder: (e) => ({
             variant: "application-widget",
             applicationId: e.applicationId,
@@ -73,15 +73,15 @@ function I(e) {
         { config: N } = (0, h.G)(),
         j = i.useMemo(() => {
             switch (n) {
-                case s.l.CURRENT_GAMES:
-                case s.l.FAVORITE_GAMES:
-                case s.l.PLAYED_GAMES:
-                case s.l.WANT_TO_PLAY_GAMES:
+                case o.l.CURRENT_GAMES:
+                case o.l.FAVORITE_GAMES:
+                case o.l.PLAYED_GAMES:
+                case o.l.WANT_TO_PLAY_GAMES:
                     return new f.zy({
                         type: n,
                         games: [],
                     });
-                case s.l.APPLICATION:
+                case o.l.APPLICATION:
                     let e = null == N ? void 0 : N.application_id;
                     if (null == e) return null;
                     return new p.q({
@@ -129,7 +129,7 @@ function I(e) {
         : (0, r.jsxs)("div", {
               className: v.addButtonContainer,
               children: [
-                  (0, r.jsxs)(o.P3F, {
+                  (0, r.jsxs)(s.P3F, {
                       className: a()(v.addButtonContent, T && v.sizeSmall, d && v.loading),
                       onClick: P,
                       "aria-label": C(j),
@@ -163,7 +163,7 @@ function I(e) {
                           (0, r.jsxs)("div", {
                               className: v.overlay,
                               children: [
-                                  (0, r.jsx)(o.oFk, {
+                                  (0, r.jsx)(s.oFk, {
                                       size: "md",
                                       color: "currentColor",
                                       className: v.addButton,
@@ -171,7 +171,7 @@ function I(e) {
                                   (0, r.jsxs)("div", {
                                       className: v.title,
                                       children: [
-                                          (0, r.jsx)(o.Text, {
+                                          (0, r.jsx)(s.Text, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
                                               children: (0, g.mR)(j),

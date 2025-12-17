@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(593473),
-    o = n(442837),
+    o = n(593473),
+    s = n(442837),
     c = n(755721),
     u = n(481060),
     d = n(749210),
@@ -13,15 +13,15 @@ var r = n(54381),
     g = n(770146),
     h = n(600164),
     m = n(565138),
-    _ = n(41776),
-    b = n(703656),
+    b = n(41776),
+    _ = n(703656),
     E = n(769654),
     O = n(430824),
     v = n(411198),
     y = n(843445),
     I = n(981631),
     C = n(388032),
-    S = n(295265);
+    S = n(612510);
 function T(e, t, n) {
     return (
         t in e
@@ -64,20 +64,20 @@ class N extends i.PureComponent {
             isInGuild: n,
             isLurking: i,
             isAuthenticated: l,
-            className: s,
-            pageSize: o,
+            className: o,
+            pageSize: s,
         } = this.props;
         if (t && n) return null;
         let d = (0, v.B3)(e),
             p = C.intl.string(C.t.pxwdrA),
             f = this.handleJoinOrView,
-            _ = c.zx.Looks.FILLED,
-            b = c.zx.Colors.PRIMARY;
+            b = c.zx.Looks.FILLED,
+            _ = c.zx.Colors.PRIMARY;
         return (
             l
                 ? n
-                    ? ((_ = c.zx.Looks.OUTLINED),
-                      (b = S.buttonColorInGuild),
+                    ? ((b = c.zx.Looks.OUTLINED),
+                      (_ = S.buttonColorInGuild),
                       (p = (0, r.jsxs)(h.Z, {
                           align: h.Z.Align.CENTER,
                           children: [
@@ -92,7 +92,7 @@ class N extends i.PureComponent {
                     : i && t && (p = C.intl.string(C.t.XpeFYr))
                 : ((p = C.intl.string(C.t.dKhVQN)), (f = this.handleLogin)),
             (0, r.jsxs)("div", {
-                className: a()(s, o === y.b.SMALL ? S.inviteSmall : S.inviteLarge),
+                className: a()(o, s === y.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
                     (0, r.jsx)(g.Z, { children: C.intl.string(C.t.s1KcLo) }),
                     (0, r.jsxs)("div", {
@@ -123,8 +123,8 @@ class N extends i.PureComponent {
                                 size: c.zx.Sizes.SMALL,
                                 className: S.actionButton,
                                 fullWidth: !0,
-                                color: b,
-                                look: _,
+                                color: _,
+                                look: b,
                                 onClick: f,
                                 children: p,
                             }),
@@ -152,17 +152,17 @@ class N extends i.PureComponent {
             }),
             T(this, "handleLogin", () => {
                 let e = { redirect_to: I.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, b.uL)(I.Z5c.LOGIN, {
-                    search: (0, s.stringify)(e),
+                (0, _.uL)(I.Z5c.LOGIN, {
+                    search: (0, o.stringify)(e),
                     source: "verified_guild_invite",
                 });
             });
     }
 }
 let j = (0, f.Z)(
-    o.ZP.connectStores([O.Z, _.Z], (e) => {
+    s.ZP.connectStores([O.Z, b.Z], (e) => {
         let { guild: t } = e,
-            n = _.Z.isLurking(t.id);
+            n = b.Z.isLurking(t.id);
         return {
             isInGuild: null != O.Z.getGuild(t.id) && !n,
             isLurking: n,

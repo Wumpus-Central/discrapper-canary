@@ -2,8 +2,8 @@ let r, i;
 n.d(t, { Z: () => f });
 var l = n(54381);
 n(473749);
-var o = n(481060),
-    a = n(570140),
+var a = n(481060),
+    o = n(570140),
     s = n(341382),
     c = n(981631);
 let u = null;
@@ -12,7 +12,7 @@ function d(e) {
 }
 let f = {
     init() {
-        a.Z.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", (e) => {
+        o.Z.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", (e) => {
             let t;
             d(!1),
                 (u = e.context),
@@ -20,7 +20,7 @@ let f = {
                 (i = e.reject),
                 c.e3s === e.context &&
                     ((t = !1),
-                    (0, o.ZDy)(
+                    (0, a.ZDy)(
                         async () => {
                             let { default: e } = await Promise.all([n.e("88470"), n.e("77927"), n.e("29393")]).then(
                                 n.bind(n, 134817),
@@ -28,8 +28,8 @@ let f = {
                             return (n) => {
                                 var r,
                                     i,
-                                    { onClose: o } = n,
-                                    a = (function (e, t) {
+                                    { onClose: a } = n,
+                                    o = (function (e, t) {
                                         if (null == e) return {};
                                         var n,
                                             r,
@@ -79,11 +79,11 @@ let f = {
                                                 });
                                         }
                                         return e;
-                                    })({}, a)),
+                                    })({}, o)),
                                     (i = i =
                                         {
                                             onClose: (e) => {
-                                                (t = e), o();
+                                                (t = e), a();
                                             },
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -109,11 +109,11 @@ let f = {
                         },
                     ));
         }),
-            a.Z.subscribe("PREMIUM_REQUIRED_MODAL_CLOSE", (e) => {
+            o.Z.subscribe("PREMIUM_REQUIRED_MODAL_CLOSE", (e) => {
                 let { shouldContinue: t } = e;
                 (u = null), d(t);
             }),
-            a.Z.subscribe("OVERLAY_SET_INPUT_LOCKED", (e) => {
+            o.Z.subscribe("OVERLAY_SET_INPUT_LOCKED", (e) => {
                 let { locked: t } = e;
                 t && null != u && ((u = null), d(!1));
             });

@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(35282);
 var r = n(512722),
     i = n.n(r),
     l = n(924301),
-    o = n(430824),
-    a = n(699516),
+    a = n(430824),
+    o = n(699516),
     s = n(594174),
     c = n(624138),
     u = n(51144),
@@ -20,35 +20,35 @@ function p(e) {
         : h.intl.format(l, { username: t });
 }
 function g(e) {
-    var t, n, r, g, m, b, _, y, O, v, j, x, C, E, S;
-    let { item: I, renderApplication: P } = e,
-        N = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : f.lds,
-        Z = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
-        w = I.applicationId;
-    switch (I.type) {
+    var t, n, r, g, b, m, y, O, v, j, C, x, E, S, I;
+    let { item: _, renderApplication: P } = e,
+        N = null != (r = null == (t = _.other_user) ? void 0 : t.id) ? r : f.lds,
+        Z = u.ZP.getName(s.default.getUser(null == (n = _.other_user) ? void 0 : n.id)),
+        w = _.applicationId;
+    switch (_.type) {
         case d.O7.FRIEND_REQUESTS_GROUPED:
-            let T = u.ZP.getName(s.default.getUser(null == (m = I.other_users) || null == (g = m[0]) ? void 0 : g.id)),
-                A = u.ZP.getName(s.default.getUser(null == (_ = I.other_users) || null == (b = _[1]) ? void 0 : b.id)),
-                R = Math.max((null != (O = null == (y = I.other_users) ? void 0 : y.length) ? O : 0) - 2, 0);
+            let T = u.ZP.getName(s.default.getUser(null == (b = _.other_users) || null == (g = b[0]) ? void 0 : g.id)),
+                A = u.ZP.getName(s.default.getUser(null == (y = _.other_users) || null == (m = y[1]) ? void 0 : m.id)),
+                R = Math.max((null != (v = null == (O = _.other_users) ? void 0 : O.length) ? v : 0) - 2, 0);
             return h.intl.format(h.t.g5xyIC, {
                 user: T,
                 user2: A,
                 count: R,
             });
         case d.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let D = null != (j = null == (v = I.local_id) ? void 0 : v.split("_").pop()) ? j : "unknown";
+            let D = null != (C = null == (j = _.local_id) ? void 0 : j.split("_").pop()) ? C : "unknown";
             return "Update to build ".concat(D, " available!");
         case d.DY.FRIEND_SUGGESTION_CREATED:
-            return a.Z.getRelationshipType(N), f.OGo.PENDING_OUTGOING, null != (x = I.body) ? x : "";
+            return o.Z.getRelationshipType(N), f.OGo.PENDING_OUTGOING, null != (x = _.body) ? x : "";
         case d.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let L = I.guild_scheduled_event_id,
-                M = null != L ? l.ZP.getGuildScheduledEvent(L) : null,
-                k = null == M ? void 0 : M.name,
-                G = null == (C = o.Z.getGuild(null == M ? void 0 : M.guild_id)) ? void 0 : C.name,
-                U = (0, l.Z2)(null != M ? M : void 0);
+            let M = _.guild_scheduled_event_id,
+                L = null != M ? l.ZP.getGuildScheduledEvent(M) : null,
+                k = null == L ? void 0 : L.name,
+                G = null == (E = a.Z.getGuild(null == L ? void 0 : L.guild_id)) ? void 0 : E.name,
+                U = (0, l.Z2)(null != L ? L : void 0);
             return (0, c.Ew)(G) || (0, c.Ew)(k) || !U
-                ? null != (E = I.body)
-                    ? E
+                ? null != (S = _.body)
+                    ? S
                     : ""
                 : h.intl.format(h.t.AyvfXR, {
                       event_name: k,
@@ -80,7 +80,7 @@ function g(e) {
             });
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
             return (
-                i()(null != w, "Expected application id for ".concat(I.type)),
+                i()(null != w, "Expected application id for ".concat(_.type)),
                 h.intl.format(h.t["BB/0vn"], {
                     username: Z,
                     applicationName: () => P(w),
@@ -88,18 +88,18 @@ function g(e) {
             );
         case d.O7.INCOMING_GAME_FRIEND_REQUESTS:
             return (
-                i()(null != w, "Expected application id for ".concat(I.type)),
+                i()(null != w, "Expected application id for ".concat(_.type)),
                 h.intl.format(h.t["7cqOLI"], {
                     username: Z,
                     applicationName: () => P(w),
                 })
             );
         case d.DY.GAME_FRIEND_REQUEST_ACCEPTED:
-            if (null == w) return I.body;
+            if (null == w) return _.body;
             return h.intl.format(h.t.Wi64vN, {
                 username: Z,
                 applicationName: () => P(w),
             });
     }
-    return null != (S = I.body) ? S : "";
+    return null != (I = _.body) ? I : "";
 }

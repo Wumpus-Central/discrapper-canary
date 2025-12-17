@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => b,
+    Z: () => _,
     j: () => g,
 }),
     n(415506),
@@ -8,12 +8,12 @@ var r,
     i = n(54381),
     l = n(473749),
     a = n(748780),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(210887),
     u = n(981631),
     d = n(388032),
-    p = n(755429);
+    p = n(397977);
 function f(e, t, n) {
     return (
         t in e
@@ -37,11 +37,11 @@ let h = Object.freeze({
             renderContent: (e) =>
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(o.OZU, { note: d.intl.string(d.t.Y4vMY8) }),
+                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.Y4vMY8) }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
-                            children: (0, i.jsx)(o.Button, {
+                            children: (0, i.jsx)(s.Button, {
                                 variant: "primary",
                                 text: d.intl.string(d.t.w5uwoI),
                                 onClick: e,
@@ -55,14 +55,14 @@ let h = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t.v7HbiQ) }),
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.v7HbiQ) }),
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["9xdyWB"]) }),
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["9xdyWB"]) }),
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
@@ -73,9 +73,9 @@ let h = Object.freeze({
                 (0, i.jsxs)("div", {
                     className: p.emptyStateContainer,
                     children: [
-                        (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["aCYQ+P"]) }),
+                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["aCYQ+P"]) }),
                         null != e &&
-                            (0, i.jsx)(o.Button, {
+                            (0, i.jsx)(s.Button, {
                                 variant: "secondary",
                                 text: t ? d.intl.string(d.t.R40bU2) : d.intl.string(d.t.rXl8fj),
                                 onClick: e,
@@ -89,25 +89,25 @@ let h = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["vgI/EF"]) }),
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["vgI/EF"]) }),
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["7sW4h1"]) }),
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["7sW4h1"]) }),
         },
     }),
     m = (e) => {
         let { theme: t } = e,
             n = d.intl.string(d.t["oi+B4p"]);
-        return (0, i.jsx)(o.ubH, {
+        return (0, i.jsx)(s.ubH, {
             theme: t,
-            children: (0, i.jsx)(o.OZU, { note: n }),
+            children: (0, i.jsx)(s.OZU, { note: n }),
         });
     };
-class _ extends l.PureComponent {
+class b extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
             r = { opacity: this.state.opacity },
@@ -137,7 +137,7 @@ class _ extends l.PureComponent {
             : (0, i.jsx)(a.Z.div, {
                   className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsx)(o.ubH, {
+                  children: (0, i.jsx)(s.ubH, {
                       theme: n,
                       children: l.renderContent(t),
                   }),
@@ -161,4 +161,4 @@ class _ extends l.PureComponent {
             });
     }
 }
-let b = s.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(_);
+let _ = o.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(b);

@@ -9,9 +9,9 @@ var i = n(54381),
     u = n(199902),
     d = n(435064),
     p = n(341569),
-    h = n(354459),
-    f = n(388032),
-    m = n(363862);
+    f = n(354459),
+    h = n(388032),
+    m = n(339012);
 let g = (e) => {
     let { channelId: t } = e;
     return (0, r.e7)([u.Z, s.Z, d.Z, c.ZP], () => {
@@ -21,11 +21,11 @@ let g = (e) => {
             i = null == (e = c.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
         return (
             !!((null != n && (0, p.LI)()) || (null != i && (0, p.CY)())) ||
-            s.Z.getParticipants(t).some((e) => e.type === h.fO.USER && d.Z.isClipsEnabledForUser(e.user.id))
+            s.Z.getParticipants(t).some((e) => e.type === f.fO.USER && d.Z.isClipsEnabledForUser(e.user.id))
         );
     })
         ? (0, i.jsx)(a.u, {
-              text: f.intl.string(f.t.DJXW3G),
+              text: h.intl.string(h.t.DJXW3G),
               children: (0, i.jsxs)("div", {
                   className: m.clipsEnabledIndicator,
                   children: [
@@ -36,7 +36,7 @@ let g = (e) => {
                           className: m.clipBadgeIcon,
                       }),
                       (0, i.jsx)(o.IGR, {
-                          text: f.intl.string(f.t.pCMkDb),
+                          text: h.intl.string(h.t.pCMkDb),
                           shape: o.Dv2.ROUND_RIGHT,
                           color: l.Z.unsafe_rawColors.PRIMARY_500.css,
                           className: m.clipBadgeText,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r,
     i = n(392711),
     a = n.n(i),
@@ -167,7 +167,7 @@ function R(e) {
     let { channelId: t } = e;
     null == t && (E = {});
 }
-class D extends (r = o.ZP.Store) {
+class w extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.Z, d.Z);
     }
@@ -196,8 +196,8 @@ class D extends (r = o.ZP.Store) {
         };
     }
 }
-p(D, "displayName", "CallStore");
-let w = new D(l.Z, {
+p(w, "displayName", "CallStore");
+let D = new w(l.Z, {
     CONNECTION_OPEN: y,
     CONNECTION_CLOSED: v,
     OVERLAY_INITIALIZE: O,

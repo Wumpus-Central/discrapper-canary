@@ -6,7 +6,7 @@ var o = n(98278),
     l = n(474936),
     i = n(981631),
     a = n(388032),
-    u = n(330226);
+    u = n(391853);
 function f(e) {
     var { channel: t, onClose: n } = e,
         f = (function (e, t) {

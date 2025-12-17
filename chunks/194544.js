@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(86419),
     c = n(687158),
     u = n(892001),
-    d = n(732380),
+    d = n(475413),
     f = n(314897),
     p = n(77498),
     _ = n(228168),
@@ -54,7 +54,7 @@ function h(e) {
             [t, g, n, h],
         );
     return y
-        ? (0, r.jsx)(d.O1, {
+        ? (0, r.jsx)(d.i6, {
               text: m.intl.string(m.t.BjYzmC),
               onClick: O,
               fullWidth: !0,

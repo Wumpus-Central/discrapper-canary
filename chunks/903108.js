@@ -17,6 +17,6 @@ function p(e) {
         g = (0, r.e7)([l.Z], () => l.Z.getGuild(e.guild_id), [e.guild_id]),
         m = (0, r.e7)([a.Z], () => a.Z.can(c.yP, e), [e]),
         b = null != (t = null == g ? void 0 : g.maxStageVideoChannelUsers) ? t : 0,
-        _ = !(null != g && g.features.has(u.GuildFeatures.COMMUNITY)) && b > u.RcX;
-    return f && !n && m && !_ && p + h >= b;
+        y = !(null != g && g.features.has(u.GuildFeatures.COMMUNITY)) && b > u.RcX;
+    return f && !n && m && !y && p + h >= b;
 }

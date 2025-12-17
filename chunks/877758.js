@@ -1,32 +1,32 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => l });
 var a = n(54381);
 n(473749);
 var o = n(120356),
-    s = n.n(o),
-    l = n(785997),
-    i = n(880837);
-function r(e) {
+    i = n.n(o),
+    s = n(785997),
+    r = n(745873);
+function l(e) {
     let { step: t } = e,
-        n = t === l.F.AGE_GATE,
-        o = t === l.F.CHOOSE_TEMPLATE || t === l.F.CREATION_INTENT,
-        r = t === l.F.CUSTOMIZE_GUILD,
-        c = t === l.F.CHANNEL_PROMPT || t === l.F.JOIN_GUILD,
-        u = r || c,
-        d = o || u;
+        n = t === s.F.AGE_GATE,
+        o = t === s.F.CHOOSE_TEMPLATE || t === s.F.CREATION_INTENT,
+        l = t === s.F.CUSTOMIZE_GUILD,
+        c = t === s.F.CHANNEL_PROMPT || t === s.F.JOIN_GUILD,
+        d = l || c,
+        u = o || d;
     return (0, a.jsxs)("div", {
-        className: i.sidebar,
+        className: r.sidebar,
         children: [
-            (0, a.jsx)("div", { className: s()(i.step1, { [i.show]: n }) }),
-            (0, a.jsx)("div", { className: s()(i.step24Clouds, { [i.show]: d }) }),
-            (0, a.jsx)("div", { className: s()(i.step34Flag, { [i.show]: u }) }),
-            (0, a.jsx)("div", { className: s()(i.step24Base, { [i.show]: d }) }),
-            (0, a.jsx)("div", { className: s()(i.step24Ground, { [i.show]: d }) }),
-            (0, a.jsx)("div", { className: s()(i.step2Base, { [i.show]: o }) }),
-            (0, a.jsx)("div", { className: s()(i.step2Character, { [i.show]: o }) }),
-            (0, a.jsx)("div", { className: s()(i.step34Base, { [i.show]: u }) }),
-            (0, a.jsx)("div", { className: s()(i.step3Character, { [i.show]: r }) }),
-            (0, a.jsx)("div", { className: s()(i.step4Character, { [i.show]: c }) }),
-            (0, a.jsx)("div", { className: s()(i.step24Foreground, { [i.show]: d }) }),
+            (0, a.jsx)("div", { className: i()(r.step1, { [r.show]: n }) }),
+            (0, a.jsx)("div", { className: i()(r.step24Clouds, { [r.show]: u }) }),
+            (0, a.jsx)("div", { className: i()(r.step34Flag, { [r.show]: d }) }),
+            (0, a.jsx)("div", { className: i()(r.step24Base, { [r.show]: u }) }),
+            (0, a.jsx)("div", { className: i()(r.step24Ground, { [r.show]: u }) }),
+            (0, a.jsx)("div", { className: i()(r.step2Base, { [r.show]: o }) }),
+            (0, a.jsx)("div", { className: i()(r.step2Character, { [r.show]: o }) }),
+            (0, a.jsx)("div", { className: i()(r.step34Base, { [r.show]: d }) }),
+            (0, a.jsx)("div", { className: i()(r.step3Character, { [r.show]: l }) }),
+            (0, a.jsx)("div", { className: i()(r.step4Character, { [r.show]: c }) }),
+            (0, a.jsx)("div", { className: i()(r.step24Foreground, { [r.show]: u }) }),
         ],
     });
 }

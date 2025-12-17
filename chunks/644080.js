@@ -1,60 +1,60 @@
-t.d(n, { Z: () => Z });
-var l = t(54381),
-    r = t(473749),
-    a = t(120356),
-    i = t.n(a),
-    s = t(442837),
-    c = t(481060),
-    o = t(410030),
-    d = t(565138),
+t.d(n, { Z: () => I });
+var a = t(54381),
+    l = t(473749),
+    r = t(120356),
+    i = t.n(r),
+    c = t(442837),
+    s = t(481060),
+    d = t(410030),
+    o = t(565138),
     u = t(523751),
     m = t(637853),
     h = t(434404),
     f = t(159300),
     g = t(496675),
-    p = t(768581),
+    b = t(768581),
     x = t(981631),
-    b = t(388032),
-    j = t(917733),
+    p = t(388032),
+    j = t(622197),
     C = t(63190),
     v = t(102219);
-function _(e) {
+function Z(e) {
     let { guild: n } = e,
         {
             variant: t,
-            icon: r,
-            text: a,
+            icon: l,
+            text: r,
         } = n.features.has(x.GuildFeatures.BANNER)
             ? {
                   variant: "overlay-secondary",
-                  icon: c.FmF,
-                  text: b.intl.string(b.t.b0y3DL),
+                  icon: s.FmF,
+                  text: p.intl.string(p.t.b0y3DL),
               }
             : {
                   variant: "expressive",
-                  icon: c.Ucv,
-                  text: b.intl.string(b.t["+7XY31"]),
+                  icon: s.Ucv,
+                  text: p.intl.string(p.t["+7XY31"]),
               };
-    return (0, l.jsx)("div", {
+    return (0, a.jsx)("div", {
         className: j.editButtonContainer,
-        children: (0, l.jsx)(c.Button, {
+        children: (0, a.jsx)(s.Button, {
             variant: t,
-            icon: r,
-            text: a,
+            icon: l,
+            text: r,
             onClick: () => {
                 h.Z.open(n.id, x.pNK.ONBOARDING, void 0, x.KsC.SERVER_GUIDE);
             },
         }),
     });
 }
-let Z = r.memo(function (e) {
-    let { guild: n, titleClassName: a } = e,
-        { homeHeaderImage: h, isHomeHeaderImageSet: Z } = ((e) => {
-            let n = r.useMemo(
+let I = l.memo(function (e) {
+    let { guild: n, titleClassName: r } = e,
+        { homeHeaderImage: h, isHomeHeaderImageSet: I } = ((e) => {
+            let n = l.useMemo(
                 () =>
                     null == e
                         ? null
-                        : p.ZP.getGuildHomeHeaderURL({
+                        : b.ZP.getGuildHomeHeaderURL({
                               id: e.id,
                               homeHeader: e.homeHeader,
                           }),
@@ -66,75 +66,75 @@ let Z = r.memo(function (e) {
                 homeHeaderScroll: 200 * (null != n),
             };
         })(n),
-        I = (0, m.b$)(n.id),
-        y = (0, s.e7)([g.Z], () => (0, f.b)(g.Z, n)),
-        N = (0, o.ZP)();
-    return (0, l.jsxs)("div", {
+        N = (0, m.b$)(n.id),
+        y = (0, c.e7)([g.Z], () => (0, f.b)(g.Z, n)),
+        O = (0, d.ZP)();
+    return (0, a.jsxs)("div", {
         className: j.header,
         children: [
-            (0, l.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: j.headerArtWrapper,
                 children: [
-                    (0, l.jsx)("div", {
-                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !Z }),
-                        style: { backgroundImage: "url(".concat(Z ? h : "dark" === N ? C : v, ")") },
+                    (0, a.jsx)("div", {
+                        className: i()(j.headerArt, { [j.headerArtPlaceholder]: !I }),
+                        style: { backgroundImage: "url(".concat(I ? h : "dark" === O ? C : v, ")") },
                     }),
-                    I && (0, l.jsx)(_, { guild: n }),
+                    N && (0, a.jsx)(Z, { guild: n }),
                 ],
             }),
-            (0, l.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: j.titleWrapper,
-                children: (0, l.jsxs)("div", {
-                    className: a,
+                children: (0, a.jsxs)("div", {
+                    className: r,
                     children: [
-                        (0, l.jsx)(d.Z, {
+                        (0, a.jsx)(o.Z, {
                             className: j.headerIcon,
                             guild: n,
-                            size: d.Z.Sizes.XLARGE,
+                            size: o.Z.Sizes.XLARGE,
                             active: !0,
                         }),
-                        (0, l.jsx)(c.y5t, {
-                            children: (0, l.jsxs)("div", {
+                        (0, a.jsx)(s.y5t, {
+                            children: (0, a.jsxs)("div", {
                                 className: j.headerName,
                                 children: [
-                                    (0, l.jsx)(c.Heading, {
+                                    (0, a.jsx)(s.Heading, {
                                         className: j.headerName,
                                         variant: "heading-xxl/bold",
                                         children: n.name,
                                     }),
-                                    (0, l.jsx)(u.Z, {
+                                    (0, a.jsx)(u.Z, {
                                         size: 24,
                                         guild: n,
                                         tooltipPosition: "bottom",
-                                        tooltipColor: c.aML.Colors.PRIMARY,
+                                        tooltipColor: s.aML.Colors.PRIMARY,
                                     }),
                                     y &&
-                                        (0, l.jsx)("div", {
+                                        (0, a.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: j.inviteButton,
-                                            children: (0, l.jsx)(c.Button, {
+                                            children: (0, a.jsx)(s.Button, {
                                                 variant: "secondary",
-                                                text: b.intl.string(b.t.VINpSK),
+                                                text: p.intl.string(p.t.VINpSK),
                                                 onClick: () =>
-                                                    (0, c.ZDy)(async () => {
+                                                    (0, s.ZDy)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             t.e("7654"),
-                                                            t.e("89772"),
+                                                            t.e("45965"),
                                                         ]).then(t.bind(t, 560114));
                                                         return (t) => {
-                                                            var r, a;
-                                                            return (0, l.jsx)(
+                                                            var l, r;
+                                                            return (0, a.jsx)(
                                                                 e,
-                                                                ((r = (function (e) {
+                                                                ((l = (function (e) {
                                                                     for (var n = 1; n < arguments.length; n++) {
                                                                         var t =
                                                                                 null != arguments[n]
                                                                                     ? arguments[n]
                                                                                     : {},
-                                                                            l = Object.keys(t);
+                                                                            a = Object.keys(t);
                                                                         "function" ==
                                                                             typeof Object.getOwnPropertySymbols &&
-                                                                            (l = l.concat(
+                                                                            (a = a.concat(
                                                                                 Object.getOwnPropertySymbols(t).filter(
                                                                                     function (e) {
                                                                                         return Object.getOwnPropertyDescriptor(
@@ -144,46 +144,46 @@ let Z = r.memo(function (e) {
                                                                                     },
                                                                                 ),
                                                                             )),
-                                                                            l.forEach(function (n) {
-                                                                                var l;
-                                                                                (l = t[n]),
+                                                                            a.forEach(function (n) {
+                                                                                var a;
+                                                                                (a = t[n]),
                                                                                     n in e
                                                                                         ? Object.defineProperty(e, n, {
-                                                                                              value: l,
+                                                                                              value: a,
                                                                                               enumerable: !0,
                                                                                               configurable: !0,
                                                                                               writable: !0,
                                                                                           })
-                                                                                        : (e[n] = l);
+                                                                                        : (e[n] = a);
                                                                             });
                                                                     }
                                                                     return e;
                                                                 })({}, t)),
-                                                                (a = a =
+                                                                (r = r =
                                                                     {
                                                                         guild: n,
                                                                         source: x.t4x.GUILD_HOME,
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(
-                                                                          r,
-                                                                          Object.getOwnPropertyDescriptors(a),
+                                                                          l,
+                                                                          Object.getOwnPropertyDescriptors(r),
                                                                       )
                                                                     : (function (e, n) {
                                                                           var t = Object.keys(e);
                                                                           if (Object.getOwnPropertySymbols) {
-                                                                              var l = Object.getOwnPropertySymbols(e);
-                                                                              t.push.apply(t, l);
+                                                                              var a = Object.getOwnPropertySymbols(e);
+                                                                              t.push.apply(t, a);
                                                                           }
                                                                           return t;
-                                                                      })(Object(a)).forEach(function (e) {
+                                                                      })(Object(r)).forEach(function (e) {
                                                                           Object.defineProperty(
-                                                                              r,
+                                                                              l,
                                                                               e,
-                                                                              Object.getOwnPropertyDescriptor(a, e),
+                                                                              Object.getOwnPropertyDescriptor(r, e),
                                                                           );
                                                                       }),
-                                                                r),
+                                                                l),
                                                             );
                                                         };
                                                     }),

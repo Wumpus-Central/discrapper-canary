@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(430824),
     d = n(496675),
     p = n(594174),
-    h = n(796263),
-    f = n(864309),
+    f = n(796263),
+    h = n(792389),
     m = n(388032);
 function g(e) {
     let { channel: t, user: n, guild: g } = e,
@@ -19,13 +19,13 @@ function g(e) {
             () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z]),
         ),
         [C, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        _ = (0, r.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
-    if (!b || !_) return null;
-    let v = "timeout-user-".concat(null == n ? void 0 : n.id);
+        v = (0, r.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
+    if (!b || !v) return null;
+    let x = "timeout-user-".concat(null == n ? void 0 : n.id);
     return (0, i.jsx)(
-        h.Z,
+        f.Z,
         {
-            text: y ? m.intl.string(f.default["6uMZbv"]) : m.intl.string(f.default["Sgg/uI"]),
+            text: y ? m.intl.string(h.default["6uMZbv"]) : m.intl.string(h.default["Sgg/uI"]),
             icon: l.T39,
             onClick: () => {
                 null != n &&
@@ -37,6 +37,6 @@ function g(e) {
             },
             disabled: y,
         },
-        v,
+        x,
     );
 }

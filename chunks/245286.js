@@ -1,15 +1,15 @@
 n.d(t, { default: () => S }), n(388685), n(358797);
 var r = n(54381),
     o = n(473749),
-    i = n(24156),
-    l = n(481060),
-    a = n(893776),
+    a = n(24156),
+    i = n(481060),
+    l = n(893776),
     c = n(493773),
     s = n(82084),
     u = n(663389),
-    b = n(585483),
-    f = n(88658),
-    d = n(996733),
+    f = n(585483),
+    d = n(88658),
+    b = n(996733),
     y = n(313789),
     p = n(914578),
     g = n(342386),
@@ -17,10 +17,10 @@ var r = n(54381),
     m = n(518596),
     j = n(981631),
     v = n(388032),
-    h = n(942408);
+    h = n(767254);
 function x(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, f.QB)({
+    (0, d.QB)({
         destinationPane: t,
         originPane: n,
         subsection: u.Z.getSubsection(),
@@ -39,20 +39,20 @@ function S(e) {
                     var n,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ["target"]);
-    let l = d.Z.useField("query"),
-        f = o.useRef(null);
+    let i = b.Z.useField("query"),
+        d = o.useRef(null);
     (0, c.ZP)(() => {
         let e = u.Z.getSection();
         null != e &&
@@ -60,25 +60,25 @@ function S(e) {
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (f.current = e));
+            (d.current = e));
     });
     let v = o.useCallback((e) => {
-            d.Z.setState({ query: e });
+            b.Z.setState({ query: e });
         }, []),
         [h, S] = o.useState(!1);
     return (o.useEffect(() => {
         let e = () => {
-            (0, i.flushSync)(() => {
+            (0, a.flushSync)(() => {
                 S(!0), (0, g.default)();
             }),
                 setImmediate(() => {
-                    a.Z.logout("settings");
+                    l.Z.logout("settings");
                 });
         };
         return (
-            b.S.subscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e),
+            f.S.subscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e),
             () => {
-                b.S.unsubscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e);
+                f.S.unsubscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e);
             }
         );
     }, []),
@@ -120,13 +120,13 @@ function S(e) {
                           null != t &&
                               (x({
                                   destinationPanel: t,
-                                  originPanel: f.current,
+                                  originPanel: d.current,
                               }),
-                              (f.current = t));
+                              (d.current = t));
                       },
                       target: t,
                       defaultTarget: y.n.ACCOUNT_PANEL,
-                      searchQuery: l,
+                      searchQuery: i,
                       onSearchChange: v,
                   },
                   n,
@@ -137,12 +137,12 @@ function P() {
     return (0, r.jsxs)("div", {
         className: h.emptySearchResultsContainer,
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
                 children: v.intl.string(v.t.zihbmv),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 children: v.intl.string(v.t.XclvsB),

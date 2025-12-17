@@ -1,18 +1,18 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(98357),
     d = n(432877),
-    u = n(344832),
-    m = n(451429);
+    u = n(352318),
+    m = n(663618);
 function p(e) {
     let { devSettingsCategory: t } = e,
         n = (0, s.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], s.pF),
-        i = r.useMemo(
+        l = r.useMemo(
             () =>
                 n.map((e) => {
                     let [t, n, { label: r }] = e;
@@ -30,7 +30,7 @@ function p(e) {
             [n],
         );
     return (0, a.jsx)("div", {
-        className: l()(m.panel, u.panel),
-        children: i,
+        className: i()(m.panel, u.panel),
+        children: l,
     });
 }

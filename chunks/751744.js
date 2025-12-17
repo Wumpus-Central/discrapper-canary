@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(953529);
+n.d(e, { default: () => h }), n(953529);
 var i = n(54381),
     l = n(473749),
     r = n(793030),
@@ -10,57 +10,57 @@ var i = n(54381),
     u = n(138201),
     x = n(331692),
     m = n(103879),
-    p = n(236289),
+    b = n(236289),
     g = n(800530),
-    f = n(388032);
-let h = [
+    p = n(388032);
+let f = [
         {
-            title: f.intl.string(f.t["1+E7LP"]),
-            description: f.intl.string(f.t["BXiat/"]),
+            title: p.intl.string(p.t["1+E7LP"]),
+            description: p.intl.string(p.t["BXiat/"]),
         },
         {
-            title: f.intl.string(f.t.iMQXtK),
-            description: f.intl.string(f.t.oQ0vwu),
+            title: p.intl.string(p.t.iMQXtK),
+            description: p.intl.string(p.t.oQ0vwu),
         },
         {
-            title: f.intl.string(f.t["oY/z1Q"]),
-            description: f.intl.string(f.t.wtj02W),
+            title: p.intl.string(p.t["oY/z1Q"]),
+            description: p.intl.string(p.t.wtj02W),
         },
     ],
-    b = function (t) {
-        let { onClose: e, transitionState: n, classificationId: b } = t,
-            j = (0, s.e7)([p.Z], () => p.Z.getAgeVerificationWebviewUrl()),
-            _ = (0, s.e7)([p.Z], () => p.Z.getIsLoadingAgeVerification()),
-            v = l.useCallback(() => {
+    h = function (t) {
+        let { onClose: e, transitionState: n, classificationId: h } = t,
+            j = (0, s.e7)([b.Z], () => b.Z.getAgeVerificationWebviewUrl()),
+            v = (0, s.e7)([b.Z], () => b.Z.getIsLoadingAgeVerification()),
+            N = l.useCallback(() => {
                 e(), x.Z.close();
             }, [e]),
-            N = l.useCallback(() => {
-                x.Z.success(), v(), x.Z.start_verification_check();
-            }, [v]);
+            C = l.useCallback(() => {
+                x.Z.success(), N(), x.Z.start_verification_check();
+            }, [N]);
         return (
             l.useEffect(() => {
                 "" !== j &&
                     o.Z.showAgeVerification({
                         webviewUrl: j,
-                        onComplete: N,
+                        onComplete: C,
                         entryPoint: a.cU.AUTOMATED_UNDERAGE_APPEALS,
                     });
-            }, [j, N]),
+            }, [j, C]),
             (0, i.jsx)(r.Modal, {
                 onClose: e,
                 transitionState: n,
-                title: f.intl.string(f.t["9SDLnj"]),
-                subtitle: f.intl.string(f.t["yvx//1"]),
+                title: p.intl.string(p.t["9SDLnj"]),
+                subtitle: p.intl.string(p.t["yvx//1"]),
                 actions: [
                     {
-                        text: f.intl.string(f.t.dKacJ8),
-                        onClick: v,
+                        text: p.intl.string(p.t.dKacJ8),
+                        onClick: N,
                         variant: "secondary",
                     },
                     {
-                        text: f.intl.string(f.t["54b8V0"]),
-                        onClick: () => (0, m.FN)(b),
-                        loading: _,
+                        text: p.intl.string(p.t["54b8V0"]),
+                        onClick: () => (0, m.FN)(h),
+                        loading: v,
                     },
                 ],
                 children: (0, i.jsxs)(c.Kqy, {
@@ -68,7 +68,7 @@ let h = [
                     direction: "vertical",
                     children: [
                         (0, i.jsx)(d.z, {
-                            children: h.map((t, e) => {
+                            children: f.map((t, e) => {
                                 let { title: n, description: l } = t;
                                 return (0, i.jsx)(
                                     d.q,
@@ -87,11 +87,11 @@ let h = [
                             direction: "vertical",
                             children: [
                                 (0, i.jsx)(u.rT, {
-                                    title: f.intl.string(f.t.WPwp1b),
+                                    title: p.intl.string(p.t.WPwp1b),
                                     children: (0, i.jsx)(u.JZ, {
-                                        title: f.intl.string(f.t.N9WJMM),
-                                        description: f.intl.string(f.t.NHq382),
-                                        buttonText: f.intl.string(f.t["9iy4lB"]),
+                                        title: p.intl.string(p.t.N9WJMM),
+                                        description: p.intl.string(p.t.NHq382),
+                                        buttonText: p.intl.string(p.t["9iy4lB"]),
                                         titleVariant: "text-md/medium",
                                         onButtonPress: () => window.open(g.sQ.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
@@ -101,7 +101,7 @@ let h = [
                                     children: (0, i.jsx)(c.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-subtle",
-                                        children: f.intl.format(f.t.ZbWsOF, {
+                                        children: p.intl.format(p.t.ZbWsOF, {
                                             learnMoreLink: g.sQ.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),

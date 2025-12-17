@@ -3,14 +3,14 @@ var l = n(54381),
     i = n(473749),
     r = n(481060),
     o = n(596454),
-    s = n(318766),
-    a = n(907040),
+    a = n(318766),
+    s = n(907040),
     c = n(273039),
     u = n(185923);
 function d(e) {
     let { className: t, emojiClassName: n, emoji: d, setEmoji: m, channel: j } = e,
         g = i.useRef(null),
-        v =
+        p =
             null == d || null == d.name
                 ? null
                 : () => {
@@ -32,7 +32,7 @@ function d(e) {
             position: "bottom",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(a.Z, {
+                return (0, l.jsx)(s.Z, {
                     closePopout: t,
                     onSelectEmoji: (e) => {
                         var n, l;
@@ -55,7 +55,7 @@ function d(e) {
                 var i, r;
                 let { isShown: o } = n;
                 return (0, l.jsx)(
-                    s.Z,
+                    a.Z,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -87,7 +87,7 @@ function d(e) {
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: v,
+                            renderButtonContents: p,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))

@@ -251,7 +251,7 @@ function c(e) {
         contains: ["self"].concat(P),
     });
     let R = [].concat(N, S.contains),
-        D = R.concat([
+        w = R.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
@@ -259,14 +259,14 @@ function c(e) {
                 contains: ["self"].concat(R),
             },
         ]),
-        w = {
+        D = {
             className: "params",
             begin: /(\s*)\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: E,
-            contains: D,
+            contains: w,
         },
         x = {
             variants: [
@@ -321,7 +321,7 @@ function c(e) {
                 3: "title.function",
             },
             label: "func.def",
-            contains: [w],
+            contains: [D],
             illegal: /%/,
         },
         k = {
@@ -345,30 +345,30 @@ function c(e) {
             className: "property",
             relevance: 0,
         },
-        B = {
+        F = {
             match: [/get|set/, /\s+/, d, /(?=\()/],
             className: {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [{ begin: /\(\)/ }, w],
+            contains: [{ begin: /\(\)/ }, D],
         },
-        F = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        B = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
         V = {
-            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
+            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(B)],
             keywords: "async",
             className: {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [w],
+            contains: [D],
         };
     return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
         keywords: E,
         exports: {
-            PARAMS_CONTAINS: D,
+            PARAMS_CONTAINS: w,
             CLASS_REFERENCE: L,
         },
         illegal: /#(?![$_A-z])/,
@@ -404,7 +404,7 @@ function c(e) {
                     e.REGEXP_MODE,
                     {
                         className: "function",
-                        begin: F,
+                        begin: B,
                         returnBegin: !0,
                         end: "\\s*=>",
                         contains: [
@@ -426,7 +426,7 @@ function c(e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: E,
-                                        contains: D,
+                                        contains: w,
                                     },
                                 ],
                             },
@@ -475,7 +475,7 @@ function c(e) {
                 returnBegin: !0,
                 label: "func.def",
                 contains: [
-                    w,
+                    D,
                     e.inherit(e.TITLE_MODE, {
                         begin: d,
                         className: "title.function",
@@ -494,12 +494,12 @@ function c(e) {
             {
                 match: [/\bconstructor(?=\s*\()/],
                 className: { 1: "title.function" },
-                contains: [w],
+                contains: [D],
             },
             G,
             k,
             x,
-            B,
+            F,
             { match: /\$[(.]/ },
         ],
     };

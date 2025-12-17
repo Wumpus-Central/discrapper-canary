@@ -2,26 +2,26 @@ n.d(t, {
     K: () => l,
     v: () => i,
 });
-var r = n(979007),
-    a = n(388032);
+var a = n(979007),
+    r = n(388032);
 function i(e) {
     switch (e.id) {
         case 4:
-            return a.intl.string(a.t["3m9Egb"]);
+            return r.intl.string(r.t["3m9Egb"]);
         case 6:
-            return a.intl.string(a.t.VJRr3Y);
+            return r.intl.string(r.t.VJRr3Y);
         case 8:
-            return a.intl.string(a.t.Uv7mFd);
+            return r.intl.string(r.t.Uv7mFd);
         case 9:
-            return a.intl.string(a.t.TEK9Ax);
+            return r.intl.string(r.t.TEK9Ax);
         case 10:
-            return a.intl.string(a.t.lfBt2T);
+            return r.intl.string(r.t.lfBt2T);
     }
     return "";
 }
 function l() {
     return {
-        id: r.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
-        name: a.intl.string(a.t.ijDDwz),
+        id: a.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
+        name: r.intl.string(r.t.ijDDwz),
     };
 }

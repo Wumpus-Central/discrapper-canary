@@ -1,18 +1,18 @@
-n.d(t, { Y: () => _ }), n(388685);
+n.d(t, { Y: () => v }), n(388685);
 var i,
     r = n(54381),
     l = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     c = n(481060),
     u = n(542094),
     d = n(182906),
     p = n(556505),
-    h = n(513202),
-    f = n(981631),
+    f = n(513202),
+    h = n(981631),
     m = n(388032),
-    g = n(748788);
+    g = n(218877);
 let b = ["embedded_cover"],
     C = {
         tension: 800,
@@ -22,25 +22,25 @@ var y =
     (((i = y || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
-function _(e) {
+function v(e) {
     var t;
-    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: _, commandOrigin: v } = e,
+    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: v, commandOrigin: x } = e,
         {
             onActivityItemSelected: O,
-            imageBackground: x,
-            activityAction: E,
-            labelType: j,
+            imageBackground: E,
+            activityAction: j,
+            labelType: S,
         } = (0, u.ZP)({
             context: n,
             activityItem: i,
             guildId: null != (t = n.channel.getGuildId()) ? t : void 0,
             locationObject: {},
             onActivityItemSelected: a,
-            embeddedActivitiesManager: h.Z,
+            embeddedActivitiesManager: f.Z,
             assetNames: b,
-            commandOrigin: v,
+            commandOrigin: x,
         }),
-        [S, P] = l.useState(!1),
+        [_, P] = l.useState(!1),
         I = l.useCallback(() => {
             P(!0);
         }, [P]),
@@ -53,13 +53,13 @@ function _(e) {
                     className: g.overlayBadge,
                     children: (0, r.jsx)("div", {
                         className: g.badgeContainer,
-                        children: (0, r.jsx)(p.Z, { labelType: j }),
+                        children: (0, r.jsx)(p.Z, { labelType: S }),
                     }),
                 }),
-            [j],
+            [S],
         ),
         N = l.useMemo(() => {
-            switch (E) {
+            switch (j) {
                 case u.JS.JOIN:
                     return (0, r.jsx)("div", {
                         className: g.activityAction,
@@ -88,7 +88,7 @@ function _(e) {
                 default:
                     return null;
             }
-        }, [E]);
+        }, [j]);
     return (0, r.jsx)(c.P3F, {
         onClick: O,
         onFocus: I,
@@ -99,14 +99,14 @@ function _(e) {
         children: (0, r.jsx)(c.AMe, {
             config: C,
             from: { value: 0 },
-            to: { value: +!!S },
+            to: { value: +!!_ },
             children: (e) => {
                 let { value: t } = e;
                 return (0, r.jsx)(c.f6W, {
-                    theme: f.BRd.DARK,
+                    theme: h.BRd.DARK,
                     children: (e) =>
                         (0, r.jsxs)(s.animated.div, {
-                            className: o()(e, g.activityItem, _, {
+                            className: o()(e, g.activityItem, v, {
                                 [g.activityItem_13_11]: 0 === y,
                                 [g.activityItem_16_9]: 1 === y,
                             }),
@@ -115,7 +115,7 @@ function _(e) {
                             },
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    imageBackground: x,
+                                    imageBackground: E,
                                     applicationName: i.application.name,
                                     imageClassName: g.activitySuggestionImage,
                                     imageNotFoundClassName: g.brokenImageIconWrapper,
@@ -129,4 +129,4 @@ function _(e) {
         }),
     });
 }
-_.AspectRatio = y;
+v.AspectRatio = y;

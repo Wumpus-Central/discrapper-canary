@@ -8,9 +8,9 @@ var n = a(54381),
     c = a(643103),
     d = a(34211),
     u = a(231338),
-    _ = a(431138),
-    N = a(368955);
-let m = u.j_.MAIN_NAVIGATION_MENU;
+    N = a(431138),
+    m = a(820014);
+let f = u.j_.MAIN_NAVIGATION_MENU;
 function p(e) {
     let {
             className: t,
@@ -20,35 +20,35 @@ function p(e) {
             openNavAriaLabel: h,
             hideNavAriaLabel: I,
         } = e,
-        k = r.useId(),
-        [g, A] = r.useState(!1),
-        O = r.useCallback(() => A(!g), [g]),
-        f = r.useCallback(
+        b = r.useId(),
+        [k, g] = r.useState(!1),
+        A = r.useCallback(() => g(!k), [k]),
+        O = r.useCallback(
             (e) => {
-                ("Escape" === e.key || "Esc" === e.key) && (e.preventDefault(), g && O());
+                ("Escape" === e.key || "Esc" === e.key) && (e.preventDefault(), k && A());
             },
-            [g, O],
+            [k, A],
         );
     return (
-        r.useEffect(() => (window.addEventListener("keydown", f), () => window.removeEventListener("keydown", f)), [f]),
+        r.useEffect(() => (window.addEventListener("keydown", O), () => window.removeEventListener("keydown", O)), [O]),
         (0, n.jsx)("header", {
-            className: l()(N.header, t),
+            className: l()(m.header, t),
             children: (0, n.jsxs)("nav", {
-                className: N.headerInner,
+                className: m.headerInner,
                 children: [
                     (0, n.jsx)(a, {
                         tag: "div",
-                        eventName: m,
-                        className: N.headerLogo,
+                        eventName: f,
+                        className: m.headerLogo,
                         data: { linkClicked: "logo" },
                         children: (0, n.jsx)(o.Z, {
                             avoidRouter: p,
-                            className: N.logoWrapper,
+                            className: m.logoWrapper,
                             to: u.am.INDEX,
                             from: u.j_.MAIN_NAVIGATION_MENU,
                             children: (0, n.jsx)("img", {
-                                className: N.logo,
-                                src: _.r.ASSET_LOGO_DISCORD_SVG,
+                                className: m.logo,
+                                src: N.r.ASSET_LOGO_DISCORD_SVG,
                                 alt: "Discord",
                                 itemProp: "logo",
                             }),
@@ -56,27 +56,27 @@ function p(e) {
                     }),
                     (0, n.jsx)(a, {
                         tag: "div",
-                        className: N.hamburgerButton,
-                        eventName: m,
+                        className: m.hamburgerButton,
+                        eventName: f,
                         data: { linkClicked: "mobile-menu" },
                         children: (0, n.jsx)(i.r, {
-                            open: g,
+                            open: k,
                             "aria-haspopup": "true",
-                            "aria-label": g ? I : h,
-                            "aria-expanded": g,
-                            "aria-controls": k,
-                            onClick: O,
+                            "aria-label": k ? I : h,
+                            "aria-expanded": k,
+                            "aria-controls": b,
+                            onClick: A,
                         }),
                     }),
                     (0, n.jsxs)("ul", {
-                        className: g ? N.headerNavOpen : N.headerNav,
+                        className: k ? m.headerNavOpen : m.headerNav,
                         children: [
                             (0, n.jsx)(d.o, {
                                 avoidRouter: p,
                                 TrackClick: a,
-                                styles: N,
+                                styles: m,
                                 isMobile: !0,
-                                isVisible: g,
+                                isVisible: k,
                             }),
                             (0, n.jsx)(c.p, { onChange: s }),
                         ],

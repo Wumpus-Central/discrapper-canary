@@ -31,8 +31,8 @@ function v(e) {
             escapeKeyBehavior: N = "clearSelection",
             selectOnFocus: P = "replace" === n.selectionBehavior,
             disallowTypeAhead: R = !1,
-            shouldUseVirtualFocus: D,
-            allowsTabNavigation: w = !1,
+            shouldUseVirtualFocus: w,
+            allowsTabNavigation: D = !1,
             isVirtualized: x,
             scrollRef: L = S,
             linkBehavior: j = "action",
@@ -181,7 +181,7 @@ function v(e) {
                         (e.stopPropagation(), e.preventDefault(), n.clearSelection());
                     break;
                 case "Tab":
-                    if (!w)
+                    if (!D)
                         if (e.shiftKey) S.current.focus();
                         else {
                             let e,
@@ -230,24 +230,24 @@ function v(e) {
                 if (null != n.focusedKey && L.current) {
                     let e = (0, r.D0)(S, n.focusedKey);
                     e instanceof HTMLElement &&
-                        (e.contains(document.activeElement) || D || (0, s.A)(e),
+                        (e.contains(document.activeElement) || w || (0, s.A)(e),
                         "keyboard" === (0, b.Jz)() && (0, c.G)(e, { containingElement: S.current }));
                 }
             }
         },
-        B = (e) => {
+        F = (e) => {
             e.currentTarget.contains(e.relatedTarget) || n.setFocused(!1);
         },
-        F = (0, E.useRef)(!1);
+        B = (0, E.useRef)(!1);
     (0, l.z)(
         S,
         u.N,
-        D
+        w
             ? (e) => {
                   let { detail: t } = e;
                   e.stopPropagation(),
                       n.setFocused(!0),
-                      (null == t ? void 0 : t.focusStrategy) === "first" && (F.current = !0);
+                      (null == t ? void 0 : t.focusStrategy) === "first" && (B.current = !0);
               }
             : void 0,
     );
@@ -256,14 +256,14 @@ function v(e) {
         let r = null != (t = null == (e = v.getFirstKey) ? void 0 : e.call(v)) ? t : null;
         if (null == r) {
             let e = (0, f.vY)();
-            (0, h.q6)(S.current), (0, h.Jv)(e, null), n.collection.size > 0 && (F.current = !1);
-        } else n.setFocusedKey(r), (F.current = !1);
+            (0, h.q6)(S.current), (0, h.Jv)(e, null), n.collection.size > 0 && (B.current = !1);
+        } else n.setFocusedKey(r), (B.current = !1);
     });
     (0, p.i)(() => {
-        F.current && V();
+        B.current && V();
     }, [n.collection, V]);
     let H = (0, d.i)(() => {
-        n.collection.size > 0 && (F.current = !1);
+        n.collection.size > 0 && (B.current = !1);
     });
     (0, p.i)(() => {
         H();
@@ -271,7 +271,7 @@ function v(e) {
         (0, l.z)(
             S,
             u.o,
-            D
+            w
                 ? (e) => {
                       var t;
                       e.stopPropagation(),
@@ -298,7 +298,7 @@ function v(e) {
             }
             n.setFocused(!0),
                 n.setFocusedKey(a),
-                null == a && !D && S.current && (0, y.e)(S.current),
+                null == a && !w && S.current && (0, y.e)(S.current),
                 n.collection.size > 0 && ((Y.current = !1), (W.current = !0));
         }
     });
@@ -322,7 +322,7 @@ function v(e) {
                         ((0, c.z)(L.current, t), "virtual" !== e && (0, c.G)(t, { containingElement: S.current }));
                 })));
         }
-        !D && n.isFocused && null == n.focusedKey && null != K.current && S.current && (0, y.e)(S.current),
+        !w && n.isFocused && null == n.focusedKey && null != K.current && S.current && (0, y.e)(S.current),
             (K.current = n.focusedKey),
             (W.current = !1);
     }),
@@ -338,7 +338,7 @@ function v(e) {
     let q = {
             onKeyDown: U,
             onFocus: Z,
-            onBlur: B,
+            onBlur: F,
             onMouseDown(e) {
                 L.current === e.target && e.preventDefault();
             },
@@ -347,7 +347,7 @@ function v(e) {
             keyboardDelegate: v,
             selectionManager: n,
         });
-    R || (q = (0, _.d)(Q, q)), D || (t = null == n.focusedKey ? 0 : -1);
+    R || (q = (0, _.d)(Q, q)), w || (t = null == n.focusedKey ? 0 : -1);
     let X = (0, r.Mm)(n.collection);
     return {
         collectionProps: (0, _.d)(q, {

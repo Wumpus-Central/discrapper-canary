@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,21 +8,21 @@ var r = n(54381),
     c = n(259580),
     d = n(81543),
     u = n(388032),
-    g = n(858063);
-let m = function (e) {
+    g = n(248803);
+let f = function (e) {
     let {
             items: t,
             carouselClassName: n,
             paginationCaretClassName: l,
-            intervalBetweenAutomaticItemRotations: m,
-            renderItem: p,
+            intervalBetweenAutomaticItemRotations: f,
+            renderItem: m,
         } = e,
-        f = i.useMemo(() => new s.Xp(), []),
-        [h, b] = i.useState(d.n.LEFT),
+        b = i.useMemo(() => new s.Xp(), []),
+        [p, h] = i.useState(d.n.LEFT),
         [x, j] = i.useState(0),
-        [_, v] = i.useState(!1),
-        [O, C] = i.useState(!1),
-        y = i.useCallback(
+        [v, O] = i.useState(!1),
+        [C, y] = i.useState(!1),
+        N = i.useCallback(
             (e, t) => {
                 j((n) => {
                     let r = n + t;
@@ -31,26 +31,26 @@ let m = function (e) {
             },
             [j],
         ),
-        N = i.useCallback(() => {
-            O || y(t, 1);
-        }, [y, t, O]),
         E = i.useCallback(() => {
-            O || y(t, -1);
-        }, [y, t, O]);
+            C || N(t, 1);
+        }, [N, t, C]),
+        I = i.useCallback(() => {
+            C || N(t, -1);
+        }, [N, t, C]);
     return (
         i.useEffect(() => {
-            null != m && (_ ? _ && f.stop() : f.start(m, N));
-        }, [_, f, m, N]),
+            null != f && (v ? v && b.stop() : b.start(f, E));
+        }, [v, b, f, E]),
         (0, r.jsxs)("div", {
             className: g.root,
-            onMouseEnter: () => v(!0),
-            onMouseLeave: () => v(!1),
+            onMouseEnter: () => O(!0),
+            onMouseLeave: () => O(!1),
             children: [
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: E,
-                    onMouseEnter: () => b(d.n.RIGHT),
-                    ignoreKeyPress: O,
+                    onClick: I,
+                    onMouseEnter: () => h(d.n.RIGHT),
+                    ignoreKeyPress: C,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.LEFT,
                         height: 48,
@@ -60,17 +60,17 @@ let m = function (e) {
                 }),
                 (0, r.jsx)(d.Z, {
                     step: x,
-                    direction: h,
-                    onAnimationStart: () => C(!0),
-                    onAnimationEnd: () => C(!1),
+                    direction: p,
+                    onAnimationStart: () => y(!0),
+                    onAnimationEnd: () => y(!1),
                     className: a()(g.carousel, n),
-                    children: p(t[x]),
+                    children: m(t[x]),
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(g.carouselCaret, l),
-                    onClick: N,
-                    onMouseEnter: () => b(d.n.LEFT),
-                    ignoreKeyPress: O,
+                    onClick: E,
+                    onMouseEnter: () => h(d.n.LEFT),
+                    ignoreKeyPress: C,
                     children: (0, r.jsx)(c.Z, {
                         direction: c.Z.Directions.RIGHT,
                         height: 48,

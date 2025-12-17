@@ -1,4 +1,4 @@
-n.d(t, { J: () => w }), n(388685);
+n.d(t, { J: () => E }), n(388685);
 var r = n(54381),
     i = n(473749),
     o = n(120356),
@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(778033),
     v = n(967021),
     y = n(709706),
-    O = n(56848),
-    j = n(378441),
+    j = n(56848),
+    O = n(378441),
     h = n(981631),
     x = n(509571),
     _ = n(388032),
@@ -46,14 +46,14 @@ function C(e) {
     }
     return e;
 }
-let w = (e) => {
+let E = (e) => {
     let { voiceFilter: t, hasNitro: n, analyticsContext: o } = e,
-        { activeVoice: w, mostRecentlyRequestedVoiceId: E } = (0, j.o)(),
-        I = (0, O.z)(t.id),
-        T = t.id === w,
+        { activeVoice: E, mostRecentlyRequestedVoiceId: w } = (0, O.o)(),
+        I = (0, j.z)(t.id),
+        T = t.id === E,
         S = !t.available && !t.temporarilyAvailable,
         N = t.temporarilyAvailable && !n && !T,
-        Z = !T && t.id === E,
+        Z = !T && t.id === w,
         [k, D] = i.useState(!1);
     i.useEffect(() => {
         let e = Z ? setTimeout(() => D(Z), 200) : void 0;
@@ -68,32 +68,32 @@ let w = (e) => {
         }),
         A = (0, a.e7)([y.Z], () => y.Z.isVoiceFilterDownloaded(t.id), [t]),
         R = null == I ? void 0 : I.previewSoundURLs,
-        [L, V] = i.useState(0),
+        [V, L] = i.useState(0),
         {
             isPlaying: F,
             playSound: U,
             stopSound: Y,
             preloadSound: H,
-        } = (0, p.Z)(null != R ? R[L] : null, { soundId: t.id }),
+        } = (0, p.Z)(null != R ? R[V] : null, { soundId: t.id }),
         z = P[t.styleKey],
         B = i.useCallback(() => {
             n || !S
-                ? ((0, b.v6)(w === t.id ? null : t.id, o),
+                ? ((0, b.v6)(E === t.id ? null : t.id, o),
                   N &&
                       m.default.track(
                           h.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED,
                           C({ voice_filter_id: t.id }, (0, g.w)(o)),
                       ))
                 : (0, d.i)();
-        }, [n, S, w, t.id, o, N]),
+        }, [n, S, E, t.id, o, N]),
         q = i.useCallback(() => {
             m.default.track(h.rMx.VOICE_FILTER_PREVIEW_PLAYED, C({ voice_filter_id: t.id }, (0, g.w)(o))),
                 U({
                     volume: 0.5,
                     outputChannel: x.w.VOICE,
                 }),
-                (0.25 > Math.random() || L > 0) && null != R && V((e) => (e + 1) % R.length);
-        }, [o, U, L, R, t.id]),
+                (0.25 > Math.random() || V > 0) && null != R && L((e) => (e + 1) % R.length);
+        }, [o, U, V, R, t.id]),
         W = null != I ? _.intl.string(I.name) : "";
     return (0, r.jsxs)("div", {
         className: l()(P.filter, z, {

@@ -2,14 +2,14 @@ n.d(t, { Z: () => p });
 var a = n(54381);
 n(473749);
 var r = n(120356),
-    i = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    i = n(481060),
     s = n(320161),
     o = n(572004),
     c = n(51144),
     d = n(785717),
     u = n(388032),
-    m = n(508929);
+    m = n(426156);
 function p(e) {
     let { user: t, isVisible: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
@@ -26,7 +26,7 @@ function p(e) {
               children: (e) => {
                   var t, r;
                   return (0, a.jsx)(
-                      l.P3F,
+                      i.P3F,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -54,9 +54,9 @@ function p(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: i()(m.copyButton, { [m.visible]: n }),
+                              className: l()(m.copyButton, { [m.visible]: n }),
                               "aria-label": u.intl.string(u.t.y5MwJy),
-                              children: (0, a.jsx)(l.TIy, {
+                              children: (0, a.jsx)(i.TIy, {
                                   size: "xs",
                                   color: "currentColor",
                               }),

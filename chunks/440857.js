@@ -15,7 +15,7 @@ var r = n(54381),
     p = n(256003),
     h = n(981631),
     g = n(388032),
-    j = n(800209);
+    j = n(108551);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,8 +63,8 @@ function y(e) {
     let { guildId: t } = e,
         y = (0, f.xC)(t),
         { selectedUserIds: O, clearSelection: H } = (0, p.Z)(t),
-        _ = O.size > 0,
-        w = async (e, t, n, r) => {
+        w = O.size > 0,
+        S = async (e, t, n, r) => {
             try {
                 let l = await u.Z.banMultipleUsers(e, t, n, r);
                 (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5I), c.ToastType.SUCCESS)),
@@ -83,10 +83,10 @@ function y(e) {
             }
             H();
         },
-        S = l.useCallback(() => {
+        Z = l.useCallback(() => {
             H();
         }, [H]),
-        Z = (0, r.jsxs)("span", {
+        D = (0, r.jsxs)("span", {
             className: j.messageContainer,
             children: [
                 (0, r.jsx)(c.tBG, {
@@ -102,11 +102,11 @@ function y(e) {
                 }),
                 (0, r.jsx)(c.Avr, {
                     text: g.intl.string(g.t.yW6ZdE),
-                    onClick: S,
+                    onClick: Z,
                 }),
             ],
         }),
-        D = (0, r.jsxs)("span", {
+        N = (0, r.jsxs)("span", {
             className: j.buttonContainer,
             children: [
                 (0, r.jsx)(c.pgN, {
@@ -127,7 +127,7 @@ function y(e) {
               component: "div",
               className: j.saveNoticeContainer,
               children:
-                  _ &&
+                  w &&
                   (0, r.jsx)(c.oXn, {
                       children: (0, r.jsx)(a.Z, {
                           onSave: () => {
@@ -149,14 +149,14 @@ function y(e) {
                                                   guildId: t,
                                                   canBulkBan: y,
                                                   userIds: O,
-                                                  onBanMultiple: w,
+                                                  onBanMultiple: S,
                                               }),
                                           );
                                   });
                           },
-                          onSaveText: D,
+                          onSaveText: N,
                           onSaveButtonColor: s.Tt.RED,
-                          message: Z,
+                          message: D,
                       }),
                   }),
           })

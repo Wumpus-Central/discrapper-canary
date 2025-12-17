@@ -1,8 +1,8 @@
 n.d(t, {
-    QT: () => l,
+    QT: () => i,
     Uz: () => r,
     d3: () => s,
-    d9: () => i,
+    d9: () => l,
     eq: () => o,
 });
 var a = n(704215);
@@ -13,14 +13,14 @@ let r = [
         a.z.GUILD_TAG_AVAILABLE_COACHMARK,
         a.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
     ],
-    i = [
+    l = [
         a.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
         a.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
         a.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
         a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         a.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    l = [a.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    i = [a.C.ADOPT_CLAN_IDENTITY_NOTICE],
     s = [
         a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         a.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,

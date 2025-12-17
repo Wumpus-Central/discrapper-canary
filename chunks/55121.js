@@ -6,22 +6,22 @@ var a = n(793030),
     l = n(22928),
     o = n(438926),
     r = n(388032),
-    c = n(475495);
+    c = n(924422);
 function u(t) {
     let {
         sku: e,
         application: n,
         primaryCTAButtonProps: l,
         transitionState: u,
-        onClose: x,
-        hasAlreadyLinked: f,
-        canStartAuthorization: _,
-        bodyText: m,
+        onClose: f,
+        hasAlreadyLinked: x,
+        canStartAuthorization: m,
+        bodyText: _,
         title: g,
     } = t;
     return (0, i.jsxs)(a.IX, {
         transitionState: u,
-        onClose: x,
+        onClose: f,
         children: [
             (0, i.jsx)(o.y, {
                 sku: e,
@@ -36,23 +36,23 @@ function u(t) {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
                                 className: c.modalBodyText,
-                                children: m,
+                                children: _,
                             }),
                             (0, i.jsx)(d, {
-                                isConnected: f,
+                                isConnected: x,
                                 application: n,
                             }),
                         ],
                     }),
-                    !_ &&
-                        !f &&
+                    !m &&
+                        !x &&
                         (0, i.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: c.cannotLinkAccountWarning,
                             color: "text-feedback-warning",
                             children: r.intl.string(r.t.GDL8wb),
                         }),
-                    !f &&
+                    !x &&
                         (0, i.jsx)("div", {
                             className: c.expirationWarningContainer,
                             children: (0, i.jsx)(s.Text, {

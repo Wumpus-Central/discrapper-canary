@@ -13,8 +13,8 @@ function u() {
         n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
         u = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         g = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
-        m = i.useMemo(() => (null == n ? void 0 : n.getAnyErrorMessage()), [n]),
-        p = i.useCallback(() => {
+        f = i.useMemo(() => (null == n ? void 0 : n.getAnyErrorMessage()), [n]),
+        m = i.useCallback(() => {
             if (null == e || null == u) return;
             let t = {
                 name: u.name,
@@ -28,13 +28,13 @@ function u() {
             };
             (0, s.pV)(e.id, t);
         }, [e, u]),
-        f = i.useCallback(() => {
+        b = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
     return (0, r.jsx)(a.Z, {
         submitting: g,
-        errorMessage: m,
-        onSave: p,
-        onReset: f,
+        errorMessage: f,
+        onSave: m,
+        onReset: b,
     });
 }

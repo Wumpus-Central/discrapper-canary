@@ -4,7 +4,7 @@ n(473749);
 var i = n(481060),
     a = n(36361),
     o = n(388032),
-    s = n(949558);
+    s = n(196317);
 function l(e) {
     let { node: t } = e;
     return (0, r.jsxs)(i.Kqy, {

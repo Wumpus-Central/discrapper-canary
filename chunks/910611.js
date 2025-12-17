@@ -22,8 +22,8 @@ var i = n(54381),
     C = n(703656),
     y = n(621853),
     v = n(484459),
-    O = n(699516),
-    x = n(914010),
+    x = n(699516),
+    O = n(914010),
     E = n(594174),
     j = n(768581),
     S = n(63063),
@@ -264,10 +264,10 @@ function D(e) {
         case A.d4z.ANNOUNCEMENT_THREAD:
         case A.d4z.PUBLIC_THREAD:
         case A.d4z.PRIVATE_THREAD:
-            let x = null;
+            let O = null;
             if (!s && null != l) {
                 let e = (0, h.KS)(l, o);
-                x = (0, i.jsxs)(r.Fragment, {
+                O = (0, i.jsxs)(r.Fragment, {
                     children: [
                         V(e, M.intl.string(M.t.Pnajj0)),
                         (0, i.jsx)(T.Z.Title, {
@@ -275,7 +275,7 @@ function D(e) {
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, f.F6)(l, E.default, O.Z),
+                            children: (0, f.F6)(l, E.default, x.Z),
                         }),
                         (0, i.jsx)(T.Z.Caret, {}),
                     ],
@@ -284,7 +284,7 @@ function D(e) {
             let j = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    x,
+                    O,
                     V(j ? null : b, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(T.Z.Title, {
                         level: y,
@@ -396,7 +396,7 @@ function V(e, t) {
 }
 function F(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
-        a = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
+        a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         s = (0, b.D)(),
         d = r.useRef(null);
     return (a === A.I_8 || s) && null != t

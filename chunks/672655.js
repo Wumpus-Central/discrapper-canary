@@ -1,36 +1,36 @@
-n.d(e, { Z: () => o }), n(539854);
-var i = n(701488),
-    a = n(388032);
-function o(t) {
+a.d(e, { Z: () => c }), a(539854);
+var n = a(701488),
+    i = a(388032);
+function c(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = [
+        a = [
             {
-                value: i.K8.FAILED_LOAD,
-                label: t ? a.intl.string(a.t.uaiF6B) : a.intl.string(a.t.aO6OMZ),
+                value: n.K8.FAILED_LOAD,
+                label: t ? i.intl.string(i.t.uaiF6B) : i.intl.string(i.t.aO6OMZ),
             },
             {
-                value: i.K8.LAGGING,
-                label: t ? a.intl.string(a.t["/nJOlj"]) : a.intl.string(a.t["79HFwf"]),
+                value: n.K8.LAGGING,
+                label: t ? i.intl.string(i.t["/nJOlj"]) : i.intl.string(i.t["79HFwf"]),
             },
             {
-                value: i.K8.CONFUSING,
-                label: t ? a.intl.string(a.t["/8psS7"]) : a.intl.string(a.t.iSv55N),
+                value: n.K8.CONFUSING,
+                label: t ? i.intl.string(i.t["/8psS7"]) : i.intl.string(i.t.iSv55N),
             },
             {
-                value: i.K8.NOT_FUN,
-                label: t ? a.intl.string(a.t["7GVmLm"]) : a.intl.string(a.t.GnVff5),
+                value: n.K8.NOT_FUN,
+                label: t ? i.intl.string(i.t["7GVmLm"]) : i.intl.string(i.t.GnVff5),
             },
             {
-                value: i.K8.OTHER,
-                label: a.intl.string(a.t.emlT91),
+                value: n.K8.OTHER,
+                label: i.intl.string(i.t.emlT91),
             },
         ];
     return (
         e &&
-            n.push({
-                value: i.K8.ADS,
-                label: t ? a.intl.string(a.t["5o1UL6"]) : a.intl.string(a.t.XeeDhK),
+            a.push({
+                value: n.K8.ADS,
+                label: t ? i.intl.string(i.t["5o1UL6"]) : i.intl.string(i.t.XeeDhK),
             }),
-        n
+        a
     );
 }

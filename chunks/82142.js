@@ -83,11 +83,11 @@ function R(e) {
     let { giftCode: t } = e;
     return (g = g.filter((e) => e !== t.code)), b.includes(t.code) || (b = [...b, t.code]), I(t);
 }
-function D(e) {
+function w(e) {
     let { code: t } = e;
     (g = g.filter((e) => e !== t)), b.includes(t) || (b = [...b, t]);
 }
-function w(e) {
+function D(e) {
     let { code: t } = e;
     h.delete(t);
     let n = m[t];
@@ -146,11 +146,11 @@ function Z(e) {
                 h.set(t, r.set("uses", r.maxUses));
         }
 }
-function B(e) {
+function F(e) {
     let { message: t } = e;
     return C(t, !0);
 }
-function F(e) {
+function B(e) {
     let { channelId: t, messages: n } = e;
     S.add(t), n.forEach((e) => C(e, !0));
 }
@@ -230,20 +230,20 @@ let q = new z(l.Z, {
         CHANNEL_SELECT: N,
         GIFT_CODE_RESOLVE: P,
         GIFT_CODE_RESOLVE_SUCCESS: R,
-        GIFT_CODE_RESOLVE_FAILURE: D,
+        GIFT_CODE_RESOLVE_FAILURE: w,
         GIFT_CODE_REDEEM: x,
         GIFT_CODE_REDEEM_SUCCESS: G,
         GIFT_CODE_REDEEM_FAILURE: Z,
-        GIFT_CODE_REVOKE_SUCCESS: w,
+        GIFT_CODE_REVOKE_SUCCESS: D,
         GIFT_CODE_CREATE_SUCCESS: L,
         GIFT_CODES_FETCH: M,
         GIFT_CODES_FETCH_SUCCESS: U,
         GIFT_CODES_FETCH_FAILURE: k,
-        MESSAGE_CREATE: B,
-        MESSAGE_UPDATE: B,
-        LOCAL_MESSAGES_LOADED: F,
-        LOAD_MESSAGES_SUCCESS: F,
-        LOAD_MESSAGES_AROUND_SUCCESS: F,
+        MESSAGE_CREATE: F,
+        MESSAGE_UPDATE: F,
+        LOCAL_MESSAGES_LOADED: B,
+        LOAD_MESSAGES_SUCCESS: B,
+        LOAD_MESSAGES_AROUND_SUCCESS: B,
         LOAD_RECENT_MENTIONS_SUCCESS: V,
         LOAD_PINNED_MESSAGES_SUCCESS: H,
         SEARCH_MESSAGES_SUCCESS: Y,

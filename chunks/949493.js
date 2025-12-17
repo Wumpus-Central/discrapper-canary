@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(442837),
     a = n(921801),
@@ -57,16 +57,16 @@ let N = () =>
             webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(h.ZP, {})],
         }),
-    D = () =>
+    w = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)(N, {}), (0, r.jsx)(P, {}), (0, r.jsx)(R, {})],
         });
-function w() {
+function D() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
         t = [
             {
                 title: A.intl.string(A.t["/7xJCF"]),
-                component: () => (0, r.jsx)(D, {}),
+                component: () => (0, r.jsx)(w, {}),
                 setting: I.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
             {

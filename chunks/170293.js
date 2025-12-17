@@ -1,14 +1,14 @@
-n.d(t, { $: () => l });
+n.d(t, { $: () => i });
 var a = n(668781),
     r = n(743498),
-    i = n(388032);
-function l(e) {
+    l = n(388032);
+function i(e) {
     a.Z.show({
-        title: i.intl.string(i.t.RpjdL8),
-        body: i.intl.string(i.t.nOSopS),
-        confirmText: i.intl.string(i.t["sKJ7+Y"]),
+        title: l.intl.string(l.t.RpjdL8),
+        body: l.intl.string(l.t.nOSopS),
+        confirmText: l.intl.string(l.t["sKJ7+Y"]),
         confirmVariant: "critical-primary",
-        cancelText: i.intl.string(i.t["7wZ1GY"]),
+        cancelText: l.intl.string(l.t["7wZ1GY"]),
         onConfirm: () => {
             (0, r.v6)(null);
         },

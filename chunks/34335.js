@@ -5,21 +5,21 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(231338);
-let a = i.createContext(null),
+    a = n(231338);
+let l = i.createContext(null),
     o = {
-        registerManageWidgetButtonRef: () => l.dG,
-        manageFocusOnReorder: l.dG,
+        registerManageWidgetButtonRef: () => a.dG,
+        manageFocusOnReorder: a.dG,
         getManageButtonForWidget: () => null,
     };
 function c() {
-    let e = i.useContext(a);
+    let e = i.useContext(l);
     return null != e ? e : o;
 }
 function s(e) {
     let { children: t } = e,
         n = i.useRef(new Map()),
-        l = i.useCallback(
+        a = i.useCallback(
             (e) => (t) => {
                 null != t ? n.current.set(e, t) : n.current.delete(e);
             },
@@ -37,13 +37,13 @@ function s(e) {
         }, []),
         s = i.useMemo(
             () => ({
-                registerManageWidgetButtonRef: l,
+                registerManageWidgetButtonRef: a,
                 manageFocusOnReorder: o,
                 getManageButtonForWidget: c,
             }),
-            [l, o, c],
+            [a, o, c],
         );
-    return (0, r.jsx)(a.Provider, {
+    return (0, r.jsx)(l.Provider, {
         value: s,
         children: t,
     });

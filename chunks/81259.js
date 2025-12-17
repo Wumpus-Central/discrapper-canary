@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(314940);
+n.d(t, { Z: () => g }), n(314940);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -7,31 +7,31 @@ var i = n(120356),
     s = n(692547),
     l = n(481060),
     c = n(551556),
-    u = n(631936);
+    u = n(991119);
 let d = () =>
         (0, r.jsx)(c.Z, {
             width: 13,
             height: 13,
             backgroundColor: s.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
         }),
-    m = () =>
+    f = () =>
         (0, r.jsx)(l.k$p, {
             size: "custom",
             width: 13,
             height: 13,
             color: s.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
         }),
-    g = () =>
+    m = () =>
         (0, r.jsx)(l.k$p, {
             size: "custom",
             width: 13,
             height: 13,
             color: s.Z.colors.TEXT_FEEDBACK_WARNING.css,
         });
-function f(e) {
+function g(e) {
     let t = (0, o.EQ)(e.type)
-        .with("info", () => (0, r.jsx)(g, {}))
-        .with("error", () => (0, r.jsx)(m, {}))
+        .with("info", () => (0, r.jsx)(m, {}))
+        .with("error", () => (0, r.jsx)(f, {}))
         .with("success", () => (0, r.jsx)(d, {}))
         .otherwise(() => null);
     return (0, r.jsxs)(r.Fragment, {

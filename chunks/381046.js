@@ -56,9 +56,9 @@ var r = n(260674),
     m = {},
     h = function e(t, n, a, o, s, c, d, f, h, g, E, b, y, O, v, S, I, T) {
         for (var C, A = t, N = T, P = 0, R = !1; void 0 !== (N = N.get(m)) && !R; ) {
-            var D = N.get(t);
-            if (((P += 1), void 0 !== D))
-                if (D === P) throw RangeError("Cyclic object value");
+            var w = N.get(t);
+            if (((P += 1), void 0 !== w))
+                if (w === P) throw RangeError("Cyclic object value");
                 else R = !0;
             void 0 === N.get(m) && (P = 0);
         }
@@ -81,8 +81,8 @@ var r = n(260674),
             return h
                 ? [v(S ? n : h(n, p.encoder, I, "key", O)) + "=" + v(h(A, p.encoder, I, "value", O))]
                 : [v(n) + "=" + v(String(A))];
-        var w = [];
-        if (void 0 === A) return w;
+        var D = [];
+        if (void 0 === A) return D;
         if ("comma" === a && l(A))
             S && h && (A = i.maybeMap(A, h)), (C = [{ value: A.length > 0 ? A.join(",") || null : void 0 }]);
         else if (l(g)) C = g;
@@ -100,12 +100,12 @@ var r = n(260674),
                 var G = b && f ? String(k).replace(/\./g, "%2E") : String(k),
                     Z = l(A) ? ("function" == typeof a ? a(j, G) : j) : j + (b ? "." + G : "[" + G + "]");
                 T.set(t, P);
-                var B = r();
-                B.set(m, T),
-                    u(w, e(U, Z, a, o, s, c, d, f, "comma" === a && S && l(A) ? null : h, g, E, b, y, O, v, S, I, B));
+                var F = r();
+                F.set(m, T),
+                    u(D, e(U, Z, a, o, s, c, d, f, "comma" === a && S && l(A) ? null : h, g, E, b, y, O, v, S, I, F));
             }
         }
-        return w;
+        return D;
     },
     g = function (e) {
         if (!e) return p;

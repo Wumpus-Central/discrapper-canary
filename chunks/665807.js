@@ -3,28 +3,28 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(959165),
-    o = n(164991),
+    o = n(959165),
+    s = n(164991),
     c = n(526429),
     u = n(128449),
     d = n(388032),
-    p = n(394843),
+    p = n(831686),
     f = n(882008);
 let g = function (e) {
     let { loadId: t } = e,
-        n = o.Z.useField("categoryId"),
+        n = s.Z.useField("categoryId"),
         g = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
         h = i.useCallback(() => {
-            o.Z.setState({ categoryId: u.Hk }),
-                s.Z.loadCategoryResults({
+            s.Z.setState({ categoryId: u.Hk }),
+                o.Z.loadCategoryResults({
                     loadId: t,
                     categoryId: u.Hk,
-                    query: o.Z.getField("fetchedQuery"),
-                    languageCode: o.Z.getField("languageCode"),
+                    query: s.Z.getField("fetchedQuery"),
+                    languageCode: s.Z.getField("languageCode"),
                 });
         }, [t]),
         m = n === u.Hk ? d.intl.string(d.t.Ivw1Is) : d.intl.formatToPlainString(d.t["+1WAFb"], { categoryName: g }),
-        _ = n === u.Hk ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: h });
+        b = n === u.Hk ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: h });
     return (0, r.jsxs)("div", {
         className: p.container,
         children: [
@@ -41,7 +41,7 @@ let g = function (e) {
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                children: _,
+                children: b,
             }),
         ],
     });

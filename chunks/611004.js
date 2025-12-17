@@ -128,12 +128,12 @@ function R(e) {
               },
           });
 }
-function D(e) {
+function w(e) {
     let t = (0, p.Tm)(e),
         n = b.Z.getEditorState(t);
     return null != n ? u.Sq(n) : null;
 }
-function w(e, t) {
+function D(e, t) {
     var n;
     let r = (0, p.Tm)(e),
         i = null != (n = b.Z.getEditorState(r)) ? n : u.nR(d.Jl(g.ZP)),
@@ -143,10 +143,10 @@ function w(e, t) {
     (a = u.lv(s, a, g.ZP)), (a = u.iK(0 + t.length, a)), E.Z.updateSearchEditorState(e, a);
 }
 function x(e, t) {
-    let n = D(e);
+    let n = w(e);
     if (null == n) return;
     let r = n.endsWith(" ") ? n + t : n + " " + t;
-    w(e, r),
+    D(e, r),
         R({
             searchContext: e,
             searchQueryString: r,
@@ -162,7 +162,7 @@ function j(e, t, n) {
     if (null == i) return;
     let a = u.Sq(i),
         o = t.type === S.aib.CHANNEL ? (0, p.EX)(a) : a;
-    w(t, (o = o.trim()));
+    D(t, (o = o.trim()));
     let l = b.Z.getSearchMode(r);
     E.Z.updateSearchMode(t, null != l ? l : v.o), m.Z.transitionSessionAnalytics(e, t);
     let c = (0, p.kG)(o),
@@ -196,9 +196,9 @@ function M() {
 let k = {
     cleanUpSearchState: N,
     fetchMessages: R,
-    setSearchInputText: w,
+    setSearchInputText: D,
     appendToSearchInputText: x,
-    getSearchInputText: D,
+    getSearchInputText: w,
     ensureSearchInputDecorators: function (e) {
         let t,
             n = (0, p.Tm)(e),

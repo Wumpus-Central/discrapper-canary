@@ -8,8 +8,8 @@ var r,
     c = n(392711),
     d = n.n(c),
     u = n(82923),
-    g = n(463299);
-function m(e, t, n) {
+    g = n(583943);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,8 +22,8 @@ function m(e, t, n) {
         e
     );
 }
-var p = (((i = p || {})[(i.HOVERING = 0)] = "HOVERING"), (i[(i.FLYING = 1)] = "FLYING"), i);
-let f = Object.freeze({
+var m = (((i = m || {})[(i.HOVERING = 0)] = "HOVERING"), (i[(i.FLYING = 1)] = "FLYING"), i);
+let b = Object.freeze({
     HOVERING: {
         Y_DURATION: 1500,
         Y_VALUE: -5,
@@ -61,7 +61,7 @@ let f = Object.freeze({
         OPACITY_DURATION_DIVIDEND: 2,
     },
 });
-function h(e, t, n, r) {
+function p(e, t, n, r) {
     return u.Z.sequence(
         d().times(t, (i) =>
             u.Z.timing(e, {
@@ -71,7 +71,7 @@ function h(e, t, n, r) {
         ),
     );
 }
-class b extends (r = a.Component) {
+class h extends (r = a.Component) {
     componentDidMount() {
         this.startAnimation();
     }
@@ -93,77 +93,77 @@ class b extends (r = a.Component) {
         this.y.setValue(0), this.x.setValue(0), this.opacity.setValue(1), this.fireScale.setValue(1);
     }
     startHoverAnimate() {
-        this.resetAnimation(), this.hoverAnimate(f.HOVERING.Y_VALUE);
+        this.resetAnimation(), this.hoverAnimate(b.HOVERING.Y_VALUE);
     }
     createFireAnimation(e, t, n, r) {
-        return h(this.fireScale, e, t, () => d().random(n, r));
+        return p(this.fireScale, e, t, () => d().random(n, r));
     }
     async hoverAnimate(e) {
         var t;
         if (0 !== this.props.stage || this.isUnmounted) return;
         let n = e > 1,
-            r = n ? f.HOVERING.FIRE_MIN_INTENSITY_FALLING : f.HOVERING.FIRE_MIN_INTENSITY_RISING,
-            i = n ? f.HOVERING.FIRE_MAX_INTENSITY_FALLING : f.HOVERING.FIRE_MAX_INTENSITY_RISING,
-            l = this.createFireAnimation(f.HOVERING.FIRE_COUNT, f.HOVERING.Y_DURATION, r, i),
+            r = n ? b.HOVERING.FIRE_MIN_INTENSITY_FALLING : b.HOVERING.FIRE_MIN_INTENSITY_RISING,
+            i = n ? b.HOVERING.FIRE_MAX_INTENSITY_FALLING : b.HOVERING.FIRE_MAX_INTENSITY_RISING,
+            l = this.createFireAnimation(b.HOVERING.FIRE_COUNT, b.HOVERING.Y_DURATION, r, i),
             a = u.Z.timing(this.y, {
                 toValue: e,
-                duration: f.HOVERING.Y_DURATION,
+                duration: b.HOVERING.Y_DURATION,
                 easing: u.Z.Easing.inOut(u.Z.Easing.ease),
             });
         (this.currentAnimation = u.Z.parallel([a, l])),
             await (null == (t = this.currentAnimation) ? void 0 : t.start()),
-            this.hoverAnimate(e * f.HOVERING.Y_VALUE_MODIFIER);
+            this.hoverAnimate(e * b.HOVERING.Y_VALUE_MODIFIER);
     }
     createShakeAnimation(e, t, n) {
-        return h(this.x, e, t, (e) => d().random(1, n) * (e % 2 == 0 ? 1 : -1));
+        return p(this.x, e, t, (e) => d().random(1, n) * (e % 2 == 0 ? 1 : -1));
     }
     async flyAnimate() {
         var e;
         let t = u.Z.spring(this.y, {
-                toValue: f.FALLING.Y_VALUE,
+                toValue: b.FALLING.Y_VALUE,
                 overshootClamping: !0,
             }),
             n = u.Z.spring(this.fireScale, {
-                toValue: f.FALLING.FIRE_VALUE,
+                toValue: b.FALLING.FIRE_VALUE,
                 overshootClamping: !0,
             }),
             r = u.Z.parallel([t, n]),
             i = u.Z.timing(this.y, {
-                toValue: f.STAGING.Y_VALUE,
-                duration: f.STAGING.DURATION,
+                toValue: b.STAGING.Y_VALUE,
+                duration: b.STAGING.DURATION,
             }),
-            l = this.createShakeAnimation(f.STAGING.SHAKE_COUNT, f.STAGING.DURATION, f.STAGING.SHAKE_INTENSITY),
+            l = this.createShakeAnimation(b.STAGING.SHAKE_COUNT, b.STAGING.DURATION, b.STAGING.SHAKE_INTENSITY),
             a = this.createFireAnimation(
-                f.STAGING.FIRE_COUNT,
-                f.STAGING.DURATION,
-                f.STAGING.FIRE_MIN_INTENSITY,
-                f.STAGING.FIRE_MAX_INTENSITY,
+                b.STAGING.FIRE_COUNT,
+                b.STAGING.DURATION,
+                b.STAGING.FIRE_MIN_INTENSITY,
+                b.STAGING.FIRE_MAX_INTENSITY,
             ),
             s = u.Z.parallel([i, l, a]),
             o = u.Z.timing(this.y, {
-                toValue: f.FLYING.Y_VALUE,
-                duration: f.FLYING.DURATION,
-                easing: f.FLYING.Y_EASING,
+                toValue: b.FLYING.Y_VALUE,
+                duration: b.FLYING.DURATION,
+                easing: b.FLYING.Y_EASING,
             }),
             c = u.Z.timing(this.x, {
-                toValue: f.FLYING.X_VALUE,
-                duration: f.FLYING.DURATION,
-                easing: f.FLYING.X_EASING,
+                toValue: b.FLYING.X_VALUE,
+                duration: b.FLYING.DURATION,
+                easing: b.FLYING.X_EASING,
             }),
             d = u.Z.timing(this.opacity, {
-                toValue: f.FLYING.OPACITY_VALUE,
-                duration: f.FLYING.DURATION / f.FLYING.OPACITY_DURATION_DIVIDEND,
-                delay: f.FLYING.DURATION / f.FLYING.OPACITY_DURATION_DIVIDEND,
+                toValue: b.FLYING.OPACITY_VALUE,
+                duration: b.FLYING.DURATION / b.FLYING.OPACITY_DURATION_DIVIDEND,
+                delay: b.FLYING.DURATION / b.FLYING.OPACITY_DURATION_DIVIDEND,
             }),
             g = this.createFireAnimation(
-                f.FLYING.FIRE_COUNT,
-                f.FLYING.DURATION,
-                f.FLYING.FIRE_MIN_INTENSITY,
-                f.FLYING.FIRE_MAX_INTENSITY,
+                b.FLYING.FIRE_COUNT,
+                b.FLYING.DURATION,
+                b.FLYING.FIRE_MIN_INTENSITY,
+                b.FLYING.FIRE_MAX_INTENSITY,
             ),
-            m = u.Z.parallel([o, c, d, g]);
+            f = u.Z.parallel([o, c, d, g]);
         if (
-            ((this.currentAnimation = u.Z.sequence([r, s, m])),
+            ((this.currentAnimation = u.Z.sequence([r, s, f])),
             await (null == (e = this.currentAnimation) ? void 0 : e.start()),
             !this.isUnmounted)
         ) {
@@ -208,7 +208,7 @@ class b extends (r = a.Component) {
                             }),
                         )),
                         r.forEach(function (t) {
-                            m(e, t, n[t]);
+                            f(e, t, n[t]);
                         });
                 }
                 return e;
@@ -234,13 +234,13 @@ class b extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            m(this, "x", new u.Z.Value(0)),
-            m(this, "y", new u.Z.Value(0)),
-            m(this, "opacity", new u.Z.Value(1)),
-            m(this, "fireScale", new u.Z.Value(1)),
-            m(this, "currentAnimation", null),
-            m(this, "isUnmounted", !1);
+            f(this, "x", new u.Z.Value(0)),
+            f(this, "y", new u.Z.Value(0)),
+            f(this, "opacity", new u.Z.Value(1)),
+            f(this, "fireScale", new u.Z.Value(1)),
+            f(this, "currentAnimation", null),
+            f(this, "isUnmounted", !1);
     }
 }
-m(b, "Stages", p);
-let x = b;
+f(h, "Stages", m);
+let x = h;

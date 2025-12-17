@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(496675),
     u = n(979651),
     d = n(652853),
-    f = n(732380),
+    f = n(475413),
     p = n(981631),
     _ = n(671955),
     m = n(388032);
@@ -47,7 +47,7 @@ function h(e) {
                 t.isGuildStageVoice() ? (0, l.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)),
                 null == h || h();
         };
-    return (0, r.jsx)(f.O1, {
+    return (0, r.jsx)(f.i6, {
         text: b ? y() : O(),
         fullWidth: !E,
         onClick: v,

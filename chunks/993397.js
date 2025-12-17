@@ -9,11 +9,11 @@ var i = n(54381),
     u = n(492593),
     d = n(534469),
     p = n(511010),
-    h = n(834129),
-    f = n(981631),
+    f = n(834129),
+    h = n(981631),
     m = n(388032),
-    g = n(378661),
-    b = n(360514);
+    g = n(884193),
+    b = n(548498);
 function C(e) {
     let { expanded: t, onClick: n, count: r, compact: l, collapsedReason: a } = e,
         c = (0, o.EQ)({ collapsedReason: a })
@@ -41,7 +41,7 @@ function C(e) {
     return (0, i.jsx)(u.Z, {
         compact: l,
         role: "group",
-        childrenMessageContent: (0, i.jsx)(h.Z, {
+        childrenMessageContent: (0, i.jsx)(f.Z, {
             compact: l,
             className: g.blockedSystemMessage,
             iconNode: c,
@@ -65,20 +65,20 @@ function C(e) {
 let y = r.memo(function (e) {
     var t;
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: u } = e,
-        { hasJumpTarget: h = !1 } = n,
-        [m, y] = r.useState(h),
-        _ = r.useCallback(() => y((e) => !e), []);
+        { hasJumpTarget: f = !1 } = n,
+        [m, y] = r.useState(f),
+        v = r.useCallback(() => y((e) => !e), []);
     r.useEffect(() => {
-        h && y(!0);
-    }, [h]);
-    let v = n.hasUnread ? n.content.length - 1 : n.content.length;
+        f && y(!0);
+    }, [f]);
+    let x = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)("div", {
         className: a()({
             [b.groupStart]: !0,
             [g.expanded]: m,
         }),
         children: [
-            n.hasUnread && (!m || (null == (t = n.content[0]) ? void 0 : t.type) === f.ys_.DIVIDER)
+            n.hasUnread && (!m || (null == (t = n.content[0]) ? void 0 : t.type) === h.ys_.DIVIDER)
                 ? (0, i.jsx)(
                       p.Z,
                       {
@@ -91,17 +91,17 @@ let y = r.memo(function (e) {
             (0, i.jsx)(
                 C,
                 {
-                    count: v,
+                    count: x,
                     compact: o,
                     expanded: m,
-                    onClick: _,
+                    onClick: v,
                     collapsedReason: u,
                 },
                 "collapsed-message-item",
             ),
             m
                 ? n.content.map((e, t) => {
-                      if (e.type === f.ys_.DIVIDER && t > 0) {
+                      if (e.type === h.ys_.DIVIDER && t > 0) {
                           var r, a;
                           let e = null != (a = null == (r = n.content[t + 1]) ? void 0 : r.isGroupStart) && a;
                           return (0, i.jsx)(
@@ -114,8 +114,8 @@ let y = r.memo(function (e) {
                               "divider",
                           );
                       }
-                      if (e.type === f.ys_.MESSAGE || e.type === f.ys_.THREAD_STARTER_MESSAGE) {
-                          let t = e.type === f.ys_.THREAD_STARTER_MESSAGE ? d.Ru : d.ZP;
+                      if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
+                          let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? d.Ru : d.ZP;
                           return (0, i.jsx)(
                               t,
                               {

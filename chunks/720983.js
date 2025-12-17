@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N });
+t.d(n, { Z: () => E });
 var l = t(54381),
     i = t(473749),
     a = t(120356),
@@ -20,33 +20,33 @@ var l = t(54381),
     v = t(181268),
     C = t(981631),
     k = t(228168),
-    j = t(388032),
-    S = t(418993);
+    S = t(388032),
+    j = t(418993);
 function Z(e) {
     let { content: n, onClick: t, ariaLabel: i, className: a } = e;
     return (0, l.jsx)(s.P3F, {
-        className: o()(S.iconButton, a),
+        className: o()(j.iconButton, a),
         onClick: t,
         "aria-label": i,
         children: n,
     });
 }
-function N(e) {
+function E(e) {
     let { guildId: n, storefront: t, selectedPageIndex: a } = e,
-        N = (0, s.wjy)((0, d.ZP)()),
-        E = (0, g.Y)({ location: "SocialLayerStorefrontHeader" }),
-        L = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
+        E = (0, s.wjy)((0, d.ZP)()),
+        L = (0, g.Y)({ location: "SocialLayerStorefrontHeader" }),
+        N = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
         R = (0, m.oR)(),
         { analyticsLocations: T } = (0, u.ZP)(),
         A = i.useCallback(() => {
-            (null == L ? void 0 : L.id) != null &&
+            (null == N ? void 0 : N.id) != null &&
                 (0, p.openUserProfileModal)({
-                    userId: L.id,
+                    userId: N.id,
                     tabSection: k.oh.WISHLIST,
                     showGuildProfile: !1,
                     sourceAnalyticsLocations: [c.Z.SOCIAL_LAYER_STOREFRONT],
                 });
-        }, [L]),
+        }, [N]),
         M = i.useCallback(() => {
             h.default.track(C.rMx.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: null == R ? void 0 : R.sessionId,
@@ -60,10 +60,10 @@ function N(e) {
         P = null != t.lightThemeLogoAssetId ? (0, _._W)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
         y = null;
     return (
-        (y = N ? (null != O ? O : P) : null != P ? P : O),
+        (y = E ? (null != O ? O : P) : null != P ? P : O),
         (0, l.jsxs)(f.Z, {
             disableDoubleClick: !0,
-            className: S.headerContainer,
+            className: j.headerContainer,
             children: [
                 (0, l.jsxs)(s.P3F, {
                     onClick: () => {
@@ -72,11 +72,11 @@ function N(e) {
                             pageIndex: 0,
                         });
                     },
-                    className: S.titleContainer,
+                    className: j.titleContainer,
                     children: [
                         null != y &&
                             (0, l.jsx)("img", {
-                                className: S.logo,
+                                className: j.logo,
                                 src: y,
                                 alt: t.title,
                             }),
@@ -84,7 +84,7 @@ function N(e) {
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: S.titles,
+                    className: j.titles,
                     children: t.pages.map((e, t) =>
                         (0, l.jsx)(
                             f.Z.Title,
@@ -95,8 +95,8 @@ function N(e) {
                                         pageIndex: t,
                                     });
                                 },
-                                wrapperClassName: S.titleWrapper,
-                                className: o()(S.pageTitleContainer, { [S.selectedPageIndicator]: a === t }),
+                                wrapperClassName: j.titleWrapper,
+                                className: o()(j.pageTitleContainer, { [j.selectedPageIndicator]: a === t }),
                                 children: (0, l.jsx)(s.xvT, {
                                     variant: "text-sm/medium",
                                     children: e.title,
@@ -106,9 +106,9 @@ function N(e) {
                         ),
                     ),
                 }),
-                E &&
+                L &&
                     (0, l.jsxs)("div", {
-                        className: S.alignedRightContent,
+                        className: j.alignedRightContent,
                         children: [
                             (0, l.jsx)(Z, {
                                 content: (0, l.jsx)(s.h_8, {
@@ -116,17 +116,17 @@ function N(e) {
                                     color: "currentColor",
                                 }),
                                 onClick: A,
-                                ariaLabel: j.intl.string(j.t["7lZ31J"]),
-                                className: S.wishlistButton,
+                                ariaLabel: S.intl.string(S.t["7lZ31J"]),
+                                className: j.wishlistButton,
                             }),
                             (0, l.jsx)(Z, {
                                 onClick: M,
-                                ariaLabel: j.intl.string(j.t.hvVgAZ),
+                                ariaLabel: S.intl.string(S.t.hvVgAZ),
                                 content: (0, l.jsx)(s.xvT, {
                                     variant: "text-sm/medium",
-                                    children: j.intl.string(j.t.hvVgAZ),
+                                    children: S.intl.string(S.t.hvVgAZ),
                                 }),
-                                className: S.learnMoreButton,
+                                className: j.learnMoreButton,
                             }),
                         ],
                     }),

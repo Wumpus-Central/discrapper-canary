@@ -15,7 +15,7 @@ n.d(t, {
     Vl: () => O,
     b7: () => V,
     ge: () => R,
-    il: () => B,
+    il: () => F,
     nY: () => p,
     pO: () => E,
     q8: () => T,
@@ -105,10 +105,10 @@ function P(e) {
 function R(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
-function D(e) {
+function w(e) {
     return (null == e ? void 0 : e.type) === i.X.PLAY_ON_DESKTOP;
 }
-let w = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
+let D = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
     x = (e) => P(e) || s.Z.isProgressingOnDesktop(e.id),
     L = (e, t) => {
         var n, i, o, s;
@@ -159,13 +159,13 @@ let w = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
         if (null == d) throw Error("No task with type ".concat(s, " found for quest ").concat(o.id, "!"));
         let f = d.target,
             p = k(o, d),
-            _ = Object.values(c.tasks).find(D),
+            _ = Object.values(c.tasks).find(w),
             m = null == _ || null == (n = _.applications) ? void 0 : n.map((e) => e.id);
         return {
             progressSeconds: p,
             targetSeconds: f,
             targetMinutes: Math.ceil(f / a.Z.Seconds.MINUTE),
-            percentComplete: w(f, p),
+            percentComplete: D(f, p),
             taskType: u,
             applications: m,
         };
@@ -208,7 +208,7 @@ let w = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
             includeTaskTypes: a,
         });
     },
-    B = (e, t) => {
+    F = (e, t) => {
         if (O(e))
             return {
                 progressSeconds: 0,
@@ -248,7 +248,7 @@ let w = (e, t) => (e > 0 ? (0, r.floor)(Math.min(t / e, 1), 4) : 0),
                     taskType: i.X.STREAM_ON_DESKTOP,
                 });
     };
-function F(e) {
+function B(e) {
     var t;
     let n = e.taskConfigV2.tasks,
         r = n[i.X.ACHIEVEMENT_IN_ACTIVITY],
@@ -257,14 +257,14 @@ function F(e) {
 }
 function V(e) {
     var t, n, r, i;
-    let a = F(e.config);
+    let a = B(e.config);
     if (null == a) return null;
     let o =
             null !=
             (i = null == (r = e.userStatus) || null == (n = r.progress) || null == (t = n[a.type]) ? void 0 : t.value)
                 ? i
                 : 0,
-        s = w(a.target, o);
+        s = D(a.target, o);
     return {
         title: a.messages.taskTitle,
         description: a.messages.taskDescription,

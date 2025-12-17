@@ -3,8 +3,8 @@ var r = n(413135),
     i = n(836560),
     l = n(392711),
     a = n.n(l),
-    s = n(710845),
-    o = n(998502),
+    o = n(710845),
+    s = n(998502),
     c = n(901077),
     u = n(76238),
     d = n(852926),
@@ -22,8 +22,8 @@ function f(e, t, n) {
         e
     );
 }
-let g = o.ZP.requireModule("discord_rpc").RPCIPC,
-    h = new s.Z("RPCServer:IPC"),
+let g = s.ZP.requireModule("discord_rpc").RPCIPC,
+    h = new o.Z("RPCServer:IPC"),
     m = {
         HANDSHAKE: 0,
         FRAME: 1,
@@ -31,10 +31,10 @@ let g = o.ZP.requireModule("discord_rpc").RPCIPC,
         PING: 3,
         PONG: 4,
     };
-function _(e, t) {
+function b(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : (e._didHandshake = t);
 }
-function b(e) {
+function _(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
 function E(e) {
@@ -159,7 +159,7 @@ class v extends u.Z {
                 this.handleHandshake(e, n), e.emit("handshake", n);
                 break;
             case m.FRAME:
-                if (!b(e)) throw Error("did not handshake");
+                if (!_(e)) throw Error("did not handshake");
                 e.emit("request", n);
                 break;
             case m.CLOSE:
@@ -173,8 +173,8 @@ class v extends u.Z {
         }
     }
     handleHandshake(e, t) {
-        if (b(e)) throw Error("already did handshake");
-        (this.clientId = t.client_id), this.checkRpcVersion(+t.v), _(e, !0);
+        if (_(e)) throw Error("already did handshake");
+        (this.clientId = t.client_id), this.checkRpcVersion(+t.v), b(e, !0);
     }
     constructor(e, t) {
         super("ipc", p.X6Q, t),
@@ -184,7 +184,7 @@ class v extends u.Z {
             f(this, "socket", void 0),
             f(this, "clientId", null),
             (this.socket = e),
-            _(e, !1);
+            b(e, !1);
     }
 }
 class y extends i.EventEmitter {

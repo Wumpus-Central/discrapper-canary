@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => D,
-    Z: () => w,
+    S: () => w,
+    Z: () => D,
 }),
     n(704826),
     n(35282),
@@ -28,7 +28,7 @@ var r = n(54381),
     v = n(726985),
     S = n(65154),
     I = n(388032),
-    T = n(612232);
+    T = n(986752);
 let C = ">=10.0.22000",
     A = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i,
     N = "{E5323777-F976-4f5b-9B55-B94699C46E44}";
@@ -40,7 +40,7 @@ function R(e) {
         ? "ms-settings:camera" + (null != e ? "?cameraId=".concat(encodeURIComponent(e.replace(A, N))) : "")
         : "";
 }
-function D() {
+function w() {
     let [e, t] = i.useState(!1),
         n = (0, s.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
     return (i.useEffect(() => {
@@ -61,7 +61,7 @@ function D() {
           })
         : null;
 }
-function w(e) {
+function D(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
@@ -75,8 +75,8 @@ function w(e) {
         } = e,
         { analyticsLocations: A } = (0, f.ZP)(),
         { id: N } = (0, _.p6)(S.h7.VIDEO_INPUT),
-        D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
-        w = h.qF.useSetting();
+        w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
+        D = h.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
@@ -94,7 +94,7 @@ function w(e) {
                 : (0, r.jsx)(c.rsf, {
                       label: I.intl.string(I.t["3Ppr1h"]),
                       description: I.intl.string(I.t.WNbX4O),
-                      checked: w,
+                      checked: D,
                       onChange: (e) => {
                           h.qF.updateSetting(e),
                               b.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
@@ -119,7 +119,7 @@ function w(e) {
                                 : void 0,
                         deviceType: S.h7.VIDEO_INPUT,
                         location: "CameraSettings",
-                        isDisabled: !D,
+                        isDisabled: !w,
                         showAllDevices: !0,
                     }),
                 }),

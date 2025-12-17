@@ -4,26 +4,26 @@ var r = n(54381),
     l = n(442837),
     o = n(544891),
     a = n(481060),
-    s = n(570140),
-    c = n(39952),
+    c = n(570140),
+    s = n(39952),
     u = n(706454),
     d = n(981631),
     f = n(388032),
-    g = n(418087);
+    g = n(268436);
 let b = new Map();
 function p(e, t) {
     let {
             handleTranslate: p,
-            handleRevertTranslation: m,
-            isTranslating: O,
-            isTranslated: v,
+            handleRevertTranslation: O,
+            isTranslating: y,
+            isTranslated: m,
         } = (function (e) {
             let [t, n] = i.useState(!1),
                 r = (0, l.e7)([u.default], () => u.default.locale);
             return {
                 handleTranslate: i.useCallback(
                     async (i, l) => {
-                        var c, u;
+                        var s, u;
                         if (t) return;
                         let g = null != i ? i : r;
                         n(!0);
@@ -32,9 +32,9 @@ function p(e, t) {
                             (u =
                                 null != l
                                     ? l
-                                    : null == (c = (0, f.getAvailableLocales)().find((e) => e.value === g))
+                                    : null == (s = (0, f.getAvailableLocales)().find((e) => e.value === g))
                                       ? void 0
-                                      : c.name)
+                                      : s.name)
                                 ? u
                                 : g;
                         b.has(e.id) || b.set(e.id, e.content),
@@ -55,7 +55,7 @@ function p(e, t) {
                             });
                             t.ok &&
                                 t.body &&
-                                (s.Z.dispatch({
+                                (c.Z.dispatch({
                                     type: "MESSAGE_UPDATE",
                                     message: {
                                         id: e.id,
@@ -78,7 +78,7 @@ function p(e, t) {
                 handleRevertTranslation: i.useCallback(() => {
                     let t = b.get(e.id);
                     null != t &&
-                        (s.Z.dispatch({
+                        (c.Z.dispatch({
                             type: "MESSAGE_UPDATE",
                             message: {
                                 id: e.id,
@@ -92,7 +92,7 @@ function p(e, t) {
                 isTranslated: b.has(e.id),
             };
         })(e),
-        y = (function (e, t) {
+        v = (function (e, t) {
             let l = (0, f.getAvailableLocales)();
             return i.useMemo(
                 () =>
@@ -122,23 +122,23 @@ function p(e, t) {
                     }),
                 [e, t, l],
             );
-        })(p, O),
-        h = (0, c.o)();
+        })(p, y),
+        h = (0, s.o)();
     return null != e.content && "" !== e.content.trim() && h
-        ? v
+        ? m
             ? (0, r.jsx)(a.sNh, {
                   id: "revert-translation",
                   label: f.intl.string(f.t.JC9BXn),
                   icon: a.os0,
-                  action: m,
-                  disabled: O,
+                  action: O,
+                  disabled: y,
               })
             : (0, r.jsx)(a.sNh, {
                   id: "translate",
-                  label: O ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
+                  label: y ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
                   action: () => p(),
-                  disabled: O,
-                  children: y,
+                  disabled: y,
+                  children: v,
               })
         : null;
 }

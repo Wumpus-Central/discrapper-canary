@@ -6,9 +6,9 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(119269),
-    s = n(227140),
-    o = n(388032),
-    c = n(820562);
+    o = n(227140),
+    s = n(388032),
+    c = n(630942);
 let u = (e) => {
         let { children: t } = e,
             n = (0, r.jsxs)("div", {
@@ -31,11 +31,11 @@ let u = (e) => {
                         children: [
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-sm/bold",
-                                children: o.intl.string(o.t.USo4s7),
+                                children: s.intl.string(s.t.USo4s7),
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-xs/normal",
-                                children: o.intl.format(o.t.AGKQq6, { numReferrals: 3 }),
+                                children: s.intl.format(s.t.AGKQq6, { numReferrals: 3 }),
                             }),
                         ],
                     }),
@@ -44,7 +44,7 @@ let u = (e) => {
         return (0, r.jsx)(l.aML, {
             text: n,
             position: "right",
-            "aria-label": o.intl.string(o.t.USo4s7),
+            "aria-label": s.intl.string(s.t.USo4s7),
             tooltipClassName: c.marketingBadgeTooltip,
             allowOverflow: !0,
             tooltipContentClassName: c.tooltipContent,
@@ -101,6 +101,6 @@ let u = (e) => {
             i.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, r.jsx)(s.Z, { copy: o.intl.string(o.t.y2b7CA) })
+            (0, r.jsx)(o.Z, { copy: s.intl.string(s.t.y2b7CA) })
         );
     };

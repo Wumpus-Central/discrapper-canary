@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(35282), n(388685);
+n.d(t, { Z: () => D }), n(35282), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -13,8 +13,8 @@ var r = n(54381),
     _ = n(259580),
     m = n(424218),
     h = n(388032),
-    g = n(409077),
-    E = n(154257);
+    g = n(708702),
+    E = n(164701);
 function b(e, t, n) {
     return (
         t in e
@@ -243,7 +243,7 @@ function P(e) {
         children: (0, r.jsx)(u.P3F, {
             className: g.openFullPreviewSection,
             onClick: () => {
-                (0, u.h7j)((t) => (0, r.jsx)(D, y({}, e, t)));
+                (0, u.h7j)((t) => (0, r.jsx)(w, y({}, e, t)));
             },
             children: (0, r.jsx)(u.bJT, {
                 size: "xs",
@@ -278,7 +278,7 @@ function R(e) {
                 : (S += " " + h.intl.formatToPlainString(h.t["1+gGcK"], { formattedBytes: (0, m.IC)(_) })));
     let I = (null == b ? void 0 : b.slice(0, O).join("\n")) + S,
         R = (0, f.nM)(I),
-        D = l || O < y;
+        w = l || O < y;
     return (0, r.jsxs)("div", {
         className: o()(E, g.container),
         children: [
@@ -297,7 +297,7 @@ function R(e) {
                 className: g.footer,
                 variant: "text-sm/normal",
                 children: [
-                    D
+                    w
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(C, {
@@ -333,7 +333,7 @@ function R(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let {
             url: t,
             fileName: n,
@@ -389,7 +389,7 @@ function D(e) {
         })
     );
 }
-let w = i.memo(
+let D = i.memo(
     function (e) {
         let { url: t, fileName: n, fileSize: a, contentType: s, className: l, onClick: c, onContextMenu: u } = e,
             [f, p] = i.useState(!1),

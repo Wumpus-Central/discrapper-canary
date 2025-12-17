@@ -4,8 +4,8 @@ n(473749);
 var i = n(481060),
     l = n(570140),
     a = n(317770),
-    s = n(314897),
-    o = n(592125),
+    o = n(314897),
+    s = n(592125),
     c = n(797258),
     u = n(590415),
     d = n(981631);
@@ -35,7 +35,7 @@ class g extends a.Z {
             p(this, "handleVoiceStateUpdates", (e) => {
                 var t;
                 let { voiceStates: l } = e,
-                    a = s.default.getId(),
+                    a = o.default.getId(),
                     g = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
                     h = l.find((e) => e.userId === a && e.sessionId === g);
                 if (null == h) return;
@@ -44,10 +44,10 @@ class g extends a.Z {
                     (0, i.nfh)(f) && (0, i.Mr3)(f);
                     return;
                 }
-                let _ = o.Z.getChannel(m);
-                if (!(null == _ ? void 0 : _.isGuildStageVoice())) return;
-                let b = (0, u.gf)(h) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-                if (null != _ && b) {
+                let b = s.Z.getChannel(m);
+                if (!(null == b ? void 0 : b.isGuildStageVoice())) return;
+                let _ = (0, u.gf)(h) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                if (null != b && _) {
                     if ((0, i.nfh)(f)) return;
                     (0, i.ZDy)(
                         async () => {
@@ -93,7 +93,7 @@ class g extends a.Z {
                                             }
                                             return e;
                                         })({}, t),
-                                        { channel: _ },
+                                        { channel: b },
                                     ),
                                 );
                         },

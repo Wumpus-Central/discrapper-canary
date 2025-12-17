@@ -3,8 +3,8 @@ var r = n(710845),
     i = n(857192),
     l = n(901077),
     a = n(46832),
-    s = n(852926),
-    o = n(748635),
+    o = n(852926),
+    s = n(748635),
     c = n(981631);
 let u = new r.Z("RPCServer:PostMessage"),
     d = (e, t, n) => {
@@ -12,7 +12,7 @@ let u = new r.Z("RPCServer:PostMessage"),
             t.info("Socket Message: ".concat(n.id), (0, l.Z)(e));
     },
     p = (function () {
-        let e = new a.Z(s.em, u, o.Z, d);
+        let e = new a.Z(o.em, u, s.Z, d);
         return (
             window.addEventListener("message", (t) => {
                 if (window === t.source) return;

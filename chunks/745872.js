@@ -43,8 +43,8 @@ var r,
     N = n(138676),
     P = n(365088),
     R = n(947599),
-    D = {},
-    w = "undefined" != typeof Uint8Array && C ? C(Uint8Array) : r,
+    w = {},
+    D = "undefined" != typeof Uint8Array && C ? C(Uint8Array) : r,
     x = {
         __proto__: null,
         "%AggregateError%": "undefined" == typeof AggregateError ? r : AggregateError,
@@ -52,10 +52,10 @@ var r,
         "%ArrayBuffer%": "undefined" == typeof ArrayBuffer ? r : ArrayBuffer,
         "%ArrayIteratorPrototype%": T && C ? C([][Symbol.iterator]()) : r,
         "%AsyncFromSyncIteratorPrototype%": r,
-        "%AsyncFunction%": D,
-        "%AsyncGenerator%": D,
-        "%AsyncGeneratorFunction%": D,
-        "%AsyncIteratorPrototype%": D,
+        "%AsyncFunction%": w,
+        "%AsyncGenerator%": w,
+        "%AsyncGeneratorFunction%": w,
+        "%AsyncIteratorPrototype%": w,
         "%Atomics%": "undefined" == typeof Atomics ? r : Atomics,
         "%BigInt%": "undefined" == typeof BigInt ? r : BigInt,
         "%BigInt64Array%": "undefined" == typeof BigInt64Array ? r : BigInt64Array,
@@ -75,7 +75,7 @@ var r,
         "%Float64Array%": "undefined" == typeof Float64Array ? r : Float64Array,
         "%FinalizationRegistry%": "undefined" == typeof FinalizationRegistry ? r : FinalizationRegistry,
         "%Function%": b,
-        "%GeneratorFunction%": D,
+        "%GeneratorFunction%": w,
         "%Int8Array%": "undefined" == typeof Int8Array ? r : Int8Array,
         "%Int16Array%": "undefined" == typeof Int16Array ? r : Int16Array,
         "%Int32Array%": "undefined" == typeof Int32Array ? r : Int32Array,
@@ -105,7 +105,7 @@ var r,
         "%Symbol%": T ? Symbol : r,
         "%SyntaxError%": c,
         "%ThrowTypeError%": I,
-        "%TypedArray%": w,
+        "%TypedArray%": D,
         "%TypeError%": u,
         "%Uint8Array%": "undefined" == typeof Uint8Array ? r : Uint8Array,
         "%Uint8ClampedArray%": "undefined" == typeof Uint8ClampedArray ? r : Uint8ClampedArray,
@@ -207,20 +207,20 @@ var j = function e(t) {
     U = n(706165),
     G = k.call(R, Array.prototype.concat),
     Z = k.call(P, Array.prototype.splice),
-    B = k.call(R, String.prototype.replace),
-    F = k.call(R, String.prototype.slice),
+    F = k.call(R, String.prototype.replace),
+    B = k.call(R, String.prototype.slice),
     V = k.call(R, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
-        var t = F(e, 0, 1),
-            n = F(e, -1);
+        var t = B(e, 0, 1),
+            n = B(e, -1);
         if ("%" === t && "%" !== n) throw new c("invalid intrinsic syntax, expected closing `%`");
         if ("%" === n && "%" !== t) throw new c("invalid intrinsic syntax, expected opening `%`");
         var r = [];
         return (
-            B(e, H, function (e, t, n, i) {
-                r[r.length] = n ? B(i, Y, "$1") : t || e;
+            F(e, H, function (e, t, n, i) {
+                r[r.length] = n ? F(i, Y, "$1") : t || e;
             }),
             r
         );
@@ -230,7 +230,7 @@ var j = function e(t) {
             r = e;
         if ((U(M, r) && (r = "%" + (n = M[r])[0] + "%"), U(x, r))) {
             var i = x[r];
-            if ((i === D && (i = j(r)), void 0 === i && !t))
+            if ((i === w && (i = j(r)), void 0 === i && !t))
                 throw new u("intrinsic " + e + " exists, but is not available. Please file an issue!");
             return {
                 alias: n,
@@ -255,8 +255,8 @@ e.exports = function (e, t) {
     l && ((r = l[0]), Z(n, G([0, 1], l)));
     for (var d = 1, f = !0; d < n.length; d += 1) {
         var p = n[d],
-            _ = F(p, 0, 1),
-            m = F(p, -1);
+            _ = B(p, 0, 1),
+            m = B(p, -1);
         if (('"' === _ || "'" === _ || "`" === _ || '"' === m || "'" === m || "`" === m) && _ !== m)
             throw new c("property names with quotes must have matching quotes");
         if ((("constructor" !== p && f) || (s = !0), (r += "." + p), U(x, (a = "%" + r + "%")))) o = x[a];

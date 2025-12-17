@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => $,
-    e5: () => B,
+    e5: () => F,
     px: () => Z,
 }),
     n(388685);
@@ -8,7 +8,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -99,10 +99,10 @@ function Z(e) {
             return c.EFr.SIZE_32;
     }
 }
-function B(e) {
+function F(e) {
     return c.ny6[e].size;
 }
-let F = () =>
+let B = () =>
         n
             .e("43841")
             .then(n.t.bind(n, 737848, 19))
@@ -219,7 +219,7 @@ let q = i.memo(function (e) {
                 children: [
                     d &&
                         (0, r.jsx)(c.Fmz, {
-                            importData: F,
+                            importData: B,
                             shouldAnimate: !y,
                             className: j.animation,
                         }),
@@ -232,7 +232,7 @@ let q = i.memo(function (e) {
                     }),
                     !d &&
                         (0, r.jsx)(c.Fmz, {
-                            importData: F,
+                            importData: B,
                             shouldAnimate: !y,
                             className: j.animation,
                         }),
@@ -285,7 +285,7 @@ let q = i.memo(function (e) {
                 onShowStreamPreview: k,
                 onWatchStream: U,
                 connectedOn: G,
-                ref: F,
+                ref: B,
             } = e,
             V = (0, l.e7)([T.default], () => T.default.getId() === s.id, [s.id]),
             { ref: H, width: Y } = (0, _.ZP)(),
@@ -361,14 +361,14 @@ let q = i.memo(function (e) {
             }, [a, k, ec, s]),
             e_ = a || w,
             em = i.useMemo(() => Z(h), [h]),
-            eh = i.useMemo(() => B(em), [em]),
+            eh = i.useMemo(() => F(em), [em]),
             eg = i.useMemo(() => s.getAvatarURL(C, eh), [s, C, eh]),
             eE = (0, l.e7)([N.Z], () => N.Z.getVoiceVolume($));
         return (f === x.OYC.ONLY_WHILE_SPEAKING && e_ && !es) || null == et
             ? null
             : n
               ? (0, r.jsxs)(c.P3F, {
-                    innerRef: F,
+                    innerRef: B,
                     className: o()(j.voiceUser, {
                         [j.speaking]: es,
                         [j.interactive]: !a,
@@ -462,7 +462,7 @@ let q = i.memo(function (e) {
                     ],
                 })
               : (0, r.jsxs)(c.P3F, {
-                    innerRef: F,
+                    innerRef: B,
                     className: o()(j.voiceUser, {
                         [j.speaking]: es,
                         [j.interactive]: !a,

@@ -9,10 +9,10 @@ var i = n(54381),
     u = n(626135),
     d = n(981631),
     p = n(388032),
-    h = n(960296),
-    f = n(430864);
+    f = n(868691),
+    h = n(960324);
 function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: C, popoutText: y, animation: _ } = e;
+    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: C, popoutText: y, animation: v } = e;
     r.useEffect(() => {
         u.default.track(
             d.rMx.OPEN_POPOUT,
@@ -43,29 +43,29 @@ function m(e) {
             })({ type: C }, (0, s.v_)(b)),
         );
     }, [C, b]);
-    let v = r.useCallback(() => {
+    let x = r.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
         O = r.useCallback(() => {
             null == g || g(), t();
         }, [g, t]),
-        x = r.useRef(null);
+        E = r.useRef(null);
     return (
         r.useEffect(() => {
             let e,
                 t = c.Z.theme,
                 i = !1;
             return (
-                null != _ &&
+                null != v &&
                     (async () => {
                         let [{ default: r }, l] = await Promise.all([
                             Promise.resolve().then(n.t.bind(n, 500923, 23)),
-                            (0, a.wj)(t) ? _.dark() : _.light(),
+                            (0, a.wj)(t) ? v.dark() : v.light(),
                         ]);
                         i ||
-                            null == x.current ||
+                            null == E.current ||
                             (e = r.loadAnimation({
-                                container: x.current,
+                                container: E.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -76,42 +76,42 @@ function m(e) {
                     (i = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [_]),
+        }, [v]),
         (0, i.jsx)(o.VqE, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, i.jsxs)("form", {
-                className: h.contentWarningPopout,
-                onSubmit: v,
+                className: f.contentWarningPopout,
+                onSubmit: x,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: h.body,
+                        className: f.body,
                         children: [
-                            null != _ &&
+                            null != v &&
                                 (0, i.jsx)("div", {
-                                    className: h.animation,
-                                    ref: x,
+                                    className: f.animation,
+                                    ref: E,
                                 }),
                             (0, i.jsxs)("div", {
-                                className: h.content,
+                                className: f.content,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: h.header,
+                                        className: f.header,
                                         children: p.intl.string(p.t.mY3Y38),
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         id: "content-warning-popout-label",
-                                        className: f.markup,
+                                        className: h.markup,
                                         variant: "text-sm/normal",
                                         children: y.body,
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: h.buttonWrapper,
+                                        className: f.buttonWrapper,
                                         children: [
                                             (0, i.jsxs)("div", {
-                                                className: h.buttonContainer,
+                                                className: f.buttonContainer,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: h.button,
+                                                        className: f.button,
                                                         children: (0, i.jsx)(o.Button, {
                                                             variant: "secondary",
                                                             onClick: O,
@@ -120,26 +120,26 @@ function m(e) {
                                                     }),
                                                     (0, i.jsx)(o.Text, {
                                                         variant: "text-xs/normal",
-                                                        className: h.buttonHint,
+                                                        className: f.buttonHint,
                                                         children: p.intl.format(p.t["0LzVPZ"], {}),
                                                     }),
                                                 ],
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: h.buttonContainer,
+                                                className: f.buttonContainer,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: h.button,
+                                                        className: f.button,
                                                         children: (0, i.jsx)(o.Button, {
                                                             variant: "primary",
-                                                            onClick: v,
+                                                            onClick: x,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
                                                     }),
                                                     (0, i.jsx)(o.Text, {
                                                         variant: "text-xs/normal",
-                                                        className: h.buttonHint,
+                                                        className: f.buttonHint,
                                                         children: p.intl.format(p.t.khjqdH, {}),
                                                     }),
                                                 ],
@@ -152,12 +152,12 @@ function m(e) {
                     }),
                     null != y.footer && "" !== y.footer
                         ? (0, i.jsxs)("div", {
-                              className: h.footer,
+                              className: f.footer,
                               children: [
                                   (0, i.jsx)(o.d3s, {
                                       size: "xs",
                                       color: l.Z.unsafe_rawColors.PRIMARY_400.css,
-                                      className: h.icon,
+                                      className: f.icon,
                                   }),
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-sm/normal",

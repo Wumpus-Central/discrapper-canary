@@ -21,10 +21,10 @@ var r = n(54381),
     p = n(726542),
     O = n(536285),
     N = n(591759),
-    g = n(656649),
-    C = n(981631),
-    b = n(388032),
-    y = n(130560);
+    b = n(656649),
+    g = n(981631),
+    C = n(388032),
+    y = n(936502);
 let S = null != window.opener;
 function m() {
     var e, t;
@@ -32,11 +32,11 @@ function m() {
         i = (0, f.l)(),
         u = i.get("code"),
         O = i.get("oauth_verifier"),
-        b = null != (e = i.get("state")) ? e : "",
+        C = null != (e = i.get("state")) ? e : "",
         y = i.get("loading"),
         m = null != (t = i.get("iss")) ? t : void 0,
-        { type: w } = (0, o.UO)(),
-        R = (0, g.vJ)(w),
+        { type: R } = (0, o.UO)(),
+        _ = (0, b.vJ)(R),
         [A, T] = c.useState(!1),
         [D, x] = c.useState(!1),
         Z = (0, d.Z)(),
@@ -45,7 +45,7 @@ function m() {
         let e;
         if (null != y) return;
         for (let t of i.keys()) t.startsWith("openid.") && (null == e && (e = {}), (e[t] = i.get(t)));
-        let t = (0, g.vJ)(w);
+        let t = (0, b.vJ)(R);
         !(async function () {
             if (null == t || !p.Z.isSupported(t)) return;
             function r(e) {
@@ -56,63 +56,63 @@ function m() {
                         return;
                     }
                     if ([200, 204].includes(r)) {
-                        n.replace(C.Z5c.CONNECTIONS_SUCCESS(t)), S && window.close();
+                        n.replace(g.Z5c.CONNECTIONS_SUCCESS(t)), S && window.close();
                         return;
                     }
                     (null == c ? void 0 : c.code) != null && i.append("error-code", c.code),
-                        n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
+                        n.replace("".concat(g.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
                 }
             }
             if (
-                await _({
+                await h({
                     platformType: t,
                     code: k,
-                    state: b,
+                    state: C,
                     openidParams: e,
                     iss: m,
                     handleCallbackResponse: r,
                 })
             )
                 return;
-            let c = await h(t, b, k, e, m);
+            let c = await j(t, C, k, e, m);
             0 === c
                 ? T(!0)
                 : 1 === c
-                  ? n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
+                  ? n.replace("".concat(g.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
                   : 3 === c
                     ? l.tq
                         ? x(!0)
-                        : n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
-                    : j({
+                        : n.replace("".concat(g.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()))
+                    : w({
                           platformType: t,
-                          state: b,
+                          state: C,
                           handleCallbackResponse: r,
                           handleCallbackError: (e) => {
                               var r;
                               (null == e || null == (r = e.body) ? void 0 : r.code) != null &&
                                   i.append("error-code", e.body.code),
-                                  n.replace("".concat(C.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
+                                  n.replace("".concat(g.Z5c.CONNECTIONS_ERROR(t), "?").concat(i.toString()));
                           },
                           openidParams: e,
                           code: k,
                           iss: m,
                       });
         })();
-    }, [k, n, y, w, i, b, m]),
+    }, [k, n, y, R, i, C, m]),
         c.useEffect(() => {
             let e;
             if (!A) return;
             let t = 0;
             async function r() {
-                if (null == R) return;
-                let { handoff_status: c, success_redirect: o } = (await s.Z.getHandoffStatus(R, b)).body;
+                if (null == _) return;
+                let { handoff_status: c, success_redirect: o } = (await s.Z.getHandoffStatus(_, C)).body;
                 if (c === a.g.HANDOFF_SUCCESS)
-                    if (null == N.Z.toURLSafe(o)) return n.replace(C.Z5c.CONNECTIONS_SUCCESS(R));
+                    if (null == N.Z.toURLSafe(o)) return n.replace(g.Z5c.CONNECTIONS_SUCCESS(_));
                     else {
                         window.location = o;
                         return;
                     }
-                if (c === a.g.HANDOFF_ERROR || t >= 10) return n.replace(C.Z5c.CONNECTIONS_ERROR(R));
+                if (c === a.g.HANDOFF_ERROR || t >= 10) return n.replace(g.Z5c.CONNECTIONS_ERROR(_));
                 e = setTimeout(() => {
                     Z() && ((t += 1), r());
                 }, 1000);
@@ -123,31 +123,31 @@ function m() {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [Z, n, R, A, b]);
+        }, [Z, n, _, A, C]);
     let I = c.useMemo(() => {
-        if (null != R) return "discord://".concat(C.Z5c.CONNECTIONS(R), "/?").concat(i.toString());
-    }, [R, i]);
-    return null != R && p.Z.isSupported(R)
+        if (null != _) return "discord://".concat(g.Z5c.CONNECTIONS(_), "/?").concat(i.toString());
+    }, [_, i]);
+    return null != _ && p.Z.isSupported(_)
         ? D
             ? (0, r.jsx)(E, {
-                  platformType: R,
+                  platformType: _,
                   deeplink: I,
                   onClick: () => {
                       x(!1), T(!0);
                   },
               })
-            : (0, r.jsx)(v, { platformType: R })
+            : (0, r.jsx)(v, { platformType: _ })
         : null;
 }
 function v(e) {
     let { platformType: t } = e,
         n = p.Z.get(t);
-    return (0, r.jsxs)(g.UV, {
+    return (0, r.jsxs)(b.UV, {
         platformType: t,
         children: [
             (0, r.jsx)("div", {
                 className: y.message,
-                children: b.intl.format(b.t.AOKOe7, { name: n.name }),
+                children: C.intl.format(C.t.AOKOe7, { name: n.name }),
             }),
             (0, r.jsx)("div", {
                 className: y.buttonContainer,
@@ -163,14 +163,14 @@ function v(e) {
 function E(e) {
     let { deeplink: t, onClick: n, platformType: c } = e,
         o = p.Z.get(c);
-    return (0, r.jsx)(g.UV, {
+    return (0, r.jsx)(b.UV, {
         platformType: c,
         children: (0, r.jsxs)("div", {
             className: y.buttonContainer,
             children: [
                 (0, r.jsx)("div", {
                     className: y.message,
-                    children: b.intl.format(b.t["6ig6i5"], { connectionName: o.name }),
+                    children: C.intl.format(C.t["6ig6i5"], { connectionName: o.name }),
                 }),
                 (0, r.jsx)(u.P3F, {
                     tag: "a",
@@ -179,21 +179,21 @@ function E(e) {
                     target: "_self",
                     children: (0, r.jsx)(i.zx, {
                         className: y.btn,
-                        children: b.intl.string(b.t.flvacA),
+                        children: C.intl.string(C.t.flvacA),
                     }),
                 }),
             ],
         }),
     });
 }
-async function _(e) {
+async function h(e) {
     let { platformType: t, code: n, state: r, openidParams: c, iss: o, handleCallbackResponse: a } = e;
     if (l.tq || S) return !1;
     try {
         var i, u;
         let e = await O.default
             .request(
-                C.Etm.CONNECTIONS_CALLBACK,
+                g.Etm.CONNECTIONS_CALLBACK,
                 ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -251,7 +251,7 @@ async function _(e) {
         return !1;
     }
 }
-async function h(e, t, n, r, c) {
+async function j(e, t, n, r, c) {
     try {
         return await s.Z.sessionHandoff(e, t, n, r, c), 0;
     } catch (e) {
@@ -261,7 +261,7 @@ async function h(e, t, n, r, c) {
         return 1;
     }
 }
-async function j(e) {
+async function w(e) {
     let {
         platformType: t,
         state: n,

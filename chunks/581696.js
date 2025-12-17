@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(144725),
-    s = n(613928),
-    o = n(390536),
+    o = n(613928),
+    s = n(390536),
     c = n(853041),
     u = n(352153),
     d = n(589694),
@@ -17,8 +17,8 @@ let g = function (e) {
         h = i.useRef(null),
         [m, b] = i.useState(!1),
         {
-            data: E,
-            loading: _,
+            data: _,
+            loading: E,
             isRefreshing: O,
             handleOnRefresh: v,
             viewabilityConfigCallbackPairs: y,
@@ -26,7 +26,7 @@ let g = function (e) {
             showDot: g,
             notificationItem: n,
         }),
-        I = (0, o.G)();
+        I = (0, s.G)();
     i.useEffect(
         () => () => {
             I();
@@ -36,8 +36,8 @@ let g = function (e) {
     let C = (0, l.e7)([a.Z], () => a.Z.hasNewContent(), []),
         S = (0, l.e7)([a.Z], () => a.Z.isHydrating(), []),
         T = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
-        { registerItemRef: N } = (0, p.m)(E, T, t),
-        j = i.useMemo(() => E.some((e) => "end" === e.data.kind), [E]),
+        { registerItemRef: N } = (0, p.m)(_, T, t),
+        j = i.useMemo(() => _.some((e) => "end" === e.data.kind), [_]),
         P = i.useCallback(() => {
             if (j) return;
             let e = t.current;
@@ -45,15 +45,15 @@ let g = function (e) {
             let n = e.scrollHeight;
             !(n - e.scrollTop - e.clientHeight < 300) ||
                 m ||
-                _ ||
+                E ||
                 S ||
                 (b(!0),
-                (0, s.es)().finally(() => {
+                (0, o.es)().finally(() => {
                     setTimeout(() => {
                         b(!1);
                     }, 300);
                 }));
-        }, [_, m, S, j, t]);
+        }, [E, m, S, j, t]);
     i.useEffect(() => {
         let e = t.current;
         if (null != e)
@@ -125,7 +125,7 @@ let g = function (e) {
                           ),
             [N],
         );
-    return _ && 0 === E.length
+    return E && 0 === _.length
         ? (0, r.jsx)("div", {
               style: {
                   padding: "32px",
@@ -165,7 +165,7 @@ let g = function (e) {
                       ref: h,
                       className: f.scrollContainer,
                       children: [
-                          E.map((e) => Z(e)),
+                          _.map((e) => Z(e)),
                           !j &&
                               (m || S) &&
                               (0, r.jsx)("div", {

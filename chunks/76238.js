@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(392711),
     i = n.n(r),
     l = n(996106),
     a = n(981631);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,19 +16,19 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+class s {
     checkRpcVersion(e) {
         if (null == e || e > a.X6Q || e < 1)
             throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, "Invalid Version: ".concat(e));
     }
     constructor(e, t, n) {
-        s(this, "transport", void 0),
-            s(this, "version", void 0),
-            s(this, "encoding", void 0),
-            s(this, "id", void 0),
-            s(this, "authorization", void 0),
-            s(this, "application", void 0),
-            s(this, "abortController", void 0),
+        o(this, "transport", void 0),
+            o(this, "version", void 0),
+            o(this, "encoding", void 0),
+            o(this, "id", void 0),
+            o(this, "authorization", void 0),
+            o(this, "application", void 0),
+            o(this, "abortController", void 0),
             (this.transport = e),
             (this.version = t),
             (this.encoding = n),

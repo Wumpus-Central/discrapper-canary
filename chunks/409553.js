@@ -6,12 +6,12 @@ var o = n(54381),
     a = n(921869),
     c = n(981631),
     l = n(388032),
-    d = n(493358);
+    d = n(167945);
 function u(e) {
     let { onContinue: t, onClose: n } = e,
         u = s.Z.getArticleURL(c.BhN.XBOX_CONNECTION),
         p = l.intl.format(l.t.CIc3IN, { helpdeskArticleUrl: u }),
-        f = r.useMemo(
+        b = r.useMemo(
             () => [
                 {
                     label: l.intl.string(l.t.ihQXsb),
@@ -45,6 +45,6 @@ function u(e) {
             height: 160,
             alt: "",
         }),
-        valueProps: f,
+        valueProps: b,
     });
 }

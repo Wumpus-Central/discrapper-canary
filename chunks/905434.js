@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(54381);
 n(473749);
 var l = n(481060),
@@ -6,7 +6,7 @@ var l = n(481060),
     a = n(430824),
     s = n(388032),
     o = n(435639);
-let d = (e) => {
+let c = (e) => {
     let { stageInstance: t } = e,
         n = a.Z.getGuild(t.guild_id);
     return null == n

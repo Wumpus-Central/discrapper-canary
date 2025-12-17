@@ -2,17 +2,17 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     s = n(893776),
-    l = n(129293),
-    a = n(388905),
+    a = n(129293),
+    l = n(388905),
     o = n(108427),
     c = n(388032),
-    u = n(197571);
+    u = n(478411);
 function d(e) {
     let { location: t } = e,
         [d, h] = i.useState("submitting");
     return (i.useEffect(() => {
         (0, o.e)("authorize_payment");
-        let e = (0, l.Z)(t);
+        let e = (0, a.Z)(t);
         if (null == e) return void h("failed");
         (async () => {
             try {
@@ -23,42 +23,42 @@ function d(e) {
         })();
     }, [t]),
     "failed" === d)
-        ? (0, r.jsxs)(a.ZP, {
+        ? (0, r.jsxs)(l.ZP, {
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
                       src: n(375673),
                       className: u.marginBottom20,
                   }),
-                  (0, r.jsx)(a.Dx, {
+                  (0, r.jsx)(l.Dx, {
                       className: u.marginBottom8,
                       children: c.intl.string(c.t.GHRpue),
                   }),
-                  (0, r.jsx)(a.DK, {
+                  (0, r.jsx)(l.DK, {
                       className: u.marginBottom40,
                       children: c.intl.string(c.t["1nO55v"]),
                   }),
               ],
           })
         : "succeeded" === d
-          ? (0, r.jsxs)(a.ZP, {
+          ? (0, r.jsxs)(l.ZP, {
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
                         src: n(73962),
                         className: u.marginBottom20,
                     }),
-                    (0, r.jsx)(a.Dx, {
+                    (0, r.jsx)(l.Dx, {
                         className: u.marginBottom8,
                         children: c.intl.string(c.t.ihHX53),
                     }),
-                    (0, r.jsx)(a.DK, {
+                    (0, r.jsx)(l.DK, {
                         className: u.marginBottom40,
                         children: c.intl.string(c.t["pGPCv+"]),
                     }),
                 ],
             })
-          : (0, r.jsxs)(a.ZP, {
-                children: [(0, r.jsx)(a.Hh, {}), (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.T3vC7n) })],
+          : (0, r.jsxs)(l.ZP, {
+                children: [(0, r.jsx)(l.Hh, {}), (0, r.jsx)(l.Dx, { children: c.intl.string(c.t.T3vC7n) })],
             });
 }

@@ -4,8 +4,8 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(442837),
-    s = n(704215),
-    o = n(481060),
+    o = n(704215),
+    s = n(481060),
     c = n(410575),
     u = n(100527),
     d = n(906732),
@@ -14,35 +14,35 @@ var i = n(120356),
     g = n(365113),
     h = n(352455),
     m = n(480294),
-    _ = n(791359),
-    b = n(981631),
+    b = n(791359),
+    _ = n(981631),
     E = n(388032),
-    O = n(708567);
+    O = n(833047);
 function v(e) {
     let { isStandalone: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(u.Z.ACTIVE_NOW_COLUMN),
-        i = (0, a.e7)([m.Z], () => m.Z.hasConsented(b.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD],
+        i = (0, a.e7)([m.Z], () => m.Z.hasConsented(_.pjP.PERSONALIZATION)) ? [] : [o.z.NOW_PLAYING_CONSENT_CARD],
         v = g.o.useConfig({ location: "nowplaying" }).demureActivityCards,
         y = g.o.useConfig({ location: "nowplaying" }).friendsTab,
         I = (0, p.Dt)();
     return (0, r.jsx)(d.Gt, {
         value: n,
         children: (0, r.jsx)(c.Z, {
-            section: b.jXE.ACTIVE_NOW_COLUMN,
+            section: _.jXE.ACTIVE_NOW_COLUMN,
             children: (0, r.jsx)("aside", {
                 className: l()(O.container, {
                     [O.refreshActiveNow]: v,
                     "refresh-active-now": v,
                 }),
                 "aria-labelledby": I,
-                children: (0, r.jsx)(o.Ttm, {
+                children: (0, r.jsx)(s.Ttm, {
                     className: l()(O.scroller, { [O.standalone]: t }),
                     children: (0, r.jsxs)("div", {
                         className: l()({ [O.standaloneContainer]: t }),
                         children: [
                             y
                                 ? null
-                                : (0, r.jsx)(o.Heading, {
+                                : (0, r.jsx)(s.Heading, {
                                       variant: "heading-lg/semibold",
                                       className: O.header,
                                       id: I,
@@ -52,14 +52,14 @@ function v(e) {
                                 contentTypes: i,
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
-                                    if (t === s.z.NOW_PLAYING_CONSENT_CARD)
+                                    if (t === o.z.NOW_PLAYING_CONSENT_CARD)
                                         return (0, r.jsx)(h.Z, {
                                             className: O.__invalid_consentCard,
                                             markAsDismissed: n,
                                         });
                                 },
                             }),
-                            (0, r.jsx)(_.Z, {}),
+                            (0, r.jsx)(b.Z, {}),
                         ],
                     }),
                 }),

@@ -4,8 +4,8 @@ t(473749);
 var i = t(442837),
     r = t(481060),
     a = t(749210),
-    u = t(287734),
-    o = t(933557),
+    o = t(287734),
+    u = t(933557),
     s = t(314897),
     d = t(592125),
     c = t(984933),
@@ -57,10 +57,10 @@ function v(e, n) {
                           id: i.id,
                           action: () => {
                               e.id === s.default.getId()
-                                  ? u.default.selectVoiceChannel(i.id)
+                                  ? o.default.selectVoiceChannel(i.id)
                                   : a.Z.setChannel(n, e.id, i.id);
                           },
-                          label: (0, o.F6)(i, O.default, b.Z),
+                          label: (0, u.F6)(i, O.default, b.Z),
                       },
                       i.id,
                   );

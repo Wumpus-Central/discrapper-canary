@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     l = n(681715),
-    o = n(481060),
-    a = n(110255),
+    a = n(481060),
+    o = n(110255),
     s = n(64247),
     c = n(981631),
     u = n(388032);
@@ -53,10 +53,10 @@ function f(e, t) {
 function h(e) {
     let { channel: t } = e,
         n = i.useRef(null);
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: n,
         align: "right",
-        animation: o.yRy.Animation.NONE,
+        animation: a.yRy.Animation.NONE,
         position: "bottom",
         renderPopout: (e) =>
             t.isThread()
@@ -69,7 +69,7 @@ function h(e) {
                       }),
                   )
                 : (0, r.jsx)(
-                      a.Z,
+                      o.Z,
                       f(d({}, e), {
                           channel: t,
                           navId: "recents-notifications",
@@ -83,9 +83,9 @@ function h(e) {
             return (0, r.jsx)(l.u, {
                 text: u.intl.string(u.t.h850Ss),
                 targetElementRef: n,
-                children: (0, r.jsx)(o.hU, {
+                children: (0, r.jsx)(a.hU, {
                     "aria-label": u.intl.string(u.t.h850Ss),
-                    icon: o.Dkj,
+                    icon: a.Dkj,
                     variant: "secondary",
                     size: "sm",
                     onClick: t,

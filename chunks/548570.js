@@ -38,8 +38,8 @@ var r = n(512722),
     N = n(14639),
     P = n(639655),
     R = n(249308),
-    D = n(610308),
-    w = n(91247),
+    w = n(610308),
+    D = n(91247),
     x = n(508569),
     L = n(183139),
     j = n(645436),
@@ -75,7 +75,7 @@ function Z(e) {
     }
     return e;
 }
-function B(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,19 +87,19 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let V = new E.Z("GatewaySocket"),
-    H = new D.Z();
+    H = new w.Z();
 function Y(e) {
     let { actuallySkipped: t, reason: n } = e;
     if (!(0, R.n)()) return;
@@ -145,11 +145,11 @@ function W(e) {
             let e = Z({}, l.state);
             null != e.messages &&
                 (e.messages = e.messages.map((e) =>
-                    null != e.data && "string" == typeof e.data ? F(Z({}, e), { data: e.data.substring(0, 100) }) : e,
+                    null != e.data && "string" == typeof e.data ? B(Z({}, e), { data: e.data.substring(0, 100) }) : e,
                 )),
                 V.log(
                     "[FAST CONNECT] successfully took over websocket, state:",
-                    F(Z({}, e), { messages: null == (p = e.messages) ? void 0 : p.length }),
+                    B(Z({}, e), { messages: null == (p = e.messages) ? void 0 : p.length }),
                 ),
                 (c = l.state.open),
                 (u = l.state.identify),
@@ -347,7 +347,7 @@ class ei extends L.Z {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
         V.verbose(
-            "[HELLO] via ".concat((0, w.TO)(e), ", ") +
+            "[HELLO] via ".concat((0, D.TO)(e), ", ") +
                 "heartbeat interval: ".concat(t, ", ") +
                 "took ".concat(n, " ms"),
         ),
@@ -368,7 +368,7 @@ class ei extends L.Z {
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = (0, w.TO)(e);
+            let n = (0, D.TO)(e);
             o.Z.setServerTrace(n),
                 V.info("[READY] took ".concat(r, "ms, as ").concat(t)),
                 V.verbose("".concat(n)),
@@ -383,7 +383,7 @@ class ei extends L.Z {
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (V.verbose((0, w.TO)(e)),
+                  (V.verbose((0, D.TO)(e)),
                   (this.connectionState = A.Z.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
@@ -543,7 +543,7 @@ class ei extends L.Z {
     _doResume() {
         var e;
         (this.connectionState = A.Z.RESUMING),
-            (this.dispatcher.resumeAnalytics = (0, w.zH)(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = (0, D.zH)(Date.now() - this.connectionStartTime)),
             V.info(
                 "[RESUME] resuming session ".concat(null != (e = this.sessionId) ? e : "", ", seq: ").concat(this.seq),
             ),
@@ -712,7 +712,7 @@ class ei extends L.Z {
     resetSocketOnDispatchError(e) {
         let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
         this.resetSocketOnError(
-            F(Z({}, e), {
+            B(Z({}, e), {
                 sentry: !t,
                 clearCache: t,
             }),

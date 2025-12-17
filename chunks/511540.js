@@ -1,16 +1,16 @@
 n.d(t, { c: () => s }), n(388685);
-var r = n(473749),
-    a = n(489863),
-    i = n(828878),
-    o = n(388032);
+var a = n(473749),
+    r = n(489863),
+    o = n(828878),
+    i = n(388032);
 function s(e, t, n) {
-    let [s, l] = r.useState(!1),
-        [c, d] = r.useState(null),
-        u = r.useCallback(async () => {
+    let [s, c] = a.useState(!1),
+        [l, d] = a.useState(null),
+        u = a.useCallback(async () => {
             try {
-                l(!0);
-                let n = await (0, a.tV)(e);
-                l(!1),
+                c(!0);
+                let n = await (0, r.tV)(e);
+                c(!1),
                     t({
                         userCode: e,
                         clientId: n.body.client_id,
@@ -18,25 +18,25 @@ function s(e, t, n) {
                         twoWayLinkCode: n.body.two_way_link_code,
                     });
             } catch (e) {
-                var r;
+                var a;
                 d(
-                    429 === (r = null == e ? void 0 : e.status)
-                        ? o.intl.string(o.t.BPmZvj)
-                        : 404 === r || 400 === r
-                          ? o.intl.string(o.t.aWa1Pw)
-                          : o.intl.string(o.t.JNQRU4),
+                    429 === (a = null == e ? void 0 : e.status)
+                        ? i.intl.string(i.t.BPmZvj)
+                        : 404 === a || 400 === a
+                          ? i.intl.string(i.t.aWa1Pw)
+                          : i.intl.string(i.t.JNQRU4),
                 ),
-                    l(!1),
+                    c(!1),
                     (null == e ? void 0 : e.status) === 401 && n();
             }
         }, [e, t, n]);
     return (
-        r.useEffect(() => {
-            e.length === i.A.USER_CODE_LENGTH ? u() : d(null);
+        a.useEffect(() => {
+            e.length === o.A.USER_CODE_LENGTH ? u() : d(null);
         }, [e, u]),
         {
             manualSubmit: u,
-            error: c,
+            error: l,
             submitting: s,
         }
     );

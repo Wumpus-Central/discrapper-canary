@@ -1,16 +1,16 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(28664),
     a = n(481060),
-    s = n(770146),
-    o = n(863969),
+    o = n(770146),
+    s = n(863969),
     c = n(38761),
     u = n(6074),
     d = n(39377),
     p = n(981631),
     f = n(388032),
-    g = n(126373);
+    g = n(322349);
 let h = [
         {
             feature: p.Qa3.SINGLE_PLAYER,
@@ -82,7 +82,7 @@ let h = [
             feature: p.Qa3.CLOUD_SAVES,
             getText: () => f.intl.string(f.t.rOcNrD),
             getTooltip: () => f.intl.string(f.t.kvw18E),
-            IconComponent: o.Z,
+            IconComponent: s.Z,
         },
         {
             feature: p.Qa3.SECURE_NETWORKING,
@@ -112,7 +112,7 @@ let h = [
             ],
         });
     };
-class _ extends i.PureComponent {
+class b extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
             t = h
@@ -136,8 +136,8 @@ class _ extends i.PureComponent {
             ? null
             : (0, r.jsxs)("div", {
                   className: g.features,
-                  children: [(0, r.jsx)(s.Z, { children: f.intl.string(f.t.XXENra) }), t],
+                  children: [(0, r.jsx)(o.Z, { children: f.intl.string(f.t.XXENra) }), t],
               });
     }
 }
-let b = _;
+let _ = b;

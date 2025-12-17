@@ -28,8 +28,8 @@ var f = 0,
     N = 17,
     P = 18,
     R = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0],
-    D = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13],
-    w = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
+    w = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13],
+    D = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
     x = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
     L = 512,
     j = Array(576);
@@ -43,7 +43,7 @@ d(U);
 var G = Array(g);
 d(G);
 var Z = Array(y);
-function B(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     (this.static_tree = e),
         (this.extra_bits = t),
         (this.extra_base = n),
@@ -51,7 +51,7 @@ function B(e, t, n, r, i) {
         (this.max_length = i),
         (this.has_stree = e && e.length);
 }
-function F(e, t) {
+function B(e, t) {
     (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
 }
 function V(e) {
@@ -138,15 +138,15 @@ function X() {
         s,
         l = Array(S + 1);
     for (o = 0, n = 0; o < g - 1; o++) for (e = 0, G[o] = n; e < 1 << R[o]; e++) U[n++] = o;
-    for (U[n - 1] = o, s = 0, o = 0; o < 16; o++) for (e = 0, Z[o] = s; e < 1 << D[o]; e++) k[s++] = o;
-    for (s >>= 7; o < y; o++) for (e = 0, Z[o] = s << 7; e < 1 << (D[o] - 7); e++) k[256 + s++] = o;
+    for (U[n - 1] = o, s = 0, o = 0; o < 16; o++) for (e = 0, Z[o] = s; e < 1 << w[o]; e++) k[s++] = o;
+    for (s >>= 7; o < y; o++) for (e = 0, Z[o] = s << 7; e < 1 << (w[o] - 7); e++) k[256 + s++] = o;
     for (t = 0; t <= S; t++) l[t] = 0;
     for (e = 0; e <= 143; ) (j[2 * e + 1] = 8), e++, l[8]++;
     for (; e <= 255; ) (j[2 * e + 1] = 9), e++, l[9]++;
     for (; e <= 279; ) (j[2 * e + 1] = 7), e++, l[7]++;
     for (; e <= 287; ) (j[2 * e + 1] = 8), e++, l[8]++;
     for (Q(j, b + 1, l), e = 0; e < y; e++) (M[2 * e + 1] = 5), (M[2 * e] = K(e, 5));
-    (r = new B(j, R, E + 1, b, S)), (i = new B(M, D, 0, y, S)), (a = new B([], w, 0, O, T));
+    (r = new F(j, R, E + 1, b, S)), (i = new F(M, w, 0, y, S)), (a = new F([], D, 0, O, T));
 }
 function J(e) {
     var t;
@@ -193,7 +193,7 @@ function er(e, t, n) {
                     : (W(e, (a = U[i]) + E + 1, t),
                       0 !== (o = R[a]) && Y(e, (i -= G[a]), o),
                       W(e, (a = V(--r)), n),
-                      0 !== (o = D[a]) && Y(e, (r -= Z[a]), o));
+                      0 !== (o = w[a]) && Y(e, (r -= Z[a]), o));
         while (s < e.last_lit);
     W(e, C, t);
 }
@@ -339,9 +339,9 @@ function e_(e, t, n) {
 }
 (t._tr_init = function (e) {
     eu || (X(), (eu = !0)),
-        (e.l_desc = new F(e.dyn_ltree, r)),
-        (e.d_desc = new F(e.dyn_dtree, i)),
-        (e.bl_desc = new F(e.bl_tree, a)),
+        (e.l_desc = new B(e.dyn_ltree, r)),
+        (e.d_desc = new B(e.dyn_dtree, i)),
+        (e.bl_desc = new B(e.bl_tree, a)),
         (e.bi_buf = 0),
         (e.bi_valid = 0),
         J(e);

@@ -2,14 +2,14 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(681715),
-    o = n(755721),
-    a = n(481060),
+    a = n(755721),
+    o = n(481060),
     s = n(626135),
     c = n(981631),
     u = n(388032);
 function d(e) {
     let { onClick: t } = e,
-        [n, o] = i.useState(!1),
+        [n, a] = i.useState(!1),
         d = () => {
             t(),
                 s.default.track(c.rMx.INBOX_CHANNEL_ACKED, {
@@ -22,18 +22,18 @@ function d(e) {
             n
                 ? (0, r.jsx)(f, {
                       confirm: d,
-                      cancel: () => o(!1),
+                      cancel: () => a(!1),
                   })
                 : null,
             (0, r.jsx)(l.u, {
                 text: u.intl.string(u.t["8k+6QY"]),
-                children: (0, r.jsx)(a.hU, {
+                children: (0, r.jsx)(o.hU, {
                     variant: "secondary",
                     "aria-label": u.intl.string(u.t["8k+6QY"]),
                     size: "sm",
-                    icon: a.W6s,
+                    icon: o.W6s,
                     onClick: (e) => {
-                        e.shiftKey ? d() : o(!0);
+                        e.shiftKey ? d() : a(!0);
                     },
                 }),
             }),
@@ -42,15 +42,15 @@ function d(e) {
 }
 function f(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, r.jsx)(a.SR, {
+    return (0, r.jsx)(o.SR, {
         dismissable: !0,
         header: u.intl.string(u.t.h4bVZ2),
         confirmText: u.intl.string(u.t.e6RscS),
         cancelText: u.intl.string(u.t["ETE/oC"]),
-        confirmButtonColor: o.zx.Colors.BRAND,
+        confirmButtonColor: a.zx.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, r.jsx)(a.Text, {
+        children: (0, r.jsx)(o.Text, {
             color: "text-default",
             variant: "text-sm/normal",
             children: u.intl.string(u.t["0MQ0Bf"]),

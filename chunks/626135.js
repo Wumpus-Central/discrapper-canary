@@ -3,7 +3,7 @@ n.r(t),
         AnalyticEventConfigs: () => V,
         AnalyticsContext: () => N,
         AnalyticsSchema: () => _,
-        addExtraAnalyticsDecorator: () => F,
+        addExtraAnalyticsDecorator: () => B,
         clearAnalyticsEventsRecording: () => er,
         debugLogEvent: () => X,
         default: () => eu,
@@ -115,8 +115,8 @@ let A = { location: {} },
     N = r.createContext(A),
     P = {},
     R = 1000,
-    D = 10000,
-    w = 60000,
+    w = 10000,
+    D = 60000,
     x = 120000,
     L = 300000,
     j = 900000,
@@ -126,9 +126,9 @@ let A = { location: {} },
     G = performance.now(),
     Z = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
 a.extendSuperProperties({ launch_signature: Z });
-let B = [];
-function F(e) {
-    B.push(e);
+let F = [];
+function B(e) {
+    F.push(e);
 }
 let V = {
     [g.rMx.APP_OPENED]: {
@@ -171,7 +171,7 @@ let V = {
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0,
     },
@@ -212,7 +212,7 @@ let V = {
         },
     },
     [g.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: () => [],
     },
     [g.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
@@ -262,11 +262,11 @@ let V = {
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -274,11 +274,11 @@ let V = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.user_id],
     },
     [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: () => [],
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -306,7 +306,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -346,12 +346,12 @@ let V = {
     [g.rMx.OPEN_MODAL]: (e) =>
         e.type === g.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: w,
+                  throttlePeriod: D,
                   throttleKeys: (e) => [e.type],
               }
             : void 0,
     [g.rMx.MODERATOR_QUEUE_ACTION]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.NOTIFICATION_PERMISSION_STATUS]: {
@@ -448,7 +448,7 @@ function Q(e) {
         (a.utm_campaign = null != (r = a.utm_campaign) ? r : c),
         (a.utm_content = null != (i = a.utm_content) ? i : u),
         (a.launch_signature = Z),
-        B.forEach((e) => e(a)),
+        F.forEach((e) => e(a)),
         a
     );
 }

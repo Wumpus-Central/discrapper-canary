@@ -75,14 +75,14 @@ let p = "mp4",
     N = "",
     P = "",
     R = [],
-    D = [],
     w = [],
+    D = [],
     x = [];
 function L(e) {
     A = e.analyticsID;
 }
 function j(e) {
-    "" === (N = e.query) && ((P = ""), (R = []), (w = []));
+    "" === (N = e.query) && ((P = ""), (R = []), (D = []));
 }
 function M(e) {
     switch (e) {
@@ -129,7 +129,7 @@ function G(e) {
 }
 function Z(e) {
     let t = e.trendingCategories;
-    D = [
+    w = [
         ...(null != e.trendingGIFPreview
             ? [
                   {
@@ -149,11 +149,11 @@ function Z(e) {
         ),
     ];
 }
-function B(e) {
-    let { items: t } = e;
-    w = t;
-}
 function F(e) {
+    let { items: t } = e;
+    D = t;
+}
+function B(e) {
     let { items: t } = e;
     x = t;
 }
@@ -171,13 +171,13 @@ class V extends (r = i.ZP.Store) {
         return R;
     }
     getTrendingCategories() {
-        return D;
+        return w;
     }
     getSelectedFormat() {
         return T;
     }
     getSuggestions() {
-        return w;
+        return D;
     }
     getTrendingSearchTerms() {
         return x;
@@ -190,6 +190,6 @@ let H = new V(o.Z, {
     GIF_PICKER_QUERY_SUCCESS: U,
     GIF_PICKER_QUERY_FAILURE: G,
     GIF_PICKER_TRENDING_FETCH_SUCCESS: Z,
-    GIF_PICKER_SUGGESTIONS_SUCCESS: B,
-    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: F,
+    GIF_PICKER_SUGGESTIONS_SUCCESS: F,
+    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: B,
 });

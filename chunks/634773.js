@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(70956),
-    s = n(797394),
-    o = n(613928);
+    o = n(797394),
+    s = n(613928);
 function c(e, t, n) {
     return (
         t in e
@@ -51,11 +51,11 @@ let f = new p(l.Z, {
     LOAD_ICYMI_DEHYDRATED: function (e) {
         let { items: t } = e;
         for (let e of t)
-            if (e.type === s.Ni.MESSAGE) {
+            if (e.type === o.Ni.MESSAGE) {
                 var n;
                 null != d.readIdToTimestampMap[e.id] ||
                     (null == (n = e.data.message_context) ? void 0 : n.external_content_application_id) != null ||
-                    (0, o.$U)(e.data.channel_id, e.data.message_id) ||
+                    (0, s.$U)(e.data.channel_id, e.data.message_id) ||
                     (d.readIdToTimestampMap[e.id] = 0);
             }
     },

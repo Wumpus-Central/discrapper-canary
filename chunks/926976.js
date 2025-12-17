@@ -1,8 +1,8 @@
-n.d(t, { Z: () => D }), n(388685), n(49124);
+n.d(t, { Z: () => Z }), n(388685), n(49124);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(913527),
     o = n.n(s),
     c = n(442837),
@@ -11,23 +11,23 @@ var a = n(54381),
     m = n(129861),
     p = n(665149),
     h = n(886118),
-    x = n(301801),
-    f = n(594174),
-    g = n(572004),
-    b = n(55935),
+    f = n(301801),
+    x = n(594174),
+    b = n(572004),
+    g = n(55935),
     v = n(120816),
     j = n(31336),
-    _ = n(257785),
-    y = n(484036),
-    C = n(681619),
+    y = n(257785),
+    C = n(975775),
+    _ = n(681619),
     S = n(621060),
     E = n(388032),
-    O = n(599832),
-    T = n(451429);
+    T = n(865362),
+    O = n(663618);
 let N = [
     {
         key: "event",
-        cellClassName: O.eventColumn,
+        cellClassName: T.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -35,43 +35,43 @@ let N = [
     },
     {
         key: "location",
-        cellClassName: O.locationColumn,
+        cellClassName: T.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
         },
     },
 ];
-function P(e) {
+function w(e) {
     let { children: t } = e;
     return (0, a.jsx)(u.zJl, {
-        className: O.customPropertiesContainer,
+        className: T.customPropertiesContainer,
         children: (0, a.jsx)("dl", { children: t }),
     });
 }
-function w(e) {
-    let { name: t, children: n, copyValue: i } = e,
-        [l, s] = r.useState(!1);
+function P(e) {
+    let { name: t, children: n, copyValue: l } = e,
+        [i, s] = r.useState(!1);
     return (
         r.useEffect(() => {
-            if (l) {
+            if (i) {
                 let e = setTimeout(() => s(!1), 1000);
                 return () => clearTimeout(e);
             }
-        }, [l]),
+        }, [i]),
         (0, a.jsxs)("div", {
-            className: O.customProperty,
+            className: T.customProperty,
             children: [
                 (0, a.jsx)("dt", {
-                    className: O.customPropertiesName,
+                    className: T.customPropertiesName,
                     children: t,
                 }),
                 (0, a.jsx)("dd", { children: n }),
                 (0, a.jsx)(u.P3F, {
                     tag: "span",
-                    className: O.copyPropertyButton,
-                    onClick: () => (0, g.JG)(JSON.stringify(i), () => s(!0)),
-                    children: l
+                    className: T.copyPropertyButton,
+                    onClick: () => (0, b.JG)(JSON.stringify(l), () => s(!0)),
+                    children: i
                         ? (0, a.jsx)(u.kmB, {
                               color: "currentColor",
                               size: "sm",
@@ -93,30 +93,30 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
             group: S.v0.NONE,
             render: (e) => {
                 let {
-                        loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: i },
+                        loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
                         onClose: s,
                         filteredEvents: c,
                     } = e,
-                    d = f.default.getUser(i),
+                    d = x.default.getUser(l),
                     h = o()(r);
                 return (0, a.jsxs)("div", {
                     "data-mtctest-ignore": "true",
                     children: [
                         (0, a.jsxs)(p.ZP, {
-                            className: l()(T.headerBar, O.subPanelHeaderBar),
+                            className: i()(O.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(p.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t,
                                 }),
                                 (0, a.jsxs)(p.ZP.Title, {
-                                    wrapperClassName: O.headerTitle,
+                                    wrapperClassName: T.headerTitle,
                                     children: [
                                         t,
                                         (0, a.jsx)(u.P3F, {
                                             tag: "span",
-                                            className: O.copyEventButton,
-                                            onClick: () => (0, g.JG)(t),
+                                            className: T.copyEventButton,
+                                            onClick: () => (0, b.JG)(t),
                                             children: (0, a.jsx)(u.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -128,7 +128,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     icon: u.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, g.JG)(
+                                        (0, b.JG)(
                                             JSON.stringify(
                                                 (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -159,7 +159,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                     {
                                                         event: t,
                                                         timestamp: r,
-                                                        fingerprint: i,
+                                                        fingerprint: l,
                                                         user: null == d ? void 0 : d.id,
                                                     },
                                                     n,
@@ -177,35 +177,35 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(_.E, {
-                            className: O.commonProperties,
+                        (0, a.jsxs)(y.E, {
+                            className: T.commonProperties,
                             children: [
-                                (0, a.jsx)(_.Z9, {
+                                (0, a.jsx)(y.Z9, {
                                     name: "Timestamp (local)",
                                     copyValue: r.toISOString(),
                                     children: (0, a.jsxs)("time", {
                                         dateTime: r.toISOString(),
-                                        title: (0, b.vc)(h, "LLLL"),
-                                        children: ["(", o().locale(), ") ", (0, b.Y4)(h)],
+                                        title: (0, g.vc)(h, "LLLL"),
+                                        children: ["(", o().locale(), ") ", (0, g.Y4)(h)],
                                     }),
                                 }),
                                 null != d &&
-                                    (0, a.jsx)(_.Z9, {
+                                    (0, a.jsx)(y.Z9, {
                                         name: "User",
                                         copyValue: d.id,
                                         children: (0, a.jsx)(m.Z, { user: d }),
                                     }),
-                                (0, a.jsx)(_.Z9, {
+                                (0, a.jsx)(y.Z9, {
                                     name: "Fingerprint",
-                                    copyValue: i,
-                                    children: (0, a.jsx)("code", { children: i }),
+                                    copyValue: l,
+                                    children: (0, a.jsx)("code", { children: l }),
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(P, {
+                        (0, a.jsx)(w, {
                             children: Object.entries(n).map((e) => {
                                 let [n, r] = e,
-                                    i = I.has(n)
+                                    l = I.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length)
@@ -214,14 +214,14 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                       count: 0,
                                                   };
                                               let r = null,
-                                                  i = 0;
+                                                  l = 0;
                                               for (let e of a) {
                                                   let t = e.properties[n];
-                                                  "number" == typeof t && ((i += 1), null == r ? (r = t) : (r += t));
+                                                  "number" == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
                                               }
                                               return {
                                                   average: null !== r ? r / a.length : null,
-                                                  count: i,
+                                                  count: l,
                                               };
                                           })(c, t, n)
                                         : null;
@@ -230,7 +230,7 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     {
                                         children: [
                                             (0, a.jsx)(
-                                                w,
+                                                P,
                                                 {
                                                     name: "".concat(n, ":"),
                                                     copyValue: { [n]: r || null },
@@ -238,21 +238,21 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                         null != r
                                                             ? (0, a.jsx)("code", { children: JSON.stringify(r) })
                                                             : (0, a.jsx)("code", {
-                                                                  className: O.emptyProperty,
+                                                                  className: T.emptyProperty,
                                                                   children: "null",
                                                               }),
                                                 },
                                                 n,
                                             ),
-                                            null !== i &&
-                                                null !== i.average &&
+                                            null !== l &&
+                                                null !== l.average &&
                                                 (0, a.jsx)(
-                                                    w,
+                                                    P,
                                                     {
                                                         name: "".concat(n, "_avg:"),
                                                         copyValue: { [n]: r || null },
                                                         children: (0, a.jsxs)("code", {
-                                                            children: [i.average.toFixed(3), " (", i.count, ")"],
+                                                            children: [l.average.toFixed(3), " (", l.count, ")"],
                                                         }),
                                                     },
                                                     "".concat(n, "_avg"),
@@ -304,32 +304,32 @@ let I = new Set(["client_performance_cpu", "client_performance_memory"]),
         },
         throttleMs: 100,
     };
-function D() {
+function Z() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        i = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
+        l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(R)),
         [m, p] = r.useState(v.Z.loggedEvents),
         h = r.useCallback((e) => {
             p(e);
         }, []);
-    (0, x.BO)(t, v.Z.loggedEvents, h, A, [i]);
-    let f = m.filter((e) => {
+    (0, f.BO)(t, v.Z.loggedEvents, h, A, [l]);
+    let x = m.filter((e) => {
             for (let t of s) if (R[t].filter(e)) return !0;
             return !1;
         }),
-        [g, b] = r.useState(void 0),
-        _ = f.find((e) => e.key === g),
-        { TabBar: P, renderSelectedTab: w } = (0, S.ZP)({ tabs: k }, []);
+        [b, g] = r.useState(void 0),
+        y = x.find((e) => e.key === b),
+        { TabBar: w, renderSelectedTab: P } = (0, S.ZP)({ tabs: k }, []);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(T.panel, O.panel),
+        className: i()(O.panel, T.panel),
         children: [
             (0, a.jsxs)("div", {
-                className: O.toolbar,
+                className: T.toolbar,
                 children: [
                     (0, a.jsx)(d.zx, {
-                        className: O.toolbarButton,
+                        className: T.toolbarButton,
                         look: d.zx.Looks.BLANK,
                         size: d.zx.Sizes.ICON,
                         onClick: j.Zw,
@@ -342,15 +342,15 @@ function D() {
                             }),
                         }),
                     }),
-                    (0, a.jsx)("div", { className: O.toolbarDivider }),
+                    (0, a.jsx)("div", { className: T.toolbarDivider }),
                     (0, a.jsx)("div", {
-                        className: O.filters,
+                        className: T.filters,
                         children: Object.entries(R).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.P3F,
                                 {
-                                    className: l()(O.filter, s.includes(t) && O.activeFilter),
+                                    className: i()(T.filter, s.includes(t) && T.activeFilter),
                                     onClick: () => {
                                         o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -363,7 +363,7 @@ function D() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: O.toolbar,
+                className: T.toolbar,
                 children: (0, a.jsx)(u.E1j, {
                     size: "sm",
                     query: t,
@@ -372,23 +372,23 @@ function D() {
                     placeholder: "Search by event name",
                 }),
             }),
-            (0, a.jsx)(C.Z, {
+            (0, a.jsx)(_.Z, {
                 columns: N,
-                data: f,
-                selectedRowKey: g,
-                onClickRow: (e) => b(e.key),
+                data: x,
+                selectedRowKey: b,
+                onClickRow: (e) => g(e.key),
             }),
-            null != _ &&
-                (0, a.jsxs)(y.Z, {
-                    className: O.subPanel,
+            null != y &&
+                (0, a.jsxs)(C.Z, {
+                    className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, a.jsx)(P, {}),
-                        w({
-                            loggedEvent: _,
-                            onClose: () => b(void 0),
-                            filteredEvents: f,
+                        (0, a.jsx)(w, {}),
+                        P({
+                            loggedEvent: y,
+                            onClose: () => g(void 0),
+                            filteredEvents: x,
                         }),
                     ],
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,73 +10,73 @@ var i = n(442837),
     d = n(273504),
     u = n(981631),
     g = n(590433),
-    m = n(388032),
-    p = n(464992);
-function f(e) {
+    f = n(388032),
+    m = n(239244);
+function b(e) {
     var t;
-    let { action: n, triggerType: f, guildId: h, toggled: b, onToggleAction: x } = e,
+    let { action: n, triggerType: b, guildId: p, toggled: h, onToggleAction: x } = e,
         j = (e) => () => x(e),
-        _ = (0, c.c)(n.type, n, f),
-        v = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        O = null != v ? (0, g.getFriendlyDurationString)(v) : null,
-        C = (0, i.e7)([o.Z, s.Z], () => o.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(h)), [h]);
-    if (null == _) return null;
-    let { headerText: y, descriptionText: N, icon: E } = _;
+        v = (0, c.c)(n.type, n, b),
+        O = null == (t = n.metadata) ? void 0 : t.durationSeconds,
+        C = null != O ? (0, g.getFriendlyDurationString)(O) : null,
+        y = (0, i.e7)([o.Z, s.Z], () => o.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(p)), [p]);
+    if (null == v) return null;
+    let { headerText: N, descriptionText: E, icon: I } = v;
     return (0, r.jsxs)("div", {
-        className: p.actionContainer,
+        className: m.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: p.actionIconContainer,
-                children: (0, r.jsx)(E, {
+                className: m.actionIconContainer,
+                children: (0, r.jsx)(I, {
                     size: "md",
                     color: "currentColor",
-                    className: p.actionIcon,
+                    className: m.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: p.actionTextContainer,
+                className: m.actionTextContainer,
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/semibold",
-                        children: y,
+                        children: N,
                     }),
                     (0, r.jsx)(a.Text, {
                         color: "interactive-text-default",
                         variant: "text-xs/medium",
-                        children: N,
+                        children: E,
                     }),
-                    b &&
+                    h &&
                         (0, r.jsxs)(a.Text, {
                             color: "interactive-text-default",
                             variant: "text-xs/medium",
                             children: [
-                                null === O
+                                null === C
                                     ? null
-                                    : f === d.fX.MENTION_SPAM
-                                      ? m.intl.format(m.t.i3lsKD, { friendlyDurationString: O })
-                                      : m.intl.format(m.t.mvHxze, { friendlyDurationString: O }),
-                                C &&
+                                    : b === d.fX.MENTION_SPAM
+                                      ? f.intl.format(f.t.i3lsKD, { friendlyDurationString: C })
+                                      : f.intl.format(f.t.mvHxze, { friendlyDurationString: C }),
+                                y &&
                                     (0, r.jsx)(a.P3F, {
                                         onClick: j(!0),
-                                        className: p.editChannel,
+                                        className: m.editChannel,
                                         tag: "span",
                                         role: "link",
-                                        children: m.intl.string(m.t["0B95RJ"]),
+                                        children: f.intl.string(f.t["0B95RJ"]),
                                     }),
                             ],
                         }),
                 ],
             }),
             (0, r.jsx)(l.u, {
-                text: m.intl.format(m.t.wx6Vb9, {}),
-                "aria-label": m.intl.formatToMarkdownString(m.t.wx6Vb9, {}),
-                shouldShow: !C,
+                text: f.intl.format(f.t.wx6Vb9, {}),
+                "aria-label": f.intl.formatToMarkdownString(f.t.wx6Vb9, {}),
+                shouldShow: !y,
                 children: (0, r.jsx)("div", {
                     children: (0, r.jsx)(a.P3F, {
-                        onClick: C ? j(!1) : void 0,
+                        onClick: y ? j(!1) : void 0,
                         children: (0, r.jsx)(a.FZ5, {
-                            checked: b,
-                            disabled: !C,
+                            checked: h,
+                            disabled: !y,
                         }),
                     }),
                 }),

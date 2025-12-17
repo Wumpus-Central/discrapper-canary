@@ -8,8 +8,8 @@ n.d(t, {
     n(473749);
 var a,
     r,
-    i = n(925421),
-    l = n(388032),
+    l = n(693473),
+    i = n(388032),
     s =
         (((a = {})[(a.REFRESH_APP = -1)] = "REFRESH_APP"),
         (a[(a.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
@@ -23,5 +23,5 @@ let o = {
         AGE_VERIFICATION: "age_verification",
     },
     c = new Set(Object.values(o));
-l.intl.string(i.default["Qm6K/s"]), l.intl.string(i.default["dSkE/A"]);
+i.intl.string(l.default["Qm6K/s"]), i.intl.string(l.default["dSkE/A"]);
 var d = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r);

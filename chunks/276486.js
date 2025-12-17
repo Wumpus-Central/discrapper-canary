@@ -6,13 +6,13 @@ var r = n(54381);
 n(473749);
 var l = n(28664),
     i = n(481060),
-    s = n(144114),
-    a = n(489813),
+    a = n(144114),
+    s = n(489813),
     o = n(815660),
     c = n(388032),
-    u = n(624463);
+    u = n(888327);
 function d() {
-    return (0, r.jsx)(a.PU, {
+    return (0, r.jsx)(s.PU, {
         className: u.editableRequirementContainer,
         icon: i.AtH,
         text: c.intl.string(c.t.woMjLV),
@@ -33,7 +33,7 @@ function d() {
 function m(e) {
     let { isUserVerified: t } = e,
         l = t ? c.intl.string(c.t.WWzQta) : c.intl.string(c.t.woMjLV);
-    return (0, r.jsx)(a.PU, {
+    return (0, r.jsx)(s.PU, {
         className: u.editableRequirementContainer,
         icon: i.AtH,
         text: l,
@@ -74,7 +74,7 @@ function m(e) {
                                             });
                                     }
                                     return e;
-                                })({ reason: s.L.GUILD_PHONE_REQUIRED }, t),
+                                })({ reason: a.L.GUILD_PHONE_REQUIRED }, t),
                             );
                     },
                     { modalKey: o.M },

@@ -5,7 +5,7 @@ var r = n(54381),
     a = n.n(l),
     s = n(481060),
     o = n(28997),
-    c = n(882871);
+    c = n(595511);
 function d(e) {
     var { action: t, children: n, className: l, onExpandChange: d, loading: u } = e,
         g = (function (e, t) {
@@ -29,13 +29,13 @@ function d(e) {
             }
             return i;
         })(e, ["action", "children", "className", "onExpandChange", "loading"]);
-    let [m, p] = i.useState(!1);
+    let [f, m] = i.useState(!1);
     return (0, r.jsx)(s.zF9, {
         className: a()(c.groupContainer, l),
-        isExpanded: m,
+        isExpanded: f,
         collapsibleContent: (0, r.jsxs)("div", {
             className: c.groupCollapsedContainer,
-            children: [m && (0, r.jsx)("div", { className: c.pointer }), n],
+            children: [f && (0, r.jsx)("div", { className: c.pointer }), n],
         }),
         children: (e) => {
             var n, i;
@@ -73,7 +73,7 @@ function d(e) {
                         action: u ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
                             var t;
-                            p((t = !m)), null == d || d(t), l(e);
+                            m((t = !f)), null == d || d(t), l(e);
                         },
                     }),
                 Object.getOwnPropertyDescriptors

@@ -10,8 +10,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(793030),
-    o = n(442837),
+    o = n(793030),
+    s = n(442837),
     c = n(780384),
     u = n(481060),
     d = n(239091),
@@ -74,9 +74,9 @@ function P(e, t) {
 }
 let x = function (e) {
     let { guildId: t, transitionState: l, onClose: x } = e,
-        A = (0, o.e7)([O.Z], () => O.Z.getSortedRoles(t)),
-        Z = (0, o.e7)([_.default], () => _.default.getId()),
-        w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
+        A = (0, s.e7)([O.Z], () => O.Z.getSortedRoles(t)),
+        Z = (0, s.e7)([_.default], () => _.default.getId()),
+        w = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
         [L, R] = i.useState([]),
         D = (0, f.ZP)();
     if (
@@ -102,7 +102,7 @@ let x = function (e) {
     )
         return null;
     let M = A.filter((e) => null === e.tags.guild_connections);
-    return (0, r.jsx)(s.Modal, {
+    return (0, r.jsx)(o.Modal, {
         transitionState: l,
         title: S.intl.string(S.t.ghtnss),
         onClose: x,
@@ -111,7 +111,7 @@ let x = function (e) {
         children: (0, r.jsx)(u.Kqy, {
             children: M.map((e) => {
                 let l = w.roles.includes(e.id),
-                    s = (function (e) {
+                    o = (function (e) {
                         let n = L.find((t) => {
                             let { role_id: n } = t;
                             return n === e;
@@ -119,11 +119,11 @@ let x = function (e) {
                         if (null == n) return [];
                         let i = {};
                         for (let e of n.rules.flat()) {
-                            let s;
+                            let o;
                             if (null != e.application_id) {
                                 var l;
                                 let i = null == (l = n.applications) ? void 0 : l[e.application_id];
-                                s =
+                                o =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
                                               src: new b.Z(i.bot).getAvatarURL(t, 24),
@@ -133,13 +133,13 @@ let x = function (e) {
                                         : null;
                             } else {
                                 let t = g.Z.get(e.connection_type);
-                                s = (0, r.jsx)("img", {
+                                o = (0, r.jsx)("img", {
                                     src: (0, c.ap)(D) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
                                     className: N.avatar,
                                 });
                             }
-                            null != s && (i["".concat(e.connection_type, ":").concat(e.application_id)] = s);
+                            null != o && (i["".concat(e.connection_type, ":").concat(e.application_id)] = o);
                         }
                         return Object.values(i);
                     })(e.id);
@@ -225,8 +225,8 @@ let x = function (e) {
                             (0, r.jsx)(h.ZP, {
                                 showUserPopout: !1,
                                 guildId: t,
-                                users: s.map(() => null),
-                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: s[n] }, n),
+                                users: o.map(() => null),
+                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: o[n] }, n),
                                 max: 3,
                             }),
                         ],

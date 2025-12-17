@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var r,
     i = n(877921),
     l = n.n(i),
@@ -51,11 +51,11 @@ function g(e) {
             return e;
         })({}, i, r, d[t]));
 }
-function m(e) {
+function f(e) {
     let { error: t } = e;
     u = t.code;
 }
-class p extends (r = a.ZP.Store) {
+class m extends (r = a.ZP.Store) {
     getOverviewAnalytics(e) {
         return d[e];
     }
@@ -63,12 +63,12 @@ class p extends (r = a.ZP.Store) {
         return u;
     }
 }
-o(p, "displayName", "GuildSettingsAnalyticsStore");
-let f = new p(s.Z, {
+o(m, "displayName", "GuildSettingsAnalyticsStore");
+let b = new m(s.Z, {
     GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: g,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: g,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: g,
-    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: m,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: m,
-    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: m,
+    GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: f,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: f,
+    GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: f,
 });

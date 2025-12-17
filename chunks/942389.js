@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var r = n(54381),
     i = n(473749),
-    a = n(650072);
+    a = n(189440);
 let o = i.memo(function (e) {
     let { className: t } = e;
     return (0, r.jsxs)("svg", {

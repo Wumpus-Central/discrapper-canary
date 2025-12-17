@@ -438,18 +438,18 @@ function P(e) {
 }
 function R(e) {
     let { widgetId: t } = e;
-    return N(t, (e, t) => D(t, e.id));
+    return N(t, (e, t) => w(t, e.id));
 }
-function D(e, t) {
+function w(e, t) {
     let n = H(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
     if (r === n.length - 1) return !1;
     n.push(n.splice(r, 1)[0]);
-    for (let e = 0; e < n.length; e++) F(n[e], e);
+    for (let e = 0; e < n.length; e++) B(n[e], e);
     return !0;
 }
-function w(e) {
+function D(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
         x(e, n);
@@ -524,11 +524,11 @@ function Z(e) {
         r = O(b({}, r), { [n.id]: n.set("widgets", a) });
     });
 }
-function B(e) {
+function F(e) {
     let { widgetType: t, defaultConfig: n } = e;
     T[t] = b({}, T[t], n);
 }
-function F(e, t) {
+function B(e, t) {
     i = O(b({}, i), { [e.id]: e.set("zIndex", t) });
 }
 function V(e, t) {
@@ -830,7 +830,7 @@ let q = new z(d.Z, {
     LAYOUT_DELETE_WIDGET: U,
     LAYOUT_DELETE_ALL_WIDGETS: G,
     LAYOUT_CREATE_WIDGETS: Z,
-    LAYOUT_SET_WIDGET_META: w,
+    LAYOUT_SET_WIDGET_META: D,
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: k,
-    LAYOUT_SET_DEFAULT_CONFIG: B,
+    LAYOUT_SET_DEFAULT_CONFIG: F,
 });

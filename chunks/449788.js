@@ -17,8 +17,8 @@ function g(e) {
     let { floatRight: t } = e,
         { quest: n, sourceQuestContent: g, isPortrait: O } = o.useContext(f.VideoQuestModalContext),
         h = (0, s.aM)(),
-        { enabled: b, variant: C } = u.EO.useConfig({ location: v.dr.VIDEO_MODAL }),
-        S = C === u.m_.OVERLAY_SHARE_ON_VIDEO,
+        { enabled: b, variant: S } = u.EO.useConfig({ location: v.dr.VIDEO_MODAL }),
+        C = S === u.m_.OVERLAY_SHARE_ON_VIDEO,
         [_, y] = (0, p.G6)(E.intl.string(E.t.RDE0Sc), E.intl.string(E.t["+5kSoW"]), 1700),
         [x, j] = o.useState(!1),
         P = o.useRef(null),
@@ -60,7 +60,7 @@ function g(e) {
                           : (0, r.jsx)(l.u, {
                                 text: b ? E.intl.string(E.t.WmfZHZ) : void 0,
                                 children: (0, r.jsx)(i.hU, {
-                                    variant: S ? "overlay-secondary" : "secondary",
+                                    variant: C ? "overlay-secondary" : "secondary",
                                     icon: b ? i.xPt : i.TIy,
                                     "aria-label": E.intl.string(E.t.RDE0Sc),
                                     onClick: T,

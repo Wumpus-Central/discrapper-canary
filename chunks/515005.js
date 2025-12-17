@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(490095),
     y = n(981631),
     O = n(388032),
-    v = n(940992);
+    v = n(806512);
 function S(e, t, n) {
     return (
         t in e
@@ -94,8 +94,8 @@ function N(e, t) {
 }
 let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
     R = (0, l.Mg)(v.__invalid_stickerPickerPreviewPadding),
-    D = 250,
-    w = i.memo(function (e) {
+    w = 250,
+    D = i.memo(function (e) {
         let {
                 isDisplayingIndividualStickers: t = !1,
                 preferAnimation: a = !0,
@@ -103,7 +103,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 getStickerRowProps: S,
                 gutterWidth: T,
                 inspectedStickerPosition: N,
-                isScrolling: w,
+                isScrolling: D,
                 isUsingKeyboardNavigation: x,
                 onInspect: L,
                 onSelect: j,
@@ -112,8 +112,8 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 stickerDescriptors: U,
                 stickerPadding: G = R,
                 stickerSize: Z = P,
-                ownedStickerPacks: B,
-                enlargeOnInteraction: F = !1,
+                ownedStickerPacks: F,
+                enlargeOnInteraction: B = !1,
                 channel: V,
                 currentUser: H,
                 checkSendability: Y = !0,
@@ -154,21 +154,21 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                         let f =
                                 e.visibleRowIndex === (null == N ? void 0 : N.rowIndex) &&
                                 e.columnIndex === (null == N ? void 0 : N.columnIndex),
-                            S = e.type === h.al.STICKER && F && f,
+                            S = e.type === h.al.STICKER && B && f,
                             T = (t) => {
-                                if ((null == w ? void 0 : w.current) === !0 || (null == x ? void 0 : x.current) === !0)
+                                if ((null == D ? void 0 : D.current) === !0 || (null == x ? void 0 : x.current) === !0)
                                     return;
                                 let n = t.altKey;
                                 n && e.type === h.al.STICKER && !(0, g.gM)(e.sticker.id) && X(e.sticker.id),
                                     null == j || j(e, n);
                             },
                             P = (0, s.throttle)(() => {
-                                (null == w ? void 0 : w.current) === !0 ||
+                                (null == D ? void 0 : D.current) === !0 ||
                                     (null == x ? void 0 : x.current) === !0 ||
                                     f ||
                                     null == L ||
                                     L(e);
-                            }, D),
+                            }, w),
                             R = () => {
                                 e.type === h.al.CREATE_STICKER &&
                                     (_.default.track(y.rMx.OPEN_MODAL, {
@@ -176,7 +176,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         location: W,
                                     }),
                                     (0, c.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("93626"), n.e("97162")]).then(
+                                        let { default: t } = await Promise.all([n.e("93626"), n.e("47985")]).then(
                                             n.bind(n, 136735),
                                         );
                                         return (n) => (0, r.jsx)(t, I({ guildId: e.guild_id }, n));
@@ -200,7 +200,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             onClick: R,
                                             style: q,
                                             children: [
-                                                !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                !B && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                 (0, r.jsx)("div", {
                                                     className: v.iconWrapper,
                                                     children: (0, r.jsx)(c.qJs, {
@@ -220,7 +220,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     e.guild_id,
                                 );
                             case h.al.STICKER: {
-                                let s = t && null != B && (0, g.jl)(e.sticker) && !B.has(e.sticker.pack_id),
+                                let s = t && null != F && (0, g.jl)(e.sticker) && !F.has(e.sticker.pack_id),
                                     l = (e) => {
                                         (0, u.jW)(e, async () => {
                                             let { default: e } = await n.e("39010").then(n.bind(n, 269254));
@@ -249,11 +249,11 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                             (0, r.jsxs)("div", {
                                                 "aria-hidden": !0,
                                                 children: [
-                                                    !F && (0, r.jsx)("div", { className: v.inspectedIndicator }),
+                                                    !B && (0, r.jsx)("div", { className: v.inspectedIndicator }),
                                                     (0, r.jsx)(E.Z, {
                                                         className: o()(v.stickerNode, {
                                                             [v.stickerNodeDimmed]:
-                                                                F &&
+                                                                B &&
                                                                 !f &&
                                                                 null != N &&
                                                                 -1 !== N.rowIndex &&
@@ -262,7 +262,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                                             [v.stickerUnsendable]: Y && !(0, m.kl)(e.sticker, H, V),
                                                         }),
                                                         disableAnimation: !f && !a,
-                                                        enlargeOnInteraction: F,
+                                                        enlargeOnInteraction: B,
                                                         isInteracting: f,
                                                         maskAsset: f,
                                                         sticker: e.sticker,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(539854);
+n.d(t, { Z: () => B }), n(388685), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -63,11 +63,11 @@ function R(e) {
     let { applicationId: t } = e;
     S.add(t);
 }
-function D(e) {
+function w(e) {
     let { applicationId: t, entitlements: n } = e;
     for (let e of (S.delete(t), I.add(t), n)) !0 !== e.consumed && A(e);
 }
-function w(e) {
+function D(e) {
     let { entitlements: t } = e;
     (g = {}), t.forEach(N);
 }
@@ -96,7 +96,7 @@ function G(e) {
 function Z(e) {
     return P(e.entitlement);
 }
-class B extends (r = s.yh) {
+class F extends (r = s.yh) {
     initialize() {
         this.syncWith([u.Z], () => !0);
     }
@@ -212,12 +212,12 @@ class B extends (r = s.yh) {
         );
     }
 }
-m(B, "displayName", "EntitlementStore");
-let F = new B(l.Z, {
+m(F, "displayName", "EntitlementStore");
+let B = new F(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: R,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: D,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: x,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: D,
     SKU_PURCHASE_SUCCESS: k,
     VIRTUAL_CURRENCY_REDEEM_SUCCESS: k,
     LIBRARY_FETCH_SUCCESS: U,

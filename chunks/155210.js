@@ -23,19 +23,19 @@ function O(e, t, n) {
         T = (0, i.J)(),
         { ariaLabel: C, ariaLabelledBy: A, ariaDescribedBy: N, focusManager: P } = r.Lh.get(t),
         R = e.isPlaceholder ? "" : e.text,
-        D = (0, h.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
-        w = (0, E.a)({
+        w = (0, h.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
+        D = (0, E.a)({
             month: "long",
-            timeZone: D.timeZone,
+            timeZone: w.timeZone,
         }),
         x = (0, E.a)({
             hour: "numeric",
-            hour12: D.hour12,
-            timeZone: D.timeZone,
+            hour12: w.hour12,
+            timeZone: w.timeZone,
         });
     if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (R = x.format(t.dateValue));
     else {
-        let e = w.format(t.dateValue);
+        let e = D.format(t.dateValue);
         R = e !== R ? `${R} \u{2013} ${e}` : e;
     }
     let { spinButtonProps: L } = (0, y.G)({
@@ -99,11 +99,11 @@ function O(e, t, n) {
             let e = new Date();
             return e.setHours(0), G.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
         }, [G]),
-        B = (0, h.useMemo)(() => {
+        F = (0, h.useMemo)(() => {
             let e = new Date();
             return e.setHours(12), G.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
         }, [G]),
-        F = (0, E.a)({
+        B = (0, E.a)({
             year: "numeric",
             era: "narrow",
             timeZone: "UTC",
@@ -122,20 +122,20 @@ function O(e, t, n) {
                         .toDate("UTC");
                     return {
                         era: e,
-                        formatted: F.formatToParts(t).find((e) => "era" === e.type).value,
+                        formatted: B.formatToParts(t).find((e) => "era" === e.type).value,
                     };
                 }),
                 i = v(r.map((e) => e.formatted));
             if (i) for (let e of r) e.formatted = e.formatted.slice(i);
             return r;
-        }, [F, t.calendar, e.type]),
+        }, [B, t.calendar, e.type]),
         H = (n) => {
             if (t.isDisabled || t.isReadOnly) return;
             let r = O.current + n;
             switch (e.type) {
                 case "dayPeriod":
                     if (U(Z, n)) t.setSegment("dayPeriod", 0);
-                    else if (U(B, n)) t.setSegment("dayPeriod", 12);
+                    else if (U(F, n)) t.setSegment("dayPeriod", 12);
                     else break;
                     P.focusNext();
                     break;
@@ -204,7 +204,7 @@ function O(e, t, n) {
         (0, u.z)(n, "input", (e) => {
             let { inputType: t, data: r } = e;
             "insertCompositionText" === t &&
-                (n.current && (n.current.textContent = K.current), null != r && (U(Z, r) || U(B, r)) && H(r));
+                (n.current && (n.current.textContent = K.current), null != r && (U(Z, r) || U(F, r)) && H(r));
         }),
         (0, d.b)(() => {
             let e = n.current;
@@ -234,7 +234,7 @@ function O(e, t, n) {
     let $ = { caretColor: "transparent" };
     if ("rtl" === I) {
         $.unicodeBidi = "embed";
-        let t = D[e.type];
+        let t = w[e.type];
         ("numeric" === t || "2-digit" === t) && ($.direction = "ltr");
     }
     return {

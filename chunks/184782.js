@@ -4,14 +4,14 @@ var a = i(54381),
     t = i(793030),
     o = i(442837),
     s = i(481060),
-    r = i(596454),
-    c = i(471445),
-    d = i(686546),
+    d = i(596454),
+    r = i(471445),
+    c = i(686546),
     u = i(313201),
     m = i(339085),
-    _ = i(633302),
-    h = i(565138),
-    p = i(372769),
+    h = i(633302),
+    p = i(565138),
+    _ = i(372769),
     j = i(703656),
     x = i(592125),
     N = i(430824),
@@ -24,29 +24,29 @@ var a = i(54381),
     I = i(981631),
     v = i(231338),
     T = i(388032),
-    S = i(557401);
+    S = i(145598);
 let k = (e) => {
         var n;
         let { channelData: i, onClose: l, trackOptionClick: t } = e,
-            d = (0, o.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
-            u = (0, o.e7)([g.Z], () => null != d && g.Z.can(v.Pl.VIEW_CHANNEL, d)),
-            h = (0, o.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
+            c = (0, o.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
+            u = (0, o.e7)([g.Z], () => null != c && g.Z.can(v.Pl.VIEW_CHANNEL, c)),
+            p = (0, o.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
                 i.emoji_id,
             ]),
-            p = null != i.emoji_name ? _.ZP.getByName(_.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
-            N = null != (n = (0, c.KS)(d)) ? n : s.VL1;
-        return null != d && u
+            _ = null != i.emoji_name ? h.ZP.getByName(h.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
+            N = null != (n = (0, r.KS)(c)) ? n : s.VL1;
+        return null != c && u
             ? (0, a.jsxs)(s.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      t(), l(), (0, j.XU)(d.guild_id, d.id);
+                      t(), l(), (0, j.XU)(c.guild_id, c.id);
                   },
                   children: [
-                      null != h || null != p
-                          ? (0, a.jsx)(r.Z, {
-                                emojiName: null != i.emoji_id ? (null == h ? void 0 : h.name) : i.emoji_name,
-                                animated: null != h && h.animated,
-                                emojiId: null == h ? void 0 : h.id,
+                      null != p || null != _
+                          ? (0, a.jsx)(d.Z, {
+                                emojiName: null != i.emoji_id ? (null == p ? void 0 : p.name) : i.emoji_name,
+                                animated: null != p && p.animated,
+                                emojiId: null == p ? void 0 : p.id,
                                 autoplay: !0,
                                 className: S.optionEmoji,
                             })
@@ -68,7 +68,7 @@ let k = (e) => {
                                           size: "xxs",
                                           color: "currentColor",
                                       }),
-                                      (0, a.jsx)("span", { children: d.name }),
+                                      (0, a.jsx)("span", { children: c.name }),
                                   ],
                               }),
                           ],
@@ -83,21 +83,21 @@ let k = (e) => {
     },
     P = (e) => {
         var n;
-        let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
-            _ = (0, o.e7)([N.Z], () => N.Z.getGuild(c)),
+        let { onClose: i, transitionState: d, guildId: r, isPreview: m } = e,
+            h = (0, o.e7)([N.Z], () => N.Z.getGuild(r)),
             {
                 welcomeScreen: j,
                 fetching: x,
                 hasError: g,
             } = (0, o.cj)([E.Z], () => ({
-                welcomeScreen: E.Z.get(c),
+                welcomeScreen: E.Z.get(r),
                 fetching: E.Z.isFetching(),
                 hasError: E.Z.hasError(),
             })),
             C = (0, u.Dt)();
         l.useEffect(() => {
-            null == j && (0, f.RM)(c);
-        }, [c, j]),
+            null == j && (0, f.RM)(r);
+        }, [r, j]),
             l.useEffect(() => {
                 !1 === x && !0 === g && null == j && i();
             }, [x, g, i, j]),
@@ -108,9 +108,9 @@ let k = (e) => {
                 !0 !== m &&
                     b.default.track(I.rMx.OPEN_MODAL, {
                         type: Z._,
-                        guild_id: c,
+                        guild_id: r,
                     });
-            }, [c, m]);
+            }, [r, m]);
         let v = l.useCallback(
             (e) => {
                 var n;
@@ -124,20 +124,20 @@ let k = (e) => {
                     }),
                     b.default.track(I.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
-                        guild_id: c,
+                        guild_id: r,
                         options: i,
                         options_channel_ids: a,
                         guild_description: j.description,
                         has_custom_emojis: l,
                     });
             },
-            [c, m, j],
+            [r, m, j],
         );
-        return null == _
+        return null == h
             ? null
             : null == j
               ? (0, a.jsx)(t.Modal, {
-                    transitionState: r,
+                    transitionState: d,
                     "aria-label": T.intl.string(T.t.ZTNur7),
                     title: T.intl.string(T.t.ZTNur7),
                     onClose: () => Promise.resolve(i()),
@@ -145,7 +145,7 @@ let k = (e) => {
                     children: (0, a.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
                 })
               : (0, a.jsx)(t.Modal, {
-                    transitionState: r,
+                    transitionState: d,
                     "aria-labelledby": C,
                     actions: [
                         {
@@ -159,14 +159,14 @@ let k = (e) => {
                     children: (0, a.jsxs)("div", {
                         className: S.modalContent,
                         children: [
-                            (0, a.jsx)(d.ZP, {
-                                mask: d.ZP.Masks.SQUIRCLE,
+                            (0, a.jsx)(c.ZP, {
+                                mask: c.ZP.Masks.SQUIRCLE,
                                 width: 64,
                                 height: 64,
                                 className: S.guildIcon,
-                                children: (0, a.jsx)(h.Z, {
-                                    size: h.Z.Sizes.LARGER,
-                                    guild: _,
+                                children: (0, a.jsx)(p.Z, {
+                                    size: p.Z.Sizes.LARGER,
+                                    guild: h,
                                     active: !0,
                                     animate: !0,
                                     tabIndex: -1,
@@ -177,14 +177,14 @@ let k = (e) => {
                                 className: S.header,
                                 id: C,
                                 children: T.intl.format(T.t["0aydCN"], {
-                                    guildName: _.name,
+                                    guildName: h.name,
                                     guildNameHook: (e, n) =>
                                         (0, a.jsxs)(
                                             "span",
                                             {
                                                 children: [
-                                                    (0, a.jsx)(p.Z, {
-                                                        guild: _,
+                                                    (0, a.jsx)(_.Z, {
+                                                        guild: h,
                                                         className: S.headerGuildBadge,
                                                         flowerStarClassName: S.flowerStar,
                                                         tooltipColor: s.aML.Colors.PRIMARY,

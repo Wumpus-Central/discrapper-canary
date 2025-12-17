@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(533348);
 let C = "CameraPreviewPosition";
 function y(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: v, onSelectParticipant: O } = e,
-        [x, E] = (function () {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: v, onSelectParticipant: x } = e,
+        [O, E] = (function () {
             let [e, t] = r.useState(() => s.K.get(C, h.VD2.BOTTOM_RIGHT));
             return [
                 e,
@@ -58,7 +58,7 @@ function y(e) {
     return (0, i.jsx)("div", {
         className: g.container,
         children: (0, i.jsx)(d._, {
-            position: x,
+            position: O,
             id: 0,
             width: I,
             ref: j,
@@ -85,7 +85,7 @@ function y(e) {
                             inCall: !0,
                             popoutType: u.P.NO_POPOUT,
                             width: 160,
-                            onClick: O,
+                            onClick: x,
                         },
                         e.id,
                     ),

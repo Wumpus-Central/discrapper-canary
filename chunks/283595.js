@@ -89,11 +89,11 @@ function P(e) {
 function R() {
     y = !1;
 }
-function D(e) {
+function w(e) {
     let { libraryApplications: t } = e;
     (O = {}), P(t), (y = !0);
 }
-function w(e) {
+function D(e) {
     let { libraryApplications: t } = e;
     P(t);
 }
@@ -126,7 +126,7 @@ function U() {
     v = {};
 }
 function G(e) {
-    let t = B();
+    let t = F();
     return (
         Object.keys(t).forEach((n) => {
             e(t[n]) || delete t[n];
@@ -139,10 +139,10 @@ function Z(e, t) {
     let r = (0, d.Tu)(e, t);
     return null != (n = O[r]) ? n : v[r];
 }
-function B() {
+function F() {
     return m({}, v, O);
 }
-class F extends (r = s.ZP.Store) {
+class B extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = l.K.get(E);
@@ -154,10 +154,10 @@ class F extends (r = s.ZP.Store) {
         return G((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return B();
+        return F();
     }
     hasLibraryApplication() {
-        return Object.keys(B()).length > 0;
+        return Object.keys(F()).length > 0;
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -178,7 +178,7 @@ class F extends (r = s.ZP.Store) {
                 a = null != (r = O[i]) ? r : v[i];
             if (null != a && (0, d.Je)(a) && (t || !a.isHidden())) return a;
         }
-        let i = B();
+        let i = F();
         for (let n in i)
             if (i[n].id === e) {
                 let e = i[n];
@@ -195,7 +195,7 @@ class F extends (r = s.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return a()(B())
+        return a()(F())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -210,11 +210,11 @@ class F extends (r = s.ZP.Store) {
         });
     }
 }
-_(F, "displayName", "LibraryApplicationStore");
-let V = new F(c.Z, {
+_(B, "displayName", "LibraryApplicationStore");
+let V = new B(c.Z, {
     LOGOUT: R,
-    LIBRARY_FETCH_SUCCESS: D,
-    SKU_PURCHASE_SUCCESS: w,
+    LIBRARY_FETCH_SUCCESS: w,
+    SKU_PURCHASE_SUCCESS: D,
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: x,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     LIBRARY_APPLICATION_UPDATE: L,

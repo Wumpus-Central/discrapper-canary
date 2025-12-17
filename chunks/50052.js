@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(246946),
     a = n(313789),
     o = n(388032);
-let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
+let S = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
         useTitle: () => o.intl.string(o.t["yR/d2T"]),
         useSubtitle: () => o.intl.string(o.t.RiIiPw),
         useValue: () =>
@@ -25,7 +25,7 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ hideInstantInvites: t }),
     }),
-    S = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
+    c = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
         useTitle: () => o.intl.string(o.t.OrqYDP),
         useValue: () =>
             (0, i.e7)([r.Z], () => {
@@ -34,7 +34,7 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableSounds: t }),
     }),
-    d = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+    E = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
         useValue: () =>
             (0, i.e7)([r.Z], () => {
@@ -43,7 +43,7 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableNotifications: t }),
     }),
-    E = (0, u.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
+    d = (0, u.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
         useTitle: () => o.intl.string(o.t["iA81+a"]),
         useSubtitle: () => o.intl.string(o.t.P4vj0h),
         useValue: () =>
@@ -69,5 +69,5 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     g = (0, u.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),
         variant: "separators",
-        buildLayout: () => [c, T, S, d, E],
+        buildLayout: () => [S, T, c, E, d],
     });

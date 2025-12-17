@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(785717),
     u = n(502762),
     d = n(388032),
-    f = n(419173);
+    f = n(949048);
 function p(e) {
     let { previewData: t, className: n, onClick: a } = e,
         { trackUserProfileAction: p } = (0, c.KZ)(),

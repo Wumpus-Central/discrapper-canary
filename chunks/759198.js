@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    a = n(977072);
+    a = n(481060),
+    o = n(750319);
 function s(e) {
     var { className: t, color: n } = e,
         i = (function (e, t) {
@@ -29,7 +29,7 @@ function s(e) {
             return i;
         })(e, ["className", "color"]);
     return (0, r.jsx)(
-        o.Text,
+        a.Text,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +56,7 @@ function s(e) {
             return e;
         })(
             {
-                className: l()({ [a.text]: null == n }, t),
+                className: l()({ [o.text]: null == n }, t),
                 color: n,
             },
             i,

@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(793030),
     s = n(481060),
-    l = n(845442);
+    l = n(126827);
 function c(e) {
     let {
         headingColor: t = "text-strong",

@@ -1,14 +1,14 @@
-n.d(t, { u: () => c });
+n.d(t, { u: () => s });
 var r,
-    l,
-    i = n(818083),
-    o = n(751823);
-let a = { showRefreshedStreamTaxonomy: !1 },
-    s = (0, i.B)({
+    a,
+    l = n(818083),
+    i = n(751823);
+let o = { showRefreshedStreamTaxonomy: !1 },
+    c = (0, l.B)({
         kind: "user",
         id: "2025-07_stream_survey_taxonomy_refresh",
         label: "Stream survey taxonomy refresh",
-        defaultConfig: a,
+        defaultConfig: o,
         treatments: [
             {
                 id: 1,
@@ -38,10 +38,10 @@ let a = { showRefreshedStreamTaxonomy: !1 },
                                 });
                         }
                         return e;
-                    })({}, a)),
-                    (l = l = { showRefreshedStreamTaxonomy: !0 }),
+                    })({}, o)),
+                    (a = a = { showRefreshedStreamTaxonomy: !0 }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -49,17 +49,17 @@ let a = { showRefreshedStreamTaxonomy: !1 },
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     r),
             },
         ],
     });
-function c(e) {
+function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: r } = o.L.useExperiment({ location: t }, { autoTrackExposure: n });
-    return s.useExperiment(
+        { isInHoldout: r } = i.L.useExperiment({ location: t }, { autoTrackExposure: n });
+    return c.useExperiment(
         { location: t },
         {
             disable: r,

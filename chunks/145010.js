@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(390322),
     d = n(871499),
     p = n(12168),
-    h = n(304388),
-    f = n(388032);
+    f = n(304388),
+    h = n(388032);
 function m(e) {
     let { channel: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
@@ -26,12 +26,12 @@ function m(e) {
                 : m && (0, o.Bo)(null),
                 null == t || t();
         };
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(f.Z, {
         renderPopout: (e) => {
             let { closePopout: n, onFocus: r } = e;
             return (0, i.jsx)(u.Z, {
                 children: (0, i.jsx)(p.Z, {
-                    title: f.intl.string(f.t.XYLOyF),
+                    title: h.intl.string(h.t.XYLOyF),
                     channel: t,
                     closePopout: n,
                     onFocus: r,

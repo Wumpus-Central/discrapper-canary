@@ -1,11 +1,11 @@
-n.d(t, { s: () => s });
+n.d(t, { s: () => o });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
     a = n(871612);
-function s(e) {
-    let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
+function o(e) {
+    let { onDiscardApplication: t, onContinueApplication: n, guild: o } = e;
     return (0, r.jsxs)("div", {
         className: a.confirmation,
         children: [
@@ -20,8 +20,8 @@ function s(e) {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
                 children:
-                    null != s
-                        ? l.intl.formatToPlainString(l.t.f5Jaw7, { guildName: s.name })
+                    null != o
+                        ? l.intl.formatToPlainString(l.t.f5Jaw7, { guildName: o.name })
                         : l.intl.string(l.t["0sTyEb"]),
             }),
             (0, r.jsxs)("div", {

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(28664),
     l = n(388032),
     a = n(803412);
-let s = Math.ceil(2 * Math.PI * 20),
-    o = (e) => {
+let o = Math.ceil(2 * Math.PI * 20),
+    s = (e) => {
         let { total: t, used: n } = e,
-            o = Math.max(0, Math.min(1, n / t)),
-            c = "".concat(Math.floor(100 * o), "%");
+            s = Math.max(0, Math.min(1, n / t)),
+            c = "".concat(Math.floor(100 * s), "%");
         return (0, r.jsx)(i.u, {
             text: l.intl.formatToPlainString(l.t["2eoRMh"], { used: c }),
             children: (0, r.jsxs)("div", {
@@ -37,11 +37,11 @@ let s = Math.ceil(2 * Math.PI * 20),
                                         n = Math.round(-71 * e + 208),
                                         r = Math.round(-22 * e + 240);
                                     return "rgb(".concat(t, ", ").concat(n, ", ").concat(r, ")");
-                                })(o),
+                                })(s),
                                 strokeDasharray: (function (e) {
-                                    let t = Math.floor(s * e);
-                                    return "".concat(t, ", ").concat(s);
-                                })(o),
+                                    let t = Math.floor(o * e);
+                                    return "".concat(t, ", ").concat(o);
+                                })(s),
                             }),
                         ],
                     }),

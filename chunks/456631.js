@@ -15,8 +15,8 @@ var i,
     d = n(963838),
     f = n(354459);
 let p = [],
-    m = {},
-    _ = [],
+    b = {},
+    m = [],
     g = (e) => {
         null != e &&
             s.Z.dispatch({
@@ -25,12 +25,12 @@ let p = [],
             });
     },
     v = [],
-    b = 10 * u.Z.Millis.SECOND,
-    h = (0, a.debounce)(() => {
-        let e = (0, d.cX)(_);
-        c.uv.announce(e, "polite"), (_ = []);
+    h = 10 * u.Z.Millis.SECOND,
+    E = (0, a.debounce)(() => {
+        let e = (0, d.cX)(m);
+        c.uv.announce(e, "polite"), (m = []);
     }, 500);
-class E extends (i = o.ZP.Store) {
+class _ extends (i = o.ZP.Store) {
     get recentlyUsedEmojis() {
         return p;
     }
@@ -41,21 +41,21 @@ class E extends (i = o.ZP.Store) {
         return r;
     }
     getEffectForUserId(e) {
-        return m[e];
+        return b[e];
     }
 }
-(l = "displayName") in E
-    ? Object.defineProperty(E, l, {
+(l = "displayName") in _
+    ? Object.defineProperty(_, l, {
           value: "VoiceChannelEffectsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (E[l] = "VoiceChannelEffectsStore");
-let y = new E(s.Z, {
+    : (_[l] = "VoiceChannelEffectsStore");
+let y = new _(s.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
         let { userId: t } = e;
-        null != m[t] && delete m[t];
+        null != b[t] && delete b[t];
     },
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
         let { emoji: t } = e;
@@ -65,26 +65,26 @@ let y = new E(s.Z, {
         let { emoji: t, userId: n, animationType: r } = e;
         null != t &&
             null != r &&
-            ((m[n] = {
+            ((b[n] = {
                 emoji: t,
                 sentAt: Date.now(),
                 animationType: r,
             }),
-            (_ = [
-                ..._,
+            (m = [
+                ...m,
                 {
                     emojiName: t.name,
                     userId: n,
                 },
             ]),
-            h());
+            E());
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
         let e = new Date();
         if ((v = [e, ...v].slice(0, 20)).length >= 20) {
             let t = v[v.length - 1],
                 n = e.getTime() - t.getTime();
-            n < b && (r = new Date(e.getTime() + b - n));
+            n < h && (r = new Date(e.getTime() + h - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {

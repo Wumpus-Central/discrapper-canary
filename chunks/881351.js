@@ -22,8 +22,8 @@ var l = n(481060),
     y = n(88966),
     P = n(47091),
     x = n(991307),
-    E = n(37258),
-    S = n(700994),
+    S = n(37258),
+    E = n(700994),
     I = n(332031),
     C = n(981631),
     A = n(388032);
@@ -42,7 +42,7 @@ let _ = (0, a.Z)(
                     friendGroupId: D,
                 } = e,
                 { enableTopNavButton: k } = (0, c.Cq)({ location: "user-context-menu" }),
-                w = (0, E.Z)({
+                w = (0, S.Z)({
                     userId: t.id,
                     guildId: n,
                     channelId: o,
@@ -61,7 +61,7 @@ let _ = (0, a.Z)(
                     groupId: D,
                 }),
                 F = (0, I.Z)(t.id),
-                R = (0, S.Z)(t.id),
+                R = (0, E.Z)(t.id),
                 B = (0, x.Z)(t.id, d),
                 W = (0, h.Z)({ user: t }),
                 H = (0, u.Z)(null, t),

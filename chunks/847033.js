@@ -67,25 +67,25 @@ function N(e) {
         N = (0, b.g)(I, "guild_shop_page"),
         P = (0, E.RF)(o, "guild_shop_page"),
         R = (null == I ? void 0 : I.features.has(S.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
-        D = (0, f.mY)(null == I ? void 0 : I.id),
-        w = D && P,
+        w = (0, f.mY)(null == I ? void 0 : I.id),
+        D = w && P,
         x = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
         L = [],
         j = y.y.GUILD_SHOP_FULL_PREVIEW;
-    A || (R && D)
+    A || (R && w)
         ? (L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_PRODUCTS : y.y.GUILD_ROLE_SUBSCRIPTIONS),
           L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_ROLE_SUBSCRIPTIONS : y.y.GUILD_PRODUCTS),
           (j = L[0]))
-        : R && !D
+        : R && !w
           ? (L.push(y.y.GUILD_PRODUCTS), (j = y.y.GUILD_PRODUCTS))
           : !R &&
-            D &&
+            w &&
             (L.push(y.y.GUILD_ROLE_SUBSCRIPTIONS),
             (j = y.y.GUILD_ROLE_SUBSCRIPTIONS),
             N && L.push(y.y.GUILD_PRODUCTS_PREVIEW)),
         (a = null != a ? a : j);
     let [M, k] = i.useState(a),
-        U = (N && !w) || M === y.y.GUILD_PRODUCTS_PREVIEW;
+        U = (N && !D) || M === y.y.GUILD_PRODUCTS_PREVIEW;
     i.useEffect(() => {
         k(a);
     }, [a]);

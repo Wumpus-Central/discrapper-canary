@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(372129),
     l = n(981631),
     c = n(388032),
-    u = n(144291);
+    u = n(295406);
 function d(e) {
     let { channel: t } = e,
         n = i.useRef(null),

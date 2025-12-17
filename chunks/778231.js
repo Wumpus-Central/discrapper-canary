@@ -5,8 +5,8 @@ var r = n(54381),
     a = n(139117),
     s = n(481060),
     o = n(384275),
-    d = n(686546),
-    c = n(359993),
+    c = n(686546),
+    d = n(359993),
     u = n(146078),
     m = n(881998),
     b = n(709054),
@@ -18,8 +18,8 @@ let x = (e) => {
     let { entry: x } = e,
         { name: h } = x,
         v = (0, i.e7)([m.default], () => m.default.getNewestTokenForApplication(x.id)),
-        _ = null != (n = x.getIconURL(40)) ? n : f,
-        j = (0, c.Z)({ application: x }),
+        j = null != (n = x.getIconURL(40)) ? n : f,
+        _ = (0, d.Z)({ application: x }),
         y = l.useRef(!1);
     l.useEffect(() => {
         y.current || (o.Z.fetch(), (y.current = !0));
@@ -38,13 +38,13 @@ let x = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: g.appInfo,
                     children: [
-                        (0, r.jsx)(d.ZP, {
-                            mask: d.ZP.Masks.AVATAR_DEFAULT,
+                        (0, r.jsx)(c.ZP, {
+                            mask: c.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
                             className: g.appIconMask,
                             children: (0, r.jsx)("img", {
-                                src: _,
+                                src: j,
                                 alt: "",
                                 className: g.appIcon,
                             }),
@@ -57,17 +57,17 @@ let x = (e) => {
                                     variant: "text-md/medium",
                                     children: h,
                                 }),
-                                j.length > 0
+                                _.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: (0, u.Z)(j.length),
+                                                  children: (0, u.Z)(_.length),
                                               }),
                                               (0, r.jsx)(a.Z, {
                                                   className: g.guildStack,
-                                                  guilds: j,
+                                                  guilds: _,
                                                   maxGuilds: 6,
                                               }),
                                           ],

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => m }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(467721),
+    s = n(236726),
     o = n(692547),
     c = n(481060),
     d = n(259580),
-    u = n(992981);
+    u = n(723820);
 function g(e) {
     let { checked: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -30,18 +30,18 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function f(e) {
     let { title: t, children: n, buttonLabel: l, buttonCallback: a, disabled: o } = e,
-        [m, p] = i.useState(!1),
-        f = n.flatMap((e) => e.items.map((e) => e.completed)),
-        h = f.filter((e) => e).length / f.length,
-        b = (0, c.q_F)({ width: "".concat(100 * h, "%") });
+        [f, m] = i.useState(!1),
+        b = n.flatMap((e) => e.items.map((e) => e.completed)),
+        p = b.filter((e) => e).length / b.length,
+        h = (0, c.q_F)({ width: "".concat(100 * p, "%") });
     return (0, r.jsxs)("div", {
         className: u.container,
         children: [
             (0, r.jsxs)(c.P3F, {
                 className: u.headerBar,
-                onClick: () => p((e) => !e),
+                onClick: () => m((e) => !e),
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
@@ -49,7 +49,7 @@ function m(e) {
                         children: t,
                     }),
                     (0, r.jsx)(d.Z, {
-                        direction: m ? d.Z.Directions.DOWN : d.Z.Directions.UP,
+                        direction: f ? d.Z.Directions.DOWN : d.Z.Directions.UP,
                         className: u.headerCaret,
                     }),
                 ],
@@ -58,10 +58,10 @@ function m(e) {
                 className: u.progressBarOuter,
                 children: (0, r.jsx)(s.animated.div, {
                     className: u.progressBarInner,
-                    style: b,
+                    style: h,
                 }),
             }),
-            !m &&
+            !f &&
                 n.map((e, t) => {
                     let { title: n, items: l } = e;
                     return (0, r.jsxs)(
@@ -104,7 +104,7 @@ function m(e) {
                                 size: "sm",
                                 text: l,
                                 onClick: a,
-                                disabled: 1 !== h || o,
+                                disabled: 1 !== p || o,
                             }),
                         }),
                     ],

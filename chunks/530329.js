@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(981631),
     p = n(486324),
     g = n(388032),
-    m = n(463339);
+    m = n(295218);
 function h(e) {
     var { uploadType: t, analyticsSource: n, className: l } = e,
         h = (function (e, t) {
@@ -42,8 +42,8 @@ function h(e) {
             });
         }, [t, n]),
         A = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-        j = c.ZP.canUseAnimatedAvatar(A),
-        y = a.useMemo(() => {
+        y = c.ZP.canUseAnimatedAvatar(A),
+        j = a.useMemo(() => {
             switch (t) {
                 case p.pC.AVATAR:
                     return g.intl.format(g.t["pvw/HH"], { onClick: b });
@@ -53,7 +53,7 @@ function h(e) {
                     return "";
             }
         }, [t, b]);
-    return (t !== p.pC.AVATAR && t !== p.pC.BANNER) || (t === p.pC.AVATAR && j)
+    return (t !== p.pC.AVATAR && t !== p.pC.BANNER) || (t === p.pC.AVATAR && y)
         ? null
         : (0, r.jsx)(
               u.p,
@@ -83,7 +83,7 @@ function h(e) {
                   return e;
               })(
                   {
-                      text: y,
+                      text: j,
                       button: g.intl.string(g.t.BmJkbd),
                       buttonAnalyticsObject: { section: f.jXE.USER_PROFILE },
                       className: i()(m.container, l),

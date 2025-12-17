@@ -22,7 +22,7 @@ var r = n(54381),
     g = n(626135),
     E = n(981631),
     b = n(388032),
-    y = n(459931),
+    y = n(867998),
     O = n(740353);
 let v = "VoiceChannelStatusModal",
     S = 500;
@@ -31,8 +31,8 @@ function I(e) {
         C = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         A = (0, o.e7)([m.Z], () => m.Z.getMediaSessionId()),
         [N, P] = i.useState(null != C ? C : ""),
-        [R, D] = i.useState(!1),
-        [w, x] = i.useState(null),
+        [R, w] = i.useState(!1),
+        [D, x] = i.useState(null),
         L = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
         j = N.length > S;
     i.useEffect(() => {
@@ -49,12 +49,12 @@ function I(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, L, t.id);
-                return x(e), D(!1), { hasErrors: !0 };
+                return x(e), w(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === C && T(), null == e || e.preventDefault(), x(null), D(!0);
+            N === C && T(), null == e || e.preventDefault(), x(null), w(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = _.ZP.parse(t, N),
@@ -76,14 +76,14 @@ function I(e) {
                 } catch (e) {
                     M(e);
                 }
-                D(!1);
+                w(!1);
             }
         },
         [G, Z] = i.useState((0, f.JM)(N)),
-        B = (e, t, n) => {
+        F = (e, t, n) => {
             P(t), Z(n);
         },
-        F = async () => (
+        B = async () => (
             j || R || (await U()),
             Promise.resolve({
                 shouldClear: !1,
@@ -92,7 +92,7 @@ function I(e) {
         ),
         V = (0, r.jsx)(a.gNt, {
             label: b.intl.string(b.t.Fq5lwN),
-            errorMessage: w,
+            errorMessage: D,
             children: (0, r.jsx)(p.ZP, {
                 innerClassName: y.textArea,
                 textValue: N,
@@ -100,8 +100,8 @@ function I(e) {
                 placeholder: b.intl.formatToPlainString(b.t.DUXxBh, { channelName: t.name }),
                 focused: !0,
                 channel: t,
-                onChange: B,
-                onSubmit: F,
+                onChange: F,
+                onSubmit: B,
                 type: d.Ie.VOICE_CHANNEL_STATUS,
                 canMentionRoles: !1,
                 canMentionChannels: !1,

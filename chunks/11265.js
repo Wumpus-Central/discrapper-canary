@@ -3,30 +3,30 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(467721),
+    s = n(236726),
     o = n(481060),
     c = n(393238),
     d = n(388032),
-    u = n(165121);
+    u = n(192072);
 let g = i.memo(function (e) {
     var t, n;
     let {
             renderHeader: l,
             children: g,
-            isExpanded: m,
-            isStuck: p,
-            onExpand: f,
-            disableAnimation: h,
-            disableBackground: b,
+            isExpanded: f,
+            isStuck: m,
+            onExpand: b,
+            disableAnimation: p,
+            disableBackground: h,
         } = e,
         [x, j] = i.useState(!0),
-        [_, v] = i.useState(!1),
-        { ref: O, height: C = 0 } = (0, c.ZP)(),
-        { ref: y, height: N = 0 } = (0, c.ZP)(),
-        [E, I] = i.useState(m),
-        S = (0, o.q_F)(
+        [v, O] = i.useState(!1),
+        { ref: C, height: y = 0 } = (0, c.ZP)(),
+        { ref: N, height: E = 0 } = (0, c.ZP)(),
+        [I, S] = i.useState(f),
+        _ = (0, o.q_F)(
             {
-                height: E ? N + C : C,
+                height: I ? E + y : y,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -68,18 +68,18 @@ let g = i.memo(function (e) {
                           }),
                     t),
                 onStart: () => {
-                    v(!1);
+                    O(!1);
                 },
                 onRest: () => {
-                    v(!0);
+                    O(!0);
                 },
             },
-            x || h ? "animate-never" : "respect-motion-settings",
+            x || p ? "animate-never" : "respect-motion-settings",
         );
     return (
         i.useLayoutEffect(() => {
-            v(!1), I(m);
-        }, [m]),
+            O(!1), S(f);
+        }, [f]),
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
                 j(!1);
@@ -88,22 +88,22 @@ let g = i.memo(function (e) {
         }, []),
         (0, r.jsx)(o.P3F, {
             className: a()(u.editCard, {
-                [u.toggled]: m,
-                [u.noBackground]: b,
+                [u.toggled]: f,
+                [u.noBackground]: h,
             }),
             children: (0, r.jsxs)(s.animated.div, {
-                className: a()(u.contentExpandContainer, { [u.showOverflow]: m && _ }),
-                style: S,
+                className: a()(u.contentExpandContainer, { [u.showOverflow]: f && v }),
+                style: _,
                 children: [
                     (0, r.jsx)(o.P3F, {
-                        innerRef: O,
-                        onClick: p ? void 0 : f,
-                        className: a()(u.innerHeader, { [u.toggled]: m && p }),
+                        innerRef: C,
+                        onClick: m ? void 0 : b,
+                        className: a()(u.innerHeader, { [u.toggled]: f && m }),
                         "aria-label": d.intl.string(d.t.dcl9MQ),
                         children: l,
                     }),
                     (0, r.jsx)("div", {
-                        ref: y,
+                        ref: N,
                         children: g,
                     }),
                 ],

@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(442837),
     l = n(481060),
-    c = n(717881),
+    c = n(350922),
     u = n(616780),
     d = n(850827),
     f = n(576855),
@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(871118),
     T = n(981631),
     C = n(388032),
-    A = n(839021);
+    A = n(724506);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -186,7 +186,7 @@ class L extends i.PureComponent {
 }
 function j(e) {
     var { user: t, channel: n } = e,
-        a = w(e, ["user", "channel"]);
+        a = D(e, ["user", "channel"]);
     let [o, l] = (0, s.Wu)([b.Z, h.Z, g.Z, p.default], () => (0, O.p9)(n, b.Z, h.Z, g.Z, p.default)),
         c = (0, s.e7)([_.Z], () => _.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([_.Z], () => _.Z.getActiveStreamForApplicationStream(c)),
@@ -198,7 +198,7 @@ function j(e) {
         (0, u.$)(I, "StreamPreviewPopout"),
         (0, r.jsx)(
             L,
-            D(P({}, a), {
+            w(P({}, a), {
                 canWatch: o,
                 unavailableReason: l,
                 user: t,

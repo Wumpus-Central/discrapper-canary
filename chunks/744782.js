@@ -10,13 +10,13 @@ var r = n(442837),
     u = n(984933),
     d = n(430824),
     g = n(341165),
-    m = n(626135),
-    x = n(572004),
+    x = n(626135),
+    m = n(572004),
     h = n(971130),
     v = n(230900),
-    p = n(981631),
-    f = n(388032),
-    j = n(369702);
+    f = n(981631),
+    p = n(388032),
+    j = n(147373);
 let { INVITE_OPTIONS_7_DAYS: b, INVITE_OPTIONS_UNLIMITED: y } = h.ZP;
 function O(e) {
     var t, n, O;
@@ -43,15 +43,15 @@ function O(e) {
                 : null,
         D = null == k || null == T,
         R = (0, s.Z)(null != k ? k : ""),
-        _ = null != (n = null == T ? void 0 : T.maxAge) ? n : b.value,
-        A = null != (O = null == T ? void 0 : T.maxUses) ? O : y.value;
+        A = null != (n = null == T ? void 0 : T.maxAge) ? n : b.value,
+        _ = null != (O = null == T ? void 0 : T.maxUses) ? O : y.value;
     return (0, l.jsxs)("div", {
         className: j.container,
         children: [
             (0, l.jsx)(i.P3F, {
                 onClick: E,
                 className: j.close,
-                "aria-label": f.intl.string(f.t.cpT0Cq),
+                "aria-label": p.intl.string(p.t.cpT0Cq),
                 children: (0, l.jsx)(i.Dio, {
                     size: "md",
                     color: "currentColor",
@@ -72,13 +72,13 @@ function O(e) {
             (0, l.jsx)(i.Heading, {
                 variant: "heading-xl/semibold",
                 className: j.header,
-                children: f.intl.string(f.t.UzNv7u),
+                children: p.intl.string(p.t.UzNv7u),
             }),
             (0, l.jsx)(i.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
                 className: j.body,
-                children: f.intl.string(f.t.UetJjH),
+                children: p.intl.string(p.t.UetJjH),
             }),
             (0, l.jsxs)("div", {
                 className: j.invite,
@@ -88,13 +88,13 @@ function O(e) {
                         autoFocus: !1,
                         onCopy: (e) => {
                             if (D) return;
-                            (0, x.JG)(e);
+                            (0, m.JG)(e);
                             let t = (0, v.xC)(N.entity_type);
-                            m.default.track(p.rMx.COPY_INSTANT_INVITE, {
+                            x.default.track(f.rMx.COPY_INSTANT_INVITE, {
                                 server: N.guild_id,
                                 channel: I,
                                 channel_type: t,
-                                location: p.t4x.GUILD_EVENTS,
+                                location: f.t4x.GUILD_EVENTS,
                                 code: T.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });
@@ -105,7 +105,7 @@ function O(e) {
                             variant: "text-xs/normal",
                             color: "text-default",
                             className: j.inviteDetail,
-                            children: (0, h.Vg)(_, A),
+                            children: (0, h.Vg)(A, _),
                         }),
                 ],
             }),

@@ -9,42 +9,42 @@ var i = n(54381),
     u = n(607070),
     d = n(768581),
     p = n(176354),
-    h = n(823961),
-    f = n(992970),
+    f = n(823961),
+    h = n(992970),
     m = n(111810),
     g = n(287941),
     b = n(235894),
-    C = n(874341);
+    C = n(858441);
 let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
         y = r.useRef((0, o.random)(-6, 24)).current,
-        _ = (0, s.e7)([h.Z], () => h.Z.confettiMode),
-        v = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        v = (0, s.e7)([f.Z], () => f.Z.confettiMode),
+        x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         O = r.useRef(0),
-        x = r.useRef(null),
         E = r.useRef(null),
-        [j, S] = r.useState(!1),
-        P = r.useMemo(() => !n && !_ && !v, [_, n, v]);
+        j = r.useRef(null),
+        [S, _] = r.useState(!1),
+        P = r.useMemo(() => !n && !v && !x, [v, n, x]);
     if (
         (r.useEffect(() => {
-            n || S(!1), n && _ && S(!0);
-        }, [n, _]),
+            n || _(!1), n && v && _(!0);
+        }, [n, v]),
         r.useEffect(() => {
-            !v &&
-                (j ||
-                    (!1 === n && ((O.current = 0), null != x.current && (clearTimeout(x.current), (x.current = null))),
+            !x &&
+                (S ||
+                    (!1 === n && ((O.current = 0), null != E.current && (clearTimeout(E.current), (E.current = null))),
                     (O.current = Date.now()),
-                    (x.current = setTimeout(() => {
+                    (E.current = setTimeout(() => {
                         let e = O.current;
-                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !_) {
-                            if (null != E.current) {
+                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !v) {
+                            if (null != j.current) {
                                 var i;
                                 let {
                                     x: e,
                                     y: n,
                                     width: r,
                                     height: l,
-                                } = null == (i = E.current) ? void 0 : i.getBoundingClientRect();
+                                } = null == (i = j.current) ? void 0 : i.getBoundingClientRect();
                                 (0, g.Z)(
                                     t,
                                     {
@@ -54,17 +54,17 @@ let y = (e) => {
                                         h: l,
                                     },
                                     !0,
-                                    f.LL.UserTriggered,
+                                    h.LL.UserTriggered,
                                 );
-                            } else (0, g.Z)(t, void 0, !0, f.LL.UserTriggered);
-                            S(!0),
+                            } else (0, g.Z)(t, void 0, !0, h.LL.UserTriggered);
+                            _(!0),
                                 c.Z.dispatch({
                                     type: "POTIONS_SET_CONFETTI_MODE",
                                     enabled: !0,
                                 });
                         }
                     }, 1100))));
-        }, [_, j, n, t, v]),
+        }, [v, S, n, t, x]),
         !(0, m.p7)("Message Confetti Peak") || !(0, b.Uw)(t))
     )
         return null;
@@ -86,26 +86,26 @@ let y = (e) => {
                       forcePNG: !0,
                   });
     return (0, i.jsxs)("div", {
-        ref: E,
+        ref: j,
         className: C.emojiWrapper,
         style: { right: "".concat(256 + y, "px") },
         children: [
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([C.emoji, C.left, P && C.shy, _ && C.confettiMode]),
+                className: a()([C.emoji, C.left, P && C.shy, v && C.confettiMode]),
                 width: 28,
             }),
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([C.emoji, C.right, P && C.shy, _ && C.confettiMode]),
+                className: a()([C.emoji, C.right, P && C.shy, v && C.confettiMode]),
                 width: 26,
             }),
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([C.emoji, C.center, P && C.shy, _ && C.confettiMode]),
+                className: a()([C.emoji, C.center, P && C.shy, v && C.confettiMode]),
                 width: 32,
             }),
         ],

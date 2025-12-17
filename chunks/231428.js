@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -25,9 +25,9 @@ var r,
     C = n(474936),
     A = n(231338),
     N = n(388032),
-    P = n(504333),
-    R = n(982710);
-function D(e, t, n) {
+    P = n(144923),
+    R = n(354351);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -129,7 +129,7 @@ function U(e) {
                 return (0, i.jsx)(
                     b.Z,
                     L(
-                        w(
+                        D(
                             {
                                 className: P.verticalFit,
                                 currentPageIndex: c,
@@ -242,7 +242,7 @@ class G extends (r = a.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), D(this, "scrollerRef", a.createRef());
+        super(...e), w(this, "scrollerRef", a.createRef());
     }
 }
 function Z(e) {
@@ -251,7 +251,7 @@ function Z(e) {
         r = null == (t = e.subscription) ? void 0 : t.items[0].planId;
     return !(null == n || null == r || Object.values(C.Si).includes(n) || (0, S.PV)(r));
 }
-function B(e) {
+function F(e) {
     let t = (0, d.e7)([y.Z], () => y.Z.getPayments()),
         n = (0, d.e7)([v.Z], () => v.Z.getPremiumTypeSubscription()),
         r = a.useMemo(
@@ -286,11 +286,11 @@ function B(e) {
         }, [l, o]),
         (0, i.jsx)(
             G,
-            L(w({}, e), {
+            L(D({}, e), {
                 payments: c,
                 subscription: n,
             }),
         )
     );
 }
-D(G, "defaultProps", { compactMode: !1 });
+w(G, "defaultProps", { compactMode: !1 });

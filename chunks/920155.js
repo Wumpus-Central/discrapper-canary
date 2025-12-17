@@ -1,13 +1,13 @@
 n.d(t, {
     I: () => S,
-    m: () => D,
+    m: () => w,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(945909),
     _ = n(866577),
     m = n(231338),
-    h = n(254477);
+    h = n(770966);
 function g(e, t, n) {
     return (
         t in e
@@ -117,7 +117,7 @@ function R() {
             return 0;
     }
 }
-function D(e) {
+function w(e) {
     var t;
     let {
             children: n,
@@ -126,8 +126,8 @@ function D(e) {
             onRequestClose: g,
             position: b = "top",
             align: v,
-            alignmentStrategy: D = "trigger-center",
-            caretConfig: w,
+            alignmentStrategy: w = "trigger-center",
+            caretConfig: D,
             hasVideo: x = !1,
             gradientColor: L,
             gradientOffsetBottom: j = 0.4,
@@ -136,9 +136,9 @@ function D(e) {
             scrollBehavior: U = "sticky",
             modal: G = !1,
             returnRef: Z,
-            experimental_ignoreModalClicks: B = !0,
+            experimental_ignoreModalClicks: F = !0,
         } = e,
-        [F, V] = i.useState(m),
+        [B, V] = i.useState(m),
         [H, Y] = i.useState(b),
         W = i.useRef(b),
         K = i.useRef(0),
@@ -177,7 +177,7 @@ function D(e) {
             onExitComplete: en,
         }),
         ei = i.useMemo(() => {
-            if ("edge" === D && null != v) {
+            if ("edge" === w && null != v) {
                 let e = "top" === H || "bottom" === H,
                     t = "left" === H || "right" === H;
                 if (e) {
@@ -185,17 +185,17 @@ function D(e) {
                 } else if (t && ("top" === v || "center" === v || "bottom" === v)) return v;
             }
             return "center";
-        }, [D, v, H]),
+        }, [w, v, H]),
         ea = i.useMemo(() => {
             var e;
-            if ("edge" !== D) return R(null != (e = null == w ? void 0 : w.align) ? e : "center", H, q, Q);
-        }, [D, w, H, q, Q]),
+            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", H, q, Q);
+        }, [w, D, H, q, Q]),
         eo = i.useMemo(
             () => ({
                 position: H,
-                caretConfig: null != w ? w : { align: "center" },
+                caretConfig: null != D ? D : { align: "center" },
             }),
-            [H, w],
+            [H, D],
         ),
         es = (e) => {
             var { setPopoutRef: t, position: i, nudge: a } = e,
@@ -243,7 +243,7 @@ function D(e) {
         };
     return (0, r.jsx)(u.H, {
         targetElementRef: a,
-        shouldShow: F,
+        shouldShow: B,
         onRequestClose: g,
         position: H,
         align: ei,
@@ -256,7 +256,7 @@ function D(e) {
         autoInvert: !0,
         nudgeAlignIntoViewport: "top" === H || "bottom" === H,
         closeOnClickOutside: !1,
-        ignoreModalClicks: B,
+        ignoreModalClicks: F,
         scrollBehavior: U,
         renderPopout: es,
         children: P,

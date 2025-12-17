@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(692547),
     c = n(28664),
     u = n(481060),
@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(324805),
     T = n(231338),
     C = n(388032),
-    A = n(451882);
+    A = n(565408);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-let w = (0, s.animated)(u.CJ0),
+let D = (0, s.animated)(u.CJ0),
     x = (e) => {
         var t;
         let {
@@ -92,8 +92,8 @@ let w = (0, s.animated)(u.CJ0),
                 toggleExpanded: U,
                 sourceQuestContent: G,
             } = e,
-            { ref: Z, height: B } = (0, d.ZP)(),
-            [F, V] = i.useState(null),
+            { ref: Z, height: F } = (0, d.ZP)(),
+            [B, V] = i.useState(null),
             [H, Y] = i.useState(null),
             W = (0, p.Z)((e) => {
                 let t = e.target;
@@ -120,7 +120,7 @@ let w = (0, s.animated)(u.CJ0),
                         sourceQuestContent: G,
                     });
             },
-            er = () => null != F && null != H && F < H,
+            er = () => null != B && null != H && B < H,
             ei = (0, r.jsx)(y.ZP, {
                 className: A.partnerBranding,
                 logotypeClassName: et ? A.partnerBrandingLogotypes : void 0,
@@ -137,7 +137,7 @@ let w = (0, s.animated)(u.CJ0),
                 [A.outerContainerXs]: "xs" === R,
             }),
             "aria-label": C.intl.string(C.t.dcl9MQ),
-            style: { height: z ? B : void 0 },
+            style: { height: z ? F : void 0 },
             children: [
                 (0, r.jsx)(E.Z, {
                     quest: a,
@@ -300,7 +300,7 @@ let w = (0, s.animated)(u.CJ0),
                                             "aria-hidden": !L && !j,
                                             children: (0, r.jsx)(
                                                 u.P3F,
-                                                D(P({}, e), {
+                                                w(P({}, e), {
                                                     className: A.iconWrapper,
                                                     "aria-label": C.intl.string(C.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {
@@ -316,7 +316,7 @@ let w = (0, s.animated)(u.CJ0),
                                         onClick: en,
                                         className: A.iconWrapper,
                                         "aria-label": j ? C.intl.string(C.t.iTcuma) : C.intl.string(C.t.dcl9MQ),
-                                        children: (0, r.jsx)(w, {
+                                        children: (0, r.jsx)(D, {
                                             style: {
                                                 rotate: x.to({
                                                     range: [0, 1],

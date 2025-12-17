@@ -60,16 +60,16 @@ function I(e) {
             cardHeight: N,
             thumbnailHeight: P,
             descriptionTextVariant: R = "text-sm/normal",
-            showOpaqueBackground: D = !1,
+            showOpaqueBackground: w = !1,
         } = e,
-        w = (0, i.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        D = (0, i.e7)([u.Z], () => u.Z.getGuild(n), [n]),
         x = (0, i.e7)([c.Z], () => {
             var e;
             return c.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : y.lds);
         }),
         L = (0, o.U)(t, S),
         j = (0, h.C)(t),
-        M = (0, f.SO)(w),
+        M = (0, f.SO)(D),
         { shouldHideGuildPurchaseEntryPoints: k } = (0, l.uP)(n),
         U = (0, h.k)(t),
         G = (0, E.Z)({
@@ -77,17 +77,17 @@ function I(e) {
             guildProductListingId: t.id,
             sourceAnalyticsLocations: O,
         });
-    if (null == w || k) return null;
+    if (null == D || k) return null;
     let Z = () =>
             (0, b.e)({
                 guildId: n,
                 guildProductListingId: t.id,
                 analyticsLocation: O,
             }),
-        B = () => {
-            _.h(w.id, t.id);
-        },
         F = () => {
+            _.h(D.id, t.id);
+        },
+        B = () => {
             (0, s.x)({ listing: t });
         },
         V = () => {
@@ -102,10 +102,10 @@ function I(e) {
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: M ? B : () => {},
+            onEditProduct: M ? F : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
-            onReportProduct: F,
+            onReportProduct: B,
             onCopyProductLink: V,
             onTestDownload: () => {},
         });
@@ -123,7 +123,7 @@ function I(e) {
             onShowFullDescription: Z,
             onTapCard: Z,
             actionMenu: H,
-            showOpaqueBackground: D,
+            showOpaqueBackground: w,
             hideRoleTag: T,
             lineClamp: C,
             cardWidth: A,

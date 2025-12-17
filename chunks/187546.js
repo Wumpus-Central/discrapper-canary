@@ -1,12 +1,12 @@
 n.d(t, { Z: () => o });
-var r = n(54381);
+var a = n(54381);
 n(473749);
-var i = n(724908),
-    a = n(913437);
+var r = n(724908),
+    i = n(353844);
 function o(e) {
     let { rewardName: t, children: n } = e;
-    return (0, r.jsxs)("div", {
-        className: a.container,
-        children: [(0, r.jsx)(i.A, { rewardName: t }), n],
+    return (0, a.jsxs)("div", {
+        className: i.container,
+        children: [(0, a.jsx)(r.A, { rewardName: t }), n],
     });
 }

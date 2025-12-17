@@ -1,3 +1,3 @@
-r.d(t, { R: () => n });
-var a,
-    n = (((a = {})[(a.CONFIRM = 1)] = "CONFIRM"), (a[(a.SUCCESS = 2)] = "SUCCESS"), a);
+a.d(t, { R: () => n });
+var r,
+    n = (((r = {})[(r.CONFIRM = 1)] = "CONFIRM"), (r[(r.SUCCESS = 2)] = "SUCCESS"), r);

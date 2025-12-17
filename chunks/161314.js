@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(886176),
     S = n(981631),
     I = n(388032),
-    T = n(736636);
+    T = n(587435);
 function C(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function N(e) {
         { loading: C, subscriptionsSettings: N } = (0, y.H)(n),
         { listingsLoaded: P } = (0, m.eD)(n),
         R = (0, m.ue)(n, { publishedOnly: !0 }),
-        D = i.useCallback(async () => {
+        w = i.useCallback(async () => {
             b.default.track(S.rMx.GUILD_SHOP_EMBED_CLICKED, A({}, (0, f.hH)(n))), await (0, h.Z)(S.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, p.Z)(
@@ -68,7 +68,7 @@ function N(e) {
         },
         { disableTrack: null == a },
     );
-    let w = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
+    let D = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
     return C || !P
         ? (0, r.jsx)("div", {
               className: o()(T.guildShopEmbed, T.spinnerContainer),
@@ -127,13 +127,13 @@ function N(e) {
                                             children: I.intl.format(I.t.tKZNlb, { listingCount: R.length }),
                                         }),
                                     }),
-                                    null != w &&
+                                    null != D &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children: I.intl.format(I.t["kXr8+b"], {
-                                                    createdYear: w.getFullYear(),
+                                                    createdYear: D.getFullYear(),
                                                 }),
                                             }),
                                         }),
@@ -142,7 +142,7 @@ function N(e) {
                             (0, r.jsx)("div", {
                                 className: T.guildShopEmbedCta,
                                 children: (0, r.jsx)(u.zxk, {
-                                    onClick: D,
+                                    onClick: w,
                                     icon: v.P,
                                     text: I.intl.string(I.t.jXx1CC),
                                 }),

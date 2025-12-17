@@ -6,11 +6,11 @@ var r = n(54381),
     s = n(481060),
     o = n(730671),
     c = n(388032),
-    d = n(554867);
+    d = n(773655);
 function u(e) {
-    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: g, initialValue: m } = e,
-        p = i.useMemo(() => (null != m ? m : []), [m]),
-        { value: f, onChange: h, errorMessage: b } = (0, o.Z)(t, m, n);
+    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: g, initialValue: f } = e,
+        m = i.useMemo(() => (null != f ? f : []), [f]),
+        { value: b, onChange: p, errorMessage: h } = (0, o.Z)(t, f, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -18,24 +18,24 @@ function u(e) {
                 children: [
                     (0, r.jsx)(s.lcI, {
                         className: a()(d.keywordsTextArea, u),
-                        value: f,
-                        onChange: h,
+                        value: b,
+                        onChange: p,
                         placeholder: c.intl.string(c.t.UyaxJy),
                     }),
                     (0, r.jsx)(s.Text, {
                         className: d.keywordsCounter,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: "".concat(p.length, " / ").concat(n),
+                        children: "".concat(m.length, " / ").concat(n),
                     }),
                 ],
             }),
-            null != b
+            null != h
                 ? (0, r.jsx)(s.Text, {
                       className: a()(d.paddingTop, d.errorText),
                       variant: "text-xs/medium",
                       color: "text-feedback-critical",
-                      children: b,
+                      children: h,
                   })
                 : (0, r.jsx)(s.Text, {
                       className: d.paddingTop,

@@ -6,10 +6,10 @@ var r = a(54111),
     l = a(982905),
     i = a(66037),
     o = a(231338),
-    c = a(614537);
+    c = a(545438);
 let d = o.j_.MAIN_NAVIGATION_MENU;
 function u(e) {
-    let { isOpen: t, dropdownLinks: a, TrackClick: u, avoidRouter: _, id: N, "aria-label": m } = e,
+    let { isOpen: t, dropdownLinks: a, TrackClick: u, avoidRouter: N, id: m, "aria-label": f } = e,
         p = (0, s.fQ)({ history: (0, r.k6)() }),
         h = a.map((e, t) =>
             e.divider
@@ -38,7 +38,7 @@ function u(e) {
                         {
                             className: (0, l.l)(c, "moreListItem", p(e.route) ? "Active" : "Inactive"),
                             children: (0, n.jsx)(i.Z, {
-                                avoidRouter: _,
+                                avoidRouter: N,
                                 className: c.moreListLink,
                                 to: e.route,
                                 from: o.j_.MAIN_NAVIGATION_MENU,
@@ -56,9 +56,9 @@ function u(e) {
                     ),
         );
     return (0, n.jsx)("ul", {
-        id: N,
+        id: m,
         className: (0, l.l)(c, "moreList", t ? "Open" : "Closed"),
-        "aria-label": m,
+        "aria-label": f,
         children: h,
     });
 }

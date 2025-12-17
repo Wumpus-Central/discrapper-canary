@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(442837),
     l = n(704215),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(266454),
     c = n(554747),
     u = n(306680),
@@ -12,8 +12,8 @@ var i = n(442837),
     f = n(434479),
     h = n(490897),
     p = n(388032),
-    g = n(509612);
-function m(e) {
+    g = n(323453);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { guild: t, selected: _ } = e,
-        { hasUnread: y, mentionCount: O } = (0, i.cj)(
+function y(e) {
+    let { guild: t, selected: y } = e,
+        { hasUnread: O, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
@@ -66,40 +66,40 @@ function _(e) {
             }),
             [t.id],
         ),
-        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function j() {
-        await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
-            return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
+        j = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function C() {
+        await (0, a.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("27097")]).then(n.bind(n, 17671));
+            return (n) => (0, r.jsx)(e, m(b({}, n), { guildId: t.id }));
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? p.intl.formatToPlainString(p.t.IBdqSu, { number: x.length }) : p.intl.string(p.t.tlopTM);
+        E = x.length > 0 ? p.intl.formatToPlainString(p.t.IBdqSu, { number: x.length }) : p.intl.string(p.t.tlopTM);
     return (0, r.jsx)(f.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
-            (0, r.jsx)(o.Que, {
+            (0, r.jsx)(a.Que, {
                 size: "md",
                 color: "currentColor",
                 className: e,
             }),
-        text: C,
-        selected: _,
-        onClick: j,
+        text: E,
+        selected: y,
+        onClick: C,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, o.jW)(e, async () => {
                 let { default: e } = await n.e("95307").then(n.bind(n, 867757));
-                return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
+                return (n) => (0, r.jsx)(e, m(b({}, n), { guildId: t.id }));
             });
         },
-        showUnread: y && !v,
+        showUnread: O && !j,
         trailing:
-            !v && O > 0
-                ? (0, r.jsx)(o.mAB, {
+            !j && v > 0
+                ? (0, r.jsx)(a.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: O,
+                      count: v,
                   })
                 : null,
     });

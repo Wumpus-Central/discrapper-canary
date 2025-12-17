@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(430824),
     d = n(563132),
     m = n(409813),
-    p = n(586585),
-    f = n(614277),
+    f = n(586585),
+    p = n(614277),
     b = n(750143),
     h = n(388032);
 function g(e) {
@@ -23,7 +23,7 @@ function g(e) {
     let S = (0, o.KW)(x.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.C3, {
+            (0, i.jsx)(p.C3, {
                 children: y
                     ? (0, i.jsx)(c.h, {
                           confirmCta: h.intl.string(h.t.PBHFSq),
@@ -47,12 +47,12 @@ function g(e) {
                       }),
             }),
             !y &&
-                (0, i.jsx)(f.O3, {
-                    children: (0, i.jsx)(p.Z, {
+                (0, i.jsx)(p.O3, {
+                    children: (0, i.jsx)(f.Z, {
                         onBack: n,
                         backText: h.intl.string(h.t.TQBY1J),
                         onPrimary: C,
-                        primaryCTA: p.g.CONTINUE,
+                        primaryCTA: f.g.CONTINUE,
                         primaryText: h.intl.string(h.t["gZhF+3"]),
                     }),
                 }),

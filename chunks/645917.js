@@ -12,7 +12,7 @@ var r = n(54381),
     c = n(966902),
     u = n(237872),
     d = n(481060),
-    f = n(420153);
+    f = n(718786);
 function p(e, t, n) {
     return (
         t in e
@@ -143,9 +143,9 @@ function y(e) {
             "returnRef",
             "onNudgeChange",
         ]);
-    let [D, w] = i.useState(null != v ? v : "top");
+    let [w, D] = i.useState(null != v ? v : "top");
     i.useEffect(() => {
-        null != v && w(v);
+        null != v && D(v);
     }, [v]);
     let x = i.useMemo(() => {
             var e;
@@ -164,7 +164,7 @@ function y(e) {
             [O],
         ),
         M = i.useCallback((e) => {
-            w(e);
+            D(e);
         }, []),
         k = C ? f.caretHoverable : void 0,
         U = _(
@@ -172,7 +172,7 @@ function y(e) {
                 targetElementRef: R.targetElementRef,
                 shouldShow: R.shouldShow,
                 hasVideo: R.hasVideo,
-                position: D,
+                position: w,
                 caretConfig: x,
                 onRequestClose: L,
                 gradientColor: y,

@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(731722),
     p = n(131085),
     _ = n(388032),
-    m = n(713328),
-    h = n(655262);
+    m = n(551199),
+    h = n(261905);
 function g(e, t, n) {
     return (
         t in e
@@ -122,13 +122,13 @@ let b = i.memo(function (e) {
             A = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
             N = (0, s.e7)([u.Z], () => u.Z.theme),
             P = null != (t = null == A ? void 0 : A.primaryGuild) ? t : n,
-            { tag: R, badge: D, guildId: w } = (0, f.Pb)(P);
-        return (0, f.yF)(a, p) && null != w
+            { tag: R, badge: w, guildId: D } = (0, f.Pb)(P);
+        return (0, f.yF)(a, p) && null != D
             ? v
                 ? (0, r.jsx)(y, {
-                      guildId: w,
+                      guildId: D,
                       guildTag: R,
-                      guildBadge: D,
+                      guildBadge: w,
                       className: o()(h.noTooltip, _),
                       textVariant: g,
                       textColor: b,
@@ -138,7 +138,7 @@ let b = i.memo(function (e) {
                 : (0, r.jsx)(l.ze6, {
                       theme: N,
                       children: (0, r.jsx)(c.Z, {
-                          guildId: w,
+                          guildId: D,
                           onRequestOpen: I,
                           onClose: T,
                           targetElementRef: C,
@@ -150,9 +150,9 @@ let b = i.memo(function (e) {
                                       y,
                                       E(
                                           {
-                                              guildId: w,
+                                              guildId: D,
                                               guildTag: R,
-                                              guildBadge: D,
+                                              guildBadge: w,
                                               className: _,
                                               textVariant: g,
                                               textColor: b,

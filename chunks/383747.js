@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(54381),
     i = n(481060),
     l = n(410030),
     a = n(388032);
-function s(e) {
+function o(e) {
     let { onClick: t } = e,
-        s = (0, l.ZP)();
+        o = (0, l.ZP)();
     return (0, r.jsxs)(i.ubH, {
-        theme: s,
+        theme: o,
         children: [
             (0, r.jsx)(i.oxh, {
                 lightSrc: n(979770),

@@ -9,33 +9,33 @@ var r,
     u = n(752048),
     d = n(131704),
     p = n(624138),
-    h = n(51144),
-    f = n(592125),
+    f = n(51144),
+    h = n(592125),
     m = n(480294),
     g = n(580005),
     b = n(699516),
     C = n(594174),
     y = n(981631);
-let _ = !1,
-    v = "",
+let v = !1,
+    x = "",
     O = 0,
-    x = [],
-    E = !1,
-    j = new Set(),
-    S = null;
+    E = [],
+    j = !1,
+    S = new Set(),
+    _ = null;
 function P() {
-    (v = ""), (O = 0), (x = []), (j = new Set()), (_ = !1), (S = null);
+    (x = ""), (O = 0), (E = []), (S = new Set()), (v = !1), (_ = null);
 }
 function I(e) {
-    (v = e), (O = 0), Z();
+    (x = e), (O = 0), Z();
 }
 function Z() {
-    if (!_) return !1;
-    let e = f.Z.getChannel(S);
-    if (0 === v.trim().length)
+    if (!v) return !1;
+    let e = h.Z.getChannel(_);
+    if (0 === x.trim().length)
         return (
             null != i && i.clearQuery(),
-            (x = (function (e) {
+            (E = (function (e) {
                 let t = b.Z.getFriendIDs(),
                     n = C.default.getCurrentUser();
                 return (
@@ -55,7 +55,7 @@ function Z() {
                                     n.isProvisional ||
                                     e.push({
                                         user: n,
-                                        comparator: h.ZP.getName(n),
+                                        comparator: f.ZP.getName(n),
                                     }),
                                 e
                             );
@@ -71,7 +71,7 @@ function Z() {
         let e = C.default.getCurrentUser(),
             r = null != (n = null == e ? void 0 : e.isStaff()) && n;
         i.setQuery({
-            query: v,
+            query: x,
             filters: {
                 friends: !0,
                 staff: r,
@@ -92,7 +92,7 @@ function Z() {
                         let i = g.Z.getScoreWithoutFetchingLatest(e.id),
                             r = e.getRecipientId(),
                             l = 0.2 * !!b.Z.isFriend(r),
-                            a = 0.1 * (null != f.Z.getDMFromUserId(r));
+                            a = 0.1 * (null != h.Z.getDMFromUserId(r));
                         n[r] = 1 + i / t + l + a;
                     }),
                     n
@@ -103,9 +103,9 @@ function Z() {
     return !1;
 }
 function T() {
-    if (!_) return !1;
-    let e = E;
-    return (E = b.Z.getFriendCount() > 0) !== e;
+    if (!v) return !1;
+    let e = j;
+    return (j = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
     if (m.Z.hasConsented(y.pjP.PERSONALIZATION)) {
@@ -120,13 +120,13 @@ function N(e, t) {
                     : 0;
         if (a !== o) return o - a;
     }
-    return (0, p._I)(h.ZP.getName(e.user).toLocaleLowerCase()).localeCompare(
-        (0, p._I)(h.ZP.getName(t.user).toLocaleLowerCase()),
+    return (0, p._I)(f.ZP.getName(e.user).toLocaleLowerCase()).localeCompare(
+        (0, p._I)(f.ZP.getName(t.user).toLocaleLowerCase()),
     );
 }
 function A(e) {
     let { results: t } = e;
-    if (!_ || "" === v) return;
+    if (!v || "" === x) return;
     let n = [];
     for (let { id: e, comparator: i } of t) {
         let t = C.default.getUser(e);
@@ -136,14 +136,14 @@ function A(e) {
                 comparator: i,
             });
     }
-    (x = n), k.emitChange();
+    (E = n), k.emitChange();
 }
 function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
 }
 function M(e) {
     if (e.key !== y.vTt) return !1;
-    (_ = !0), T(), (i = w()), (S = null), I("");
+    (v = !0), T(), (i = w()), (_ = null), I("");
 }
 function R(e) {
     if (e.key !== y.vTt) return !1;
@@ -154,29 +154,29 @@ function L() {
 }
 class D extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, C.default),
-            this.syncWith([C.default, f.Z], Z),
+        this.waitFor(h.Z, m.Z, c.Z, g.Z, b.Z, u.Z, C.default),
+            this.syncWith([C.default, h.Z], Z),
             this.syncWith([b.Z], T);
     }
     getResults() {
-        return x;
-    }
-    hasFriends() {
         return E;
     }
-    getSelectedUsers() {
+    hasFriends() {
         return j;
     }
+    getSelectedUsers() {
+        return S;
+    }
     getQuery() {
-        return v;
+        return x;
     }
     getState() {
         return {
-            query: v,
+            query: x,
             selectedRow: O,
-            selectedUsers: j,
-            results: x,
-            hasFriends: E,
+            selectedUsers: S,
+            results: E,
+            hasFriends: j,
         };
     }
 }
@@ -195,30 +195,30 @@ let k = new D(o.Z, {
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
-            let i = _;
-            return P(), (_ = i), (S = n), Z();
+            let i = v;
+            return P(), (v = i), (_ = n), Z();
         },
         MODAL_PUSH: M,
         SHOW_ACTION_SHEET: M,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (_ = !0), T(), (i = w()), (S = e.channelId), I("");
+            (v = !0), T(), (i = w()), (_ = e.channelId), I("");
         },
         MODAL_POP: R,
         HIDE_ACTION_SHEET: R,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (S = e.channelId), I(e.query);
+            (_ = e.channelId), I(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             O = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            j.add(t), (j = new Set(j));
+            S.add(t), (S = new Set(S));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            j.delete(t), (j = new Set(j));
+            S.delete(t), (S = new Set(S));
         },
     }),
     U = k;

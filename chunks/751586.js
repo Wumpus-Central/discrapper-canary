@@ -6,8 +6,8 @@ var r = n(54381),
     i = n(442837),
     l = n(616022),
     a = n(564034),
-    s = n(649424),
-    o = n(176168),
+    o = n(649424),
+    s = n(176168),
     c = n(234086),
     u = n(17057),
     d = n(70621),
@@ -50,7 +50,7 @@ let h = (e) => {
         children: [
             g("quest_bar") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(o.Z, { quest: f }), (0, r.jsx)(a.i, {})],
+                    children: [(0, r.jsx)(s.Z, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
             g("home_card") &&
                 (0, r.jsxs)(r.Fragment, {
@@ -70,7 +70,7 @@ let h = (e) => {
                 }),
             g("activity_panel") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(s.Z, { quest: f }), (0, r.jsx)(a.i, {})],
+                    children: [(0, r.jsx)(o.Z, { quest: f }), (0, r.jsx)(a.i, {})],
                 }),
         ],
     });

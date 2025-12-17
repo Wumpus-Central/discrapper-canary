@@ -1,4 +1,4 @@
-n.d(t, { getApplicationPaymentSteps: () => p }), n(388685);
+n.d(t, { getApplicationPaymentSteps: () => f }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(409813),
@@ -34,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function p(e) {
+function f(e) {
     let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {

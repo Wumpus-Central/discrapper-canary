@@ -13,13 +13,13 @@ var r = n(54381),
     h = n(585483),
     f = n(669079),
     g = n(296848),
-    j = n(987209),
-    y = n(563132),
+    y = n(987209),
+    j = n(563132),
     v = n(107998),
     b = n(614277),
     O = n(400981),
-    P = n(435020),
-    S = n(698708),
+    S = n(435020),
+    P = n(698708),
     x = n(981631),
     E = n(921944);
 function w(e) {
@@ -59,8 +59,8 @@ function I(e) {
             continueSessionToInitialStep: M,
         } = e,
         {
-            activeSubscription: R,
-            paymentSources: _,
+            activeSubscription: _,
+            paymentSources: R,
             paymentSourceId: A,
             selectedPlan: L,
             selectedSkuId: Z,
@@ -68,10 +68,10 @@ function I(e) {
             updatedSubscription: F,
             startingPremiumSubscriptionPlanIdRef: G,
             startingFractionalPremiumEndsAtRef: B,
-            isPremiumGroupPurchase: H,
-        } = (0, y.JL)(),
+            isPremiumGroupPurchase: U,
+        } = (0, j.JL)(),
         {
-            isGift: U,
+            isGift: H,
             giftRecipient: z,
             giftCode: K,
             hasSentMessage: W,
@@ -79,14 +79,14 @@ function I(e) {
             sendGiftMessage: Y,
             claimableRewards: q,
             selectedGiftingPromotionReward: J,
-        } = (0, j.wD)(),
+        } = (0, y.wD)(),
         { confirmationFooter: Q } = (0, v.zb)(),
-        X = (0, d.id)(L, U, q),
+        X = (0, d.id)(L, H, q),
         $ = (0, c.Z)(),
         ee = (0, d.a5)(L),
         et = (0, d.tK)(null == J ? void 0 : J.skuId),
-        en = (0, P.$)(_, A),
-        er = U && null != J && ee;
+        en = (0, S.$)(R, A),
+        er = H && null != J && ee;
     a()(null != L, "Expected plan to selected"),
         a()(null != Z, "Expected selectedSkuId"),
         a()(null != D, "Step should be set");
@@ -95,7 +95,7 @@ function I(e) {
     }, [i, T]);
     l.useEffect(() => {
         function e() {
-            H &&
+            U &&
                 null != F &&
                 F.hasAnyPremiumGroup &&
                 (0, o.ZDy)(async () => {
@@ -129,10 +129,10 @@ function I(e) {
                 h.S.unsubscribe(x.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [H, F]),
+    }, [U, F]),
         l.useEffect(() => {
-            !U || null == z || null == K || W || V || (0, f.pO)(z) || Y({ onSubscriptionConfirmation: T });
-        }, [Y, U, z, K, W, V, T]),
+            !H || null == z || null == K || W || V || (0, f.pO)(z) || Y({ onSubscriptionConfirmation: T });
+        }, [Y, H, z, K, W, V, T]),
         l.useEffect(() => {
             null != $ &&
                 null != $.reminderNotice &&
@@ -141,7 +141,7 @@ function I(e) {
         }, [$, X]);
     let ei = null != M ? m.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != k) t = k(L, el, F);
-    else if (U)
+    else if (H)
         t = (0, r.jsx)(m.TB, {
             planId: L.id,
             onClose: el,
@@ -153,7 +153,7 @@ function I(e) {
                 : {
                       followupSKUInfo: N,
                       startingPremiumSubscriptionPlanId: G.current,
-                      isDowngrade: null != R && (0, g.GY)(R, L.id, I),
+                      isDowngrade: null != _ && (0, g.GY)(_, L.id, I),
                   };
         t = (0, r.jsx)(
             m.ZP,
@@ -173,7 +173,7 @@ function I(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(b.C3, {
-                children: [(0, r.jsx)(S.Z, {}), t],
+                children: [(0, r.jsx)(P.Z, {}), t],
             }),
             null != Q && Q,
             er &&

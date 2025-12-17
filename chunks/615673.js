@@ -1,10 +1,10 @@
 n.d(t, {
-    Cp: () => F,
+    Cp: () => B,
     Me: () => M,
     RR: () => Z,
     X5: () => U,
     cv: () => k,
-    dp: () => B,
+    dp: () => F,
     dr: () => V,
     oo: () => H,
     uY: () => G,
@@ -319,7 +319,7 @@ function R(e, t) {
     for (; r && (0, a.Ze)(r) && N(r); ) r = P(r, t);
     return r && (0, a.Py)(r) && N(r) && !(0, a.hT)(r) ? n : r || (0, a.gQ)(e) || n;
 }
-let D = async function (e) {
+let w = async function (e) {
     let t = this.getOffsetParent || R,
         n = this.getDimensions,
         r = await n(e.floating);
@@ -333,7 +333,7 @@ let D = async function (e) {
         },
     };
 };
-function w(e) {
+function D(e) {
     return "rtl" === (0, a.Dx)(e).direction;
 }
 let x = {
@@ -341,12 +341,12 @@ let x = {
     getDocumentElement: a.tF,
     getClippingRect: T,
     getOffsetParent: R,
-    getElementRects: D,
+    getElementRects: w,
     getClientRects: h,
     getDimensions: C,
     getScale: l,
     isElement: a.kK,
-    isRTL: w,
+    isRTL: D,
 };
 function L(e, t) {
     return e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height;
@@ -454,8 +454,8 @@ let k = i.cv,
     U = i.X5,
     G = i.uY,
     Z = i.RR,
-    B = i.dp,
-    F = i.Cp,
+    F = i.dp,
+    B = i.Cp,
     V = i.dr,
     H = (e, t, n) => {
         let r = new Map(),

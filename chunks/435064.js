@@ -76,8 +76,8 @@ let y = "default",
     N = null,
     P = [],
     R = null,
-    D = {},
-    w = new Map(),
+    w = {},
+    D = new Map(),
     x = {
         clipsEnabled: !1,
         storageLocation: y,
@@ -158,8 +158,8 @@ function G(e) {
         var i;
         let e = Date.now();
         (R = null != R ? R : e),
-            (D[n] = [
-                ...(null != (i = D[n]) ? i : []),
+            (w[n] = [
+                ...(null != (i = w[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r,
@@ -169,12 +169,12 @@ function G(e) {
 }
 function Z(e) {
     let { streamKey: t, timestamp: n } = e;
-    R === n && (R = null), null == n ? (D[t] = []) : (D[t] = D[t].filter((e) => e.timestamp !== n));
+    R === n && (R = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
 }
-function B() {
+function F() {
     I = Math.max(I - 1, 0);
 }
-function F(e) {
+function B(e) {
     var t, n;
     let { clip: r } = e;
     (I = Math.max(I - 1, 0)),
@@ -250,7 +250,7 @@ function q(e) {
 }
 function Q(e) {
     let { streamKey: t } = e;
-    if (((R = null), (D[t] = []), null == C || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
+    if (((R = null), (w[t] = []), null == C || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
     C = 0 === C.newClipIds.length ? null : b(g({}, C), { ended: !0 });
 }
 function X(e) {
@@ -308,8 +308,8 @@ function ea(e, t, n) {
             a = t.substring(n),
             o = JSON.parse(a);
         if (null == o.id) return !1;
-        let s = w.get(e);
-        return null == s && ((s = new Set()), w.set(e, s)), s.add(o.id), !0;
+        let s = D.get(e);
+        return null == s && ((s = new Set()), D.set(e, s)), s.add(o.id), !0;
     } catch (e) {
         return !1;
     }
@@ -353,10 +353,10 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = D[e]) ? t : O;
+        return null != (t = w[e]) ? t : O;
     }
     hasAnyClipAnimations() {
-        return Object.values(D).some((e) => e.length > 0);
+        return Object.values(w).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return L.hardwareClassification;
@@ -416,7 +416,7 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
     }
     wasClipSharedInChannel(e, t) {
         var n;
-        let r = w.get(t);
+        let r = D.get(t);
         return null != (n = null == r ? void 0 : r.has(e)) && n;
     }
 }
@@ -522,11 +522,11 @@ h(el, "displayName", "ClipsStore"),
     ]);
 let ec = new el(o.Z, {
         CLIPS_SETTINGS_UPDATE: U,
-        CLIPS_SAVE_CLIP: F,
+        CLIPS_SAVE_CLIP: B,
         CLIPS_SAVE_CLIP_PLACEHOLDER: V,
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: H,
         CLIPS_SAVE_CLIP_START: G,
-        CLIPS_SAVE_CLIP_ERROR: B,
+        CLIPS_SAVE_CLIP_ERROR: F,
         CLIPS_SAVE_ANIMATION_END: Z,
         STREAM_START: q,
         STREAM_STOP: Q,

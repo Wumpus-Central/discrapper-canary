@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(953529), n(388685);
+n.d(t, { Z: () => f }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,18 +8,18 @@ var r = n(54381),
     c = n(259580),
     d = n(404203),
     u = n(388032),
-    g = n(717795);
-function m(e) {
-    let { intiallyExpanded: t = !1, title: n, description: l, children: m } = e,
-        [p, f] = i.useState(t),
-        h = () => f((e) => !e),
-        b = (0, o.Dt)();
+    g = n(618374);
+function f(e) {
+    let { intiallyExpanded: t = !1, title: n, description: l, children: f } = e,
+        [m, b] = i.useState(t),
+        p = () => b((e) => !e),
+        h = (0, o.Dt)();
     return (0, r.jsxs)("div", {
         className: g.container,
         children: [
             (0, r.jsx)(d.Z, {
-                className: a()(g.header, { [g.headerWithDescription]: p && null != l }),
-                onClick: h,
+                className: a()(g.header, { [g.headerWithDescription]: m && null != l }),
+                onClick: p,
                 children: (e) => {
                     let { areaRef: t, handleStopPropagation: i } = e;
                     return (0, r.jsxs)(r.Fragment, {
@@ -29,23 +29,23 @@ function m(e) {
                                 children: n,
                             }),
                             (0, r.jsx)(s.P3F, {
-                                onClick: i(h),
+                                onClick: i(p),
                                 "aria-label": u.intl.string(u.t.e5eQOy),
-                                "aria-controls": b,
-                                "aria-expanded": p,
+                                "aria-controls": h,
+                                "aria-expanded": m,
                                 focusProps: { ringTarget: t },
                                 children: (0, r.jsx)(c.Z, {
                                     className: g.caret,
-                                    direction: p ? c.Z.Directions.UP : c.Z.Directions.DOWN,
+                                    direction: m ? c.Z.Directions.UP : c.Z.Directions.DOWN,
                                 }),
                             }),
                         ],
                     });
                 },
             }),
-            p &&
+            m &&
                 (0, r.jsxs)("div", {
-                    id: b,
+                    id: h,
                     children: [
                         null != l &&
                             (0, r.jsx)(s.Text, {
@@ -56,7 +56,7 @@ function m(e) {
                         (0, r.jsx)("div", { className: g.divider }),
                         (0, r.jsx)("div", {
                             className: g.content,
-                            children: m,
+                            children: f,
                         }),
                     ],
                 }),

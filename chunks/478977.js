@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d });
 var a = n(54381),
     r = n(473749),
-    i = n(866442),
-    l = n(481060),
-    s = n(188764);
+    l = n(866442),
+    i = n(481060),
+    s = n(607814);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,28 +50,28 @@ function c(e, t) {
 let d = function (e) {
     let { colorKey: t, value: n, onChange: d, title: u } = e,
         m = r.useRef(null);
-    return (0, a.jsx)(l.gNt, {
+    return (0, a.jsx)(i.gNt, {
         label: u,
-        children: (0, a.jsx)(l.yRy, {
+        children: (0, a.jsx)(i.yRy, {
             targetElementRef: m,
             renderPopout: (e) =>
                 (0, a.jsx)(
-                    l.Z$W,
+                    i.Z$W,
                     c(o({}, e), {
                         value: n,
-                        onChange: (e) => d(t, (0, i.Rf)(e)),
+                        onChange: (e) => d(t, (0, l.Rf)(e)),
                     }),
                 ),
             children: (e) =>
                 (0, a.jsx)(
-                    l.P3F,
+                    i.P3F,
                     c(o({}, e), {
                         innerRef: m,
                         tag: "span",
                         "aria-label": "Select a color",
                         className: s.swatchContainer,
                         style: { backgroundColor: n },
-                        children: (0, a.jsx)(l.ilE, {
+                        children: (0, a.jsx)(i.ilE, {
                             size: "xs",
                             color: "currentColor",
                             className: s.swatchIcon,

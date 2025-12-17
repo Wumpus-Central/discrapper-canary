@@ -1,79 +1,79 @@
 r.d(t, { default: () => u }), r(388685);
 var n = r(54381),
-    i = r(473749),
-    o = r(481060),
-    c = r(985002),
+    o = r(473749),
+    c = r(481060),
+    i = r(985002),
     l = r(957656),
-    a = r(225753),
-    s = r(388032),
-    d = r(601582);
+    s = r(517319),
+    a = r(388032),
+    d = r(603521);
 let u = (e) => {
     let { currentUser: t, otherUser: r, transitionState: u, onClose: f } = e,
-        b = i.useCallback(() => {
+        b = o.useCallback(() => {
             f();
         }, [f]),
         p = t.nsfwAllowed,
-        [h, j] = i.useState(!1),
-        [g, y] = i.useState(!1),
-        x = i.useCallback(() => {
-            y(!0), j(!1);
+        [h, j] = o.useState(!1),
+        [g, x] = o.useState(!1),
+        y = o.useCallback(() => {
+            x(!0), j(!1);
         }, []),
-        { disconnectLinkRequest: O, isDisconnectLoading: m } = (0, c.G)({
+        { disconnectLinkRequest: O, isDisconnectLoading: m } = (0, i.G)({
             onSuccess: b,
-            onError: x,
+            onError: y,
         });
-    return (0, n.jsxs)(o.IX, {
+    return (0, n.jsxs)(c.IX, {
         transitionState: u,
         onClose: f,
         children: [
             g &&
-                (0, n.jsx)(o.M14, {
+                (0, n.jsx)(c.M14, {
                     type: "critical",
-                    children: s.intl.string(a.default.krIDdy),
+                    children: a.intl.string(s.default.krIDdy),
                 }),
-            (0, n.jsxs)(o.fef, {
+            (0, n.jsxs)(c.fef, {
                 children: [
                     (0, n.jsx)(l.Z.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: s.intl.formatToPlainString(a.default["NMSTb/"], { isAdult: String(p) }),
-                        icon: (0, n.jsx)(o.Dio, {
+                        header: a.intl.formatToPlainString(s.default["NMSTb/"], { isAdult: String(p) }),
+                        icon: (0, n.jsx)(c.Dio, {
                             size: "md",
                             color: "currentColor",
                             className: d.closeIcon,
                         }),
                     }),
-                    (0, n.jsxs)(o.Kqy, {
+                    (0, n.jsxs)(c.Kqy, {
                         gap: 16,
                         children: [
                             (0, n.jsx)(l.Z.Notice, {
-                                notice: p ? s.intl.string(a.default.EvMGLT) : s.intl.string(a.default.f1SUeW),
+                                notice: p ? a.intl.string(s.default.EvMGLT) : a.intl.string(s.default.f1SUeW),
                             }),
-                            (0, n.jsx)(o.Checkbox, {
+                            (0, n.jsx)(c.Checkbox, {
                                 checked: h,
                                 onChange: (e) => {
-                                    j(e), y(!1);
+                                    j(e), x(!1);
                                 },
-                                label: p ? s.intl.string(a.default["/MYCee"]) : s.intl.string(a.default.VJaHUb),
+                                label: p ? a.intl.string(s.default["/MYCee"]) : a.intl.string(s.default.VJaHUb),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(o.Go$, {
+            (0, n.jsx)(c.Go$, {
                 actionsFullWidth: !0,
                 actions: [
                     {
                         variant: "secondary",
-                        text: s.intl.string(s.t["ETE/oC"]),
+                        text: a.intl.string(a.t["ETE/oC"]),
                         onClick: f,
                         disabled: m,
                     },
                     {
                         variant: "critical-primary",
-                        text: s.intl.string(a.default["c5L+sl"]),
+                        text: a.intl.string(s.default["c5L+sl"]),
                         onClick: () => {
-                            y(!1), O(r.id);
+                            x(!1), O(r.id);
                         },
                         disabled: !h || m,
                         loading: m,

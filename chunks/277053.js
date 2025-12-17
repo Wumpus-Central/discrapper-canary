@@ -2,8 +2,8 @@ let r, i;
 n.d(t, { Z: () => Z }), n(388685);
 var l,
     a = n(392711),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     c = n(433517),
     u = n(570140),
     d = n(700785),
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ let E = new Set(),
     j = c.K.get(h.kf) || !1;
 function P(e) {
     let t = e.getGuildId(),
-        n = _({}, e.permissionOverwrites);
+        n = b({}, e.permissionOverwrites);
     return null != t && null == n[t] && (n[t] = d.we(t)), n;
 }
 function x() {
@@ -85,7 +85,7 @@ function x() {
         (O = g.QZA.CLOSED),
         E.clear();
 }
-class A extends (l = o.ZP.Store) {
+class A extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, f.Z);
     }
@@ -138,14 +138,14 @@ let Z = new A(u.Z, {
         let { id: t, allow: n, deny: i } = e,
             l = null == y ? void 0 : y[t];
         if (null == l || null == C) return !1;
-        (l = b(_({}, l), {
+        (l = _(b({}, l), {
             allow: n,
             deny: i,
         })),
-            (y = b(_({}, y), { [t]: l })),
+            (y = _(b({}, y), { [t]: l })),
             E.add(t),
             (O = g.QZA.OPEN),
-            (v = !s().isEqual(y, I)),
+            (v = !o().isEqual(y, I)),
             (r = d.o4(C, S));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
@@ -180,7 +180,7 @@ let Z = new A(u.Z, {
                             null != y && (n[e] = y[e]);
                         }),
                         null == n[t] && null == C.permissionOverwrites[t] && (n[t] = d.we(t)),
-                        null == (y = _({}, C.permissionOverwrites, n))[T]
+                        null == (y = b({}, C.permissionOverwrites, n))[T]
                             ? (T = t)
                             : null != N && null != y[N] && ((T = N), (N = null)),
                         (r = d.o4(C, S)),

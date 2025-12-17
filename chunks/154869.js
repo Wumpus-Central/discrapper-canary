@@ -1,4 +1,4 @@
-n.d(e, { $: () => O });
+n.d(e, { $: () => N });
 var i = n(54381),
     l = n(473749),
     s = n(512722),
@@ -6,20 +6,20 @@ var i = n(54381),
     r = n(442837),
     a = n(481060),
     o = n(660216),
-    c = n(825209),
-    d = n(924557),
-    S = n(509613),
-    T = n(556296),
-    E = n(313789),
+    S = n(825209),
+    T = n(924557),
+    c = n(509613),
+    E = n(556296),
+    d = n(313789),
     g = n(981631),
-    I = n(388032),
-    _ = n(360919);
-let O = (0, S.ON)(E.n.CLIPS_SCREENSHOT_KEYBIND, {
-    useSearchTerms: () => [I.intl.string(I.t["0U/hj7"]), I.intl.string(I.t["5zxkdo"])],
-    usePredicate: d.PP,
+    _ = n(388032),
+    I = n(216476);
+let N = (0, c.ON)(d.n.CLIPS_SCREENSHOT_KEYBIND, {
+    useSearchTerms: () => [_.intl.string(_.t["0U/hj7"]), _.intl.string(_.t["5zxkdo"])],
+    usePredicate: T.PP,
     Component: () => {
-        let t = (0, r.e7)([T.ZP], () => T.ZP.getKeybindForAction(g.kg4.SAVE_CLIP, !0)),
-            e = (0, r.e7)([T.ZP], () => T.ZP.getKeybindForAction(g.kg4.SAVE_SCREENSHOT, !0));
+        let t = (0, r.e7)([E.ZP], () => E.ZP.getKeybindForAction(g.kg4.SAVE_CLIP, !0)),
+            e = (0, r.e7)([E.ZP], () => E.ZP.getKeybindForAction(g.kg4.SAVE_SCREENSHOT, !0));
         u()(null != t, "Save clip keybind unset"), u()(null != e, "Save screenshot keybind unset");
         let n = l.useCallback(
             (t) => {
@@ -69,12 +69,12 @@ let O = (0, S.ON)(E.n.CLIPS_SCREENSHOT_KEYBIND, {
             [e],
         );
         return (0, i.jsx)(a.gNt, {
-            label: I.intl.string(I.t["0U/hj7"]),
-            description: I.intl.string(I.t["5zxkdo"]),
+            label: _.intl.string(_.t["0U/hj7"]),
+            description: _.intl.string(_.t["5zxkdo"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
-                className: _.keyRecorder,
-                children: (0, i.jsx)(c.Z, {
+                className: I.keyRecorder,
+                children: (0, i.jsx)(S.Z, {
                     defaultValue: e.shortcut,
                     onChange: n,
                 }),

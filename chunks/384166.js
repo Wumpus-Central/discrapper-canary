@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     l = n.n(a),
-    o = n(467721),
+    o = n(236726),
     c = n(442837),
     s = n(481060),
     u = n(607070),
@@ -26,15 +26,15 @@ function j(e) {
             return null != (e = b.Z.getSaveablePendingWidgets()) ? e : [];
         }),
         P = (0, c.Wu)([b.Z], () => b.Z.getChangedWidgets()),
-        I = (0, c.Wu)([b.Z], () => b.Z.getRemovedWidgets()),
-        w = (0, c.e7)([b.Z], () => b.Z.hasUnsavedChanges()),
+        w = (0, c.Wu)([b.Z], () => b.Z.getRemovedWidgets()),
+        I = (0, c.e7)([b.Z], () => b.Z.hasUnsavedChanges()),
         S = (0, c.e7)([b.Z], () => b.Z.canSaveChanges()),
         E = (0, c.e7)([b.Z], () => b.Z.isSubmitting),
-        _ = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-        T = (0, s.Yzy)(w, {
+        T = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
+        _ = (0, s.Yzy)(I, {
             from: {
                 opacity: 0,
-                y: 80 * !_,
+                y: 80 * !T,
             },
             enter: {
                 opacity: 1,
@@ -42,7 +42,7 @@ function j(e) {
             },
             leave: {
                 opacity: 0,
-                y: 80 * !_,
+                y: 80 * !T,
             },
         });
     i.useEffect(() => {
@@ -58,8 +58,8 @@ function j(e) {
         );
     }, []),
         i.useEffect(() => {
-            w && s.uvj.announce(v.intl.string(v.t["0Y/qkL"]));
-        }, [w]);
+            I && s.uvj.announce(v.intl.string(v.t["0Y/qkL"]));
+        }, [I]);
     let C = i.useCallback(async () => {
             if (b.Z.canSaveChanges()) {
                 try {
@@ -87,17 +87,17 @@ function j(e) {
                         }, 0))),
                         n(t);
                 }
-                for (let e of I)
+                for (let e of w)
                     n({
                         widgetEdited: e.type,
                         isWidgetRemoved: !0,
                     });
             }
-        }, [x, P, I, n]),
+        }, [x, P, w, n]),
         D = i.useCallback(() => {
             p.Z.clearPendingWidgets();
         }, []);
-    return T((e, n) =>
+    return _((e, n) =>
         n
             ? (0, r.jsx)(o.animated.div, {
                   className: t,
@@ -120,7 +120,7 @@ function j(e) {
                                       variant: "secondary",
                                       text: v.intl.string(v.t.yBZMsQ),
                                       onClick: D,
-                                      disabled: !w || E,
+                                      disabled: !I || E,
                                   }),
                                   (0, r.jsx)(s.Button, {
                                       size: "sm",
@@ -128,7 +128,7 @@ function j(e) {
                                       text: v.intl.string(v.t["R3BPH+"]),
                                       onClick: C,
                                       loading: E,
-                                      disabled: !S || !w || E,
+                                      disabled: !S || !I || E,
                                   }),
                               ],
                           }),

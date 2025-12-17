@@ -7,8 +7,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(481060),
-    o = n(706454),
+    o = n(481060),
+    s = n(706454),
     c = n(959165),
     u = n(164991),
     d = n(783393),
@@ -33,19 +33,19 @@ function h(e) {
             });
         }, [n, t]),
         p = u.Z.useField("categoryId") === n,
-        h = l.toLocaleString(o.default.locale),
+        h = l.toLocaleString(s.default.locale),
         m = (0, d.E)({ categoryId: n });
-    return (0, r.jsxs)(s.P3F, {
+    return (0, r.jsxs)(o.P3F, {
         onClick: c,
         className: a()(f.category, { [f.selected]: p }),
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 className: f.name,
                 variant: "text-sm/medium",
                 color: "text-strong",
                 children: m,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 className: f.count,
                 variant: "text-sm/normal",
                 color: "text-muted",

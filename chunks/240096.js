@@ -2,7 +2,7 @@ n.d(t, { V: () => i });
 let { Themes: r } = n(15202).VV,
     i = {
         SemanticColorExperiments: {
-            APP_BORDER_FRAME: {
+            APP_FRAME_BORDER: {
                 "refresh-fast-follow-distinct-borders": {
                     [r.DARK]: {
                         raw: "NEUTRAL_52",

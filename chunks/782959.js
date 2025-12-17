@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(907862),
     a = n(481060),
-    s = n(367907),
-    o = n(626135),
+    o = n(367907),
+    s = n(626135),
     c = n(63063),
     u = n(981631),
     d = n(921944),
@@ -39,10 +39,10 @@ function g(e) {
         m = {
             text: p.intl.string(p.t.JzJpg4),
             onClick: () => {
-                o.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, s.hH)(t))),
+                s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, o.hH)(t))),
                     g(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
+                        let { default: e } = await Promise.all([n.e("29497"), n.e("59679")]).then(n.bind(n, 241865));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
@@ -72,11 +72,11 @@ function g(e) {
             },
             variant: "primary",
         },
-        _ = i.useRef(null);
+        b = i.useRef(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                ref: _,
+                ref: b,
                 children: h(),
             }),
             (0, r.jsx)(l.Mb, {
@@ -90,7 +90,7 @@ function g(e) {
                     link: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL),
                     text: p.intl.string(p.t.w4DutA),
                 },
-                targetElementRef: _,
+                targetElementRef: b,
                 onRequestClose: () => g(d.L.DISMISS),
             }),
         ],

@@ -1,40 +1,40 @@
-n.d(t, { Z: () => x }), n(388685), n(415506), n(457542);
+n.d(t, { Z: () => _ }), n(388685), n(415506), n(457542);
 var r = n(54381),
     i = n(473749),
     s = n(120356),
-    l = n.n(s),
-    a = n(990547),
+    a = n.n(s),
+    l = n(990547),
     o = n(481060),
     c = n(479531),
     u = n(388905),
     d = n(585483),
     h = n(573261),
-    g = n(720196),
-    m = n(981631),
-    p = n(388032),
-    f = n(710509),
-    _ = n(197571);
-function x(e) {
-    let { setOriginalEmail: t, setSlide: s, ready: x, token: E } = e,
-        [v, j] = i.useState(!1),
-        [b, I] = i.useState(null),
+    f = n(720196),
+    g = n(981631),
+    m = n(388032),
+    p = n(839926),
+    x = n(478411);
+function _(e) {
+    let { setOriginalEmail: t, setSlide: s, ready: _, token: E } = e,
+        [v, b] = i.useState(!1),
+        [j, I] = i.useState(null),
         [N, y] = i.useState(null),
         [S, C] = i.useState(""),
-        O = i.useRef(null);
+        T = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (x) {
+            if (_) {
                 var e;
-                null == (e = O.current) || e.focus();
+                null == (e = T.current) || e.focus();
             }
-        }, [x]),
+        }, [_]),
         (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(u.Ee, {
                     src: null == N ? n(26230) : n(935227),
-                    className: l()(_.marginBottom20, _.marginTop8),
+                    className: a()(x.marginBottom20, x.marginTop8),
                 }),
-                (0, r.jsx)(u.Dx, { children: p.intl.string(p.t.IfBQ56) }),
+                (0, r.jsx)(u.Dx, { children: m.intl.string(m.t.IfBQ56) }),
                 null != N && "" !== N
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -43,57 +43,57 @@ function x(e) {
                       })
                     : null,
                 (0, r.jsxs)(u.gO, {
-                    className: l()(_.marginBottom20, _.marginTop20),
+                    className: a()(x.marginBottom20, x.marginTop20),
                     children: [
                         (0, r.jsx)(u.II, {
                             name: "password",
                             type: "password",
-                            label: p.intl.string(p.t["8dM4FO"]),
-                            setRef: O,
-                            className: _.marginBottom20,
+                            label: m.intl.string(m.t["8dM4FO"]),
+                            setRef: T,
+                            className: x.marginBottom20,
                             value: S,
                             onChange: C,
-                            error: b,
+                            error: j,
                             autoComplete: "new-password",
                             maxLength: 72,
-                            placeholder: p.intl.string(p.t["yY/PXY"]),
+                            placeholder: m.intl.string(m.t["yY/PXY"]),
                         }),
                         (0, r.jsx)("div", {
-                            className: _.marginTop8,
+                            className: x.marginTop8,
                             children: (0, r.jsx)(o.Button, {
-                                text: p.intl.string(p.t.ezv91b),
+                                text: m.intl.string(m.t.ezv91b),
                                 fullWidth: !0,
                                 onClick: () => {
                                     if (!v) {
                                         if (0 === S.length) {
-                                            I(p.intl.string(p.t.R98xD5)), d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                            I(m.intl.string(m.t.R98xD5)), d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                             return;
                                         }
                                         return (
                                             null != N && y(null),
-                                            null != b && I(null),
+                                            null != j && I(null),
                                             t(""),
-                                            j(!0),
+                                            b(!0),
                                             h.Z.post({
-                                                url: m.ANM.ACCOUNT_REVERT,
+                                                url: g.ANM.ACCOUNT_REVERT,
                                                 body: {
                                                     token: E,
                                                     password: S,
                                                 },
-                                                trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
+                                                trackedActionData: { event: l.NetworkActionNames.ACCOUNT_REVERT },
                                                 rejectWithError: !1,
                                             })
                                                 .then((e) => {
                                                     let {
                                                         body: { email: n },
                                                     } = e;
-                                                    C(""), t(n), s(g.n.SUCCESS);
+                                                    C(""), t(n), s(f.n.SUCCESS);
                                                 })
                                                 .catch((e) => {
                                                     if (e instanceof Error)
                                                         y(
-                                                            p.intl.formatToPlainString(p.t.aTVNes, {
-                                                                statusPageURL: m.yXt.STATUS,
+                                                            m.intl.formatToPlainString(m.t.aTVNes, {
+                                                                statusPageURL: g.yXt.STATUS,
                                                             }),
                                                         );
                                                     else {
@@ -103,24 +103,24 @@ function x(e) {
                                                             : y(
                                                                   (function (e) {
                                                                       switch (e) {
-                                                                          case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                              return p.intl.string(p.t["11zzGR"]);
-                                                                          case m.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                              return p.intl.string(p.t["6qmgaI"]);
-                                                                          case m.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                              return p.intl.string(p.t.bChnKs);
+                                                                          case g.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
+                                                                              return m.intl.string(m.t["11zzGR"]);
+                                                                          case g.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
+                                                                              return m.intl.string(m.t["6qmgaI"]);
+                                                                          case g.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
+                                                                              return m.intl.string(m.t.bChnKs);
                                                                           default:
-                                                                              return p.intl.format(p.t.aTVNes, {
-                                                                                  statusPageURL: m.yXt.STATUS,
+                                                                              return m.intl.format(m.t.aTVNes, {
+                                                                                  statusPageURL: g.yXt.STATUS,
                                                                               });
                                                                       }
                                                                   })(t.code).toString(),
                                                               );
                                                     }
-                                                    d.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                                    d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                                 })
                                                 .finally(() => {
-                                                    j(!1);
+                                                    b(!1);
                                                 })
                                         );
                                     }
@@ -132,13 +132,13 @@ function x(e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: f.buttonContainer,
+                    className: p.buttonContainer,
                     children: (0, r.jsx)(o.Button, {
-                        text: p.intl.string(p.t.rzxnQ8),
+                        text: m.intl.string(m.t.rzxnQ8),
                         variant: "secondary",
                         fullWidth: !0,
                         onClick: () => {
-                            C(""), s(g.n.START);
+                            C(""), s(f.n.START);
                         },
                     }),
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(997841);
+n.d(t, { Z: () => D }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
@@ -186,7 +186,7 @@ function R(e) {
     if (!m.has(e.code)) return !1;
     (m = new Map(m)).delete(e.code);
 }
-class D extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     getInvite(e) {
         return f.get(e);
     }
@@ -203,8 +203,8 @@ class D extends (r = i.ZP.Store) {
         return m.get(e);
     }
 }
-l(D, "displayName", "InviteStore");
-let w = new D(a.Z, {
+l(w, "displayName", "InviteStore");
+let D = new w(a.Z, {
     INVITE_RESOLVE: g,
     INVITE_RESOLVE_SUCCESS: E,
     INVITE_RESOLVE_FAILURE: v,

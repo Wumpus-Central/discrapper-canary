@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => p }), n(953529);
 var r,
     i = n(442837),
     l = n(570140),
@@ -25,26 +25,26 @@ let c = {
     d = c,
     u = !1,
     g = !1,
-    m = c;
-function p(e) {
+    f = c;
+function m(e) {
     let { welcomeScreen: t, guildId: n } = e,
         r = a.Z.getGuild(n);
     if (null != t) {
         var i, l;
-        m = d = {
+        f = d = {
             description: null != (i = t.description) ? i : "",
             channels: null != (l = t.welcome_channels) ? l : [],
             enabled: null == r ? void 0 : r.features.has(s.GuildFeatures.WELCOME_SCREEN_ENABLED),
         };
-    } else m = d = c;
+    } else f = d = c;
     g = !1;
 }
-class f extends (r = i.ZP.Store) {
+class b extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(a.Z);
     }
     get() {
-        return m;
+        return f;
     }
     showNotice() {
         return g;
@@ -53,24 +53,24 @@ class f extends (r = i.ZP.Store) {
         return {
             submitting: u,
             hasErrors: g,
-            welcomeSettings: m,
+            welcomeSettings: f,
             originalWelcomeSettings: d,
         };
     }
 }
-o(f, "displayName", "WelcomeScreenSettingsStore");
-let h = new f(l.Z, {
-    WELCOME_SCREEN_FETCH_SUCCESS: p,
-    WELCOME_SCREEN_UPDATE: p,
+o(b, "displayName", "WelcomeScreenSettingsStore");
+let p = new b(l.Z, {
+    WELCOME_SCREEN_FETCH_SUCCESS: m,
+    WELCOME_SCREEN_UPDATE: m,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (m = d), (g = !1);
+        (f = d), (g = !1);
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (m = c), (d = c);
+        (f = c), (d = c);
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        m = (function (e) {
+        f = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -85,13 +85,13 @@ let h = new f(l.Z, {
                     });
             }
             return e;
-        })({}, m, t);
+        })({}, f, t);
     },
     WELCOME_SCREEN_SUBMIT: function () {
         u = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        p(e), (u = !1);
+        m(e), (u = !1);
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
         (g = !0), (u = !1);

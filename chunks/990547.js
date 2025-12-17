@@ -146,8 +146,8 @@ if (null != R) {
             ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
             : "win32" === n && (r.os_sdk_version = null == i ? void 0 : i.split(".")[2]);
 }
-let D = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function w(e, t) {
+let w = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function D(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
@@ -156,8 +156,8 @@ function w(e, t) {
 function x(e) {
     let t = {};
     return (
-        D.forEach((n) => {
-            let r = w(e, n);
+        w.forEach((n) => {
+            let r = D(e, n);
             r.length > 0 && (t[n] = r);
         }),
         t
@@ -182,7 +182,7 @@ function j() {
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
-        let i = w(t, r);
+        let i = D(t, r);
         i.length > 0 && (e.mp_keyword = i);
     }
     return e;
@@ -242,7 +242,7 @@ function Z() {
         e
     );
 }
-function B() {
+function F() {
     var e, t;
     return T(
         S(
@@ -258,7 +258,7 @@ function B() {
         },
     );
 }
-function F() {
+function B() {
     let e = {};
     return (e.referrer = document.referrer), (e.referring_domain = G()), (e = S({}, e, x(window.location.href), j()));
 }
@@ -270,9 +270,9 @@ function H() {
     let e = _.K.get(C);
     null == e && ((e = Z()), _.K.set(C, e));
     let t = _.K.get(A);
-    null == t && ((t = F()), _.K.set(A, t));
+    null == t && ((t = B()), _.K.set(A, t));
     let n = m.x.get(A);
-    return null == n && ((n = V(F(), "_current")), m.x.set(A, n)), S({}, e, B(), t, n);
+    return null == n && ((n = V(B(), "_current")), m.x.set(A, n)), S({}, e, F(), t, n);
 }
 function Y() {
     try {
@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("478273", 10);
+    let i = parseInt("481003", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (

@@ -55,8 +55,8 @@ var i,
     N = n(322155),
     P = n(509140),
     R = n(48481),
-    D = n(314897),
-    w = n(77498),
+    w = n(314897),
+    D = n(77498),
     x = n(355863),
     L = n(626135),
     j = n(866119),
@@ -65,8 +65,8 @@ var i,
     U = n(145597),
     G = n(372679),
     Z = n(981631),
-    B = n(757744);
-function F(e, t, n) {
+    F = n(757744);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -90,7 +90,7 @@ function V(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
@@ -156,12 +156,12 @@ class er {
         for (let t of (this.waitingActionsToFlush.clear(), e)) this.queueDispatch(t);
     }
     constructor() {
-        F(this, "isDispatching", !1),
-            F(this, "timeout", void 0),
-            F(this, "requestIdleCallback", void 0),
-            F(this, "actionsToFlush", new Set()),
-            F(this, "waitingActionsToFlush", new Set()),
-            F(this, "flush", () => {
+        B(this, "isDispatching", !1),
+            B(this, "timeout", void 0),
+            B(this, "requestIdleCallback", void 0),
+            B(this, "actionsToFlush", new Set()),
+            B(this, "waitingActionsToFlush", new Set()),
+            B(this, "flush", () => {
                 if (
                     (null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null)),
                     null != this.requestIdleCallback &&
@@ -179,10 +179,10 @@ class er {
                     this.actionsToFlush.clear()),
                     this.waitingActionsToFlush.size > 0 && this.enqueueWaitingActions();
             }),
-            F(this, "dispatchPayloads", (e) => {
+            B(this, "dispatchPayloads", (e) => {
                 (this.isDispatching = !0), e.forEach((e) => l.Z.dispatch(e)), (this.isDispatching = !1);
             }),
-            F(
+            B(
                 this,
                 "queueDispatch",
                 (e) =>
@@ -404,7 +404,7 @@ function eh() {
                 for (let l of (el.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
                     var t, n, r, i, a, o, s;
                     if (null == l) continue;
-                    let e = null != l.processName ? w.Z.getGameByExecutable(l.processName) : null;
+                    let e = null != l.processName ? D.Z.getGameByExecutable(l.processName) : null;
                     L.default.track(Z.rMx.OVERLAY_HOOK_CRASHED, {
                         process_name: null == l ? void 0 : l.processName,
                         game_name: null != (t = null == e ? void 0 : e.name) ? t : null,
@@ -606,7 +606,7 @@ function eC(e) {
 function eA(e, t, n) {
     var r;
     let i = null == (r = b.ZP.getGameForPID(e)) ? void 0 : r.name,
-        a = w.Z.getGameByName(i),
+        a = D.Z.getGameByName(i),
         o = V(
             {
                 game_name: i,
@@ -617,7 +617,7 @@ function eA(e, t, n) {
             n,
         );
     ed(e, V({}, o)),
-        (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), B.bv, {
+        (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), F.bv, {
             width: n.graphics_width,
             height: n.graphics_height,
         });
@@ -630,8 +630,8 @@ function eA(e, t, n) {
               eg(e, "CONNECT_FAILED", "CONNECTING"));
 }
 function eN() {
-    let e = D.default.getToken(),
-        t = D.default.getId();
+    let e = w.default.getToken(),
+        t = w.default.getId();
     null != e &&
         h.lW({
             type: Z.BmY.DISPATCH,
@@ -652,9 +652,9 @@ function eP(e) {
 function eR(e) {
     switch ((es && el.info("[app data received]", e), e.type)) {
         case Z.BmY.CONNECT:
-            let t = D.default.getToken();
+            let t = w.default.getToken();
             if (null == t) break;
-            (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), B.bv),
+            (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), F.bv),
                 Promise.all([(0, I.Z)(t, e.pid), o.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -690,7 +690,7 @@ function eR(e) {
             (0, y.K)(e.payload);
     }
 }
-async function eD(e, t) {
+async function ew(e, t) {
     let n = await (0, G.K)();
     if (null == n) return void el.error("setInputLocked: overlay module failed loaded");
     let r = null != t ? t : $;
@@ -707,8 +707,8 @@ async function eD(e, t) {
         (0, O.D1)(e, S.gl.Hook), el.error("Error during input lock", e);
     }
 }
-function ew(e, t) {
-    e ? setTimeout(() => eD(e, t), 200) : eD(e, t);
+function eD(e, t) {
+    e ? setTimeout(() => ew(e, t), 200) : ew(e, t);
 }
 let ex = null;
 function eL(e) {
@@ -717,24 +717,24 @@ function eL(e) {
     if ((ee.has(n) && ev(void 0), null != r && null != K[n]) && (t || "READY" === r || "CRASHED" === r)) {
         if ((t ? en.delete(n) : en.add(n), eo.clear(), null != ex && (clearTimeout(ex), (ex = null), t))) return;
         t
-            ? ew(t, n)
+            ? eD(t, n)
             : (ex = setTimeout(() => {
-                  ew(t, n), (ex = null);
+                  eD(t, n), (ex = null);
               }, 100));
     }
 }
 function ej(e) {
     let { region: t } = e;
-    eo.add(t), ew(!1, $);
+    eo.add(t), eD(!1, $);
 }
 function eM() {
-    eo.clear(), ew(!0, $);
+    eo.clear(), eD(!0, $);
 }
 function ek(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "1b4a4225212609b70ea55b6ebd1dbdfab293b54d"),
+    n.append("build_id", "f9b0c48da1925ee9918f885d30a71ec845fa50da"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -763,10 +763,10 @@ function eZ(e) {
         el.verbose("OverlayBridgeStore: handleOverlayCrashed: ".concat(n)),
         (0, O.V6)(i, S.gl.Hook);
 }
-function eB() {
+function eF() {
     (J = !0), (z = !1), eQ();
 }
-function eF() {
+function eB() {
     (J = !1), f.Z.setFocusedPID(null, null), ev(void 0), el.verbose("OverlayBridgeStore: handleConnectionClosed");
 }
 function eV() {
@@ -845,10 +845,10 @@ class e$ extends (i = o.ZP.Store) {
     initialize() {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(D.default, E.Z, w.Z, x.Z, T.default, N.Z, P.Z, A.Z, b.ZP),
+            (this.waitFor(w.default, E.Z, D.Z, x.Z, T.default, N.Z, P.Z, A.Z, b.ZP),
             this.syncWith([E.Z], eQ),
             h.sr(eR, eP),
-            D.default.addChangeListener(eN),
+            w.default.addChangeListener(eN),
             l.Z.addInterceptor(ei.queueDispatch));
     }
     isFocusedPidInputLocked() {
@@ -895,7 +895,7 @@ class e$ extends (i = o.ZP.Store) {
         return q;
     }
 }
-F(e$, "displayName", "OverlayBridgeStore");
+B(e$, "displayName", "OverlayBridgeStore");
 let e0 = new e$(
         l.Z,
         __OVERLAY__
@@ -903,8 +903,8 @@ let e0 = new e$(
             : {
                   LOGIN: eX,
                   LOGOUT: eJ,
-                  CONNECTION_OPEN: eB,
-                  CONNECTION_CLOSED: eF,
+                  CONNECTION_OPEN: eF,
+                  CONNECTION_CLOSED: eB,
                   EXPERIMENT_OVERRIDE_BUCKET: eV,
                   RUNNING_GAME_TOGGLE_OVERLAY: ez,
                   RUNNING_GAMES_CHANGE: eK,

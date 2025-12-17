@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(442837),
     l = n(481060),
     a = n(37234),
-    s = n(653592),
-    o = n(156142),
+    o = n(653592),
+    s = n(156142),
     c = n(594174),
     u = n(981631);
 function d() {
@@ -18,14 +18,14 @@ function d() {
         })
     )
         return null;
-    let e = s.componentPlaygroundConfigs.flatMap((e) => e.collections);
+    let e = o.componentPlaygroundConfigs.flatMap((e) => e.collections);
     return (0, r.jsx)(
         l.sNh,
         {
             id: "playgrounds",
             label: "Playgrounds",
             action: () => {
-                o.PlaygroundStore.setState({
+                s.PlaygroundStore.setState({
                     selectedCollection: null,
                     selectedStory: null,
                 }),
@@ -41,7 +41,7 @@ function d() {
                                 id: "".concat(e.id, "-playground"),
                                 label: e.name,
                                 action: () => {
-                                    o.PlaygroundStore.setState({
+                                    s.PlaygroundStore.setState({
                                         selectedCollection: e.id,
                                         selectedStory: null,
                                     }),

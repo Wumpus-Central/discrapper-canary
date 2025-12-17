@@ -8,26 +8,26 @@ var r = n(54381),
     c = n(526429),
     d = n(203377);
 let u = (e) => {
-    let { label: t, description: n, guild: u, guildMetadata: g, disabled: m } = e,
-        p = (0, l.Wu)([c.Z], () => c.Z.getAllCategories()),
-        f = i.useMemo(
+    let { label: t, description: n, guild: u, guildMetadata: g, disabled: f } = e,
+        m = (0, l.Wu)([c.Z], () => c.Z.getAllCategories()),
+        b = i.useMemo(
             () =>
-                p.map((e) => {
+                m.map((e) => {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
                         label: n,
                     };
                 }),
-            [p],
+            [m],
         );
-    return 0 === f.length
+    return 0 === b.length
         ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsx)(a.d, {
               label: t,
               description: n,
               value: g.secondaryCategoryIds,
-              options: f,
+              options: b,
               onChange: (e) => {
                   let { secondaryCategoryIds: t } = g;
                   if (e.length < t.length) t.filter((t) => !e.includes(t)).forEach((e) => (0, o.K0)(u.id, e));
@@ -36,7 +36,7 @@ let u = (e) => {
                       e.filter((e) => !t.includes(e)).forEach((e) => (0, o.Kq)(u.id, e));
                   }
               },
-              isDisabled: m,
+              isDisabled: f,
               multi: !0,
           });
 };

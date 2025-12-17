@@ -34,8 +34,8 @@ var r = n(23893),
     N = n(287293),
     P = n(413565),
     R = n(401522),
-    D = n(880016),
-    w = n(575065),
+    w = n(880016),
+    D = n(575065),
     x = n(69663),
     L = n(473749);
 n(24156);
@@ -175,7 +175,7 @@ let M = (0, L.createContext)(null),
                 createCollection: () => new j(),
             },
             (n) =>
-                L.createElement(B, {
+                L.createElement(F, {
                     props: e,
                     forwardedRef: t,
                     selectionState: r,
@@ -183,7 +183,7 @@ let M = (0, L.createContext)(null),
                 }),
         );
     });
-function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
+function F({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     var l;
     let u, d, f;
     [e, t] = (0, o.pE)(e, t, i.lU);
@@ -199,7 +199,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
             UNSAFE_selectionState: n,
         }),
         T = (0, m.w)(I, O),
-        { isVirtualized: C, layoutDelegate: A, dropTargetDelegate: N, CollectionRoot: w } = (0, L.useContext)(a.Qk),
+        { isVirtualized: C, layoutDelegate: A, dropTargetDelegate: N, CollectionRoot: D } = (0, L.useContext)(a.Qk),
         { dragAndDropHooks: x } = e,
         { gridProps: j } = (0, h.x)(
             {
@@ -212,8 +212,8 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         ),
         k = T.selectionManager,
         Z = !!(null == x ? void 0 : x.useDraggableCollectionState),
-        B = !!(null == x ? void 0 : x.useDroppableCollectionState);
-    (0, L.useRef)(Z), (0, L.useRef)(B), (0, L.useEffect)(() => {}, [Z, B]);
+        F = !!(null == x ? void 0 : x.useDroppableCollectionState);
+    (0, L.useRef)(Z), (0, L.useRef)(F), (0, L.useEffect)(() => {}, [Z, F]);
     let V = !1,
         H = null,
         Y = (0, L.useRef)(null);
@@ -227,7 +227,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         let e = x.DragPreview;
         H = x.renderDragPreview ? L.createElement(e, { ref: Y }, x.renderDragPreview) : null;
     }
-    if (B && x) {
+    if (F && x) {
         d = x.useDroppableCollectionState({
             collection: T.collection,
             selectionManager: k,
@@ -273,8 +273,8 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 tableLayout: "fixed",
                 width: "fit-content",
             }));
-    let $ = F("table"),
-        ee = (0, D.z)(e, { global: !0 });
+    let $ = B("table"),
+        ee = (0, w.z)(e, { global: !0 });
     return L.createElement(
         o.zt,
         {
@@ -313,7 +313,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 L.createElement(
                     c.y,
                     null,
-                    L.createElement(w, {
+                    L.createElement(D, {
                         collection: T.collection,
                         scrollRef: null != (l = null == S ? void 0 : S.scrollRef) ? l : t,
                         persistedKeys: (0, s.y)(k, x, d),
@@ -324,7 +324,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         H,
     );
 }
-function F(e) {
+function B(e) {
     let { isVirtualized: t } = (0, L.useContext)(a.Qk);
     return t ? "div" : e;
 }
@@ -342,7 +342,7 @@ let Y = (0, d.IW)(
                     throw Error("Unsupported node type in TableHeader: " + e.type);
                 }, []),
             }),
-            i = F("thead"),
+            i = B("thead"),
             { rowGroupProps: a } = (0, O.LA)(),
             { hoverProps: s, isHovered: l } = (0, v.X)({
                 onHoverStart: e.onHoverStart,
@@ -358,7 +358,7 @@ let Y = (0, d.IW)(
         return L.createElement(
             i,
             {
-                ...(0, y.d)((0, D.z)(e, { global: !0 }), a, s),
+                ...(0, y.d)((0, w.z)(e, { global: !0 }), a, s),
                 ...c,
                 ref: t,
                 "data-hovered": l || void 0,
@@ -389,7 +389,7 @@ function W({ item: e }) {
             t,
         ),
         { checkboxProps: c } = (0, I.j)(n),
-        u = F("tr");
+        u = B("tr");
     return L.createElement(
         u,
         {
@@ -458,8 +458,8 @@ let z = (0, d.G5)(K, (e, t, n) => {
                 ...O,
                 width: _.getColumnWidth(n.key),
             });
-        let S = F("th"),
-            I = (0, D.z)(e, { global: !0 });
+        let S = B("th"),
+            I = (0, w.z)(e, { global: !0 });
         return (
             delete I.id,
             L.createElement(
@@ -523,8 +523,8 @@ let X = (0, d.IW)(Q, (e, t) => {
             defaultClassName: "react-aria-TableBody",
             values: h,
         }),
-        E = F("tr"),
-        b = F("td"),
+        E = B("tr"),
+        b = B("td"),
         v = c.columnCount;
     if (m && e.renderEmptyState && i) {
         let t = {},
@@ -550,8 +550,8 @@ let X = (0, d.IW)(Q, (e, t) => {
             ));
     }
     let { rowGroupProps: S } = (0, O.LA)(),
-        I = F("tbody"),
-        T = (0, D.z)(e, { global: !0 });
+        I = B("tbody"),
+        T = (0, w.z)(e, { global: !0 });
     return L.createElement(
         I,
         {
@@ -598,7 +598,7 @@ let $ = (0, d.IW)(
                 d,
             ),
             { isFocused: S, isFocusVisible: T, focusProps: N } = (0, E.F)(),
-            { isFocusVisible: R, focusProps: w } = (0, E.F)({ within: !0 }),
+            { isFocusVisible: R, focusProps: D } = (0, E.F)({ within: !0 }),
             { hoverProps: x, isHovered: j } = (0, v.X)({
                 isDisabled: !O.allowsSelection && !O.hasAction,
                 onHoverStart: e.onHoverStart,
@@ -634,7 +634,7 @@ let $ = (0, d.IW)(
         (0, L.useEffect)(() => {
             _ && Z.current;
         }, []);
-        let B = _ && _.isDragging(n.key),
+        let F = _ && _.isDragging(n.key),
             { children: V, ...H } = e,
             Y = (0, o.aX)({
                 ...H,
@@ -647,15 +647,15 @@ let $ = (0, d.IW)(
                     isFocusVisible: T,
                     selectionMode: f.selectionManager.selectionMode,
                     selectionBehavior: f.selectionManager.selectionBehavior,
-                    isDragging: B,
+                    isDragging: F,
                     isDropTarget: null == u ? void 0 : u.isDropTarget,
                     isFocusVisibleWithin: R,
                     id: n.key,
                 },
             }),
-            W = F("tr"),
-            K = F("td"),
-            z = (0, D.z)(e, { global: !0 });
+            W = B("tr"),
+            K = B("td"),
+            z = (0, w.z)(e, { global: !0 });
         return (
             delete z.id,
             delete z.onClick,
@@ -688,7 +688,7 @@ let $ = (0, d.IW)(
                 L.createElement(
                     W,
                     {
-                        ...(0, y.d)(z, Y, b, N, x, null == c ? void 0 : c.dragProps, w),
+                        ...(0, y.d)(z, Y, b, N, x, null == c ? void 0 : c.dragProps, D),
                         ref: d,
                         "data-disabled": O.isDisabled || void 0,
                         "data-selected": O.isSelected || void 0,
@@ -696,7 +696,7 @@ let $ = (0, d.IW)(
                         "data-focused": O.isFocused || void 0,
                         "data-focus-visible": T || void 0,
                         "data-pressed": O.isPressed || void 0,
-                        "data-dragging": B || void 0,
+                        "data-dragging": F || void 0,
                         "data-drop-target": (null == u ? void 0 : u.isDropTarget) || void 0,
                         "data-selection-mode":
                             "none" === f.selectionManager.selectionMode ? void 0 : f.selectionManager.selectionMode,
@@ -788,8 +788,8 @@ let et = (0, d.G5)(ee, (e, t, n) => {
                 id: n.key,
             },
         }),
-        b = F("td"),
-        O = (0, D.z)(e, { global: !0 });
+        b = B("td"),
+        O = (0, w.z)(e, { global: !0 });
     return (
         delete O.id,
         L.createElement(
@@ -829,12 +829,12 @@ function er(e, t) {
             defaultClassName: "react-aria-DropIndicator",
             values: { isDropTarget: r },
         }),
-        u = F("tr"),
-        d = F("td");
+        u = B("tr"),
+        d = B("td");
     return L.createElement(
         u,
         {
-            ...(0, D.z)(e, { global: !0 }),
+            ...(0, w.z)(e, { global: !0 }),
             ...c,
             role: "row",
             ref: t,
@@ -865,8 +865,8 @@ function ea() {
         { dropIndicatorProps: i } = t.useDropIndicator({ target: { type: "root" } }, n, r),
         a = n.isDropTarget({ type: "root" }),
         { visuallyHiddenProps: o } = (0, A.S)(),
-        l = F("tr"),
-        c = F("td");
+        l = B("tr"),
+        c = B("td");
     return !a && i["aria-hidden"]
         ? null
         : L.createElement(
@@ -907,7 +907,7 @@ function ea() {
             }),
             [l, c, null == r ? void 0 : r.collection],
         );
-    (0, w.B)(p, f);
+    (0, D.B)(p, f);
     let _ = (0, o.aX)({
             ...u,
             id: void 0,
@@ -915,8 +915,8 @@ function ea() {
             defaultClassName: "react-aria-TableLoadingIndicator",
             values: null,
         }),
-        m = F("tr"),
-        h = F("td"),
+        m = B("tr"),
+        h = B("td"),
         g = {},
         E = {},
         b = {};
@@ -955,7 +955,7 @@ function ea() {
                 L.createElement(
                     m,
                     {
-                        ...(0, y.d)((0, D.z)(e, { global: !0 }), g),
+                        ...(0, y.d)((0, w.z)(e, { global: !0 }), g),
                         ..._,
                         role: "row",
                         ref: t,

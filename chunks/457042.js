@@ -1,6 +1,6 @@
 r.d(e, {
     ParagraphFormFieldModal: () => g,
-    TextInputFormFieldModal: () => b,
+    TextInputFormFieldModal: () => p,
 }),
     r(953529),
     r(388685),
@@ -8,14 +8,14 @@ r.d(e, {
     r(35282),
     r(781311);
 var n = r(54381),
-    i = r(473749),
-    a = r(481060),
+    a = r(473749),
+    i = r(481060),
     o = r(881052),
     l = r(246364),
     c = r(915509),
     s = r(592286),
-    u = r(388032);
-function d(t) {
+    b = r(388032);
+function u(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
@@ -40,45 +40,45 @@ function d(t) {
     }
     return t;
 }
-function p(t) {
+function d(t) {
     var e, r, l;
-    let { type: p, title: b, description: g, field: y, onSave: _, onClose: f } = t,
-        [m, O] = i.useState(null != (e = null == y ? void 0 : y.label) ? e : ""),
-        [j, h] = i.useState(null),
-        x = async () => {
-            null != j && h(null);
-            let t = m.trim();
-            if ("" === t) return void h(u.intl.string(u.t["G+TI44"]));
+    let { type: d, title: p, description: g, field: y, onSave: f, onClose: m } = t,
+        [O, j] = a.useState(null != (e = null == y ? void 0 : y.label) ? e : ""),
+        [h, x] = a.useState(null),
+        v = async () => {
+            null != h && x(null);
+            let t = O.trim();
+            if ("" === t) return void x(b.intl.string(b.t["G+TI44"]));
             try {
-                await _({
-                    field_type: p,
+                await f({
+                    field_type: d,
                     label: t,
                     required: !0,
                 }),
-                    f();
+                    m();
             } catch (t) {
-                h(new o.Hx(t).getAnyErrorMessage());
+                x(new o.Hx(t).getAnyErrorMessage());
             }
         };
     return (0, n.jsx)(
         c.Z,
-        ((r = d({}, t)),
+        ((r = u({}, t)),
         (l = l =
             {
-                errorText: j,
-                title: b,
+                errorText: h,
+                title: p,
                 description: g,
-                onConfirm: x,
-                onCancel: f,
-                children: (0, n.jsx)(a.oil, {
+                onConfirm: v,
+                onCancel: m,
+                children: (0, n.jsx)(i.oil, {
                     onChange: (t) => {
-                        null != j && h(null);
+                        null != h && x(null);
                         let e = t.replace(/(\r\n|\n|\r)/g, " ");
-                        e.length > s.XN && (e = e.slice(0, s.XN)), O(e);
+                        e.length > s.XN && (e = e.slice(0, s.XN)), j(e);
                     },
-                    placeholder: u.intl.string(u.t.fqVmbL),
-                    value: m,
-                    onKeyDown: (t) => "Enter" === t.key && x(),
+                    placeholder: b.intl.string(b.t.fqVmbL),
+                    value: O,
+                    onKeyDown: (t) => "Enter" === t.key && v(),
                 }),
             }),
         Object.getOwnPropertyDescriptors
@@ -96,13 +96,13 @@ function p(t) {
         r),
     );
 }
-function b(t) {
+function p(t) {
     return (0, n.jsx)(
-        p,
-        d(
+        d,
+        u(
             {
-                title: u.intl.string(u.t.w6Q9wz),
-                description: u.intl.string(u.t["A6M+qv"]),
+                title: b.intl.string(b.t.w6Q9wz),
+                description: b.intl.string(b.t["A6M+qv"]),
                 type: l.QJ.TEXT_INPUT,
             },
             t,
@@ -111,11 +111,11 @@ function b(t) {
 }
 function g(t) {
     return (0, n.jsx)(
-        p,
-        d(
+        d,
+        u(
             {
-                title: u.intl.string(u.t.gG0JBN),
-                description: u.intl.string(u.t.SMX0ia),
+                title: b.intl.string(b.t.gG0JBN),
+                description: b.intl.string(b.t.SMX0ia),
                 type: l.QJ.PARAGRAPH,
             },
             t,

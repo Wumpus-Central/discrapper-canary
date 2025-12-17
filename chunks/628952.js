@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(473608),
     y = n(29121),
     O = n(388032),
-    v = n(855646);
+    v = n(512476);
 function S(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ let A = (e) => {
             hideProfilePreview: N = !1,
         } = e,
         { product: P } = (0, h.T)(t, !0),
-        { giftRecipient: R, giftRecipientError: D } = (0, f.wD)(),
-        w = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
+        { giftRecipient: R, giftRecipientError: w } = (0, f.wD)(),
+        D = (0, u.e7)([m.default], () => m.default.getCurrentUser()),
         x = (0, y.kd)(P),
         L = i.useRef(null);
     if (null == P) return null;
@@ -105,7 +105,7 @@ let A = (e) => {
         },
         k =
             null != R &&
-            R.id !== (null == w ? void 0 : w.id) &&
+            R.id !== (null == D ? void 0 : D.id) &&
             P.type !== c.Z.BUNDLE &&
             j.type !== c.Z.NAMEPLATE &&
             !N,
@@ -164,8 +164,8 @@ let A = (e) => {
                 tag: "div",
                 onClick: U,
                 className: o()(v.previewContainer, {
-                    [v.previewContainerSelected]: n && null == D,
-                    [v.previewContainerError]: n && null != D,
+                    [v.previewContainerSelected]: n && null == w,
+                    [v.previewContainerError]: n && null != w,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
@@ -196,13 +196,13 @@ let A = (e) => {
                         ],
                     }),
                     n &&
-                        null != D &&
+                        null != w &&
                         (0, r.jsx)("div", {
                             className: v.recipientError,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "status-danger",
-                                children: D,
+                                children: w,
                             }),
                         }),
                 ],

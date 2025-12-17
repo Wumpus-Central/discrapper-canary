@@ -1,6 +1,6 @@
 t.d(n, {
-    a: () => d,
-    r: () => u,
+    a: () => u,
+    r: () => d,
 }),
     t(388685);
 var i = t(54381),
@@ -9,8 +9,8 @@ var i = t(54381),
     o = t(594174),
     a = t(5192),
     l = t(388032),
-    c = t(405842);
-let u = (e, n) => {
+    c = t(729861);
+let d = (e, n) => {
         if (1 === e.length) {
             let t = o.default.getUser(e[0]);
             return null != t
@@ -26,9 +26,9 @@ let u = (e, n) => {
             size: r.EFr.SIZE_32,
         });
     },
-    d = (e, n, t, s) => {
-        let u = [...e].map((e) => o.default.getUser(e)),
-            d = (e) =>
+    u = (e, n, t, s) => {
+        let d = [...e].map((e) => o.default.getUser(e)),
+            u = (e) =>
                 (0, i.jsx)(r.Text, {
                     variant: "text-md/semibold",
                     className: c.username,
@@ -36,19 +36,19 @@ let u = (e, n) => {
                 });
         return n >= 4
             ? l.intl.format(l.t.qfo6KR, {
-                  usernameHook1: () => d(u[0]),
-                  usernameHook2: () => d(u[1]),
+                  usernameHook1: () => u(d[0]),
+                  usernameHook2: () => u(d[1]),
                   numberOfOtherUsers: n - e.length,
               })
             : 3 === n
               ? l.intl.format(l.t["67ZE+9"], {
-                    usernameHook1: () => d(u[0]),
-                    usernameHook2: () => d(u[1]),
+                    usernameHook1: () => u(d[0]),
+                    usernameHook2: () => u(d[1]),
                 })
               : 2 === n
                 ? l.intl.format(l.t.veV4IN, {
-                      usernameHook1: () => d(u[0]),
-                      usernameHook2: () => d(u[1]),
+                      usernameHook1: () => u(d[0]),
+                      usernameHook2: () => u(d[1]),
                   })
-                : l.intl.format(l.t["4WHCtq"], { usernameHook: () => d(u[0]) });
+                : l.intl.format(l.t["4WHCtq"], { usernameHook: () => u(d[0]) });
     };

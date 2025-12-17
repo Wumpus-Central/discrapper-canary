@@ -8,11 +8,11 @@ var i = n(54381),
     c = n(493773),
     d = n(410030),
     u = n(600164),
-    p = n(63063),
-    m = n(725875),
-    b = n(981631),
+    m = n(63063),
+    b = n(725875),
+    p = n(981631),
     g = n(388032),
-    f = n(878375),
+    f = n(774696),
     h = n(893916),
     x = n(408942);
 function j(e) {
@@ -23,24 +23,24 @@ function j(e) {
             customWebhooks: v,
             editedWebhook: O,
             selectableWebhookChannels: y,
-            refToScroller: _,
-            errors: C,
-            canNavigate: N,
+            refToScroller: C,
+            errors: N,
+            canNavigate: S,
         } = e,
-        S = (0, d.ZP)(),
-        [I, w] = r.useState(null),
-        [E, P] = r.useState(null);
+        I = (0, d.ZP)(),
+        [T, E] = r.useState(null),
+        [Z, w] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(y);
         t = e.length > 0 ? e[0] : null;
     }
-    let T = r.useCallback(async () => {
-        if (N() && null !== t) {
+    let P = r.useCallback(async () => {
+        if (S() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
                 return (
-                    t && t.code === b.evJ.TOO_MANY_WEBHOOKS
+                    t && t.code === p.evJ.TOO_MANY_WEBHOOKS
                         ? o.Z.show({
                               title: g.intl.string(g.t.cCqsca),
                               body: g.intl.string(g.t["w+QZoX"]),
@@ -57,20 +57,20 @@ function j(e) {
                     null
                 );
             });
-            null != e && (P(e.id), w(e));
+            null != e && (w(e.id), E(e));
         }
-    }, [N, t, n]);
+    }, [S, t, n]);
     (0, c.ZP)(() => {
-        0 === v.length && T();
+        0 === v.length && P();
     });
-    let Z = null !== t;
+    let _ = null !== t;
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 children: g.intl.format(g.t.WL0d0e, {
-                    helpdeskArticle: p.Z.getArticleURL(b.BhN.WEBHOOKS),
-                    developersArticle: b.EYA.API_DOCS_WEBHOOKS,
+                    helpdeskArticle: m.Z.getArticleURL(p.BhN.WEBHOOKS),
+                    developersArticle: p.EYA.API_DOCS_WEBHOOKS,
                 }),
             }),
             (0, i.jsx)(a.izJ, { className: f.headerDivider }),
@@ -84,17 +84,17 @@ function j(e) {
                                   variant: "primary",
                                   size: "sm",
                                   text: g.intl.string(g.t["nrO/HH"]),
-                                  disabled: !Z,
-                                  onClick: T,
+                                  disabled: !_,
+                                  onClick: P,
                               }),
                           }),
-                          (0, i.jsx)(m.Z, {
+                          (0, i.jsx)(b.Z, {
                               webhooks: v,
                               editedWebhook: O,
                               selectableWebhookChannels: y,
-                              lastCreatedWebhookId: null == I ? void 0 : I.id,
-                              errors: C,
-                              canNavigate: N,
+                              lastCreatedWebhookId: null == T ? void 0 : T.id,
+                              errors: N,
+                              canNavigate: S,
                           }),
                       ],
                   })
@@ -125,7 +125,7 @@ function j(e) {
                               }),
                           ],
                       });
-                  })(S, Z, T),
+                  })(I, _, P),
         ],
     });
 }

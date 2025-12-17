@@ -8,11 +8,11 @@ var i = n(54381),
     c = n(442837),
     d = n(780384),
     u = n(481060),
-    b = n(37234),
-    p = n(410030),
-    m = n(726542),
-    f = n(835473),
-    g = n(231757),
+    m = n(37234),
+    b = n(410030),
+    p = n(726542),
+    g = n(835473),
+    f = n(231757),
     h = n(600164),
     x = n(749681),
     j = n(258971),
@@ -23,11 +23,11 @@ var i = n(54381),
     N = n(626135),
     S = n(768581),
     I = n(63063),
-    w = n(709054),
+    T = n(709054),
     E = n(51144),
-    P = n(466070),
-    T = n(585835),
-    Z = n(997787),
+    Z = n(466070),
+    w = n(585835),
+    P = n(997787),
     _ = n(981631),
     k = n(49898),
     A = n(388032),
@@ -74,7 +74,7 @@ function W(e) {
             onManageApplication: X,
             onManageLobbiesLinked: $,
         } = e,
-        ee = (0, p.ZP)(),
+        ee = (0, b.ZP)(),
         [et, en] = r.useState(""),
         { isFetchingConnections: ei, accounts: er } = (0, c.cj)(
             [y.Z],
@@ -95,13 +95,13 @@ function W(e) {
             [W, H],
         ),
         eo = (0, v.Y)(H),
-        es = (0, f.q)(null == H || null == (t = H.linkedLobby) ? void 0 : t.application_id),
+        es = (0, g.q)(null == H || null == (t = H.linkedLobby) ? void 0 : t.application_id),
         ec = (0, O.F)(null == W ? void 0 : W.id),
         {
             availableTwitchIntegrations: ed,
             availableYoutubeIntegrations: eu,
-            guildTwitchIntegrations: eb,
-            guildYoutubeIntegrations: ep,
+            guildTwitchIntegrations: em,
+            guildYoutubeIntegrations: eb,
         } = r.useMemo(() => {
             var e, t, n, i, r, l, a, o;
             return {
@@ -113,7 +113,7 @@ function W(e) {
                     null != (o = null == (i = F.youtube) ? void 0 : i.filter((e) => e.enabled).length) ? o : 0,
             };
         }, [F.twitch, F.youtube]),
-        { showTwitchCard: em, showYoutubeCard: ef } = r.useMemo(() => {
+        { showTwitchCard: ep, showYoutubeCard: eg } = r.useMemo(() => {
             if (ei || !ea)
                 return {
                     showTwitchCard: !1,
@@ -127,9 +127,9 @@ function W(e) {
                 showYoutubeCard: eu > 0 || (!n && e),
             };
         }, [ei, ea, W, er, ed, eu]),
-        eg = Object.values(G).length,
+        ef = Object.values(G).length,
         eh = r.useMemo(() => {
-            let e = eg > 100 ? U : s();
+            let e = ef > 100 ? U : s();
             return Object.values(G).filter((t) => {
                 var n;
                 let { application: i } = t;
@@ -140,9 +140,9 @@ function W(e) {
                     (null != i.bot && e(n, i.bot.username.toLowerCase()))
                 );
             });
-        }, [G, eg, et]),
-        ex = (0, c.e7)([Z.Z], () => {
-            if (null != W) return eh.find((e) => Z.Z.canShowOverviewTooltip(W.id, e.integration.id));
+        }, [G, ef, et]),
+        ex = (0, c.e7)([P.Z], () => {
+            if (null != W) return eh.find((e) => P.Z.canShowOverviewTooltip(W.id, e.integration.id));
         }, [eh, W]),
         ej = r.useMemo(
             () => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh),
@@ -168,16 +168,16 @@ function W(e) {
                     ? l.push({
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sat, {
-                              timestamp: w.default.extractTimestamp(r.id),
+                              timestamp: T.default.extractTimestamp(r.id),
                               user: E.ZP.getUserTag(r.user),
                           }),
                       })
                     : l.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: w.default.extractTimestamp(r.id) }),
+                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: T.default.extractTimestamp(r.id) }),
                       }),
                 (0, i.jsx)(
-                    T.Z,
+                    w.Z,
                     {
                         name: n.name,
                         imageSrc: S.ZP.getApplicationIconURL({
@@ -259,7 +259,7 @@ function W(e) {
                                                 guildId: n,
                                             },
                                         }),
-                                            (0, b.xf)();
+                                            (0, m.xf)();
                                     },
                                 }),
                             }),
@@ -267,18 +267,18 @@ function W(e) {
                     }),
                 });
             return t > 0 ? l : a;
-        })(ee, eg, null == W ? void 0 : W.id)),
+        })(ee, ef, null == W ? void 0 : W.id)),
         (eI = null));
-    let ew = I.Z.getArticleURL(_.BhN.INTEGRATIONS),
+    let eT = I.Z.getArticleURL(_.BhN.INTEGRATIONS),
         eE = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
-        eP = [];
+        eZ = [];
     if (el) {
         let e, t, r, a, o;
-        eP.push(
+        eZ.push(
             ((n = K.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
             (0, i.jsx)(
-                T.Z,
+                w.Z,
                 {
                     name: A.intl.string(A.t.xOg4SP),
                     icon: u.tYf,
@@ -294,14 +294,14 @@ function W(e) {
         ),
             (null == H ? void 0 : H.type) === _.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && _.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                eP.push(
+                eZ.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
                         : ((r = A.intl.string(A.t["ZwSt+T"])),
                           (a = () => open(I.Z.getArticleURL(_.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        T.Z,
+                        w.Z,
                         {
                             name: A.intl.string(A.t.OrV60r),
                             icon: u.AsW,
@@ -317,10 +317,10 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        eP.push(
+        eZ.push(
             ((o = ec.length),
             (0, i.jsx)(
-                T.Z,
+                w.Z,
                 {
                     name: A.intl.string(A.t.tqtDXC),
                     icon: u.DuK,
@@ -332,14 +332,14 @@ function W(e) {
                 "channels-syncing",
             )),
         ),
-        em &&
-            eP.push(
+        ep &&
+            eZ.push(
                 (function (e, t, n) {
                     let r,
                         l,
                         a,
                         o,
-                        s = m.Z.get(_.ABu.TWITCH);
+                        s = p.Z.get(_.ABu.TWITCH);
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
@@ -348,12 +348,12 @@ function W(e) {
                             : ((r = A.intl.string(A.t.bkvGkn)),
                               (l = A.intl.string(A.t.Qq3X2M)),
                               (a = () =>
-                                  (0, g.Z)({
+                                  (0, f.Z)({
                                       platformType: _.ABu.TWITCH,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            T.Z,
+                            w.Z,
                             {
                                 name: A.intl.string(A.t.q4pBG3),
                                 icon: s.icon.whiteSVG,
@@ -368,16 +368,16 @@ function W(e) {
                             "integrations-twitch",
                         )
                     );
-                })(ed, eb, Y),
+                })(ed, em, Y),
             ),
-        ef &&
-            eP.push(
+        eg &&
+            eZ.push(
                 (function (e, t, n) {
                     let r,
                         l,
                         a,
                         o,
-                        s = m.Z.get(_.ABu.YOUTUBE);
+                        s = p.Z.get(_.ABu.YOUTUBE);
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
@@ -386,12 +386,12 @@ function W(e) {
                             : ((r = A.intl.string(A.t.xEyQ3X)),
                               (l = A.intl.string(A.t.T0ivgQ)),
                               (a = () =>
-                                  (0, g.Z)({
+                                  (0, f.Z)({
                                       platformType: _.ABu.YOUTUBE,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            T.Z,
+                            w.Z,
                             {
                                 name: A.intl.string(A.t.aS6cK4),
                                 icon: s.icon.whiteSVG,
@@ -406,15 +406,15 @@ function W(e) {
                             "integrations-youtube",
                         )
                     );
-                })(eu, ep, Y),
+                })(eu, eb, Y),
             );
-    let eT = null != H && eo && null != es;
+    let ew = null != H && eo && null != es;
     return (0, i.jsxs)("div", {
         className: a()(null != eI ? D.footerPlaceholder : null),
         children: [
             (0, i.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(eE, { helpdeskArticle: ew }),
+                children: A.intl.format(eE, { helpdeskArticle: eT }),
             }),
             (0, i.jsx)(u.izJ, { className: D.divider }),
             V || ei || null == W
@@ -424,17 +424,17 @@ function W(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eP,
-                          eT &&
+                          eZ,
+                          ew &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eP.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      eZ.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(P.t, {
+                                      (0, i.jsx)(Z.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -448,13 +448,13 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eP.length > 0 || eT ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        eZ.length > 0 || ew ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,
                                             children: A.intl.string(A.t.pUBKht),
                                         }),
-                                        eg > 4
+                                        ef > 4
                                             ? (0, i.jsx)(B, {
                                                   query: et,
                                                   setQuery: en,

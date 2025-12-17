@@ -26,8 +26,8 @@ var r,
     N = A && A.prototype,
     P = T && E(T),
     R = C && E(C),
-    D = Object.prototype,
-    w = l.TypeError,
+    w = Object.prototype,
+    D = l.TypeError,
     x = y("toStringTag"),
     L = O("TYPED_ARRAY_TAG"),
     j = "TypedArrayConstructor",
@@ -53,25 +53,25 @@ var r,
         var t = f(e);
         return "DataView" === t || d(U, t) || d(G, t);
     },
-    B = function (e) {
+    F = function (e) {
         var t = E(e);
         if (u(t)) {
             var n = I(t);
-            return n && d(n, j) ? n[j] : B(t);
+            return n && d(n, j) ? n[j] : F(t);
         }
     },
-    F = function (e) {
+    B = function (e) {
         if (!u(e)) return !1;
         var t = f(e);
         return d(U, t) || d(G, t);
     },
     V = function (e) {
-        if (F(e)) return e;
-        throw new w("Target is not a typed array");
+        if (B(e)) return e;
+        throw new D("Target is not a typed array");
     },
     H = function (e) {
         if (c(e) && (!b || g(P, e))) return e;
-        throw new w(p(e) + " is not a typed array constructor");
+        throw new D(p(e) + " is not a typed array constructor");
     },
     Y = function (e, t, n, r) {
         if (s) {
@@ -114,12 +114,12 @@ for (r in G) (a = (i = l[r]) && i.prototype) && (S(a)[j] = i);
 if (
     (!M || !c(P) || P === Function.prototype) &&
     ((P = function () {
-        throw new w("Incorrect invocation");
+        throw new D("Incorrect invocation");
     }),
     M)
 )
     for (r in U) l[r] && b(l[r], P);
-if ((!M || !R || R === D) && ((R = P.prototype), M)) for (r in U) l[r] && b(l[r].prototype, R);
+if ((!M || !R || R === w) && ((R = P.prototype), M)) for (r in U) l[r] && b(l[r].prototype, R);
 if ((M && E(N) !== R && b(N, R), s && !d(R, x)))
     for (r in ((k = !0),
     h(R, x, {
@@ -137,9 +137,9 @@ e.exports = {
     aTypedArrayConstructor: H,
     exportTypedArrayMethod: Y,
     exportTypedArrayStaticMethod: W,
-    getTypedArrayConstructor: B,
+    getTypedArrayConstructor: F,
     isView: Z,
-    isTypedArray: F,
+    isTypedArray: B,
     TypedArray: P,
     TypedArrayPrototype: R,
 };

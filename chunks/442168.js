@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
-    l = n(467721),
+    l = n(236726),
     a = n(442837),
     o = n(780384),
     c = n(481060),
@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(39604),
     f = n(175470),
     p = n(569545),
-    m = n(314910),
-    _ = n(565063);
+    b = n(314910),
+    m = n(933300);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -38,17 +38,17 @@ function g(e) {
     return e;
 }
 let v = { visibility: "hidden" },
-    b = {
+    h = {
         precision: 0.0001,
         duration: 300,
     },
-    h = {
+    E = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
         bounce: 0,
     },
-    E = { duration: 1000 };
+    _ = { duration: 1000 };
 function y(e) {
     let { stream: t, popoutType: n } = e,
         { reducedMotion: y } = i.useContext(o.Sf),
@@ -84,7 +84,7 @@ function y(e) {
                 ref: x,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: b,
+                config: h,
             },
             "animate-always",
         ),
@@ -143,7 +143,7 @@ function y(e) {
                             })(),
                         ),
                 ),
-                config: y.enabled ? E : h,
+                config: y.enabled ? _ : E,
                 onRest: (e, t) => {
                     null != t.item &&
                         null != I.find((e) => e.timestamp === t.item.timestamp) &&
@@ -157,26 +157,26 @@ function y(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: _.hidden,
+                    className: m.hidden,
                     ref: S,
                 }),
                 Z(
                     (e, t) =>
                         null != t &&
                         (0, r.jsx)(l.animated.div, {
-                            className: _.whiteFlash,
+                            className: m.whiteFlash,
                             style: e,
                         }),
                 ),
-                (0, r.jsx)(m.ZP, {
+                (0, r.jsx)(b.ZP, {
                     children: (0, r.jsx)("div", {
-                        className: _.hidden,
+                        className: m.hidden,
                         children: T(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(l.animated.img, {
                                     src: t.thumbnail,
-                                    className: _.movingImage,
+                                    className: m.movingImage,
                                     style: e,
                                 }),
                         ),

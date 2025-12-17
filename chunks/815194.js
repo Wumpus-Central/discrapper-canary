@@ -1,4 +1,4 @@
-n.d(e, { h: () => I });
+n.d(e, { h: () => _ });
 var i = n(54381),
     l = n(793030),
     s = n(442837),
@@ -6,32 +6,32 @@ var i = n(54381),
     r = n(825209),
     a = n(509613),
     o = n(131951),
-    c = n(313789),
-    S = n(518596),
-    d = n(595373),
-    T = n(981631),
-    g = n(388032),
-    E = n(318120);
-let I = (0, a.ON)(c.n.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
-    useSearchTerms: () => [g.intl.string(g.t["pS+K2L"]), g.intl.string(g.t.nuFtHH)],
-    usePredicate: d.J,
+    S = n(313789),
+    T = n(518596),
+    c = n(595373),
+    E = n(981631),
+    d = n(388032),
+    g = n(318120);
+let _ = (0, a.ON)(S.n.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
+    useSearchTerms: () => [d.intl.string(d.t["pS+K2L"]), d.intl.string(d.t.nuFtHH)],
+    usePredicate: c.J,
     Component: function () {
         let t = (0, s.e7)([o.Z], () => {
                 let { shortcut: t } = o.Z.getModeOptions();
                 return t;
             }),
-            e = g.intl.format(g.t.HVvn5T, {
-                onClick: () => (0, S.openUserSettings)(c.n.KEYBINDS_PANEL, { section: T.oAB.KEYBINDS }),
+            e = d.intl.format(d.t.HVvn5T, {
+                onClick: () => (0, T.openUserSettings)(S.n.KEYBINDS_PANEL, { section: E.oAB.KEYBINDS }),
             });
         return (0, i.jsx)(l.gNt, {
-            label: g.intl.string(g.t["o+BJQR"]),
+            label: d.intl.string(d.t["o+BJQR"]),
             description: e,
             layout: "horizontal-responsive",
             children: (0, i.jsx)("div", {
-                className: E.keybindContainer,
+                className: g.keybindContainer,
                 children: (0, i.jsx)(r.Z, {
                     defaultValue: t,
-                    onChange: (t) => u.Z.setMode(T.pM4.PUSH_TO_TALK, { shortcut: t }),
+                    onChange: (t) => u.Z.setMode(E.pM4.PUSH_TO_TALK, { shortcut: t }),
                 }),
             }),
         });

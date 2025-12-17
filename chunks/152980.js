@@ -7,25 +7,25 @@ var n = A(54381),
     o = A(28664),
     s = A(481060),
     d = A(205822),
-    u = A(476326),
-    c = A(313201),
-    g = A(374794),
-    f = A(587123),
+    c = A(476326),
+    u = A(313201),
+    f = A(374794),
+    g = A(587123),
     p = A(863663),
     m = A(731994),
     v = A(629481),
     h = A(388032),
-    q = A(530521);
-let b = (0, c.hQ)();
+    q = A(994959);
+let b = (0, u.hQ)();
 function C(e) {
     var t;
     let { upload: A, progress: a = 0, onDeleteAttachment: d } = e,
-        u = r.useCallback(() => {
+        c = r.useCallback(() => {
             null == d || d(A.id);
         }, [d, A.id]),
-        c = a >= 1,
-        g = a < 0,
-        f = c || g,
+        u = a >= 1,
+        f = a < 0,
+        g = u || f,
         m = null != (t = A.filename) ? t : A.id,
         v = (0, p.kg)(a);
     return (0, n.jsx)(o.u, {
@@ -33,8 +33,8 @@ function C(e) {
         text: v,
         children: (0, n.jsxs)("div", {
             className: l()(q.attachedFileCard, {
-                [q.attachedFileCardError]: g,
-                [q.attachedFileCardUploading]: !f,
+                [q.attachedFileCardError]: f,
+                [q.attachedFileCardUploading]: !g,
             }),
             children: [
                 (0, n.jsx)(s.ZKT, {
@@ -49,15 +49,15 @@ function C(e) {
                     variant: "text-sm/normal",
                     children: m,
                 }),
-                !f &&
+                !g &&
                     (0, n.jsx)(s.$jN, {
                         className: q.attachedFileCardSpinner,
                         type: s.$jN.Type.SPINNING_CIRCLE,
                     }),
-                f &&
+                g &&
                     null != d &&
                     (0, n.jsx)(s.P3F, {
-                        onClick: u,
+                        onClick: c,
                         "aria-label": h.intl.formatToPlainString(h.t["1o5hyW"], { attachment: m }),
                         "aria-hidden": !1,
                         className: q.deleteButton,
@@ -79,14 +79,14 @@ function U(e) {
             canAttachArchives: l,
             addAttachment: i,
             deleteAttachment: o,
-            fileUploadProgresses: c,
-        } = (0, f.P)(),
+            fileUploadProgresses: u,
+        } = (0, g.P)(),
         p = r.useRef(!1);
     function U(e) {
         try {
             for (let t of e)
                 i({
-                    platform: u.ow.WEB,
+                    platform: c.ow.WEB,
                     file: t,
                     origin: "unknown:guild_product_attachment",
                 });
@@ -107,7 +107,7 @@ function U(e) {
                     icons: m.J6,
                     onDrop: U,
                 }),
-                (0, n.jsxs)(g.Z, {
+                (0, n.jsxs)(f.Z, {
                     className: q.addFileButtonLook,
                     innerClassName: q.addFileButton,
                     disabled: !a,
@@ -154,7 +154,7 @@ function U(e) {
                                             children: (0, n.jsx)(C, {
                                                 upload: e,
                                                 onDeleteAttachment: o,
-                                                progress: c[e.id],
+                                                progress: u[e.id],
                                             }),
                                         },
                                         e.id,

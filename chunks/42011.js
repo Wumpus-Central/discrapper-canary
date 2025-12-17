@@ -1,20 +1,20 @@
-e.d(n, { W: () => a });
-var o = e(54381);
-e(473749);
-var i = e(376340),
-    r = e(388032),
-    s = e(629582);
-function a(t) {
-    let { onClose: n } = t;
+n.d(t, { W: () => s });
+var o = n(54381);
+n(473749);
+var i = n(376340),
+    a = n(388032),
+    r = n(898912);
+function s(e) {
+    let { onClose: t } = e;
     return (0, o.jsx)(i.L, {
         img: (0, o.jsx)("img", {
-            src: s.Z,
+            src: r.Z,
             width: "124 ",
             height: "160",
             alt: "",
         }),
-        title: r.intl.string(r.t.e6SOl0),
-        body: r.intl.string(r.t.QjAZAQ),
-        onClose: n,
+        title: a.intl.string(a.t.e6SOl0),
+        body: a.intl.string(a.t.QjAZAQ),
+        onClose: t,
     });
 }

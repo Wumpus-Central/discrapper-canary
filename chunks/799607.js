@@ -85,7 +85,7 @@ function _(e) {
         N = "open-mouse" === v || "open-keyboard" === v,
         P = (O.keyboardModeEnabled || A) && null != b,
         R = P,
-        [D, w] = i.useState(0),
+        [w, D] = i.useState(0),
         x = (0, l.$)(n, c, v),
         L = i.useCallback(() => {
             null != I.current && (clearTimeout(I.current), (I.current = null));
@@ -166,8 +166,8 @@ function _(e) {
                       ),
             [b, j],
         ),
-        B = i.useCallback((e) => {
-            w(e);
+        F = i.useCallback((e) => {
+            D(e);
         }, []);
     return (0, r.jsxs)("div", {
         onMouseEnter: M,
@@ -193,9 +193,9 @@ function _(e) {
                 isCaretHoverable: !0,
                 caretConfig: {
                     align: "custom",
-                    customOffset: D,
+                    customOffset: w,
                 },
-                onNudgeChange: B,
+                onNudgeChange: F,
                 onRequestClose: (e) => {
                     j(null != e && (0, o.Al)(e));
                 },

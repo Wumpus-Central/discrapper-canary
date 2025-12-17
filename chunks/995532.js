@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => I,
-    a: () => a,
+    a: () => s,
 });
 var r,
     l,
     i = n(442837),
-    s = n(570140);
-let a = {},
+    a = n(570140);
+let s = {},
     o = {},
     u = {},
     c = !1,
@@ -18,7 +18,7 @@ function _(e) {
 }
 function A(e) {
     let { welcomeScreen: t, guildId: n } = e;
-    o[n] = null != t ? t : a;
+    o[n] = null != t ? t : s;
 }
 class T extends (l = i.ZP.Store) {
     get(e) {
@@ -48,7 +48,7 @@ class T extends (l = i.ZP.Store) {
           writable: !0,
       })
     : (T[r] = "WelcomeScreenStore");
-let I = new T(s.Z, {
+let I = new T(a.Z, {
     INVITE_RESOLVE_SUCCESS: _,
     INVITE_ACCEPT_SUCCESS: _,
     WELCOME_SCREEN_SUBMIT_SUCCESS: A,
@@ -72,7 +72,7 @@ let I = new T(s.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
         (E = !1), (d = !1);
         let { welcomeScreen: t, guildId: n } = e;
-        o[n] = null != t ? t : a;
+        o[n] = null != t ? t : s;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
         (E = !1), (d = !0);

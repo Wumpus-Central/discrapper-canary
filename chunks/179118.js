@@ -27,11 +27,11 @@ var r = n(54381),
     N = n(669079),
     P = n(74538),
     R = n(51144),
-    D = n(987209),
-    w = n(981631),
+    w = n(987209),
+    D = n(981631),
     x = n(474936),
     L = n(388032),
-    j = n(769212);
+    j = n(527866);
 let M = 1500;
 function k(e) {
     let {
@@ -49,12 +49,12 @@ function k(e) {
         [O, v] = i.useState(p.kO8.Modes.DEFAULT),
         I = (0, c.e7)([T.Z], () => T.Z.enabled),
         C = d || (null != l && null != _),
-        k = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
+        k = (null == a ? void 0 : a.productLine) === D.POd.COLLECTIBLES,
         G = (0, b.Z)(),
-        { selectedGiftingPromotionReward: Z } = (0, D.wD)(),
-        B = null == G ? void 0 : G.giftPurchaseConfirmation,
-        F = (0, y.tK)(null == Z ? void 0 : Z.skuId),
-        V = (0, y.a5)(s) && null != F && null != B,
+        { selectedGiftingPromotionReward: Z } = (0, w.wD)(),
+        F = null == G ? void 0 : G.giftPurchaseConfirmation,
+        B = (0, y.tK)(null == Z ? void 0 : Z.skuId),
+        V = (0, y.a5)(s) && null != B && null != F,
         H = () => (null != s ? s.skuId : null != a ? a.id : null),
         Y = () => {
             let e;
@@ -66,12 +66,12 @@ function k(e) {
                         s.interval === x.rV.MONTH
                             ? C
                                 ? V
-                                    ? B.monthGiftText
+                                    ? F.monthGiftText
                                     : L.t["4ZJ+7Z"]
                                 : L.t["P+z55d"]
                             : C
                               ? V
-                                  ? B.yearGiftText
+                                  ? F.yearGiftText
                                   : L.t.p0pZXP
                               : L.t.bXqk3o),
                     L.intl.format(e, {
@@ -242,9 +242,9 @@ let U = (e) => {
         A = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
         N = l().difference(A, T),
         P = [...T, ...N],
-        D = (0, c.e7)([C.default], () => C.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
-    if (null == D || 0 === D.length) return null;
-    let w = l().sortBy(D, (e) => P.indexOf(e.id));
+        w = (0, c.e7)([C.default], () => C.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
+    if (null == w || 0 === w.length) return null;
+    let D = l().sortBy(w, (e) => P.indexOf(e.id));
     return (0, r.jsxs)("div", {
         className: j.giftRecipientSection,
         children: [
@@ -268,7 +268,7 @@ let U = (e) => {
                         onChange: (e) => {
                             o(e), f(!1);
                         },
-                        options: w.map((e) => ({
+                        options: D.map((e) => ({
                             value: e,
                             label: "".concat(R.ZP.getUserTag(e)),
                         })),

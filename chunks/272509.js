@@ -1,31 +1,31 @@
 e.d(i, { default: () => C });
 var s = e(54381),
     n = e(473749),
-    o = e(793030),
-    r = e(704215),
-    l = e(481060),
-    c = e(266454),
-    a = e(749681),
+    a = e(793030),
+    o = e(704215),
+    r = e(481060),
+    l = e(266454),
+    c = e(749681),
     b = e(661824),
     d = e(626135),
     m = e(258971),
     x = e(981631),
     u = e(921944),
     I = e(49898),
-    _ = e(388032),
-    p = e(817238);
+    f = e(388032),
+    p = e(171339);
 function C(t) {
-    let { guildId: i, transitionState: C, onClose: h, analyticsType: v = r.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+    let { guildId: i, transitionState: C, onClose: h, analyticsType: v = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
         n.useEffect(() => {
             d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: r.z[v],
+                type: o.z[v],
                 guild_id: i,
             });
         }, [i, v]),
-        (0, s.jsx)(o.ExpressiveModal, {
-            title: _.intl.string(_.t["2tv5YG"]),
-            subtitle: _.intl.string(_.t.pgwlD7),
+        (0, s.jsx)(a.ExpressiveModal, {
+            title: f.intl.string(f.t["2tv5YG"]),
+            subtitle: f.intl.string(f.t.pgwlD7),
             transitionState: C,
             size: "sm",
             graphic: {
@@ -37,10 +37,10 @@ function C(t) {
             actions: [
                 {
                     variant: "secondary",
-                    text: _.intl.string(_.t.L5eIZ2),
+                    text: f.intl.string(f.t.L5eIZ2),
                     onClick: () => {
                         h(),
-                            (0, c.Q3)(v, {
+                            (0, l.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: u.L.SECONDARY,
                                 guildId: i,
@@ -49,15 +49,15 @@ function C(t) {
                 },
                 {
                     variant: "primary",
-                    text: _.intl.string(_.t["5e8Mrp"]),
+                    text: f.intl.string(f.t["5e8Mrp"]),
                     onClick: () => {
                         h(),
-                            (0, c.Q3)(v, {
+                            (0, l.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: u.L.PRIMARY,
                                 guildId: i,
                             }),
-                            (0, a.transitionToGlobalDiscovery)({
+                            (0, c.transitionToGlobalDiscovery)({
                                 tab: I.GlobalDiscoveryTab.APPS,
                                 newSessionState: {
                                     guildId: i,
@@ -73,14 +73,14 @@ function C(t) {
                     (0, s.jsxs)("li", {
                         className: p.listItem,
                         children: [
-                            (0, s.jsx)(l.$2U, {
+                            (0, s.jsx)(r.$2U, {
                                 color: "currentColor",
                                 className: p.wandIcon,
                             }),
-                            (0, s.jsx)(l.Text, {
+                            (0, s.jsx)(r.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t["0vKo5F"]),
+                                children: f.intl.string(f.t["0vKo5F"]),
                             }),
                         ],
                     }),
@@ -88,14 +88,14 @@ function C(t) {
                     (0, s.jsxs)("li", {
                         className: p.listItem,
                         children: [
-                            (0, s.jsx)(l.wGt, {
+                            (0, s.jsx)(r.wGt, {
                                 color: "currentColor",
                                 className: p.robotIcon,
                             }),
-                            (0, s.jsx)(l.Text, {
+                            (0, s.jsx)(r.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t.CprEDO),
+                                children: f.intl.string(f.t.CprEDO),
                             }),
                         ],
                     }),
@@ -103,14 +103,14 @@ function C(t) {
                     (0, s.jsxs)("li", {
                         className: p.listItem,
                         children: [
-                            (0, s.jsx)(l.EO4, {
+                            (0, s.jsx)(r.EO4, {
                                 color: "currentColor",
                                 className: p.smileIcon,
                             }),
-                            (0, s.jsx)(l.Text, {
+                            (0, s.jsx)(r.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t.wQJMPC),
+                                children: f.intl.string(f.t.wQJMPC),
                             }),
                         ],
                     }),

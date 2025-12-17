@@ -1,4 +1,4 @@
-n.d(t, { b: () => w }), n(388685);
+n.d(t, { b: () => D }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(674466),
@@ -79,7 +79,7 @@ function R(e) {
     let r = m.Z.getVoiceChannelId();
     return null != (n = null != (t = "channelId" in e ? e.channelId : void 0) ? t : r) ? n : null;
 }
-function D(e, t, n) {
+function w(e, t, n) {
     var r, i, a, o;
     return e
         ? null != (i = null == (r = I(t)) ? void 0 : r.frameRateEncode)
@@ -89,8 +89,8 @@ function D(e, t, n) {
           ? o
           : null;
 }
-function w(e, t) {
-    var n, r, c, m, w;
+function D(e, t) {
+    var n, r, c, m, D;
     let x,
         L = (0, O.hp)(e),
         j = R(t),
@@ -99,8 +99,8 @@ function w(e, t) {
         U = "mediaContext" in t ? t.mediaContext : void 0,
         G = "underlyingError" in t ? t.underlyingError : void 0,
         Z = "errorMessage" in t ? t.errorMessage : void 0,
-        B = "mediaSessionId" in t ? t.mediaSessionId : void 0,
-        F = "rtcConnectionId" in t ? t.rtcConnectionId : void 0,
+        F = "mediaSessionId" in t ? t.mediaSessionId : void 0,
+        B = "rtcConnectionId" in t ? t.rtcConnectionId : void 0,
         V = "videoCodec" in t ? t.videoCodec : void 0,
         H = "videoEncoder" in t ? t.videoEncoder : void 0,
         Y = "videoDecoder" in t ? t.videoDecoder : void 0,
@@ -131,8 +131,8 @@ function w(e, t) {
                   : $.getInboundStats(X.ownerId)
             : es
               ? null !=
-                (w = i().maxBy(null != (m = null == $ ? void 0 : $.getOutboundStats()) ? m : [], (e) => e.num_frames))
-                  ? w
+                (D = i().maxBy(null != (m = null == $ ? void 0 : $.getOutboundStats()) ? m : [], (e) => e.num_frames))
+                  ? D
                   : null
               : null != ec
                 ? null == $
@@ -153,7 +153,7 @@ function w(e, t) {
                 g,
                 O,
                 R,
-                w,
+                D,
                 k,
                 Q,
                 ee,
@@ -176,8 +176,8 @@ function w(e, t) {
                 eN,
                 eP,
                 eR,
-                eD,
                 ew,
+                eD,
                 ex,
                 eL,
                 ej,
@@ -186,8 +186,8 @@ function w(e, t) {
                 eU,
                 eG,
                 eZ,
-                eB,
                 eF,
+                eB,
                 eV;
             let eH = {
                 error_name: e.valueOf(),
@@ -196,11 +196,11 @@ function w(e, t) {
                 error_category: L.category,
                 underlying_error: null != G ? G : null,
                 error_message: null != Z ? Z : null,
-                guild_id: null != (w = null == M ? void 0 : M.guild_id) ? w : null,
+                guild_id: null != (D = null == M ? void 0 : M.guild_id) ? D : null,
                 channel_id: null != j ? j : null,
                 channel_type: null != (k = null == M ? void 0 : M.type) ? k : null,
-                rtc_connection_id: null != F ? F : null,
-                media_session_id: null != (Q = null != B ? B : p.Z.getMediaSessionId()) ? Q : null,
+                rtc_connection_id: null != B ? B : null,
+                media_session_id: null != (Q = null != F ? F : p.Z.getMediaSessionId()) ? Q : null,
                 parent_media_session_id: null != (ee = null == J ? void 0 : J.parentMediaSessionId) ? ee : null,
                 context: null != U ? U : null,
                 voice_backend_version:
@@ -232,7 +232,7 @@ function w(e, t) {
                 incoming_video_stopped_for_occlusion: !o.w.isIncomingVideoEnabled(),
                 bitrate: null != (eI = null == (u = C(es, ed, ec)) ? void 0 : u.bitrate) ? eI : null,
                 target_bitrate: es && null != (eT = null == (d = I(ed)) ? void 0 : d.bitrateTarget) ? eT : null,
-                fps: null != (eC = D(es, el, ec)) ? eC : null,
+                fps: null != (eC = w(es, el, ec)) ? eC : null,
                 target_fps: el === S.Yn.STREAM && es ? en : null,
                 sender_user_id: null != (eA = null == X ? void 0 : X.ownerId) ? eA : null,
                 stream_region: null != (eN = null == J ? void 0 : J.getRegion()) ? eN : null,
@@ -249,8 +249,8 @@ function w(e, t) {
                 share_application_id: null != ei ? ei : null,
                 share_application_executable: null != ea ? ea : null,
                 share_application_distributor: null != eo ? eo : null,
-                cpu_brand: null != (eD = null == t ? void 0 : t.cpu_brand) ? eD : null,
-                cpu_vendor: null != (ew = null == t ? void 0 : t.cpu_vendor) ? ew : null,
+                cpu_brand: null != (ew = null == t ? void 0 : t.cpu_brand) ? ew : null,
+                cpu_vendor: null != (eD = null == t ? void 0 : t.cpu_vendor) ? eD : null,
                 cpu_memory: null != (ex = null == t ? void 0 : t.cpu_memory) ? ex : null,
                 gpu_brand: null != (eL = null == t ? void 0 : t.gpu_brand) ? eL : null,
                 gpu_count: null != (ej = null == t ? void 0 : t.gpu_count) ? ej : null,
@@ -259,8 +259,8 @@ function w(e, t) {
                 gpu_device_device_id: null != (eU = null == t ? void 0 : t.gpu_device_device_id) ? eU : null,
                 gpu_device_sub_sys_id: null != (eG = null == t ? void 0 : t.gpu_device_sub_sys_id) ? eG : null,
                 gpu_device_revision: null != (eZ = null == t ? void 0 : t.gpu_device_revision) ? eZ : null,
-                gpu_driver_version: null != (eB = null == t ? void 0 : t.gpu_driver_version) ? eB : null,
-                cpu_usage: null != (eF = y.Z.getCurrentCPUUsagePercent()) ? eF : null,
+                gpu_driver_version: null != (eF = null == t ? void 0 : t.gpu_driver_version) ? eF : null,
+                cpu_usage: null != (eB = y.Z.getCurrentCPUUsagePercent()) ? eB : null,
                 memory_usage: null != (eV = y.Z.getCurrentMemoryUsageKB()) ? eV : null,
                 outbound_bitrate_estimate: A(ed),
                 inbound_bitrate_estimate: N(ed),

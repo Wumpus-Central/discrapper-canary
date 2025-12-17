@@ -87,40 +87,40 @@ function R(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return D(e, t, n).hex("rgba");
+            return w(e, t, n).hex("rgba");
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return D(e, t, n).css("hsl");
+            return w(e, t, n).css("hsl");
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return D(e, t, n).hex();
+            return w(e, t, n).hex();
         },
         int() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                r = D(e, t, n),
+                r = w(e, t, n),
                 i = r.num();
             return 1 !== r.alpha() ? (i << 8) | Math.round(255 * r.alpha()) : i;
         },
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return D(e, t, n).rgba();
+            return w(e, t, n).rgba();
         },
     };
 }
-function D(e, t, n) {
+function w(e, t, n) {
     var r;
     let i = o()(null != (r = n.opacity) ? r : 1, 0, 1),
         a = e;
     return 1 !== t && (a = a.set("hsl.s", a.get("hsl.s") * t)), 1 !== i && (a = a.alpha(a.alpha() * i)), a;
 }
-function w(e) {
+function D(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
 function x(e, t) {
-    let n = null != t ? w(t) : null,
-        r = w(e);
+    let n = null != t ? D(t) : null,
+        r = D(e);
     return "var(--".concat([n, r].filter(Boolean).join("-"), ")");
 }
 let L = P;

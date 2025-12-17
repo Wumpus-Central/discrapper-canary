@@ -4,7 +4,7 @@ n.d(t, {
     K0: () => R,
     Pd: () => g,
     f$: () => s.f$,
-    lg: () => w,
+    lg: () => D,
     sX: () => s.Hx,
     tn: () => P,
     yZ: () => c.H,
@@ -143,7 +143,7 @@ function E(e, t, n, r, o) {
             (t.retried = (null != t.retried ? t.retried : 0) + 1),
             t.backoff.fail(() => x(t.url).then(() => E(e, t, n, r, o)));
     };
-    null == D || null == (d = D.prepareRequest) || d.call(D, b),
+    null == w || null == (d = w.prepareRequest) || d.call(w, b),
         b.ok((e) => null != e.status),
         b.then(
             (i) => {
@@ -177,7 +177,7 @@ function E(e, t, n, r, o) {
                     };
                 if (
                     (null == t || null == (a = t.interceptResponse) ? void 0 : a.call(t, i, m, b)) !== !0 &&
-                    (null == D || null == (c = D.interceptResponse) ? void 0 : c.call(D, i, m, b)) !== !0
+                    (null == w || null == (c = w.interceptResponse) ? void 0 : c.call(w, i, m, b)) !== !0
                 ) {
                     if (i.ok) n(d);
                     else {
@@ -321,9 +321,9 @@ function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "");
 }
-let D = null;
-function w(e) {
-    D = e;
+let w = null;
+function D(e) {
+    w = e;
 }
 let x = () => Promise.resolve();
 function L(e) {

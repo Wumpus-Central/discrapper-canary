@@ -199,8 +199,8 @@
         N = /^ (?= *`)|(` *) $/g,
         P = A,
         R = / *\n+$/,
-        D = RegExp("^( *)(" + S + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + S + " )\\n*|\\s*\n*$)"),
-        w = /(?:^|\n)( *)$/,
+        w = RegExp("^( *)(" + S + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + S + " )\\n*|\\s*\n*$)"),
+        D = /(?:^|\n)( *)$/,
         x = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
@@ -418,9 +418,9 @@
                 order: G++,
                 match: function (e, t) {
                     var n = null == t.prevCapture ? "" : t.prevCapture[0],
-                        r = w.exec(n),
+                        r = D.exec(n),
                         i = t._list || !t.inline;
-                    return r && i ? ((e = r[1] + e), D.exec(e)) : null;
+                    return r && i ? ((e = r[1] + e), w.exec(e)) : null;
                 },
                 parse: function (e, t, n) {
                     var r = e[2],
@@ -860,7 +860,7 @@
                 },
             },
         },
-        B = function (e, t) {
+        F = function (e, t) {
             return (
                 t ||
                     "undefined" == typeof console ||
@@ -870,7 +870,7 @@
                 }
             );
         },
-        F = function (e) {
+        B = function (e) {
             var t = function (n, r) {
                 if (((r = r || {}), !Array.isArray(n))) return e(n, t, r);
                 for (var i = r.key, a = [], o = null, s = 0; s < n.length; s++) {
@@ -964,8 +964,8 @@
         htmlTag: d,
         reactElement: u,
         defaultRawParse: Y,
-        ruleOutput: B,
-        reactFor: F,
+        ruleOutput: F,
+        reactFor: B,
         htmlFor: V,
         defaultParse: function () {
             return (

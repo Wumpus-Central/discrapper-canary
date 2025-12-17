@@ -23,8 +23,8 @@ var r = n(54381),
     I = n(783685),
     T = n(981631),
     C = n(388032),
-    A = n(208733),
-    N = n(430864);
+    A = n(297705),
+    N = n(960324);
 function P(e, t, n) {
     return (
         t in e
@@ -54,8 +54,8 @@ function R(e) {
     }
     return e;
 }
-let D = 2,
-    w = 2000;
+let w = 2,
+    D = 2000;
 function x(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         p = i.useMemo(() => {
@@ -267,7 +267,7 @@ function U(e) {
                     is_bot_user_id_non_null: null != h,
                     show_try_it_out_button: g,
                 });
-        }, w);
+        }, D);
         return () => clearTimeout(e);
     }, [a, u, h, g]),
     (0, y.BQ)(a) && (0, y.ye)(a))
@@ -310,7 +310,7 @@ function G(e) {
             let e = c * u;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, D * c),
+                minHeightOverride: Math.min(e, w * c),
                 maxHeightOverride: e,
             };
         }, [u, c]),
@@ -327,12 +327,12 @@ function G(e) {
                     ref: s,
                     className: N.markup,
                     variant: "text-sm/medium",
-                    lineClamp: m ? void 0 : D,
+                    lineClamp: m ? void 0 : w,
                     style: { maxHeight: m ? void 0 : d.minHeightOverride },
                     children: o,
                 }),
             }),
-            null != u && u > D
+            null != u && u > w
                 ? (0, r.jsxs)(l.P3F, {
                       className: A.expandableDescriptionClickable,
                       onClick: () => a((e) => !e),

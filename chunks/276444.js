@@ -61,11 +61,11 @@ function R(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
     (I = !0), (T = a), (m = !1), (f = t), (p = new Set(n)), (C = r), (_ = i);
 }
-function D(e) {
+function w(e) {
     let {} = e;
     (I = !1), (T = !1), (C = null), (m = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
 }
-function w(e) {
+function D(e) {
     let { userTrialOffer: t } = e;
     (0, l.C$)(), E.set(t.id, t), p.add(t.user_id);
 }
@@ -101,10 +101,10 @@ function Z(e) {
     if (null == t) return !1;
     g.has(t) || h.has(t) || (L(t), o.Z.wait(() => (0, l.IB)(t).catch(c.VqG)));
 }
-function B() {
+function F() {
     v = !0;
 }
-function F(e) {
+function B(e) {
     let { users: t, nextIndex: n } = e;
     (v = !1), (O = t), (S = n);
 }
@@ -163,13 +163,13 @@ let Y = new H(o.Z, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: G,
     BILLING_REFERRALS_REMAINING_FETCH_START: P,
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: R,
-    BILLING_REFERRALS_REMAINING_FETCH_FAIL: D,
-    BILLING_CREATE_REFERRAL_SUCCESS: w,
+    BILLING_REFERRALS_REMAINING_FETCH_FAIL: w,
+    BILLING_CREATE_REFERRAL_SUCCESS: D,
     CREATE_REFERRALS_SUCCESS: x,
     BILLING_REFERRAL_RESOLVE_SUCCESS: j,
     BILLING_REFERRAL_RESOLVE_FAIL: M,
-    REFERRALS_FETCH_ELIGIBLE_USER_START: B,
-    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: F,
+    REFERRALS_FETCH_ELIGIBLE_USER_START: F,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: B,
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: V,
     LOAD_MESSAGES_SUCCESS: U,
     MESSAGE_CREATE: k,

@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(607070),
     f = n(865672),
     p = n(109161),
-    _ = n(836484);
+    _ = n(557383);
 function m(e, t, n) {
     return (
         t in e
@@ -116,8 +116,8 @@ function O(e) {
         P = C && N,
         {
             gradientStyle: R,
-            gradientClassname: D,
-            gradientGlowClassname: w,
+            gradientClassname: w,
+            gradientGlowClassname: D,
         } = (0, f.Ic)({
             colorStrings: c,
             roleStyle: "username",
@@ -127,12 +127,12 @@ function O(e) {
         L = {
             className: o()(_.name, g, y, {
                 [_.username]: C,
-                [D]: P,
+                [w]: P,
             }),
             children: x,
         },
         j = {
-            className: o()(_.nameGlow, w, y),
+            className: o()(_.nameGlow, D, y),
             children: n,
         },
         M = A

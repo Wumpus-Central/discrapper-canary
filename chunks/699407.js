@@ -82,8 +82,8 @@ let h = "x-science-test",
     N = 0,
     P = 0,
     R = 0,
-    D = null,
-    w = 0,
+    w = null,
+    D = 0,
     x = Number.MAX_SAFE_INTEGER,
     L = 0,
     j = 0,
@@ -92,13 +92,13 @@ let h = "x-science-test",
     U = null,
     G = null;
 function Z() {
-    (A = 0), (N = 0), (P = 0), (w = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (D = Date.now()), (R = C);
+    (A = 0), (N = 0), (P = 0), (D = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (w = Date.now()), (R = C);
 }
-function B(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
 }
-let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
+let B = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
     V = new u.R(),
     H = {
         handleConnectionOpen: () => {},
@@ -119,7 +119,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
             TRACKING_URL: b,
             drainTimeoutOverride: y,
             waitFor: O,
-            scheduleWhenIdle: z = F,
+            scheduleWhenIdle: z = B,
             getLaunchSignature: q = () => null,
         } = e;
         function Q(e) {
@@ -138,9 +138,9 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
         function $() {
             if (((W = null), !X())) return Promise.resolve();
             let e = Y.slice();
-            (Y = []), (w = B(w));
+            (Y = []), (D = F(D));
             let t = e.length;
-            (x = Math.min(x, t)), (L = Math.max(L, t)), (j = B(j, t));
+            (x = Math.min(x, t)), (L = Math.max(L, t)), (j = F(j, t));
             let n = ee(e);
             return (
                 n.then(
@@ -149,10 +149,10 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                             var t;
                             null == (t = e.resolve) || t.call(e);
                         }),
-                            (N = B(N));
+                            (N = F(N));
                     },
                     (t) => {
-                        Y.unshift(...e), (P = B(P));
+                        Y.unshift(...e), (P = F(P));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -196,13 +196,13 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     rpc_failure_count: P,
                     first_seen_event_sequence_number: R,
                     last_seen_event_sequence_number: C,
-                    telemetry_period_start_timestamp: D,
+                    telemetry_period_start_timestamp: w,
                     telemetry_period_end_timestamp: Date.now(),
                     event_queue_rejection_count: A,
-                    event_queue_batch_count: w,
+                    event_queue_batch_count: D,
                     event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
                     event_queue_batch_max_size: L,
-                    event_queue_batch_avg_size: w > 0 ? j / w : 0,
+                    event_queue_batch_avg_size: D > 0 ? j / D : 0,
                     science_request_id: G,
                     science_response: U,
                     launch_signature: q(),
@@ -283,7 +283,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                             l = Q(s);
                         if ((null != l && (s.properties.client_uuid = V.generate(l)), Y.push(s), Y.length > E)) {
                             let e = Y.length - E;
-                            (A = B(A, e)), (Y = Y.slice(-E));
+                            (A = F(A, e)), (Y = Y.slice(-E));
                         }
                         r ? J({ shouldFlushOnNextTick: !0 }) : J({ shouldFlushOnNextTick: !1 });
                     }),

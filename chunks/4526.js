@@ -1,33 +1,33 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => f }), r(388685);
 var n = r(54381),
     o = r(473749),
-    i = r(512722),
-    c = r.n(i),
+    c = r(512722),
+    i = r.n(c),
     l = r(481060),
     s = r(985002),
     a = r(957656),
-    d = r(225753),
+    d = r(517319),
     u = r(388032),
-    f = r(544723);
-let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: i, onClose: b } = e,
+    b = r(909660);
+let f = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: c, onClose: f } = e,
         [p, h] = o.useState(!1),
         j = o.useCallback(() => {
             h(!0);
         }, []),
         y = o.useCallback(() => {
-            b();
-        }, [b]),
+            f();
+        }, [f]),
         x = t.nsfwAllowed,
         { declineLinkRequest: g, isDeclineLoading: O } = (0, s.G)({
             onError: j,
             onSuccess: y,
         });
     return (
-        c()(!x, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        i()(!x, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
         (0, n.jsxs)(l.IX, {
-            transitionState: i,
-            onClose: b,
+            transitionState: c,
+            onClose: f,
             children: [
                 p &&
                     (0, n.jsx)(l.M14, {
@@ -43,7 +43,7 @@ let b = (e) => {
                             icon: (0, n.jsx)(l.Dio, {
                                 size: "md",
                                 color: "currentColor",
-                                className: f.closeIcon,
+                                className: b.closeIcon,
                             }),
                         }),
                         (0, n.jsx)(a.Z.Content, {
@@ -57,7 +57,7 @@ let b = (e) => {
                         {
                             variant: "secondary",
                             text: u.intl.string(u.t["ETE/oC"]),
-                            onClick: b,
+                            onClick: f,
                             disabled: O,
                         },
                         {

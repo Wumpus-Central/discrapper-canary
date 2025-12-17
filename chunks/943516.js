@@ -12,14 +12,14 @@ var r = A(512722),
     o = A(159691),
     s = A(481060),
     d = A(485386),
-    u = A(470209),
-    c = A(981631),
-    g = A(388032),
-    f = A(340036);
+    c = A(470209),
+    u = A(981631),
+    f = A(388032),
+    g = A(850699);
 function p() {
     return {
         name: "",
-        color: c.p6O,
+        color: u.p6O,
     };
 }
 function m(e) {
@@ -41,7 +41,7 @@ function m(e) {
           })
         : ((t = (0, n.jsx)(s.$jN, { type: s.$jN.Type.PULSING_ELLIPSIS })),
           (0, n.jsx)("div", {
-              className: f.attachedRoleContainer,
+              className: g.attachedRoleContainer,
               children: t,
           }));
 }
@@ -49,7 +49,7 @@ function v() {
     return (0, n.jsx)(s.Mgn, {
         size: "xs",
         color: "currentColor",
-        className: f.warningIcon,
+        className: g.warningIcon,
     });
 }
 function h(e) {
@@ -59,7 +59,7 @@ function h(e) {
             (0, n.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: g.intl.format(g.t.i2x5aY, {
+                children: f.intl.format(f.t.i2x5aY, {
                     roleName: t,
                     emphasisHook: (e) =>
                         (0, n.jsx)(s.Text, {
@@ -71,7 +71,7 @@ function h(e) {
                 }),
             }),
             (0, n.jsxs)(s.Heading, {
-                className: f.detachWarningHeading,
+                className: g.detachWarningHeading,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
@@ -83,16 +83,16 @@ function h(e) {
                         horizontal: !0,
                         size: 8,
                     }),
-                    g.intl.string(g.t.KWx4HY),
+                    f.intl.string(f.t.KWx4HY),
                 ],
             }),
             (0, n.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: g.intl.string(g.t.hNHNph),
+                children: f.intl.string(f.t.hNHNph),
             }),
             (0, n.jsxs)(s.Heading, {
-                className: f.detachWarningHeading,
+                className: g.detachWarningHeading,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
@@ -104,24 +104,24 @@ function h(e) {
                         horizontal: !0,
                         size: 8,
                     }),
-                    g.intl.string(g.t.WIPKAb),
+                    f.intl.string(f.t.WIPKAb),
                 ],
             }),
             (0, n.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: g.intl.string(g.t["40shJX"]),
+                children: f.intl.string(f.t["40shJX"]),
             }),
         ],
     });
 }
 function q(e) {
-    let { newRoleParams: t, setNewRoleParams: r, guildId: l, productId: c, listingRoleId: f, error: p } = e,
-        v = (0, i.e7)([d.Z], () => (null != f ? d.Z.getRole(l, f) : void 0));
+    let { newRoleParams: t, setNewRoleParams: r, guildId: l, productId: u, listingRoleId: g, error: p } = e,
+        v = (0, i.e7)([d.Z], () => (null != g ? d.Z.getRole(l, g) : void 0));
     return null === t
         ? (0, n.jsx)(s.gNt, {
-              label: g.intl.string(g.t.ovXIrP),
-              description: g.intl.string(g.t["H7coX+"]),
+              label: f.intl.string(f.t.ovXIrP),
+              description: f.intl.string(f.t["H7coX+"]),
               children: (0, n.jsxs)(s.NIo, {
                   children: [
                       (0, n.jsx)(m, {
@@ -129,7 +129,7 @@ function q(e) {
                           onRemove: void 0,
                       }),
                       (0, n.jsx)(o.zxk, {
-                          text: g.intl.string(g.t.KkRpFi),
+                          text: f.intl.string(f.t.KkRpFi),
                           icon: s.UEU,
                           iconPosition: "end",
                           variant: "secondary",
@@ -140,15 +140,15 @@ function q(e) {
                   ],
               }),
           })
-        : null != f
+        : null != g
           ? (0, n.jsx)(s.gNt, {
-                label: g.intl.string(g.t.zIg9tw),
-                description: g.intl.string(g.t.OfuEkP),
+                label: f.intl.string(f.t.zIg9tw),
+                description: f.intl.string(f.t.OfuEkP),
                 errorMessage: p,
                 children: (0, n.jsx)(m, {
                     role: v,
                     onRemove: () => {
-                        a()(null != c, "productId cannot be null"),
+                        a()(null != u, "productId cannot be null"),
                             a()(null != v, "no role attached"),
                             (function (e) {
                                 let { onConfirm: t, roleName: r } = e;
@@ -183,10 +183,10 @@ function q(e) {
                                                 return e;
                                             })(
                                                 {
-                                                    title: g.intl.string(g.t.Y3Hi3R),
+                                                    title: f.intl.string(f.t.Y3Hi3R),
                                                     body: (0, n.jsx)(h, { roleName: r }),
-                                                    cta: g.intl.string(g.t.VawZVx),
-                                                    closeLabel: g.intl.string(g.t["6y+3Bw"]),
+                                                    cta: f.intl.string(f.t.VawZVx),
+                                                    closeLabel: f.intl.string(f.t["6y+3Bw"]),
                                                     onConfirm: t,
                                                 },
                                                 A,
@@ -203,9 +203,9 @@ function q(e) {
           : (a()(null != t, "newRoleParams cannot be null at this point"),
             (0, n.jsx)(s.gNt, {
                 required: !0,
-                label: g.intl.string(g.t.xZvFpA),
+                label: f.intl.string(f.t.xZvFpA),
                 errorMessage: p,
-                children: (0, n.jsx)(u.Z, {
+                children: (0, n.jsx)(c.Z, {
                     newRoleParams: t,
                     setNewRoleParams: r,
                 }),

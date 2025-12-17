@@ -11,18 +11,18 @@ function d(e, t) {
     return "".concat(e, ":").concat(t);
 }
 let p = {},
-    h = {},
-    f = new a.sW(3000, function () {
+    f = {},
+    h = new a.sW(3000, function () {
         let e = [];
-        for (let [t, n] of Object.entries(h)) e.push(n), (p[t] = n), delete h[t];
+        for (let [t, n] of Object.entries(f)) e.push(n), (p[t] = n), delete f[t];
         0 !== e.length && s.Z.subscribeActivities(e);
     });
 function m(e) {
     let t = d(e.applicationId, e.partyId);
-    return t in p || t in h;
+    return t in p || t in f;
 }
 function g() {
-    (p = {}), (h = {});
+    (p = {}), (f = {});
 }
 class b extends (i = l.ZP.Store) {
     initialize() {
@@ -47,7 +47,7 @@ let C = new b(o.Z, {
                 let e = !1,
                     t = Date.now();
                 for (let [n, i] of Object.entries(p)) i.expiresAt < t && (delete p[n], (e = !0));
-                for (let [n, i] of Object.entries(h)) i.expiresAt < t && (delete h[n], (e = !0));
+                for (let [n, i] of Object.entries(f)) i.expiresAt < t && (delete f[n], (e = !0));
                 return e;
             })(),
             { userId: i, applicationId: r, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
@@ -55,7 +55,7 @@ let C = new b(o.Z, {
         let c = d(r, l),
             g = u.$y + Date.now();
         return (
-            (h[c] = {
+            (f[c] = {
                 userId: i,
                 applicationId: r,
                 partyId: l,
@@ -63,13 +63,13 @@ let C = new b(o.Z, {
                 channelId: o,
                 expiresAt: g,
             }),
-            f.delay(),
+            h.delay(),
             !0
         );
     },
     CONNECTION_OPEN: g,
     CONNECTION_RESUMED: g,
     LOGOUT: function () {
-        (p = {}), (h = {});
+        (p = {}), (f = {});
     },
 });

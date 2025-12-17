@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(493683),
     a = n(239091),
-    s = n(730749),
-    o = n(430824);
+    o = n(730749),
+    s = n(430824);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,7 +49,7 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return (0, s.Z)(
+    return (0, o.Z)(
         class extends i.Component {
             render() {
                 return (0, r.jsx)(
@@ -94,13 +94,13 @@ function d(e) {
                         n.e("9536"),
                         n.e("87154"),
                         n.e("33213"),
-                        n.e("22431"),
+                        n.e("48363"),
                     ]).then(n.bind(n, 545135));
                     return (n) => (0, r.jsx)(e, u(c({}, n), { guild: t }));
                 });
             }
             handleChannelContextMenu(e, t) {
-                let i = o.Z.getGuild(t.getGuildId());
+                let i = s.Z.getGuild(t.getGuildId());
                 if (null == i) return null;
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e("17471").then(n.bind(n, 428108));

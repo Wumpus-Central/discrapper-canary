@@ -1,16 +1,16 @@
 n.d(t, { Z: () => a });
 var r = n(973772),
     i = n(535396),
-    l = n(265397),
+    l = n(556970),
     o = n(388032);
 function a(e) {
     var t, n, a;
     let s,
-        { guildId: u, powerups: c } = e,
-        d = (0, r.Gv)(u, c),
-        p = d.some((e) => e.type !== i.A3.INACTIVE);
-    if (c.length <= 0) return null;
-    let f = d.reduce(
+        { guildId: c, powerups: u } = e,
+        d = (0, r.Gv)(c, u),
+        f = d.some((e) => e.type !== i.A3.INACTIVE);
+    if (u.length <= 0) return null;
+    let p = d.reduce(
         (e, t) => {
             let { sourceEntitlement: n } = t,
                 r = null == n ? void 0 : n.ends_at;
@@ -18,12 +18,12 @@ function a(e) {
         },
         void 0,
     );
-    null != f
+    null != p
         ? (s = {
               type: "expiring",
-              expiringAt: f,
+              expiringAt: p,
           })
-        : p &&
+        : f &&
           (s = {
               type: "active",
               statusText: o.intl.string(l.default.FFLkmx),
@@ -49,13 +49,13 @@ function a(e) {
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
-        x = p ? m : g;
+        x = f ? m : g;
     return {
-        isActive: p,
+        isActive: f,
         status: s,
         cost: x,
-        costDecorator: !p && v > x ? "+" : void 0,
-        expiringAt: f,
+        costDecorator: !f && v > x ? "+" : void 0,
+        expiringAt: p,
         activeCost: m,
         minCost: g,
         totalCost: v,

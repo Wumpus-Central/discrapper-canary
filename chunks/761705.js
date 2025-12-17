@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y }), n(388685), n(539854);
-var r,
-    a = n(54381),
+var a,
+    r = n(54381),
     i = n(473749),
     l = n(120356),
     s = n.n(l),
@@ -11,11 +11,11 @@ var r,
     p = n(376641),
     m = n(714338),
     h = n(134432),
-    g = n(44488),
-    f = n(585483),
-    _ = n(981631),
-    b = n(463747);
-function x(e, t, n) {
+    f = n(44488),
+    g = n(585483),
+    b = n(981631),
+    x = n(499077);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,52 +28,52 @@ function x(e, t, n) {
         e
     );
 }
-function v(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                x(e, t, n[t]);
+            a.forEach(function (t) {
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-let C = {
+let j = {
     friction: 10,
     tension: 100,
 };
-class j extends i.Component {
+class _ extends i.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
-            { translate: n, opacity: r } = this.state;
+            { translate: n, opacity: a } = this.state;
         n.setValue(t[t.length - 1]),
-            r.setValue(0),
+            a.setValue(0),
             e(),
             d.Z.parallel([
-                d.Z.timing(r, {
+                d.Z.timing(a, {
                     toValue: 1,
                     easing: d.Z.Easing.out(d.Z.Easing.linear),
                     duration: 200,
                 }),
-                d.Z.spring(n, v({ toValue: 0 }, C)),
+                d.Z.spring(n, C({ toValue: 0 }, j)),
             ]).start();
     }
     componentWillLeave(e) {
         let { directionHistory: t } = this.props,
-            { opacity: n, translate: r } = this.state;
+            { opacity: n, translate: a } = this.state;
         d.Z.parallel([
             d.Z.timing(n, {
                 toValue: 0,
                 easing: d.Z.Easing.in(d.Z.Easing.linear),
                 duration: 200,
             }),
-            d.Z.spring(r, v({ toValue: -1 * t[t.length - 1] }, C)),
+            d.Z.spring(a, C({ toValue: -1 * t[t.length - 1] }, j)),
         ]).start(e);
     }
     getStyle() {
@@ -93,41 +93,41 @@ class j extends i.Component {
     render() {
         let { item: e } = this.props,
             { className: t } = this.props;
-        return (0, a.jsx)(d.Z.img, {
+        return (0, r.jsx)(d.Z.img, {
             src: e.src,
             alt: "",
-            className: s()(b.slide, t),
+            className: s()(x.slide, t),
             style: this.getStyle(),
         });
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", {
+            v(this, "state", {
                 translate: new d.Z.Value(0),
                 opacity: new d.Z.Value(1),
             });
     }
 }
-class y extends (r = i.Component) {
+class y extends (a = i.Component) {
     componentDidMount() {
         this.preloadNextImages(),
             m.Z.disable(),
             m.Z.enableTemp(p.P),
-            f.S.subscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-            f.S.subscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+            g.S.subscribe(b.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
+            g.S.subscribe(b.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     componentWillUnmount() {
         m.Z.disableTemp(),
-            f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-            f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+            g.S.unsubscribe(b.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
+            g.S.unsubscribe(b.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     preloadNextImages() {
         var e, t;
         let { currentIndex: n } = this.state,
-            { items: r } = this.props,
-            a = (((n + 1) % (e = r.length)) + e) % e,
-            i = (((n - 1) % (t = r.length)) + t) % t;
-        this.preloadImage(r[a]), this.preloadImage(r[i]);
+            { items: a } = this.props,
+            r = (((n + 1) % (e = a.length)) + e) % e,
+            i = (((n - 1) % (t = a.length)) + t) % t;
+        this.preloadImage(a[r]), this.preloadImage(a[i]);
     }
     preloadImage(e) {
         (0, h.po)(e.src);
@@ -137,47 +137,47 @@ class y extends (r = i.Component) {
         n !== t.currentIndex && this.preloadNextImages();
     }
     navigateTo(e) {
-        var t, n, r;
-        let { directionHistory: a, currentIndex: i } = this.state;
-        a.push(e - i),
-            (e = ((e % (r = this.props.items.length)) + r) % r),
+        var t, n, a;
+        let { directionHistory: r, currentIndex: i } = this.state;
+        r.push(e - i),
+            (e = ((e % (a = this.props.items.length)) + a) % a),
             this.setState({
                 currentIndex: e,
-                directionHistory: a,
+                directionHistory: r,
             }),
             null == (t = (n = this.props).onIndexChange) || t.call(n, e);
     }
     render() {
         var e;
         let { className: t } = this.props,
-            { currentIndex: n, directionHistory: r } = this.state,
+            { currentIndex: n, directionHistory: a } = this.state,
             { modalCarouselItemClassName: i } = this.props,
             l = this.props.items[n],
             o = this.props.items;
-        return (0, a.jsxs)(u.W, {
+        return (0, r.jsxs)(u.W, {
             component: "div",
-            className: s()(b.wrapper, t),
+            className: s()(x.wrapper, t),
             children: [
                 o.length > 1
-                    ? (0, a.jsx)(g.am, {
-                          className: b.navPrev,
+                    ? (0, r.jsx)(f.am, {
+                          className: x.navPrev,
                           onClick: this.gotoPrev,
                       })
                     : null,
                 null != (e = l.component)
                     ? e
-                    : (0, a.jsx)(
-                          j,
+                    : (0, r.jsx)(
+                          _,
                           {
                               item: l,
-                              directionHistory: r,
+                              directionHistory: a,
                               className: i,
                           },
                           l.src,
                       ),
                 o.length > 1
-                    ? (0, a.jsx)(g.Pz, {
-                          className: b.navNext,
+                    ? (0, r.jsx)(f.Pz, {
+                          className: x.navNext,
                           onClick: this.gotoNext,
                       })
                     : null,
@@ -186,20 +186,20 @@ class y extends (r = i.Component) {
     }
     constructor(e) {
         super(e),
-            x(this, "gotoNext", () => {
+            v(this, "gotoNext", () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e + 1);
             }),
-            x(this, "gotoPrev", () => {
+            v(this, "gotoPrev", () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e - 1);
             }),
-            x(this, "gotoNextThrottled", c()(this.gotoNext, 300)),
-            x(this, "gotoPrevThrottled", c()(this.gotoPrev, 300)),
+            v(this, "gotoNextThrottled", c()(this.gotoNext, 300)),
+            v(this, "gotoPrevThrottled", c()(this.gotoPrev, 300)),
             (this.state = {
                 currentIndex: e.startWith,
                 directionHistory: [],
             });
     }
 }
-x(y, "defaultProps", { startWith: 0 });
+v(y, "defaultProps", { startWith: 0 });

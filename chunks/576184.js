@@ -1,16 +1,16 @@
-s.r(r), s.d(r, { default: () => g });
+s.r(r), s.d(r, { default: () => N });
 var t = s(54381),
     o = s(473749),
-    i = s(120356),
-    n = s.n(i),
-    a = s(319498),
+    a = s(120356),
+    i = s.n(a),
+    n = s(319498),
     c = s(481060),
     l = s(710845),
     d = s(361207),
     w = s(954824),
     b = s(981631),
     m = s(388032),
-    p = s(827414);
+    p = s(963557);
 let h = [
         {
             id: "discord",
@@ -28,12 +28,12 @@ let h = [
             url: "https://www.mozilla.org/en-US/firefox/new/?scene=2",
         },
     ],
-    _ = {
+    u = {
         discord: "browserDiscord",
         firefox: "browserFirefox",
         chrome: "browserChrome",
     };
-class u extends o.Component {
+class x extends o.Component {
     render() {
         let e,
             { id: r, getName: s, url: o } = this.props.browser;
@@ -45,7 +45,7 @@ class u extends o.Component {
                           href: o,
                           children: m.intl.string(m.t["1WjMbC"]),
                       })
-                    : (0, t.jsx)(a.rU, {
+                    : (0, t.jsx)(n.rU, {
                           className: p.btn,
                           to: b.Z5c.APPS,
                           children: m.intl.string(m.t["1WjMbC"]),
@@ -53,7 +53,7 @@ class u extends o.Component {
             (0, t.jsxs)("li", {
                 className: p.browserItem,
                 children: [
-                    (0, t.jsx)("div", { className: n()(p.browserItemText, p.browser, p[_[r]]) }),
+                    (0, t.jsx)("div", { className: i()(p.browserItemText, p.browser, p[u[r]]) }),
                     (0, t.jsx)("div", {
                         className: p.browserItemText,
                         children: s(),
@@ -64,14 +64,14 @@ class u extends o.Component {
         );
     }
 }
-class x extends o.Component {
+class g extends o.Component {
     componentDidMount() {
         w.Z.launch("discord://" + this.props.location.pathname, (e) => {
             new l.Z("UnsupportedBrowser").log("discord://", e);
         });
     }
     render() {
-        let e = h.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
+        let e = h.map((e) => (0, t.jsx)(x, { browser: e }, e.id));
         return (0, t.jsx)("div", {
             className: p.unsupportedBrowser,
             children: (0, t.jsxs)("div", {
@@ -94,4 +94,4 @@ class x extends o.Component {
         });
     }
 }
-let g = x;
+let N = g;

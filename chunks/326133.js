@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    S = n(671982);
+    S = n(109137);
 function I(e, t, n) {
     return (
         t in e
@@ -94,13 +94,13 @@ function P(e, t) {
     return i;
 }
 let R = 490,
-    D = 490,
-    w = 245,
+    w = 490,
+    D = 245,
     x = 200,
     L = 120,
     j = i.forwardRef(function (e, t) {
         var n, a, I, C, P, j, M, k, U;
-        let { channel: G, type: Z, editorHeight: B, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
+        let { channel: G, type: Z, editorHeight: F, onVisibilityChange: B, editorScrollerRef: V, barsHeight: H } = e,
             Y = (0, m.Dt)(),
             W = (0, l.e7)([E.Z], () => {
                 var e;
@@ -112,7 +112,7 @@ let R = 490,
             J = (0, p.DJ)(z.selectedIndex);
         (0, _.KR)(Y, z.isVisible, J);
         let $ = (0, y.Z)({
-                editorHeight: B,
+                editorHeight: F,
                 type: Z,
                 state: z,
             }),
@@ -139,8 +139,8 @@ let R = 490,
         if (
             (i.useEffect(() => {
                 var e, t;
-                F(z.isVisible, null != (t = null == (e = z.query) ? void 0 : e.type) ? t : null);
-            }, [F, z.isVisible, null == (a = z.query) ? void 0 : a.type]),
+                B(z.isVisible, null != (t = null == (e = z.query) ? void 0 : e.type) ? t : null);
+            }, [B, z.isVisible, null == (a = z.query) ? void 0 : a.type]),
             !z.isVisible || null == z.query || void 0 === $)
         )
             return null;
@@ -171,9 +171,9 @@ let R = 490,
             (ei = (null == (j = Z.autocomplete) ? void 0 : j.small)
                 ? x
                 : (null == (M = z.query) ? void 0 : M.type) === b.eq.EMOJIS_AND_STICKERS
-                  ? D
-                  : w);
-        let ea = Math.max(B, null != (k = null == V || null == (C = V.current) ? void 0 : C.clientHeight) ? k : 0),
+                  ? w
+                  : D);
+        let ea = Math.max(F, null != (k = null == V || null == (C = V.current) ? void 0 : C.clientHeight) ? k : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
         ei = Math.min(window.innerHeight - L - eo - (null != H ? H : 0), ei);
         let es = (0, r.jsx)(p.ZP, {

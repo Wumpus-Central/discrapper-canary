@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    l = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    l = n(442837),
     o = n(28664),
     c = n(481060),
     s = n(313201),
@@ -12,12 +12,12 @@ var i = n(120356),
     f = n(817053),
     g = n(890814),
     p = n(388032),
-    m = n(932366),
-    b = n(845859);
+    b = n(713603),
+    m = n(813347);
 function h(e) {
     var t,
         n,
-        { gameName: i, onClick: l } = e,
+        { gameName: i, onClick: a } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -27,29 +27,29 @@ function h(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["gameName", "onClick"]);
     let g = null != i ? i : p.intl.string(p.t.GIWFlF),
         h = p.intl.formatToPlainString(p.t["3mb1s5"], { game: g }),
-        y = (0, a.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
+        y = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
     return (0, d.kO)(s.applicationId) || y
-        ? (0, r.jsx)("div", { className: m.loadingCover })
+        ? (0, r.jsx)("div", { className: b.loadingCover })
         : (0, r.jsx)(o.u, {
               text: h,
               ariaHidden: !0,
               children: (0, r.jsxs)(c.P3F, {
-                  className: b.addButton,
-                  onClick: l,
+                  className: m.addButton,
+                  onClick: a,
                   "aria-label": h,
                   children: [
                       (0, r.jsx)(
@@ -80,7 +80,7 @@ function h(e) {
                               return e;
                           })(
                               {
-                                  className: b.cover,
+                                  className: m.cover,
                                   gameName: i,
                               },
                               s,
@@ -102,7 +102,7 @@ function h(e) {
                       ),
                       (0, r.jsx)(c.svS, {
                           size: "md",
-                          className: b.addIcon,
+                          className: m.addIcon,
                           color: c.TVs.colors.WHITE,
                       }),
                   ],
@@ -110,17 +110,17 @@ function h(e) {
           });
 }
 function y(e) {
-    let { userId: t, games: n, onDismiss: i, onClick: a, className: o } = e,
+    let { userId: t, games: n, onDismiss: i, onClick: l, className: o } = e,
         u = (0, s.Dt)();
     return (0, r.jsxs)("aside", {
-        className: l()(b.container, o),
+        className: a()(m.container, o),
         "aria-labelledby": u,
         children: [
             (0, r.jsxs)("div", {
-                className: b.header,
+                className: m.header,
                 children: [
                     (0, r.jsx)(c.P3F, {
-                        className: b.dismissButton,
+                        className: m.dismissButton,
                         "aria-label": p.intl.string(p.t["pUR+3g"]),
                         onClick: i,
                         children: (0, r.jsx)(c.Dio, {
@@ -139,13 +139,13 @@ function y(e) {
             (0, r.jsx)(g.Z, {
                 games: n,
                 renderGame: (e) => {
-                    let { applicationId: n, gameName: i, imageSrc: l } = e;
+                    let { applicationId: n, gameName: i, imageSrc: a } = e;
                     return (0, r.jsx)(h, {
-                        onClick: () => a(n, i, l),
+                        onClick: () => l(n, i, a),
                         userId: t,
                         applicationId: n,
                         gameName: i,
-                        imageSrc: l,
+                        imageSrc: a,
                     });
                 },
             }),

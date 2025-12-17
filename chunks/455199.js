@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => eo,
-    ln: () => B,
+    ln: () => F,
 }),
     n(290780),
     n(539854);
@@ -59,8 +59,8 @@ let A = "recentMentionFilterSettings",
     N = [],
     P = {},
     R = {},
-    D = !1,
-    w = !0,
+    w = !1,
+    D = !0,
     x = s.K.get(A, {
         guildFilter: I.NgX.ALL_SERVERS,
         everyoneFilter: !0,
@@ -88,14 +88,14 @@ function U(e) {
 }
 function G(e) {
     let { guildId: t } = e;
-    (D = !0), null == t && x.guildFilter === I.NgX.THIS_SERVER && Q({ guildFilter: I.NgX.ALL_SERVERS });
+    (w = !0), null == t && x.guildFilter === I.NgX.THIS_SERVER && Q({ guildFilter: I.NgX.ALL_SERVERS });
 }
 function Z(e) {
     if (e instanceof m.ZP) return e;
     let t = E.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, d.e5)(e);
 }
-function B(e) {
+function F(e) {
     let t = g.Z.getBasicChannel(e.channel_id);
     if (
         null == t ||
@@ -123,7 +123,7 @@ function B(e) {
             return !1;
     }
 }
-function F(e) {
+function B(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
         i = a().map(n, Z);
     U({ addedMessages: i }),
@@ -131,13 +131,13 @@ function F(e) {
         a().forEach(i, (e) => {
             R[e.id] = !0;
         }),
-        (D = !1),
-        (w = t),
+        (w = !1),
+        (D = t),
         (j = (0, l.zO)()),
         (L = !0);
 }
 function V() {
-    D = !1;
+    w = !1;
 }
 function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -269,7 +269,7 @@ function er(e) {
     let { size: t } = e;
     U({ deletedMessages: N.slice(t) });
     for (let e = t; e < N.length; ++e) delete R[N[e].id];
-    N.length > (N = N.slice(0, t)).length && (w = !0);
+    N.length > (N = N.slice(0, t)).length && (D = !0);
 }
 function ei(e) {
     M = !0;
@@ -288,16 +288,16 @@ class ea extends (r = o.ZP.Store) {
         return L || N.length > 0 ? N : null;
     }
     getSettingsFilteredMentions() {
-        return L || N.length > 0 ? N.filter(B) : null;
+        return L || N.length > 0 ? N.filter(F) : null;
     }
     hasMention(e) {
         return R[e];
     }
     get loading() {
-        return D;
+        return w;
     }
     get hasMore() {
-        return w;
+        return D;
     }
     get guildFilter() {
         return x.guildFilter;
@@ -322,7 +322,7 @@ class ea extends (r = o.ZP.Store) {
 T(ea, "displayName", "RecentMentionsStore");
 let eo = new ea(c.Z, {
     LOAD_RECENT_MENTIONS: G,
-    LOAD_RECENT_MENTIONS_SUCCESS: F,
+    LOAD_RECENT_MENTIONS_SUCCESS: B,
     LOAD_RECENT_MENTIONS_FAILURE: V,
     SET_RECENT_MENTIONS_FILTER: Q,
     CLEAR_MENTIONS: en,

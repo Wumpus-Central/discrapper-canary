@@ -1,24 +1,24 @@
-t.d(n, { Z: () => o }), t(388685);
+t.d(n, { Z: () => u }), t(388685);
 var l = t(54381);
 t(473749);
 var i = t(442837),
     r = t(481060),
     a = t(699516),
-    u = t(388032);
-function o(e) {
-    let { user: n, onAction: o, appContext: s } = e,
+    o = t(388032);
+function u(e) {
+    let { user: n, onAction: u, appContext: s } = e,
         d = n.id,
         [c, g] = (0, i.Wu)([a.Z], () => {
             var e;
             return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
         }, [d]);
     if (!c) return null;
-    let Z = null == g ? u.intl.string(u.t.BGYkaH) : u.intl.string(u.t["8pOYUE"]);
+    let Z = null == g ? o.intl.string(o.t.BGYkaH) : o.intl.string(o.t["8pOYUE"]);
     return (0, l.jsx)(r.sNh, {
         id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
         label: Z,
         action: () => {
-            null == o || o(),
+            null == u || u(),
                 (0, r.ZDy)(
                     async () => {
                         let { default: e } = await t.e("25070").then(t.bind(t, 670794));

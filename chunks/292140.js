@@ -4,8 +4,8 @@ n(473749);
 var i = n(481060),
     l = n(493773),
     a = n(626135),
-    s = n(144145),
-    o = n(555927),
+    o = n(144145),
+    s = n(555927),
     c = n(738762),
     u = n(244080),
     d = n(247530),
@@ -15,11 +15,11 @@ var i = n(481060),
 function h(e) {
     let { party: t, close: n, onSelect: h } = e,
         m = (0, c.Z)(t),
-        _ = (0, p.Z)(t),
-        b = (0, d.Z)(t),
+        b = (0, p.Z)(t),
+        _ = (0, d.Z)(t),
         E = (0, u.Z)(t),
-        O = (0, s.Z)(t),
-        v = (0, o.Z)(t);
+        O = (0, o.Z)(t),
+        v = (0, s.Z)(t);
     return (
         (0, l.ZP)(() => {
             let e = t.currentActivities
@@ -44,7 +44,7 @@ function h(e) {
             children: [
                 m,
                 (0, r.jsxs)(i.kSQ, {
-                    children: [_, b],
+                    children: [b, _],
                 }),
                 (0, r.jsx)(i.kSQ, { children: E }),
                 (0, r.jsx)(i.kSQ, { children: O }),

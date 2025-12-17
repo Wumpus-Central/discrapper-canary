@@ -1,6 +1,6 @@
 n.d(t, {
     JA: () => k,
-    Jw: () => w,
+    Jw: () => D,
     Od: () => M,
     Wj: () => G,
     gK: () => U,
@@ -39,8 +39,8 @@ var r = n(473749),
     N = n(124368),
     P = n(981631),
     R = n(959517),
-    D = n(388032),
-    w = (function (e) {
+    w = n(388032),
+    D = (function (e) {
         return (
             (e[(e.Disabled = 1)] = "Disabled"),
             (e[(e.Enabled = 2)] = "Enabled"),
@@ -107,11 +107,11 @@ function k(e) {
                 g = null != (_ = i.name) ? _ : "";
             if ("" === g && d) {
                 let e = M(t, n);
-                g = "" !== e ? e : D.intl.string(D.t["7Xm5QI"]);
+                g = "" !== e ? e : w.intl.string(w.t["7Xm5QI"]);
             }
             let y = (0, T.WD)(t),
                 O = E.Z.getChannel(S.default.castMessageIdAsChannelId(n)),
-                v = await B(t, [], void 0, () => {
+                v = await F(t, [], void 0, () => {
                     let e = null != n ? P.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : P.ANM.CHANNEL_THREADS(t.id);
                     return a.tn.post({
                         url: e,
@@ -139,7 +139,7 @@ function k(e) {
     );
 }
 function U(e, t, n, r, i) {
-    return B(e, [], void 0, () =>
+    return F(e, [], void 0, () =>
         a.tn.post({
             url: P.ANM.CHANNEL_THREADS(e.id),
             body: {
@@ -189,7 +189,7 @@ function G(e) {
                         i)
                     );
                 }
-            let C = await B(t, s, m, () =>
+            let C = await F(t, s, m, () =>
                 a.tn.post({
                     url: v,
                     body: S,
@@ -217,15 +217,15 @@ function Z(e, t, n, r, i) {
     else if (null != n && n.length > 0) return c.Z.sendStickers(e.id, n, t, { location: R.dy.THREAD_CREATION });
     else return c.Z.sendMessage(e.id, m.ZP.parse(e, t), void 0, { location: R.dy.THREAD_CREATION });
 }
-async function B(e, t, n, r) {
+async function F(e, t, n, r) {
     let i,
         a = e.isForumLikeChannel();
     try {
         (i = await r()),
             null == i.body
                 ? s.Z.show({
-                      title: D.intl.string(D.t.j2d6Km),
-                      body: D.intl.string(D.t.fEptJP),
+                      title: w.intl.string(w.t.j2d6Km),
+                      body: w.intl.string(w.t.fEptJP),
                   })
                 : (o.Z.dispatch({
                       type: "SLOWMODE_RESET_COOLDOWN",
@@ -240,13 +240,13 @@ async function B(e, t, n, r) {
         var l, u, p, m, g, b, y, S, I;
         if ((null == (l = r.body) ? void 0 : l.code) === P.evJ.TOO_MANY_THREADS)
             s.Z.show({
-                title: a ? D.intl.string(D.t.vWNFkx) : D.intl.string(D.t["1KEdvB"]),
-                body: a ? D.intl.string(D.t.KGaiEK) : D.intl.string(D.t.P0wT5S),
+                title: a ? w.intl.string(w.t.vWNFkx) : w.intl.string(w.t["1KEdvB"]),
+                body: a ? w.intl.string(w.t.KGaiEK) : w.intl.string(w.t.P0wT5S),
             });
         else if ((null == (u = r.body) ? void 0 : u.code) === P.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             s.Z.show({
-                title: D.intl.string(D.t["1KEdvB"]),
-                body: D.intl.string(D.t.jDMxz2),
+                title: w.intl.string(w.t["1KEdvB"]),
+                body: w.intl.string(w.t.jDMxz2),
             });
         else if ((null == (p = r.body) ? void 0 : p.code) === P.evJ.SLOWMODE_RATE_LIMITED) {
             let t = null != (b = r.body.retry_after) ? b : 0;
@@ -259,8 +259,8 @@ async function B(e, t, n, r) {
                 });
         } else if (429 === r.status)
             s.Z.show({
-                title: a ? D.intl.string(D.t.vWNFkx) : D.intl.string(D.t["1KEdvB"]),
-                body: D.intl.string(D.t.Whhv4w),
+                title: a ? w.intl.string(w.t.vWNFkx) : w.intl.string(w.t["1KEdvB"]),
+                body: w.intl.string(w.t.Whhv4w),
             });
         else if (N.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
         else if (N.RN.has(null == (g = r.body) ? void 0 : g.code)) {
@@ -301,8 +301,8 @@ async function B(e, t, n, r) {
             });
         } else
             s.Z.show({
-                title: D.intl.string(D.t.j2d6Km),
-                body: D.intl.string(D.t.fEptJP),
+                title: w.intl.string(w.t.j2d6Km),
+                body: w.intl.string(w.t.fEptJP),
             });
     }
     let T = await new Promise((e, t) => {

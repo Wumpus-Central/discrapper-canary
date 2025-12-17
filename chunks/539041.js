@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(481060),
     l = n(324060),
-    c = n(285764);
+    c = n(352936);
 function u(e) {
     let { children: t, useTopRightClipPath: n = !1, innerClassName: a } = e,
         u = i.useContext(l.Q),

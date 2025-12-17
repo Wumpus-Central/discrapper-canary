@@ -13,11 +13,11 @@ let o = (e) => {
             value: d,
             onRemoveTag: u,
             onAddTag: g,
-            onAddTagError: m,
-            maxTaxLength: p,
-            maxTags: f,
-            disabled: h,
-            placeholder: b,
+            onAddTagError: f,
+            maxTaxLength: m,
+            maxTags: b,
+            disabled: p,
+            placeholder: h,
         } = e,
         x = (function (e, t) {
             if (null == e) return {};
@@ -51,18 +51,18 @@ let o = (e) => {
             "disabled",
             "placeholder",
         ]);
-    let [j, _] = i.useState(null != d ? d : ""),
-        v = i.useCallback(() => {
+    let [j, v] = i.useState(null != d ? d : ""),
+        O = i.useCallback(() => {
             let e = j.trim();
             if (0 !== e.length) {
-                if (null != f && o.length >= f) {
-                    null == m || m(s.intl.string(s.t.Xx7XeB));
+                if (null != b && o.length >= b) {
+                    null == f || f(s.intl.string(s.t.Xx7XeB));
                     return;
                 }
-                g(e), _("");
+                g(e), v("");
             }
-        }, [j, f, g, m, o.length]),
-        O = i.useCallback(
+        }, [j, b, g, f, o.length]),
+        C = i.useCallback(
             (e) => {
                 switch (e.key) {
                     case a.vn.BACKSPACE:
@@ -73,10 +73,10 @@ let o = (e) => {
                     case a.vn.ENTER:
                     case a.vn.TAB:
                     case a.vn.COMMA:
-                        e.preventDefault(), e.stopPropagation(), v();
+                        e.preventDefault(), e.stopPropagation(), O();
                 }
             },
-            [v, j.length, u, o],
+            [O, j.length, u, o],
         );
     return (0, r.jsx)(
         l.oil,
@@ -118,12 +118,12 @@ let o = (e) => {
         (n = n =
             {
                 value: j,
-                onKeyDown: O,
-                onChange: _,
-                maxLength: p,
-                disabled: h,
-                onBlur: v,
-                placeholder: b,
+                onKeyDown: C,
+                onChange: v,
+                maxLength: m,
+                disabled: p,
+                onBlur: O,
+                placeholder: h,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

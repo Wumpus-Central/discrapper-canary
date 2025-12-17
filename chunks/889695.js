@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    S = n(124650);
+    S = n(593140);
 function I(e, t, n) {
     return (
         t in e
@@ -59,8 +59,8 @@ function C(e) {
             impersonateType: b.Z.getImpersonateType(t),
             viewingRoles: b.Z.getViewingRoles(t),
         })),
-        D = P === y.z.SERVER_SHOP,
-        w = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        w = P === y.z.SERVER_SHOP,
+        D = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
         x = null != I ? C[(0, u.lV)(I)] : null,
         [L, j] = i.useState(() => {
             let e = null == R ? [] : g.default.keys(R);
@@ -81,18 +81,18 @@ function C(e) {
             });
         }
     }, [L, P, C]);
-    let k = null != I && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
+    let k = null != I && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
                 null != I && null != n
                     ? N.filter((e) => !(0, d.fI)(e))
                           .filter((e) => {
                               var t;
-                              return !D || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
+                              return !w || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
                           .filter((e) => (null == k ? void 0 : k.id) === e.id || h.r6(I, n.id, k, e))
                     : [],
-            [I, n, D, k, N],
+            [I, n, w, k, N],
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({
@@ -115,9 +115,9 @@ function C(e) {
                 e
             );
         }, [U, I, x]);
-    if (null == n || null == I || null == w) return null;
+    if (null == n || null == I || null == D) return null;
     let Z = {};
-    return (w.roles.forEach((e) => {
+    return (D.roles.forEach((e) => {
         let t = C[e];
         null != t && (Z[t.id] = t);
     }),

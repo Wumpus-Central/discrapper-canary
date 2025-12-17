@@ -6,7 +6,7 @@ var i = n(54381),
     r = n(518596),
     a = n(981631),
     o = n(388032);
-let c = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
+let S = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
         useSearchTerms: () => [],
         Component: () =>
             (0, i.jsx)(l.Text, {
@@ -18,4 +18,4 @@ let c = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
                 }),
             }),
     }),
-    T = (0, s.k4)(u.n.APPEARANCE_REDIRECT_CATEGORY, { buildLayout: () => [c] });
+    T = (0, s.k4)(u.n.APPEARANCE_REDIRECT_CATEGORY, { buildLayout: () => [S] });

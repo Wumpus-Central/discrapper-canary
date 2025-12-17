@@ -39,8 +39,8 @@ let d = {},
     N = null,
     P = !1,
     R = c.oE.NONE,
-    D = null;
-function w(e) {
+    w = null;
+function D(e) {
     _ = !0;
 }
 function x(e) {
@@ -80,11 +80,11 @@ function Z(e) {
     let { signal: t } = e;
     S = t;
 }
-function B(e) {
+function F(e) {
     let { userInput: t } = e;
     I = t;
 }
-function F(e) {
+function B(e) {
     let {} = e;
     (O = !0), (v = null);
 }
@@ -118,19 +118,19 @@ function q(e) {
 }
 function Q(e) {
     let {} = e;
-    (R = c.oE.LOADING), (D = null);
+    (R = c.oE.LOADING), (w = null);
 }
 function X(e) {
     let {} = e;
-    (R = c.oE.LOADING), (D = null), (A += 1);
+    (R = c.oE.LOADING), (w = null), (A += 1);
 }
 function J(e) {
     let { success: t } = e;
-    (R = t ? c.oE.SUCCESS : A < c.o6 ? c.oE.LOADING : c.oE.FAILURE), (D = null);
+    (R = t ? c.oE.SUCCESS : A < c.o6 ? c.oE.LOADING : c.oE.FAILURE), (w = null);
 }
 function $(e) {
     let { error: t } = e;
-    (R = c.oE.ERROR), (D = t);
+    (R = c.oE.ERROR), (w = t);
 }
 function ee() {
     (_ = !1), (d = {}), (p = { state: l.Sn.ALL_GOOD }), (g = null), (S = c.bK.DIDNT_VIOLATE_POLICY), (I = ""), (y = []);
@@ -197,7 +197,7 @@ class et extends (r = o.ZP.Store) {
         return R;
     }
     getAgeCheckError() {
-        return D;
+        return w;
     }
     getAgeCheckAttempts() {
         return A;
@@ -205,7 +205,7 @@ class et extends (r = o.ZP.Store) {
 }
 u(et, "displayName", "SafetyHubStore");
 let en = new et(s.Z, {
-    SAFETY_HUB_FETCH_START: w,
+    SAFETY_HUB_FETCH_START: D,
     SAFETY_HUB_FETCH_SUCCESS: x,
     SAFETY_HUB_FETCH_FAILURE: L,
     SAFETY_HUB_FETCH_CLASSIFICATION_START: j,
@@ -214,8 +214,8 @@ let en = new et(s.Z, {
     SAFETY_HUB_APPEAL_OPEN: U,
     SAFETY_HUB_APPEAL_CLOSE: G,
     SAFETY_HUB_APPEAL_SIGNAL_SELECT: Z,
-    SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: B,
-    SAFETY_HUB_REQUEST_REVIEW_START: F,
+    SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: F,
+    SAFETY_HUB_REQUEST_REVIEW_START: B,
     SAFETY_HUB_REQUEST_REVIEW_SUCCESS: V,
     SAFETY_HUB_REQUEST_REVIEW_FAILURE: H,
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: Y,

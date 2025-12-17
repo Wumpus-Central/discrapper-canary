@@ -37,7 +37,7 @@ let A = {
     N = T.Z;
 function P(e, t = {}) {
     return R(e)
-        ? ((t.async = !0), D(e, t).then((e) => Z(e, t)))
+        ? ((t.async = !0), w(e, t).then((e) => Z(e, t)))
         : U(e)
           ? ((t.async = !0), G(e).then((e) => Z(e, t)))
           : Z(e, t);
@@ -45,16 +45,16 @@ function P(e, t = {}) {
 function R(e) {
     return "string" == typeof e;
 }
-function D(e, t) {
+function w(e, t) {
     return /^\w+:\/\//.test(e)
         ? "undefined" != typeof fetch
-            ? w(e, t)
+            ? D(e, t)
             : x(e, t)
         : j(e)
           ? Promise.resolve((0, r.u0)(e))
           : M(e, t);
 }
-function w(e, { length: t } = {}) {
+function D(e, { length: t } = {}) {
     let n = { method: "GET" };
     return (
         Number.isInteger(t) && t >= 0 && (n.headers = { range: `bytes=0-${t - 1}` }),
@@ -125,16 +125,16 @@ function G(e) {
     });
 }
 function Z(e, t) {
-    return B(e) && (e = new Uint8Array(e).buffer), V(F(e), t);
+    return F(e) && (e = new Uint8Array(e).buffer), V(B(e), t);
 }
-function B(e) {
+function F(e) {
     try {
         return C.isBuffer(e);
     } catch (e) {
         return !1;
     }
 }
-function F(e) {
+function B(e) {
     try {
         return new DataView(e);
     } catch (t) {
@@ -156,8 +156,8 @@ function V(
         {
             fileType: P,
             fileDataOffset: R,
-            jfifDataOffset: D,
-            tiffHeaderOffset: w,
+            jfifDataOffset: w,
+            tiffHeaderOffset: D,
             iptcDataOffset: x,
             xmpChunks: L,
             iccChunks: j,
@@ -166,21 +166,21 @@ function V(
             pngTextChunks: U,
             pngChunkOffsets: G,
             vp8xChunkOffset: Z,
-            gifHeaderOffset: B,
+            gifHeaderOffset: F,
         } = s.Z.parseAppMarkers(e, n);
     if (a.Z.USE_JPEG && a.Z.USE_FILE && H(R)) {
         C = !0;
         let n = u.Z.read(e, R);
         t ? (A.file = n) : (A = (0, r.wB)({}, A, n));
     }
-    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(D)) {
+    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(w)) {
         C = !0;
-        let n = d.Z.read(e, D);
+        let n = d.Z.read(e, w);
         t ? (A.jfif = n) : (A = (0, r.wB)({}, A, n));
     }
-    if (a.Z.USE_EXIF && W(w)) {
+    if (a.Z.USE_EXIF && W(D)) {
         C = !0;
-        let { tags: n, byteOrder: s } = l.Z.read(e, w, i);
+        let { tags: n, byteOrder: s } = l.Z.read(e, D, i);
         if (
             (n.Thumbnail && ((A.Thumbnail = n.Thumbnail), delete n.Thumbnail),
             t ? ((A.exif = n), K(A)) : (A = (0, r.wB)({}, A, n)),
@@ -210,10 +210,10 @@ function V(
         }
         if (a.Z.USE_MAKER_NOTES && n.MakerNote) {
             if (X(n)) {
-                let a = h.Z.read(e, w, n.MakerNote.__offset, s, i);
+                let a = h.Z.read(e, D, n.MakerNote.__offset, s, i);
                 t ? (A.makerNotes = a) : (A = (0, r.wB)({}, A, a));
             } else if (J(n)) {
-                let a = g.Z.read(e, w, n.MakerNote.__offset, i);
+                let a = g.Z.read(e, D, n.MakerNote.__offset, i);
                 t ? (A.makerNotes = a) : (A = (0, r.wB)({}, A, a));
             }
         }
@@ -259,14 +259,14 @@ function V(
         let n = O.Z.read(e, Z);
         t ? (A.riff = A.riff ? (0, r.wB)({}, A.riff, n) : n) : (A = (0, r.wB)({}, A, n));
     }
-    if (a.Z.USE_GIF && ei(B)) {
+    if (a.Z.USE_GIF && ei(F)) {
         C = !0;
-        let n = v.Z.read(e, B);
+        let n = v.Z.read(e, F);
         t ? (A.gif = A.gif ? (0, r.wB)({}, A.gif, n) : n) : (A = (0, r.wB)({}, A, n));
     }
-    let F = I.Z.get(A, t);
-    F && (t ? (A.composite = F) : (A = (0, r.wB)({}, A, F)));
-    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && S.Z.get(e, A.Thumbnail, w);
+    let B = I.Z.get(A, t);
+    B && (t ? (A.composite = B) : (A = (0, r.wB)({}, A, B)));
+    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && S.Z.get(e, A.Thumbnail, D);
     if (
         (ea ? ((C = !0), (A.Thumbnail = ea)) : delete A.Thumbnail,
         P && (t ? (A.file || (A.file = {}), (A.file.FileType = P)) : (A.FileType = P), (C = !0)),

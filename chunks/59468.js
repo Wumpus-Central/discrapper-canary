@@ -46,7 +46,7 @@ async function d(e) {
         p = (0, o._)(),
         h = await p,
         m = await f,
-        _ = m
+        g = m
             .filter((e) => e.id.startsWith(i.vA.SCREEN))
             .map((e) => {
                 var t, n;
@@ -97,7 +97,7 @@ async function d(e) {
                     t
                 );
             }),
-        g = (function (e, t) {
+        x = (function (e, t) {
             let n = {};
             return (
                 t.forEach((e) => {
@@ -112,10 +112,10 @@ async function d(e) {
             m.filter((e) => e.id.startsWith(i.vA.WINDOW)),
             h,
         ),
-        x = [];
+        v = [];
     return (
         d.includes(i.vA.CAMERA) &&
-            (x = Object.entries(u)
+            (v = Object.entries(u)
                 .filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
@@ -132,9 +132,9 @@ async function d(e) {
                     };
                 })),
         {
-            windowSources: g,
-            screenSources: _,
-            cameraSources: x,
+            windowSources: x,
+            screenSources: g,
+            cameraSources: v,
         }
     );
 }

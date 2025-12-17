@@ -42,11 +42,11 @@
                 (W(e.r) && W(e.g) && W(e.b)
                     ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = "%" === String(e.r).substr(-1) ? "prgb" : "rgb"))
                     : W(e.h) && W(e.s) && W(e.v)
-                      ? ((r = F(e.s)), (i = F(e.v)), (t = m(e.h, r, i)), (l = !0), (c = "hsv"))
+                      ? ((r = B(e.s)), (i = B(e.v)), (t = m(e.h, r, i)), (l = !0), (c = "hsv"))
                       : W(e.h) &&
                         W(e.s) &&
                         W(e.l) &&
-                        ((r = F(e.s)), (a = F(e.l)), (t = p(e.h, r, a)), (l = !0), (c = "hsl")),
+                        ((r = B(e.s)), (a = B(e.l)), (t = p(e.h, r, a)), (l = !0), (c = "hsl")),
                 e.hasOwnProperty("a") && (n = e.a)),
             (n = j(n)),
             {
@@ -160,7 +160,7 @@
         };
     }
     function h(e, t, n, r) {
-        var i = [B(a(e).toString(16)), B(a(t).toString(16)), B(a(n).toString(16))];
+        var i = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))];
         return r &&
             i[0].charAt(0) == i[0].charAt(1) &&
             i[1].charAt(0) == i[1].charAt(1) &&
@@ -169,7 +169,7 @@
             : i.join("");
     }
     function g(e, t, n, r, i) {
-        var o = [B(a(e).toString(16)), B(a(t).toString(16)), B(a(n).toString(16)), B(V(r))];
+        var o = [F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16)), F(V(r))];
         return i &&
             o[0].charAt(0) == o[0].charAt(1) &&
             o[1].charAt(0) == o[1].charAt(1) &&
@@ -179,7 +179,7 @@
             : o.join("");
     }
     function E(e, t, n, r) {
-        return [B(V(r)), B(a(e).toString(16)), B(a(t).toString(16)), B(a(n).toString(16))].join("");
+        return [F(V(r)), F(a(e).toString(16)), F(a(t).toString(16)), F(a(n).toString(16))].join("");
     }
     function b(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -287,7 +287,7 @@
         for (r.h = (r.h - ((i * t) >> 1) + 720) % 360; --t; ) (r.h = (r.h + i) % 360), a.push(c(r));
         return a;
     }
-    function D(e, t) {
+    function w(e, t) {
         t = t || 6;
         for (var n = c(e).toHsv(), r = n.h, i = n.s, a = n.v, o = [], s = 1 / t; t--; )
             o.push(
@@ -504,7 +504,7 @@
             return this._applyCombination(C, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(D, arguments);
+            return this._applyCombination(w, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(P, arguments);
@@ -519,7 +519,7 @@
         (c.fromRatio = function (e, t) {
             if ("object" == typeof e) {
                 var n = {};
-                for (var r in e) e.hasOwnProperty(r) && ("a" === r ? (n[r] = e[r]) : (n[r] = F(e[r])));
+                for (var r in e) e.hasOwnProperty(r) && ("a" === r ? (n[r] = e[r]) : (n[r] = B(e[r])));
                 e = n;
             }
             return c(e, t);
@@ -586,7 +586,7 @@
                 ? s
                 : ((n.includeFallbackColors = !1), c.mostReadable(e, ["#fff", "#000"], n));
         });
-    var w = (c.names = {
+    var D = (c.names = {
             aliceblue: "f0f8ff",
             antiquewhite: "faebd7",
             aqua: "0ff",
@@ -737,7 +737,7 @@
             yellow: "ff0",
             yellowgreen: "9acd32",
         }),
-        x = (c.hexNames = L(w));
+        x = (c.hexNames = L(D));
     function L(e) {
         var t = {};
         for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
@@ -765,10 +765,10 @@
     function Z(e) {
         return "string" == typeof e && -1 != e.indexOf("%");
     }
-    function B(e) {
+    function F(e) {
         return 1 == e.length ? "0" + e : "" + e;
     }
-    function F(e) {
+    function B(e) {
         return e <= 1 && (e = 100 * e + "%"), e;
     }
     function V(e) {
@@ -802,7 +802,7 @@
         e = e.replace(n, "").replace(r, "").toLowerCase();
         var t,
             i = !1;
-        if (w[e]) (e = w[e]), (i = !0);
+        if (D[e]) (e = D[e]), (i = !0);
         else if ("transparent" == e)
             return {
                 r: 0,

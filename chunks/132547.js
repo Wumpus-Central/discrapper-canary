@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(781800),
     P = n(474936),
     R = n(981631),
-    D = n(388032),
-    w = n(677599),
+    w = n(388032),
+    D = n(548768),
     x = n(865215);
 let L = (e) => {
     let { userId: t } = e;
@@ -48,39 +48,39 @@ let L = (e) => {
         k = (0, y.$)(),
         U = i.useRef(null),
         [G, Z] = i.useState(!1),
-        [B, F] = i.useState(!1),
+        [F, B] = i.useState(!1),
         V = null != k && null != L && L.status === R.O0b.CANCELED,
         H = (0, O.W7)(P.Xh.PREMIUM_MONTH_TIER_2, k, L),
-        Y = !B && V,
+        Y = !F && V,
         { analyticsLocations: W } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [K, z] = i.useState(!1),
         q = (0, s.e7)([m.Z], () => (null != t ? m.Z.getUserProfile(t) : null)),
         Q = (0, b.Z)({ location: "SubscriberNitroHome" });
     return null == q
         ? (0, r.jsx)("div", {
-              className: o()(w.container, w.loading),
+              className: o()(D.container, D.loading),
               children: (0, r.jsx)(c.$jN, {}),
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(c.yWw, {
-                      className: w.mainPageScroller,
+                      className: D.mainPageScroller,
                       ref: n,
                       children: [
                           (0, r.jsx)(c.$1m, {
                               color: "nitro-pink",
-                              className: o()(w.container, w.responsiveContainer, { [w.hiddenGradient]: !Q }),
+                              className: o()(D.container, D.responsiveContainer, { [D.hiddenGradient]: !Q }),
                               children: (0, r.jsxs)(f.Gt, {
                                   value: W,
                                   children: [
                                       (0, r.jsx)(l.$, {
                                           innerRef: U,
-                                          onChange: (e) => F(e),
+                                          onChange: (e) => B(e),
                                           threshold: 0.1,
                                           active: !0,
                                           children: (0, r.jsx)(T.Z, {
                                               buttonVisibilityRef: U,
-                                              className: w.heroHeading,
+                                              className: D.heroHeading,
                                               enablePremiumBrandRefresh: Q,
                                               userDiscountOffer: k,
                                               discountedPrice: H,
@@ -88,12 +88,12 @@ let L = (e) => {
                                       }),
                                       (0, r.jsx)(S.Z, {
                                           variant: C.gM.WHATS_NEW,
-                                          className: w.whatsNew,
+                                          className: D.whatsNew,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
                                       }),
                                       (0, r.jsx)(S.Z, {
-                                          className: w.perksDiscoverability,
+                                          className: D.perksDiscoverability,
                                           variant: C.gM.PERKS_DISCOVERABILITY,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
@@ -103,14 +103,14 @@ let L = (e) => {
                                           }),
                                       }),
                                       (0, r.jsx)(I.Z, {
-                                          className: w.giftNitro,
+                                          className: D.giftNitro,
                                           location: d.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                           analyticsLocation: {
                                               page: R.ZY5.NITRO_HOME,
                                               section: R.jXE.GIFT_BANNER,
                                           },
                                       }),
-                                      (0, r.jsx)("div", { className: w.footerSpacing }),
+                                      (0, r.jsx)("div", { className: D.footerSpacing }),
                                       (0, r.jsx)(l.$, {
                                           innerRef: a,
                                           onChange: (e) => {
@@ -123,15 +123,15 @@ let L = (e) => {
                                           },
                                           children: (0, r.jsx)("div", {
                                               ref: a,
-                                              className: w.bottomOfPageVisibilitySensor,
+                                              className: D.bottomOfPageVisibilitySensor,
                                           }),
                                       }),
                                       (0, r.jsx)("img", {
                                           src: x,
-                                          className: w.bottomIllustration,
+                                          className: D.bottomIllustration,
                                           width: 112,
                                           height: 85,
-                                          alt: D.intl.string(D.t.X4IxWL),
+                                          alt: w.intl.string(w.t.X4IxWL),
                                       }),
                                   ],
                               }),

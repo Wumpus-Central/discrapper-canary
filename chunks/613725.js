@@ -10,8 +10,8 @@ var r = n(55160),
     u = n(592125),
     d = n(430824),
     p = n(594174),
-    h = n(768581),
-    f = n(870515);
+    f = n(768581),
+    h = n(970167);
 function m() {
     let { guildId: e, channelId: t } = (0, c.Z)((e) => {
             let { guildId: t, channelId: n } = e;
@@ -24,16 +24,16 @@ function m() {
         m = (0, l.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
         g = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         b = null != m ? (0, o.x)(m) : null,
-        C = null != g ? g.getAvatarURL(e, 80) : h.pK["0"],
+        C = null != g ? g.getAvatarURL(e, 80) : f.pK["0"],
         y = (0, i.jsx)(a.qEK, {
             src: C,
             "aria-hidden": !0,
             size: a.EFr.SIZE_80,
-            className: f.avatarSizeOverride,
+            className: h.avatarSizeOverride,
         }),
-        _ = null;
+        v = null;
     return (
-        (_ =
+        (v =
             null != n
                 ? (0, i.jsx)(s.Z, { guild: n })
                 : null != b
@@ -41,22 +41,22 @@ function m() {
                         "aria-hidden": !0,
                         src: b,
                         size: a.EFr.SIZE_80,
-                        className: f.avatarSizeOverride,
+                        className: h.avatarSizeOverride,
                     })
                   : y),
         (0, i.jsxs)("div", {
-            className: f.container,
+            className: h.container,
             children: [
                 (0, i.jsx)("div", {
-                    className: f.personAvatar,
+                    className: h.personAvatar,
                     children: y,
                 }),
                 (0, i.jsx)("div", {
-                    className: f.guildAvatar,
-                    children: _,
+                    className: h.guildAvatar,
+                    children: v,
                 }),
                 (0, i.jsx)("svg", {
-                    className: f.illustration,
+                    className: h.illustration,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",

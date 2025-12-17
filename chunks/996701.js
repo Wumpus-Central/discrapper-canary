@@ -6,8 +6,8 @@ var l = n(120356),
     a = n(481060),
     s = n(782568),
     o = n(388032),
-    d = n(520310),
-    c = n(315665);
+    c = n(467171),
+    d = n(888186);
 let u = (e) => {
     let {
         data: { url: t, link_text: n, link_description: l, is_localized: o },
@@ -15,16 +15,16 @@ let u = (e) => {
     return o
         ? (0, r.jsxs)(a.P3F, {
               role: "link",
-              className: i()(c.linkButton, d.listElement),
+              className: i()(d.linkButton, c.listElement),
               onClick: () => {
                   (0, s.Z)(t);
               },
               children: [
                   (0, r.jsxs)("div", {
-                      className: c.linkTextContainer,
+                      className: d.linkTextContainer,
                       children: [
                           (0, r.jsx)(a.Text, {
-                              className: c.__invalid_linkText,
+                              className: d.__invalid_linkText,
                               variant: "text-md/semibold",
                               children: n,
                           }),
@@ -40,7 +40,7 @@ let u = (e) => {
                   (0, r.jsx)(a.Gr1, {
                       size: "sm",
                       color: "currentColor",
-                      className: c.linkIcon,
+                      className: d.linkIcon,
                   }),
               ],
           })
@@ -67,13 +67,13 @@ function m(e) {
             return t.is_header_hidden;
         });
     return (0, r.jsxs)("div", {
-        className: i()(c.linksContainer, d.listElementWrapper),
+        className: i()(d.linksContainer, c.listElementWrapper),
         children: [
             !l &&
                 (0, r.jsx)(a.Heading, {
                     variant: "heading-sm/semibold",
                     color: "text-default",
-                    className: c.header,
+                    className: d.header,
                     children: o.intl.string(o.t.hvVgAZ),
                 }),
             n,

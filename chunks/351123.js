@@ -26,18 +26,18 @@ var i = n(54381),
     E = n(485386),
     w = n(430824),
     T = n(496675),
-    _ = n(594174),
-    P = n(903386),
-    I = n(700785),
-    R = n(605436),
-    L = n(374347),
-    M = n(415236),
-    A = n(182905),
+    P = n(594174),
+    I = n(903386),
+    R = n(700785),
+    L = n(605436),
+    M = n(374347),
+    A = n(415236),
+    _ = n(182905),
     D = n(71080),
     k = n(981631),
     B = n(231338),
     U = n(388032),
-    G = n(411851);
+    G = n(195349);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -176,7 +176,7 @@ function F(e) {
                         (0, i.jsx)(d.Text, {
                             color: "text-muted",
                             variant: "text-xs/normal",
-                            children: R.zB(g.rowType),
+                            children: L.zB(g.rowType),
                         }),
                         g.rowType !== D.aC.EMPTY_STATE &&
                             (0, i.jsx)(o.u, {
@@ -241,13 +241,13 @@ function F(e) {
 function W(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
         c = (0, s.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
-        u = R.RZ(t, c, l, O.yP, r),
-        h = (0, s.e7)([N.ZP], () => R.cR(N.ZP.getMemberIds(t.id), l, t, O.yP, r)),
+        u = L.RZ(t, c, l, O.yP, r),
+        h = (0, s.e7)([N.ZP], () => L.cR(N.ZP.getMemberIds(t.id), l, t, O.yP, r)),
         g = (0, C.nG)(l.id);
     return (0, i.jsxs)("div", {
         className: a()(G.settingCard, G.active),
         children: [
-            (0, i.jsx)(M.Z, {
+            (0, i.jsx)(A.Z, {
                 label: U.intl.string(U.t.StpcFU),
                 description: U.intl.string(U.t.f7VbhF),
                 icon: (0, i.jsx)(d.ewx, {
@@ -304,11 +304,11 @@ function W(e) {
 function z(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: r, roles: o, members: u } = e,
         h = (0, s.e7)([T.Z], () => T.Z.can(B.Pl.ADMINISTRATOR, t)),
-        g = I.Uu(B.Pl.VIEW_CHANNEL, t),
-        m = I.Uu(B.Pl.ADMINISTRATOR, t);
+        g = R.Uu(B.Pl.VIEW_CHANNEL, t),
+        m = R.Uu(B.Pl.ADMINISTRATOR, t);
     async function f() {
         let e = l.accessPermissions,
-            a = _.default.getCurrentUser();
+            a = P.default.getCurrentUser();
         if (!r && null != (await (0, v.T)(t.id, l.id)))
             return void (0, d.ZDy)(async () => {
                 let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 288022));
@@ -330,7 +330,7 @@ function z(e) {
                         }),
                     );
             });
-        R.$e(l, e, r), r || null == a || h || R.Yh(l, e);
+        L.$e(l, e, r), r || null == a || h || L.Yh(l, e);
     }
     let p = {
         title: U.intl.string(U.t.aUI70g),
@@ -346,7 +346,7 @@ function z(e) {
         (0, i.jsxs)("div", {
             className: a()(G.settingCard, { [G.active]: r }),
             children: [
-                (0, i.jsx)(M.Z, {
+                (0, i.jsx)(A.Z, {
                     description: p.subtitle,
                     icon: (0, i.jsx)(d.mBM, {
                         size: "custom",
@@ -420,7 +420,7 @@ function z(e) {
                                         channel: l,
                                         roles: o,
                                         members: u,
-                                        getRemoveTooltipHint: R.yv,
+                                        getRemoveTooltipHint: L.yv,
                                     }),
                                 ],
                             }),
@@ -460,9 +460,9 @@ let q = s.ZP.connectStores([S.Z, T.Z, N.ZP, w.Z, E.Z], () => {
                 let n = S.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
             }, {})),
-                (i = R.kA(e, s, t, t.accessPermissions, r)),
-                (l = R.cR(n, t, e, t.accessPermissions, r)),
-                (a = R.Yk(t, r));
+                (i = L.kA(e, s, t, t.accessPermissions, r)),
+                (l = L.cR(n, t, e, t.accessPermissions, r)),
+                (a = L.Yk(t, r));
         }
     }
     return {
@@ -488,7 +488,7 @@ let q = s.ZP.connectStores([S.Z, T.Z, N.ZP, w.Z, E.Z], () => {
             locked: h,
             permissionUpdates: m,
         } = e,
-        [f, p] = l.useState(!I.Uu(B.Pl.SEND_MESSAGES, a));
+        [f, p] = l.useState(!R.Uu(B.Pl.SEND_MESSAGES, a));
     if (null == a || null == c) return null;
     let b = {
         title: U.intl.string(U.t.BAZMBn),
@@ -508,15 +508,15 @@ let q = s.ZP.connectStores([S.Z, T.Z, N.ZP, w.Z, E.Z], () => {
                 }),
                 null != r && t
                     ? h
-                        ? (0, i.jsx)(A.Z, {
+                        ? (0, i.jsx)(_.Z, {
                               canSync: !1,
                               icon: d.DuK,
                               noticeText: U.intl.format(U.t.ETJqLl, { categoryName: r.name }),
                           })
-                        : (0, i.jsx)(A.Z, {
+                        : (0, i.jsx)(_.Z, {
                               buttonText: U.intl.string(U.t.NVwuHq),
                               canSync: !0,
-                              icon: (0, d.GSL)(P.Z),
+                              icon: (0, d.GSL)(I.Z),
                               noticeText: U.intl.format(U.t.OIhm0M, { categoryName: r.name }),
                               onClick: function () {
                                   null != r &&
@@ -531,7 +531,7 @@ let q = s.ZP.connectStores([S.Z, T.Z, N.ZP, w.Z, E.Z], () => {
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
                                                               t = V({}, r.permissionOverwrites);
-                                                          null != e && null == t[e] && (t[e] = I.we(e)),
+                                                          null != e && null == t[e] && (t[e] = R.we(e)),
                                                               (await (0, j.u)(a, t[e].deny, t[e].allow)) &&
                                                                   (0, g.wk)(a.id, {
                                                                       permissionOverwrites: Object.values(t),
@@ -558,7 +558,7 @@ let q = s.ZP.connectStores([S.Z, T.Z, N.ZP, w.Z, E.Z], () => {
                     members: s,
                 }),
                 !1,
-                (0, i.jsx)(L.Z, {}),
+                (0, i.jsx)(M.Z, {}),
             ],
         })
     );

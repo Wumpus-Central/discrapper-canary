@@ -3,18 +3,18 @@ var r = n(54381),
     l = n(473749),
     o = n(481060),
     i = n(893776),
-    s = n(809206),
-    a = n(600164),
+    a = n(809206),
+    s = n(600164),
     c = n(390885),
     u = n(626135),
-    m = n(361207),
-    f = n(981631),
+    f = n(361207),
+    m = n(981631),
     d = n(630724),
     p = n(388032),
-    _ = n(678254);
-function g(t) {
-    let { email: e, setEmail: n, claimRequired: u, onSuccess: m, onClose: f } = t,
-        [g, S] = l.useState(),
+    g = n(373060);
+function _(t) {
+    let { email: e, setEmail: n, claimRequired: u, onSuccess: f, onClose: m } = t,
+        [_, S] = l.useState(),
         [y, v] = l.useState(""),
         [N, b] = l.useState(""),
         [j, C] = l.useState(!1);
@@ -22,12 +22,12 @@ function g(t) {
     let O = async (t) => {
         t.preventDefault(), C(!0), S(""), b("");
         try {
-            await (0, s.S2)({
+            await (0, a.S2)({
                 email: e,
                 password: y,
             }),
                 C(!1),
-                m();
+                f();
         } catch (t) {
             var n, r;
             (null == t || null == (n = t.body) ? void 0 : n.email) && S(t.body.email),
@@ -38,31 +38,31 @@ function g(t) {
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsxs)(o.xBx, {
-                className: _.formHeader,
-                direction: a.Z.Direction.VERTICAL,
+                className: g.formHeader,
+                direction: s.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, r.jsx)("div", { className: _.formImage }),
+                    (0, r.jsx)("div", { className: g.formImage }),
                     (0, r.jsx)(o.Heading, {
-                        className: _.formTitle,
+                        className: g.formTitle,
                         variant: "heading-xl/semibold",
                         children: p.intl.string(p.t["uQShv/"]),
                     }),
                     (0, r.jsx)(o.Text, {
-                        className: _.formBody,
+                        className: g.formBody,
                         variant: "text-md/normal",
                         color: "text-default",
                         children: u ? p.intl.string(p.t.sW28gZ) : p.intl.string(p.t["gP/vPe"]),
                     }),
                     (0, r.jsx)(o.olH, {
-                        className: _.closeButton,
-                        onClick: f,
+                        className: g.closeButton,
+                        onClick: m,
                     }),
                 ],
             }),
             (0, r.jsx)(o.hzk, {
                 children: (0, r.jsx)("form", {
-                    className: _.formContent,
+                    className: g.formContent,
                     onSubmit: O,
                     children: (0, r.jsxs)(o.Kqy, {
                         gap: 16,
@@ -70,7 +70,7 @@ function g(t) {
                             (0, r.jsx)(o.oil, {
                                 label: p.intl.string(p.t.dI4d4S),
                                 value: e,
-                                error: g,
+                                error: _,
                                 onChange: (t) => n(t),
                                 autoFocus: !0,
                             }),
@@ -91,11 +91,11 @@ function g(t) {
                             }),
                             u &&
                                 (0, r.jsx)("div", {
-                                    className: _.logoutButton,
+                                    className: g.logoutButton,
                                     children: (0, r.jsx)(o.Avr, {
                                         text: p.intl.string(p.t["2jxGer"]),
                                         onClick: () => {
-                                            i.Z.logout("claim_account_modal"), f();
+                                            i.Z.logout("claim_account_modal"), m();
                                         },
                                     }),
                                 }),
@@ -108,27 +108,27 @@ function g(t) {
 }
 function S(t) {
     let { email: e, claimRequired: n, onClose: i } = t,
-        s = n ? p.t.D7trIB : p.t.JNWX7G;
+        a = n ? p.t.D7trIB : p.t.JNWX7G;
     return (
         l.useEffect(() => c.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT_SUCCESS), []),
         (0, r.jsxs)("div", {
             children: [
                 (0, r.jsxs)(o.hzk, {
-                    className: _.successContent,
+                    className: g.successContent,
                     children: [
                         !n &&
                             (0, r.jsx)(o.olH, {
-                                className: _.closeButton,
+                                className: g.closeButton,
                                 onClick: i,
                             }),
-                        (0, r.jsx)("div", { className: _.successImage }),
+                        (0, r.jsx)("div", { className: g.successImage }),
                         (0, r.jsx)(o.Text, {
-                            className: _.successTitle,
+                            className: g.successTitle,
                             variant: "text-lg/semibold",
-                            children: p.intl.format(s, { email: e }),
+                            children: p.intl.format(a, { email: e }),
                         }),
                         (0, r.jsx)(o.Text, {
-                            className: _.successPromotion,
+                            className: g.successPromotion,
                             variant: "text-md/normal",
                             children: p.intl.string(p.t.eXqM2d),
                         }),
@@ -136,7 +136,7 @@ function S(t) {
                 }),
                 n
                     ? (0, r.jsx)(o.mzw, {
-                          direction: a.Z.Direction.VERTICAL,
+                          direction: s.Z.Direction.VERTICAL,
                           children: (0, r.jsx)(o.Button, {
                               text: p.intl.string(p.t.BddRzS),
                               variant: "primary",
@@ -145,15 +145,15 @@ function S(t) {
                           }),
                       })
                     : (0, r.jsx)(o.mzw, {
-                          direction: a.Z.Direction.VERTICAL,
+                          direction: s.Z.Direction.VERTICAL,
                           children: (0, r.jsx)(o.Button, {
                               text: p.intl.string(p.t.ygArIV),
                               variant: "primary",
                               fullWidth: !0,
                               onClick: function () {
-                                  window.open((0, m.t3)(), "_blank"),
-                                      u.default.track(f.rMx.DOWNLOAD_APP, {
-                                          platform: (0, m.DW)(),
+                                  window.open((0, f.t3)(), "_blank"),
+                                      u.default.track(m.rMx.DOWNLOAD_APP, {
+                                          platform: (0, f.DW)(),
                                           ptb: !1,
                                           released: !0,
                                           has_e_mail: !0,
@@ -169,14 +169,14 @@ function S(t) {
 }
 function y(t) {
     let { onClose: e, transitionState: n, claimRequired: i = !1 } = t,
-        [s, a] = l.useState(""),
+        [a, s] = l.useState(""),
         [c, u] = l.useState(!1);
     return c
         ? (0, r.jsx)(o.Y0X, {
               transitionState: n,
               parentComponent: "ClaimAccountModal",
               children: (0, r.jsx)(S, {
-                  email: s,
+                  email: a,
                   claimRequired: i,
                   onClose: e,
               }),
@@ -184,9 +184,9 @@ function y(t) {
         : (0, r.jsx)(o.Y0X, {
               transitionState: n,
               parentComponent: "ClaimAccountModal",
-              children: (0, r.jsx)(g, {
-                  email: s,
-                  setEmail: a,
+              children: (0, r.jsx)(_, {
+                  email: a,
+                  setEmail: s,
                   claimRequired: i,
                   onSuccess: () => u(!0),
                   onClose: e,

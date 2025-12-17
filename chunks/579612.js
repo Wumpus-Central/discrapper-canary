@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(933557),
     l = n(471445),
     c = n(266076),
@@ -17,19 +17,19 @@ var i = n(120356),
     f = n(246946),
     p = n(594174),
     _ = n(51144),
-    m = n(495824);
+    m = n(399781);
 function h(e) {
-    let { channel: t, avatarSize: n, iconSize: i, iconClassName: o } = e;
+    let { channel: t, avatarSize: n, iconSize: i, iconClassName: a } = e;
     if (t.isDM()) {
         let e = t.getRecipientId(),
             i = p.default.getUser(e);
         if (null == i) return null;
-        let o = i.getAvatarURL(null, a.ny6[n].size);
-        return (0, r.jsx)(a.qEK, {
+        let a = i.getAvatarURL(null, o.ny6[n].size);
+        return (0, r.jsx)(o.qEK, {
             "aria-hidden": !0,
             className: m.searchResultDMChannelIcon,
             size: n,
-            src: o,
+            src: a,
         });
     }
     if (t.isGroupDM())
@@ -43,7 +43,7 @@ function h(e) {
     return null == s
         ? null
         : (0, r.jsx)(s, {
-              className: o,
+              className: a,
               color: "currentColor",
               size: i,
           });
@@ -83,11 +83,11 @@ function b(e) {
     return null == t
         ? (0, r.jsx)("strong", { children: n })
         : (0, r.jsxs)("div", {
-              className: o()(m.resultChannel, i),
+              className: a()(m.resultChannel, i),
               children: [
                   (0, r.jsx)(h, {
                       channel: t,
-                      avatarSize: a.EFr.SIZE_20,
+                      avatarSize: o.EFr.SIZE_20,
                       iconSize: "refresh_sm",
                   }),
                   (0, r.jsxs)("div", {

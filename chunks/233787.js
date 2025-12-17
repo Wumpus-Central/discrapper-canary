@@ -1,9 +1,9 @@
-r.d(t, { C: () => p }), r(539854);
+r.d(t, { C: () => d }), r(539854);
 var n,
     i = r(54381),
     a = r(473749),
     c = r(793030),
-    l = r(584649),
+    l = r(307321),
     o =
         (((n = o || {}).UPGRADE = "UPGRADE"),
         (n.CANCEL = "CANCEL"),
@@ -21,8 +21,8 @@ let s = {
     u = (e) => {
         var t,
             r,
-            { children: n, premiumModalType: o, primary: u, secondary: p } = e,
-            b = (function (e, t) {
+            { children: n, premiumModalType: o, primary: u, secondary: d } = e,
+            p = (function (e, t) {
                 if (null == e) return {};
                 var r,
                     n,
@@ -43,14 +43,14 @@ let s = {
                 }
                 return i;
             })(e, ["children", "premiumModalType", "primary", "secondary"]);
-        let m = a.useMemo(() => {
+        let b = a.useMemo(() => {
             let e = [];
             return (
-                null != p &&
+                null != d &&
                     e.push({
                         variant: "secondary",
-                        text: p.label,
-                        onClick: p.onClick,
+                        text: d.label,
+                        onClick: d.onClick,
                     }),
                 null != u &&
                     e.push({
@@ -60,7 +60,7 @@ let s = {
                     }),
                 e
             );
-        }, [u, p]);
+        }, [u, d]);
         return (0, i.jsxs)(
             c.Modal,
             ((t = (function (e) {
@@ -87,10 +87,10 @@ let s = {
                         });
                 }
                 return e;
-            })({}, b)),
+            })({}, p)),
             (r = r =
                 {
-                    actions: m,
+                    actions: b,
                     children: [
                         (0, i.jsx)("div", { className: l[s[o]] }),
                         (0, i.jsx)("div", {
@@ -115,4 +115,4 @@ let s = {
         );
     };
 u.Types = o;
-let p = u;
+let d = u;

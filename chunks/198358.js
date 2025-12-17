@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(481060),
     l = n(324060),
     c = n(883166),
-    u = n(84773);
+    u = n(25239);
 function d(e) {
     let { children: t, noPadding: n = !1, centered: a = !0, verticalFlow: d = !1, className: f } = e,
         p = i.useContext(l.Q),

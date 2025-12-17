@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    fQ: () => o,
-    uL: () => s,
+    fQ: () => s,
+    uL: () => o,
 }),
     n(539854),
     n(704826),
@@ -9,10 +9,10 @@ n.d(t, {
 var i = n(539528),
     l = n(33382),
     a = n.n(l);
-function s(e) {
+function o(e) {
     r.push(e);
 }
-function o(e) {
+function s(e) {
     return (t) => {
         if (null != e) return null != a()(t, { end: !1 }).exec(e.history.location.pathname);
     };

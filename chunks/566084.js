@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r,
     i,
     l = n(442837),
@@ -42,7 +42,7 @@ class g extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (g[r] = "GuildSettingsVanityURLStore");
-let m = new g(a.Z, {
+let f = new g(a.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
         (c = s = null != (t = e.code) ? t : ""), (o = e.uses), (d = null != (n = e.error) ? n : null), (u = !0);

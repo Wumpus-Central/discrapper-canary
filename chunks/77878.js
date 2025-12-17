@@ -4,8 +4,8 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(981631),
-    s = n(365778);
-let o = "1",
+    o = n(136569);
+let s = "1",
     c = "2",
     u = "3",
     d = "4",
@@ -14,27 +14,27 @@ let o = "1",
     g = "1",
     h = "2",
     m = "3",
-    _ = "4",
-    b = "5",
+    b = "4",
+    _ = "5",
     E = {
         [a.aIt.ESRB]: {
-            [o]: s.esrbEveryone,
-            [c]: s.esrbEveryoneTenPlus,
-            [u]: s.esrbTeen,
-            [d]: s.esrbMature,
-            [p]: s.esrbAdult,
-            [f]: s.esrbRatingPending,
+            [s]: o.esrbEveryone,
+            [c]: o.esrbEveryoneTenPlus,
+            [u]: o.esrbTeen,
+            [d]: o.esrbMature,
+            [p]: o.esrbAdult,
+            [f]: o.esrbRatingPending,
         },
         [a.aIt.PEGI]: {
-            [g]: s.pegiThree,
-            [h]: s.pegiSeven,
-            [m]: s.pegiTwelve,
-            [_]: s.pegiSixteen,
-            [b]: s.pegiEighteen,
+            [g]: o.pegiThree,
+            [h]: o.pegiSeven,
+            [m]: o.pegiTwelve,
+            [b]: o.pegiSixteen,
+            [_]: o.pegiEighteen,
         },
     },
     O = (e) => {
         let { agency: t, rating: n, className: i } = e,
             a = E[t][n];
-        return null == a ? null : (0, r.jsx)("div", { className: l()(s.contentRating, a, i) });
+        return null == a ? null : (0, r.jsx)("div", { className: l()(o.contentRating, a, i) });
     };

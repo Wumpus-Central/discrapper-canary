@@ -7,10 +7,10 @@ n.d(t, {
     TP: () => N,
     Uu: () => K,
     e9: () => V,
-    iJ: () => B,
+    iJ: () => F,
     o4: () => Z,
     oz: () => z,
-    r6: () => F,
+    r6: () => B,
     uB: () => U,
     we: () => Y,
     ym: () => x,
@@ -111,8 +111,8 @@ let C = a.vB(0),
         S.Plq.USE_SOUNDBOARD,
         S.Plq.USE_VAD,
     ),
-    D = a.$e(S.Plq.VIEW_CHANNEL, S.Plq.READ_MESSAGE_HISTORY),
-    w = a.$e(S.Plq.VIEW_CHANNEL, S.Plq.READ_MESSAGE_HISTORY, S.Plq.CHANGE_NICKNAME),
+    w = a.$e(S.Plq.VIEW_CHANNEL, S.Plq.READ_MESSAGE_HISTORY),
+    D = a.$e(S.Plq.VIEW_CHANNEL, S.Plq.READ_MESSAGE_HISTORY, S.Plq.CHANGE_NICKNAME),
     x = a.$e(
         S.Plq.MANAGE_GUILD,
         S.Plq.MANAGE_ROLES,
@@ -145,7 +145,7 @@ function j(e, t, n, r) {
         let o = r[t.userId];
         null != o && ((n = a.Od(n, o.deny)), (n = a.IH(n, o.allow)));
         let c = a.e$(n, S.Plq.ADMINISTRATOR);
-        (0, s.EY)(t) && !c && (n = a.hX(n, w)), (0, l.b)(t) && !c && (n = a.hX(n, D));
+        (0, s.EY)(t) && !c && (n = a.hX(n, D)), (0, l.b)(t) && !c && (n = a.hX(n, w));
     }
     return n;
 }
@@ -305,7 +305,7 @@ function Z(e, t) {
             })
     );
 }
-function B(e) {
+function F(e) {
     var t;
     return i().some(E.Z.getUnsafeMutableRoles(e.id), (e) => e.hoist && (0, _.Fs)(e, S.Plq.ADMINISTRATOR))
         ? void 0
@@ -313,7 +313,7 @@ function B(e) {
           ? t
           : void 0;
 }
-function F(e, t, n, r) {
+function B(e, t, n, r) {
     return !!(null != t && (0, p.eM)(e, t)) || (null != n && (null == r || (0, O.C$)(n, r)));
 }
 function V(e, t) {

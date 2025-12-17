@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => s,
+    I: () => o,
     s: () => a,
 });
 var r = n(823379),
@@ -17,7 +17,7 @@ function a(e) {
             (0, r.vE)(e);
     }
 }
-function s(e) {
+function o(e) {
     if (e.startsWith("/discovery/applications")) return i.GlobalDiscoveryTab.APPS;
     switch (e) {
         case "/discovery/quests":

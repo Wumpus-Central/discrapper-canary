@@ -1,16 +1,16 @@
-r.d(e, { default: () => u }), r(388685);
+r.d(e, { default: () => f }), r(388685);
 var n = r(54381),
     a = r(473749),
     o = r(159691),
     i = r(481060),
     c = r(841183),
     s = r(388032),
-    l = r(323964);
-function u(t) {
+    l = r(628241);
+function f(t) {
     var e,
         r,
-        { avatarId: u, storageHash: f, avatarDescription: b, onConfirmDelete: p, onClose: y } = t,
-        d = (function (t, e) {
+        { avatarId: f, storageHash: u, avatarDescription: b, onConfirmDelete: p, onClose: d } = t,
+        y = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -33,8 +33,8 @@ function u(t) {
         })(t, ["avatarId", "storageHash", "avatarDescription", "onConfirmDelete", "onClose"]);
     let [O, v] = a.useState(!1),
         { avatarSrc: j, eventHandlers: g } = (0, c.Z)({
-            avatarId: u,
-            storageHash: f,
+            avatarId: f,
+            storageHash: u,
             size: i.EFr.SIZE_120,
         }),
         { onMouseEnter: m, onMouseLeave: h } = g,
@@ -46,8 +46,8 @@ function u(t) {
             } finally {
                 v(!1);
             }
-            y();
-        }, [p, y]);
+            d();
+        }, [p, d]);
     return (0, n.jsx)(
         o.u_l,
         ((e = (function (t) {
@@ -83,7 +83,7 @@ function u(t) {
                     {
                         text: s.intl.string(s.t["ETE/oC"]),
                         variant: "secondary",
-                        onClick: y,
+                        onClick: d,
                         disabled: O,
                     },
                     {
@@ -93,9 +93,9 @@ function u(t) {
                         loading: O,
                     },
                 ],
-                onClose: y,
+                onClose: d,
             },
-            d,
+            y,
         )),
         (r = r =
             {

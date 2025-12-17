@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(657707),
     m = n(454389),
     h = n(402453),
-    g = n(170382);
+    g = n(836605);
 function E(e, t, n) {
     return (
         t in e
@@ -110,8 +110,8 @@ function I(e) {
         ]);
     let { i18n: A } = (0, h.ZF)(),
         { fieldProps: N } = (0, p.X)(C),
-        { disabled: P, errorMessage: R, required: D = !1 } = N,
-        w = { hasError: null != R && "" !== R },
+        { disabled: P, errorMessage: R, required: w = !1 } = N,
+        D = { hasError: null != R && "" !== R },
         {
             refs: x,
             floatingStyles: L,
@@ -124,7 +124,7 @@ function I(e) {
             matchReferenceWidth: !1,
             placement: "bottom-start",
         }),
-        { isMounted: Z, styles: B } = (0, d.Y)(k, {
+        { isMounted: Z, styles: F } = (0, d.Y)(k, {
             common: (e) => {
                 let { side: t } = e;
                 return { transformOrigin: "".concat("top" === t ? "bottom" : "top", " center") };
@@ -135,7 +135,7 @@ function I(e) {
             },
             duration: 100,
         }),
-        F = (e) => {
+        B = (e) => {
             null == n || n(e), M(!1);
         };
     return (0, r.jsx)(
@@ -148,7 +148,7 @@ function I(e) {
                         b(
                             {
                                 className: g.inputField,
-                                validation: w,
+                                validation: D,
                                 ref: x.setReference,
                             },
                             G(),
@@ -161,9 +161,9 @@ function I(e) {
                                 "aria-invalid": null != e.errorMessageId,
                                 "aria-errormessage": e.errorMessageId,
                                 value: t,
-                                onChange: F,
+                                onChange: B,
                                 isDisabled: P,
-                                isRequired: D,
+                                isRequired: w,
                                 minValue: i,
                                 maxValue: E,
                                 placeholderValue: y,
@@ -203,11 +203,11 @@ function I(e) {
                                                 style: L,
                                                 className: g.popover,
                                                 children: (0, r.jsx)(u.Vq, {
-                                                    style: B,
+                                                    style: F,
                                                     className: g.dialog,
                                                     children: (0, r.jsx)(f.f, {
                                                         value: t,
-                                                        onChange: F,
+                                                        onChange: B,
                                                         minValue: i,
                                                         maxValue: E,
                                                         disabled: P,

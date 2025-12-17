@@ -1,69 +1,69 @@
-n.d(t, { d: () => b });
-var i = n(54381),
-    l = n(473749),
+n.d(t, { d: () => y });
+var r = n(54381),
+    i = n(473749),
     a = n(512722),
-    r = n.n(a),
+    o = n.n(a),
     s = n(159691),
-    o = n(481060),
+    l = n(481060),
     c = n(906732),
-    d = n(987209),
-    u = n(563132),
+    u = n(987209),
+    d = n(563132),
     f = n(614277),
-    g = n(698708),
-    m = n(844068),
-    p = n(517730),
+    p = n(698708),
+    _ = n(844068),
+    m = n(517730),
     h = n(436585),
-    x = n(848118),
-    v = n(388032),
-    C = n(216215);
-function b(e) {
+    g = n(848118),
+    E = n(388032),
+    b = n(358035);
+function y(e) {
     var t;
     let { handleClose: n } = e,
         { analyticsLocations: a } = (0, c.ZP)(),
-        { skusById: b, selectedSkuId: _, application: j } = (0, u.JL)(),
-        { isGift: I, giftRecipient: P } = (0, d.wD)();
-    r()(null != _, "Expected selectedSkuId"), r()(null != j, "Expected application");
-    let w = b[_];
-    return (r()(null != w, "Expected sku"),
-    l.useEffect(() => {
-        I ||
+        { skusById: y, selectedSkuId: O, application: v } = (0, d.JL)(),
+        { isGift: S, giftRecipient: I } = (0, u.wD)();
+    o()(null != O, "Expected selectedSkuId"), o()(null != v, "Expected application");
+    let T = y[O];
+    return (o()(null != T, "Expected sku"),
+    i.useEffect(() => {
+        S ||
             ((0, h.U)(),
             n(),
-            (0, p.I)({
-                sku: w,
-                application: j,
+            (0, m.I)({
+                sku: T,
+                application: v,
                 analyticsLocations: a,
             }));
-    }, [I, w, j, n, a]),
-    I)
-        ? (0, i.jsxs)(f.C3, {
+    }, [S, T, v, n, a]),
+    S)
+        ? (0, r.jsxs)(f.C3, {
               children: [
-                  (0, i.jsx)(m.Z, {}),
-                  (0, i.jsx)(g.Z, {}),
-                  (0, i.jsxs)("div", {
-                      className: C.confirmation,
+                  (0, r.jsx)(_.Z, {}),
+                  (0, r.jsx)(p.Z, {}),
+                  (0, r.jsxs)("div", {
+                      className: b.confirmation,
                       children: [
-                          (0, i.jsx)(x.A, {
-                              sku: w,
+                          (0, r.jsx)(g.A, {
+                              sku: T,
                               shape: "square",
-                              containerClassName: C.skuImage,
+                              containerClassName: b.skuImage,
                           }),
-                          (0, i.jsx)(o.Heading, {
+                          (0, r.jsx)(l.Heading, {
                               variant: "heading-xl/semibold",
-                              className: C.confirmationHeader,
-                              children: v.intl.string(v.t["5glWta"]),
+                              className: b.confirmationHeader,
+                              children: E.intl.string(E.t["5glWta"]),
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: "text-md/normal",
-                              className: C.confirmationDescription,
-                              children: v.intl.formatToPlainString(v.t["2VjPTw"], {
-                                  itemName: w.name,
-                                  giftRecipient: null != (t = null == P ? void 0 : P.username) ? t : "your recipient",
+                              className: b.confirmationDescription,
+                              children: E.intl.formatToPlainString(E.t["2VjPTw"], {
+                                  itemName: T.name,
+                                  giftRecipient: null != (t = null == I ? void 0 : I.username) ? t : "your recipient",
                               }),
                           }),
-                          (0, i.jsx)(s.zxk, {
+                          (0, r.jsx)(s.zxk, {
                               onClick: n,
-                              text: v.intl.string(v.t.cpT0Cq),
+                              text: E.intl.string(E.t.cpT0Cq),
                               fullWidth: !0,
                           }),
                       ],

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(442837),
-    l = n(199849),
+    l = n(442837),
+    i = n(199849),
     s = n(481060),
     o = n(435064),
     c = n(894694),
@@ -51,7 +51,7 @@ function m(e, t) {
     );
 }
 function p() {
-    let { mlPipelinesEnabled: e } = (0, i.cj)([o.Z], () => ({
+    let { mlPipelinesEnabled: e } = (0, l.cj)([o.Z], () => ({
             mlPipelinesEnabled: o.Z.getSettings().mlPipelinesEnabled,
         })),
         [t, n] = r.useState(
@@ -72,10 +72,10 @@ function p() {
             ),
         ),
         [p, h] = r.useState(c.x0.KILL),
-        [x, f] = r.useState(1),
-        [g, b] = r.useState(""),
+        [f, x] = r.useState(1),
+        [b, g] = r.useState(""),
         [v, j] = r.useState(""),
-        _ = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -134,7 +134,7 @@ function p() {
                     children: [
                         (0, a.jsxs)(s.NIo, {
                             children: [
-                                (0, a.jsx)(l.y6, {
+                                (0, a.jsx)(i.y6, {
                                     label: "Event Type",
                                     value: p,
                                     onChange: (e) => h(e),
@@ -181,10 +181,10 @@ function p() {
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(l.y6, {
+                                (0, a.jsx)(i.y6, {
                                     label: "Importance",
-                                    value: x,
-                                    onChange: f,
+                                    value: f,
+                                    onChange: x,
                                     options: [
                                         {
                                             label: "Low",
@@ -204,8 +204,8 @@ function p() {
                         }),
                         (0, a.jsx)(s.oil, {
                             label: "Title (optional)",
-                            value: g,
-                            onChange: b,
+                            value: b,
+                            onChange: g,
                             placeholder: "e.g., First Blood",
                         }),
                         (0, a.jsx)(s.oil, {
@@ -220,8 +220,8 @@ function p() {
                                 d.XK({
                                     type: c.Bs.GAME_EVENT,
                                     eventType: p,
-                                    importance: x,
-                                    title: g,
+                                    importance: f,
+                                    title: b,
                                     description: v,
                                 });
                             },
@@ -261,25 +261,25 @@ function p() {
                             label: "Wake Word Debug",
                             description: "Log wake word detection events to console",
                             checked: t.wakeWord,
-                            onChange: () => _("wakeWord"),
+                            onChange: () => y("wakeWord"),
                         }),
                         (0, a.jsx)(s.rsf, {
                             label: "Emotion Debug",
                             description: "Log emotion classification events to console",
                             checked: t.emotion,
-                            onChange: () => _("emotion"),
+                            onChange: () => y("emotion"),
                         }),
                         (0, a.jsx)(s.rsf, {
                             label: "Yell Debug",
                             description: "Show yell classification events to console",
                             checked: t.yell,
-                            onChange: () => _("yell"),
+                            onChange: () => y("yell"),
                         }),
                         (0, a.jsx)(s.rsf, {
                             label: "Whisper Debug",
                             description: "Log whisper transcription events to console",
                             checked: t.whisper,
-                            onChange: () => _("whisper"),
+                            onChange: () => y("whisper"),
                         }),
                     ],
                 }),

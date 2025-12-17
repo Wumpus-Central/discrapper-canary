@@ -16,8 +16,8 @@ function E() {
     var e, t, n, E;
     let { quest: g, sourceQuestContent: O, onClose: h } = o.useContext(f.VideoQuestModalContext),
         { enabled: b } = c.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
-        C = (0, u.tP)(g),
-        S = null != (0, d.LM)(g.config),
+        S = (0, u.tP)(g),
+        C = null != (0, d.LM)(g.config),
         _ = (0, m.D)({
             quest: g,
             questContent: s.jn.QUEST_HOME_DESKTOP,
@@ -31,13 +31,13 @@ function E() {
         }),
         y =
             (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null
-                ? S
+                ? C
                     ? v.intl.string(v.t.WYchde)
                     : v.intl.string(v.t.vTgCWx)
                 : v.intl.string(v.t.cfY4PE),
         x =
             (null == (n = g.userStatus) ? void 0 : n.completedAt) == null && b
-                ? C
+                ? S
                     ? v.intl.string(v.t.NJ6Bnm)
                     : v.intl.string(v.t.USNO1K)
                 : void 0;

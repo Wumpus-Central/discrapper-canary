@@ -1,14 +1,14 @@
 n.d(t, {
-    Z: () => m,
+    Z: () => f,
     t: () => d,
 }),
     n(953529);
 var r,
     i = n(392711),
     o = n.n(i),
-    l = n(442837),
-    s = n(570140),
-    a = n(246364);
+    a = n(442837),
+    l = n(570140),
+    s = n(246364);
 function c(e, t, n) {
     return (
         t in e
@@ -28,17 +28,17 @@ let d = {
         formFields: [],
     },
     u = {};
-class p extends (r = l.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     get(e) {
         if (null != e) return u[e];
     }
     getRulesPrompt(e) {
         var t;
-        return o().find(null == (t = u[e]) ? void 0 : t.formFields, a.J);
+        return o().find(null == (t = u[e]) ? void 0 : t.formFields, s.J);
     }
 }
 c(p, "displayName", "MemberVerificationFormStore");
-let m = new p(s.Z, {
+let f = new p(l.Z, {
     INVITE_ACCEPT_SUCCESS: function (e) {
         let { invite: t } = e,
             { member_verification_form: n } = t,

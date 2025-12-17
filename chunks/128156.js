@@ -21,10 +21,10 @@ var i = n(442837),
     j = n(661462),
     x = n(228168),
     P = n(981631),
-    I = n(388032),
-    w = n(644773);
+    w = n(388032),
+    I = n(644773);
 function S(e) {
-    let { user: t, currentUser: n, displayProfile: S, guildId: E, channelId: _, onClose: T } = e,
+    let { user: t, currentUser: n, displayProfile: S, guildId: E, channelId: T, onClose: _ } = e,
         { voiceActivityStatusEnabled: C } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
         D = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: k, recent: N, stream: A } = (0, g.Z)(t.id),
@@ -44,12 +44,12 @@ function S(e) {
         W = N.length > 0;
     if (!F && !W && G)
         return (0, r.jsx)("div", {
-            className: w.cards,
+            className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: w.loadingItem,
+                        className: I.loadingItem,
                         children: [
                             (0, r.jsx)(c.ZT, {
                                 width: 60,
@@ -68,23 +68,23 @@ function S(e) {
     if (!F && !W && !G) {
         var H;
         return M
-            ? (0, r.jsx)(v.Uf, { onClose: T })
+            ? (0, r.jsx)(v.Uf, { onClose: _ })
             : (0, r.jsx)(v.P9, {
                   user: t,
                   guildId: null != (H = null == S ? void 0 : S.guildId) ? H : E,
-                  channelId: _,
-                  onClose: T,
+                  channelId: T,
+                  onClose: _,
               });
     }
     return (0, r.jsxs)(j.F, {
-        className: w.scroller,
+        className: I.scroller,
         fade: !0,
         children: [
             F
                 ? (0, r.jsx)(O.Z, {
-                      heading: I.intl.string(I.t.J6STd9),
+                      heading: w.intl.string(w.t.J6STd9),
                       children: (0, r.jsxs)("ul", {
-                          className: w.cards,
+                          className: I.cards,
                           children: [
                               !D &&
                                   U &&
@@ -93,7 +93,7 @@ function S(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: Z,
-                                          onClose: T,
+                                          onClose: _,
                                       }),
                                   }),
                               null != A &&
@@ -102,7 +102,7 @@ function S(e) {
                                           user: t,
                                           currentUser: n,
                                           stream: A,
-                                          onClose: T,
+                                          onClose: _,
                                       }),
                                   }),
                               k.map((e, i) =>
@@ -113,7 +113,7 @@ function S(e) {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: T,
+                                              onClose: _,
                                           }),
                                       },
                                       "live-".concat(i),
@@ -126,7 +126,7 @@ function S(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: Z,
-                                          onClose: T,
+                                          onClose: _,
                                       }),
                                   }),
                           ],
@@ -135,9 +135,9 @@ function S(e) {
                 : null,
             W
                 ? (0, r.jsx)(O.Z, {
-                      heading: I.intl.string(I.t.jzgEoL),
+                      heading: w.intl.string(w.t.jzgEoL),
                       introText: M
-                          ? I.intl.format(I.t["4bk9Ak"], {
+                          ? w.intl.format(w.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
                                         a.Anchor,
@@ -151,7 +151,7 @@ function S(e) {
                           : void 0,
                       scrollTargetId: x.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: w.cards,
+                          className: I.cards,
                           children: N.map((e) =>
                               (0, r.jsx)(
                                   "li",
@@ -159,7 +159,7 @@ function S(e) {
                                       children: (0, r.jsx)(m.Z, {
                                           user: t,
                                           entry: e,
-                                          onClose: T,
+                                          onClose: _,
                                       }),
                                   },
                                   e.id,

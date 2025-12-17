@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(721355),
     i = n(320285),
     a = n(25209),
@@ -134,7 +134,7 @@ function R(e, t) {
             return (0, a.Rp)(y.intl.formatToParts(y.t["a+lJKl"], { guildName: r.name }));
     }
 }
-function D(e) {
+function w(e) {
     var t, n, r;
     let [i] = null != (t = e.mentions) ? t : [];
     return null == i
@@ -147,10 +147,10 @@ function D(e) {
             ? r
             : null;
 }
-let w = {
+let D = {
     stringify: function (e, t) {
         var n, i, _, m;
-        let h = D(e),
+        let h = w(e),
             E = e.channel_id,
             O = g.ZP.getName(null, E, e.author);
         switch (e.type) {
@@ -261,11 +261,11 @@ let w = {
                 );
             case b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof f.ZP) return null;
-                let w = (0, c.ZH)((0, l.e5)(e));
+                let D = (0, c.ZH)((0, l.e5)(e));
                 return (0, a.Rp)(
                     (0, u.Y)({
                         application: e.application,
-                        username: w.nick,
+                        username: D.nick,
                     }),
                 );
             case b.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED:

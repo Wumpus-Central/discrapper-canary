@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(551488),
     m = n(131573),
     h = n(777207),
-    g = n(577650);
+    g = n(414103);
 function E(e, t, n) {
     return (
         t in e
@@ -116,8 +116,8 @@ function A(e) {
             fullWidth: T = !1,
             focusProps: C,
             loading: A,
-            loadingStartedLabel: D,
-            loadingFinishedLabel: w,
+            loadingStartedLabel: w,
+            loadingFinishedLabel: D,
             rounded: x = !1,
             type: L = "button",
             rel: j,
@@ -126,8 +126,8 @@ function A(e) {
             onMouseEnter: U,
             onMouseLeave: G,
             onMouseUp: Z,
-            onMouseDown: B,
-            onKeyDown: F,
+            onMouseDown: F,
+            onKeyDown: B,
             disabled: V,
             minWidth: H,
             className: Y,
@@ -183,11 +183,11 @@ function A(e) {
         eo = (0, s.a)(ei),
         es = i.useRef(!1);
     i.useEffect(() => {
-        !0 === A && ((es.current = !0), l.u.announce(null != D ? D : ea.BUTTON_LOADING_STARTED_LABEL)),
+        !0 === A && ((es.current = !0), l.u.announce(null != w ? w : ea.BUTTON_LOADING_STARTED_LABEL)),
             !1 === A &&
                 !0 === es.current &&
-                (l.u.announce(null != w ? w : ea.BUTTON_LOADING_FINISHED_LABEL), (es.current = !1));
-    }, [A, D, w, ea.BUTTON_LOADING_STARTED_LABEL, ea.BUTTON_LOADING_FINISHED_LABEL]);
+                (l.u.announce(null != D ? D : ea.BUTTON_LOADING_FINISHED_LABEL), (es.current = !1));
+    }, [A, w, D, ea.BUTTON_LOADING_STARTED_LABEL, ea.BUTTON_LOADING_FINISHED_LABEL]);
     let el = (0, r.jsxs)("div", {
             className: o()(g.buttonChildren, { [g.loading]: A }),
             children: [
@@ -228,8 +228,8 @@ function A(e) {
                             onClick: ec ? (e) => e.preventDefault() : M,
                             onDoubleClick: ec ? (e) => e.preventDefault() : k,
                             onMouseUp: ec ? void 0 : Z,
-                            onMouseDown: ec ? void 0 : B,
-                            onKeyDown: ec ? void 0 : F,
+                            onMouseDown: ec ? void 0 : F,
+                            onKeyDown: ec ? void 0 : B,
                             onMouseEnter: ec ? void 0 : U,
                             onMouseLeave: ec ? void 0 : G,
                             disabled: V,

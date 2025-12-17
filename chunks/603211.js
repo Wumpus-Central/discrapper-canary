@@ -5,7 +5,7 @@ var i = n(473749),
 function a(e) {
     let { type: t, index: n, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: c } = e,
         [d, u] = i.useState(!1),
-        [, p] = (0, r.c)({
+        [, m] = (0, r.c)({
             type: t,
             item: () => (
                 o(a),
@@ -22,7 +22,7 @@ function a(e) {
                 s(n.optionId);
             },
         }),
-        [{ dragSourcePosition: m }, b] = (0, l.L)({
+        [{ dragSourcePosition: b }, p] = (0, l.L)({
             accept: t,
             canDrop: () => !0,
             collect: (e) => {
@@ -34,9 +34,9 @@ function a(e) {
             drop: () => ({ optionId: a }),
         });
     return {
-        drag: p,
-        dragSourcePosition: m,
-        drop: b,
+        drag: m,
+        dragSourcePosition: b,
+        drop: p,
         setIsDraggable: u,
     };
 }

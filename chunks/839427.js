@@ -1,40 +1,40 @@
-m.r(a), m.d(a, { default: () => n });
+m.r(e), m.d(e, { default: () => n });
 var g = m(54381);
 m(473749);
-var i = m(120356),
-    r = m.n(i),
-    s = m(162190),
-    c = m(205582);
-function n(e) {
-    let { instance: a } = e,
-        m = (0, s.Z)(a.gameId, "cover");
+var c = m(120356),
+    i = m.n(c),
+    r = m(162190),
+    s = m(556957);
+function n(a) {
+    let { instance: e } = a,
+        m = (0, r.Z)(e.gameId, "cover");
     return (0, g.jsxs)("div", {
-        className: c.container,
+        className: s.container,
         children: [
             (0, g.jsxs)("div", {
-                className: r()(c.gameImage, c.gameImage1),
+                className: i()(s.gameImage, s.gameImage1),
                 children: [
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageBorder) }),
                 ],
             }),
             (0, g.jsxs)("div", {
-                className: r()(c.gameImage, c.gameImage2),
+                className: i()(s.gameImage, s.gameImage2),
                 children: [
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageBorder) }),
                 ],
             }),
             (0, g.jsxs)("div", {
-                className: r()(c.gameImage, c.gameImage3),
+                className: i()(s.gameImage, s.gameImage3),
                 children: [
                     (0, g.jsx)("img", {
                         src: m,
                         alt: "",
-                        className: c.image,
+                        className: s.image,
                     }),
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageOverlay) }),
-                    (0, g.jsx)("div", { className: r()(c.imageDecoration, c.gameImageBorder) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageOverlay) }),
+                    (0, g.jsx)("div", { className: i()(s.imageDecoration, s.gameImageBorder) }),
                 ],
             }),
         ],

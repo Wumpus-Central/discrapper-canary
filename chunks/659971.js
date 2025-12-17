@@ -3,11 +3,11 @@ var r,
     i,
     l = n(873546),
     a = n(442837),
-    s = n(570140);
-let o = !1;
+    o = n(570140);
+let s = !1;
 class c extends (i = a.ZP.Store) {
     getIsOpen() {
-        return !l.tq || o;
+        return !l.tq || s;
     }
 }
 (r = "displayName") in c
@@ -18,11 +18,11 @@ class c extends (i = a.ZP.Store) {
           writable: !0,
       })
     : (c[r] = "MobileWebSidebarStore");
-let u = new c(s.Z, {
+let u = new c(o.Z, {
     MOBILE_WEB_SIDEBAR_OPEN: function () {
-        o = !0;
+        s = !0;
     },
     MOBILE_WEB_SIDEBAR_CLOSE: function () {
-        o = !1;
+        s = !1;
     },
 });

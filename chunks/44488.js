@@ -1,17 +1,17 @@
 n.d(t, {
-    Pz: () => g,
-    ZP: () => f,
+    Pz: () => f,
+    ZP: () => g,
     am: () => h,
 }),
     n(388685);
-var r,
-    a = n(54381),
+var a,
+    r = n(54381),
     i = n(473749),
     l = n(120356),
     s = n.n(l),
     o = n(481060),
     c = n(768762),
-    d = n(584917);
+    d = n(836569);
 function u(e, t, n) {
     return (
         t in e
@@ -29,17 +29,17 @@ let p = {
     CENTER: d.alignCenter,
     LEFT: d.alignLeft,
 };
-class m extends (r = i.PureComponent) {
+class m extends (a = i.PureComponent) {
     componentDidUpdate(e) {
         let { selectedIndex: t } = this.props;
         e.selectedIndex !== t && this.handleSelectedIndexChange(t);
     }
     render() {
-        let { renderItem: e, items: t, vertical: n, paginationContainerClass: r, align: l } = this.props,
+        let { renderItem: e, items: t, vertical: n, paginationContainerClass: a, align: l } = this.props,
             c = n ? d.verticalPaginationItemContainer : d.horizontalPaginationItemContainer;
-        return (0, a.jsx)(o.yWw, {
+        return (0, r.jsx)(o.yWw, {
             orientation: n ? "vertical" : "horizontal",
-            className: s()(c, r, l),
+            className: s()(c, a, l),
             ref: this.handleSetScrollerRef,
             children: t.map((t, n) =>
                 i.cloneElement(e(t, n), {
@@ -89,10 +89,10 @@ u(m, "Align", p),
 class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, a.jsx)(o.P3F, {
+        return (0, r.jsx)(o.P3F, {
             className: s()(d.prevButtonContainer, e),
             onClick: this.handlePrevClick,
-            children: (0, a.jsx)(c.Z, {
+            children: (0, r.jsx)(c.Z, {
                 className: d.arrow,
                 direction: c.Z.Directions.LEFT,
             }),
@@ -107,13 +107,13 @@ class h extends i.PureComponent {
             });
     }
 }
-class g extends i.PureComponent {
+class f extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, a.jsx)(o.P3F, {
+        return (0, r.jsx)(o.P3F, {
             className: s()(d.nextButtonContainer, e),
             onClick: this.handleNextClick,
-            children: (0, a.jsx)(c.Z, {
+            children: (0, r.jsx)(c.Z, {
                 className: d.arrow,
                 direction: c.Z.Directions.RIGHT,
             }),
@@ -128,4 +128,4 @@ class g extends i.PureComponent {
             });
     }
 }
-let f = m;
+let g = m;

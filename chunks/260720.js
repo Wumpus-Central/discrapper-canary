@@ -1,28 +1,28 @@
 n.d(t, { x: () => f });
 var r = n(313789),
     i = n(518596),
-    o = n(594174),
-    a = n(51144),
+    a = n(594174),
+    o = n(51144),
     s = n(282793),
     l = n(981631),
-    c = n(941651),
+    c = n(353149),
     u = n(388032);
 let d = (e, t) => {
         var n;
         if (null == t) return null;
         let r = null == (n = t.recipients) ? void 0 : n.find((t) => t !== e.id),
-            i = o.default.getUser(r);
-        return null == i ? null : (0, a.XM)(i);
+            i = a.default.getUser(r);
+        return null == i ? null : (0, o.XM)(i);
     },
     f = (e) => {
         let t,
             n,
-            { sender: o, channel: f, isSender: p, inviteState: _ } = e,
+            { sender: a, channel: f, isSender: p, inviteState: _ } = e,
             m = (0, s.sO)();
         if (p) {
-            let e = d(o, f);
+            let e = d(a, f);
             if (null == e) return null;
-            let a = u.intl.format(c.default.MkcFjx, {
+            let o = u.intl.format(c.default.MkcFjx, {
                 receiverName: e,
                 premiumGroupProductName: m,
             });
@@ -48,12 +48,12 @@ let d = (e, t) => {
                         (n = u.intl.formatToPlainString(c.default["AmE0B/"], { receiverName: e }));
             }
             return {
-                message: a,
+                message: o,
                 header: t,
                 body: n,
             };
         } else {
-            let e = (0, a.XM)(o),
+            let e = (0, o.XM)(a),
                 r = u.intl.format(c.default["51Kv/4"], {
                     senderName: e,
                     premiumGroupProductName: m,

@@ -3,8 +3,8 @@ var r = n(846519),
     i = n(570140),
     l = n(317770),
     a = n(220082),
-    s = n(594174),
-    o = n(125268),
+    o = n(594174),
+    s = n(125268),
     c = n(813900);
 function u(e, t, n) {
     return (
@@ -34,11 +34,11 @@ class d extends l.Z {
     _handleVoiceChannelEffectReceived(e) {
         var t;
         let { lineId: n, points: r, userId: i, streamerId: l, emojiHose: u } = e;
-        if (null != l && i !== (null == (t = s.default.getCurrentUser()) ? void 0 : t.id))
+        if (null != l && i !== (null == (t = o.default.getCurrentUser()) ? void 0 : t.id))
             if (null != r && null != n) {
-                let e = s.default.getUser(i);
-                null != e && (0, a.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, i, l, r);
-            } else null != u && ((u.lastUpdatedAt = Date.now()), (0, o.gr)(u, i, l));
+                let e = o.default.getUser(i);
+                null != e && (0, a.vM)(e.getAvatarURL(null, c.Ks)), (0, s.cV)(n, i, l, r);
+            } else null != u && ((u.lastUpdatedAt = Date.now()), (0, s.gr)(u, i, l));
     }
     constructor(...e) {
         super(...e),
@@ -58,7 +58,7 @@ class d extends l.Z {
             u(this, "sendLineBatch", () => {
                 for (let e in this.linesToUpdate) {
                     let { channelId: t, points: n, streamerId: r } = this.linesToUpdate[e];
-                    (0, o.AX)(t, e, r, n);
+                    (0, s.AX)(t, e, r, n);
                 }
                 (this.linesToUpdate = {}), this.lineBatchTimer.stop();
             });

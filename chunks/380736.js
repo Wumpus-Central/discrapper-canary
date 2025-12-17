@@ -1,13 +1,13 @@
 n.d(t, {
     Y: () => C,
-    Z: () => D,
+    Z: () => w,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(442837),
     c = n(481060),
     u = n(13245),
@@ -18,7 +18,7 @@ var r = n(54381),
     m = n(693091),
     h = n(981631),
     g = n(388032),
-    E = n(968803);
+    E = n(199757);
 function b(e, t, n) {
     return (
         t in e
@@ -114,8 +114,8 @@ let C = i.memo(function (e) {
             contentOpacity: N,
             status: P,
             containerRef: R,
-            className: D,
-            wrapperClassName: w,
+            className: w,
+            wrapperClassName: D,
         } = e,
         [x, L] = i.useState(!1),
         j = n || x || P === h._1z.FOCUSED,
@@ -144,10 +144,10 @@ let C = i.memo(function (e) {
         Z = i.useCallback(() => {
             L(!0);
         }, []),
-        B = i.useCallback(() => {
+        F = i.useCallback(() => {
             L(!1);
         }, []);
-    function F() {
+    function B() {
         return (0, r.jsx)(d.Z, {
             className: E.dismissButton,
             onDismiss: k,
@@ -256,19 +256,19 @@ let C = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(E.overflowWrapper, w),
+                className: o()(E.overflowWrapper, D),
                 onScroll: T,
                 children: (0, r.jsx)(c.P3F, {
                     innerRef: R,
                     ignoreKeyPress: !0,
                     onMouseOver: Z,
-                    onMouseLeave: B,
+                    onMouseLeave: F,
                     onClick: b,
-                    className: o()(E.container, { [E.clickable]: null != b }, D),
+                    className: o()(E.container, { [E.clickable]: null != b }, w),
                     children: W(),
                 }),
             }),
-            F(),
+            B(),
         ],
     });
 });
@@ -329,7 +329,7 @@ function R() {
         }, []),
     };
 }
-function D(e) {
+function w(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -359,13 +359,13 @@ function D(e) {
             },
             [p, c, T],
         ),
-        D = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 null == _ || _(e, c);
             },
             [_, c],
         ),
-        w = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 null == h || h(e, c);
             },
@@ -382,9 +382,9 @@ function D(e) {
                 onCancelClick: G,
                 disableClickableRegions: Z = !1,
             },
-            status: B,
+            status: F,
         } = t,
-        F = S(t.props, [
+        B = S(t.props, [
             "onNotificationShow",
             "onDismissClick",
             "renderFooter",
@@ -407,20 +407,20 @@ function D(e) {
             observe: H,
             children: (0, r.jsx)(
                 C,
-                v(y({}, F), {
-                    title: "function" == typeof F.title ? F.title(O) : F.title,
+                v(y({}, B), {
+                    title: "function" == typeof B.title ? B.title(O) : B.title,
                     containerRef: Y,
                     notificationId: t.id,
                     onNotificationShow: 0 === n ? b : void 0,
                     onDismissClick: O,
                     onNotificationClick: P,
-                    onConfirmClick: null != _ ? D : void 0,
-                    onCancelClick: null != h ? w : void 0,
+                    onConfirmClick: null != _ ? w : void 0,
+                    onCancelClick: null != h ? D : void 0,
                     renderFooter: x,
                     expand: !1,
                     index: n,
                     locked: a,
-                    status: B,
+                    status: F,
                     contentOpacity: W.contentOpacity,
                 }),
             ),

@@ -6,8 +6,8 @@ var i = n(54381),
     r = n(915009),
     a = n(631885),
     o = n(509613),
-    T = n(970013),
-    S = n(313789),
+    S = n(970013),
+    T = n(313789),
     c = n(997950),
     E = n(639814),
     d = n(342386),
@@ -18,7 +18,7 @@ var i = n(54381),
     A = n(696467),
     O = n(388032),
     C = n(517319);
-let f = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
+let f = (0, o.k4)(T.n.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
     useTitle: () => O.intl.string(O.t["y62Z/d"]),
     useNotice: () => {
         let t = (0, E.is)(),
@@ -30,7 +30,7 @@ let f = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
         return l.useMemo(() => {
             if (t === c.Th && e)
                 return {
-                    type: T.v.INLINE_NOTICE,
+                    type: S.v.INLINE_NOTICE,
                     noticeType: "info",
                     useText: () =>
                         O.intl.format(C.default.i284fU, {

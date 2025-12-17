@@ -33,8 +33,8 @@ var r = n(54381),
     N = n(960048),
     P = n(735521),
     R = n(325100),
-    D = n(659848),
-    w = n(583046),
+    w = n(659848),
+    D = n(583046),
     x = n(897829),
     L = n(74179),
     j = n(896246),
@@ -43,12 +43,12 @@ var r = n(54381),
     U = n(814076),
     G = n(712297),
     Z = n(585686),
-    B = n(771206),
-    F = n(362755),
+    F = n(771206),
+    B = n(362755),
     V = n(283307),
     H = n(981631),
     Y = n(474936),
-    W = n(876414);
+    W = n(696970);
 function K(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ function ee(e) {
             excludeSKUPurchasePreviews: el = !1,
             wasTier2PremiumBeforePurchase: ec = !1,
         } = e,
-        eu = (0, B.Z)(),
+        eu = (0, F.Z)(),
         ed = (0, h.Q)(),
         ef = (0, x.Z)(),
         ep = $[0],
@@ -145,7 +145,7 @@ function ee(e) {
             setCurrency: eI,
             currencyLoading: eT,
             currencies: eC,
-        } = (0, w.Z)({
+        } = (0, D.Z)({
             activeSubscription: K,
             skuIDs: $,
             paymentSourceId: eE,
@@ -156,8 +156,8 @@ function ee(e) {
         [eN, eP] = i.useState(!1),
         {
             step: eR,
-            setStep: eD,
-            steps: ew,
+            setStep: ew,
+            steps: eD,
             breadcrumbsData: ex,
             previousStepRef: eL,
         } = (0, Z.Z)({
@@ -166,8 +166,8 @@ function ee(e) {
         }),
         [ej, eM] = (0, k.Z)(eR),
         { paymentError: ek, paymentAuthenticationState: eU } = (0, j.Z)(),
-        { purchaseError: eG, purchaseErrorBlockRef: eZ, setPurchaseError: eB } = (0, M.Z)(),
-        eF = (0, d.Z)(() => {
+        { purchaseError: eG, purchaseErrorBlockRef: eZ, setPurchaseError: eF } = (0, M.Z)(),
+        eB = (0, d.Z)(() => {
             let e = null != C ? C : (0, l.Z)();
             return (
                 N.Z.addBreadcrumb({ message: "Checkout session ID: ".concat(e) }),
@@ -186,7 +186,7 @@ function ee(e) {
             setSelectedPlanNotification: ez,
         } = (0, P.Z)(),
         [eq, eQ] = (0, u.Wu)([v.Z], () => [v.Z.purchaseTokenAuthState, v.Z.purchaseTokenHash]),
-        [eX, eJ, e$, e0] = (0, u.Wu)([F.Z], () => [F.Z.browserCheckoutState, F.Z.loadId, F.Z.skuId, F.Z.planId]),
+        [eX, eJ, e$, e0] = (0, u.Wu)([B.Z], () => [B.Z.browserCheckoutState, B.Z.loadId, B.Z.skuId, B.Z.planId]),
         [e1, e3] = i.useState(null),
         [e2, e4] = i.useState(null),
         [e5, e8] = i.useState(null),
@@ -216,7 +216,7 @@ function ee(e) {
         }),
         [eE, eo, C],
     );
-    (0, D.m)(ep, td);
+    (0, w.m)(ep, td);
     let {
             skusById: tf,
             hasFetchedSkus: tp,
@@ -256,11 +256,11 @@ function ee(e) {
         tA = (0, u.e7)([T.Z], () => (null != eV ? T.Z.getForSKU(eV) : null), [eV]),
         [tN, tP] = i.useState(null),
         tR = null != (o = null == K ? void 0 : K.inReverseTrial) && o && !ee,
-        tD = (0, y.Z)({ location: "PaymentModal" }) && ts,
-        { isDisplayingWowMomentConfirmation: tw } = (0, u.cj)([b.Z], () => ({
+        tw = (0, y.Z)({ location: "PaymentModal" }) && ts,
+        { isDisplayingWowMomentConfirmation: tD } = (0, u.cj)([b.Z], () => ({
             isDisplayingWowMomentConfirmation: b.Z.isDisplayingWowMomentConfirmation,
         })),
-        tx = tD ? W.premiumBrandRefreshBackground : void 0,
+        tx = tw ? W.premiumBrandRefreshBackground : void 0,
         { enabled: tL } = (0, E.l)({ location: "PaymentContext" }),
         tj = (0, R.uH)({ location: "PaymentModal" }),
         tM = i.useMemo(() => {
@@ -273,7 +273,7 @@ function ee(e) {
                 {
                     stripe: eu,
                     paymentElementsEnabled: tL,
-                    contextMetadata: eF,
+                    contextMetadata: eB,
                     blockedPayments: ed,
                     activeSubscription: K,
                     hasFetchedSubscriptions: ef,
@@ -298,8 +298,8 @@ function ee(e) {
                 hasAcceptedTerms: eN,
                 setHasAcceptedTerms: eP,
                 step: eR,
-                setStep: eD,
-                steps: ew,
+                setStep: ew,
+                steps: eD,
                 stepConfigs: q,
                 breadcrumbs: ex,
                 previousStepRef: eL,
@@ -308,7 +308,7 @@ function ee(e) {
                 paymentAuthenticationState: eU,
                 paymentError: ek,
                 purchaseError: eG,
-                setPurchaseError: eB,
+                setPurchaseError: eF,
                 purchasePreviewError: tE,
                 setPurchasePreviewError: tb,
                 purchaseErrorBlockRef: eZ,
@@ -357,8 +357,8 @@ function ee(e) {
                 invoicePreview: tN,
                 setInvoicePreview: tP,
                 inReverseTrial: tR,
-                enablePremiumBrandRefresh: tD,
-                isDisplayingWowMomentConfirmation: tw,
+                enablePremiumBrandRefresh: tw,
+                isDisplayingWowMomentConfirmation: tD,
                 premiumBrandRefreshBackgroundClassName: tx,
                 wasTier2PremiumBeforePurchase: ec,
                 customCheckoutFlow: tM,

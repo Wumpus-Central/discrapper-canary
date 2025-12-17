@@ -3,7 +3,7 @@ A.d(t, {
     bd: () => r,
     pA: () => l,
 });
-var n = A(374450);
+var n = A(297747);
 let r = {
         0: n.image,
         1: n.document,

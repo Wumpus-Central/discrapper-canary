@@ -10,7 +10,7 @@ var r = n(54381),
     u = n(622822),
     p = n(986035),
     h = n(388032),
-    f = n(244006);
+    f = n(698194);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,13 +65,13 @@ function m(e) {
         b = i.useCallback(() => {
             null != l && o.Z.nsfwReturnToSafety(l.id);
         }, [l]),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             null != l && o.Z.nsfwAgree(l.id);
         }, [l]),
-        y = i.useCallback(() => {
+        O = i.useCallback(() => {
             c.Z.showAgeVerificationGetStartedModal({ entryPoint: d.cU.NSFW_GUILD });
         }, []),
-        O =
+        x =
             ((t = g({}, m)),
             (n = n =
                 {
@@ -99,11 +99,11 @@ function m(e) {
                 p.Z,
                 g(
                     {
-                        onAgree: y,
+                        onAgree: O,
                         onDisagree: b,
                         modalType: f,
                     },
-                    O,
+                    x,
                 ),
             );
         default:
@@ -111,11 +111,11 @@ function m(e) {
                 p.Z,
                 g(
                     {
-                        onAgree: _,
+                        onAgree: y,
                         onDisagree: b,
                         modalType: f,
                     },
-                    O,
+                    x,
                 ),
             );
     }

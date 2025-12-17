@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(624138),
     s = n(981631),
     l = n(388032),
-    c = n(616926);
+    c = n(570810);
 let u = {
     title: "Balance Widget",
     stories: [

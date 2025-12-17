@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685), n(539854);
+n.d(t, { Z: () => v }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    o = n(481060),
-    a = n(110924),
+    a = n(481060),
+    o = n(110924),
     s = n(693546),
     c = n(863249),
     u = n(937111),
@@ -12,17 +12,17 @@ var r = n(54381),
     h = n(727258),
     p = n(234383),
     g = n(179809),
-    m = n(588275),
-    b = n(388032),
-    _ = n(264096);
-function y(e) {
+    b = n(588275),
+    m = n(388032),
+    y = n(284410);
+function O(e) {
     let { onActivate: t, children: n } = e,
         s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         f = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        h = (0, a.Z)(d),
+        h = (0, o.Z)(d),
         p = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -38,43 +38,43 @@ function y(e) {
             }
         }, [p, d, h, t]),
         (0, r.jsxs)("div", {
-            className: _.container,
+            className: y.container,
             children: [
-                (0, r.jsx)(o.yRy, {
+                (0, r.jsx)(a.yRy, {
                     ref: p,
                     targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
-                            className: _.popoutContainer,
+                            className: y.popoutContainer,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: _.popoutContent,
+                                    className: y.popoutContent,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: _.coachmarkTextContainer,
+                                            className: y.coachmarkTextContainer,
                                             children: [
-                                                (0, r.jsx)(o.Heading, {
+                                                (0, r.jsx)(a.Heading, {
                                                     variant: "heading-md/medium",
-                                                    children: b.intl.string(b.t["0YV0YE"]),
+                                                    children: m.intl.string(m.t["0YV0YE"]),
                                                 }),
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: b.intl.string(b.t["0UQVDL"]),
+                                                    children: m.intl.string(m.t["0UQVDL"]),
                                                 }),
                                             ],
                                         }),
-                                        (0, r.jsx)(o.Button, {
+                                        (0, r.jsx)(a.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: b.intl.string(b.t["4r+amb"]),
+                                            text: m.intl.string(m.t["4r+amb"]),
                                             fullWidth: !0,
                                             onClick: f,
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: _.popoutCaretLeft }),
+                                (0, r.jsx)("div", { className: y.popoutCaretLeft }),
                             ],
                         }),
                     position: "right",
@@ -112,7 +112,7 @@ function y(e) {
                             })({}, e)),
                             (n = n =
                                 {
-                                    className: _.popoutAnchor,
+                                    className: y.popoutAnchor,
                                     ref: s,
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -136,17 +136,17 @@ function y(e) {
         })
     );
 }
-function O(e) {
+function v(e) {
     let { onActivate: t } = e,
-        [n, O] = i.useState(!1),
-        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        [n, v] = i.useState(!1),
+        j = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         x = (0, p.Z)(),
-        C = (0, a.Z)(v),
-        E = i.useMemo(() => {
+        E = (0, o.Z)(j),
+        S = i.useMemo(() => {
             let e = (0, h.qQ)({
                 folderId: f.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: b.intl.string(b.t["scsU+l"]),
+                folderName: m.intl.string(m.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
@@ -154,29 +154,29 @@ function O(e) {
             return e;
         }, [x, n]);
     i.useEffect(() => {
-        n && !j && s.Z.fetchRequestToJoinGuilds();
-    }, [n, j]);
-    let S = null != v && x.includes(v);
+        n && !C && s.Z.fetchRequestToJoinGuilds();
+    }, [n, C]);
+    let I = null != j && x.includes(j);
     return (i.useEffect(() => {
-        !n && S && C !== v && O(!0);
-    }, [n, S, C, v]),
+        !n && I && E !== j && v(!0);
+    }, [n, I, E, j]),
     0 === x.length)
         ? null
-        : (0, r.jsx)(y, {
+        : (0, r.jsx)(O, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
-                  folderNode: E,
+                  folderNode: S,
                   expanded: n,
-                  selected: S,
+                  selected: I,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      O(!n), c.ZP.clearCoachmark();
+                      v(!n), c.ZP.clearCoachmark();
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
-                      className: _.pendingFolderButtonIcon,
-                      children: (0, r.jsx)(o.wGF, {
+                      className: y.pendingFolderButtonIcon,
+                      children: (0, r.jsx)(a.wGF, {
                           size: "sm",
                           color: "currentColor",
                       }),
@@ -185,7 +185,7 @@ function O(e) {
                       return e.type !== h.eD.GUILD
                           ? null
                           : (0, r.jsx)(
-                                m.Z,
+                                b.Z,
                                 {
                                     guildNode: e,
                                     "aria-setsize": n,

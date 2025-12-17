@@ -10,10 +10,10 @@ var i = n(481060),
     d = n(48950),
     u = n(84058),
     g = n(981631),
-    m = n(30513),
-    p = n(388032),
-    f = n(155470);
-function h(e) {
+    f = n(30513),
+    m = n(388032),
+    b = n(776580);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,61 +58,61 @@ function b(e, t) {
 }
 let x = function (e) {
     let { guild: t, disabled: x, role: j } = e,
-        _ = (0, o.oC)(t.id, j),
-        { analyticsLocations: v } = (0, a.ZP)(),
-        O = t.features.has(g.GuildFeatures.ROLE_ICONS),
-        C = (e) => {
-            O ||
+        v = (0, o.oC)(t.id, j),
+        { analyticsLocations: O } = (0, a.ZP)(),
+        C = t.features.has(g.GuildFeatures.ROLE_ICONS),
+        y = (e) => {
+            C ||
                 ((0, l.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: b(h({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
+                    location: h(p({}, e), { section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: v,
+                    location_stack: O,
                 }),
                 (0, c.Z)({
-                    analyticsLocations: v,
+                    analyticsLocations: O,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
                         section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
                         object: g.qAy.BADGE,
                     },
                     guild: t,
-                    perks: (0, m.Yp)(),
+                    perks: (0, f.Yp)(),
                 }));
         },
-        y = (0, r.jsx)(s.Z, {
-            className: f.availabilityIndicator,
+        N = (0, r.jsx)(s.Z, {
+            className: b.availabilityIndicator,
             guild: t,
             guildFeature: g.GuildFeatures.ROLE_ICONS,
             tooltipPosition: "top",
-            hideTooltip: O,
+            hideTooltip: C,
             onClick: () =>
-                C({
+                y({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.AnalyticsObjectTypes.TIER_2,
                 }),
         });
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: b.container,
         children: [
             (0, r.jsxs)(i.vwX, {
-                className: f.formTitle,
-                children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJw) }), y],
+                className: b.formTitle,
+                children: [(0, r.jsx)("div", { children: m.intl.string(m.t.B9grJw) }), N],
             }),
             (0, r.jsx)(i.R94, {
-                className: f.description,
-                children: p.intl.string(p.t.I3YQeV),
+                className: b.description,
+                children: m.intl.string(m.t.I3YQeV),
             }),
             (0, r.jsxs)("div", {
-                className: f.rolePreviewArea,
+                className: b.rolePreviewArea,
                 children: [
                     (0, r.jsx)("div", {
-                        className: f.previewContainer,
+                        className: b.previewContainer,
                         children:
-                            null != _
+                            null != v
                                 ? (0, r.jsx)(
                                       d.Z,
-                                      b(h({}, _), {
-                                          className: f.roleIconPreview,
+                                      h(p({}, v), {
+                                          className: b.roleIconPreview,
                                           enableTooltip: !1,
                                       }),
                                   )
@@ -121,37 +121,37 @@ let x = function (e) {
                                       color: "currentColor",
                                       width: 24,
                                       height: 24,
-                                      className: f.preview,
+                                      className: b.preview,
                                   }),
                     }),
                     (0, r.jsx)(i.Button, {
                         onClick: () =>
                             t.features.has(g.GuildFeatures.ROLE_ICONS)
                                 ? void (0, i.ZDy)(async () => {
-                                      let { default: e } = await n.e("22942").then(n.bind(n, 660727));
+                                      let { default: e } = await n.e("63635").then(n.bind(n, 660727));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              b(h({}, n), {
+                                              h(p({}, n), {
                                                   guildId: t.id,
                                                   onUploadIcon: (e) => (0, u._l)(j.id, e, null),
                                                   onSelectUnicodeEmoji: (e) => (0, u._l)(j.id, null, e),
                                               }),
                                           );
                                   })
-                                : C({ object: g.qAy.UPLOAD_IMAGE }),
+                                : y({ object: g.qAy.UPLOAD_IMAGE }),
                         variant: "primary",
                         disabled: x,
-                        text: p.intl.string(p.t.mD1oGB),
+                        text: m.intl.string(m.t.mD1oGB),
                     }),
-                    null != _
+                    null != v
                         ? (0, r.jsx)(i.Button, {
                               onClick: () => {
                                   (0, u._l)(j.id, null, null);
                               },
                               variant: "critical-secondary",
                               disabled: x,
-                              text: p.intl.string(p.t["uY+Nk/"]),
+                              text: m.intl.string(m.t["uY+Nk/"]),
                           })
                         : null,
                 ],

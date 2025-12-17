@@ -3,9 +3,9 @@ var r = n(473749),
     i = n(442837),
     l = n(948053),
     a = n(144725),
-    s = n(797394);
-function o(e, t, n) {
-    if (t.type === s.Ni.MESSAGE)
+    o = n(797394);
+function s(e, t, n) {
+    if (t.type === o.Ni.MESSAGE)
         return t.message.id === t.message.channel_id && null != t.threadChannel
             ? {
                   id: e.id,
@@ -34,7 +34,7 @@ function o(e, t, n) {
                   debugScore: JSON.stringify(e.score_components),
                   unread: n,
               };
-    if (t.type === s.Ni.ACTIVITY || t.type === s.Ni.CUSTOM_STATUS)
+    if (t.type === o.Ni.ACTIVITY || t.type === o.Ni.CUSTOM_STATUS)
         return {
             id: e.id,
             timestamp: Date.now(),
@@ -46,7 +46,7 @@ function o(e, t, n) {
             debugScore: JSON.stringify(e.score_components),
             unread: n,
         };
-    if (t.type === s.Ni.GUILD_EVENT)
+    if (t.type === o.Ni.GUILD_EVENT)
         return {
             id: e.id,
             timestamp: Date.now(),
@@ -58,7 +58,7 @@ function o(e, t, n) {
             debugScore: JSON.stringify(e.score_components),
             unread: n,
         };
-    if (t.type === s.Ni.RECOMMENDED_GUILDS)
+    if (t.type === o.Ni.RECOMMENDED_GUILDS)
         return {
             id: e.id,
             timestamp: Date.now(),
@@ -67,7 +67,7 @@ function o(e, t, n) {
             debugScore: JSON.stringify(e.score_components),
             unread: n,
         };
-    if (t.type === s.Ni.GENERATED_CANDIDATE)
+    if (t.type === o.Ni.GENERATED_CANDIDATE)
         return {
             id: e.id,
             timestamp: Date.now(),
@@ -109,12 +109,12 @@ function c() {
         let i = d[r.id];
         if (
             (null == i &&
-                r.type === s.Ni.MESSAGE &&
+                r.type === o.Ni.MESSAGE &&
                 (null == (e = r.data.message_context) ? void 0 : e.reference_message_id) != null &&
                 (i = d[r.data.message_id]),
             null != i)
         ) {
-            let e = o(r, i, !0);
+            let e = s(r, i, !0);
             null != e && f.push(e);
         }
     }
@@ -124,12 +124,12 @@ function c() {
         let r = d[n.id];
         if (
             (null == r &&
-                n.type === s.Ni.MESSAGE &&
+                n.type === o.Ni.MESSAGE &&
                 (null == (t = n.data.message_context) ? void 0 : t.reference_message_id) != null &&
                 (r = d[n.data.message_id]),
             null != r)
         ) {
-            let e = o(n, r, !1);
+            let e = s(n, r, !1);
             null != e && g.push(e);
         }
     }

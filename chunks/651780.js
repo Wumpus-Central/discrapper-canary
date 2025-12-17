@@ -9,32 +9,32 @@ var r = n(54381),
     d = n(821849),
     u = n(774078),
     g = n(100527),
-    m = n(15640),
-    p = n(774380),
-    f = n(404270),
-    h = n(441536),
-    b = n(174604),
+    f = n(15640),
+    m = n(774380),
+    b = n(404270),
+    p = n(441536),
+    h = n(174604),
     x = n(399829),
     j = n(428862),
-    _ = n(899667),
-    v = n(626135),
-    O = n(267642),
-    C = n(63063),
-    y = n(999382),
-    N = n(981631),
-    E = n(388032),
-    I = n(424359);
-function S(e) {
+    v = n(899667),
+    O = n(626135),
+    C = n(267642),
+    y = n(63063),
+    N = n(999382),
+    E = n(981631),
+    I = n(388032),
+    S = n(874176);
+function _(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
         { days: i, hours: l } = (0, u.Z)(t);
     return n <= 0
         ? null
         : 0 === i && 0 === l
-          ? E.intl.format(E.t.kF0HEa, {
+          ? I.intl.format(I.t.kF0HEa, {
                 tierName: r,
                 numPremiumSubscriptions: n,
             })
-          : E.intl.format(E.t.neDJhq, {
+          : I.intl.format(I.t.neDJhq, {
                 days: i,
                 hours: l,
                 tierName: r,
@@ -43,18 +43,18 @@ function S(e) {
 }
 function T(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
-        i = (0, O.gZ)(t, n),
-        l = (0, O.nW)((0, O.Jh)(n));
+        i = (0, C.gZ)(t, n),
+        l = (0, C.nW)((0, C.Jh)(n));
     if (null == i || null == l) return null;
-    let s = (0, O._k)(t, n);
+    let s = (0, C._k)(t, n);
     return (0, r.jsxs)(a.Wn, {
         messageType: a.QYI.WARNING,
         children: [
             (0, r.jsx)("div", {
-                className: I.guildBoostingGracePeriodTitle,
-                children: E.intl.format(E.t.LG7vvg, {}),
+                className: S.guildBoostingGracePeriodTitle,
+                children: I.intl.format(I.t.LG7vvg, {}),
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(_, {
                 endsAt: i,
                 appliedGuildBoostsToMaintain: s,
                 tierName: l,
@@ -83,16 +83,16 @@ function w() {
             (0, o.tZ)(), (0, d.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),
-        t = (0, l.e7)([_.Z], () => (null != e ? _.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
-        n = (0, m.V)();
+    let e = (0, l.e7)([N.Z], () => N.Z.getGuild()),
+        t = (0, l.e7)([v.Z], () => (null != e ? v.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
+        n = (0, f.V)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
-                        children: E.intl.string(E.t.nLovSZ),
+                        children: I.intl.string(I.t.nLovSZ),
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(T, {
@@ -101,37 +101,37 @@ function w() {
                           })
                         : null,
                     (0, r.jsx)(a.Text, {
-                        className: I.titleBlurb,
+                        className: S.titleBlurb,
                         variant: "text-sm/normal",
-                        children: E.intl.format(E.t.hLOkp9, {
-                            helpdeskArticle: C.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS),
+                        children: I.intl.format(I.t.hLOkp9, {
+                            helpdeskArticle: y.Z.getArticleURL(E.BhN.GUILD_SUBSCRIPTIONS),
                         }),
                     }),
                 ],
             }),
             null != e &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(h.Z, {
                     guild: e,
                     onButtonClick: function () {
-                        null != e && ((0, c.xf)(), (0, h.Z)(e.id, g.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
+                        null != e && ((0, c.xf)(), (0, p.Z)(e.id, g.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
                     },
                 }),
             (0, r.jsx)(x.Z, {
-                tiers: (0, O.cP)(
-                    null != e && e.features.has(N.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o,
+                tiers: (0, C.cP)(
+                    null != e && e.features.has(E.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= E.B9o,
                 ),
                 renderTier: P,
             }),
-            (0, r.jsx)("div", { className: I.divider }),
-            n ? (0, r.jsx)(f.Z, {}) : null,
+            (0, r.jsx)("div", { className: S.divider }),
+            n ? (0, r.jsx)(b.Z, {}) : null,
             n
-                ? (0, r.jsx)(p.Z, {
+                ? (0, r.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void v.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void O.default.track(E.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: N.ZY5.GUILD_SETTINGS,
-                                  section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: N.qAy.BUTTON_CTA,
+                                  page: E.ZY5.GUILD_SETTINGS,
+                                  section: E.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: E.qAy.BUTTON_CTA,
                               },
                           }),
                   })

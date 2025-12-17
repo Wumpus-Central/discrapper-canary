@@ -1,12 +1,12 @@
 n.d(t, {
-    U: () => o,
-    Z: () => a,
+    U: () => a,
+    Z: () => o,
 });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032);
-function o(e) {
+function a(e) {
     return null == e || null == e.end_time
         ? null
         : l.intl.formatToPlainString(l.t.j7h4AJ, {
@@ -18,9 +18,9 @@ function o(e) {
               }),
           });
 }
-function a(e) {
+function o(e) {
     let { muteConfig: t, className: n } = e,
-        l = o(t);
+        l = a(t);
     return null != l
         ? (0, r.jsx)(i.Text, {
               variant: "text-xs/normal",

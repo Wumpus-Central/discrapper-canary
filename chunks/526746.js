@@ -15,21 +15,21 @@ var l = n(54381),
 function g(e) {
     var t;
     let { connection: n, guildId: g, location: j } = e,
-        v = (0, r.e7)([u.Z], () => (null != n.application_id ? u.Z.getApplication(n.application_id) : null), [
+        x = (0, r.e7)([u.Z], () => (null != n.application_id ? u.Z.getApplication(n.application_id) : null), [
             n.application_id,
         ]),
-        { analyticsLocations: x } = (0, a.ZP)(j);
+        { analyticsLocations: v } = (0, a.ZP)(j);
     i.useEffect(() => {
-        null != v ||
+        null != x ||
             null == n.application_id ||
             u.Z.isFetchingApplication(n.application_id) ||
             u.Z.didFetchingApplicationFail(n.application_id) ||
             (0, s.UM)(n.application_id).catch(() => {});
-    }, [v, n.application_id]);
-    let y = null != (t = null == v ? void 0 : v.name) ? t : f.intl.string(f.t.cgPbaZ),
-        { hasAlreadyLinked: b, canStartAuthorization: C, startAuthorization: O, fetched: Z } = (0, c.F)(v),
+    }, [x, n.application_id]);
+    let y = null != (t = null == x ? void 0 : x.name) ? t : f.intl.string(f.t.cgPbaZ),
+        { hasAlreadyLinked: b, canStartAuthorization: C, startAuthorization: O, fetched: Z } = (0, c.F)(x),
         w = (0, l.jsx)(d.Z, {
-            game: v,
+            game: x,
             size: d.A.MEDIUM,
         }),
         _ = i.useCallback(() => {
@@ -81,8 +81,8 @@ function g(e) {
                       }),
                 t),
             ),
-                O({ analyticsLocations: x });
-        }, [O, g, n.application_id, j, x]);
+                O({ analyticsLocations: v });
+        }, [O, g, n.application_id, j, v]);
     return (0, l.jsx)(p.Z, {
         displayName: y,
         description: n.description,

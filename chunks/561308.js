@@ -14,11 +14,11 @@ n.d(t, {
     ig: () => x,
     kr: () => E,
     n2: () => y,
-    q_: () => D,
+    q_: () => w,
     vU: () => R,
     yA: () => v,
     yh: () => h,
-    zo: () => w,
+    zo: () => D,
 }),
     n(35282);
 var r = n(164369),
@@ -175,13 +175,13 @@ function R(e) {
     var t;
     return null == (t = g(e, o.N.STREAK_DAYS)) ? void 0 : t.streak_count_days;
 }
-function D(e) {
+function w(e) {
     let t = R(e);
     if (null == t || t < 3) return !1;
     let n = c.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
 }
-function w(e) {
+function D(e) {
     let t = v(e);
     if (null == t)
         return {

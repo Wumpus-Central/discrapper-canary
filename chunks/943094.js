@@ -1,9 +1,9 @@
-n.d(t, { W: () => s });
+n.d(t, { W: () => o });
 var r = n(481060),
     i = n(812206),
     l = n(710845),
     a = n(51025);
-function s(e, t, s) {
+function o(e, t, o) {
     !(function (e, t) {
         let a = i.Z.getApplication(e);
         if (null == a)
@@ -45,5 +45,5 @@ function s(e, t, s) {
                     ),
                 );
         });
-    })(e, () => (0, a.pC)(e, t, s));
+    })(e, () => (0, a.pC)(e, t, o));
 }

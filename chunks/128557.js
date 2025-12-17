@@ -22,8 +22,8 @@ var i = n(54381),
     C = n(314897),
     y = n(430824),
     v = n(594174),
-    O = n(259580),
-    x = n(585483),
+    x = n(259580),
+    O = n(585483),
     E = n(63063),
     j = n(358085),
     S = n(709054),
@@ -106,9 +106,9 @@ function w(e) {
                           color: "currentColor",
                           className: a()(T.checkmark, { [T.animate]: d }),
                       })
-                    : (0, i.jsx)(O.Z, {
+                    : (0, i.jsx)(x.Z, {
                           className: T.arrow,
-                          direction: O.Z.Directions.RIGHT,
+                          direction: x.Z.Directions.RIGHT,
                       }),
             ],
         })
@@ -118,7 +118,7 @@ function M(e) {
     let { channel: t } = e,
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && S.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        O = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
+        x = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, h.TE)(t, l),
         D = (0, s.e7)([v.default], () => {
             var e, t;
@@ -130,8 +130,8 @@ function M(e) {
         { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, h.h_)(l),
         {
             handleInvite: F,
-            handleMessage: B,
-            handlePersonalize: H,
+            handleMessage: H,
+            handlePersonalize: B,
             handleDownload: G,
             handleAddApplication: z,
         } = (function (e) {
@@ -161,7 +161,7 @@ function M(e) {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.SEND_MESSAGE,
                     }),
-                        x.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
+                        O.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
                             channelId: P.lds,
                         });
@@ -311,7 +311,7 @@ function M(e) {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
                             completed: V,
-                            onClick: H,
+                            onClick: B,
                         }),
                     },
                     "customize",
@@ -328,7 +328,7 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: B,
+                            onClick: H,
                         }),
                     },
                     "message",
@@ -367,7 +367,7 @@ function M(e) {
                 "addapp",
             ),
         ));
-    let $ = O ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
+    let $ = x ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
     p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
         E.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),

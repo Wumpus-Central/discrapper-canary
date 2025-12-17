@@ -3,8 +3,8 @@ var l = t(54381),
     i = t(473749),
     r = t(442837),
     a = t(481060),
-    u = t(616780),
-    o = t(438536),
+    o = t(616780),
+    u = t(438536),
     s = t(946273),
     d = t(346479),
     c = t(665906),
@@ -58,11 +58,11 @@ function h(e, n) {
 }
 function p(e, n, p) {
     let P = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, u.$)(P, "useThreadAdminActionItems"), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
+    (0, o.$)(P, "useThreadAdminActionItems"), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
     let j = (0, r.e7)([g.Z], () => g.Z.getChannel(p)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         N = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-        y = (0, o.Z)(j, "Context Menu"),
+        y = (0, u.Z)(j, "Context Menu"),
         x = (0, c.yw)(null == j ? void 0 : j.id);
     return (null == N ? void 0 : N.id) === e.id
         ? [y]

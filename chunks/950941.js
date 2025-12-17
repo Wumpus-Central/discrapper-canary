@@ -1,9 +1,9 @@
-n.d(t, { W: () => f });
+n.d(t, { W: () => d });
 var r = n(54381),
     o = n(481060),
-    i = n(970013),
-    l = n(388032);
-function a(e) {
+    a = n(970013),
+    i = n(388032);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,34 +52,34 @@ function s(e) {
     return 0 === n ? null : (0, r.jsx)(o.mAB, { count: n });
 }
 function u(e) {
-    let { getDismissibleContentTypes: t, stronglyDiscouragedBadgeComponent: n, visibleContent: i, isSelected: a } = e,
+    let { getDismissibleContentTypes: t, stronglyDiscouragedBadgeComponent: n, visibleContent: a, isSelected: l } = e,
         c = null == t ? void 0 : t(),
-        s = null != i && c.includes(i) && !a,
-        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(o.IGR, { text: l.intl.string(l.t.y2b7CA) });
+        s = null != a && c.includes(a) && !l,
+        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(o.IGR, { text: i.intl.string(i.t.y2b7CA) });
     return s ? u : null;
 }
-function b(e) {
+function f(e) {
     let { useCustomDecoration: t, visibleContent: n, isSelected: r } = e;
     return t(n, r);
 }
-function f(e) {
+function d(e) {
     let { trailing: t, visibleContent: n, isSelected: o } = e;
     if (null == t) return null;
     switch (t.type) {
-        case i.W.BADGE_COUNT:
-            return (0, r.jsx)(s, a({}, t));
-        case i.W.BADGE_NEW:
+        case a.W.BADGE_COUNT:
+            return (0, r.jsx)(s, l({}, t));
+        case a.W.BADGE_NEW:
             return (0, r.jsx)(
                 u,
-                c(a({}, t), {
+                c(l({}, t), {
                     visibleContent: n,
                     isSelected: o,
                 }),
             );
-        case i.W.STRONGLY_DISCOURAGED_CUSTOM:
+        case a.W.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(
-                b,
-                c(a({}, t), {
+                f,
+                c(l({}, t), {
                     visibleContent: n,
                     isSelected: o,
                 }),

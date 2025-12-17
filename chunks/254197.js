@@ -4,7 +4,7 @@ n(473749);
 var i = n(481060),
     a = n(925329),
     o = n(388032),
-    s = n(523626);
+    s = n(779526);
 function l(e) {
     let { applications: t } = e;
     return (0, r.jsxs)(r.Fragment, {

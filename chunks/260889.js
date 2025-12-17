@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(287734),
-    o = n(367907),
+    o = n(287734),
+    s = n(367907),
     c = n(359110),
     u = n(769654),
     d = n(496675),
@@ -37,7 +37,7 @@ function m(e) {
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,10 +55,10 @@ function _(e, t) {
         e
     );
 }
-function b(e) {
+function _(e) {
     let t = i.useContext(f.AnalyticsContext),
         n = e.voiceChannels[0],
-        b = (0, l.e7)([d.Z], () => null != n && d.Z.can(g.Plq.CONNECT, n.channel));
+        _ = (0, l.e7)([d.Z], () => null != n && d.Z.can(g.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
@@ -68,12 +68,12 @@ function b(e) {
                       id: "join-voice",
                       action: function () {
                           (0, c.Kh)(n.channel.id),
-                              s.default.selectVoiceChannel(n.channel.id),
-                              o.ZP.trackWithMetadata(
+                              o.default.selectVoiceChannel(n.channel.id),
+                              s.ZP.trackWithMetadata(
                                   g.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
                                   m(
                                       {
-                                          source: _(m({}, t.location), { object: g.qAy.LIST_ITEM }),
+                                          source: b(m({}, t.location), { object: g.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           channel_id: n.channel.id,
                                       },
@@ -82,7 +82,7 @@ function b(e) {
                               );
                       },
                       label: h.intl.string(h.t["8yOlh9"]),
-                      disabled: !b,
+                      disabled: !_,
                   },
                   "join-voice",
               ),
@@ -92,11 +92,11 @@ function b(e) {
                       id: "goto-server",
                       action: function () {
                           (0, u.X)(n.guild.id),
-                              o.ZP.trackWithMetadata(
+                              s.ZP.trackWithMetadata(
                                   g.rMx.ACTIVITY_FEED_GUILD_VISITED,
                                   m(
                                       {
-                                          source: _(m({}, t.location), { object: g.qAy.LIST_ITEM }),
+                                          source: b(m({}, t.location), { object: g.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           af_recently_played: !1,
                                       },

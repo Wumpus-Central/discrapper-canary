@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(901461),
     y = n(981631),
     v = n(388032),
-    O = n(42241);
-let x = "749054660769218631";
+    x = n(42241);
+let O = "749054660769218631";
 function E(e) {
     var t;
     let { channel: n } = e,
@@ -35,11 +35,11 @@ function E(e) {
         ),
         S = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         _ = null != (t = b.ZP.useName(S)) ? t : v.intl.string(v.t.y1Wu2f),
-        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(x)),
+        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(O)),
         I = r.useCallback(async () => {
             if (null == l || "" === l)
                 try {
-                    await c.Z.sendGreetMessage(n.id, x),
+                    await c.Z.sendGreetMessage(n.id, O),
                         g.default.track(y.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
@@ -54,7 +54,7 @@ function E(e) {
         T =
             null != l && "" !== l
                 ? (0, i.jsx)(s.Text, {
-                      className: O.error,
+                      className: x.error,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: l,
@@ -62,10 +62,10 @@ function E(e) {
                 : null;
     return j
         ? (0, i.jsxs)("div", {
-              className: O.containerCompact,
+              className: x.containerCompact,
               children: [
                   (0, i.jsxs)(s.P3F, {
-                      className: null != l && "" !== l ? O.compactButtonDisabled : O.compactButton,
+                      className: null != l && "" !== l ? x.compactButtonDisabled : x.compactButton,
                       "aria-label": v.intl.string(v.t.pJObYI),
                       onClick: I,
                       children: [
@@ -74,7 +74,7 @@ function E(e) {
                               size: 24,
                           }),
                           (0, i.jsx)(s.Text, {
-                              className: O.text,
+                              className: x.text,
                               variant: "text-md/medium",
                               children: Z,
                           }),
@@ -84,12 +84,12 @@ function E(e) {
               ],
           })
         : (0, i.jsxs)("div", {
-              className: O.containerExpanded,
+              className: x.containerExpanded,
               children: [
                   (0, i.jsx)(p.Z, {
                       sticker: P,
                       size: 160,
-                      className: O.stickerExpanded,
+                      className: x.stickerExpanded,
                   }),
                   (0, i.jsx)(s.Button, {
                       fullWidth: !0,

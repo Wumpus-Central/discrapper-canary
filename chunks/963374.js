@@ -2,8 +2,8 @@ n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854);
 var r = n(392711),
     l = n.n(r),
     i = n(619864),
-    s = n(193995);
-let a = new Set([
+    a = n(193995);
+let s = new Set([
     "a",
     "an",
     "and",
@@ -45,7 +45,7 @@ function u(e) {
     return e.toLowerCase();
 }
 function c(e) {
-    return a.has(e);
+    return s.has(e);
 }
 function E(e) {
     return 0 === e.length;
@@ -53,7 +53,7 @@ function E(e) {
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.length >= i.zV && e.length <= i.y_ && t,
-        r = new Set(l()(e.split(/\W+/)).map(o).reject(E).map(u).reject(c).map(s.a).value());
+        r = new Set(l()(e.split(/\W+/)).map(o).reject(E).map(u).reject(c).map(a.a).value());
     return (e) =>
         (function e(t, n, r) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n, r));
@@ -65,7 +65,7 @@ function d(e) {
                     !(function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                         if (E((e = u(o(e)))) || c(e)) return !1;
-                        let r = (0, s.a)(e);
+                        let r = (0, a.a)(e);
                         if (n) {
                             for (let e of t.values()) if (r.includes(e)) return !0;
                             return !1;

@@ -39,8 +39,8 @@ function R(e, t, n) {
         e
     );
 }
-let D = "seenQSTutorial",
-    w = 5,
+let w = "seenQSTutorial",
+    D = 5,
     x = 7,
     L = 3,
     j = 100,
@@ -49,8 +49,8 @@ let D = "seenQSTutorial",
     U = !1,
     G = !1,
     Z = null,
-    B = [],
-    F = null,
+    F = [],
+    B = null,
     V = 0,
     H = [],
     Y = [],
@@ -179,28 +179,28 @@ function X(e, t) {
                     null != t ? P.intl.formatToPlainString(P.t.FREzQs, { name: t.name }) : P.intl.string(P.t.XFYW1o),
                 ),
             ),
-                (B = e);
+                (F = e);
             break;
         }
         case u.h8.TEXT_CHANNEL:
-            e.unshift((0, u.o6)(P.intl.string(P.t.W26k4V))), (B = e);
+            e.unshift((0, u.o6)(P.intl.string(P.t.W26k4V))), (F = e);
             break;
         case u.h8.VOICE_CHANNEL:
-            e.unshift((0, u.o6)(P.intl.string(P.t.zUoI5C))), (B = e);
+            e.unshift((0, u.o6)(P.intl.string(P.t.zUoI5C))), (F = e);
             break;
         case u.h8.GUILD:
-            e.unshift((0, u.o6)(P.intl.string(P.t.olADPs))), (B = e);
+            e.unshift((0, u.o6)(P.intl.string(P.t.olADPs))), (F = e);
             break;
         case u.h8.APPLICATION:
-            e.unshift((0, u.o6)(P.intl.string(P.t.VwK1ld))), (B = e);
+            e.unshift((0, u.o6)(P.intl.string(P.t.VwK1ld))), (F = e);
             break;
         default:
-            B = e;
+            F = e;
     }
-    if (t !== F) (F = t), (V = Math.max(t.length, V)), (k = (0, u.gJ)(u.a8.DOWN, -1, B));
+    if (t !== B) (B = t), (V = Math.max(t.length, V)), (k = (0, u.gJ)(u.a8.DOWN, -1, F));
     else {
-        let e = B[k];
-        null != e && e.type === u.h8.HEADER && (k = (0, u.gJ)(u.a8.DOWN, k, B));
+        let e = F[k];
+        null != e && e.type === u.h8.HEADER && (k = (0, u.gJ)(u.a8.DOWN, k, F));
     }
     es.emitChange();
 }
@@ -218,7 +218,7 @@ function J(e) {
                 : new u.ZP(
                       et,
                       M,
-                      null != i ? j : w,
+                      null != i ? j : D,
                       {
                           frecencyBoosters: !0,
                           blacklist: s,
@@ -226,7 +226,7 @@ function J(e) {
                       },
                       j,
                   )),
-        (F = null),
+        (B = null),
         (V = a.length),
         (Z = i),
         r.search(a);
@@ -249,7 +249,7 @@ function et(e, t) {
     ee((e = "" === (t = t.trim()).trim() ? Q() : e), H) || ((H = e), X(e, t));
 }
 function en() {
-    (F = null), (V = 0), (H = []), null != r && (r.destroy(), (r = null));
+    (B = null), (V = 0), (H = []), null != r && (r.destroy(), (r = null));
 }
 function er(e) {
     var t, n;
@@ -257,7 +257,7 @@ function er(e) {
         o = i.trim();
     if (null == r) return !1;
     if (Z !== a) {
-        r.setResultTypes(null != a ? [a] : M), r.setLimit(null != a ? j : w);
+        r.setResultTypes(null != a ? [a] : M), r.setLimit(null != a ? j : D);
         let e = null != (t = I.Z.getGuildId()) ? t : void 0;
         a === u.h8.USER && null != e
             ? r.setOptions(
@@ -289,14 +289,14 @@ function ei(e) {
 }
 function ea() {
     if (U) return !1;
-    (U = !0), l.K.set(D, !0);
+    (U = !0), l.K.set(w, !0);
 }
 class eo extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(p.Z, m.default, h.Z, g.Z, E.ZP, b.ZP, y.Z, O.Z, v.ZP, S.Z, I.Z, _.Z, T.ZP),
             this.syncWith([_.Z], () => !0),
-            (U = l.K.get(D) || !1),
+            (U = l.K.get(w) || !1),
             (Y = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
@@ -333,7 +333,7 @@ class eo extends (i = s.ZP.PersistedStore) {
             theme: _.Z.theme,
             query: null != r ? r.query : "",
             queryMode: Z,
-            results: B,
+            results: F,
             selectedIndex: k,
             seenTutorial: U,
             maxQueryLength: V,

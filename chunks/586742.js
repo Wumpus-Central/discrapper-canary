@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var i = n(54381),
     r = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     s = n(481060),
     c = n(239091),
@@ -79,12 +79,12 @@ function D(e, t) {
 }
 let R = r.memo(function (e) {
         var t;
-        let { participant: n, channel: r, context: l } = e,
-            a = null == (t = n.user) ? void 0 : t.id;
-        return (0, o.e7)([O.Z], () => null != n.user && null != l && null != r && O.Z.isLocalVideoDisabled(a, l), [
-            a,
-            n.user,
+        let { participant: n, channel: r, context: a } = e,
+            l = null == (t = n.user) ? void 0 : t.id;
+        return (0, o.e7)([O.Z], () => null != n.user && null != a && null != r && O.Z.isLocalVideoDisabled(l, a), [
             l,
+            n.user,
+            a,
             r,
         ])
             ? null
@@ -93,8 +93,8 @@ let R = r.memo(function (e) {
     L = r.memo(function (e) {
         let {
                 context: t = T.Yn.DEFAULT,
-                participants: l,
-                locked: a,
+                participants: a,
+                locked: l,
                 channel: o,
                 width: s,
                 height: u,
@@ -102,11 +102,11 @@ let R = r.memo(function (e) {
             } = e,
             f = r.useCallback(
                 (e, r) => {
-                    let l = e.user;
+                    let a = e.user;
                     (0, x.Ws)(w.Odu.VIDEO, {
                         type: x.Qu.CAMERA,
                         value: x.bk.SETTINGS_OPENED,
-                        userId: null == l ? void 0 : l.id,
+                        userId: null == a ? void 0 : a.id,
                     }),
                         (0, c.jW)(r, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
@@ -114,13 +114,13 @@ let R = r.memo(function (e) {
                                 (0, i.jsx)(
                                     e,
                                     D(k({}, n), {
-                                        user: l,
+                                        user: a,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
                                             (0, x.Ws)(w.Odu.VIDEO, {
                                                 type: x.Qu.GO_LIVE,
                                                 value: x.bk.ENABLED,
-                                                userId: null == l ? void 0 : l.id,
+                                                userId: null == a ? void 0 : a.id,
                                             });
                                         },
                                     }),
@@ -132,12 +132,12 @@ let R = r.memo(function (e) {
             m = (0, x.ee)(
                 () =>
                     new Set(
-                        l.map((e) => {
+                        a.map((e) => {
                             var t;
                             return null == (t = e.user) ? void 0 : t.id;
                         }),
                     ),
-                [l],
+                [a],
             );
         r.useEffect(() => {
             d &&
@@ -156,7 +156,7 @@ let R = r.memo(function (e) {
             [s, u],
         );
         return (0, i.jsx)(i.Fragment, {
-            children: l.map((e) =>
+            children: a.map((e) =>
                 (0, i.jsx)(
                     R,
                     {
@@ -169,8 +169,8 @@ let R = r.memo(function (e) {
                         popoutType: h.P.OVERLAY,
                         inCall: !0,
                         noBorder: !0,
-                        onContextMenu: a ? void 0 : f,
-                        forceIdle: a,
+                        onContextMenu: l ? void 0 : f,
+                        forceIdle: l,
                         paused: !d,
                         context: t,
                     },
@@ -183,7 +183,7 @@ let R = r.memo(function (e) {
         let {
                 context: t = T.Yn.DEFAULT,
                 participants: n,
-                participantsVersion: l,
+                participantsVersion: a,
                 locked: o,
                 widget: c,
                 channel: u,
@@ -208,7 +208,7 @@ let R = r.memo(function (e) {
         let b = r.useMemo(() => ({ opacity: c.opacity }), [c.opacity]),
             y = r.useMemo(
                 () =>
-                    a()({
+                    l()({
                         [A.videoList]: !0,
                         [A.vertical]: !m,
                         [A.hidden]: !g && o,
@@ -230,7 +230,7 @@ let R = r.memo(function (e) {
                           width: d,
                           height: f,
                           shouldDisplay: g,
-                          participantsVersion: l,
+                          participantsVersion: a,
                       }),
                   })
             : h
@@ -245,11 +245,11 @@ let R = r.memo(function (e) {
               : null;
     }),
     z = (e) => {
-        let { widget: t, computedSize: n, borderWidth: i, padding: r, containerSpecs: l } = e;
+        let { widget: t, computedSize: n, borderWidth: i, padding: r, containerSpecs: a } = e;
         if (!(0, Z.js)(t)) return n;
-        let a = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
+        let l = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
             o = 2 * i + 2 * r,
-            s = a
+            s = l
                 ? {
                       width: Math.max(n.width, N.vZ),
                       height: Math.min(n.height, 2 * N.mo + o),
@@ -259,13 +259,13 @@ let R = r.memo(function (e) {
                       width: Math.min(n.width, 2 * N.mo + o),
                   },
             c = {
-                maxWidth: 0.75 * l.maxX,
-                maxHeight: 0.75 * l.maxY,
+                maxWidth: 0.75 * a.maxX,
+                maxHeight: 0.75 * a.maxY,
             };
         return (0, _.hJ)(s, c);
     };
 function V(e) {
-    var t, n, l, a;
+    var t, n, a, l;
     let s = (0, o.e7)([v.Z, y.Z], () => y.Z.getChannel(v.Z.getVoiceChannelId())),
         c = 2 * e.padding + 2 * e.borderWidth,
         h = null == s ? void 0 : s.id,
@@ -305,14 +305,14 @@ function V(e) {
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (l = null == Z ? void 0 : Z.height) ? l : e.height,
-                right: null != (a = null == Z ? void 0 : Z.width) ? a : e.width,
+                bottom: null != (a = null == Z ? void 0 : Z.height) ? a : e.height,
+                right: null != (l = null == Z ? void 0 : Z.width) ? l : e.width,
             },
         };
     return (
         !(function (e) {
             let { horizontal: t, widget: n, widgetLayoutSpecs: i } = e,
-                l = {
+                a = {
                     id: n.id,
                     size: n.size,
                     containerWidth: i.containerSize.containerWidth,
@@ -320,21 +320,21 @@ function V(e) {
                     widget: n,
                     widgetLayoutSpecs: i,
                 },
-                a = r.useRef(l);
-            r.useLayoutEffect(() => void (a.current = l)),
+                l = r.useRef(a);
+            r.useLayoutEffect(() => void (l.current = a)),
                 r.useLayoutEffect(() => {
                     let {
                         size: e,
                         id: n,
                         containerWidth: i,
                         containerHeight: r,
-                        widget: l,
+                        widget: a,
                         widgetLayoutSpecs: o,
-                    } = a.current;
+                    } = l.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
                     let { width: s, height: c } = z(
                         D(k({}, o), {
-                            widget: l,
+                            widget: a,
                             operation: C.B.RESIZE_NORTH,
                             computedSize: {
                                 width: r,

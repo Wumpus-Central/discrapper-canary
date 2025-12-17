@@ -46,7 +46,7 @@ let l = {
                 participants: e
                     .array()
                     .items(
-                        s(e)
+                        o(e)
                             .keys({ nickname: e.string().description("Server nickname. Not unique.") })
                             .required(),
                     )
@@ -69,7 +69,7 @@ let l = {
                     url: e.string().required(),
                     width: e.number().required(),
                 }),
-                components: e.array().items(o(e)),
+                components: e.array().items(s(e)),
                 pid: e.number(),
             }),
             response: (e) => ({ success: e.boolean().required() }),
@@ -95,7 +95,7 @@ let l = {
                     .items(
                         e.object({
                             type: e.number().required(),
-                            user: s(e).required(),
+                            user: o(e).required(),
                             presence: e.object({
                                 status: e.string().required(),
                                 activity: a(e).allow(null),
@@ -113,7 +113,7 @@ let l = {
         },
         [i.Q5.GET_USER]: {
             request: (e) => ({ id: e.string().max(64).required() }),
-            response: (e) => s(e).allow(null),
+            response: (e) => o(e).allow(null),
         },
         [i.Q5.GET_QUEST_ENROLLMENT_STATUS]: {
             request: (e) => ({ quest_id: e.string().required() }),
@@ -187,7 +187,7 @@ let l = {
             buttons: e.array().items(e.string()).optional(),
             hangStatus: e.string().optional(),
         }),
-    s = (e) =>
+    o = (e) =>
         e
             .object({
                 id: e.string().required().description("User ID"),
@@ -211,7 +211,7 @@ let l = {
                 premium_type: e.number().allow(null).description("Nitro premium type"),
             })
             .description("Discord User"),
-    o = (e) =>
+    s = (e) =>
         e.object({
             type: e.number().valid(1).required(),
             components: e.array().max(5).items(c(e)),

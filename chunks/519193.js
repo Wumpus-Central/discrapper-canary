@@ -1,46 +1,46 @@
-n.d(a, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => g });
+n.d(a, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => T });
 var i = n(54381),
     e = n(473749),
     s = n(793030),
-    l = n(481060),
-    r = n(493773),
-    c = n(100527),
+    c = n(481060),
+    l = n(493773),
+    r = n(100527),
     o = n(906732),
     u = n(524995),
     d = n(626135),
     x = n(877481),
-    _ = n(579201),
-    p = n(683668),
-    m = n(55121),
-    f = n(438926),
+    f = n(579201),
+    _ = n(683668),
+    p = n(55121),
+    m = n(438926),
     C = n(582113),
     h = n(981631),
     k = n(388032),
-    T = n(786081);
-function g(t) {
-    let { transitionState: a, onClose: n, sku: g, application: j, analyticsLocations: L } = t,
-        A = (0, p.a)(j),
-        { fetched: b, hasAlreadyLinked: v, canStartAuthorization: N, startAuthorization: S } = (0, u.F)(j),
-        y = (0, _.I)(j),
-        { analyticsLocations: E } = (0, o.ZP)(null != L ? L : [], c.Z.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
-        I = !b || null == A,
+    b = n(370296);
+function T(t) {
+    let { transitionState: a, onClose: n, sku: T, application: g, analyticsLocations: j } = t,
+        L = (0, _.a)(g),
+        { fetched: A, hasAlreadyLinked: v, canStartAuthorization: N, startAuthorization: S } = (0, u.F)(g),
+        y = (0, f.I)(g),
+        { analyticsLocations: E } = (0, o.ZP)(null != j ? j : [], r.Z.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
+        I = !A || null == L,
         R = e.useRef({
             analyticsLocations: E,
-            skuId: g.id,
-            applicationId: j.id,
-            isLaunchable: A,
+            skuId: T.id,
+            applicationId: g.id,
+            isLaunchable: L,
             isApplicationConnected: y,
             canStartAuthorization: N,
         });
     e.useEffect(() => {
-        (R.current.isLaunchable = A), (R.current.isApplicationConnected = y), (R.current.canStartAuthorization = N);
-    }, [A, y, N]),
-        (0, r.ZP)(() => {
+        (R.current.isLaunchable = L), (R.current.isApplicationConnected = y), (R.current.canStartAuthorization = N);
+    }, [L, y, N]),
+        (0, l.ZP)(() => {
             d.default.track(h.rMx.OPEN_MODAL, {
                 location_stack: E,
                 type: C.ng,
-                sku_id: g.id,
-                application_id: j.id,
+                sku_id: T.id,
+                application_id: g.id,
             });
         }),
         e.useEffect(() => {
@@ -70,11 +70,11 @@ function g(t) {
             d.default.track(h.rMx.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                 location_stack: t,
                 sku_id: a,
-                application_id: j.id,
+                application_id: g.id,
                 is_gift: !1,
             }),
-                x.Z.launchGame(j.id);
-        }, [j.id]),
+                x.Z.launchGame(g.id);
+        }, [g.id]),
         B = e.useCallback(() => {
             let {
                 analyticsLocations: t,
@@ -97,11 +97,11 @@ function g(t) {
         return (0, i.jsx)(s.IX, {
             transitionState: a,
             onClose: n,
-            children: (0, i.jsx)(s.fef, { children: (0, i.jsx)(l.$jN, {}) }),
+            children: (0, i.jsx)(s.fef, { children: (0, i.jsx)(c.$jN, {}) }),
         });
     if (v) {
         let t =
-            A && !y
+            L && !y
                 ? {
                       variant: "primary",
                       text: k.intl.string(k.t["s+J8Dl"]),
@@ -117,17 +117,17 @@ function g(t) {
             transitionState: a,
             onClose: n,
             children: [
-                (0, i.jsx)(f.y, {
-                    sku: g,
+                (0, i.jsx)(m.y, {
+                    sku: T,
                     title: k.intl.string(k.t["5glWta"]),
                 }),
                 (0, i.jsx)(s.fef, {
-                    children: (0, i.jsx)(l.Text, {
+                    children: (0, i.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        className: T.modalBodyText,
+                        className: b.modalBodyText,
                         children: k.intl.formatToPlainString(k.t.W2znvX, {
-                            skuName: g.name,
-                            applicationName: j.name,
+                            skuName: T.name,
+                            applicationName: g.name,
                         }),
                     }),
                 }),
@@ -146,15 +146,15 @@ function g(t) {
             icon: s.uIJ,
             disabled: !N,
         };
-        return (0, i.jsx)(m.M, {
-            sku: g,
-            application: j,
+        return (0, i.jsx)(p.M, {
+            sku: T,
+            application: g,
             transitionState: a,
             onClose: n,
             hasAlreadyLinked: v,
             canStartAuthorization: N,
             primaryCTAButtonProps: t,
-            bodyText: k.intl.formatToPlainString(k.t.Qmkje8, { applicationName: j.name }),
+            bodyText: k.intl.formatToPlainString(k.t.Qmkje8, { applicationName: g.name }),
             title: k.intl.string(k.t.GPAtvf),
         });
     }

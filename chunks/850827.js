@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -16,7 +16,7 @@ var i = n(120356),
     h = n(979651),
     g = n(503438),
     E = n(802856),
-    b = n(942596),
+    b = n(387903),
     y = n(606925),
     O = n(719216),
     v = n(429589),
@@ -28,15 +28,15 @@ var i = n(120356),
     N = n(757182),
     P = n(910424),
     R = n(981631),
-    D = n(964719);
-let w = (0, u.Z)((e) => {
+    w = n(765812);
+let D = (0, u.Z)((e) => {
     let {
             activity: t,
             embeddedActivity: n,
             user: i,
             applicationStream: o,
             className: u,
-            guildId: w,
+            guildId: D,
             channelId: x,
             source: L,
             buttonVariant: j,
@@ -49,11 +49,11 @@ let w = (0, u.Z)((e) => {
         }),
         G = M === b.Y.STREAM_PREVIEW || null != o,
         Z = (0, g.Z)(t),
-        B = Z || G ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL,
-        F = (null == t ? void 0 : t.type) === R.IIU.HANG_STATUS,
+        F = Z || G ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL,
+        B = (null == t ? void 0 : t.type) === R.IIU.HANG_STATUS,
         V = (0, l.e7)([h.Z, _.Z], () => {
             var e;
-            return F ? _.Z.getChannel(null == (e = h.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
+            return B ? _.Z.getChannel(null == (e = h.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
         }),
         H = () => {
             if ((0, E.Z)(t))
@@ -74,7 +74,7 @@ let w = (0, u.Z)((e) => {
                 let e = (0, r.jsx)(A.Z, {
                         activity: t,
                         user: i,
-                        guildId: w,
+                        guildId: D,
                         channelId: x,
                         source: L,
                         onAction: k,
@@ -108,7 +108,7 @@ let w = (0, u.Z)((e) => {
                       applicationStream: o,
                       onAction: k,
                   })
-                : F && null != V
+                : B && null != V
                   ? (0, r.jsx)(S.Z, {
                         userId: i.id,
                         variant: j,
@@ -144,13 +144,13 @@ let w = (0, u.Z)((e) => {
                         ],
                     });
         },
-        Y = B === f.Z.Direction.VERTICAL;
+        Y = F === f.Z.Direction.VERTICAL;
     return (0, r.jsx)(f.Z, {
         grow: 0,
         align: f.Z.Align.STRETCH,
-        direction: B,
+        direction: F,
         wrap: Y ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
-        className: a()(u, D.buttonsWrapper, Y ? D.vertical : D.horizontal),
+        className: a()(u, w.buttonsWrapper, Y ? w.vertical : w.horizontal),
         children: H(),
     });
 });

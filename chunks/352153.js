@@ -3,8 +3,8 @@ var r = n(473749),
     i = n(442837),
     l = n(699682),
     a = n(948053),
-    s = n(944596),
-    o = n(940893),
+    o = n(944596),
+    s = n(940893),
     c = n(144725),
     u = n(797394),
     d = n(613928),
@@ -13,12 +13,12 @@ var r = n(473749),
     g = n(11543);
 function h(e) {
     let { showDot: t, notificationItem: n, setScrollState: h } = e,
-        [m, _] = r.useState(!1),
-        { unreadItems: b, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
+        [m, b] = r.useState(!1),
+        { unreadItems: _, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
         v = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
         y = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && v > 0));
     r.useEffect(() => {
-        null != c.Z.getLoadId() && s.m.trackFeedShown({ homeSessionId: "gravity" });
+        null != c.Z.getLoadId() && o.m.trackFeedShown({ homeSessionId: "gravity" });
     }, [v]);
     let I = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
         C = (0, i.e7)([c.Z], () => c.Z.isHydrating(), []),
@@ -29,7 +29,7 @@ function h(e) {
         })),
         P = S.filter((e) => {
             let { item: t } = e;
-            return !o.X.has(t.data.kind);
+            return !s.X.has(t.data.kind);
         })
             .map((e) => {
                 let { item: t } = e;
@@ -40,29 +40,29 @@ function h(e) {
     r.useEffect(() => {
         if (I || y || null == x || null == P || P === x) return;
         let e = Date.now();
-        e - j > g.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
+        e - j > g.C && (a.Z.gravityScrollEvent(e), o.m.trackFeedFirstScrollStarted());
     }, [I, j, x, P, N, y]);
     let A = r.useCallback(
             (e) => {
                 var t, n;
                 let { viewableItems: r } = e;
-                if ((r.some((e) => "end" === e.item.data.kind) && _(!0), 0 === r.length)) return;
+                if ((r.some((e) => "end" === e.item.data.kind) && b(!0), 0 === r.length)) return;
                 T(r),
                     (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == h || h());
                 let i = [],
                     l = (0, d.FJ)(r),
-                    o = Date.now();
+                    s = Date.now();
                 for (let e = l.length - 1; e >= 0; e--) {
                     let t = l[e];
                     null != t &&
                         i.push({
                             id: t.id,
                             type: (0, u.v$)(t),
-                            timestamp: o++,
+                            timestamp: s++,
                         });
                 }
                 i.length > 0 && a.Z.ackGravityItems(i, !0),
-                    s.m.trackItemShortImpression(
+                    o.m.trackItemShortImpression(
                         r,
                         l.map((e) => ({
                             id: e.id,
@@ -71,14 +71,14 @@ function h(e) {
                         v,
                     );
             },
-            [v, _, h],
+            [v, b, h],
         ),
         Z = r.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if (0 === t.length) return;
                 let n = (0, d.FJ)(t);
-                s.m.trackItemLongImpression(
+                o.m.trackItemLongImpression(
                     t,
                     n.map((e) => ({
                         id: e.id,
@@ -90,7 +90,7 @@ function h(e) {
                         t
                             .filter((e) => {
                                 let { item: t } = e;
-                                return !o.X.has(t.data.kind);
+                                return !s.X.has(t.data.kind);
                             })
                             .map((e) => {
                                 var t, n;
@@ -115,7 +115,7 @@ function h(e) {
                 t
                     .filter((e) => {
                         let { item: t } = e;
-                        return !o.X.has(t.data.kind);
+                        return !s.X.has(t.data.kind);
                     })
                     .map((e) => {
                         var t, n;
@@ -188,7 +188,7 @@ function h(e) {
                           unread: !1,
                           data: { kind: "loading" },
                       })
-                    : (b.forEach((t) => {
+                    : (_.forEach((t) => {
                           (0, d.eO)(t) || e.push(t);
                       }),
                       O &&
@@ -214,7 +214,7 @@ function h(e) {
                     stickyHeaderIndices: [],
                 }
             );
-        }, [y, n, b, O, E, C]);
+        }, [y, n, _, O, E, C]);
     return {
         data: D,
         loading: y,

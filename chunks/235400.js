@@ -12,8 +12,8 @@ var r = n(54381),
     p = n(311395),
     h = n(269982),
     x = n(767714),
-    f = n(150039),
-    g = n(369111),
+    g = n(150039),
+    f = n(369111),
     v = n(271383),
     b = n(594174),
     j = n(626135),
@@ -36,7 +36,7 @@ function E(e) {
         } = e,
         E = (0, l.e7)([v.ZP], () => (null != w ? v.ZP.getMember(w.id, t.id) : null)),
         A = null != E ? E.avatarDecoration : t.avatarDecoration,
-        { pendingAvatarDecoration: T, setPendingAvatarDecoration: _ } = (0, g.Z)({
+        { pendingAvatarDecoration: T, setPendingAvatarDecoration: _ } = (0, f.Z)({
             analyticsLocations: m,
             guildId: null == w ? void 0 : w.id,
         }),
@@ -56,7 +56,7 @@ function E(e) {
                       ? e
                       : null;
         }),
-        N = (0, f.Ys)({
+        N = (0, g.Ys)({
             pendingValue: D,
             userValue: null == t ? void 0 : t.avatarDecoration,
             guildValue: null == E ? void 0 : E.avatarDecoration,
@@ -179,8 +179,8 @@ function A(e) {
         } = e,
         h = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: x } = (0, o.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: f, purchases: g, isFetchingCategories: v, isFetchingPurchases: P } = (0, m.ZP)(),
-        y = v || (P && 0 === g.size);
+        { categories: g, purchases: f, isFetchingCategories: v, isFetchingPurchases: P } = (0, m.ZP)(),
+        y = v || (P && 0 === f.size);
     return (
         i.useEffect(() => {
             j.default.track(w.rMx.OPEN_MODAL, {
@@ -206,8 +206,8 @@ function A(e) {
                           : (0, r.jsx)(E, {
                                 user: h,
                                 guild: p,
-                                categories: f,
-                                purchases: g,
+                                categories: g,
+                                purchases: f,
                                 analyticsLocations: x,
                                 initialSelectedDecoration: u,
                                 onClose: () => {

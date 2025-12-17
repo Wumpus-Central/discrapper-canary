@@ -1,15 +1,15 @@
 n.d(t, {
     BO: () => u,
-    cq: () => h,
-    gI: () => p,
-    xN: () => f,
+    cq: () => f,
+    gI: () => h,
+    xN: () => p,
     yA: () => d,
 });
 var i = n(348327),
     r = n.n(i),
-    l = n(972959),
-    o = n(569545);
-function a(e) {
+    a = n(972959),
+    l = n(569545);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -52,21 +52,21 @@ function s(e, t) {
         e
     );
 }
-let c = (0, l.H)(() => ({ streams: {} }));
+let c = (0, a.H)(() => ({ streams: {} }));
 function u(e) {
     var t, n;
-    let i = (0, o.V9)(e);
+    let i = (0, l.V9)(e);
     return null != (n = null == (t = c.useState((e) => e.streams, r())[i]) ? void 0 : t.zoom) ? n : 100;
 }
 function d(e) {
     return u(e) / 100;
 }
-function h(e, t) {
-    let n = (0, o.V9)(e);
+function f(e, t) {
+    let n = (0, l.V9)(e);
     c.setState((e) => {
         var i;
-        return s(a({}, e), {
-            streams: s(a({}, e.streams), {
+        return s(o({}, e), {
+            streams: s(o({}, e.streams), {
                 [n]: {
                     zoom: t,
                     fitOverride: null == (i = e.streams[n]) ? void 0 : i.fitOverride,
@@ -75,12 +75,12 @@ function h(e, t) {
         });
     }, !0);
 }
-function p(e, t) {
-    let n = (0, o.V9)(e);
+function h(e, t) {
+    let n = (0, l.V9)(e);
     c.setState((e) => {
         var i;
-        return s(a({}, e), {
-            streams: s(a({}, e.streams), {
+        return s(o({}, e), {
+            streams: s(o({}, e.streams), {
                 [n]: {
                     zoom: null == (i = e.streams[n]) ? void 0 : i.zoom,
                     fitOverride: t,
@@ -89,8 +89,8 @@ function p(e, t) {
         });
     });
 }
-function f(e) {
+function p(e) {
     var t;
-    let n = (0, o.V9)(e);
+    let n = (0, l.V9)(e);
     return null == (t = c.useState((e) => e.streams, r())[n]) ? void 0 : t.fitOverride;
 }

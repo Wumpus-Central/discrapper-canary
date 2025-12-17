@@ -1,17 +1,17 @@
-n.d(t, { v: () => a });
+n.d(t, { v: () => o });
 var r = n(54381);
 n(473749);
 var i = n(388032),
-    l = n(478394),
-    o = n(652430);
-let a = () =>
+    l = n(296772),
+    a = n(652430);
+let o = () =>
     (0, r.jsxs)("div", {
         className: l.container,
         children: [
             (0, r.jsx)("img", {
                 className: l.image,
                 alt: "",
-                src: o,
+                src: a,
             }),
             (0, r.jsx)("div", {
                 className: l.title,

@@ -2,12 +2,12 @@ n.d(t, { S: () => s });
 var r = n(54381),
     i = n(473749),
     l = n(681715),
-    o = n(593214),
-    a = n(388032);
+    a = n(593214),
+    o = n(388032);
 let s = i.memo(function (e) {
     let { "aria-label": t = !1, children: n } = e,
         s = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, o.up)();
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, a.up)();
             return (
                 i.useEffect(() => {
                     if (e) {
@@ -29,7 +29,7 @@ let s = i.memo(function (e) {
               spacing: 12,
               position: "right",
               align: "center",
-              text: a.intl.string(a.t["4tSWQg"]),
+              text: o.intl.string(o.t["4tSWQg"]),
               "aria-label": t,
               children: (0, r.jsx)("div", { children: n }),
           })

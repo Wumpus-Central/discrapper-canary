@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685), n(361932), n(187205);
 var r,
     i = n(392711),
-    o = n(979554),
-    a = n(442837),
+    a = n(979554),
+    o = n(442837),
     s = n(570140),
     l = n(212161);
 function c(e, t, n) {
@@ -23,12 +23,12 @@ let u = {},
     f = (e) => {
         var t, n;
         let r = !1;
-        if (e.type !== o.Z.PROFILE_EFFECT && e.type !== o.Z.VARIANTS_GROUP) return r;
-        let a = [
+        if (e.type !== a.Z.PROFILE_EFFECT && e.type !== a.Z.VARIANTS_GROUP) return r;
+        let o = [
             ...e.items,
             ...(null != (n = null == (t = e.variants) ? void 0 : t.flatMap((e) => e.items)) ? n : []),
         ].filter(l.H);
-        for (let e of (0, i.uniqBy)(a, "skuId")) {
+        for (let e of (0, i.uniqBy)(o, "skuId")) {
             let t = {
                 skuId: e.skuId,
                 config: e,
@@ -80,7 +80,7 @@ let u = {},
     y = (e) => {
         u = {};
     };
-class O extends (r = a.ZP.Store) {
+class O extends (r = o.ZP.Store) {
     getAllProfileEffects() {
         return Object.values(u);
     }

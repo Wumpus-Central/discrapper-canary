@@ -1,9 +1,9 @@
-n.d(t, { E: () => s }), n(388685);
+n.d(t, { E: () => o }), n(388685);
 var r = n(442837),
     i = n(526429),
     l = n(128449),
     a = n(388032);
-function s(e) {
+function o(e) {
     let { categoryId: t } = e;
     return (0, r.e7)([i.Z], () =>
         (function (e) {

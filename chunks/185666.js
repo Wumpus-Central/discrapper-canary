@@ -3,14 +3,14 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(570140),
-    o = n(317770),
-    a = n(978986),
+    a = n(317770),
+    o = n(978986),
     s = n(626135),
     c = n(379164),
     u = n(590965),
     d = n(981631);
 let f = "INVITE_MODAL_KEY";
-class h extends o.Z {
+class h extends a.Z {
     _initialize() {
         l.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
@@ -26,7 +26,7 @@ class h extends o.Z {
             !(0, i.nfh)(f) &&
             (0, i.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("86872"), n.e("63798")]).then(n.bind(n, 472365));
+                    let { default: e } = await Promise.all([n.e("86872"), n.e("74705")]).then(n.bind(n, 472365));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -61,8 +61,8 @@ class h extends o.Z {
                     modalKey: f,
                     contextKey: (0, i.VnL)(t),
                     onCloseRequest: () => {
-                        let e = (0, a.e7)(),
-                            t = (0, a._J)();
+                        let e = (0, o.e7)(),
+                            t = (0, o._J)();
                         s.default.track(d.rMx.INVITE_ACCEPT_DISMISSED, {
                             invite_code: e,
                             guild_id: t,

@@ -1,4 +1,4 @@
-t.d(n, { ForwardFailedAlertModal: () => S });
+t.d(n, { ForwardFailedAlertModal: () => Z });
 var l = t(54381),
     r = t(473749),
     i = t(442837),
@@ -16,7 +16,7 @@ var l = t(54381),
     m = t(51144),
     g = t(912332),
     y = t(388032),
-    O = t(296719);
+    O = t(862587);
 function x(e) {
     let { icon: n, label: t } = e;
     return (0, l.jsxs)("div", {
@@ -32,7 +32,7 @@ function x(e) {
         ],
     });
 }
-function _(e) {
+function v(e) {
     let { channel: n } = e,
         t = (0, s.ZP)(n);
     return (0, l.jsx)(x, {
@@ -44,7 +44,7 @@ function _(e) {
         label: t,
     });
 }
-function v(e) {
+function w(e) {
     let { user: n } = e,
         t = m.ZP.useName(n),
         r = (0, i.e7)([p.Z], () => p.Z.getNickname(n.id)),
@@ -59,7 +59,7 @@ function v(e) {
         label: null != r ? r : t,
     });
 }
-function w(e) {
+function P(e) {
     let { channel: n } = e,
         t = (0, i.e7)([h.Z], () => h.Z.getGuild(null == n ? void 0 : n.guild_id)),
         r = (0, s.ZP)(n);
@@ -72,21 +72,21 @@ function w(e) {
         label: r,
     });
 }
-function P(e) {
+function S(e) {
     let { destination: n } = e,
         { channel: t, user: r } = (0, i.cj)([f.Z, j.default], () => ({
             channel: "channel" === n.type ? f.Z.getChannel(n.id) : null,
             user: "user" === n.type ? j.default.getUser(n.id) : null,
         }));
     return (null == t ? void 0 : t.isGroupDM())
-        ? (0, l.jsx)(_, { channel: t })
+        ? (0, l.jsx)(v, { channel: t })
         : null != r
-          ? (0, l.jsx)(v, { user: r })
+          ? (0, l.jsx)(w, { user: r })
           : null != t
-            ? (0, l.jsx)(w, { channel: t })
+            ? (0, l.jsx)(P, { channel: t })
             : null;
 }
-function S(e) {
+function Z(e) {
     var n,
         t,
         { message: i, failedDestinations: a, forwardOptions: s } = e,
@@ -164,7 +164,7 @@ function S(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: O.failedDestinations,
-                        children: a.map((e, n) => (0, l.jsx)(P, { destination: e }, n)),
+                        children: a.map((e, n) => (0, l.jsx)(S, { destination: e }, n)),
                     }),
                 ],
             }),

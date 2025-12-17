@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(320161),
     p = n(998502),
     _ = n(388032),
-    m = n(447160);
+    m = n(574775);
 function h(e, t, n) {
     return (
         t in e
@@ -85,8 +85,8 @@ function O(e) {
     let { compact: p = !1 } = e,
         h = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "478273",
-        v = "1b4a4225212609b70ea55b6ebd1dbdfab293b54d".substring(0, 7),
+        O = "481003",
+        v = "f9b0c48da1925ee9918f885d30a71ec845fa50da".substring(0, 7),
         S = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         I = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         T = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),

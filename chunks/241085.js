@@ -25,7 +25,7 @@ var r = n(54381),
     C = n(292419),
     A = n(756043),
     N = n(388032),
-    P = n(975279);
+    P = n(764055);
 function R(e) {
     let { dropping: t, fileInputRef: n, minValues: i, maxValues: a, guildId: s } = e,
         l = (0, v.dg)(s),
@@ -94,7 +94,7 @@ function R(e) {
         ],
     });
 }
-function D() {
+function w() {
     return (0, r.jsxs)("div", {
         className: o()(P.mainWrapper, P.mainBody),
         children: [
@@ -115,7 +115,7 @@ function D() {
         ],
     });
 }
-function w(e) {
+function D(e) {
     var t;
     let { upload: n, handleRemoveFile: i, singleFileInput: a } = e;
     return (0, r.jsxs)(
@@ -215,11 +215,11 @@ function x(e) {
             },
             [G],
         ),
-        B = (e) => {
+        F = (e) => {
             var t;
             G(Array.from(null != (t = e.currentTarget.files) ? t : []), "file_picker"), (e.currentTarget.value = "");
         },
-        F = (e) => {
+        B = (e) => {
             d.Z.remove(E, e, y.d.InteractionModal), x(v.filter((t) => t !== e));
         };
     return (i.useEffect(() => {
@@ -236,9 +236,9 @@ function x(e) {
         );
     }, [k, U, Z]),
     1 === a && 1 === L.length)
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(D, {
               upload: L[0],
-              handleRemoveFile: F,
+              handleRemoveFile: B,
               singleFileInput: !0,
           })
         : (0, r.jsxs)("div", {
@@ -249,7 +249,7 @@ function x(e) {
               }),
               children: [
                   v.length >= a
-                      ? (0, r.jsx)(D, {})
+                      ? (0, r.jsx)(w, {})
                       : (0, r.jsx)(R, {
                             dropping: m,
                             fileInputRef: s,
@@ -262,10 +262,10 @@ function x(e) {
                           className: P.files,
                           children: L.map((e) =>
                               (0, r.jsx)(
-                                  w,
+                                  D,
                                   {
                                       upload: e,
-                                      handleRemoveFile: F,
+                                      handleRemoveFile: B,
                                   },
                                   e.id,
                               ),
@@ -273,7 +273,7 @@ function x(e) {
                       }),
                   (0, r.jsx)(f.Z, {
                       ref: s,
-                      onChange: B,
+                      onChange: F,
                       multiple: a > 1,
                       tabIndex: -1,
                       className: P.fileInput,

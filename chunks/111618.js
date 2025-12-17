@@ -16,19 +16,19 @@ function a(e, t, n) {
         e
     );
 }
-let s = {};
-class c extends (r = i.ZP.Store) {
+let c = {};
+class s extends (r = i.ZP.Store) {
     getOptions(e) {
-        return s[e];
+        return c[e];
     }
 }
-a(c, "displayName", "SendMessageOptionsStore");
-let u = new c(l.Z, {
+a(s, "displayName", "SendMessageOptionsStore");
+let u = new s(l.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t, sendMessageOptions: n } = e;
         if (null != n) {
             var r, i, l;
-            s[t.id] =
+            c[t.id] =
                 ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,6 +60,6 @@ let u = new c(l.Z, {
                       }),
                 i);
         }
-        null != t.nonce && t.nonce in s && delete s[t.nonce];
+        null != t.nonce && t.nonce in c && delete c[t.nonce];
     },
 });

@@ -10,9 +10,9 @@ var r = n(442837),
     u = n(322937),
     d = n(134049),
     p = n(893732),
-    h = n(590433),
-    f = n(388032),
-    m = n(105095);
+    f = n(590433),
+    h = n(388032),
+    m = n(427988);
 function g(e) {
     let { guild: t, disabledUntil: n } = e,
         [g, b] = (0, d.i)(t.id),
@@ -33,8 +33,8 @@ function g(e) {
                         color: "currentColor",
                         className: m.bannerIcon,
                     }),
-                    bannerHeader: f.intl.string(f.t["9UoK6Y"]),
-                    bannerSubtext: f.intl.format(f.t["4ZwD5G"], { link: h.cu }),
+                    bannerHeader: h.intl.string(h.t["9UoK6Y"]),
+                    bannerSubtext: h.intl.format(h.t["4ZwD5G"], { link: f.cu }),
                     textStyles: m.bannerContainer,
                     headerStyles: m.bannerHeader,
                     children: (0, i.jsx)(l.Text, {

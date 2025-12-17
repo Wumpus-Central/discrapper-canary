@@ -8,12 +8,12 @@ var s = n(54381),
     d = n(536285),
     h = n(388905),
     c = n(600164),
-    u = n(703656),
-    f = n(314897),
+    f = n(703656),
+    u = n(314897),
     p = n(981631),
     m = n(388032),
-    g = n(796771),
-    x = n(197571);
+    g = n(989532),
+    x = n(478411);
 function j(t, e, n) {
     return (
         e in t
@@ -40,7 +40,7 @@ class b extends r.PureComponent {
         let { stage: t, key: e } = this.state;
         t === B
             ? N()
-            : f.default.isAuthenticated()
+            : u.default.isAuthenticated()
               ? l.tn
                     .post({
                         url: p.ANM.HANDOFF,
@@ -58,7 +58,7 @@ class b extends r.PureComponent {
         d.default
             .requestRedirect(p.Etm.BROWSER_HANDOFF, {
                 handoffToken: t,
-                fingerprint: f.default.getFingerprint(),
+                fingerprint: u.default.getFingerprint(),
             })
             .then(this.done, this.failed);
     }
@@ -150,7 +150,7 @@ class b extends r.PureComponent {
                 this.setState({ stage: D }), N();
             }),
             j(this, "handleOpenApp", () => {
-                (0, u.uL)(p.Z5c.ME);
+                (0, f.uL)(p.Z5c.ME);
             });
         let { search: n } = t.location,
             s = null != n && "" !== n ? (0, i.parse)(n) : {};

@@ -13,10 +13,10 @@ var l = n(54381),
     h = n(999382),
     f = n(980555),
     I = n(987350),
-    _ = n(190007),
-    A = n(290511),
+    A = n(190007),
+    _ = n(290511),
     x = n(388032),
-    O = n(342203);
+    O = n(933177);
 function S(e) {
     var t;
     let { transitionState: n, onClose: S, connection: v, index: m } = e,
@@ -34,7 +34,7 @@ function S(e) {
             for (let e of T)
                 null != p.Z.getApplication(e) || p.Z.isFetchingApplication(e) || (0, u.UM)(e).catch(() => {});
         }, [T]);
-    let E = (0, o.Wu)([p.Z], () => {
+    let b = (0, o.Wu)([p.Z], () => {
             let e = [];
             for (let t of T) {
                 let n = p.Z.getApplication(t);
@@ -42,12 +42,12 @@ function S(e) {
             }
             return e;
         }, [T]),
-        [b, y] = i.useState(() => (null != v ? (0, A.a4)(v) : void 0)),
+        [E, y] = i.useState(() => (null != v ? (0, _.a4)(v) : void 0)),
         [j, G] = i.useState(null != (t = null == v ? void 0 : v.description) ? t : ""),
         [P, D] = i.useState([]),
         w = i.useMemo(() => {
             let e = [];
-            for (let l of d.Z.filter((e) => e.enabled && !A.Ni.has(e.type))) {
+            for (let l of d.Z.filter((e) => e.enabled && !_.Ni.has(e.type))) {
                 var t, n;
                 let i =
                     "light" === L
@@ -63,7 +63,7 @@ function S(e) {
                     icon: i,
                 });
             }
-            for (let t of E)
+            for (let t of b)
                 e.push({
                     label: t.name,
                     value: "app:".concat(t.id),
@@ -78,10 +78,10 @@ function S(e) {
                         icon: void 0,
                     });
             return e.sort((e, t) => e.label.localeCompare(t.label)), e;
-        }, [E, T, L]),
+        }, [b, T, L]),
         Z = i.useCallback(() => {
-            if (null == b || "" === b) return void D(["Please select a connection"]);
-            let e = (0, A.BN)(b);
+            if (null == E || "" === E) return void D(["Please select a connection"]);
+            let e = (0, _.BN)(E);
             if (null == e) return void D(["Invalid connection selected"]);
             let t = j.trim(),
                 n = (function (e) {
@@ -116,10 +116,10 @@ function S(e) {
                     null != e.applicationId && { application_id: e.applicationId },
                     null != e.providerId && { provider_id: e.providerId },
                 ),
-                l = (0, A.t9)(n);
+                l = (0, _.t9)(n);
             if (l.length > 0) return void D(l);
-            N ? (0, _.HZ)(m, n) : (0, _.HE)(n), S();
-        }, [b, j, N, m, S]),
+            N ? (0, A.HZ)(m, n) : (0, A.HE)(n), S();
+        }, [E, j, N, m, S]),
         R = i.useCallback(
             (e) =>
                 (0, l.jsxs)("div", {
@@ -206,7 +206,7 @@ function S(e) {
                             (0, l.jsx)(c.xJW, {
                                 title: x.intl.string(x.t.joNLrt),
                                 children: (0, l.jsx)(a.y6, {
-                                    value: null != b ? b : "",
+                                    value: null != E ? E : "",
                                     onChange: (e) => {
                                         y(e), D([]);
                                     },
@@ -268,7 +268,7 @@ function S(e) {
                             value: j,
                             onChange: G,
                             placeholder: x.intl.string(x.t["28bQNf"]),
-                            maxLength: A.kk,
+                            maxLength: _.kk,
                         }),
                     ],
                 }),

@@ -68,7 +68,7 @@ function P(e) {
     -1 !== e.current && (clearTimeout(e.current), (e.current = -1));
 }
 let R = N("safe-polygon");
-function D(e, t, n) {
+function w(e, t, n) {
     if (n && !(0, a.r)(n)) return 0;
     if ("number" == typeof e) return e;
     if ("function" == typeof e) {
@@ -77,7 +77,7 @@ function D(e, t, n) {
     }
     return null == e ? void 0 : e[t];
 }
-function w(e) {
+function D(e) {
     return "function" == typeof e ? e() : e;
 }
 function x(e, t) {
@@ -132,7 +132,7 @@ function x(e, t) {
     let k = i.useCallback(
             function (e, t, n) {
                 void 0 === t && (t = !0), void 0 === n && (n = "hover");
-                let i = D(b.current, "close", v.current);
+                let i = w(b.current, "close", v.current);
                 i && !I.current
                     ? (P(S), (S.current = window.setTimeout(() => r(!1, e, n), i)))
                     : t && (P(S), r(!1, e, n));
@@ -175,9 +175,9 @@ function x(e, t) {
             );
         }
         function e(e) {
-            if ((P(S), (N.current = !1), (p && !(0, a.r)(v.current)) || (w(O.current) > 0 && !D(b.current, "open"))))
+            if ((P(S), (N.current = !1), (p && !(0, a.r)(v.current)) || (D(O.current) > 0 && !w(b.current, "open"))))
                 return;
-            let t = D(b.current, "open", v.current);
+            let t = w(b.current, "open", v.current);
             t
                 ? (S.current = window.setTimeout(() => {
                       y.current || r(!0, e, "hover");
@@ -265,7 +265,7 @@ function x(e, t) {
             },
             [u, c.domReference, U, G],
         );
-    let B = i.useMemo(() => {
+    let F = i.useMemo(() => {
         function e(e) {
             v.current = e.pointerType;
         }
@@ -279,16 +279,16 @@ function x(e, t) {
                 }
                 (!p || (0, a.r)(v.current)) &&
                     !n &&
-                    0 !== w(O.current) &&
+                    0 !== D(O.current) &&
                     ((j.current && e.movementX ** 2 + e.movementY ** 2 < 2) ||
                         (P(T),
                         "touch" === v.current
                             ? i()
-                            : ((j.current = !0), (T.current = window.setTimeout(i, w(O.current))))));
+                            : ((j.current = !0), (T.current = window.setTimeout(i, D(O.current))))));
             },
         };
     }, [p, r, n, y, O]);
-    return i.useMemo(() => (u ? { reference: B } : {}), [u, B]);
+    return i.useMemo(() => (u ? { reference: F } : {}), [u, F]);
 }
 let L = null,
     j = 0;
@@ -319,8 +319,8 @@ let G = {
 function Z(e) {
     return "inert" === e ? G.inert : "aria-hidden" === e ? G["aria-hidden"] : G.none;
 }
-let B = new WeakSet(),
-    F = null,
+let F = new WeakSet(),
+    B = null,
     V = 0,
     H = (e) => e && (e.host || H(e.parentNode)),
     Y = (e, t) =>
@@ -338,8 +338,8 @@ function W(e, t, n, r) {
         s = new Set(),
         l = new Set(o),
         c = [];
-    F[i] || (F[i] = new WeakMap());
-    let u = F[i];
+    B[i] || (B[i] = new WeakMap());
+    let u = B[i];
     function d(e) {
         !(!e || s.has(e)) && (s.add(e), e.parentNode && d(e.parentNode));
     }
@@ -358,7 +358,7 @@ function W(e, t, n, r) {
                         r.set(e, o),
                             u.set(e, s),
                             c.push(e),
-                            1 === o && n && B.add(e),
+                            1 === o && n && F.add(e),
                             1 === s && e.setAttribute(i, ""),
                             !n && a && e.setAttribute(a, "inert" === a ? "" : "true");
                     }
@@ -376,15 +376,15 @@ function W(e, t, n, r) {
                     r = (u.get(e) || 0) - 1;
                 t.set(e, n),
                     u.set(e, r),
-                    n || (!B.has(e) && a && e.removeAttribute(a), B.delete(e)),
+                    n || (!F.has(e) && a && e.removeAttribute(a), F.delete(e)),
                     r || e.removeAttribute(i);
             }),
                 --V ||
                     ((G.inert = new WeakMap()),
                     (G["aria-hidden"] = new WeakMap()),
                     (G.none = new WeakMap()),
-                    (B = new WeakSet()),
-                    (F = {}));
+                    (F = new WeakSet()),
+                    (B = {}));
         }
     );
 }
@@ -530,7 +530,7 @@ function es(e, t) {
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener("keydown", n);
         }),
-        D = (0, a.iW)((e) => {
+        w = (0, a.iW)((e) => {
             var t;
             let n = l.current.insideReactTree;
             l.current.insideReactTree = !1;
@@ -591,11 +591,11 @@ function es(e, t) {
             }
             r(!1, e, "outside-press");
         }),
-        w = (0, a.iW)((e) => {
+        D = (0, a.iW)((e) => {
             var t;
             let n = () => {
                 var t;
-                D(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
+                w(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener(f, n);
         });
@@ -622,7 +622,7 @@ function es(e, t) {
             (p.addEventListener("keydown", I ? R : P, I),
             p.addEventListener("compositionstart", i),
             p.addEventListener("compositionend", d)),
-            y && p.addEventListener(f, T ? w : D, T);
+            y && p.addEventListener(f, T ? D : w, T);
         let _ = [];
         return (
             m &&
@@ -643,14 +643,14 @@ function es(e, t) {
                     (p.removeEventListener("keydown", I ? R : P, I),
                     p.removeEventListener("compositionstart", i),
                     p.removeEventListener("compositionend", d)),
-                    y && p.removeEventListener(f, T ? w : D, T),
+                    y && p.removeEventListener(f, T ? D : w, T),
                     _.forEach((e) => {
                         e.removeEventListener("scroll", t);
                     }),
                     window.clearTimeout(e);
             }
         );
-    }, [l, o, u, y, f, n, r, m, c, v, S, P, I, R, D, T, w]),
+    }, [l, o, u, y, f, n, r, m, c, v, S, P, I, R, w, T, D]),
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
@@ -1078,8 +1078,8 @@ function ev(e) {
                 A = eO(g, v),
                 N = S.width > v.width,
                 R = S.height > v.height,
-                D = (N ? v : S).left,
-                w = (N ? v : S).right,
+                w = (N ? v : S).left,
+                D = (N ? v : S).right,
                 x = (R ? v : S).top,
                 L = (R ? v : S).bottom;
             if (y && ((a = !0), !b)) return;
@@ -1103,18 +1103,18 @@ function ev(e) {
             switch (I) {
                 case "top":
                     j = [
-                        [D, v.top + 1],
-                        [D, S.bottom - 1],
-                        [w, S.bottom - 1],
                         [w, v.top + 1],
+                        [w, S.bottom - 1],
+                        [D, S.bottom - 1],
+                        [D, v.top + 1],
                     ];
                     break;
                 case "bottom":
                     j = [
-                        [D, S.top + 1],
-                        [D, v.bottom - 1],
-                        [w, v.bottom - 1],
                         [w, S.top + 1],
+                        [w, v.bottom - 1],
+                        [D, v.bottom - 1],
+                        [D, S.top + 1],
                     ];
                     break;
                 case "left":

@@ -1,4 +1,4 @@
-n.d(t, { J: () => f });
+n.d(t, { J: () => d });
 var r = n(54381);
 n(473749);
 var l = n(120356),
@@ -6,21 +6,21 @@ var l = n(120356),
     s = n(481060),
     i = n(493683),
     o = n(518950),
-    u = n(342386),
-    c = n(51144),
-    p = n(941651),
-    h = n(388032),
-    d = n(456577);
-let f = (e) => {
+    c = n(342386),
+    u = n(51144),
+    p = n(353149),
+    f = n(388032),
+    h = n(116741);
+let d = (e) => {
     let { recipient: t, isSuccess: n, onClose: l } = e,
-        { avatarSrc: f, eventHandlers: g } = (0, o.Z)({
+        { avatarSrc: d, eventHandlers: g } = (0, o.Z)({
             userId: null == t ? void 0 : t.id,
             size: s.EFr.SIZE_56,
         }),
-        b = c.ZP.getName(t),
+        b = u.ZP.getName(t),
         m = !n;
     return (0, r.jsxs)("div", {
-        className: d.row,
+        className: h.row,
         children: [
             (0, r.jsx)(
                 s.qEK,
@@ -50,8 +50,8 @@ let f = (e) => {
                     return e;
                 })(
                     {
-                        imageClassName: a()({ [d.erroredAvatar]: m }),
-                        src: f,
+                        imageClassName: a()({ [h.erroredAvatar]: m }),
+                        src: d,
                         "aria-label": b,
                         size: s.EFr.SIZE_32,
                     },
@@ -62,33 +62,33 @@ let f = (e) => {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Text, {
-                              className: d.error,
+                              className: h.error,
                               variant: "text-md/medium",
                               color: "text-strong",
                               children: b,
                           }),
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/medium",
-                              className: d.error,
+                              className: h.error,
                               color: "text-strong",
-                              children: h.intl.format(p.default["Y/oMwY"], { userName: b }),
+                              children: f.intl.format(p.default["Y/oMwY"], { userName: b }),
                           }),
                       ],
                   })
                 : (0, r.jsx)(s.Text, {
                       variant: "text-md/medium",
-                      className: d.displayName,
+                      className: h.displayName,
                       color: "text-strong",
                       children: b,
                   }),
             (0, r.jsx)(s.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: h.intl.string(h.t["g33r/P"]),
+                text: f.intl.string(f.t["g33r/P"]),
                 icon: s.kBi,
                 onClick: () => {
                     var e;
-                    return (e = t.id), void ((0, u.default)(), i.Z.openPrivateChannel({ recipientIds: e }), l());
+                    return (e = t.id), void ((0, c.default)(), i.Z.openPrivateChannel({ recipientIds: e }), l());
                 },
             }),
         ],

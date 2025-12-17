@@ -2,8 +2,8 @@ n.d(t, { Z: () => Z });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(235820),
     u = n(493773),
@@ -12,18 +12,18 @@ var r = n(54381),
     h = n(198620),
     p = n(294218),
     g = n(598999),
-    m = n(216789),
-    b = n(695346),
-    _ = n(592125),
-    y = n(731290),
-    O = n(944486),
-    v = n(455199),
-    j = n(655354),
+    b = n(216789),
+    m = n(695346),
+    y = n(592125),
+    O = n(731290),
+    v = n(944486),
+    j = n(455199),
+    C = n(655354),
     x = n(324081),
-    C = n(240126),
-    E = n(981631),
-    S = n(388032),
-    I = n(889833);
+    E = n(240126),
+    S = n(981631),
+    I = n(388032),
+    _ = n(771047);
 let P = {
     offset: {
         left: 4,
@@ -31,58 +31,58 @@ let P = {
     },
 };
 function N(e, t, n) {
-    let r = t ? v.ZP.guildFilter : null,
-        i = t ? v.ZP.roleFilter : null,
-        l = t ? v.ZP.everyoneFilter : null,
-        o = null;
-    null != e && null != r && (o = r === E.NgX.ALL_SERVERS ? null : e.getGuildId()),
+    let r = t ? j.ZP.guildFilter : null,
+        i = t ? j.ZP.roleFilter : null,
+        l = t ? j.ZP.everyoneFilter : null,
+        a = null;
+    null != e && null != r && (a = r === S.NgX.ALL_SERVERS ? null : e.getGuildId()),
         c.Z.fetchRecentMentions({
             before: n,
-            limit: E.DJj,
-            guildId: o,
+            limit: S.DJj,
+            guildId: a,
             roles: i,
             everyone: l,
         });
 }
 function Z(e) {
     let { onJump: t } = e,
-        n = (0, a.e7)([_.Z, O.Z], () => _.Z.getChannel(O.Z.getChannelId())),
+        n = (0, o.e7)([y.Z, v.Z], () => y.Z.getChannel(v.Z.getChannelId())),
         {
             messages: l,
             hasMore: s,
             loading: f,
             guildFilter: p,
-            roleFilter: b,
-            everyoneFilter: y,
-        } = (0, a.cj)([v.ZP], () => ({
-            messages: v.ZP.getMentions(),
-            hasMore: v.ZP.hasMore,
-            loading: v.ZP.loading,
-            guildFilter: v.ZP.guildFilter,
-            roleFilter: v.ZP.roleFilter,
-            everyoneFilter: v.ZP.everyoneFilter,
+            roleFilter: m,
+            everyoneFilter: O,
+        } = (0, o.cj)([j.ZP], () => ({
+            messages: j.ZP.getMentions(),
+            hasMore: j.ZP.hasMore,
+            loading: j.ZP.loading,
+            guildFilter: j.ZP.guildFilter,
+            roleFilter: j.ZP.roleFilter,
+            everyoneFilter: j.ZP.everyoneFilter,
         })),
-        j = (0, m.Us)({ location: "RecentMentions" }),
+        C = (0, b.Us)({ location: "RecentMentions" }),
         x = (0, d.Z)(p),
-        C = (0, d.Z)(b),
-        P = (0, d.Z)(y);
+        E = (0, d.Z)(m),
+        P = (0, d.Z)(O);
     i.useEffect(() => {
-        if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != x && p !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
-    }, [x, p, C, b, P, y, n, !0]),
+        if (!j.ZP.hasLoadedEver) return void N(n, !0);
+        ((null != x && p !== x) || (null != E && m !== E) || (null != P && O !== P)) && N(n, !0);
+    }, [x, p, E, m, P, O, n, !0]),
         (0, u.ZP)(() => {
             (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
         i.useEffect(
             () => () => {
-                c.Z.truncateMentions(E.DJj);
+                c.Z.truncateMentions(S.DJj);
             },
             [],
         );
     let Z = i.useCallback(() => null, []);
     return (0, r.jsx)(g.ZP, {
-        className: o()(I.recentMentionsPopout, { [I.widerInbox]: j }),
-        scrollerClassName: I.scroller,
+        className: a()(_.recentMentionsPopout, { [_.widerInbox]: C }),
+        scrollerClassName: _.scroller,
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
@@ -100,7 +100,7 @@ function Z(e) {
         renderHeader: Z,
         renderEmptyState: A,
         renderMessage: w,
-        "aria-label": S.intl.string(S.t.jbV6MM),
+        "aria-label": I.intl.string(I.t.jbV6MM),
         listName: "recents",
     });
 }
@@ -120,12 +120,12 @@ function w(e, t) {
 function T(e) {
     let { message: t, gotoMessage: n, dismissible: i } = e;
     if (null == t) return null;
-    let l = _.Z.getChannel(t.channel_id);
+    let l = y.Z.getChannel(t.channel_id);
     if (null == l || (0, f._t)(l) || (0, f.ft)(l)) return null;
-    let o = y.Z.didAgree(l.getGuildId()),
-        a = !!(0, f.qF)(l) && !o;
+    let a = O.Z.didAgree(l.getGuildId()),
+        o = !!(0, f.qF)(l) && !a;
     return (0, r.jsxs)("div", {
-        className: I.container,
+        className: _.container,
         children: [
             (0, r.jsx)(x.Z, {
                 channel: l,
@@ -139,10 +139,10 @@ function T(e) {
                         : null,
             }),
             (0, r.jsxs)("div", {
-                className: I.messageContainer,
+                className: _.messageContainer,
                 children: [
-                    (0, r.jsx)(j.Z, {
-                        className: I.jumpMessageButton,
+                    (0, r.jsx)(C.Z, {
+                        className: _.jumpMessageButton,
                         onJump: n,
                     }),
                     (0, r.jsx)(
@@ -150,9 +150,9 @@ function T(e) {
                         {
                             message: t,
                             channel: l,
-                            className: I.message,
-                            hideAccessories: a,
-                            compact: b.jU.getSetting(),
+                            className: _.message,
+                            hideAccessories: o,
+                            compact: m.jU.getSetting(),
                             animateAvatar: !1,
                             focusProps: P,
                             trackAnnouncementViews: !0,
@@ -165,9 +165,9 @@ function T(e) {
     });
 }
 function A() {
-    return (0, r.jsx)(C.Z, {
+    return (0, r.jsx)(E.Z, {
         Icon: s.lOy,
-        header: S.intl.string(S.t.bgDz74),
-        tip: S.intl.string(S.t.NS15vk),
+        header: I.intl.string(I.t.bgDz74),
+        tip: I.intl.string(I.t.NS15vk),
     });
 }

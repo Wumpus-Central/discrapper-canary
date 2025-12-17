@@ -1,8 +1,8 @@
 n.d(e, { Z: () => c });
 var r = n(54381);
 n(473749);
-var o = n(159691),
-    a = n(406877);
+var a = n(159691),
+    o = n(406877);
 function c(t) {
     var e,
         n,
@@ -11,26 +11,26 @@ function c(t) {
             if (null == t) return {};
             var n,
                 r,
-                o = (function (t, e) {
+                a = (function (t, e) {
                     if (null == t) return {};
                     var n,
                         r,
-                        o = {},
-                        a = Object.keys(t);
-                    for (r = 0; r < a.length; r++) (n = a[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
-                    return o;
+                        a = {},
+                        o = Object.keys(t);
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (a[n] = t[n]);
+                    return a;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                var o = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (a[n] = t[n]);
             }
-            return o;
+            return a;
         })(t, ["guildId", "productId", "attachmentId"]);
-    let { isLoading: u, downloadAttachment: f } = (0, a.Z)(c, i);
+    let { isLoading: u, downloadAttachment: f } = (0, o.Z)(c, i);
     return (0, r.jsx)(
-        o.zxk,
+        a.zxk,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},

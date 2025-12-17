@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v }), n(388685);
 var a,
     r = n(54381),
-    i = n(473749),
-    l = n(120356),
-    s = n.n(l),
+    l = n(473749),
+    i = n(120356),
+    s = n.n(i),
     o = n(873546),
     c = n(481060),
     d = n(599857),
@@ -11,8 +11,8 @@ var a,
     m = n(1964),
     p = n(981631),
     h = n(388032),
-    x = n(222198);
-function f(e, t, n) {
+    f = n(922895);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,8 +25,8 @@ function f(e, t, n) {
         e
     );
 }
-let g = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class b extends (a = i.PureComponent) {
+let b = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class g extends (a = l.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
         return (0, r.jsx)(r.Fragment, {
@@ -54,7 +54,7 @@ class b extends (a = i.PureComponent) {
     render() {
         return (0, r.jsxs)(c.Kqy, {
             gap: 16,
-            className: x.verification,
+            className: f.verification,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -62,7 +62,7 @@ class b extends (a = i.PureComponent) {
                 (0, r.jsxs)(c.Kqy, {
                     gap: 16,
                     fullWidth: !1,
-                    className: s()(x.container, { [x.isMobile]: o.tq }),
+                    className: s()(f.container, { [f.isMobile]: o.tq }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -73,9 +73,9 @@ class b extends (a = i.PureComponent) {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, r.jsx)("div", { className: x.image }),
+                                (0, r.jsx)("div", { className: f.image }),
                                 (0, r.jsxs)(c.Kqy, {
-                                    className: x.textContainer,
+                                    className: f.textContainer,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
@@ -87,7 +87,7 @@ class b extends (a = i.PureComponent) {
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: g }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: b }),
                                         }),
                                     ],
                                 }),
@@ -110,7 +110,7 @@ class b extends (a = i.PureComponent) {
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            className: x.footer,
+                            className: f.footer,
                             children: h.intl.string(h.t.qqYun3),
                         }),
                         (0, r.jsxs)(c.Kqy, {
@@ -121,16 +121,16 @@ class b extends (a = i.PureComponent) {
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
-                                    className: x.footer,
+                                    className: f.footer,
                                     children: h.intl.format(h.t.WL51ZR, { supportURL: u.Z.getSubmitRequestURL() }),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: s()(x.footer, x.footerBullet),
+                                    className: s()(f.footer, f.footerBullet),
                                     children: "\u2022",
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
-                                    className: x.footer,
+                                    className: f.footer,
                                     children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
@@ -142,15 +142,15 @@ class b extends (a = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, "handleClick", (e) => {
+            x(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-f(b, "defaultProps", {
+x(g, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,
 });
-let v = b;
+let v = g;

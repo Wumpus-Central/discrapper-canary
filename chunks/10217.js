@@ -12,8 +12,8 @@ var l = n(54381),
     m = n(239091),
     f = n(100527),
     b = n(906732),
-    y = n(812206),
-    v = n(70097),
+    v = n(812206),
+    y = n(70097),
     h = n(592125),
     j = n(430824),
     g = n(594174),
@@ -31,48 +31,48 @@ var l = n(54381),
     D = n(542055),
     Z = n(981631),
     L = n(388032),
-    H = n(134351);
+    H = n(278018);
 let T = function (e) {
-    var t, i, s, c, y;
-    let { clip: v, actionsDisabled: x, isNew: S, onClick: E } = e,
-        N = (0, u.Wu)([g.default], () => v.users.map((e) => g.default.getUser(e)).filter(w.lm)),
-        M = (0, u.e7)([h.Z], () => (null != v.channelId ? h.Z.getChannel(v.channelId) : null)),
-        T = (0, u.e7)([j.Z], () => (null != v.guildId ? j.Z.getGuild(v.guildId) : null)),
+    var t, i, s, c, v;
+    let { clip: y, actionsDisabled: x, isNew: S, onClick: E } = e,
+        N = (0, u.Wu)([g.default], () => y.users.map((e) => g.default.getUser(e)).filter(w.lm)),
+        M = (0, u.e7)([h.Z], () => (null != y.channelId ? h.Z.getChannel(y.channelId) : null)),
+        T = (0, u.e7)([j.Z], () => (null != y.guildId ? j.Z.getGuild(y.guildId) : null)),
         { analyticsLocations: V } = (0, b.ZP)(f.Z.CLIPS_GALLERY_ITEM),
         { selectedClipIds: U, toggleClipSelection: z, isMultiSelectMode: B } = r.useContext(D.U),
         [G, F] = r.useState(!1),
         Y = r.useRef(null),
-        K = (0, o.Z)(null != (y = null == (t = v.editMetadata) ? void 0 : t.start) ? y : 0),
-        q = U.has(v.id),
-        X = v.type === I.NJ.SCREENSHOT,
+        K = (0, o.Z)(null != (v = null == (t = y.editMetadata) ? void 0 : t.start) ? v : 0),
+        q = U.has(y.id),
+        X = y.type === I.NJ.SCREENSHOT,
         W =
-            "" === v.applicationName && (null == M ? void 0 : M.name) != null && "" !== M.name
+            "" === y.applicationName && (null == M ? void 0 : M.name) != null && "" !== M.name
                 ? M.name
-                : v.applicationName,
-        J = (0, C.Xf)(new Date(P.default.extractTimestamp(v.id))),
+                : y.applicationName,
+        J = (0, C.Xf)(new Date(P.default.extractTimestamp(y.id))),
         Q = r.useMemo(() => {
             let e = [];
-            if (v.type === I.NJ.VOICE_CLIP)
+            if (y.type === I.NJ.VOICE_CLIP)
                 (null == T ? void 0 : T.name) != null && e.push(T.name),
                     (null == M ? void 0 : M.name) != null && e.push(M.name);
             else {
                 var t, n;
                 "" !== W && null != W && e.push(W),
-                    (null == (t = v.activity) ? void 0 : t.state) != null &&
-                        "" !== v.activity.state &&
-                        e.push(v.activity.state),
-                    (null == (n = v.activity) ? void 0 : n.details) != null &&
-                        "" !== v.activity.details &&
-                        e.push(v.activity.details);
+                    (null == (t = y.activity) ? void 0 : t.state) != null &&
+                        "" !== y.activity.state &&
+                        e.push(y.activity.state),
+                    (null == (n = y.activity) ? void 0 : n.details) != null &&
+                        "" !== y.activity.details &&
+                        e.push(y.activity.details);
             }
             return e.join(" \u203A ");
         }, [
             W,
             null == T ? void 0 : T.name,
             null == M ? void 0 : M.name,
-            null == (i = v.activity) ? void 0 : i.state,
-            null == (s = v.activity) ? void 0 : s.details,
-            v.type,
+            null == (i = y.activity) ? void 0 : i.state,
+            null == (s = y.activity) ? void 0 : s.details,
+            y.type,
         ]),
         $ = r.useCallback(() => {
             let e = Y.current;
@@ -89,8 +89,8 @@ let T = function (e) {
             if (!0 === X) return;
             let n = Y.current;
             null != n &&
-                (n.pause(), (n.currentTime = null != (t = null == (e = v.editMetadata) ? void 0 : e.start) ? t : 0));
-        }, [X, null == (c = v.editMetadata) ? void 0 : c.start]),
+                (n.pause(), (n.currentTime = null != (t = null == (e = y.editMetadata) ? void 0 : e.start) ? t : 0));
+        }, [X, null == (c = y.editMetadata) ? void 0 : c.start]),
         en = r.useCallback(
             (e) => {
                 var t, n;
@@ -106,7 +106,7 @@ let T = function (e) {
             (e) => {
                 var t;
                 F(!0), null == (t = Y.current) || t.pause();
-                let r = B && U.size > 0 ? k.Z.getClips().filter((e) => U.has(e.id)) : [v];
+                let r = B && U.size > 0 ? k.Z.getClips().filter((e) => U.has(e.id)) : [y];
                 (0, m.jW)(
                     e,
                     async () => {
@@ -175,7 +175,7 @@ let T = function (e) {
                     { onClose: el },
                 );
             },
-            [v, B, U, x, $, el],
+            [y, B, U, x, $, el],
         ),
         ei = r.useCallback(
             (e) => {
@@ -186,10 +186,10 @@ let T = function (e) {
         ea = r.useCallback(
             (e) => {
                 x ||
-                    (e.shiftKey ? (e.preventDefault(), z(v.id)) : B ? z(v.id) : null != E && E(v),
+                    (e.shiftKey ? (e.preventDefault(), z(y.id)) : B ? z(y.id) : null != E && E(y),
                     O.default.track(Z.rMx.CLIP_GALLERY_CARD_CLICKED));
             },
-            [x, B, z, v, E],
+            [x, B, z, y, E],
         );
     return (0, l.jsx)(b.Gt, {
         value: V,
@@ -209,7 +209,7 @@ let T = function (e) {
             onMouseLeave: et,
             children: [
                 (0, l.jsx)(A, {
-                    clip: v,
+                    clip: y,
                     isNew: S,
                     videoRef: Y,
                     onOpenContextMenu: er,
@@ -218,11 +218,11 @@ let T = function (e) {
                 (0, l.jsxs)("div", {
                     className: H.clipMetadata,
                     children: [
-                        (0, l.jsx)(_, { clip: v }),
+                        (0, l.jsx)(_, { clip: y }),
                         (0, l.jsxs)("div", {
                             className: H.clipTextInfo,
                             children: [
-                                (0, l.jsx)(R, { clip: v }),
+                                (0, l.jsx)(R, { clip: y }),
                                 (0, l.jsx)(p.Text, {
                                     className: H.clipSubtitle,
                                     color: "text-subtle",
@@ -329,13 +329,13 @@ function A(e) {
                       isClipEdited: l,
                   };
         }, [t.length, t.editMetadata]),
-        y = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), S.Pr(t);
             },
             [t],
         ),
-        v = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), s || a(e);
             },
@@ -350,14 +350,14 @@ function A(e) {
                     className: H.clipHoverButtons,
                     children: [
                         (0, l.jsx)(p.hU, {
-                            onClick: y,
+                            onClick: v,
                             icon: t.isFavorite ? p.h_8 : p.Pzh,
                             "aria-label": L.intl.string(L.t.k8fFjp),
                             variant: "overlay-secondary",
                             size: "sm",
                         }),
                         (0, l.jsx)(p.hU, {
-                            onClick: v,
+                            onClick: y,
                             icon: p.Huf,
                             "aria-label": L.intl.string(L.t["UKOtz+"]),
                             variant: "overlay-secondary",
@@ -447,7 +447,7 @@ function V(e) {
                 className: H.clipThumb,
             })
           : null != r
-            ? (0, l.jsx)(v.Z, {
+            ? (0, l.jsx)(y.Z, {
                   preload: "metadata",
                   poster: t.thumbnail,
                   muted: !0,
@@ -473,7 +473,7 @@ function V(e) {
 }
 function _(e) {
     let { clip: t } = e,
-        n = (0, u.e7)([y.Z], () => (null != t.applicationId ? y.Z.getApplication(t.applicationId) : null)),
+        n = (0, u.e7)([v.Z], () => (null != t.applicationId ? v.Z.getApplication(t.applicationId) : null)),
         r = null == n ? void 0 : n.getIconURL(32);
     return (0, l.jsx)("div", {
         className: H.clipIcon,

@@ -5,12 +5,12 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    l = n.n(i),
-    a = n(36563),
+    a = n.n(i),
+    l = n(36563),
     o = n(681715),
     c = n(481060),
     s = n(313201),
-    u = n(245583);
+    u = n(807438);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,14 +45,14 @@ function f(e, t) {
             var n,
                 r,
                 i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++)
-            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -61,10 +61,10 @@ function g(e) {
         g = f(e, ["label", "className", "size", "maxUsers"]);
     let p = (0, s.Dt)();
     return (0, r.jsxs)("div", {
-        className: l()(n, u.container),
+        className: a()(n, u.container),
         children: [
             (0, r.jsx)(
-                a.g,
+                l.g,
                 d(
                     {
                         "aria-labelledby": p,
@@ -86,7 +86,7 @@ function g(e) {
 }
 function p(e) {
     var { label: t, className: n, overflowCountClassName: i, size: s = c.EFr.SIZE_16, maxUsers: g = 4, onClick: p } = e,
-        m = f(e, ["label", "className", "overflowCountClassName", "size", "maxUsers", "onClick"]);
+        b = f(e, ["label", "className", "overflowCountClassName", "size", "maxUsers", "onClick"]);
     return (0, r.jsx)("div", {
         className: n,
         children: (0, r.jsx)(o.u, {
@@ -97,15 +97,15 @@ function p(e) {
                 onClick: p,
                 "aria-label": t,
                 children: (0, r.jsx)(
-                    a.g,
+                    l.g,
                     d(
                         {
                             size: s,
                             maxUsers: g,
-                            overflowCountClassName: l()(u.overflow, i),
+                            overflowCountClassName: a()(u.overflow, i),
                             "aria-hidden": !0,
                         },
-                        m,
+                        b,
                     ),
                 ),
             }),

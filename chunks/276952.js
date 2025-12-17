@@ -3,9 +3,9 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(467721),
+    o = n(236726),
     s = n(481060),
-    l = n(82364);
+    l = n(53519);
 let c = Object.freeze({
         tension: 400,
         friction: 30,

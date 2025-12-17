@@ -1,4 +1,4 @@
-n.d(t, { d: () => h });
+n.d(t, { d: () => f });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -8,16 +8,16 @@ var i = n(54381),
     c = n(314897),
     u = n(906605),
     d = n(748855),
-    p = n(972526);
-function h(e) {
+    p = n(849191);
+function f(e) {
     var t;
-    let { guildId: n, onSetActivityStatus: h } = e,
-        f = (0, l.e7)([c.default], () => c.default.getId()),
-        m = (0, s.Z)(f, n)[0],
+    let { guildId: n, onSetActivityStatus: f } = e,
+        h = (0, l.e7)([c.default], () => c.default.getId()),
+        m = (0, s.Z)(h, n)[0],
         g = null != (t = (0, a.IX)(null == m ? void 0 : m.application_id).data) ? t : void 0,
         b = r.useCallback(() => {
-            null != g && ((0, u.XE)(g.id, !0), h());
-        }, [g, h]);
+            null != g && ((0, u.XE)(g.id, !0), f());
+        }, [g, f]);
     return null == g
         ? null
         : (0, i.jsxs)(i.Fragment, {

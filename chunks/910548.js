@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(834129),
     O = n(981631),
     v = n(388032),
-    S = n(465687);
+    S = n(333748);
 function I(e, t, n) {
     return (
         t in e
@@ -104,8 +104,8 @@ var R = (function (e) {
         e
     );
 })({});
-let D = ["TOP_LEFT", "TOP_RIGHT"],
-    w = (0, c.Mg)(u.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+let w = ["TOP_LEFT", "TOP_RIGHT"],
+    D = (0, c.Mg)(u.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
     x = 11,
     L = 125,
     j = {
@@ -120,8 +120,8 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
     U = 80,
     G = 180,
     Z = 8,
-    B = 12,
-    F = Object.freeze({
+    F = 12,
+    B = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
                 x: e - x,
@@ -217,7 +217,7 @@ function J(e, t) {
         case "enter":
             return "confetti";
         case "confetti":
-            if (D.includes(t)) return "leaf_peel";
+            if (w.includes(t)) return "leaf_peel";
             return "exit";
         case "leaf_peel":
             return "leaf_fall";
@@ -228,14 +228,14 @@ function J(e, t) {
     }
 }
 function $(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : w,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : D,
         r = null == e ? void 0 : e.getBoundingClientRect();
     if (null == r)
         return {
             x: 0,
             y: 0,
         };
-    let i = F[t].getConfettiPosition(n);
+    let i = B[t].getConfettiPosition(n);
     return {
         x: r.left + i.x,
         y: r.top + i.y,
@@ -248,7 +248,7 @@ function ee(e, t) {
             x: 0,
             y: 0,
         };
-    let r = F[t];
+    let r = B[t];
     return {
         x: n.left + r.leafPosition.x,
         y: n.top + r.leafPosition.y,
@@ -263,7 +263,7 @@ function et(e) {
         [E, b] = i.useState(null),
         y = (0, s.uR)(g, E),
         O = J(p, m),
-        v = D.includes(m),
+        v = w.includes(m),
         I = v && "exit" === p,
         T = i.useCallback((e) => {
             _(e);
@@ -277,7 +277,7 @@ function et(e) {
     return (
         i.useEffect(() => {
             if ("confetti" === p) {
-                let { confettiVelocityDirection: e } = F[m],
+                let { confettiVelocityDirection: e } = B[m],
                     t = $(u.current, m, c);
                 h(t.x, t.y, {
                     velocity: {
@@ -296,7 +296,7 @@ function et(e) {
         }, [h, m, p, c]),
         i.useEffect(() => {
             if (v && "leaf_fall" === p) {
-                let e = F[m].leafRotationDirection;
+                let e = B[m].leafRotationDirection;
                 y.createConfetti(
                     {
                         id: "".concat(V, "-").concat((0, l.Z)()),
@@ -328,7 +328,7 @@ function et(e) {
                             maxAddValue: {
                                 x: 0,
                                 y: 0,
-                                z: B * e,
+                                z: F * e,
                             },
                         },
                     },
@@ -377,31 +377,31 @@ function en(e) {
         [C, A] = i.useState(!1),
         P = i.useRef(null),
         { reducedMotion: R } = i.useContext(d.Sfi),
-        D = (0, b.ZP)(n),
-        w = D.nick,
-        x = s(D);
+        w = (0, b.ZP)(n),
+        D = w.nick,
+        x = s(w);
     t =
         null == c || null == o
             ? u > 1
                 ? v.intl.format(v.t.yfC9ds, {
-                      username: w,
+                      username: D,
                       usernameHook: x,
                       numSubscriptions: u,
                   })
                 : v.intl.format(v.t["57St/7"], {
-                      username: w,
+                      username: D,
                       usernameHook: x,
                   })
             : u > 1
               ? v.intl.format(v.t.PO9uJD, {
-                    username: w,
+                    username: D,
                     usernameHook: x,
                     numSubscriptions: u,
                     guildName: o.name,
                     newTierName: (0, E.nW)(c),
                 })
               : v.intl.format(v.t.cUfTTE, {
-                    username: w,
+                    username: D,
                     usernameHook: x,
                     guildName: o.name,
                     newTierName: (0, E.nW)(c),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(997841), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(95015),
+    a = n.n(l),
+    o = n(95015),
     s = n(793030),
     c = n(248514),
     u = n(481060),
@@ -12,17 +12,17 @@ var r = n(54381),
     h = n(933557),
     p = n(576855),
     g = n(372900),
-    m = n(726521),
-    b = n(501517),
-    _ = n(699516),
-    y = n(594174),
-    O = n(970257),
-    v = n(294218),
-    j = n(981631),
+    b = n(726521),
+    m = n(501517),
+    y = n(699516),
+    O = n(594174),
+    v = n(970257),
+    j = n(294218),
+    C = n(981631),
     x = n(388032),
-    C = n(864309),
-    E = n(625221);
-function S(e, t, n) {
+    E = n(792389),
+    S = n(552593);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function S(e, t, n) {
         e
     );
 }
-function I(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -57,7 +57,7 @@ class P extends i.PureComponent {
             t,
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
-            { channel: o, message: c, showContextMenuHint: d, moderatorReportData: f } = l,
+            { channel: a, message: c, showContextMenuHint: d, moderatorReportData: f } = l,
             h = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -79,28 +79,28 @@ class P extends i.PureComponent {
                 }
                 return i;
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            m = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, a.yE)(c.flags, j.iLy.CROSSPOSTED);
+            b = a.type === C.d4z.GUILD_ANNOUNCEMENT && (0, o.yE)(c.flags, C.iLy.CROSSPOSTED);
         d &&
             (e = (0, r.jsx)(p.Z, {
-                className: E.spacingTop,
+                className: S.spacingTop,
                 children: x.intl.format(x.t.IxY7E6, {}),
             })),
-            (0, O.vc)(c) &&
+            (0, v.vc)(c) &&
                 (t = (0, r.jsx)("div", {
-                    className: E.spacingTop,
+                    className: S.spacingTop,
                     children: (0, r.jsx)(u.rsf, {
                         label: x.intl.string(x.t.x0jzo9),
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let b = m ? x.intl.string(x.t["2kHABX"]) : x.intl.string(x.t.AMvpS4),
-            _ = (0, r.jsxs)(r.Fragment, {
+        let m = b ? x.intl.string(x.t["2kHABX"]) : x.intl.string(x.t.AMvpS4),
+            y = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: E.message,
-                        children: (0, r.jsx)(v.Z, {
-                            channel: o,
+                        className: S.message,
+                        children: (0, r.jsx)(j.Z, {
+                            channel: a,
                             message: c,
                             disableInteraction: !0,
                         }),
@@ -110,16 +110,16 @@ class P extends i.PureComponent {
                 ],
             });
         if ((null == f ? void 0 : f.moderatorReportChannelId) != null) {
-            var y, S;
+            var O, I;
             let { isFlagResolved: e } = f;
             return (0, r.jsx)(g.Z.Provider, {
-                value: o.guild_id,
+                value: a.guild_id,
                 children: (0, r.jsx)(
                     s.Modal,
-                    ((y = I(
+                    ((O = _(
                         {
                             title: x.intl.string(x.t.MWMcg7),
-                            subtitle: b,
+                            subtitle: m,
                             actions: [
                                 {
                                     variant: "critical-primary",
@@ -131,15 +131,15 @@ class P extends i.PureComponent {
                                 ? void 0
                                 : (0, r.jsx)(u.Checkbox, {
                                       checked: i,
-                                      label: x.intl.string(C.default["8yIKem"]),
+                                      label: x.intl.string(E.default["8yIKem"]),
                                       onChange: (e) => this.handleToggleResolveFlag(e),
                                   }),
                         },
                         h,
                     )),
-                    (S = S = { children: _ }),
+                    (I = I = { children: y }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(y, Object.getOwnPropertyDescriptors(S))
+                        ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(I))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -147,18 +147,18 @@ class P extends i.PureComponent {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(S)).forEach(function (e) {
-                              Object.defineProperty(y, e, Object.getOwnPropertyDescriptor(S, e));
+                          })(Object(I)).forEach(function (e) {
+                              Object.defineProperty(O, e, Object.getOwnPropertyDescriptor(I, e));
                           }),
-                    y),
+                    O),
                 ),
             });
         }
         return (0, r.jsx)(g.Z.Provider, {
-            value: o.guild_id,
+            value: a.guild_id,
             children: (0, r.jsx)(s.Modal, {
-                title: m ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
-                subtitle: b,
+                title: b ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
+                subtitle: m,
                 actions: [
                     {
                         text: x.intl.string(x.t["ETE/oC"]),
@@ -173,44 +173,44 @@ class P extends i.PureComponent {
                 ],
                 onClose: h.onClose,
                 transitionState: h.transitionState,
-                children: _,
+                children: y,
             }),
         });
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", {
+            I(this, "state", {
                 report: !1,
                 resolveFlag: !1,
             }),
-            S(this, "handleDelete", () => {
+            I(this, "handleDelete", () => {
                 let { report: e, resolveFlag: t } = this.state,
                     { channel: n, message: r, moderatorReportData: i } = this.props,
-                    { moderatorReportChannelId: l, isFlagResolved: o } = null != i ? i : {};
+                    { moderatorReportChannelId: l, isFlagResolved: a } = null != i ? i : {};
                 e
-                    ? (0, m.ak)(r, "message_delete_alert", () =>
+                    ? (0, b.ak)(r, "message_delete_alert", () =>
                           f.Z.deleteMessage(n.id, r.id).then(() => {
                               if (null != l) {
                                   var e, n;
-                                  t && !o && b.Z.resolveFlag(l), null == (e = (n = this.props).onClose) || e.call(n);
+                                  t && !a && m.Z.resolveFlag(l), null == (e = (n = this.props).onClose) || e.call(n);
                               }
                           }),
                       )
                     : f.Z.deleteMessage(n.id, r.id).then(() => {
                           if (null != l) {
                               var e, n;
-                              t && !o && b.Z.resolveFlag(l), null == (e = (n = this.props).onClose) || e.call(n);
+                              t && !a && m.Z.resolveFlag(l), null == (e = (n = this.props).onClose) || e.call(n);
                           }
                       });
             }),
-            S(this, "handleDeleteMana", () => {
+            I(this, "handleDeleteMana", () => {
                 var e, t;
                 this.handleDelete(), null == (e = (t = this.props).onClose) || e.call(t);
             }),
-            S(this, "handleToggleReport", (e) => {
+            I(this, "handleToggleReport", (e) => {
                 this.setState({ report: e });
             }),
-            S(this, "handleToggleResolveFlag", (e) => {
+            I(this, "handleToggleResolveFlag", (e) => {
                 this.setState({ resolveFlag: e });
             });
     }
@@ -218,7 +218,7 @@ class P extends i.PureComponent {
 let N = {
     confirmPin: function (e, t) {
         let n,
-            i = (0, h.F6)(e, y.default, _.Z);
+            i = (0, h.F6)(e, O.default, y.Z);
         (n = e.isPrivate() ? x.intl.string(x.t.hMRngA) : x.intl.formatToPlainString(x.t["3IRluI"], { channelName: i })),
             (0, c.Z)({
                 title: x.intl.string(x.t.bKMaZX),
@@ -230,8 +230,8 @@ let N = {
                 },
                 cancelText: x.intl.string(x.t["ETE/oC"]),
                 children: (0, r.jsx)("div", {
-                    className: E.message,
-                    children: (0, r.jsx)(v.Z, {
+                    className: S.message,
+                    children: (0, r.jsx)(j.Z, {
                         channel: e,
                         message: t,
                         animateAvatar: !1,
@@ -253,8 +253,8 @@ let N = {
             children: (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(E.message, E.spacing),
-                        children: (0, r.jsx)(v.Z, {
+                        className: a()(S.message, S.spacing),
+                        children: (0, r.jsx)(j.Z, {
                             channel: e,
                             message: t,
                             disableInteraction: !0,
@@ -271,7 +271,7 @@ let N = {
         (0, u.h7j)((l) =>
             (0, r.jsx)(
                 P,
-                I(
+                _(
                     {
                         channel: e,
                         message: t,

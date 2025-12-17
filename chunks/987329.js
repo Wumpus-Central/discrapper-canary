@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(54381),
     r = n(473749),
     l = n(481060),
@@ -9,10 +9,10 @@ var i = n(54381),
     u = n(390322),
     d = n(871499),
     p = n(354459),
-    h = n(388032);
-let f = (e) => {
+    f = n(388032);
+let h = (e) => {
     let { channel: t, remoteMode: n = !1 } = e,
-        { parentAnalyticsLocation: f } = (0, a.ZP)(),
+        { parentAnalyticsLocation: h } = (0, a.ZP)(),
         m = r.useRef(null);
     return (0, i.jsx)(l.yRy, {
         targetElementRef: m,
@@ -23,7 +23,7 @@ let f = (e) => {
                     onClose: r,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, c.u)("MoreSettingsMenu", f, { entrypoint: p.A5.THREE_DOT }),
+                    onInteraction: (0, c.u)("MoreSettingsMenu", h, { entrypoint: p.A5.THREE_DOT }),
                 }),
             });
         },
@@ -38,9 +38,9 @@ let f = (e) => {
                 ref: m,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    (0, s.v)(f, s.d.MORE), n(e);
+                    (0, s.v)(h, s.d.MORE), n(e);
                 },
-                label: h.intl.string(h.t.PdRCRg),
+                label: f.intl.string(f.t.PdRCRg),
                 iconComponent: l.xhG,
                 color: "primaryDark",
                 isActive: r,

@@ -1,4 +1,4 @@
-n.d(t, { c: () => p });
+n.d(t, { c: () => m });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(30513),
     d = n(981631),
     u = n(388032),
-    g = n(131115);
-function m(e) {
+    g = n(550293);
+function f(e) {
     let { guild: t, banner: n } = e;
     return (0, r.jsx)("div", {
         className: g.guildBanner,
@@ -35,7 +35,7 @@ function m(e) {
         }),
     });
 }
-function p(e) {
+function m(e) {
     let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: l, banner: a } = e,
         g = l ? (0, s._p)(d.GuildFeatures.ANIMATED_BANNER) : (0, s._p)(d.GuildFeatures.BANNER);
     null != g &&
@@ -51,7 +51,7 @@ function p(e) {
                         ? u.intl.formatToPlainString(u.t["TR/Uyt"], { targetLevelOrPlan: n })
                         : u.intl.formatToPlainString(u.t.B253V6, { targetLevelOrPlan: n });
                 })(g, l),
-                image: (0, r.jsx)(m, {
+                image: (0, r.jsx)(f, {
                     guild: i,
                     banner: a,
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -6,14 +6,14 @@ var i = n(657707),
     o = n(692547),
     a = n(921944),
     s = n(388032),
-    u = n(695610);
-function c(e) {
+    c = n(912514);
+function u(e) {
     let { notificationConfig: t, markAsDismissed: n } = e;
     return (0, r.jsxs)("div", {
-        className: u.container,
+        className: c.container,
         children: [
             (0, r.jsx)("div", {
-                className: u.close,
+                className: c.close,
                 children: (0, r.jsx)(l.hU, {
                     variant: "icon-only",
                     size: "md",
@@ -26,7 +26,7 @@ function c(e) {
             }),
             (0, r.jsx)(i.Mgn, {
                 color: o.Z.colors.TEXT_FEEDBACK_WARNING,
-                className: u.icon,
+                className: c.icon,
             }),
             (0, r.jsx)(l.xvT, {
                 variant: "text-md/semibold",

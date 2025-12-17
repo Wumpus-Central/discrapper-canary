@@ -31,11 +31,11 @@ function c() {
                 }),
             [c],
         ),
-        p = i.useMemo(() => (t.startsWith("/") ? u.filter((e) => e.type === a.yU.CHAT) : u), [t, u]),
-        m = i.useMemo(() => (t.startsWith("/") ? t.substring(1) : t), [t]);
+        m = i.useMemo(() => (t.startsWith("/") ? u.filter((e) => e.type === a.yU.CHAT) : u), [t, u]),
+        b = i.useMemo(() => (t.startsWith("/") ? t.substring(1) : t), [t]);
     return {
         query: t,
-        results: i.useMemo(() => (0, o.B)(p, d, m), [p, m]),
+        results: i.useMemo(() => (0, o.B)(m, d, b), [m, b]),
         setQuery: n,
         unfilteredCount: e.length,
     };

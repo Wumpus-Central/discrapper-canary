@@ -1,7 +1,7 @@
 n.d(t, {
     FJ: () => en,
     RE: () => G,
-    T5: () => H,
+    T5: () => B,
     Xb: () => V,
     YK: () => ee,
     YS: () => X,
@@ -31,8 +31,8 @@ var r,
     i,
     l = n(729594),
     a = n(243814),
-    s = n(544891),
-    o = n(63023),
+    o = n(544891),
+    s = n(63023),
     c = n(904245),
     u = n(155268),
     d = n(812206),
@@ -41,8 +41,8 @@ var r,
     g = n(973616),
     h = n(131704),
     m = n(598077),
-    _ = n(592125),
-    b = n(430824),
+    b = n(592125),
+    _ = n(430824),
     E = n(131951),
     O = n(375954),
     v = n(158776),
@@ -129,11 +129,11 @@ function G(e) {
               .concat("/" === e.charAt(0) ? "" : "/")
               .concat(e);
 }
-function B(e) {
+function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return t.indexOf(e) > -1;
 }
-function H(e, t) {
+function B(e, t) {
     let n = [],
         r = e.getGuildId();
     return (
@@ -171,7 +171,7 @@ function H(e, t) {
 }
 function V(e) {
     let t = p.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(U),
-        n = _.Z.getChannel(e.channel_id),
+        n = b.Z.getChannel(e.channel_id),
         r = null != e.author ? new m.Z(e.author) : void 0,
         i = null != e.author ? (0, f.ij)(r, n) : void 0;
     return {
@@ -196,9 +196,9 @@ function V(e) {
     };
 }
 function F(e, t, n) {
-    let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
-        c = y.default.getUser(o);
-    if (null == c) throw Error("Invalid user id: ".concat(o));
+    let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
+        c = y.default.getUser(s);
+    if (null == c) throw Error("Invalid user id: ".concat(s));
     return {
         nick: S.ZP.getName(e, t, c),
         mute: E.Z.isLocalMute(c.id),
@@ -209,7 +209,7 @@ function F(e, t, n) {
             deaf: i,
             self_mute: l,
             self_deaf: a,
-            suppress: s,
+            suppress: o,
         },
         user: (0, P.Z)(c),
     };
@@ -250,7 +250,7 @@ function W(e) {
     );
 }
 function q(e, t, n) {
-    let r = b.Z.getGuild(e.getGuildId());
+    let r = _.Z.getGuild(e.getGuildId());
     return (null != r ? r.application_id : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
 function K(e) {
@@ -267,7 +267,7 @@ function Q(e, t, n) {
     return e === A.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
 function J(e) {
-    return s.tn
+    return o.tn
         .get({
             url: A.ANM.APPLICATION_RPC(e),
             oldFormErrors: !0,
@@ -289,25 +289,25 @@ async function X(e, t, n) {
     if ("string" == typeof n)
         if (e.transport === x.He.POST_MESSAGE) {
             let e = (0, u.ZP)(t);
-            if (null == e || !B(n, [e])) throw new j.Z({ closeCode: A.$VG.INVALID_ORIGIN }, "Invalid Origin");
+            if (null == e || !H(n, [e])) throw new j.Z({ closeCode: A.$VG.INVALID_ORIGIN }, "Invalid Origin");
         } else {
             let e = await J(t);
-            if (((r = g.ZP.createFromServer(e)), !B(n, e.rpc_origins)))
+            if (((r = g.ZP.createFromServer(e)), !H(n, e.rpc_origins)))
                 throw new j.Z({ closeCode: A.$VG.INVALID_ORIGIN }, "Invalid Origin");
         }
     null == r && (r = g.ZP.createFromServer(await J(t)));
-    let { id: i, name: l, icon: a, coverImage: s, flags: o } = r;
+    let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
     e.application = {
         id: i,
         name: l,
         icon: a,
-        coverImage: s,
-        flags: o,
+        coverImage: o,
+        flags: s,
     };
 }
 async function $(e, t) {
     let n = k[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, M)), (k[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, M)), (k[e] = n)), await n.process();
 }
 function ee(e, t) {
     null == t && (e.authorization.scopes = [x.lH]);

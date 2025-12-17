@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(392711),
     a = n.n(l),
-    s = n(954955),
-    o = n.n(s),
+    o = n(954955),
+    s = n.n(o),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(968843),
     h = n(759479),
     m = n(283689),
-    _ = n(93127),
-    b = n(752048),
+    b = n(93127),
+    _ = n(752048),
     E = n(594174),
     O = n(801077),
     v = n(626135),
@@ -28,11 +28,11 @@ var r = n(54381),
     P = n(981631),
     x = n(324805),
     A = n(388032),
-    Z = n(559909);
+    Z = n(121748);
 let w = 15 * y.Z.Millis.MINUTE,
     L = (0, j.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = i.useRef(null),
+            o = i.useRef(null),
             c = (0, r.jsx)(S.Z, {
                 party: t,
                 onUserContextMenu: n,
@@ -43,8 +43,8 @@ let w = 15 * y.Z.Millis.MINUTE,
                 quest: a,
             }),
             { partiedMembers: f, applicationStreams: g, currentActivities: h, voiceChannels: m } = t,
-            _ = f.length,
-            b = g.length,
+            b = f.length,
+            _ = g.length,
             E = h.length,
             O = m.length > 0,
             y = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
@@ -59,17 +59,17 @@ let w = 15 * y.Z.Millis.MINUTE,
                     })
                     .map((e) => e.game.name);
                 v.default.track(P.rMx.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: _,
-                    num_streams: b,
+                    num_users: b,
+                    num_streams: _,
                     num_activities: E,
                     in_voice_channel: O,
                     games_detected: e,
                 });
-            }, [_, b, E, O, h]),
-            j = i.useMemo(() => o()(I, w), [I]);
+            }, [b, _, E, O, h]),
+            j = i.useMemo(() => s()(I, w), [I]);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
-                  targetElementRef: s,
+                  targetElementRef: o,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
@@ -111,7 +111,7 @@ let w = 15 * y.Z.Millis.MINUTE,
                           })({}, e)),
                           (i = i =
                               {
-                                  ref: s,
+                                  ref: o,
                                   onMouseEnter: j,
                                   "aria-haspopup": "menu",
                                   className: Z.itemCard,
@@ -139,7 +139,7 @@ let w = 15 * y.Z.Millis.MINUTE,
               })
             : null;
     }),
-    R = a().throttle(() => _._(), 300000);
+    R = a().throttle(() => b._(), 300000);
 function D() {
     let {
             nowPlayingCards: e,
@@ -147,15 +147,15 @@ function D() {
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, c.cj)([O.Z, b.Z, E.default], () => ({
+        } = (0, c.cj)([O.Z, _.Z, E.default], () => ({
             nowPlayingCards: O.Z.nowPlayingCards,
             loaded: O.Z.loaded,
-            needsRefresh: b.Z.shouldFetch(),
-            fetching: b.Z.isFetching(),
+            needsRefresh: _.Z.shouldFetch(),
+            fetching: _.Z.isFetching(),
             currentUser: E.default.getCurrentUser(),
         })),
-        s = (0, c.e7)([f.Z], () => f.Z.quests),
-        o = (0, g.Fy)(Array.from(s.values()));
+        o = (0, c.e7)([f.Z], () => f.Z.quests),
+        s = (0, g.Fy)(Array.from(o.values()));
     i.useEffect(() => (d.Z.wait(() => I.L()), () => d.Z.wait(() => I.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && R();
@@ -163,7 +163,7 @@ function D() {
     let p = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, m.NI)(s, x.l$);
+                r = (0, m.NI)(o, x.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
@@ -172,10 +172,10 @@ function D() {
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;
-        }, [e, s, o]),
-        _ = null;
+        }, [e, o, s]),
+        b = null;
     return t
-        ? (_ =
+        ? (b =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;

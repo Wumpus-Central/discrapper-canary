@@ -18,7 +18,7 @@ var r = n(373793),
     l = n(998698),
     c = n(895924),
     u = n(581364),
-    d = n(509716),
+    d = n(344896),
     f = n(826298),
     p = n(592125),
     _ = n(485386),
@@ -208,7 +208,7 @@ function N(e) {
         }
     }
     if (null != m && null != p) {
-        D(i, m) || w(i, m);
+        w(i, m) || D(i, m);
         let e = h.tM(i, m, s.id),
             t = y.bN.above(i, {
                 match: (e) => y.bN.isInline(i, e) && "applicationCommandOption" === e.type,
@@ -315,7 +315,7 @@ function P(e, t, n) {
             : null != C
               ? (b.Q.selectCommandOption(e, C.optionName, !1), (N = C.optionName))
               : b.Q.resetSelectionToEditorEnd(e),
-        null == C && w(e, u),
+        null == C && D(e, u),
         N
     );
 }
@@ -339,7 +339,7 @@ function R(e, t, n, r) {
             section: null,
         });
 }
-function D(e, t) {
+function w(e, t) {
     if (null == t.options || 0 === t.options.length) return !1;
     let n = h.zb(e, t);
     return (
@@ -380,7 +380,7 @@ function D(e, t) {
         !0)
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||

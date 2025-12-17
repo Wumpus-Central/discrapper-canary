@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(135431),
     g = n(621853),
     E = n(497805),
-    b = n(732380),
+    b = n(475413),
     y = n(981631),
     O = n(388032);
 function v(e, t, n) {
@@ -88,10 +88,10 @@ function C(e) {
                       p.default.track(y.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id }))
                     : (0, h.L)(S({ applicationId: C.id }, C)));
         }, [C, N, P, null == A ? void 0 : A.guild_id, n]),
-        D = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
+        w = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
     if (null == C || !(0, u.Eb)(C)) return null;
-    let { customInstallUrl: w } = C,
-        x = null == w || m.Z.isDiscordUrl(w) ? o.qJs : o.Gr1,
+    let { customInstallUrl: D } = C,
+        x = null == D || m.Z.isDiscordUrl(D) ? o.qJs : o.Gr1,
         L = N ? void 0 : x;
     return _.wS
         ? (0, r.jsx)(o.yRy, {
@@ -116,12 +116,12 @@ function C(e) {
                   var { onClick: t } = e,
                       n = I(e, ["onClick"]);
                   return (0, r.jsx)(
-                      b.O1,
+                      b.i6,
                       S(
                           {
                               buttonRef: T,
                               action: "PRESS_ADD_APP",
-                              text: D,
+                              text: w,
                               icon: L,
                               onContextMenu: t,
                               onClick: R,
@@ -133,11 +133,11 @@ function C(e) {
               },
           })
         : (0, r.jsx)(
-              b.O1,
+              b.i6,
               S(
                   {
                       action: "PRESS_ADD_APP",
-                      text: D,
+                      text: w,
                       icon: L,
                       onClick: R,
                       variant: "primary",

@@ -9,24 +9,24 @@ var i = n(54381),
     u = n(584729),
     d = n(27457),
     p = n(546247),
-    h = n(354459),
-    f = n(388032),
-    m = n(427538);
+    f = n(354459),
+    h = n(388032),
+    m = n(951840);
 let g = function (e) {
     let { participants: t, channel: n, hasConnectPermission: g } = e,
-        b = t.filter(h.Io),
+        b = t.filter(f.Io),
         C = (0, c.J)(n.guild_id),
         y = r.useCallback(() => {
             C ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, C]),
-        _ = 4 === b.length ? 2 : 3;
+        v = 4 === b.length ? 2 : 3;
     return (0, i.jsxs)("div", {
         className: m.container,
         children: [
             (0, i.jsx)(p.Z, {}),
             (0, i.jsx)("div", {
                 className: m.tiles,
-                style: { maxWidth: 168 * _ },
+                style: { maxWidth: 168 * v },
                 children: b.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
@@ -55,16 +55,16 @@ let g = function (e) {
                     variant: "text-sm/normal",
                     children:
                         0 === b.length
-                            ? f.intl.string(f.t.zSqdrS)
+                            ? h.intl.string(h.t.zSqdrS)
                             : 1 === b.length
-                              ? f.intl.formatToPlainString(f.t.BUyJIG, { a: (0, u.Z)(n, b[0]) })
+                              ? h.intl.formatToPlainString(h.t.BUyJIG, { a: (0, u.Z)(n, b[0]) })
                               : 2 === b.length
-                                ? f.intl.formatToPlainString(f.t["dcyZf/"], {
+                                ? h.intl.formatToPlainString(h.t["dcyZf/"], {
                                       a: (0, u.Z)(n, b[0]),
                                       b: (0, u.Z)(n, b[1]),
                                   })
                                 : b.length > 2
-                                  ? f.intl.formatToPlainString(f.t["44/Obu"], {
+                                  ? h.intl.formatToPlainString(h.t["44/Obu"], {
                                         a: (0, u.Z)(n, b[0]),
                                         b: (0, u.Z)(n, b[1]),
                                         n: b.length - 2,
@@ -76,7 +76,7 @@ let g = function (e) {
                 className: m.joinButton,
                 children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
-                    text: g ? f.intl.string(f.t["96ANUN"]) : f.intl.string(f.t.TVBCKZ),
+                    text: g ? h.intl.string(h.t["96ANUN"]) : h.intl.string(h.t.TVBCKZ),
                     onClick: y,
                     disabled: !g,
                 }),

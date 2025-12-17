@@ -17,7 +17,7 @@ var i = n(120356),
     g = n(504865),
     E = n(474936),
     b = n(388032),
-    y = n(560230);
+    y = n(113991);
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
@@ -47,15 +47,15 @@ function v(e) {
             headingColor: P,
         } = e,
         R = (0, l.e7)([d.Z], () => d.Z.getPremiumTypeSubscription()),
-        D = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        w = (0, p.t7)(),
+        w = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        D = (0, p.t7)(),
         x = (0, p.lr)(),
         L = n === E.PremiumTypes.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
         j = (null == R ? void 0 : R.hasActiveTrial)
-            ? null == D
+            ? null == w
                 ? void 0
-                : D.premiumType
-            : w
+                : w.premiumType
+            : D
               ? E.PremiumTypes.TIER_2
               : null,
         M = (0, m.N)(),
@@ -96,7 +96,7 @@ function v(e) {
             E.rV.MONTH,
         );
         if (o === E.C.PREMIUM_TRIAL) {
-            var G, Z, B, F;
+            var G, Z, F, B;
             return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: P,
@@ -108,8 +108,8 @@ function v(e) {
                             : E.Xh.PREMIUM_MONTH_TIER_2,
                     ),
                     duration: (0, f.if)({
-                        intervalType: null != (B = null == U ? void 0 : U.interval) ? B : E.rV.DAY,
-                        intervalCount: null != (F = null == U ? void 0 : U.interval_count) ? F : 30,
+                        intervalType: null != (F = null == U ? void 0 : U.interval) ? F : E.rV.DAY,
+                        intervalCount: null != (B = null == U ? void 0 : U.interval_count) ? B : 30,
                         capitalize: !1,
                     }),
                     price: e,

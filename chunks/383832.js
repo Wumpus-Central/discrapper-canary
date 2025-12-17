@@ -5,8 +5,8 @@ n.d(t, {
 var a = n(54381);
 n(473749);
 var r = n(481060),
-    i = n(570140),
-    l = n(71509);
+    l = n(570140),
+    i = n(71509);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,19 +40,19 @@ function o() {
         },
         {
             onCloseCallback: () => {
-                i.Z.dispatch({
+                l.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: l.Ui,
+            modalKey: i.Ui,
         },
     );
 }
 function c() {
     (0, r.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("52030"), n.e("41619"), n.e("24374")]).then(n.bind(n, 153069));
+            let { default: e } = await Promise.all([n.e("52030"), n.e("41619"), n.e("88252")]).then(n.bind(n, 153069));
             return (t) => {
                 var n, r;
                 return (0, a.jsx)(
@@ -77,12 +77,12 @@ function c() {
         },
         {
             onCloseCallback: () => {
-                i.Z.dispatch({
+                l.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: l._5,
+            modalKey: i._5,
         },
     );
 }

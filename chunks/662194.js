@@ -3,8 +3,8 @@ var r = n(243814),
     i = n(846027),
     l = n(131951),
     a = n(594174),
-    s = n(996106),
-    o = n(452426),
+    o = n(996106),
+    s = n(452426),
     c = n(852926),
     u = n(186901),
     d = n(981631);
@@ -14,11 +14,11 @@ let p = {
             [u.Gp.ANY]: [r.x.RPC, r.x.RPC_VOICE_WRITE],
         },
         validation: (e) =>
-            (0, o.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
-                    pan: (0, o.Z)(e).keys({
+                    pan: (0, s.Z)(e).keys({
                         left: e.number().min(0).max(1).required(),
                         right: e.number().min(0).max(1).required(),
                     }),
@@ -27,14 +27,14 @@ let p = {
                 }),
         handler(e) {
             let {
-                    args: { user_id: t, pan: n, volume: r, mute: o },
+                    args: { user_id: t, pan: n, volume: r, mute: s },
                 } = e,
                 c = a.default.getCurrentUser();
             if (null == a.default.getUser(t) || (null == c ? void 0 : c.id) === t)
-                throw new s.Z({ errorCode: d.lTL.INVALID_USER }, "Invalid user id: ".concat(t));
-            if ((null != n && i.Z.setLocalPan(t, n.left, n.right), null != r && i.Z.setLocalVolume(t, r), null != o)) {
+                throw new o.Z({ errorCode: d.lTL.INVALID_USER }, "Invalid user id: ".concat(t));
+            if ((null != n && i.Z.setLocalPan(t, n.left, n.right), null != r && i.Z.setLocalVolume(t, r), null != s)) {
                 let e = l.Z.isLocalMute(t);
-                ((e && !o) || (!e && o)) && i.Z.toggleLocalMute(t);
+                ((e && !s) || (!e && s)) && i.Z.toggleLocalMute(t);
             }
             return {
                 user_id: t,
@@ -55,23 +55,23 @@ let p = {
             [u.Gp.ANY]: [r.x.RPC, r.x.RPC_VOICE_WRITE],
         },
         validation: (e) =>
-            (0, o.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
-                    input: (0, o.Z)(e).keys({
+                    input: (0, s.Z)(e).keys({
                         device_id: e.string().valid(Object.keys(l.Z.getInputDevices())),
                         volume: e.number().min(0).max(100),
                     }),
-                    output: (0, o.Z)(e).keys({
+                    output: (0, s.Z)(e).keys({
                         device_id: e.string().valid(Object.keys(l.Z.getOutputDevices())),
                         volume: e.number().min(0).max(200),
                     }),
-                    mode: (0, o.Z)(e).keys({
+                    mode: (0, s.Z)(e).keys({
                         type: e.string().valid(Object.keys(d.pM4)),
                         auto_threshold: e.boolean(),
                         threshold: e.number().min(-100).max(0),
                         shortcut: e.array().items(
-                            (0, o.Z)(e).keys({
+                            (0, s.Z)(e).keys({
                                 type: e.number().min(0).max(3).required(),
                                 code: e.number().required(),
                                 name: e.string(),
@@ -94,8 +94,8 @@ let p = {
                     output: n,
                     mode: r,
                     automatic_gain_control: a,
-                    echo_cancellation: s,
-                    noise_suppression: o,
+                    echo_cancellation: o,
+                    noise_suppression: s,
                     qos: u,
                     silence_warning: d,
                     deaf: p,
@@ -122,8 +122,8 @@ let p = {
             }
             if (
                 (null != a && i.Z.setAutomaticGainControl(a),
-                null != s && i.Z.setEchoCancellation(s),
-                null != o && i.Z.setNoiseSuppression(o),
+                null != o && i.Z.setEchoCancellation(o),
+                null != s && i.Z.setNoiseSuppression(s),
                 null != u && i.Z.setQoS(u),
                 null != d && i.Z.setSilenceWarning(d),
                 null != p)

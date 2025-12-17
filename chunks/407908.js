@@ -12,30 +12,30 @@ var r = n(54381),
     h = n(981631),
     f = n(50493),
     g = n(388032),
-    m = n(864309);
+    m = n(792389);
 function b(e) {
     var t, n;
     let { channel: b } = e,
-        _ = i.useContext(p.AnalyticsContext),
-        y = (0, c.Aq)(),
-        O = g.intl.string(m.default["Beo/7v"]),
-        { firstMessage: x } = (0, a.cl)(b),
-        j = null == x || null == (t = x.messageSnapshots) ? void 0 : t[0],
-        v = null == j || null == (n = j.moderatorReport) ? void 0 : n.reported_user_id;
-    return b.isModeratorReportChannel() && null != v
+        y = i.useContext(p.AnalyticsContext),
+        O = (0, c.Aq)(),
+        x = g.intl.string(m.default["Beo/7v"]),
+        { firstMessage: j } = (0, a.cl)(b),
+        v = null == j || null == (t = j.messageSnapshots) ? void 0 : t[0],
+        C = null == v || null == (n = v.moderatorReport) ? void 0 : n.reported_user_id;
+    return b.isModeratorReportChannel() && null != C
         ? (0, r.jsx)(o.ZP.Icon, {
               onClick: () => {
                   (0, u.Kh)(b.id),
                       (0, d.i)(),
-                      (0, s.r)(b.guild_id, v, b.id, {
+                      (0, s.r)(b.guild_id, C, b.id, {
                           modViewPanel: f.k.INFO,
-                          sourceLocation: null != location ? location : _.location,
+                          sourceLocation: null != location ? location : y.location,
                       }),
-                      y.dispatch(h.CkL.POPOUT_CLOSE);
+                      O.dispatch(h.CkL.POPOUT_CLOSE);
               },
-              tooltip: O,
+              tooltip: x,
               icon: l.HI3,
-              "aria-label": O,
+              "aria-label": x,
           })
         : null;
 }

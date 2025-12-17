@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -18,14 +18,14 @@ var r = n(54381),
     b = n(914010),
     y = n(785717),
     O = n(652853),
-    v = n(732380),
+    v = n(475413),
     S = n(228168),
     I = n(981631),
     T = n(921944),
     C = n(474936),
     A = n(671955),
     N = n(388032),
-    P = n(131151);
+    P = n(577832);
 function R(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
@@ -39,7 +39,7 @@ function R(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
@@ -49,7 +49,7 @@ function D(e) {
             (0, r.jsx)("div", {
                 className: P.upsellButtonWrapper,
                 children: n
-                    ? (0, r.jsx)(v.O1, {
+                    ? (0, r.jsx)(v.i6, {
                           action: S.yM.VIEW_PREMIUM_PERKS,
                           fullWidth: !0,
                           size: "sm",
@@ -77,7 +77,7 @@ function D(e) {
             }),
             (0, r.jsx)("div", {
                 className: P.upsellButtonWrapper,
-                children: (0, r.jsx)(v.O1, {
+                children: (0, r.jsx)(v.i6, {
                     action: S.yM.VISIT_SHOP,
                     fullWidth: !0,
                     icon: u.EOn,
@@ -96,7 +96,7 @@ function D(e) {
         ],
     });
 }
-function w(e) {
+function D(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, p.Dt)(),
         { themeType: d } = (0, O.z)(),
@@ -130,7 +130,7 @@ function w(e) {
                 });
             },
         }),
-        S = (0, r.jsx)(D, {
+        S = (0, r.jsx)(w, {
             isPremiumUser: t,
             onInteraction: n,
             tiny: f,

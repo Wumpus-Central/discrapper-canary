@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(626135),
     u = n(981631),
     d = n(388032),
-    f = n(104844);
+    f = n(753308);
 function p(e) {
     var t;
     let { shopLink: n, skuId: a, onClick: c } = e,

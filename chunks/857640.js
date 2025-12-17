@@ -5,7 +5,7 @@ var i = n(481060),
     a = n(739566),
     o = n(834129),
     s = n(388032),
-    l = n(519824);
+    l = n(882409);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
         u = (0, a.ZP)(t),

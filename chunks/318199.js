@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => _,
+    default: () => b,
     r: () => m,
 });
 var r = n(54381);
@@ -7,8 +7,8 @@ n(473749);
 var i = n(581282),
     l = n(704215),
     a = n(8853),
-    s = n(481060),
-    o = n(2052),
+    o = n(481060),
+    s = n(2052),
     c = n(410030),
     u = n(100527),
     d = n(906732),
@@ -18,19 +18,19 @@ var i = n(581282),
     h = n(290347);
 function m(e) {
     let { promotionId: t, content: n, isPreview: r } = e,
-        s = a.t.fromBinary((0, i.c)(n));
-    if ("announcementModalVariant1" !== s.properties.oneofKind) return null;
+        o = a.t.fromBinary((0, i.c)(n));
+    if ("announcementModalVariant1" !== o.properties.oneofKind) return null;
     {
         let { isDismissed: e } = (0, p.Ob)(l.z.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, t);
-        return !r && e ? null : (r && (s.properties.announcementModalVariant1.dismissKey = ""), s);
+        return !r && e ? null : (r && (o.properties.announcementModalVariant1.dismissKey = ""), o);
     }
 }
-function _(e) {
+function b(e) {
     let { componentId: t, promotionId: n, renderModalProps: i, properties: l } = e,
-        { location: a } = (0, o.O)(),
+        { location: a } = (0, s.O)(),
         { analyticsLocations: p } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         m = (0, c.ZP)(),
-        _ = (0, s.apv)(m);
+        b = (0, o.apv)(m);
     if ("announcementModalVariant1" === l.properties.oneofKind) {
         let e = (0, g.N)({
             componentId: t,
@@ -39,7 +39,7 @@ function _(e) {
             renderModalProps: i,
             analyticsLocations: p,
             analyticsLocation: a,
-            isLightTheme: _,
+            isLightTheme: b,
         });
         return (0, r.jsx)(
             h.Z,

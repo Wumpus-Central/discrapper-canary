@@ -1,4 +1,4 @@
-a.d(t, { p: () => N }), a(642613), a(388685);
+a.d(t, { p: () => m }), a(642613), a(388685);
 var n = a(54381),
     r = a(473749),
     s = a(120356),
@@ -7,8 +7,8 @@ var n = a(54381),
     o = a(982905),
     c = a(431138),
     d = a(330711),
-    u = a(405948);
-function _(e, t, a) {
+    u = a(146371);
+function N(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, a) {
         e
     );
 }
-class N extends r.PureComponent {
+class m extends r.PureComponent {
     componentDidMount() {
         this.callChangeLocale(d.Z.getLocale());
     }
@@ -98,25 +98,25 @@ class N extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", {
+            N(this, "state", {
                 languages: d.Z.getLanguages().filter((e) => e.enabled),
                 current: d.Z.getLocaleInfo(),
                 isOpen: !1,
             }),
-            _(this, "setLocale", (e) => {
+            N(this, "setLocale", (e) => {
                 null != d.Z && (d.Z.setLocale(e), this.callChangeLocale(e));
             }),
-            _(this, "callChangeLocale", (e) => {
+            N(this, "callChangeLocale", (e) => {
                 let { onChange: t } = this.props;
                 null != t && t(e);
             }),
-            _(this, "open", () => {
+            N(this, "open", () => {
                 this.setState({ isOpen: !0 });
             }),
-            _(this, "close", () => {
+            N(this, "close", () => {
                 this.setState({ isOpen: !1 });
             }),
-            _(this, "toggle", () => {
+            N(this, "toggle", () => {
                 let { isOpen: e } = this.state;
                 this.setState({ isOpen: !e });
             });

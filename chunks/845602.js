@@ -1,6 +1,6 @@
 n.d(t, {
-    E: () => C,
-    Z: () => k,
+    E: () => O,
+    Z: () => C,
 }),
     n(388685);
 var r = n(54381),
@@ -14,21 +14,21 @@ var r = n(54381),
     u = n(353857),
     g = n(978088),
     m = n(9377),
-    p = n(101017),
+    f = n(101017),
     b = n(606318),
-    f = n(141006),
-    _ = n(981631),
-    x = n(131085),
-    j = n(388032),
-    h = n(583931),
-    v = n(842926);
-function k() {
+    p = n(141006),
+    x = n(981631),
+    j = n(131085),
+    h = n(388032),
+    v = n(326237),
+    k = n(789023);
+function C() {
     var e;
     let [t, n] = a.useState(() => {
-            let e = Math.floor(Math.random() * f.tl.length);
+            let e = Math.floor(Math.random() * p.tl.length);
             return {
-                primary_color: f.tl[e].start,
-                secondary_color: f.tl[e].end,
+                primary_color: p.tl[e].start,
+                secondary_color: p.tl[e].end,
                 tertiary_color: null,
             };
         }),
@@ -39,21 +39,21 @@ function k() {
             animateGradient: !0,
         });
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: v.container,
         children: [
             (0, r.jsx)("div", {
-                className: h.messageContainer,
+                className: v.messageContainer,
                 children: (0, r.jsx)(g.l, {
                     avatar: i.Z,
                     username: "Cherry",
                     usernameStyle: s,
-                    usernameClassName: o()(c, v.animateGradient),
-                    message: j.intl.string(j.t["6OSasb"]),
+                    usernameClassName: o()(c, k.animateGradient),
+                    message: h.intl.string(h.t["6OSasb"]),
                 }),
             }),
             (0, r.jsx)(d.default, {
-                defaultColor: _.p6O,
-                colors: f.tl,
+                defaultColor: x.p6O,
+                colors: p.tl,
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
@@ -111,10 +111,10 @@ function k() {
         ],
     });
 }
-function C(e) {
+function O(e) {
     let { guildId: t } = e,
-        [n, s] = a.useState(x.x_.HEART),
-        o = (0, p.Z)(),
+        [n, s] = a.useState(j.x_.HEART),
+        o = (0, f.Z)(),
         l = a.useMemo(
             () => ({
                 unlockedBadges: o.unlockedBadges.slice(0, 10),
@@ -123,15 +123,15 @@ function C(e) {
             [o],
         );
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: v.container,
         children: [
             (0, r.jsx)("div", {
-                className: h.messageContainer,
+                className: v.messageContainer,
                 children: (0, r.jsx)(g.l, {
                     avatar: c.Z,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
-                    message: j.intl.string(j.t["6OSasb"]),
+                    message: h.intl.string(h.t["6OSasb"]),
                     decorations: (0, r.jsx)(m.S, {
                         guildId: t,
                         tag: "GGEZ",

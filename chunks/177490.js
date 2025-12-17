@@ -48,7 +48,7 @@ function l(e, t) {
 }
 var c = n(329554),
     u = n(613990),
-    d = n(590297),
+    d = n(229450),
     f = n(410937),
     p = n(493807),
     _ = n(529742),
@@ -68,8 +68,8 @@ var c = n(329554),
     N = n(581079),
     P = n(207303),
     R = n(467159),
-    D = v.isBrowser("IE"),
-    w = !D,
+    w = v.isBrowser("IE"),
+    D = !w,
     x = {
         edit: _,
         composite: d,
@@ -366,7 +366,7 @@ var c = n(329554),
                                 onSelect: this._onSelect,
                                 ref: this.props.editorRef,
                                 role: d ? null : g,
-                                spellCheck: w && this.props.spellCheck,
+                                spellCheck: D && this.props.spellCheck,
                                 style: h,
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex,
@@ -384,7 +384,7 @@ var c = n(329554),
                 (this._blockSelectEvents = !1),
                     !L && A("draft_ods_enabled") && ((L = !0), g.initODS()),
                     this.setMode("edit"),
-                    D &&
+                    w &&
                         (this.editor
                             ? this.editor.ownerDocument.execCommand("AutoUrlDetect", !1, !1)
                             : n.g.execCommand("AutoUrlDetect", !1, !1));

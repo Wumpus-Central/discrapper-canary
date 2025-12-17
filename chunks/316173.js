@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(433517),
+    o = n(442837),
+    s = n(433517),
     c = n(481060),
     u = n(304761),
     d = n(865427),
@@ -14,8 +14,8 @@ var r = n(54381),
 let h = "isHideDevBanner",
     m = () => {
         var e;
-        let [t, n] = (0, i.useState)((null == (e = o.K.get(h, "false")) ? void 0 : e.toString()) === "true"),
-            l = (0, s.e7)([u.C], () => {
+        let [t, n] = (0, i.useState)((null == (e = s.K.get(h, "false")) ? void 0 : e.toString()) === "true"),
+            l = (0, o.e7)([u.C], () => {
                 var e;
                 return (0, d.fD)()
                     ? null == (e = u.C.getCurrentBuildOverride().overrides)
@@ -25,7 +25,7 @@ let h = "isHideDevBanner",
             });
         if (t) return null;
         let m = () => {
-                o.K.set(h, !0), n(!0);
+                s.K.set(h, !0), n(!0);
             },
             b = () =>
                 (0, r.jsx)(c.P3F, {
@@ -48,7 +48,7 @@ let h = "isHideDevBanner",
                     className: a()(g.devBanner, g.staging),
                     children: [
                         (0, r.jsx)(p.Z, { className: g.icon }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "479581" }),
+                        f.intl.format(f.t.uyrfYF, { buildNumber: "481003" }),
                         (0, r.jsx)(b, {}),
                     ],
                 })

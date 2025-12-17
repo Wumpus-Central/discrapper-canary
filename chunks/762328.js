@@ -14,7 +14,7 @@ var r = n(54381),
     c = n.n(l),
     u = n(155127),
     d = n(966044),
-    f = n(464239);
+    f = n(282144);
 function p(e, t, n) {
     return (
         t in e
@@ -88,9 +88,9 @@ function b(e) {
             children: N,
             renderLayer: P,
             viewportPadding: R = g,
-            trigger: D = "click",
+            trigger: w = "click",
         } = e,
-        w = i.useRef(null),
+        D = i.useRef(null),
         x = i.useMemo(() => {
             let e = [(0, a.cv)(v)];
             return (
@@ -131,18 +131,18 @@ function b(e) {
             elements: n,
         }),
         Z = (0, o.bQ)(G),
-        B = (0, o.XI)(G, {
-            enabled: "hover" === D,
+        F = (0, o.XI)(G, {
+            enabled: "hover" === w,
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
-        { getReferenceProps: F, getFloatingProps: V } = (0, o.NI)([Z, B]),
+        { getReferenceProps: B, getFloatingProps: V } = (0, o.NI)([Z, F]),
         H = (null == (t = k.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
         Y = C ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             N({
                 ref: L.setReference,
-                props: F(),
+                props: B(),
             }),
             l &&
                 (0, r.jsxs)(Y, {
@@ -163,7 +163,7 @@ function b(e) {
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: w,
+                                        containerRef: D,
                                         children: P({
                                             placement: M,
                                             update: U,

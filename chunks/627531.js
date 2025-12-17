@@ -6,8 +6,8 @@ var i = n(509613),
     r = n(313789),
     a = n(997950),
     o = n(639814),
-    T = n(703115),
-    S = n(526761),
+    S = n(703115),
+    T = n(526761),
     c = n(981631),
     E = n(388032),
     d = n(418924);
@@ -24,8 +24,8 @@ let g = (0, i.qs)(r.n.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_SHARE_SETTING, {
         t ? n.delete(e) : n.add(e),
             u.SE.updateSetting([...n]),
             l.default.track(c.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                action: T.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
-                ingress: S.f4.USER_SETTINGS_PRIVACY_SAFETY,
+                action: S.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
+                ingress: T.f4.USER_SETTINGS_PRIVACY_SAFETY,
                 guild_id: e,
             });
     },

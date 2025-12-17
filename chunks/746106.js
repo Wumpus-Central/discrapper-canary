@@ -1,7 +1,7 @@
-n.d(t, { w: () => D }), n(388685), n(539854);
+n.d(t, { w: () => w }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(469571),
+    a = n(354012),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
@@ -24,7 +24,7 @@ var r = n(54381),
     T = n(998502),
     C = n(264783),
     A = n(892071),
-    N = n(245034),
+    N = n(271860),
     P = n(388032);
 function R(e, t, n, r, o) {
     let s = i.useContext(p.Z),
@@ -100,7 +100,7 @@ function R(e, t, n, r, o) {
         u
     );
 }
-function D(e) {
+function w(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
         [c] = i.useState(() => T.ZP.getEnableHardwareAcceleration()),
@@ -109,8 +109,8 @@ function D(e) {
             theme: b,
             focused: N,
             currentWindow: P,
-            fontScale: D,
-            fontScaleClass: w,
+            fontScale: w,
+            fontScaleClass: D,
             keyboardModeEnabled: x,
             saturation: L,
             desaturateUserColors: j,
@@ -119,7 +119,7 @@ function D(e) {
             useReducedMotion: U,
             alwaysShowLinkDecorations: G,
             confettiMode: Z,
-            highContrastMode: B,
+            highContrastMode: F,
         } = (0, l.cj)([v.default, d.Z, S.Z, I.Z, y.Z, O.Z], () => {
             var e;
             return {
@@ -140,7 +140,7 @@ function D(e) {
                 confettiMode: O.Z.confettiMode,
             };
         }),
-        F = f.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
+        B = f.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
         V = (0, m.Z)(P, __OVERLAY__ || N),
         H = 0;
     1 !== L && (H = (0, u.OdO)(H, u.bgu.REDUCE_SATURATION_ENABLED));
@@ -180,8 +180,8 @@ function D(e) {
                 theme: b,
                 density: Y,
                 focused: N,
-                fontScale: D,
-                fontScaleClass: w,
+                fontScale: w,
+                fontScaleClass: D,
                 keyboardModeEnabled: x,
                 mouseMode: V,
                 saturation: L,
@@ -191,7 +191,7 @@ function D(e) {
                 useReducedMotion: U,
                 alwaysShowLinkDecorations: G,
                 hardwareAccelerationEnabled: c,
-                highContrastMode: F && B,
+                highContrastMode: B && F,
                 isPopoutWindow: o,
                 rootClassName: s()(X, {
                     "confetti-mode": Z,

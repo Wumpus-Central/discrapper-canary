@@ -22,15 +22,15 @@ var r = n(54381),
     S = n(736530),
     I = n(981631),
     T = n(388032),
-    C = n(225753);
+    C = n(517319);
 function A(e) {
     let { ingress: t, guildId: n } = e,
         A = (0, h.c_)(),
         N = (0, _.q)(),
         P = m.h2.useSetting().includes(n),
         R = (0, l.LN)(),
-        D = m.mX.useSetting(),
-        w = m.zA.useSetting().includes(n),
+        w = m.mX.useSetting(),
+        D = m.zA.useSetting().includes(n),
         x = i.useCallback(
             (e) => {
                 let r = (0, f.gl)();
@@ -79,7 +79,7 @@ function A(e) {
             n === S.T
                 ? (0, r.jsx)(E.ZP, {
                       title: T.intl.string(T.t["3o2ojh"]),
-                      value: !N && !D,
+                      value: !N && !w,
                       onChange: (e) => j(e, !1),
                       disabled: N || R,
                       tooltipText: R ? T.intl.string(C.default["6Af/cw"]) : void 0,
@@ -87,7 +87,7 @@ function A(e) {
                   })
                 : (0, r.jsx)(E.ZP, {
                       title: T.intl.string(T.t["3o2ojh"]),
-                      value: !P && !w,
+                      value: !P && !D,
                       onChange: (e) => j(e, !0),
                       disabled: P,
                       note: A

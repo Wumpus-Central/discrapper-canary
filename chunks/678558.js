@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    S = n(132810);
+    S = n(104749);
 function I(e, t, n) {
     return (
         t in e
@@ -102,8 +102,8 @@ let R = (e) => {
             targetBoostedGuildTier: C,
             onClose: P = () => {},
             closeLayer: R = () => {},
-            pauseAnimation: D = !1,
-            applicationId: w,
+            pauseAnimation: w = !1,
+            applicationId: D,
             handleSubscribeModalClose: x,
             withHighlight: L = !1,
             icon: j,
@@ -128,7 +128,7 @@ let R = (e) => {
         ]),
         { analyticsLocations: G } = (0, p.ZP)(),
         Z = (0, m.bp)() === y.IlC.POPOUT,
-        [B, F] = i.useState(!1),
+        [F, B] = i.useState(!1),
         { fractionalState: V } = (0, _.Z)(),
         H = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
@@ -138,7 +138,7 @@ let R = (e) => {
         W = null != C ? Math.max((0, E.KK)(a, C), 1) : 1,
         K = (0, E.aq)({ fractionalState: V }),
         z = async () => {
-            F(!0),
+            B(!0),
                 await (0, b.u)({
                     analyticsLocations: G,
                     analyticsLocation: t,
@@ -148,11 +148,11 @@ let R = (e) => {
                     onClose: P,
                     closeLayer: R,
                     inPopout: Z,
-                    applicationId: w,
+                    applicationId: D,
                     handleSubscribeModalClose: x,
                     intent: M,
                 }),
-                F(!1);
+                B(!1);
         },
         q = g.Z.getPremiumTypeSubscription(),
         Q = (0, r.jsxs)("div", {
@@ -196,7 +196,7 @@ let R = (e) => {
                                   A(T({ "data-migration-pending": !0 }, e), {
                                       disabled: !0,
                                       size: u.zx.Sizes.SMALL,
-                                      pauseAnimation: D,
+                                      pauseAnimation: w,
                                   }),
                                   U,
                               ),
@@ -208,7 +208,7 @@ let R = (e) => {
           ? (0, r.jsx)(d.Button, {
                 variant: "expressive",
                 disabled: X,
-                loading: B,
+                loading: F,
                 text: null != I ? I : v.intl.string(v.t.gKmQ1G),
                 onClick: z,
             })
@@ -224,9 +224,9 @@ let R = (e) => {
                     ),
                     {
                         className: o()(U.className, { [S.buttonHighlighted]: L }),
-                        submitting: B,
+                        submitting: F,
                         onClick: z,
-                        pauseAnimation: D,
+                        pauseAnimation: w,
                         children: Q,
                     },
                 ),

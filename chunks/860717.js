@@ -15,17 +15,17 @@ var r = n(54381),
     m = n(970184),
     h = n(197653),
     y = n(979372),
-    O = n(676149),
-    v = n(861529),
+    v = n(676149),
+    O = n(861529),
     j = n(768494),
     x = n(124347),
     P = n(929677),
-    I = n(706454),
-    w = n(314897),
+    w = n(706454),
+    I = n(314897),
     S = n(77498),
     E = n(823379),
-    _ = n(785717),
-    T = n(621853),
+    T = n(785717),
+    _ = n(621853),
     C = n(750312),
     D = n(919498),
     k = n(388032),
@@ -187,12 +187,12 @@ let R = /{{(.*?)}}/g,
             ],
         },
     ];
-function L(e) {
+function M(e) {
     return null != e && e.loadingState === s.f.LOADED_SUCCESS && null != e.width && null != e.height;
 }
-function M(e) {
+function L(e) {
     let { component: t } = e;
-    if (Array.isArray(t)) return F(t);
+    if (Array.isArray(t)) return U(t);
     switch (t.type) {
         case "HERO":
             let { body: n } = t,
@@ -219,9 +219,9 @@ function M(e) {
                     }
                     return i;
                 })(t, ["body"]);
-            return (0, r.jsx)(U, Z(A({}, i), { body: F(n) }));
+            return (0, r.jsx)(F, Z(A({}, i), { body: U(n) }));
         case "GRID":
-            return (0, r.jsx)(W, { children: F(t.children) });
+            return (0, r.jsx)(W, { children: U(t.children) });
         case "FIELD":
             return (0, r.jsx)(H, {
                 value: B(t.value),
@@ -238,12 +238,12 @@ function M(e) {
     }
 }
 function B(e, t) {
-    return (0, r.jsx)(M, { component: e }, t);
-}
-function F(e) {
-    return e.map((e, t) => B(e, t));
+    return (0, r.jsx)(L, { component: e }, t);
 }
 function U(e) {
+    return e.map((e, t) => B(e, t));
+}
+function F(e) {
     let { title: t, body: n, image: i, imagePlaceholder: a } = e;
     return (0, r.jsxs)("div", {
         className: N.heroSection,
@@ -262,7 +262,7 @@ function U(e) {
                     }),
                 ],
             }),
-            L(i)
+            M(i)
                 ? (0, r.jsx)("div", {
                       className: N.heroImageContainer,
                       children: (0, r.jsx)(x.ZP, {
@@ -305,7 +305,7 @@ function z(e) {
         n = i.useId(),
         a = (0, y._)();
     return null != t
-        ? (0, r.jsx)(v.Z, {
+        ? (0, r.jsx)(O.Z, {
               type: s.re.TEXT_DISPLAY,
               id: n,
               content: t,
@@ -316,7 +316,7 @@ function z(e) {
 function K(e) {
     let { content: t, image: n, imagePosition: i } = e,
         a = (0, y._)(),
-        o = L(n)
+        o = M(n)
             ? (0, r.jsx)("div", {
                   className: l()(N.image, a.className),
                   "data-position": i,
@@ -351,7 +351,7 @@ function K(e) {
 function q(e) {
     let { size: t = "small", divider: n = !1 } = e,
         a = i.useId();
-    return (0, r.jsx)(O.Z, {
+    return (0, r.jsx)(v.Z, {
         type: s.re.SEPARATOR,
         id: a,
         divider: n,
@@ -407,12 +407,12 @@ function X(e, t) {
 }
 let Q = i.createContext(null);
 function J(e) {
-    return (0, o.cj)([g.Z, T.Z, S.Z], () => {
+    return (0, o.cj)([g.Z, _.Z, S.Z], () => {
         let t = g.Z.getApplication(e.applicationId);
         return {
             application: t,
             game: null != t ? S.Z.getGameByApplication(t) : null,
-            config: T.Z.getApplicationWidgetApplicationConfig(e.applicationId),
+            config: _.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
 }
@@ -475,37 +475,37 @@ function ee(e) {
 }
 let et = Object.assign(
     function (e) {
-        let { trackUserProfileAction: t } = (0, _.KZ)(),
+        let { trackUserProfileAction: t } = (0, T.KZ)(),
             { user: n, widget: a, cta: s, subtle: g = !1 } = e,
-            m = (0, o.e7)([w.default], () => w.default.getId()) === n.id,
-            { application: h, game: y, config: O } = J(a),
-            v = null == h ? void 0 : h.getIconURL(16),
+            m = (0, o.e7)([I.default], () => I.default.getId()) === n.id,
+            { application: h, game: y, config: v } = J(a),
+            O = null == h ? void 0 : h.getIconURL(16),
             x = (0, P.O)(n.id).data,
             S = null == x ? void 0 : x.find((e) => e.application_id === a.applicationId),
-            T = (0, b.Z)({
+            _ = (0, b.Z)({
                 location: "UserProfileApplicationWidget",
                 applicationId: null == y ? void 0 : y.id,
                 source: p.m1.UserProfile,
                 sourceUserId: n.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: D, hasAlreadyLinked: R, canStartAuthorization: L, startAuthorization: B } = (0, f.F)(h),
-            { analyticsLocations: F } = (0, d.ZP)(u.Z.USER_PROFILE_APPLICATION_WIDGET),
-            U = i.useCallback(() => {
-                L &&
+            { fetched: D, hasAlreadyLinked: R, canStartAuthorization: M, startAuthorization: B } = (0, f.F)(h),
+            { analyticsLocations: U } = (0, d.ZP)(u.Z.USER_PROFILE_APPLICATION_WIDGET),
+            F = i.useCallback(() => {
+                M &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: a.applicationId,
                     }),
-                    B({ analyticsLocations: F }));
-            }, [L, B, t, a.applicationId, F]),
-            W = null == s && D && !R && L,
+                    B({ analyticsLocations: U }));
+            }, [M, B, t, a.applicationId, U]),
+            W = null == s && D && !R && M,
             H = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != v
+                    null != O
                         ? (0, r.jsx)("img", {
                               className: N.appIcon,
-                              src: v,
+                              src: O,
                               width: 16,
                               height: 16,
                               alt: "",
@@ -528,10 +528,10 @@ let et = Object.assign(
                       })
                     : (0, r.jsx)(c.P3F, {
                           className: l()(N.headerTitle, N.clickable),
-                          onClick: T,
+                          onClick: _,
                           children: H,
                       }),
-            K = (0, o.e7)([I.default], () => I.default.locale),
+            K = (0, o.e7)([w.default], () => w.default.locale),
             q = i.useMemo(() => {
                 let e = (function (e, t, n) {
                     var r, i, a;
@@ -590,7 +590,7 @@ let et = Object.assign(
                               config: t,
                               numberFormat: l,
                           };
-                })(null != S ? S : null, null != O ? O : null, K);
+                })(null != S ? S : null, null != v ? v : null, K);
                 return G.map(function t(n) {
                     switch (n.type) {
                         case "HERO":
@@ -630,7 +630,7 @@ let et = Object.assign(
                             return n;
                     }
                 });
-            }, [O, S, K]);
+            }, [v, S, K]);
         return (0, r.jsxs)(
             C.Z,
             Z(A({}, e), {
@@ -645,7 +645,7 @@ let et = Object.assign(
                               id: "view-game-profile",
                               label: "View Game Profile",
                               icon: c.iWm,
-                              action: T,
+                              action: _,
                           })
                         : null,
                 children: [
@@ -653,7 +653,7 @@ let et = Object.assign(
                         value: e,
                         children: (0, r.jsx)($, {
                             widget: a,
-                            children: (0, r.jsx)(M, { component: q }),
+                            children: (0, r.jsx)(L, { component: q }),
                         }),
                     }),
                     m &&
@@ -679,7 +679,7 @@ let et = Object.assign(
                                           content: k.intl.string(k.t["OW/2al"]),
                                           buttons: (0, r.jsx)(c.Button, {
                                               text: k.intl.string(k.t.S0W8Z5),
-                                              onClick: U,
+                                              onClick: F,
                                           }),
                                       })
                                     : s,

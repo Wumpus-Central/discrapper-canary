@@ -5,40 +5,40 @@ var r = n(54381),
     o = n(442837),
     a = n(704215),
     s = n(243778),
-    u = n(430824),
-    c = n(765703),
+    c = n(430824),
+    u = n(765703),
     d = n(618460),
+    f = n(431971),
     p = n(800869),
-    f = n(366751),
-    m = n(309945),
-    g = n(385902),
+    m = n(366751),
+    g = n(309945),
     v = n(981631),
-    x = n(847328),
-    _ = n(265397),
-    b = n(388032),
-    h = n(547885);
-function j() {
+    x = n(914820),
+    b = n(556970),
+    h = n(388032),
+    j = n(754747);
+function _() {
     return (0, r.jsx)("div", {
-        className: h.staffContainer,
+        className: j.staffContainer,
         children: (0, r.jsx)(l.xvT, {
             variant: "text-sm/medium",
-            children: b.intl.string(_.default.l9n4QZ),
+            children: h.intl.string(b.default.l9n4QZ),
         }),
     });
 }
 function C(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([u.Z], () => {
+        n = (0, o.e7)([c.Z], () => {
             var e;
             return (
-                (null == (e = u.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
+                (null == (e = c.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
                 !0
             );
         }),
         C = (0, d.Z)(t),
-        Z = (0, c.Z)(t),
+        Z = (0, u.Z)(t),
         w = C.length > 0 || Z.length > 0,
-        { shouldShow: I, notificationConfig: E } = (0, g._)(t, "GuildPowerupNotificationContainer"),
+        { shouldShow: I, notificationConfig: E } = (0, f._)(t, "GuildPowerupNotificationContainer"),
         P = [];
     I && P.push(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
     let [T, N] = (0, s.ZT)(P, t),
@@ -50,13 +50,13 @@ function C(e) {
             let n = [];
             if (w) {
                 let e = C.some((e) => e.skuId === i.A$),
-                    l = Z.length > 0 ? b.intl.string(x.default["B3OfL/"]) : void 0,
+                    l = Z.length > 0 ? h.intl.string(x.default["B3OfL/"]) : void 0,
                     o = [];
-                e && o.push(b.intl.string(_.default.Sfr0Jw)),
-                    Z.length > 0 && o.push(b.intl.string(x.default.wiungr)),
+                e && o.push(h.intl.string(b.default.Sfr0Jw)),
+                    Z.length > 0 && o.push(h.intl.string(x.default.wiungr)),
                     n.push(
                         (0, r.jsx)(
-                            m.Z,
+                            g.Z,
                             {
                                 guildId: t,
                                 powerupNames: [...C.map((e) => e.title), ...(null != l ? [l] : [])],
@@ -70,7 +70,7 @@ function C(e) {
                 y &&
                     n.push(
                         (0, r.jsx)(
-                            f.Z,
+                            m.Z,
                             {
                                 notificationConfig: E,
                                 markAsDismissed: (e) => {
@@ -88,14 +88,14 @@ function C(e) {
         })(S);
     return 0 !== L.length || n
         ? (0, r.jsxs)("div", {
-              className: h.container,
+              className: j.container,
               children: [
                   (0, r.jsx)(l.xvT, {
                       variant: "eyebrow",
                       color: "text-subtle",
-                      children: b.intl.string(_.default["3FRirU"]),
+                      children: h.intl.string(b.default["3FRirU"]),
                   }),
-                  n && (0, r.jsx)(j, {}),
+                  n && (0, r.jsx)(_, {}),
                   L.map((e) => e),
               ],
           })

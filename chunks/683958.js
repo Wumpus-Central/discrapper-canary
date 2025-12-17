@@ -16,7 +16,7 @@ var l = n(54381),
     g = n(617266),
     v = n(333861),
     x = n(388032),
-    y = n(963354),
+    y = n(497387),
     j = n(621054);
 let S = [s.yU.CHAT],
     O = () => {
@@ -29,11 +29,11 @@ function P(e) {
             channel: s,
             command: v,
             onClose: P,
-            requireLaunchChannel: _,
-            onShareResult: w,
-            previewMessage: C,
+            requireLaunchChannel: w,
+            onShareResult: C,
+            previewMessage: Z,
         } = e,
-        Z = (function (e, t) {
+        L = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
@@ -62,9 +62,9 @@ function P(e) {
             "onShareResult",
             "previewMessage",
         ]);
-    let L = r.useMemo(() => (null == s ? null : (0, u.dL)(s.id)), [s]),
-        [E, N] = r.useState(!1),
-        { commands: T, loading: k } =
+    let E = r.useMemo(() => (null == s ? null : (0, u.dL)(s.id)), [s]),
+        [N, T] = r.useState(!1),
+        { commands: _, loading: k } =
             ((t = r.useMemo(
                 () =>
                     null == s
@@ -85,13 +85,13 @@ function P(e) {
                 },
             )),
         M = r.useRef(0),
-        [F, A] = r.useState(_ && null != L ? [L] : []),
+        [F, A] = r.useState(w && null != E ? [E] : []),
         I = F.length,
         D = I >= 5,
         [q, R] = r.useState(""),
         { results: z, updateSearchText: U } = (0, c.s)({
             selectedDestinations: F,
-            originDestination: null != L ? L : void 0,
+            originDestination: null != E ? E : void 0,
             includeMissingDMs: !0,
         }),
         W = r.useCallback(
@@ -100,7 +100,7 @@ function P(e) {
             },
             [U],
         ),
-        H = r.useCallback(() => (w(!1), P()), [w, P]),
+        H = r.useCallback(() => (C(!1), P()), [C, P]),
         [G] = (0, o.Z)([n]),
         V = r.useCallback(() => {
             R("");
@@ -128,16 +128,16 @@ function P(e) {
         ),
         [Q, Y] = r.useMemo(() => {
             if (k) return [null, !1];
-            let e = T.find((e) => e.untranslatedName === v.name);
+            let e = _.find((e) => e.untranslatedName === v.name);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [v, T, k]),
+        }, [v, _, k]),
         J = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 if (null === Q) return;
-                N(!0);
+                T(!0);
                 let n = (await Promise.all(e.map(u.qx))).filter(f.lm);
-                t && (w(!0), O()),
+                t && (C(!0), O()),
                     n.forEach(async (e) => {
                         var t, n;
                         let l = d.Z.getChannel(e);
@@ -173,10 +173,10 @@ function P(e) {
                             })) &&
                             (0, a.showToast)((0, a.createToast)(x.intl.string(x.t["5WjJcl"]), a.ToastType.MESSAGE));
                     }),
-                    w(!0),
+                    C(!0),
                     O();
             },
-            [w, Q, v.options],
+            [C, Q, v.options],
         ),
         K = r.useCallback(() => {
             J(F, { closeAfterSend: !0 });
@@ -185,7 +185,7 @@ function P(e) {
         return (0, l.jsx)(i.Modal, {
             title: x.intl.string(x.t.fuFvwx),
             "aria-label": x.intl.string(x.t.fuFvwx),
-            transitionState: Z.transitionState,
+            transitionState: L.transitionState,
             onClose: P,
             actions: [],
             children: (0, l.jsx)(a.$jN, { className: y.spinnerContainer }),
@@ -194,7 +194,7 @@ function P(e) {
         return (0, l.jsx)(i.Modal, {
             title: x.intl.string(x.t.fuFvwx),
             "aria-label": x.intl.string(x.t.fuFvwx),
-            transitionState: Z.transitionState,
+            transitionState: L.transitionState,
             onClose: P,
             actions: [
                 {
@@ -212,7 +212,7 @@ function P(e) {
                       handleToggleDestination: B,
                       selectedDestinations: F,
                       disableSelection: D,
-                      originDestination: L,
+                      originDestination: E,
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
@@ -237,7 +237,7 @@ function P(e) {
             title: ee.toString(),
             subtitle: et,
             "aria-label": ee.toString(),
-            transitionState: Z.transitionState,
+            transitionState: L.transitionState,
             onClose: H,
             size: "md",
             actions: [
@@ -249,11 +249,11 @@ function P(e) {
                 {
                     text: x.intl.string(x.t.TXNS7S),
                     onClick: K,
-                    disabled: 0 === I || E,
+                    disabled: 0 === I || N,
                     variant: "primary",
                 },
             ],
-            preview: void 0 !== C ? (0, l.jsx)(h.z, { previewMessage: C }) : null,
+            preview: void 0 !== Z ? (0, l.jsx)(h.z, { previewMessage: Z }) : null,
             input: (0, l.jsx)(a.E1j, {
                 ref: X,
                 query: q,

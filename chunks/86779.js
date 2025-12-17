@@ -38,10 +38,10 @@ let b = "mweb_handoff_nonce",
                     fingerprint: p,
                 });
         }, [p, e]);
-        let [O, T] = i.useState(null),
+        let [T, O] = i.useState(null),
             A = i.useCallback(
                 (e) => {
-                    T(e),
+                    O(e),
                         m.default.track(
                             _.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
@@ -51,12 +51,12 @@ let b = "mweb_handoff_nonce",
                             { fingerprint: C },
                         );
                 },
-                [T, C],
+                [O, C],
             ),
             Z = c.K.get(b);
         if (
-            ("null" === n && null === O && A("deep_link_failed"),
-            null != n && "null" !== n && null == Z && null === O && A("nonce_missing"),
+            ("null" === n && null === T && A("deep_link_failed"),
+            null != n && "null" !== n && null == Z && null === T && A("nonce_missing"),
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(j);
@@ -67,7 +67,7 @@ let b = "mweb_handoff_nonce",
                 null != n &&
                     "null" !== n &&
                     null != Z &&
-                    null == O &&
+                    null == T &&
                     o.tn
                         .post({
                             url: _.ANM.HANDOFF_EXCHANGE,
@@ -97,21 +97,21 @@ let b = "mweb_handoff_nonce",
                         .finally(() => {
                             S();
                         });
-            }, [n, Z, O, C, A]),
+            }, [n, Z, T, C, A]),
             null == C)
         )
             return null;
         let P =
-            null == O
+            null == T
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [E.intl.string(E.t.uJ1JsY), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAs)],
                   })
-                : y.has(O)
+                : y.has(T)
                   ? E.intl.string(E.t.EPt55r)
-                  : N.has(O)
+                  : N.has(T)
                     ? E.intl.string(E.t.g87kTp)
                     : void 0;
-        return null != O && y.has(O)
+        return null != T && y.has(T)
             ? (0, r.jsx)("div", {
                   className: v.errorContainer,
                   children: (0, r.jsx)(d.Text, {

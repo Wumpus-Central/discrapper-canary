@@ -1,26 +1,26 @@
-n.d(t, { Z: () => _ }), n(388685), n(642613);
+n.d(t, { Z: () => y }), n(388685), n(642613);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(665149),
     d = n(428530),
-    u = n(484036),
+    u = n(975775),
     m = n(681619),
     p = n(621060),
-    h = n(451429),
-    x = n(104444);
-function f(e, t) {
+    h = n(663618),
+    f = n(850409);
+function x(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function g(e) {
+function b(e) {
     let { store: t, dataGetter: n } = e,
-        [i, l] = r.useState(n(t));
+        [l, i] = r.useState(n(t));
     return (
         r.useEffect(() => {
-            let e = () => l(n(t));
+            let e = () => i(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -30,15 +30,15 @@ function g(e) {
             );
         }, [t, n]),
         (0, a.jsx)(o.zJl, {
-            className: x.inspectorContainer,
-            children: (0, a.jsx)(d.Z, { data: i }),
+            className: f.inspectorContainer,
+            children: (0, a.jsx)(d.Z, { data: l }),
         })
     );
 }
-let b = [
+let g = [
         {
             key: "name",
-            cellClassName: x.__invalid_eventColumn,
+            cellClassName: f.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -54,14 +54,14 @@ let b = [
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, a.jsxs)("div", {
-                          className: x.inspectorContainer,
+                          className: f.inspectorContainer,
                           children: [
                               "Store is missing ",
                               (0, a.jsx)("code", { children: "__getLocalVars" }),
                               " method.",
                           ],
                       })
-                    : (0, a.jsx)(g, {
+                    : (0, a.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,7 +73,7 @@ let b = [
             group: p.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(g, {
+                return (0, a.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e,
                 });
@@ -82,15 +82,15 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: i } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
-        className: x.subPanel,
+        className: f.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.ZP, {
-                className: l()(h.headerBar, x.subPanelHeaderBar),
+                className: i()(h.headerBar, f.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -99,24 +99,24 @@ function j(e) {
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() }),
                 ],
             }),
-            i({ store: t }),
+            l({ store: t }),
         ],
     });
 }
-function _() {
+function y() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        i = s.yh.getAll(),
+        l = s.yh.getAll(),
         c = r
             .useMemo(
                 () =>
-                    i
+                    l
                         .map((e) => ({
                             key: e._dispatchToken,
                             store: e,
                         }))
-                        .sort(f),
-                [i],
+                        .sort(x),
+                [l],
             )
             .filter((e) =>
                 (function (e, t) {
@@ -125,13 +125,13 @@ function _() {
                 })(e, t),
             ),
         [d, u] = r.useState(),
-        p = i.find((e) => e._dispatchToken === d);
+        p = l.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(h.panel, x.panel),
+        className: i()(h.panel, f.panel),
         children: [
             (0, a.jsx)("div", {
-                className: x.toolbar,
+                className: f.toolbar,
                 children: (0, a.jsx)(o.E1j, {
                     size: "sm",
                     query: t,
@@ -142,7 +142,7 @@ function _() {
                 }),
             }),
             (0, a.jsx)(m.Z, {
-                columns: b,
+                columns: g,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key),

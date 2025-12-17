@@ -3,14 +3,14 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(692547),
     c = n(251052),
     u = n(673824),
     d = n(213305),
     f = n(155127),
     p = n(483566),
-    _ = n(406751);
+    _ = n(117325);
 function m(e, t, n) {
     return (
         t in e
@@ -139,10 +139,10 @@ function P(e) {
     function R(e) {
         T(!1), e.stopPropagation(), null == t || t(e.currentTarget.checked);
     }
-    function D(e) {
+    function w(e) {
         a || e.repeat || ((" " === e.key || "Enter" === e.key) && T(!0));
     }
-    function w(e) {
+    function D(e) {
         var t;
         a || !I || e.repeat || (T(!1), "Enter" === e.key && (null == (t = S.current) || t.click()));
     }
@@ -220,8 +220,8 @@ function P(e) {
                                     },
                                     className: _.input,
                                     tabIndex: a ? -1 : 0,
-                                    onKeyDown: D,
-                                    onKeyUp: w,
+                                    onKeyDown: w,
+                                    onKeyUp: D,
                                     onChange: R,
                                     checked: n,
                                     disabled: a,

@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(354459),
     v = n(981631),
     S = n(388032),
-    I = n(238377);
+    I = n(299348);
 function T(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ function R(e, t) {
             throw Error("Unknown participant type.");
     }
 }
-function D(e) {
+function w(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: a, channelId: s, handleUserContextMenu: l } = e,
         c = R(a, t.length);
     return (0, r.jsx)(f.VqE, {
@@ -120,7 +120,7 @@ function D(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: s, participantType: l } = e,
         c = R(l, t.length),
         u =
@@ -195,7 +195,7 @@ function L(e) {
                     (0, p.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("26465")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) => (0, r.jsx)(e, N(C({}, n), { user: t }));
@@ -207,7 +207,7 @@ function L(e) {
         );
     if (0 === M.length) return null;
     if (h)
-        return (0, r.jsx)(w, {
+        return (0, r.jsx)(D, {
             maxVisibleUsers: S,
             users: M,
             guildId: a,
@@ -248,7 +248,7 @@ function L(e) {
                 children: (0, r.jsx)(f.yRy, {
                     targetElementRef: T,
                     renderPopout: () =>
-                        (0, r.jsx)(D, {
+                        (0, r.jsx)(w, {
                             participantType: s.type,
                             handleUserContextMenu: G,
                             guildId: a,

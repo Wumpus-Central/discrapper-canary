@@ -15,7 +15,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(467721),
+    c = n(236726),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -27,8 +27,8 @@ var i = n(54381),
     C = n(607070),
     y = n(100527),
     v = n(906732),
-    O = n(998698),
-    x = n(326133),
+    x = n(998698),
+    O = n(326133),
     E = n(507366),
     j = n(570220),
     S = n(951394),
@@ -48,8 +48,8 @@ var i = n(54381),
     U = n(746877),
     V = n(541716),
     F = n(667829),
-    B = n(258696),
-    H = n(893718),
+    H = n(258696),
+    B = n(893718),
     G = n(273031),
     z = n(303628),
     W = n(981631),
@@ -150,8 +150,8 @@ let en = r.memo(
                 setEditorRef: eC,
                 autoCompletePosition: ey,
                 disableThemedBackground: ev = !1,
-                emojiPickerCloseOnModalOuterClick: eO,
-                parentModalKey: ex,
+                emojiPickerCloseOnModalOuterClick: ex,
+                parentModalKey: eO,
             } = e,
             eE = E.Z.useField("channelDrafts")[L.id],
             ej = null != (l = null == eE ? void 0 : eE.title) ? l : "",
@@ -160,18 +160,18 @@ let en = r.memo(
             eP = null == (u = null == eE ? void 0 : eE.createThread) || u;
         s()(null != k, "chat input type must be set");
         let { analyticsLocations: eI } = (0, v.ZP)(y.Z.CHANNEL_TEXT_AREA),
-            eZ = (0, H.qz)(t),
+            eZ = (0, B.qz)(t),
             eT = r.useRef(null),
             eN = r.useRef(null),
             eA = r.useRef(null),
             ew = r.useRef(null);
         null == eC || eC(eN.current);
-        let { activeCommand: eM } = (0, d.cj)([O.Z], () => {
+        let { activeCommand: eM } = (0, d.cj)([x.Z], () => {
                 var e, t;
                 return {
-                    activeCommand: (null == (e = k.commands) ? void 0 : e.enabled) ? O.Z.getActiveCommand(L.id) : null,
+                    activeCommand: (null == (e = k.commands) ? void 0 : e.enabled) ? x.Z.getActiveCommand(L.id) : null,
                     activeCommandSection: (null == (t = k.commands) ? void 0 : t.enabled)
-                        ? O.Z.getActiveCommandSection(L.id)
+                        ? x.Z.getActiveCommandSection(L.id)
                         : null,
                 };
             }),
@@ -181,18 +181,18 @@ let en = r.memo(
                 disabled: eD,
                 canAttachFiles: ek,
                 canEveryoneSendMessages: eU,
-            } = (0, H.TE)(L, k, eM, I),
+            } = (0, B.TE)(L, k, eM, I),
             eV = !A.dN.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
             eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
-            eB = (0, T.Z)(),
-            { fontSize: eH } = (0, d.cj)([C.Z], () => ({
+            eH = (0, T.Z)(),
+            { fontSize: eB } = (0, d.cj)([C.Z], () => ({
                 fontSize: C.Z.fontSize,
                 isSubmitButtonEnabled: C.Z.isSubmitButtonEnabled,
             })),
             eG = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
             ez = (0, N.NE)(L);
-        (0, H.hJ)(k, eD, L.id);
-        let { eventEmitter: eW, handleEditorSelectionChanged: eq } = (0, H.x2)(eN, p, f),
+        (0, B.hJ)(k, eD, L.id);
+        let { eventEmitter: eW, handleEditorSelectionChanged: eq } = (0, B.x2)(eN, p, f),
             eK = r.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -269,13 +269,13 @@ let en = r.memo(
                 },
                 [eu, ej, eS, L.id, eP, e_, ez],
             ),
-            { submit: eY, handleSubmit: eX } = (0, H.bL)(eK, k, eN, ew, L.id),
-            { autocompleteRef: eJ, handleMaybeShowAutocomplete: eQ, handleHideAutocomplete: e$ } = (0, H.jx)(),
+            { submit: eY, handleSubmit: eX } = (0, B.bL)(eK, k, eN, ew, L.id),
+            { autocompleteRef: eJ, handleMaybeShowAutocomplete: eQ, handleHideAutocomplete: e$ } = (0, B.jx)(),
             e0 = r.useCallback(() => {
                 var e;
                 return null == ew || null == (e = ew.current) ? void 0 : e.hide();
             }, []),
-            { editorHeight: e1, handleResize: e2 } = (0, H.oR)(en),
+            { editorHeight: e1, handleResize: e2 } = (0, B.oR)(en),
             {
                 handleTab: e3,
                 handleEnter: e4,
@@ -312,12 +312,12 @@ let en = r.memo(
                     ),
                 };
             })(eJ, eT, eF),
-            { expressionPickerView: e8, shouldHideExpressionPicker: e6, handleOuterClick: e5 } = (0, H.iV)(k, eN, L.id),
-            e9 = (0, H.aT)(p),
-            { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, H.vB)(k, L.id),
-            tn = (0, H.ae)(eN),
-            ti = (0, H.Sg)(eY, k, eN),
-            tr = (0, H.O1)({
+            { expressionPickerView: e8, shouldHideExpressionPicker: e6, handleOuterClick: e5 } = (0, B.iV)(k, eN, L.id),
+            e9 = (0, B.aT)(p),
+            { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, B.vB)(k, L.id),
+            tn = (0, B.ae)(eN),
+            ti = (0, B.Sg)(eY, k, eN),
+            tr = (0, B.O1)({
                 editorRef: eN,
                 disabled: eD,
                 textValue: p,
@@ -436,7 +436,7 @@ let en = r.memo(
                                                             type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: ek,
                                                             uploadPromptCharacterCount: W.en1,
-                                                            maxCharacterCount: null != eh ? eh : eB,
+                                                            maxCharacterCount: null != eh ? eh : eH,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eg,
                                                             onChange: Y,
@@ -452,7 +452,7 @@ let en = r.memo(
                                                             onMaybeShowAutocomplete: eQ,
                                                             onHideAutocomplete: e$,
                                                             promptToUpload: ed,
-                                                            fontSize: eH,
+                                                            fontSize: eB,
                                                             spellcheckEnabled: eG,
                                                             canOnlyUseTextCommands: !1,
                                                             isEditorIdle: e9,
@@ -484,7 +484,7 @@ let en = r.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, i.jsx)(el, { channel: L }),
-                                            (0, i.jsx)(B.Z, {
+                                            (0, i.jsx)(H.Z, {
                                                 type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eD,
                                                 channel: L,
@@ -563,7 +563,7 @@ let en = r.memo(
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(x.Z, {
+                            (0, i.jsx)(O.Z, {
                                 targetRef: eZ,
                                 ref: eJ,
                                 channel: L,
@@ -596,8 +596,8 @@ let en = r.memo(
                               onSelectEmoji: tn,
                               onSelectSticker: tr,
                               channel: L,
-                              closeOnModalOuterClick: eO,
-                              parentModalKey: ex,
+                              closeOnModalOuterClick: ex,
+                              parentModalKey: eO,
                               position: "top",
                               align: "right",
                               positionLayerClassName: Q.expressionPickerPositionLayer,

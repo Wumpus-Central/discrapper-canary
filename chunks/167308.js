@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     r = n(473749),
-    i = n(481060),
-    l = n(49436),
+    l = n(481060),
+    i = n(49436),
     s = n(373370),
     o = n(644646),
     c = n(444134),
@@ -25,7 +25,7 @@ let h = (e) => {
             quest: g,
             isExpanded: t,
             activeScreen: x,
-            sourceQuestContent: l.jn.QUEST_BAR_V2,
+            sourceQuestContent: i.jn.QUEST_BAR_V2,
             popoutTargetElementRef: b,
             onGameSheetOpened: v,
             onGameSheetClosed: j,
@@ -47,10 +47,10 @@ let h = (e) => {
                         children: (0, a.jsx)(o.Z, {
                             className: p.questProgressRewardTile,
                             quest: g,
-                            questContent: l.jn.QUEST_BAR_V2,
+                            questContent: i.jn.QUEST_BAR_V2,
                             autoplay: !1,
                             location: m.dr.QUESTS_BAR,
-                            sourceQuestContent: l.jn.QUEST_BAR_V2,
+                            sourceQuestContent: i.jn.QUEST_BAR_V2,
                         }),
                     }),
             }),
@@ -61,7 +61,7 @@ let h = (e) => {
                         inState: n,
                         id: "progress-title",
                         children: (e) =>
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(l.Text, {
                                 ref: e,
                                 className: p.questProgressHint,
                                 color: "text-strong",
@@ -74,7 +74,7 @@ let h = (e) => {
                         id: "progress-subtitle",
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(l.Text, {
                                 ref: e,
                                 className: p.questProgressHint,
                                 color: "text-muted",

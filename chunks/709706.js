@@ -251,14 +251,14 @@ function R(e) {
         totalBytes: r,
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let { modelId: n, error: r } = e;
     (null == (t = E.modelState[n]) ? void 0 : t.status) !== u.L.DOWNLOADED &&
         ((E.modelState[n] = m(p({}, E.modelState[n]), { status: u.L.MISSING })),
         "USER_CANCELED_DOWNLOAD" in (null != r ? r : {}) || (E.error = "ERROR_DOWNLOADING_DEPENDENCY"));
 }
-function w(e) {
+function D(e) {
     let { modelId: t } = e;
     E.modelState[t] = m(p({}, E.modelState[t]), {
         status: u.L.DOWNLOADED,
@@ -285,8 +285,8 @@ f(A, "displayName", "VoiceFilterStore");
 let U = new A(s.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: P,
     VOICE_FILTER_DOWNLOAD_PROGRESS: R,
-    VOICE_FILTER_DOWNLOAD_FAILED: D,
-    VOICE_FILTER_FILE_READY: w,
+    VOICE_FILTER_DOWNLOAD_FAILED: w,
+    VOICE_FILTER_FILE_READY: D,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: T,
     VOICE_FILTER_CATALOG_FETCH_FAILED: C,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: N,

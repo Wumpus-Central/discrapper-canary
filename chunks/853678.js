@@ -3,8 +3,8 @@ var r = n(95015),
     i = n(45792),
     l = n(782568),
     a = n(636449),
-    s = n(317381),
-    o = n(611577),
+    o = n(317381),
+    s = n(611577),
     c = n(840074),
     u = n(16609),
     d = n(812206),
@@ -13,8 +13,8 @@ var r = n(95015),
     g = n(12647),
     h = n(49012),
     m = n(358085),
-    _ = n(996106),
-    b = n(914946),
+    b = n(996106),
+    _ = n(914946),
     E = n(452426),
     O = n(186901),
     v = n(981631),
@@ -56,25 +56,25 @@ let C = new Set([y.Fu, y.JT]),
                     socket: t,
                     args: { url: n },
                 } = e;
-                (0, b.bu)(t.transport);
-                let r = s.ZP.getCurrentEmbeddedActivity();
+                (0, _.bu)(t.transport);
+                let r = o.ZP.getCurrentEmbeddedActivity();
                 try {
                     var i, c;
                     let e = new URL(n),
-                        s = e.toString();
+                        o = e.toString();
                     if (m.isPlatformEmbedded) {
                         let e = (0, a.R)() ? v.KJ3.ACTIVITY_POPOUT : null;
                         g.Z.focus(e, !0);
                     }
                     let p = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
-                        _ = (0, u.p)(null == r ? void 0 : r.location),
-                        b = (null == p ? void 0 : p.id) !== void 0 ? T.get(p.id) : void 0;
-                    if (void 0 !== b && b.trustedUntilEpochMs >= Date.now() && b.trustedHosts.has(e.host))
+                        b = (0, u.p)(null == r ? void 0 : r.location),
+                        _ = (null == p ? void 0 : p.id) !== void 0 ? T.get(p.id) : void 0;
+                    if (void 0 !== _ && _.trustedUntilEpochMs >= Date.now() && _.trustedHosts.has(e.host))
                         return (
-                            (0, l.Z)(s),
+                            (0, l.Z)(o),
                             f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                 application_id: null == (c = t.application) ? void 0 : c.id,
-                                url: s,
+                                url: o,
                                 opened: !0,
                             }),
                             Promise.resolve({ opened: !0 })
@@ -82,14 +82,14 @@ let C = new Set([y.Fu, y.JT]),
                     return new Promise((e) =>
                         (0, h.q)(
                             {
-                                href: s,
+                                href: o,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
                                     var n;
-                                    (0, l.Z)(s),
+                                    (0, l.Z)(o),
                                         f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                             application_id: null == (n = t.application) ? void 0 : n.id,
-                                            url: s,
+                                            url: o,
                                             opened: !0,
                                         }),
                                         e({ opened: !0 });
@@ -98,7 +98,7 @@ let C = new Set([y.Fu, y.JT]),
                                     var n;
                                     f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                         application_id: null == (n = t.application) ? void 0 : n.id,
-                                        url: s,
+                                        url: o,
                                         opened: !1,
                                     }),
                                         e({ opened: !1 });
@@ -106,14 +106,14 @@ let C = new Set([y.Fu, y.JT]),
                             },
                             void 0,
                             void 0,
-                            (0, o.z)({
+                            (0, s.z)({
                                 application: p,
-                                channelId: _,
+                                channelId: b,
                             }),
                         ),
                     );
                 } catch (e) {
-                    throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "Invalid URL: ".concat(n));
+                    throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, "Invalid URL: ".concat(n));
                 }
             },
         },
@@ -122,10 +122,10 @@ let C = new Set([y.Fu, y.JT]),
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 let { socket: t } = e;
-                (0, b.bu)(t.transport);
-                let r = (0, b._f)(t.application);
+                (0, _.bu)(t.transport);
+                let r = (0, _._f)(t.application);
                 if (!C.has(r))
-                    throw new _.Z(
+                    throw new b.Z(
                         { errorCode: v.lTL.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
@@ -143,14 +143,14 @@ let C = new Set([y.Fu, y.JT]),
                     socket: n,
                     args: { custom_id: i, message: l, link_id: a },
                 } = e;
-                (0, b.bu)(n.transport);
-                let s = (0, b._f)(n.application);
-                if (null == s) throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "No application.");
+                (0, _.bu)(n.transport);
+                let o = (0, _._f)(n.application);
+                if (null == o) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, "No application.");
                 if (!(0, r.yE)(null != (t = n.application.flags) ? t : 0, v.udG.EMBEDDED))
-                    throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "This application cannot access this API");
+                    throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     (0, c._)({
-                        applicationId: s,
+                        applicationId: o,
                         customId: i,
                         linkId: a,
                         message: l,

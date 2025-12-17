@@ -2,15 +2,15 @@ n.d(t, {
     B0: () => P,
     ZP: () => L,
     _I: () => A,
-    xm: () => C,
+    xm: () => y,
 }),
     n(49124);
 var l = n(54381),
     i = n(473749),
     r = n(120356),
-    a = n.n(r),
-    s = n(500923),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(500923),
+    o = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(493773),
@@ -24,12 +24,12 @@ var l = n(54381),
     O = n(819553),
     E = n(487533),
     S = n(279876),
-    x = n(180504),
+    x = n(787117),
     T = n(790711),
     _ = n(535170),
     j = n(981631),
     v = n(388032),
-    b = n(577436);
+    b = n(576085);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function G(e, t) {
         e
     );
 }
-function y(e) {
+function C(e) {
     let t = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         n = i.useRef(null);
     return (
@@ -96,10 +96,10 @@ function y(e) {
         n
     );
 }
-function C() {
-    let e = y(x);
+function y() {
+    let e = C(x);
     return (0, l.jsx)("div", {
-        className: a()(b.leftArt, b.altFloat),
+        className: s()(b.leftArt, b.altFloat),
         children: (0, l.jsx)("div", {
             ref: e,
             className: b.grillingIsland,
@@ -107,9 +107,9 @@ function C() {
     });
 }
 function P() {
-    let e = y(_);
+    let e = C(_);
     return (0, l.jsx)("div", {
-        className: a()(b.rightArt, b.altFloat),
+        className: s()(b.rightArt, b.altFloat),
         children: (0, l.jsx)("div", {
             ref: e,
             className: b.waffleIsland,
@@ -118,9 +118,9 @@ function P() {
 }
 function A(e) {
     let { guild: t, mainIslandClassName: n, balloonDogClassName: r } = e,
-        s = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        a = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         d = i.useRef(null),
-        u = y(S),
+        u = C(S),
         g = N.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
@@ -137,7 +137,7 @@ function A(e) {
                               container: d.current,
                               renderer: "svg",
                               loop: !0,
-                              autoplay: !s,
+                              autoplay: !a,
                               animationData: n,
                           });
                       })
@@ -146,23 +146,23 @@ function A(e) {
                           container: d.current,
                           renderer: "svg",
                           loop: !0,
-                          autoplay: !s,
+                          autoplay: !a,
                           animationData: JSON.parse(JSON.stringify(T)),
                       })),
                 () => {
                     null == e || e.destroy();
                 }
             );
-        }, [g, d, s]),
+        }, [g, d, a]),
         (0, l.jsxs)("div", {
-            className: a()(b.centerArt, b.float),
+            className: s()(b.centerArt, b.float),
             children: [
                 (0, l.jsx)("div", {
-                    className: a()(b.balloonDog, r),
+                    className: s()(b.balloonDog, r),
                     ref: u,
                 }),
                 (0, l.jsx)("div", {
-                    className: a()(b.mainIsland, n),
+                    className: s()(b.mainIsland, n),
                     ref: d,
                 }),
             ],
@@ -170,11 +170,11 @@ function A(e) {
     );
 }
 function L(e) {
-    let { guild: t, onStart: n, onboardingStatus: r, headerId: a, disableTracking: s } = e,
+    let { guild: t, onStart: n, onboardingStatus: r, headerId: s, disableTracking: a } = e,
         o = (0, c.e7)([p.Z], () => p.Z.isLoading()),
         m = i.useRef(!1);
     i.useEffect(() => {
-        if (!s)
+        if (!a)
             return (
                 h.default.track(
                     j.rMx.GUILD_ONBOARDING_STEP_VIEWED,
@@ -195,7 +195,7 @@ function L(e) {
                     );
                 }
             );
-    }, [t.id, m, s]);
+    }, [t.id, m, a]);
     let N = i.useMemo(() => (0, f.EB)(t, 135, !1, !0), [t]);
     return (
         (0, u.ZP)(() => {
@@ -222,7 +222,7 @@ function L(e) {
                                 className: b.coverTitle,
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                id: a,
+                                id: s,
                                 children: v.intl.format(v.t["j59F/c"], { guildName: null == t ? void 0 : t.name }),
                             }),
                             o

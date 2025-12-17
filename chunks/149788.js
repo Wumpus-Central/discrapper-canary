@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(749210),
-    s = n(322665),
-    o = n(17845),
+    o = n(322665),
+    s = n(17845),
     c = n(374939),
     u = n(283293),
     d = n(469988),
@@ -73,10 +73,10 @@ let b = function (e) {
     return (0, r.jsxs)(u.Z, {
         onScroll: t,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 title: g.intl.string(g.t.X5xPlb),
                 description: g.intl.string(g.t["F/IQCI"]),
-                children: (0, r.jsx)(s.Z, {}),
+                children: (0, r.jsx)(o.Z, {}),
             }),
             (0, r.jsxs)(c.Z, {
                 children: [

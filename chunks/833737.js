@@ -21,8 +21,8 @@ var l = n(54381),
     j = n(712301),
     h = n(567711),
     v = n(358386),
-    _ = n(37258),
-    S = n(931617),
+    S = n(37258),
+    _ = n(931617),
     M = n(981631),
     C = n(388032);
 let I = (0, c.Z)(
@@ -56,7 +56,7 @@ let I = (0, c.Z)(
                     k(O.jQ.COPY_ID);
                 }, [k]),
                 q = (0, i.e7)([E.ZP], () => E.ZP.isMember(u, n.id), [u, n.id]),
-                B = (0, _.Z)({
+                B = (0, S.Z)({
                     userId: n.id,
                     guildId: u,
                     sourceAnalyticsLocations: T,
@@ -84,7 +84,7 @@ let I = (0, c.Z)(
                 Q = (0, y.Z)(n, u, null != c ? c : L, U),
                 H = (0, h.Z)(c, N),
                 W = (0, v.Z)(n, u),
-                X = (0, S.Z)(n.id, u, !1, U),
+                X = (0, _.Z)(n.id, u, !1, U),
                 z = (0, b.Z)({
                     id: n.id,
                     label: C.intl.string(C.t["/AXYnE"]),

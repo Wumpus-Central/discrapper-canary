@@ -1,4 +1,4 @@
-n.d(e, { default: () => y }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -6,18 +6,18 @@ var r = n(54381),
     c = n(481060),
     s = n(660216),
     l = n(825209),
-    u = n(714338),
-    b = n(556296),
-    d = n(13140),
+    d = n(714338),
+    u = n(556296),
+    b = n(13140),
     p = n(710111),
     f = n(981631),
     g = n(388032),
-    O = n(687213);
-function y(t) {
-    var e;
-    let { transitionState: n, onClose: y } = t,
-        m = (0, o.e7)([b.ZP], () => b.ZP.getKeybindForAction(f.kg4.SOUNDBOARD_HOLD)),
-        [h, j] = i.useState(null != (e = null == m ? void 0 : m.shortcut) ? e : []),
+    O = n(784677);
+function y(e) {
+    var t;
+    let { transitionState: n, onClose: y } = e,
+        m = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(f.kg4.SOUNDBOARD_HOLD)),
+        [h, j] = i.useState(null != (t = null == m ? void 0 : m.shortcut) ? t : []),
         x = i.useCallback(() => {
             if (0 === h.length) return null != m && s.Z.deleteKeybind(m.id), y();
             if (null == m)
@@ -28,56 +28,56 @@ function y(t) {
                     params: {},
                 });
             else {
-                var t, e;
+                var e, t;
                 s.Z.setKeybind(
-                    ((t = (function (t) {
-                        for (var e = 1; e < arguments.length; e++) {
-                            var n = null != arguments[e] ? arguments[e] : {},
+                    ((e = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (e) {
+                                r.forEach(function (t) {
                                     var r;
-                                    (r = n[e]),
-                                        e in t
-                                            ? Object.defineProperty(t, e, {
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (t[e] = r);
+                                            : (e[t] = r);
                                 });
                         }
-                        return t;
+                        return e;
                     })({}, m)),
-                    (e = e = { shortcut: h }),
+                    (t = t = { shortcut: h }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-                        : (function (t, e) {
-                              var n = Object.keys(t);
+                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(t);
+                                  var r = Object.getOwnPropertySymbols(e);
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(e)).forEach(function (n) {
-                              Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+                          })(Object(t)).forEach(function (n) {
+                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                           }),
-                    t),
+                    e),
                 );
             }
             y();
         }, [m, y, h]);
     i.useEffect(
         () => (
-            u.Z.disable(),
+            d.Z.disable(),
             () => {
-                u.Z.enable();
+                d.Z.enable();
             }
         ),
         [],
@@ -136,7 +136,7 @@ function y(t) {
             }),
             (0, r.jsx)(c.Anchor, {
                 className: O.resetButton,
-                onClick: () => j((0, d.Kd)(p.D_)),
+                onClick: () => j((0, b.Kd)(p.D_)),
                 children: g.intl.string(g.t["s7+2rQ"]),
             }),
         ],

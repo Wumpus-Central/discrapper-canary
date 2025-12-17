@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -9,82 +9,82 @@ var i = n(54381),
     u = n(697451),
     d = n(348238),
     p = n(614584);
-let h = r.memo(function (e) {
+let f = r.memo(function (e) {
     var t, n;
     let {
-            message: h,
-            channel: f,
+            message: f,
+            channel: h,
             compact: m = !1,
             interactionUsernameProfile: g,
             interactionAvatarProfile: b,
             interactionData: C,
             referencedUsernameProfile: y,
-            referencedAvatarProfile: _,
-            setPopout: v,
+            referencedAvatarProfile: v,
+            setPopout: x,
         } = e,
-        { isInteractionUserBlocked: O, isInteractionUserIgnored: x } = (0, l.cj)(
+        { isInteractionUserBlocked: O, isInteractionUserIgnored: E } = (0, l.cj)(
             [c.Z],
             () => ({
-                isInteractionUserBlocked: c.Z.isBlockedForMessage(h),
-                isInteractionUserIgnored: c.Z.isIgnoredForMessage(h),
+                isInteractionUserBlocked: c.Z.isBlockedForMessage(f),
+                isInteractionUserIgnored: c.Z.isIgnoredForMessage(f),
             }),
-            [h],
+            [f],
         ),
-        E = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
-        j = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
-        S = (0, d.Nk)(h.interaction, f, g, v),
-        P = (0, d.NU)(b, v),
-        I = (0, o.t0)(h),
+        j = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == f ? void 0 : f.messageReference)),
+        S = (0, d.wq)(null == (t = f.interaction) ? void 0 : t.user.id, h.id),
+        _ = (0, d.Nk)(f.interaction, h, g, x),
+        P = (0, d.NU)(b, x),
+        I = (0, o.t0)(f),
         Z =
             (null == I ? void 0 : I.type) === a.B8.APPLICATION_COMMAND
                 ? null == (n = I.target_user)
                     ? void 0
                     : n.id
                 : void 0,
-        T = (0, d.wq)(Z, f.id),
-        N = (0, d.JC)(Z, f, y, v),
-        A = (0, d.rY)(_, v),
-        w = (0, d.Xn)(C, v),
+        T = (0, d.wq)(Z, h.id),
+        N = (0, d.JC)(Z, h, y, x),
+        A = (0, d.rY)(v, x),
+        w = (0, d.Xn)(C, x),
         M = r.useCallback(() => {
-            v({
+            x({
                 interactionUsernameProfile: !1,
                 interactionAvatarProfile: !1,
                 interactionData: !1,
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
-        }, [v]),
+        }, [x]),
         R = r.useCallback(
             () =>
                 (0, p.Z)({
-                    message: h,
-                    channel: f,
+                    message: f,
+                    channel: h,
                     compact: m,
-                    setPopout: v,
-                    referencedAvatarProfile: _,
+                    setPopout: x,
+                    referencedAvatarProfile: v,
                     referencedUsernameProfile: y,
-                    replyReference: h.messageReference,
-                    replyMessage: E,
+                    replyReference: f.messageReference,
+                    replyMessage: j,
                     isReplySpineClickable: !1,
                     showReplySpine: !1,
                 }),
-            [f, m, h, _, E, y, v],
+            [h, m, f, v, j, y, x],
         );
     return (0, i.jsx)(u.Z, {
-        message: h,
-        channel: f,
+        message: f,
+        channel: h,
         compact: m,
         isInteractionUserBlocked: O,
-        isInteractionUserIgnored: x,
+        isInteractionUserIgnored: E,
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: C,
-        showTargetAvatarPopout: _,
+        showTargetAvatarPopout: v,
         showTargetUsernamePopout: y,
         onClickAvatar: P,
-        onClickUsername: S,
+        onClickUsername: _,
         onClickCommand: w,
-        onUserContextMenu: j,
+        onUserContextMenu: S,
         onClickTargetAvatar: A,
         onClickTargetUsername: N,
         onTargetUserContextMenu: T,
@@ -92,11 +92,11 @@ let h = r.memo(function (e) {
         renderTargetMessage: R,
     });
 });
-function f(e, t, n) {
+function h(e, t, n) {
     let { message: r, channel: l, compact: a } = e;
     return null != r.interaction && "" !== r.interaction.displayName
         ? (0, i.jsx)(
-              h,
+              f,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

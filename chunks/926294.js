@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(450433);
+    s = n(171532);
 function l(e) {
     let { className: t } = e,
         [n] = i.useState(() => Math.floor(60 * Math.random()) + 20),

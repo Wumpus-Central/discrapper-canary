@@ -1,12 +1,12 @@
 n.d(t, {
-    Q: () => f,
-    Z: () => x,
+    Q: () => g,
+    Z: () => v,
 }),
     n(35282),
     n(539854),
     n(388685);
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(481060),
     l = n(33122),
     s = n(761705),
@@ -30,14 +30,14 @@ function p(e, t, n) {
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
+            a.forEach(function (t) {
                 p(e, t, n[t]);
             });
     }
@@ -51,8 +51,8 @@ function h(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -61,60 +61,60 @@ function h(e, t) {
         e
     );
 }
-function g(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
-        r,
-        a = (function (e, t) {
+        a,
+        r = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                a = {},
+                a,
+                r = {},
                 i = Object.keys(e);
-            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-            return a;
+            for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++)
-            (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+        for (a = 0; a < i.length; a++)
+            (n = i[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
     }
-    return a;
+    return r;
 }
-function f(e) {
+function g(e) {
     return "".concat(e.split("?")[0], "?size=").concat(2048);
 }
-let _ = (e) => {
+let b = (e) => {
     var { index: t, items: n } = e,
-        a = g(e, ["index", "items"]);
+        r = f(e, ["index", "items"]);
     let i = n[t],
         l = 0,
         o = [];
     for (let e of n)
         if (e.type === d.s9s.IMG) {
-            let { width: t, height: n, src: r } = e;
+            let { width: t, height: n, src: a } = e;
             e === i && (l = o.length),
                 o.push({
-                    src: f(r),
+                    src: g(a),
                     width: t,
                     height: n,
                 });
         }
-    return (0, r.jsx)(
+    return (0, a.jsx)(
         s.Z,
-        h(m({}, a), {
+        h(m({}, r), {
             items: o,
             startWith: l,
         }),
     );
 };
-class b extends a.Component {
+class x extends r.Component {
     render() {
         let e = this.props,
             { pageSize: t } = e,
-            n = g(e, ["pageSize"]),
-            a = t === c.b.SMALL ? o.Z : l.Z;
-        return (0, r.jsx)(a, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
+            n = f(e, ["pageSize"]),
+            r = t === c.b.SMALL ? o.Z : l.Z;
+        return (0, a.jsx)(r, h(m({}, n), { onCurrentItemClick: this.handleCurrentItemClick }));
     }
     constructor(...e) {
         super(...e),
@@ -122,7 +122,7 @@ class b extends a.Component {
                 e.type !== d.s9s.IMG ||
                     (0, i.$sL)() ||
                     (0, i.h7j)((e) =>
-                        (0, r.jsx)(
+                        (0, a.jsx)(
                             i.Y0X,
                             h(
                                 m(
@@ -134,8 +134,8 @@ class b extends a.Component {
                                 ),
                                 {
                                     parentComponent: "ApplicationStoreListingCarousel",
-                                    children: (0, r.jsx)(
-                                        _,
+                                    children: (0, a.jsx)(
+                                        b,
                                         h(m({}, e), {
                                             index: t,
                                             items: this.props.items,
@@ -148,4 +148,4 @@ class b extends a.Component {
             });
     }
 }
-let x = b;
+let v = x;

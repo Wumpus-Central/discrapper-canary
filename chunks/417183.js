@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function N(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ function N(e, t) {
         e
     );
 }
-class O extends s.PureComponent {
+class N extends s.PureComponent {
     componentWillLeave(e) {
         a.Z.parallel([
             a.Z.timing(this.state.opacity, {
@@ -86,7 +86,7 @@ class O extends s.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: i, isContextMenuActive: s } = this.state,
-            { children: r, user: c, onClick: h, isActive: d, className: O, activeClassName: y } = this.props;
+            { children: r, user: c, onClick: h, isActive: d, className: N, activeClassName: y } = this.props;
         return (0, n.jsx)(l.mh, {
             id: c.id,
             children: (l) =>
@@ -97,10 +97,10 @@ class O extends s.PureComponent {
                     },
                     children: (0, n.jsx)(
                         a.Z.div,
-                        N(
+                        O(
                             m(
                                 {
-                                    className: o()(O, p.peopleListItem, null != y ? { [y]: d || s } : null, {
+                                    className: o()(N, p.peopleListItem, null != y ? { [y]: d || s } : null, {
                                         [p.active]: d || s,
                                     }),
                                     onContextMenu: (e) => this.handleContextMenu(e, c),
@@ -145,7 +145,7 @@ class O extends s.PureComponent {
                             let { default: e } = await Promise.all([i.e("79695"), i.e("69220"), i.e("26465")]).then(
                                 i.bind(i, 881351),
                             );
-                            return (i) => (0, n.jsx)(e, N(m({}, i), { user: t }));
+                            return (i) => (0, n.jsx)(e, O(m({}, i), { user: t }));
                         },
                         {
                             onClose: () => {
@@ -156,4 +156,4 @@ class O extends s.PureComponent {
             });
     }
 }
-let y = O;
+let y = N;

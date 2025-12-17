@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(997841), n(388685);
+n.d(t, { Z: () => _ }), n(997841), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(95015),
@@ -9,17 +9,17 @@ var i = n(54381),
     u = n(893718),
     d = n(314897),
     p = n(323873),
-    h = n(430824),
-    f = n(496675),
+    f = n(430824),
+    h = n(496675),
     m = n(585483),
     g = n(838440),
     b = n(819514),
     C = n(930282),
     y = n(955384),
-    _ = n(981631),
-    v = n(224837),
-    O = n(360514);
-function x(e) {
+    v = n(981631),
+    x = n(224837),
+    O = n(548498);
+function E(e) {
     let { value: t, channel: n } = e;
     return (0, g.v)({
         type: c.Ie.EDIT,
@@ -29,15 +29,15 @@ function x(e) {
         respectCooldown: !1,
     });
 }
-function E(e) {
+function j(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
-        g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
-        E = null != g && g.features.has(_.GuildFeatures.NEWS),
-        S = C && E,
+        g = (0, a.e7)([f.Z], () => f.Z.getGuild(m), [m]),
+        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
+        j = null != g && g.features.has(v.GuildFeatures.NEWS),
+        _ = C && j,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -55,39 +55,39 @@ function E(e) {
         N = r.useCallback(
             (e, i, r) => {
                 let { content: a } = r,
-                    c = f.Z.can(_.Plq.MANAGE_MESSAGES, t),
+                    c = h.Z.can(v.Plq.MANAGE_MESSAGES, t),
                     u = null != P && null != P.author ? P.author.id : null,
-                    d = S && (u === T || c),
+                    d = _ && (u === T || c),
                     p = {
                         content: a,
                         components: void 0,
                     };
-                if (n.hasFlag(_.iLy.IS_COMPONENTS_V2)) {
-                    var h;
-                    let e = (null == (h = n.components[0]) ? void 0 : h.type) === s.re.MEDIA_GALLERY,
+                if (n.hasFlag(v.iLy.IS_COMPONENTS_V2)) {
+                    var f;
+                    let e = (null == (f = n.components[0]) ? void 0 : f.type) === s.re.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== s.re.TEXT_DISPLAY);
                     t.splice(+!!e, 0, {
                         type: s.re.TEXT_DISPLAY,
                         content: a,
-                        id: "".concat(v.Kb),
+                        id: "".concat(x.Kb),
                     }),
                         (p.content = ""),
                         (p.components = t);
                 }
                 return (
-                    d && null != P && (0, l.yE)(P.flags, _.iLy.CROSSPOSTED)
+                    d && null != P && (0, l.yE)(P.flags, v.iLy.CROSSPOSTED)
                         ? b.Z.confirmEdit(e, i, p)
                         : o.Z.editMessage(e, i, p),
                     Promise.resolve()
                 );
             },
-            [P, S, T, t, n],
+            [P, _, T, t, n],
         ),
         A = r.useCallback(
             (e) => {
                 var t, n;
                 return (0, r.createElement)(
-                    j,
+                    S,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -146,12 +146,12 @@ function E(e) {
               onChange: o.Z.updateEditMessage,
               onConfirmDelete: b.Z.confirmDelete,
               saveMessage: N,
-              validateEdit: x,
+              validateEdit: E,
               children: A,
           })
         : null;
 }
-function j(e) {
+function S(e) {
     let {
             textValue: t,
             richValue: n,
@@ -162,16 +162,16 @@ function j(e) {
             onKeyDown: d,
             renderLeftAccessories: p,
         } = e,
-        [h, f] = r.useState(!0),
-        g = r.useCallback(() => f(!0), []),
-        b = r.useCallback(() => f(!1), []);
+        [f, h] = r.useState(!0),
+        g = r.useCallback(() => h(!0), []),
+        b = r.useCallback(() => h(!1), []);
     return (
         r.useEffect(
             () => (
-                m.S.subscribe(_.CkL.TEXTAREA_FOCUS, g),
-                m.S.subscribe(_.CkL.TEXTAREA_BLUR, b),
+                m.S.subscribe(v.CkL.TEXTAREA_FOCUS, g),
+                m.S.subscribe(v.CkL.TEXTAREA_BLUR, b),
                 () => {
-                    m.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(_.CkL.TEXTAREA_BLUR, b);
+                    m.S.unsubscribe(v.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(v.CkL.TEXTAREA_BLUR, b);
                 }
             ),
             [g, b],
@@ -190,7 +190,7 @@ function j(e) {
                     return s(t);
                 },
                 onKeyDown: d,
-                focused: h,
+                focused: f,
                 onFocus: g,
                 onBlur: b,
                 renderLeftAccessories: p,
@@ -199,10 +199,10 @@ function j(e) {
         )
     );
 }
-function S(e, t, n) {
+function _(e, t, n) {
     let { message: r, channel: l, compact: a } = e;
     return n
-        ? (0, i.jsx)(E, {
+        ? (0, i.jsx)(j, {
               channel: l,
               message: r,
           })

@@ -1,4 +1,4 @@
-n.d(t, { _P: () => c }), n(388685), n(539854);
+n.d(t, { _P: () => u }), n(388685), n(539854);
 var r = n(473749),
     i = n(494497),
     l = n(442837),
@@ -11,12 +11,12 @@ let s = Object.entries({
         for (let t of r) e[t] = n;
         return e;
     }, {}),
-    u = [a.Us.LEVEL, a.Us.PERK];
-function c(e, t) {
+    c = [a.Us.LEVEL, a.Us.PERK];
+function u(e, t) {
     let n = (0, l.e7)([o.Z], () => o.Z.getStateForGuild(e));
     return r.useMemo(
         () =>
-            u.reduce((e, r) => {
+            c.reduce((e, r) => {
                 let l = null == n ? void 0 : n.powerupCatalog[r];
                 if (null == l) return e;
                 let o = (function (e, t, n) {

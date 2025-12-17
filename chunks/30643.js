@@ -3,8 +3,8 @@ var r = n(237997),
     i = n(998502),
     l = n(576027),
     a = n(13838),
-    s = n(812967),
-    o = n(350085),
+    o = n(812967),
+    s = n(350085),
     c = n(943687),
     u = n(910484),
     d = n(443952),
@@ -13,8 +13,8 @@ var r = n(237997),
     g = n(121826),
     h = n(109815),
     m = n(753335),
-    _ = n(567481),
-    b = n(498164),
+    b = n(567481),
+    _ = n(498164),
     E = n(705444),
     O = n(885381),
     v = n(111097),
@@ -48,17 +48,17 @@ function N(e) {
     }
     return e;
 }
-let j = N({}, l.A, d.Z, p.Z, g.Z, m.Z, h.Z, _.Z, b.Z, E.Z, O.Z, v.Z, I.Z, S.Z, C.Z, f.Z, y.Z),
-    P = N({}, a.Z, o.M, c.f, u.n),
+let j = N({}, l.A, d.Z, p.Z, g.Z, m.Z, h.Z, b.Z, _.Z, E.Z, O.Z, v.Z, I.Z, S.Z, C.Z, f.Z, y.Z),
+    P = N({}, a.Z, s.M, c.f, u.n),
     x = {
-        server: s.Z,
+        server: o.Z,
         commands: j,
         events: P,
         stores: [r.default],
         transports: [T.Z],
         registerTransportsForEmbeddedPlatform: function () {
             i.ZP.ensureModule("discord_rpc").then(() => {
-                for (let e of [n(178318).Z, n(967351).Z]) s.Z.registerTransport(e);
+                for (let e of [n(178318).Z, n(967351).Z]) o.Z.registerTransport(e);
             });
         },
     };

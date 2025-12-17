@@ -10,10 +10,10 @@ var r = e(54381),
     E = e(800010);
 function A(t) {
     var n;
-    let { error: e, setEmailToken: A, setError: _, onNext: C, onClose: d, transitionState: x } = t,
+    let { error: e, setEmailToken: A, setError: _, onNext: d, onClose: C, transitionState: x } = t,
         [N, S] = i.useState(!1),
-        [g, p] = i.useState(""),
-        [f, m] = i.useState(!1),
+        [g, f] = i.useState(""),
+        [p, m] = i.useState(!1),
         v = (0, a.e7)([c.Z], () => c.Z.getErrors()),
         y = i.useRef(null);
     i.useEffect(() => {
@@ -24,7 +24,7 @@ function A(t) {
             t.preventDefault(), _(null), S(!0);
             try {
                 let { token: t } = await (0, o.w)(g);
-                A(t), C();
+                A(t), d();
             } catch (t) {
                 _(new s.Z(t).getAnyErrorMessage());
             } finally {
@@ -32,7 +32,7 @@ function A(t) {
             }
         },
         M = async () => {
-            if (!f) {
+            if (!p) {
                 m(!0);
                 try {
                     await (0, o.i)(!0),
@@ -53,7 +53,7 @@ function A(t) {
             src: E,
         },
         transitionState: x,
-        onClose: d,
+        onClose: C,
         actions: [
             {
                 variant: "primary",
@@ -69,7 +69,7 @@ function A(t) {
                     label: u.intl.string(u.t["8mZX6M"]),
                     error: null != e ? e : null == v || null == (n = v.email_token) ? void 0 : n[0],
                     value: g,
-                    onChange: p,
+                    onChange: f,
                     inputRef: y,
                 }),
                 (0, r.jsx)(l.Avr, {

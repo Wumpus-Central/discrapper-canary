@@ -8,10 +8,10 @@ var s = i(120356),
     l = i(700582),
     u = i(699516);
 i(51144);
-var c = i(913139);
+var c = i(639845);
 let h = function (e) {
     let { user: t, hovered: i, subText: s, showAccountIdentifier: h, status: p, isMobile: d, className: m } = e,
-        N = (0, o.e7)([u.Z], () => u.Z.getNickname(t.id));
+        O = (0, o.e7)([u.Z], () => u.Z.getNickname(t.id));
     return (0, n.jsxs)("div", {
         className: r()(c.userInfo, m, { [c.hovered]: i }),
         children: [
@@ -27,7 +27,7 @@ let h = function (e) {
                 children: [
                     (0, n.jsx)(a.Z, {
                         user: t,
-                        nick: N,
+                        nick: O,
                         botClass: c.botTag,
                         className: r()(c.discordTag, { [c.alignPomelo]: t.hasUniqueUsername() }),
                         usernameClass: c.username,

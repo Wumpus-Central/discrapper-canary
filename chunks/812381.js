@@ -2,14 +2,14 @@ n.d(t, { a: () => u }), n(388685);
 var a = n(54381);
 n(473749);
 var r = n(920981),
-    i = n(442837),
-    l = n(199849),
+    l = n(442837),
+    i = n(199849),
     s = n(481060),
     o = n(335131),
     c = n(52030),
-    d = n(978134);
+    d = n(815778);
 let u = () => {
-    let e = (0, i.e7)([c.Z], () => c.Z.getShopHomeConfigOverride()),
+    let e = (0, l.e7)([c.Z], () => c.Z.getShopHomeConfigOverride()),
         t = [
             {
                 label: "DISABLED (no override)",
@@ -29,7 +29,7 @@ let u = () => {
                 variant: "text-md/normal",
                 children: "Shop Home Override",
             }),
-            (0, a.jsx)(l.y6, {
+            (0, a.jsx)(i.y6, {
                 className: d.selector,
                 options: t,
                 value: e,

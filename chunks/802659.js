@@ -1,8 +1,8 @@
 t.d(n, { Z: () => u });
 var r,
     i = t(442837),
-    l = t(570140);
-function a(e, n, t) {
+    a = t(570140);
+function l(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,8 +31,8 @@ class c extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(c, "displayName", "GameServerRegionStore");
-let u = new c(l.Z, {
+l(c, "displayName", "GameServerRegionStore");
+let u = new c(a.Z, {
     LOGOUT: d,
     GAME_SERVER_REGION_PING_STATE_UPDATE: function (e) {
         var n, t;
@@ -48,7 +48,7 @@ let u = new c(l.Z, {
                         }),
                     )),
                     r.forEach(function (n) {
-                        a(e, n, t[n]);
+                        l(e, n, t[n]);
                     });
             }
             return e;

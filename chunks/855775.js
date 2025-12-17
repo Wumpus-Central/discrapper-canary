@@ -95,11 +95,11 @@ function R(e) {
         (y = null),
         (E = e.promotionId);
 }
-function D(e) {
+function w(e) {
     let { error: t } = e;
     (T = !1), (A = null), P(t);
 }
-function w(e) {
+function D(e) {
     let { skuId: t } = e;
     N.add(t);
 }
@@ -133,10 +133,10 @@ function G() {
 function Z() {
     v = null;
 }
-function B(e) {
+function F(e) {
     C = e.isGift;
 }
-function F(e) {
+function B(e) {
     let { locked: t } = e;
     if (!t || null == A) return !1;
     (T = !1), (A = null), P();
@@ -186,8 +186,8 @@ class V extends (a = o.ZP.Store) {
 c(V, "displayName", "SKUPaymentModalStore");
 let H = new V(s.Z, {
     SKU_PURCHASE_MODAL_OPEN: R,
-    SKU_PURCHASE_MODAL_CLOSE: D,
-    SKU_PURCHASE_PREVIEW_FETCH: w,
+    SKU_PURCHASE_MODAL_CLOSE: w,
+    SKU_PURCHASE_PREVIEW_FETCH: D,
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: x,
     SKU_PURCHASE_PREVIEW_FETCH_FAILURE: L,
     SKU_PURCHASE_START: j,
@@ -195,7 +195,7 @@ let H = new V(s.Z, {
     SKU_PURCHASE_FAIL: U,
     SKU_PURCHASE_SHOW_CONFIRMATION_STEP: G,
     SKU_PURCHASE_CLEAR_ERROR: Z,
-    SKU_PURCHASE_UPDATE_IS_GIFT: B,
-    OVERLAY_SET_INPUT_LOCKED: F,
+    SKU_PURCHASE_UPDATE_IS_GIFT: F,
+    OVERLAY_SET_INPUT_LOCKED: B,
     GIFT_CODE_CREATE: k,
 });

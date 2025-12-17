@@ -1,8 +1,8 @@
 n.d(t, { n: () => S }), n(539854);
 var r = n(54381),
     i = n(473749),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(481060),
@@ -15,9 +15,9 @@ var r = n(54381),
     h = n(45474),
     g = n(594135),
     E = n(282793),
-    b = n(941651),
+    b = n(353149),
     y = n(388032),
-    O = n(181679);
+    O = n(436551);
 let v = (e) => {
         let { churnUserDiscountOffer: t } = e;
         return null == t
@@ -32,14 +32,14 @@ let v = (e) => {
                 transitionState: e,
                 onClose: t,
                 premiumType: n,
-                setStep: o,
+                setStep: a,
                 churnUserDiscountOffer: m,
                 isFetchingChurnDiscountOffer: O,
                 planId: S,
             } = (0, g.a)(),
             I = (0, l.e7)([d.default], () => {
                 let e = d.default.getCurrentUser();
-                return a()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
+                return o()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
             });
         i.useEffect(() => {
             (0, u.Z)(I.id, I.getAvatarURL(null, 80));
@@ -63,7 +63,7 @@ let v = (e) => {
             null != m
                 ? R.push({
                       text: y.intl.string(y.t.zrCzVB),
-                      onClick: () => o(h.R.CONFIRM_DISCOUNT),
+                      onClick: () => a(h.R.CONFIRM_DISCOUNT),
                       variant: "secondary",
                       icon: c.SrA,
                   })
@@ -74,7 +74,7 @@ let v = (e) => {
                   }),
             R.push({
                 text: C ? y.intl.string(y.t.PfnxqD) : y.intl.string(y.t["3PatSz"]),
-                onClick: () => o(h.R.CONFIRM),
+                onClick: () => a(h.R.CONFIRM),
                 variant: "primary",
             }),
             (0, r.jsx)(s.Modal, {

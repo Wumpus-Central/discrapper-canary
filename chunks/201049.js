@@ -1,4 +1,4 @@
-t.d(n, { default: () => f }), t(388685);
+t.d(n, { default: () => y }), t(388685);
 var i = t(54381),
     l = t(473749),
     o = t(793030),
@@ -12,12 +12,12 @@ var i = t(54381),
     j = t(984933),
     p = t(883429),
     v = t(185923),
-    g = t(295907),
-    b = t(388032),
-    y = t(851458);
-function f(e) {
+    b = t(295907),
+    g = t(388032),
+    f = t(833257);
+function y(e) {
     var n;
-    let { transitionState: t, onClose: f, channelId: h, guildId: C, tag: O } = e,
+    let { transitionState: t, onClose: y, channelId: h, guildId: C, tag: O } = e,
         k = l.useRef(null),
         x = null != O,
         [P, N] = l.useState(null != (n = null == O ? void 0 : O.name) ? n : ""),
@@ -36,7 +36,7 @@ function f(e) {
             (null == O ? void 0 : O.emojiId) !== (null == w ? void 0 : w.id) ||
             (null == O ? void 0 : O.emojiName) !== (null == w ? void 0 : w.name) ||
             B !== (null == O ? void 0 : O.moderated),
-        _ = () => {
+        D = () => {
             if (null != P && S) {
                 if (x) {
                     p.Z.updateForumTag(
@@ -49,7 +49,7 @@ function f(e) {
                         },
                         h,
                     ),
-                        f();
+                        y();
                     return;
                 }
                 p.Z.createForumTag(
@@ -61,32 +61,32 @@ function f(e) {
                     },
                     h,
                 ),
-                    f();
+                    y();
             }
         },
-        D = l.useCallback((e) => N(e), []),
-        T = l.useRef(null);
+        T = l.useCallback((e) => N(e), []),
+        R = l.useRef(null);
     return (
         (0, c.ZP)(() => {
-            null != T.current && T.current.focus();
+            null != R.current && R.current.focus();
         }),
         (0, i.jsxs)(o.Modal, {
-            title: x ? b.intl.string(b.t.zeVg5d) : b.intl.string(b.t["/jubeD"]),
-            subtitle: b.intl.string(b.t["3v8kZH"]),
+            title: x ? g.intl.string(g.t.zeVg5d) : g.intl.string(g.t["/jubeD"]),
+            subtitle: g.intl.string(g.t["3v8kZH"]),
             transitionState: t,
-            onClose: f,
+            onClose: y,
             actions: [
                 {
                     variant: "secondary",
-                    text: b.intl.string(b.t["ETE/oC"]),
+                    text: g.intl.string(g.t["ETE/oC"]),
                     onClick: () => {
-                        f();
+                        y();
                     },
                 },
                 {
                     variant: "primary",
-                    text: b.intl.string(b.t["R3BPH+"]),
-                    onClick: _,
+                    text: g.intl.string(g.t["R3BPH+"]),
+                    onClick: D,
                     disabled: 0 === P.length || !S,
                     autoFocus: !0,
                 },
@@ -94,26 +94,26 @@ function f(e) {
             actionBarInput: x
                 ? (0, i.jsx)(r.Button, {
                       variant: "critical-secondary",
-                      text: b.intl.string(b.t.huYSMr),
+                      text: g.intl.string(g.t.huYSMr),
                       onClick: () => {
-                          x && (p.Z.deleteForumTag(h, O.id), f());
+                          x && (p.Z.deleteForumTag(h, O.id), y());
                       },
                   })
                 : void 0,
             children: [
                 (0, i.jsx)("div", {
-                    className: y.inputContainer,
+                    className: f.inputContainer,
                     children: (0, i.jsx)(r.oil, {
-                        inputRef: T,
+                        inputRef: R,
                         maxLength: 20,
                         value: P,
-                        placeholder: b.intl.string(b.t["5vpeb4"]),
-                        onChange: D,
+                        placeholder: g.intl.string(g.t["5vpeb4"]),
+                        onChange: T,
                         autoFocus: !0,
                         leading: {
                             type: "emoji",
                             button: (0, i.jsx)("div", {
-                                className: y.emojiButtonContainer,
+                                className: f.emojiButtonContainer,
                                 children: (0, i.jsx)(r.yRy, {
                                     targetElementRef: k,
                                     renderPopout: (e) => {
@@ -139,7 +139,7 @@ function f(e) {
                                                     i && n();
                                             },
                                             pickerIntention: v.Hz.COMMUNITY_CONTENT,
-                                            onNavigateAway: f,
+                                            onNavigateAway: y,
                                             channel: t,
                                         });
                                     },
@@ -184,13 +184,13 @@ function f(e) {
                                                         null == (t = e.onClick) || t.call(e, n);
                                                     },
                                                     active: o,
-                                                    className: y.emojiButton,
+                                                    className: f.emojiButton,
                                                     tabIndex: 0,
                                                     renderButtonContents:
                                                         null != w && (null != w.id || null != w.name)
                                                             ? () =>
                                                                   (0, i.jsx)(u.Z, {
-                                                                      className: y.emoji,
+                                                                      className: f.emoji,
                                                                       emojiId: w.id,
                                                                       emojiName: w.name,
                                                                       animated: !!(null == I ? void 0 : I.animated),
@@ -220,7 +220,7 @@ function f(e) {
                             }),
                         },
                         onKeyDown: (e) => {
-                            e.key === g.vn.ENTER && P.length > 0 && (P.length > 0 && _(), e.preventDefault());
+                            e.key === b.vn.ENTER && P.length > 0 && (P.length > 0 && D(), e.preventDefault());
                         },
                         trailing:
                             P.length > 0 || null != w
@@ -229,7 +229,7 @@ function f(e) {
                                       onClick: () => {
                                           N(""), Z(null);
                                       },
-                                      "aria-label": b.intl.string(b.t.o8lsHe),
+                                      "aria-label": g.intl.string(g.t.o8lsHe),
                                   }
                                 : void 0,
                     }),
@@ -238,7 +238,7 @@ function f(e) {
                 (0, i.jsx)(r.Checkbox, {
                     checked: null != B && B,
                     onChange: (e) => E(e || ((null == O ? void 0 : O.moderated) == null && void 0)),
-                    label: b.intl.string(b.t["rMH+rt"]),
+                    label: g.intl.string(g.t["rMH+rt"]),
                     labelType: "secondary",
                 }),
             ],

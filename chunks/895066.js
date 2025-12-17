@@ -438,8 +438,8 @@ class g extends a.Z {
                                     N = t.bytesReceived,
                                     P = t.nackCount,
                                     R = null != (a = t.fecPacketsReceived) ? a : 0,
-                                    D = null != (o = t.fecPacketsDiscarded) ? o : 0,
-                                    w = null != (s = t.jitterBuffer) ? s : 0,
+                                    w = null != (o = t.fecPacketsDiscarded) ? o : 0,
+                                    D = null != (s = t.jitterBuffer) ? s : 0,
                                     x = {
                                         audioJitterBuffer: t.audioJitterBuffer,
                                         audioJitterTarget: t.audioJitterTarget,
@@ -479,7 +479,7 @@ class g extends a.Z {
                                                   : void 0;
                                     r > 0 &&
                                         a >= 0 &&
-                                        ((o = this.calculateMos(T + w, i().clamp(a / (r + a), 0, 1))),
+                                        ((o = this.calculateMos(T + D, i().clamp(a / (r + a), 0, 1))),
                                         s[Math.floor(o)]++),
                                         (this.inboundStats[n] = f(
                                             {
@@ -488,7 +488,7 @@ class g extends a.Z {
                                                 packetsLost: A,
                                                 nackCount: null != P ? P : 0,
                                                 fecPacketsReceived: R,
-                                                fecPacketsDiscarded: D,
+                                                fecPacketsDiscarded: w,
                                                 mos: o,
                                                 mosSum: e.mosSum + o,
                                                 mosCount: e.mosCount + +(o > 0),
@@ -526,7 +526,7 @@ class g extends a.Z {
                                             packetsLost: A,
                                             nackCount: null != P ? P : 0,
                                             fecPacketsReceived: R,
-                                            fecPacketsDiscarded: D,
+                                            fecPacketsDiscarded: w,
                                             mos: 0,
                                             mosSum: 0,
                                             mosCount: 0,

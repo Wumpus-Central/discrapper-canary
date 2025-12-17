@@ -1,9 +1,9 @@
-t.d(n, { Z: () => v }), t(388685);
+t.d(n, { Z: () => b }), t(388685);
 var l = t(54381),
     i = t(473749),
     o = t(120356),
     r = t.n(o),
-    a = t(467721),
+    a = t(236726),
     c = t(442837),
     s = t(481060),
     d = t(607070),
@@ -48,7 +48,7 @@ let h = {
             type: s.ToastType.FAILURE,
         },
     },
-    b = (e) => {
+    v = (e) => {
         let { message: n, icon: t, type: i } = e;
         return (0, l.jsxs)("div", {
             className: r()(x.toast, p.toast),
@@ -66,12 +66,12 @@ let h = {
             ],
         });
     },
-    v = (e) => {
+    b = (e) => {
         let { className: n, onAutoHide: t } = e,
             o = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
             [m, x] = i.useState(!1),
-            [v, j] = i.useState(null);
+            [b, j] = i.useState(null);
         i.useEffect(() => {
             null !== o ? (x(!0), j(h[o]), s.uvj.announce(h[o].message)) : x(!1);
         }, [o]);
@@ -112,12 +112,12 @@ let h = {
                 children: g(
                     (e, t) =>
                         t &&
-                        null !== v &&
+                        null !== b &&
                         (0, l.jsx)(a.animated.div, {
                             className: r()(n, p.toastContainer),
                             style: e,
                             children: (0, l.jsx)(
-                                b,
+                                v,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -142,7 +142,7 @@ let h = {
                                             });
                                     }
                                     return e;
-                                })({}, v),
+                                })({}, b),
                             ),
                         }),
                 ),

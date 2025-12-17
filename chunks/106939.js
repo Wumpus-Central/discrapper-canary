@@ -29,9 +29,9 @@ var r = n(54381),
     A = n(539086),
     N = n(292352),
     P = n(981631),
-    R = n(225753),
-    D = n(388032),
-    w = n(166387);
+    R = n(517319),
+    w = n(388032),
+    D = n(168842);
 let x = {
         [N.dG.REQUESTS]: T.Z,
         [N.dG.ACTIVITY]: I.Z,
@@ -49,7 +49,7 @@ function j() {
     return (0, r.jsx)(c.Kqy, {
         justify: "center",
         align: "center",
-        className: w.loadingContainer,
+        className: D.loadingContainer,
         children: (0, r.jsx)(c.$jN, {}),
     });
 }
@@ -60,27 +60,27 @@ function M(e) {
     return t === N.dG.CONTENT_AND_SOCIAL || t === N.dG.DATA_AND_PRIVACY
         ? null
         : (0, r.jsxs)(c.njP, {
-              className: w.settingsTabBar,
-              "aria-label": D.intl.string(R.default.RZqaJn),
+              className: D.settingsTabBar,
+              "aria-label": w.intl.string(R.default.RZqaJn),
               selectedItem: t,
               type: "top",
               look: "brand",
               onItemSelect: n,
               children: [
                   (0, r.jsx)(c.njP.Item, {
-                      className: w.settingsTabBarItem,
+                      className: D.settingsTabBarItem,
                       id: N.dG.ACTIVITY,
-                      children: D.intl.string(R.default.bdBmqy),
+                      children: w.intl.string(R.default.bdBmqy),
                   }),
                   (0, r.jsxs)(c.njP.Item, {
-                      className: w.settingsTabBarItem,
+                      className: D.settingsTabBarItem,
                       id: N.dG.REQUESTS,
-                      "aria-label": D.intl.string(R.default["gVWG+6"]),
+                      "aria-label": w.intl.string(R.default["gVWG+6"]),
                       children: [
-                          D.intl.string(R.default["gVWG+6"]),
+                          w.intl.string(R.default["gVWG+6"]),
                           i > 0
                               ? (0, r.jsx)(c.mAB, {
-                                    className: w.badge,
+                                    className: D.badge,
                                     count: i,
                                 })
                               : null,
@@ -88,9 +88,9 @@ function M(e) {
                   }),
                   a
                       ? (0, r.jsx)(c.njP.Item, {
-                            className: w.settingsTabBarItem,
+                            className: D.settingsTabBarItem,
                             id: N.dG.SETTINGS,
-                            children: D.intl.string(D.t["3D5yo/"]),
+                            children: w.intl.string(w.t["3D5yo/"]),
                         })
                       : null,
               ],
@@ -104,7 +104,7 @@ function k(e) {
         theme: t,
         children: (e) =>
             (0, r.jsxs)(m.Z, {
-                className: o()(e, w.sidebarTabBar),
+                className: o()(e, D.sidebarTabBar),
                 scrollable: s.tq,
                 role: "navigation",
                 "aria-labelledby": a,
@@ -116,29 +116,29 @@ function k(e) {
                     }),
                     (0, r.jsx)(m.Z.Title, {
                         id: a,
-                        children: D.intl.string(R.default.RZqaJn),
+                        children: w.intl.string(R.default.RZqaJn),
                     }),
                     (0, r.jsx)(m.Z.Divider, {}),
                     (0, r.jsxs)(c.njP, {
-                        "aria-label": D.intl.string(R.default.RZqaJn),
+                        "aria-label": w.intl.string(R.default.RZqaJn),
                         selectedItem: n,
                         type: "top-pill",
                         onItemSelect: i,
                         children: [
                             (0, r.jsx)(c.njP.Item, {
                                 id: N.dG.ACTIVITY,
-                                className: w.item,
-                                children: D.intl.string(R.default.bdBmqy),
+                                className: D.item,
+                                children: w.intl.string(R.default.bdBmqy),
                             }),
                             (0, r.jsxs)(c.njP.Item, {
                                 id: N.dG.REQUESTS,
-                                className: w.item,
-                                "aria-label": D.intl.string(R.default["gVWG+6"]),
+                                className: D.item,
+                                "aria-label": w.intl.string(R.default["gVWG+6"]),
                                 children: [
-                                    D.intl.string(R.default["gVWG+6"]),
+                                    w.intl.string(R.default["gVWG+6"]),
                                     l > 0
                                         ? (0, r.jsx)(c.mAB, {
-                                              className: w.badge,
+                                              className: D.badge,
                                               count: l,
                                           })
                                         : null,
@@ -169,10 +169,10 @@ function U() {
     if (a) return null;
     let s = x[n];
     return (0, r.jsxs)("main", {
-        className: w.container,
-        "aria-label": D.intl.string(R.default.RZqaJn),
+        className: D.container,
+        "aria-label": w.intl.string(R.default.RZqaJn),
         children: [
-            (0, r.jsx)(p.yY, { location: D.intl.string(R.default.RZqaJn) }),
+            (0, r.jsx)(p.yY, { location: w.intl.string(R.default.RZqaJn) }),
             (0, r.jsx)(M, {
                 section: n,
                 handleItemSelect: o,
@@ -180,7 +180,7 @@ function U() {
             (0, r.jsx)(c.njP.Panel, {
                 id: n,
                 "aria-labelledby": e,
-                className: w.contentPanel,
+                className: D.contentPanel,
                 children: (0, r.jsx)("div", { children: t ? (0, r.jsx)(j, {}) : (0, r.jsx)(s, {}) }),
             }),
         ],
@@ -216,10 +216,10 @@ function G() {
     return (0, r.jsx)(f.Gt, {
         value: e,
         children: (0, r.jsxs)("main", {
-            className: o()(w.container, w.containerSidenav),
-            "aria-label": D.intl.string(R.default.RZqaJn),
+            className: o()(D.container, D.containerSidenav),
+            "aria-label": w.intl.string(R.default.RZqaJn),
             children: [
-                (0, r.jsx)(p.yY, { location: D.intl.string(R.default.RZqaJn) }),
+                (0, r.jsx)(p.yY, { location: w.intl.string(R.default.RZqaJn) }),
                 (0, r.jsx)(k, {
                     theme: a,
                     section: T,
@@ -228,10 +228,10 @@ function G() {
                 (0, r.jsx)(c.njP.Panel, {
                     id: T,
                     "aria-labelledby": s,
-                    className: w.contentPanel,
+                    className: D.contentPanel,
                     children: (0, r.jsx)(c.Ttm, {
                         children: (0, r.jsx)("div", {
-                            className: w.sideNavContent,
+                            className: D.sideNavContent,
                             children: m ? (0, r.jsx)(j, {}) : (0, r.jsx)(C, {}),
                         }),
                     }),

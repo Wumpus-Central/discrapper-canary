@@ -13,8 +13,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(828700),
-    o = n(442837),
+    o = n(828700),
+    s = n(442837),
     c = n(481060),
     u = n(570140),
     d = n(150063),
@@ -23,8 +23,8 @@ var r = n(54381),
     g = n(313201),
     h = n(5254),
     m = n(984370),
-    _ = n(518311),
-    b = n(199104),
+    b = n(518311),
+    _ = n(199104),
     E = n(108427),
     O = n(210887),
     v = n(974042),
@@ -35,11 +35,11 @@ var r = n(54381),
     T = n(981631),
     N = n(723359),
     j = n(388032),
-    P = n(236202);
+    P = n(221534);
 function x() {
     return (0, r.jsx)("div", {
         className: P.inviteToolbar,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(b.Z, {
             tooltip: j.intl.string(j.t["HfOgA/"]),
             location: "PeoplePageHeaderToolbar-CreateDMButton",
         }),
@@ -47,8 +47,8 @@ function x() {
 }
 let A = function (e) {
     let { initialSection: t } = e,
-        n = (0, s.TH)(),
-        l = (0, s.k6)();
+        n = (0, o.TH)(),
+        l = (0, o.k6)();
     i.useEffect(() => {
         "true" === new URLSearchParams(n.search).get("confirm-age") &&
             u.Z.dispatch({
@@ -61,10 +61,10 @@ let A = function (e) {
         i.useEffect(() => {
             d.Y(T.Z5c.FRIENDS), (0, E.e)("friends");
         }, []);
-    let _ = (0, o.e7)([O.Z], () => O.Z.theme),
+    let b = (0, s.e7)([O.Z], () => O.Z.theme),
         A = (0, I.If)(),
-        { section: Z, rows: w } = (0, o.cj)([v.ZP], () => v.ZP.getState()),
-        L = (0, o.e7)([h.Z], () => h.Z.getSuggestionCount()),
+        { section: Z, rows: w } = (0, s.cj)([v.ZP], () => v.ZP.getState()),
+        L = (0, s.e7)([h.Z], () => h.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
         null != t && p.Z.setInitialSection(t),
@@ -132,22 +132,22 @@ let A = function (e) {
             },
         ],
         G = y.o.useConfig({ location: "people page" }).friendsTab,
-        B = null,
-        H = G
+        H = null,
+        B = G
             ? null
             : (0, r.jsx)("div", {
                   className: P.nowPlayingColumn,
-                  children: (0, r.jsx)(b.Z, {}),
+                  children: (0, r.jsx)(_.Z, {}),
               });
     return (
-        (B = Z === T.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: k })),
+        (H = Z === T.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: k })),
         (0, r.jsxs)("main", {
             className: P.container,
             "aria-label": j.intl.string(j.t.TdEu5X),
             children: [
                 (0, r.jsx)(f.yY, { location: j.intl.string(j.t.TdEu5X) }),
                 (0, r.jsx)(c.f6W, {
-                    theme: _,
+                    theme: b,
                     children: (e) =>
                         (0, r.jsxs)(m.Z, {
                             className: e,
@@ -194,9 +194,9 @@ let A = function (e) {
                             id: Z,
                             className: P.peopleColumn,
                             "aria-labelledby": k,
-                            children: B,
+                            children: H,
                         }),
-                        H,
+                        B,
                     ],
                 }),
             ],

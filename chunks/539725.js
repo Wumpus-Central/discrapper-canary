@@ -1,20 +1,20 @@
-n.d(t, { default: () => u });
+n.d(t, { default: () => l });
 var r = n(54381);
 n(473749);
-var i = n(793030),
-    a = n(115849),
+var a = n(793030),
+    i = n(115849),
     s = n(388032),
-    l = n(255597);
-function u(e) {
+    c = n(961451);
+function l(e) {
     let { transitionState: t, onClose: n } = e;
-    return (0, r.jsx)(i.Modal, {
+    return (0, r.jsx)(a.Modal, {
         title: s.intl.string(s.t.w5uwoI),
         transitionState: t,
         onClose: n,
         actions: void 0,
         children: (0, r.jsx)("div", {
-            className: l.content,
-            children: (0, r.jsx)(a.Z, { placeholder: s.intl.string(s.t.IEpCBQ) }),
+            className: c.content,
+            children: (0, r.jsx)(i.Z, { placeholder: s.intl.string(s.t.IEpCBQ) }),
         }),
     });
 }

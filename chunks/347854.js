@@ -6,8 +6,8 @@ var i = n(755721),
     r = n(626135),
     a = n(88658),
     o = n(976978),
-    T = n(695346),
-    S = n(313789),
+    S = n(695346),
+    T = n(313789),
     c = n(997950),
     E = n(87820),
     d = n(639814),
@@ -22,7 +22,7 @@ let O = (t, e) => {
             applied_to_existing_guilds: e,
         });
     },
-    C = (0, s.qs)(S.n.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
+    C = (0, s.qs)(T.n.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
         useTitle: () => ((0, E.r)() ? A.intl.string(A.t.PMsfcH) : A.intl.string(A.t.RAQUSN)),
         useSubtitle: () => {
             let t = (0, d.is)(),
@@ -40,7 +40,7 @@ let O = (t, e) => {
         },
         useValue: () => {
             let t = (0, d.is)(),
-                e = T.h2.useSetting().includes(t),
+                e = S.h2.useSetting().includes(t),
                 n = (0, o.q)();
             return t === c.Th ? !n : !e;
         },
@@ -60,16 +60,16 @@ let O = (t, e) => {
                         cancelText: A.intl.string(A.t.p89ACt),
                         confirmButtonColor: i.zx.Colors.BRAND,
                         onConfirm: () => {
-                            T.gR.updateSetting(n), O(n, !1);
+                            S.gR.updateSetting(n), O(n, !1);
                         },
                         onCancel: () => {
-                            T.gR.updateSetting(n), T.h2.updateSetting(n ? u.Z.getGuildIds() : []), O(n, !0);
+                            S.gR.updateSetting(n), S.h2.updateSetting(n ? u.Z.getGuildIds() : []), O(n, !0);
                         },
                     });
             } else {
                 let n = (0, a.YK)();
                 t ? n.delete(e) : n.add(e),
-                    T.h2.updateSetting(Array.from(n)),
+                    S.h2.updateSetting(Array.from(n)),
                     r.default.track(N.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: _.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: I.f4.USER_SETTINGS_PRIVACY_SAFETY,

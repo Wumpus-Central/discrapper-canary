@@ -54,7 +54,7 @@ function E(e, t, n) {
         (0, f.OV)() && "expandedKeys" in t && (A.role = "treegrid");
     let { column: N, direction: P } = t.sortDescriptor || {},
         R = (0, m.q)(g(i.Z), "@react-aria/table"),
-        D = (0, h.useMemo)(() => {
+        w = (0, h.useMemo)(() => {
             var e, n;
             let r =
                 null != (n = null == (e = t.collection.columns.find((e) => e.key === N)) ? void 0 : e.textValue)
@@ -62,14 +62,14 @@ function E(e, t, n) {
                     : "";
             return P && N ? R.format(`${P}Sort`, { columnName: r }) : void 0;
         }, [P, N, t.collection.columns]),
-        w = (0, c.P)(D);
+        D = (0, c.P)(w);
     return (
         (0, u.r)(() => {
-            D && (0, o.xQ)(D, "assertive", 500);
-        }, [D]),
+            w && (0, o.xQ)(w, "assertive", 500);
+        }, [w]),
         {
-            gridProps: (0, d.d)(A, w, {
-                "aria-describedby": [w["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" "),
+            gridProps: (0, d.d)(A, D, {
+                "aria-describedby": [D["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" "),
             }),
         }
     );

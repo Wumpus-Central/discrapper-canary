@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    UB: () => w,
+    UB: () => D,
     Uc: () => S,
     ZP: () => H,
     kE: () => x,
@@ -56,7 +56,7 @@ function P() {
 function R() {
     return f.Z.getUseSystemScreensharePicker();
 }
-function D() {
+function w() {
     let e = R() && (C > 0 || (I && 0 === T));
     if (e !== A) {
         var t, n;
@@ -66,13 +66,13 @@ function D() {
                 t.call(n, A);
     }
 }
-function w() {
+function D() {
     return (0, a.useEffect)(
         () => (
             T++,
-            D(),
+            w(),
             () => {
-                0 == --T && D();
+                0 == --T && w();
             }
         ),
         [],
@@ -82,9 +82,9 @@ function x() {
     return (0, a.useEffect)(
         () => (
             C++,
-            D(),
+            w(),
             () => {
-                --C, D();
+                --C, w();
             }
         ),
         [],
@@ -92,7 +92,7 @@ function x() {
 }
 function L() {
     let e = u.Z.getChannel(_.Z.getVoiceChannelId());
-    return (I = null != e && (0, h.Z)(f.Z) && (0, m.JL)(e, d.Z, p.Z, !1)), D(), !1;
+    return (I = null != e && (0, h.Z)(f.Z) && (0, m.JL)(e, d.Z, p.Z, !1)), w(), !1;
 }
 function j() {
     return null != r ? (0, E.Z)(r) : null;
@@ -149,14 +149,14 @@ function G(e) {
 function Z() {
     N = { lastPickerAction: 2 };
 }
-function B(e) {
+function F(e) {
     let { error: t } = e;
     N = {
         lastPickerAction: 3,
         lastPickerError: t,
     };
 }
-function F(e) {
+function B(e) {
     let { style: t } = e;
     N = {
         lastPickerAction: 0,
@@ -170,7 +170,7 @@ v(U, "displayName", "NativeScreenSharePickerStore");
 let H = new U(s.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: G,
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: Z,
-    NATIVE_SCREEN_SHARE_PICKER_ERROR: B,
-    NATIVE_SCREEN_SHARE_PICKER_PRESENT: F,
+    NATIVE_SCREEN_SHARE_PICKER_ERROR: F,
+    NATIVE_SCREEN_SHARE_PICKER_PRESENT: B,
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: V,
 });

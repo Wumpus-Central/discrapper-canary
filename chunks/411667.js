@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(346163),
     a = n(981631),
     s = n(388032),
-    o = n(515444);
+    o = n(652138);
 function c(e) {
     let t,
         { guild: n } = e,
@@ -13,11 +13,11 @@ function c(e) {
             resubmissionError: d,
             createEnableRequest: u,
             resubmittedRequest: g,
-            requestRejectedNoticeText: m,
-            reapplyNoticeText: p,
+            requestRejectedNoticeText: f,
+            reapplyNoticeText: m,
         } = (0, l.Z)(n),
-        f = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
-        h = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+        b = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
+        p = n.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != d)
         return (0, r.jsx)("div", {
             className: o.noticeContainer,
@@ -26,18 +26,18 @@ function c(e) {
                 children: d.getAnyErrorMessage(),
             }),
         });
-    let b = null;
+    let h = null;
     return (
-        null != m
-            ? (b = m)
+        null != f
+            ? (h = f)
             : g
-              ? (b = s.intl.string(s.t.MyJpJT))
-              : null != p
-                ? ((b = p), (t = s.intl.string(s.t["YKw/NQ"])))
-                : h
-                  ? (b = s.intl.string(s.t.e2g9sW))
-                  : f && (b = s.intl.string(s.t.rxI9sl)),
-        null != b
+              ? (h = s.intl.string(s.t.MyJpJT))
+              : null != m
+                ? ((h = m), (t = s.intl.string(s.t["YKw/NQ"])))
+                : p
+                  ? (h = s.intl.string(s.t.e2g9sW))
+                  : b && (h = s.intl.string(s.t.rxI9sl)),
+        null != h
             ? (0, r.jsx)("div", {
                   className: o.noticeContainer,
                   children: (0, r.jsx)(i.Wn, {
@@ -48,7 +48,7 @@ function c(e) {
                           onClick: u,
                           loading: c,
                       }),
-                      children: b,
+                      children: h,
                   }),
               })
             : null

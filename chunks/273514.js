@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
 var l = n(481060),
@@ -6,37 +6,37 @@ var l = n(481060),
     a = n(592125),
     s = n(430824),
     o = n(388032),
-    d = n(557376);
-let c = (e) => {
+    c = n(557376);
+let d = (e) => {
     let { entry: t } = e,
         n = a.Z.getChannel(t.channelId);
     if (null == n) return null;
-    let c = s.Z.getGuild(n.guild_id);
-    return null == c
+    let d = s.Z.getGuild(n.guild_id);
+    return null == d
         ? null
         : (0, r.jsxs)("div", {
-              className: d.container,
+              className: c.container,
               children: [
                   (0, r.jsx)(l.Heading, {
-                      className: d.header,
+                      className: c.header,
                       variant: "heading-sm/semibold",
                       children: o.intl.string(o.t.nTe4HC),
                   }),
                   (0, r.jsxs)("div", {
-                      className: d.guildContainer,
+                      className: c.guildContainer,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: d.hubInfo,
+                              className: c.hubInfo,
                               children: [
                                   (0, r.jsx)(i.Z, {
-                                      guild: c,
+                                      guild: d,
                                       size: i.Z.Sizes.MINI,
-                                      className: d.hubIcon,
+                                      className: c.hubIcon,
                                   }),
                                   (0, r.jsx)(l.Text, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
-                                      children: c.name,
+                                      children: d.name,
                                   }),
                               ],
                           }),

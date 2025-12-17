@@ -1,7 +1,7 @@
 t.d(n, { Z: () => i });
-var l = t(399606),
-    r = t(592125),
-    a = t(563534);
+var a = t(399606),
+    l = t(592125),
+    r = t(563534);
 function i(e) {
-    return (0, l.Wu)([a.Z, r.Z], () => a.Z.getResourceChannels(e).filter((e) => null != r.Z.getChannel(e.channelId)));
+    return (0, a.Wu)([r.Z, l.Z], () => r.Z.getResourceChannels(e).filter((e) => null != l.Z.getChannel(e.channelId)));
 }

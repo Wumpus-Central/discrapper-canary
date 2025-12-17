@@ -8,7 +8,7 @@ var r = n(54381),
     o = n(442550),
     s = n(297781),
     l = n(443487),
-    c = n(451419);
+    c = n(925002);
 let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
     d = (e) => {
         let { entry: t, channel: n, selected: i, hovered: d } = e,

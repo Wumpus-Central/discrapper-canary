@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -27,21 +27,21 @@ var r = n(54381),
     N = n(594174),
     P = n(626135),
     R = n(768581),
-    D = n(70956),
-    w = n(823379),
+    w = n(70956),
+    D = n(823379),
     x = n(506071),
     L = n(226378),
     j = n(981631),
     M = n(701488),
     k = n(967249),
     U = n(388032),
-    G = n(853392);
+    G = n(891332);
 function Z(e) {
     var t, n, a;
     let l,
-        { application: d, channelId: S, guildId: D, message: x } = e,
+        { application: d, channelId: S, guildId: w, message: x } = e,
         { analyticsLocations: Z } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
-        F = (0, u.O)(),
+        B = (0, u.O)(),
         V = (0, s.e7)([C.Z], () => C.Z.getChannel(S), [S]),
         H = (null == V || null == (t = V.isThread) ? void 0 : t.call(V)) ? (null == V ? void 0 : V.parent_id) : S,
         Y = (0, s.e7)([T.default], () => T.default.getId()),
@@ -66,7 +66,7 @@ function Z(e) {
             () =>
                 Array.from(null != q ? q : [])
                     .map((e) => N.default.getUser(e))
-                    .filter(w.lm),
+                    .filter(D.lm),
             [q],
         ),
         X = (0, s.e7)([A.Z], () => {
@@ -108,7 +108,7 @@ function Z(e) {
                     ? await (0, _.Z)({
                           targetApplicationId: d.id,
                           channelId: S,
-                          locationObject: F.location,
+                          locationObject: B.location,
                           analyticsLocations: Z,
                           componentId: er,
                           commandOrigin: E.bB.ACTIVITY_INSTANCE_EMBED,
@@ -116,7 +116,7 @@ function Z(e) {
                     : await (0, p.Z)({
                           applicationId: W.applicationId,
                           activityChannelId: S,
-                          locationObject: F.location,
+                          locationObject: B.location,
                           analyticsLocations: Z,
                           componentId: er,
                       });
@@ -189,7 +189,7 @@ function Z(e) {
                                                   (0, r.jsx)(c.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "none",
-                                                      children: (0, r.jsx)(B, { start: eu }),
+                                                      children: (0, r.jsx)(F, { start: eu }),
                                                   }),
                                               ],
                                           }),
@@ -215,7 +215,7 @@ function Z(e) {
                           ec > 0 &&
                               (0, r.jsx)(y.K, {
                                   activityUsers: Q,
-                                  guildId: D,
+                                  guildId: w,
                                   activityText: ed.text,
                               }),
                       ],
@@ -226,14 +226,14 @@ function Z(e) {
         trackingConfig: {
             id: d.id,
             linkType: k.U.ACTIVITY_INSTANCE,
-            guildId: D,
+            guildId: w,
             channelId: S,
             messageId: x.id,
             isDeadEnd: et,
         },
     });
 }
-let B = i.memo((e) => {
+let F = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
         a = (0, x.n)(),
@@ -243,8 +243,8 @@ let B = i.memo((e) => {
         i.useEffect(() => {
             let e = new l.Xp();
             return (
-                e.start(c ? 15 * D.Z.Millis.SECOND : D.Z.Millis.SECOND, () => {
-                    r((new Date().getTime() - t) / D.Z.Millis.SECOND);
+                e.start(c ? 15 * w.Z.Millis.SECOND : w.Z.Millis.SECOND, () => {
+                    r((new Date().getTime() - t) / w.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );
@@ -252,5 +252,5 @@ let B = i.memo((e) => {
         (0, S.m)(n)
     );
 });
-B.displayName = "ActivityRuntimeCounter";
-let F = i.memo(Z);
+F.displayName = "ActivityRuntimeCounter";
+let B = i.memo(Z);

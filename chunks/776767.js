@@ -8,33 +8,33 @@ var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    s = n(481060),
-    a = n(938556);
+    a = n(481060),
+    s = n(608586);
 let o = 16;
 function u(e) {
     let { description: t, name: n, icon: l, onNavigate: u, className: c, missingNavIcon: E } = e;
-    return (0, r.jsxs)(s.P3F, {
+    return (0, r.jsxs)(a.P3F, {
         onClick: u,
-        className: i()(a.modInfoItem, null != u && a.modInfoAction, c),
+        className: i()(s.modInfoItem, null != u && s.modInfoAction, c),
         children: [
             null != l &&
                 (0, r.jsx)("div", {
-                    className: a.modInfoItemIcon,
+                    className: s.modInfoItemIcon,
                     children: l,
                 }),
             null != n &&
                 (0, r.jsx)("div", {
-                    className: a.modInfoItemName,
+                    className: s.modInfoItemName,
                     children: n,
                 }),
             (0, r.jsx)("div", {
-                className: a.modInfoItemDescription,
+                className: s.modInfoItemDescription,
                 children: t,
             }),
             null != u &&
                 (0, r.jsx)("div", {
-                    className: a.modInfoItemActionIcon,
-                    children: (0, r.jsx)(s.LJT, {
+                    className: s.modInfoItemActionIcon,
+                    children: (0, r.jsx)(a.LJT, {
                         size: "custom",
                         width: o,
                         height: o,
@@ -43,7 +43,7 @@ function u(e) {
             null == u &&
                 null != E &&
                 (0, r.jsx)("div", {
-                    className: a.modInfoItemActionIcon,
+                    className: s.modInfoItemActionIcon,
                     children: E,
                 }),
         ],
@@ -52,7 +52,7 @@ function u(e) {
 function c(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
-        className: a.modInfoItemContainer,
+        className: s.modInfoItemContainer,
         children: t,
     });
 }

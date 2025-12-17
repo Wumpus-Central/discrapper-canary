@@ -23,10 +23,10 @@ let N = C.QZA.CLOSED,
 function R() {
     (N = C.QZA.OPEN), (P = {});
 }
-function D() {
+function w() {
     (N = C.QZA.CLOSED), (P = {});
 }
-function w() {
+function D() {
     (N = C.QZA.SUBMITTING), (P = {});
 }
 function x(e) {
@@ -66,11 +66,11 @@ function Z(e) {
     let { bio: t } = e;
     c = t;
 }
-function B(e) {
+function F(e) {
     let { pronouns: t } = e;
     u = t;
 }
-function F(e) {
+function B(e) {
     let { color: t } = e;
     d = t;
 }
@@ -139,7 +139,7 @@ function eo() {
     _ = void 0;
 }
 function es() {
-    et(), ei(), D();
+    et(), ei(), w();
 }
 class el extends (v = I.ZP.Store) {
     getFormState() {
@@ -253,9 +253,9 @@ let ec = new el(T.Z, {
     USER_SETTINGS_MODAL_INIT: R,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: R,
     USER_SETTINGS_MODAL_SET_SECTION: L,
-    USER_SETTINGS_ACCOUNT_CLOSE: D,
+    USER_SETTINGS_ACCOUNT_CLOSE: w,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: es,
-    USER_SETTINGS_ACCOUNT_SUBMIT: w,
+    USER_SETTINGS_ACCOUNT_SUBMIT: D,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: x,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: M,
@@ -263,8 +263,8 @@ let ec = new el(T.Z, {
     USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: Z,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: B,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: F,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: F,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: B,
     USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: V,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: K,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: z,

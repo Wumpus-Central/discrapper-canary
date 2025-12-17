@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(91192),
-    o = n(286379),
+    o = n(91192),
+    s = n(286379),
     c = n(481060),
     u = n(183126),
     d = n(493773),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(797614),
     h = n(626135),
     m = n(26373),
-    _ = n(486622),
-    b = n(488634),
+    b = n(486622),
+    _ = n(488634),
     E = n(727813),
     O = n(355350),
     v = n(307947),
@@ -22,7 +22,7 @@ var r = n(54381),
     I = n(687683),
     C = n(981631),
     S = n(388032),
-    T = n(393272);
+    T = n(932376);
 function N() {
     let e = i.useRef(null),
         t = (0, E.Z)(),
@@ -30,35 +30,35 @@ function N() {
         l = (0, m.V)(),
         N = (0, u.N)(),
         j = (0, p.Z)("message-requests-spam-list"),
-        { channelId: P } = (0, b._)(),
+        { channelId: P } = (0, _._)(),
         x = i.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t["EDYbS+"]), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: A } = (0, _.m)({ onError: x }),
+        { rejectAll: A } = (0, b.m)({ onError: x }),
         Z = i.useCallback(() => {
             A(t.map((e) => e.channel.id));
         }, [t, A]);
     (0, d.ZP)(() => {
         h.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-            g.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+            g.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
             (e) => {
                 var n, i;
-                let { row: s } = e,
-                    o = t[s],
-                    c = null == (i = t[s + 1]) || null == (n = i.channel) ? void 0 : n.id,
-                    u = o.channel.id;
+                let { row: o } = e,
+                    s = t[o],
+                    c = null == (i = t[o + 1]) || null == (n = i.channel) ? void 0 : n.id,
+                    u = s.channel.id;
                 return (0, r.jsx)(
                     y.Z,
                     {
-                        index: s,
+                        index: o,
                         className: a()({
                             [T.selected]: null != P && P === u,
                             [T.siblingSelected]: null != P && P === c,
                         }),
-                        channel: o.channel,
-                        user: o.user,
+                        channel: s.channel,
+                        user: s.user,
                         hasSingleMessageRequest: l,
                     },
                     u,
@@ -101,9 +101,9 @@ function N() {
         );
     return 0 === t.length
         ? (0, r.jsx)(v.Z, { section: I.pS.SPAM })
-        : (0, r.jsx)(s.bG, {
+        : (0, r.jsx)(o.bG, {
               navigator: j,
-              children: (0, r.jsx)(s.SJ, {
+              children: (0, r.jsx)(o.SJ, {
                   children: (n) => {
                       var { ref: i, role: l } = n,
                           a = (function (e, t) {

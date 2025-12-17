@@ -8,13 +8,13 @@ var n = r(54381),
     c = r(481060),
     d = r(239091),
     a = r(276264),
-    f = r(670188),
-    m = r(271383),
-    b = r(699516),
+    b = r(670188),
+    f = r(271383),
+    m = r(699516),
     p = r(594174),
     g = r(432496),
     O = r(388032),
-    j = r(283602);
+    j = r(293866);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function w(e) {
         l = p.default.getUser(u.userId),
         o = i.useRef(null);
     return (0, n.jsx)(
-        f.Z,
+        b.Z,
         {
             targetElementRef: o,
             userId: u.userId,
@@ -73,7 +73,7 @@ function w(e) {
                                     let { default: e } = await Promise.all([
                                         r.e("79695"),
                                         r.e("26976"),
-                                        r.e("52092"),
+                                        r.e("71182"),
                                     ]).then(r.bind(r, 415118));
                                     return (r) => {
                                         var i, s;
@@ -119,12 +119,12 @@ function w(e) {
 }
 function I(e) {
     let { guild: t, transitionState: r, onClose: s } = e,
-        d = i.useMemo(() => b.Z.getFriendIDs(), []);
+        d = i.useMemo(() => m.Z.getFriendIDs(), []);
     i.useEffect(() => {
         g.Z.fetchFriendMembersIfNotFetched(t.id, d);
     }, [t.id, d]);
-    let a = (0, o.e7)([m.ZP], () => m.ZP.getMembers(t.id)),
-        f = i.useMemo(
+    let a = (0, o.e7)([f.ZP], () => f.ZP.getMembers(t.id)),
+        b = i.useMemo(
             () =>
                 u()(a)
                     .filter((e) => !!d.includes(e.userId) && null != p.default.getUser(e.userId))
@@ -152,11 +152,11 @@ function I(e) {
         title: O.intl.string(O.t.kYxEcH),
         subtitle: O.intl.format(j ? O.t.EtQnZi : O.t.OgMdNS, {
             guildName: t.name,
-            numFriends: f.length,
+            numFriends: b.length,
         }),
         actions: void 0,
         transitionState: r,
         onClose: s,
-        children: [j && (0, n.jsx)(c.$jN, {}), f],
+        children: [j && (0, n.jsx)(c.$jN, {}), b],
     });
 }

@@ -10,7 +10,7 @@ var r = n(54381),
 function u() {
     let { guild: e, originalGuild: t, submitting: n, errors: u } = (0, a.cj)([c.Z], () => c.Z.getProps()),
         g = i.useMemo(() => (0, d.LG)(u), [u]),
-        m = i.useCallback(async () => {
+        f = i.useCallback(async () => {
             if (null == e) return Promise.resolve();
             let n = {
                 systemChannelFlags: e.systemChannelFlags,
@@ -29,13 +29,13 @@ function u() {
             }
             return Promise.resolve();
         }, [e, t]),
-        p = i.useCallback(() => {
+        m = i.useCallback(() => {
             null != e && o.Z.init(e.id);
         }, [e]);
     return (0, r.jsx)(s.Z, {
         submitting: n,
         errorMessage: g,
-        onSave: m,
-        onReset: p,
+        onSave: f,
+        onReset: m,
     });
 }

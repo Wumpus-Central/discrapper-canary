@@ -14,7 +14,7 @@ function s(e, n, t, l) {
                 pageIndex: d,
                 pageTitle: c,
                 isUserGuildMember: u,
-                pageHasLeaderboard: g,
+                pageHasLeaderboard: f,
             } = n;
             a.default.track(e, {
                 slayer_storefront_session_id: i,
@@ -22,7 +22,7 @@ function s(e, n, t, l) {
                 page_index: d,
                 page_title: c,
                 is_user_guild_member: u,
-                page_has_leaderboard: g,
+                page_has_leaderboard: f,
                 scroll_visible_percent: l,
                 page_height: Math.round(s),
                 page_width: Math.round(r),

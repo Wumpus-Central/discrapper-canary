@@ -13,7 +13,7 @@ var t = n(54381),
     m = n(156142),
     p = n(811364),
     x = n(981631),
-    g = n(777461);
+    g = n(828338);
 let v = {
         mana: {
             name: "Mana",
@@ -46,7 +46,7 @@ function S(l) {
                 })(l.url),
             [l.url],
         ),
-        j =
+        b =
             null != C
                 ? (function () {
                       if (null == y)
@@ -55,45 +55,45 @@ function S(l) {
                       return y;
                   })().get(C)
                 : null,
-        b = null != C ? v[C] : null,
+        j = null != C ? v[C] : null,
         P = u.useMemo(() => {
-            if (null == j) return;
+            if (null == b) return;
             let e = (function (l) {
                 var e;
                 let n = l.match(p.u);
                 return null == n ? null : null != (e = n[3]) ? e : null;
             })(l.url);
             if (null != e)
-                for (let l of j.groups) {
+                for (let l of b.groups) {
                     let n = l.stories.find((l) => l.id === e);
                     if (null != n) return n;
                 }
-        }, [l.url, j]),
-        k = null != (e = null == P ? void 0 : P.name) ? e : null != j ? "".concat(j.name, " Playground") : "Playground",
+        }, [l.url, b]),
+        k = null != (e = null == P ? void 0 : P.name) ? e : null != b ? "".concat(b.name, " Playground") : "Playground",
         M =
             null != P && null != P.docs
                 ? (0, t.jsx)(a.Anchor, {
                       href: P.docs,
                       children: "Documentation",
                   })
-                : null != b
-                  ? b.defaultSubtitle
+                : null != j
+                  ? j.defaultSubtitle
                   : "Explore Components",
         N = u.useCallback(() => {
-            null != j &&
+            null != b &&
                 (null != P
                     ? m.PlaygroundStore.setState({
-                          selectedCollection: j.id,
+                          selectedCollection: b.id,
                           selectedStory: P.id,
                       })
                     : m.PlaygroundStore.setState({
-                          selectedCollection: j.id,
+                          selectedCollection: b.id,
                           selectedStory: null,
                       }),
                 (0, c.jN)(x.S9g.COMPONENT_PLAYGROUND));
-        }, [P, j]);
-    if (!S || null == j) return null;
-    let _ = null != (n = null == b ? void 0 : b.icon) ? n : o.hh5;
+        }, [P, b]);
+    if (!S || null == b) return null;
+    let w = null != (n = null == j ? void 0 : j.icon) ? n : o.hh5;
     return (0, t.jsx)("div", {
         className: g.root,
         "data-has-story": null != P,
@@ -110,7 +110,7 @@ function S(l) {
                         align: "start",
                         gap: 8,
                         children: [
-                            (0, t.jsx)(_, { size: "lg" }),
+                            (0, t.jsx)(w, { size: "lg" }),
                             (0, t.jsxs)(r.Kqy, {
                                 direction: "vertical",
                                 gap: 0,

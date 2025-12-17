@@ -151,14 +151,14 @@ function O(e, t, n) {
                 return k(this, t, n);
             case "utf8":
             case "utf-8":
-                return w(this, t, n);
+                return D(this, t, n);
             case "ascii":
                 return j(this, t, n);
             case "latin1":
             case "binary":
                 return M(this, t, n);
             case "base64":
-                return D(this, t, n);
+                return w(this, t, n);
             case "ucs2":
             case "ucs-2":
             case "utf16le":
@@ -259,10 +259,10 @@ function P(e, t, n, r) {
 function R(e, t, n, r) {
     return Q(z(t, e.length - n), e, n, r);
 }
-function D(e, t, n) {
+function w(e, t, n) {
     return 0 === t && n === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(t, n));
 }
-function w(e, t, n) {
+function D(e, t, n) {
     n = Math.min(e.length, n);
     for (var r = [], i = t; i < n; ) {
         var a,
@@ -429,7 +429,7 @@ function w(e, t, n) {
     }),
     (c.prototype.toString = function () {
         var e = this.length;
-        return 0 === e ? "" : 0 == arguments.length ? w(this, 0, e) : O.apply(this, arguments);
+        return 0 === e ? "" : 0 == arguments.length ? D(this, 0, e) : O.apply(this, arguments);
     }),
     (c.prototype.toLocaleString = c.prototype.toString),
     (c.prototype.equals = function (e) {
@@ -559,14 +559,14 @@ function Z(e, t, n, r, i, a) {
     if (t > i || t < a) throw RangeError('"value" argument is out of bounds');
     if (n + r > e.length) throw RangeError("Index out of range");
 }
-function B(e, t, n, r, i, a) {
+function F(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError("Index out of range");
 }
-function F(e, t, n, r, i) {
+function B(e, t, n, r, i) {
     return (
         (t *= 1),
         (n >>>= 0),
-        i || B(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38),
+        i || F(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38),
         a.write(e, t, n, r, 23, 4),
         n + 4
     );
@@ -575,7 +575,7 @@ function V(e, t, n, r, i) {
     return (
         (t *= 1),
         (n >>>= 0),
-        i || B(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308),
+        i || F(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308),
         a.write(e, t, n, r, 52, 8),
         n + 8
     );
@@ -809,10 +809,10 @@ function V(e, t, n, r, i) {
         );
     }),
     (c.prototype.writeFloatLE = function (e, t, n) {
-        return F(this, e, t, !0, n);
+        return B(this, e, t, !0, n);
     }),
     (c.prototype.writeFloatBE = function (e, t, n) {
-        return F(this, e, t, !1, n);
+        return B(this, e, t, !1, n);
     }),
     (c.prototype.writeDoubleLE = function (e, t, n) {
         return V(this, e, t, !0, n);

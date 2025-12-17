@@ -1,27 +1,27 @@
 n.d(t, { Z: () => s }), n(388685), n(361932), n(187205);
-var l = n(473749),
-    r = n(699758);
+var r = n(473749),
+    l = n(699758);
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = l);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -34,8 +34,8 @@ function a(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -54,24 +54,24 @@ function s(e) {
             hasUserMadeSelection: c,
         } = e,
         d = null != n && n.length > 0,
-        [m, p] = l.useState(null != (t = null == s ? void 0 : s.defaultCategory) ? t : r.KN.Trick),
-        h = l.useRef(m),
-        f = l.useMemo(
+        [p, m] = r.useState(null != (t = null == s ? void 0 : s.defaultCategory) ? t : l.KN.Trick),
+        h = r.useRef(p),
+        f = r.useMemo(
             () =>
-                d ? n.flatMap((e) => (e.variants.length < r.mo ? [] : a(i({}, e.variants[m]), { name: e.name }))) : [],
-            [n, m, d],
+                d ? n.flatMap((e) => (e.variants.length < l.mo ? [] : a(i({}, e.variants[p]), { name: e.name }))) : [],
+            [n, p, d],
         ),
-        g = l.useMemo(() => null != o && f.some((e) => e.skuId === o.skuId), [f, o]);
+        g = r.useMemo(() => null != o && f.some((e) => e.skuId === o.skuId), [f, o]);
     if (
-        (l.useEffect(() => {
-            d && ((null == s ? void 0 : s.defaultCategory) == null || c || p(s.defaultCategory));
+        (r.useEffect(() => {
+            d && ((null == s ? void 0 : s.defaultCategory) == null || c || m(s.defaultCategory));
         }, [null == s ? void 0 : s.defaultCategory, c, d]),
-        l.useEffect(() => {
-            d && (h.current === m || g || u(void 0), (h.current = m));
-        }, [m, g, u, d]),
+        r.useEffect(() => {
+            d && (h.current === p || g || u(void 0), (h.current = p));
+        }, [p, g, u, d]),
         !d)
     )
         return null;
-    let v = n.length > 1;
-    return a(i({}, v && { selectedCategory: m }, v && { setSelectedCategory: p }), { shouldRenderCategoryControl: v });
+    let y = n.length > 1;
+    return a(i({}, y && { selectedCategory: p }, y && { setSelectedCategory: m }), { shouldRenderCategoryControl: y });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r,
     i,
     l = n(442837),
@@ -28,7 +28,7 @@ function g(e) {
             d = o.u.OVERVIEW;
     }
 }
-class m extends (i = l.ZP.Store) {
+class f extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -36,15 +36,15 @@ class m extends (i = l.ZP.Store) {
         return d;
     }
 }
-(r = "displayName") in m
-    ? Object.defineProperty(m, r, {
+(r = "displayName") in f
+    ? Object.defineProperty(f, r, {
           value: "GuildSettingsSafetyStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (m[r] = "GuildSettingsSafetyStore");
-let p = new m(a.Z, {
+    : (f[r] = "GuildSettingsSafetyStore");
+let m = new f(a.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (s.Z.getGuildId() === u) return !1;
         u = s.Z.getGuildId();

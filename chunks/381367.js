@@ -134,7 +134,7 @@ function R(e, t) {
         gameName: null == n ? void 0 : n.name,
     };
 }
-function D(e) {
+function w(e) {
     let { pid: t, error: n, crashType: r } = e,
         i = n instanceof Error ? n : Error(null != n ? n : "Unknown error");
     return (
@@ -144,7 +144,7 @@ function D(e) {
         !0
     );
 }
-function w(e) {
+function D(e) {
     let { createWindowTriggeringPID: t } = e;
     return T(t, { mounting_started_at: new Date().getTime() }), !0;
 }
@@ -203,12 +203,12 @@ let G = new U(
     __OVERLAY__ || !_.iP
         ? {}
         : {
-              OVERLAY_V3_PRE_CREATE_POPOUT: w,
+              OVERLAY_V3_PRE_CREATE_POPOUT: D,
               OVERLAY_V3_POST_CREATE_POPOUT: x,
               OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: L,
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: M,
               OVERLAY_SUCCESSFULLY_SHOWN: k,
-              OVERLAY_CRASHED: D,
+              OVERLAY_CRASHED: w,
               OVERLAY_V3_NATIVE_TRACK_GAME: j,
           },
 );

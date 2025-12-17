@@ -3,8 +3,8 @@ var l = n(54381),
     i = n(473749),
     r = n(120356),
     o = n.n(r),
-    s = n(225433),
-    a = n(683608);
+    a = n(225433),
+    s = n(347040);
 function c(e) {
     let { hasSetEmoji: t, onClick: n, children: r, className: c, buttonClassName: u } = e,
         [d, m] = i.useState(!1),
@@ -12,7 +12,7 @@ function c(e) {
             n(), m(!1);
         }, [n, m]);
     return (0, l.jsxs)("div", {
-        className: o()(a.container, c),
+        className: o()(s.container, c),
         onMouseEnter: () => {
             if (t) return void m(!0);
             m(!1);
@@ -23,9 +23,9 @@ function c(e) {
         children: [
             r,
             t && d
-                ? (0, l.jsx)(s.Z, {
+                ? (0, l.jsx)(a.Z, {
                       onClick: j,
-                      className: o()(a.removeButton, u),
+                      className: o()(s.removeButton, u),
                   })
                 : null,
         ],

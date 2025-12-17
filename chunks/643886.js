@@ -8,16 +8,16 @@ var i = n(473749),
     c = n(485386),
     d = n(430824),
     u = n(496675),
-    p = n(594174),
-    m = n(700785),
-    b = n(282923),
+    m = n(594174),
+    b = n(700785),
+    p = n(282923),
     g = n(981631);
 function f(e) {
     let t = (0, a.e7)([d.Z], () => d.Z.getGuild(e));
     l()(null != t, "guild must be present to be editing its integration settings");
     let n = (0, a.e7)([u.Z], () => u.Z.getHighestRole(t)),
         r = (0, a.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
-        f = (0, a.cj)([p.default], () => p.default.getUsers()),
+        f = (0, a.cj)([m.default], () => m.default.getUsers()),
         j = (0, a.e7)([c.Z], () => c.Z.getSortedRoles(e), [e]),
         v = i.useMemo(() => {
             let e = [];
@@ -26,7 +26,7 @@ function f(e) {
                 if (null == i || i.bot) continue;
                 let r =
                     i.id !== t.ownerId &&
-                    !m.BT({
+                    !b.BT({
                         permission: g.Plq.ADMINISTRATOR,
                         user: i,
                         context: t,
@@ -59,21 +59,21 @@ function f(e) {
             }
             return e;
         }, [j, t, n]),
-        [_, C] = i.useState(""),
-        N = i.useMemo(() => {
+        [C, N] = i.useState(""),
+        S = i.useMemo(() => {
             var t;
-            let n = (t = _).startsWith("@") ? t.substr(1) : t,
-                i = _.startsWith("@") ? y.filter((t) => t.id === e) : y;
+            let n = (t = C).startsWith("@") ? t.substr(1) : t,
+                i = C.startsWith("@") ? y.filter((t) => t.id === e) : y;
             return {
-                members: (0, b.B)(v, h, n),
-                roles: (0, b.B)(i, x, n),
+                members: (0, p.B)(v, h, n),
+                roles: (0, p.B)(i, x, n),
             };
-        }, [e, v, _, y]);
+        }, [e, v, C, y]);
     return {
-        query: _,
-        results: N,
-        setQuery: C,
-        unfilteredCount: N.members.length + N.roles.length,
+        query: C,
+        results: S,
+        setQuery: N,
+        unfilteredCount: S.members.length + S.roles.length,
     };
 }
 function h(e) {

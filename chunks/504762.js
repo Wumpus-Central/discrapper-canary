@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
-    a = n(926440),
-    s = n(217110);
-function o() {
+    a = n(145312),
+    o = n(217110);
+function s() {
     return (0, r.jsx)("div", {
         className: a.container,
         children: (0, r.jsxs)("div", {
             className: a.content,
             children: [
                 (0, r.jsx)("img", {
-                    src: s,
+                    src: o,
                     alt: l.intl.string(l.t.MvLOqp),
                 }),
                 (0, r.jsx)(i.LZC, { size: 12 }),

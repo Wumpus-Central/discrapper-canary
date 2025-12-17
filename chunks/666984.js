@@ -8,11 +8,11 @@ var i = n(28664),
     l = n(829820),
     c = n(395361),
     u = n(652853),
-    d = n(732380),
+    d = n(475413),
     f = n(981631),
     p = n(671955),
     _ = n(388032),
-    m = n(704543);
+    m = n(251806);
 function h(e) {
     var t, n, h, g, E;
     let { user: b, activity: y, onAction: O } = e,
@@ -31,7 +31,7 @@ function h(e) {
               children: [
                   (0, r.jsx)(i.u, {
                       text: I.tooltip,
-                      children: (0, r.jsx)(d.O1, {
+                      children: (0, r.jsx)(d.i6, {
                           text: null != (t = I.label) ? t : _.intl.string(_.t.eU3inB),
                           onClick: C,
                           disabled: I.disabled,
@@ -40,7 +40,7 @@ function h(e) {
                   }),
                   (0, r.jsx)(i.u, {
                       text: S.tooltip,
-                      children: (0, r.jsx)(d.O1, {
+                      children: (0, r.jsx)(d.i6, {
                           text: null != (n = S.label) ? n : _.intl.string(_.t.rRffNz),
                           onClick: T,
                           disabled: S.disabled,
@@ -55,7 +55,7 @@ function h(e) {
                       className: m.primaryButton,
                       children: (0, r.jsx)(i.u, {
                           text: S.tooltip,
-                          children: (0, r.jsx)(d.O1, {
+                          children: (0, r.jsx)(d.i6, {
                               icon: () => (0, r.jsx)(c.Z, {}),
                               text: null != (h = S.label) ? h : _.intl.string(_.t.rRffNz),
                               onClick: T,
@@ -65,7 +65,7 @@ function h(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsx)(d.pt, {
+                  (0, r.jsx)(d.ef, {
                       icon: a.iOO,
                       tooltipText: null != (g = I.tooltip) ? g : _.intl.string(_.t.eU3inB),
                       "aria-label": null != (E = I.label) ? E : _.intl.string(_.t.eU3inB),

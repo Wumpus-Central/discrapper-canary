@@ -2,9 +2,9 @@ n.d(t, { Z: () => Z }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(891371),
-    s = n(467721),
+    a = n.n(l),
+    o = n(891371),
+    s = n(236726),
     c = n(91192),
     u = n(866442),
     d = n(477690),
@@ -12,19 +12,19 @@ var r = n(54381),
     h = n(153867),
     p = n(591146),
     g = n(771845),
-    m = n(624138),
-    b = n(727258),
-    _ = n(276952),
-    y = n(199540),
-    O = n(40153),
-    v = n(252686),
-    j = n(682662),
+    b = n(624138),
+    m = n(727258),
+    y = n(276952),
+    O = n(199540),
+    v = n(40153),
+    j = n(252686),
+    C = n(682662),
     x = n(662146),
-    C = n(126134),
-    E = n(388032),
-    S = n(106663),
-    I = n(534175);
-let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    E = n(126134),
+    S = n(388032),
+    I = n(829313),
+    _ = n(455802);
+let P = (0, b.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(f.Kqy),
     Z = i.memo(function (e) {
         let {
@@ -33,15 +33,15 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 selected: l,
                 expanded: s,
                 mediaState: d,
-                mentionCount: m = 0,
+                mentionCount: b = 0,
                 isMentionLowImportance: Z,
                 unread: w = !1,
                 defaultFolderName: T,
                 draggable: A = !1,
                 sorting: R = !1,
                 onDragStart: D,
-                onDragEnd: L,
-                onExpandCollapse: M,
+                onDragEnd: M,
+                onExpandCollapse: L,
                 onContextMenu: k,
                 renderChildNode: G,
                 folderButtonSize: U,
@@ -49,61 +49,61 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 "aria-setsize": F,
                 "aria-posinset": V,
             } = e,
-            { id: H, name: W, children: z } = t,
+            { id: H, name: z, children: W } = t,
             [K, Y] = i.useState(!1),
-            [q, X] = i.useState(!1),
-            Q = K || q,
+            [q, Q] = i.useState(!1),
+            X = K || q,
             J = (0, p.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
-        let [{ dragging: $ }, ee] = (0, a.c)({
-                type: b.eD.FOLDER,
+        let [{ dragging: $ }, ee] = (0, o.c)({
+                type: m.eD.FOLDER,
                 item: () => (
                     null == D || D(),
                     {
-                        type: b.eD.FOLDER,
+                        type: m.eD.FOLDER,
                         nodeId: t.id,
                     }
                 ),
                 end() {
-                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == M || M(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
             et = i.useCallback((e) => {
-                X(e);
+                Q(e);
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && M();
+                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && L();
                 },
-                [M, s],
+                [L, s],
             ),
-            er = null != W && "" !== W ? W : null != T && "" !== T ? T : E.intl.string(E.t.xV9hVh),
+            er = null != z && "" !== z ? z : null != T && "" !== T ? T : S.intl.string(S.t.xV9hVh),
             ei = (0, c.Ie)("".concat(H)),
             el = "folder-items-".concat(H),
-            eo = (function (e) {
+            ea = (function (e) {
                 let t = (0, f.dQu)(f.TVs.modules.guildbar.FOLDER_SIZE),
                     n = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
                     r = (0, f.dQu)(f.TVs.space.SPACE_XS);
                 return e * (n + r) - r + (r - (t - n) / 2) + (0, f.dQu)(f.TVs.space.SPACE_4);
-            })(z.length),
-            ea = (0, f.Yzy)(!$ && s, {
+            })(W.length),
+            eo = (0, f.Yzy)(!$ && s, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
                 config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(j.H, {
+            ec = (0, r.jsxs)(C.H, {
                 children: [
-                    (0, r.jsx)(_.Z, {
+                    (0, r.jsx)(y.Z, {
                         disabled: $ || s,
                         hovered: K,
                         selected: l,
                         unread: w,
-                        className: I.pill,
+                        className: _.pill,
                     }),
                     (0, r.jsx)(x.Z, {
                         text: er,
@@ -116,23 +116,23 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       ee(e);
                                   }
                                 : void 0,
-                            className: o()(S.folderHeader, {
-                                [S.folderHeaderSmall]: "icon" === U || J,
-                                [I.wobble]: !$ && q && !s,
+                            className: a()(I.folderHeader, {
+                                [I.folderHeaderSmall]: "icon" === U || J,
+                                [_.wobble]: !$ && q && !s,
                             }),
                             "data-dnd-name": er,
                             children: $
-                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
-                                : (0, r.jsx)(y.Z, {
+                                ? (0, r.jsx)(j.Z, { isFolder: !0 })
+                                : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: s,
                                       sorting: R,
                                       mediaState: d,
-                                      mentionCount: m,
+                                      mentionCount: b,
                                       isMentionLowImportance: Z,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: M,
+                                      onClick: L,
                                       onContextMenu: k,
                                       onHoverChange: Y,
                                       onKeyDown: en,
@@ -144,7 +144,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         }),
                     }),
                     A
-                        ? (0, r.jsx)(O.ZP, {
+                        ? (0, r.jsx)(v.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et,
@@ -152,20 +152,20 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null,
                 ],
             }),
-            eu = null != t.color ? t.color : C.Wy,
-            ed = eu === C.Wy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : E.Wy,
+            ed = eu === E.Wy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)("div", {
             ref: es,
-            className: o()(S.folderGroup, {
-                [S.isExpanded]: s,
-                [S.isHovering]: Q,
+            className: a()(I.folderGroup, {
+                [I.isExpanded]: s,
+                [I.isHovering]: X,
             }),
             style: { "--custom-folder-color": null != ed ? ed : "" },
             "data-drop-hovering": q,
             children: [
-                !$ && s && (0, r.jsx)("span", { className: S.folderGroupBackground }),
+                !$ && s && (0, r.jsx)("span", { className: I.folderGroupBackground }),
                 ec,
-                ea((e, n, i) => {
+                eo((e, n, i) => {
                     let { key: l } = i;
                     return (
                         n &&
@@ -176,17 +176,17 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 role: "group",
                                 as: "ul",
                                 gap: "xs",
-                                className: S.folderGuildsList,
-                                style: { height: e.height.to((e) => e * eo) },
+                                className: I.folderGuildsList,
+                                style: { height: e.height.to((e) => e * ea) },
                                 "aria-label": t.name,
-                                children: z.map((t, n) => G(t, n, z.length, e.height)),
+                                children: W.map((t, n) => G(t, n, W.length, e.height)),
                             },
                             l,
                         )
                     );
                 }),
                 A && s
-                    ? (0, r.jsx)(O.Zu, {
+                    ? (0, r.jsx)(v.Zu, {
                           name: er,
                           targetNode: t,
                       })

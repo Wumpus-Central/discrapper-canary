@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(314734),
     N = n(981631),
     P = n(388032),
-    R = n(399235);
-function D(e, t, n) {
+    R = n(425838);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -87,9 +87,9 @@ let j = Array(6)
     U = 4,
     G = 5;
 function Z(e) {
-    return (0, r.jsx)(B, w({}, e));
+    return (0, r.jsx)(F, D({}, e));
 }
-function B(e) {
+function F(e) {
     let { context: t, query: n, entrypoint: a, isScrollCloseToBottom: l } = e,
         c = a === g._b.TEXT,
         u = a === g._b.TEXT,
@@ -159,7 +159,7 @@ function B(e) {
           : (0, r.jsxs)("div", {
                 children: [
                     m &&
-                        (0, r.jsx)(F, {
+                        (0, r.jsx)(B, {
                             context: t,
                             commandResults: _,
                             query: n,
@@ -175,7 +175,7 @@ function B(e) {
                 ],
             });
 }
-function F(e) {
+function B(e) {
     var t, n;
     let { context: a, commandResults: o, query: s } = e,
         p = o.length > U,
@@ -184,15 +184,15 @@ function F(e) {
         v = null != (t = (0, l.Z)(b)) ? t : b,
         S = i.useCallback(() => y((e) => !e), []),
         C = (null != (n = (0, l.Z)(s)) ? n : s)[0] !== s[0],
-        D = b && !C;
+        w = b && !C;
     i.useLayoutEffect(() => y(!1), [C]);
     let {
-        ref: w,
+        ref: D,
         isTransitioning: x,
         onTransitionEnd: L,
     } = (0, O.Z)({
         key: s,
-        isExpanded: D,
+        isExpanded: w,
         durationMs: 200,
         maxAnimationHeight: A.K7,
     });
@@ -205,8 +205,8 @@ function F(e) {
                 num: o.length,
             });
     }, [o.length, v, b]);
-    let j = D || x,
-        M = D ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
+    let j = w || x,
+        M = w ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
         k = j ? o : E;
     return (0, r.jsxs)("div", {
         children: [
@@ -217,7 +217,7 @@ function F(e) {
             }),
             (0, r.jsx)("div", {
                 className: R.sectionContentContainer,
-                ref: w,
+                ref: D,
                 onTransitionEnd: L,
                 children: k.map((e, t) => {
                     let { command: n, application: i, section: o } = e;
@@ -272,7 +272,7 @@ function V(e) {
         },
         children: (0, r.jsx)(
             b.kA,
-            L(w({}, e), {
+            L(D({}, e), {
                 tracksImpression: !1,
                 enableVideoBanner: !0,
             }),

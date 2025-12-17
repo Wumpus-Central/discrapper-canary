@@ -3,20 +3,20 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(570140),
-    s = n(519938),
-    o = n(585483),
+    o = n(519938),
+    s = n(585483),
     c = n(591472),
     u = n(408491),
     d = n(981631);
 let p = (e, t) => {
     a.Z.wait(() => {
-        (0, s.Cz)(e, t);
+        (0, o.Cz)(e, t);
     });
 };
 function f(e) {
     let { embedId: t, className: n, style: a } = e,
-        s = (0, l.e7)([c.Z], () => c.Z.getConnectedFrame()),
-        f = ((0, l.e7)([c.Z], () => c.Z.getFrameLayoutMode()), null != s && u.U.FOCUSED, window),
+        o = (0, l.e7)([c.Z], () => c.Z.getConnectedFrame()),
+        f = ((0, l.e7)([c.Z], () => c.Z.getFrameLayoutMode()), null != o && u.U.FOCUSED, window),
         g = i.useRef(null),
         h = i.useCallback(() => {
             null != g.current && p(t, g.current.getBoundingClientRect());
@@ -49,9 +49,9 @@ function f(e) {
         }, [h, f]),
         i.useLayoutEffect(
             () => (
-                o.S.subscribe(d.CkL.MANUAL_IFRAME_RESIZING, h),
+                s.S.subscribe(d.CkL.MANUAL_IFRAME_RESIZING, h),
                 () => {
-                    o.S.unsubscribe(d.CkL.MANUAL_IFRAME_RESIZING, h);
+                    s.S.unsubscribe(d.CkL.MANUAL_IFRAME_RESIZING, h);
                 }
             ),
             [h],

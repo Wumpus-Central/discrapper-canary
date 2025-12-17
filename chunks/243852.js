@@ -3,8 +3,8 @@ var r,
     i,
     l,
     a = n(442837),
-    s = n(433517),
-    o = n(846519),
+    o = n(433517),
+    s = n(846519),
     c = n(570140),
     u = n(278323),
     d = n(581567),
@@ -13,29 +13,29 @@ var r,
     g = n(70956),
     h = n(780570),
     m = n(314897),
-    _ = n(77498),
-    b = n(283595),
+    b = n(77498),
+    _ = n(283595),
     E = n(19780),
     O = n(944486),
     v = n(981631);
 let y = "ActivityTrackingStore",
     I = 30 * g.Z.Millis.MINUTE,
     C = 5 * g.Z.Millis.MINUTE,
-    S = null != (r = s.K.get(y)) ? r : {},
+    S = null != (r = o.K.get(y)) ? r : {},
     T = {},
     N = !1;
 function j(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && P(e, !0);
     let n = T[e.applicationId];
-    null != n && (n.stop(), delete T[e.applicationId]), delete S[e.applicationId], s.K.set(y, S);
+    null != n && (n.stop(), delete T[e.applicationId]), delete S[e.applicationId], o.K.set(y, S);
 }
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         r = null != e.updatedAt ? n - e.updatedAt : 0;
     r > I + C && (r = 0);
-    let i = (0, h.OT)(e.applicationId, b.Z),
+    let i = (0, h.OT)(e.applicationId, _.Z),
         l = O.Z.getVoiceChannelId(),
         a = m.default.getSessionId(),
         c = E.Z.getMediaSessionId();
@@ -53,15 +53,15 @@ function P(e) {
     }),
         (e.updatedAt = n);
     let d = T[e.applicationId];
-    null == d && (d = T[e.applicationId] = new o.Xp()).start(I, () => P(e)),
-        t || ((S[e.applicationId] = e), s.K.set(y, S));
+    null == d && (d = T[e.applicationId] = new s.Xp()).start(I, () => P(e)),
+        t || ((S[e.applicationId] = e), o.K.set(y, S));
 }
 function x() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: r, exePath: i } of t) {
-        let t = _.Z.getGameByName(e);
+        let t = b.Z.getGameByName(e);
         null != t &&
             (n.add(t.id),
             t.id in S ||
@@ -80,7 +80,7 @@ function A() {
 }
 class Z extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, _.Z, b.Z, E.Z, p.ZP, O.Z, f.Z), this.syncWith([f.Z], x);
+        this.waitFor(m.default, b.Z, _.Z, E.Z, p.ZP, O.Z, f.Z), this.syncWith([f.Z], x);
     }
     getActivities() {
         return S;
@@ -110,12 +110,12 @@ class Z extends (i = a.ZP.Store) {
             let { applicationId: t, token: n } = e,
                 r = S[t];
             if (null == r) return !1;
-            (r.token = n), s.K.set(y, S);
+            (r.token = n), o.K.set(y, S);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
                 n = S[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), s.K.set(y, S);
+            (n.token = null), (n.updatedAt = null), o.K.set(y, S);
         },
     });

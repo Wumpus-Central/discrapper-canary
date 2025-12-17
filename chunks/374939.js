@@ -1,13 +1,13 @@
 n.d(t, { Z: () => i });
-var r = n(54381);
+var a = n(54381);
 n(473749);
-var a = n(333329);
+var r = n(835592);
 function i(e) {
     let { children: t } = e;
-    return (0, r.jsx)("section", {
-        className: a.contentSection,
-        children: (0, r.jsx)("div", {
-            className: a.content,
+    return (0, a.jsx)("section", {
+        className: r.contentSection,
+        children: (0, a.jsx)("div", {
+            className: r.content,
             children: t,
         }),
     });

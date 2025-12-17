@@ -12,8 +12,8 @@ function s(e) {
             isSelfStream: u,
             centerButton: d,
             onMouseEnter: p,
-            onMouseLeave: h,
-            renderNUXHighlight: f,
+            onMouseLeave: f,
+            renderNUXHighlight: h,
             buttonRef: m,
         } = e,
         g = (function (e, t) {
@@ -54,9 +54,9 @@ function s(e) {
         : s
           ? o.intl.string(o.t.fjBNo1)
           : o.intl.string(o.t.uQn9B8);
-    let { Component: C, events: y, play: _ } = (0, l.P)(c ? "disable" : "enable");
+    let { Component: C, events: y, play: v } = (0, l.P)(c ? "disable" : "enable");
     return (
-        r.useEffect(() => () => _(), [c, _]),
+        r.useEffect(() => () => v(), [c, v]),
         (0, i.jsx)(
             b,
             (function (e) {
@@ -91,12 +91,12 @@ function s(e) {
                     disabled: !s,
                     iconComponent: C,
                     isActive: c,
-                    color: (f ? (n = "premiumGradient") : c && (n = "green"), n),
+                    color: (h ? (n = "premiumGradient") : c && (n = "green"), n),
                     onMouseEnter: (e) => {
                         null == p || p(e), y.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == h || h(e), y.onMouseLeave();
+                        null == f || f(e), y.onMouseLeave();
                     },
                 },
                 g,

@@ -32,8 +32,8 @@ function c(e) {
 }
 function d(e) {
     var t,
-        { channel: d, application: u, showApplicationImage: p } = e,
-        m = (function (e, t) {
+        { channel: d, application: u, showApplicationImage: m } = e,
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -54,7 +54,7 @@ function d(e) {
             }
             return r;
         })(e, ["channel", "application", "showApplicationImage"]);
-    let b = (0, a.w)(d),
+    let p = (0, a.w)(d),
         g = r.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
@@ -87,16 +87,16 @@ function d(e) {
                 }),
             [u, d],
         ),
-        f = p ? (null != (t = u.getIconURL(48)) ? t : o.pK["0"]) : void 0;
+        f = m ? (null != (t = u.getIconURL(48)) ? t : o.pK["0"]) : void 0;
     return (0, i.jsx)(
         s.Z,
         c(
             {
                 imageSrc: f,
                 onButtonClick: g,
-                details: null != b ? [{ text: b }] : void 0,
+                details: null != p ? [{ text: p }] : void 0,
             },
-            m,
+            b,
         ),
     );
 }

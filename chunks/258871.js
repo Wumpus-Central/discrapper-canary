@@ -1,10 +1,10 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(442837),
     l = n(481060),
-    o = n(434479),
-    a = n(593364),
+    a = n(434479),
+    o = n(593364),
     s = n(703656),
     c = n(944486),
     u = n(688438),
@@ -94,7 +94,7 @@ let g = [
             getName: () => f.intl.string(f.t.MJQOuJ),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("45965")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -107,7 +107,7 @@ let g = [
                 }),
         },
     ],
-    m = (e) => {
+    b = (e) => {
         let { guild: t, channel: n } = e,
             l = (0, i.e7)([c.Z], () => null != n && c.Z.getChannelId() === n.id),
             s = (0, u.t)(n);
@@ -116,14 +116,14 @@ let g = [
                 let { key: i, getName: c, handler: u, renderIcon: d } = e,
                     f = "".concat(i, "-").concat(t.id);
                 return (0, r.jsx)(
-                    o.m,
+                    a.m,
                     {
                         id: f,
                         renderIcon: d,
                         text: c(),
                         selected: l && "JOIN_SERVERS" === i,
                         onClick: null != n ? () => u(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === i && s > 0 ? (0, a.N)(s) : null,
+                        trailing: "JOIN_SERVERS" === i && s > 0 ? (0, o.N)(s) : null,
                     },
                     f,
                 );

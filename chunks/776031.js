@@ -87,7 +87,7 @@ function T(e, t) {
         }),
         { location: P } = (0, l.O)(),
         R = (0, a.e7)([_.Z, d.Z], () => d.Z.getChannel(_.Z.getVoiceChannelId())),
-        D = i.useCallback(
+        w = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
                     if (null != C) {
@@ -123,7 +123,7 @@ function T(e, t) {
             [t, P, T, C],
         );
     if (null == e) return null;
-    let w = n === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? g.ApplicationStreamFPS.FPS_30 : v,
+    let D = n === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? g.ApplicationStreamFPS.FPS_30 : v,
         x = g.af.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, y, t, A, N, R);
@@ -134,14 +134,14 @@ function T(e, t) {
                     id: "stream-settings-fps-".concat(t),
                     label: n,
                     checked: t === v,
-                    action: () => D(i, y, t, h.AnalyticsObjectTypes.RESOLUTION),
+                    action: () => w(i, y, t, h.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-fps-".concat(t),
             );
         }),
         L = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, w, A, N, R);
+                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, D, A, N, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -149,7 +149,7 @@ function T(e, t) {
                     id: "stream-settings-resolution-".concat(t),
                     label: n,
                     checked: t === y,
-                    action: () => D(i, t, w, h.AnalyticsObjectTypes.RESOLUTION),
+                    action: () => w(i, t, D, h.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-resolution-".concat(t),
             );

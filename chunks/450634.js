@@ -1,16 +1,16 @@
-n.d(e, { default: () => f });
-var i = n(54381),
-    a = n(473749),
-    o = n(481060),
-    l = n(957115),
-    c = n(332664),
-    r = n(626135),
-    _ = n(672655),
-    d = n(768015),
-    u = n(701488),
-    s = n(981631),
-    b = n(531578),
-    m = n(388032);
+a.d(e, { default: () => f });
+var n = a(54381),
+    i = a(473749),
+    c = a(481060),
+    o = a(957115),
+    d = a(332664),
+    l = a(626135),
+    r = a(672655),
+    b = a(768015),
+    u = a(701488),
+    s = a(981631),
+    _ = a(531578),
+    m = a(388032);
 let p = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
 function f(t) {
     var e;
@@ -22,8 +22,8 @@ function f(t) {
         transitionState: O,
         analyticsData: h,
     } = t;
-    a.useEffect(() => {
-        r.default.track(s.rMx.OPEN_MODAL, {
+    i.useEffect(() => {
+        l.default.track(s.rMx.OPEN_MODAL, {
             type: "Activity Feedback Modal",
             application_id: g.id,
             application_name: g.name,
@@ -32,63 +32,63 @@ function f(t) {
         });
     }, [g]);
     let j = (null == (e = g.embeddedActivityConfig) ? void 0 : e.displays_advertisements) === !0;
-    return (0, i.jsx)(c.Z, {
+    return (0, n.jsx)(d.Z, {
         modalType: "activity",
         header: m.intl.formatToPlainString(m.t.QXYwoD, { applicationName: g.name }),
         body: m.intl.string(m.t["9hk2KF"]),
         problemTitle: m.intl.string(m.t.g1q5fr),
-        problems: (0, _.Z)(!0, j),
+        problems: (0, r.Z)(!0, j),
         freeformNeededProblems: p,
         onSubmit: function (t) {
             var e;
-            let { rating: a, problem: c, dontShowAgain: _, feedback: u } = t;
-            _ &&
-                (r.default.track(s.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+            let { rating: i, problem: d, dontShowAgain: r, feedback: u } = t;
+            r &&
+                (l.default.track(s.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                     application_id: g.id,
-                    rating: a,
+                    rating: i,
                 }),
-                (0, l.Uv)({
-                    feedbackType: b.nw.ACTIVITY,
+                (0, o.Uv)({
+                    feedbackType: _.nw.ACTIVITY,
                     location: "ActivityFeedback",
                 })),
-                null != a &&
-                    ((0, d.Z)({
-                        problem: null != (e = null == c ? void 0 : c.value) ? e : null,
+                null != i &&
+                    ((0, b.Z)({
+                        problem: null != (e = null == d ? void 0 : d.value) ? e : null,
                         channel: f,
                         embeddedActivityLocation: v,
                         feedback: u,
                         activityApplication: g,
                         analyticsData: h,
                         location: "Activity End",
-                        rating: a,
+                        rating: i,
                     }),
-                    null != c &&
-                        (0, o.ZDy)(async () => {
-                            let { default: t } = await n.e("14466").then(n.bind(n, 729328));
+                    null != d &&
+                        (0, c.ZDy)(async () => {
+                            let { default: t } = await a.e("14466").then(a.bind(a, 729328));
                             return (e) =>
-                                (0, i.jsx)(
+                                (0, n.jsx)(
                                     t,
                                     (function (t) {
                                         for (var e = 1; e < arguments.length; e++) {
-                                            var n = null != arguments[e] ? arguments[e] : {},
-                                                i = Object.keys(n);
+                                            var a = null != arguments[e] ? arguments[e] : {},
+                                                n = Object.keys(a);
                                             "function" == typeof Object.getOwnPropertySymbols &&
-                                                (i = i.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                                (n = n.concat(
+                                                    Object.getOwnPropertySymbols(a).filter(function (t) {
+                                                        return Object.getOwnPropertyDescriptor(a, t).enumerable;
                                                     }),
                                                 )),
-                                                i.forEach(function (e) {
-                                                    var i;
-                                                    (i = n[e]),
+                                                n.forEach(function (e) {
+                                                    var n;
+                                                    (n = a[e]),
                                                         e in t
                                                             ? Object.defineProperty(t, e, {
-                                                                  value: i,
+                                                                  value: n,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0,
                                                               })
-                                                            : (t[e] = i);
+                                                            : (t[e] = n);
                                                 });
                                         }
                                         return t;

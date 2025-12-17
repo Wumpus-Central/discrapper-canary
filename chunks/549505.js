@@ -4,11 +4,11 @@ r(473749);
 var n = r(793030),
     s = r(481060),
     o = r(547972),
-    l = r(63063),
-    c = r(981631),
+    c = r(63063),
+    l = r(981631),
     a = r(332325),
     d = r(388032),
-    x = r(688364);
+    x = r(353697);
 function m(t) {
     let { transitionState: e, onClose: r } = t;
     return (0, i.jsx)(n.Modal, {
@@ -50,7 +50,7 @@ function u(t) {
                     color: "currentColor",
                 }),
                 text: d.intl.format(d.t.wBlJCr, {
-                    recentActivityURL: l.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                    recentActivityURL: c.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {
                         e(), (0, o.Z)(a.Z.ACTIVITY_PRIVACY);
                     },

@@ -1,6 +1,6 @@
 n.d(t, {
     Bg: () => G,
-    Ni: () => B,
+    Ni: () => F,
     YH: () => U,
     ld: () => M,
     rf: () => Z,
@@ -35,8 +35,8 @@ var r = n(473749),
     N = n(199257),
     P = n(149203),
     R = n(185923),
-    D = n(388032);
-function w(e, t, n) {
+    w = n(388032);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -106,15 +106,15 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                 collapsedSections: l,
                 includeCreateEmojiButton: f = !0,
                 pickerIntention: p,
-                emojiSearchResults: w,
+                emojiSearchResults: D,
                 gridWidth: L,
                 emojiPaddingHorizontal: M,
                 emojiSpriteSize: U,
                 shouldShowSoundmojiInEmojiPicker: G,
                 showOnlyUnicode: Z,
             } = e,
-            B = (0, s.e7)([c.ZP], () => c.ZP.categories),
-            F = r.useMemo(() => (Z ? d.ZP.getCategories() : B), [B, Z]),
+            F = (0, s.e7)([c.ZP], () => c.ZP.categories),
+            B = r.useMemo(() => (Z ? d.ZP.getCategories() : F), [F, Z]),
             V = (0, s.e7)([E.Z], () => E.Z.getGuild(null == n ? void 0 : n.getGuildId()), [n]),
             H = null != (t = null == n ? void 0 : n.getGuildId()) ? t : i,
             Y = (0, s.e7)([c.ZP], () => c.ZP.getDisambiguatedEmojiContext(H), [H]),
@@ -168,9 +168,9 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                             A = d.sectionId === P.En.TOP_GUILD_EMOJI,
                             N = !A && null != O && I === O.id && y.length < (0, S.y4)(O),
                             R = A && y.length < u && !eo,
-                            w = null != O && A && eo && es === T.B.WITH_TOP_LIST && ea[O.id].length < (0, S.y4)(O),
-                            L = f && $ && null != O && (N || R || w);
-                        L && w && y.length === u && y.shift();
+                            D = null != O && A && eo && es === T.B.WITH_TOP_LIST && ea[O.id].length < (0, S.y4)(O),
+                            L = f && $ && null != O && (N || R || D);
+                        L && D && y.length === u && y.shift();
                         let M = y.length > _ && null != O && d.isNitroLocked,
                             k = M && !J.has(O.id);
                         if (k) {
@@ -179,7 +179,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                         }
                         let G = eo && L && !h,
                             Z = Math.ceil((L || M ? y.length + 1 : y.length) / u),
-                            B = [];
+                            F = [];
                         for (let e = 0; e < Z; e++) {
                             let t = 0 === e,
                                 n = e * u - (G && e > 0 ? 1 : 0),
@@ -213,7 +213,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                                         {
                                             type: 1,
                                             guildId: O.id,
-                                            name: D.intl.string(D.t["Z/r7IS"]),
+                                            name: w.intl.string(w.t["Z/r7IS"]),
                                             size: U,
                                             rowIndex: c,
                                             columnIndex: 0,
@@ -221,15 +221,15 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                                         },
                                         ...o,
                                     ]),
-                                B.push(o),
+                                F.push(o),
                                 !h)
                             ) {
                                 if (!eo && L && e === Z - 1) {
-                                    let t = B[e];
+                                    let t = F[e];
                                     t.push({
                                         type: 1,
                                         guildId: O.id,
-                                        name: D.intl.string(D.t["Z/r7IS"]),
+                                        name: w.intl.string(w.t["Z/r7IS"]),
                                         size: U,
                                         rowIndex: e,
                                         columnIndex: t.length,
@@ -237,11 +237,11 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                                     });
                                 }
                                 if (M && e === Z - 1) {
-                                    let t = B[e];
+                                    let t = F[e];
                                     t.push({
                                         type: 2,
                                         guildId: O.id,
-                                        name: D.intl.string(D.t.NZI2Zk),
+                                        name: w.intl.string(w.t.NZI2Zk),
                                         size: U,
                                         rowIndex: e,
                                         columnIndex: t.length,
@@ -253,24 +253,24 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                             }
                             c++;
                         }
-                        let F = h ? 0 : Z,
+                        let B = h ? 0 : Z,
                             V = j(x({}, d), { count: o.length });
-                        t.push(V), e.push(F);
+                        t.push(V), e.push(B);
                     };
-                if (null != w)
-                    0 !== w.unlocked.length &&
-                        m(w.unlocked, {
+                if (null != D)
+                    0 !== D.unlocked.length &&
+                        m(D.unlocked, {
                             type: P.En.SEARCH_RESULTS,
                             sectionId: P.En.SEARCH_RESULTS,
-                            count: w.unlocked.length,
+                            count: D.unlocked.length,
                             isNitroLocked: !1,
                         }),
-                        0 !== w.locked.length &&
-                            m(w.locked, {
+                        0 !== D.locked.length &&
+                            m(D.locked, {
                                 type: P.En.PREMIUM_UPSELL,
                                 categoryId: P.UX.PREMIUM_UPSELL,
                                 sectionId: P.En.PREMIUM_UPSELL,
-                                count: w.locked.length,
+                                count: D.locked.length,
                                 isNitroLocked: !et,
                             });
                 else {
@@ -293,7 +293,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                         let a = l.has(P.UX.SOUNDMOJI);
                         !a && (i.push(n.length), r.push(n), s++), e.push(+!a), c++;
                     }
-                    for (let e of F)
+                    for (let e of B)
                         if (e === P.UX.CUSTOM) {
                             let t = (t) => {
                                 let r = ea[t];
@@ -397,7 +397,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                 rowCountBySection: e,
                 sectionDescriptors: t,
             };
-        }, [Y, L, U, M, w, l, eo, es, ea, f, $, J, n, p, q, Q, et, F, V, X, z, K, W, en, el, G]);
+        }, [Y, L, U, M, D, l, eo, es, ea, f, $, J, n, p, q, Q, et, B, V, X, z, K, W, en, el, G]);
     };
 var G = (function (e) {
     return (e[(e.PREMIUM = 0)] = "PREMIUM"), (e[(e.ROLE_SUBSCRIPTION = 1)] = "ROLE_SUBSCRIPTION"), e;
@@ -462,7 +462,7 @@ let Z = (e) => {
             [n, t, a, o, p, d, f],
         );
     },
-    B = (e) => {
+    F = (e) => {
         let { emojiListRef: t } = e,
             n = (0, p.Iu)((e) => e.searchQuery),
             i = r.useCallback(

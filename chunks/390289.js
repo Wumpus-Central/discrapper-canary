@@ -9,8 +9,8 @@ var i,
     u = n(944486),
     d = n(9156),
     p = n(70956),
-    h = n(709054),
-    f = n(221259),
+    f = n(709054),
+    h = n(221259),
     m = n(981631),
     g = n(490897),
     b = n(526761);
@@ -49,25 +49,25 @@ let y = [
             viewTime: 30 * p.Z.Millis.MINUTE,
         },
     ],
-    _ = 5 * y[y.length - 1].viewTime,
-    v = p.Z.Millis.WEEK,
+    v = 5 * y[y.length - 1].viewTime,
+    x = p.Z.Millis.WEEK,
     O = { channels: {} },
-    x = new Set(),
-    E = null,
-    j = 0,
-    S = 0;
+    E = new Set(),
+    j = null,
+    S = 0,
+    _ = 0;
 function P() {
-    if (null == E || !T(E)) return !1;
-    let e = Z(E);
-    if (e.lastActionTime > Date.now() - p.Z.Millis.DAY && e.viewDuration > _) return !1;
+    if (null == j || !T(j)) return !1;
+    let e = Z(j);
+    if (e.lastActionTime > Date.now() - p.Z.Millis.DAY && e.viewDuration > v) return !1;
     let t = Date.now();
-    (e.lastActionTime = t), (e.viewDuration += t - j), (j = t);
+    (e.lastActionTime = t), (e.viewDuration += t - S), (S = t);
 }
 function I() {
     return (
-        0 !== S && (clearInterval(S), (S = 0)),
+        0 !== _ && (clearInterval(_), (_ = 0)),
         d.ZP.useNewNotifications &&
-            (S = setInterval(() => {
+            (_ = setInterval(() => {
                 P() && w.emitChange();
             }, 15 * p.Z.Millis.SECOND)),
         !1
@@ -85,7 +85,7 @@ function Z(e) {
     );
 }
 function T(e) {
-    if (!d.ZP.useNewNotifications || x.has(e)) return !1;
+    if (!d.ZP.useNewNotifications || E.has(e)) return !1;
     let t = s.Z.getBasicChannel(e);
     if (
         null == t ||
@@ -130,14 +130,14 @@ class A extends (i = l.ZP.PersistedStore) {
                 var t;
                 let n = c.Z.getGuild(e.guild_id),
                     i = null != (t = null == n ? void 0 : n.joinedAt) ? t : new Date(),
-                    r = Math.min(h.default.age(e.id), Date.now() - i.getTime()),
+                    r = Math.min(f.default.age(e.id), Date.now() - i.getTime()),
                     l = O.channels[e.id];
-                if (null == l || l.lastActionTime < Date.now() - v) return !1;
+                if (null == l || l.lastActionTime < Date.now() - x) return !1;
                 for (let e of y)
                     if (r < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
-            (delete O.channels[e], x.add(e), (0, f.IG)(t.guild_id, t.id, g.i.ALL_MESSAGES), !0)
+            (delete O.channels[e], E.add(e), (0, h.IG)(t.guild_id, t.id, g.i.ALL_MESSAGES), !0)
         );
     }
 }
@@ -145,12 +145,12 @@ C(A, "displayName", "UnreadSettingNoticeStore2"), C(A, "persistKey", "UnreadSett
 let w = new A(a.Z, {
         CHANNEL_SELECT: function () {
             let e = P();
-            return (E = u.Z.getChannelId()), (j = Date.now()), e;
+            return (j = u.Z.getChannelId()), (S = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (E = u.Z.getChannelId()), (j = Date.now()), I();
-            let e = Date.now() - v;
-            h.default.forEach(O.channels, (t, n) => {
+            (j = u.Z.getChannelId()), (S = Date.now()), I();
+            let e = Date.now() - x;
+            f.default.forEach(O.channels, (t, n) => {
                 let { lastActionTime: i } = t;
                 i < e && delete O.channels[n];
             });

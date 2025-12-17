@@ -1,7 +1,7 @@
 n.d(t, {
-    Kp: () => E,
+    Kp: () => S,
     u9: () => v,
-    xV: () => S,
+    xV: () => _,
 }),
     n(413496),
     n(433524),
@@ -10,42 +10,42 @@ n.d(t, {
     n(388685);
 var r = n(473749),
     l = n(828700),
-    i = n(442837),
-    o = n(607070),
-    s = n(100527),
-    a = n(906732),
+    a = n(442837),
+    s = n(607070),
+    o = n(100527),
+    i = n(906732),
     c = n(597688),
     u = n(328347),
     d = n(429368),
-    g = n(410127),
-    f = n(237031),
-    p = n(258939),
-    m = n(956472),
-    h = n(981631);
-let C = "".concat("#").concat("itemSkuId", "="),
-    _ = new RegExp("^".concat(C, "(\\d+)$")),
-    b = [h.Z5c.COLLECTIBLES_SHOP],
+    f = n(410127),
+    g = n(237031),
+    b = n(258939),
+    p = n(956472),
+    m = n(981631);
+let h = "".concat("#").concat("itemSkuId", "="),
+    C = new RegExp("^".concat(h, "(\\d+)$")),
+    E = [m.Z5c.COLLECTIBLES_SHOP],
     v = (e) => {
         let t = (0, l.TH)();
         r.useEffect(() => {
-            if (null != e && b.includes(t.pathname))
+            if (null != e && E.includes(t.pathname))
                 return () => {
-                    window.location.hash.startsWith(C) && window.location.replace("#");
+                    window.location.hash.startsWith(h) && window.location.replace("#");
                 };
         }, [e, t.pathname]);
     },
-    E = () => {
-        let e = (0, p.R)(),
+    S = () => {
+        let e = (0, b.R)(),
             t = r.useRef(null),
             n = (0, l.TH)(),
-            o = n.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : s.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: C } = (0, a.ZP)(o),
-            b = (0, g.Z)();
+            s = n.pathname === m.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : o.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: h } = (0, i.ZP)(s),
+            E = (0, f.Z)();
         r.useEffect(() => {
-            let e = _.exec(n.hash);
+            let e = C.exec(n.hash);
             null != e ? (t.current = e[1]) : (t.current = null);
-        }, [b, n.hash]);
-        let v = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
+        }, [E, n.hash]);
+        let v = (0, a.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (e) return;
             let n = null;
@@ -53,56 +53,56 @@ let C = "".concat("#").concat("itemSkuId", "="),
                 let e = setTimeout(() => {
                     ((e) => {
                         let { productSkuId: t, analyticsLocations: n, analyticsSource: r, tab: l } = e,
-                            i = c.Z.getProduct(t),
-                            o = c.Z.getCategoryForProduct(t);
-                        if (null != i && null != o) {
-                            let e = i,
-                                a = (0, m.oQ)({ product: i }),
+                            a = c.Z.getProduct(t),
+                            s = c.Z.getCategoryForProduct(t);
+                        if (null != a && null != s) {
+                            let e = a,
+                                i = (0, p.oQ)({ product: a }),
                                 u = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (u !== document.activeElement && (null == u || u.focus()),
-                                null != i.variantGroupStoreListingId)
+                                null != a.variantGroupStoreListingId)
                             ) {
-                                let n = c.Z.getProductByStoreListingId(i.variantGroupStoreListingId);
+                                let n = c.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
                                 if (null != n) {
-                                    var s;
+                                    var o;
                                     e = n;
-                                    let r = null == (s = n.variants) ? void 0 : s.findIndex((e) => e.skuId === t);
+                                    let r = null == (o = n.variants) ? void 0 : o.findIndex((e) => e.skuId === t);
                                     null != r && r > -1 && (0, d.$)(n, r);
                                 }
                             }
-                            (0, f.T)({
+                            (0, g.T)({
                                 product: e,
-                                category: o,
+                                category: s,
                                 analyticsSource: r,
                                 analyticsLocations: n,
                                 tab: l,
-                                shouldCheckoutWithOrbs: a,
+                                shouldCheckoutWithOrbs: i,
                             });
                         }
                     })({
                         productSkuId: n,
-                        analyticsLocations: C,
-                        analyticsSource: o,
-                        tab: b,
+                        analyticsLocations: h,
+                        analyticsSource: s,
+                        tab: E,
                     });
                 }, 250);
                 return () => clearTimeout(e);
             }
-        }, [C, o, e, v, b]);
+        }, [h, s, e, v, E]);
     },
-    S = (e) => {
+    _ = (e) => {
         let t = r.useRef({}),
-            n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-            l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),
-            [s, a] = r.useState(null),
+            n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+            l = (0, a.e7)([c.Z], () => c.Z.isFetchingCategories),
+            [o, i] = r.useState(null),
             u = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             d = r.useCallback(
                 (r) => {
                     l
-                        ? a(r)
+                        ? i(r)
                         : setTimeout(() => {
                               let l = t.current[r];
                               null != l &&
@@ -115,12 +115,12 @@ let C = "".concat("#").concat("itemSkuId", "="),
                                       }));
                           }, 100);
                 },
-                [e, n, l, a],
+                [e, n, l, i],
             );
         return (
             r.useEffect(() => {
-                l || null == s || (d(s), a(null));
-            }, [l, d, s, a]),
+                l || null == o || (d(o), i(null));
+            }, [l, d, o, i]),
             {
                 setCategoryRef: u,
                 handleScrollToCategory: d,

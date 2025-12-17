@@ -77,11 +77,11 @@ function R(e) {
         n = y(e.guildId);
     return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
 }
-function D(e) {
+function w(e) {
     let { guildId: t, userId: n } = e;
     return y(t).updateMembersByMemberIds([n]);
 }
-function w(e) {
+function D(e) {
     let { guildId: t, members: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -168,7 +168,7 @@ function G(e) {
 function Z(e) {
     return U(e);
 }
-function B(e) {
+function F(e) {
     let { guildMembers: t } = e,
         n = !1;
     return (
@@ -180,7 +180,7 @@ function B(e) {
         n
     );
 }
-function F(e) {
+function B(e) {
     let { guildId: t, members: n } = e;
     if (null == t || null == l.Z.getGuild(t)) return !1;
     E = !0;
@@ -336,8 +336,8 @@ g(X, "displayName", "MemberSafetyStore");
 let J = new X(a.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: Z,
-    LOCAL_MESSAGES_LOADED: F,
-    CACHE_LOADED: B,
+    LOCAL_MESSAGES_LOADED: B,
+    CACHE_LOADED: F,
     PASSIVE_UPDATE_V2: V,
     GUILD_CREATE: S,
     GUILD_DELETE: I,
@@ -349,9 +349,9 @@ let J = new X(a.Z, {
     GUILD_ROLE_UPDATE: R,
     GUILD_ROLE_DELETE: R,
     GUILD_MEMBER_PROFILE_UPDATE: M,
-    GUILD_ROLE_MEMBER_REMOVE: D,
-    GUILD_ROLE_MEMBER_ADD: D,
-    THREAD_MEMBER_LIST_UPDATE: w,
+    GUILD_ROLE_MEMBER_REMOVE: w,
+    GUILD_ROLE_MEMBER_ADD: w,
+    THREAD_MEMBER_LIST_UPDATE: D,
     THREAD_MEMBERS_UPDATE: x,
     LOAD_ARCHIVED_THREADS_SUCCESS: L,
     LOAD_FORUM_POSTS: j,

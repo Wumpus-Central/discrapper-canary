@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(981631),
     y = n(245335),
     O = n(388032),
-    v = n(105341);
+    v = n(222922);
 function S(e) {
     let t,
         n,
@@ -37,20 +37,20 @@ function S(e) {
             () => (null != a && null != a.target_user ? _.Z.getActiveStreamForUser(a.target_user.id, N) : null),
             [a, N],
         ),
-        D = (0, l.e7)(
+        w = (0, l.e7)(
             [_.Z],
             () => (null != a && null != a.target_user ? _.Z.getStreamForUser(a.target_user.id, N) : null),
             [a, N],
         ),
-        { analyticsLocations: w } = (0, d.ZP)(u.Z.INVITE_EMBED),
+        { analyticsLocations: D } = (0, d.ZP)(u.Z.INVITE_EMBED),
         x = null != a && a.target_type === y.Iq.STREAM && null != a.target_user && null != R,
         L =
             null != a &&
-            null != D &&
+            null != w &&
             null != a.channel &&
             null != a.guild &&
-            D.channelId === a.channel.id &&
-            D.guildId === a.guild.id;
+            w.channelId === a.channel.id &&
+            w.guildId === a.guild.id;
     o()(null != a, "Invite cannot be null");
     let { target_type: j, target_user: M } = a;
     o()(j === y.Iq.STREAM && null != M, "invalid streaming invite");
@@ -66,26 +66,26 @@ function S(e) {
                         inviter_id: T.author.id,
                         invite_message_id: T.id,
                     },
-                    w,
+                    D,
                 );
-        }, [a, T, w, x, C, A]),
+        }, [a, T, D, x, C, A]),
         Z = null != I;
     if (null == I) {
         if (null == a.guild) return (0, r.jsx)(E.Z, {});
         I = (0, h.Qs)(a.guild);
     }
-    let B = null != a.channel ? (0, p.jD)(a.channel) : null,
-        F = g.ZP.getName(M),
+    let F = null != a.channel ? (0, p.jD)(a.channel) : null,
+        B = g.ZP.getName(M),
         V = "active";
     Z && !L
-        ? (n = k ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: F }))
+        ? (n = k ? O.intl.string(O.t.oBLoZJ) : O.intl.formatToPlainString(O.t["0QJmA+"], { name: B }))
         : ((t = O.intl.string(O.t.I6JG46)),
           (V = "active"),
           x && ((t = O.intl.string(O.t.Q1W99y)), (V = "secondary")),
-          (n = k ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: F })));
+          (n = k ? O.intl.string(O.t["4hyaHu"]) : O.intl.formatToPlainString(O.t.QmlLEq, { name: B })));
     let H =
-        P === I.id && null != B
-            ? (0, r.jsx)(f.Z.Channel, { channel: B })
+        P === I.id && null != F
+            ? (0, r.jsx)(f.Z.Channel, { channel: F })
             : O.intl.formatToPlainString(O.t.u0vaDE, { guildName: I.name });
     return (0, r.jsxs)(f.Z, {
         children: [

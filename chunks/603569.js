@@ -1,36 +1,36 @@
-n.d(e, { a: () => I });
+n.d(e, { a: () => _ });
 var i = n(54381),
     l = n(657707),
     s = n(704215),
-    r = n(481060),
-    u = n(631885),
+    u = n(481060),
+    r = n(631885),
     a = n(509613),
     o = n(970013),
-    c = n(313789),
-    d = n(54942),
-    g = n(726985),
-    S = n(388032),
-    T = n(225753);
-let E = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
-        useTitle: () => S.intl.string(T.default.RZqaJn),
-        StronglyDiscouragedCustomComponent: d.Z,
+    S = n(313789),
+    T = n(54942),
+    c = n(726985),
+    E = n(388032),
+    d = n(517319);
+let g = (0, a.wf)(S.n.FAMILY_CENTER_PANEL, {
+        useTitle: () => E.intl.string(d.default.RZqaJn),
+        StronglyDiscouragedCustomComponent: T.Z,
         buildLayout: () => [],
     }),
-    I = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(T.default.RZqaJn),
-        getLegacySearchKey: () => g.s6.PRIVACY_FAMILY_CENTER,
+    _ = (0, a.m7)(S.n.FAMILY_CENTER_SIDEBAR_ITEM, {
+        useTitle: () => E.intl.string(d.default.RZqaJn),
+        getLegacySearchKey: () => c.s6.PRIVACY_FAMILY_CENTER,
         icon: l.BFJ,
         trailing: {
             type: o.W.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [s.z.FAMILY_CENTER_NEW_BADGE],
             useCustomDecoration: function (t) {
-                let e = (0, u.gU)();
+                let e = (0, r.gU)();
                 return t === s.z.FAMILY_CENTER_NEW_BADGE
-                    ? (0, i.jsx)(r.IGR, { text: S.intl.string(S.t.y2b7CA) })
+                    ? (0, i.jsx)(u.IGR, { text: E.intl.string(E.t.y2b7CA) })
                     : e > 0
-                      ? (0, i.jsx)(r.mAB, { count: e })
+                      ? (0, i.jsx)(u.mAB, { count: e })
                       : null;
             },
         },
-        buildLayout: () => [E],
+        buildLayout: () => [g],
     });

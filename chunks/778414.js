@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => W,
-    Z: () => M,
+    Z: () => L,
 }),
     n(388685);
 var r = n(54381),
@@ -19,17 +19,17 @@ var r = n(54381),
     m = n(351402),
     h = n(931847),
     y = n(836197),
-    O = n(880421),
-    v = n(206599),
+    v = n(880421),
+    O = n(206599),
     j = n(50130),
     x = n(5136),
     P = n(690760),
-    I = n(517157),
-    w = n(860717),
+    w = n(517157),
+    I = n(860717),
     S = n(28671),
     E = n(729424),
-    _ = n(34335),
-    T = n(683881),
+    T = n(34335),
+    _ = n(683881),
     C = n(190862),
     D = n(682085),
     k = n(996921),
@@ -62,7 +62,7 @@ function G(e) {
     }
     return e;
 }
-function L(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,11 +82,11 @@ function L(e, t) {
     }
     return i;
 }
-function M(e) {
+function L(e) {
     var { widget: t } = e,
-        n = L(e, ["widget"]);
+        n = M(e, ["widget"]);
     return t instanceof h.q
-        ? (0, r.jsx)(w.Z, G({ widget: t }, n))
+        ? (0, r.jsx)(I.Z, G({ widget: t }, n))
         : t instanceof y.zy
           ? (0, r.jsx)(C.Z, G({ widget: t }, n))
           : null;
@@ -105,12 +105,12 @@ function B() {
         ],
     });
 }
-function F(e) {
+function U(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        a = (0, I.Z)(t.id),
-        l = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
+        a = (0, w.Z)(t.id),
+        l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
         o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
         ? null
@@ -128,9 +128,9 @@ function F(e) {
               },
           });
 }
-function U(e) {
+function F(e) {
     let { user: t, guildId: n, channelId: a } = e,
-        l = (0, I.Z)(t.id),
+        l = (0, w.Z)(t.id),
         c = (0, o.e7)([b.default], () => b.default.getId() === t.id),
         s = (() => {
             let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
@@ -142,19 +142,19 @@ function U(e) {
                 "GB" === e && n
             );
         })(),
-        d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
+        d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
         f = 0 === l.length && c,
         j = i.useMemo(() => l.filter(y.Wc), [l]),
         x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
-    (0, v.J)(c, j);
-    var w = t.id;
+    (0, O.J)(c, j);
+    var I = t.id;
     (0, P.s)(x);
-    let { data: S, refetch: T } = (0, p.O)(w),
+    let { data: S, refetch: _ } = (0, p.O)(I),
         C = i.useRef(S);
     (C.current = S),
         i.useEffect(() => {
-            null !== C.current && T();
-        }, [T]);
+            null !== C.current && _();
+        }, [_]);
     let k = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -163,12 +163,12 @@ function U(e) {
                         children: [
                             (0, r.jsx)(E.Z, { className: R.editingHeader }),
                             s && (0, r.jsx)(B, {}),
-                            (0, r.jsx)(F, { user: t }),
+                            (0, r.jsx)(U, { user: t }),
                         ],
                     }),
                 l.map((e, i) =>
                     (0, r.jsx)(
-                        M,
+                        L,
                         {
                             widget: e,
                             user: t,
@@ -184,11 +184,11 @@ function U(e) {
     if (f)
         if (d) return (0, r.jsx)(D.Z, {});
         else return (0, r.jsx)(A.Z, {});
-    return c ? (0, r.jsx)(_.K, { children: k() }) : k();
+    return c ? (0, r.jsx)(T.K, { children: k() }) : k();
 }
 function W(e) {
     var { user: t } = e,
-        n = L(e, ["user"]);
+        n = M(e, ["user"]);
     let a = i.useRef(null);
     (0, x.r)({ containerRef: a });
     let o = (0, k.h)(t.id);
@@ -197,6 +197,6 @@ function W(e) {
         scrollerRef: a,
         className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
+        children: [(0, r.jsx)(_.Z, { scrollerRef: a }), (0, r.jsx)(F, G({ user: t }, n))],
     });
 }

@@ -27,8 +27,8 @@ var r = n(392711),
     N = n(483360),
     P = n(176354),
     R = n(5192),
-    D = n(51144),
-    w = n(981631),
+    w = n(51144),
+    D = n(981631),
     x = n(185923),
     L = n(388032);
 function j(e, t, n) {
@@ -135,7 +135,7 @@ function Z(e, t, n) {
         })
         .first();
 }
-function B(e) {
+function F(e) {
     return {
         order: e.order,
         match: e.match,
@@ -145,7 +145,7 @@ function B(e) {
         }),
     };
 }
-function F(e) {
+function B(e) {
     return {
         match: o().anyScopeRegex(e),
         parse: (e) => ({
@@ -164,15 +164,15 @@ let V = f.Z.RULES,
     Q = /(@everyone|@here|@Clyde)\b/,
     X = /^[^\s]+@[^\s]+\.[^\s.]+/,
     J = {
-        link: B(o().defaultRules.link),
-        autolink: B(o().defaultRules.autolink),
-        url: B(o().defaultRules.url),
-        inlineCode: B(V.inlineCode),
-        codeBlock: B(V.codeBlock),
-        rawUserMention: F(Y),
-        rawRoleMention: F(W),
-        rawChannelMention: F(z),
-        rawEmoji: F(q),
+        link: F(o().defaultRules.link),
+        autolink: F(o().defaultRules.autolink),
+        url: F(o().defaultRules.url),
+        inlineCode: F(V.inlineCode),
+        codeBlock: F(V.codeBlock),
+        rawUserMention: B(Y),
+        rawRoleMention: B(W),
+        rawChannelMention: B(z),
+        rawEmoji: B(q),
         mention: {
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
@@ -287,18 +287,18 @@ let V = f.Z.RULES,
         }),
     },
     $ = {
-        inlineCode: B(V.inlineCode),
-        codeBlock: B(V.codeBlock),
+        inlineCode: F(V.inlineCode),
+        codeBlock: F(V.codeBlock),
         mention: {
             match: o().anyScopeRegex(Y),
             parse(e, t, n) {
                 let { isNotification: r, guild: a, channelId: o } = n,
                     s = A.default.getUser(e[1]);
                 if (null == s) return { content: e[0] };
-                let l = D.ZP.getUserTag(s, { identifiable: r && C.Z.enabled ? "never" : "always" });
+                let l = w.ZP.getUserTag(s, { identifiable: r && C.Z.enabled ? "never" : "always" });
                 if (r) {
                     var c;
-                    let e = null != (c = R.ZP.getNickname(null == a ? void 0 : a.id, o, s)) ? c : D.ZP.getGlobalName(s);
+                    let e = null != (c = R.ZP.getNickname(null == a ? void 0 : a.id, o, s)) ? c : w.ZP.getGlobalName(s);
                     return { content: null != e ? "@".concat(e) : "@".concat(l) };
                 }
                 {
@@ -375,11 +375,11 @@ let V = f.Z.RULES,
             },
         },
         spoiler: {
-            match: o().anyScopeRegex(w.$92),
+            match: o().anyScopeRegex(D.$92),
             parse: () => ({ content: "<".concat(L.intl.string(L.t["F+x38C"]).toLowerCase(), ">") }),
         },
         staticRouteLink: {
-            match: o().anyScopeRegex(w.PEY),
+            match: o().anyScopeRegex(D.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
         timestamp: U(M({}, V.timestamp), {
@@ -460,7 +460,7 @@ function ea(e) {
     let t,
         n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? S.Z.getGuild(n) : null,
-        a = I.Z.can(w.Plq.MENTION_EVERYONE, e);
+        a = I.Z.can(D.Plq.MENTION_EVERYONE, e);
     t = (null == e ? void 0 : e.isPrivate())
         ? e.recipients.map((e) => ({
               userId: e,

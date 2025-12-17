@@ -1,8 +1,8 @@
 let r, i, l;
 n.d(t, { Z: () => A }), n(539854), n(388685);
 var a,
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     u = n(570140),
     d = n(308063),
@@ -11,7 +11,7 @@ var a,
     g = n(496675),
     h = n(855674),
     m = n(981631);
-function _(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -58,8 +58,8 @@ function T() {
     }
     (y = m.QZA.OPEN), (I = {}), (C = !1);
 }
-let N = o().debounce(() => {
-    C && ((null == O || o().isEqual(O, j(O.id))) && (C = !1), C || x.emitChange());
+let N = s().debounce(() => {
+    C && ((null == O || s().isEqual(O, j(O.id))) && (C = !1), C || x.emitChange());
 }, 500);
 function j(e) {
     return E.find((t) => {
@@ -102,7 +102,7 @@ class P extends (a = c.ZP.Store) {
         };
     }
 }
-_(P, "displayName", "ChannelSettingsIntegrationsStore");
+b(P, "displayName", "ChannelSettingsIntegrationsStore");
 let x = new P(
         u.Z,
         __OVERLAY__
@@ -135,7 +135,7 @@ let x = new P(
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == O) return !1;
-                      (O = b({}, O)),
+                      (O = _({}, O)),
                           null != t.name && O.name !== t.name && ((O.name = t.name), (C = !0)),
                           void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (C = !0)),
                           null != t.channelId &&
@@ -160,7 +160,7 @@ let x = new P(
                                   if (n === t.id) return !0;
                               });
                               if (null != r) {
-                                  let n = b({}, t, r);
+                                  let n = _({}, t, r);
                                   (E[e] = n), C || (null == O ? void 0 : O.id) !== n.id || (O = n);
                               } else (null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1);
                           }

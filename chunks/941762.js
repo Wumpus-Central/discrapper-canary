@@ -1,6 +1,6 @@
-t.d(n, { Z: () => _ });
-var r = t(54381),
-    a = t(473749),
+t.d(n, { Z: () => v });
+var a = t(54381),
+    r = t(473749),
     i = t(481060),
     l = t(239091),
     s = t(100527),
@@ -9,10 +9,10 @@ var r = t(54381),
     d = t(47695),
     u = t(735276),
     m = t(619733),
-    g = t(816632),
+    g = t(914820),
     f = t(388032),
-    x = t(799070);
-let v = {
+    b = t(435261);
+let x = {
     steps: {
         [m.EK.SERVER_SETTINGS]: {
             onBack: { type: "close" },
@@ -20,45 +20,45 @@ let v = {
         },
     },
 };
-function _(e) {
+function v(e) {
     let { guildId: n, instance: t } = e,
-        m = a.useRef(null),
-        _ = (0, d.Z)(t.providerType, t.gameServerPanelUrl);
+        m = r.useRef(null),
+        v = (0, d.Z)(t.providerType, t.gameServerPanelUrl);
     return (0, c.Z)(n)
-        ? (0, r.jsx)(i.yRy, {
+        ? (0, a.jsx)(i.yRy, {
               targetElementRef: m,
               align: "top",
               position: "right",
               animationPosition: "bottom",
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: a } = e;
-                  return (0, r.jsx)(i.v2r, {
+                  let { closePopout: r } = e;
+                  return (0, a.jsx)(i.v2r, {
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, l.Zy)(), a();
+                          (0, l.Zy)(), r();
                       },
                       "aria-label": f.intl.string(g.default["yb+ork"]),
                       onSelect: void 0,
-                      children: (0, r.jsxs)(i.kSQ, {
+                      children: (0, a.jsxs)(i.kSQ, {
                           children: [
-                              null != _ &&
-                                  (0, r.jsx)(i.sNh, {
+                              null != v &&
+                                  (0, a.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
                                       label: f.intl.string(g.default.bBkeMs),
                                       action: () => {
-                                          (0, o.q)({ href: _ });
+                                          (0, o.q)({ href: v });
                                       },
                                   }),
-                              (0, r.jsx)(i.sNh, {
+                              (0, a.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
                                   label: f.intl.string(g.default["feUiM/"]),
                                   action: () => {
                                       (0, u.Z)({
                                           guildId: n,
-                                          stepConfig: v,
+                                          stepConfig: x,
                                           initialGameServerInstance: t,
                                           analyticsLocation: s.Z.GAME_SERVER_PAGE,
                                       });
@@ -70,43 +70,43 @@ function _(e) {
               },
               children: (e) => {
                   var n, t;
-                  return (0, r.jsx)(
+                  return (0, a.jsx)(
                       i.P3F,
                       ((n = (function (e) {
                           for (var n = 1; n < arguments.length; n++) {
                               var t = null != arguments[n] ? arguments[n] : {},
-                                  r = Object.keys(t);
+                                  a = Object.keys(t);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
+                                  (a = a.concat(
                                       Object.getOwnPropertySymbols(t).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                       }),
                                   )),
-                                  r.forEach(function (n) {
-                                      var r;
-                                      (r = t[n]),
+                                  a.forEach(function (n) {
+                                      var a;
+                                      (a = t[n]),
                                           n in e
                                               ? Object.defineProperty(e, n, {
-                                                    value: r,
+                                                    value: a,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[n] = r);
+                                              : (e[n] = a);
                                   });
                           }
                           return e;
                       })(
                           {
                               "aria-label": f.intl.string(f.t["UKOtz+"]),
-                              className: x.clickable,
+                              className: b.clickable,
                           },
                           e,
                       )),
                       (t = t =
                           {
                               innerRef: m,
-                              children: (0, r.jsx)(i.xhG, {
+                              children: (0, a.jsx)(i.xhG, {
                                   color: "currentColor",
                                   size: "sm",
                               }),
@@ -116,8 +116,8 @@ function _(e) {
                           : (function (e, n) {
                                 var t = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    t.push.apply(t, r);
+                                    var a = Object.getOwnPropertySymbols(e);
+                                    t.push.apply(t, a);
                                 }
                                 return t;
                             })(Object(t)).forEach(function (e) {

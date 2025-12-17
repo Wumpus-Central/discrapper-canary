@@ -13,7 +13,7 @@ var i = n(481060),
     f = n(5192),
     p = n(671955),
     O = n(388032),
-    g = n(580792);
+    g = n(440674);
 function b(e) {
     var t;
     let { user: n, previewText: b, previewEmoji: h, previewStatus: S, placeHolderText: T, transitionState: v } = e,

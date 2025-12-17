@@ -2,12 +2,12 @@ n.d(t, {
     En: () => x,
     HK: () => R,
     dY: () => A,
-    eC: () => w,
+    eC: () => D,
     jz: () => P,
     kC: () => I,
     l3: () => N,
     o3: () => C,
-    vP: () => D,
+    vP: () => w,
 }),
     n(413496),
     n(433524),
@@ -184,7 +184,7 @@ function P(e) {
 function R(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (y.test(e.url) || b.test(e.url));
 }
-function D(e, t, n) {
+function w(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -201,7 +201,7 @@ function D(e, t, n) {
                 maxMediaHeight: 300,
             };
 }
-function w(e, t) {
+function D(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
 }
 function x(e) {

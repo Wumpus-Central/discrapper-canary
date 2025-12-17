@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => h,
-    default: () => f,
+    B: () => f,
+    default: () => h,
 }),
     n(388685);
 var i = n(54381),
@@ -13,16 +13,16 @@ var i = n(54381),
     u = n(353077),
     d = n(618857),
     p = n(388032);
-let h = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
-function f(e) {
+let f = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
+function h(e) {
     let { scheduledMessage: t, transitionState: n, onClose: l } = e,
-        f = a()(t.sendAtTimestamp.substring(0, 200)),
-        [m, g] = r.useState(f),
+        h = a()(t.sendAtTimestamp.substring(0, 200)),
+        [m, g] = r.useState(h),
         [b, C] = r.useState(!1),
         y = async () => {
             C(!0);
             try {
-                await (0, c.P4)(t.scheduledMessageId, m.toISOString()), (0, d.eD)(), (0, s.Mr3)(h);
+                await (0, c.P4)(t.scheduledMessageId, m.toISOString()), (0, d.eD)(), (0, s.Mr3)(f);
             } catch (e) {
                 (0, d.$X)(e.message);
             } finally {
@@ -48,7 +48,7 @@ function f(e) {
             },
         ],
         children: (0, i.jsx)(u.Z, {
-            defaultValue: f,
+            defaultValue: h,
             onChange: g,
         }),
     });

@@ -1,11 +1,11 @@
 n.d(t, {
-    Bd: () => B,
+    Bd: () => F,
     C1: () => K,
     CR: () => W,
     DD: () => Z,
     eQ: () => V,
     t5: () => N,
-    vf: () => F,
+    vf: () => B,
 }),
     n(953529),
     n(388685);
@@ -190,7 +190,7 @@ function R(e) {
         i,
     );
 }
-function D(e) {
+function w(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = (0, p.B3)(n.config),
@@ -226,7 +226,7 @@ function D(e) {
         i,
     );
 }
-function w(e) {
+function D(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
@@ -426,7 +426,7 @@ function U(e) {
             collectibleRewardDuration: h,
         });
     if ((0, _.$H)(t))
-        return D({
+        return w({
             quest: t,
             taskDetails: n,
             withoutMarkdown: o,
@@ -434,7 +434,7 @@ function U(e) {
             collectibleRewardDuration: h,
         });
     if ((0, p.oo)({ quest: t }))
-        return w({
+        return D({
             quest: t,
             taskDetails: n,
             withoutMarkdown: o,
@@ -486,7 +486,7 @@ function Z(e) {
         }),
     );
 }
-function B(e, t, n) {
+function F(e, t, n) {
     var r, i;
     let a = (0, g.Rf)(e),
         o = (0, _.b7)(e),
@@ -508,7 +508,7 @@ function B(e, t, n) {
             ? s
             : null;
 }
-function F(e) {
+function B(e) {
     var t, n;
     let {
             quest: r,

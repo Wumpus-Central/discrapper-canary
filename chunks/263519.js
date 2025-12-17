@@ -29,11 +29,11 @@ function y(e) {
             return null != (e = null == N ? void 0 : N.flatMap(p.Z.getForSKU)) ? e : [];
         }, [N]),
         R = r.useMemo(() => P.map((e) => e.id), [P]),
-        D = (0, E.KK)(null != (n = null == I ? void 0 : I.flags) ? n : 0),
-        w = (0, o.e7)(
+        w = (0, E.KK)(null != (n = null == I ? void 0 : I.flags) ? n : 0),
+        D = (0, o.e7)(
             [g.Z],
-            () => null != i && !1 !== D && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
-            [D, O, i],
+            () => null != i && !1 !== w && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
+            [w, O, i],
         ),
         x = null == I ? void 0 : I.applicationId,
         L = (null == T ? void 0 : T.published) === !0 && (null == I ? void 0 : I.isAvailable()) === !0,
@@ -43,20 +43,20 @@ function y(e) {
         U = null == k ? void 0 : k.subscription,
         G = null == k ? void 0 : k.subscriptionPlan,
         Z = (0, h.cr)(A, null != i ? i : void 0),
-        B = null == Z ? void 0 : Z.subscriptionPlan,
-        { entitlementsLoaded: F } = (0, h.LM)({ guildId: i });
-    null == i && (F = !0);
+        F = null == Z ? void 0 : Z.subscriptionPlan,
+        { entitlementsLoaded: B } = (0, h.LM)({ guildId: i });
+    null == i && (B = !0);
     let V = (0, f.Z)(),
         H = null != U && (0, E.Jf)(U, I),
         Y = r.useMemo(() => {
-            if (!F || null == j || null == O) return u.rf.LOADING;
+            if (!B || null == j || null == O) return u.rf.LOADING;
             if (!L) return u.rf.UNAVAILABLE;
-            if (!D) {
+            if (!w) {
                 if ((null == G ? void 0 : G.skuId) === O) return u.rf.SUBSCRIBED;
-                if ((null == B ? void 0 : B.skuId) === O && !1 === H) return u.rf.UPCOMING_PLAN;
+                if ((null == F ? void 0 : F.skuId) === O && !1 === H) return u.rf.UPCOMING_PLAN;
             }
             return u.rf.AVAILABLE;
-        }, [null == G ? void 0 : G.skuId, L, j, F, H, D, null == B ? void 0 : B.skuId, O]);
+        }, [null == G ? void 0 : G.skuId, L, j, B, H, w, null == F ? void 0 : F.skuId, O]);
     return (
         r.useEffect(() => {
             L &&
@@ -86,7 +86,7 @@ function y(e) {
                     });
             }, [j, O, L, C, I, R, i, S, M, y, v]),
             subscriptionPurchaseButtonState: Y,
-            isGuildSubscribed: w,
+            isGuildSubscribed: D,
         }
     );
 }

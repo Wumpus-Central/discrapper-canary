@@ -3,15 +3,15 @@ var r = n(54381),
     i = n(473749),
     l = n(414910),
     a = n(226961),
-    o = n(447661);
+    o = n(973994);
 function c(e) {
     let { currentUserId: t, participant: n } = e,
         c = (0, l.Z)(n.type),
         [s, u] = i.useState(),
         [d, f] = i.useState(),
-        [p, m] = i.useState(),
-        _ = n.id.split(":").at(-1),
-        g = t === _,
+        [p, b] = i.useState(),
+        m = n.id.split(":").at(-1),
+        g = t === m,
         v = i.useCallback((e, t, n) => {
             var r, i, l;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
@@ -21,7 +21,7 @@ function c(e) {
                         ? "unknown"
                         : i.width + " x " + i.height,
                 ),
-                m(
+                b(
                     (null == o ? void 0 : o.bitrateEstimate) !== void 0
                         ? ((l = o.bitrateEstimate), "".concat((l / 1000).toFixed(2), " Kbps"))
                         : "unknown",
@@ -29,11 +29,11 @@ function c(e) {
         }, []);
     return (
         i.useEffect(() => {
-            let e = () => v(_, c, g);
+            let e = () => v(m, c, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, _, c, v]),
+        }, [g, m, c, v]),
         (0, r.jsxs)("div", {
             className: o.streamInfoContainer,
             children: [

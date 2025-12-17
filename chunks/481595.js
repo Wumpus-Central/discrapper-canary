@@ -27,13 +27,13 @@ var r = n(54381),
     N = n(669079),
     P = n(987209),
     R = n(563132),
-    D = n(45572),
-    w = n(435020),
+    w = n(45572),
+    D = n(435020),
     x = n(119226),
     L = n(982204),
     j = n(981631),
     M = n(388032),
-    k = n(416439);
+    k = n(472810);
 function U(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
@@ -55,8 +55,8 @@ function G(e) {
         {
             application: G,
             purchaseState: Z,
-            paymentSources: B,
-            paymentSourceId: F,
+            paymentSources: F,
+            paymentSourceId: B,
             setHasAcceptedTerms: V,
             skusById: H,
             skuPricePreviewsById: Y,
@@ -79,7 +79,7 @@ function G(e) {
     let eo = H[W],
         es = null == eo ? void 0 : eo.eligiblePaymentGateways,
         el = Y[W],
-        ec = null != F ? F : T.c,
+        ec = null != B ? B : T.c,
         eu = null != el ? el[ec] : null;
     o()(null != eo, "SKU must exist and be fetched."), o()(null != G, "Application must exist.");
     let ed = (0, c.e7)([h.Z, C.Z], () => C.Z.inTestModeForApplication(G.id) || h.Z.inDevModeForApplication(G.id), [
@@ -87,12 +87,12 @@ function G(e) {
         ]),
         ef = (0, c.e7)([v.Z], () => v.Z.enabled),
         ep = s.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
-        e_ = Z === D.A.PURCHASING || Z === D.A.COMPLETED,
-        em = (0, w.m)(B, F),
+        e_ = Z === w.A.PURCHASING || Z === w.A.COMPLETED,
+        em = (0, D.m)(F, B),
         eh = null != em ? em.type : null;
     i.useEffect(() => {
         ea &&
-            F === ei &&
+            B === ei &&
             ei !== T.c &&
             null == eu &&
             (0, d.x2)(eo.applicationId, eo.id, ei, { isGift: $ })
@@ -102,8 +102,8 @@ function G(e) {
                 .catch((e) => {
                     X(e);
                 });
-    }, [ei, ea, F, eo.applicationId, eo.id, eu, X, $]);
-    let eg = null != es && es.length > 0 && (F === T.c || null === eh) && J ? y.w.SELECT_PAYMENT_METHOD : void 0,
+    }, [ei, ea, B, eo.applicationId, eo.id, eu, X, $]);
+    let eg = null != es && es.length > 0 && (B === T.c || null === eh) && J ? y.w.SELECT_PAYMENT_METHOD : void 0,
         eE = eo.productLine === j.POd.SOCIAL_LAYER_GAME_ITEM,
         eb = et && !eE;
     return (0, r.jsxs)("div", {
@@ -164,8 +164,8 @@ function G(e) {
             }),
             (0, r.jsx)(_.ZP, {
                 label: M.intl.string(M.t["mmDvV+"]),
-                paymentSources: Object.values(B),
-                selectedPaymentSourceId: F,
+                paymentSources: Object.values(F),
+                selectedPaymentSourceId: B,
                 onChange: a,
                 onPaymentSourceAdd: E,
                 hidePersonalInformation: ef,

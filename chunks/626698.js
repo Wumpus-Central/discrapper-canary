@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(92951),
     c = n(442837),
     u = n(481060),
@@ -21,14 +21,14 @@ var r = n(54381),
     v = n(935212),
     S = n(612776),
     I = n(981631),
-    T = n(860076),
+    T = n(638398),
     C = n(388032),
-    A = n(296953),
-    N = n(550770),
-    P = n(807808);
+    A = n(221943),
+    N = n(653506),
+    P = n(900268);
 let R = 2.8,
-    D = 2,
-    w = 1000,
+    w = 2,
+    D = 1000,
     x = 500,
     L = 1000 + v.t;
 function j(e) {
@@ -42,26 +42,26 @@ function j(e) {
         Z = i.useCallback((e) => {
             e.currentTarget.currentTime >= R && j(!1);
         }, []),
-        B = (0, u.q_F)({
+        F = (0, u.q_F)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             pause: a,
             delay: L,
         }),
-        F = (0, u.q_F)({
+        B = (0, u.q_F)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             pause: a,
         });
     i.useEffect(() => {
-        null != M.current && (M.current.playbackRate = D);
+        null != M.current && (M.current.playbackRate = w);
     }, []),
         i.useEffect(() => {
             if (G) {
                 null != M.current && (M.current.currentTime = 0.2);
                 let e = setTimeout(() => {
                     j(!1);
-                }, w);
+                }, D);
                 return () => clearTimeout(e);
             }
         }, [G]);
@@ -152,7 +152,7 @@ function j(e) {
                   a
                       ? null
                       : (0, r.jsx)(s.animated.div, {
-                            style: F,
+                            style: B,
                             children: (0, r.jsx)(l.Z, {
                                 autoPlay: !G,
                                 muted: !0,
@@ -202,7 +202,7 @@ function j(e) {
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)(s.animated.div, {
-                                    style: B,
+                                    style: F,
                                     children: [
                                         (0, r.jsx)(E.Z, {
                                             className: A.knickKnacks,
@@ -225,7 +225,7 @@ function j(e) {
                                     ],
                                 }),
                                 (0, r.jsx)(s.animated.div, {
-                                    style: F,
+                                    style: B,
                                     children: (0, r.jsx)(O.Z, {
                                         className: A.ratingIcon,
                                         style: { color: U },

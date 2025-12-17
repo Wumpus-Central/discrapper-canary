@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(981631);
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -44,13 +44,13 @@ function l(e, t) {
     );
 }
 let a = "<removed>";
-function s(e) {
+function o(e) {
     var t, n;
-    let s = i({}, e);
+    let o = i({}, e);
     return (
-        "object" == typeof (t = s).args &&
+        "object" == typeof (t = o).args &&
             "string" == typeof t.cmd &&
-            (s = (function (e) {
+            (o = (function (e) {
                 switch (e.cmd) {
                     case r.Etm.AUTHENTICATE:
                     case r.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -58,10 +58,10 @@ function s(e) {
                     default:
                         return i({}, e);
                 }
-            })(s)),
-        "object" == typeof (n = s).data &&
+            })(o)),
+        "object" == typeof (n = o).data &&
             "string" == typeof n.cmd &&
-            (s = (function (e) {
+            (o = (function (e) {
                 switch (e.cmd) {
                     case r.Etm.AUTHENTICATE:
                     case r.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -69,7 +69,7 @@ function s(e) {
                     default:
                         return i({}, e);
                 }
-            })(s)),
-        s
+            })(o)),
+        o
     );
 }

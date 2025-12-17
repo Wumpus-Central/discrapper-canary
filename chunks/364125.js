@@ -8,55 +8,55 @@ var r = n(473749),
     s = n(370663),
     u = n(743597);
 function d(e) {
-    let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: m } = e,
-        _ = r.useRef(!1),
+    let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: b } = e,
+        m = r.useRef(!1),
         g = (0, i.e7)([l.Z], () => l.Z.getDrawMode()),
         v = (0, c.Z)((0, s.Z)(t.id, n, d), f),
-        b = (0, c.Z)((0, u.Z)(t.id, n, d), f),
-        h = r.useCallback(
+        h = (0, c.Z)((0, u.Z)(t.id, n, d), f),
+        E = r.useCallback(
             (e, t, n) => {
-                if (null == m) return;
-                let { x: r, y: i } = (0, o.hn)(m, n);
+                if (null == b) return;
+                let { x: r, y: i } = (0, o.hn)(b, n);
                 switch (t.type) {
                     case a.W.LINE:
                         return v[e](t, r, i);
                     case a.W.EMOJI_HOSE:
-                        return b[e](t, r, i);
+                        return h[e](t, r, i);
                 }
             },
-            [m, v, b],
+            [b, v, h],
         ),
-        E = r.useCallback(
+        _ = r.useCallback(
             (e) => {
-                p && null != g && (e.stopPropagation(), (_.current = !0), h("handleMouseDown", g, e));
+                p && null != g && (e.stopPropagation(), (m.current = !0), E("handleMouseDown", g, e));
             },
-            [h, g, p],
+            [E, g, p],
         ),
         y = r.useCallback(
             (e) => {
-                p && null != g && (e.stopPropagation(), _.current && h("handleMouseMove", g, e));
+                p && null != g && (e.stopPropagation(), m.current && E("handleMouseMove", g, e));
             },
-            [h, g, p],
+            [E, g, p],
         ),
         S = r.useCallback(
             (e) => {
-                p && null != g && (e.stopPropagation(), (_.current = !1), h("handleMouseUp", g, e));
+                p && null != g && (e.stopPropagation(), (m.current = !1), E("handleMouseUp", g, e));
             },
-            [h, g, p],
+            [E, g, p],
         ),
         O = r.useCallback(
             (e) => {
-                _.current && null != g && h("handleMouseEnter", g, e);
+                m.current && null != g && E("handleMouseEnter", g, e);
             },
-            [h, g],
+            [E, g],
         );
     return (
         r.useEffect(() => {
             let e = (e) => {
-                null != g && ((_.current = !1), h("handleMouseUp", g, e));
+                null != g && ((m.current = !1), E("handleMouseUp", g, e));
             };
             return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e);
-        }, [h, g]),
+        }, [E, g]),
         {
             handleClick: r.useCallback(
                 (e) => {
@@ -64,7 +64,7 @@ function d(e) {
                 },
                 [g, p],
             ),
-            handleMouseDown: E,
+            handleMouseDown: _,
             handleMouseEnter: O,
             handleMouseMove: y,
             handleMouseUp: S,

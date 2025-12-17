@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(576645),
     m = n(981631),
     h = n(388032),
-    g = n(354617);
+    g = n(332974);
 function E(e) {
     let { emojiConfetti: t } = e,
         n = i.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);
@@ -76,7 +76,7 @@ let b = function (e) {
                 source: u.YD.MessageConfettiBar,
             });
         }, [t.id]),
-        D = i.useRef(null);
+        w = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: g.bar,
         children: [
@@ -85,12 +85,12 @@ let b = function (e) {
                 shouldShow: C,
                 onRequestClose: N,
                 setEmojiConfetti: P,
-                positionRef: D,
+                positionRef: w,
                 position: "top",
                 align: "left",
                 children: () =>
                     (0, r.jsxs)(o.P3F, {
-                        innerRef: D,
+                        innerRef: w,
                         onClick: () => A(!C),
                         className: g.emojiSelectContainer,
                         children: [

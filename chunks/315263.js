@@ -1,5 +1,5 @@
 n.r(t),
-    n.d(t, { default: () => B }),
+    n.d(t, { default: () => F }),
     n(190126),
     n(368063),
     n(65234),
@@ -39,8 +39,8 @@ var r = n(873546),
 n(812513);
 var P = n(701190),
     R = n(944486),
-    D = n(914010),
-    w = n(771845),
+    w = n(914010),
+    D = n(771845),
     x = n(626135),
     L = n(591759),
     j = n(782568),
@@ -65,7 +65,7 @@ async function G(e) {
     if (null == n) return;
     if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR)
         return void (await U(n, e.code));
-    let r = w.ZP.getFlattenedGuildIds(),
+    let r = D.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
     null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await U(n, e.code);
 }
@@ -73,7 +73,7 @@ let Z = {
     skipExtensionCheck: void 0,
     analyticsLocations: [],
 };
-function B(e) {
+function F(e) {
     var t;
     let { skipExtensionCheck: a, analyticsLocations: s } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z,
@@ -102,7 +102,7 @@ function B(e) {
                                 applicationId: void 0,
                                 skuId: void 0,
                             },
-                c = null != (a = D.Z.getGuildId()) ? a : void 0;
+                c = null != (a = w.Z.getGuildId()) ? a : void 0;
             return (
                 null == s
                     ? (0, j.Z)(e)
@@ -237,17 +237,17 @@ function B(e) {
                 !0
             );
         };
-    let { host: w, hostname: U, pathname: B, search: F, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
+    let { host: D, hostname: U, pathname: F, search: B, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
         H =
             L.Z.isDiscordHostname(null != U ? U : null) ||
-            L.Z.isDiscordLocalhost(null != w ? w : null, null != U ? U : null);
+            L.Z.isDiscordLocalhost(null != D ? D : null, null != U ? U : null);
     if (
         H &&
-        ((null == B ? void 0 : B.startsWith("/application-directory")) ||
-            (null == B ? void 0 : B.startsWith("/discovery/applications")))
+        ((null == F ? void 0 : F.startsWith("/application-directory")) ||
+            (null == F ? void 0 : F.startsWith("/discovery/applications")))
     ) {
-        let e = B.split("/"),
-            t = null == B ? void 0 : B.startsWith("/discovery/applications"),
+        let e = F.split("/"),
+            t = null == F ? void 0 : F.startsWith("/discovery/applications"),
             r = e[t ? 3 : 2],
             i = "search" === r,
             a = t && "categories" === r && "featured" !== e[4];
@@ -255,7 +255,7 @@ function B(e) {
             let r, o, s;
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
-                let e = new URLSearchParams(F);
+                let e = new URLSearchParams(B);
                 (r = null != (l = e.get("q")) ? l : void 0),
                     (o = null != (c = e.get("category_id")) ? c : void 0),
                     (s = null != (u = e.get("page")) ? u : void 0);
@@ -277,18 +277,18 @@ function B(e) {
             );
         };
     }
-    if (null != B && H && L.Z.isAppRoute(B)) {
+    if (null != F && H && L.Z.isAppRoute(F)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0,
         };
         return (
-            null != F && (e.search = F),
+            null != B && (e.search = B),
             null != V && (e.hash = V),
-            (t) => (null == t || t.preventDefault(), (0, v.Z)(B, e), !0)
+            (t) => (null == t || t.preventDefault(), (0, v.Z)(F, e), !0)
         );
     }
-    if (null != B && H) {
+    if (null != F && H) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
         if (null != i)
@@ -301,19 +301,19 @@ function B(e) {
                 !0
             );
     }
-    let Y = (0, O.Ao)(B);
-    if (null != B && H && null != Y)
+    let Y = (0, O.Ao)(F);
+    if (null != F && H && null != Y)
         return (e) => {
             null == e || e.preventDefault();
-            let t = D.Z.getGuildId();
+            let t = w.Z.getGuildId();
             null != Y.guildId && "" !== Y.guildId && Y.guildId !== t && (0, v.Z)(M.Z5c.CHANNEL(Y.guildId));
             let n = b.ZP.getGuildScheduledEvent(Y.guildEventId);
             return null != n && (0, E.bO)({ eventId: n.id }), !0;
         };
-    if (H && (null == B ? void 0 : B.startsWith("/settings/"))) {
+    if (H && (null == F ? void 0 : F.startsWith("/settings/"))) {
         let { default: e } = n(722589),
             { openUserSettingsFromParsedUrl: t } = n(518596),
-            r = e(B, F);
+            r = e(F, B);
         if (null != r)
             return (e) => (
                 null == e || e.preventDefault(),
@@ -325,18 +325,18 @@ function B(e) {
                 !0
             );
     }
-    return H && (null == B ? void 0 : B.startsWith("/discovery/quests"))
+    return H && (null == F ? void 0 : F.startsWith("/discovery/quests"))
         ? (e) => (null == e || e.preventDefault(), (0, T.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
-        : H && (null == B ? void 0 : B.startsWith("/quest-home"))
-          ? (e) => (null == e || e.preventDefault(), (0, C.uL)(M.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
-          : H && (null == B ? void 0 : B.startsWith("/quest-preview"))
+        : H && (null == F ? void 0 : F.startsWith("/quest-home"))
+          ? (e) => (null == e || e.preventDefault(), (0, C.uL)(M.Z5c.QUEST_HOME_V2 + (null != B ? B : "")), !0)
+          : H && (null == F ? void 0 : F.startsWith("/quest-preview"))
             ? (e) => {
                   if ((null == e || e.preventDefault(), (0, I.T)({ location: k.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (
-                          (0, C.uL)(M.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(B.split("/").at(-1))), !0
+                          (0, C.uL)(M.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(F.split("/").at(-1))), !0
                       );
               }
-            : H && (null == B ? void 0 : B.startsWith("/discovery/servers"))
+            : H && (null == F ? void 0 : F.startsWith("/discovery/servers"))
               ? (e) => (
                     null == e || e.preventDefault(),
                     Promise.resolve()

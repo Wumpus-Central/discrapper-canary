@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(785717),
     f = n(592183),
     p = n(224724),
-    _ = n(732380),
+    _ = n(475413),
     m = n(388032),
     h = n(119180);
 function g(e, t, n) {
@@ -74,7 +74,7 @@ function O(e) {
         N = i.useRef(null);
     return v
         ? null == S
-            ? (0, r.jsx)(_.O1, {
+            ? (0, r.jsx)(_.i6, {
                   action: "EDIT_PROFILE",
                   text: m.intl.string(m.t.s5vZlQ),
                   icon: o.vdY,
@@ -122,7 +122,7 @@ function O(e) {
                       var { onClick: t } = e,
                           n = b(e, ["onClick"]);
                       return (0, r.jsx)(
-                          _.O1,
+                          _.i6,
                           E(
                               {
                                   buttonRef: N,

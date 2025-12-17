@@ -12,7 +12,7 @@ let i = n(792214);
         (e.Link = "link"),
         (e.Paragraph = "paragraph");
 })(r || (t.RichTextNodeType = r = {}));
-let o = {
+let a = {
     $b: (e) => ({
         type: r.Strong,
         content: e,
@@ -39,13 +39,13 @@ let o = {
         content: e,
     }),
 };
-class a extends i.FormatBuilder {
+class o extends i.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = []);
     }
     pushRichTextTag(e, t, n) {
-        if (!(e in o)) throw `${e} is not a known rich text formatting tag`;
-        let r = o[e](t, "", n);
+        if (!(e in a)) throw `${e} is not a known rich text formatting tag`;
+        let r = a[e](t, "", n);
         Array.isArray(r) ? this.result.push(...r) : this.result.push(r);
     }
     pushLiteralText(e) {
@@ -72,9 +72,9 @@ function s(e, t) {
                   content: e,
               },
           ]
-        : this.bindFormatValues(a, e, t);
+        : this.bindFormatValues(o, e, t);
 }
 t.astFormatter = {
     format: s,
-    builder: a,
+    builder: o,
 };

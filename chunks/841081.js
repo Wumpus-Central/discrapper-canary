@@ -2,8 +2,8 @@ t.d(e, { default: () => g });
 var n = t(54381),
     s = t(473749),
     r = t(481060),
-    a = t(987209),
-    l = t(563132),
+    l = t(987209),
+    a = t(563132),
     o = t(963249),
     c = t(701464),
     d = t(474936),
@@ -14,13 +14,13 @@ function f(i) {
     let {
             giftRecipient: e,
             onClose: t,
-            transitionState: a,
+            transitionState: l,
             analyticsLocations: f,
             analyticsLocation: g,
             analyticsObject: p,
             giftMessage: I,
         } = i,
-        { priceOptions: b } = (0, l.JL)(),
+        { priceOptions: b } = (0, a.JL)(),
         j = s.useCallback(
             (i) => {
                 (0, o.Z)({
@@ -46,7 +46,7 @@ function f(i) {
             [e, f, g, p, I, t],
         );
     return (0, n.jsxs)(r.Y0X, {
-        transitionState: a,
+        transitionState: l,
         size: r.CgR.DYNAMIC,
         className: h.modalContainer,
         parentComponent: "GiftOptionSelectModal",
@@ -93,12 +93,12 @@ function g(i) {
         analyticsObject: c,
         giftMessage: u,
     } = i;
-    return (0, n.jsx)(l.PaymentContextProvider, {
+    return (0, n.jsx)(a.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: d.nS,
         isGift: !0,
-        children: (0, n.jsx)(a.KB, {
+        children: (0, n.jsx)(l.KB, {
             isGift: !0,
             giftRecipient: e,
             giftingOrigin: d.Wt.DM_CHANNEL,

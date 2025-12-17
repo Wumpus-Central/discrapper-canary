@@ -39,7 +39,7 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     N = new Map(),
     P = !1,
     R = null;
-function D() {
+function w() {
     let e = {
         queue: v,
         paused: I,
@@ -47,7 +47,7 @@ function D() {
     };
     s.K.set(O, e);
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (null != T && T.applicationId === e && T.branchId === t) ||
         (null != C && C.applicationId === e && C.branchId === t)
@@ -58,7 +58,7 @@ function x() {
     if (null != e) {
         let { comboId: t, action: n } = e,
             { applicationId: r, branchId: i } = (0, p.CP)(t);
-        if (!w(r, i)) {
+        if (!D(r, i)) {
             let e = d.default.getToken(),
                 t = d.default.getId();
             if (null == e) throw Error("missing user token");
@@ -81,21 +81,21 @@ function j(e, t, n, r) {
     let s = L(e, t);
     0 !== s && (n ? -1 === s && (v.push(a), x()) : (s > 0 && v.splice(s, 1), v.unshift(a), x())),
         !n && I && _.Z.resume(),
-        D();
+        w();
 }
 function M(e, t) {
     let n = (0, p.Tu)(e, t),
         r = S.indexOf(n);
     -1 !== r && S.splice(r, 1);
     let i = L(e, t);
-    -1 !== i && (v.splice(i, 1), D()), x();
+    -1 !== i && (v.splice(i, 1), w()), x();
 }
 function k(e) {
     let { applicationId: t, branchId: n } = e;
     N.set((0, p.Tu)(t, n), "Install"), j(t, n, !1, "Patch");
 }
 function U(e) {
-    B(e), V(e);
+    F(e), V(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
@@ -105,15 +105,15 @@ function Z(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
     j(t, n, r, "Patch");
 }
-function B(e) {
+function F(e) {
     let { applicationId: t, branchId: n } = e;
     M(t, n);
 }
-function F(e) {
+function B(e) {
     let { applicationId: t, branchId: n } = e,
         r = L(t, n);
     if (r < 1) return !1;
-    v.splice(0, 0, v.splice(r, 1)[0]), x(), I && _.Z.resume(), D();
+    v.splice(0, 0, v.splice(r, 1)[0]), x(), I && _.Z.resume(), w();
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e,
@@ -156,7 +156,7 @@ function H(e) {
         return !0;
     })),
         x(),
-        (r || n !== I) && D();
+        (r || n !== I) && w();
 }
 function Y() {
     let e = d.default.getToken(),
@@ -240,9 +240,9 @@ let J = new X(l.Z, {
     DISPATCH_APPLICATION_INSTALL: k,
     DISPATCH_APPLICATION_UPDATE: Z,
     DISPATCH_APPLICATION_UNINSTALL: U,
-    DISPATCH_APPLICATION_CANCEL: B,
+    DISPATCH_APPLICATION_CANCEL: F,
     DISPATCH_APPLICATION_REPAIR: G,
-    DISPATCH_APPLICATION_MOVE_UP: F,
+    DISPATCH_APPLICATION_MOVE_UP: B,
     DISPATCH_APPLICATION_REMOVE_FINISHED: V,
     DISPATCH_APPLICATION_STATE_UPDATE: H,
     DISPATCH_APPLICATION_ERROR: W,

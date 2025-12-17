@@ -13,7 +13,7 @@ var i = n(54381),
 let u = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
 function d(e) {
     let { channel: t, transitionState: n, onClose: d, defaultValue: p } = e,
-        [h, f] = r.useState(p);
+        [f, h] = r.useState(p);
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
         size: "md",
@@ -31,7 +31,7 @@ function d(e) {
                 onClick: () => {
                     (0, o._e)({
                         channelId: t.id,
-                        scheduledTimestamp: h.toISOString(),
+                        scheduledTimestamp: f.toISOString(),
                     }),
                         (0, a.Mr3)(u);
                 },
@@ -39,7 +39,7 @@ function d(e) {
         ],
         children: (0, i.jsx)(s.Z, {
             defaultValue: p,
-            onChange: f,
+            onChange: h,
         }),
     });
 }

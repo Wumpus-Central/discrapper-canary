@@ -3,8 +3,8 @@ var r = n(473749),
     i = n(442837),
     l = n(668781),
     a = n(493683),
-    s = n(100527),
-    o = n(906732),
+    o = n(100527),
+    s = n(906732),
     c = n(835473),
     u = n(703656),
     d = n(594174),
@@ -15,9 +15,9 @@ function h(e) {
     var t, n;
     let { match: h } = e,
         m = null != (n = (0, u.DR)()) ? n : [],
-        { analyticsLocations: _ } = (0, o.ZP)([...m, s.Z.ACTIVITY_DETAIL_PAGE]),
-        { applicationId: b } = h.params,
-        [E] = (0, c.Z)([b]),
+        { analyticsLocations: b } = (0, s.ZP)([...m, o.Z.ACTIVITY_DETAIL_PAGE]),
+        { applicationId: _ } = h.params,
+        [E] = (0, c.Z)([_]),
         O = null == E || null == (t = E.bot) ? void 0 : t.id,
         v = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (
@@ -31,20 +31,20 @@ function h(e) {
                             n = await a.Z.openPrivateChannel({ recipientIds: O }),
                             r = null != (e = t.searchParams.get("referrer_id")) ? e : void 0,
                             { customId: i } = await (0, f.ur)(
-                                b,
+                                _,
                                 t.searchParams.get("link_id"),
                                 t.searchParams.get("custom_id"),
                             );
                         await (0, p.Z)({
-                            targetApplicationId: b,
+                            targetApplicationId: _,
                             channelId: n,
-                            analyticsLocations: _,
+                            analyticsLocations: b,
                             customId: i,
                             referrerId: r,
                         });
                     } catch (e) {}
                 })();
-        }, [_, b, O, v]),
+        }, [b, _, O, v]),
         r.useEffect(() => {
             let e = setTimeout(() => {
                 null == O &&

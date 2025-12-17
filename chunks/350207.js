@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(652853),
     b = n(671955),
     y = n(388032),
-    O = n(350917);
+    O = n(722036);
 let v = 4;
 function S(e) {
     let t = (0, u.Z)(e.map((e) => e.applicationId));
@@ -57,8 +57,8 @@ function I(e) {
         A = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
         [N, P] = (0, i.useState)([]),
         { themeType: R } = (0, E.z)(),
-        D = R === b.l.SIDEBAR,
-        w = (0, i.useRef)(!1);
+        w = R === b.l.SIDEBAR,
+        D = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
             if (A) return void c.Z.getDetectableGames();
@@ -84,7 +84,7 @@ function I(e) {
             );
         }, [C, A]),
         (0, i.useEffect)(() => {
-            0 !== N.length && (w.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (w.current = !0)));
+            0 !== N.length && (D.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (D.current = !0)));
         }, [u, N.length]),
         (0, r.jsx)(l.P3F, {
             "aria-label": y.intl.string(y.t.JjiwFx),
@@ -96,7 +96,7 @@ function I(e) {
                 className: o()(O.innerContainer, a),
                 children: [
                     (0, r.jsx)(l.Text, {
-                        variant: D ? "text-sm/medium" : "text-xs/medium",
+                        variant: w ? "text-sm/medium" : "text-xs/medium",
                         children: y.intl.string(y.t.JjiwFx),
                     }),
                     (0, r.jsx)("div", {

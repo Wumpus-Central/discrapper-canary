@@ -4,7 +4,7 @@ n.d(t, {
     NK: () => V,
     OP: () => I,
     Sw: () => Y,
-    ZP: () => F,
+    ZP: () => B,
     ge: () => H,
     hU: () => U,
     nY: () => S,
@@ -137,11 +137,11 @@ function R(e) {
     let t = A(e, s.G.QUARANTINE_USER);
     if (null != t) return t;
 }
-function D(e) {
+function w(e) {
     let t = A(e, s.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
-function w(e) {
+function D(e) {
     let t = A(e, s.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
@@ -207,8 +207,8 @@ function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = arguments.length > 4 ? arguments[4] : void 0,
-        l = w(e),
-        c = D(e),
+        l = D(e),
+        c = w(e),
         u = x(e),
         d = R(e),
         f = P(e),
@@ -298,7 +298,7 @@ function Z(e) {
         suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0,
     };
 }
-function B(e) {
+function F(e) {
     let t = A(e, s.G.CHANNEL_ID),
         n = A(e, s.G.ALERT_ACTIONS_EXECUTION),
         r = (0, m.t)(n);
@@ -321,14 +321,14 @@ function B(e) {
         alertActionsExecution: null != r ? r : void 0,
     };
 }
-function F(e) {
-    let t = r.useMemo(() => B(e), [e]),
+function B(e) {
+    let t = r.useMemo(() => F(e), [e]),
         n = (0, f.e7)([p.Z], () => p.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return v(y({}, t), { embedChannel: n });
 }
 function V(e) {
     if (null == e) return null;
-    let { alertActionsExecution: t } = B(e);
+    let { alertActionsExecution: t } = F(e);
     return null != t ? t : null;
 }
 function H(e) {

@@ -3,9 +3,9 @@ var r = n(54381),
     a = n(473749),
     o = n(91192),
     l = n(481060),
-    s = n(724757),
-    i = n(217031);
-function c(e, t) {
+    c = n(724757),
+    s = n(217031);
+function i(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -31,11 +31,11 @@ function u(e) {
             message: n,
             originChannel: u,
             selectedDestinations: d,
-            handleToggleDestination: f,
-            disableSelection: b,
+            handleToggleDestination: b,
+            disableSelection: f,
             rowClassName: p,
         } = e,
-        g = c(e, [
+        g = i(e, [
             "rowData",
             "message",
             "originChannel",
@@ -46,28 +46,28 @@ function u(e) {
         ]);
     let {
             sections: h,
-            sectionHeight: _,
-            renderRow: m,
-            rowHeight: y,
-        } = (0, i.Y)({
+            sectionHeight: m,
+            renderRow: y,
+            rowHeight: O,
+        } = (0, s.Y)({
             rowData: t,
             message: n,
             originChannel: u,
             selectedDestinations: d,
-            handleToggleDestination: f,
-            disableSelection: b,
+            handleToggleDestination: b,
+            disableSelection: f,
             rowClassName: p,
         }),
-        O = a.useRef(null),
-        C = (0, s.Z)("forward-modal", O);
+        C = a.useRef(null),
+        j = (0, c.Z)("forward-modal", C);
     return (0, r.jsx)(o.bG, {
-        navigator: C,
+        navigator: j,
         children: (0, r.jsx)(o.SJ, {
             children: (e) => {
                 var t,
                     n,
                     { ref: a } = e,
-                    o = c(e, ["ref"]);
+                    o = i(e, ["ref"]);
                 return (0, r.jsx)(
                     l.Tvr,
                     ((t = (function (e) {
@@ -98,7 +98,7 @@ function u(e) {
                         {
                             ref: (e) => {
                                 var t;
-                                (O.current = e),
+                                (C.current = e),
                                     (a.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                             },
                         },
@@ -108,9 +108,9 @@ function u(e) {
                     (n = n =
                         {
                             sections: h,
-                            sectionHeight: _,
-                            renderRow: m,
-                            rowHeight: y,
+                            sectionHeight: m,
+                            renderRow: y,
+                            rowHeight: O,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

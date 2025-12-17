@@ -1,5 +1,5 @@
 n.d(t, {
-    $H: () => F,
+    $H: () => B,
     AB: () => G,
     JS: () => k,
     ZP: () => Y,
@@ -7,7 +7,7 @@ n.d(t, {
     kO: () => V,
     oG: () => H,
     v_: () => U,
-    yw: () => B,
+    yw: () => F,
 });
 var r = n(392711),
     i = n.n(r),
@@ -37,8 +37,8 @@ var r = n(392711),
     N = n(700785),
     P = n(546416),
     R = n(981631),
-    D = n(176505);
-function w(e, t, n) {
+    w = n(176505);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -159,7 +159,7 @@ function Z(e, t) {
             ? r
             : null;
 }
-function B(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (C.default.isThrottled(e)) return;
@@ -167,11 +167,11 @@ function B(e) {
         i = "guild_id" in t ? t.guild_id : r ? v.Z.getGuildId() : null,
         a = "channel_id" in t ? t.channel_id : r ? O.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
-        s = x({}, t, j(Z(o, i)), null != i && null != a && (0, D.AB)(a) ? M(i, a) : U(o));
+        s = x({}, t, j(Z(o, i)), null != i && null != a && (0, w.AB)(a) ? M(i, a) : U(o));
     C.default.track(e, s, { flush: n });
 }
-function F(e) {
-    if ((0, D.AB)(e)) return { channel_static_route: e };
+function B(e) {
+    if ((0, w.AB)(e)) return { channel_static_route: e };
     let t = u.Z.getChannel(e);
     if (null == t) return { channel_id: e };
     let n = m.Z.getGuild(t.guild_id);
@@ -236,6 +236,6 @@ function H(e, t) {
     );
 }
 let Y = {
-    trackWithMetadata: B,
+    trackWithMetadata: F,
     getVoiceStateMetadata: V,
 };

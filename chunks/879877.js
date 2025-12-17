@@ -16,17 +16,17 @@ var r = n(54381),
 function h(e) {
     var t;
     let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,
-        O = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
-        v = O.length > 0,
+        v = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
+        O = v.length > 0,
         P = o.qH,
-        I = a && !h && (0, f.M8)(c) && O.length < P,
-        { trackUserProfileAction: w } = (0, d.KZ)(),
+        w = a && !h && (0, f.M8)(c) && v.length < P,
+        { trackUserProfileAction: I } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
-        _ = (0, i.useRef)(null),
-        [T, C] = (0, i.useState)(0),
+        T = (0, i.useRef)(null),
+        [_, C] = (0, i.useState)(0),
         [D, k] = (0, i.useState)(!1),
-        N = x(E, _, O, S, C);
+        N = x(E, T, v, S, C);
     if (
         ((0, i.useEffect)(
             () => (
@@ -36,16 +36,16 @@ function h(e) {
                     window.removeEventListener("resize", N);
                 }
             ),
-            [N, null == O ? void 0 : O.join("")],
+            [N, null == v ? void 0 : v.join("")],
         ),
-        !v && !I)
+        !O && !w)
     )
         return null;
-    let A = D ? O : O.slice(0, O.length - T);
+    let A = D ? v : v.slice(0, v.length - _);
     return (0, r.jsxs)("div", {
         className: l()(m.tagListContainer, u),
         children: [
-            v &&
+            O &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("ul", {
@@ -68,27 +68,27 @@ function h(e) {
                                 ),
                             ),
                         }),
-                        T > 0 &&
+                        _ > 0 &&
                             (0, r.jsx)(j, {
                                 buttonRef: E,
                                 isExpanded: D,
-                                numberOfOverflowingTags: T,
+                                numberOfOverflowingTags: _,
                                 onExpandTags: () => {
-                                    k(!0), w({ action: "EXPAND_GAME_TAGS" });
+                                    k(!0), I({ action: "EXPAND_GAME_TAGS" });
                                 },
                                 onCollapseTags: () => {
-                                    k(!1), w({ action: "COLLAPSE_GAME_TAGS" });
+                                    k(!1), I({ action: "COLLAPSE_GAME_TAGS" });
                                 },
                                 disableInteraction: h,
                             }),
                     ],
                 }),
-            I &&
+            w &&
                 (0, r.jsx)(g.Z, {
                     tags: n,
                     widgetType: c,
                     applicationId: s,
-                    ref: _,
+                    ref: T,
                 }),
         ],
     });
@@ -134,7 +134,7 @@ let y = (e) => {
         ],
     });
 };
-function O(e) {
+function v(e) {
     let { numberOfOverflowingTags: t } = e;
     return (0, r.jsx)(s.Text, {
         variant: "text-xxs/medium",
@@ -142,7 +142,7 @@ function O(e) {
         children: "+".concat(t),
     });
 }
-function v() {
+function O() {
     return (0, r.jsx)(u.Z, {
         direction: u.Z.Directions.LEFT,
         width: 12,
@@ -165,7 +165,7 @@ function j(e) {
         ? (0, r.jsx)("div", {
               className: m.expandButton,
               ref: o,
-              children: (0, r.jsx)(O, { numberOfOverflowingTags: n }),
+              children: (0, r.jsx)(v, { numberOfOverflowingTags: n }),
           })
         : (0, r.jsx)(c.u, {
               text: u,
@@ -175,7 +175,7 @@ function j(e) {
                   onClick: t ? a : i,
                   "aria-label": d,
                   className: t ? m.collapseButton : m.expandButton,
-                  children: t ? (0, r.jsx)(v, {}) : (0, r.jsx)(O, { numberOfOverflowingTags: n }),
+                  children: t ? (0, r.jsx)(O, {}) : (0, r.jsx)(v, { numberOfOverflowingTags: n }),
               }),
           });
 }

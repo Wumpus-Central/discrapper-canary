@@ -1,25 +1,25 @@
-n.d(t, { Z: () => p });
-var r = n(54381);
-n(473749);
-var i = n(442837),
-    l = n(481060),
-    o = n(430824),
-    a = n(594174),
-    c = n(724213),
-    u = n(398758),
-    s = n(981631),
-    b = n(388032);
-function p(e) {
+r.d(t, { Z: () => O });
+var n = r(54381);
+r(473749);
+var i = r(442837),
+    l = r(481060),
+    o = r(430824),
+    c = r(594174),
+    a = r(724213),
+    u = r(398758),
+    s = r(981631),
+    b = r(388032);
+function O(e) {
     let t = (0, u.DM)(e),
-        n = (0, i.e7)([o.Z], () => o.Z.getGuild(e)),
-        p = (0, i.e7)([a.default], () => a.default.getCurrentUser());
-    return null != p && null != n && (n.features.has(s.GuildFeatures.COMMUNITY) || p.isStaff())
-        ? (0, r.jsx)(l.S89, {
+        r = (0, i.e7)([o.Z], () => o.Z.getGuild(e)),
+        O = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    return null != O && null != r && (r.features.has(s.GuildFeatures.COMMUNITY) || O.isStaff())
+        ? (0, n.jsx)(l.S89, {
               id: "opt-in",
               label: b.intl.string(b.t.FB2ZZV),
               checked: !t,
               action: () => {
-                  (0, c.kH)(e);
+                  (0, a.kH)(e);
               },
           })
         : null;

@@ -11,7 +11,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(566898),
     s = n(981631),
-    c = n(835025);
+    c = n(492578);
 function u(e) {
     let { compact: t, messageGroups: n, groupRange: i, attachments: r, fontSize: l, groupSpacing: c } = e;
     if (r > n)
@@ -19,26 +19,26 @@ function u(e) {
     let u = l / s.yqN.FONT_SIZE_DEFAULT,
         d = t ? o.iv : o.pk,
         p = t ? o.Pb : o.XX,
-        h = 0,
-        f = Array(n)
+        f = 0,
+        h = Array(n)
             .fill(null)
             .map(() => {
                 let e = a().random(1, i);
-                return (h += c * u), (h += d * u), (h += (e - 1) * p * u), e;
+                return (f += c * u), (f += d * u), (f += (e - 1) * p * u), e;
             }),
-        m = f.map((e, t) => t),
+        m = h.map((e, t) => t),
         g = [];
     for (; g.length < r; ) {
         let e = {
             width: a().random(140, 400),
             height: a().random(100, 320),
         };
-        g.push([m.splice(a().random(0, m.length - 1), 1)[0], e]), (h += e.height + o.M9 * u);
+        g.push([m.splice(a().random(0, m.length - 1), 1)[0], e]), (f += e.height + o.M9 * u);
     }
     return {
-        messages: f,
+        messages: h,
         attachmentSpecs: g,
-        totalHeight: h,
+        totalHeight: f,
         groupSpacing: c,
     };
 }

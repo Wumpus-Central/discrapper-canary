@@ -3,10 +3,10 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(603592),
-    o = n(388032);
-let a = "DOWNLOAD_APPS";
+    a = n(388032);
+let o = "DOWNLOAD_APPS";
 function s() {
-    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, a));
+    let e = (0, i.s9z)((e) => (0, i.DEQ)(e, o));
     return (0, r.jsx)(l.Z, {
         id: "app-download-button",
         onClick: () => {
@@ -43,11 +43,11 @@ function s() {
                             })({ source: "Guilds" }, t),
                         );
                 },
-                { modalKey: a },
+                { modalKey: o },
             );
         },
         selected: e,
-        tooltip: o.intl.string(o.t.Z7jwrJ),
+        tooltip: a.intl.string(a.t.Z7jwrJ),
         icon: i._8t,
     });
 }

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(54381),
     l = n(473749),
     i = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(938315);
-function d(e) {
+function c(e) {
     let {
             element: {
-                data: { header: t, body: n, is_localized: d },
+                data: { header: t, body: n, is_localized: c },
             },
         } = e,
-        c = l.useMemo(() => {
+        d = l.useMemo(() => {
             var e, t;
             return a.Z.reactParserFor(
                 ((e = (function (e) {
@@ -55,7 +55,7 @@ function d(e) {
                 e),
             );
         }, []);
-    return d && (null != t || null != n)
+    return c && (null != t || null != n)
         ? (0, r.jsxs)("div", {
               children: [
                   null != t &&
@@ -69,7 +69,7 @@ function d(e) {
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/normal",
                           className: o.body,
-                          children: c(n),
+                          children: d(n),
                       }),
               ],
           })

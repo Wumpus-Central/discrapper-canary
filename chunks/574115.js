@@ -41,9 +41,9 @@ e.exports = function (e, t) {
             N = A.start,
             P = A.end,
             R = O.getCurrentContent(),
-            D = R.getBlockForKey(I),
-            w = D.getText().slice(N, P);
-        if ((y.endsWith(f) && (y = y.slice(0, -1)), y === w)) {
+            w = R.getBlockForKey(I),
+            D = w.getText().slice(N, P);
+        if ((y.endsWith(f) && (y = y.slice(0, -1)), y === D)) {
             var x = t.nativeEvent.inputType;
             if (x) {
                 var L = p(x, O);
@@ -57,25 +57,25 @@ e.exports = function (e, t) {
                 focusOffset: P,
                 isBackward: !1,
             }),
-            k = D.getEntityAt(N),
+            k = w.getEntityAt(N),
             U = s(k) ? R.getEntity(k) : null,
             G = null != U ? U.getMutability() : null,
             Z = "MUTABLE" === G,
-            B = Z ? "spellcheck-change" : "apply-entity",
-            F = r.replaceText(R, M, y, D.getInlineStyleAt(N), Z ? D.getEntityAt(N) : null);
+            F = Z ? "spellcheck-change" : "apply-entity",
+            B = r.replaceText(R, M, y, w.getInlineStyleAt(N), Z ? w.getEntityAt(N) : null);
         if (d)
             (n = m.anchorOffset), (_ = (c = N + Math.min(n, (o = m.focusOffset))) + Math.abs(n - o)), (n = c), (o = _);
         else {
-            var V = y.length - w.length;
+            var V = y.length - D.length;
             (c = j.getStartOffset()), (_ = j.getEndOffset()), (n = g ? _ + V : c), (o = _ + V);
         }
-        var H = F.merge({
+        var H = B.merge({
             selectionBefore: R.getSelectionAfter(),
             selectionAfter: j.merge({
                 anchorOffset: n,
                 focusOffset: o,
             }),
         });
-        e.update(a.push(O, H, B));
+        e.update(a.push(O, H, F));
     }
 };

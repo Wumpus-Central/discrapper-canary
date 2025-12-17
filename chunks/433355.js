@@ -79,8 +79,8 @@ let T = "message_requests",
     N = !0,
     P = {},
     R = {},
-    D = !1,
-    w = null;
+    w = !1,
+    D = null;
 function x(e) {
     if (null == e) return null;
     if ((0, b.AB)(e)) {
@@ -94,12 +94,12 @@ function L(e) {
 }
 function j(e) {
     let t = !1;
-    D && ((D = !1), (t = !0));
+    w && ((w = !1), (t = !0));
     let n = x(m.Z.getChannelId());
     return null != n && n in P && (delete P[n], (t = !0)), t && e ? e : !e;
 }
 function M() {
-    D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), A && (A = j(A)), (C = j(C));
+    w && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), A && (A = j(A)), (C = j(C));
 }
 function k() {
     C && (C = j(C)), (A = j(A));
@@ -109,7 +109,7 @@ function U() {
 }
 function G(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
-    D = !1;
+    w = !1;
     let a = x(r);
     return (
         null != a &&
@@ -126,9 +126,9 @@ function Z(e) {
     let { guildId: t } = e;
     return null != R[t] && (delete R[t], !0);
 }
-function B(e) {
+function F(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
-    D = !1;
+    w = !1;
     let a = x(n);
     if (null == a) return !1;
     let o = {
@@ -138,9 +138,9 @@ function B(e) {
     };
     return t === c.tI.VIEW_MOD_REPORT && (o = I(v({}, o), { baseChannelId: n })), (P[a] = o), !0;
 }
-function F(e) {
+function B(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
-    D = !1;
+    w = !1;
     let i = x(t);
     null != i &&
         (P[i] = {
@@ -196,15 +196,15 @@ function K(e) {
     null != n && delete P[n];
 }
 function z() {
-    let e = null != w && l.Z.hasSearchState(w);
-    if (e === D) return !1;
-    D = e;
+    let e = null != D && l.Z.hasSearchState(D);
+    if (e === w) return !1;
+    w = e;
 }
 function q() {
     i.tq && C && ((C = !1), (A = !1));
 }
 function Q(e) {
-    return (w = e.searchContextId), z();
+    return (D = e.searchContextId), z();
 }
 class X extends (r = a.ZP.PersistedStore) {
     initialize(e) {
@@ -228,7 +228,7 @@ class X extends (r = a.ZP.PersistedStore) {
         };
     }
     getSection(e, t) {
-        if (D) return E.ULH.SEARCH;
+        if (w) return E.ULH.SEARCH;
         let n = x(e);
         return null != n && null != P[n]
             ? E.ULH.SIDEBAR_CHAT
@@ -249,7 +249,7 @@ class X extends (r = a.ZP.PersistedStore) {
     }
     getCurrentSidebarChannelId(e) {
         let t = x(e);
-        if (null == t || D) return null;
+        if (null == t || w) return null;
         let n = P[t];
         return null == n
             ? null
@@ -260,7 +260,7 @@ class X extends (r = a.ZP.PersistedStore) {
     getCurrentSidebarMessageId(e) {
         var t;
         let n = x(e);
-        if (null == n || D) return null;
+        if (null == n || w) return null;
         let r = P[n];
         return null == r
             ? null
@@ -271,7 +271,7 @@ class X extends (r = a.ZP.PersistedStore) {
               : null;
     }
     getCurrentSearchContextId() {
-        return w;
+        return D;
     }
 }
 O(X, "displayName", "ChannelSectionStore"), O(X, "persistKey", "ChannelSectionStore2");
@@ -280,9 +280,9 @@ let J = new X(o.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: M,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: U,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: k,
-    SIDEBAR_VIEW_CHANNEL: B,
+    SIDEBAR_VIEW_CHANNEL: F,
     SIDEBAR_VIEW_GUILD: G,
-    SIDEBAR_CREATE_THREAD: F,
+    SIDEBAR_CREATE_THREAD: B,
     SIDEBAR_CLOSE: K,
     SIDEBAR_CLOSE_GUILD: Z,
     CHANNEL_DELETE: V,

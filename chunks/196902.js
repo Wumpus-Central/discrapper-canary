@@ -9,33 +9,33 @@ var r = n(54381),
     d = n(494620),
     u = n(63063),
     g = n(434404),
-    m = n(999382),
-    p = n(981631),
-    f = n(713328),
-    h = n(388032),
-    b = n(764009);
+    f = n(999382),
+    m = n(981631),
+    b = n(551199),
+    p = n(388032),
+    h = n(331867);
 let x = function (e) {
-    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: _, isDisabled: v = !1 } = e,
-        O = (0, a.e7)([m.Z], () => m.Z.getProps().originalProfile),
-        C = null != O && O.tag !== i;
-    function y(e) {
+    let { className: t, guildId: n, tag: i, badge: x, primaryColor: j, secondaryColor: v, isDisabled: O = !1 } = e,
+        C = (0, a.e7)([f.Z], () => f.Z.getProps().originalProfile),
+        y = null != C && C.tag !== i;
+    function N(e) {
         g.Z.updateGuildProfile(n, { tag: e });
     }
     return (0, r.jsxs)("div", {
         className: t,
         children: [
             (0, r.jsx)(o.gNt, {
-                label: h.intl.string(f.default["tN+8pD"]),
+                label: p.intl.string(b.default["tN+8pD"]),
                 children: (e) =>
                     (0, r.jsxs)("div", {
-                        className: b.tagContainer,
+                        className: h.tagContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: b.tagInputContainer,
+                                className: h.tagInputContainer,
                                 children: (0, r.jsx)(s.Is, {
                                     id: e.controlId,
-                                    className: b.tagInputWrapper,
-                                    inputClassName: l()(b.tagInput, "heading-sm/semibold"),
+                                    className: h.tagInputWrapper,
+                                    inputClassName: l()(h.tagInput, "heading-sm/semibold"),
                                     maxLength: 4,
                                     autoFocus: !0,
                                     placeholder: "WUMP",
@@ -44,31 +44,31 @@ let x = function (e) {
                                         width: 40,
                                         height: 40,
                                         primaryTintColor: j,
-                                        secondaryTintColor: _,
+                                        secondaryTintColor: v,
                                     }),
-                                    disabled: v,
+                                    disabled: O,
                                     value: null != i ? i : "",
-                                    onChange: y,
+                                    onChange: N,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: b.tagTooltip,
+                                className: h.tagTooltip,
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
-                                    children: h.intl.string(f.default.CrHXHt),
+                                    children: p.intl.string(b.default.CrHXHt),
                                 }),
                             }),
                         ],
                     }),
             }),
-            C &&
+            y &&
                 (0, r.jsx)(d.Z, {
-                    className: b.tagChangeInfoBox,
+                    className: h.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        children: h.intl.format(f.default["4ZKDXq"], {
-                            articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS),
+                        children: p.intl.format(b.default["4ZKDXq"], {
+                            articleUrl: u.Z.getArticleURL(m.BhN.SERVER_TAGS),
                         }),
                     }),
                 }),

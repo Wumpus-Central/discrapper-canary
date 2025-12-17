@@ -9,8 +9,8 @@ var o = n(100527),
     a = n(107998),
     s = n(791785),
     f = n(276442),
-    d = n(793541),
-    b = n(380898),
+    b = n(793541),
+    d = n(380898),
     p = n(710094),
     O = n(865921),
     y = n(853872),
@@ -82,11 +82,11 @@ let x = [
     },
     {
         key: u.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, r.jsx)(b.Z, {}),
+        renderStep: () => (0, r.jsx)(d.Z, {}),
     },
     {
         key: u.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, r.jsx)(d.Z, {}),
+        renderStep: () => (0, r.jsx)(b.Z, {}),
     },
     {
         key: u.h8.REVIEW,
@@ -120,12 +120,12 @@ function S(e) {
             }
             return o;
         })(e, ["guildProductContext", "sourceAnalyticsLocations", "applicationId"]);
-    let { analyticsLocations: d } = (0, c.ZP)(n, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
+    let { analyticsLocations: b } = (0, c.ZP)(n, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
     return (0, r.jsx)(
         g.R,
         m(v({}, t), {
             children: (0, r.jsx)(c.Gt, {
-                value: d,
+                value: b,
                 children: (0, r.jsx)(i.PaymentContextProvider, {
                     stepConfigs: x,
                     applicationId: u,
@@ -139,7 +139,7 @@ function S(e) {
                                 v(
                                     {
                                         initialPlanId: null,
-                                        analyticsLocations: d,
+                                        analyticsLocations: b,
                                         renderHeader: P.L,
                                     },
                                     f,

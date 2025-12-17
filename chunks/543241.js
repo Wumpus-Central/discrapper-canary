@@ -8,16 +8,16 @@ n.d(t, {
     MZ: () => Y,
     NJ: () => V,
     Nf: () => U,
-    PC: () => D,
+    PC: () => w,
     Y1: () => G,
     ZF: () => P,
     fe: () => M,
-    jA: () => w,
+    jA: () => D,
     kI: () => N,
     nV: () => K,
-    q5: () => F,
+    q5: () => B,
     to: () => L,
-    wC: () => B,
+    wC: () => F,
     y$: () => x,
 }),
     n(290780),
@@ -56,8 +56,8 @@ let N = function (e, t) {
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         (0, u.O)(n);
         let a = (0, I.Gt)(e),
-            s = B(n),
-            c = F(n),
+            s = F(n),
+            c = B(n),
             f = V(n),
             { topEmojis: h, newlyAddedEmojis: g } = (0, O.Z)(n, e),
             { allEmojis: S } = (0, y.Z)({
@@ -183,13 +183,13 @@ let N = function (e, t) {
             location_section: null != e ? S.jXE.EMOJI_PICKER_POPOUT : S.jXE.CUSTOM_STATUS_MODAL,
         });
     },
-    D = (e, t) => {
+    w = (e, t) => {
         s.ZP.trackWithMetadata(S.rMx.SEARCH_STARTED, {
             search_type: null != t && t === I.Hz.REACTION ? S.aib.EMOJI_REACTION : S.aib.EMOJI,
             location: e,
         });
     },
-    w = (e, t, n, r, i) => {
+    D = (e, t, n, r, i) => {
         s.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_VIEWED, {
             search_type: null != i && i === I.Hz.REACTION ? S.aib.EMOJI_REACTION : S.aib.EMOJI,
             total_results: e,
@@ -378,7 +378,7 @@ function Z(e, t, n, i) {
         o.pF,
     );
 }
-function B(e) {
+function F(e) {
     return (
         r.useEffect(() => {
             f.DZ.loadIfNecessary();
@@ -386,7 +386,7 @@ function B(e) {
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
     );
 }
-function F(e) {
+function B(e) {
     return (
         r.useEffect(() => {
             f.DZ.loadIfNecessary();

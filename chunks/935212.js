@@ -8,7 +8,7 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(391876),
-    l = n(831880);
+    l = n(383542);
 let c = 400;
 function u(e) {
     let { className: t, textClassName: n, text: a, variant: u, delay: d } = e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i,
     r,
     l = n(392711),
@@ -53,7 +53,7 @@ class p extends (r = o.ZP.Store) {
           writable: !0,
       })
     : (p[i] = "RegionStore");
-let h = new p(s.Z, {
+let f = new p(s.Z, {
     LOAD_REGIONS: function (e) {
         let t = a().sortBy(e.regions, (e) => e.name);
         null != e.guildId ? (d[e.guildId] = t) : (u = t);

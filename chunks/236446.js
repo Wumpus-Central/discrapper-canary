@@ -1,37 +1,37 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
     s = n(120356),
-    l = n.n(s),
-    a = n(512722),
-    o = n.n(a),
+    a = n.n(s),
+    l = n(512722),
+    o = n.n(l),
     c = n(442837),
     u = n(481060),
     d = n(388905),
     h = n(362762),
-    g = n(409059),
-    m = n(659900),
-    p = n(962220),
-    f = n(473855),
-    _ = n(306453),
-    x = n(929809),
+    f = n(409059),
+    g = n(659900),
+    m = n(962220),
+    p = n(473855),
+    x = n(306453),
+    _ = n(929809),
     E = n(108427),
     v = n(390885),
-    j = n(314897),
-    b = n(896797),
+    b = n(314897),
+    j = n(896797),
     I = n(954824),
     N = n(781428),
     y = n(163671),
     S = n(423527),
     C = n(981631),
-    O = n(260539),
-    T = n(701476),
+    T = n(260539),
+    O = n(701476),
     A = n(630724),
     Z = n(436620),
     P = n(388032),
-    R = n(160033),
-    L = n(197571);
-function w(e, t, n) {
+    R = n(572378),
+    L = n(478411);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,13 +45,13 @@ function w(e, t, n) {
     );
 }
 c.ZP.initialize();
-class D extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         (0, E.e)("guildTemplate"),
             Z.KO || I.Z.launch("discord://" + C.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return Z.KO
@@ -78,7 +78,7 @@ class D extends i.PureComponent {
                     className: L.marginBottom8,
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: l()(L.marginTop8, L.marginBottom8),
+                    className: a()(L.marginTop8, L.marginBottom8),
                     children: P.intl.string(P.t.C7ZRNw),
                 }),
                 (0, r.jsx)(d.DK, { children: P.intl.string(P.t.A6MwXE) }),
@@ -100,10 +100,10 @@ class D extends i.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (o()(null != e, "guild template must not be null"), e.state === O.Rj.RESOLVING)
+        return (o()(null != e, "guild template must not be null"), e.state === T.Rj.RESOLVING)
             ? (0, r.jsx)(d.ZP, {
                   className: R.authBox,
-                  children: (0, r.jsx)(_.Z, { guildTemplate: e }),
+                  children: (0, r.jsx)(x.Z, { guildTemplate: e }),
               })
             : (0, r.jsx)(M, { guildTemplate: e });
     }
@@ -121,9 +121,9 @@ class D extends i.PureComponent {
         if (t === C.kEZ.OPEN) return this.renderAppOpened();
         if (t === C.kEZ.OPENING) return this.renderSpinner(P.intl.string(P.t["Z+hCVU"]));
         switch (e.state) {
-            case O.Rj.RESOLVING:
+            case T.Rj.RESOLVING:
                 return this.renderSpinner(P.intl.string(P.t["Z+hCVU"]));
-            case O.Rj.RESOLVED:
+            case T.Rj.RESOLVED:
                 if (n || !Z.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, r.jsx)(N.Z, {
@@ -136,11 +136,11 @@ class D extends i.PureComponent {
                     transitionTo: i,
                     location: s,
                     onRegister: () => {
-                        (0, x.c)(T.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE),
+                        (0, _.c)(O.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE),
                             v.Z.flowStart(A.MK.ORGANIC_GUILD_TEMPLATES, A.EW.NUF_STARTED);
                     },
                 });
-            case O.Rj.EXPIRED:
+            case T.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;
@@ -148,21 +148,21 @@ class D extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, "handleContinue", () => {
+            D(this, "handleContinue", () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             });
     }
 }
-function k(e) {
+function w(e) {
     let t = {
-        guildTemplate: (0, c.e7)([g.Z], () => g.Z.getGuildTemplate(e.code)),
+        guildTemplate: (0, c.e7)([f.Z], () => f.Z.getGuildTemplate(e.code)),
         nativeAppState: (0, c.e7)([h.Z], () => h.Z.getState(e.code)),
-        authenticated: (0, c.e7)([j.default], () => j.default.isAuthenticated()),
-        defaultRoute: (0, c.e7)([b.Z], () => b.Z.defaultRoute),
+        authenticated: (0, c.e7)([b.default], () => b.default.isAuthenticated()),
+        defaultRoute: (0, c.e7)([j.Z], () => j.Z.defaultRoute),
     };
     return (0, r.jsx)(
-        D,
+        k,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -174,7 +174,7 @@ function k(e) {
                         }),
                     )),
                     r.forEach(function (t) {
-                        w(e, t, n[t]);
+                        D(e, t, n[t]);
                     });
             }
             return e;
@@ -183,7 +183,7 @@ function k(e) {
 }
 function M(e) {
     let { guildTemplate: t } = e,
-        { form: n, handleSubmit: i } = (0, m.Z)(t, !1);
+        { form: n, handleSubmit: i } = (0, g.Z)(t, !1);
     v.Z.flowStep(A.MK.ORGANIC_GUILD_TEMPLATES, A.X2.GUILD_CREATE);
     let s = (0, r.jsxs)(r.Fragment, {
         children: [
@@ -205,7 +205,7 @@ function M(e) {
     return (0, r.jsx)(y.Z, {
         className: R.authBox,
         children: () => [
-            (0, r.jsx)(f.Z, { guildTemplate: t }, "template"),
+            (0, r.jsx)(p.Z, { guildTemplate: t }, "template"),
             (0, r.jsx)(
                 "div",
                 {

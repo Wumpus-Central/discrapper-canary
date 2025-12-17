@@ -8,15 +8,15 @@ var n = a(54381),
     c = a(153867),
     d = a(706454),
     u = a(626135),
-    _ = a(981631),
-    N = a(388032),
-    m = a(430355);
+    N = a(981631),
+    m = a(388032),
+    f = a(456235);
 class p extends r.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
         return (
-            t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_SKU("")) ||
-            t.pathname.startsWith(_.Z5c.APPLICATION_STORE_LISTING_APPLICATION(""))
+            t.pathname.startsWith(N.Z5c.APPLICATION_STORE_LISTING_SKU("")) ||
+            t.pathname.startsWith(N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(""))
         );
     }
     render() {
@@ -32,12 +32,12 @@ class p extends r.Component {
                             locale: o,
                             authRedirectTo: e.pathname,
                             track: u.default.track,
-                            className: m.marketingHeader,
+                            className: f.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
-                            mobileClassName: m.marketingHeader,
-                            openNavAriaLabel: N.intl.string(N.t.Fs9k3K),
-                            hideNavAriaLabel: N.intl.string(N.t.AbfyHI),
-                            skipToContentLabel: N.intl.string(N.t["18gavA"]),
+                            mobileClassName: f.marketingHeader,
+                            openNavAriaLabel: m.intl.string(m.t.Fs9k3K),
+                            hideNavAriaLabel: m.intl.string(m.t.AbfyHI),
+                            skipToContentLabel: m.intl.string(m.t["18gavA"]),
                         }),
                         a(t, i),
                         (0, n.jsx)(s.$, {
@@ -45,7 +45,7 @@ class p extends r.Component {
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,
                             track: u.default.track,
-                            className: m.marketingFooter,
+                            className: f.marketingFooter,
                         }),
                     ],
                 }),

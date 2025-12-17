@@ -10,12 +10,12 @@ var i = n(54381),
     d = n(607070),
     p = n(585483),
     m = n(254109),
-    y = n(212459),
-    f = n(730606),
+    f = n(212459),
+    y = n(730606),
     E = n(860153),
     O = n(981631),
     h = n(388032),
-    S = n(105969);
+    S = n(281290);
 function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
@@ -29,7 +29,7 @@ function g(e) {
             shouldHideMediaOptions: T = !1,
             transitionState: v,
         } = e,
-        _ = (function (e, t) {
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -57,7 +57,7 @@ function g(e) {
             "shouldHideMediaOptions",
             "transitionState",
         ]);
-    let [C, j] = l.useState(null != r ? r : 0),
+    let [_, j] = l.useState(null != r ? r : 0),
         [x, L] = l.useState(!1),
         [D, I] = (0, s.q_F)(() => ({
             scale: d.Z.useReducedMotion ? 1 : 0.9,
@@ -159,7 +159,7 @@ function g(e) {
                         className: a()(S.carouselModal, e),
                         transitionState: v,
                     },
-                    _,
+                    C,
                 )),
                 (r = r =
                     {
@@ -169,11 +169,11 @@ function g(e) {
                         onClick: t,
                         "aria-label": h.intl.string(h.t.AMTX3j),
                         parentComponent: "MediaViewerModal",
-                        children: (0, i.jsxs)(y.z.Provider, {
+                        children: (0, i.jsxs)(f.z.Provider, {
                             value: N,
                             children: [
                                 (0, i.jsx)(E.Z, {
-                                    item: n[C],
+                                    item: n[_],
                                     hideMediaOptions: T,
                                     onClose: t,
                                 }),
@@ -181,9 +181,9 @@ function g(e) {
                                     style: { display: "none" },
                                     ref: P,
                                 }),
-                                (0, i.jsx)(f.ZP, {
+                                (0, i.jsx)(y.ZP, {
                                     items: n,
-                                    startIndex: C,
+                                    startIndex: _,
                                     onIndexChange: R,
                                     enabledContentHarmTypeFlags: g,
                                     shouldHideMediaOptions: T,

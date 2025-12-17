@@ -10,26 +10,26 @@ var r = n(473749),
 function u(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
         [u, g] = r.useState(),
-        [m, p] = r.useState(!1),
-        f = (0, d.Ob)(n);
+        [f, m] = r.useState(!1),
+        b = (0, d.Ob)(n);
     return {
         canSubmitAcceptance: (0, i.e7)([o.default], () => {
             let e = o.default.getCurrentUser();
             return null != n && (0, a.eM)(n, e);
         }, [n]),
         error: u,
-        loading: m,
+        loading: f,
         submitAcceptTermsRequest: r.useCallback(async () => {
-            if (null != e && (f || null != t)) {
-                p(!0), g(void 0);
+            if (null != e && (b || null != t)) {
+                m(!0), g(void 0);
                 try {
                     null != t ? await c.wE(e, t) : await c.zo(e);
                 } catch (e) {
                     g(new l.Z(e));
                 } finally {
-                    p(!1);
+                    m(!1);
                 }
             }
-        }, [e, t, f]),
+        }, [e, t, b]),
     };
 }

@@ -12,7 +12,7 @@ var r = n(54381),
     u = n(966902),
     d = n(237872),
     f = n(562618),
-    p = n(254477);
+    p = n(770966);
 function _(e, t, n) {
     return (
         t in e
@@ -127,7 +127,7 @@ function y(e) {
         R = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
-        D = m(
+        w = m(
             {
                 targetElementRef: N.targetElementRef,
                 shouldShow: N.shouldShow,
@@ -147,7 +147,7 @@ function y(e) {
         );
     return (0, r.jsx)(
         l.m,
-        g(m({}, D), {
+        g(m({}, w), {
             children: (0, r.jsxs)("div", {
                 ref: I,
                 "data-mana-component": "popover",

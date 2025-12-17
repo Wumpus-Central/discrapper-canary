@@ -28,11 +28,11 @@ var i = n(512722),
     N = n(18438),
     P = n(778825),
     R = n(52597),
-    D = n(430131),
-    w = n(291334),
+    w = n(430131),
+    D = n(291334),
     x = n(474936),
     L = n(388032),
-    j = n(737788);
+    j = n(822462);
 function M(e) {
     var t, n, i, M;
     let { guild: k } = e,
@@ -43,8 +43,8 @@ function M(e) {
         G = (0, d.m)(x.PremiumTypes.TIER_2),
         {
             pendingAvatar: Z,
-            pendingNickname: B,
-            pendingBanner: F,
+            pendingNickname: F,
+            pendingBanner: B,
             pendingBio: V,
             pendingPronouns: H,
             pendingThemeColors: Y,
@@ -82,7 +82,7 @@ function M(e) {
         $ = c.JH.useExperiment({ location: "GuildIdentityCustomizationSections" }).enabled,
         ee = C.ZP.canUsePremiumProfileCustomization(U),
         et = (0, f.gd)(Z, null == X ? void 0 : X.avatar),
-        en = (0, f.f$)(F, null == J ? void 0 : J.banner),
+        en = (0, f.f$)(B, null == J ? void 0 : J.banner),
         er = (0, R.p)(Y, null == J ? void 0 : J.themeColors),
         ei = null != (t = null == J ? void 0 : J.bio) ? t : "",
         ea = null != (n = null == J ? void 0 : J.pronouns) ? n : "",
@@ -96,11 +96,11 @@ function M(e) {
         className: j.sectionsContainer,
         children: [
             (0, r.jsx)(
-                D.Z,
+                w.Z,
                 {
                     errors: null != (i = null == W ? void 0 : W.nick) ? i : null == Q ? void 0 : Q.nick,
                     username: A.ZP.getName(U),
-                    pendingNick: B,
+                    pendingNick: F,
                     currentNick: null == X ? void 0 : X.nick,
                     user: U,
                     guild: q,
@@ -120,7 +120,7 @@ function M(e) {
                 },
                 "pronouns",
             ),
-            (0, r.jsxs)(w.Z, {
+            (0, r.jsxs)(D.Z, {
                 user: U,
                 showOverlay: !ee,
                 children: [

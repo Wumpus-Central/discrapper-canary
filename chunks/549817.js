@@ -75,7 +75,7 @@ function R(e, t) {
         e
     );
 }
-function D(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (f.Z.isFullServerPreview(e)) return;
     let n = t ? O.Z.getOnboardingPromptsForOnboarding(e) : O.Z.getOnboardingPrompts(e),
@@ -136,7 +136,7 @@ function D(e) {
                   );
               });
 }
-function w(e, t, n) {
+function D(e, t, n) {
     var r, a;
     let o = null != (a = null == (r = m.ZP.getSelfMember(e)) ? void 0 : r.roles) ? a : [];
     if (f.Z.isViewingRoles(e)) return void (0, d.og)(e, i().difference(i().union(o, t), n));
@@ -163,8 +163,8 @@ let x = {
             removedOptionIds: o,
         });
     },
-    updateOnboardingResponses: i().debounce(D, 1000),
-    updateRolesLocal: w,
+    updateOnboardingResponses: i().debounce(w, 1000),
+    updateRolesLocal: D,
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
             r = O.Z.getSelectedOptions(e),
@@ -175,7 +175,7 @@ let x = {
             b = [...o, ...s],
             A = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
             P = (0, S.v)(e, new Set(b), A, !0).length,
-            w = null == n ? [] : n.options.map((e) => e.id),
+            D = null == n ? [] : n.options.map((e) => e.id),
             x = O.Z.getConnections(e),
             L = (0, v.OZ)(x),
             j = (0, v.N4)(x);
@@ -184,8 +184,8 @@ let x = {
                 I.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                 R(N({}, (0, c.hH)(e)), {
                     step: t.length - 1,
-                    options_selected: null == n ? 0 : r.filter((e) => w.includes(e.id)).length,
-                    skipped: w.length > 0,
+                    options_selected: null == n ? 0 : r.filter((e) => D.includes(e.id)).length,
+                    skipped: D.length > 0,
                     back: !1,
                     in_onboarding: !0,
                     is_final_step: !0,
@@ -200,7 +200,7 @@ let x = {
                 }),
             ),
             (0, l.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
-            D(e, !0),
+            w(e, !0),
             f.Z.isFullServerPreview(e))
         ) {
             (0, d.zS)(e, b, []), (0, d.aq)(e, { optInEnabled: !0 }), (0, d.og)(e, Array.from(i));

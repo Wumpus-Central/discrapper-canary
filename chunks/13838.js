@@ -3,8 +3,8 @@ var r = n(392711),
     i = n.n(r),
     l = n(243814),
     a = n(149765),
-    s = n(902704),
-    o = n(622822),
+    o = n(902704),
+    s = n(622822),
     c = n(812206),
     u = n(594190),
     d = n(601964),
@@ -13,8 +13,8 @@ var r = n(392711),
     g = n(271383),
     h = n(430824),
     m = n(131951),
-    _ = n(19780),
-    b = n(594174),
+    b = n(19780),
+    _ = n(594174),
     E = n(979651),
     O = n(996106),
     v = n(914946),
@@ -34,7 +34,7 @@ function x(e) {
         r = f.Z.getChannel(t);
     if (null == r || !(0, v.zM)(r, n.application.id, n.authorization.scopes))
         throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
-    if ((0, o.ft)(r)) throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
+    if ((0, s.ft)(r)) throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
 }
 let A = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
 function Z(e) {
@@ -59,7 +59,7 @@ let w = {
                 let { prevState: r, dispatch: l } = e,
                     a = h.Z.getGuild(t);
                 if (null == a) return;
-                let s = {
+                let o = {
                     guild: {
                         id: a.id,
                         name: a.name,
@@ -67,7 +67,7 @@ let w = {
                     },
                     online: 0,
                 };
-                return i().isEqual(r, s) || l(s), s;
+                return i().isEqual(r, o) || l(o), o;
             };
         },
     },
@@ -87,16 +87,16 @@ let w = {
                     l = f.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(E.Z.getVoiceStatesForChannel(l.id));
+                    o = Object.values(E.Z.getVoiceStatesForChannel(l.id));
                 return (
                     n &&
                         i()
-                            .differenceBy(s, n, (e) => {
+                            .differenceBy(o, n, (e) => {
                                 let { userId: t } = e;
                                 return t;
                             })
                             .forEach((e) => r((0, v.aE)(a, l.id, e))),
-                    s
+                    o
                 );
             };
         },
@@ -117,15 +117,15 @@ let w = {
                     l = f.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(E.Z.getVoiceStatesForChannel(l.id));
+                    o = Object.values(E.Z.getVoiceStatesForChannel(l.id));
                 return (
                     i()
-                        .differenceBy(n, s, (e) => {
+                        .differenceBy(n, o, (e) => {
                             let { userId: t } = e;
                             return t;
                         })
                         .forEach((e) => r((0, v.aE)(a, l.id, e))),
-                    s
+                    o
                 );
             };
         },
@@ -146,12 +146,12 @@ let w = {
                     l = f.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(E.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, v.aE)(a, l.id, e));
+                    o = Object.values(E.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, v.aE)(a, l.id, e));
                 return (
                     i()
-                        .differenceWith(s, n, i().isEqual)
+                        .differenceWith(o, n, i().isEqual)
                         .forEach((e) => r(e)),
-                    s
+                    o
                 );
             };
         },
@@ -163,11 +163,11 @@ let w = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, v.zy)(_.Z.getState()),
-                    hostname: _.Z.getHostname(),
-                    pings: _.Z.getPings(),
-                    average_ping: _.Z.getAveragePing(),
-                    last_ping: _.Z.getLastPing(),
+                    state: (0, v.zy)(b.Z.getState()),
+                    hostname: b.Z.getHostname(),
+                    pings: b.Z.getPings(),
+                    average_ping: b.Z.getAveragePing(),
+                    last_ping: b.Z.getLastPing(),
                 };
             return i().isEqual(r, t) || n(r), r;
         },
@@ -287,8 +287,8 @@ let w = {
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                r = { currentUser: b.default.getCurrentUser() };
-            return null == r.currentUser || (null != t && (0, s.Z)(r, t)) || n((0, T.Z)(r.currentUser)), r;
+                r = { currentUser: _.default.getCurrentUser() };
+            return null == r.currentUser || (null != t && (0, o.Z)(r, t)) || n((0, T.Z)(r.currentUser)), r;
         },
     },
     [j.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
@@ -303,7 +303,7 @@ let w = {
                 let { prevState: n, dispatch: r } = e,
                     i = { currentGuildMember: g.ZP.getSelfMember(t) };
                 return (
-                    null == i.currentGuildMember || (null != n && (0, s.Z)(i, n)) || r((0, S.Z)(i.currentGuildMember)),
+                    null == i.currentGuildMember || (null != n && (0, o.Z)(i, n)) || r((0, S.Z)(i.currentGuildMember)),
                     i
                 );
             };
@@ -330,13 +330,13 @@ let w = {
             let { prevState: n, dispatch: r } = e,
                 l = p.Z.getStreamerActiveStreamMetadata(),
                 a = (null == l ? void 0 : l.pid) != null ? u.ZP.getGameForPID(l.pid) : null,
-                s = (null == a ? void 0 : a.id) != null ? c.Z.getApplication(a.id) : null,
-                o = null != s ? (0, C.Z)(s) : null,
+                o = (null == a ? void 0 : a.id) != null ? c.Z.getApplication(a.id) : null,
+                s = null != o ? (0, C.Z)(o) : null,
                 d = null == l ? void 0 : l.sourceName,
                 f = {
                     active: null != l,
                     pid: null != (t = null == l ? void 0 : l.pid) ? t : null,
-                    application: null != o ? { name: d } : null,
+                    application: null != s ? { name: d } : null,
                 };
             return i().isEqual(f, n) || r(f), f;
         },

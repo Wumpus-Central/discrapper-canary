@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(793030),
     l = n(493773),
-    c = n(959338);
+    c = n(270662);
 function u(e) {
     var t, n;
     let r = null == (t = e.current) ? void 0 : t.getScrollerNode();
@@ -36,8 +36,8 @@ let d = i.memo(
                 initialScrollTop: N = 0,
                 role: P = "list",
             } = e,
-            [R, D] = i.useState(-1),
-            [w, x] = i.useState(-1),
+            [R, w] = i.useState(-1),
+            [D, x] = i.useState(-1),
             L = i.useRef(null),
             j = i.useRef(0),
             M = i.useRef(-1);
@@ -74,14 +74,14 @@ let d = i.memo(
                 },
                 [v],
             ),
-            B = i.useCallback(
+            F = i.useCallback(
                 (e) => {
                     let t = "function" == typeof y ? y(e) : y;
                     return null == t ? 0 : t;
                 },
                 [y],
             ),
-            F = i.useRef([]),
+            B = i.useRef([]),
             V = i.useRef([]),
             {
                 totalHeight: H,
@@ -119,22 +119,22 @@ let d = i.memo(
                             (r = n),
                             e++;
                     }
-                    (r += Z(o) + B(o)), (a[o].offset.bottom = r);
+                    (r += Z(o) + F(o)), (a[o].offset.bottom = r);
                 }
                 return {
                     totalHeight: (r += d[2]),
                     rowDescriptors: i,
                     sectionDescriptors: a,
                 };
-            }, [U, Z, G, B, d, g, E, k]);
-        (F.current = W), (V.current = Y);
+            }, [U, Z, G, F, d, g, E, k]);
+        (B.current = W), (V.current = Y);
         let K = i.useCallback(() => {
             var e;
             let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
             x(r),
-                D(i),
+                w(i),
                 null == a ||
                     a({
                         width: n,
@@ -142,8 +142,8 @@ let d = i.memo(
                     });
         }, [a]);
         i.useLayoutEffect(() => {
-            -1 === w && K();
-        }, [w, K]),
+            -1 === D && K();
+        }, [D, K]),
             i.useEffect(() => {
                 var e;
                 let t = null == (e = L.current) ? void 0 : e.getScrollerNode(),
@@ -161,7 +161,7 @@ let d = i.memo(
                 (r.cancelAnimationFrame(M.current),
                 (M.current = r.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (j.current = e), null == n || n(e), D(e);
+                    (j.current = e), null == n || n(e), w(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -192,7 +192,7 @@ let d = i.memo(
                                 } = i,
                                 c = G(o),
                                 u = s - (I ? c : 0) - r <= j.current,
-                                d = l + r >= j.current + w;
+                                d = l + r >= j.current + D;
                             if (u) {
                                 let i = j.current + c - s,
                                     a = I ? j.current - i : s;
@@ -202,7 +202,7 @@ let d = i.memo(
                                         animate: n,
                                     });
                             } else if (d) {
-                                let e = l - (j.current + w);
+                                let e = l - (j.current + D);
                                 null == (a = L.current) ||
                                     a.scrollTo({
                                         to: j.current + e + r,
@@ -214,7 +214,7 @@ let d = i.memo(
                 scrollToSectionTop: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = F.current[e],
+                        i = B.current[e],
                         a = u(L);
                     null != i &&
                         null != a &&
@@ -228,10 +228,10 @@ let d = i.memo(
                         });
                 },
                 getListDimensions: () => ({
-                    height: w,
+                    height: D,
                     totalHeight: H,
                 }),
-                getSectionDescriptors: () => F.current,
+                getSectionDescriptors: () => B.current,
                 getRowDescriptors: () => V.current,
                 getScrollerNode: () => {
                     var e;
@@ -242,16 +242,16 @@ let d = i.memo(
                     return null == (t = L.current) ? void 0 : t.scrollIntoViewNode({ node: e });
                 },
             }),
-            [G, I, H, w],
+            [G, I, H, D],
         );
         let { visibleItems: q, listOffset: Q } = i.useMemo(() => {
-                if (-1 === w || -1 === R)
+                if (-1 === D || -1 === R)
                     return {
                         visibleItems: null,
                         listOffset: 0,
                     };
                 let e = R,
-                    t = R + w,
+                    t = R + D,
                     n = 0,
                     r = d[0],
                     i = [],
@@ -266,7 +266,7 @@ let d = i.memo(
                     if (0 === c) continue;
                     let u = G(a),
                         d = Z(a),
-                        h = B(a);
+                        h = F(a);
                     if (l <= e) r = l;
                     else if (l > e && s < t) {
                         n = o;
@@ -299,7 +299,7 @@ let d = i.memo(
                     visibleItems: i,
                     listOffset: r,
                 };
-            }, [U, Z, G, B, d, f, p, m, _, R, W, I, h, k, w]),
+            }, [U, Z, G, F, d, f, p, m, _, R, W, I, h, k, D]),
             X = i.useMemo(() => {
                 var e, t, n;
                 return {

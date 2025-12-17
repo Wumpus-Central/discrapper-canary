@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(968843),
-    s = n(304696),
-    o = n(670362),
+    o = n(304696),
+    s = n(670362),
     c = n(388032);
 let u = function (e) {
     let { onChange: t, optionClassName: n, selectedSortMethod: u } = e,
@@ -24,12 +24,12 @@ let u = function (e) {
                 })),
             [p, n],
         );
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         renderPopout: (e, t) => {
             let { closePopout: n } = e;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(o.g, {
+                    (0, r.jsx)(s.g, {
                         id: t,
                         children: c.intl.string(c.t.tZXJIS),
                     }),
@@ -76,7 +76,7 @@ let u = function (e) {
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: (0, s.NL)(u),
+                        text: (0, o.NL)(u),
                         icon: l.hic,
                         iconPosition: "end",
                         variant: "secondary",

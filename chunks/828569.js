@@ -7,36 +7,36 @@ var n = t(54381),
     c = t(755721),
     a = t(481060),
     u = t(570140),
-    p = t(355467),
-    f = t(821849),
+    f = t(355467),
+    p = t(821849),
     d = t(15640),
     m = t(563132),
     j = t(409813),
     g = t(622909),
-    _ = t(639119),
-    O = t(767714),
-    b = t(165583),
-    h = t(185139),
-    P = t(263954),
-    y = t(706454),
-    x = t(853872),
+    O = t(639119),
+    b = t(767714),
+    h = t(165583),
+    P = t(185139),
+    y = t(263954),
+    x = t(706454),
+    _ = t(853872),
     C = t(930153),
     S = t(74538),
     w = t(937615),
     E = t(981631),
     k = t(474936),
     v = t(388032),
-    I = t(803414);
+    I = t(773491);
 let T = (e) => {
         let { locale: r } = e;
         return (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(P.Z, {
+                (0, n.jsx)(y.Z, {
                     icon: a.SlE,
                     iconClassName: I.iconColorPurple,
                     description: v.intl.string(v.t.uAfKTe),
                 }),
-                (0, n.jsx)(P.Z, {
+                (0, n.jsx)(y.Z, {
                     icon: a.$zw,
                     iconClassName: I.iconColorPink,
                     description: v.intl.formatToPlainString(v.t.sWnv5M, {
@@ -44,7 +44,7 @@ let T = (e) => {
                         discountPercent: (0, C.T3)(r, k.Rr / 100),
                     }),
                 }),
-                (0, n.jsx)(P.Z, {
+                (0, n.jsx)(y.Z, {
                     icon: a.EO4,
                     iconClassName: I.iconColorYellow,
                     description: v.intl.string(v.t.pqHIf7),
@@ -54,8 +54,8 @@ let T = (e) => {
     },
     N = (e) => {
         let { trialOffer: r, discountOffer: o, isLoading: i, price: c, onClose: u } = e,
-            p = (0, s.e7)([y.default], () => y.default.locale),
-            f = null != r || null != o;
+            f = (0, s.e7)([x.default], () => x.default.locale),
+            p = null != r || null != o;
         return (0, n.jsxs)("div", {
             className: I.wrapper,
             children: [
@@ -64,9 +64,9 @@ let T = (e) => {
                     onClick: u,
                     className: I.closeButton,
                 }),
-                f && (0, n.jsx)(b.dz, { className: I.premiumTrialBadge }),
+                p && (0, n.jsx)(h.dz, { className: I.premiumTrialBadge }),
                 (0, n.jsx)("img", {
-                    className: l()(I.heroImage, { [I.heroImageWithTrialOffer]: f }),
+                    className: l()(I.heroImage, { [I.heroImageWithTrialOffer]: p }),
                     src: t(178632),
                     alt: "",
                 }),
@@ -86,7 +86,7 @@ let T = (e) => {
                               }),
                               (0, n.jsx)("div", {
                                   className: I.perks,
-                                  children: (0, n.jsx)(T, { locale: p }),
+                                  children: (0, n.jsx)(T, { locale: f }),
                               }),
                           ],
                       }),
@@ -106,7 +106,7 @@ let T = (e) => {
                     text: v.intl.string(v.t.cpT0Cq),
                     onClick: o,
                 }),
-                (0, n.jsx)(O.Z, {
+                (0, n.jsx)(b.Z, {
                     textOptions: { textOverride: null != r || null != t ? v.intl.string(v.t["Gd/XHF"]) : void 0 },
                     premiumModalAnalyticsLocation: i,
                     subscriptionTier: k.Si.TIER_2,
@@ -145,16 +145,16 @@ function M(e) {
             return o;
         })(e, ["onClose"]);
     let c = (0, d.V)(),
-        O = (0, s.e7)([x.Z], () => x.Z.hasFetchedPaymentSources),
-        b = c && O,
-        P = (0, _.N)(),
-        y = (0, g.N)();
+        b = (0, s.e7)([_.Z], () => _.Z.hasFetchedPaymentSources),
+        h = c && b,
+        y = (0, O.N)(),
+        x = (0, g.N)();
     o.useEffect(() => {
         u.Z.wait(() => {
-            (0, p.tZ)(), (0, f.Y2)(null, null, E.JjL.DISCOVERY);
+            (0, f.tZ)(), (0, p.Y2)(null, null, E.JjL.DISCOVERY);
         });
     }, []);
-    let C = b ? S.ZP.getDefaultPrice(k.Xh.PREMIUM_MONTH_TIER_2) : null;
+    let C = h ? S.ZP.getDefaultPrice(k.Xh.PREMIUM_MONTH_TIER_2) : null;
     return (0, n.jsx)(m.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
@@ -190,18 +190,18 @@ function M(e) {
                 {
                     "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
                     parentComponent: "StickerPackPremiumUpsellModal",
-                    children: (0, n.jsx)(h.Z, {
+                    children: (0, n.jsx)(P.Z, {
                         hideBreadcrumbs: !0,
                         body: (0, n.jsx)(N, {
-                            trialOffer: P,
-                            discountOffer: y,
-                            isLoading: !b,
+                            trialOffer: y,
+                            discountOffer: x,
+                            isLoading: !h,
                             price: C,
                             onClose: i,
                         }),
                         footer: (0, n.jsx)(L, {
-                            trialOffer: P,
-                            discountOffer: y,
+                            trialOffer: y,
+                            discountOffer: x,
                             onClose: i,
                         }),
                         steps: [j.h8.PREMIUM_UPSELL],

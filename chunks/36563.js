@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(5192),
     _ = n(51144),
     m = n(388032),
-    h = n(120230);
+    h = n(826529);
 function g(e, t, n) {
     return (
         t in e
@@ -251,8 +251,8 @@ function P(e) {
             onFocusOverflow: N,
             onUserClick: P,
             onUserPopoutRequestClose: R,
-            "aria-label": D,
-            "aria-labelledby": w,
+            "aria-label": w,
+            "aria-labelledby": D,
             "aria-hidden": x,
         } = e,
         [L, j] = i.useState(!1),
@@ -263,8 +263,8 @@ function P(e) {
         Z = () =>
             (0, r.jsx)(u.VqE, {
                 className: h.popoutWrapper,
-                "aria-label": D,
-                "aria-labelledby": w,
+                "aria-label": w,
+                "aria-labelledby": D,
                 children: (0, r.jsx)(u.Ttm, {
                     className: h.scroller,
                     children: t.map((e) =>
@@ -287,7 +287,7 @@ function P(e) {
                                             let { default: t } = await Promise.all([
                                                 n.e("79695"),
                                                 n.e("69220"),
-                                                n.e("77635"),
+                                                n.e("26465"),
                                             ]).then(n.bind(n, 881351));
                                             return (n) =>
                                                 (0, r.jsx)(
@@ -307,7 +307,7 @@ function P(e) {
                     ),
                 }),
             }),
-        B = () =>
+        F = () =>
             G
                 ? (0, r.jsx)(
                       u.yRy,
@@ -345,8 +345,8 @@ function P(e) {
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-label": D,
-              "aria-labelledby": w,
+              "aria-label": w,
+              "aria-labelledby": D,
               className: o()(c, h.avatars),
               "aria-hidden": x,
               children: [
@@ -359,7 +359,7 @@ function P(e) {
                       shouldShowOverflowCount: G,
                       disableUsernameTooltip: S,
                   }),
-                  B(),
+                  F(),
               ],
           });
 }

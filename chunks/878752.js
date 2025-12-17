@@ -25,18 +25,18 @@ function g(e) {
             { location: "VoiceEffectsActionBar" },
             { autoTrackExposure: !1 },
         ),
-        O = (0, a.Z)(u.Z);
+        x = (0, a.Z)(u.Z);
     if (null == t || null != C) return null;
-    let x = v && O,
+    let O = v && x,
         E = y && n;
-    return x || E
+    return O || E
         ? (0, i.jsxs)(l.Gt, {
               value: b,
               children: [
                   (0, i.jsxs)("div", {
                       className: m.voiceEffectsActionBar,
                       children: [
-                          x && (0, i.jsx)(d.Z, { channel: t }),
+                          O && (0, i.jsx)(d.Z, { channel: t }),
                           E && (0, i.jsx)(p.Z, {}),
                           E && (0, i.jsx)(f.Z, { channel: t }),
                           E && (0, i.jsx)(h.Z, {}),

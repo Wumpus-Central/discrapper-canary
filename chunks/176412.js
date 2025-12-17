@@ -1,7 +1,7 @@
 n.d(t, {
     Bm: () => R,
     P7: () => P,
-    X: () => D,
+    X: () => w,
     ae: () => N,
 });
 var r = n(473749),
@@ -160,17 +160,17 @@ function P(e) {
             fetchesApplication: g,
             onConfirmActivityLaunchChecksAlertOpen: I,
         }),
-        D = "primary",
-        w = null != s ? s : S.intl.string(S.t.zKX8Nu);
+        w = "primary",
+        D = null != s ? s : S.intl.string(S.t.zKX8Nu);
     return (
         A === c.JS.JOIN
-            ? ((D = "active"), (w = S.intl.string(S.t.d9PsMj)))
-            : A !== c.JS.LEAVE || h || ((D = "critical-primary"), (w = S.intl.string(S.t["Hi1/aQ"]))),
+            ? ((w = "active"), (D = S.intl.string(S.t.d9PsMj)))
+            : A !== c.JS.LEAVE || h || ((w = "critical-primary"), (D = S.intl.string(S.t["Hi1/aQ"]))),
         {
             onActivityItemSelected: R,
             activityAction: A,
-            buttonVariant: D,
-            buttonText: w,
+            buttonVariant: w,
+            buttonText: D,
         }
     );
 }
@@ -197,6 +197,6 @@ function R(e, t) {
         null != e && a(e, n);
     }, [e, t, n, a]);
 }
-function D(e) {
+function w(e) {
     g.S.dispatchToLastSubscribed(v.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

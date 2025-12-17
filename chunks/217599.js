@@ -1,8 +1,8 @@
 n.d(t, { r: () => B });
 var a = n(54381),
     r = n(473749),
-    i = n(442837),
-    l = n(159691),
+    l = n(442837),
+    i = n(159691),
     s = n(755721),
     o = n(481060),
     c = n(607070),
@@ -25,8 +25,8 @@ var a = n(54381),
     T = n(35215),
     O = n(526188),
     N = n(215023),
-    P = n(388032),
-    w = n(306946);
+    w = n(388032),
+    P = n(306946);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,7 +72,7 @@ function k(e, t) {
 }
 function R(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: r } = e;
-    return (0, a.jsx)(l.zxk, {
+    return (0, a.jsx)(i.zxk, {
         variant: "primary",
         fullWidth: !0,
         onClick: () => {
@@ -92,8 +92,8 @@ function R(e) {
 let A = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             r = (0, p.aM)(),
-            i = (0, g.V_)(t);
-        return (0, a.jsx)(l.zxk, {
+            l = (0, g.V_)(t);
+        return (0, a.jsx)(i.zxk, {
             size: "sm",
             fullWidth: !0,
             onClick: () =>
@@ -103,14 +103,14 @@ let A = (e) => {
                     impressionId: r,
                     sourceQuestContent: n,
                 }),
-            text: i,
+            text: l,
         });
     },
-    D = (e) => {
+    Z = (e) => {
         var t;
         let { quest: n, sourceQuestContent: r } = e,
-            i = null == (t = (0, p.WD)()) ? void 0 : t.getId();
-        return (0, a.jsx)(l.zxk, {
+            l = null == (t = (0, p.WD)()) ? void 0 : t.getId();
+        return (0, a.jsx)(i.zxk, {
             fullWidth: !0,
             onClick: () =>
                 (0, v.gI)(
@@ -118,20 +118,20 @@ let A = (e) => {
                     {
                         content: h.jn.QUEST_BAR_V2,
                         ctaContent: m.jZ.CONNECT_CONSOLE,
-                        impressionId: i,
+                        impressionId: l,
                         sourceQuestContent: r,
                     },
                 ),
             size: "sm",
-            text: P.intl.string(P.t.csptqV),
+            text: w.intl.string(w.t.csptqV),
         });
     },
-    Z = (e) => {
+    D = (e) => {
         let { quest: t } = e,
             n = (0, x.CR)({ quest: t }),
             { launchInGameActivity: r } = (0, b.zB)(t);
         return (0, C.Rt)(t)
-            ? (0, a.jsx)(l.zxk, {
+            ? (0, a.jsx)(i.zxk, {
                   fullWidth: !0,
                   variant: "primary",
                   icon: (0, E.getPrimaryCtaIcon)(t),
@@ -146,7 +146,7 @@ let A = (e) => {
                 quest: t,
                 sourceQuestContent: n,
                 taskDetails: r,
-                popoutTargetElementRef: i,
+                popoutTargetElementRef: l,
                 onGameSheetOpened: s,
                 onGameSheetClosed: o,
             } = e,
@@ -155,18 +155,18 @@ let A = (e) => {
             quest: t,
             sourceQuestContent: n,
             applications: null != c ? c : [],
-            targetElementRef: i,
+            targetElementRef: l,
             onGameSheetOpened: s,
             onGameSheetClosed: o,
             children: (e) =>
                 (0, a.jsx)(
-                    l.zxk,
+                    i.zxk,
                     I(
                         {
                             variant: "secondary",
                             fullWidth: !0,
                             size: "sm",
-                            text: P.intl.string(P.t["93PTEs"]),
+                            text: w.intl.string(w.t["93PTEs"]),
                         },
                         e,
                     ),
@@ -177,7 +177,7 @@ let A = (e) => {
         var t,
             n,
             {
-                quest: i,
+                quest: l,
                 useReducedMotion: c,
                 isExpanded: p,
                 className: x,
@@ -195,14 +195,14 @@ let A = (e) => {
                         var n,
                             a,
                             r = {},
-                            i = Object.keys(e);
-                        for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            l = Object.keys(e);
+                        for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var i = Object.getOwnPropertySymbols(e);
-                    for (a = 0; a < i.length; a++)
-                        (n = i[a]),
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (a = 0; a < l.length; a++)
+                        (n = l[a]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
@@ -216,9 +216,9 @@ let A = (e) => {
                 "questContent",
                 "sourceQuestContent",
             ]);
-        let _ = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
+        let _ = (null == (t = l.userStatus) ? void 0 : t.completedAt) != null,
             E = (0, S.hf)({
-                quest: i,
+                quest: l,
                 questContent: v,
                 sourceQuestContent: y,
             }),
@@ -226,7 +226,7 @@ let A = (e) => {
                 (e) => {
                     var t;
                     null == g || g(e),
-                        (0, j.xN)(i.config) && (null == (t = i.userStatus) ? void 0 : t.claimedAt) != null
+                        (0, j.xN)(l.config) && (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, u.mK)({
                                   tab: N.AW.ORBS,
                                   analyticsLocations: [],
@@ -234,7 +234,7 @@ let A = (e) => {
                               })
                             : E();
                 },
-                [g, i.config, null == (n = i.userStatus) ? void 0 : n.claimedAt, E],
+                [g, l.config, null == (n = l.userStatus) ? void 0 : n.claimedAt, E],
             ),
             { shouldUseShinyButton: O } = f.Z.useConfig({ location: (0, m._b)(y) + "- CtaButton" });
         return O
@@ -248,22 +248,22 @@ let A = (e) => {
                               onClick: T,
                               pauseAnimation: c || (!p && !_),
                               className: x,
-                              buttonShineClassName: w.shine,
+                              buttonShineClassName: P.shine,
                               "data-migration-pending": !0,
                           },
                           C,
                       ),
-                      { children: null != b ? b : P.intl.string(P.t.cfY4PE) },
+                      { children: null != b ? b : w.intl.string(w.t.cfY4PE) },
                   ),
               )
             : (0, a.jsx)(
-                  l.zxk,
+                  i.zxk,
                   k(
                       I(
                           {
                               fullWidth: !0,
                               onClick: T,
-                              text: null != b ? b : P.intl.string(P.t.cfY4PE),
+                              text: null != b ? b : w.intl.string(w.t.cfY4PE),
                           },
                           C,
                       ),
@@ -275,7 +275,7 @@ let A = (e) => {
         var t;
         let {
                 isExpanded: n,
-                sourceQuestContent: l,
+                sourceQuestContent: i,
                 awaitingConsoleConnections: s,
                 hasMadeProgress: o,
                 isProgressing: d,
@@ -283,7 +283,7 @@ let A = (e) => {
                 popoutTargetElementRef: m,
             } = e,
             { quest: p, onGameSheetOpen: f, onGameSheetClose: x, taskDetails: b } = r.useContext(O.A),
-            g = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
+            g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             v = (null == (t = p.userStatus) ? void 0 : t.completedAt) != null,
             j = (0, y.q8)(p),
             _ = u !== h.LI.SELECT && !o && !d,
@@ -292,27 +292,27 @@ let A = (e) => {
             v
                 ? (S = (0, a.jsx)(M, {
                       quest: p,
-                      sourceQuestContent: l,
+                      sourceQuestContent: i,
                       useReducedMotion: g,
                       isExpanded: n,
                   }))
                 : j
                   ? (S = (0, a.jsx)(R, {
                         quest: p,
-                        sourceQuestContent: l,
+                        sourceQuestContent: i,
                         taskDetails: b,
                     }))
                   : (0, C.Rt)(p)
-                    ? (S = (0, a.jsx)(Z, { quest: p }))
+                    ? (S = (0, a.jsx)(D, { quest: p }))
                     : u === h.LI.CONSOLE && s
-                      ? (S = (0, a.jsx)(D, {
+                      ? (S = (0, a.jsx)(Z, {
                             quest: p,
-                            sourceQuestContent: l,
+                            sourceQuestContent: i,
                         }))
                       : _ && (0, C.Pb)(p)
                         ? (S = (0, a.jsx)(L, {
                               quest: p,
-                              sourceQuestContent: l,
+                              sourceQuestContent: i,
                               taskDetails: b,
                               popoutTargetElementRef: m,
                               onGameSheetOpened: f,
@@ -321,12 +321,12 @@ let A = (e) => {
                         : _ &&
                           (S = (0, a.jsx)(A, {
                               quest: p,
-                              sourceQuestContent: l,
+                              sourceQuestContent: i,
                           })),
             null == S
                 ? null
                 : (0, a.jsx)("div", {
-                      className: w.cta,
+                      className: P.cta,
                       children: S,
                   })
         );
@@ -334,13 +334,13 @@ let A = (e) => {
 function B(e) {
     let t = r.useRef(null);
     return (0, a.jsxs)("div", {
-        className: w.ctaButtons,
+        className: P.ctaButtons,
         ref: t,
         children: [
             e.showBackButton &&
-                (0, a.jsx)(l.hU, {
+                (0, a.jsx)(i.hU, {
                     size: "sm",
-                    "aria-label": P.intl.string(P.t["13/7kX"]),
+                    "aria-label": w.intl.string(w.t["13/7kX"]),
                     onClick: e.onBack,
                     icon: o.V7D,
                     variant: "secondary",

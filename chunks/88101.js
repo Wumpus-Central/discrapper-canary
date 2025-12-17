@@ -12,8 +12,8 @@ function d(e) {
         n = (0, l.G)(e),
         d = (0, r.v)(e),
         p = (0, s.S)(e, o.pj.STRANGER_DANGER),
-        h = (0, c.U)(),
-        f = (null == t ? void 0 : t.isStaff()) !== !0,
+        f = (0, c.U)(),
+        h = (null == t ? void 0 : t.isStaff()) !== !0,
         m = (0, u.h)(e).length > 0;
-    if (!(!h && f) && !n && !d && !m) return p;
+    if (!(!f && h) && !n && !d && !m) return p;
 }

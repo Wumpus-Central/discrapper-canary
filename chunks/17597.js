@@ -1,8 +1,8 @@
-n.d(t, { default: () => O }), n(388685), n(953529);
+n.d(t, { default: () => T }), n(388685), n(953529);
 var a = n(54381),
     r = n(473749),
-    i = n(772848),
-    l = n(793030),
+    l = n(772848),
+    i = n(793030),
     s = n(704215),
     o = n(481060),
     c = n(243778),
@@ -11,64 +11,64 @@ var a = n(54381),
     m = n(788080),
     p = n(420846),
     h = n(63063),
-    x = n(168107),
-    f = n(480916),
-    g = n(352138),
-    b = n(629235),
+    f = n(168107),
+    x = n(480916),
+    b = n(352138),
+    g = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(241751),
-    y = n(388032),
-    C = n(70402),
-    S = n(736056);
+    y = n(144287),
+    C = n(388032),
+    _ = n(39151),
+    S = n(765896);
 function E(e) {
     let { modalSessionId: t, entryPoint: n } = e;
     return (0, m.GE)()
         ? (0, a.jsx)(o.Text, {
               variant: "text-xs/medium",
-              children: y.intl.format(_.default.htWh1G, {
+              children: C.intl.format(y.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, f.x3)(t, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                      f.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
+                          (0, x.x3)(t, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
                   },
               }),
           })
-        : n === f.cU.SAFETY_FLOWS
+        : n === x.cU.SAFETY_FLOWS
           ? (0, a.jsx)(o.Avr, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: y.intl.string(y.t["2jxGer"]),
+                text: C.intl.string(C.t["2jxGer"]),
                 onClick: () => {
-                    (0, f.x3)(t, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
+                    (0, x.x3)(t, x.d_.EXPRESSIVE_PRIMARY, x.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
                 },
             })
           : null;
 }
-let O = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: T } = e,
-        [N, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        w = r.useRef(N),
+let T = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: O } = e,
+        [N, w] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        P = r.useRef(N),
         [I, k] = (0, c.US)([N], void 0, !0),
-        R = r.useMemo(() => (0, i.Z)(), []),
+        R = r.useMemo(() => (0, l.Z)(), []),
         A = r.useRef(!1),
-        D = (0, m.GE)();
+        Z = (0, m.GE)();
     r.useEffect(() => {
-        w.current = I;
+        P.current = I;
     }, [I]);
-    let { loading: Z, ageVerificationMethods: L } = (0, b.Z)({
+    let { loading: D, ageVerificationMethods: L } = (0, g.Z)({
         onClose: () => {
             null == j || j(), u();
         },
         onMethodClick: () => {
-            P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            w(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: T,
+        classificationId: O,
     });
     return (
         r.useLayoutEffect(
             () => () => {
                 if (A.current) return;
-                let e = w.current;
+                let e = P.current;
                 null != e &&
                     ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
@@ -79,24 +79,24 @@ let O = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
+            (0, x.lA)(R, x.d_.EXPRESSIVE_PRIMARY, n);
         }, [R, n]),
-        (0, a.jsx)(l.ExpressiveModal, {
+        (0, a.jsx)(i.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: O,
+            dismissable: T,
             graphic: {
                 type: "image",
                 src: S.Z,
             },
-            title: y.intl.string(y.t.JHNunj),
-            subtitle: D
-                ? y.intl.string(_.default["1/6wta"])
-                : y.intl.format(_.default.RpMIT0, {
+            title: C.intl.string(C.t.JHNunj),
+            subtitle: Z
+                ? C.intl.string(y.default["1/6wta"])
+                : C.intl.format(y.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
-                          x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                          f.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                              (0, x.x3)(R, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
                       },
                   }),
             actionBarInput: (0, a.jsx)(E, {
@@ -118,7 +118,7 @@ let O = function (e) {
                             right: 12,
                         },
                         align: "center",
-                        className: C.dataAssurance,
+                        className: _.dataAssurance,
                         children: [
                             (0, a.jsx)(o.d3s, {
                                 size: "lg",
@@ -127,7 +127,7 @@ let O = function (e) {
                             (0, a.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: y.intl.string(_.default.ar3a3q),
+                                children: C.intl.string(y.default.ar3a3q),
                             }),
                         ],
                     }),
@@ -140,14 +140,14 @@ let O = function (e) {
                                   (0, a.jsx)(o.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
-                                      children: y.intl.string(_.default.cR6336),
+                                      children: C.intl.string(y.default.cR6336),
                                   }),
                                   (0, a.jsx)(o.Button, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: y.intl.string(_.default.hDvmYP),
+                                      text: C.intl.string(y.default.hDvmYP),
                                       onClick: () => {
-                                          (0, g.Jh)();
+                                          (0, b.Jh)();
                                       },
                                   }),
                               ],
@@ -163,7 +163,7 @@ let O = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: Z,
+                                          buttonDisabled: D,
                                           onButtonPress: () => r(R),
                                       },
                                       t,

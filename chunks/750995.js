@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(704215),
     l = n(481060),
     a = n(570140),
-    s = n(317770),
-    o = n(266454),
+    o = n(317770),
+    s = n(266454),
     c = n(605236),
     u = n(650774),
     d = n(430824),
@@ -13,7 +13,7 @@ var i = n(704215),
     f = n(228392),
     g = n(981631),
     h = n(921944);
-class m extends s.Z {
+class m extends o.Z {
     _initialize() {
         a.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
@@ -29,16 +29,16 @@ class m extends s.Z {
                 let n = d.Z.getGuild(e),
                     r = !!(null == n ? void 0 : n.features.has(g.GuildFeatures.COMMUNITY)),
                     l = p.Z.can(g.Plq.MANAGE_CHANNELS, n),
-                    a = (0, o.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
-                    s = null != (t = u.Z.getMemberCount(e)) ? t : 0;
-                return r && l && !a && s >= 200;
+                    a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
+                    o = null != (t = u.Z.getMemberCount(e)) ? t : 0;
+                return r && l && !a && o >= 200;
             })(t)
         )
             return;
         (0, f.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.L.DISMISS;
-            (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
+            (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
         (0, l.ZDy)(
             async () => {
@@ -97,10 +97,10 @@ class m extends s.Z {
                 };
             },
             {
-                onCloseCallback: () => (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: h.L.DISMISS }),
+                onCloseCallback: () => (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: h.L.DISMISS }),
                 onCloseRequest: g.VqG,
             },
         );
     }
 }
-let _ = new m();
+let b = new m();

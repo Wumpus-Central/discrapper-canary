@@ -1,11 +1,11 @@
 n.d(t, { d: () => o });
 var r = n(473749),
     i = n(442837),
-    l = n(457330),
-    a = n(553795);
+    a = n(457330),
+    l = n(553795);
 function o(e) {
-    let t = (0, i.e7)([a.Z], () => (null != e ? a.Z.getAccount(null, e) : null)),
-        n = (0, i.e7)([a.Z], () => a.Z.isFetching()),
+    let t = (0, i.e7)([l.Z], () => (null != e ? l.Z.getAccount(null, e) : null)),
+        n = (0, i.e7)([l.Z], () => l.Z.isFetching()),
         o = null != t && !t.revoked;
     return {
         loading: n,
@@ -16,7 +16,7 @@ function o(e) {
                 if (null == e) return { success: !1 };
                 try {
                     var n;
-                    let r = await l.Z.authorize(e, { location: null != t ? t : "Account Linking" });
+                    let r = await a.Z.authorize(e, { location: null != t ? t : "Account Linking" });
                     if (r.ok && (null == (n = r.body) ? void 0 : n.url) != null)
                         return {
                             success: !0,

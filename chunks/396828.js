@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
 var i = n(692547),
     l = n(325767);
-function o(e) {
+function a(e) {
     var t,
         n,
-        { width: o = 24, height: a = 24 } = e,
+        { width: a = 24, height: o = 24 } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -57,8 +57,8 @@ function o(e) {
         })({}, (0, l.Z)(s))),
         (n = n =
             {
-                width: o,
-                height: a,
+                width: a,
+                height: o,
                 viewBox: "0 0 24 24",
                 children: [
                     (0, r.jsx)("path", {

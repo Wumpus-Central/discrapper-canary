@@ -1,51 +1,51 @@
-n.d(t, { Z: () => b });
-var r = n(54381),
-    i = n(473749),
-    l = n(481060),
-    o = n(528011),
-    a = n(666657),
-    c = n(533244),
-    u = n(981631),
-    s = n(388032);
+r.d(t, { Z: () => b });
+var n = r(54381),
+    i = r(473749),
+    l = r(481060),
+    o = r(528011),
+    c = r(666657),
+    a = r(533244),
+    u = r(981631),
+    s = r(388032);
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: b, isUnderLockdown: p, incidentData: d } = (0, o.mI)(e.id),
-        O = i.useCallback(() => {
+        { shouldShowIncidentActions: b, isUnderLockdown: O, incidentData: p } = (0, o.mI)(e.id),
+        f = i.useCallback(() => {
             let t = {
-                source: a.Zu.CONTEXT_MENU,
-                alertType: (0, c.T1)(d),
+                source: c.Zu.CONTEXT_MENU,
+                alertType: (0, a.T1)(p),
             };
             (0, l.ZDy)(async () => {
-                let { default: i } = await n.e("58175").then(n.bind(n, 664452));
-                return (n) => {
+                let { default: i } = await r.e("58175").then(r.bind(r, 664452));
+                return (r) => {
                     var l, o;
-                    return (0, r.jsx)(
+                    return (0, n.jsx)(
                         i,
                         ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = n);
                                     });
                             }
                             return e;
-                        })({}, n)),
+                        })({}, r)),
                         (o = o =
                             {
                                 guildId: e.id,
@@ -54,12 +54,12 @@ function b(e) {
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
-                                  var n = Object.keys(e);
+                                  var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
+                                      var n = Object.getOwnPropertySymbols(e);
+                                      r.push.apply(r, n);
                                   }
-                                  return n;
+                                  return r;
                               })(Object(o)).forEach(function (e) {
                                   Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
@@ -67,13 +67,13 @@ function b(e) {
                     );
                 };
             });
-        }, [e.id, d]);
+        }, [e.id, p]);
     return e.features.has(u.GuildFeatures.COMMUNITY) && b
-        ? (0, r.jsx)(l.sNh, {
+        ? (0, n.jsx)(l.sNh, {
               id: "server-lockdown",
-              label: p ? s.intl.string(s.t["+tSVi3"]) : s.intl.string(s.t.EPlEdu),
-              icon: t ? (p ? l.d$P : l.mBM) : void 0,
-              action: O,
+              label: O ? s.intl.string(s.t["+tSVi3"]) : s.intl.string(s.t.EPlEdu),
+              icon: t ? (O ? l.d$P : l.mBM) : void 0,
+              action: f,
               color: "danger",
           })
         : null;

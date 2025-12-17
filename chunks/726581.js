@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(304106),
+    o = n(442837),
+    s = n(304106),
     c = n(649974),
     u = n(246946),
     d = n(594174),
@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(551428),
     h = n(73346),
     m = n(733789),
-    _ = n(4962),
-    b = n(388032),
-    E = n(796787);
+    b = n(4962),
+    _ = n(388032),
+    E = n(142882);
 class O extends i.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
@@ -43,7 +43,7 @@ class O extends i.Component {
                                   "div",
                                   {
                                       className: E.unit,
-                                      children: (0, r.jsx)(o.Z, { reason: e }),
+                                      children: (0, r.jsx)(s.Z, { reason: e }),
                                   },
                                   e.type,
                               ),
@@ -56,7 +56,7 @@ class O extends i.Component {
         let { storeListing: e } = this.props;
         return null != e.staffNotes
             ? {
-                  type: _.Z.Types.STAFF_NOTES,
+                  type: b.Z.Types.STAFF_NOTES,
                   staffNotes: e.staffNotes,
               }
             : null;
@@ -70,18 +70,18 @@ class O extends i.Component {
             className: l,
         } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
-        let s = this.getReviewToRender();
+        let o = this.getReviewToRender();
         return (0, r.jsxs)("div", {
             className: a()(E.root, l),
             children: [
                 (0, r.jsx)("div", {
                     className: E.header,
-                    children: b.intl.string(b.t.qABFpX),
+                    children: _.intl.string(_.t.qABFpX),
                 }),
                 this.renderReasons(e, t, i),
-                null != s
-                    ? (0, r.jsx)(_.Z, {
-                          data: s,
+                null != o
+                    ? (0, r.jsx)(b.Z, {
+                          data: o,
                           className: E.review,
                       })
                     : null,
@@ -89,7 +89,7 @@ class O extends i.Component {
         });
     }
 }
-let v = s.ZP.connectStores([f.Z, d.default, g.Z, c.Z, p.Z, u.Z], (e) => {
+let v = o.ZP.connectStores([f.Z, d.default, g.Z, c.Z, p.Z, u.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, h.Gg)(t.id, f.Z, d.default, c.Z, p.Z),

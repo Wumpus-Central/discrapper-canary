@@ -1,9 +1,9 @@
-n.d(t, { default: () => x }), n(704826), n(35282);
+n.d(t, { default: () => f }), n(704826), n(35282);
 var a = n(54381);
 n(473749);
 var r = n(734610),
-    i = n(990547),
-    l = n(793030),
+    l = n(990547),
+    i = n(793030),
     s = n(481060),
     o = n(213609),
     c = n(528477),
@@ -11,41 +11,41 @@ var r = n(734610),
     u = n(988158),
     m = n(981631),
     p = n(388032),
-    h = n(140080);
-function x(e) {
-    let { url: t, trustUrl: n, isProtocol: x, onConfirm: f, onCancel: g, onClose: b, transitionState: v } = e,
+    h = n(444301);
+function f(e) {
+    let { url: t, trustUrl: n, isProtocol: f, onConfirm: x, onCancel: b, onClose: g, transitionState: v } = e,
         {
             protocol: j,
-            authorityPrefix: _,
-            hostname: y,
-            theRestOfTheUrl: C,
+            authorityPrefix: y,
+            hostname: C,
+            theRestOfTheUrl: _,
             shouldTrustUrl: S,
             setShouldTrustUrl: E,
-            handleConfirm: O,
-            handleCancel: T,
+            handleConfirm: T,
+            handleCancel: O,
         } = (0, u.X)({
             url: t,
             trustUrl: n,
-            onConfirm: f,
-            onCancel: g,
-            onClose: b,
+            onConfirm: x,
+            onCancel: b,
+            onClose: g,
         });
     return (
         (0, o.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.MASKED_LINK_MODAL,
+            type: l.ImpressionTypes.MODAL,
+            name: l.ImpressionNames.MASKED_LINK_MODAL,
         }),
-        (0, a.jsxs)(l.Modal, {
+        (0, a.jsxs)(i.Modal, {
             size: "md",
             transitionState: v,
-            onClose: b,
+            onClose: g,
             title: p.intl.string(p.t["3w1QGl"]),
-            subtitle: x ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
+            subtitle: f ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
             actions: [
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        T(),
+                        O(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "cancel",
@@ -54,9 +54,9 @@ function x(e) {
                     variant: "secondary",
                 },
                 {
-                    text: x ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
+                    text: f ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: () => {
-                        O(),
+                        T(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "confirm",
@@ -71,21 +71,21 @@ function x(e) {
                     children: [
                         (0, a.jsxs)(s.Text, {
                             tag: "span",
-                            variant: x ? "text-md/semibold" : "text-md/normal",
-                            color: x ? "text-default" : "text-muted",
-                            children: [j, _],
+                            variant: f ? "text-md/semibold" : "text-md/normal",
+                            color: f ? "text-default" : "text-muted",
+                            children: [j, y],
                         }),
                         (0, a.jsx)(s.Text, {
                             tag: "span",
-                            variant: x ? "text-md/normal" : "text-md/semibold",
-                            color: x ? "text-muted" : "text-default",
-                            children: y,
+                            variant: f ? "text-md/normal" : "text-md/semibold",
+                            color: f ? "text-muted" : "text-default",
+                            children: C,
                         }),
                         (0, a.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: C,
+                            children: _,
                         }),
                     ],
                 }),
@@ -94,15 +94,15 @@ function x(e) {
                     children: (0, a.jsx)(s.Checkbox, {
                         checked: S,
                         onChange: (e) => E(e),
-                        label: x
+                        label: f
                             ? p.intl.format(p.t["haA+Xw"], { protocol: j.replace(":", "") })
-                            : p.intl.format(p.t.ZgXDsI, { domain: y }),
+                            : p.intl.format(p.t.ZgXDsI, { domain: C }),
                         labelType: "secondary",
                     }),
                 }),
                 (0, a.jsx)(r.SV, {
                     fallback: null,
-                    children: (0, a.jsx)(c.n, { onClose: b }),
+                    children: (0, a.jsx)(c.n, { onClose: g }),
                 }),
             ],
         })

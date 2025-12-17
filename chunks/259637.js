@@ -1,44 +1,44 @@
-n.d(t, { Z: () => g });
-var r = n(54381);
+n.d(t, { Z: () => h });
+var a = n(54381);
 n(473749);
-var i = n(658722),
-    l = n.n(i),
-    a = n(442837),
+var r = n(658722),
+    i = n.n(r),
+    l = n(442837),
     s = n(481060),
     o = n(596454),
     c = n(339085),
     d = n(456269),
     u = n(388032),
-    m = n(183132);
-let h = (e) => {
+    m = n(909454);
+let f = (e) => {
     let { tag: t } = e,
-        { id: n, name: i, emojiId: l, emojiName: d } = t,
-        u = (0, a.e7)([c.ZP], () => (null != l ? c.ZP.getUsableCustomEmojiById(l) : null)),
-        h = null != l || null != d;
-    return (0, r.jsx)(
+        { id: n, name: r, emojiId: i, emojiName: d } = t,
+        u = (0, l.e7)([c.ZP], () => (null != i ? c.ZP.getUsableCustomEmojiById(i) : null)),
+        f = null != i || null != d;
+    return (0, a.jsx)(
         s.lo1,
         {
             value: n,
-            children: (0, r.jsx)(s.lo1.Label, {
-                children: (0, r.jsxs)("div", {
+            children: (0, a.jsx)(s.lo1.Label, {
+                children: (0, a.jsxs)("div", {
                     className: m.row,
                     children: [
-                        h
-                            ? (0, r.jsx)(o.Z, {
+                        f
+                            ? (0, a.jsx)(o.Z, {
                                   className: m.__invalid_emoji,
-                                  emojiId: l,
+                                  emojiId: i,
                                   emojiName: d,
                                   animated: !!(null == u ? void 0 : u.animated),
                               })
-                            : (0, r.jsx)(s.lO_, {
+                            : (0, a.jsx)(s.lO_, {
                                   size: "md",
                                   color: "currentColor",
                                   className: m.__invalid_emoji,
                               }),
-                        (0, r.jsx)(s.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: "text-md/semibold",
                             color: "text-default",
-                            children: i,
+                            children: r,
                         }),
                     ],
                 }),
@@ -47,17 +47,17 @@ let h = (e) => {
         n,
     );
 };
-function g(e) {
-    let { parentChannel: t, appliedTags: n, maxTagsApplied: i, onSelectTag: a, onClose: o } = e,
+function h(e) {
+    let { parentChannel: t, appliedTags: n, maxTagsApplied: r, onSelectTag: l, onClose: o } = e,
         c = (0, d.Vm)(t);
-    return (0, r.jsx)(s.DBG, {
+    return (0, a.jsx)(s.DBG, {
         value: n,
         onChange: (e) => {
-            (!i || n.has(e)) && (a(e), o());
+            (!r || n.has(e)) && (l(e), o());
         },
         placeholder: u.intl.string(u.t.MbhGm7),
         "aria-label": u.intl.string(u.t.MbhGm7),
         children: (e) =>
-            c.filter((t) => l()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, r.jsx)(h, { tag: e }, e.id)),
+            c.filter((t) => i()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, a.jsx)(f, { tag: e }, e.id)),
     });
 }

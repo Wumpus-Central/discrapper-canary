@@ -1,7 +1,7 @@
 n.d(t, {
     EH: () => g,
     Mf: () => d,
-    lL: () => m,
+    lL: () => f,
     t4: () => u,
 });
 var r = n(442837),
@@ -29,7 +29,7 @@ function g(e, t) {
               : c.intl.string(c.t["031cXt"]),
     );
 }
-function m(e, t) {
+function f(e, t) {
     let n = (0, r.e7)([l.Z], () => {
             var n;
             return (null == (n = l.Z.getGuild(e)) ? void 0 : n.rulesChannelId) === t;

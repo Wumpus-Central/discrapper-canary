@@ -32,8 +32,8 @@ var r = n(54381),
     N = n(770812),
     P = n(434404),
     R = n(536442),
-    D = n(609218),
-    w = n(695346),
+    w = n(609218),
+    D = n(695346),
     x = n(984933),
     L = n(594174),
     j = n(626135),
@@ -42,8 +42,8 @@ var r = n(54381),
     U = n(543241),
     G = n(253696),
     Z = n(199257),
-    B = n(636411),
-    F = n(380331),
+    F = n(636411),
+    B = n(380331),
     V = n(170762),
     H = n(22363),
     Y = n(784222),
@@ -55,7 +55,7 @@ var r = n(54381),
     X = n(981631),
     J = n(921944),
     $ = n(185923),
-    ee = n(359175);
+    ee = n(101972);
 function et(e, t, n) {
     return (
         t in e
@@ -284,15 +284,15 @@ let eu = (e, t) => {
                 categoryListClassName: eN,
                 shouldShowSoundmojiInEmojiPicker: eP = !1,
                 showOnlyUnicode: eR = !1,
-                showAddEmojiButton: eD = !1,
+                showAddEmojiButton: ew = !1,
             } = e,
-            { onFocus: ew, onKeyDown: ex, autoFocus: eL = !0, accessory: ej } = ev,
+            { onFocus: eD, onKeyDown: ex, autoFocus: eL = !0, accessory: ej } = ev,
             eM = (0, u.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
             [ek, eU] = i.useState(null),
             eG = i.useRef(""),
             eZ = (0, T.Iu)((e) => e.searchQuery),
-            eB = i.useRef(null),
             eF = i.useRef(null),
+            eB = i.useRef(null),
             eV = i.useRef(null);
         null == c && null != eM && (c = eM);
         let eH = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
@@ -307,13 +307,13 @@ let eu = (e, t) => {
             { diversitySurrogate: e2 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eZ, c, l, eR),
             e5 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
-            e8 = w.d4.useSetting(),
+            e8 = D.d4.useSetting(),
             e6 = i.useMemo(() => new Set(e8), [e8]),
             e7 = i.useCallback((e) => {
-                w.d4.updateSetting(Array.from(e));
+                D.d4.updateSetting(Array.from(e));
             }, []),
             e9 = (0, A.ep)({
-                gridWrapperRef: eB,
+                gridWrapperRef: eF,
                 containerWidth: eu,
                 listPaddingLeft: eo,
                 listScrollbarWidth: es,
@@ -403,11 +403,11 @@ let eu = (e, t) => {
                 columnCounts: tr,
                 onSelectEmoji: er,
                 emojiGrid: tn,
-                emojiList: eF,
+                emojiList: eB,
                 channelGuildId: eH,
                 isBurstReaction: eY,
             });
-        ef(eu, eF),
+        ef(eu, eB),
             ep(eu, e2, eV, eL),
             i.useEffect(() => {
                 eE || (0, T.ql)("");
@@ -446,8 +446,8 @@ let eu = (e, t) => {
         let tp = null != eS ? eS : P ? "div" : p.VqE,
             t_ = null != e9;
         if ((null == ek ? void 0 : ek.type) === Y.Bg.PREMIUM) {
-            let e = D.p.NONE;
-            2 === k ? (e = D.p.PARENT_CONTAINER) : 1 === k && (e = D.p.TAB_PARENT_CONTAINER),
+            let e = w.p.NONE;
+            2 === k ? (e = w.p.PARENT_CONTAINER) : 1 === k && (e = w.p.TAB_PARENT_CONTAINER),
                 (s = (0, r.jsx)(q.Z, {
                     onLearnMore: ts,
                     emojiDescriptor: ek.emojiDescriptor,
@@ -464,7 +464,7 @@ let eu = (e, t) => {
                       guildId: ek.guildId,
                       emojiId: ek.emojiId,
                   }))
-                : eY && !ez && (s = (0, r.jsx)(B.Z, { onDismiss: () => eW(!1) }));
+                : eY && !ez && (s = (0, r.jsx)(F.Z, { onDismiss: () => eW(!1) }));
         let tm = (e, t) => {
                 to(e, ei(en({}, t), { isBurst: eY }));
             },
@@ -475,12 +475,12 @@ let eu = (e, t) => {
             tg = (0, r.jsx)(H.Z, {
                 channel: c,
                 pickerIntention: l,
-                emojiListRef: eF,
+                emojiListRef: eB,
                 onKeyDown: (e) => {
                     null == td || td(e), null == ex || ex(e);
                 },
                 searchBarRef: eV,
-                onFocus: ew,
+                onFocus: eD,
                 autoFocus: eL,
                 accessory: ej,
                 headerClassName: ey,
@@ -488,7 +488,7 @@ let eu = (e, t) => {
                 isBurstReaction: eY,
                 onBurstReactionToggle: th,
                 renderHeader: eC,
-                showAddEmojiButton: eD,
+                showAddEmojiButton: ew,
             }),
             tE = [];
         l === $.Hz.REACTION && tE.push(d.z.SUPER_REACTIONS_NITRO_MARKETING),
@@ -513,7 +513,7 @@ let eu = (e, t) => {
                                 P ? tg : null,
                                 (0, r.jsxs)("div", {
                                     className: ee.bodyWrapper,
-                                    ref: eB,
+                                    ref: eF,
                                     children: [
                                         (0, r.jsx)(z.Z, {
                                             channel: c,
@@ -545,7 +545,7 @@ let eu = (e, t) => {
                                                                     collapsedSections: e6,
                                                                     diversitySurrogate: e2,
                                                                     emojiGrid: tn,
-                                                                    emojiListRef: eF,
+                                                                    emojiListRef: eB,
                                                                     emojiSize: C,
                                                                     getEmojiItemProps: tl,
                                                                     getEmojiRowProps: tc,
@@ -582,9 +582,9 @@ let eu = (e, t) => {
                         }),
                         eI
                             ? null
-                            : (0, r.jsx)(F.Z, {
+                            : (0, r.jsx)(B.Z, {
                                   className: o()(ee.categoryList, eN),
-                                  emojiListRef: eF,
+                                  emojiListRef: eB,
                                   sectionDescriptors: tt,
                                   intention: l,
                                   channel: c,

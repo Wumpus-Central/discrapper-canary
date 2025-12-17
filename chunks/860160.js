@@ -1,10 +1,10 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(876215),
     a = n(442837),
-    s = n(471445),
-    o = n(565138),
+    o = n(471445),
+    s = n(565138),
     c = n(924301),
     u = n(178480),
     d = n(592125),
@@ -14,10 +14,10 @@ var r = n(54381),
     h = n(981631),
     m = n(388032),
     b = n(697392);
-function E(e) {
+function _(e) {
     var t;
     let { item: n } = e,
-        E = i.useMemo(() => {
+        _ = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "guildEvent":
@@ -30,7 +30,7 @@ function E(e) {
                     return "unknown";
             }
         }, [n]),
-        _ = i.useMemo(() => {
+        E = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                     return n.data.message.channel_id;
@@ -64,11 +64,11 @@ function E(e) {
                     return n.timestamp;
             }
         }, [n]),
-        I = (0, a.e7)([d.Z], () => d.Z.getChannel(_), [_]),
+        I = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
         C = null != (t = null == I ? void 0 : I.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
         T = (0, a.e7)([f.default], () => (null != v ? f.default.getUser(v) : null), [v]);
-    return "unknown" === E
+    return "unknown" === _
         ? null
         : (0, r.jsx)("div", {
               className: b.container,
@@ -76,8 +76,8 @@ function E(e) {
                   className: b.header,
                   children: [
                       (() => {
-                          if ("guild" === E && null != S)
-                              return (0, r.jsx)(o.Z, {
+                          if ("guild" === _ && null != S)
+                              return (0, r.jsx)(s.Z, {
                                   guild: S,
                                   size: "Medium",
                                   active: !1,
@@ -87,7 +87,7 @@ function E(e) {
                                   tooltipPosition: "top",
                                   animate: !1,
                               });
-                          if ("user" === E && null != T) {
+                          if ("user" === _ && null != T) {
                               let e = T.getAvatarURL(void 0, 50);
                               return (0, r.jsx)("img", {
                                   src: e,
@@ -105,12 +105,12 @@ function E(e) {
                                   children: (0, r.jsxs)("div", {
                                       className: b.titleLeft,
                                       children: [
-                                          "guild" === E && null != S
+                                          "guild" === _ && null != S
                                               ? (0, r.jsx)("div", {
                                                     className: b.title,
                                                     children: S.name,
                                                 })
-                                              : "user" === E && null != T
+                                              : "user" === _ && null != T
                                                 ? (0, r.jsx)("div", {
                                                       className: b.title,
                                                       children: T.username,
@@ -150,7 +150,7 @@ function E(e) {
                                               return "";
                                       }
                                   })();
-                                  if ("user" === E)
+                                  if ("user" === _)
                                       return (0, r.jsx)("div", {
                                           className: b.subtitle,
                                           children: (0, r.jsx)("span", {
@@ -159,7 +159,7 @@ function E(e) {
                                           }),
                                       });
                                   if (null != I && null != e) {
-                                      let t = (0, s.KS)(I, S);
+                                      let t = (0, o.KS)(I, S);
                                       return (0, r.jsxs)("div", {
                                           className: b.subtitle,
                                           children: [

@@ -1,23 +1,23 @@
 t.d(n, { default: () => p });
 var r = t(54381),
-    i = t(473749),
-    a = t(442837),
+    a = t(473749),
+    i = t(442837),
     s = t(481060),
     l = t(668274),
     o = t(600164),
     c = t(241209),
     d = t(807693),
     u = t(388032),
-    E = t(608981);
+    E = t(648441);
 function p(e) {
     var n;
     let { eulaId: t, transitionState: p, onClose: f } = e,
-        h = (0, a.e7)([d.Z], () => d.Z.getEULA(t));
-    i.useEffect(() => {
+        h = (0, i.e7)([d.Z], () => d.Z.getEULA(t));
+    a.useEffect(() => {
         (0, l.N)(t);
     }, [t]);
-    let S = null != (n = null == h ? void 0 : h.name) ? n : u.intl.string(u.t.ZTNur7),
-        j =
+    let b = null != (n = null == h ? void 0 : h.name) ? n : u.intl.string(u.t.ZTNur7),
+        S =
             null != h
                 ? (0, r.jsx)(c.Z, {
                       children: h.content,
@@ -27,7 +27,7 @@ function p(e) {
     return (0, r.jsxs)(s.Y0X, {
         transitionState: p,
         size: s.CgR.SMALL,
-        "aria-label": S,
+        "aria-label": b,
         parentComponent: "EULA",
         children: [
             (0, r.jsxs)(s.xBx, {
@@ -35,12 +35,12 @@ function p(e) {
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: S,
+                        children: b,
                     }),
                     (0, r.jsx)(s.olH, { onClick: f }),
                 ],
             }),
-            (0, r.jsx)(s.hzk, { children: j }),
+            (0, r.jsx)(s.hzk, { children: S }),
         ],
     });
 }

@@ -10,41 +10,41 @@ var r = n(442837),
     u = n(626135),
     d = n(63063),
     p = n(862679),
-    h = n(981631),
-    f = n(596401),
+    f = n(981631),
+    h = n(596401),
     m = n(388032);
 function g(e) {
     var t, g;
     let { channel: b, children: C } = e,
         y = (0, r.e7)([c.Z], () => c.Z.isBlocked(b.getRecipientId()));
     (0, o.Z)(b.id);
-    let _ = (0, s.Z)(b.id),
-        v = b.isSystemDM(),
-        O = y && !v && !b.isMultiUserDM(),
-        x = {};
-    if (v) {
-        let e = _ ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
-        (x.message = m.intl.string(m.t.Bt2N7D)),
-            (x.subtitle = m.intl.string(m.t["n/Vzkw"])),
-            (x.buttonText = e),
-            (x.buttonIcon = _ ? l.rgF : void 0),
-            (x.onButtonClick = () => {
-                if (_) {
-                    open(f.D2),
-                        u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+    let v = (0, s.Z)(b.id),
+        x = b.isSystemDM(),
+        O = y && !x && !b.isMultiUserDM(),
+        E = {};
+    if (x) {
+        let e = v ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
+        (E.message = m.intl.string(m.t.Bt2N7D)),
+            (E.subtitle = m.intl.string(m.t["n/Vzkw"])),
+            (E.buttonText = e),
+            (E.buttonIcon = v ? l.rgF : void 0),
+            (E.onButtonClick = () => {
+                if (v) {
+                    open(h.D2),
+                        u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: "chat_blocker",
-                            target: f.D2,
+                            target: h.D2,
                         });
                     return;
                 }
-                open(d.Z.getArticleURL(h.BhN.SYSTEM_DMS));
+                open(d.Z.getArticleURL(f.BhN.SYSTEM_DMS));
             }),
-            (x.imageSrc = n(780961));
+            (E.imageSrc = n(780961));
     } else
         O &&
-            ((x.message = m.intl.string(m.t["9T6N5/"])),
-            (x.buttonText = m.intl.string(m.t.XyHpKH)),
-            (x.onButtonClick = () => {
+            ((E.message = m.intl.string(m.t["9T6N5/"])),
+            (E.buttonText = m.intl.string(m.t.XyHpKH)),
+            (E.onButtonClick = () => {
                 a.Z.unblockUser(b.getRecipientId());
             }));
     return (0, i.jsx)(
@@ -73,7 +73,7 @@ function g(e) {
                     });
             }
             return e;
-        })({}, x)),
+        })({}, E)),
         (g = g = { children: C }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(g))

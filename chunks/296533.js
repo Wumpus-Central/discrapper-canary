@@ -6,7 +6,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(467721),
+    a = n(236726),
     o = n(399606),
     s = n(481060),
     l = n(607070),
@@ -23,7 +23,7 @@ var r = n(54381),
     b = n(981631),
     y = n(474936),
     O = n(388032),
-    v = n(183547);
+    v = n(740561);
 function S(e, t, n) {
     return (
         t in e
@@ -226,7 +226,7 @@ function R(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let {
             guildId: t,
             guildBoostSlotRecords: n,
@@ -259,7 +259,7 @@ function D(e) {
         ],
     });
 }
-function w(e) {
+function D(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: i } = e,
         a = (0, o.e7)([f.Z], () => f.Z.getGuild(t), [t]),
         s = m.default.fromTimestamp(Date.now());
@@ -328,7 +328,7 @@ function x(e) {
                       className: v.container,
                       children: m.default.keys(a).map((e) =>
                           (0, r.jsx)(
-                              w,
+                              D,
                               {
                                   guildId: e,
                                   premiumSubscription: n,
@@ -383,7 +383,7 @@ function L(e) {
                 className: v.container,
                 children: m.default.keys(s).map((e) =>
                     (0, r.jsx)(
-                        D,
+                        w,
                         {
                             guildId: e,
                             guildBoostSlotRecords: s[e],

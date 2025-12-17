@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var i = n(13245),
     r = n(45114),
-    l = n(580991),
-    a = n(562224),
+    a = n(580991),
+    l = n(562224),
     o = n(361291),
     s = n(624864),
     c = n(610394),
@@ -38,10 +38,10 @@ function g(e, t, n, g) {
         onConfirmClick: (e, t) => {
             let n = o.Z.getState().preset;
             if (n === h.ApplicationStreamPresets.PRESET_DOCUMENTS) {
-                let { allowAutoQuality: e } = (0, l.IK)({ location: "requestToStreamNotification" });
+                let { allowAutoQuality: e } = (0, a.IK)({ location: "requestToStreamNotification" });
                 n = e ? h.ApplicationStreamPresets.PRESET_AUTO : h.ApplicationStreamPresets.PRESET_VIDEO;
             }
-            (0, a.Z)(c.Z.getTargetPID(), { preset: n }), E("request-to-stream"), i.Z.updateNotificationStatus(t);
+            (0, l.Z)(c.Z.getTargetPID(), { preset: n }), E("request-to-stream"), i.Z.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
             (0, r.ack)(

@@ -1,22 +1,22 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     o = n(442837),
-    l = n(481060),
-    s = n(100527),
-    a = n(367907),
+    a = n(481060),
+    l = n(100527),
+    s = n(367907),
     c = n(881998),
     d = n(553795),
     u = n(626135),
     p = n(745752),
-    m = n(45966),
-    f = n(637853),
-    g = n(657021),
-    h = n(290511),
-    x = n(981631),
-    _ = n(388032),
-    b = n(362791);
-function v(e) {
+    f = n(45966),
+    m = n(637853),
+    b = n(657021),
+    g = n(290511),
+    h = n(981631),
+    x = n(388032),
+    v = n(935954);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,25 +59,25 @@ function O(e, t) {
         e
     );
 }
-function j(e) {
-    let { guildId: t, onComplete: n, isLastStep: j, disableTracking: y } = e,
+function _(e) {
+    let { guildId: t, onComplete: n, isLastStep: _, disableTracking: y } = e,
         N = i.useRef(!1),
-        { onboardingConnections: P, isLoading: C } = (0, o.cj)([m.Z], () => ({
-            onboardingConnections: m.Z.getConnections(t),
-            isLoading: m.Z.isLoading(),
+        { onboardingConnections: P, isLoading: C } = (0, o.cj)([f.Z], () => ({
+            onboardingConnections: f.Z.getConnections(t),
+            isLoading: f.Z.isLoading(),
         })),
         E = (0, o.e7)(
             [c.default, d.Z],
             () =>
                 P.some((e) => {
-                    if (e.connection_type === h.zz.APPLICATION && null != e.application_id) {
+                    if (e.connection_type === g.zz.APPLICATION && null != e.application_id) {
                         let t = c.default.getNewestTokenForApplication(e.application_id);
                         return (
                             c.default.getFetchStateForApplication(e.application_id) === c.FetchState.FETCHED &&
                             null != t
                         );
                     }
-                    if (e.connection_type === h.zz.PROVIDER_CONNECTED_ACCOUNT && null != e.provider_id) {
+                    if (e.connection_type === g.zz.PROVIDER_CONNECTED_ACCOUNT && null != e.provider_id) {
                         let t = d.Z.getAccount(null, e.provider_id);
                         return null != t && !t.revoked;
                     }
@@ -87,11 +87,11 @@ function j(e) {
         );
     i.useEffect(() => {
         if (y || C || 0 === P.length || N.current) return;
-        let e = (0, f.OZ)(P),
-            n = (0, f.N4)(P);
+        let e = (0, m.OZ)(P),
+            n = (0, m.N4)(P);
         u.default.track(
-            x.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-            O(v({}, (0, a.hH)(t)), {
+            h.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+            j(O({}, (0, s.hH)(t)), {
                 step: p.Xx,
                 required: !1,
                 provider_connections_connected: e.connected,
@@ -104,17 +104,17 @@ function j(e) {
     }, [t, C, P, y]);
     let D = i.useCallback(() => {
         if (!y) {
-            let e = (0, f.OZ)(P),
-                n = (0, f.N4)(P);
+            let e = (0, m.OZ)(P),
+                n = (0, m.N4)(P);
             u.default.track(
-                x.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                O(v({}, (0, a.hH)(t)), {
+                h.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                j(O({}, (0, s.hH)(t)), {
                     step: p.Xx,
                     skipped: !E,
                     back: !1,
                     options_selected: 0,
                     in_onboarding: !0,
-                    is_final_step: j,
+                    is_final_step: _,
                     provider_connections_connected: e.connected,
                     provider_connections_not_connected: e.notConnected,
                     application_connections_connected: n.connected,
@@ -123,58 +123,58 @@ function j(e) {
             );
         }
         n();
-    }, [n, y, t, P, E, j]);
+    }, [n, y, t, P, E, _]);
     return C
         ? (0, r.jsxs)("div", {
-              className: b.loadingContainer,
+              className: v.loadingContainer,
               children: [
-                  (0, r.jsx)(l.$jN, {}),
-                  (0, r.jsx)(l.Text, {
+                  (0, r.jsx)(a.$jN, {}),
+                  (0, r.jsx)(a.Text, {
                       variant: "text-md/normal",
                       color: "text-muted",
-                      children: _.intl.string(_.t.ZTNur7),
+                      children: x.intl.string(x.t.ZTNur7),
                   }),
               ],
           })
         : (0, r.jsx)("div", {
-              className: b.container,
+              className: v.container,
               children: (0, r.jsxs)("div", {
-                  className: b.content,
+                  className: v.content,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: b.scrollerContent,
+                          className: v.scrollerContent,
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: b.header,
+                                  className: v.header,
                                   children: [
                                       (0, r.jsx)("div", {
-                                          className: b.headerTitle,
-                                          children: (0, r.jsx)(l.Heading, {
+                                          className: v.headerTitle,
+                                          children: (0, r.jsx)(a.Heading, {
                                               variant: "heading-xl/semibold",
-                                              children: _.intl.string(_.t.eDVMrA),
+                                              children: x.intl.string(x.t.eDVMrA),
                                           }),
                                       }),
                                       (0, r.jsx)("div", {
-                                          className: b.headerDescription,
-                                          children: (0, r.jsx)(l.Text, {
+                                          className: v.headerDescription,
+                                          children: (0, r.jsx)(a.Text, {
                                               variant: "text-md/normal",
                                               color: "text-muted",
-                                              children: _.intl.string(_.t.BozOXu),
+                                              children: x.intl.string(x.t.BozOXu),
                                           }),
                                       }),
                                   ],
                               }),
                               (0, r.jsx)("div", {
-                                  className: b.connectionsListScroller,
+                                  className: v.connectionsListScroller,
                                   children: (0, r.jsx)("div", {
-                                      className: b.connectionsList,
+                                      className: v.connectionsList,
                                       children: P.map((e, n) =>
                                           (0, r.jsx)(
-                                              g.Z,
+                                              b.Z,
                                               {
                                                   connection: e,
                                                   guildId: t,
-                                                  location: s.Z.GUILD_ONBOARDING,
+                                                  location: l.Z.GUILD_ONBOARDING,
                                               },
                                               n,
                                           ),
@@ -184,22 +184,22 @@ function j(e) {
                           ],
                       }),
                       (0, r.jsx)("div", {
-                          className: b.footer,
+                          className: v.footer,
                           children: (0, r.jsxs)("div", {
-                              className: b.actions,
+                              className: v.actions,
                               children: [
                                   (0, r.jsx)("div", {}),
                                   (0, r.jsx)("div", {
-                                      className: b.primaryActions,
-                                      children: (0, r.jsx)(l.Button, {
+                                      className: v.primaryActions,
+                                      children: (0, r.jsx)(a.Button, {
                                           variant: E ? "primary" : "secondary",
                                           onClick: D,
                                           text: E
-                                              ? j
-                                                  ? "".concat(_.intl.string(_.t["8SuVoE"]), " \uD83C\uDF89")
-                                                  : _.intl.string(_.t.PDTjLN)
-                                              : _.intl.string(_.t["5Wxrcd"]),
-                                          icon: j ? void 0 : l.d4D,
+                                              ? _
+                                                  ? "".concat(x.intl.string(x.t["8SuVoE"]), " \uD83C\uDF89")
+                                                  : x.intl.string(x.t.PDTjLN)
+                                              : x.intl.string(x.t["5Wxrcd"]),
+                                          icon: _ ? void 0 : a.d4D,
                                           iconPosition: "end",
                                       }),
                                   }),

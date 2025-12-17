@@ -1,4 +1,4 @@
-s.d(n, { default: () => f }), s(388685);
+s.d(n, { default: () => S }), s(388685);
 var t = s(54381);
 s(473749);
 var l = s(399606),
@@ -10,30 +10,30 @@ var l = s(399606),
     u = s(812545),
     d = s(981631),
     g = s(388032),
-    _ = s(625221);
-function f(e) {
-    let { channelId: n, messageId: s, transitionState: f, onClose: S } = e,
+    f = s(552593);
+function S(e) {
+    let { channelId: n, messageId: s, transitionState: S, onClose: b } = e,
         h = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
         [C, F] = (0, u.Z)(n),
-        m = null == h ? void 0 : h.guild_id;
+        _ = null == h ? void 0 : h.guild_id;
     return (0, t.jsx)(o.VoidConfirmModal, {
         header: g.intl.string(g.t.aIz1oV),
         confirmText: g.intl.string(g.t["cY+Oob"]),
         cancelText: g.intl.string(g.t["ETE/oC"]),
         confirmButtonColor: i.zx.Colors.BRAND,
         onConfirm: () => a.Z.crosspostMessage(n, s),
-        transitionState: f,
-        onClose: S,
+        transitionState: S,
+        onClose: b,
         children: (0, t.jsx)(o.Text, {
             variant: "text-md/normal",
-            className: _.spacing,
+            className: f.spacing,
             children: F
                 ? (0, t.jsx)(o.$jN, {})
                 : null != C && null != C.guildsFollowing && C.guildsFollowing > 0
                   ? (0, t.jsxs)(t.Fragment, {
                         children: [
                             (0, t.jsx)(o.Text, {
-                                className: _.spacing,
+                                className: f.spacing,
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.GCGrNP, { numGuildsFollowing: C.guildsFollowing }),
                             }),
@@ -41,7 +41,7 @@ function f(e) {
                                 variant: "text-sm/normal",
                                 children: g.intl.format(g.t.IMhGZz, {
                                     onClick: () => {
-                                        null != m && null != S && (S(), r.Z.open(m, d.pNK.ANALYTICS));
+                                        null != _ && null != b && (b(), r.Z.open(_, d.pNK.ANALYTICS));
                                     },
                                 }),
                             }),

@@ -4,16 +4,16 @@ n(473749);
 var i = n(907862),
     l = n(481060),
     a = n(100527),
-    s = n(626135),
-    o = n(93237),
+    o = n(626135),
+    s = n(93237),
     c = n(981631),
     u = n(388032),
-    d = n(295234);
+    d = n(746838);
 let p = (e) => {
     let { targetElementRef: t } = e,
-        p = (0, o.eW)(),
+        p = (0, s.eW)(),
         f = () => {
-            (0, o.ZL)();
+            (0, s.ZL)();
         };
     return (0, r.jsx)(i.J2, {
         targetElementRef: t,
@@ -33,7 +33,7 @@ let p = (e) => {
             {
                 text: u.intl.string(u.t.t2N81y),
                 onClick: () => {
-                    s.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                    o.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                         location_stack: [a.Z.HOME_PAGE_PREMIUM_TAB],
                     }),
                         f(),

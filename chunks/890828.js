@@ -1,8 +1,8 @@
 n.d(t, { Z: () => W }), n(361932), n(187205), n(388685), n(642613), n(781311), n(539854), n(472816), n(794429);
 var i = n(54381),
     r = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     s = n(36563),
     c = n(481060),
@@ -62,9 +62,9 @@ let P = (e) => [
     },
     D = r.memo(function (e) {
         let { channel: t, query: n } = e,
-            [l] = (0, o.e7)([j.Z], () => [j.Z.getVoiceStatesForChannel(t.id), j.Z.getVoiceStateVersion()], [t.id], Z.Q),
-            [a, u] = r.useState([]);
-        (0, y.BO)(n, Object.values(l), u, k);
+            [a] = (0, o.e7)([j.Z], () => [j.Z.getVoiceStatesForChannel(t.id), j.Z.getVoiceStateVersion()], [t.id], Z.Q),
+            [l, u] = r.useState([]);
+        (0, y.BO)(n, Object.values(a), u, k);
         let d = (0, o.Wu)(
                 [j.Z, C.default, O.Z, I.Z],
                 () =>
@@ -72,26 +72,26 @@ let P = (e) => [
                         .map((e) => C.default.getUser(e.userId))
                         .filter(_.lm)
                         .sort((e, t) => {
-                            var i, r, l, o;
-                            if (a.length > 0 && "" !== n.trim()) {
-                                if (a.some((t) => t.userId === e.id)) return -1;
-                                if (a.some((e) => e.userId === t.id)) return 1;
+                            var i, r, a, o;
+                            if (l.length > 0 && "" !== n.trim()) {
+                                if (l.some((t) => t.userId === e.id)) return -1;
+                                if (l.some((e) => e.userId === t.id)) return 1;
                             }
                             return I.Z.isFriend(e.id) && !I.Z.isFriend(t.id)
                                 ? -1
                                 : !I.Z.isFriend(e.id) && I.Z.isFriend(t.id)
                                   ? 1
-                                  : (null != (l = null == (i = O.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability)
-                                        ? l
+                                  : (null != (a = null == (i = O.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability)
+                                        ? a
                                         : 0) -
                                     (null != (o = null == (r = O.Z.getUserAffinity(e.id)) ? void 0 : r.vcProbability)
                                         ? o
                                         : 0);
                         }),
-                [t.id, a, n],
+                [t.id, l, n],
             ),
             f = t.getGuildId(),
-            h = Math.max(a.length, 2);
+            h = Math.max(l.length, 2);
         return null == f
             ? null
             : (0, i.jsx)(s.Z, {
@@ -109,8 +109,8 @@ let P = (e) => [
         var t;
         let { channel: n } = e,
             r = n.getGuildId(),
-            l = (0, o.e7)([S.Z], () => S.Z.getGuild(r), [r]);
-        if (null == l)
+            a = (0, o.e7)([S.Z], () => S.Z.getGuild(r), [r]);
+        if (null == a)
             switch (n.type) {
                 case N.d4z.DM:
                     return (0, i.jsx)(p.je, {
@@ -132,9 +132,9 @@ let P = (e) => [
             children: (0, i.jsx)("div", {
                 className: T.guildIconWrapper,
                 children: (0, i.jsx)(h.Ft, {
-                    guildId: l.id,
-                    guildName: null != (t = l.name) ? t : w.intl.string(w.t.DmIUGK),
-                    guildIcon: l.icon,
+                    guildId: a.id,
+                    guildName: null != (t = a.name) ? t : w.intl.string(w.t.DmIUGK),
+                    guildIcon: a.icon,
                     iconSize: 32,
                 }),
             }),
@@ -145,7 +145,7 @@ let P = (e) => [
         let {
                 channelId: n,
                 isHighlighted: r,
-                currentVoiceChannel: l,
+                currentVoiceChannel: a,
                 onClick: s,
                 onMouseOver: f,
                 onMouseLeave: h,
@@ -155,7 +155,7 @@ let P = (e) => [
             g = null == m ? void 0 : m.getGuildId(),
             b = (0, o.e7)([S.Z], () => S.Z.getGuild(g), [g]),
             y = (0, d.KS)(m, b),
-            O = (null == l ? void 0 : l.id) === n,
+            O = (null == a ? void 0 : a.id) === n,
             E = O ? "text-feedback-positive" : r ? "interactive-text-active" : "text-muted",
             x = O
                 ? c.TVs.colors.TEXT_FEEDBACK_POSITIVE
@@ -165,7 +165,7 @@ let P = (e) => [
         return null == m
             ? null
             : (0, i.jsxs)(c.kL8, {
-                  className: a()(T.channelItemContainer, r && T.channelItemHighlighted),
+                  className: l()(T.channelItemContainer, r && T.channelItemHighlighted),
                   "aria-label": m.name,
                   onClick: () => s(n),
                   onMouseOver: () => f(n),
@@ -207,7 +207,7 @@ let P = (e) => [
                           className: T.channelItemAvatars,
                           children: (0, i.jsx)(D, {
                               channel: m,
-                              currentVoiceChannel: l,
+                              currentVoiceChannel: a,
                               query: p,
                           }),
                       }),
@@ -229,8 +229,8 @@ let P = (e) => [
         let {
                 sectionHeader: t,
                 channelIds: n,
-                currentVoiceChannel: l,
-                onSelect: a,
+                currentVoiceChannel: a,
+                onSelect: l,
                 hasQuery: o,
                 query: s,
                 scrollable: u = !0,
@@ -263,9 +263,9 @@ let P = (e) => [
                                 {
                                     channelId: e,
                                     isHighlighted: e === d,
-                                    currentVoiceChannel: l,
+                                    currentVoiceChannel: a,
                                     onClick: () => {
-                                        a(e);
+                                        l(e);
                                     },
                                     onMouseOver: h,
                                     onMouseLeave: p,
@@ -281,14 +281,14 @@ let P = (e) => [
     });
 function V(e) {
     let { searchQuery: t, currentVoiceChannel: n, onSelect: r } = e,
-        { recentVoiceChannelIds: l, friendVoiceChannelIds: s } = (function () {
+        { recentVoiceChannelIds: a, friendVoiceChannelIds: s } = (function () {
             let e = (function () {
                     let e = (0, o.Wu)(
                         [C.default, I.Z, O.Z],
                         () =>
                             I.Z.getFriendIDs()
                                 .sort((e, t) => {
-                                    var n, i, r, l;
+                                    var n, i, r, a;
                                     return null == e && null == t
                                         ? 0
                                         : null == e
@@ -303,11 +303,11 @@ function V(e) {
                                                   ? r
                                                   : 0) -
                                               (null !=
-                                              (l =
+                                              (a =
                                                   null == (i = O.Z.getUserAffinity(e))
                                                       ? void 0
                                                       : i.communicationProbability)
-                                                  ? l
+                                                  ? a
                                                   : 0);
                                 })
                                 .reduce((e, t) => {
@@ -349,14 +349,14 @@ function V(e) {
                 recentVoiceChannelIds: t,
             };
         })();
-    return l.length > 0 || s.length > 0
+    return a.length > 0 || s.length > 0
         ? (0, i.jsxs)(c.zJl, {
-              className: a()(T.channelList, T.channelListWrapper),
+              className: l()(T.channelList, T.channelListWrapper),
               children: [
-                  l.length > 0 &&
+                  a.length > 0 &&
                       (0, i.jsx)(z, {
                           sectionHeader: w.intl.string(w.t.lnk2NQ),
-                          channelIds: l.slice(0, 3),
+                          channelIds: a.slice(0, 3),
                           hasQuery: !1,
                           query: t,
                           currentVoiceChannel: n,
@@ -382,7 +382,7 @@ function U(e) {
 }
 function W(e) {
     var t, n;
-    let { currentVoiceChannel: l, onClose: a, onSelect: s } = e,
+    let { currentVoiceChannel: a, onClose: l, onSelect: s } = e,
         u = (0, o.Wu)(
             [S.Z, E.ZP, j.Z, I.Z, x.Z],
             () =>
@@ -414,15 +414,15 @@ function W(e) {
     (0, y.BO)(d, u, p, A);
     let m = r.useCallback(
             (e) => {
-                "Escape" === e.key && a();
+                "Escape" === e.key && l();
             },
-            [a],
+            [l],
         ),
         g = r.useCallback(
             (e, t) => {
-                s(e, t), a();
+                s(e, t), l();
             },
-            [s, a],
+            [s, l],
         );
     r.useEffect(
         () => (
@@ -431,7 +431,7 @@ function W(e) {
                 document.removeEventListener("keydown", m, !0);
             }
         ),
-        [a, m],
+        [l, m],
     );
     let b = "" !== d.trim(),
         O = h.length > 20,
@@ -503,12 +503,12 @@ function W(e) {
                                   .slice(0, 20),
                               hasQuery: b,
                               query: d,
-                              currentVoiceChannel: l,
+                              currentVoiceChannel: a,
                               onSelect: (e) => g(e, "search channel"),
                           })
                         : (0, i.jsx)(V, {
                               searchQuery: d,
-                              currentVoiceChannel: l,
+                              currentVoiceChannel: a,
                               onSelect: g,
                           }),
                 ],

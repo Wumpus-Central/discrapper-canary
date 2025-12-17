@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     a = n(481060),
     s = n(137510),
-    o = n(922657);
+    o = n(227968);
 function c(e) {
     let {
         title: t,
@@ -15,26 +15,26 @@ function c(e) {
         selected: d = !1,
         subsection: u = null,
         onClick: g,
-        className: m,
-        disabled: p,
+        className: f,
+        disabled: m,
     } = e;
     return (0, r.jsxs)("div", {
-        className: l()(o.container, m),
+        className: l()(o.container, f),
         children: [
             (0, r.jsx)(a.P3F, {
                 className: l()(
                     o.clickableContainer,
                     {
                         [o.noAction]: null == g,
-                        [o.disabled]: p,
+                        [o.disabled]: m,
                     },
-                    m,
+                    f,
                 ),
-                onClick: p ? void 0 : g,
+                onClick: m ? void 0 : g,
                 children: (0, r.jsxs)("div", {
                     className: l()(o.backgroundModifierContainer, o[c], {
                         [o.selected]: d,
-                        [o.disabled]: p,
+                        [o.disabled]: m,
                         [o.noAction]: null == g,
                     }),
                     children: [

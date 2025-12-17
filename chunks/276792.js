@@ -4,26 +4,26 @@ n(473749);
 var i = n(657707),
     l = n(740111),
     a = n(159691),
-    s = n(481060),
-    o = n(626135),
+    o = n(481060),
+    s = n(626135),
     c = n(63063),
     u = n(382791),
     d = n(671728),
     p = n(981631),
     f = n(388032),
-    g = n(605548);
+    g = n(256465);
 function h(e) {
     var t, n, h, m;
     let {
-            componentId: _,
-            promotionId: b,
+            componentId: b,
+            promotionId: _,
             content: E,
             renderModalProps: O,
             analyticsLocations: v,
             analyticsLocation: y,
             isLightTheme: I,
         } = e,
-        C = "AnnouncementModalVariant1_".concat(_),
+        C = "AnnouncementModalVariant1_".concat(b),
         { onClose: S } = O,
         T = null != (m = null == (t = E.button) ? void 0 : t.copy) ? m : f.intl.string(f.t.YScQSF),
         N =
@@ -42,7 +42,7 @@ function h(e) {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               "\xA0",
-                              (0, r.jsx)(s.Anchor, {
+                              (0, r.jsx)(o.Anchor, {
                                   className: g.termsApplyAnchor,
                                   href: c.Z.getArticleURL(E.helpArticleId),
                                   children: f.intl.string(f.t["sBp+u0"]),
@@ -74,8 +74,8 @@ function h(e) {
                   })
             : void 0;
     return {
-        componentId: _,
-        promotionId: b,
+        componentId: b,
+        promotionId: _,
         renderModalProps: O,
         header: E.header,
         modalTopExtra: A,
@@ -96,7 +96,7 @@ function h(e) {
                 variant: "expressive",
                 size: "md",
                 onClick: () => {
-                    o.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
+                    s.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: C,
                         cta_type: N,
                         seconds_open: Math.round((Date.now() - e) / 1000),

@@ -35,7 +35,7 @@ function a(e) {
     (t.railscasts = a(r(869431))),
     (t.shapeshifter = a(r(539635))),
     (t.solarized = a(r(123265))),
-    (t.summerfruit = a(r(342762))),
+    (t.summerfruit = a(r(266120))),
     (t.tomorrow = a(r(442748))),
     (t.tube = a(r(848042))),
     (t.twilight = a(r(796160)));

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -23,7 +23,7 @@ function f(e) {
         }),
     });
 }
-function p(e, t) {
+function h(e, t) {
     let n = (0, c.P)(t),
         o = i.useCallback(() => {
             s.open(

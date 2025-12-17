@@ -2,8 +2,8 @@ n.d(t, { S: () => O });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    l = n.n(i),
-    a = n(85707),
+    a = n.n(i),
+    l = n(85707),
     o = n(594174),
     c = n(86419),
     s = n(780899),
@@ -12,12 +12,12 @@ var i = n(120356),
     f = n(533815),
     g = n(919498),
     p = n(394606),
-    m = n(853072),
-    b = n(388032),
-    h = n(932366),
-    y = n(133458);
+    b = n(853072),
+    m = n(388032),
+    h = n(713603),
+    y = n(507683);
 function v(e) {
-    let { index: t, widgetType: n, game: i, coverImageUrl: l, gameName: a, children: o } = e,
+    let { index: t, widgetType: n, game: i, coverImageUrl: a, gameName: l, children: o } = e,
         { manageFocusOnReorder: d } = (0, u.C)();
     return (0, r.jsx)(s.yW, {
         index: t,
@@ -25,10 +25,10 @@ function v(e) {
         listType: n,
         itemType: "GAME_COVER",
         itemPreviewProps: {
-            imageSrc: l,
-            gameName: a,
+            imageSrc: a,
+            gameName: l,
         },
-        "aria-label": b.intl.formatToPlainString(b.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": m.intl.formatToPlainString(m.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, c.Eq)(n, e, t),
         onEnd: () => d(i.applicationId),
         className: y.container,
@@ -47,38 +47,38 @@ function O(e) {
             userId: n,
             widgetType: i,
             guildId: c,
-            channelId: b,
+            channelId: m,
             disableInteraction: O = !1,
             index: j,
             onRemoveGame: x,
-            coverRef: _,
+            coverRef: P,
         } = e,
-        { coverImageUrl: P, gameName: I, isLoading: w } = (0, p.Z)(t.applicationId),
-        { registerDragHandleRef: S } = (0, u.C)(),
-        E = (0, m.Z)(t.applicationId).length > 0,
-        T = o.default.getCurrentUser(),
-        C = (null == T ? void 0 : T.id) === n,
+        { coverImageUrl: w, gameName: I, isLoading: S } = (0, p.Z)(t.applicationId),
+        { registerDragHandleRef: E } = (0, u.C)(),
+        T = (0, b.Z)(t.applicationId).length > 0,
+        _ = o.default.getCurrentUser(),
+        C = (null == _ ? void 0 : _.id) === n,
         D = !O && C,
-        { isDragging: k } = (0, a.f)((e) => ({ isDragging: e.isDragging() })),
+        { isDragging: k } = (0, l.f)((e) => ({ isDragging: e.isDragging() })),
         N = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        imageSrc: P,
+                        imageSrc: w,
                         gameName: I,
                         applicationId: t.applicationId,
                         userId: n,
                         disableInteraction: O,
-                        className: l()(
-                            E ? y.socialProofBackdrop : void 0,
-                            null == P || O ? void 0 : h.hoverActiveEffect,
+                        className: a()(
+                            T ? y.socialProofBackdrop : void 0,
+                            null == w || O ? void 0 : h.hoverActiveEffect,
                         ),
                         hideTooltip: k,
-                        coverRef: _,
+                        coverRef: P,
                     }),
                     D &&
                         (0, r.jsx)(s.e_, {
-                            buttonRef: S(t.applicationId),
+                            buttonRef: E(t.applicationId),
                             className: y.dragHandle,
                         }),
                     !O &&
@@ -86,7 +86,7 @@ function O(e) {
                             userId: n,
                             applicationId: t.applicationId,
                             guildId: c,
-                            channelId: b,
+                            channelId: m,
                             className: y.socialProof,
                         }),
                     D &&
@@ -99,14 +99,14 @@ function O(e) {
                         }),
                 ],
             });
-    return w
+    return S
         ? (0, r.jsx)("div", { className: h.loadingCover })
         : D
           ? (0, r.jsx)(v, {
                 widgetType: i,
                 index: null != j ? j : 0,
                 game: t,
-                coverImageUrl: P,
+                coverImageUrl: w,
                 gameName: I,
                 children: N(),
             })

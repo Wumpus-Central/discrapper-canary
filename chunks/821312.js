@@ -1,4 +1,4 @@
-n.d(t, { default: () => p }), n(388685);
+n.d(t, { default: () => m }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(793030),
@@ -7,10 +7,10 @@ var i = n(54381),
     s = n(177862),
     c = n(981631),
     d = n(388032),
-    u = n(882313);
-function p(e) {
-    let { guildId: t, transitionState: n, onClose: p } = e,
-        [m, b] = r.useState([]),
+    u = n(247873);
+function m(e) {
+    let { guildId: t, transitionState: n, onClose: m } = e,
+        [b, p] = r.useState([]),
         [g, f] = r.useState(),
         h = [
             {
@@ -39,42 +39,42 @@ function p(e) {
             },
         ],
         x = r.useCallback((e) => {
-            b(e);
+            p(e);
         }, []);
     return null == t
-        ? (p(), null)
+        ? (m(), null)
         : (0, i.jsx)(l.Modal, {
               transitionState: n,
               title: d.intl.string(d.t.f5hd9P),
               actions: [
                   {
                       text: d.intl.string(d.t["ETE/oC"]),
-                      onClick: p,
+                      onClick: m,
                       variant: "secondary",
                   },
                   {
                       text: d.intl.string(d.t.nAt0rE),
                       onClick: function () {
                           (0, o.yw)(c.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                              raid_lockdown_feedback_type: m,
+                              raid_lockdown_feedback_type: b,
                               raid_lockdown_feedback_other_reason: g,
                               guild_id: t,
                           }),
-                              p();
+                              m();
                       },
-                      disabled: 0 === m.length,
+                      disabled: 0 === b.length,
                   },
               ],
-              onClose: p,
+              onClose: m,
               children: (0, i.jsxs)(a.Kqy, {
                   gap: 8,
                   children: [
                       (0, i.jsx)(a.cOn, {
-                          selectedValues: m,
+                          selectedValues: b,
                           onChange: x,
                           options: h,
                       }),
-                      m.includes(s.C2.OTHER) &&
+                      b.includes(s.C2.OTHER) &&
                           (0, i.jsx)("div", {
                               className: u.textboxContainer,
                               children: (0, i.jsx)(a.Kx8, {

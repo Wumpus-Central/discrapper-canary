@@ -6,11 +6,11 @@ var i = n(442837),
     r = n(313789),
     a = n(518596),
     o = n(981631),
-    c = n(388032);
+    S = n(388032);
 let T = (0, u.qs)(r.n.SYNC_PROFILE_THEMES, {
-    useTitle: () => c.intl.string(c.t["sSY+mD"]),
+    useTitle: () => S.intl.string(S.t["sSY+mD"]),
     useSubtitle: () =>
-        c.intl.format(c.t.u6UjrL, {
+        S.intl.format(S.t.u6UjrL, {
             onThemeClick() {
                 (0, a.openUserSettings)(r.n.APPEARANCE_PANEL, { section: o.oAB.APPEARANCE });
             },

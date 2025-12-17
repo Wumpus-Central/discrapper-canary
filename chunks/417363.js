@@ -75,8 +75,8 @@ let I = 200,
     N = "content",
     P = "file://",
     R = !1,
-    D = 0,
     w = 0,
+    D = 0,
     x = 0,
     L = [],
     j = [],
@@ -207,12 +207,12 @@ function Z(e) {
     }
     throw Error("Invalid Dispatch State. state=".concat(e.state.type));
 }
-function B(e) {
+function F(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
         ? e.networkProgress
         : null;
 }
-function F(e) {
+function B(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING
         ? e.diskProgress
         : null;
@@ -275,10 +275,10 @@ function X(e) {
         for (let t in r[e]) {
             let o = (0, _.Tu)(e, t);
             if (((n[o] = Z(r[e][t])), null != A[o])) {
-                let e = Q(n, o, B);
-                e > 0 && K((D += e));
-                let r = Q(n, o, F);
-                r > 0 && q((w += r));
+                let e = Q(n, o, F);
+                e > 0 && K((w += e));
+                let r = Q(n, o, B);
+                r > 0 && q((D += r));
                 let s = Q(n, o, V);
                 if ((s > 0 && z((x += s)), i === t)) {
                     let e = n[o];

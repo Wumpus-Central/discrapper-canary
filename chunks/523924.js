@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(28664),
-    s = n(481060),
-    o = n(693546),
+    o = n(481060),
+    s = n(693546),
     c = n(937111),
     u = n(850493),
     d = n(388032),
@@ -25,7 +25,7 @@ let f = (e) => {
         }),
         { canReapply: E, isLoading: O } = (0, u.o)(null == b ? void 0 : b.id);
     i.useEffect(() => {
-        null == _ && null != b && o.Z.fetchJoinRequestCooldown(b.id);
+        null == _ && null != b && s.Z.fetchJoinRequestCooldown(b.id);
     }, [_, b]);
     let v = (null != _ ? _ : 0) > 0,
         y = v && null != _ ? Math.ceil((1000 * _ - Date.now()) / 86400000) : 0;
@@ -34,15 +34,15 @@ let f = (e) => {
         children: [
             (0, r.jsx)("div", {
                 className: p.iconWrapper,
-                children: (0, r.jsx)(s.P$X, {
+                children: (0, r.jsx)(o.P$X, {
                     size: "md",
-                    color: s.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
+                    color: o.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, r.jsxs)("div", {
                 className: p.statusTextContainer,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         id: t,
                         variant: "heading-lg/semibold",
                         color: "text-strong",
@@ -52,7 +52,7 @@ let f = (e) => {
                                 : d.intl.string(d.t.gBPcuP),
                     }),
                     null != m && "" !== m
-                        ? (0, r.jsxs)(s.Text, {
+                        ? (0, r.jsxs)(o.Text, {
                               variant: "text-md/medium",
                               color: "text-default",
                               children: [
@@ -74,7 +74,7 @@ let f = (e) => {
                               asContainer: !0,
                               text: v ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : null,
                               "aria-label": v ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : void 0,
-                              children: (0, r.jsx)(s.Button, {
+                              children: (0, r.jsx)(o.Button, {
                                   onClick: f,
                                   variant: "secondary",
                                   size: "md",
@@ -85,7 +85,7 @@ let f = (e) => {
                               }),
                           })
                         : null,
-                    (0, r.jsx)(s.Button, {
+                    (0, r.jsx)(o.Button, {
                         onClick: () => h(E || O),
                         variant: "critical-primary",
                         size: "md",

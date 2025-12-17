@@ -4,7 +4,7 @@ n.d(t, {
     Ew: () => U,
     HO: () => E,
     Jk: () => T,
-    Jp: () => D,
+    Jp: () => w,
     Lv: () => P,
     NH: () => b,
     Ot: () => f,
@@ -25,7 +25,7 @@ n.d(t, {
     tt: () => R,
     v6: () => A,
     wF: () => I,
-    yq: () => w,
+    yq: () => D,
 }),
     n(388685),
     n(642613);
@@ -155,8 +155,8 @@ let S = "1333839522189938740",
         i.X.PLAY_ON_DESKTOP_V2,
         i.X.PLAY_ACTIVITY,
     ]),
-    D = { is_targeted: !1 };
-var w = (function (e) {
+    w = { is_targeted: !1 };
+var D = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),

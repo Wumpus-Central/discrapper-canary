@@ -10,8 +10,8 @@ var r = n(120356),
     u = n(700582),
     d = n(600164),
     p = n(158776),
-    h = n(51144),
-    f = n(469407);
+    f = n(51144),
+    h = n(828377);
 function m(e) {
     var t, n;
     let {
@@ -21,14 +21,14 @@ function m(e) {
             comparator: b,
             selected: C,
             checked: y,
-            disabled: _ = !1,
-            inlineUsername: v = !0,
+            disabled: v = !1,
+            inlineUsername: x = !0,
             onClick: O,
-            onMouseEnter: x,
-            "aria-setsize": E,
-            "aria-posinset": j,
+            onMouseEnter: E,
+            "aria-setsize": j,
+            "aria-posinset": S,
         } = e,
-        S = (0, o.e7)([p.Z], () => p.Z.getStatus(r.id)),
+        _ = (0, o.e7)([p.Z], () => p.Z.getStatus(r.id)),
         P = (0, a.JA)(String(r.id));
     return (0, i.jsx)(
         s.P3F,
@@ -59,12 +59,12 @@ function m(e) {
         })(
             {
                 id: "user-row-".concat(m),
-                className: l()(f.friendWrapper, { [f.disabled]: _ }),
+                className: l()(h.friendWrapper, { [h.disabled]: v }),
                 onClick: () => {
                     null != O && O(r.id);
                 },
                 onMouseEnter: () => {
-                    null != x && x(m);
+                    null != E && E(m);
                 },
             },
             P,
@@ -73,37 +73,37 @@ function m(e) {
             {
                 role: "option",
                 "aria-selected": y,
-                "aria-disabled": _,
-                "aria-setsize": E,
-                "aria-posinset": j,
+                "aria-disabled": v,
+                "aria-setsize": j,
+                "aria-posinset": S,
                 children: (0, i.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
-                    className: l()(f.friend, {
-                        [f.friendSelected]: C,
-                        [f.twoRows]: !v,
+                    className: l()(h.friend, {
+                        [h.friendSelected]: C,
+                        [h.twoRows]: !x,
                     }),
                     children: [
                         (0, i.jsx)(u.Z, {
                             user: r,
-                            status: S,
-                            className: f.avatar,
+                            status: _,
+                            className: h.avatar,
                         }),
                         (0, i.jsxs)(d.Z, {
-                            className: f.match,
+                            className: h.match,
                             align: d.Z.Align.BASELINE,
-                            direction: v ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, i.jsx)(s.Text, {
                                     tag: "strong",
-                                    className: f.nickname,
+                                    className: h.nickname,
                                     "aria-hidden": !0,
                                     variant: "text-md/medium",
                                     children:
                                         null != b && b === r.tag
-                                            ? h.ZP.getName(r)
+                                            ? f.ZP.getName(r)
                                             : null != b && "" !== b
                                               ? b
-                                              : h.ZP.getName(r),
+                                              : f.ZP.getName(r),
                                 }),
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-xs/normal",
@@ -111,9 +111,9 @@ function m(e) {
                                     children: (0, i.jsx)(c.Z, {
                                         user: r,
                                         hideDiscriminator: g,
-                                        className: f.discordTag,
-                                        usernameClass: f.__invalid_weightMedium,
-                                        discriminatorClass: f.__invalid_weightMedium,
+                                        className: h.discordTag,
+                                        usernameClass: h.__invalid_weightMedium,
+                                        discriminatorClass: h.__invalid_weightMedium,
                                         forceUsername: !0,
                                     }),
                                 }),
@@ -121,7 +121,7 @@ function m(e) {
                         }),
                         (0, i.jsx)(s.FZ5, {
                             checked: y,
-                            disabled: _,
+                            disabled: v,
                         }),
                     ],
                 }),

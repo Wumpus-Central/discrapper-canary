@@ -1,4 +1,4 @@
-n.d(t, { O: () => h });
+n.d(t, { O: () => p });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -9,22 +9,22 @@ var r = n(54381),
     d = n(981631),
     u = n(30513),
     g = n(486324),
-    m = n(200299),
-    p = n(388032),
-    f = n(747530);
-function h(e) {
+    f = n(200299),
+    m = n(388032),
+    b = n(676157);
+function p(e) {
     let { guild: t, canManageGuild: n } = e,
-        h = t.features.has(d.GuildFeatures.BANNER),
-        b = t.features.has(d.GuildFeatures.ANIMATED_BANNER),
-        x = h && n,
+        p = t.features.has(d.GuildFeatures.BANNER),
+        h = t.features.has(d.GuildFeatures.ANIMATED_BANNER),
+        x = p && n,
         { analyticsLocations: j } = (0, a.ZP)(),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t],
         ),
-        v = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function h(e) {
             },
             [j, t],
         ),
-        O = (0, r.jsx)(s.Z, {
+        C = (0, r.jsx)(s.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -47,19 +47,19 @@ function h(e) {
                               id: t.id,
                               banner: e,
                           },
-                          b,
+                          h,
                       )
                     : null,
             disabled: !x,
-            onChange: _,
-            hint: p.intl.string(p.t.uPvxqJ),
+            onChange: v,
+            hint: m.intl.string(m.t.uPvxqJ),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
                     uploadType: g.pC.GUILD_BANNER,
-                    maxFileSizeBytes: m.B,
+                    maxFileSizeBytes: f.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return _(t, n);
+                        return v(t, n);
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
@@ -69,13 +69,13 @@ function h(e) {
                 }),
             enabled: x,
         });
-    return h
-        ? O
+    return p
+        ? C
         : (0, r.jsx)(l.P3F, {
               "aria-hidden": !0,
               tabIndex: -1,
-              className: f.upsell,
-              onClick: v,
-              children: O,
+              className: b.upsell,
+              onClick: O,
+              children: C,
           });
 }

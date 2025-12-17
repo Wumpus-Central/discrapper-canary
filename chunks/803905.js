@@ -8,7 +8,7 @@ n.d(t, {
     O1: () => O,
     O8: () => R,
     Pl: () => v,
-    Uw: () => w,
+    Uw: () => D,
     ZE: () => L,
     _G: () => y,
     _O: () => I,
@@ -43,7 +43,7 @@ function d(e, t) {
         let n = c.uM[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = B[n];
+        let r = F[n];
         if (null == r)
             return (
                 u.warn(
@@ -85,8 +85,8 @@ let p = new f(r.q.ANIMATED_EMOJIS),
     N = new f("freeBoosts"),
     P = new f(r.q.STREAM_MID_QUALITY),
     R = new f(r.q.STREAM_HIGH_QUALITY),
-    D = new f(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    w = new f("fancyVoiceChannelReactions"),
+    w = new f(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    D = new f("fancyVoiceChannelReactions"),
     x = new f("installPremiumApplications"),
     L = new f("redeemPremiumPerks"),
     j = new f(r.q.VIDEO_FILTER_ASSETS);
@@ -96,9 +96,9 @@ let M = new f(r.q.INCREASED_GUILD_LIMIT),
     U = new f("increasedVideoUploadQuality"),
     G = new f("uploadLargeFiles"),
     Z = new f("warpPrivateBrowsing"),
-    B = Object.freeze({
+    F = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, _, m, v, j, U, G, T]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, _, b, y, v, A, P, w, U, G, T]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, _, b, y, v, A, P, D, U, G, T]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
             p,
             _,
@@ -115,7 +115,7 @@ let M = new f(r.q.INCREASED_GUILD_LIMIT),
             N,
             P,
             R,
-            w,
+            D,
             x,
             L,
             j,
@@ -125,18 +125,18 @@ let M = new f(r.q.INCREASED_GUILD_LIMIT),
             G,
             T,
             I,
-            D,
+            w,
             E,
             Z,
         ]),
     }),
-    F = [A, N, Z],
+    B = [A, N, Z],
     V = [Z];
 function H(e, t, n) {
     return (
         !(
             (0, s.U)("canUserUse", t) ||
-            (null != t && t.isPremiumWithFractionalPremiumOnly() && F.includes(e)) ||
+            (null != t && t.isPremiumWithFractionalPremiumOnly() && B.includes(e)) ||
             (n && V.includes(e))
         ) && e.getFeatureValue(t)
     );

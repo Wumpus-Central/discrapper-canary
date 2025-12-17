@@ -6,7 +6,7 @@ var l = n(120356),
     i = n(481060),
     a = n(373370),
     o = n(644646),
-    u = n(673655);
+    u = n(776665);
 let c = function (e) {
     let {
             className: t,
@@ -17,7 +17,7 @@ let c = function (e) {
             location: m,
             sourceQuestContent: f,
         } = e,
-        p = (0, a.DD)({
+        E = (0, a.DD)({
             quest: l,
             taskDetails: d,
             location: m,
@@ -40,7 +40,7 @@ let c = function (e) {
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: p,
+                    children: E,
                 }),
             }),
         ],

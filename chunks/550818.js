@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(793030),
@@ -14,13 +14,13 @@ var r = n(54381),
     g = n(687158),
     m = n(316027),
     b = n(502762),
-    _ = n(848780),
-    y = n(907179),
-    O = n(671955),
-    x = n(388032),
-    j = n(491010),
-    v = n(268293);
-function C(e) {
+    y = n(848780),
+    O = n(907179),
+    x = n(671955),
+    j = n(388032),
+    v = n(696483),
+    C = n(268293);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,8 +45,8 @@ function C(e) {
     }
     return e;
 }
-function I(e) {
-    let { user: t, channel: n, onHide: I } = e,
+function _(e) {
+    let { user: t, channel: n, onHide: _ } = e,
         S = (0, g.ZP)(t.id),
         E = (0, o.ZP)(),
         Z = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.id)),
@@ -68,32 +68,32 @@ function I(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: O.l.SIDEBAR,
+                themeType: x.l.SIDEBAR,
                 themeOverride: E,
                 children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
-                        className: j.container,
+                        className: v.container,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: v,
-                                className: j.preview,
+                                src: C,
+                                className: v.preview,
                                 "aria-hidden": !0,
                             }),
                             (0, r.jsxs)("div", {
-                                className: j.body,
+                                className: v.body,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: j.headerContainer,
+                                        className: v.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: x.intl.string(x.t.b33pLD),
+                                                children: j.intl.string(j.t.b33pLD),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: x.intl.format(Z ? x.t["8F+WNz"] : x.t["/cZp5s"], {
+                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5s"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
@@ -102,12 +102,12 @@ function I(e) {
                                     (0, r.jsxs)(s.Kqy, {
                                         align: "center",
                                         children: [
-                                            (0, r.jsx)(y.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 isBlocked: Z,
                                                 onClick: () => {
-                                                    I(),
+                                                    _(),
                                                         (0, f.pQ)(
-                                                            C(
+                                                            I(
                                                                 {
                                                                     action: Z
                                                                         ? "VIEW_BLOCKED_PROFILE"
@@ -119,12 +119,12 @@ function I(e) {
                                                         );
                                                 },
                                             }),
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    I(),
+                                                    _(),
                                                         (0, f.pQ)(
-                                                            C(
+                                                            I(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                                     analyticsLocations: P,

@@ -431,23 +431,23 @@
                 N,
                 P,
                 R = r.constructor,
-                D = r.s == i.s ? 1 : -1,
-                w = r.d,
+                w = r.s == i.s ? 1 : -1,
+                D = r.d,
                 x = i.d;
             if (!r.s) return new R(r);
             if (!i.s) throw Error(o + "Division by zero");
-            for (u = 0, c = r.e - i.e, N = x.length, T = w.length, g = (h = new R(D)).d = []; x[u] == (w[u] || 0); )
+            for (u = 0, c = r.e - i.e, N = x.length, T = D.length, g = (h = new R(w)).d = []; x[u] == (D[u] || 0); )
                 ++u;
-            if ((x[u] > (w[u] || 0) && --c, (O = null == a ? (a = R.precision) : s ? a + (v(r) - v(i)) + 1 : a) < 0))
+            if ((x[u] > (D[u] || 0) && --c, (O = null == a ? (a = R.precision) : s ? a + (v(r) - v(i)) + 1 : a) < 0))
                 return new R(0);
             if (((O = (O / p + 2) | 0), (u = 0), 1 == N))
                 for (d = 0, x = x[0], O++; (u < T || d) && O--; u++)
-                    (S = d * f + (w[u] || 0)), (g[u] = (S / x) | 0), (d = (S % x) | 0);
+                    (S = d * f + (D[u] || 0)), (g[u] = (S / x) | 0), (d = (S % x) | 0);
             else {
                 for (
-                    (d = (f / (x[0] + 1)) | 0) > 1 && ((x = e(x, d)), (w = e(w, d)), (N = x.length), (T = w.length)),
+                    (d = (f / (x[0] + 1)) | 0) > 1 && ((x = e(x, d)), (D = e(D, d)), (N = x.length), (T = D.length)),
                         I = N,
-                        b = (E = w.slice(0, N)).length;
+                        b = (E = D.slice(0, N)).length;
                     b < N;
                 )
                     E[b++] = 0;
@@ -469,7 +469,7 @@
                               (b = E.length))
                             : 0 === l && (d++, (E = [0])),
                         (g[u++] = d),
-                        l && E[0] ? (E[b++] = w[I] || 0) : ((E = [w[I]]), (b = 1));
+                        l && E[0] ? (E[b++] = D[I] || 0) : ((E = [D[I]]), (b = 1));
                 while ((I++ < T || void 0 !== E[0]) && O--);
             }
             return g[0] || g.shift(), (h.e = c), A(h, s ? a + v(h) + 1 : a);
@@ -710,7 +710,7 @@
     function R(e, t) {
         if (e.length > t) return (e.length = t), !0;
     }
-    function D(e) {
+    function w(e) {
         var t, n, r;
         function i(e) {
             var t = this;
@@ -748,8 +748,8 @@
             (i.ROUND_HALF_EVEN = 6),
             (i.ROUND_HALF_CEIL = 7),
             (i.ROUND_HALF_FLOOR = 8),
-            (i.clone = D),
-            (i.config = i.set = w),
+            (i.clone = w),
+            (i.config = i.set = D),
             void 0 === e && (e = {}),
             e)
         )
@@ -757,7 +757,7 @@
                 e.hasOwnProperty((n = r[t++])) || (e[n] = this[n]);
         return i.config(e), i;
     }
-    function w(e) {
+    function D(e) {
         if (!e || "object" != typeof e) throw Error(o + "Object expected");
         var t,
             n,
@@ -772,7 +772,7 @@
             else throw Error(s + n + ": " + i);
         return this;
     }
-    ((i = D(i)).default = i.Decimal = i),
+    ((i = w(i)).default = i.Decimal = i),
         (n = new i(1)),
         "function" == typeof define && define.amd
             ? define(function () {

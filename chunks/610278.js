@@ -1,13 +1,13 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => b,
     ro: () => f,
 });
 var r = n(570140),
     i = n(519938),
     l = n(317770),
     a = n(958185),
-    s = n(928518),
-    o = n(819640),
+    o = n(928518),
+    s = n(819640),
     c = n(366050),
     u = n(591472),
     d = n(981631);
@@ -33,8 +33,8 @@ function g() {
 function h() {
     if (
         (0, a.Z)({
-            LayerStore: o.Z,
-            PopoutWindowStore: s.Z,
+            LayerStore: s.Z,
+            PopoutWindowStore: o.Z,
         })
     ) {
         let e = p;
@@ -46,10 +46,10 @@ function h() {
 }
 class m extends l.Z {
     _initialize() {
-        u.Z.addChangeListener(g), o.Z.addChangeListener(h);
+        u.Z.addChangeListener(g), s.Z.addChangeListener(h);
     }
     _terminate() {
-        u.Z.removeChangeListener(g), o.Z.removeChangeListener(h);
+        u.Z.removeChangeListener(g), s.Z.removeChangeListener(h);
     }
 }
-let _ = new m();
+let b = new m();

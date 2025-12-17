@@ -7,7 +7,7 @@ var i = n(442837),
     s = n(231757),
     l = n(553795),
     c = n(652853),
-    u = n(732380),
+    u = n(475413),
     d = n(981631),
     f = n(671955),
     p = n(388032);
@@ -26,7 +26,7 @@ function _(e) {
                 location: m,
             });
     };
-    return (0, r.jsx)(u.O1, {
+    return (0, r.jsx)(u.i6, {
         icon: n,
         text: p.intl.formatToPlainString(p.t.XWSHTb, { platform: a.Z.get(t).name }),
         fullWidth: !g,

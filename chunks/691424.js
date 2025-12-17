@@ -27,14 +27,14 @@ var r = n(54381),
     N = n(943362),
     P = n(551452),
     R = n(69626),
-    D = n(142990),
-    w = n(382056),
+    w = n(142990),
+    D = n(382056),
     x = n(532901),
     L = n(311739),
     j = n(981631),
     M = n(176505),
-    k = n(430864),
-    U = n(154257);
+    k = n(960324),
+    U = n(164701);
 function G(e, t, n) {
     return (
         t in e
@@ -64,7 +64,7 @@ function Z(e) {
     }
     return e;
 }
-function B(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -116,7 +116,7 @@ function H(e) {
                 d = f.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = F(Z({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
+                e = B(Z({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
             }
             return (0, r.jsx)(
                 b.Y,
@@ -195,7 +195,7 @@ function W(e) {
               }),
     });
 }
-n(324509);
+n(649370);
 let K = {
     blockQuote: {
         react: (e, t, n) =>
@@ -403,15 +403,15 @@ let K = {
     },
 };
 function z(e) {
-    return F(Z({}, K), {
+    return B(Z({}, K), {
         link: (0, x.Z)(e),
-        devLink: (0, D.Z)(e),
+        devLink: (0, w.Z)(e),
         emoji: V(e),
         customEmoji: H(e),
         channelMention: (0, P.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, N.Z)(e),
         shopLink: (0, L.Z)(e),
-        gameMention: w.Z,
+        gameMention: D.Z,
     });
 }

@@ -26,17 +26,17 @@ var i = n(54381),
     E = n(594174),
     w = n(585483),
     T = n(787263),
-    _ = n(975316),
-    P = n(428813),
-    I = n(2147),
-    R = n(856606),
-    L = n(981631),
-    M = n(388032),
-    A = n(102865);
+    P = n(975316),
+    I = n(428813),
+    R = n(2147),
+    L = n(856606),
+    M = n(981631),
+    A = n(388032),
+    _ = n(958389);
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    h.ZP.trackWithMetadata(L.rMx.SETTINGS_PANE_VIEWED, {
+    h.ZP.trackWithMetadata(M.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: "channel",
         origin_pane: t,
         destination_pane: e,
@@ -61,9 +61,9 @@ class k extends l.PureComponent {
                 canUnlinkChannel: o,
             } = this.props;
         (a || r || s || o) &&
-        (i !== L.QZA.CLOSED || i === t) &&
-        (r || l !== L.CoT.PERMISSIONS) &&
-        (s || o || l !== L.CoT.INTEGRATIONS)
+        (i !== M.QZA.CLOSED || i === t) &&
+        (r || l !== M.CoT.PERMISSIONS) &&
+        (s || o || l !== M.CoT.INTEGRATIONS)
             ? l !== n && D(l, n)
             : (0, c.xf)();
     }
@@ -85,7 +85,7 @@ class k extends l.PureComponent {
             : (0, i.jsx)(d.ZP, {
                   theme: e,
                   sidebarTheme: t,
-                  section: null != n ? n : L.CoT.OVERVIEW,
+                  section: null != n ? n : M.CoT.OVERVIEW,
                   onSetSection: o.zc,
                   onClose: c.xf,
                   sections: (function (e) {
@@ -99,16 +99,16 @@ class k extends l.PureComponent {
                               canUnlinkChannel: h,
                           } = e,
                           p = (0, m.KS)(t),
-                          { GUILD_CATEGORY: b } = L.d4z,
+                          { GUILD_CATEGORY: b } = M.d4z,
                           x = v.Ec.has(t.type),
                           j =
                               t.type === b
-                                  ? M.intl.string(M.t.ifbXnL)
+                                  ? A.intl.string(A.t.ifbXnL)
                                   : x
                                     ? t.isForumPost()
-                                        ? M.intl.string(M.t.nEOg1N)
-                                        : M.intl.string(M.t.H7vTe2)
-                                    : M.intl.string(M.t["8D8Rsb"]);
+                                        ? A.intl.string(A.t.nEOg1N)
+                                        : A.intl.string(A.t.H7vTe2)
+                                    : A.intl.string(A.t["8D8Rsb"]);
                       return [
                           {
                               section: u.ID.HEADER,
@@ -120,7 +120,7 @@ class k extends l.PureComponent {
                                                     ? (0, i.jsx)(p, {
                                                           size: "xxs",
                                                           color: "currentColor",
-                                                          className: A.channelIcon,
+                                                          className: _.channelIcon,
                                                       })
                                                     : null,
                                                 (0, g.F6)(t, E.default, N.Z),
@@ -130,59 +130,59 @@ class k extends l.PureComponent {
                                                           variant: "text-xs/semibold",
                                                           color: "text-default",
                                                           lineClamp: 1,
-                                                          className: A.category,
+                                                          className: _.category,
                                                           children: (0, g.F6)(n, E.default, N.Z),
                                                       })
                                                     : null,
                                             ],
                                         })
-                                      : M.intl.string(M.t.XPDhcc),
+                                      : A.intl.string(A.t.XPDhcc),
                           },
                           {
-                              section: L.CoT.OVERVIEW,
-                              label: M.intl.string(M.t["/dp6yY"]),
-                              ariaLabel: M.intl.string(M.t["/dp6yY"]),
-                              element: I.Z,
+                              section: M.CoT.OVERVIEW,
+                              label: A.intl.string(A.t["/dp6yY"]),
+                              ariaLabel: A.intl.string(A.t["/dp6yY"]),
+                              element: R.Z,
                               notice: {
-                                  element: I.G,
+                                  element: R.G,
                                   stores: [O.Z],
                               },
                               predicate: () => !t.isModeratorReportChannel(),
                           },
                           {
-                              section: L.CoT.PERMISSIONS,
-                              label: M.intl.string(M.t.xrmhRX),
+                              section: M.CoT.PERMISSIONS,
+                              label: A.intl.string(A.t.xrmhRX),
                               element: f.Z,
                               notice: {
-                                  element: R.n,
+                                  element: L.n,
                                   stores: [C.Z],
                               },
                               predicate: () => l && !x,
                           },
                           {
-                              section: L.CoT.INSTANT_INVITES,
-                              label: M.intl.string(M.t["9F90ic"]),
-                              element: P.Z,
+                              section: M.CoT.INSTANT_INVITES,
+                              label: A.intl.string(A.t["9F90ic"]),
+                              element: I.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => t.type !== b && r && !x && !t.isModeratorReportChannel(),
                           },
                           {
-                              section: L.CoT.INTEGRATIONS,
-                              label: M.intl.string(M.t.s69NLF),
-                              ariaLabel: M.intl.string(M.t.s69NLF),
-                              element: _.Z,
+                              section: M.CoT.INTEGRATIONS,
+                              label: A.intl.string(A.t.s69NLF),
+                              ariaLabel: A.intl.string(A.t.s69NLF),
+                              element: P.Z,
                               notice: {
                                   stores: [y.Z],
-                                  element: _.B,
+                                  element: P.B,
                               },
                               predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && v.Ti.has(t.type),
                           },
                           { section: u.ID.DIVIDER },
                           {
-                              section: L.CoT.DELETE,
+                              section: M.CoT.DELETE,
                               onClick() {
                                   (0, T.w)(t, function () {
-                                      w.S.subscribeOnce(L.CkL.LAYER_POP_COMPLETE, () => {
+                                      w.S.subscribeOnce(M.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();
@@ -224,9 +224,9 @@ function B() {
             canManageWebhooks: h,
             canUnlinkChannel: g,
         } = (0, r.cj)([S.Z], () => ({
-            canManageChannels: S.Z.can(L.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && S.Z.can(L.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && S.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
+            canManageChannels: S.Z.can(M.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && S.Z.can(M.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && S.Z.can(M.Plq.MANAGE_WEBHOOKS, e),
             canUnlinkChannel: (0, p.C)(e, S.Z),
         })),
         m = (0, r.e7)([Z.Z], () => Z.Z.getChannel(null == e ? void 0 : e.parent_id));

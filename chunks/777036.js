@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var i = n(26151),
     r = n(13245),
-    l = n(287734),
-    a = n(43267),
+    a = n(287734),
+    l = n(43267),
     o = n(933557),
     s = n(699516),
     c = n(594174),
@@ -14,7 +14,7 @@ var i = n(26151),
 function m(e) {
     let t = (0, o.F6)(e, c.default, s.Z),
         n = p.intl.string(p.t.ssrVzG),
-        m = (0, a.x)(e),
+        m = (0, l.x)(e),
         g = (0, u.Z)(e),
         { trackView: b, trackClick: y } = (0, d.Rg)(f.n0.IncomingCall, {
             notif_type: f.n0.IncomingCall,
@@ -36,7 +36,7 @@ function m(e) {
             if ((y("join"), h.TPd.CALLABLE.has(e.type))) i.Z.call(e.id, !1, !1);
             else {
                 if (e.type !== h.d4z.GUILD_VOICE) return;
-                l.default.selectVoiceChannel(e.id);
+                a.default.selectVoiceChannel(e.id);
             }
             r.Z.updateNotificationStatus(n),
                 r.Z.track(h.rMx.VOICE_CHANNEL_SELECTED, {

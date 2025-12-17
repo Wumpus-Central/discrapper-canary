@@ -2,22 +2,22 @@ n.d(t, { Z: () => v }), n(953529);
 var r = n(54381),
     i = n(473749),
     s = n(442837),
-    l = n(481060),
-    a = n(388905),
+    a = n(481060),
+    l = n(388905),
     o = n(409059),
     c = n(962220),
     u = n(306453),
     d = n(108427),
     h = n(314897),
-    g = n(626135),
-    m = n(587444),
-    p = n(981631),
-    f = n(260539),
-    _ = n(388032),
-    x = n(197571);
+    f = n(626135),
+    g = n(587444),
+    m = n(981631),
+    p = n(260539),
+    x = n(388032),
+    _ = n(478411);
 function E(e, t, n) {
     e.preventDefault(),
-        g.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        f.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -25,7 +25,7 @@ function E(e, t, n) {
         });
     let r = h.default.getFingerprint(),
         i = null != r ? r : h.default.getId();
-    c.Z.openMobileApp(n.state === f.Rj.RESOLVED ? t : void 0, i);
+    c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, i);
 }
 function v(e) {
     let { code: t } = e,
@@ -33,28 +33,28 @@ function v(e) {
     return (i.useEffect(() => {
         (0, d.e)("guild_template_mobile");
     }, []),
-    null == n || n.state === f.Rj.RESOLVING)
-        ? (0, r.jsx)(a.ZP, { children: (0, r.jsx)(l.$jN, {}) })
-        : n.state === f.Rj.RESOLVED
-          ? (0, r.jsxs)(a.ZP, {
+    null == n || n.state === p.Rj.RESOLVING)
+        ? (0, r.jsx)(l.ZP, { children: (0, r.jsx)(a.$jN, {}) })
+        : n.state === p.Rj.RESOLVED
+          ? (0, r.jsxs)(l.ZP, {
                 children: [
                     (0, r.jsx)(u.Z, {
                         guildTemplate: n,
                         tall: !0,
                     }),
                     (0, r.jsx)("div", {
-                        className: x.marginTop20,
-                        children: (0, r.jsx)(l.Button, {
-                            text: _.intl.string(_.t["a3Gl+e"]),
+                        className: _.marginTop20,
+                        children: (0, r.jsx)(a.Button, {
+                            text: x.intl.string(x.t["a3Gl+e"]),
                             fullWidth: !0,
                             onClick: (e) => E(e, t, n),
                         }),
                     }),
                 ],
             })
-          : (0, r.jsx)(m.Z, {
-                text: _.intl.string(_.t["e/rZ2n"]),
-                buttonCta: _.intl.string(_.t.HAvYn0),
+          : (0, r.jsx)(g.Z, {
+                text: x.intl.string(x.t["e/rZ2n"]),
+                buttonCta: x.intl.string(x.t.HAvYn0),
                 onClick: (e) => E(e, t, n),
             });
 }

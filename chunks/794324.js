@@ -11,43 +11,43 @@ var r = n(473749),
     i = n(264181),
     l = n(884697),
     a = n(15400),
-    s = n(619899),
-    o = n(281598),
+    o = n(619899),
+    s = n(281598),
     c = n(215023);
 let u = (e) => {
-        let t = (0, s.zL)(o.jE.HERO_LOGO),
-            n = (0, s.zL)(o.jE.HERO_BANNER_STATIC),
-            i = (0, s.zL)(o.jE.HERO_BANNER_ANIMATED),
-            l = (0, s.zL)(o.jE.HERO_BANNER_RIVE),
+        let t = (0, o.zL)(s.jE.HERO_LOGO),
+            n = (0, o.zL)(s.jE.HERO_BANNER_STATIC),
+            i = (0, o.zL)(s.jE.HERO_BANNER_ANIMATED),
+            l = (0, o.zL)(s.jE.HERO_BANNER_RIVE),
             c = (0, a.Y)("HeroBlock");
         return r.useMemo(() => {
             var r, a;
-            let s = null != n || null != i || null != l,
-                o = null != n && null == i;
+            let o = null != n || null != i || null != l,
+                s = null != n && null == i;
             if (c)
                 return {
-                    bannerStyleOverrides: s ? void 0 : e.bannerDisplayConfig,
-                    logoStyleOverrides: s ? void 0 : e.logoDisplayConfig,
+                    bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
+                    logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
                     heroLogo: null != t ? t : e.heroLogoUrl,
                     heroBannerStatic: null != n ? n : e.heroBannerUrl,
-                    heroBannerAnimated: o ? void 0 : null != i ? i : e.heroBannerAnimatedUrl,
+                    heroBannerAnimated: s ? void 0 : null != i ? i : e.heroBannerAnimatedUrl,
                     heroBannerRive: null != l ? l : e.heroRiveUrl,
                 };
             let u = null == (r = e.bannerAsset) ? void 0 : r.animated,
                 d = (null == u ? void 0 : u.endsWith(".riv")) ? u : e.heroRiveUrl;
             return {
-                bannerStyleOverrides: s ? void 0 : e.bannerDisplayConfig,
-                logoStyleOverrides: s ? void 0 : e.logoDisplayConfig,
+                bannerStyleOverrides: o ? void 0 : e.bannerDisplayConfig,
+                logoStyleOverrides: o ? void 0 : e.logoDisplayConfig,
                 heroLogo: null != t ? t : e.logoUrl,
                 heroBannerStatic: null != n ? n : null == (a = e.bannerAsset) ? void 0 : a.static,
-                heroBannerAnimated: o ? void 0 : null != i ? i : u,
-                heroBannerRive: o ? void 0 : null != l ? l : d,
+                heroBannerAnimated: s ? void 0 : null != i ? i : u,
+                heroBannerRive: s ? void 0 : null != l ? l : d,
             };
         }, [t, n, i, l, e, c]);
     },
     d = (e, t) => {
         var n, r;
-        let i = (0, s.zL)(o.jE.FEATURED_BLOCK);
+        let i = (0, o.zL)(s.jE.FEATURED_BLOCK);
         if ((0, a.Y)("FeaturedBlock"))
             return null != (n = null != i ? i : null == t ? void 0 : t.assetUrl)
                 ? n
@@ -62,8 +62,8 @@ let u = (e) => {
     },
     p = (e) => {
         var t, n;
-        let r = (0, s.zL)(o.jE.CATALOG_BANNER_STATIC),
-            i = (0, s.zL)(o.jE.CATALOG_BANNER_ANIMATED);
+        let r = (0, o.zL)(s.jE.CATALOG_BANNER_STATIC),
+            i = (0, o.zL)(s.jE.CATALOG_BANNER_ANIMATED);
         return (0, a.Y)("CatalogBanner")
             ? {
                   catalogBannerStatic: null != r ? r : e.catalogBannerUrl,
@@ -75,7 +75,7 @@ let u = (e) => {
               };
     },
     f = (e) => {
-        let t = (0, s.zL)(o.jE.PDP_BACKGROUND),
+        let t = (0, o.zL)(s.jE.PDP_BACKGROUND),
             n = (0, a.Y)("PDPBackground");
         if (null != t) return t;
         if (n) return e.pdpBgUrl;
@@ -88,24 +88,24 @@ let u = (e) => {
               });
     },
     g = (e) => {
-        let t = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER),
-            n = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_DARK),
-            l = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
-            a = (0, s.zL)(o.jE.SHOP_BUTTON_BG_RESTING),
-            c = (0, s.zL)(o.jE.SHOP_BUTTON_BG_RESTING_DARK),
-            u = (0, s.zL)(o.jE.SHOP_BUTTON_BG_RESTING_LIGHT),
-            d = (0, s.zL)(o.jE.COACHTIP_AVATAR);
+        let t = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER),
+            n = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER_DARK),
+            l = (0, o.zL)(s.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
+            a = (0, o.zL)(s.jE.SHOP_BUTTON_BG_RESTING),
+            c = (0, o.zL)(s.jE.SHOP_BUTTON_BG_RESTING_DARK),
+            u = (0, o.zL)(s.jE.SHOP_BUTTON_BG_RESTING_LIGHT),
+            d = (0, o.zL)(s.jE.COACHTIP_AVATAR);
         return r.useMemo(() => {
-            var r, s, o, p, f;
+            var r, o, s, p, f;
             let g = [t, n, l, a, c, u, d].some((e) => null != e);
             if ((null == e ? void 0 : e.type) === i.Z.COACHMARK) return { hasPreviewAssets: !1 };
             let h = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
                 m = null == h ? void 0 : h.resting,
-                _ = null == h ? void 0 : h.hovered;
+                b = null == h ? void 0 : h.hovered;
             return {
                 hasPreviewAssets: g,
-                buttonBGHoverDark: null != (s = null != n ? n : t) ? s : null == _ ? void 0 : _.dark,
-                buttonBGHoverLight: null != (o = null != l ? l : t) ? o : null == _ ? void 0 : _.light,
+                buttonBGHoverDark: null != (o = null != n ? n : t) ? o : null == b ? void 0 : b.dark,
+                buttonBGHoverLight: null != (s = null != l ? l : t) ? s : null == b ? void 0 : b.light,
                 buttonBGRestingDark: null != (p = null != c ? c : a) ? p : null == m ? void 0 : m.dark,
                 buttonBGRestingLight: null != (f = null != u ? u : a) ? f : null == m ? void 0 : m.light,
                 coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar,

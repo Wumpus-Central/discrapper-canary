@@ -1,44 +1,44 @@
-e.d(t, { Z: () => d });
-var o = e(54381);
-e(473749);
-var i = e(212598),
-    r = e(728151),
-    s = e(981631),
-    l = e(388032),
-    a = e(344595),
-    c = e(322539);
-function d(n) {
+t.d(n, { Z: () => c });
+var o = t(54381);
+t(473749);
+var i = t(212598),
+    r = t(728151),
+    s = t(981631),
+    a = t(388032),
+    l = t(344595),
+    d = t(322539);
+function c(e) {
     let {
-            isWaitingForConnection: t,
-            onWaitingForConnection: e,
-            expectedCallbackState: d,
+            isWaitingForConnection: n,
+            onWaitingForConnection: t,
+            expectedCallbackState: c,
             onAuthToken: u,
             onError: C,
-            onClose: _,
-        } = n,
-        h = t
+            onClose: b,
+        } = e,
+        h = n
             ? (0, o.jsx)("img", {
-                  src: c,
+                  src: d,
                   width: "168",
                   height: "124",
                   alt: "",
               })
             : (0, o.jsx)("img", {
-                  src: a,
+                  src: l,
                   width: "152",
                   height: "123",
                   alt: "",
               }),
-        p = t ? l.intl.string(l.t.tZ6ze7) : l.intl.string(l.t.siPkNp),
-        x = t ? l.intl.string(l.t.VgWnwP) : l.intl.string(l.t.oS4NEH);
+        p = n ? a.intl.string(a.t.tZ6ze7) : a.intl.string(a.t.siPkNp),
+        x = n ? a.intl.string(a.t.VgWnwP) : a.intl.string(a.t.oS4NEH);
     return (0, o.jsx)(i.t, {
         platformType: s.ABu.CRUNCHYROLL,
-        isWaitingForConnection: t,
-        onWaitingForConnection: e,
-        expectedCallbackState: d,
+        isWaitingForConnection: n,
+        onWaitingForConnection: t,
+        expectedCallbackState: c,
         onAuthToken: u,
         onError: C,
-        onClose: _,
+        onClose: b,
         img: h,
         title: p,
         body: x,

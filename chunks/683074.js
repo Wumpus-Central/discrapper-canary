@@ -1,8 +1,8 @@
 t.d(n, { j: () => o });
 var r = t(54381),
-    i = t(473749),
-    l = t(793030),
-    s = t(734837);
+    l = t(473749),
+    i = t(793030),
+    s = t(116482);
 function o(e) {
     let {
             title: n,
@@ -12,11 +12,11 @@ function o(e) {
             animatedBackgroundSrc: a,
             prefersReducedMotion: c = !0,
         } = e,
-        d = i.useMemo(() => {
+        d = l.useMemo(() => {
             let e = null != u ? u : o;
             if (null != e) return { "--custom-background-url": "url(".concat(e.toString(), ")") };
         }, [u, o]),
-        p = i.useMemo(() => {
+        p = l.useMemo(() => {
             if (null == u) return;
             let e = { "--custom-background-static": "url(".concat(u.toString()) };
             return c || null == a || (e["--custom-background-animated"] = "url(".concat(a.toString(), ")")), e;
@@ -41,13 +41,13 @@ function o(e) {
                         }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(l.xvT, {
+                            (0, r.jsx)(i.xvT, {
                                 variant: "heading-xl/bold",
                                 tag: "div",
                                 children: n,
                             }),
                             null != t &&
-                                (0, r.jsxs)(l.xvT, {
+                                (0, r.jsxs)(i.xvT, {
                                     variant: "text-sm/normal",
                                     children: ["\u201C", t, "\u201D"],
                                 }),

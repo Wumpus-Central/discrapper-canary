@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(704215),
     a = n(481060),
-    s = n(243778),
-    o = n(433280),
+    o = n(243778),
+    s = n(433280),
     c = n(34131),
     u = n(567458),
     d = n(782959),
@@ -34,7 +34,7 @@ function h(e) {
 }
 let m = i.memo(function (e) {
     let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, m] = (0, s.US)(t, g.R.GUILD_HEADER_TOOLTIPS);
+        [a, m] = (0, o.US)(t, g.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (a) {
@@ -51,7 +51,7 @@ let m = i.memo(function (e) {
                 case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, r.jsx)(h, {
                         renderPopout: (e) =>
-                            (0, r.jsx)(o.Z, {
+                            (0, r.jsx)(s.Z, {
                                 guildId: n.id,
                                 markAsDismissed: m,
                                 targetElementRef: e,

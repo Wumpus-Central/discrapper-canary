@@ -27,8 +27,8 @@ var r,
     N = n(592125),
     P = n(480294),
     R = n(831506),
-    D = n(430824),
-    w = n(496675),
+    w = n(430824),
+    D = n(496675),
     x = n(158776),
     L = n(699516),
     j = n(594174),
@@ -64,7 +64,7 @@ function Z(e) {
     }
     return e;
 }
-function B(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -116,10 +116,10 @@ function en(e) {
     return x.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
 }
 function er(e) {
-    return null == X[e] && (X = F(Z({}, X), { [e]: new C.Z({ name: e }) })), X[e];
+    return null == X[e] && (X = B(Z({}, X), { [e]: new C.Z({ name: e }) })), X[e];
 }
 function ei(e) {
-    return null == J[e] && (J = F(Z({}, J), { [e]: new T.Z({ url: e }) })), J[e];
+    return null == J[e] && (J = B(Z({}, J), { [e]: new T.Z({ url: e }) })), J[e];
 }
 function ea(e) {
     ee.has(e) || $.add(e);
@@ -155,7 +155,7 @@ function es(e) {
 function el(e) {
     let t = M.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null &&
-        w.Z.canWithPartialContext(U.Plq.VIEW_CHANNEL, { channelId: t.channelId })
+        D.Z.canWithPartialContext(U.Plq.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
         : null;
 }
@@ -222,8 +222,8 @@ function ef(e, t, n) {
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: N.Z,
                     VoiceStateStore: M.Z,
-                    PermissionStore: w.Z,
-                    GuildStore: D.Z,
+                    PermissionStore: D.Z,
+                    GuildStore: w.Z,
                 }) !== c.Fw.CAN_JOIN
             )
                 continue;
@@ -261,13 +261,13 @@ function ef(e, t, n) {
     let U = 1 === f.length,
         G = [],
         Z = new Set(),
-        B = new Set();
+        F = new Set();
     for (let e of s) {
         let t = el(e.id),
             n = N.Z.getChannel(t),
             i = null != n ? n.getGuildId() : null,
-            o = D.Z.getGuild(i);
-        if ((B.has(i) && Z.has(t)) || null == n || null == o || n.id === o.afkChannelId)
+            o = w.Z.getGuild(i);
+        if ((F.has(i) && Z.has(t)) || null == n || null == o || n.id === o.afkChannelId)
             null == n && ((r = null), (U = !0));
         else {
             let e = M.Z.getVoiceStatesForChannel(n.id),
@@ -294,8 +294,8 @@ function ef(e, t, n) {
                 .orderBy([c], ["desc"])
                 .value();
             u.filter((e) => !d.includes(e.id)).forEach((e) => s.push(e)),
-                U ? B.has(i) || (r = null) : ((r = o), (U = !0)),
-                B.add(i),
+                U ? F.has(i) || (r = null) : ((r = o), (U = !0)),
+                F.add(i),
                 Z.add(t),
                 G.push({
                     channel: n,
@@ -424,7 +424,7 @@ function eA() {
 class eN extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([j.default, h.Z, x.Z, R.Z, M.Z, A.Z, L.Z, P.Z, O.Z], eI),
-            this.waitFor(h.Z, A.Z, N.Z, P.Z, R.Z, E.Z, D.Z, w.Z, x.Z, L.Z, O.Z, j.default, M.Z);
+            this.waitFor(h.Z, A.Z, N.Z, P.Z, R.Z, E.Z, w.Z, D.Z, x.Z, L.Z, O.Z, j.default, M.Z);
     }
     get currentActivityParties() {
         return q;

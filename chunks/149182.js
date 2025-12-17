@@ -14,7 +14,7 @@
     }
     function d(e, t, n, r) {
         var i = Object.create((t && t.prototype instanceof E ? t : E).prototype);
-        return (i._invoke = A(e, n, new D(r || []))), i;
+        return (i._invoke = A(e, n, new w(r || []))), i;
     }
     function f(e, t, n) {
         try {
@@ -43,7 +43,7 @@
         return this;
     };
     var v = Object.getPrototypeOf,
-        S = v && v(v(w([])));
+        S = v && v(v(D([])));
     S && S !== r && i.call(S, o) && (O = S);
     var I = (y.prototype = E.prototype = Object.create(O));
     function T(e) {
@@ -155,10 +155,10 @@
         var t = e.completion || {};
         (t.type = "normal"), delete t.arg, (e.completion = t);
     }
-    function D(e) {
+    function w(e) {
         (this.tryEntries = [{ tryLoc: "root" }]), e.forEach(P, this), this.reset(!0);
     }
-    function w(e) {
+    function D(e) {
         if (e) {
             var t = e[o];
             if (t) return t.call(e);
@@ -234,9 +234,9 @@
                 }
             );
         }),
-        (u.values = w),
-        (D.prototype = {
-            constructor: D,
+        (u.values = D),
+        (w.prototype = {
+            constructor: w,
             reset: function (e) {
                 if (
                     ((this.prev = 0),
@@ -329,7 +329,7 @@
             delegateYield: function (e, t, r) {
                 return (
                     (this.delegate = {
-                        iterator: w(e),
+                        iterator: D(e),
                         resultName: t,
                         nextLoc: r,
                     }),

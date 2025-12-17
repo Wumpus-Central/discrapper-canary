@@ -4,20 +4,20 @@ var r,
 n(473749);
 var l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(700582),
     u = n(451478),
     d = n(388032),
-    p = n(113520),
+    p = n(745476),
     f = (((r = f || {})[(r.STAFF_NOTES = 1)] = "STAFF_NOTES"), r);
-let g = s.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
+let g = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: r } = e;
         return (0, i.jsxs)("div", {
             className: a()(p.staffReviewHeader, n),
             children: [
                 (0, i.jsx)(c.Z, {
-                    size: o.EFr.SIZE_32,
+                    size: s.EFr.SIZE_32,
                     user: t,
                     animate: r,
                 }),

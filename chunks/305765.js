@@ -1,8 +1,8 @@
 n.d(t, { x: () => o });
 var r = n(553024),
     i = n(791241),
-    l = n(521548);
-function a(e, t, n) {
+    a = n(521548);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ var o = (function () {
     function t(e) {
         var n = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        a(
+        l(
             this,
             "hooks",
             (0, r.p)({
@@ -38,21 +38,21 @@ var o = (function () {
                 },
             }),
         ),
-            a(this, "handlerId", null),
-            a(this, "dragSourceRef", null),
-            a(this, "dragSourceNode", void 0),
-            a(this, "dragSourceOptionsInternal", null),
-            a(this, "dragSourceUnsubscribe", void 0),
-            a(this, "dragPreviewRef", null),
-            a(this, "dragPreviewNode", void 0),
-            a(this, "dragPreviewOptionsInternal", null),
-            a(this, "dragPreviewUnsubscribe", void 0),
-            a(this, "lastConnectedHandlerId", null),
-            a(this, "lastConnectedDragSource", null),
-            a(this, "lastConnectedDragSourceOptions", null),
-            a(this, "lastConnectedDragPreview", null),
-            a(this, "lastConnectedDragPreviewOptions", null),
-            a(this, "backend", void 0),
+            l(this, "handlerId", null),
+            l(this, "dragSourceRef", null),
+            l(this, "dragSourceNode", void 0),
+            l(this, "dragSourceOptionsInternal", null),
+            l(this, "dragSourceUnsubscribe", void 0),
+            l(this, "dragPreviewRef", null),
+            l(this, "dragPreviewNode", void 0),
+            l(this, "dragPreviewOptionsInternal", null),
+            l(this, "dragPreviewUnsubscribe", void 0),
+            l(this, "lastConnectedHandlerId", null),
+            l(this, "lastConnectedDragSource", null),
+            l(this, "lastConnectedDragSourceOptions", null),
+            l(this, "lastConnectedDragPreview", null),
+            l(this, "lastConnectedDragPreviewOptions", null),
+            l(this, "backend", void 0),
             (this.backend = e);
     }
     return (
@@ -164,13 +164,13 @@ var o = (function () {
             {
                 key: "didDragSourceOptionsChange",
                 value: function () {
-                    return !(0, l.w)(this.lastConnectedDragSourceOptions, this.dragSourceOptions);
+                    return !(0, a.w)(this.lastConnectedDragSourceOptions, this.dragSourceOptions);
                 },
             },
             {
                 key: "didDragPreviewOptionsChange",
                 value: function () {
-                    return !(0, l.w)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions);
+                    return !(0, a.w)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions);
                 },
             },
             {

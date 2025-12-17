@@ -68,7 +68,7 @@ function O(e, t) {
 }
 function v(e, t, n) {
     var E, y, v, S, I, T, C, A, N, P, R;
-    let { channel: D, type: w } = e,
+    let { channel: w, type: D } = e,
         [x, L] = r.useState(() => (0, _.PA)()),
         j = (0, i.Z)(),
         M = (0, a.e7)([u.ZP, p.default], () => {
@@ -77,8 +77,8 @@ function v(e, t, n) {
             return (
                 null !=
                     (t =
-                        null != D.guild_id && null != n
-                            ? null == (e = u.ZP.getMember(D.guild_id, n.id))
+                        null != w.guild_id && null != n
+                            ? null == (e = u.ZP.getMember(w.guild_id, n.id))
                                 ? void 0
                                 : e.isPending
                             : null) && t
@@ -87,38 +87,38 @@ function v(e, t, n) {
         { canMentionEveryone: k, hidePersonalInformation: U } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: D.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(h.Plq.MENTION_EVERYONE, D),
+                canMentionEveryone: w.isPrivate() || M || D === l.Ie.RULES_INPUT || d.Z.can(h.Plq.MENTION_EVERYONE, w),
                 hidePersonalInformation: f.Z.hidePersonalInformation,
             }),
-            [D, w, M],
+            [w, D, M],
         ),
         { activeCommand: G, activeCommandOption: Z } = (0, a.cj)([s.Z], () => ({
-            activeCommand: s.Z.getActiveCommand(D.id),
-            activeCommandOption: s.Z.getActiveOption(D.id),
+            activeCommand: s.Z.getActiveCommand(w.id),
+            activeCommandOption: s.Z.getActiveOption(w.id),
         })),
-        B = (0, m.Z)({
+        F = (0, m.Z)({
             navId: "channel-autocomplete",
             scrollerRef: n,
             state: x,
             onFocus: (e) => W.setSelectedIndex(e),
         }),
-        F = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
+        B = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
         V = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
         H = null;
     null != V && (H = null != (C = null == (T = c.bN.getSelectedParentOfType(V, _.un)) ? void 0 : T[0]) ? C : null);
     let Y = O(b({}, e), {
-            navigator: B,
+            navigator: F,
             activeCommand: G,
             activeCommandOption: Z,
             activeInlineAutocompleteInput: H,
-            canMentionUsers: null != (A = null == (v = w.users) ? void 0 : v.allowMentioning) && A,
+            canMentionUsers: null != (A = null == (v = D.users) ? void 0 : v.allowMentioning) && A,
             canMentionEveryone: k,
             hidePersonalInformation: U,
-            hideMentionDescription: w === l.Ie.RULES_INPUT,
-            emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
-            currentWord: null != (N = null == F ? void 0 : F.word) ? N : "",
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
-            currentFullWord: null != (P = null == F ? void 0 : F.fullWord) ? P : "",
+            hideMentionDescription: D === l.Ie.RULES_INPUT,
+            emojiIntention: D === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,
+            currentWord: null != (N = null == B ? void 0 : B.word) ? N : "",
+            currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
+            currentFullWord: null != (P = null == B ? void 0 : B.fullWord) ? P : "",
             optionText:
                 null != Z
                     ? (0, o.KF)(
@@ -160,6 +160,6 @@ function v(e, t, n) {
                 };
             }
         }, [W, null == (I = x.query) ? void 0 : I.typeInfo]),
-        [x, W, B]
+        [x, W, F]
     );
 }

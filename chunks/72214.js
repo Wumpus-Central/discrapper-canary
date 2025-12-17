@@ -8,13 +8,13 @@ var l = n(473749),
     o = n(580005),
     c = n(987509),
     d = n(601565),
-    b = n(41837);
-function f(e) {
+    f = n(41837);
+function b(e) {
     let { query: t, queryMode: n } = (0, a.F_)(e),
-        l = b.M,
+        l = f.M,
         r = null;
     return (
-        null != n && b.M.includes(n) && ((l = [n]), (r = n)),
+        null != n && f.M.includes(n) && ((l = [n]), (r = n)),
         {
             query: t,
             queryMode: r,
@@ -23,7 +23,7 @@ function f(e) {
     );
 }
 function h(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: b = !1 } = e,
+    let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: f = !1 } = e,
         h = (0, r.e7)([u.default], () => u.default.getId()),
         m = l.useMemo(
             () => ({
@@ -36,12 +36,12 @@ function h(e) {
             [h],
         ),
         { search: p, query: g, results: x } = (0, d.Z)(m),
-        [y, j] = l.useState(f("")),
-        v = l.useCallback((e) => j(f(e)), [j]),
+        [y, j] = l.useState(b("")),
+        v = l.useCallback((e) => j(b(e)), [j]),
         { queryMode: S } = y,
         P = l.useRef(null),
         O = l.useRef(n),
-        _ = g !== P.current ? n : O.current;
+        Z = g !== P.current ? n : O.current;
     l.useEffect(() => {
         g !== P.current && (O.current = n), (P.current = g);
     }, [g, n]),
@@ -53,25 +53,25 @@ function h(e) {
             });
         }, [p, y]),
         (0, i.D)();
-    let Z = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
-        E = (0, r.e7)([s.Z], () => s.Z.isConnected()),
-        L = "" !== g;
+    let E = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+        L = (0, r.e7)([s.Z], () => s.Z.isConnected()),
+        T = "" !== g;
     return {
         results: l.useMemo(
             () =>
                 (0, c.ZP)({
                     results: x,
-                    hasQuery: L,
+                    hasQuery: T,
                     queryMode: S,
                     targetDestination: t,
-                    frequentChannels: Z,
+                    frequentChannels: E,
                     selectedDestinations: n,
-                    pinnedDestinations: _,
+                    pinnedDestinations: Z,
                     originDestination: a,
-                    includeMissingDMs: b,
-                    isConnected: E,
+                    includeMissingDMs: f,
+                    isConnected: L,
                 }),
-            [x, L, S, t, Z, n, _, a, b, E],
+            [x, T, S, t, E, n, Z, a, f, L],
         ),
         updateSearchText: v,
     };

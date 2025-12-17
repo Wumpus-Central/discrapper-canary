@@ -16,7 +16,7 @@ var e = n(54381),
     m = n(51144),
     E = n(981631),
     h = n(388032),
-    C = n(277081);
+    C = n(808079);
 function p(l) {
     let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: s, hasNick: c } = l,
         d = r.useRef(null),
@@ -81,9 +81,9 @@ let A = function (l) {
                     : N.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, u.id, t))
             );
         }),
-        [_, M] = r.useState(!1),
-        [Z, j] = r.useState(null != (t = null == f ? void 0 : f.nick) ? t : ""),
-        [y, I] = r.useState({});
+        [M, Z] = r.useState(!1),
+        [j, y] = r.useState(null != (t = null == f ? void 0 : f.nick) ? t : ""),
+        [_, I] = r.useState({});
     (0, c.ZP)(() => {
         g.default.track(E.rMx.OPEN_MODAL, {
             type: "Change Server Identity",
@@ -101,12 +101,12 @@ let A = function (l) {
                 l.preventDefault();
                 let N = null;
                 if (
-                    (Z !== (null != (t = null == f ? void 0 : f.nick) ? t : "") && ((N = null != N ? N : {}).nick = Z),
+                    (j !== (null != (t = null == f ? void 0 : f.nick) ? t : "") && ((N = null != N ? N : {}).nick = j),
                     null == N)
                 )
                     return void m();
                 try {
-                    M(!0),
+                    Z(!0),
                         await a.tn.patch({
                             url: E.ANM.GUILD_MEMBER(o, u.id),
                             body: N,
@@ -116,7 +116,7 @@ let A = function (l) {
                         m();
                 } catch (a) {
                     let l;
-                    M(!1);
+                    Z(!1);
                     let t = null != (e = null == (n = a.body) ? void 0 : n.errors) ? e : null;
                     (null == t ? void 0 : t.nick) != null
                         ? (l =
@@ -131,7 +131,7 @@ let A = function (l) {
                         I({ nick: l });
                 }
             },
-            [o, Z, m, u, f, P],
+            [o, j, m, u, f, P],
         );
     return (0, e.jsx)("form", {
         onSubmit: S,
@@ -149,15 +149,15 @@ let A = function (l) {
                     text: h.intl.string(h.t["R3BPH+"]),
                     variant: "primary",
                     type: "submit",
-                    disabled: _,
+                    disabled: M,
                 },
             ],
             children: (0, e.jsx)(p, {
                 disabled: !b,
                 user: u,
-                error: y.nick,
-                nickname: Z,
-                setNickname: j,
+                error: _.nick,
+                nickname: j,
+                setNickname: y,
                 hasNick: (null == f ? void 0 : f.nick) != null,
             }),
         }),

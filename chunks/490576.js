@@ -1,8 +1,8 @@
-n.d(e, { default: () => b });
+n.d(e, { default: () => p });
 var r = n(54381);
 n(473749);
-var o = n(512722),
-    a = n.n(o),
+var a = n(512722),
+    o = n.n(a),
     c = n(793030),
     i = n(442837),
     l = n(481060),
@@ -10,9 +10,9 @@ var o = n(512722),
     u = n(598952),
     f = n(596211),
     d = n(388032),
-    m = n(819994);
-function p(t) {
-    let { attachment: e, guildId: n, productId: o } = t;
+    m = n(914721);
+function b(t) {
+    let { attachment: e, guildId: n, productId: a } = t;
     return (0, r.jsxs)("li", {
         className: m.attachmentRow,
         children: [
@@ -22,17 +22,17 @@ function p(t) {
                 icon: l._8t,
                 text: void 0,
                 guildId: n,
-                productId: o,
+                productId: a,
                 attachmentId: e.id,
             }),
         ],
     });
 }
-function b(t) {
+function p(t) {
     var e;
-    let { guildId: n, productId: o, onClose: l, transitionState: u } = t,
-        f = (0, i.e7)([s.Z], () => s.Z.getGuildProduct(o));
-    a()(null != f, "guildProductListing cannot be null");
+    let { guildId: n, productId: a, onClose: l, transitionState: u } = t,
+        f = (0, i.e7)([s.Z], () => s.Z.getGuildProduct(a));
+    o()(null != f, "guildProductListing cannot be null");
     let m = null != (e = f.attachments) ? e : [];
     return (0, r.jsx)(c.Modal, {
         size: "md",
@@ -45,7 +45,7 @@ function b(t) {
         children: (0, r.jsx)("ul", {
             children: m.map((t) =>
                 (0, r.jsx)(
-                    p,
+                    b,
                     {
                         guildId: n,
                         productId: f.id,

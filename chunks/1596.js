@@ -1,9 +1,9 @@
-n.d(e, { Z: () => c });
+n.d(e, { Z: () => s });
 var r = n(54381),
     i = n(481060),
     o = n(819557),
     l = n(388032);
-function c() {
+function s() {
     return (0, r.jsxs)(o.z, {
         children: [
             (0, r.jsx)(o.q, {

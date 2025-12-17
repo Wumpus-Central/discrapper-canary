@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(124072),
     E = n(457926),
     b = n(388032),
-    y = n(695719);
+    y = n(902682);
 function O(e, t, n) {
     return (
         t in e
@@ -116,7 +116,7 @@ let T = function (e) {
                 return (t) => (0, r.jsx)(e, v({}, t));
             });
         }, []),
-        D = null != S ? "@game ".concat(S.name) : void 0;
+        w = null != S ? "@game ".concat(S.name) : void 0;
     return (0, r.jsx)(p.Z, {
         applicationId: t,
         targetElementRef: O,
@@ -126,8 +126,8 @@ let T = function (e) {
             return (0, r.jsx)(l.u, {
                 asContainer: !0,
                 tag: "span",
-                text: D,
-                "aria-label": D,
+                text: w,
+                "aria-label": w,
                 delay: 750,
                 children: (0, r.jsxs)(
                     g.Z,

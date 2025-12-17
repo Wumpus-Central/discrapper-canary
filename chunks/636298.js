@@ -1,16 +1,16 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     o = n(473749),
-    i = n(120356),
-    l = n.n(i),
-    a = n(873546),
+    a = n(120356),
+    i = n.n(a),
+    l = n(873546),
     c = n(159691),
     s = n(481060),
     u = n(984802),
-    b = n(996435),
-    f = n(36361),
-    d = n(388032),
-    y = n(214779);
+    f = n(996435),
+    d = n(36361),
+    b = n(388032),
+    y = n(283924);
 function p(e) {
     let { icon: t, label: n, onClick: o } = e;
     return (0, r.jsx)(c.hU, {
@@ -23,21 +23,21 @@ function p(e) {
 }
 function g(e) {
     let { title: t, badge: n, onClose: o } = e,
-        i = (0, u.Ll)();
+        a = (0, u.Ll)();
     return (0, r.jsx)(s.f6W, {
-        theme: i,
+        theme: a,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: l()(y.contentHeader, e),
+                className: i()(y.contentHeader, e),
                 children: [
                     (0, r.jsxs)("div", {
                         className: y.contentHeaderLeft,
                         children: [
-                            a.tq &&
+                            l.tq &&
                                 (0, r.jsx)(p, {
                                     icon: s.yFM,
-                                    onClick: () => b.Z.setState({ showNavigationMobile: !0 }),
-                                    label: d.intl.string(d.t["13/7kX"]),
+                                    onClick: () => f.Z.setState({ showNavigationMobile: !0 }),
+                                    label: b.intl.string(b.t["13/7kX"]),
                                 }),
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
@@ -50,7 +50,7 @@ function g(e) {
                     (0, r.jsx)(p, {
                         icon: s.Uz9,
                         onClick: o,
-                        label: d.intl.string(d.t.cpT0Cq),
+                        label: b.intl.string(b.t.cpT0Cq),
                     }),
                 ],
             }),
@@ -58,13 +58,13 @@ function g(e) {
 }
 let O = o.memo(function (e) {
     var t, n;
-    let { onClose: o, setting: i } = e,
-        c = null != (n = null == i ? void 0 : i.useTitle()) ? n : "",
-        s = null == i || null == (t = i.useBadge) ? void 0 : t.call(i),
-        u = b.Z.useField("showNavigationMobile");
+    let { onClose: o, setting: a } = e,
+        c = null != (n = null == a ? void 0 : a.useTitle()) ? n : "",
+        s = null == a || null == (t = a.useBadge) ? void 0 : t.call(a),
+        u = f.Z.useField("showNavigationMobile");
     return (0, r.jsxs)("div", {
-        className: l()(y.content, {
-            [y.mobile]: a.tq,
+        className: i()(y.content, {
+            [y.mobile]: l.tq,
             [y.mobileNavigationOpen]: u,
         }),
         children: [
@@ -75,7 +75,7 @@ let O = o.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: y.contentBody,
-                children: null != i && (0, r.jsx)(f.Z, { node: i }),
+                children: null != a && (0, r.jsx)(d.Z, { node: a }),
             }),
         ],
     });

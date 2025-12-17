@@ -20,7 +20,7 @@ var r = n(54381),
     D = n(703558),
     P = n(598006),
     j = n(677601),
-    x = n(702511);
+    x = n(873776);
 let C = [u.S, m.O, p.U, h._];
 function Z(e) {
     let { windowKey: t, channelId: n } = e,

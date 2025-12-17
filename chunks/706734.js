@@ -1,7 +1,7 @@
 e.d(n, { Z: () => E });
-var a = e(54381),
-    r = e(481060),
-    i = e(488889),
+var r = e(54381),
+    i = e(481060),
+    a = e(488889),
     l = e(626135),
     s = e(981631),
     o = e(308569),
@@ -11,9 +11,9 @@ function E(t) {
     let { onNext: n, onClose: e, reason: E, onReasonChange: A, transitionState: _ } = t,
         d = o.zf.map((t) => ({
             value: t,
-            name: (0, i.S)(t),
+            name: (0, a.S)(t),
         }));
-    return (0, a.jsx)(r.Ioy, {
+    return (0, r.jsx)(i.Ioy, {
         graphic: {
             type: "image",
             src: u,
@@ -34,7 +34,7 @@ function E(t) {
                 onClick: n,
             },
         ],
-        children: (0, a.jsx)(r.FXm, {
+        children: (0, r.jsx)(i.FXm, {
             value: E,
             options: d,
             onChange: (t) => {

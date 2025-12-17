@@ -30,8 +30,8 @@ var r = n(54381),
     N = n(31074),
     P = n(206295),
     R = n(91140),
-    D = n(297781),
-    w = n(591853),
+    w = n(297781),
+    D = n(591853),
     x = n(410441),
     L = n(797342),
     j = n(981631),
@@ -54,8 +54,8 @@ let k = {
                 disableGameProfileLinks: U,
                 onReaction: G,
                 onVoiceChannelPreview: Z,
-                onUserPopoutClosed: B,
-                trackRankingItemInteraction: F,
+                onUserPopoutClosed: F,
+                trackRankingItemInteraction: B,
             } = e,
             { largeImage: V } = (0, v.rv)({ entry: y }),
             { user: H, details: Y, appName: W, activity: K, embeddedActivity: z } = (0, L.n)(y),
@@ -102,13 +102,13 @@ let k = {
                 [null == V ? void 0 : V.src, b, ee, y, X, er, et, en, q, Q, H],
             );
         if (null == H) return null;
-        let ef = (0, r.jsx)(D.Gk, {
-                location: null == J ? D.Gt.POPOUT : D.Gt.STREAMING_POPOUT,
+        let ef = (0, r.jsx)(w.Gk, {
+                location: null == J ? w.Gt.POPOUT : w.Gt.STREAMING_POPOUT,
                 children: R.W.map((e, t) => (0, r.jsx)(e, { entry: y }, t)),
             }),
             ep =
                 null == $
-                    ? (0, r.jsx)(w.wG, {
+                    ? (0, r.jsx)(D.wG, {
                           channel: b,
                           headerIcons:
                               null == ea
@@ -124,10 +124,10 @@ let k = {
                           badges: ef,
                           entry: y,
                           disableGameProfileLinks: U,
-                          onUserPopoutClosed: B,
-                          trackRankingItemInteraction: F,
+                          onUserPopoutClosed: F,
+                          trackRankingItemInteraction: B,
                       })
-                    : (0, r.jsx)(w.jL, {
+                    : (0, r.jsx)(D.jL, {
                           channel: b,
                           title: y.extra.game_name,
                           subtitle: Y,
@@ -135,8 +135,8 @@ let k = {
                           userDescription: M.t["6oWFUN"],
                           entry: y,
                           stream: $,
-                          onUserPopoutClosed: B,
-                          trackRankingItemInteraction: F,
+                          onUserPopoutClosed: F,
+                          trackRankingItemInteraction: B,
                       }),
             e_ =
                 !eu && ec
@@ -177,11 +177,11 @@ let k = {
                     : null,
                 e_,
             ].filter(O.lm);
-        return (0, r.jsxs)(w.yR, {
+        return (0, r.jsxs)(D.yR, {
             children: [
                 ep,
-                (0, r.jsx)(w.St, {
-                    children: (0, r.jsx)(w.WT, {
+                (0, r.jsx)(D.St, {
+                    children: (0, r.jsx)(D.WT, {
                         onReaction: G,
                         onVoiceChannelPreview: Z,
                         user: H,

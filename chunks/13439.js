@@ -1,4 +1,4 @@
-n.d(t, { e: () => o });
+n.d(t, { e: () => a });
 var r = n(818083),
     i = n(987338);
 let l = (0, r.B)({
@@ -15,7 +15,7 @@ let l = (0, r.B)({
         },
     ],
 });
-function o(e, t) {
+function a(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return l.useExperiment(
         {

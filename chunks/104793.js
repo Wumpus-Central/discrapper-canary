@@ -48,14 +48,14 @@ function g(e, t, n) {
             applicationAllowedForChannel: N,
             isGuildInstalled: P,
             isUserInstalled: R,
-            commandBotId: D,
+            commandBotId: w,
         } = n;
     if (!h.includes(e.type)) return 2;
     if (e.nsfw && !g) return 1;
-    let w = null != l ? (0, p.Vh)(l, D) : void 0;
+    let D = null != l ? (0, p.Vh)(l, w) : void 0;
     if (null != e.contexts) {
-        if (null != w && !e.contexts.includes(w)) return 4;
-    } else if (e.inputType === d.iw.BOT && ((!1 === e.dmPermission && w === s.D.BOT_DM) || w === s.D.PRIVATE_CHANNEL))
+        if (null != D && !e.contexts.includes(D)) return 4;
+    } else if (e.inputType === d.iw.BOT && ((!1 === e.dmPermission && D === s.D.BOT_DM) || D === s.D.PRIVATE_CHANNEL))
         return 4;
     if (null != e.predicate && l instanceof c.Sf) {
         let t = u.Z.getGuild(l.guild_id);

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    y: () => m,
+    y: () => b,
 });
 var i,
     r = n(54381);
@@ -10,7 +10,7 @@ var l = n(120356),
     o = n(755721),
     s = n(481060),
     c = n(388032),
-    d = n(114284);
+    d = n(563978);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,7 +36,7 @@ function u(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,8 +54,8 @@ function p(e, t) {
         e
     );
 }
-var m = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let b = Object.keys(m);
+var b = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
+let p = Object.keys(b);
 function g(e) {
     let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: l = !1, id: s } = e,
         c = (0, o.Jb)({
@@ -63,7 +63,7 @@ function g(e) {
             isDisabled: l,
             labelledBy: i,
         }),
-        { ref: m } = c,
+        { ref: b } = c,
         g = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -87,17 +87,17 @@ function g(e) {
         })(c, ["ref"]);
     return (0, r.jsx)(
         "div",
-        p(
+        m(
             u(
                 {
                     className: a()(d.group, { [d.disabled]: l }),
-                    ref: m,
+                    ref: b,
                     id: s,
                 },
                 g,
             ),
             {
-                children: b.map((e) =>
+                children: p.map((e) =>
                     (0, r.jsx)(
                         f,
                         {
@@ -118,7 +118,7 @@ function f(e) {
     let t,
         n,
         i,
-        { type: l, onSelect: m, isSelected: b } = e;
+        { type: l, onSelect: b, isSelected: p } = e;
     switch (l) {
         case "DENY":
             (i = c.intl.string(c.t["6639O5"])), (t = s.Dio), (n = d.deny);
@@ -130,16 +130,16 @@ function f(e) {
             (i = c.intl.string(c.t.ujC3ZS)), (t = s.XZC), (n = d.passthrough);
     }
     let g = (0, o.jm)({
-        isSelected: b,
+        isSelected: p,
         label: i,
     });
     return (0, r.jsx)(
         s.P3F,
-        p(
+        m(
             u(
                 {
-                    className: a()(d.item, n, { [d.selected]: b }),
-                    onClick: () => m(l),
+                    className: a()(d.item, n, { [d.selected]: p }),
+                    onClick: () => b(l),
                 },
                 g,
             ),
@@ -152,5 +152,5 @@ function f(e) {
         ),
     );
 }
-g.Types = m;
+g.Types = b;
 let h = g;

@@ -5,10 +5,10 @@ n.d(t, {
 var r = n(54381),
     i = n(120356),
     l = n.n(i),
-    o = n(494497),
-    a = n(156732),
+    a = n(494497),
+    o = n(156732),
     s = n(535396),
-    c = n(922434),
+    c = n(896481),
     u = n(942570);
 function d(e) {
     let { className: t } = e;
@@ -20,7 +20,7 @@ function d(e) {
 }
 function f(e) {
     let { className: t, powerup: n, isHovering: i } = e,
-        u = (0, a.Z)(n, i);
+        u = (0, o.Z)(n, i);
     switch (n.type) {
         case s.Us.LEVEL:
             return (0, r.jsx)(d, {});
@@ -28,7 +28,7 @@ function f(e) {
             return (0, r.jsx)("img", {
                 alt: "",
                 src: u,
-                className: l()(c.background, { [c.gradientRoleColorsImage]: n.skuId === o.If }, t),
+                className: l()(c.background, { [c.gradientRoleColorsImage]: n.skuId === a.If }, t),
             });
     }
 }

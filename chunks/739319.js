@@ -5,17 +5,17 @@ var r = n(54381),
     a = n.n(i),
     s = n(481060),
     o = n(454585),
-    d = n(572004),
-    c = n(388032),
-    u = n(852950);
+    c = n(572004),
+    d = n(388032),
+    u = n(595670);
 function m(e) {
     let {
             element: {
                 data: { title: t, body: n, sms: i, is_localized: m },
             },
         } = e,
-        [p, g] = l.useState(!1),
-        _ = l.useRef(o.Z.reactParserFor(o.Z.defaultRules));
+        [b, p] = l.useState(!1),
+        g = l.useRef(o.Z.reactParserFor(o.Z.defaultRules));
     return m
         ? (0, r.jsxs)("div", {
               className: u.container,
@@ -29,11 +29,11 @@ function m(e) {
                   (0, r.jsx)(s.Text, {
                       variant: "text-sm/normal",
                       className: u.bodyText,
-                      children: _.current(n),
+                      children: g.current(n),
                   }),
                   (0, r.jsx)("div", {
                       children: (0, r.jsxs)("div", {
-                          className: a()(u.smsNumberContainer, { [u.copied]: p }),
+                          className: a()(u.smsNumberContainer, { [u.copied]: b }),
                           children: [
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/normal",
@@ -47,9 +47,9 @@ function m(e) {
                                   children: (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: p ? c.intl.string(c.t.t5VZ88) : c.intl.string(c.t.OpuAlK),
+                                      text: b ? d.intl.string(d.t.t5VZ88) : d.intl.string(d.t.OpuAlK),
                                       onClick: () => {
-                                          (0, d.JG)(i, () => g(!0));
+                                          (0, c.JG)(i, () => p(!0));
                                       },
                                   }),
                               }),

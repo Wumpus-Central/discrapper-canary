@@ -7,8 +7,8 @@ var a = n(473749),
 let s = (t, e, n) => {
     let [s, c] = a.useState(t),
         [u, d] = a.useState(Date.now()),
-        [_] = a.useState(Date.now()),
-        m = a.useCallback(
+        [m] = a.useState(Date.now()),
+        O = a.useCallback(
             (t) => {
                 r.default.track(
                     o.rMx.CANCELLATION_FLOW_STEP,
@@ -41,7 +41,7 @@ let s = (t, e, n) => {
                             from_step: l.O[s],
                             to_step: l.O[t],
                             step_duration_ms: Date.now() - u,
-                            flow_duration_ms: Date.now() - _,
+                            flow_duration_ms: Date.now() - m,
                             location_stack: n,
                         },
                         (0, i.v)(e),
@@ -50,7 +50,7 @@ let s = (t, e, n) => {
                     c(t),
                     d(Date.now());
             },
-            [n, _, u, s, e],
+            [n, m, u, s, e],
         );
-    return [s, m, u, _];
+    return [s, O, u, m];
 };

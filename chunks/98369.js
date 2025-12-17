@@ -23,13 +23,13 @@ var r,
     d = n(959457),
     f = n(630759),
     p = n(729303),
-    m = n(651941),
-    _ = n(981631);
+    b = n(651941),
+    m = n(981631);
 let g = new Map(),
     v = new Map(),
-    b = !1,
-    h = null;
-function E() {
+    h = !1,
+    E = null;
+function _() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, c.my)(t),
             r = !0 === g.get(n),
@@ -47,8 +47,8 @@ function y() {
             r = !1;
             break;
         }
-    let i = r !== b;
-    return (b = r), i;
+    let i = r !== h;
+    return (h = r), i;
 }
 function S(e) {
     let { userId: t } = e;
@@ -57,25 +57,25 @@ function S(e) {
             let t = u.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
-                r = m.Z.isKeyVerified(e, n) || p.Z.isKeyVerified(e, n),
+                r = b.Z.isKeyVerified(e, n) || p.Z.isKeyVerified(e, n),
                 i = (0, f.UB)(e, [u.Z, d.Z]),
                 l = r && !i,
                 a = l !== g.get(e);
             return g.set(e, l), a;
         })(t),
-        r = E(),
+        r = _(),
         i = y();
     return n || r || i;
 }
 function O() {
-    g.clear(), v.clear(), (b = !1);
+    g.clear(), v.clear(), (h = !1);
 }
 class C extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.default, u.Z, d.Z, p.Z, m.Z);
+        this.waitFor(s.default, u.Z, d.Z, p.Z, b.Z);
     }
     isCallVerified() {
-        return b;
+        return h;
     }
     isStreamVerified(e) {
         return v.get(e);
@@ -96,12 +96,12 @@ let w = new C(o.Z, {
     CONNECTION_OPEN: O,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (t === h) return !1;
-        (h = t), O();
+        if (t === E) return !1;
+        (E = t), O();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: r } = e;
-        if (n !== _.hes.DISCONNECTED) return !1;
+        if (n !== m.hes.DISCONNECTED) return !1;
         switch (r) {
             case a.Yn.STREAM:
                 if (null == t) return !1;
@@ -114,7 +114,7 @@ let w = new C(o.Z, {
         let { userIds: t } = e,
             n = s.default.getId(),
             r = t.reduce((e, t) => (n === t ? e : !!S({ userId: t }) || e), !1),
-            i = E(),
+            i = _(),
             l = y();
         return r || i || l;
     },

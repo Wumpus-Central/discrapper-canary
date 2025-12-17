@@ -12,8 +12,8 @@ var i = n(54381),
     u = n(346479),
     d = n(665906),
     p = n(981631),
-    h = n(388032),
-    f = n(856426);
+    f = n(388032),
+    h = n(690584);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,18 +68,18 @@ function b(e) {
             );
         }, [t]),
         (0, i.jsxs)("div", {
-            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
+            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
             children: [
                 (0, i.jsx)(o.Text, {
-                    className: f.chatHeaderBarText,
+                    className: h.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? h.intl.string(h.t["833FDn"]) : h.intl.string(h.t.rEeodK),
+                    children: t.isForumPost() ? f.intl.string(f.t["833FDn"]) : f.intl.string(f.t.rEeodK),
                 }),
                 l
                     ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: h.intl.string(h.t["0dvvEi"]),
+                          text: f.intl.string(f.t["0dvvEi"]),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,
@@ -108,18 +108,18 @@ function C(e) {
             );
         }, [t]),
         (0, i.jsxs)("div", {
-            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
+            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
             children: [
                 (0, i.jsx)(o.Text, {
-                    className: f.chatHeaderBarText,
+                    className: h.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: t.isForumPost() ? h.intl.string(h.t.E7oO8u) : h.intl.string(h.t["V/JF2N"]),
+                    children: t.isForumPost() ? f.intl.string(f.t.E7oO8u) : f.intl.string(f.t["V/JF2N"]),
                 }),
                 l
                     ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: h.intl.string(h.t.zA9d1J),
+                          text: f.intl.string(f.t.zA9d1J),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,

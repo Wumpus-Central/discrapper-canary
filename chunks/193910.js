@@ -9,27 +9,27 @@ var i = n(54381),
     u = n(566620),
     d = n(906732),
     p = n(499254),
-    h = n(827498),
-    f = n(397698),
+    f = n(827498),
+    h = n(397698),
     m = n(266454),
     g = n(706140),
     b = n(243778),
     C = n(618857),
     y = n(346479),
-    _ = n(286934),
-    v = n(488131),
+    v = n(286934),
+    x = n(488131),
     O = n(375954),
-    x = n(626135),
-    E = n(585483),
-    j = n(403182),
-    S = n(127654),
+    E = n(626135),
+    j = n(585483),
+    S = n(403182),
+    _ = n(127654),
     P = n(752305),
     I = n(951211),
     Z = n(981631),
     T = n(921944),
     N = n(489887),
     A = n(388032),
-    w = n(749723);
+    w = n(688169);
 let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function R() {
     let e = (0, l.e7)([O.Z], () => O.Z.hasCurrentUserSentMessageSinceAppStart()),
@@ -71,14 +71,14 @@ function L(e) {
             setValue: V,
             openClips: F,
         } = e,
-        { analyticsLocations: B, newestAnalyticsLocation: H } = (0, d.ZP)(),
+        { analyticsLocations: H, newestAnalyticsLocation: B } = (0, d.ZP)(),
         G = (0, C.Dt)({ channel: t }),
-        W = (0, l.e7)([_.Z], () => _.Z.isInProgress());
-    function z() {
-        (0, v.R6)(t, void 0, "Plus Button");
+        z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
+    function W() {
+        (0, x.R6)(t, void 0, "Plus Button");
     }
     function q() {
-        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
+        E.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
         F();
@@ -138,12 +138,12 @@ function L(e) {
             );
     }
     function X() {
-        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        E.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
         }),
-            (0, f.Z)({
+            (0, h.Z)({
                 context:
                     null != t
                         ? {
@@ -152,7 +152,7 @@ function L(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: H,
+                analyticsLocation: B,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -162,13 +162,13 @@ function L(e) {
             i = "",
             r = U.match(M);
         null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, S.d)([(0, j.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
-            E.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
-            "" !== i && E.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
+            (0, _.d)([(0, S.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            j.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
+            "" !== i && j.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
         r.useEffect(() => {
-            x.default.track(Z.rMx.OPEN_POPOUT, {
+            E.default.track(Z.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },
@@ -313,7 +313,7 @@ function L(e) {
                             {
                                 id: "THREAD",
                                 label: r,
-                                action: z,
+                                action: W,
                             },
                             "THREAD",
                         );
@@ -333,7 +333,7 @@ function L(e) {
                             {
                                 id: "APP_LAUNCHER",
                                 label: r,
-                                action: () => (0, p._)(h._b.TEXT, g, void 0, t.id),
+                                action: () => (0, p._)(f._b.TEXT, g, void 0, t.id),
                             },
                             "APP_LAUNCHER",
                         );
@@ -366,9 +366,9 @@ function L(e) {
                                 id: "summarize_thread",
                                 label: r,
                                 action: () => y.Z.summarizeThread(t),
-                                icon: W ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: W,
-                                children: W
+                                icon: z ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: z,
+                                children: z
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => p }), n(388685);
-var r = n(54381);
-n(473749);
-var i = n(788111),
-    a = n(601665),
-    o = n(103113),
-    s = n(862077),
-    l = n(738953);
-function c(e, t, n) {
+n.d(t, { Z: () => _ }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    a = n(788111),
+    o = n(601665),
+    s = n(103113),
+    l = n(862077),
+    c = n(738953);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +30,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,25 +47,37 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e) {
-    let { user: t } = e,
-        [n, c] = (0, i.Z)(t.id);
-    return n
-        ? (0, r.jsx)(s.Z, f(u({}, e), { onHide: c }))
+function _(e) {
+    let { user: t, onClickContainer: n } = e,
+        u = i.useCallback(
+            (e) => {
+                null == n || n(e), e.stopPropagation();
+            },
+            [n],
+        ),
+        [f, _] = (0, a.Z)(t.id);
+    return f
+        ? (0, r.jsx)(
+              l.Z,
+              p(d({}, e), {
+                  onHide: _,
+                  onClickContainer: u,
+              }),
+          )
         : t.isNonUserBot()
-          ? (0, r.jsx)(o.Z, u({}, e))
+          ? (0, r.jsx)(s.Z, p(d({}, e), { onClickContainer: u }))
           : t.bot
-            ? (0, r.jsx)(a.Z, u({}, e))
-            : (0, r.jsx)(l.Z, u({}, e));
+            ? (0, r.jsx)(o.Z, p(d({}, e), { onClickContainer: u }))
+            : (0, r.jsx)(c.Z, p(d({}, e), { onClickContainer: u }));
 }

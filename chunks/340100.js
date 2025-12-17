@@ -7,11 +7,11 @@ var l = n(120356),
     a = n(481060),
     o = n(968843),
     u = n(141707),
-    c = n(905889);
+    c = n(869367);
 let d = function (e) {
     let { className: t, color: n = i.Z.colors.WHITE, quest: l, isInventory: d } = e,
         m = (0, o.qb)(e.quest),
-        { percentComplete: f, completedRatioDisplay: p } = (0, o.I)(l);
+        { percentComplete: f, completedRatioDisplay: E } = (0, o.I)(l);
     return !d && m.length > 0
         ? (0, r.jsx)(u.Z, { children: m.at(0) })
         : (0, r.jsxs)("div", {
@@ -25,7 +25,7 @@ let d = function (e) {
                               variant: "text-xs/semibold",
                               className: c.percentCompleteLabel,
                               color: "none",
-                              children: p,
+                              children: E,
                           }),
                           (0, r.jsx)("div", {
                               className: c.percentCompleteLabelOffset,

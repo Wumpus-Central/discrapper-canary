@@ -2,10 +2,10 @@ n.d(t, {
     A2: () => C,
     BU: () => A,
     Pz: () => S,
-    Qf: () => D,
+    Qf: () => w,
     ZC: () => R,
     a0: () => N,
-    pD: () => w,
+    pD: () => D,
     t8: () => T,
     tq: () => P,
 }),
@@ -123,10 +123,10 @@ function P() {
 function R(e) {
     return !(0, _.isIOS)() || !e.hasFlag(E.TD.IS_BLOCKED_IOS);
 }
-function D(e, t) {
+function w(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
-function w(e) {
+function D(e) {
     let { promotionPartner: t } = e;
     return g.Ce.has(t.toLocaleLowerCase());
 }

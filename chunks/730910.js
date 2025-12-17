@@ -1,7 +1,7 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(467721),
+    l = n(236726),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -9,26 +9,26 @@ var r = n(54381),
     d = n(481060),
     u = n(410030),
     g = n(367907),
-    m = n(626135),
-    p = n(585483),
-    f = n(999382),
-    h = n(743475),
-    b = n(983135),
+    f = n(626135),
+    m = n(585483),
+    b = n(999382),
+    p = n(743475),
+    h = n(983135),
     x = n(8426),
     j = n(969632),
-    _ = n(570961),
-    v = n(208665),
-    O = n(359191),
-    C = n(84658),
-    y = n(142961),
-    N = n(232764),
-    E = n(729311),
-    I = n(478777),
-    S = n(966301),
+    v = n(570961),
+    O = n(208665),
+    C = n(359191),
+    y = n(84658),
+    N = n(142961),
+    E = n(232764),
+    I = n(729311),
+    S = n(478777),
+    _ = n(966301),
     T = n(976269),
     P = n(981631),
     w = n(388032),
-    Z = n(982086);
+    Z = n(602886);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,26 +73,26 @@ function D(e, t) {
     );
 }
 function A() {
-    let e = (0, a.e7)([f.Z], () => f.Z.getGuild());
+    let e = (0, a.e7)([b.Z], () => b.Z.getGuild());
     return null == e ? null : (0, r.jsx)(L, { guild: e });
 }
 function L(e) {
     let { guild: t } = e,
-        f = t.id,
-        A = (0, a.e7)([O.Z], () => O.Z.getCurrentPage()),
-        L = (0, y.Z)(f),
+        b = t.id,
+        A = (0, a.e7)([C.Z], () => C.Z.getCurrentPage()),
+        L = (0, N.Z)(b),
         {
             hasChanges: k,
             hasConfiguredAnythingForCurrentStep: G,
             hasErrors: M,
-        } = (0, a.cj)([O.Z], () => ({
-            hasChanges: O.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: O.Z.hasErrors(),
+        } = (0, a.cj)([C.Z], () => ({
+            hasChanges: C.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: C.Z.hasErrors(),
         })),
-        U = (0, a.e7)([O.Z], () => {
-            let e = (0, C.lg)(A);
-            return null != e && !O.Z.isEducationUpsellDismissed(e);
+        U = (0, a.e7)([C.Z], () => {
+            let e = (0, y.lg)(A);
+            return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
         B = (0, u.ZP)(),
         F = i.useRef(null),
@@ -110,9 +110,9 @@ function L(e) {
                 });
         }
         return (
-            p.S.subscribe(P.CkL.EMPHASIZE_NOTICE, e),
+            m.S.subscribe(P.CkL.EMPHASIZE_NOTICE, e),
             () => {
-                p.S.unsubscribe(P.CkL.EMPHASIZE_NOTICE, e);
+                m.S.unsubscribe(P.CkL.EMPHASIZE_NOTICE, e);
             }
         );
     }, [W]);
@@ -124,23 +124,23 @@ function L(e) {
             output: [K, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (L) {
-        if (A === C.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
-        else if (A === C.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(S.Zm, {});
-        else if (A === C.PG.HOME_SETTINGS) return (0, r.jsx)(T.Z, {});
-        else if (A === C.PG.CONNECTIONS) return (0, r.jsx)(I.u, {});
-        else if ((A === C.PG.LANDING || A === C.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(T.Z, {});
+        if (A === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(I.j, {});
+        else if (A === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(_.Zm, {});
+        else if (A === y.PG.HOME_SETTINGS) return (0, r.jsx)(T.Z, {});
+        else if (A === y.PG.CONNECTIONS) return (0, r.jsx)(S.u, {});
+        else if ((A === y.PG.LANDING || A === y.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(T.Z, {});
     }
-    let q = A === C.xh[C.xh.length - 1],
+    let q = A === y.xh[y.xh.length - 1],
         X = async () => {
-            let e = v.Z.advancedMode;
+            let e = O.Z.advancedMode;
             if (k)
                 try {
-                    if (A === C.PG.DEFAULT_CHANNELS)
-                        await (0, h.DO)(t).then(() =>
-                            e ? (0, _.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
+                    if (A === y.PG.DEFAULT_CHANNELS)
+                        await (0, p.DO)(t).then(() =>
+                            e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve(),
                         );
-                    else if (A === C.PG.CUSTOMIZATION_QUESTIONS) await (0, _.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (A === C.PG.HOME_SETTINGS) {
+                    else if (A === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (A === y.PG.HOME_SETTINGS) {
                         let e = j.Z.getSettings();
                         await (0, x.oo)(t.id, e);
                     }
@@ -150,37 +150,37 @@ function L(e) {
             return !0;
         },
         J = async () => {
-            m.default.track(
+            f.default.track(
                 P.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                D(R({}, (0, g.hH)(f)), {
-                    step: C.PG[A],
+                D(R({}, (0, g.hH)(b)), {
+                    step: y.PG[A],
                     back: !1,
                     skip: !k,
                 }),
             ),
-                (0, b.Nb)((0, C.lg)(A)),
-                (await X()) && (0, b.IG)(f, A);
+                (0, h.Nb)((0, y.lg)(A)),
+                (await X()) && (0, h.IG)(b, A);
         },
         Q = async () => {
-            m.default.track(
+            f.default.track(
                 P.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                D(R({}, (0, g.hH)(f)), {
-                    step: C.PG[A],
+                D(R({}, (0, g.hH)(b)), {
+                    step: y.PG[A],
                     back: !0,
                     skip: !1,
                 }),
             ),
-                (await X()) && (0, b.Wy)(f, A);
+                (await X()) && (0, h.Wy)(b, A);
         },
         $ = null;
     U &&
-        (A === C.PG.SAFETY_CHECK
-            ? ($ = (0, r.jsx)(N.j7, {}))
-            : A === C.PG.DEFAULT_CHANNELS
-              ? ($ = (0, r.jsx)(N.Io, {}))
-              : A === C.PG.CUSTOMIZATION_QUESTIONS
-                ? ($ = (0, r.jsx)(N.cZ, {}))
-                : A === C.PG.HOME_SETTINGS && ($ = (0, r.jsx)(N.g6, {})));
+        (A === y.PG.SAFETY_CHECK
+            ? ($ = (0, r.jsx)(E.j7, {}))
+            : A === y.PG.DEFAULT_CHANNELS
+              ? ($ = (0, r.jsx)(E.Io, {}))
+              : A === y.PG.CUSTOMIZATION_QUESTIONS
+                ? ($ = (0, r.jsx)(E.cZ, {}))
+                : A === y.PG.HOME_SETTINGS && ($ = (0, r.jsx)(E.g6, {})));
     let ee = (0, r.jsx)("div", {
             className: U ? Z.hidden : void 0,
             children: (0, r.jsx)(d.Button, {

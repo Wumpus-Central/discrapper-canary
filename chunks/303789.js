@@ -1,4 +1,4 @@
-n.d(e, { n: () => c });
+n.d(e, { n: () => S });
 var i = n(100527),
     l = n(509613),
     s = n(626135),
@@ -6,7 +6,7 @@ var i = n(100527),
     r = n(313789),
     a = n(981631),
     o = n(388032);
-let c = (0, l.qs)(r.n.CHAT_STICKERS_AUTOCOMPLETE, {
+let S = (0, l.qs)(r.n.CHAT_STICKERS_AUTOCOMPLETE, {
     useTitle: () => o.intl.string(o.t["29xPVZ"]),
     useSubtitle: () => o.intl.string(o.t["/eVrj8"]),
     useValue: u.fq.useSetting,

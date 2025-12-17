@@ -28,8 +28,8 @@ function v(e) {
             botUserId: null == S || null == (n = S.bot) ? void 0 : n.id,
         }),
         R = null != S && (0, l.ye)(S),
-        D = null != N && R && P,
-        { analyticsLocations: w } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
+        w = null != N && R && P,
+        { analyticsLocations: D } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
         x = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         L = (0, y.KF)(x),
         j = (0, i.e7)([E.ZP], () => {
@@ -42,9 +42,9 @@ function v(e) {
         U = L === y.jy.CAN_LAUNCH,
         G = null != j && (null == M ? void 0 : M.compositeInstanceId) === j,
         Z = null != I ? I : T.customId,
-        B = [];
+        F = [];
     U &&
-        B.push({
+        F.push({
             label: null == j ? O.intl.string(O.t.RscU7I) : G ? O.intl.string(O.t.DPfdsq) : O.intl.string(O.t.sqe0hj),
             trackingArea: f.j_.PLAY,
             onClick() {
@@ -55,30 +55,30 @@ function v(e) {
                     embeddedActivitiesManager: k,
                     customId: Z,
                     referrerId: C,
-                    analyticsLocations: w,
+                    analyticsLocations: D,
                 });
             },
             disabled: G,
         }),
-        D &&
+        w &&
             !U &&
-            B.push({
+            F.push({
                 label: O.intl.string(O.t.JeK1Wg),
                 trackingArea: f.j_.PLAY,
                 onClick() {
                     (0, s.W)({
                         appId: S.id,
                         botId: N,
-                        analyticsLocations: w,
+                        analyticsLocations: D,
                         customId: Z,
                         referrerId: C,
                     });
                 },
             });
-    let F = (0, p.G)(S);
+    let B = (0, p.G)(S);
     return (0, r.jsx)(d.W, {
-        actions: B,
-        onClickContent: F,
+        actions: F,
+        onClickContent: B,
         header: S.name,
         iconSrc: h.ZP.getApplicationIconURL({
             id: S.id,

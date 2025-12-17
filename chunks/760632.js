@@ -1,4 +1,4 @@
-n.d(t, { M: () => m });
+n.d(t, { M: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(199849),
@@ -9,9 +9,9 @@ let o = "".concat(60),
     d = "".concat(900),
     u = "".concat(1800),
     g = "".concat(3600);
-function m(e) {
-    let { canManageGuild: t, afkTimeout: n, afkChannelId: m, label: p } = e,
-        f = i.useMemo(
+function f(e) {
+    let { canManageGuild: t, afkTimeout: n, afkChannelId: f, label: m } = e,
+        b = i.useMemo(
             () => [
                 {
                     value: o,
@@ -36,14 +36,14 @@ function m(e) {
             ],
             [],
         ),
-        h = i.useCallback((e) => {
+        p = i.useCallback((e) => {
             a.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
     return (0, r.jsx)(l.y6, {
-        label: p,
+        label: m,
         value: null == n ? null : "".concat(n),
-        options: f,
-        isDisabled: null == m || !t,
-        onChange: h,
+        options: b,
+        isDisabled: null == f || !t,
+        onChange: p,
     });
 }

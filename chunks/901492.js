@@ -1,12 +1,12 @@
-n.d(t, { default: () => a });
+n.d(t, { default: () => o });
 var r = n(54381);
 n(473749);
 var i = n(793030),
     l = n(933557),
-    o = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     var { channel: t, category: n } = e,
-        a = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -57,14 +57,14 @@ function a(e) {
             return e;
         })(
             {
-                title: o.intl.string(o.t.YWMtRe),
-                subtitle: o.intl.format(o.t["iKW+jY"], {
+                title: a.intl.string(a.t.YWMtRe),
+                subtitle: a.intl.format(a.t["iKW+jY"], {
                     channelName: s,
                     categoryName: c,
                 }),
-                confirmText: o.intl.string(o.t.eW8Gy4),
+                confirmText: a.intl.string(a.t.eW8Gy4),
             },
-            a,
+            o,
         ),
     );
 }

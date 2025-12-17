@@ -1,9 +1,9 @@
 n.d(t, {
-    KJ: () => p,
-    N0: () => b,
+    KJ: () => g,
+    N0: () => v,
     k3: () => j,
     lk: () => C,
-    ng: () => v,
+    ng: () => p,
 }),
     n(388685),
     n(457542),
@@ -12,30 +12,30 @@ n.d(t, {
 var r,
     l = n(473749),
     i = n(442837),
-    s = n(999382),
-    a = n(658666),
+    a = n(999382),
+    s = n(658666),
     o = n(384632),
     c = n(430824),
     u = n(411198),
     d = n(863249),
     m = n(944163),
     f = n(246364),
-    x = n(983736),
-    h = n(266395),
-    g = n(388032),
-    p =
+    b = n(983736),
+    x = n(266395),
+    h = n(388032),
+    g =
         (((r = {})[(r.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
         (r[(r.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
         (r[(r.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
         r);
-function v(e, t, n) {
-    let [r, s] = l.useState(!1),
+function p(e, t, n) {
+    let [r, a] = l.useState(!1),
         c = (0, i.e7)([m.Z], () => m.Z.get(e)),
-        u = (0, i.e7)([a.Z], () => a.Z.pendingState);
+        u = (0, i.e7)([s.Z], () => s.Z.pendingState);
     l.useEffect(() => {
-        t || d.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
+        t || d.ZP.fetchVerificationForm(e, n).finally(() => a(!0));
     }, [e, n, t]);
-    let x = l.useMemo(() => {
+    let b = l.useMemo(() => {
         var e, n;
         let r;
         if (!t || null == u) return null;
@@ -46,7 +46,7 @@ function v(e, t, n) {
             r = [
                 {
                     field_type: f.QJ.TERMS,
-                    label: g.intl.string(g.t["9suSIA"]),
+                    label: h.intl.string(h.t["9suSIA"]),
                     values: e,
                     required: !0,
                 },
@@ -63,15 +63,15 @@ function v(e, t, n) {
     }, [t, u, c]);
     return {
         hasFetched: r,
-        verificationForm: null != x ? x : c,
+        verificationForm: null != b ? b : c,
     };
 }
-function b(e, t, n) {
+function v(e, t, n) {
     let r = (0, i.e7)([c.Z], () => c.Z.getGuild(e)),
-        a = (0, i.e7)([s.Z], () => s.Z.getGuild());
+        s = (0, i.e7)([a.Z], () => a.Z.getGuild());
     return l.useMemo(
-        () => (n && (null == a ? void 0 : a.id) === e ? a : null != r ? r : null != t ? (0, u.Rj)(t) : null),
-        [n, a, e, r, t],
+        () => (n && (null == s ? void 0 : s.id) === e ? s : null != r ? r : null != t ? (0, u.Rj)(t) : null),
+        [n, s, e, r, t],
     );
 }
 function j(e) {
@@ -92,18 +92,18 @@ function j(e) {
     );
 }
 function C(e) {
-    let t = (0, h.rb)((e) => e.hasUnsubmittedChanges);
+    let t = (0, x.rb)((e) => e.hasUnsubmittedChanges);
     l.useEffect(
         () => (
-            (0, h.a5)(!1),
+            (0, x.a5)(!1),
             () => {
-                (0, h.a5)(!1);
+                (0, x.a5)(!1);
             }
         ),
         [],
     ),
         l.useEffect(() => {
-            let n = e.some((e) => e.field_type !== f.QJ.TERMS && (0, x.OA)(e));
-            n && !t ? (0, h.a5)(!0) : !n && t && (0, h.a5)(!1);
+            let n = e.some((e) => e.field_type !== f.QJ.TERMS && (0, b.OA)(e));
+            n && !t ? (0, x.a5)(!0) : !n && t && (0, x.a5)(!1);
         }, [e, t]);
 }

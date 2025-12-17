@@ -10,9 +10,9 @@ var r = n(442837),
     u = n(496675),
     d = n(967128),
     p = n(981631),
-    h = n(388032),
-    f = n(734335),
-    m = n(430864);
+    f = n(388032),
+    h = n(312794),
+    m = n(960324);
 function g(e) {
     let { channel: t } = e,
         n = (0, o.ZP)(t, !0),
@@ -21,21 +21,21 @@ function g(e) {
         channelId: t.id,
         children: [
             (0, i.jsx)(d.Kq, { channelType: t.type }),
-            (0, i.jsx)(d.Ot, { children: h.intl.format(h.t.I3R7Vn, { channelName: n }) }),
+            (0, i.jsx)(d.Ot, { children: f.intl.format(f.t.I3R7Vn, { channelName: n }) }),
             (0, i.jsx)(d.jz, {
                 className: m.markup,
-                children: h.intl.format(h.t.pYMVRT, {
+                children: f.intl.format(f.t.pYMVRT, {
                     channelName: n,
                     topicHook: () => s.Z.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
             }),
             g
                 ? (0, i.jsx)("div", {
-                      className: f.buttonContainer,
+                      className: h.buttonContainer,
                       children: (0, i.jsx)(l.Button, {
                           size: "sm",
                           variant: "secondary",
-                          text: h.intl.string(h.t["3gUsJb"]),
+                          text: f.intl.string(f.t["3gUsJb"]),
                           onClick: () => {
                               a.ZP.open(t.id);
                           },

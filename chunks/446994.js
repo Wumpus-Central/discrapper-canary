@@ -875,8 +875,8 @@
                                                                 N.push(r.float_array(h));
                                                         var P = r.float_array(S),
                                                             R = r.float_array(S),
-                                                            D = 0,
                                                             w = 0,
+                                                            D = 0,
                                                             x = [
                                                                 {
                                                                     in_time: 0,
@@ -891,7 +891,7 @@
                                                             U = 0,
                                                             G = 0,
                                                             Z = 0,
-                                                            B = {
+                                                            F = {
                                                                 mapOutputToInputTime: function (e) {
                                                                     for (
                                                                         var t = x.length - 1;
@@ -908,16 +908,16 @@
                                                                     for (t = 0; t < u.length; t++) u[t] = 0;
                                                                     for (t = 0; t < d.length; t++) d[t] = 0;
                                                                     if (e) {
-                                                                        (w = Math.max(0, w - e)),
-                                                                            (D = B.mapOutputToInputTime(w));
+                                                                        (D = Math.max(0, D - e)),
+                                                                            (w = F.mapOutputToInputTime(D));
                                                                         for (
                                                                             var r = x.length - 1;
-                                                                            w <= x[r].out_time && r >= 0;
+                                                                            D <= x[r].out_time && r >= 0;
                                                                         )
                                                                             x.pop(), r--;
                                                                         x.push({
-                                                                            in_time: D,
-                                                                            out_time: w,
+                                                                            in_time: w,
+                                                                            out_time: D,
                                                                             tempo: a,
                                                                         });
                                                                     }
@@ -944,17 +944,17 @@
                                                                         })(_, p)),
                                                                         (a = e);
                                                                     var t = x[x.length - 1];
-                                                                    t.out_time == w
+                                                                    t.out_time == D
                                                                         ? (t.tempo = e)
                                                                         : x.push({
-                                                                              in_time: D,
-                                                                              out_time: w,
+                                                                              in_time: w,
+                                                                              out_time: D,
                                                                               tempo: e,
                                                                           });
                                                                 },
                                                             };
-                                                        B.flush(0), B.setTempo(a);
-                                                        var F = function (e, t, n) {
+                                                        F.flush(0), F.setTempo(a);
+                                                        var B = function (e, t, n) {
                                                                 var r = Math.floor(n),
                                                                     i = r % 2 == 1 ? -1 : 1;
                                                                 return Math.atan2(
@@ -1032,18 +1032,18 @@
                                                                             Math.abs(f[v] - Z) < S &&
                                                                             u[Math.round(f[v])] > 0.1 * m[Math.round(Z)]
                                                                         ) {
-                                                                            var D = F(t, n, Z),
-                                                                                w =
+                                                                            var w = B(t, n, Z),
+                                                                                D =
                                                                                     p[v] +
                                                                                     _[v] +
-                                                                                    V(D, Z, p[v], f[v], a) -
-                                                                                    D;
-                                                                            (b[G] = D),
-                                                                                (y[G] = w),
-                                                                                (P[G] = Math.cos(w)),
-                                                                                (R[G] = Math.sin(w));
+                                                                                    V(w, Z, p[v], f[v], a) -
+                                                                                    w;
+                                                                            (b[G] = w),
+                                                                                (y[G] = D),
+                                                                                (P[G] = Math.cos(D)),
+                                                                                (R[G] = Math.sin(D));
                                                                         } else
-                                                                            (b[G] = F(t, n, Z)),
+                                                                            (b[G] = B(t, n, Z)),
                                                                                 (y[G] = 0),
                                                                                 (P[G] = 1),
                                                                                 (R[G] = 0);
@@ -1067,7 +1067,7 @@
                                                                 } else
                                                                     for (var G = 0; G < E; G++) {
                                                                         var Z = g[G];
-                                                                        p[G] = _[G] = F(t, n, Z);
+                                                                        p[G] = _[G] = B(t, n, Z);
                                                                     }
                                                             },
                                                             Y = function () {
@@ -1106,7 +1106,7 @@
                                                                 return (L += 2), (j = 2 * p + e);
                                                             };
                                                         return (
-                                                            (B.process = function (e) {
+                                                            (F.process = function (e) {
                                                                 var n = e[0].length,
                                                                     i = e[0];
                                                                 if (e.length > 1) {
@@ -1125,9 +1125,9 @@
                                                                                 r.blit(e[l], 0, h, Z + G, n),
                                                                                 m.push(h);
                                                                         }
-                                                                        B.flush(0), (n = _), (e = m);
+                                                                        F.flush(0), (n = _), (e = m);
                                                                     }
-                                                                    return (D += n / t), (w += n / t), e;
+                                                                    return (w += n / t), (D += n / t), e;
                                                                 }
                                                                 var g =
                                                                         2 *
@@ -1152,8 +1152,8 @@
                                                                           (y += I),
                                                                           (G = s - f)),
                                                                         (S = Y()),
-                                                                        (D += (2 * f) / t),
-                                                                        (w += S / t),
+                                                                        (w += (2 * f) / t),
+                                                                        (D += S / t),
                                                                         (v = O + S - E) < 0 && (v = 0),
                                                                         r.blit(d, 0, b, O, S - v),
                                                                         (O += S);
@@ -1163,7 +1163,7 @@
                                                                 for (l = 0; l < e.length; l++) T.push(b);
                                                                 return T;
                                                             }),
-                                                            B
+                                                            F
                                                         );
                                                     });
                                             },
@@ -1994,8 +1994,8 @@
                         N = "LOADED",
                         P = "PRELOAD",
                         R = "READY",
-                        D = "PLAYING",
-                        w = "SEEKING",
+                        w = "PLAYING",
+                        D = "SEEKING",
                         x = "ERROR",
                         L = "NOT_SEEKING",
                         j = "BISECT_TO_TARGET",
@@ -2017,7 +2017,7 @@
                             ? Date.now
                             : performance.now.bind(performance)),
                         (Z.prototype = Object.create(HTMLElement.prototype, {}));
-                    var B = (function (e) {
+                    var F = (function (e) {
                         (0, s.default)(n, e);
                         var t = v(n);
                         function n(e) {
@@ -2179,10 +2179,10 @@
                                     },
                                     currentTime: {
                                         get: function () {
-                                            return this._state == w
+                                            return this._state == D
                                                 ? this._seekTargetTime
                                                 : this._codec
-                                                  ? this._state != D || this._paused
+                                                  ? this._state != w || this._paused
                                                       ? this._initialPlaybackOffset
                                                       : this._getPlaybackTime()
                                                   : this._initialSeekTime;
@@ -2212,7 +2212,7 @@
                                     },
                                     seeking: {
                                         get: function () {
-                                            return this._state == w;
+                                            return this._state == D;
                                         },
                                     },
                                     muted: {
@@ -2752,7 +2752,7 @@
                                                     n._stopPlayback(),
                                                     (n._prebufferingAudio = !1),
                                                     n._audioFeeder && n._audioFeeder.flush(),
-                                                    (n._state = w),
+                                                    (n._state = D),
                                                     (n._seekTargetTime = e),
                                                     (n._seekMode = t),
                                                     n._codec ? n._codec.flush(r) : r();
@@ -2774,7 +2774,7 @@
                                             (this._streamEnded = !1),
                                                 (this._dataEnded = !1),
                                                 (this._ended = !1),
-                                                (this._state = w),
+                                                (this._state = D),
                                                 (this._seekTargetTime = e),
                                                 (this._lastSeekPosition = -1),
                                                 (this._decodedFrames = []),
@@ -3037,8 +3037,8 @@
                                             else if (this._state == N) this._doProcessLoaded();
                                             else if (this._state == P) this._doProcessPreload();
                                             else if (this._state == R) this._doProcessReady();
-                                            else if (this._state == w) this._doProcessSeeking();
-                                            else if (this._state == D) this._doProcessPlay();
+                                            else if (this._state == D) this._doProcessSeeking();
+                                            else if (this._state == w) this._doProcessPlay();
                                             else {
                                                 if (this._state != x)
                                                     throw Error("Unexpected OGVPlayer state " + this._state);
@@ -3166,7 +3166,7 @@
                                             else {
                                                 var n = function () {
                                                     e._log("finishStartPlaying"),
-                                                        (e._state = D),
+                                                        (e._state = w),
                                                         (e._lastFrameTimestamp = S()),
                                                         e._codec.hasAudio && e._audioFeeder
                                                             ? (e._prebufferingAudio = !0)
@@ -3739,7 +3739,7 @@
                                                 this._paused &&
                                                     ((this._startedPlaybackInDocument = document.body.contains(this)),
                                                     (this._paused = !1),
-                                                    this._state == w ||
+                                                    this._state == D ||
                                                         (this._started && this._codec && this._codec.loadedMetadata
                                                             ? (this._ended && this._stream && this._byteLength
                                                                   ? (this._log(".play() starting over after end"),
@@ -3857,9 +3857,9 @@
                             n
                         );
                     })(Z);
-                    (0, h.default)(B, T),
-                        (B.instanceCount = 0),
-                        (B.styleManager = new (function () {
+                    (0, h.default)(F, T),
+                        (F.instanceCount = 0),
+                        (F.styleManager = new (function () {
                             var e = document.createElement("style");
                             (e.type = "text/css"),
                                 (e.textContent =
@@ -3873,7 +3873,7 @@
                                 t.insertRule(a, t.cssRules.length - 1);
                             };
                         })()),
-                        (t.default = B);
+                        (t.default = F);
                 },
                 580: (e, t, n) => {
                     var r = n(318);
@@ -6275,11 +6275,11 @@
                                     N = 0,
                                     P = 0,
                                     R = 0,
-                                    D = 0;
+                                    w = 0;
                                 if (1 == a && 1 == o)
-                                    for (y = 0, O = p, D = 0, P = 0; P < i; P += 2) {
+                                    for (y = 0, O = p, w = 0, P = 0; P < i; P += 2) {
                                         for (
-                                            h = ((m = (P * u) | 0) + u) | 0, g = (D * d) | 0, E = (D * f) | 0, N = 0;
+                                            h = ((m = (P * u) | 0) + u) | 0, g = (w * d) | 0, E = (w * f) | 0, N = 0;
                                             N < r;
                                             N += 2
                                         )
@@ -6307,12 +6307,12 @@
                                                 (n[O + 1] = (I - C) >> 8),
                                                 (n[O + 2] = (I + A) >> 8),
                                                 (O += 4);
-                                        (y += p), (O += p), D++;
+                                        (y += p), (O += p), w++;
                                     }
                                 else
                                     for (b = 0, P = 0; P < i; P++)
                                         for (
-                                            R = 0, _ = (P * u) | 0, g = ((D = P >> o) * d) | 0, E = (D * f) | 0, N = 0;
+                                            R = 0, _ = (P * u) | 0, g = ((w = P >> o) * d) | 0, E = (w * f) | 0, N = 0;
                                             N < r;
                                             N++
                                         )

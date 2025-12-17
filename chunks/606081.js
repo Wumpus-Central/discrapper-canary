@@ -3,8 +3,8 @@ var r,
     i,
     l,
     a,
-    s = n(54381),
-    o = n(473749);
+    o = n(54381),
+    s = n(473749);
 function c(e, t, n) {
     return (
         t in e
@@ -89,16 +89,16 @@ function m(e) {
     return d("Offer", e);
 }
 (m.ItemConditions = g), (m.ItemAvailability = h);
-var _ = (((a = _ || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
-function b(e) {
+var b = (((a = b || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
+function _(e) {
     return d("QuantitativeValue", e);
 }
-b.UnitCodes = _;
-class E extends (r = o.Component) {
+_.UnitCodes = b;
+class E extends (r = s.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify(u({ "@context": "http://schema.org" }, t));
-        return (0, s.jsx)("script", {
+        return (0, o.jsx)("script", {
             type: "application/ld+json",
             children: n,
         });
@@ -126,7 +126,7 @@ c(E, "Thing", p),
     c(E, "AggregateOffer", function (e) {
         return d("AggregateOffer", e);
     }),
-    c(E, "QuantitativeValue", b),
+    c(E, "QuantitativeValue", _),
     c(E, "UnitPriceSpecification", function (e) {
         return d("UnitPriceSpecification", e);
     });

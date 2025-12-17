@@ -5,7 +5,7 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     s = n(27367),
-    o = n(328241);
+    o = n(224671);
 function c(e) {
     let { className: t, size: n = s.m } = e,
         a = (0, i.dcp)(n);

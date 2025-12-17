@@ -1,9 +1,9 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i,
     l = n(106351),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(38618),
     c = n(70956);
 let u = new Set(),
@@ -17,7 +17,7 @@ function h() {
 function p(e) {
     u.delete(e.guild.id);
 }
-class g extends (r = o.ZP.Store) {
+class g extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -38,7 +38,7 @@ class g extends (r = o.ZP.Store) {
           writable: !0,
       })
     : (g[i] = "VoiceChannelStartTimeStore");
-let m = new g(a.Z, {
+let b = new g(o.Z, {
     GUILD_CREATE: p,
     GUILD_DELETE: p,
     CONNECTION_RESUMED: h,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     r = n(473749),
-    i = n(793030),
-    l = n(668339),
+    l = n(793030),
+    i = n(668339),
     s = n(481060),
     o = n(972959),
     c = n(313789),
@@ -32,7 +32,7 @@ function h() {
                 })),
             [],
         ),
-        x = r.useMemo(
+        f = r.useMemo(
             () =>
                 Object.values(m.oAB).map((e) => ({
                     label: e,
@@ -40,10 +40,10 @@ function h() {
                 })),
             [],
         );
-    return (0, a.jsxs)(i.C3N, {
+    return (0, a.jsxs)(l.C3N, {
         label: "Settings Navigation Tool",
         children: [
-            (0, a.jsx)(l.d, {
+            (0, a.jsx)(i.d, {
                 label: "Setting (Redesign)",
                 placeholder: "Select a setting",
                 value: e,
@@ -51,11 +51,11 @@ function h() {
                 options: h,
                 popoutLayerContext: u.O$,
             }),
-            (0, a.jsx)(l.d, {
+            (0, a.jsx)(i.d, {
                 label: "Setting Section (Legacy)",
                 value: t,
                 onChange: (e) => p.setState({ section: e }),
-                options: x,
+                options: f,
                 popoutLayerContext: u.O$,
             }),
             (0, a.jsx)(s.oil, {
@@ -63,7 +63,7 @@ function h() {
                 placeholder: "Type a subsection...",
                 onChange: (e) => p.setState({ subsection: e }),
             }),
-            (0, a.jsx)(i.zxk, {
+            (0, a.jsx)(l.zxk, {
                 variant: "primary",
                 onClick: o,
                 text: "Open User Settings",

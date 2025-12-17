@@ -1,6 +1,6 @@
-n.d(t, { Z: () => p }), n(388685);
-var l = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => m }), n(388685);
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
     s = n(481060),
@@ -8,20 +8,20 @@ var l = n(54381),
     u = n(699758),
     c = n(913338),
     d = n(388032),
-    m = n(807276);
-function p(e) {
-    var t, n, i, p;
+    p = n(761768);
+function m(e) {
+    var t, n, i, m;
     let { defaultCategory: h, onCategoryChange: f, className: g } = e,
-        [v, j] = r.useState(h),
-        [y, b] = r.useState(null),
-        S = (0, o.Z)(),
-        x = r.useMemo(
+        [y, j] = l.useState(h),
+        [v, b] = l.useState(null),
+        O = (0, o.Z)(),
+        S = l.useMemo(
             () => [
                 {
                     name: d.intl.string(d.t["6Zuivx"]),
                     value: u.KN.Trick,
                     key: "Trick",
-                    icon: (0, l.jsx)(s.yDF, {
+                    icon: (0, r.jsx)(s.yDF, {
                         size: "sm",
                         color: "currentColor",
                     }),
@@ -32,7 +32,7 @@ function p(e) {
                     name: d.intl.string(d.t["2UeOlY"]),
                     value: u.KN.Treat,
                     key: "Treat",
-                    icon: (0, l.jsx)(s.sq, {
+                    icon: (0, r.jsx)(s.sq, {
                         size: "sm",
                         color: "currentColor",
                     }),
@@ -42,54 +42,54 @@ function p(e) {
             ],
             [],
         ),
-        P = r.useCallback(
+        P = l.useCallback(
             (e) => {
                 j(e.value), f(e.value);
             },
             [f],
         ),
-        O =
-            null == S || null == (n = S.segmentedControlAnimations) || null == (t = n.trick)
+        x =
+            null == O || null == (n = O.segmentedControlAnimations) || null == (t = n.trick)
                 ? void 0
                 : t.getAnimationData,
         E =
-            null == S || null == (p = S.segmentedControlAnimations) || null == (i = p.treat)
+            null == O || null == (m = O.segmentedControlAnimations) || null == (i = m.treat)
                 ? void 0
                 : i.getAnimationData;
-    return (0, l.jsxs)("div", {
-        className: a()(m.container, g),
+    return (0, r.jsxs)("div", {
+        className: a()(p.container, g),
         children: [
-            (0, l.jsx)(c.w, {
-                options: x,
-                value: v,
+            (0, r.jsx)(c.w, {
+                options: S,
+                value: y,
                 onChange: P,
             }),
-            y === u.KN.Trick &&
-                null != O &&
-                (0, l.jsx)("div", {
-                    className: a()(m.animationOverlay, m.trickAnimation),
-                    children: (0, l.jsx)(s.Fmz, {
+            v === u.KN.Trick &&
+                null != x &&
+                (0, r.jsx)("div", {
+                    className: a()(p.animationOverlay, p.trickAnimation),
+                    children: (0, r.jsx)(s.Fmz, {
                         shouldAnimate: !0,
                         loop: !0,
                         autoplay: !0,
-                        className: m.lottieAnimation,
-                        importData: O,
+                        className: p.lottieAnimation,
+                        importData: x,
                         renderer: s.Fmz.Renderers.SVG,
-                        versionKey: +(y === u.KN.Trick),
+                        versionKey: +(v === u.KN.Trick),
                     }),
                 }),
-            y === u.KN.Treat &&
+            v === u.KN.Treat &&
                 null != E &&
-                (0, l.jsx)("div", {
-                    className: a()(m.animationOverlay, m.treatAnimation),
-                    children: (0, l.jsx)(s.Fmz, {
+                (0, r.jsx)("div", {
+                    className: a()(p.animationOverlay, p.treatAnimation),
+                    children: (0, r.jsx)(s.Fmz, {
                         shouldAnimate: !0,
                         loop: !0,
                         autoplay: !0,
-                        className: m.lottieAnimation,
+                        className: p.lottieAnimation,
                         importData: E,
                         renderer: s.Fmz.Renderers.SVG,
-                        versionKey: +(y === u.KN.Treat),
+                        versionKey: +(v === u.KN.Treat),
                     }),
                 }),
         ],

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(594496),
     P = n(856768),
     R = n(981631),
-    D = n(388032),
-    w = n(813709);
+    w = n(388032),
+    D = n(267238);
 function x(e, t, n) {
     return (
         t in e
@@ -118,10 +118,10 @@ function Z(e) {
         }),
         U = (0, s.e7)([y.ZP], () => (null != a ? y.ZP.getMember(a.id, j.id) : null)),
         Z = (0, s.e7)([b.Z], () => !b.Z.isFetchingProfile(j.id, null == a ? void 0 : a.id)),
-        B = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        F = (0, s.cj)([C.Z], () => M(L({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
-        { source: V, pendingAvatar: H, pendingNameplate: Y } = F,
-        W = k(F, ["source", "pendingAvatar", "pendingNameplate"]),
+        F = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        B = (0, s.cj)([C.Z], () => M(L({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        { source: V, pendingAvatar: H, pendingNameplate: Y } = B,
+        W = k(B, ["source", "pendingAvatar", "pendingNameplate"]),
         K = (0, E.SD)({
             userId: j.id,
             image: H,
@@ -142,7 +142,7 @@ function Z(e) {
                 source: V,
             });
     }, [V]),
-    B)
+    F)
         ? (0, r.jsx)(u.Z, {})
         : Z
           ? (0, r.jsxs)(p.Gt, {
@@ -150,7 +150,7 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: D.intl.format(D.t["/PTB2E"], {
+                        children: w.intl.format(w.t["/PTB2E"], {
                             helpCenterLink: S.Z.getArticleURL(R.BhN.GUILD_PROFILES),
                         }),
                     }),
@@ -166,8 +166,8 @@ function Z(e) {
                                   (0, r.jsx)(h.Z, {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
-                                          className: w.profilePreviewTitle,
-                                          children: D.intl.formatToPlainString(D.t.Tc0slG, {
+                                          className: D.profilePreviewTitle,
+                                          children: w.intl.formatToPlainString(w.t.Tc0slG, {
                                               guildName: null == a ? void 0 : a.name,
                                           }),
                                       }),
@@ -189,7 +189,7 @@ function Z(e) {
                                               user: j,
                                               guildId: null == a ? void 0 : a.id,
                                               nameplate: z,
-                                              className: null == z ? w.nameplatePreviewPlaceholder : void 0,
+                                              className: null == z ? D.nameplatePreviewPlaceholder : void 0,
                                               isHighlighted: !0,
                                           }),
                                       ),

@@ -1,78 +1,78 @@
-n.d(t, {
-    q: () => u,
+n.d(e, {
+    q: () => a,
     z: () => o,
 }),
     n(953529);
-var r = n(54381);
+var i = n(54381);
 n(473749);
 var l = n(120356),
-    s = n.n(l),
-    i = n(481060),
-    a = n(932599);
-function o(e) {
-    let { children: t } = e;
-    return (0, r.jsx)("div", {
-        className: a.cellGroup,
-        children: (0, r.jsx)("div", {
-            className: a.content,
-            children: t,
+    r = n.n(l),
+    s = n(481060),
+    c = n(932599);
+function o(t) {
+    let { children: e } = t;
+    return (0, i.jsx)("div", {
+        className: c.cellGroup,
+        children: (0, i.jsx)("div", {
+            className: c.content,
+            children: e,
         }),
     });
 }
-function u(e) {
+function a(t) {
     let {
-        icon: t,
+        icon: e,
         title: n,
         description: l,
         iconClassName: o,
-        color: u,
-        listType: c = "icon",
-        completed: d = !1,
-        index: m,
-    } = e;
-    return (0, r.jsxs)("div", {
-        className: a.cell,
+        color: a,
+        listType: d = "icon",
+        completed: u = !1,
+        index: x,
+    } = t;
+    return (0, i.jsxs)("div", {
+        className: c.cell,
         children: [
             (() => {
-                if ("numbered" === c && null != m)
-                    if (d)
-                        return (0, r.jsx)("div", {
-                            className: a.number,
-                            children: (0, r.jsx)(i.sV5, {
+                if ("numbered" === d && null != x)
+                    if (u)
+                        return (0, i.jsx)("div", {
+                            className: c.number,
+                            children: (0, i.jsx)(s.sV5, {
                                 color: "green",
-                                className: s()(a.icon, o),
+                                className: r()(c.icon, o),
                             }),
                         });
                     else
-                        return (0, r.jsx)(i.Heading, {
+                        return (0, i.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-brand",
-                            className: a.number,
-                            children: m + 1,
+                            className: c.number,
+                            children: x + 1,
                         });
-                if (null != t)
-                    return (0, r.jsx)("div", {
-                        className: a.iconContainer,
-                        children: (0, r.jsx)(t, {
-                            color: null != u ? u : "currentColor",
-                            className: s()(a.icon, o),
+                if (null != e)
+                    return (0, i.jsx)("div", {
+                        className: c.iconContainer,
+                        children: (0, i.jsx)(e, {
+                            color: null != a ? a : "currentColor",
+                            className: r()(c.icon, o),
                         }),
                     });
             })(),
-            (0, r.jsxs)("div", {
-                className: a.textContainer,
+            (0, i.jsxs)("div", {
+                className: c.textContainer,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        className: s()({ [a.completedText]: d }),
+                        className: r()({ [c.completedText]: u }),
                         children: n,
                     }),
                     null != l &&
-                        (0, r.jsx)(i.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            className: s()({ [a.completedText]: d }),
+                            className: r()({ [c.completedText]: u }),
                             children: l,
                         }),
                 ],

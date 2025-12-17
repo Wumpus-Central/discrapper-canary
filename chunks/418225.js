@@ -5,17 +5,17 @@ var l = s(793030),
     n = s(481060),
     i = s(935369),
     a = s(53365),
-    o = s(388032),
-    c = s(65618),
+    c = s(388032),
+    o = s(69901),
     d = s(490962);
 function u(t) {
     let { header: e, body: s } = t;
     return (0, r.jsxs)("div", {
-        className: c.bulletItem,
+        className: o.bulletItem,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                className: c.bulletImage,
+                className: o.bulletImage,
                 src: d,
             }),
             (0, r.jsxs)("div", {
@@ -37,7 +37,7 @@ function u(t) {
     });
 }
 function x(t) {
-    let { guildId: e, demonetized: s, transitionState: c, onClose: d } = t,
+    let { guildId: e, demonetized: s, transitionState: o, onClose: d } = t,
         [x, { loading: m, error: h }] = (0, i.Z)(s ? a.$J : a.hY),
         p = async () => {
             try {
@@ -47,21 +47,21 @@ function x(t) {
         };
     return (0, r.jsx)(l.Modal, {
         size: "md",
-        transitionState: c,
+        transitionState: o,
         actions: [
             {
                 variant: "secondary",
                 onClick: d,
-                text: o.intl.string(o.t.Jj8nUC),
+                text: c.intl.string(c.t.Jj8nUC),
             },
             {
                 variant: "primary",
                 loading: m,
                 onClick: p,
-                text: o.intl.string(o.t["pC/ozD"]),
+                text: c.intl.string(c.t["pC/ozD"]),
             },
         ],
-        title: o.intl.string(o.t.TP4GSt),
+        title: c.intl.string(c.t.TP4GSt),
         onClose: d,
         preview: (0, r.jsxs)(r.Fragment, {
             children: [
@@ -75,25 +75,25 @@ function x(t) {
                 (0, r.jsx)(n.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    children: o.intl.format(o.t["+oNl6x"], {
+                    children: c.intl.format(c.t["+oNl6x"], {
                         termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms",
                     }),
                 }),
             ],
         }),
-        subtitle: o.intl.format(o.t.c0IsON, {
+        subtitle: c.intl.format(c.t.c0IsON, {
             termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms",
         }),
         children: (0, r.jsxs)(n.Kqy, {
             gap: 16,
             children: [
                 (0, r.jsx)(u, {
-                    header: o.intl.string(o.t.UzDaWD),
-                    body: o.intl.string(o.t.IDk8Fz),
+                    header: c.intl.string(c.t.UzDaWD),
+                    body: c.intl.string(c.t.IDk8Fz),
                 }),
                 (0, r.jsx)(u, {
-                    header: o.intl.string(o.t["36/RiT"]),
-                    body: o.intl.string(o.t.CBzNtr),
+                    header: c.intl.string(c.t["36/RiT"]),
+                    body: c.intl.string(c.t.CBzNtr),
                 }),
             ],
         }),

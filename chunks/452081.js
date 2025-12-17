@@ -3,13 +3,13 @@ var r = n(473749),
     i = n(828700),
     l = n(823379),
     a = n(283833),
-    s = n(968843),
-    o = n(388032);
+    o = n(968843),
+    s = n(388032);
 function c(e) {
     let { withClaimedQuestsTab: t = !0 } = e,
         n = a.Z.useField("tab"),
         c = (0, i.TH)(),
-        u = (0, s.aV)();
+        u = (0, o.aV)();
     r.useEffect(() => {
         a.Z.getState().initializeFromUrl(c.search, u);
     }, [c.search, u]);
@@ -21,19 +21,19 @@ function c(e) {
             () =>
                 [
                     {
-                        id: s.e5.ALL,
-                        label: o.intl.string(o.t["0SzXmi"]),
+                        id: o.e5.ALL,
+                        label: s.intl.string(s.t["0SzXmi"]),
                     },
                     t
                         ? {
-                              id: s.e5.CLAIMED,
-                              label: o.intl.string(o.t.zyNYNB),
+                              id: o.e5.CLAIMED,
+                              label: s.intl.string(s.t.zyNYNB),
                           }
                         : null,
                     t && u
                         ? {
-                              id: s.e5.PREVIEW_TOOL,
-                              label: o.intl.string(o.t.BDUDau),
+                              id: o.e5.PREVIEW_TOOL,
+                              label: s.intl.string(s.t.BDUDau),
                           }
                         : null,
                 ].filter(l.lm),

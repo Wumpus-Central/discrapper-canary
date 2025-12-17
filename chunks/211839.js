@@ -1,4 +1,4 @@
-n.d(e, { m: () => c });
+n.d(e, { m: () => S });
 var i = n(442837),
     l = n(136097),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(313789),
     a = n(36192),
     o = n(388032);
-let c = (0, s.ON)(r.n.SESSIONS_OTHER_SESSIONS_SETTING, {
+let S = (0, s.ON)(r.n.SESSIONS_OTHER_SESSIONS_SETTING, {
     Component: a.Vy,
     useSearchTerms: () => [o.intl.string(o.t["+1h0k/"])],
     usePredicate: () => {

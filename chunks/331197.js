@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -9,19 +9,19 @@ var i = n(54381),
     u = n(906732),
     d = n(522651),
     p = n(795318),
-    h = n(706140),
-    f = n(579185),
+    f = n(706140),
+    h = n(579185),
     m = n(242291),
     g = n(792165),
     b = n(603074),
     C = n(294629),
     y = n(131951),
-    _ = n(390322),
-    v = n(871499),
+    v = n(390322),
+    x = n(871499),
     O = n(127379),
-    x = n(388032);
-function E(e) {
-    let { channel: t, themeable: E, whichPopoutIsOpen: j, setWhichPopoutIsOpen: S } = e,
+    E = n(388032);
+function j(e) {
+    let { channel: t, themeable: j, whichPopoutIsOpen: S, setWhichPopoutIsOpen: _ } = e,
         { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
             Component: I,
@@ -33,10 +33,10 @@ function E(e) {
         R = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         L = w || M || R,
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
-        [k, U] = (0, h.cv)(D),
+        [k, U] = (0, f.cv)(D),
         { analyticsLocations: V } = (0, u.ZP)(),
-        { isHovered: F, setIsHovered: B, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
-    function W(e) {
+        { isHovered: F, setIsHovered: H, onMouseEnter: B, onMouseLeave: G } = (0, h.Z)(200, 300);
+    function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
@@ -93,31 +93,31 @@ function E(e) {
                 };
             });
     }
-    function z() {
+    function W() {
         (0, d.v)(P, d.d.SOUNDBOARD),
-            j === O.D.SOUNDBOARD
-                ? (null == S || S(void 0), G())
-                : (null != j ? (Z(), H()) : Z(), null == S || S(O.D.SOUNDBOARD));
+            S === O.D.SOUNDBOARD
+                ? (null == _ || _(void 0), G())
+                : (null != S ? (Z(), B()) : Z(), null == _ || _(O.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (F && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
+        shouldShow: (F && (S === O.D.SOUNDBOARD || null == S)) || S === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            B(!1), null == S || S(void 0);
+            H(!1), null == _ || _(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return L
                 ? null
-                : (0, i.jsx)(_.Z, {
+                : (0, i.jsx)(v.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: H,
+                          onMouseEnter: B,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -135,29 +135,29 @@ function E(e) {
                   });
         },
         children: () =>
-            (0, i.jsx)(v.d, {
+            (0, i.jsx)(x.d, {
                 ref: q,
                 isTrayButton: !0,
-                themeable: E,
+                themeable: j,
                 label: w
-                    ? x.intl.string(x.t["Ox4/zU"])
+                    ? E.intl.string(E.t["Ox4/zU"])
                     : M
-                      ? x.intl.string(x.t["+YBKYI"])
+                      ? E.intl.string(E.t["+YBKYI"])
                       : R
-                        ? x.intl.string(x.t.X1lQli)
+                        ? E.intl.string(E.t.X1lQli)
                         : void 0,
                 iconComponent: I,
                 disabled: L,
-                onContextMenu: W,
-                onClick: z,
+                onContextMenu: z,
+                onClick: W,
                 onMouseEnter: () => {
-                    H(), T();
+                    B(), T();
                 },
                 onMouseLeave: () => {
-                    null == j && (G(), N());
+                    null == S && (G(), N());
                 },
-                isActive: F || j === O.D.SOUNDBOARD,
-                color: F || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: F || S === O.D.SOUNDBOARD,
+                color: F || S === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

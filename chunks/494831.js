@@ -1,7 +1,7 @@
 n.d(t, {
     Cl: () => d,
     ey: () => u,
-    pM: () => f,
+    pM: () => b,
 });
 var r = n(149765),
     i = n(900089),
@@ -14,7 +14,7 @@ let d = 371,
     u = 30,
     g = l.TP;
 r.Od(g, s.Plq.MENTION_EVERYONE);
-let m = r.$e(
+let f = r.$e(
         g,
         s.Plq.VIEW_AUDIT_LOG,
         s.Plq.MANAGE_NICKNAMES,
@@ -27,8 +27,8 @@ let m = r.$e(
         s.Plq.PRIORITY_SPEAKER,
         s.Plq.MODERATE_MEMBERS,
     ),
-    p = r.$e(
-        m,
+    m = r.$e(
+        f,
         s.Plq.MANAGE_CHANNELS,
         s.Plq.MANAGE_THREADS,
         s.Plq.MANAGE_ROLES,
@@ -37,13 +37,13 @@ let m = r.$e(
         s.Plq.MANAGE_WEBHOOKS,
         s.Plq.SEND_TTS_MESSAGES,
     );
-r.IH(p, s.Plq.VIEW_GUILD_ANALYTICS),
+r.IH(m, s.Plq.VIEW_GUILD_ANALYTICS),
     (0, i.Fw)("BRAND_500"),
     l.Hn,
     (0, i.Fw)("GREEN_360"),
     (0, i.Fw)("YELLOW_300"),
     (0, i.Fw)("RED_400");
-let f = [
+let b = [
     {
         id: a.g.SOLID,
         colors: {

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(742280),
-    o = n(442837),
+    o = n(742280),
+    s = n(442837),
     c = n(681715),
     u = n(481060),
     d = n(355467),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(100527),
     m = n(367907),
     b = n(791250),
-    E = n(752048),
-    _ = n(518950),
+    _ = n(752048),
+    E = n(518950),
     O = n(592125),
     v = n(480294),
     y = n(158776),
@@ -31,15 +31,15 @@ var r = n(54381),
 function Z(e) {
     var t, n;
     let { user: i, index: l, isCompetitive: a } = e,
-        { status: s, isMobile: c } = (0, o.cj)([y.Z], () => ({
+        { status: o, isMobile: c } = (0, s.cj)([y.Z], () => ({
             status: y.Z.getStatus(i.id),
             isMobile: y.Z.isMobileOnline(i.id),
         })),
-        d = (0, o.e7)([C.Z, O.Z], () => {
+        d = (0, s.e7)([C.Z, O.Z], () => {
             let e = O.Z.getDMFromUserId(i.id);
             return null != e && C.Z.isTyping(e, i.id);
         }, [i]),
-        { avatarSrc: f, eventHandlers: g } = (0, _.Z)({
+        { avatarSrc: f, eventHandlers: g } = (0, E.Z)({
             userId: i.id,
             size: u.EFr.SIZE_32,
             animateOnHover: !0,
@@ -95,9 +95,9 @@ function Z(e) {
                     e),
                 );
         },
-        E = 0 === l,
-        v = E ? u.YqE : a ? u.XcD : void 0,
-        I = E ? x.intl.string(x.t.aI4VOL) : a ? x.intl.string(x.t.kABl2x) : void 0;
+        _ = 0 === l,
+        v = _ ? u.YqE : a ? u.XcD : void 0,
+        I = _ ? x.intl.string(x.t.aI4VOL) : a ? x.intl.string(x.t.kABl2x) : void 0;
     return (0, r.jsx)(u.P3F, {
         className: A.frequentFriendAvatarButton,
         onClick: b,
@@ -107,12 +107,12 @@ function Z(e) {
         children: (0, r.jsx)(u.qEK, {
             src: f,
             "aria-label": null != (t = i.globalName) ? t : i.username,
-            status: s,
+            status: o,
             isTyping: d,
             isMobile: c && !d,
             size: u.EFr.SIZE_32,
             CutoutIcon: v,
-            avatarTooltipAsset: E ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
+            avatarTooltipAsset: _ ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
             avatarTooltipText: I,
             statusTooltip: !0,
             statusTooltipDelay: 50,
@@ -123,10 +123,10 @@ function Z(e) {
 function w() {
     let { enabled: e } = (0, j.Q)("frequent_friends_row"),
         t = (function () {
-            let e = (0, o.Wu)([E.Z], () =>
-                    [...E.Z.getUserAffinities()].sort((e, t) => E.Z.compare(e.otherUserId, t.otherUserId)),
+            let e = (0, s.Wu)([_.Z], () =>
+                    [..._.Z.getUserAffinities()].sort((e, t) => _.Z.compare(e.otherUserId, t.otherUserId)),
                 ),
-                t = (0, o.Wu)([S.default, I.Z], () => {
+                t = (0, s.Wu)([S.default, I.Z], () => {
                     let t = e.map((e) => e.otherUserId),
                         n = [];
                     for (let e of t)
@@ -155,8 +155,8 @@ function w() {
                       showCompetitiveSpot: n,
                   };
         })(),
-        n = (0, o.e7)([v.Z], () => v.Z.hasConsented(P.pjP.PERSONALIZATION)),
-        l = (0, o.e7)([S.default], () => {
+        n = (0, s.e7)([v.Z], () => v.Z.hasConsented(P.pjP.PERSONALIZATION)),
+        l = (0, s.e7)([S.default], () => {
             var e, t;
             return null != (t = null == (e = S.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) && t;
         }),
@@ -166,7 +166,7 @@ function w() {
             clientWidth: 0,
         }),
         m = i.useRef(null),
-        _ = (0, o.e7)([T.Z], () => T.Z.ipCountryCode),
+        E = (0, s.e7)([T.Z], () => T.Z.ipCountryCode),
         O = (0, g.gD)(),
         y = i.useCallback(() => {
             var e;
@@ -201,12 +201,12 @@ function w() {
     )
         return null;
     let { frequentFriends: L, showCompetitiveSpot: R } = t,
-        D = (_ === s.S.AU || _ === s.S.GB) && !O,
-        M = null != _ && s.M.EU_COUNTRIES.has(_) && !l,
-        k = !D && !M && null != _ && R,
+        D = (E === o.S.AU || E === o.S.GB) && !O,
+        M = null != E && o.M.EU_COUNTRIES.has(E) && !l,
+        k = !D && !M && null != E && R,
         U = p.scrollWidth > p.clientWidth,
         G = p.scrollLeft > 0,
-        B = p.scrollLeft < p.scrollWidth - p.clientWidth - 2;
+        H = p.scrollLeft < p.scrollWidth - p.clientWidth - 2;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -234,7 +234,7 @@ function w() {
                         },
                         className: a()(A.frequentFriendsAvatars, {
                             [A.scrollMaskLeft]: U && G,
-                            [A.scrollMaskRight]: U && B,
+                            [A.scrollMaskRight]: U && H,
                         }),
                         orientation: "horizontal",
                         onScroll: w,

@@ -1,9 +1,9 @@
-n.d(e, { Z: () => u });
+n.d(e, { Z: () => r });
 var i = n(509613),
     l = n(313789),
     s = n(795594),
-    r = n(388032);
-let u = (0, i.ON)(l.n.AUTHORIZED_APPS_LIST_SETTING, {
+    u = n(388032);
+let r = (0, i.ON)(l.n.AUTHORIZED_APPS_LIST_SETTING, {
     Component: s.Wg,
-    useSearchTerms: () => [r.intl.string(r.t["f6kk+r"])],
+    useSearchTerms: () => [u.intl.string(u.t["f6kk+r"])],
 });

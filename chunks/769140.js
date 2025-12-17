@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -28,18 +28,18 @@ var i = n(120356),
     N = n(336383),
     P = n(194811),
     R = n(265386),
-    D = n(668700),
-    w = n(384298),
+    w = n(668700),
+    D = n(384298),
     x = n(670451),
     L = n(981631),
     j = n(671955),
     M = n(388032),
-    k = n(704543),
-    U = n(936524),
+    k = n(251806),
+    U = n(272642),
     G = n(924482),
     Z = n(774797);
-function B(e) {
-    let { user: t, currentUser: n, stream: i, className: B, onClose: F } = e,
+function F(e) {
+    let { user: t, currentUser: n, stream: i, className: F, onClose: B } = e,
         { themeType: V, theme: H } = (0, A.z)(),
         Y = (0, o.e7)([O.Z], () => O.Z.getGuild(null == i ? void 0 : i.guildId)),
         W = (0, o.e7)([y.Z], () => y.Z.getChannel(null == i ? void 0 : i.channelId)),
@@ -82,7 +82,7 @@ function B(e) {
                         (Q({ action: "PRESS_IMAGE" }),
                         c.default.selectVoiceChannel(i.channelId),
                         (0, u.iV)(i),
-                        null == F || F());
+                        null == B || B());
             };
             return null == ea && $
                 ? (0, r.jsx)("div", {
@@ -159,13 +159,13 @@ function B(e) {
                               channel: W,
                               guild: Y,
                               onAction: Q,
-                              onClose: F,
+                              onClose: B,
                           }),
                           (0, r.jsx)(s.Z, {
                               users: K,
                               guildId: Y.id,
                               channelId: W.id,
-                              maxUsers: D.W,
+                              maxUsers: w.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
@@ -182,22 +182,22 @@ function B(e) {
         el = () =>
             V === j.l.MODAL || V === j.l.MODAL_V2
                 ? null
-                : (0, r.jsx)(D.Z, {
+                : (0, r.jsx)(w.Z, {
                       user: t,
                       guild: Y,
                       channel: W,
                       onAction: Q,
-                      onClose: F,
+                      onClose: B,
                   }),
         ec = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)("div", {
                       className: k.actions,
-                      children: (0, r.jsx)(w.Z, {
+                      children: (0, r.jsx)(D.Z, {
                           channel: W,
                           onAction: Q,
-                          onClose: F,
+                          onClose: B,
                       }),
                   }),
         eu = null != z ? M.intl.formatToPlainString(M.t["4CQq9Q"], { name: z.name }) : M.intl.string(M.t["Jpkr/q"]);
@@ -205,9 +205,9 @@ function B(e) {
         value: q,
         children: (0, r.jsxs)(N.Z, {
             ref: X,
-            className: B,
+            className: F,
             onAction: Q,
-            onClose: F,
+            onClose: B,
             "aria-label": eu,
             children: [
                 (0, r.jsx)(P.Z, {
@@ -216,7 +216,7 @@ function B(e) {
                     contextMenu: (0, r.jsx)(x.Z, {
                         display: "live",
                         user: t,
-                        onClose: F,
+                        onClose: B,
                     }),
                 }),
                 (0, r.jsxs)("div", {

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(473749),
     i = n(55160),
     l = n(748521),
-    o = n(731965);
-function a(e) {
+    a = n(731965);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -81,13 +81,13 @@ function f(e, t) {
                             disabled: n,
                             boundingRect: null != d ? d : null,
                         }),
-                            (0, o.j)(() => {
+                            (0, a.j)(() => {
                                 c.setState((e) => {
                                     var t, n;
                                     return {
-                                        upsellsByGuildId: s(a({}, null != (t = e.upsellsByGuildId) ? t : {}), {
+                                        upsellsByGuildId: s(o({}, null != (t = e.upsellsByGuildId) ? t : {}), {
                                             [u.guildId]: s(
-                                                a({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
+                                                o({}, null != (n = e.upsellsByGuildId[u.guildId]) ? n : {}),
                                                 { [u.name]: u },
                                             ),
                                         }),

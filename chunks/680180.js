@@ -1,11 +1,11 @@
 n.d(t, { Z: () => d });
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(481060),
     o = n(49898),
-    c = n(174183);
+    c = n(447141);
 function d(e) {
     let {
             state: t,
@@ -17,39 +17,39 @@ function d(e) {
             onBlur: m,
             onSubmit: h,
         } = e,
-        g = a.useRef(null),
-        f = a.useCallback(
+        f = r.useRef(null),
+        g = r.useCallback(
             (e) => {
                 "Enter" === e.key && h();
             },
             [h],
         ),
-        _ = a.useCallback(() => {
+        b = r.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
-                    return null == (e = g.current) ? void 0 : e.focus();
+                    return null == (e = f.current) ? void 0 : e.focus();
                 });
         }, [u]);
     return t === o.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, r.jsx)(s.P3F, {
+        ? (0, a.jsx)(s.P3F, {
               className: c.searchIcon,
-              onClick: _,
-              children: (0, r.jsx)(s._Ve, {
+              onClick: b,
+              children: (0, a.jsx)(s._Ve, {
                   size: "sm",
                   color: s.TVs.colors.ICON_STRONG,
               }),
           })
-        : (0, r.jsx)("div", {
+        : (0, a.jsx)("div", {
               className: l()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
-              children: (0, r.jsx)(s.E1j, {
+              children: (0, a.jsx)(s.E1j, {
                   size: "sm",
-                  ref: g,
+                  ref: f,
                   query: n,
                   placeholder: i,
                   onChange: d,
                   onClear: p,
-                  onKeyDown: f,
+                  onKeyDown: g,
                   onBlur: m,
               }),
           });

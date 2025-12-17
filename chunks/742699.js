@@ -1,33 +1,33 @@
-e.d(t, { Z: () => u });
-var o = e(54381),
-    i = e(473749),
-    r = e(481060),
-    s = e(63063),
-    l = e(921869),
-    a = e(981631),
-    c = e(388032),
-    d = e(233820);
-function u(n) {
-    let { onContinue: t, onClose: e } = n,
-        u = s.Z.getArticleURL(a.BhN.CRUNCHYROLL_CONNECTION),
+t.d(n, { Z: () => u });
+var o = t(54381),
+    i = t(473749),
+    r = t(481060),
+    s = t(63063),
+    a = t(921869),
+    l = t(981631),
+    d = t(388032),
+    c = t(233820);
+function u(e) {
+    let { onContinue: n, onClose: t } = e,
+        u = s.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
         C = i.useMemo(
             () => [
                 {
-                    label: c.intl.string(c.t["2TXHQd"]),
+                    label: d.intl.string(d.t["2TXHQd"]),
                     icon: r.ARS,
                 },
             ],
             [],
         );
-    return (0, o.jsx)(l.m, {
-        platformType: a.ABu.CRUNCHYROLL,
-        headerConnect: c.intl.string(c.t["Da+3NJ"]),
-        body: c.intl.string(c.t.MaPpPL),
+    return (0, o.jsx)(a.m, {
+        platformType: l.ABu.CRUNCHYROLL,
+        headerConnect: d.intl.string(d.t["Da+3NJ"]),
+        body: d.intl.string(d.t.MaPpPL),
         learnMoreLink: u,
-        onClose: e,
-        onContinue: t,
+        onClose: t,
+        onContinue: n,
         img: (0, o.jsx)("img", {
-            src: d,
+            src: c,
             width: 234,
             height: 152,
             alt: "",

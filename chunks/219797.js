@@ -1,5 +1,5 @@
 n.d(t, {
-    L9: () => D,
+    L9: () => w,
     ZK: () => R,
     d4: () => P,
     dS: () => T,
@@ -26,7 +26,7 @@ var r = n(54381),
     g = n(524444),
     E = n(981631),
     b = n(388032),
-    y = n(512399);
+    y = n(977267);
 function O(e, t, n) {
     return (
         t in e
@@ -231,15 +231,15 @@ function R(e) {
         }),
     );
 }
-function D(e) {
+function w(e) {
     return "CLIP" === e.item.type
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(D, {
               attachment: e.item.originalItem,
               message: e.message,
           })
         : null;
 }
-function w(e) {
+function D(e) {
     var t;
     let { attachment: n, message: i } = e,
         a = i.channel_id,

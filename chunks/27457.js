@@ -275,7 +275,7 @@ let ei = [$.fO.ACTIVITY],
                 });
         }
         let e6 = i.useRef(null),
-            e8 = O.type === $.fO.STREAM ? u.pzj : u.Odl;
+            e7 = O.type === $.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(f.Z, {
             section: J.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -357,7 +357,7 @@ let ei = [$.fO.ACTIVITY],
                                     eu
                                         ? (0, r.jsx)("div", {
                                               className: er.selectedScreen,
-                                              children: (0, r.jsx)(e8, {
+                                              children: (0, r.jsx)(e7, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: er.selectedIcon,

@@ -3,8 +3,8 @@ var r = n(392711),
     i = n.n(r),
     l = n(243814),
     a = n(734959),
-    s = n(570140),
-    o = n(212517),
+    o = n(570140),
+    s = n(212517),
     c = n(812206),
     u = n(813370),
     d = n(626135),
@@ -13,10 +13,10 @@ var r = n(392711),
     g = n(996106),
     h = n(452426),
     m = n(186901),
-    _ = n(981631);
-let b = ["1402418171662569542"],
+    b = n(981631);
+let _ = ["1402418171662569542"],
     E = {
-        [_.Etm.SET_ACTIVITY]: {
+        [b.Etm.SET_ACTIVITY]: {
             scope: {
                 [m.Gp.ANY]: [l.x.RPC, l.x.RPC_ACTIVITIES_WRITE, m.lH],
             },
@@ -48,7 +48,7 @@ let b = ["1402418171662569542"],
                                 party: (0, h.Z)(e).keys({
                                     id: e.string().min(2).max(128),
                                     size: e.array().items(e.number().min(0)).length(2),
-                                    privacy: e.number().default(_.RYY.PRIVATE).valid([_.RYY.PRIVATE, _.RYY.PUBLIC]),
+                                    privacy: e.number().default(b.RYY.PRIVATE).valid([b.RYY.PRIVATE, b.RYY.PUBLIC]),
                                 }),
                                 secrets: (0, h.Z)(e).keys({
                                     match: e.string().min(2).max(128),
@@ -69,8 +69,8 @@ let b = ["1402418171662569542"],
                                 supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(10),
                                 type: e
                                     .number()
-                                    .default(_.IIU.PLAYING)
-                                    .valid(_.IIU.PLAYING, _.IIU.LISTENING, _.IIU.WATCHING, _.IIU.COMPETING),
+                                    .default(b.IIU.PLAYING)
+                                    .valid(b.IIU.PLAYING, b.IIU.LISTENING, b.IIU.WATCHING, b.IIU.COMPETING),
                                 status_display_type: e.number().optional().valid(a.D.NAME, a.D.STATE, a.D.DETAILS),
                             })
                             .allow(null),
@@ -85,14 +85,14 @@ let b = ["1402418171662569542"],
                     } = e;
                 if (![m.He.IPC, m.He.WEBSOCKET, m.He.POST_MESSAGE].includes(a.transport))
                     throw new g.Z(
-                        { errorCode: _.lTL.INVALID_COMMAND },
+                        { errorCode: b.lTL.INVALID_COMMAND },
                         'command not available from "'.concat(a.transport, '" transport'),
                     );
                 if (null == h && m.He.IPC === a.transport)
-                    throw new g.Z({ errorCode: _.lTL.INVALID_COMMAND }, "nonzero pid required");
+                    throw new g.Z({ errorCode: b.lTL.INVALID_COMMAND }, "nonzero pid required");
                 if (null == E)
                     return (
-                        s.Z.dispatch({
+                        o.Z.dispatch({
                             type: "LOCAL_ACTIVITY_UPDATE",
                             socketId: a.id,
                             pid: h,
@@ -105,28 +105,28 @@ let b = ["1402418171662569542"],
                 let y = a.application.id;
                 E.application_id = y;
                 let I = a.transport === m.He.POST_MESSAGE;
-                E.platform = I ? _.M7m.EMBEDDED : _.M7m.DESKTOP;
+                E.platform = I ? b.M7m.EMBEDDED : b.M7m.DESKTOP;
                 let C = c.Z.getApplication(null != y ? y : void 0),
                     S = null != (r = E.instance) && r,
                     T = null == (t = E.party) ? void 0 : t.privacy;
                 delete E.instance, null == (n = E.party) || delete n.privacy;
-                let N = (0, o.S)(E, S, I, null != C && (0, u.g)(C) && I, T);
+                let N = (0, s.S)(E, S, I, null != C && (0, u.g)(C) && I, T);
                 N > 0 && (E.flags = N);
                 let { assets: j, party: P, secrets: x, timestamps: A, buttons: Z, type: w } = E;
-                if ((null == w && (E.type = _.IIU.PLAYING), null != x)) {
+                if ((null == w && (E.type = b.IIU.PLAYING), null != x)) {
                     let e = i()
                         .values(x)
                         .filter((e) => !!e);
-                    if (null != P && i().intersection(e, [P.id]).length > 0 && !b.includes(a.application.id))
+                    if (null != P && i().intersection(e, [P.id]).length > 0 && !_.includes(a.application.id))
                         throw new g.Z(
-                            { errorCode: _.lTL.INVALID_ACTIVITY_SECRET },
+                            { errorCode: b.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot match the party id",
                         );
                     if (i().uniq(e).length < e.length)
-                        throw new g.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
+                        throw new g.Z({ errorCode: b.lTL.INVALID_ACTIVITY_SECRET }, "secrets must be unique");
                     if (null != Z)
                         throw new g.Z(
-                            { errorCode: _.lTL.INVALID_ACTIVITY_SECRET },
+                            { errorCode: b.lTL.INVALID_ACTIVITY_SECRET },
                             "secrets cannot currently be sent with buttons",
                         );
                 }
@@ -145,16 +145,16 @@ let b = ["1402418171662569542"],
                 }
                 return l.then((e) => {
                     var t, n, r, i;
-                    let [l, o, c] = e;
+                    let [l, s, c] = e;
                     if (
                         (null != j &&
                             (null != l ? (j.large_image = l) : delete j.large_image,
-                            null != o ? (j.small_image = o) : delete j.small_image,
+                            null != s ? (j.small_image = s) : delete j.small_image,
                             null != c ? (j.invite_cover_image = c) : delete j.invite_cover_image),
                         !O())
                     )
                         return;
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: "LOCAL_ACTIVITY_UPDATE",
                         socketId: a.id,
                         pid: h,
@@ -180,7 +180,7 @@ let b = ["1402418171662569542"],
                         null != j && (f.has_images = !!(j.large_image || j.small_image || j.invite_cover_image)),
                         null != p &&
                             ((f.party_max = null != p.size && p.size[1] > 0 ? p.size[1] : void 0), (f.party_id = p.id)),
-                        d.default.track(_.rMx.ACTIVITY_UPDATED, f),
+                        d.default.track(b.rMx.ACTIVITY_UPDATED, f),
                         E
                     );
                 });

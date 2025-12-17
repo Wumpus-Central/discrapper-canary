@@ -1,80 +1,80 @@
-r.d(e, { default: () => p }), r(388685);
+r.d(t, { default: () => d }), r(388685);
 var n = r(54381),
     a = r(473749),
     i = r(481060),
     o = r(881052),
     c = r(434404),
     l = r(78451),
-    s = r(915509),
-    u = r(981631),
-    d = r(388032);
-function p(t) {
-    var e, r;
-    let { guild: p, onClose: b, hideColors: g } = t,
-        [f, y] = a.useState(p.verificationLevel),
-        [_, O] = a.useState(null),
-        m = p.features.has(u.GuildFeatures.COMMUNITY),
-        v = (0, l.IF)(m, g).filter((t) => !t.disabled),
-        j = a.useCallback(async () => {
-            null != _ && O(null);
+    b = r(915509),
+    s = r(981631),
+    u = r(388032);
+function d(e) {
+    var t, r;
+    let { guild: d, onClose: p, hideColors: g } = e,
+        [f, y] = a.useState(d.verificationLevel),
+        [O, m] = a.useState(null),
+        v = d.features.has(s.GuildFeatures.COMMUNITY),
+        j = (0, l.IF)(v, g).filter((e) => !e.disabled),
+        C = a.useCallback(async () => {
+            null != O && m(null);
             try {
-                await c.Z.saveGuild(p.id, { verificationLevel: f }), c.Z.updateGuild({ verificationLevel: f }), b();
-            } catch (t) {
-                O(new o.Hx(t).getAnyErrorMessage());
+                await c.Z.saveGuild(d.id, { verificationLevel: f }), c.Z.updateGuild({ verificationLevel: f }), p();
+            } catch (e) {
+                m(new o.Hx(e).getAnyErrorMessage());
             }
-        }, [_, p.id, f, b]);
+        }, [O, d.id, f, p]);
     return (0, n.jsx)(
-        s.Z,
-        ((e = (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var r = null != arguments[e] ? arguments[e] : {},
+        b.Z,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         }),
                     )),
-                    n.forEach(function (e) {
+                    n.forEach(function (t) {
                         var n;
-                        (n = r[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (t[e] = n);
+                                : (e[t] = n);
                     });
             }
-            return t;
-        })({}, t)),
+            return e;
+        })({}, e)),
         (r = r =
             {
-                title: d.intl.string(d.t.DpRdYK),
-                description: d.intl.format(d.t.iuRk2j, {}),
-                errorText: _,
-                onConfirm: j,
-                onCancel: b,
+                title: u.intl.string(u.t.DpRdYK),
+                description: u.intl.format(u.t.iuRk2j, {}),
+                errorText: O,
+                onConfirm: C,
+                onCancel: p,
                 children: (0, n.jsx)(i.FXm, {
                     value: f,
-                    options: v,
-                    onChange: (t) => y(t),
+                    options: j,
+                    onChange: (e) => y(e),
                 }),
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : (function (t, e) {
-                  var r = Object.keys(t);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(t);
+                      var n = Object.getOwnPropertySymbols(e);
                       r.push.apply(r, n);
                   }
                   return r;
-              })(Object(r)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
-        e),
+        t),
     );
 }

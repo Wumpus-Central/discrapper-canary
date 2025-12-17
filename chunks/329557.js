@@ -3,12 +3,12 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(570140),
-    o = n(317770),
-    a = n(51596),
+    a = n(317770),
+    o = n(51596),
     s = n(823385),
     c = n(900085);
 let u = "QUICK_SWITCHER_MODAL_KEY";
-class d extends o.Z {
+class d extends a.Z {
     _initialize() {
         l.Z.subscribe("QUICKSWITCHER_SHOW", this.handleShow), l.Z.subscribe("QUICKSWITCHER_HIDE", this.handleHide);
     }
@@ -51,7 +51,7 @@ class d extends o.Z {
                 {
                     modalKey: u,
                     instant: !0,
-                    onCloseCallback: a.Cp,
+                    onCloseCallback: o.Cp,
                 },
             );
     }

@@ -38,7 +38,7 @@ function P(e, t, n) {
     );
 }
 let R = new _.Z("MessageManager");
-function D(e) {
+function w(e) {
     let {
         guildId: t,
         channelId: n,
@@ -130,7 +130,7 @@ function D(e) {
             );
         }
 }
-let w = 90 * I.Z.Millis.DAY,
+let D = 90 * I.Z.Millis.DAY,
     x = "viewedThreadIds";
 function L(e) {
     if (O.ZP.hasOpenedThread(e)) return !1;
@@ -140,7 +140,7 @@ function L(e) {
     }
     if (e in i) return !1;
     i[e] = Date.now();
-    let n = Date.now() - w;
+    let n = Date.now() - D;
     for (let e in i) i[e] < n && delete i[e];
     return o.K.set(x, i), !0;
 }
@@ -163,28 +163,28 @@ function M() {
     if (null == t) return;
     let n = j(t.id);
     (r = void 0),
-        D({
+        w({
             guildId: t.getGuildId(),
             channelId: t.id,
             messageId: n.messageId,
             jumpType: n.jumpType,
             avoidInitialScroll: null != n.messageId,
         }),
-        B(t.getGuildId(), t.id);
+        F(t.getGuildId(), t.id);
 }
 function k() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
     if (null == t) return;
-    if (!(0, g.Qm)(t.type)) return void B(t.getGuildId(), t.id);
+    if (!(0, g.Qm)(t.type)) return void F(t.getGuildId(), t.id);
     let n = f.Z.getOrCreate(e);
-    if (n.ready && n.hasFetched) return void B(t.getGuildId(), t.id);
-    D({
+    if (n.ready && n.hasFetched) return void F(t.getGuildId(), t.id);
+    w({
         guildId: t.getGuildId(),
         channelId: t.id,
     }),
-        B(t.getGuildId(), t.id);
+        F(t.getGuildId(), t.id);
 }
 function U(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: a, isInitialSetup: o } = e;
@@ -198,61 +198,61 @@ function U(e) {
                 }),
             !1
         );
-    D({
+    w({
         guildId: t,
         channelId: n,
         messageId: i,
         jumpType: a,
     }),
-        B(t, n);
+        F(t, n);
 }
 function G(e) {
     let { guildId: t, channelId: n } = e;
-    D({
+    w({
         guildId: t,
         channelId: n,
     });
 }
 function Z(e) {
     let { guildId: t, channelId: n, messageId: r, jumpType: i } = e;
-    D({
+    w({
         guildId: t,
         channelId: n,
         messageId: r,
         jumpType: i,
     });
 }
-function B(e, t) {
+function F(e, t) {
     let n = E.ZP.getCurrentSidebarChannelId(t);
     null != n &&
-        D({
+        w({
             guildId: e,
             channelId: n,
             messageId: E.ZP.getCurrentSidebarMessageId(t),
         });
 }
-function F() {
+function B() {
     let e = v.Z.getChannelId(),
         t = S.Z.getGuildId();
     if (null == t || null == e) return;
     let n = E.ZP.getSidebarState(e);
-    (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && B(t, e);
+    (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && F(t, e);
 }
 function V(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === C.e3s &&
-        (D({
+        (w({
             guildId: t,
             channelId: n,
         }),
-        B(t, n));
+        F(t, n));
 }
 function H(e) {
     let { channel: t, messageId: n } = e,
         r = t.guild_id;
     null != r &&
         v.Z.getChannelId(r) === t.id &&
-        D({
+        w({
             guildId: r,
             channelId: t.id,
             messageId: n,
@@ -318,9 +318,9 @@ class Q extends d.Z {
     }
     constructor(...e) {
         super(...e),
-            P(this, "fetchMessages", D),
+            P(this, "fetchMessages", w),
             P(this, "loadSelectedChannelIfNecessary", k),
-            P(this, "stores", new Map().set(E.ZP, F)),
+            P(this, "stores", new Map().set(E.ZP, B)),
             P(this, "actions", {
                 APP_STATE_UPDATE: q,
                 OVERLAY_INITIALIZE: M,

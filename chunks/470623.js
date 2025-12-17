@@ -1,7 +1,7 @@
 n.d(t, {
-    AF: () => O,
-    oL: () => _,
-    xH: () => y,
+    AF: () => x,
+    oL: () => y,
+    xH: () => O,
 }),
     n(388685),
     n(781311);
@@ -183,16 +183,16 @@ class m {
         let s = null != (r = p.Z.getThreadSettings(a.id)) ? r : {},
             m = null == a.template ? "" : a.template.trim(),
             b = p.Z.getDraft(a.id, p.d.FirstThreadMessage),
-            _ = (0, d.eK)(null != b && "" !== b.trim() ? b : m);
+            y = (0, d.eK)(null != b && "" !== b.trim() ? b : m);
         (this.name = null != (i = s.name) ? i : ""),
             (l = new Set(s.appliedTags)),
             (this.appliedTags = void 0 !== l ? l : new Set()),
-            (this.textAreaState = _),
-            (this.formOpen = _.textValue !== m);
+            (this.textAreaState = y),
+            (this.formOpen = y.textValue !== m);
     }
 }
 let b = i.createContext(null);
-function _(e) {
+function y(e) {
     let { children: t, channel: n } = e,
         l = i.useMemo(() => (0, s.F)((e, t) => new m(n.id, e, t)), [n]);
     return (0, r.jsx)(b.Provider, {
@@ -200,11 +200,11 @@ function _(e) {
         children: t,
     });
 }
-function y(e, t) {
+function O(e, t) {
     let n = i.useContext(b);
     return a()(null != n, "[useForumPostComposerStore] Context should not be null"), n(e, t);
 }
-function O() {
+function x() {
     let e = i.useContext(b);
     return a()(null != e, "[useForumPostComposerStore] Context should not be null"), e;
 }

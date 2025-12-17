@@ -3,12 +3,12 @@ function i() {}
 function s() {}
 (s.resetWarningCache = i),
     (e.exports = function () {
-        function e(e, t, n, i, s, l) {
-            if (l !== r) {
-                var a = Error(
+        function e(e, t, n, i, s, a) {
+            if (a !== r) {
+                var l = Error(
                     "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
                 );
-                throw ((a.name = "Invariant Violation"), a);
+                throw ((l.name = "Invariant Violation"), l);
             }
         }
         function t() {

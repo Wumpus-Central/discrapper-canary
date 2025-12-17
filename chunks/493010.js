@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => x });
 var i = n(54381),
     r = n(473749),
     l = n(704215),
@@ -17,22 +17,22 @@ var i = n(54381),
     C = n(921944),
     y = n(388032),
     v = n(19055);
-let O = function (e) {
-    let { channel: t, guild: n, maxWidth: O } = e;
+let x = function (e) {
+    let { channel: t, guild: n, maxWidth: x } = e;
     r.useEffect(() => {
         (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
     }, []);
-    let x = r.useCallback(() => {
+    let O = r.useCallback(() => {
             o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         E = (0, i.jsx)(f.ZP.Icon, {
             icon: a.Dio,
             tooltip: y.intl.string(y.t.cpT0Cq),
-            onClick: x,
+            onClick: O,
         });
     return (0, i.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
-        maxWidth: O,
+        maxWidth: x,
         floatingLayer: g.ZP,
         children: [
             (0, i.jsx)(s.Z, {

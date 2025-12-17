@@ -4,17 +4,17 @@ n(473749);
 var i = n(876215),
     l = n(67320),
     a = n(742171),
-    s = n(823873),
-    o = n(707874);
+    o = n(823873),
+    s = n(707874);
 function c(e) {
     let { item: t } = e;
     switch (t.data.kind) {
         case "guildEvent":
-            return (0, r.jsx)(s.Z, { eventId: t.data.eventId });
+            return (0, r.jsx)(o.Z, { eventId: t.data.eventId });
         case "message":
         case "generatedCandidate":
         case "forumThread":
-            return (0, r.jsx)(o.Z, { item: t });
+            return (0, r.jsx)(s.Z, { item: t });
         case "contentInventory":
             switch (t.data.content.content_type) {
                 case i.s.CUSTOM_STATUS:

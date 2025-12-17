@@ -1,4 +1,4 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => f }), r(388685);
 var n = r(54381),
     o = r(473749),
     c = r(512722),
@@ -6,20 +6,20 @@ var n = r(54381),
     l = r(481060),
     a = r(985002),
     s = r(957656),
-    d = r(225753),
+    d = r(517319),
     u = r(388032),
-    f = r(490839);
-let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: c, onClose: b } = e,
+    b = r(477856);
+let f = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: c, onClose: f } = e,
         [p, h] = o.useState(!1),
         j = o.useCallback(() => {
             h(!0);
         }, []),
         y = o.useCallback(() => {
-            b();
-        }, [b]),
+            f();
+        }, [f]),
         g = t.nsfwAllowed,
-        { cancelLinkRequest: O, isCancelLoading: m } = (0, a.G)({
+        { cancelLinkRequest: O, isCancelLoading: x } = (0, a.G)({
             onError: j,
             onSuccess: y,
         });
@@ -27,7 +27,7 @@ let b = (e) => {
         i()(g, "FamilyCenterDeclineLinkModal should only be rendered for parents."),
         (0, n.jsxs)(l.IX, {
             transitionState: c,
-            onClose: b,
+            onClose: f,
             children: [
                 p &&
                     (0, n.jsx)(l.M14, {
@@ -42,7 +42,7 @@ let b = (e) => {
                         icon: (0, n.jsx)(l.Dio, {
                             size: "md",
                             color: "currentColor",
-                            className: f.closeIcon,
+                            className: b.closeIcon,
                         }),
                     }),
                 }),
@@ -52,8 +52,8 @@ let b = (e) => {
                         {
                             variant: "secondary",
                             text: u.intl.string(d.default.czincX),
-                            onClick: b,
-                            disabled: m,
+                            onClick: f,
+                            disabled: x,
                         },
                         {
                             variant: "critical-primary",
@@ -61,8 +61,8 @@ let b = (e) => {
                             onClick: () => {
                                 h(!1), O(r.id);
                             },
-                            disabled: m || p,
-                            loading: m,
+                            disabled: x || p,
+                            loading: x,
                         },
                     ],
                 }),

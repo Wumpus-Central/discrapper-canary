@@ -26,9 +26,9 @@ function h(e) {
     let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: h } = e,
         [f, g] = i.useState(!1),
         [m, b] = i.useState(!1),
-        _ = (0, o.o)(),
-        y = i.useCallback(async () => {
-            if (_) {
+        y = (0, o.o)(),
+        O = i.useCallback(async () => {
+            if (y) {
                 g(!0);
                 try {
                     let r = null;
@@ -45,32 +45,32 @@ function h(e) {
                     g(!1);
                 }
             }
-        }, [t.id, n, l, _, h.textValue]);
+        }, [t.id, n, l, y, h.textValue]);
     i.useEffect(() => {
         b(!1), g(!1), t.id === d.parentChannelId && n !== d.parentMessageId && l({ name: "" });
     }, [n, l, t.id, d.parentChannelId, d.parentMessageId]),
         i.useEffect(() => {
-            (null == d.name || "" === d.name.trim()) && !m && _ && null != n && (b(!0), y());
-        }, [t.id, n, l, d.name, m, _, y]);
-    let O = i.useCallback(
+            (null == d.name || "" === d.name.trim()) && !m && y && null != n && (b(!0), O());
+        }, [t.id, n, l, d.name, m, y, O]);
+    let x = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if (_)
+                if (y)
                     return {
                         icon: s.$2U,
-                        onClick: y,
+                        onClick: O,
                         "aria-label": u.intl.string(u.t.ZF2oBs),
                         disabled: e || f || (null == n && h.textValue.trim().length < 10),
                         tooltip: u.intl.string(u.t.ZF2oBs),
                         loading: f,
                     };
             },
-            [_, y, f, n, h.textValue],
+            [y, O, f, n, h.textValue],
         ),
-        x = i.useCallback(
+        j = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                return _
+                return y
                     ? (0, r.jsx)(a.u, {
                           text: u.intl.string(u.t.ZF2oBs),
                           children: (0, r.jsx)(s.hU, {
@@ -78,7 +78,7 @@ function h(e) {
                               variant: "secondary",
                               size: "sm",
                               "aria-label": u.intl.string(u.t.ZF2oBs),
-                              onClick: y,
+                              onClick: O,
                               disabled: e || f || (null == n && h.textValue.trim().length < 10),
                               loading: f,
                               type: "button",
@@ -86,13 +86,13 @@ function h(e) {
                       })
                     : null;
             },
-            [_, f, n, h.textValue, y],
+            [y, f, n, h.textValue, O],
         );
     return {
         isGeneratingAI: f,
-        generateAIName: y,
-        enableAIFeatures: _,
-        renderAiGenerateButton: x,
-        getThreadNameInputAccessory: O,
+        generateAIName: O,
+        enableAIFeatures: y,
+        renderAiGenerateButton: j,
+        getThreadNameInputAccessory: x,
     };
 }

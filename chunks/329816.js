@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(366841),
     P = n(947519),
     R = n(248687),
-    D = n(690833),
-    w = n(859678),
+    w = n(690833),
+    D = n(859678),
     x = n(314910),
     L = n(84615),
     j = n(429142),
@@ -37,8 +37,8 @@ var r = n(54381),
     U = n(773275),
     G = n(254621),
     Z = n(746106),
-    B = n(526665),
-    F = n(995406),
+    F = n(526665),
+    B = n(995406),
     V = n(314897),
     H = n(819640),
     Y = n(358085),
@@ -49,7 +49,7 @@ var r = n(54381),
     Q = n(686546),
     X = n(950796),
     J = n(981631),
-    $ = n(302821);
+    $ = n(111053);
 n(29973),
     Promise.resolve()
         .then(n.bind(n, 62883))
@@ -79,7 +79,7 @@ let ee = (0, W.Un)({
     }),
     en = i.memo(function () {
         let e = (0, u.e7)([H.Z], () => H.Z.hasLayers()),
-            t = (0, B.wy)("AppSkeleton"),
+            t = (0, F.wy)("AppSkeleton"),
             n = (0, u.e7)([H.Z], () => H.Z.getLayers().includes(J.S9g.USER_SETTINGS)),
             i = (0, p.s9z)(p.$sL),
             a = (0, u.e7)([V.default], () => V.default.isAuthenticated());
@@ -94,13 +94,13 @@ let ee = (0, W.Un)({
             a = (0, Y.getPlatform)(),
             f = s.tq || s.Em,
             g = (0, u.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
-            B = i.useRef(document.body),
+            F = i.useRef(document.body),
             V = "".concat(g);
-        (0, N.G)(), (0, w.G)("AppSkeleton");
-        let H = (0, D.Co)("AppSkeleton");
+        (0, N.G)(), (0, D.G)("AppSkeleton");
+        let H = (0, w.Co)("AppSkeleton");
         return (
             i.useEffect(() => {
-                Y.isPlatformEmbedded && (H ? d.K.set(D.j4, "json") : d.K.remove(D.j4));
+                Y.isPlatformEmbedded && (H ? d.K.set(w.j4, "json") : d.K.remove(w.j4));
             }, [H]),
             (0, r.jsx)(
                 Z.w,
@@ -111,7 +111,7 @@ let ee = (0, W.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(R.Z, {
                                     children: (0, r.jsxs)(p.JcV, {
-                                        containerRef: B,
+                                        containerRef: F,
                                         children: [
                                             (0, r.jsx)(Q.Co, {}),
                                             (0, r.jsx)(q.ZP, {}),
@@ -151,7 +151,7 @@ let ee = (0, W.Un)({
                                                                                             (0, r.jsx)(S.Z, {}),
                                                                                             (0, r.jsx)(m.Z, {}),
                                                                                             (0, r.jsx)(p.nKe, {}),
-                                                                                            (0, r.jsx)(F.Z, {}),
+                                                                                            (0, r.jsx)(B.Z, {}),
                                                                                             (0, r.jsx)(L.Ox, {}),
                                                                                             (0, r.jsx)(l.uZ, {}),
                                                                                             (0, r.jsx)(x.Un, {}),

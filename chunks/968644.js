@@ -31,13 +31,13 @@ function m(e) {
                 .filter(s.lm)
                 .map((e) => (0, i.F6)(e, c.default, a.Z, !0)),
         ),
-        v = g.map((e) => "@".concat(e.name)),
-        x = (null == n ? void 0 : n.singleSelect) ? "" : u.intl.string(u.t.JshhEl),
+        x = g.map((e) => "@".concat(e.name)),
+        v = (null == n ? void 0 : n.singleSelect) ? "" : u.intl.string(u.t.JshhEl),
         y = "";
-    if (0 === j.length && v.length > 0) x = d(v, h);
+    if (0 === j.length && x.length > 0) v = d(x, h);
     else
         j.length > 0 &&
-            ((x =
+            ((v =
                 0 === j.length
                     ? ""
                     : u.intl.format(u.t.Rj841R, {
@@ -47,9 +47,9 @@ function m(e) {
                           channel2: j[1],
                           itemHook: h,
                       })),
-            v.length > 0 && (y = d(v, h, !0)));
+            x.length > 0 && (y = d(x, h, !0)));
     return {
-        helpText: x,
+        helpText: v,
         helpTextAdditional: y,
     };
 }
@@ -64,10 +64,10 @@ function p(e) {
                 .map((e) => (0, i.F6)(e, c.default, a.Z, !0)),
         ),
         j = f.map((e) => "@".concat(e.name)),
-        v = (null == n ? void 0 : n.singleSelect) ? "" : u.intl.string(u.t.JshhEl);
+        x = (null == n ? void 0 : n.singleSelect) ? "" : u.intl.string(u.t.JshhEl);
     return (
         0 === g.length && j.length > 0
-            ? (v = u.intl.format(u.t.vdtNYa, {
+            ? (x = u.intl.format(u.t.vdtNYa, {
                   count: j.length,
                   extraCount: Math.max(j.length - 2, 0),
                   role1: j[0],
@@ -75,7 +75,7 @@ function p(e) {
                   itemHook: p,
               }))
             : g.length > 0 && 0 === j.length
-              ? (v = u.intl.format(u.t.ZKywGU, {
+              ? (x = u.intl.format(u.t.ZKywGU, {
                     count: g.length,
                     extraCount: Math.max(g.length - 2, 0),
                     channel1: g[0],
@@ -84,7 +84,7 @@ function p(e) {
                 }))
               : g.length > 0 &&
                 j.length > 0 &&
-                (v = u.intl.format(u.t.WewRHM, {
+                (x = u.intl.format(u.t.WewRHM, {
                     channelCount: g.length,
                     extraChannelCount: Math.max(g.length - 2, 0),
                     channel1: g[0],
@@ -96,7 +96,7 @@ function p(e) {
                     role2: j[1],
                 })),
         {
-            helpText: v,
+            helpText: x,
             helpTextAdditional: "",
         }
     );

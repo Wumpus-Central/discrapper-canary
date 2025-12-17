@@ -11,9 +11,9 @@ var i = n(481060),
 function u(e) {
     let { "aria-labelledby": t, disabled: n = !1 } = e,
         { editStateId: u, guildId: g } = (0, l.N)(),
-        [m, p] = s.GP(u, g);
+        [f, m] = s.GP(u, g);
     return (0, r.jsx)(i.FXm, {
-        onChange: (e) => p(e),
+        onChange: (e) => m(e),
         options: [
             {
                 name: d.intl.string(d.t["vs2T+B"]),
@@ -26,7 +26,7 @@ function u(e) {
                 leadingIcon: (0, i.GSL)(o.Z),
             },
         ],
-        value: m,
+        value: f,
         "aria-labelledby": t,
         disabled: n,
     });

@@ -1,6 +1,6 @@
 t.d(n, { ZP: () => W }), t(388685), t(457542);
-var r = t(54381),
-    a = t(473749),
+var a = t(54381),
+    r = t(473749),
     i = t(120356),
     l = t.n(i),
     s = t(660815),
@@ -11,60 +11,60 @@ var r = t(54381),
     m = t(100527),
     g = t(243778),
     f = t(690221),
-    x = t(77498),
-    v = t(823379),
-    _ = t(49012),
-    b = t(639777),
-    j = t(905551),
-    p = t(578756),
-    h = t(441494),
-    C = t(775146),
-    y = t(941762),
-    O = t(587065),
+    b = t(77498),
+    x = t(823379),
+    v = t(49012),
+    j = t(639777),
+    p = t(905551),
+    h = t(578756),
+    C = t(441494),
+    y = t(775146),
+    O = t(941762),
+    _ = t(587065),
     I = t(162190),
     N = t(986841),
     S = t(47695),
     P = t(329871),
     E = t(110381),
     T = t(921944),
-    w = t(816632),
+    w = t(914820),
     Z = t(388032),
-    R = t(500104);
+    R = t(243115);
 function k(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            a = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            a.forEach(function (n) {
+                var a;
+                (a = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[n] = a);
             });
     }
     return e;
 }
 function G(e) {
     let { guildId: n, instance: t } = e,
-        [i, l] = a.useState(!1),
-        s = a.useCallback(() => {
+        [i, l] = r.useState(!1),
+        s = r.useCallback(() => {
             l(!0),
-                (0, j.WX)(n, t.id).finally(() => {
+                (0, p.WX)(n, t.id).finally(() => {
                     l(!1);
                 });
         }, [n, t.id]);
-    return (0, r.jsx)(u.Button, {
+    return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: Z.intl.string(w.default.TMzy7d),
         variant: "secondary",
@@ -73,7 +73,7 @@ function G(e) {
     });
 }
 function A(e) {
-    return (0, r.jsx)(
+    return (0, a.jsx)(
         u.Button,
         k(
             {
@@ -88,7 +88,7 @@ function A(e) {
     );
 }
 function D(e) {
-    return (0, r.jsx)(
+    return (0, a.jsx)(
         u.Button,
         k(
             {
@@ -101,7 +101,7 @@ function D(e) {
     );
 }
 function M(e) {
-    return (0, r.jsx)(
+    return (0, a.jsx)(
         u.Button,
         k(
             {
@@ -117,14 +117,14 @@ function M(e) {
 }
 function V(e) {
     let { guildId: n } = e,
-        [t, i] = a.useState(!1),
-        l = a.useCallback(() => {
+        [t, i] = r.useState(!1),
+        l = r.useCallback(() => {
             i(!0),
-                (0, j.mF)(n).finally(() => {
+                (0, p.mF)(n).finally(() => {
                     i(!1);
                 });
         }, [n]);
-    return (0, r.jsx)(u.Button, {
+    return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: Z.intl.string(w.default.BLEx3k),
         variant: "secondary",
@@ -135,25 +135,25 @@ function V(e) {
 function B(e) {
     let { instance: n } = e,
         t = (0, S.Z)(n.providerType, n.gameServerPanelUrl);
-    return (0, r.jsx)(u.Button, {
+    return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: Z.intl.string(w.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
-            null != t && (0, _.q)({ href: t });
+            null != t && (0, v.q)({ href: t });
         },
     });
 }
 function W(e) {
     let { guildId: n, instance: t } = e,
         i = (0, N.Z)(t),
-        [j, k] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        W = j !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        L = (0, o.e7)([x.Z], () => x.Z.getDetectableGame(t.gameId)),
+        [p, k] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        W = p !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        L = (0, o.e7)([b.Z], () => b.Z.getDetectableGame(t.gameId)),
         U = (0, S.Z)(t.providerType, t.gameServerPanelUrl),
-        z = a.useCallback(() => {
+        z = r.useCallback(() => {
             var e;
-            (0, p.wz)(n, t.gameId, null != (e = null == L ? void 0 : L.name) ? e : "", t.id),
+            (0, h.wz)(n, t.gameId, null != (e = null == L ? void 0 : L.name) ? e : "", t.id),
                 W || null == t.providerType
                     ? (0, P.Z)(n, t)
                     : (0, E.Z)({
@@ -163,24 +163,24 @@ function W(e) {
                           },
                       });
         }, [t, W, k, n, null == L ? void 0 : L.name]),
-        { handleCopyServerIp: F, animateCopyIcon: K } = (0, O.Z)(n, t.id, m.Z.GAME_SERVER_GAME, null != i ? i : ""),
+        { handleCopyServerIp: F, animateCopyIcon: K } = (0, _.Z)(n, t.id, m.Z.GAME_SERVER_GAME, null != i ? i : ""),
         X = (0, I.Z)(t.gameId, "cover"),
-        q = (0, b.Z)(n),
-        H = a.useCallback(() => {
+        q = (0, j.Z)(n),
+        H = r.useCallback(() => {
             var e;
-            (0, p.$M)(n, t.id), (0, _.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
+            (0, h.$M)(n, t.id), (0, v.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl, n, t.id]),
-        Y = a.useMemo(() => {
+        Y = r.useMemo(() => {
             switch (t.status) {
                 case s.V.SLEEPING:
-                    return (0, r.jsxs)(r.Fragment, {
+                    return (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, r.jsx)(G, {
+                            (0, a.jsx)(G, {
                                 guildId: n,
                                 instance: t,
                             }),
                             q &&
-                                (0, r.jsx)(A, {
+                                (0, a.jsx)(A, {
                                     onClick: H,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
@@ -189,11 +189,11 @@ function W(e) {
                 case s.V.OFFLINE:
                 case s.V.ONLINE:
                 case s.V.STARTING:
-                    return (0, r.jsxs)(r.Fragment, {
+                    return (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, r.jsx)(D, { onClick: z }),
+                            (0, a.jsx)(D, { onClick: z }),
                             q &&
-                                (0, r.jsx)(A, {
+                                (0, a.jsx)(A, {
                                     onClick: H,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
@@ -202,34 +202,34 @@ function W(e) {
                 case s.V.STARTUP_FAILED:
                 case s.V.MISSING_STOCK:
                     return q
-                        ? (0, r.jsx)(M, { onClick: H })
-                        : (0, r.jsx)(D, {
+                        ? (0, a.jsx)(M, { onClick: H })
+                        : (0, a.jsx)(D, {
                               onClick: z,
                               disabled: !0,
                           });
                 case s.V.DELETED:
                     return q
-                        ? (0, r.jsx)(A, {
+                        ? (0, a.jsx)(A, {
                               onClick: H,
                               disabled: null == t.gameServerPanelUrl,
                           })
-                        : (0, r.jsx)(D, {
+                        : (0, a.jsx)(D, {
                               onClick: z,
                               disabled: !0,
                           });
                 case s.V.PROVIDER_ERRORED:
-                    return (0, r.jsxs)(r.Fragment, {
+                    return (0, a.jsxs)(a.Fragment, {
                         children: [
                             q && null != U
-                                ? (0, r.jsx)(B, {
+                                ? (0, a.jsx)(B, {
                                       guildId: n,
                                       instance: t,
                                   })
-                                : (0, r.jsx)(D, {
+                                : (0, a.jsx)(D, {
                                       onClick: z,
                                       disabled: !0,
                                   }),
-                            (0, r.jsx)(V, {
+                            (0, a.jsx)(V, {
                                 guildId: n,
                                 instance: t,
                             }),
@@ -239,12 +239,12 @@ function W(e) {
                     return null;
             }
         }, [t, z, q, H, n, U]),
-        J = a.useMemo(() => {
+        J = r.useMemo(() => {
             if (null == t.gameConfig) return null;
-            let e = [t.gameConfig.type, t.gameConfig.version].filter(v.lm).join(" ");
+            let e = [t.gameConfig.type, t.gameConfig.version].filter(x.lm).join(" ");
             return "" === e ? null : e;
         }, [t.gameConfig]),
-        $ = a.useMemo(() => {
+        $ = r.useMemo(() => {
             switch (t.status) {
                 case s.V.STARTING:
                     if (null == t.gameServerPanelUrl) return Z.intl.string(w.default["1A3US2"]);
@@ -259,49 +259,49 @@ function W(e) {
                     return null;
             }
         }, [t.status, t.gameServerPanelUrl, q]);
-    return (0, r.jsxs)(C.Z, {
+    return (0, a.jsxs)(y.Z, {
         actions: Y,
         children: [
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: R.serverDetailsContainer,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: R.serverHeader,
                         children: [
-                            (0, r.jsx)("img", {
+                            (0, a.jsx)("img", {
                                 src: null != X ? X : "",
                                 alt: "",
                                 className: R.gameImage,
                             }),
-                            (0, r.jsxs)("div", {
+                            (0, a.jsxs)("div", {
                                 className: R.serverInfo,
                                 children: [
-                                    (0, r.jsx)(u.Heading, {
+                                    (0, a.jsx)(u.Heading, {
                                         variant: "heading-md/medium",
                                         children: t.name,
                                     }),
-                                    (0, r.jsx)(u.Text, {
+                                    (0, a.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: [null == L ? void 0 : L.name, J].filter(v.lm).join(" \u2022 "),
+                                        children: [null == L ? void 0 : L.name, J].filter(x.lm).join(" \u2022 "),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", {
-                        children: (0, r.jsxs)("div", {
+                    (0, a.jsx)("div", {
+                        children: (0, a.jsxs)("div", {
                             className: R.detailsGrid,
                             children: [
-                                (0, r.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     className: R.detailItem,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
                                             children: Z.intl.string(w.default.bDdi7n),
                                         }),
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-sm/medium",
                                             children: ""
                                                 .concat(
@@ -318,41 +318,41 @@ function W(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     className: R.detailItem,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
                                             children: Z.intl.string(w.default["7phwMG"]),
                                         }),
-                                        (0, r.jsx)("div", {
+                                        (0, a.jsx)("div", {
                                             className: R.serverIpContainer,
                                             children:
                                                 null == i
-                                                    ? (0, r.jsx)(u.Text, {
+                                                    ? (0, a.jsx)(u.Text, {
                                                           variant: "text-sm/medium",
                                                           children: "\u2014",
                                                       })
                                                     : W
-                                                      ? (0, r.jsxs)(r.Fragment, {
+                                                      ? (0, a.jsxs)(a.Fragment, {
                                                             children: [
-                                                                (0, r.jsx)(u.Text, {
+                                                                (0, a.jsx)(u.Text, {
                                                                     variant: "text-sm/medium",
                                                                     children: i,
                                                                 }),
-                                                                (0, r.jsx)(u.P3F, {
+                                                                (0, a.jsx)(u.P3F, {
                                                                     className: R.copyButton,
                                                                     "aria-label": Z.intl.string(Z.t.OpuAlK),
                                                                     onClick: F,
                                                                     children: K
-                                                                        ? (0, r.jsx)(u.dz2, { size: "sm" })
-                                                                        : (0, r.jsx)(u.TIy, { size: "sm" }),
+                                                                        ? (0, a.jsx)(u.dz2, { size: "sm" })
+                                                                        : (0, a.jsx)(u.TIy, { size: "sm" }),
                                                                 }),
                                                             ],
                                                         })
                                                       : null != t.providerType &&
-                                                        (0, r.jsx)(f.Z, {
+                                                        (0, a.jsx)(f.Z, {
                                                             onClick: () => {
                                                                 (0, E.Z)({
                                                                     provider: t.providerType,
@@ -366,29 +366,29 @@ function W(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     className: R.detailItem,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
                                             children: Z.intl.string(w.default["n+ZX7y"]),
                                         }),
-                                        (0, r.jsxs)("div", {
+                                        (0, a.jsxs)("div", {
                                             className: R.statusContainer,
                                             children: [
                                                 t.status === s.V.STARTING
-                                                    ? (0, r.jsx)(u.$jN, {
+                                                    ? (0, a.jsx)(u.$jN, {
                                                           type: u.RAz.SPINNING_CIRCLE_SIMPLE,
                                                           className: R.statusLoading,
                                                       })
-                                                    : (0, r.jsx)("span", {
+                                                    : (0, a.jsx)("span", {
                                                           className: l()(
                                                               R.statusIndicator,
                                                               null != t.status && R[t.status],
                                                           ),
                                                       }),
-                                                (0, r.jsx)(u.Text, {
+                                                (0, a.jsx)(u.Text, {
                                                     variant: "text-sm/medium",
                                                     children: (function (e) {
                                                         switch (e) {
@@ -414,10 +414,10 @@ function W(e) {
                                                     })(t.status),
                                                 }),
                                                 null != $ &&
-                                                    (0, r.jsx)(d.u, {
+                                                    (0, a.jsx)(d.u, {
                                                         position: "top",
                                                         text: $,
-                                                        children: (0, r.jsx)(u.idN, {
+                                                        children: (0, a.jsx)(u.idN, {
                                                             className: R.statusTooltipIcon,
                                                             size: "xs",
                                                         }),
@@ -426,15 +426,15 @@ function W(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     className: R.detailItem,
                                     children: [
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
                                             children: Z.intl.string(w.default.mJlz3T),
                                         }),
-                                        (0, r.jsx)(u.Text, {
+                                        (0, a.jsx)(u.Text, {
                                             variant: "text-sm/medium",
                                             children: null != t.regionName ? t.regionName : "\u2014",
                                         }),
@@ -446,16 +446,16 @@ function W(e) {
                 ],
             }),
             q &&
-                (0, r.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: R.overflowMenu,
-                    children: (0, r.jsx)(y.Z, {
+                    children: (0, a.jsx)(O.Z, {
                         guildId: n,
                         instance: t,
                     }),
                 }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: R.imageBackground,
-                children: (0, r.jsx)(h.b, { imageUrl: null != X ? X : "" }),
+                children: (0, a.jsx)(C.b, { imageUrl: null != X ? X : "" }),
             }),
         ],
     });

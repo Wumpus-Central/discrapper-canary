@@ -1,25 +1,25 @@
-t.d(n, { default: () => m });
-var a = t(54381),
-    l = t(473749),
-    i = t(120356),
-    o = t.n(i),
-    r = t(481060),
-    s = t(788080),
-    c = t(81643),
-    d = t(469775),
-    f = t(388032),
-    u = t(248319);
+a.d(n, { default: () => m });
+var t = a(54381),
+    l = a(473749),
+    i = a(120356),
+    c = a.n(i),
+    o = a(481060),
+    r = a(788080),
+    s = a(81643),
+    d = a(469775),
+    f = a(388032),
+    u = a(975401);
 let m = function (e) {
-    let { onClose: n, onComplete: t, onCancel: i, transitionState: m, webviewUrl: p } = e,
-        h = (0, s.GE)(),
+    let { onClose: n, onComplete: a, onCancel: i, transitionState: m, webviewUrl: p } = e,
+        h = (0, r.GE)(),
         C = l.useCallback(() => {
-            t(), n();
-        }, [t, n]),
-        _ = l.useCallback(() => {
-            (0, r.nfh)(d.zJ) && C();
+            a(), n();
+        }, [a, n]),
+        b = l.useCallback(() => {
+            (0, o.nfh)(d.zJ) && C();
         }, [C]);
-    (0, c.F5)(_);
-    let b = l.useCallback(
+    (0, s.F5)(b);
+    let g = l.useCallback(
         (e) => {
             if (h && "" !== p) {
                 var n;
@@ -31,46 +31,46 @@ let m = function (e) {
     return (
         l.useEffect(
             () => (
-                window.addEventListener("message", b),
+                window.addEventListener("message", g),
                 () => {
-                    window.removeEventListener("message", b);
+                    window.removeEventListener("message", g);
                 }
             ),
-            [b],
+            [g],
         ),
-        (0, a.jsxs)(r.Y0X, {
+        (0, t.jsxs)(o.Y0X, {
             "data-migration-pending": !0,
             transitionState: m,
-            className: o()(u.root, u.fullbleedContent),
+            className: c()(u.root, u.fullbleedContent),
             parentComponent: "AgeVerificationModal",
-            size: r.CgR.MEDIUM,
+            size: o.CgR.MEDIUM,
             children: [
-                (0, a.jsx)(r.hzk, {
+                (0, t.jsx)(o.hzk, {
                     "data-migration-pending": !0,
-                    className: o()(u.content, u.fullbleed),
+                    className: c()(u.content, u.fullbleed),
                     scrollbarType: "none",
-                    children: (0, a.jsx)("iframe", {
+                    children: (0, t.jsx)("iframe", {
                         id: "frame",
                         src: p,
                         className: u.iframe,
                         allow: "camera; microphone",
                     }),
                 }),
-                (0, a.jsx)(r.mzw, {
+                (0, t.jsx)(o.mzw, {
                     "data-migration-pending": !0,
-                    children: (0, a.jsx)("div", {
+                    children: (0, t.jsx)("div", {
                         className: u.footer,
-                        children: (0, a.jsxs)(r.ButtonGroup, {
+                        children: (0, t.jsxs)(o.ButtonGroup, {
                             justify: "space-between",
                             fullWidthContainer: !0,
                             children: [
-                                (0, a.jsx)(r.Avr, {
+                                (0, t.jsx)(o.Avr, {
                                     variant: "secondary",
                                     text: f.intl.string(f.t.fjKFae),
                                     onClick: n,
                                 }),
                                 null != i &&
-                                    (0, a.jsx)(r.Avr, {
+                                    (0, t.jsx)(o.Avr, {
                                         variant: "secondary",
                                         text: f.intl.string(f.t["4gTnU0"]),
                                         onClick: i,

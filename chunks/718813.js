@@ -3,8 +3,8 @@ var r,
     i = n(54381),
     l = n(473749),
     a = n(120356),
-    s = n.n(a),
-    o = n(748780),
+    o = n.n(a),
+    s = n(748780),
     c = n(442837),
     u = n(215569),
     d = n(481060),
@@ -14,8 +14,8 @@ var r,
     h = n(663993),
     m = n(84615),
     b = n(984802),
-    E = n(819640),
-    _ = n(585483),
+    _ = n(819640),
+    E = n(585483),
     O = n(981631),
     v = n(388032),
     y = n(388596);
@@ -150,21 +150,21 @@ class D extends (r = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.Z.parallel([o.Z.spring(t, C({ toValue: 1 }, L)), o.Z.spring(n, C({ toValue: 1 }, L))]).start(() =>
+        s.Z.parallel([s.Z.spring(t, C({ toValue: 1 }, L)), s.Z.spring(n, C({ toValue: 1 }, L))]).start(() =>
             this.animateComplete(e),
         );
     }
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.Z.parallel([o.Z.spring(t, C({ toValue: 0 }, L)), o.Z.spring(n, C({ toValue: 1.1 }, L))]).start(() => {
-            e(), _.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
+        s.Z.parallel([s.Z.spring(t, C({ toValue: 0 }, L)), s.Z.spring(n, C({ toValue: 1.1 }, L))]).start(() => {
+            e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        o.Z.parallel([o.Z.spring(e, C({ toValue: 0 }, L)), o.Z.spring(t, C({ toValue: 0.93 }, L))]).start(() =>
+        s.Z.parallel([s.Z.spring(e, C({ toValue: 0 }, L)), s.Z.spring(t, C({ toValue: 0.93 }, L))]).start(() =>
             this.animateComplete(),
         );
     }
@@ -200,7 +200,7 @@ class D extends (r = l.PureComponent) {
             p = e || u ? this.getAnimatedStyle() : null,
             f = !u && !a,
             g = (0, i.jsx)(
-                o.Z.div,
+                s.Z.div,
                 S(
                     C(
                         {
@@ -225,7 +225,7 @@ class D extends (r = l.PureComponent) {
                                   })(n)
                                 : void 0,
                             role: f ? "dialog" : void 0,
-                            className: s()(y.layer, {
+                            className: o()(y.layer, {
                                 [y.baseLayer]: a,
                                 [y.animating]: e,
                                 "stop-animations": r === w,
@@ -260,8 +260,8 @@ class D extends (r = l.PureComponent) {
         e.mode === w && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
-                scale: new o.Z.Value(t),
-                opacity: new o.Z.Value(n),
+                scale: new s.Z.Value(t),
+                opacity: new s.Z.Value(n),
                 mode: e.mode,
             });
     }
@@ -269,10 +269,10 @@ class D extends (r = l.PureComponent) {
 I(D, "defaultProps", { baseLayer: !1 }), I(D, "contextType", d.Sfi);
 class M extends l.PureComponent {
     componentDidMount() {
-        _.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     componentWillUnmount() {
-        _.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        E.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -312,7 +312,7 @@ class M extends l.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(d.f6W, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)("div", { className: s()(y.bg, e) }),
+            children: (e) => (0, i.jsx)("div", { className: o()(y.bg, e) }),
         });
     }
     render() {
@@ -321,7 +321,7 @@ class M extends l.PureComponent {
                 this.renderArtisanalHack(),
                 (0, i.jsx)(u.W, {
                     component: "div",
-                    className: s()(y.layers, this.props.className),
+                    className: o()(y.layers, this.props.className),
                     children: this.renderLayers(),
                 }),
             ],
@@ -330,7 +330,7 @@ class M extends l.PureComponent {
 }
 function k(e) {
     let t = (0, b.Ll)(),
-        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
+        n = (0, c.e7)([_.Z], () => _.Z.getLayers()),
         r = (0, m.QP)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );

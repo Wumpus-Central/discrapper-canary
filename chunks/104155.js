@@ -1,134 +1,134 @@
-t.d(n, {
-    I: () => j,
-    Z: () => v,
+n.d(t, {
+    I: () => v,
+    Z: () => O,
 }),
-    t(388685);
-var r = t(54381),
-    l = t(473749),
-    i = t(442837),
-    a = t(481060),
-    o = t(325708),
-    s = t(213557),
-    c = t(433355),
-    d = t(324067),
-    u = t(984933),
-    p = t(430824),
-    h = t(496675),
-    m = t(626135),
-    f = t(216306),
-    g = t(775028),
-    _ = t(981631),
-    x = t(176505),
-    C = t(388032),
-    b = t(855733);
-function j(e) {
-    let { channelId: n } = e;
-    return (0, r.jsx)(o.Z, {
+    n(388685);
+var a = n(54381),
+    r = n(473749),
+    l = n(442837),
+    i = n(481060),
+    o = n(325708),
+    c = n(213557),
+    d = n(433355),
+    s = n(324067),
+    u = n(984933),
+    b = n(430824),
+    p = n(496675),
+    f = n(626135),
+    h = n(216306),
+    m = n(775028),
+    g = n(981631),
+    x = n(176505),
+    C = n(388032),
+    j = n(516390);
+function v(e) {
+    let { channelId: t } = e;
+    return (0, a.jsx)(o.Z, {
         sidebarType: o.y.ThreadSidebar,
         maxWidth: 600,
-        children: (0, r.jsx)(s.Z, {
-            channelId: n,
+        children: (0, a.jsx)(c.Z, {
+            channelId: t,
             baseChannelId: x.oC.CHANNEL_BROWSER,
         }),
     });
 }
-function v(e) {
-    let { guildId: n } = e,
-        [o, s] = l.useState(""),
-        j = (0, i.e7)([p.Z], () => p.Z.getGuild(n)),
-        v = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        O = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
-        y = (0, f.Fo)(n, O, v, o),
-        N = (0, i.e7)([h.Z], () => h.Z.canWithPartialContext(_.Plq.MANAGE_CHANNELS, { guildId: n })),
-        w = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
-        Z = l.useCallback(() => s(""), [s]),
-        I = l.useCallback(() => {
-            (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([t.e("29497"), t.e("53781")]).then(t.bind(t, 241865));
-                return (t) => {
-                    var l, i;
-                    return (0, r.jsx)(
+function O(e) {
+    let { guildId: t } = e,
+        [o, c] = r.useState(""),
+        v = (0, l.e7)([b.Z], () => b.Z.getGuild(t)),
+        O = (0, l.e7)([u.ZP], () => u.ZP.getChannels(t)),
+        y = (0, l.e7)([s.Z], () => s.Z.getCategories(t)),
+        N = (0, h.Fo)(t, y, O, o),
+        _ = (0, l.e7)([p.Z], () => p.Z.canWithPartialContext(g.Plq.MANAGE_CHANNELS, { guildId: t })),
+        w = (0, l.e7)([d.ZP], () => null != d.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
+        Z = r.useCallback(() => c(""), [c]),
+        I = r.useCallback(() => {
+            (0, i.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e("29497"), n.e("59679")]).then(n.bind(n, 241865));
+                return (n) => {
+                    var r, l;
+                    return (0, a.jsx)(
                         e,
-                        ((l = (function (e) {
-                            for (var n = 1; n < arguments.length; n++) {
-                                var t = null != arguments[n] ? arguments[n] : {},
-                                    r = Object.keys(t);
+                        ((r = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    a = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                    (a = a.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (n) {
-                                        var r;
-                                        (r = t[n]),
-                                            n in e
-                                                ? Object.defineProperty(e, n, {
-                                                      value: r,
+                                    a.forEach(function (t) {
+                                        var a;
+                                        (a = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: a,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[n] = r);
+                                                : (e[t] = a);
                                     });
                             }
                             return e;
-                        })({}, t)),
-                        (i = i =
+                        })({}, n)),
+                        (l = l =
                             {
                                 channelType: null,
-                                guildId: n,
+                                guildId: t,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                            : (function (e, n) {
-                                  var t = Object.keys(e);
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      t.push.apply(t, r);
+                                      var a = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, a);
                                   }
-                                  return t;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        l),
+                        r),
                     );
                 };
             });
-        }, [n]);
-    return null == j
+        }, [t]);
+    return null == v
         ? null
-        : (0, r.jsxs)("div", {
-              className: b.pageBody,
+        : (0, a.jsxs)("div", {
+              className: j.pageBody,
               children: [
-                  (0, r.jsxs)("div", {
-                      className: b.header,
+                  (0, a.jsxs)("div", {
+                      className: j.header,
                       children: [
-                          (0, r.jsx)(a.E1j, {
+                          (0, a.jsx)(i.E1j, {
                               query: o,
                               onChange: (e) => {
                                   "" === o &&
                                       "" !== e &&
-                                      m.default.track(_.rMx.SEARCH_STARTED, { search_type: "channel browser" }),
-                                      s(e.toLowerCase());
+                                      f.default.track(g.rMx.SEARCH_STARTED, { search_type: "channel browser" }),
+                                      c(e.toLowerCase());
                               },
                               onClear: Z,
                               placeholder: C.intl.string(C.t.s5MnmC),
                           }),
-                          N
-                              ? (0, r.jsx)(a.Button, {
-                                    icon: a.qJs,
+                          _
+                              ? (0, a.jsx)(i.Button, {
+                                    icon: i.qJs,
                                     onClick: I,
                                     text: C.intl.string(C.t.CumH4u),
                                 })
                               : null,
                       ],
                   }),
-                  (0, r.jsx)(g.Z, {
-                      className: b.browser,
-                      channels: v,
-                      categories: y,
-                      guild: j,
+                  (0, a.jsx)(m.Z, {
+                      className: j.browser,
+                      channels: O,
+                      categories: N,
+                      guild: v,
                       hasSidebar: w,
                   }),
               ],

@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(872810),
     y = n(153867),
     v = n(410575),
-    O = n(393238),
-    x = n(110924),
+    x = n(393238),
+    O = n(110924),
     E = n(636449),
     j = n(115130),
     S = n(566620),
@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(728285),
     V = n(788983),
     F = n(928518),
-    B = n(703656),
-    H = n(880395),
+    H = n(703656),
+    B = n(880395),
     G = n(740492),
     z = n(793319),
     W = n(3861),
@@ -71,8 +71,8 @@ var i = n(54381),
     eC = n(998502),
     ey = n(228488),
     ev = n(358221),
-    eO = n(414910),
-    ex = n(887012),
+    ex = n(414910),
+    eO = n(887012),
     eE = n(909820),
     ej = n(493010),
     eS = n(742603),
@@ -141,13 +141,13 @@ let eF = {
         [eR.AEg.NO_CHAT]: eD.noChat,
         [eR.AEg.FULL_SCREEN]: eD.fullScreen,
     },
-    eB = {
+    eH = {
         [eR.IlC.POPOUT]: eD.popout,
         [eR.IlC.APP]: null,
         [eR.IlC.OVERLAY]: null,
         [eR.IlC.CALL_TILE_POPOUT]: null,
     };
-class eH extends r.PureComponent {
+class eB extends r.PureComponent {
     getRootNode() {
         var e, t;
         return (
@@ -261,8 +261,8 @@ class eH extends r.PureComponent {
             } = this.props,
             y = h === eR.AEg.MINIMUM,
             v = y || h === eR.AEg.NORMAL,
-            O = l && o === eR.WtW.VIDEO,
-            x = (null != (t = null == b ? void 0 : b.length) ? t : 0) > 0 && p.isPrivate();
+            x = l && o === eR.WtW.VIDEO,
+            O = (null != (t = null == b ? void 0 : b.length) ? t : 0) > 0 && p.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, i.jsx)(
@@ -295,13 +295,13 @@ class eH extends r.PureComponent {
                                       participants: c,
                                       filteredParticipants: u,
                                       participantsVersion: d,
-                                      selectedParticipant: O ? r : null,
+                                      selectedParticipant: x ? r : null,
                                       layout: h,
                                       idle: e.idle,
                                       mode: o,
                                       onSelectParticipant: this.handleSelectParticipant,
                                       onContextMenuParticipant: this.handleContextMenu,
-                                      showParticipants: s && (!v || x),
+                                      showParticipants: s && (!v || O),
                                       popoutType: n,
                                       awaitingRemoteSessionInfo: g,
                                       callContainerDimensions: C,
@@ -329,7 +329,7 @@ class eH extends r.PureComponent {
             m = e !== eR.AEg.NO_CHAT && e !== eR.AEg.FULL_SCREEN && null != c,
             g = eR.BRd.MIDNIGHT;
         return (0, i.jsxs)("div", {
-            className: a()(eD.wrapper, eF[e], eB[o], {
+            className: a()(eD.wrapper, eF[e], eH[o], {
                 [eD.poppedOut]: this.popoutOpen && !this.inPopout && e !== eR.AEg.NO_CHAT && t.isPrivate(),
                 [eD.video]: h,
                 [eD.sidebarOpen]: l || d,
@@ -504,7 +504,7 @@ class eH extends r.PureComponent {
                         let f = ep.default.getUser(e.id);
                         if (null != f) {
                             if (r)
-                                return (0, H.D)(t, f, c, p, (e, t) =>
+                                return (0, B.D)(t, f, c, p, (e, t) =>
                                     (0, eA.o)({
                                         menuItemProps: t,
                                         menuName: e,
@@ -636,7 +636,7 @@ class eH extends r.PureComponent {
                     n = async () => {
                         (null == t ? void 0 : t.applicationId) != null && (await (0, S.nJ)(t.applicationId, e.id));
                         let n = e.getGuildId();
-                        null != n && (0, B.uL)((0, em.LY)(n)), V.openChannelCallPopout(e);
+                        null != n && (0, H.uL)((0, em.LY)(n)), V.openChannelCallPopout(e);
                     };
                 null == t || (0, E.R)() ? n() : (0, I.Z)({ onConfirm: n });
             }),
@@ -767,7 +767,7 @@ class eH extends r.PureComponent {
                     children: [
                         null != r && r.type !== eM.fO.ACTIVITY && r.user.id !== n
                             ? (0, i.jsx)(ei.Z, {
-                                  context: (0, eO.Z)(r.type),
+                                  context: (0, ex.Z)(r.type),
                                   userId: r.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
                                   sliderClassName: eD.volumeSlider,
@@ -869,9 +869,9 @@ class eH extends r.PureComponent {
 let eG = function (e) {
     var t;
     let { channel: n, renderExternalHeader: l, maxHeight: a, canPopout: o = !0, popoutType: s } = e,
-        { width: c = 0, ref: p } = (0, O.ZP)(),
-        { width: h = 0, height: m = 0, ref: g } = (0, O.ZP)(),
-        { ref: b } = (0, O.ZP)(),
+        { width: c = 0, ref: p } = (0, x.ZP)(),
+        { width: h = 0, height: m = 0, ref: g } = (0, x.ZP)(),
+        { ref: b } = (0, x.ZP)(),
         C = (0, U.bp)(),
         E = (0, L.Z)(),
         S = (0, u.e7)([ed.Z], () => {
@@ -886,8 +886,8 @@ let eG = function (e) {
             layout: D,
             participantsOpen: k,
             participantsListOpen: V,
-            chatOpen: B,
-            selectedParticipant: H,
+            chatOpen: H,
+            selectedParticipant: B,
         } = (0, u.cj)([ev.Z], () => {
             let e = C === eR.IlC.POPOUT,
                 t = ev.Z.getMode(n.id);
@@ -911,8 +911,8 @@ let eG = function (e) {
         z = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
         { selectedStream: W } = (0, u.cj)(
             [el.Z],
-            () => ({ selectedStream: null != H ? el.Z.getActiveStreamForStreamKey(H.id) : null }),
-            [H],
+            () => ({ selectedStream: null != B ? el.Z.getActiveStreamForStreamKey(B.id) : null }),
+            [B],
         ),
         q = (0, u.e7)([es.Z], () => es.Z.getGuild(n.getGuildId())),
         K = (0, u.e7)([eu.ZP], () => eu.ZP.getMentionCount(n.id), [n.id]),
@@ -931,7 +931,7 @@ let eG = function (e) {
         ei = null != (t = null == q ? void 0 : q.id) ? t : null,
         er = (0, P.Z)(ei, n.id),
         ep = (0, u.e7)([j.Z], () => j.Z.getFetchState(), []),
-        ef = (0, x.Z)(ep);
+        ef = (0, O.Z)(ep);
     r.useEffect(() => {
         ep === j.O.ERROR &&
             ef !== j.O.ERROR &&
@@ -952,11 +952,11 @@ let eG = function (e) {
             }
         );
     }, [S, w]);
-    let em = (0, ex.Z)(n, !0),
+    let em = (0, eO.Z)(n, !0),
         { hasParticipantsPanel: eg } = (0, eI.Z)({ location: "ChannelCall" }),
         eb = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ey } = (0, N.ZP)(Z.Z.CHANNEL_CALL),
-        eO = c - eM.oo,
+        ex = c - eM.oo,
         ej = _.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eS } = (0, f.TCT)();
     return (0, i.jsx)(N.Gt, {
@@ -966,7 +966,7 @@ let eG = function (e) {
             children: (0, i.jsx)(eE.B2, {
                 children: (0, i.jsxs)(eT._A, {
                     children: [
-                        (0, i.jsx)(eH, {
+                        (0, i.jsx)(eB, {
                             channel: n,
                             guild: q,
                             hasConnectPermission: Q,
@@ -984,11 +984,11 @@ let eG = function (e) {
                             filteredParticipants: T,
                             participantsVersion: A,
                             layout: D,
-                            chatOpen: B,
-                            maxSidebarWidth: eO,
+                            chatOpen: H,
+                            maxSidebarWidth: ex,
                             shouldUseVoiceEffectsActionBar: em,
                             currentUserId: Y,
-                            selectedParticipant: H,
+                            selectedParticipant: B,
                             allActiveStreams: z,
                             useNewInviteButton: er,
                             connectedEmbeddedActivity: null != eh ? eh : void 0,

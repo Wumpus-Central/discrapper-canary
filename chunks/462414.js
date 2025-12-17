@@ -3,15 +3,15 @@ var r = n(243814),
     i = n(846027),
     l = n(837968),
     a = n(131951),
-    s = n(13140),
-    o = n(996106),
+    o = n(13140),
+    s = n(996106),
     c = n(452426),
     u = n(186901),
     d = n(981631),
     p = n(65154);
 function f(e) {
     let t = e.application.id;
-    if (null == t) throw new o.Z({ errorCode: d.lTL.INVALID_COMMAND }, "No application.");
+    if (null == t) throw new s.Z({ errorCode: d.lTL.INVALID_COMMAND }, "No application.");
     return t;
 }
 let g = {
@@ -33,10 +33,10 @@ let g = {
                     socket: t,
                     args: { input_mode: n, self_mute: r, self_deaf: l },
                 } = e,
-                o = f(t);
-            null != n && i.Z.setMode(n.type, { shortcut: (0, s.Kd)(n.shortcut) }, o),
-                null != r && r !== a.Z.isSelfMute(o) && i.Z.toggleSelfMute({ context: o }),
-                null != l && l !== a.Z.isSelfDeaf(o) && i.Z.toggleSelfDeaf({ context: o });
+                s = f(t);
+            null != n && i.Z.setMode(n.type, { shortcut: (0, o.Kd)(n.shortcut) }, s),
+                null != r && r !== a.Z.isSelfMute(s) && i.Z.toggleSelfMute({ context: s }),
+                null != l && l !== a.Z.isSelfDeaf(s) && i.Z.toggleSelfDeaf({ context: s });
         },
     },
     [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -54,9 +54,9 @@ let g = {
                     socket: t,
                     args: { user_id: n, mute: r, volume: l },
                 } = e,
-                s = f(t);
-            null != r && r !== a.Z.isLocalMute(n, s) && i.Z.toggleLocalMute(n, s),
-                null != l && i.Z.setLocalVolume(n, l, s);
+                o = f(t);
+            null != r && r !== a.Z.isLocalMute(n, o) && i.Z.toggleLocalMute(n, o),
+                null != l && i.Z.setLocalVolume(n, l, o);
         },
     },
     [d.Etm.PUSH_TO_TALK]: {

@@ -1,6 +1,6 @@
 n.d(t, {
     PH: () => P,
-    ZP: () => F,
+    ZP: () => B,
     sQ: () => A,
 }),
     n(388685);
@@ -229,10 +229,10 @@ class R {
             (this.guildId = e);
     }
 }
-function D() {
+function w() {
     S = {};
 }
-function w() {
+function D() {
     Z();
 }
 function x(e) {
@@ -281,7 +281,7 @@ function Z() {
         });
     });
 }
-class B extends (r = o.ZP.Store) {
+class F extends (r = o.ZP.Store) {
     initialize() {
         Z(), this.waitFor(u.default, d.Z, f.ZP, p.default, _.Z), this.syncWith([p.default], M);
     }
@@ -309,10 +309,10 @@ class B extends (r = o.ZP.Store) {
         return I(null != e ? e : g.ME).getVersion();
     }
 }
-E(B, "displayName", "SortedVoiceStateStore");
-let F = new B(l.Z, {
-    CONNECTION_OPEN: D,
-    OVERLAY_INITIALIZE: w,
+E(F, "displayName", "SortedVoiceStateStore");
+let B = new F(l.Z, {
+    CONNECTION_OPEN: w,
+    OVERLAY_INITIALIZE: D,
     VOICE_CHANNEL_SELECT: j,
     VOICE_STATE_UPDATES: x,
     GUILD_MEMBER_UPDATE: k,

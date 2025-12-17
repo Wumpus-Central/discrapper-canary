@@ -8,7 +8,7 @@ var i = n(28664),
     l = n(171516),
     c = n(103450),
     u = n(652853),
-    d = n(732380),
+    d = n(475413),
     f = n(614716),
     p = n(671955),
     _ = n(388032);
@@ -27,7 +27,7 @@ function m(e) {
         }),
         y = (0, l.h)(null == n ? void 0 : n.application_id);
     if (null == b && null != n && (0, s.Z)(n))
-        return (0, r.jsx)(d.O1, {
+        return (0, r.jsx)(d.i6, {
             icon: a.jje,
             text: _.intl.string(_.t.RscU7I),
             fullWidth: g !== p.l.MODAL_V2,
@@ -43,7 +43,7 @@ function m(e) {
     return (0, r.jsx)(i.u, {
         text: I,
         asContainer: !T,
-        children: (0, r.jsx)(d.O1, {
+        children: (0, r.jsx)(d.i6, {
             icon: C ? a.YVR : a.iWm,
             text: S,
             disabled: !T,

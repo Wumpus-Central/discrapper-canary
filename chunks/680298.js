@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var i = n(54381),
     r = n(473749),
     l = n(481060),
@@ -6,7 +6,7 @@ var i = n(54381),
     o = n(911969),
     s = n(399860),
     c = n(388032),
-    d = n(808978);
+    d = n(664775);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -32,15 +32,15 @@ function u(e) {
     }
     return e;
 }
-function p(e) {
-    let { applicationIcon: t, applicationName: p, canNavigate: m, command: b, guildId: g } = e,
+function m(e) {
+    let { applicationIcon: t, applicationName: m, canNavigate: b, command: p, guildId: g } = e,
         f = r.useMemo(() => {
             var e;
-            return 0 !== Object.keys(null != (e = b.permissions) ? e : {}).length;
-        }, [b.permissions]),
+            return 0 !== Object.keys(null != (e = p.permissions) ? e : {}).length;
+        }, [p.permissions]),
         h = r.useCallback(() => {
-            null != b &&
-                m() &&
+            null != p &&
+                b() &&
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("78786").then(n.bind(n, 50474));
                     return (n) =>
@@ -49,16 +49,16 @@ function p(e) {
                             u(
                                 {
                                     applicationIcon: t,
-                                    applicationId: b.applicationId,
-                                    applicationName: p,
-                                    command: b,
+                                    applicationId: p.applicationId,
+                                    applicationName: m,
+                                    command: p,
                                     guildId: g,
                                 },
                                 n,
                             ),
                         );
                 });
-        }, [t, p, m, b, g]),
+        }, [t, m, b, p, g]),
         x = r.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
@@ -70,7 +70,7 @@ function p(e) {
                             ((n = u({}, t)),
                             (r = r =
                                 {
-                                    id: b.id,
+                                    id: p.id,
                                     label: c.intl.string(c.t.oJ1Muw),
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -90,10 +90,10 @@ function p(e) {
                     };
                 });
             },
-            [b],
+            [p],
         ),
-        j = b.type === o.yU.CHAT ? l.SsZ : l.hH0,
-        v = (0, s.gw)(b.type, b.displayName);
+        j = p.type === o.yU.CHAT ? l.SsZ : l.hH0,
+        v = (0, s.gw)(p.type, p.displayName);
     return (0, i.jsxs)(l.P3F, {
         onClick: h,
         className: d.item,

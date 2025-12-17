@@ -6,15 +6,15 @@ var i = n(54381),
     o = n(481060),
     s = n(393903),
     c = n(388032),
-    d = n(399553);
+    d = n(765337);
 function u(e) {
     let {
             hasInvites: t,
             setHeight: n,
             onShowDisableInvites: u,
-            onShowInviteModal: p,
-            hasInviteDisabledPermission: m,
-            invitesDisabled: b,
+            onShowInviteModal: m,
+            hasInviteDisabledPermission: b,
+            invitesDisabled: p,
             canCreateInvites: g,
         } = e,
         f = r.useMemo(() => (0, l.debounce)(n, 100), [n]),
@@ -39,16 +39,16 @@ function u(e) {
             (0, i.jsxs)(a.hE2, {
                 children: [
                     (0, i.jsx)(o.Button, {
-                        variant: b ? "primary" : "critical-secondary",
-                        text: b ? c.intl.string(c.t["/dbw3H"]) : c.intl.string(c.t.Uwsjn6),
+                        variant: p ? "primary" : "critical-secondary",
+                        text: p ? c.intl.string(c.t["/dbw3H"]) : c.intl.string(c.t.Uwsjn6),
                         onClick: u,
-                        disabled: !m,
+                        disabled: !b,
                     }),
                     !0 === g
                         ? (0, i.jsx)(o.Button, {
                               variant: "primary",
                               text: c.intl.string(c.t.KmK3q4),
-                              onClick: p,
+                              onClick: m,
                           })
                         : null,
                 ],

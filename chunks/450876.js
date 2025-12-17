@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(793030),
-    o = n(316173),
+    o = n(793030),
+    s = n(316173),
     c = n(410575),
     u = n(393238),
     d = n(100527),
@@ -13,12 +13,12 @@ var r = n(54381),
     g = n(720734),
     h = n(840780),
     m = n(235555),
-    _ = n(746508),
-    b = n(210724),
+    b = n(746508),
+    _ = n(210724),
     E = n(905423),
     O = n(981631),
     v = n(388032),
-    y = n(822338);
+    y = n(566888);
 function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, p.ZP)(d.Z.ACTIVITY_PANEL),
@@ -87,11 +87,11 @@ let C = i.memo(function () {
         ref: e,
         className: a()(y.panels, { [y.disablePointersWhileSorting]: t }),
         "aria-label": v.intl.string(v.t.StREWK),
-        children: (0, r.jsxs)(s.JcV, {
+        children: (0, r.jsxs)(o.JcV, {
             containerRef: e,
             children: [
-                (0, r.jsx)(o.Z, {}),
-                (0, r.jsx)(b.Z, {}),
+                (0, r.jsx)(s.Z, {}),
+                (0, r.jsx)(_.Z, {}),
                 (0, r.jsx)(m.Z, {}),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACTIVITY_PANEL,
@@ -99,7 +99,7 @@ let C = i.memo(function () {
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.RTC_CONNECTION_PANEL,
-                    children: (0, r.jsx)(_.Z, {}),
+                    children: (0, r.jsx)(b.Z, {}),
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACCOUNT_PANEL,

@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(712114),
     y = n(680056),
     v = n(266454),
-    O = n(536442),
-    x = n(728285),
+    x = n(536442),
+    O = n(728285),
     E = n(79390),
     j = n(216789),
     S = n(665906),
@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(981631),
     V = n(356659),
     F = n(921944),
-    B = n(388032),
-    H = n(815308);
+    H = n(388032),
+    B = n(815308);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -94,7 +94,7 @@ let W = r.memo(function (e) {
             canOnlyUseTextCommands: J,
             chatInputType: Q,
         } = e,
-        $ = (0, x.bp)(),
+        $ = (0, O.bp)(),
         ee = r.useRef(null),
         et = r.useRef(null),
         en = (0, o.e7)([N.Z], () => N.Z.getActivities()),
@@ -107,7 +107,7 @@ let W = r.memo(function (e) {
             { autoTrackExposure: !1 },
         ),
         { onShareClick: es } = (0, y.Z)(q.id),
-        ec = (0, o.e7)([O.qc], () => O.qc.hasHotspot(O.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ec = (0, o.e7)([x.qc], () => x.qc.hasHotspot(x.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         eu = (0, c.s9z)((e) => (0, c.DEQ)(e, V.Qr)),
         ed = (0, o.e7)([I.Z], () => I.Z.hasLayers()),
         ep = (0, o.e7)([g.Z], () => g.Z.hasClips()),
@@ -158,8 +158,8 @@ let W = r.memo(function (e) {
             }
         );
     });
-    let eO = (0, S.NE)(q),
-        ex = (0, S.Xu)(q),
+    let ex = (0, S.NE)(q),
+        eO = (0, S.Xu)(q),
         eE = !_.dN.useSetting() && !(0, w.isAndroidWeb)() && null != window.ResizeObserver,
         ej = (0, h.R)({
             channel: q,
@@ -172,7 +172,7 @@ let W = r.memo(function (e) {
         eZ = null != (l = null == el ? void 0 : el.length) ? l : 0,
         eT = (0, k.Z)({
             canAttachFiles: eb,
-            canStartThreads: eO || ex,
+            canStartThreads: ex || eO,
             useSlate: eE,
             hasClips: em,
             canUseApplicationCommands: !J,
@@ -190,7 +190,7 @@ let W = r.memo(function (e) {
     let eN = (0, i.jsx)(c.svS, {
             size: "refresh_sm",
             color: "currentColor",
-            colorClass: H.attachButtonPlus,
+            colorClass: B.attachButtonPlus,
         }),
         eA = (0, i.jsx)(c.yRy, {
             targetElementRef: et,
@@ -246,10 +246,10 @@ let W = r.memo(function (e) {
                         G(
                             {
                                 ref: et,
-                                className: a()(H.attachButton, W),
-                                childClassName: H.attachButtonInner,
+                                className: a()(B.attachButton, W),
+                                childClassName: B.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": B.intl.string(B.t.d56gCa),
+                                "aria-label": H.intl.string(H.t.d56gCa),
                                 onDoubleClick: eb
                                     ? () => {
                                           var e;
@@ -267,7 +267,7 @@ let W = r.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: H.uploadInput,
+                className: B.uploadInput,
                 children: (0, i.jsx)(u.Z, {
                     ref: ee,
                     onChange: (e) => {
@@ -289,15 +289,15 @@ let W = r.memo(function (e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: H.attachWrapper,
+                className: B.attachWrapper,
                 children: (0, i.jsx)(R.Z, {
                     channel: q,
                     isOmniMenuOpen: "attachMenu" === ef,
                     openOmniMenu: () => eh("attachMenu"),
                     enabled: e_,
-                    animationContainerClassName: H.buttonAnimation,
-                    glowClassName: H.buttonAnimationGlow,
-                    trinketsClassName: H.buttonAnimationTrinkets,
+                    animationContainerClassName: B.buttonAnimation,
+                    glowClassName: B.buttonAnimationGlow,
+                    trinketsClassName: B.buttonAnimationTrinkets,
                     children: eA,
                 }),
             }),

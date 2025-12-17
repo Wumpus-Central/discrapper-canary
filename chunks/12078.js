@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(35282);
+n.d(t, { Z: () => C }), n(35282);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -9,14 +9,14 @@ var r = n(54381),
     d = n(220250),
     u = n(813197),
     g = n(430824),
-    m = n(768581),
-    p = n(921948),
-    f = n(434404),
-    h = n(981631),
-    b = n(570911),
+    f = n(768581),
+    m = n(921948),
+    b = n(434404),
+    p = n(981631),
+    h = n(570911),
     x = n(388032),
-    j = n(453921);
-function _(e) {
+    j = n(257699);
+function v(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         s = (0, d.nv)(),
         u = (0, d.qw)({
@@ -38,18 +38,18 @@ function _(e) {
         }),
     });
 }
-function v(e) {
+function O(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: l, canManageGuild: s } = e,
         o = null != n.customBanner,
         d = i.useMemo(() => {
             if (null == n.customBanner) return null;
             let e = n.customBanner;
-            return m.ff.test(e)
+            return f.ff.test(e)
                 ? e
-                : m.ZP.getGuildDiscoverySplashURL({
+                : f.ZP.getGuildDiscoverySplashURL({
                       id: n.id,
                       splash: n.customBanner,
-                      size: 300 * (0, p.Z)(),
+                      size: 300 * (0, m.Z)(),
                   });
         }, [n]);
     if (!t) return null;
@@ -92,34 +92,34 @@ function v(e) {
         }),
     });
 }
-function O(e) {
+function C(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
-        m = (0, s.e7)([g.Z], () => g.Z.getGuild(n.id)),
-        p = null != (t = null == m ? void 0 : m.features.has(h.GuildFeatures.DISCOVERABLE)) && t,
-        O = n.id,
-        C = i.useCallback(
+        f = (0, s.e7)([g.Z], () => g.Z.getGuild(n.id)),
+        m = null != (t = null == f ? void 0 : f.features.has(p.GuildFeatures.DISCOVERABLE)) && t,
+        C = n.id,
+        y = i.useCallback(
             (e) => () => {
-                f.Z.updateGuildProfile(O, {
+                b.Z.updateGuildProfile(C, {
                     brandColorPrimary: e,
                     customBanner: null,
                 });
             },
-            [O],
+            [C],
         ),
-        y = i.useCallback((e) => (!p || null == n.customBanner) && e === n.brandColorPrimary, [n, p]);
+        N = i.useCallback((e) => (!m || null == n.customBanner) && e === n.brandColorPrimary, [n, m]);
     return (0, r.jsx)(c.gNt, {
         label: x.intl.string(x.t.BSVog8),
         children: (0, r.jsxs)("div", {
             className: j.grid,
             children: [
-                (0, r.jsx)(_, {
+                (0, r.jsx)(v, {
                     profile: n,
                     canManageGuild: u,
-                    handleClick: C(null),
-                    hasCustomBanner: p && null != n.customBanner,
+                    handleClick: y(null),
+                    hasCustomBanner: m && null != n.customBanner,
                 }),
-                b.cb.map((e) => {
+                h.cb.map((e) => {
                     let { name: t, color: n } = e;
                     return (0, r.jsx)(
                         o.u,
@@ -130,18 +130,18 @@ function O(e) {
                                 "aria-disabled": !u,
                                 tabIndex: u ? 0 : -1,
                                 "aria-label": t,
-                                onClick: u ? C(n) : void 0,
+                                onClick: u ? y(n) : void 0,
                                 style: { background: (0, d.dG)(n) },
                                 className: a()(j.itemContainer, { [j.disabled]: !u }),
-                                children: (0, r.jsx)("div", { className: a()({ [j.itemSelected]: y(n) }) }),
+                                children: (0, r.jsx)("div", { className: a()({ [j.itemSelected]: N(n) }) }),
                             }),
                         },
                         t,
                     );
                 }),
-                (0, r.jsx)(v, {
+                (0, r.jsx)(O, {
                     canManageGuild: u,
-                    isDiscoverable: p,
+                    isDiscoverable: m,
                     profile: n,
                     onCustomBannerChange: l,
                 }),

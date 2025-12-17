@@ -15,7 +15,7 @@ var r = n(54381),
     p = n(527379),
     h = n(285173),
     g = n(388032),
-    j = n(115491);
+    j = n(236143);
 let x = new Set();
 function v(e) {
     let { guildId: t } = e,
@@ -37,7 +37,7 @@ function v(e) {
             },
             [O],
         ),
-        _ = l.useCallback(
+        w = l.useCallback(
             (e) => {
                 let { record: n } = e;
                 return {
@@ -56,7 +56,7 @@ function v(e) {
             },
             [t],
         ),
-        w = l.useCallback(
+        S = l.useCallback(
             (e, t) => {
                 let n = new Map(v.map((e) => [e.record.id, e]));
                 return e.filter((e) => {
@@ -77,8 +77,8 @@ function v(e) {
             value: Array.from(a),
             onSelectionChange: H,
             options: v,
-            formatOption: _,
-            customMatchSorter: w,
+            formatOption: w,
+            customMatchSorter: S,
             selectionMode: "multiple",
             autoFocus: !0,
             closeOnSelect: !1,

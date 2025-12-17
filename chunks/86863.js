@@ -1,4 +1,4 @@
-n.d(t, { n: () => h });
+n.d(t, { n: () => f });
 var i = n(54381),
     r = n(442837),
     l = n(159691),
@@ -9,17 +9,17 @@ var i = n(54381),
     u = n(626135),
     d = n(981631),
     p = n(388032);
-let h = (e) => {
-    let { channel: t, user: n, application: h, oauth2Token: f } = e,
+let f = (e) => {
+    let { channel: t, user: n, application: f, oauth2Token: h } = e,
         m = (0, r.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities());
-    if (!n.bot || null == h) return null;
+    if (!n.bot || null == f) return null;
     function g() {
-        o.Z.delete(f.id);
-        let e = m.get(h.id);
+        o.Z.delete(h.id);
+        let e = m.get(f.id);
         null != e &&
             c.Z.leaveActivity({
                 location: e.location,
-                applicationId: h.id,
+                applicationId: f.id,
             });
     }
     return (0, i.jsx)(a.Button, {
@@ -57,7 +57,7 @@ let h = (e) => {
                     })(
                         {
                             title: p.intl.string(p.t["DT39A+"]),
-                            subtitle: p.intl.formatToPlainString(p.t.QWGvxA, { applicationName: h.name }),
+                            subtitle: p.intl.formatToPlainString(p.t.QWGvxA, { applicationName: f.name }),
                             actions: [
                                 {
                                     text: p.intl.string(p.t["ETE/oC"]),
@@ -78,7 +78,7 @@ let h = (e) => {
                 ),
             ),
                 u.default.track(d.rMx.APP_MANAGE_CTA_CLICKED, {
-                    application_id: h.id,
+                    application_id: f.id,
                     channel_id: t.id,
                     channel_type: t.type,
                 });

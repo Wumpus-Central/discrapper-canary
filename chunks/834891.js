@@ -3,8 +3,8 @@ e.d(n, {
     l: () => d,
 });
 var i,
-    a = e(149765),
-    l = e(700785),
+    l = e(149765),
+    a = e(700785),
     s = e(981631),
     r = e(388032),
     d =
@@ -492,15 +492,15 @@ function o() {
                 {
                     id: "00",
                     name: "@everyone",
-                    permissions: l.TP,
+                    permissions: a.TP,
                 },
                 {
                     id: "01",
                     name: "officers (example)",
                     mentionable: !0,
                     hoist: !0,
-                    permissions: a.$e(
-                        l.TP,
+                    permissions: l.$e(
+                        a.TP,
                         s.Plq.MANAGE_ROLES,
                         s.Plq.MANAGE_CHANNELS,
                         s.Plq.KICK_MEMBERS,

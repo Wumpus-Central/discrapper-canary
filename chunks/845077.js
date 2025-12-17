@@ -1,14 +1,14 @@
 n.d(t, {
-    PA: () => l,
+    PA: () => i,
     Wl: () => s,
 });
 var a = n(990547);
 n(479531);
 var r = n(573261),
-    i = n(981631);
-async function l() {
+    l = n(981631);
+async function i() {
     let e = await r.Z.get({
-        url: i.ANM.SAFETY_FLOWS_TASK,
+        url: l.ANM.SAFETY_FLOWS_TASK,
         trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
         rejectWithError: !0,
     });
@@ -17,7 +17,7 @@ async function l() {
 async function s(e) {
     return (
         await r.Z.post({
-            url: i.ANM.SAFETY_FLOWS_TASK,
+            url: l.ANM.SAFETY_FLOWS_TASK,
             body: e,
             trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
             rejectWithError: !0,

@@ -3,17 +3,17 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(718269);
-let a = () => (0, r.jsx)("div", { className: o.spacer }),
-    s = () => (0, r.jsx)("div", { className: o.category }),
+    a = n(113153);
+let o = () => (0, r.jsx)("div", { className: a.spacer }),
+    s = () => (0, r.jsx)("div", { className: a.category }),
     c = (e) => {
         let { width: t } = e;
         return (0, r.jsxs)("div", {
-            className: o.channel,
+            className: a.channel,
             children: [
-                (0, r.jsx)("div", { className: o.channelIcon }),
+                (0, r.jsx)("div", { className: a.channelIcon }),
                 (0, r.jsx)("div", {
-                    className: o.channelName,
+                    className: a.channelName,
                     style: { width: "".concat(t, "px") },
                 }),
             ],
@@ -22,7 +22,7 @@ let a = () => (0, r.jsx)("div", { className: o.spacer }),
     u = (e) => {
         let { withBannerPadding: t } = e;
         return (0, r.jsxs)("div", {
-            className: l()(o.container, { [o.bannerPadding]: t }),
+            className: l()(a.container, { [a.bannerPadding]: t }),
             children: [
                 (0, r.jsx)(s, {}),
                 (0, r.jsx)(c, { width: 100 }),
@@ -31,7 +31,7 @@ let a = () => (0, r.jsx)("div", { className: o.spacer }),
                 (0, r.jsx)(c, { width: 70 }),
                 (0, r.jsx)(c, { width: 112 }),
                 (0, r.jsx)(c, { width: 175 }),
-                (0, r.jsx)(a, {}),
+                (0, r.jsx)(o, {}),
                 (0, r.jsx)(s, {}),
                 (0, r.jsx)(c, { width: 100 }),
                 (0, r.jsx)(c, { width: 74 }),

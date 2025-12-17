@@ -853,8 +853,8 @@ class R extends o.C {
         ]);
     }
 }
-let D = new R();
-class w extends o.C {
+let w = new R();
+class D extends o.C {
     create(e) {
         let t = {
             linkedUsers: {},
@@ -892,7 +892,7 @@ class w extends o.C {
                     a.primaryGuild = P.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 6:
-                    a.crossPlatformRestriction = D.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
+                    a.crossPlatformRestriction = w.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
                     break;
                 case 7:
                     a.collectibles = A.internalBinaryRead(e, e.uint32(), n, a.collectibles);
@@ -1003,7 +1003,7 @@ class w extends o.C {
         e.quest && V.internalBinaryWrite(e.quest, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.primaryGuild && P.internalBinaryWrite(e.primaryGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
-                D.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
+                w.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
             e.collectibles && A.internalBinaryWrite(e.collectibles, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             e.premiumState && er.internalBinaryWrite(e.premiumState, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
@@ -1060,7 +1060,7 @@ class w extends o.C {
                 no: 6,
                 name: "cross_platform_restriction",
                 kind: "message",
-                T: () => D,
+                T: () => w,
             },
             {
                 no: 7,
@@ -1089,7 +1089,7 @@ class w extends o.C {
         ]);
     }
 }
-new w();
+new D();
 class x extends o.C {
     create(e) {
         let t = {
@@ -1366,7 +1366,7 @@ class G extends o.C {
     }
 }
 let Z = new G();
-class B extends o.C {
+class F extends o.C {
     create(e) {
         let t = { shards: [] };
         return (
@@ -1419,8 +1419,8 @@ class B extends o.C {
         ]);
     }
 }
-new B();
-class F extends o.C {
+new F();
+class B extends o.C {
     create(e) {
         let t = { questsCompleted: 0 };
         return (
@@ -1466,7 +1466,7 @@ class F extends o.C {
         ]);
     }
 }
-let V = new F();
+let V = new B();
 class H extends o.C {
     create(e) {
         let t = {};

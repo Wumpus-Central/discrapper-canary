@@ -1,14 +1,14 @@
 n.r(t),
     n.d(t, {
         default: () => V,
-        useAppSidebarState: () => B,
+        useAppSidebarState: () => H,
     });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(663042),
-    o = n(442837),
+    o = n(663042),
+    s = n(442837),
     c = n(481060),
     u = n(833484),
     d = n(812206),
@@ -18,8 +18,8 @@ var r = n(54381),
     h = n(919842),
     m = n(320007),
     b = n(719961),
-    E = n(336219),
-    _ = n(609174),
+    _ = n(336219),
+    E = n(609174),
     O = n(257966),
     v = n(111666),
     y = n(413557),
@@ -41,8 +41,8 @@ var r = n(54381),
     k = n(950796),
     U = n(741764),
     G = n(428754);
-let B = (0, s.U)(() => ({ isOpen: !0 }));
-function H(e) {
+let H = (0, o.U)(() => ({ isOpen: !0 }));
+function B(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
     return n
         ? (0, r.jsx)(O.R, { focusSectionProps: i })
@@ -56,12 +56,12 @@ let V = i.memo(function () {
         D.ZP.setMinimumSize(U.J, U.N);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, N.pN)({ location: "AppTitleBar" }),
-        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, E.t)({ location: "AppTitleBar" }),
-        { backForwardButtons: s, titlebarIconSize: O } = (0, b.T)({ location: "AppTitleBar" }),
+        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, _.t)({ location: "AppTitleBar" }),
+        { backForwardButtons: o, titlebarIconSize: O } = (0, b.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: T } = f.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
-        { enabled: B } = g.c.useConfig({ location: "AppTitleBar" }),
-        V = (0, o.e7)([w.Z], () => w.Z.isDeveloper),
-        F = (0, o.e7)(
+        { enabled: H } = g.c.useConfig({ location: "AppTitleBar" }),
+        V = (0, s.e7)([w.Z], () => w.Z.isDeveloper),
+        F = (0, s.e7)(
             [L.Z, d.Z],
             () =>
                 Z.Sb.getSetting() &&
@@ -75,7 +75,7 @@ let V = i.memo(function () {
         D.ZP.setMinimumSize(U.J, U.N);
     }, []);
     let W = (0, A.Ll)(),
-        q = (0, o.e7)([R.Z, P.Z], () => (0, M.rB)()),
+        q = (0, s.e7)([R.Z, P.Z], () => (0, M.rB)()),
         K = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -97,7 +97,7 @@ let V = i.memo(function () {
                 [t, n, r, l],
             );
         })({
-            showBackForwardButtons: s,
+            showBackForwardButtons: o,
             showNotificationsInbox: z,
             titlebarFastTravel: n,
             showRecentsButton: Y,
@@ -114,14 +114,14 @@ let V = i.memo(function () {
                         className: t,
                         leading: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                s &&
-                                    (0, r.jsx)(_.Z, {
+                                o &&
+                                    (0, r.jsx)(E.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === K ? e : void 0,
                                     }),
                                 z && (0, r.jsx)(j.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === K ? e : void 0 }),
                             ],
                         }),
-                        title: (0, r.jsx)(H, {
+                        title: (0, r.jsx)(B, {
                             withFastTravel: n,
                             quickSwitcherInsteadOfTitle: l,
                             focusSectionProps: "TITLEBAR_FAST_TRAVEL" === K ? e : void 0,
@@ -129,7 +129,7 @@ let V = i.memo(function () {
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(v.Z, { className: Q }),
-                                B && (0, r.jsx)(h.Z, { className: Q }),
+                                H && (0, r.jsx)(h.Z, { className: Q }),
                                 (0, r.jsx)(m.Z, {
                                     canShowReminder: !0,
                                     className: Q,

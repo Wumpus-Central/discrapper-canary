@@ -97,8 +97,8 @@ function g(e) {
         [C, A] = (0, l.Ls)(t, { location: T }),
         N = S ? C.concat(A) : C,
         { id: P, name: R } = (0, l.p6)(t),
-        D = null != _ ? _ : P,
-        w = N.map((e) => {
+        w = null != _ ? _ : P,
+        D = N.map((e) => {
             let i,
                 { id: o, disabled: s, name: c } = e,
                 d = c,
@@ -119,7 +119,7 @@ function g(e) {
                                     variant: "text-xs/normal",
                                     children: i,
                                 }),
-                            checked: o === D,
+                            checked: o === w,
                             action: () => {
                                 var e;
                                 (null == (e = null == u ? void 0 : u(o)) || e) && y(o, { analyticsLocations: n });
@@ -160,14 +160,14 @@ function g(e) {
                       E,
                   ),
                   {
-                      children: [w, L && x],
+                      children: [D, L && x],
                   },
               ),
           )
         : (0, r.jsxs)(
               a.kSQ,
               m(p({ label: O() }, g), {
-                  children: [w, L && x],
+                  children: [D, L && x],
               }),
           );
 }

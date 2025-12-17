@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(893718),
     V = n(436660),
     F = n(680835),
-    B = n(28546),
-    H = n(295474),
+    H = n(28546),
+    B = n(295474),
     G = n(521476),
     z = n(69882),
     W = n(71619),
@@ -92,8 +92,8 @@ var i = n(54381),
     eU = n(979956),
     eV = n(413251),
     eF = n(655687),
-    eB = n(583027),
-    eH = n(25007),
+    eH = n(583027),
+    eB = n(25007),
     eG = n(685722),
     ez = n(199649),
     eW = n(1397),
@@ -478,7 +478,7 @@ class e7 extends r.PureComponent {
                         e === T.bB.IMAGE_RECS_SUBMENU
                     ) {
                         var v;
-                        let { location: t, sectionName: n } = null != (v = (0, eB._U)(l)) ? v : {},
+                        let { location: t, sectionName: n } = null != (v = (0, eH._U)(l)) ? v : {},
                             i = e === T.bB.APPLICATION_LAUNCHER ? j.Z.lastShownEntrypoint() : S._b.TEXT,
                             { isAuthorized: r } = await (0, w.L)({
                                 applicationId: l.applicationId,
@@ -495,7 +495,7 @@ class e7 extends r.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !0,
                             });
-                        (0, eB.SC)(l);
+                        (0, eH.SC)(l);
                     }
                     let n = await (0, A.Z)({
                         command: l,
@@ -832,7 +832,7 @@ class e8 extends r.PureComponent {
                                                 recipientUser: S,
                                                 voiceChannel: _,
                                             }),
-                                        (0, i.jsx)(eH.Z, {
+                                        (0, i.jsx)(eB.Z, {
                                             channel: n,
                                             guild: r,
                                             narrow: A,
@@ -958,7 +958,7 @@ class e8 extends r.PureComponent {
             }),
             eQ(this, "handleOpenExpressionPicker", (e) => {
                 let { activeView: t } = e;
-                (0, B.PG)(t, this.props.chatInputType, this.props.channel.id);
+                (0, H.PG)(t, this.props.chatInputType, this.props.channel.id);
             }),
             eQ(this, "handleOpenAppLauncher", (e) => {
                 let { applicationId: t } = e;
@@ -996,7 +996,7 @@ let e6 = r.memo(function (e) {
         { placeholder: a, accessibilityLabel: o } = (0, eF.Z)({ channel: t }),
         s = (0, es.S)(eN.default.getCurrentUser(), t),
         [c] = (0, W.AB)(null == n ? void 0 : n.id),
-        u = (0, H.Ux)(null == n ? void 0 : n.id),
+        u = (0, B.Ux)(null == n ? void 0 : n.id),
         d = (0, p.e7)([eN.default], () => eN.default.getCurrentUser()),
         h = (0, p.e7)([e_.ZP], () => {
             var e, t, i;

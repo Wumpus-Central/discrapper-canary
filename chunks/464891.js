@@ -34,8 +34,8 @@ var r = n(54381),
     N = n(670188),
     P = n(740492),
     R = n(430824),
-    D = n(496675),
-    w = n(594174),
+    w = n(496675),
+    D = n(594174),
     x = n(768581),
     L = n(585483),
     j = n(74538),
@@ -44,12 +44,12 @@ var r = n(54381),
     U = n(421399),
     G = n(453687),
     Z = n(318713),
-    B = n(304176),
-    F = n(47930),
+    F = n(304176),
+    B = n(47930),
     V = n(935910),
     H = n(981631),
     Y = n(388032),
-    W = n(724913),
+    W = n(549578),
     K = n(121282);
 function z(e, t, n) {
     return (
@@ -171,7 +171,7 @@ let et = i.memo(function (e) {
         S = (0, k.ZP)(t, n),
         I = i.useMemo(
             () =>
-                (0, F.x)({
+                (0, B.x)({
                     message: t,
                     channel: a,
                     user: null == t ? void 0 : t.author,
@@ -198,7 +198,7 @@ let et = i.memo(function (e) {
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
                                 renderPopout: () =>
-                                    (0, r.jsx)(B.Z, {
+                                    (0, r.jsx)(F.Z, {
                                         roleIcon: l,
                                         guild: C,
                                     }),
@@ -221,8 +221,8 @@ let et = i.memo(function (e) {
                         : null,
             [A, l, C],
         ),
-        P = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
-        D = i.useMemo(() => {
+        P = (0, c.e7)([D.default], () => D.default.getCurrentUser()),
+        w = i.useMemo(() => {
             let e = [],
                 n = j.ZP.isPremium(t.author),
                 i = j.ZP.isPremium(P),
@@ -288,7 +288,7 @@ let et = i.memo(function (e) {
                       onPopoutRequestClose: E,
                       decorations: {
                           [U.a.SYSTEM_TAG]: I,
-                          [U.a.BADGES]: D,
+                          [U.a.BADGES]: w,
                       },
                       previewGuildId: o,
                       preview: b,
@@ -364,9 +364,9 @@ function er(e) {
             showAvatarPopout: I,
         } = o,
         A = i.useRef(null),
-        [R, D] = i.useState(!1),
+        [R, w] = i.useState(!1),
         { analyticsLocations: j } = (0, p.ZP)(f.Z.AVATAR),
-        M = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
+        M = (0, c.e7)([D.default], () => D.default.getCurrentUser()),
         k = (0, c.e7)([P.ZP], () => {
             var e;
             return null != (e = o.displayCompactAvatars) ? e : P.ZP.displayCompactAvatars;
@@ -374,14 +374,14 @@ function er(e) {
         U = (0, V.Z)(m),
         G = g ? J : $,
         { pendingAvatarDecoration: Z } = (0, T.Z)({ guildId: l }),
-        B = (0, y.Ys)({
+        F = (0, y.Ys)({
             pendingValue: m.author.id === (null == M ? void 0 : M.id) ? Z : void 0,
             userValue: null == (t = m.author) ? void 0 : t.avatarDecoration,
             guildValue: null == h ? void 0 : h.guildMemberAvatarDecoration,
             guildId: l,
         }),
         {
-            avatarSrc: F,
+            avatarSrc: B,
             avatarDecorationSrc: Y,
             eventHandlers: W,
         } = (0, C.Z)({
@@ -389,7 +389,7 @@ function er(e) {
             guildId: l,
             size: G,
             animateOnHover: null != E ? !R : !b,
-            avatarDecorationOverride: B,
+            avatarDecorationOverride: F,
             showPending: !0,
         }),
         K = m.isInteractionPlaceholder(),
@@ -407,7 +407,7 @@ function er(e) {
                       fallbackAvatar: !1,
                   }))
                     ? t
-                    : F
+                    : B
                 : null != m.webhookId && null == h.guildMemberAvatar
                   ? x.ZP.getUserAvatarURL(
                         {
@@ -419,7 +419,7 @@ function er(e) {
                         !1,
                         G,
                     )
-                  : F;
+                  : B;
         }, [
             K,
             m.author.avatar,
@@ -428,7 +428,7 @@ function er(e) {
             null == (n = m.application) ? void 0 : n.icon,
             null == (a = m.application) ? void 0 : a.id,
             m.webhookId,
-            F,
+            B,
             G,
             h.guildMemberAvatar,
         ]);
@@ -436,8 +436,8 @@ function er(e) {
         (i.useEffect(() => {
             if (null != E)
                 return (
-                    L.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), D),
-                    () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), D)
+                    L.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), w),
+                    () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), w)
                 );
         }, [m.author.id, E]),
         !g || k)
@@ -600,9 +600,9 @@ let es = i.memo(function (e) {
             } = e,
             I = i.useMemo(() => (null != s ? (e) => s(e, t) : void 0), [s, t]),
             [, T] = (0, h.ZP)(t.author.id, e.guildId),
-            C = (0, c.e7)([D.Z, R.Z], () => {
+            C = (0, c.e7)([w.Z, R.Z], () => {
                 let n = R.Z.getGuild(e.guildId);
-                return null != t.author && null != n && D.Z.canManageUser(H.Plq.MODERATE_MEMBERS, t.author, n);
+                return null != t.author && null != n && w.Z.canManageUser(H.Plq.MODERATE_MEMBERS, t.author, n);
             }, [t.author, e.guildId]),
             A = T && C,
             N = er({
@@ -611,13 +611,13 @@ let es = i.memo(function (e) {
                 handleRenderPopout: I,
                 showCommunicationDisabledStyles: A,
             }),
-            w = (0, c.e7)([P.ZP], () => {
+            D = (0, c.e7)([P.ZP], () => {
                 var t;
                 return null != (t = e.displayCompactAvatars) ? t : P.ZP.displayCompactAvatars;
             }),
             x = i.useMemo(
                 () =>
-                    (0, F.b)({
+                    (0, B.b)({
                         message: t,
                         channel: y,
                         user: null == t ? void 0 : t.author,
@@ -626,7 +626,7 @@ let es = i.memo(function (e) {
                     }),
                 [t, y, a],
             ),
-            L = (0, c.e7)([R.Z], () => eo(a, w, p, R.Z.getGuild(e.guildId)), [a, w, p, e.guildId]),
+            L = (0, c.e7)([R.Z], () => eo(a, D, p, R.Z.getGuild(e.guildId)), [a, D, p, e.guildId]),
             j = i.useMemo(() => {
                 let e = [];
                 return (
@@ -640,7 +640,7 @@ let es = i.memo(function (e) {
             k = (0, G.Dv)(t),
             U = m ? "".concat(M) : "".concat(M, " ").concat(k),
             Z = (null == n ? void 0 : n.state) === O.Y.LOADED ? (0, G.Gq)(t) : void 0,
-            B = !0 !== m;
+            F = !0 !== m;
         return (0, r.jsx)(ei, {
             message: t,
             avatar: N,
@@ -681,7 +681,7 @@ let es = i.memo(function (e) {
                 [W.hasBadges]: null != x || j.length > 0,
             }),
             compact: a,
-            showTimestamp: B,
+            showTimestamp: F,
             showTimestampOnHover: f,
             ariaLabelledBy: U,
             ariaDescribedBy: Z,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(481060),
     o = n(49436),
     c = n(968843),
@@ -11,20 +11,20 @@ var a = n(54381),
     m = n(388032),
     p = n(782589);
 function h() {
-    let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: i } = r.useContext(u.A),
+    let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: l } = r.useContext(u.A),
         h = (0, c.B6)(e.config.expiresAt);
     return (0, a.jsxs)("div", {
         className: p.questAcceptedHeader,
         children: [
             (0, a.jsx)(s.Text, {
                 variant: "text-xxs/medium",
-                className: l()(p.flex, p.headerText),
+                className: i()(p.flex, p.headerText),
                 children: m.intl.format(m.t["pX+fmn"], { expirationDate: h }),
             }),
             (0, a.jsx)(d.i, {
                 onOpen: t,
                 onClose: n,
-                onSelect: i,
+                onSelect: l,
                 questContent: o.jn.QUEST_BAR_V2,
                 quest: e,
                 shouldShowDisclosure: !1,
@@ -66,7 +66,7 @@ function h() {
                                 children: (0, a.jsx)(s.xhG, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: l()(p.submenuIcon, p.interactiveNormal),
+                                    className: i()(p.submenuIcon, p.interactiveNormal),
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors

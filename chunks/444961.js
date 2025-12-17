@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(846519),
     i = n(570140),
     l = n(287734),
     a = n(317770),
-    s = n(199902),
-    o = n(592125),
+    o = n(199902),
+    s = n(592125),
     c = n(430824),
     u = n(517100),
     d = n(19780),
@@ -13,7 +13,7 @@ var r = n(846519),
     g = n(981631);
 let h = new r.V7(),
     m = new r.V7();
-class _ extends a.Z {
+class b extends a.Z {
     _initialize() {
         i.Z.subscribe("IDLE", this.handleIdleUpdate);
     }
@@ -23,7 +23,7 @@ class _ extends a.Z {
     handleIdleUpdate() {
         let e = u.Z.getIdleSince();
         if (!f.isPlatformEmbedded) return;
-        for (let e of (h.stop(), m.stop(), s.Z.getAllActiveStreams())) if (e.state !== g.jm8.ENDED) return;
+        for (let e of (h.stop(), m.stop(), o.Z.getAllActiveStreams())) if (e.state !== g.jm8.ENDED) return;
         if (null == e) return;
         let t = d.Z.getChannelId();
         if (null == t) return;
@@ -32,7 +32,7 @@ class _ extends a.Z {
         });
         let n = c.Z.getGuild(d.Z.getGuildId());
         if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afkTimeout) return;
-        let r = o.Z.getChannel(t);
+        let r = s.Z.getChannel(t);
         null != r &&
             (r.isGuildStageVoice() ||
                 h.start(e + n.afkTimeout * p.Z.Millis.SECOND - Date.now(), () => {
@@ -42,4 +42,4 @@ class _ extends a.Z {
                 }));
     }
 }
-let b = new _();
+let _ = new b();

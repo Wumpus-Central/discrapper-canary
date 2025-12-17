@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => E,
+    ZP: () => j,
     cy: () => O,
-    iu: () => v,
+    iu: () => x,
 }),
     n(388685);
 var i,
@@ -14,11 +14,11 @@ var i,
     u = n(780384),
     d = n(755721),
     p = n(481060),
-    h = n(600164),
-    f = n(626135),
+    f = n(600164),
+    h = n(626135),
     m = n(981631),
     g = n(388032),
-    b = n(105853);
+    b = n(308779);
 function C(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function y(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,15 +66,15 @@ function _(e, t) {
         e
     );
 }
-var v = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
+var x = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
     O = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
-class x extends o.PureComponent {
+class E extends o.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        f.default.track(m.rMx.SHOW_TUTORIAL, { tutorial: e });
+        h.default.track(m.rMx.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        f.default.track(m.rMx.CLOSE_TUTORIAL, {
+        h.default.track(m.rMx.CLOSE_TUTORIAL, {
             tutorial: this.props.uniqueId,
             acknowledged: this.state.confirmed,
         });
@@ -90,34 +90,34 @@ class x extends o.PureComponent {
                 forceTheme: o,
                 onClickSkipAll: s,
             } = this.props,
-            f = "left" === t || n,
-            m = "center" === t || !f;
+            h = "left" === t || n,
+            m = "center" === t || !h;
         return (0, a.jsxs)(p.VqE, {
             className: c()(b.popoutRoot, l),
             children: [
                 null != e &&
-                    (0, a.jsx)(h.Z, {
+                    (0, a.jsx)(f.Z, {
                         className: b.mediaContainer,
-                        justify: f ? h.Z.Justify.START : h.Z.Justify.CENTER,
+                        justify: h ? f.Z.Justify.START : f.Z.Justify.CENTER,
                         children: e(),
                     }),
                 (0, a.jsx)(p.H, {
                     className: c()({
                         [b.titleCenter]: m,
-                        [b.titleLeft]: f,
+                        [b.titleLeft]: h,
                     }),
                     children: i,
                 }),
                 (0, a.jsx)("string" == typeof r ? "p" : "div", {
                     className: c()({
                         [b.bodyCenter]: m,
-                        [b.bodyLeft]: f,
+                        [b.bodyLeft]: h,
                     }),
                     children: r,
                 }),
-                (0, a.jsxs)(h.Z, {
+                (0, a.jsxs)(f.Z, {
                     className: b.buttonContainer,
-                    justify: f ? h.Z.Justify.BETWEEN : h.Z.Justify.CENTER,
+                    justify: h ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
                     children: [
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
@@ -130,7 +130,7 @@ class x extends o.PureComponent {
                             look: d.zx.Looks.BLANK,
                             onClick: s,
                             color: (0, u.ap)(o) ? d.zx.Colors.PRIMARY : d.zx.Colors.WHITE,
-                            className: f ? b.buttonSkipLeftAlign : b.buttonSkipCenterAlign,
+                            className: h ? b.buttonSkipLeftAlign : b.buttonSkipCenterAlign,
                             children: g.intl.string(g.t["33wtxt"]),
                         }),
                     ],
@@ -147,7 +147,7 @@ class x extends o.PureComponent {
             });
     }
 }
-class E extends (i = o.PureComponent) {
+class j extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             {
@@ -161,9 +161,9 @@ class E extends (i = o.PureComponent) {
                 children: c,
                 spacing: u,
                 forceTheme: d,
-                innerRef: h,
+                innerRef: f,
             } = e,
-            f = (function (e, t) {
+            h = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     i,
@@ -196,10 +196,10 @@ class E extends (i = o.PureComponent) {
                 "forceTheme",
                 "innerRef",
             ]),
-            m = "top" === f.position || "bottom" === f.position ? "center" : "top";
+            m = "top" === h.position || "bottom" === h.position ? "center" : "top";
         return (0, a.jsx)(
             p.yRy,
-            _(y({ targetElementRef: h }, f), {
+            v(y({ targetElementRef: f }, h), {
                 align: m,
                 spacing: null != u ? u : 0,
                 renderPopout: this.renderPopoutContent,
@@ -215,7 +215,7 @@ class E extends (i = o.PureComponent) {
             }),
             C(this, "onClickSkipAll", (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), f.default.track(m.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(), t(), h.default.track(m.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
             C(this, "renderPopoutContent", (e) => {
                 let { closePopout: t, position: n } = e,
@@ -225,8 +225,8 @@ class E extends (i = o.PureComponent) {
                     theme: i,
                     children: (e) =>
                         (0, a.jsx)(
-                            x,
-                            _(y({}, this.props), {
+                            E,
+                            v(y({}, this.props), {
                                 className: c()(
                                     {
                                         [b.bottom]: "bottom" === n,
@@ -251,4 +251,4 @@ class E extends (i = o.PureComponent) {
             });
     }
 }
-C(E, "TextAlignments", v), C(E, "defaultProps", { textAlign: "left" });
+C(j, "TextAlignments", x), C(j, "defaultProps", { textAlign: "left" });

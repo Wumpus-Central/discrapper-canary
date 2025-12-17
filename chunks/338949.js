@@ -74,10 +74,10 @@ let N = new l.h(S, I),
 function R(e) {
     return N.set(e.id, e);
 }
-function D() {
+function w() {
     return P;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = v(e);
     if (null == r) throw Error("Native breadcrumb has no native id");
     return !(N.size(r) > 0) && ((P = Math.max(P, Number(e.id))), R(C(e, t, n)));
@@ -108,9 +108,9 @@ function j() {
             var e;
             let t = null != (e = null == h ? void 0 : h.getLastAssociatedPID()) ? e : null;
             null == h ||
-                h.getNativeBreadcrumbs({ minBreadcrumbId: D() }, (e) => {
+                h.getNativeBreadcrumbs({ minBreadcrumbId: w() }, (e) => {
                     let { breadcrumbs: n } = e;
-                    for (let e of n) w(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
+                    for (let e of n) D(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
                     Q.emitChange();
                 });
         }, y));
@@ -131,8 +131,8 @@ function Z(e) {
     let { enabled: t, mode: n } = e;
     t ? g.add(n) : g.delete(n), (g = new Set(g));
 }
-let B = 300;
-function F() {
+let F = 300;
+function B() {
     null == E &&
         (E = setInterval(() => {
             var e;
@@ -141,11 +141,11 @@ function F() {
                 e.call(h, (e) => {
                     o()(r, e) || ((r = e), Q.emitChange());
                 });
-        }, B));
+        }, F));
 }
 function V(e) {
     let { enabled: t } = e;
-    return t ? F() : G(), !0;
+    return t ? B() : G(), !0;
 }
 function H(e) {
     var t;

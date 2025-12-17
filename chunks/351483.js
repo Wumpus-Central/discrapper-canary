@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(112560),
     s = n(388032),
-    l = n(976864);
+    l = n(926549);
 let c = n(978538);
 function u(e) {
     let { width: t, noArt: n = !1, selected: i = !1 } = e;

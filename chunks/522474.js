@@ -103,8 +103,8 @@ let C = new d.Z("PopoutWindowStore"),
     N = {},
     P = {},
     R = {},
-    D = {},
-    w = new Set(),
+    w = {},
+    D = new Set(),
     x = "app-mount",
     L = () => $.emitChange(),
     j = s().debounce(L, 150),
@@ -145,7 +145,7 @@ function G(e) {
         n.unmount(),
         delete P[e],
         delete N[e],
-        delete D[e],
+        delete w[e],
         delete R[e];
 }
 function Z(e, t, r) {
@@ -161,19 +161,19 @@ function Z(e, t, r) {
         a()(null != i.head, "Document head was null"),
         i.head.appendChild(c);
 }
-function B(e, t) {
+function F(e, t) {
     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) Z(t, e.href, e.integrity);
 }
-function F(e) {
+function B(e) {
     let t = P[e],
-        n = D[e];
+        n = w[e];
     if (null == t) return void C.warn("Failed to open window", e);
     let r = t.document;
     (0, g.uF)(r, L),
         t.addEventListener("focus", L),
         t.addEventListener("blur", L),
         t.addEventListener("resize", j),
-        M ? k(e, t) : B(e, t);
+        M ? k(e, t) : F(e, t);
     let i = (0, l.createRoot)(r.getElementById(x));
     a()(null != i, "No render target for popout!"), (R[e] = i), i.render(n(e));
 }
@@ -228,12 +228,12 @@ function V(e) {
     }
     i ? C.verbose("Opening out of process overlay window", t) : null == v || v.focus(),
         (P[t] = v),
-        (D[t] = r),
+        (w[t] = r),
         m.isPlatformEmbedded && (h.ZP.setAlwaysOnTop(t, _), (N[t] = _), h.ZP.isAlwaysOnTop(t).then((e) => (N[t] = e))),
-        w.add(t);
+        D.add(t);
 }
 function H(e) {
-    w.has(e) && (F(e), w.delete(e), $.emitChange());
+    D.has(e) && (B(e), D.delete(e), $.emitChange());
 }
 function Y(e) {
     let t = P[e];
@@ -321,7 +321,7 @@ class J extends (r = c.ZP.PersistedStore) {
         return A;
     }
     isWindowFullyInitialized(e) {
-        return null != P[e] && null != R[e] && null != D[e];
+        return null != P[e] && null != R[e] && null != w[e];
     }
     isWindowFullScreen(e) {
         var t, n;

@@ -31,8 +31,8 @@ var i = n(772848),
     N = n(969345),
     P = n(155268),
     R = n(148720),
-    D = n(122613),
-    w = n(790920),
+    w = n(122613),
+    D = n(790920),
     x = n(201567),
     L = n(16609),
     j = n(761122),
@@ -53,8 +53,8 @@ function Z(e, t, n) {
         e
     );
 }
-let B = 2000,
-    F = {},
+let F = 2000,
+    B = {},
     V = {},
     H = {};
 function Y(e) {
@@ -83,7 +83,7 @@ function K(e, t) {
     if (null != n && n.nonce === t) return delete V[e], n;
 }
 function z(e, t) {
-    setTimeout(() => K(e, t), B);
+    setTimeout(() => K(e, t), F);
 }
 function q(e) {
     let { applicationId: t, nonce: n, analyticsLocations: r, source: i } = e;
@@ -107,7 +107,7 @@ async function Q(e) {
             retries: 2,
             rejectWithError: !1,
         }));
-    let l = F[n],
+    let l = B[n],
         c = (0, L.p)(r),
         u = (0, L.j)(r),
         d = g.Z.getChannel(c),
@@ -147,7 +147,7 @@ async function Q(e) {
             duration_ms: o,
             embedded_activity_location_kind: r.kind,
         }),
-        delete F[n];
+        delete B[n];
 }
 function X(e) {
     var t, n;
@@ -168,9 +168,9 @@ function X(e) {
     if ((o && null != C && C.isPrivate() && a && null == b && s.Z.selectParticipant(C.id, null), null == b)) return;
     let P = E.Z.getMediaSessionId(),
         R = c.compositeInstanceId,
-        D = null == P && (null == C ? void 0 : C.isVocal()) === !0 && (null == C ? void 0 : C.isPrivate()) === !1;
-    if (null == R || D) return;
-    let w = (0, i.Z)(),
+        w = null == P && (null == C ? void 0 : C.isVocal()) === !0 && (null == C ? void 0 : C.isPrivate()) === !1;
+    if (null == R || w) return;
+    let D = (0, i.Z)(),
         x = "location" in c ? 2 : 1,
         j = y.default.getCurrentUser();
     if (null == j) return;
@@ -181,17 +181,17 @@ function X(e) {
             activityConfigs: M,
         }),
         Z = 1 + k.findIndex((e) => e === r),
-        { releasePhase: B } = Y(G),
+        { releasePhase: F } = Y(G),
         H = _.Z.getRawThermalState(),
         W = null != P ? [P] : [],
         K = {
             activitySessionId: R,
-            activityUserSessionId: w,
+            activityUserSessionId: D,
             launchId: c.launchId,
             mediaSessionIds: W,
             activitiesInfraVersion: x,
         };
-    F[r] = K;
+    B[r] = K;
     let z = V[r];
     (0, I.Ew)(b.nonce) || b.nonce === (null == z ? void 0 : z.nonce) || (z = void 0),
         O.default.track(U.rMx.ACTIVITY_SESSION_JOINED, {
@@ -205,10 +205,10 @@ function X(e) {
             raw_thermal_state: H,
             n_participants: null != C ? p.Z.getUserParticipantCount(C.id) : null,
             is_activity_start: o,
-            release_phase: B,
+            release_phase: F,
             shelf_rank: null == G || null == (t = G.activity) ? void 0 : t.shelf_rank,
             shelf_sorted_rank: Z > 0 ? Z : null,
-            activity_user_session_id: w,
+            activity_user_session_id: D,
             channel_type: null == C ? void 0 : C.type,
             source: null == z ? void 0 : z.source,
             command_context_type: null != C ? (0, d.Vh)(C, r) : null,
@@ -224,7 +224,7 @@ function X(e) {
             application_id: r,
             instance_id: c.launchId,
             initial_media_session_id: W[0],
-            activity_user_session_id: w,
+            activity_user_session_id: D,
             raw_thermal_state: H,
             is_activity_start: o,
             shelf_rank: null == G || null == (n = G.activity) ? void 0 : n.shelf_rank,
@@ -234,7 +234,7 @@ function X(e) {
         });
 }
 function J(e) {
-    return F[e];
+    return B[e];
 }
 class $ extends c.Z {
     _initialize() {
@@ -391,7 +391,7 @@ class $ extends c.Z {
                 let u = A.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === a) return;
                 let d = await f.ZP.fetchApplication(a);
-                if (!(0, w.a)()) return void this.showLaunchErrorModal(G.intl.string(G.t.UXoQTp));
+                if (!(0, D.a)()) return void this.showLaunchErrorModal(G.intl.string(G.t.UXoQTp));
                 if (!(0, M.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms))
                     return void this.showLaunchErrorModal(G.intl.string(G.t.uGDCcw));
                 let p = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
@@ -424,7 +424,7 @@ class $ extends c.Z {
                           analyticsLocations: o,
                           inviterUserId: l,
                       })
-                    : await (0, D.Z)({
+                    : await (0, w.Z)({
                           targetApplicationId: a,
                           channelId: i,
                           analyticsLocations: o,

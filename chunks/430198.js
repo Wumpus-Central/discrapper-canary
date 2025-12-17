@@ -109,11 +109,11 @@ function R(e) {
     let { guild: t } = e;
     delete v[t.id];
 }
-function D(e) {
+function w(e) {
     let { guildId: t } = e;
     delete v[t];
 }
-function w(e) {
+function D(e) {
     let { channel: t } = e;
     return null != t.guild_id && N(t.guild_id, t.id);
 }
@@ -161,13 +161,13 @@ let k = new M(a.Z, {
     GUILD_CREATE: R,
     GUILD_UPDATE: R,
     GUILD_DELETE: R,
-    GUILD_ROLE_CREATE: D,
-    GUILD_ROLE_UPDATE: D,
-    GUILD_ROLE_DELETE: D,
-    IMPERSONATE_UPDATE: D,
-    IMPERSONATE_STOP: D,
-    CHANNEL_CREATE: w,
-    CHANNEL_DELETE: w,
+    GUILD_ROLE_CREATE: w,
+    GUILD_ROLE_UPDATE: w,
+    GUILD_ROLE_DELETE: w,
+    IMPERSONATE_UPDATE: w,
+    IMPERSONATE_STOP: w,
+    CHANNEL_CREATE: D,
+    CHANNEL_DELETE: D,
     CHANNEL_UPDATES: x,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: j,

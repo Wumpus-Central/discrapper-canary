@@ -108,10 +108,10 @@ if (!__OVERLAY__) {
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
-function D(e) {
+function w(e) {
     y = e.idle;
 }
-function w(e) {
+function D(e) {
     O = e.afk;
 }
 function x(e) {
@@ -164,8 +164,8 @@ class k extends (i = s.ZP.Store) {
 }
 E(k, "displayName", "IdleStore");
 let U = new k(l.Z, {
-    IDLE: D,
-    AFK: w,
+    IDLE: w,
+    AFK: D,
     SPEAKING: x,
     APP_STATE_UPDATE: L,
     OVERLAY_SET_NOT_IDLE: j,

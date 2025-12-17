@@ -1,27 +1,27 @@
-t.d(n, { Z: () => u });
-var r = t(442837),
-    i = t(704215),
-    o = t(409513),
-    a = t(605236),
-    c = t(485386),
-    s = t(496675),
-    l = t(981631);
-function u(e) {
-    var n, t, u;
-    let d = (0, r.e7)([s.Z], () => s.Z.can(l.Plq.ADMINISTRATOR, e)),
-        h = (0, r.e7)([c.Z], () => null != e && c.Z.getNumRoles(e.id) > 1),
-        { enabled: g } = o.Z.useExperiment({
+n.d(t, { Z: () => d });
+var i = n(442837),
+    r = n(704215),
+    a = n(409513),
+    l = n(605236),
+    o = n(485386),
+    c = n(496675),
+    s = n(981631);
+function d(e) {
+    var t, n, d;
+    let u = (0, i.e7)([c.Z], () => c.Z.can(s.Plq.ADMINISTRATOR, e)),
+        g = (0, i.e7)([o.Z], () => null != e && o.Z.getNumRoles(e.id) > 1),
+        { enabled: b } = a.Z.useExperiment({
             guildId: null == e ? void 0 : e.id,
             location: "useIsPermissionMigrationNotificationAvailable",
         }),
-        f = null != (n = null == e ? void 0 : e.features.has(l.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)) && n,
-        v =
+        f = null != (t = null == e ? void 0 : e.features.has(s.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)) && t,
+        p =
             null !=
-                (t =
+                (n =
                     null == e
                         ? void 0
-                        : e.features.has(l.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE)) && t,
-        p = g ? i.z.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION : i.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
-        _ = (0, a.OA)(p, null != (u = null == e ? void 0 : e.id) ? u : l.lds);
-    return h && d && (!f || (!v && g)) && !_;
+                        : e.features.has(s.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE)) && n,
+        h = b ? r.z.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION : r.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
+        j = (0, l.OA)(h, null != (d = null == e ? void 0 : e.id) ? d : s.lds);
+    return g && u && (!f || (!p && b)) && !j;
 }

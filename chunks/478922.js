@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(780900),
     l = n(663507),
     c = n(793030),
-    u = n(121958);
+    u = n(690651);
 function d(e, t, n) {
     return (
         t in e
@@ -106,8 +106,8 @@ function g(e, t, n) {
                 getSectionProps: N,
                 itemGutter: P,
                 removeEdgeItemGutters: R,
-                sectionGutter: D,
-                padding: w,
+                sectionGutter: w,
+                padding: D,
                 paddingVertical: x,
                 paddingHorizontal: L,
                 fade: j = !1,
@@ -117,7 +117,7 @@ function g(e, t, n) {
                 renderAccessory: G,
                 onItemVisibilityChange: Z,
             } = n,
-            B = m(n, [
+            F = m(n, [
                 "onScroll",
                 "dir",
                 "sections",
@@ -142,7 +142,7 @@ function g(e, t, n) {
                 "renderAccessory",
                 "onItemVisibilityChange",
             ]);
-        let F = i.useRef(null),
+        let B = i.useRef(null),
             V = i.useRef(null),
             H = i.useRef({}),
             [Y, W] = i.useState(!1),
@@ -171,8 +171,8 @@ function g(e, t, n) {
             chunkSize: T,
             itemGutter: P,
             removeEdgeItemGutters: R,
-            sectionGutter: D,
-            padding: w,
+            sectionGutter: w,
+            padding: D,
             paddingVertical: x,
             paddingHorizontal: L,
             getScrollerState: q,
@@ -217,9 +217,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == F.current ? W(!0) : clearTimeout(F.current),
-                    (F.current = setTimeout(() => {
-                        (F.current = null), W(!1);
+                    null == B.current ? W(!0) : clearTimeout(B.current),
+                    (B.current = setTimeout(() => {
+                        (B.current = null), W(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -243,7 +243,7 @@ function g(e, t, n) {
                             }),
                             style: (0, s.uT)(k),
                         },
-                        B,
+                        F,
                     ),
                     {
                         children: [

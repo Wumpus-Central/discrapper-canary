@@ -1,5 +1,5 @@
-n.d(t, { o: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { o: () => l });
+let l = (0, n(818083).B)({
     kind: "guild",
     id: "2023-02_guest_voice_invites",
     label: "Guest Voice Invites",

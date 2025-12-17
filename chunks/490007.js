@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(793030),
     o = n(481060),
     c = n(488922),
@@ -27,7 +27,7 @@ function f() {
     let [e, t] = r.useState("virtual-currency"),
         n = r.useMemo(() => h[e], [e]);
     return (0, a.jsxs)("div", {
-        className: l()(u.panel, m.container),
+        className: i()(u.panel, m.container),
         children: [
             (0, a.jsx)(o.njP, {
                 className: m.tabBar,

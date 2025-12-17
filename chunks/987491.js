@@ -1,8 +1,8 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => G });
 var l = n(54381),
     r = n(473749),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(913527),
     o = n.n(s),
     c = n(442837),
@@ -10,46 +10,46 @@ var l = n(54381),
     u = n(481060),
     m = n(239091),
     x = n(700582),
-    j = n(906732),
-    b = n(693546),
-    h = n(826581),
-    f = n(246364),
+    b = n(906732),
+    j = n(693546),
+    f = n(826581),
+    h = n(246364),
     g = n(98493),
     p = n(328977),
     v = n(412222),
-    _ = n(223312),
-    C = n(172751),
-    T = n(768762),
-    S = n(892001),
-    E = n(598077),
-    N = n(430824),
-    O = n(51144),
+    C = n(223312),
+    T = n(172751),
+    S = n(768762),
+    E = n(892001),
+    N = n(598077),
+    O = n(430824),
+    _ = n(51144),
     P = n(388032),
-    y = n(106682),
-    I = n(243194),
-    R = n(494409),
-    w = n(490225);
+    I = n(929133),
+    y = n(803767),
+    R = n(452173),
+    w = n(983266);
 function A(e) {
     let t,
         n,
         { status: r } = e;
     switch (r) {
-        case f.wB.REJECTED:
+        case h.wB.REJECTED:
             (t = P.t["7YSJ6f"]), (n = P.t.i05OUR);
             break;
-        case f.wB.APPROVED:
+        case h.wB.APPROVED:
             (t = P.t.bv82GS), (n = P.t.D4OUHT);
             break;
         default:
             (t = P.t["/wqiSv"]), (n = P.t.o47YZs);
     }
     return (0, l.jsxs)("div", {
-        className: y.emptyContainer,
+        className: I.emptyContainer,
         children: [
             (0, l.jsx)(u.dz2, {
                 size: "md",
                 color: "currentColor",
-                className: y.checkmark,
+                className: I.checkmark,
             }),
             (0, l.jsx)(u.Heading, {
                 variant: "heading-md/medium",
@@ -63,14 +63,14 @@ function A(e) {
         ],
     });
 }
-function M(e) {
+function Z(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, l.jsx)("thead", {
         children: (0, l.jsxs)("tr", {
             className: R.tableHeaderRow,
             children: [
                 (0, l.jsx)("th", {
-                    className: y.headerCell,
+                    className: I.headerCell,
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-text-default",
@@ -78,9 +78,9 @@ function M(e) {
                     }),
                 }),
                 (0, l.jsx)("th", {
-                    className: a()(y.headerCell, w.mediumCol),
+                    className: i()(I.headerCell, w.mediumCol),
                     children: (0, l.jsxs)(u.P3F, {
-                        className: y.sortItem,
+                        className: I.sortItem,
                         onClick: n,
                         children: [
                             (0, l.jsx)(u.Text, {
@@ -88,20 +88,20 @@ function M(e) {
                                 color: "interactive-text-default",
                                 children: P.intl.string(P.t.EZ5QWL),
                             }),
-                            t === f.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(T.Z, {
-                                      className: y.sortIcon,
-                                      direction: T.Z.Directions.UP,
+                            t === h.Nw.TIMESTAMP_ASC
+                                ? (0, l.jsx)(S.Z, {
+                                      className: I.sortIcon,
+                                      direction: S.Z.Directions.UP,
                                   })
-                                : (0, l.jsx)(T.Z, {
-                                      className: y.sortIcon,
-                                      direction: T.Z.Directions.DOWN,
+                                : (0, l.jsx)(S.Z, {
+                                      className: I.sortIcon,
+                                      direction: S.Z.Directions.DOWN,
                                   }),
                         ],
                     }),
                 }),
                 (0, l.jsx)("th", {
-                    className: a()(y.headerCell, y.moreOptionsCol),
+                    className: i()(I.headerCell, I.moreOptionsCol),
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-text-default",
@@ -112,21 +112,21 @@ function M(e) {
         }),
     });
 }
-let Z = r.memo(function (e) {
+let M = r.memo(function (e) {
         let { joinRequest: t, user: n } = e,
-            { joinRequestId: i, guildId: a } = t,
-            { analyticsLocations: s } = (0, j.ZP)(),
+            { joinRequestId: a, guildId: i } = t,
+            { analyticsLocations: s } = (0, b.ZP)(),
             o = r.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, S.openUserProfileModal)({
+                        (0, E.openUserProfileModal)({
                             userId: n.id,
-                            joinRequestId: i,
+                            joinRequestId: a,
                             sourceAnalyticsLocations: s,
                         });
                 },
-                [n, i, s],
+                [n, a, s],
             );
         return (0, l.jsxs)("div", {
             className: w.memberNameContainer,
@@ -145,10 +145,10 @@ let Z = r.memo(function (e) {
                             className: w.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, l.jsx)(C.ZP, {
+                                (0, l.jsx)(T.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
-                                    contextGuildId: a,
+                                    contextGuildId: i,
                                     containerClassName: w.memberClanTag,
                                 }),
                             ],
@@ -164,7 +164,7 @@ let Z = r.memo(function (e) {
                         children: (0, l.jsx)(u.P3F, {
                             onClick: o,
                             tag: "span",
-                            children: O.ZP.getUserTag(n),
+                            children: _.ZP.getUserTag(n),
                         }),
                     }),
                 }),
@@ -172,24 +172,24 @@ let Z = r.memo(function (e) {
         });
     }),
     D = r.memo(function (e) {
-        let { joinRequest: t, onSelect: i } = e,
-            { guildId: s, createdAt: x, applicationStatus: j } = t,
-            b = r.useMemo(() => new E.Z(t.user), [t.user]),
-            h = (0, p.L)({ guildId: s }),
-            g = (0, c.e7)([N.Z], () => N.Z.getGuild(s)),
-            v = j === f.wB.SUBMITTED;
-        return null == b
+        let { joinRequest: t, onSelect: a } = e,
+            { guildId: s, createdAt: x, applicationStatus: b } = t,
+            j = r.useMemo(() => new N.Z(t.user), [t.user]),
+            f = (0, p.L)({ guildId: s }),
+            g = (0, c.e7)([O.Z], () => O.Z.getGuild(s)),
+            v = b === h.wB.SUBMITTED;
+        return null == j
             ? null
             : (0, l.jsxs)("tr", {
-                  onClick: i,
-                  className: a()(w.roundedRow, w.memberRowContainer, {
-                      [w.selected]: (null == h ? void 0 : h.joinRequestId) === t.joinRequestId,
+                  onClick: a,
+                  className: i()(w.roundedRow, w.memberRowContainer, {
+                      [w.selected]: (null == f ? void 0 : f.joinRequestId) === t.joinRequestId,
                   }),
                   children: [
                       (0, l.jsx)("td", {
-                          children: (0, l.jsx)(Z, {
+                          children: (0, l.jsx)(M, {
                               joinRequest: t,
-                              user: b,
+                              user: j,
                           }),
                       }),
                       (0, l.jsx)("td", {
@@ -201,7 +201,7 @@ let Z = r.memo(function (e) {
                           }),
                       }),
                       (0, l.jsx)("td", {
-                          className: y.moreOptionsCol,
+                          className: I.moreOptionsCol,
                           children:
                               v &&
                               (0, l.jsx)(d.u, {
@@ -249,7 +249,7 @@ let Z = r.memo(function (e) {
                                                           (r = r =
                                                               {
                                                                   guild: g,
-                                                                  user: b,
+                                                                  user: j,
                                                               }),
                                                           Object.getOwnPropertyDescriptors
                                                               ? Object.defineProperties(
@@ -298,24 +298,24 @@ let Z = r.memo(function (e) {
             t = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             n = "".concat(Math.floor(25 * Math.random()) + 50, "px");
         return (0, l.jsxs)("tr", {
-            className: a()(w.roundedRow, w.memberRowContainer),
+            className: i()(w.roundedRow, w.memberRowContainer),
             children: [
                 (0, l.jsx)("td", {
                     children: (0, l.jsxs)("div", {
                         className: w.memberNameContainer,
                         children: [
-                            (0, l.jsx)("div", { className: a()(y.placeholderAvatar, w.memberAvatar) }),
+                            (0, l.jsx)("div", { className: i()(I.placeholderAvatar, w.memberAvatar) }),
                             (0, l.jsx)("div", {
                                 className: w.memberName,
                                 children: (0, l.jsx)("div", {
-                                    className: y.placeholderText,
+                                    className: I.placeholderText,
                                     style: { width: e },
                                 }),
                             }),
                             (0, l.jsx)("div", {
                                 className: w.memberGlobalName,
                                 children: (0, l.jsx)("div", {
-                                    className: y.placeholderTextSmall,
+                                    className: I.placeholderTextSmall,
                                     style: { width: t },
                                 }),
                             }),
@@ -325,21 +325,21 @@ let Z = r.memo(function (e) {
                 (0, l.jsx)("td", {
                     className: w.mediumCol,
                     children: (0, l.jsx)("div", {
-                        className: y.placeholderText,
+                        className: I.placeholderText,
                         style: { width: n },
                     }),
                 }),
-                (0, l.jsx)("td", { className: y.moreOptionsCol }),
+                (0, l.jsx)("td", { className: I.moreOptionsCol }),
             ],
         });
     };
-function L(e) {
+function G(e) {
     let { guildId: t, currentTab: n } = e,
-        i = r.useRef(null),
-        a = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
+        a = r.useRef(null),
+        i = (0, c.e7)([O.Z], () => O.Z.getGuild(t)),
         s = (0, v.C)({ guildId: t }),
-        o = (0, c.e7)([h.Z], () => h.Z.isFetching()),
-        { guildJoinRequests: d } = (0, _.j)({
+        o = (0, c.e7)([f.Z], () => f.Z.isFetching()),
+        { guildJoinRequests: d } = (0, C.j)({
             guildId: t,
             applicationStatus: n,
             sortOrder: s,
@@ -349,21 +349,21 @@ function L(e) {
             guildJoinRequests: d,
         }),
         x = r.useCallback(async () => {
-            let e = s === f.Nw.TIMESTAMP_ASC ? f.Nw.TIMESTAMP_DESC : f.Nw.TIMESTAMP_ASC;
-            b.Z.setSelectedSortOrder(t, e), await m(e, n);
+            let e = s === h.Nw.TIMESTAMP_ASC ? h.Nw.TIMESTAMP_DESC : h.Nw.TIMESTAMP_ASC;
+            j.Z.setSelectedSortOrder(t, e), await m(e, n);
         }, [s, t, m, n]);
-    return null == a
+    return null == i
         ? null
         : (0, l.jsx)("div", {
-              className: I.mainTableContainer,
+              className: y.mainTableContainer,
               children: (0, l.jsx)(u.Den, {
-                  className: I.horizatonalScroller,
-                  ref: i,
+                  className: y.horizatonalScroller,
+                  ref: a,
                   orientation: "horizontal",
                   children: (0, l.jsxs)("table", {
-                      className: y.table,
+                      className: I.table,
                       children: [
-                          (0, l.jsx)(M, {
+                          (0, l.jsx)(Z, {
                               sortOrder: s,
                               onSortChange: x,
                           }),
@@ -380,7 +380,7 @@ function L(e) {
                                               D,
                                               {
                                                   joinRequest: e,
-                                                  onSelect: () => b.Z.setSelectedGuildJoinRequest(t, e),
+                                                  onSelect: () => j.Z.setSelectedGuildJoinRequest(t, e),
                                               },
                                               e.joinRequestId,
                                           ),

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(685072),
     l = n(287734),
     a = n(906732),
-    s = n(522651),
-    o = n(15274),
+    o = n(522651),
+    s = n(15274),
     c = n(389303),
     u = n(881824),
     d = n(719100),
@@ -13,7 +13,7 @@ var i = n(685072),
     f = n(388032);
 function g(e) {
     var t, n;
-    let { tooltipText: l, onClick: o } = e,
+    let { tooltipText: l, onClick: s } = e,
         { parentAnalyticsLocation: c } = (0, a.ZP)(),
         { events: u, Component: d } = (0, i.K)();
     return (0, r.jsx)(
@@ -46,7 +46,7 @@ function g(e) {
             {
                 tooltipText: l,
                 onClick: () => {
-                    (0, s.v)(c, s.d.DISCONNECT), o();
+                    (0, o.v)(c, o.d.DISCONNECT), s();
                 },
             },
             u,
@@ -82,12 +82,12 @@ function m(e) {
     return (0, r.jsx)(g, {
         tooltipText: f.intl.string(f.t["6vrfgt"]),
         onClick: () => {
-            if ((0, c.Z)(t)) return void (0, o.lC)(t);
+            if ((0, c.Z)(t)) return void (0, s.lC)(t);
             l.default.disconnect();
         },
     });
 }
-function _(e) {
+function b(e) {
     let { channel: t } = e;
     return t.isGuildStageVoice() ? (0, r.jsx)(h, { channel: t }) : (0, r.jsx)(m, { channel: t });
 }

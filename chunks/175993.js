@@ -2,7 +2,7 @@ n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(793030),
     a = n(970013),
-    o = n(465061);
+    o = n(992406);
 function s(e) {
     let { notice: t } = e,
         { noticeType: n, useText: a } = t,

@@ -1,26 +1,26 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(54381),
     i = n(473749),
-    s = n(467721),
-    l = n(442837),
-    a = n(481060),
+    s = n(236726),
+    a = n(442837),
+    l = n(481060),
     o = n(447543),
     c = n(587444),
     u = n(393238),
     d = n(388905),
     h = n(108427),
-    g = n(314897),
-    m = n(701190),
-    p = n(626135),
-    f = n(768581),
-    _ = n(823379),
-    x = n(264229),
+    f = n(314897),
+    g = n(701190),
+    m = n(626135),
+    p = n(768581),
+    x = n(823379),
+    _ = n(264229),
     E = n(230224),
     v = n(617730),
-    j = n(258356),
-    b = n(981631),
+    b = n(258356),
+    j = n(981631),
     I = n(388032),
-    N = n(271922);
+    N = n(418024);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,34 +67,34 @@ function S(e, t) {
 function C() {
     return (0, r.jsx)("div", {
         className: N.centerFlex,
-        children: (0, r.jsx)(a.$jN, {}),
+        children: (0, r.jsx)(l.$jN, {}),
     });
 }
-let O = (e) => {
+let T = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
     switch (n) {
-        case b.r2o.RESOLVED:
-        case b.r2o.ACCEPTED:
-        case b.r2o.APP_NOT_OPENED:
-        case b.r2o.APP_OPENED:
-        case b.r2o.ACCEPTING:
-        case b.r2o.APP_OPENING:
+        case j.r2o.RESOLVED:
+        case j.r2o.ACCEPTED:
+        case j.r2o.APP_NOT_OPENED:
+        case j.r2o.APP_OPENED:
+        case j.r2o.ACCEPTING:
+        case j.r2o.APP_OPENING:
             return 1;
-        case b.r2o.EXPIRED:
-        case b.r2o.BANNED:
-        case b.r2o.ERROR:
+        case j.r2o.EXPIRED:
+        case j.r2o.BANNED:
+        case j.r2o.ERROR:
             return 2;
-        case b.r2o.RESOLVING:
+        case j.r2o.RESOLVING:
             return 0;
         default:
-            (0, _.vE)(n);
+            (0, x.vE)(n);
     }
 };
-function T(e) {
+function O(e) {
     let { invite: t, onAcceptInvite: n } = e;
-    return (null == t ? void 0 : t.state) === b.r2o.BANNED
+    return (null == t ? void 0 : t.state) === j.r2o.BANNED
         ? (0, r.jsx)(c.u, {
               text: I.intl.string(I.t["5AkWAd"]),
               buttonCta: I.intl.string(I.t["8osdkn"]),
@@ -107,7 +107,7 @@ function T(e) {
           });
 }
 function A(e) {
-    var { children: t, cardChildren: n, startAnimHeightPx: l, innerStyle: o } = e;
+    var { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: o } = e;
     let { invite: c } = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -129,26 +129,26 @@ function A(e) {
             }
             return i;
         })(e, ["children", "cardChildren", "startAnimHeightPx", "innerStyle"]),
-        [d, h] = i.useState(O(c)),
-        { ref: g, height: m } = (0, u.ZP)(),
-        p = (0, a.q_F)({
-            height: null != m && 0 !== m ? "".concat(m, "px") : "".concat(l, "px"),
+        [d, h] = i.useState(T(c)),
+        { ref: f, height: g } = (0, u.ZP)(),
+        m = (0, l.q_F)({
+            height: null != g && 0 !== g ? "".concat(g, "px") : "".concat(a, "px"),
             config: s.config.stiff,
         });
     return (
         i.useEffect(() => {
-            let e = O(c);
+            let e = T(c);
             e !== d && h(e);
         }, [c, d]),
         (0, r.jsxs)(s.animated.div, {
             className: N.inviteCard,
-            style: p,
+            style: m,
             children: [
                 (0, r.jsx)(s.animated.div, {
                     className: N.inviteChildContainer,
-                    style: p,
+                    style: m,
                     children: (0, r.jsx)("section", {
-                        ref: g,
+                        ref: f,
                         className: null == o ? void 0 : o(d),
                         children: t(d),
                     }),
@@ -171,7 +171,7 @@ function Z(e) {
                       },
                       e,
                   ),
-                  { children: (e) => (null == t ? null : 1 === e ? (0, r.jsx)(j.X, { invite: t }) : null) },
+                  { children: (e) => (null == t ? null : 1 === e ? (0, r.jsx)(b.X, { invite: t }) : null) },
               ),
           )
         : null;
@@ -201,7 +201,7 @@ function P(e) {
                             case 1:
                                 return (0, r.jsx)(v.Z, S(y({}, e), { invite: t }));
                             case 2:
-                                return (0, r.jsx)(T, S(y({}, e), { invite: t }));
+                                return (0, r.jsx)(O, S(y({}, e), { invite: t }));
                             default:
                                 return (0, r.jsx)(C, {});
                         }
@@ -215,14 +215,14 @@ function R(e) {
         { guild: i } = null != t ? t : {},
         s = {};
     if ((null == i ? void 0 : i.splash) != null) {
-        let e = f.ZP.getGuildSplashURL({
+        let e = p.ZP.getGuildSplashURL({
             id: i.id,
             splash: i.splash,
         });
         null != e && ((s.backgroundImage = "url(".concat(e, ")")), (s.backgroundSize = "cover"));
     }
     return (0, r.jsxs)(d.ZP, {
-        theme: b.BRd.DARK,
+        theme: j.BRd.DARK,
         className: N.splashBackground,
         style: s,
         contentClassName: N.centerAuthBoxContent,
@@ -231,16 +231,16 @@ function R(e) {
 }
 function L(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        s = (0, l.e7)([m.Z], () => m.Z.getInvite(t));
+        s = (0, a.e7)([g.Z], () => g.Z.getInvite(t));
     return (
         i.useEffect(() => {
             (0, h.e)("invite_mobile");
         }, []),
         i.useEffect(() => {
             null != s &&
-                s.state === b.r2o.RESOLVED &&
-                p.default.track(
-                    b.rMx.INVITE_VIEWED,
+                s.state === j.r2o.RESOLVED &&
+                m.default.track(
+                    j.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
                         friends_count: null == s ? void 0 : s.friends_count,
@@ -254,20 +254,20 @@ function L(e) {
                 !(function (e, t, n) {
                     var r, i, s;
                     null == e || e.preventDefault(),
-                        p.default.track(b.rMx.INVITE_APP_OPENED, {
-                            invite_code: (0, x.jX)(t),
+                        m.default.track(j.rMx.INVITE_APP_OPENED, {
+                            invite_code: (0, _.jX)(t),
                             guild_id: null == n || null == (r = n.guild) ? void 0 : r.id,
                             channel_id: null == n || null == (i = n.channel) ? void 0 : i.id,
                             inviter_id: null == n || null == (s = n.inviter) ? void 0 : s.id,
                         });
-                    let l = null != n && n.state !== b.r2o.EXPIRED && n.state !== b.r2o.BANNED ? t : void 0,
-                        a = g.default.getFingerprint(),
-                        c = null != a ? a : g.default.getId(),
+                    let a = null != n && n.state !== j.r2o.EXPIRED && n.state !== j.r2o.BANNED ? t : void 0,
+                        l = f.default.getFingerprint(),
+                        c = null != l ? l : f.default.getId(),
                         u =
                             null != n && (null == n ? void 0 : n.type) != null
                                 ? Number(null == n ? void 0 : n.type)
                                 : void 0;
-                    o.ZP.openApp(l, void 0, c, void 0, u);
+                    o.ZP.openApp(a, void 0, c, void 0, u);
                 })(e, t, s);
             },
             transitionTo: n,

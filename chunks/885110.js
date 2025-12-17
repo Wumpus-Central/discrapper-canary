@@ -39,8 +39,8 @@ let I = !1,
     N = [],
     P = [],
     R = !1,
-    D = !0,
-    w = Object.freeze([]),
+    w = !0,
+    D = Object.freeze([]),
     x = Object.freeze([]),
     L = [],
     j = [];
@@ -75,11 +75,11 @@ function G(e) {
     }
 }
 function Z() {
-    (D = !0), (C = T), B();
+    (w = !0), (C = T), F();
 }
-function B() {
+function F() {
     var e;
-    if (((A = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), D)) T = C;
+    if (((A = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), w)) T = C;
     else if (I) T = v.Skl.INVISIBLE;
     else {
         let e = p.co.getSetting();
@@ -87,34 +87,34 @@ function B() {
     }
     T === v.Skl.ONLINE && A > 0 && (T = v.Skl.IDLE);
     let t = !1,
-        n = D || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
+        n = w || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
     a()(N, n) || ((N = n), (P = M(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
-    w !== r && ((w = r), (t = !0));
+    D !== r && ((D = r), (t = !0));
     let i = O.Z.getHiddenActivities();
     x !== i && (x = i),
         t &&
             (j = M(
-                (L = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+                (L = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                     .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                     .value()),
             ));
 }
-function F(e) {
-    return (I = e.invisible), B();
+function B(e) {
+    return (I = e.invisible), F();
 }
 function V() {
-    return (I = !1), B();
+    return (I = !1), F();
 }
 function H() {
-    (D = !1), (C = v.Skl.UNKNOWN), B(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+    (w = !1), (C = v.Skl.UNKNOWN), F(), y.Z.setCurrentUserOnConnectionOpen(T, L);
 }
 function Y() {
     H();
 }
 class W extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, g.Z, E.Z, b.Z, y.Z, O.Z, f.Z, _.Z), this.syncWith([b.Z], B);
+        this.waitFor(h.Z, g.Z, E.Z, b.Z, y.Z, O.Z, f.Z, _.Z), this.syncWith([b.Z], F);
     }
     getLocalPresence() {
         return {
@@ -153,25 +153,25 @@ class W extends (r = c.ZP.Store) {
 }
 S(W, "displayName", "SelfPresenceStore");
 let K = new W(u.Z, {
-    START_SESSION: B,
+    START_SESSION: F,
     CONNECTION_OPEN: Y,
     CONNECTION_OPEN_SUPPLEMENTAL: H,
     OVERLAY_INITIALIZE: H,
-    CONNECTION_CLOSED: B,
-    IDLE: B,
-    AFK: B,
-    RUNNING_GAMES_CHANGE: B,
-    STREAMING_UPDATE: B,
-    USER_SETTINGS_PROTO_UPDATE: B,
-    LOCAL_ACTIVITY_UPDATE: B,
-    SPOTIFY_PLAYER_STATE: B,
-    SPOTIFY_PLAYER_PLAY: B,
-    USER_CONNECTIONS_UPDATE: B,
-    SESSIONS_REPLACE: B,
-    RPC_APP_DISCONNECTED: B,
-    LIBRARY_FETCH_SUCCESS: B,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: B,
+    CONNECTION_CLOSED: F,
+    IDLE: F,
+    AFK: F,
+    RUNNING_GAMES_CHANGE: F,
+    STREAMING_UPDATE: F,
+    USER_SETTINGS_PROTO_UPDATE: F,
+    LOCAL_ACTIVITY_UPDATE: F,
+    SPOTIFY_PLAYER_STATE: F,
+    SPOTIFY_PLAYER_PLAY: F,
+    USER_CONNECTIONS_UPDATE: F,
+    SESSIONS_REPLACE: F,
+    RPC_APP_DISCONNECTED: F,
+    LIBRARY_FETCH_SUCCESS: F,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
     LOGOUT: Z,
-    FORCE_INVISIBLE: F,
+    FORCE_INVISIBLE: B,
     WINDOW_FOCUS: V,
 });

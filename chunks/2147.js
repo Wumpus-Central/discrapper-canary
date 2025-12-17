@@ -31,18 +31,18 @@ var i = n(54381),
     E = n(893718),
     w = n(409513),
     T = n(600164),
-    _ = n(313201),
-    P = n(318766),
-    I = n(907040),
-    R = n(906411),
-    L = n(633302),
-    M = n(109434),
-    A = n(162389),
+    P = n(313201),
+    I = n(318766),
+    R = n(907040),
+    L = n(906411),
+    M = n(633302),
+    A = n(109434),
+    _ = n(162389),
     D = n(946458),
     k = n(968437),
     B = n(665906),
     U = n(456077),
-    G = n(747212),
+    G = n(266535),
     V = n(210887),
     H = n(131704),
     F = n(601964),
@@ -66,8 +66,8 @@ var i = n(54381),
     eo = n(710352),
     ec = n(124368),
     ed = n(388032),
-    eu = n(257294),
-    eh = n(197571);
+    eu = n(338915),
+    eh = n(478411);
 function eg(e, t, n) {
     return (
         t in e
@@ -115,9 +115,9 @@ function ef(e, t) {
         e
     );
 }
-let ep = (0, _.hQ)(),
-    eb = (0, _.hQ)(),
-    ex = (0, _.hQ)(),
+let ep = (0, P.hQ)(),
+    eb = (0, P.hQ)(),
+    ex = (0, P.hQ)(),
     ej = (0, H.createChannelRecord)({
         id: "1",
         type: er.d4z.DM,
@@ -205,7 +205,7 @@ function eS(e) {
         s = l.useCallback(
             (e) => {
                 let { closePopout: l } = e;
-                return (0, i.jsx)(I.Z, {
+                return (0, i.jsx)(R.Z, {
                     channel: n,
                     guildId: r,
                     pickerIntention: es.Hz.CHANNEL_NAME,
@@ -213,7 +213,7 @@ function eS(e) {
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === R.B.UNICODE && t(n.surrogates), i && l();
+                        null != n && n.type === L.B.UNICODE && t(n.surrogates), i && l();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: ey,
@@ -230,7 +230,7 @@ function eS(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, i.jsx)(
-                P.Z,
+                I.Z,
                 ef(em({}, e), {
                     ref: a,
                     active: n,
@@ -299,26 +299,26 @@ class eN extends l.PureComponent {
                 guild: Z,
                 isForumPost: N,
                 isOwner: T,
-                showAdvancedSlowModeSetting: _,
+                showAdvancedSlowModeSetting: P,
             } = this.props,
-            P = H.Ec.has(e.type),
-            I = e.isForumLikeChannel(),
-            R = I && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
-            M = (null == (l = X.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
+            I = H.Ec.has(e.type),
+            R = e.isForumLikeChannel(),
+            L = R && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
+            A = (null == (l = X.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
             B = H.TK.has(e.type)
                 ? (0, i.jsx)(b.gNt, {
-                      label: I ? ed.intl.string(ed.t.yR6HwZ) : ed.intl.string(ed.t.X8jMDh),
+                      label: R ? ed.intl.string(ed.t.yR6HwZ) : ed.intl.string(ed.t.X8jMDh),
                       children: (0, i.jsx)(E.ZP, {
                           className: a()(eu.topicContainer, { [eu.disabled]: !x }),
                           innerClassName: a()(eu.topic, { [eu.disabled]: !x }),
                           characterCountClassName: eu.topicCharacterCount,
-                          maxCharacterCount: I ? ea.Z7 : ea.$x,
+                          maxCharacterCount: R ? ea.Z7 : ea.$x,
                           onChange: this.handleChangeRichTopic,
                           placeholder: ed.intl.string(ed.t["71fbmh"]),
                           channel: ej,
                           textValue: this.state.textTopicValue,
                           richValue: this.state.richTopicValue,
-                          type: I ? S.Ie.FORUM_CHANNEL_GUIDELINES : S.Ie.CHANNEL_TOPIC,
+                          type: R ? S.Ie.FORUM_CHANNEL_GUIDELINES : S.Ie.CHANNEL_TOPIC,
                           onFocus: () => {
                               this.setState({ topicFocused: !0 });
                           },
@@ -335,11 +335,11 @@ class eN extends l.PureComponent {
                   })
                 : null,
             U =
-                I && M
+                R && A
                     ? (0, i.jsx)(b.Kx8, {
                           label: ed.intl.string(ed.t.qk2jdY),
                           placeholder: ed.intl.string(ed.t.DDjD1H),
-                          value: L.ZP.translateSurrogatesToInlineEmoji(null != (s = e.template) ? s : ""),
+                          value: M.ZP.translateSurrogatesToInlineEmoji(null != (s = e.template) ? s : ""),
                           onChange: this.handleChangeTemplate,
                           error: this.getError("template"),
                           maxLength: eo.Vb,
@@ -357,10 +357,10 @@ class eN extends l.PureComponent {
                               description: ed.intl.string(ed.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
                               id: ep,
-                              children: (0, i.jsx)(A.Z, { channel: e }),
+                              children: (0, i.jsx)(_.Z, { channel: e }),
                           }),
                           (0, i.jsx)(b.Checkbox, {
-                              disabled: !x || R,
+                              disabled: !x || L,
                               checked: e.hasFlag(ea.zZ.REQUIRE_TAG),
                               onChange: (e) => this.handleRequireTagChanged(e),
                               label: ed.intl.string(ed.t["9g2Zyv"]),
@@ -491,7 +491,7 @@ class eN extends l.PureComponent {
                       onChange: this.handleChangeDefaultTagSetting,
                   })
                 : null,
-            J = P ? y : x,
+            J = I ? y : x,
             Q =
                 null ==
                 (r = w.Z.getCurrentConfig({
@@ -501,7 +501,7 @@ class eN extends l.PureComponent {
                     ? void 0
                     : r.enabled,
             K =
-                !0 === _
+                !0 === P
                     ? (0, i.jsx)(en.Z, {
                           label: ed.intl.string(ed.t.tTHx98),
                           helperText: this.getSlowmodeHelpText(Q),
@@ -522,7 +522,7 @@ class eN extends l.PureComponent {
                           "aria-describedby": ex,
                       }),
             $ = H.X_.has(e.type)
-                ? I
+                ? R
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(b.izJ, {}),
@@ -551,7 +551,7 @@ class eN extends l.PureComponent {
                     : K
                 : null,
             et =
-                P && null != e.threadMetadata
+                I && null != e.threadMetadata
                     ? (0, i.jsx)(v.Z, {
                           page: er.ZY5.CHANNEL_SETTINGS,
                           children: (0, i.jsx)(G.Z, {
@@ -660,7 +660,7 @@ class eN extends l.PureComponent {
             ? ((p = ed.intl.string(ed.t.OCAkGP)), (m = "category-name"))
             : e.isForumPost()
               ? ((p = ed.intl.string(ed.t.uyVrTN)), (m = "post-title"))
-              : P
+              : I
                 ? ((p = ed.intl.string(ed.t.j3XWjD)), (m = "thread-name"))
                 : ((p = ed.intl.string(ed.t.PVbHDl)), (m = "channel-name"));
         let eN = T ? j : x;
@@ -874,7 +874,7 @@ class eN extends l.PureComponent {
             eg(this, "renderEmojiPicker", (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
-                return (0, i.jsx)(I.Z, {
+                return (0, i.jsx)(R.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e) => {
@@ -925,7 +925,7 @@ class eN extends l.PureComponent {
                     }, 0);
             }),
             eg(this, "handleChangeTopic", (e) => {
-                (0, x.pW)({ topic: L.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, x.pW)({ topic: M.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             eg(this, "handleChangeRichTopic", (e, t, n) => {
                 this.setState({
@@ -935,7 +935,7 @@ class eN extends l.PureComponent {
                     this.handleChangeTopic(t);
             }),
             eg(this, "handleChangeTemplate", (e) => {
-                (0, x.pW)({ template: L.ZP.translateInlineEmojiToSurrogates(e) });
+                (0, x.pW)({ template: M.ZP.translateInlineEmojiToSurrogates(e) });
             }),
             eg(this, "handleChangeDefaultReactionEmoji", (e) => {
                 let t =
@@ -1043,7 +1043,7 @@ function eE() {
         })),
         m = (0, Z.ZP)(t),
         f = W.default.getId(),
-        p = (0, M.v)(),
+        p = (0, A.v)(),
         b = null == t ? void 0 : t.id,
         x = (0, C.ts)(t, !1, !0),
         j = y.Z.useExperiment({

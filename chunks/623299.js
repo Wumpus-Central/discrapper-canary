@@ -4,8 +4,8 @@ r(473749);
 var i = r(692547),
     o = r(780384),
     l = r(410030),
-    s = r(325767);
-function c(e) {
+    c = r(325767);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -76,8 +76,8 @@ function d(e) {
     return (0, n.jsx)(
         "svg",
         a(
-            c(
-                a(c({}, (0, s.Z)(u)), {
+            s(
+                a(s({}, (0, c.Z)(u)), {
                     width: t,
                     height: r,
                     viewBox: "0 0 ".concat(t, " ").concat(r),

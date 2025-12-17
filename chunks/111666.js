@@ -1,10 +1,10 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(467721),
+    l = n(236726),
     a = n(442837),
-    s = n(481060),
-    o = n(570140),
+    o = n(481060),
+    s = n(570140),
     c = n(868781),
     u = n(122943),
     d = n(665149),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(699516),
     m = n(594174),
     b = n(482798),
-    E = n(167762),
-    _ = n(151459),
+    _ = n(167762),
+    E = n(151459),
     O = n(981631),
     v = n(388032),
     y = n(172421);
@@ -65,10 +65,10 @@ function C(e, t) {
 function S(e) {
     let { className: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.getPendingCount() > 0),
-        b = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
+        b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
-                { showActivityTicker: n } = (0, _.Z)(),
+                { showActivityTicker: n } = (0, E.Z)(),
                 r = i.useRef({}),
                 l = i.useRef(null);
             return (
@@ -83,10 +83,10 @@ function S(e) {
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
                         i = (n, i, a) => {
-                            var s, o, c, u, d, p, g, b, E;
+                            var o, s, c, u, d, p, g, b, _;
                             if (!h.Z.isFriend(n)) return !1;
-                            let _ = m.default.getUser(n);
-                            if (null == _) return !1;
+                            let E = m.default.getUser(n);
+                            if (null == E) return !1;
                             let v = !1,
                                 y = null;
                             if (null != i) {
@@ -114,11 +114,11 @@ function S(e) {
                                         ((v = !0),
                                         e(n, "presence", l),
                                         (y = {
-                                            user: _,
+                                            user: E,
                                             activity: i,
                                         }));
                                 } else
-                                    (null == (o = r.current[n]) ? void 0 : o.presence) != null &&
+                                    (null == (s = r.current[n]) ? void 0 : s.presence) != null &&
                                         ((v = !0), e(n, "presence", null));
                             }
                             if (null != a) {
@@ -129,19 +129,19 @@ function S(e) {
                                         ((v = !0),
                                         e(n, "voice", i),
                                         (y = {
-                                            user: _,
+                                            user: E,
                                             voiceChannel: t,
                                         }));
                                 }
                             } else
-                                (null == (s = r.current[n]) ? void 0 : s.voice) != null &&
+                                (null == (o = r.current[n]) ? void 0 : o.voice) != null &&
                                     ((v = !0), e(n, "voice", null));
                             return (
                                 v &&
                                     null != y &&
-                                    ((E = y),
+                                    ((_ = y),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
-                                    t(E),
+                                    t(_),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
                                     }, 10000))),
@@ -155,15 +155,15 @@ function S(e) {
                                 if (i(e, n)) break;
                             }
                         },
-                        s = (e) => {
+                        o = (e) => {
                             for (let t of e.voiceStates) if (i(t.userId, void 0, t.channelId)) break;
                         };
                     return (
-                        o.Z.subscribe("PRESENCE_UPDATES", a),
-                        o.Z.subscribe("VOICE_STATE_UPDATES", s),
+                        s.Z.subscribe("PRESENCE_UPDATES", a),
+                        s.Z.subscribe("VOICE_STATE_UPDATES", o),
                         () => {
-                            o.Z.unsubscribe("PRESENCE_UPDATES", a),
-                                o.Z.unsubscribe("VOICE_STATE_UPDATES", s),
+                            s.Z.unsubscribe("PRESENCE_UPDATES", a),
+                                s.Z.unsubscribe("VOICE_STATE_UPDATES", o),
                                 null != l.current && (window.clearTimeout(l.current), (l.current = null));
                         }
                     );
@@ -172,7 +172,7 @@ function S(e) {
             );
         })(),
         T = i.useRef(null),
-        N = (0, s.Yzy)(S, {
+        N = (0, o.Yzy)(S, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -229,7 +229,7 @@ function S(e) {
                                           ),
                                           {
                                               children: [
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)(o.Text, {
                                                       variant: "text-xs/semibold",
                                                       children: null != (i = t.user.globalName) ? i : t.user.username,
                                                   }),
@@ -252,7 +252,7 @@ function S(e) {
                           }),
                 ),
             }),
-            (0, r.jsx)(E.Or, {
+            (0, r.jsx)(_.Or, {
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 children: (e, i, l, a) =>
@@ -262,7 +262,7 @@ function S(e) {
                             ref: a,
                             className: t,
                             onClick: e,
-                            icon: s.iFz,
+                            icon: o.iFz,
                             iconSize: b,
                             "aria-label": v.intl.string(v.t.TdEu5X),
                             tooltip: i ? null : v.intl.string(v.t.TdEu5X),

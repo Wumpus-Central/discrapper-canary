@@ -5,26 +5,26 @@ var r = n(54381),
     a = n(279881),
     s = n(383124),
     o = n(388032),
-    c = n(661656);
+    c = n(772201);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: g, tryFetchTopGames: m } = (0, a.I)(),
-        p = g.get(t),
-        [f, h] = i.useState(!1);
+        { topGames: g, tryFetchTopGames: f } = (0, a.I)(),
+        m = g.get(t),
+        [b, p] = i.useState(!1);
     i.useEffect(() => {
-        h(!0),
-            m(t).finally(() => {
-                h(!1);
+        p(!0),
+            f(t).finally(() => {
+                p(!1);
             });
-    }, [t, m]);
-    let b = i.useMemo(
+    }, [t, f]);
+    let h = i.useMemo(
             () =>
-                null == p
+                null == m
                     ? []
-                    : Object.keys(p)
+                    : Object.keys(m)
                           .filter((e) => !n.includes(e))
-                          .sort((e, t) => p[t].score - p[e].score),
-            [p, n],
+                          .sort((e, t) => m[t].score - m[e].score),
+            [m, n],
         ),
         x = i.useCallback(
             (e) => {
@@ -32,9 +32,9 @@ function d(e) {
             },
             [d, n],
         );
-    return f && null == p
+    return b && null == m
         ? (0, r.jsx)(l.$jN, {})
-        : null == b || 0 === b.length
+        : null == h || 0 === h.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,7 +49,7 @@ function d(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: c.gamesList,
-                                children: b.map((e) =>
+                                children: h.map((e) =>
                                     (0, r.jsx)(
                                         s.Z,
                                         {

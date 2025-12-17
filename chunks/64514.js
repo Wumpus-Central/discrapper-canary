@@ -3,8 +3,8 @@ var r = n(846519),
     i = n(570140),
     l = n(317770),
     a = n(314897),
-    s = n(626135),
-    o = n(70956),
+    o = n(626135),
+    s = n(70956),
     c = n(960048),
     u = n(930446),
     d = n(127438),
@@ -53,7 +53,7 @@ class h extends l.Z {
             f(this, "lastHeartbeatTimestamp", 0),
             f(this, "maybeStartHeartbeat", () => {
                 this.heartbeatInterval.isStarted() ||
-                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * o.Z.Millis.MINUTE, this.trackHeartbeat));
+                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * s.Z.Millis.MINUTE, this.trackHeartbeat));
             }),
             f(this, "startAnalyticHeartbeat", () => {
                 this.schedulerStarted ||
@@ -76,10 +76,10 @@ class h extends l.Z {
                 }
                 let n = performance.now(),
                     r = n - t.lastHeartbeatTimestamp,
-                    i = 5 * o.Z.Millis.MINUTE;
+                    i = 5 * s.Z.Millis.MINUTE;
                 if (!e && t.lastHeartbeatTimestamp > 0 && r < i) return;
                 let l = (0, u.Gy)();
-                s.default.track(p.rMx.CLIENT_AD_HEARTBEAT, {
+                o.default.track(p.rMx.CLIENT_AD_HEARTBEAT, {
                     client_ad_session_id: l.uuid,
                     client_heartbeat_initialization_timestamp: l.createdAtTimestamp,
                     client_heartbeat_version: 3,

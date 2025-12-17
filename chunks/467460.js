@@ -7,10 +7,10 @@ var r = n(54381),
     i = n(704215),
     l = n(28664),
     a = n(481060),
-    s = n(774078),
-    o = n(266454),
+    o = n(774078),
+    s = n(266454),
     c = n(533246),
-    u = n(197155),
+    u = n(638893),
     d = n(476398);
 let p = (e) => {
         let { digit: t } = e;
@@ -34,15 +34,15 @@ let p = (e) => {
     },
     g = (e) => {
         let { expiresAt: t, tooltipText: n } = e,
-            { days: c, hours: p, minutes: g, seconds: h } = (0, s.Z)(Date.parse(t), 1000),
+            { days: c, hours: p, minutes: g, seconds: h } = (0, o.Z)(Date.parse(t), 1000),
             m = c > 0 ? [c, p, g] : p > 0 ? [p, g, h] : [g, h],
-            _ = (0, o.zu)(i.z.NITRO_TAB_BADGE_OFFER_REMINDER);
+            b = (0, s.zu)(i.z.NITRO_TAB_BADGE_OFFER_REMINDER);
         return (0, r.jsx)(l.u, {
             text: n,
             position: "right",
             children: (0, r.jsxs)("div", {
                 children: [
-                    !_ &&
+                    !b &&
                         (0, r.jsx)("img", {
                             src: d,
                             alt: "",

@@ -6,7 +6,7 @@ n.d(t, {
     bp: () => P,
     ef: () => v,
     s6: () => O,
-    sh: () => w,
+    sh: () => D,
 }),
     n(539854),
     n(388685);
@@ -70,7 +70,7 @@ async function O() {
         (null == e ? void 0 : e.type) === h.ABu.PLAYSTATION_STAGING) &&
         (null == e ? void 0 : e.commandId) != null &&
         (null == e ? void 0 : e.deviceId) != null &&
-        n.push(D(e.type, e.deviceId, e.commandId)),
+        n.push(w(e.type, e.deviceId, e.commandId)),
         null != t && n.push(A(t));
     try {
         await Promise.all(n);
@@ -226,7 +226,7 @@ async function R(e, t, n, i) {
         l
     );
 }
-async function D(e, t, n) {
+async function w(e, t, n) {
     o.Z.dispatch({
         type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
         platform: e,
@@ -257,7 +257,7 @@ async function D(e, t, n) {
         commandId: n,
     });
 }
-async function w(e, t, n) {
+async function D(e, t, n) {
     await p.Z.maybeShowPTTAlert(e), await O();
     let r = await C();
     await R(e, t, n, r), (0, m.Z)(n.id, e);

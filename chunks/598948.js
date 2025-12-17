@@ -21,25 +21,25 @@ var r = n(54381),
     y = n(66747),
     O = n(852479),
     H = n(295907),
-    _ = n(655804);
-let w = {
+    w = n(801777);
+let S = {
         transform: "translate3d(15%, 0, 0)",
         opacity: 0.3,
     },
-    S = {
+    Z = {
         transform: "translate3d(5%, 0, 0)",
         opacity: 0.5,
     },
-    Z = {
+    D = {
         transform: "translate3d(0, 0, 0)",
         opacity: 1,
     },
-    D = {
+    N = {
         mass: 1.1,
         friction: 24,
         tension: 260,
     },
-    N = (e) => e.shiftKey || e.key === H.vn.SHIFT,
+    _ = (e) => e.shiftKey || e.key === H.vn.SHIFT,
     R = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
     L = l.memo(
         function (e) {
@@ -63,10 +63,10 @@ let w = {
             }, [L]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            N(e) && P(!0), R(e) && M(!0);
+                            _(e) && P(!0), R(e) && M(!0);
                         },
                         t = (e) => {
-                            N(e) && P(!1), R(e) && M(!1);
+                            _(e) && P(!1), R(e) && M(!1);
                         };
                     return (
                         window.addEventListener("keydown", e),
@@ -88,14 +88,14 @@ let w = {
                             r = h.Z.getLastRefreshTimestamp(n.id),
                             l = null == t || 0 === r,
                             i = null != t && t.refreshTimestamp === r;
-                        return l || !i ? Z : T ? S : w;
+                        return l || !i ? D : T ? Z : S;
                     },
-                    enter: Z,
-                    config: D,
+                    enter: D,
+                    config: N,
                 }),
                 A = !p && a === x.po.LOADING;
             return (0, r.jsxs)("table", {
-                className: o()(_.table, i),
+                className: o()(w.table, i),
                 children: [
                     (0, r.jsx)(v.Z, {
                         guildId: n.id,

@@ -16,7 +16,7 @@ var m = n(122289),
     h = n(70956),
     g = n(981631),
     E = n(388032),
-    b = n(987954);
+    b = n(178772);
 let y = new Set([_.h8.SKU_SELECT, _.h8.AWAITING_AUTHENTICATION, _.h8.AWAITING_PURCHASE_TOKEN_AUTH, _.h8.CONFIRM]);
 function O(e) {
     let {
@@ -33,13 +33,13 @@ function O(e) {
             isLoading: N = !1,
             purchaseError: P,
             purchaseErrorBlockRef: R,
-            planError: D,
-            onScroll: w,
+            planError: w,
+            onScroll: D,
             scrollerClassName: x,
             hasCurrencies: L = !1,
         } = e,
         j = null;
-    null != v && null == (0, _.ly)(v) ? (j = v) : null != P ? (j = P) : null != D && (j = D);
+    null != v && null == (0, _.ly)(v) ? (j = v) : null != P ? (j = P) : null != w && (j = w);
     let M = null != j ? j.message : "";
     null != j &&
         j instanceof d.HF &&
@@ -120,7 +120,7 @@ function O(e) {
                                       steps: t,
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
-                                          onScroll: w,
+                                          onScroll: D,
                                           className: s()(b.scroller, x),
                                           children: o,
                                       }),

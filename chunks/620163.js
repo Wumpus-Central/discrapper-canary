@@ -782,7 +782,7 @@ let eG = () => [
                 searchableTitles: [ex.intl.string(ex.t["iHH+ky"])],
                 label: ex.intl.string(ex.t["iHH+ky"]),
                 ariaLabel: ex.intl.string(ex.t["iHH+ky"]),
-                element: en.Z,
+                element: en.ZP,
                 newIndicator: (0, r.jsx)(eZ, {}),
                 newIndicatorDismissibleContentTypes: eG(),
                 url: ew.Z5c.SETTINGS("appearance"),

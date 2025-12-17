@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(606318),
     f = n(402235),
     p = n(485386),
-    _ = n(724913);
+    _ = n(549578);
 function m(e, t, n) {
     return (
         t in e
@@ -107,8 +107,8 @@ let O = function (e) {
                 },
             },
             hasThread: R,
-            isSystemMessage: D,
-            hasReply: w,
+            isSystemMessage: w,
+            hasReply: D,
             author: x,
             onMouseEnter: L,
             onMouseLeave: j,
@@ -143,13 +143,13 @@ let O = function (e) {
         ),
         U = (0, f.yH)(null == x ? void 0 : x.guildId, k) && (0, d.S2)(x),
         [G, Z] = i.useState(!1),
-        B = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 Z(!0), null == L || L(e);
             },
             [L],
         ),
-        F = i.useCallback(
+        B = i.useCallback(
             (e) => {
                 Z(!1), null == j || j(e);
             },
@@ -182,8 +182,8 @@ let O = function (e) {
                                         [_.cozy]: !n,
                                         [_.zalgo]: m,
                                         [_.hasThread]: R,
-                                        [_.isSystemMessage]: D,
-                                        [_.hasReply]: w,
+                                        [_.isSystemMessage]: w,
+                                        [_.hasReply]: D,
                                     }),
                                     ref: N,
                                 },
@@ -191,8 +191,8 @@ let O = function (e) {
                             ),
                             {
                                 role: "article",
-                                onMouseEnter: B,
-                                onMouseLeave: F,
+                                onMouseEnter: F,
+                                onMouseLeave: B,
                                 children: [
                                     O,
                                     v,

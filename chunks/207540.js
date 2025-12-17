@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685);
+n.d(t, { default: () => h }), n(388685);
 var l = n(54381),
     i = n(473749),
     r = n(793030),
@@ -15,27 +15,27 @@ var l = n(54381),
     _ = n(144140),
     Z = n(314897),
     m = n(430824),
-    p = n(496675),
-    h = n(981631),
-    O = n(388032);
-let v = (e) => {
-    let { channel: t, onClose: n, onConfirm: v, transitionState: C } = e,
-        S = (0, o.ZP)(t, !0),
+    O = n(496675),
+    p = n(981631),
+    C = n(388032);
+let h = (e) => {
+    let { channel: t, onClose: n, onConfirm: h, transitionState: S } = e,
+        v = (0, o.ZP)(t, !0),
         I = t.id,
         P = t.isForumPost(),
         T = (0, u.e7)([m.Z], () => m.Z.getGuild(t.getGuildId())),
-        y = (0, N.u1)(I),
-        { isSubscriptionGated: D } = (0, E.Z)(t.id),
+        D = (0, N.u1)(I),
+        { isSubscriptionGated: y } = (0, E.Z)(t.id),
         b = (0, f.Z)(T, t),
         [G, w] = i.useState(),
         A = (0, u.e7)([Z.default], () => t.isOwner(Z.default.getId()), [t]),
-        U = (0, u.e7)([p.Z], () => p.Z.can(t.isThread() ? h.Plq.MANAGE_THREADS : h.Plq.MANAGE_CHANNELS, t), [t]),
+        U = (0, u.e7)([O.Z], () => O.Z.can(t.isThread() ? p.Plq.MANAGE_THREADS : p.Plq.MANAGE_CHANNELS, t), [t]),
         L = (0, u.e7)([_.Z], () => {
             var e;
             return null != (e = _.Z.getCount(t.id)) ? e : 0;
         }, [t.id]),
         j = P && (U || (A && L < 1)),
-        V = y.length > 0 && (t.type === h.d4z.GUILD_VOICE || t.type === h.d4z.GUILD_STAGE_VOICE);
+        V = D.length > 0 && (t.type === p.d4z.GUILD_VOICE || t.type === p.d4z.GUILD_STAGE_VOICE);
     if (
         (i.useEffect(() => {
             (async () => {
@@ -46,7 +46,7 @@ let v = (e) => {
         }, [t, I]),
         i.useEffect(() => {
             null != T &&
-                T.features.has(h.GuildFeatures.COMMUNITY) &&
+                T.features.has(p.GuildFeatures.COMMUNITY) &&
                 (T.rulesChannelId === I ? w(d.j.RULES) : T.publicUpdatesChannelId === I && w(d.j.UPDATES));
         }, [T, I]),
         null == T)
@@ -55,41 +55,41 @@ let v = (e) => {
     if (null != G) {
         let e,
             t = async () => {
-                await g.Z.open(T.id, h.pNK.ONBOARDING), await n();
+                await g.Z.open(T.id, p.pNK.ONBOARDING), await n();
             },
             i = async () => {
-                await g.Z.open(T.id, h.pNK.COMMUNITY), await n();
+                await g.Z.open(T.id, p.pNK.COMMUNITY), await n();
             };
         switch (G) {
             case d.j.DEFAULT:
-                e = O.intl.format(O.t.iWlB6h, { onClick: t });
+                e = C.intl.format(C.t.iWlB6h, { onClick: t });
                 break;
             case d.j.TODO:
-                e = O.intl.format(O.t["/rjozD"], { onClick: t });
+                e = C.intl.format(C.t["/rjozD"], { onClick: t });
                 break;
             case d.j.RESOURCE:
-                e = O.intl.format(O.t.Nf5ptw, { onClick: t });
+                e = C.intl.format(C.t.Nf5ptw, { onClick: t });
                 break;
             case d.j.RULES:
-                e = O.intl.format(O.t["kB1f+3"], {
-                    reason: O.intl.string(O.t.yjrZPl),
+                e = C.intl.format(C.t["kB1f+3"], {
+                    reason: C.intl.string(C.t.yjrZPl),
                     onClick: i,
                 });
                 break;
             case d.j.UPDATES:
-                e = O.intl.format(O.t["kB1f+3"], {
-                    reason: O.intl.string(O.t["1B1/NB"]),
+                e = C.intl.format(C.t["kB1f+3"], {
+                    reason: C.intl.string(C.t["1B1/NB"]),
                     onClick: i,
                 });
         }
         return (0, l.jsx)(r.Modal, {
-            title: O.intl.string(O.t["TY/V+H"]),
+            title: C.intl.string(C.t["TY/V+H"]),
             onClose: n,
             subtitle: e,
-            transitionState: C,
+            transitionState: S,
             actions: [
                 {
-                    text: O.intl.string(O.t.BddRzS),
+                    text: C.intl.string(C.t.BddRzS),
                     onClick: n,
                     variant: "primary",
                 },
@@ -97,53 +97,53 @@ let v = (e) => {
         });
     }
     let { deleteText: M, deleteBody: k } =
-        t.type === h.d4z.GUILD_CATEGORY
+        t.type === p.d4z.GUILD_CATEGORY
             ? {
-                  deleteText: O.intl.string(O.t.ifbXnL),
-                  deleteBody: O.intl.format(O.t.a6Gz9J, { channelName: S }),
+                  deleteText: C.intl.string(C.t.ifbXnL),
+                  deleteBody: C.intl.format(C.t.a6Gz9J, { channelName: v }),
               }
             : t.isForumPost()
               ? {
-                    deleteText: j ? O.intl.string(O.t.nEOg1N) : O.intl.string(O.t.xwMqD7),
+                    deleteText: j ? C.intl.string(C.t.nEOg1N) : C.intl.string(C.t.xwMqD7),
                     deleteBody:
                         j && A && !U
-                            ? O.intl.format(O.t["6/pY2+"], { postName: S })
+                            ? C.intl.format(C.t["6/pY2+"], { postName: v })
                             : j
-                              ? O.intl.format(O.t.su3voL, { postName: S })
-                              : O.intl.string(O.t.RUHcyk),
+                              ? C.intl.format(C.t.su3voL, { postName: v })
+                              : C.intl.string(C.t.RUHcyk),
                 }
               : t.isThread()
                 ? {
-                      deleteText: O.intl.string(O.t.H7vTe2),
-                      deleteBody: O.intl.format(O.t.a6Gz9J, { channelName: S }),
+                      deleteText: C.intl.string(C.t.H7vTe2),
+                      deleteBody: C.intl.format(C.t.a6Gz9J, { channelName: v }),
                   }
-                : D && b > 0
+                : y && b > 0
                   ? {
-                        deleteText: O.intl.string(O.t["8D8Rsb"]),
-                        deleteBody: O.intl.format(O.t["+qkiT9"], {
-                            channelName: S,
+                        deleteText: C.intl.string(C.t["8D8Rsb"]),
+                        deleteBody: C.intl.format(C.t["+qkiT9"], {
+                            channelName: v,
                             numGuildRoleSubscriptionMembers: b,
                         }),
                     }
                   : {
-                        deleteText: O.intl.string(O.t["8D8Rsb"]),
-                        deleteBody: O.intl.format(O.t.a6Gz9J, { channelName: S }),
+                        deleteText: C.intl.string(C.t["8D8Rsb"]),
+                        deleteBody: C.intl.format(C.t.a6Gz9J, { channelName: v }),
                     };
     return (0, l.jsx)(r.Modal, {
         size: "sm",
         onClose: n,
-        transitionState: C,
+        transitionState: S,
         title: M,
         subtitle: k,
         actions: [
             {
-                text: O.intl.string(O.t["ETE/oC"]),
+                text: C.intl.string(C.t["ETE/oC"]),
                 onClick: n,
                 variant: "secondary",
             },
             {
                 text: M,
-                onClick: v,
+                onClick: h,
                 variant: "critical-primary",
             },
         ],
@@ -151,7 +151,7 @@ let v = (e) => {
             ? (0, l.jsx)(a.Text, {
                   variant: "text-md/normal",
                   color: "text-default",
-                  children: O.intl.format(O.t.Ze005A, { count: y.length }),
+                  children: C.intl.format(C.t.Ze005A, { count: D.length }),
               })
             : null,
     });

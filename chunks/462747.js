@@ -10,10 +10,10 @@ var l = n(54381),
     u = n(939863),
     f = n(670188),
     b = n(314897),
-    h = n(158776),
-    x = n(885110),
-    m = n(594174),
-    g = n(315416),
+    x = n(158776),
+    h = n(885110),
+    g = n(594174),
+    m = n(315416),
     v = n(765305),
     j = n(388032),
     _ = n(184494);
@@ -91,7 +91,7 @@ function Z() {
         }),
     });
 }
-function S() {
+function C() {
     return (0, l.jsx)(I, {
         children: (0, l.jsx)(c.Heading, {
             color: "text-default",
@@ -101,7 +101,7 @@ function S() {
         }),
     });
 }
-function y(e) {
+function S(e) {
     let { count: t } = e;
     return (0, l.jsxs)("div", {
         className: _.listRow,
@@ -124,13 +124,13 @@ function y(e) {
         ],
     });
 }
-function E(e) {
+function y(e) {
     let { eventUser: t, guildId: n, onContextMenu: i } = e,
         o = r.useRef(null),
-        u = (0, s.e7)([m.default], () => m.default.getUser(t.user_id)),
-        g = (0, s.e7)(
-            [x.Z, h.Z, b.default],
-            () => (t.user_id === b.default.getId() ? x.Z.getStatus() : h.Z.getStatus(t.user_id, n)),
+        u = (0, s.e7)([g.default], () => g.default.getUser(t.user_id)),
+        m = (0, s.e7)(
+            [h.Z, x.Z, b.default],
+            () => (t.user_id === b.default.getId() ? h.Z.getStatus() : x.Z.getStatus(t.user_id, n)),
             [t.user_id, n],
         );
     return null == u
@@ -162,7 +162,7 @@ function E(e) {
                                       "aria-label": u.username,
                                       size: c.EFr.SIZE_24,
                                       className: _.listAvatar,
-                                      status: g,
+                                      status: m,
                                   }),
                                   (0, l.jsx)(d.Z, {
                                       user: u,
@@ -177,14 +177,14 @@ function E(e) {
               },
           });
 }
-function C(e) {
+function P(e) {
     let { eventUsers: t, guildId: n, usersNotShownCount: r = 0, onContextMenu: i } = e;
     return (0, l.jsxs)(c.zJl, {
         className: _.listScroller,
         children: [
             t.map((e) =>
                 (0, l.jsx)(
-                    E,
+                    y,
                     {
                         guildId: n,
                         eventUser: e,
@@ -193,11 +193,11 @@ function C(e) {
                     e.user_id,
                 ),
             ),
-            r > 0 && (0, l.jsx)(y, { count: r }),
+            r > 0 && (0, l.jsx)(S, { count: r }),
         ],
     });
 }
-function P(e) {
+function k(e) {
     let { children: t, style: n } = e;
     return (0, l.jsx)("div", {
         className: _.container,
@@ -205,18 +205,18 @@ function P(e) {
         children: t,
     });
 }
-function T(e) {
+function E(e) {
     let { children: t, height: n } = e;
-    return (0, l.jsx)(P, {
+    return (0, l.jsx)(k, {
         style: { height: n },
         children: t,
     });
 }
 function w(e) {
     let { guildEvent: t, recurrenceId: r, eventUsers: i, loading: a, error: s, containerHeight: d } = e,
-        u = (0, g.Z)(t.guild_id, t.id, r);
+        u = (0, m.Z)(t.guild_id, t.id, r);
     if (a && 0 === i.length)
-        return (0, l.jsx)(T, {
+        return (0, l.jsx)(E, {
             height: d,
             children: (0, l.jsx)(c.$jN, {
                 type: c.$jN.Type.SPINNING_CIRCLE,
@@ -224,20 +224,20 @@ function w(e) {
             }),
         });
     if (null != s && 0 === i.length)
-        return (0, l.jsx)(T, {
+        return (0, l.jsx)(E, {
             height: d,
-            children: (0, l.jsx)(S, {}),
+            children: (0, l.jsx)(C, {}),
         });
     let f = 0;
     return (
         i.length >= v.rC && u > v.rC && (f = Math.max(u - i.length, 0)),
         0 === i.length
-            ? (0, l.jsx)(T, {
+            ? (0, l.jsx)(E, {
                   height: d,
                   children: (0, l.jsx)(Z, {}),
               })
-            : (0, l.jsx)(P, {
-                  children: (0, l.jsx)(C, {
+            : (0, l.jsx)(k, {
+                  children: (0, l.jsx)(P, {
                       eventUsers: i,
                       guildId: t.guild_id,
                       onContextMenu: function (e, t) {

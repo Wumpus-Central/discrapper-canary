@@ -13,7 +13,7 @@ var i = n(120356),
     p = n(834129),
     _ = n(674563),
     m = n(388032),
-    h = n(682392);
+    h = n(138851);
 function g(e) {
     var t;
     let { message: n, compact: i, usernameHook: g, channel: E } = e,

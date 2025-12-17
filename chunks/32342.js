@@ -12,7 +12,7 @@ var i = n(54381),
     p = n(981631),
     h = n(829857),
     x = n(388032),
-    f = n(170538);
+    f = n(549337);
 function g(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: a } = t;
     return (0, i.jsx)("div", {
@@ -32,23 +32,23 @@ function C(t) {
     let { guildId: e, requireTeamSetup: n, onClose: s, transitionState: f } = t,
         [C, E] = a.useState(),
         [v, S] = a.useState(!1),
-        { teams: j } = (0, m.Z)(),
-        T = j.filter((t) => t.payout_account_status === h.C.ACTIVE),
-        b = a.useMemo(
+        { teams: b } = (0, m.Z)(),
+        j = b.filter((t) => t.payout_account_status === h.C.ACTIVE),
+        T = a.useMemo(
             () =>
-                T.map((t) => ({
+                j.map((t) => ({
                     label: t.name,
                     value: t.id,
                 })),
-            [T],
+            [j],
         ),
         y = () => {
             S((t) => !t);
         },
-        _ = () => {
+        k = () => {
             s(), (0, c.df)(e, C);
         },
-        k = a.useCallback(() => {
+        V = a.useCallback(() => {
             (0, d.Z)(p.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
@@ -58,7 +58,7 @@ function C(t) {
                 {
                     variant: "primary",
                     text: x.intl.string(x.t.geKm7t),
-                    onClick: _,
+                    onClick: k,
                     disabled: !v,
                 },
             ],
@@ -78,7 +78,7 @@ function C(t) {
             }),
         });
     {
-        let t = 0 === b.length;
+        let t = 0 === T.length;
         return (0, i.jsxs)(l.Modal, {
             title: x.intl.string(x.t.inJKQv),
             subtitle: t ? x.intl.format(x.t.Jyy4pV, {}) : x.intl.string(x.t.U1Vz24),
@@ -86,7 +86,7 @@ function C(t) {
                 {
                     variant: "primary",
                     text: t ? x.intl.string(x.t.JddVgE) : x.intl.string(x.t.geKm7t),
-                    onClick: t ? k : _,
+                    onClick: t ? V : k,
                 },
             ],
             onClose: s,
@@ -97,7 +97,7 @@ function C(t) {
                     (0, i.jsx)(g, {
                         selectedTeamId: C,
                         onSetSelectedTeamId: E,
-                        teamOptions: b,
+                        teamOptions: T,
                     }),
                 (0, i.jsx)(r.$q, {
                     onChange: y,

@@ -10,8 +10,8 @@ n.d(t, {
     g_: () => S,
     ho: () => v,
     pG: () => O,
-    rH: () => w,
-    rf: () => D,
+    rH: () => D,
+    rf: () => w,
     uV: () => j,
     x3: () => x,
     z5: () => A,
@@ -184,14 +184,14 @@ function R(e) {
     }),
         E(m.QP.PROFILE_BANNER);
 }
-function D(e) {
+function w(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
         themeColors: e,
     }),
         E(m.QP.PROFILE_THEME_COLOR);
 }
-function w(e) {
+function D(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES",
         displayNameStyles: e,

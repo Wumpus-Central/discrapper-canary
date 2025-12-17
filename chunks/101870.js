@@ -1,4 +1,4 @@
-n.d(e, { o: () => E });
+n.d(e, { o: () => d });
 var i = n(657707),
     l = n(509613),
     s = n(358085),
@@ -6,21 +6,21 @@ var i = n(657707),
     r = n(526665),
     a = n(200645),
     o = n(788869),
-    c = n(726985),
+    S = n(726985),
     T = n(388032);
-let S = (0, l.wf)(u.n.LINUX_PANEL, {
+let c = (0, l.wf)(u.n.LINUX_PANEL, {
         useTitle: () => T.intl.string(T.t["7pPjTW"]),
         buildLayout: () => [o.P],
     }),
-    d = (0, l.wf)(u.n.LINUX_PANEL, {
+    E = (0, l.wf)(u.n.LINUX_PANEL, {
         useTitle: () => T.intl.string(T.t["7pPjTW"]),
         StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
-    E = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
+    d = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
         useTitle: () => T.intl.string(T.t["7pPjTW"]),
-        getLegacySearchKey: () => ((0, r.Gl)("LinuxPanel") ? void 0 : c.s6.LINUX_SETTINGS),
+        getLegacySearchKey: () => ((0, r.Gl)("LinuxPanel") ? void 0 : S.s6.LINUX_SETTINGS),
         icon: i.pzj,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isLinux)(),
-        buildLayout: () => [(0, r.Gl)("LinuxPanel") ? S : d],
+        buildLayout: () => [(0, r.Gl)("LinuxPanel") ? c : E],
     });

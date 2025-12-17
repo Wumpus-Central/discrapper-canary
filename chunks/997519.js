@@ -14,9 +14,9 @@ function c(e, t) {
         u = (0, a.f)("useEarningMetrics"),
         g = (0, s.Z)(e),
         {
-            currentPeriod: m,
-            previousPeriods: p,
-            metrics: f,
+            currentPeriod: f,
+            previousPeriods: m,
+            metrics: b,
         } = r.useMemo(() => {
             var e, t;
             let { currentPeriod: n, previousPeriods: r } = (0, i.Br)(c),
@@ -73,9 +73,9 @@ function c(e, t) {
     return {
         loading: d || !u,
         team: n,
-        currentPeriod: m,
-        previousPeriods: p,
+        currentPeriod: f,
+        previousPeriods: m,
         allPeriods: c,
-        metrics: f,
+        metrics: b,
     };
 }

@@ -48,7 +48,7 @@ function R(e, t) {
         state: t,
     });
 }
-function D(e) {
+function w(e) {
     if (
         T.has(e) ||
         (e === g.YN.GAME_PROFILE_FEED && (!(0, s._J)("ContentInventoryManager") || void 0 !== h.Z.getFeed(e)))
@@ -67,7 +67,7 @@ function D(e) {
     }
     return !0;
 }
-function w(e) {
+function D(e) {
     R(e, { loading: !1 });
     let t = I.get(e);
     void 0 !== t && (clearTimeout(t), I.delete(e));
@@ -75,7 +75,7 @@ function w(e) {
 function x() {
     var e;
     let t = null != (e = C.get(v)) ? e : 0;
-    if ((t > 0 && t <= y) || (w(v), !D(v))) return;
+    if ((t > 0 && t <= y) || (D(v), !w(v))) return;
     let n = h.Z.getFeed(v);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == A) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
@@ -98,7 +98,7 @@ function x() {
 }
 async function L(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
-    if (D(t) || r)
+    if (w(t) || r)
         try {
             let e = h.Z.getFeed(t);
             T.add(t), R(t, { loading: !0 });
@@ -149,11 +149,11 @@ function M() {
     j();
 }
 function k() {
-    w(v);
+    D(v);
 }
 function U(e) {
     let { feedId: t, feature: n } = e;
-    w(t),
+    D(t),
         L({
             feedId: t,
             feature: n,
@@ -171,13 +171,13 @@ function Z(e) {
     let { connectionId: n, track: r } = e;
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && N(n, r);
 }
-function B() {
+function F() {
     L({
         feedId: g.YN.GLOBAL_FEED,
         feature: i.L.GAME_PROFILE,
     });
 }
-class F extends o.Z {
+class B extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
@@ -189,8 +189,8 @@ class F extends o.Z {
                 CONTENT_INVENTORY_MANUAL_REFRESH: U,
                 CONTENT_INVENTORY_INBOX_STALE: G,
                 SPOTIFY_NEW_TRACK: Z,
-                GAME_PROFILE_OPEN: B,
+                GAME_PROFILE_OPEN: F,
             });
     }
 }
-let V = new F();
+let V = new B();

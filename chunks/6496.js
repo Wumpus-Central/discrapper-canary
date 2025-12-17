@@ -117,11 +117,11 @@ function R(e) {
     let t = P(e);
     return null == t ? 0 : t.reactions.length;
 }
-function D(e) {
+function w(e) {
     let t = P(e);
     return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
 }
-function w(e) {
+function D(e) {
     var t, n;
     let r = l.Z.getChannel(e);
     if (null == r) return [];
@@ -189,9 +189,9 @@ function j(e) {
                   thread_approximate_creation_date: f.default.extractTimestamp(p),
                   forum_post_id: h.id,
                   forum_post_first_message_id: f.default.castChannelIdAsMessageId(h.id),
-                  forum_post_num_reactions: D(h.id),
+                  forum_post_num_reactions: w(h.id),
                   forum_post_num_unique_reactions: R(h.id),
-                  forum_post_applied_tag_ids: w(h.id),
+                  forum_post_applied_tag_ids: D(h.id),
                   forum_post_is_pinned: h.hasFlag(E.zZ.PINNED),
                   forum_post_is_new: null == (i = m.Z.getReadStateSnapshotAnalytics(h.id)) ? void 0 : i.isNew,
                   forum_post_is_unread: null == (c = m.Z.getReadStateSnapshotAnalytics(h.id)) ? void 0 : c.hasUnreads,

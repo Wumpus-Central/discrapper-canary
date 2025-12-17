@@ -4,7 +4,7 @@ n(473749);
 var i = n(620662),
     a = n(710845),
     o = n(652853),
-    s = n(732380),
+    s = n(475413),
     l = n(981631),
     c = n(671955),
     u = n(388032);
@@ -18,7 +18,7 @@ function d(e) {
             null == d || d({ action: "PRESS_NOTIFY_BUTTON" }),
             new a.Z("UserActivityActions").log("notify", t.id, n);
     };
-    return (0, r.jsx)(s.O1, {
+    return (0, r.jsx)(s.i6, {
         text: u.intl.string(u.t.vwl1PK),
         fullWidth: !p,
         onClick: _,

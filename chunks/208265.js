@@ -1,4 +1,4 @@
-e.d(t, { default: () => h }), e(388685);
+e.d(t, { default: () => N }), e(388685);
 var i = e(54381),
     a = e(473749),
     s = e(990547),
@@ -11,20 +11,20 @@ var i = e(54381),
     m = e(670199),
     g = e(800530),
     u = e(981631),
-    p = e(149390);
-function h(n) {
-    let { classificationId: t, transitionState: e, initialSlide: h = g.Cs.SPEED_BUMP, onClose: N } = n,
-        [C, j] = a.useState(h),
+    p = e(804230);
+function N(n) {
+    let { classificationId: t, transitionState: e, initialSlide: N = g.Cs.SPEED_BUMP, onClose: h } = n,
+        [C, j] = a.useState(N),
         { classification: _, isDsaEligible: E } = (0, r.YG)(null != t ? t : u.lds),
         I = (null == _ ? void 0 : _.is_spam) || !1,
         v = (null == _ ? void 0 : _.is_coppa) || !1,
         T = null == _ ? void 0 : _.appeal_ingestion_type;
     a.useEffect(() => {
-        j(h);
-    }, [j, h]);
+        j(N);
+    }, [j, N]);
     let S = a.useCallback(() => {
-            d.Z.close(), N();
-        }, [N]),
+            d.Z.close(), h();
+        }, [h]),
         A = a.useCallback(() => {
             var n;
             let t = null == (n = g.JQ[C]) ? void 0 : n.next;

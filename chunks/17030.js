@@ -9,10 +9,10 @@ var i = n(54381),
     u = n(314897),
     d = n(592125),
     p = n(944486),
-    h = n(223135),
-    f = n(981631),
+    f = n(223135),
+    h = n(981631),
     m = n(185923),
-    g = n(787267);
+    g = n(876376);
 function b(e) {
     let {
             customStatusEmoji: t,
@@ -21,8 +21,8 @@ function b(e) {
             setIsEmojiPickerOpen: C,
             defaultStatusVariant: y,
         } = e,
-        _ = r.useRef(null),
-        v = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        v = r.useRef(null),
+        x = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
         O = r.useCallback(
             () =>
                 null != t
@@ -32,12 +32,12 @@ function b(e) {
                           animated: !!t.animated,
                       })
                     : null != b
-                      ? (0, i.jsx)(h.Z, {
+                      ? (0, i.jsx)(f.Z, {
                             className: g.icon,
                             userId: u.default.getId(),
                             size: 20,
                             hangStatusActivity: {
-                                type: f.IIU.HANG_STATUS,
+                                type: h.IIU.HANG_STATUS,
                                 state: b,
                             },
                             fallbackVariant: y,
@@ -46,15 +46,15 @@ function b(e) {
             [t, y, b],
         );
     return (0, i.jsx)(a.yRy, {
-        targetElementRef: _,
+        targetElementRef: v,
         onRequestOpen: () => C(!0),
         onRequestClose: () => C(!1),
         renderPopout: (e) => {
             var t;
             let { closePopout: r } = e;
             return (0, i.jsx)(c.Z, {
-                channel: v,
-                guildId: null != (t = null == v ? void 0 : v.guild_id) ? t : void 0,
+                channel: x,
+                guildId: null != (t = null == x ? void 0 : x.guild_id) ? t : void 0,
                 closePopout: r,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: i } = e;
@@ -115,7 +115,7 @@ function b(e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: _,
+                        ref: v,
                         active: a,
                         tabIndex: 0,
                         renderButtonContents: null == t && null == b ? null : O,

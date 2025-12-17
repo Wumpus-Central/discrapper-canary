@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    Z: () => D,
+    Z: () => w,
     c: () => N,
 }),
     n(415506),
@@ -99,7 +99,7 @@ function R(e) {
             routes: [{ name: "auth" }],
         });
 }
-let D = {
+let w = {
     startSession(e) {
         l.Z.wait(() => {
             l.Z.dispatch({

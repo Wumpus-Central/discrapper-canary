@@ -1,15 +1,15 @@
-n.d(t, { e: () => o });
+n.d(t, { e: () => s });
 var r = n(54381);
 n(473749);
 var i = n(314897),
     l = n(449934),
     a = n(857458),
-    s = n(981631);
-function o(e, t) {
-    var n, o;
+    o = n(981631);
+function s(e, t) {
+    var n, s;
     let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { passProps: !0 };
     function u(n) {
-        return !(0, l.$8)() && i.default.getLoginStatus() !== s.u34.LOGGING_IN && i.default.allowLogoutRedirect()
+        return !(0, l.$8)() && i.default.getLoginStatus() !== o.u34.LOGGING_IN && i.default.allowLogoutRedirect()
             ? null != t
                 ? (0, r.jsx)(t, { renderRedirect: (0, r.jsx)(a.Z, {}) })
                 : (0, r.jsx)(a.Z, {})
@@ -44,7 +44,7 @@ function o(e, t) {
     }
     return (
         (u.displayName = "Authenticated(".concat(
-            null != (o = null != (n = e.displayName) ? n : e.name) ? o : "<Unknown>",
+            null != (s = null != (n = e.displayName) ? n : e.name) ? s : "<Unknown>",
             ")",
         )),
         u

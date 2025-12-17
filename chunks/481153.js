@@ -2,51 +2,51 @@ n.d(t, { Z: () => N });
 var r = n(54381),
     i = n(473749),
     s = n(120356),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
     h = n(479446),
-    g = n(981632),
-    m = n(594174),
-    p = n(509545),
-    f = n(55563),
-    _ = n(296848),
-    x = n(981631),
+    f = n(981632),
+    g = n(594174),
+    m = n(509545),
+    p = n(55563),
+    x = n(296848),
+    _ = n(981631),
     E = n(474936),
     v = n(388032),
-    j = n(569964),
-    b = n(149715),
-    I = n(197571);
-let N = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
+    b = n(746049),
+    j = n(727829),
+    I = n(478411);
+let N = l.ZP.connectStores([p.Z, c.Z, m.Z, g.default], (e) => {
     let { giftCode: t } = e,
-        n = f.Z.get(t.skuId),
+        n = p.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
     return {
         sku: n,
-        subscriptionPlan: null != r ? (0, _.oE)(r) : null,
+        subscriptionPlan: null != r ? (0, x.oE)(r) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: m.default.getUser(t.userId),
+        gifter: g.default.getUser(t.userId),
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: m } = e,
-        p = null == s ? v.intl.string(v.t.lTGZAl) : v.intl.formatToPlainString(v.t.TjWdPc, { username: s.username }),
-        f = a.name;
+    let { error: t, giftCode: n, gifter: s, sku: l, application: c, subscriptionPlan: g } = e,
+        m = null == s ? v.intl.string(v.t.lTGZAl) : v.intl.formatToPlainString(v.t.TjWdPc, { username: s.username }),
+        p = l.name;
     return (
-        null != m &&
-            (f = v.intl.formatToPlainString(m.interval === E.rV.MONTH ? v.t.CTpcCZ : v.t["rgPWG/"], {
-                skuName: a.name,
-                intervalCount: m.intervalCount,
+        null != g &&
+            (p = v.intl.formatToPlainString(g.interval === E.rV.MONTH ? v.t.CTpcCZ : v.t["rgPWG/"], {
+                skuName: l.name,
+                intervalCount: g.intervalCount,
             })),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, r.jsx)(g.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: j.seasonalIcon,
+                          className: b.seasonalIcon,
                       })
                     : (0, r.jsx)(u.qE, {
                           src: null != s ? s.getAvatarURL(void 0, 100) : null,
@@ -62,18 +62,18 @@ let N = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: p }),
+                              (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: l()(I.marginTop8, b.flexCenter),
+                                  className: a()(I.marginTop8, j.flexCenter),
                                   children: [
-                                      a.productLine !== x.POd.COLLECTIBLES &&
+                                      l.productLine !== _.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
                                               size: d.A.MEDIUM,
-                                              className: j.applicationIcon,
+                                              className: b.applicationIcon,
                                               game: c,
-                                              skuId: a.id,
+                                              skuId: l.id,
                                           }),
-                                      f,
+                                      p,
                                   ],
                               }),
                           ],

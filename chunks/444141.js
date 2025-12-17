@@ -1,11 +1,11 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => m });
 var l = t(54381),
     i = t(481060),
     o = t(906732),
     r = t(5192),
-    s = t(785717),
-    a = t(892001),
-    c = t(687158),
+    a = t(785717),
+    c = t(892001),
+    s = t(687158),
     d = t(388032);
 function u(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -32,7 +32,7 @@ function u(e) {
     }
     return e;
 }
-function m(e, n) {
+function f(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -50,28 +50,28 @@ function m(e, n) {
         e
     );
 }
-function p(e) {
-    let { user: n, guildId: t, channelId: p, displayProfile: f, onClose: x } = e,
+function m(e) {
+    let { user: n, guildId: t, channelId: m, displayProfile: p, onClose: x } = e,
         { analyticsLocations: h, sourceAnalyticsLocations: v } = (0, o.ZP)(),
-        { context: j, trackUserProfileAction: g } = (0, s.KZ)(),
-        b = (0, c.ZP)(n.id, t);
-    return (null == b ? void 0 : b.guildId) == null
+        { context: b, trackUserProfileAction: j } = (0, a.KZ)(),
+        g = (0, s.ZP)(n.id, t);
+    return (null == g ? void 0 : g.guildId) == null
         ? null
-        : (null == f ? void 0 : f.guildId) != null
+        : (null == p ? void 0 : p.guildId) != null
           ? (0, l.jsx)(i.sNh, {
                 id: "view-main-profile",
                 label: d.intl.string(d.t.GISTta),
                 subtext: d.intl.formatToPlainString(d.t["mn/nW2"], { displayName: r.ZP.getName(void 0, void 0, n) }),
                 action: () => {
                     null == x || x(),
-                        (0, a.openUserProfileModal)(
-                            m(
+                        (0, c.openUserProfileModal)(
+                            f(
                                 u(
                                     {
                                         userId: n.id,
                                         guildId: t,
                                     },
-                                    j,
+                                    b,
                                 ),
                                 {
                                     showGuildProfile: !1,
@@ -79,13 +79,13 @@ function p(e) {
                                 },
                             ),
                         ),
-                        g(
+                        j(
                             u(
                                 {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
                                     analyticsLocations: h,
                                 },
-                                j,
+                                b,
                             ),
                         );
                 },
@@ -93,17 +93,17 @@ function p(e) {
           : (0, l.jsx)(i.sNh, {
                 id: "view-server-profile",
                 label: d.intl.string(d.t.DisZzB),
-                subtext: d.intl.formatToPlainString(d.t["mn/nW2"], { displayName: r.ZP.getName(t, p, n) }),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW2"], { displayName: r.ZP.getName(t, m, n) }),
                 action: () => {
                     null == x || x(),
-                        (0, a.openUserProfileModal)(
-                            m(
+                        (0, c.openUserProfileModal)(
+                            f(
                                 u(
                                     {
                                         userId: n.id,
                                         guildId: t,
                                     },
-                                    j,
+                                    b,
                                 ),
                                 {
                                     showGuildProfile: !0,
@@ -111,13 +111,13 @@ function p(e) {
                                 },
                             ),
                         ),
-                        g(
+                        j(
                             u(
                                 {
                                     action: "PRESS_VIEW_SERVER_PROFILE",
                                     analyticsLocations: h,
                                 },
-                                j,
+                                b,
                             ),
                         );
                 },

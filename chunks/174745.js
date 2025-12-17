@@ -115,11 +115,11 @@ e.exports = (function (e) {
                 var N = S[A],
                     P = N.getKey(),
                     R = N.getType(),
-                    D = n(N),
-                    w = void 0,
+                    w = n(N),
+                    D = void 0,
                     x = void 0,
                     L = void 0;
-                D && ((w = D.component), (x = D.props), (L = D.editable));
+                w && ((D = w.component), (x = w.props), (L = w.editable));
                 var j = g || v.get(P),
                     M = c.encode(P, 0, 0),
                     k = {
@@ -140,15 +140,15 @@ e.exports = (function (e) {
                     U = t.get(R) || t.get("unstyled"),
                     G = U.wrapper,
                     Z = U.element || t.get("unstyled").element,
-                    B = N.getDepth(),
-                    F = "";
-                if ((r && (F = r(N)), "li" === Z)) {
-                    var V = C !== G || null === T || B > T;
-                    F = f(F, _(R, B, V, j));
+                    F = N.getDepth(),
+                    B = "";
+                if ((r && (B = r(N)), "li" === Z)) {
+                    var V = C !== G || null === T || F > T;
+                    B = f(B, _(R, F, V, j));
                 }
-                var H = w || l,
+                var H = D || l,
                     Y = {
-                        className: F,
+                        className: B,
                         "data-block": !0,
                         "data-editor": m,
                         "data-offset-key": M,

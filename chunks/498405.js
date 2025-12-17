@@ -148,10 +148,10 @@ function h(e) {
             },
             [v, t, S, c, g],
         ),
-        D = r.useCallback(() => {
+        w = r.useCallback(() => {
             I || T(!0);
         }, [I]),
-        w = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && T(!1);
             },
@@ -171,12 +171,12 @@ function h(e) {
                 id: t,
                 tabIndex: -1,
                 onKeyDown: R,
-                onFocus: D,
-                onBlur: w,
+                onFocus: w,
+                onBlur: D,
                 onMouseLeave: x,
                 "aria-activedescendant": S.length > 0 ? (0, o.qR)(t, S.join(d)) : void 0,
             }),
-            [t, R, D, w, x, S],
+            [t, R, w, D, x, S],
         ),
         M = r.useCallback(
             (e) => {

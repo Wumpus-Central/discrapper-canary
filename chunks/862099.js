@@ -2,15 +2,15 @@ n.d(t, {
     Co: () => Q,
     ZP: () => J,
     bZ: () => K,
-    gt: () => B,
+    gt: () => H,
 }),
     n(388685);
 var r,
     i = n(54381),
     l = n(473749),
     a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+    o = n.n(a),
+    s = n(442837),
     c = n(481060),
     u = n(884338),
     d = n(471445),
@@ -43,14 +43,14 @@ var r,
     k = n(981631),
     U = n(388032),
     G = n(439738);
-let B = l.memo(function (e) {
+let H = l.memo(function (e) {
     let {
         heading: t,
         location: n,
         locationIcon: r,
         details: l,
         detailsIcon: a,
-        topic: o,
+        topic: s,
         onClickCloseIcon: u,
         children: d,
     } = e;
@@ -58,7 +58,7 @@ let B = l.memo(function (e) {
         className: G.channelNotice,
         children: [
             (0, i.jsxs)("div", {
-                className: s()(G.textBlock, G.singleLine),
+                className: o()(G.textBlock, G.singleLine),
                 children: [
                     (0, i.jsx)("div", { className: G.liveIndicator }),
                     (0, i.jsx)(c.Text, {
@@ -83,10 +83,10 @@ let B = l.memo(function (e) {
                 color: "text-strong",
                 variant: "heading-md/semibold",
                 className: G.eventName,
-                children: o,
+                children: s,
             }),
             (0, i.jsxs)("div", {
-                className: s()(G.textBlock, G.singleLine),
+                className: o()(G.textBlock, G.singleLine),
                 children: [
                     r,
                     (0, i.jsx)(c.Text, {
@@ -120,9 +120,9 @@ let B = l.memo(function (e) {
         ],
     });
 });
-function H(e) {
+function B(e) {
     let { guildEvent: t, channel: n } = e,
-        r = (0, o.Wu)(
+        r = (0, s.Wu)(
             [y.ZP],
             () =>
                 y.ZP.getVoiceStatesForChannel(n).map((e) => {
@@ -132,7 +132,7 @@ function H(e) {
             [n],
         ),
         l = (0, d.KS)(n);
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(H, {
         onClickCloseIcon: () => (0, N.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: U.intl.string(U.t["X2K3/4"]),
         topic: t.name,
@@ -155,8 +155,8 @@ function H(e) {
 function V(e) {
     let { guildEvent: t, noticeType: n } = e,
         r = (0, R.DK)(t),
-        l = (0, o.e7)([T.ZP], () => T.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
-        a = (0, o.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
+        l = (0, s.e7)([T.ZP], () => T.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
+        a = (0, s.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         l || null != a || (0, N._6)(t.id),
         (0, i.jsx)(c.Button, {
@@ -179,7 +179,7 @@ function F(e) {
     var t;
     let { guildEvent: n, noticeType: r } = e,
         a = (0, L.cS)(n),
-        o = null != a ? (0, x.m)(a, !0) : null,
+        s = null != a ? (0, x.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
         { startTime: f, endTime: g } = (0, Z.ZP)(n),
@@ -234,7 +234,7 @@ function F(e) {
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: s()(G.textBlock, G.singleLine),
+                    className: o()(G.textBlock, G.singleLine),
                     children: [
                         (0, i.jsx)(c.Que, {
                             size: "custom",
@@ -252,7 +252,7 @@ function F(e) {
                     ],
                 }),
                 (0, i.jsxs)("div", {
-                    className: s()(G.textBlock, G.singleLine),
+                    className: o()(G.textBlock, G.singleLine),
                     children: [
                         null != p
                             ? (0, i.jsx)(p, {
@@ -271,7 +271,7 @@ function F(e) {
                             color: "none",
                             variant: "text-xs/normal",
                             className: G.channelName,
-                            children: null != (t = null == u ? void 0 : u.name) ? t : o,
+                            children: null != (t = null == u ? void 0 : u.name) ? t : s,
                         }),
                     ],
                 }),
@@ -288,7 +288,7 @@ function z(e) {
         n = (0, L.cS)(t);
     return null == n
         ? null
-        : (0, i.jsx)(B, {
+        : (0, i.jsx)(H, {
               onClickCloseIcon: () => (0, N.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: U.intl.string(U.t["1+boPi"]),
               topic: t.name,
@@ -338,12 +338,12 @@ function W(e) {
 }
 function q(e) {
     let { stageInstance: t, channel: n } = e,
-        r = (0, o.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, b.pV.SPEAKER).map((e) => e.user))], [
+        r = (0, s.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, b.pV.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
-        l = (0, o.e7)([m.Z], () => m.Z.getParticipantCount(n.id, b.pV.AUDIENCE), [n.id]),
+        l = (0, s.e7)([m.Z], () => m.Z.getParticipantCount(n.id, b.pV.AUDIENCE), [n.id]),
         a = U.intl.formatToPlainString(U.t["+v2pN2"], { count: "".concat(l) });
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(H, {
         onClickCloseIcon: () => (0, N.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: U.intl.string(U.t["X2K3/4"]),
         location: n.name,
@@ -375,7 +375,7 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
-        p = (0, o.e7)([v.Z], () => v.Z.can(k.Plq.CONNECT, t)),
+        p = (0, s.e7)([v.Z], () => v.Z.can(k.Plq.CONNECT, t)),
         f = (0, O.Z)(t.id),
         g = U.intl.string(U.t.VJlc0S);
     switch (r) {
@@ -400,7 +400,7 @@ function Q(e) {
               children: [
                   d.length > 0
                       ? (0, i.jsxs)("div", {
-                            className: s()(G.textBlock, G.singleLine),
+                            className: o()(G.textBlock, G.singleLine),
                             children: [
                                 (0, i.jsx)(u.ZP, {
                                     guildId: a,
@@ -432,34 +432,34 @@ let J = l.memo(function (e) {
         r = (0, A.y)(t.id),
         l = (0, w.k5)(t.id),
         a = (0, w.Vm)(t.id),
-        s = (0, o.e7)([E.Z], () => E.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
-        { isStageNoticeHidden: c, isEventNoticeHidden: u } = (0, o.cj)(
+        o = (0, s.e7)([E.Z], () => E.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
+        { isStageNoticeHidden: c, isEventNoticeHidden: u } = (0, s.cj)(
             [j.Z],
             () => ({
-                isStageNoticeHidden: j.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
+                isStageNoticeHidden: j.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
                 isEventNoticeHidden: j.Z.isLiveChannelNoticeHidden({ eventId: null == l ? void 0 : l.id }),
             }),
-            [s, l],
+            [o, l],
         ),
         d = null,
-        g = null != s && null != r && !c;
+        g = null != o && null != r && !c;
     if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
         ? g &&
           (d = (0, i.jsx)(q, {
-              stageInstance: s,
+              stageInstance: o,
               channel: r,
           }))
         : l.entity_type === M.WX.STAGE_INSTANCE && g
           ? (d = (0, i.jsx)(q, {
-                stageInstance: s,
+                stageInstance: o,
                 channel: r,
             }))
           : l.entity_type === M.WX.EXTERNAL
             ? (d = (0, i.jsx)(z, { guildEvent: l }))
             : l.entity_type === M.WX.VOICE &&
               null != r &&
-              (d = (0, i.jsx)(H, {
+              (d = (0, i.jsx)(B, {
                   guildEvent: l,
                   channel: r,
               }));

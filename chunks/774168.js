@@ -6,7 +6,7 @@ var i = n(54381),
     o = n(772848),
     s = n(481060),
     c = n(481051),
-    u = n(753797);
+    u = n(464863);
 function d(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: a = !1 } = e,
         [c] = r.useState(() => (0, o.Z)());
@@ -60,19 +60,19 @@ function p(e) {
     var t;
     let { className: n, unreadCount: r, mentionCount: l, isTyping: o, canBadge: s } = e,
         p = null != l && l > 0,
-        h = null != (t = p ? l : r) ? t : 0,
-        f = s && null != r && r > 0;
+        f = null != (t = p ? l : r) ? t : 0,
+        h = s && null != r && r > 0;
     return (0, i.jsxs)("div", {
         className: a()(u.chatIcon, n),
         children: [
             (0, i.jsx)(d, {
-                isBadged: f,
+                isBadged: h,
                 isTyping: o,
             }),
-            f &&
+            h &&
                 (0, i.jsx)(c.Z, {
                     hasMentions: p,
-                    truncatedCount: h > 99 ? "99+" : h,
+                    truncatedCount: f > 99 ? "99+" : f,
                     className: u.badge,
                 }),
         ],

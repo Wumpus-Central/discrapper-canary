@@ -1,32 +1,32 @@
 n.d(t, { default: () => w }), n(388685);
 var r = n(54381),
-    l = n(473749),
-    a = n(525769),
+    a = n(473749),
+    l = n(525769),
     i = n(793030),
     o = n(199849),
     c = n(481060),
     s = n(240872),
     u = n(213609),
-    f = n(542383),
-    d = n(79390),
+    d = n(542383),
+    f = n(79390),
     m = n(728076),
-    p = n(2466),
-    b = n(485168),
+    b = n(2466),
+    p = n(485168),
     g = n(309081),
     j = n(489887),
     O = n(20281),
     y = n(388032),
-    v = n(520317);
+    v = n(543404);
 function h(e) {
-    let { question: t, onChange: n, error: l, inputRef: a } = e;
+    let { question: t, onChange: n, error: a, inputRef: l } = e;
     return (0, r.jsx)(c.Kx8, {
         label: y.intl.string(y.t.WBiKnI),
-        inputRef: a,
+        inputRef: l,
         placeholder: y.intl.string(y.t["/uQqJW"]),
         value: t,
         onChange: n,
         maxLength: j.Az,
-        error: l,
+        error: a,
         rows: 1,
         autosize: !0,
         autoFocus: !0,
@@ -35,15 +35,15 @@ function h(e) {
 }
 function P(e) {
     let { selectedDuration: t, onSelect: n } = e,
-        l = (0, p.Z)(),
-        a = l[t];
+        a = (0, b.Z)(),
+        l = a[t];
     return (0, r.jsx)("div", {
         className: v.duration,
         children: (0, r.jsx)(o.B6, {
             label: y.intl.string(y.t.bGHzxb),
-            "aria-label": y.intl.formatToPlainString(y.t.nXNHNJ, { duration: a }),
+            "aria-label": y.intl.formatToPlainString(y.t.nXNHNJ, { duration: l }),
             className: v.durationSelect,
-            options: Object.entries(l).map((e) => {
+            options: Object.entries(a).map((e) => {
                 let [t, n] = e;
                 return {
                     label: n,
@@ -58,27 +58,27 @@ function P(e) {
     });
 }
 function w(e) {
-    let { channel: t, transitionState: n, onClose: o, initialQuestion: p, initialAnswers: C, initialDuration: k } = e;
+    let { channel: t, transitionState: n, onClose: o, initialQuestion: b, initialAnswers: C, initialDuration: k } = e;
     (0, u.Z)({
         type: O.n.MODAL,
-        name: a.z.POLL_EDITOR_VIEWED,
+        name: l.z.POLL_EDITOR_VIEWED,
     });
-    let x = l.useRef(null),
-        R = l.useRef([]),
-        E = l.useRef(null),
-        S = l.useCallback((e) => {
+    let x = a.useRef(null),
+        R = a.useRef([]),
+        E = a.useRef(null),
+        S = a.useCallback((e) => {
             var t, n;
-            let { indexToRemove: r, numberOfAnswers: l } = e;
-            l === j.gY + 1
+            let { indexToRemove: r, numberOfAnswers: a } = e;
+            a === j.gY + 1
                 ? null == (t = E.current) || t.focus()
-                : null == (n = R.current[r === l - 1 ? r - 1 : r + 1]) || n.focusDeleteButton();
+                : null == (n = R.current[r === a - 1 ? r - 1 : r + 1]) || n.focusDeleteButton();
         }, []),
         {
-            answers: _,
-            question: D,
-            allowMultiSelect: A,
-            setAllowMultiSelect: I,
-            duration: N,
+            answers: D,
+            question: A,
+            allowMultiSelect: I,
+            setAllowMultiSelect: N,
+            duration: _,
             setDuration: U,
             handleQuestionChange: L,
             handleAnswerTextChange: T,
@@ -95,17 +95,17 @@ function w(e) {
             shouldFocusOnInvalidField: G,
             setShouldFocusOnInvalidField: V,
         } = (0, m.Z)(t, o, S, {
-            initialQuestion: p,
+            initialQuestion: b,
             initialAnswers: C,
             initialDuration: k,
         }),
-        { trackPollCreationCancelled: X } = (0, b.l)(_, A),
-        J = l.useRef(_.length),
-        Q = l.useCallback(() => {
+        { trackPollCreationCancelled: X } = (0, p.l)(D, I),
+        J = a.useRef(D.length),
+        Q = a.useCallback(() => {
             X(), o();
         }, [o, X]),
-        $ = l.useCallback(() => {
-            if (!(0, d.D$)(D, _))
+        $ = a.useCallback(() => {
+            if (!(0, f.D$)(A, D))
                 return void s.Z.show({
                     title: y.intl.string(y.t.HMrgcp),
                     body: y.intl.string(y.t["Wxa/j8"]),
@@ -117,12 +117,12 @@ function w(e) {
                     },
                 });
             Q();
-        }, [Q, _, D]);
-    l.useEffect(() => {
+        }, [Q, D, A]);
+    a.useEffect(() => {
         (0, c.oav)(
             j.$z,
             (e) => {
-                var n, l;
+                var n, a;
                 return (0, r.jsx)(
                     w,
                     ((n = (function (e) {
@@ -150,9 +150,9 @@ function w(e) {
                         }
                         return e;
                     })({}, e)),
-                    (l = l = { channel: t }),
+                    (a = a = { channel: t }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -160,8 +160,8 @@ function w(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     n),
                 );
@@ -169,32 +169,32 @@ function w(e) {
             $,
         );
     }, [$, t]),
-        l.useEffect(() => {
-            if (_.length > J.current) {
+        a.useEffect(() => {
+            if (D.length > J.current) {
                 var e;
-                null == (e = R.current[_.length - 1]) || e.focusInput();
+                null == (e = R.current[D.length - 1]) || e.focusInput();
             }
-            J.current = _.length;
-        }, [_.length]),
-        l.useEffect(() => {
+            J.current = D.length;
+        }, [D.length]),
+        a.useEffect(() => {
             if (G) {
                 var e, t;
                 if ((null == q ? void 0 : q.question) != null) null == (e = x.current) || e.focus();
                 else {
-                    let e = _.findIndex((e) => q["answer-".concat(e.localCreationAnswerId)]);
+                    let e = D.findIndex((e) => q["answer-".concat(e.localCreationAnswerId)]);
                     -1 !== e && (null == (t = R.current[e]) || t.focusInput());
                 }
                 V(!1);
             }
-        }, [q, _, G, V, R]);
-    let ee = l.useCallback(() => {
+        }, [q, D, G, V, R]);
+    let ee = a.useCallback(() => {
             n === c.Dvm.ENTERED && W();
         }, [W, n]),
-        et = (0, f.Z)({
+        et = (0, d.Z)({
             disabled: F,
             onSubmit: ee,
         }),
-        en = l.useMemo(
+        en = a.useMemo(
             () => [
                 {
                     variant: "primary",
@@ -211,8 +211,8 @@ function w(e) {
         title: y.intl.string(y.t["GD/8X8"]),
         actions: en,
         actionBarInput: (0, r.jsx)(c.Checkbox, {
-            checked: A,
-            onChange: (e) => I(e),
+            checked: I,
+            onChange: (e) => N(e),
             label: y.intl.string(y.t["Ux+iQU"]),
         }),
         children: (0, r.jsxs)("div", {
@@ -225,7 +225,7 @@ function w(e) {
                         children: H.getAnyErrorMessage(),
                     }),
                 (0, r.jsx)(h, {
-                    question: D,
+                    question: A,
                     onChange: L,
                     error: null == q ? void 0 : q.question,
                     inputRef: x,
@@ -235,14 +235,14 @@ function w(e) {
                     role: "group",
                     label: y.intl.string(y.t.oMBfeS),
                     children: [
-                        _.map((e, n) =>
+                        D.map((e, n) =>
                             (0, r.jsx)(
                                 g.Z,
                                 {
                                     answer: e,
                                     channelId: t.id,
                                     index: n,
-                                    isLastAnswer: n === _.length - 1,
+                                    isLastAnswer: n === D.length - 1,
                                     onEmojiSelect: Z,
                                     onEmojiRemove: K,
                                     onAnswerTextChange: T,
@@ -275,7 +275,7 @@ function w(e) {
                 }),
                 (0, r.jsx)(c.LZC, { size: 18 }),
                 (0, r.jsx)(P, {
-                    selectedDuration: N,
+                    selectedDuration: _,
                     onSelect: U,
                 }),
             ],

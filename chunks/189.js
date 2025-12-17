@@ -1,11 +1,11 @@
 n.d(t, { Z: () => s });
 var a = n(54381),
     r = n(473749),
-    i = n(392711),
-    l = n(680295);
+    l = n(392711),
+    i = n(680295);
 let s = (e) => {
     let { config: t } = e,
-        n = r.useMemo(() => (0, i.cloneDeep)(t), [t]),
+        n = r.useMemo(() => (0, l.cloneDeep)(t), [t]),
         s = r.useMemo(() => t.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0), [t]),
         o = r.useMemo(() => {
             if (s) {
@@ -28,7 +28,7 @@ let s = (e) => {
             }
             return n;
         }, [t.effects, n, s]);
-    return (0, a.jsx)(l.n, {
+    return (0, a.jsx)(i.n, {
         profileEffectConfig: o,
         skuId: "debug",
     });

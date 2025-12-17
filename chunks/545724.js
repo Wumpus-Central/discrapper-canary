@@ -3,12 +3,12 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(748780),
-    o = n(91192),
+    o = n(748780),
+    s = n(91192),
     c = n(481060),
     u = n(239091),
     d = n(687683),
-    p = n(978070);
+    p = n(718726);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,8 +58,8 @@ let h = function (e) {
             children: l,
             user: h,
             channel: m,
-            onClick: _,
-            isFocused: b,
+            onClick: b,
+            isFocused: _,
             isActive: E,
             onOtherHover: O,
             className: v,
@@ -67,12 +67,12 @@ let h = function (e) {
         [y, I] = i.useState(!1),
         [C, S] = i.useState(!1),
         T = () => {
-            I(!0), !b || E || C || null == O || O();
+            I(!0), !_ || E || C || null == O || O();
         },
         N = () => {
             I(!1);
         };
-    return (0, r.jsx)(o.mh, {
+    return (0, r.jsx)(s.mh, {
         id: m.id,
         children: (e) =>
             (0, r.jsx)(c.tEY, {
@@ -81,7 +81,7 @@ let h = function (e) {
                     right: -8,
                 },
                 children: (0, r.jsx)(
-                    s.Z.div,
+                    o.Z.div,
                     g(
                         f(
                             {
@@ -98,7 +98,7 @@ let h = function (e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("79695"),
                                                     n.e("69220"),
-                                                    n.e("74820"),
+                                                    n.e("18030"),
                                                 ]).then(n.bind(n, 881351));
                                                 return (t) => (0, r.jsx)(e, g(f({}, t), { user: h }));
                                             },
@@ -111,7 +111,7 @@ let h = function (e) {
                                 },
                                 onMouseEnter: T,
                                 onMouseLeave: N,
-                                onClick: null != _ ? _ : void 0,
+                                onClick: null != b ? b : void 0,
                                 style: {
                                     LIST_ROW_HEIGHT: d.WN,
                                     opacity: 1,

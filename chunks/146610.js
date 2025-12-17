@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -8,9 +8,9 @@ var i = n(120356),
     o = n(169903),
     c = n(67152),
     d = n(388032),
-    u = n(183190),
-    g = n(698128);
-let m = [
+    u = n(199596),
+    g = n(729124);
+let f = [
         {
             key: "tier_name",
             cellClassName: u.tierNameColumn,
@@ -58,13 +58,13 @@ let m = [
             },
         },
     ],
-    p = (e) => {
+    m = (e) => {
         let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
             s = (0, o.Z)(n, t);
         return (0, r.jsx)("div", {
             className: l()(g.tableContainer, i),
             children: (0, r.jsx)(a.Z, {
-                columns: m,
+                columns: f,
                 data: s,
                 className: l()(g.table, u.table),
                 rowClassName: u.row,

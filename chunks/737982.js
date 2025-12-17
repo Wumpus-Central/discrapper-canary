@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    o = n(704215),
-    a = n(952265),
+    a = n(704215),
+    o = n(952265),
     s = n(481060),
     c = n(243778),
     u = n(434479),
@@ -12,36 +12,36 @@ var r = n(54381),
     h = n(933104),
     p = n(981631),
     g = n(176505),
-    m = n(921944),
-    b = n(816632),
-    _ = n(388032),
-    y = n(990963);
-let O = i.memo(function (e) {
+    b = n(921944),
+    m = n(914820),
+    y = n(388032),
+    O = n(498374);
+let v = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
-        O = (0, a.useHasAnyModalOpen)(),
-        v = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
-        [j, x] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        C = j === o.z.GAME_SERVER_HOSTING_NEW_BADGE,
-        [E, S] = (0, c.ZT)(O || v || !C ? [] : [o.z.GAME_SERVER_HOSTING_NEW_COACHMARK], t),
-        I = i.useCallback(
+        v = (0, o.useHasAnyModalOpen)(),
+        j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+        [C, x] = (0, c.ZT)([a.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        E = C === a.z.GAME_SERVER_HOSTING_NEW_BADGE,
+        [S, I] = (0, c.ZT)(v || j || !E ? [] : [a.z.GAME_SERVER_HOSTING_NEW_COACHMARK], t),
+        _ = i.useCallback(
             (e) => {
-                x(e), S(e);
+                x(e), I(e);
             },
-            [x, S],
+            [x, I],
         ),
         P = i.useCallback(() => {
-            I(m.L.USER_DISMISS), (0, d.uL)(p.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
-        }, [t, I]),
+            _(b.L.USER_DISMISS), (0, d.uL)(p.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
+        }, [t, _]),
         N = i.useRef(null),
-        Z = E === o.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
+        Z = S === a.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
         w = i.useCallback(
             () =>
                 (0, r.jsx)(h.En, {
                     channelRowRef: N,
                     guildId: t,
-                    markAsDismissed: I,
+                    markAsDismissed: _,
                 }),
-            [t, I],
+            [t, _],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -54,14 +54,14 @@ let O = i.memo(function (e) {
                         className: e,
                         color: "currentColor",
                     }),
-                text: _.intl.string(b.default.vCzwM7),
+                text: y.intl.string(m.default.vCzwM7),
                 selected: n,
                 onClick: P,
-                trailing: C
+                trailing: E
                     ? (0, r.jsx)(s.IGR, {
                           disableColor: !0,
-                          text: _.intl.string(_.t.y2b7CA),
-                          className: y.badge,
+                          text: y.intl.string(y.t.y2b7CA),
+                          className: O.badge,
                       })
                     : null,
             }),

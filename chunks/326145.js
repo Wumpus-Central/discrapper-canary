@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(393238),
     u = n(877604),
     d = n(998730),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(302221),
     m = n(745752),
     b = n(17181),
-    E = n(388032),
-    _ = n(337917),
+    _ = n(388032),
+    E = n(337917),
     O = n(321347);
 function v(e) {
     let { guildId: t, channelId: n } = e,
@@ -29,7 +29,7 @@ function v(e) {
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        C = (0, s.e7)([f.Z], () => f.Z.getGuild(t)),
+        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
         S = i.useMemo(
             () =>
                 null == C
@@ -42,7 +42,7 @@ function v(e) {
         ),
         T = (0, d.N)(S);
     return (0, r.jsxs)("div", {
-        className: a()(_.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
+        className: a()(E.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
             null != S
@@ -66,27 +66,27 @@ function v(e) {
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),
             (0, r.jsxs)("div", {
-                className: a()(_.explainerContainer, _.transparentBackground),
+                className: a()(E.explainerContainer, E.transparentBackground),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: _.header,
+                        className: E.header,
                         children: [
-                            (0, r.jsx)(o.Heading, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
-                                children: E.intl.string(E.t.CCmhpF),
+                                children: _.intl.string(_.t.CCmhpF),
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                children: E.intl.string(E.t.gRAHcZ),
+                                children: _.intl.string(_.t.gRAHcZ),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(o.Button, {
+                    (0, r.jsx)(s.Button, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: E.intl.string(E.t.VVFjAC),
+                        text: _.intl.string(_.t.VVFjAC),
                         onClick: I,
                     }),
                 ],

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(617136),
     o = n(49436),
     c = n(968843),
@@ -18,7 +18,7 @@ var a = n(54381),
 function v(e) {
     var t, n;
     let {
-            quest: i,
+            quest: l,
             className: o,
             questContent: u,
             contentPosition: v,
@@ -27,14 +27,14 @@ function v(e) {
             sourceQuestContent: C,
         } = e,
         [_, S] = r.useState(!1),
-        [E, O] = r.useState([]),
-        T = (0, c.qb)(i),
-        N = r.useMemo(() => (0, d.q8)(i), [i]),
-        P = (0, s._F)(),
-        w = r.useCallback(() => {
+        [E, T] = r.useState([]),
+        O = (0, c.qb)(l),
+        N = r.useMemo(() => (0, d.q8)(l), [l]),
+        w = (0, s._F)(),
+        P = r.useCallback(() => {
             S(!0),
-                P({
-                    questId: i.id,
+                w({
+                    questId: l.id,
                     event: b.rMx.QUEST_HOVER,
                     properties: {
                         content_id: u,
@@ -44,11 +44,11 @@ function v(e) {
                     sourceQuestContent: C,
                 }),
                 N && (0, m.loadVideoQuestModal)();
-        }, [P, i.id, u, N, C, v]),
+        }, [w, l.id, u, N, C, v]),
         I = r.useCallback(() => {
             S(!1),
-                P({
-                    questId: i.id,
+                w({
+                    questId: l.id,
                     event: b.rMx.QUEST_HOVER_OFF,
                     properties: {
                         content_id: u,
@@ -57,7 +57,7 @@ function v(e) {
                     },
                     sourceQuestContent: C,
                 });
-        }, [P, i.id, u, C, v]),
+        }, [w, l.id, u, C, v]),
         k = r.useContext(h.t),
         { visibilityElementRef: R, almostVisibleInViewport: A } = (function (e) {
             let [t, n] = r.useState(!1),
@@ -78,31 +78,31 @@ function v(e) {
             };
         })(null != (n = null == k || null == (t = k.current) ? void 0 : t.getScrollerNode()) ? n : null);
     return (0, a.jsxs)("div", {
-        id: "quest-tile-".concat(i.id),
+        id: "quest-tile-".concat(l.id),
         ref: (e) => {
             (y.current = e), (R.current = e);
         },
-        className: l()(g.container, o),
-        onMouseEnter: w,
+        className: i()(g.container, o),
+        onMouseEnter: P,
         onMouseLeave: I,
-        onFocus: w,
+        onFocus: P,
         onBlur: I,
         children: [
             (0, a.jsx)(f.Z, {
-                quest: i,
+                quest: l,
                 isHovering: _,
                 errorHints: E,
-                warningHints: T,
+                warningHints: O,
                 isVisibleInViewport: A,
                 sourceQuestContent: C,
             }),
             (0, a.jsx)(x.Z, {
-                quest: i,
+                quest: l,
                 questContent: u,
                 isHovering: _,
                 contentPosition: v,
                 rowIndex: j,
-                onReceiveErrorHints: O,
+                onReceiveErrorHints: T,
                 isVisibleInViewport: A,
                 sourceQuestContent: C,
             }),

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(392711),
     a = n.n(l),
-    s = n(442837),
-    o = n(239091),
+    o = n(442837),
+    s = n(239091),
     c = n(524331),
     u = n(768419),
     d = n(831506),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(823379),
     h = n(824138),
     m = n(658244),
-    _ = n(388032);
-function b(e, t, n) {
+    b = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,9 +49,9 @@ class E extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, "handleUserContextMenu", (e, t) => {
-                (0, o.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(
+            _(this, "handleUserContextMenu", (e, t) => {
+                (0, s.jW)(e, async () => {
+                    let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("18030")]).then(
                         n.bind(n, 881351),
                     );
                     return (n) =>
@@ -86,7 +86,7 @@ class E extends i.PureComponent {
                                                 }),
                                             )),
                                             r.forEach(function (t) {
-                                                b(e, t, n[t]);
+                                                _(e, t, n[t]);
                                             });
                                     }
                                     return e;
@@ -96,16 +96,16 @@ class E extends i.PureComponent {
                         );
                 });
             }),
-            b(this, "renderOverflowPopout", () => {
+            _(this, "renderOverflowPopout", () => {
                 let { party: e } = this.props;
                 return (0, r.jsx)(m.Z, {
                     party: e,
-                    header: _.intl.formatToPlainString(_.t.I9et1z, { count: e.length }),
+                    header: b.intl.formatToPlainString(b.t.I9et1z, { count: e.length }),
                 });
             });
     }
 }
-let O = s.ZP.connectStores([u.Z, f.default, p.Z, d.Z], () => {
+let O = o.ZP.connectStores([u.Z, f.default, p.Z, d.Z], () => {
     let e,
         t,
         n = u.Z.getSyncingWith(),
@@ -118,8 +118,8 @@ let O = s.ZP.connectStores([u.Z, f.default, p.Z, d.Z], () => {
             : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)),
         null != t)
     ) {
-        var s;
-        l = a()(Array.from(null != (s = d.Z.getParty(t)) ? s : []))
+        var o;
+        l = a()(Array.from(null != (o = d.Z.getParty(t)) ? o : []))
             .map((e) => f.default.getUser(e))
             .filter(g.lm)
             .orderBy([(t) => null == e || e.id === t.id, (e) => p.Z.isFriend(e.id)], ["desc", "desc"])

@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(953101),
     m = n(701488),
     h = n(981631),
-    g = n(702255);
+    g = n(687130);
 function E(e, t, n) {
     return (
         t in e
@@ -87,8 +87,8 @@ function v(e) {
         }),
         [N, P] = i.useState(!1),
         R = u.Z.theme,
-        D = b({}, a);
-    function w(e) {
+        w = b({}, a);
+    function D(e) {
         var n;
         null == o || o(e.target),
             (T.current = e.target),
@@ -96,7 +96,7 @@ function v(e) {
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : "");
     }
     return (
-        R === h.BRd.LIGHT ? (D.colorScheme = "light") : (D.colorScheme = "dark"),
+        R === h.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
         i.useEffect(
             () => (
                 d.S.dispatch(h.CkL.IFRAME_MOUNT, { id: I }),
@@ -118,13 +118,13 @@ function v(e) {
                 }
             );
         }, []),
-        N && (D.pointerEvents = "none"),
+        N && (w.pointerEvents = "none"),
         null != t
             ? (0, r.jsx)("iframe", {
-                  style: D,
+                  style: w,
                   allow: "autoplay; encrypted-media",
                   referrerPolicy: v,
-                  onLoad: w,
+                  onLoad: D,
                   sandbox: (0, _.Z)({ allowPopups: y }),
                   className: n,
                   src: "".concat(t, "?").concat(new URLSearchParams(A)),

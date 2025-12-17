@@ -38,14 +38,14 @@ function y(e) {
             selectedTab: T,
             selectedTeenId: I,
         },
-        D = r.useRef(R);
+        w = r.useRef(R);
     return (
         r.useEffect(() => {
-            D.current = R;
+            w.current = R;
         }),
         r.useEffect(() => {
             if (v && N) {
-                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = D.current;
+                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = w.current;
                 d.default.track(E.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: n,

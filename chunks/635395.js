@@ -3,8 +3,8 @@ var r = n(473749),
     i = n(442837),
     l = n(846027),
     a = n(91896),
-    s = n(849862),
-    o = n(313789),
+    o = n(849862),
+    s = n(313789),
     c = n(518596),
     u = n(888369),
     d = n(131951),
@@ -13,18 +13,18 @@ var r = n(473749),
     g = n(699516),
     h = n(606304),
     m = n(358085),
-    _ = n(998502),
-    b = n(981631);
+    b = n(998502),
+    _ = n(981631);
 let E = (0, m.isMac)() ? null : "DEFAULT";
 class O extends r.PureComponent {
     componentDidMount() {
-        _.ZP.setSystemTrayIcon(this.getIcon());
+        b.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentDidUpdate() {
-        _.ZP.setSystemTrayIcon(this.getIcon());
+        b.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        _.ZP.setSystemTrayIcon(E);
+        b.ZP.setSystemTrayIcon(E);
     }
     render() {
         return null;
@@ -53,15 +53,15 @@ class O extends r.PureComponent {
 }
 let v = () => null;
 m.isPlatformEmbedded &&
-    (_.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute({ location: "System Tray" })),
-    _.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()),
-    _.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-        (0, c.openUserSettings)(o.n.VOICE_AND_VIDEO_PANEL, { section: b.oAB.VOICE });
+    (b.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute({ location: "System Tray" })),
+    b.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()),
+    b.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
+        (0, c.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, { section: _.oAB.VOICE });
     }),
     (v = i.ZP.connectStores([f.Z, d.Z, h.Z, u.default, g.Z, p.Z, a.Z], () => {
         let e = u.default.getTotalMentionCount(),
             t = u.default.hasAnyUnread(),
-            n = (0, s.m$)([g.Z, a.Z]),
+            n = (0, o.m$)([g.Z, a.Z]),
             r = !p.Z.getDisableUnreadBadge() && !!(t || e + n > 0);
         return {
             connected: f.Z.isConnected(),

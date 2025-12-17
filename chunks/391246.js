@@ -26,8 +26,8 @@ var r = n(127849),
     N = "ArrayBuffer",
     P = "DataView",
     R = "prototype",
-    D = "Wrong length",
-    w = "Wrong index",
+    w = "Wrong length",
+    D = "Wrong index",
     x = T.getterFor(N),
     L = T.getterFor(P),
     j = T.set,
@@ -36,8 +36,8 @@ var r = n(127849),
     U = k && k[R],
     G = r[P],
     Z = G && G[R],
-    B = Object.prototype,
-    F = r.Array,
+    F = Object.prototype,
+    B = r.Array,
     V = r.RangeError,
     H = i(y),
     Y = i([].reverse),
@@ -73,7 +73,7 @@ var r = n(127849),
         var i = L(e),
             a = m(n),
             o = !!r;
-        if (a + t > i.byteLength) throw new V(w);
+        if (a + t > i.byteLength) throw new V(D);
         var s = i.bytes,
             l = a + i.byteOffset,
             c = O(s, l, l + t);
@@ -84,7 +84,7 @@ var r = n(127849),
             s = m(n),
             l = r(+i),
             c = !!a;
-        if (s + t > o.byteLength) throw new V(w);
+        if (s + t > o.byteLength) throw new V(D);
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
@@ -104,7 +104,7 @@ if (o) {
           (U.constructor = k),
           S(k, M))
         : er && A && l(M, "name", N),
-        b && E(Z) !== B && b(Z, B);
+        b && E(Z) !== F && b(Z, F);
     var ei = new G(new k(2)),
         ea = i(Z.setInt8);
     ei.setInt8(0, 2147483648),
@@ -128,7 +128,7 @@ if (o) {
         var t = m(e);
         j(this, {
             type: N,
-            bytes: H(F(t), 0),
+            bytes: H(B(t), 0),
             byteLength: t,
         }),
             a || ((this.byteLength = t), (this.detached = !1));
@@ -139,7 +139,7 @@ if (o) {
                 i = r.byteLength,
                 o = p(t);
             if (o < 0 || o > i) throw new V("Wrong offset");
-            if (((n = void 0 === n ? i - o : _(n)), o + n > i)) throw new V(D);
+            if (((n = void 0 === n ? i - o : _(n)), o + n > i)) throw new V(w);
             j(this, {
                 type: P,
                 buffer: e,

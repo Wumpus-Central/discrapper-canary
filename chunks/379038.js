@@ -11,12 +11,12 @@ var l = n(54381),
     g = n(388032);
 function b(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: b, onClose: p } = e,
-        x = (0, d.Z)(n, t.id),
-        f = (0, c.iA)(n, t),
-        h = (0, c.x6)(f, x),
+        f = (0, d.Z)(n, t.id),
+        x = (0, c.iA)(n, t),
+        h = (0, c.x6)(x, f),
         [j, v] = r.useState(h),
         [m, { loading: D, error: O }] = (0, u.Z)(() => {
-            let e = (0, s.Z)(t, n, j, x);
+            let e = (0, s.Z)(t, n, j, f);
             return null == O && p(), e;
         });
     return (0, l.jsxs)(i.Modal, {

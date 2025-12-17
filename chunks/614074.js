@@ -1,13 +1,13 @@
-n.d(e, { C: () => S });
+n.d(e, { C: () => T });
 var i = n(54381),
     l = n(473749),
     s = n(793030),
     u = n(5900),
     r = n(773275),
     a = n(388032),
-    o = n(665525),
-    c = n(291771);
-let S = () => {
+    o = n(472057),
+    S = n(977701);
+let T = () => {
         let { isWeb: t, installationStatus: e } = (0, r.xf)(),
             n = (0, l.useMemo)(() => {
                 if (t) return a.intl.string(o.default.KN6HOb);
@@ -29,7 +29,7 @@ let S = () => {
                     case u._n.ZERO_TRUST:
                         return a.intl.string(o.default["7zgDRR"]);
                     case u._n.INSTALLED:
-                        return (0, i.jsx)(d, {});
+                        return (0, i.jsx)(c, {});
                 }
             }, [t, e]);
         return (0, i.jsx)(s.X6q, {
@@ -37,18 +37,18 @@ let S = () => {
             children: n,
         });
     },
-    d = () => {
+    c = () => {
         switch ((0, r.xf)((t) => t.connectionStatus)) {
             case u.Ij.INITIALIZING:
                 return (0, i.jsxs)("span", {
-                    className: c.connectedStatus,
+                    className: S.connectedStatus,
                     children: [
                         a.intl.string(o.default["00vkCU"]),
                         " ",
                         (0, i.jsx)("span", {
                             children: (0, i.jsx)(s.$jN, {
                                 type: s.RAz.SPINNING_CIRCLE,
-                                className: c.spinner,
+                                className: S.spinner,
                             }),
                         }),
                     ],

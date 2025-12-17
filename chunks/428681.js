@@ -1,23 +1,23 @@
-e.d(n, { E: () => l });
-var o = e(54381);
-e(473749);
-var i = e(421580),
-    r = e(159277),
-    s = e(585183),
-    a = e(981631),
-    c = e(927923);
-function l(t) {
-    let { platformType: n, authToken: e, onContinue: l, onError: d, onClose: u } = t,
-        p = n === a.ABu.PLAYSTATION_STAGING ? r.t.PLAYSTATION_STAGING_APPLICATION_ID : r.t.PLAYSTATION_APPLICATION_ID,
-        _ = n === a.ABu.PLAYSTATION_STAGING ? i.x.PLAYSTATION_STAGING : i.x.PLAYSTATION;
-    return (0, o.jsx)(s.h, {
-        platformType: n,
-        clientId: p,
-        scopes: c.KL,
-        authToken: e,
-        onContinue: l,
-        onError: d,
-        onClose: u,
-        redirectUri: _,
+n.d(t, { E: () => c });
+var o = n(54381);
+n(473749);
+var i = n(421580),
+    a = n(159277),
+    r = n(585183),
+    s = n(981631),
+    d = n(927923);
+function c(e) {
+    let { platformType: t, authToken: n, onContinue: c, onError: l, onClose: b } = e,
+        u = t === s.ABu.PLAYSTATION_STAGING ? a.t.PLAYSTATION_STAGING_APPLICATION_ID : a.t.PLAYSTATION_APPLICATION_ID,
+        p = t === s.ABu.PLAYSTATION_STAGING ? i.x.PLAYSTATION_STAGING : i.x.PLAYSTATION;
+    return (0, o.jsx)(r.h, {
+        platformType: t,
+        clientId: u,
+        scopes: d.KL,
+        authToken: n,
+        onContinue: c,
+        onError: l,
+        onClose: b,
+        redirectUri: p,
     });
 }

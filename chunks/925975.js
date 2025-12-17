@@ -9,8 +9,8 @@ var i = n(159635),
     u = n(995774),
     d = n(695346),
     p = n(375954),
-    h = n(981631);
-let f = /\\([*?+/])/g,
+    f = n(981631);
+let h = /\\([*?+/])/g,
     m = {
         tts: { action: () => ({ tts: d.OW.getSetting() }) },
         me: { action: (e) => ({ content: "_".concat(e, "_") }) },
@@ -22,7 +22,7 @@ let f = /\\([*?+/])/g,
         nick: {
             action(e, t) {
                 let { channel: n } = t;
-                if (null != n.guild_id) return l.Z.changeNickname(n.guild_id, n.id, h.ME, e), { content: "" };
+                if (null != n.guild_id) return l.Z.changeNickname(n.guild_id, n.id, f.ME, e), { content: "" };
             },
         },
         reaction: {
@@ -45,9 +45,9 @@ let f = /\\([*?+/])/g,
                 let o = p.Z.getLastEditableMessage(l.id);
                 if (null == o || null == o.id) return { content: "" };
                 let [s, c, u, d] = Array.from(null != (n = e.match(this.match.regex)) ? n : []),
-                    h = null != (i = null == d ? void 0 : d.split("")) ? i : [];
-                (c = c.replace(f, (e, t) => t)), (u = u.replace(f, (e, t) => t));
-                let m = h.includes("g") ? o.content.replaceAll(c, u) : o.content.replace(c, u);
+                    f = null != (i = null == d ? void 0 : d.split("")) ? i : [];
+                (c = c.replace(h, (e, t) => t)), (u = u.replace(h, (e, t) => t));
+                let m = f.includes("g") ? o.content.replaceAll(c, u) : o.content.replace(c, u);
                 return (
                     (null == m || "" === m.trim()) && 0 === o.attachments.length
                         ? a.Z.deleteMessage(l.id, o.id)
@@ -56,10 +56,10 @@ let f = /\\([*?+/])/g,
                 );
             },
         },
-        spoiler: { action: (e) => ({ content: (0, h.XmY)(e).trim() }) },
+        spoiler: { action: (e) => ({ content: (0, f.XmY)(e).trim() }) },
     };
 function g(e, t, n, i) {
-    return o.ZP.trackWithMetadata(h.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, i);
+    return o.ZP.trackWithMetadata(f.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, i);
 }
 function b(e, t) {
     for (let i in m) {

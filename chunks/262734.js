@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(692547),
+    o = n(442837),
+    s = n(692547),
     c = n(755721),
     u = n(481060),
     d = n(350810),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(740492),
     m = n(871499),
     b = n(786915),
-    E = n(944486),
-    _ = n(48131),
+    _ = n(944486),
+    E = n(48131),
     O = n(214143),
     v = n(610278),
     y = n(408491),
@@ -31,13 +31,13 @@ function j(e) {
     let { frame: t } = e,
         n = (0, f.q)(t.applicationId),
         l = (0, d.Z)(),
-        { selectedChannelId: j, selectedVoiceChannelId: P } = (0, s.cj)([E.Z], () => ({
-            selectedChannelId: E.Z.getChannelId(),
-            selectedVoiceChannelId: E.Z.getVoiceChannelId(),
+        { selectedChannelId: j, selectedVoiceChannelId: P } = (0, o.cj)([_.Z], () => ({
+            selectedChannelId: _.Z.getChannelId(),
+            selectedVoiceChannelId: _.Z.getVoiceChannelId(),
         })),
-        x = (0, s.e7)([g.Z], () => null != P && j === P && g.Z.getChatOpen(P), [j, P]),
-        A = (0, s.e7)([h.ZP], () => h.ZP.callChatSidebarWidth),
-        Z = (0, u.dQu)(o.Z.modules.chat.RESIZE_HANDLE_WIDTH),
+        x = (0, o.e7)([g.Z], () => null != P && j === P && g.Z.getChatOpen(P), [j, P]),
+        A = (0, o.e7)([h.ZP], () => h.ZP.callChatSidebarWidth),
+        Z = (0, u.dQu)(s.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
         L = i.useRef(null),
         [R, D] = i.useState({
@@ -45,13 +45,13 @@ function j(e) {
             height: 0,
         }),
         M = i.useCallback(() => {
-            _.Z.updateFrameLayoutMode({
+            E.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
                 layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
         k = i.useCallback(() => {
-            _.Z.stopFrame({ applicationId: t.applicationId });
+            E.Z.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == L.current) return;
@@ -69,7 +69,7 @@ function j(e) {
                 null == w.current ||
                     w.current.contains(e.target) ||
                     l ||
-                    _.Z.updateFrameLayoutMode({
+                    E.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
                         layoutMode: y.U.PIP,
                     });
@@ -83,13 +83,13 @@ function j(e) {
         }, [t.applicationId, l]);
     let U = R.width / Math.max(R.height, 1) < C.I0,
         G = 0,
-        B = 0,
-        H = (0, p.Z)(null == n ? void 0 : n.id);
-    if (!H) {
+        H = 0,
+        B = (0, p.Z)(null == n ? void 0 : n.id);
+    if (!B) {
         let e = R.width,
             t = R.height;
         U
-            ? ((t = R.width / C.I0) > R.height && (e = (t = R.height) * C.I0), (B = (R.height - t) / 2))
+            ? ((t = R.width / C.I0) > R.height && (e = (t = R.height) * C.I0), (H = (R.height - t) / 2))
             : ((e = Math.min(R.height * C.I0)) > R.width && (t = (e = R.width) / C.I0), (G = (R.width - e) / 2));
     }
     let V = C.MI.NO_CHAT;
@@ -107,12 +107,12 @@ function j(e) {
                     (0, r.jsx)("div", {
                         className: T.activityPanelContainer,
                         children: (0, r.jsx)("div", {
-                            className: a()(T.activityContainer, { [T.activityContainerNoMargin]: H }),
+                            className: a()(T.activityContainer, { [T.activityContainerNoMargin]: B }),
                             style: {
                                 paddingLeft: G,
                                 paddingRight: G,
-                                paddingTop: B,
-                                paddingBottom: B,
+                                paddingTop: H,
+                                paddingBottom: H,
                             },
                             ref: L,
                             children: (0, r.jsx)(O.Z, {

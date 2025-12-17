@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(145807),
     T = n(56744),
     C = n(981631),
-    A = n(360514);
+    A = n(548498);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,7 +113,7 @@ function L(e) {
             renderThreadAccessory: G,
             trackAnnouncementViews: Z = !1,
         } = e,
-        B = w(e, [
+        F = D(e, [
             "message",
             "compact",
             "className",
@@ -127,7 +127,7 @@ function L(e) {
             "renderThreadAccessory",
             "trackAnnouncementViews",
         ]),
-        F = i.type === C.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        B = i.type === C.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         V = i.isFirstMessageInForumPost(j),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         {
@@ -167,13 +167,13 @@ function L(e) {
                 compact: a,
                 className: o()(N, {
                     [A.ephemeral]: (0, _.Pv)(i),
-                    [A.disableInteraction]: F,
+                    [A.disableInteraction]: B,
                 }),
-                disableInteraction: F,
+                disableInteraction: B,
                 childrenRepliedMessage: (0, T.Z)(i, j, z, q, a),
                 childrenExecutedCommand: (0, I.Z)(i, j, a),
                 childrenHeader: (0, v.Z)(
-                    D(P({}, e), {
+                    w(P({}, e), {
                         guildId: j.guild_id,
                         author: X,
                         roleIcon: $,
@@ -181,7 +181,7 @@ function L(e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W, K),
                 childrenMessageContent: (0, O.Z)(e, Y),
-                childrenSystemMessage: (0, S.Z)(D(P({}, e), { disableInteraction: F })),
+                childrenSystemMessage: (0, S.Z)(w(P({}, e), { disableInteraction: B })),
                 onContextMenu: R,
                 onClick: x,
                 hasThread: G && null != J && i.hasFlag(C.iLy.HAS_THREAD),
@@ -192,7 +192,7 @@ function L(e) {
                 author: X,
             },
             Q,
-            B,
+            F,
         ),
     );
 }

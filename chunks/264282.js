@@ -3,10 +3,10 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(968843),
-    s = n(304696),
-    o = n(670362),
+    o = n(304696),
+    s = n(670362),
     c = n(388032),
-    u = n(477813);
+    u = n(841487);
 let d = function (e) {
     let { onChange: t, selectedFilters: n } = e,
         d = (0, a.N8)(),
@@ -17,14 +17,14 @@ let d = function (e) {
             },
             [n, t],
         );
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         renderPopout: (e, a) => {
             let { closePopout: f } = e;
             return (0, r.jsxs)("div", {
                 children: [
                     d.map((e, t) => {
                         let c = e.options.map((e) => ({
-                                label: (0, s.Nt)(e.filter),
+                                label: (0, o.Nt)(e.filter),
                                 value: e.filter,
                             })),
                             d = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
@@ -33,7 +33,7 @@ let d = function (e) {
                             {
                                 children: [
                                     t > 0 && (0, r.jsx)("hr", { className: u.groupDivider }),
-                                    (0, r.jsx)(o.g, {
+                                    (0, r.jsx)(s.g, {
                                         id: a,
                                         children: e.heading,
                                     }),

@@ -1,4 +1,4 @@
-t.d(n, { default: () => g }), t(388685);
+t.d(n, { default: () => p }), t(388685);
 var i = t(54381);
 t(473749);
 var l = t(100527),
@@ -10,7 +10,7 @@ var l = t(100527),
     u = t(961830),
     d = t(382263),
     f = t(231338);
-function p(e) {
+function g(e) {
     let { onClose: n, onComplete: t, transitionState: l, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
         {} = (0, s.JL)(),
         { analyticsLocations: d } = (0, a.ZP)();
@@ -25,9 +25,9 @@ function p(e) {
         transitionState: l,
     });
 }
-function g(e) {
-    let { loadId: n, applicationId: t, skuId: c, analyticsLocations: g, isGift: m = !1 } = e,
-        { analyticsLocations: b } = (0, a.ZP)(g, l.Z.PREMIUM_PAYMENT_MODAL);
+function p(e) {
+    let { loadId: n, applicationId: t, skuId: c, analyticsLocations: p, isGift: m = !1 } = e,
+        { analyticsLocations: b } = (0, a.ZP)(p, l.Z.PREMIUM_PAYMENT_MODAL);
     return (0, i.jsx)(a.Gt, {
         value: b,
         children: (0, i.jsx)(s.PaymentContextProvider, {
@@ -45,7 +45,7 @@ function g(e) {
                 children: (0, i.jsx)(r.KB, {
                     isGift: m,
                     children: (0, i.jsx)(
-                        p,
+                        g,
                         (function (e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},

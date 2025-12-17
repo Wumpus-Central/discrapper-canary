@@ -1,4 +1,4 @@
-n.d(t, { h: () => v }), n(388685);
+n.d(t, { h: () => x }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -10,12 +10,12 @@ var r = n(442837),
     u = n(314897),
     d = n(271383),
     p = n(715903),
-    h = n(295474),
-    f = n(981631),
+    f = n(295474),
+    h = n(981631),
     m = n(372897),
     g = n(526761),
     b = n(388032),
-    C = n(216390);
+    C = n(854536);
 function y(e) {
     var t;
     let { guild: n } = e,
@@ -40,12 +40,12 @@ function y(e) {
         }),
     });
 }
-function _(e) {
+function v(e) {
     var t, n;
     let { guild: r } = e,
         { analyticsLocations: c } = (0, o.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [u, d] = (0, h.ww)({
-            guildId: null != (t = null == r ? void 0 : r.id) ? t : f.lds,
+        [u, d] = (0, f.ww)({
+            guildId: null != (t = null == r ? void 0 : r.id) ? t : h.lds,
             analyticsLocations: c,
         }),
         p = d ? b.intl.string(b.t["9ph2v7"]) : b.intl.string(b.t.ldh9Cg),
@@ -72,7 +72,7 @@ function _(e) {
         }),
     });
 }
-function v(e) {
+function x(e) {
     let { guild: t } = e,
         n = (0, r.e7)([u.default, d.ZP], () => {
             if (null == t) return new Set();
@@ -80,8 +80,8 @@ function v(e) {
             return (0, p.no)(d.ZP.getMember(t.id, e));
         }, [t]);
     return n.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(m.q.AUTOMOD_QUARANTINED_BIO)
-        ? (0, i.jsx)(_, { guild: t })
+        ? (0, i.jsx)(v, { guild: t })
         : n.has(m.q.AUTOMOD_QUARANTINED_SERVER_TAG)
           ? (0, i.jsx)(y, { guild: t })
-          : (0, i.jsx)(_, { guild: t });
+          : (0, i.jsx)(v, { guild: t });
 }

@@ -14,15 +14,15 @@ var i = t(120356),
     p = t(914010),
     x = t(785717),
     h = t(49898),
-    b = t(388032),
-    v = t(980120);
+    v = t(388032),
+    b = t(980120);
 function j(e) {
     let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: o } = e,
         r = (0, s.rm)(n, t);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", {
-                className: v.platformIconContainer,
+                className: b.platformIconContainer,
                 children:
                     null != n.application.bot
                         ? (0, l.jsx)(c.Z, {
@@ -35,10 +35,10 @@ function j(e) {
                           }),
             }),
             (0, l.jsxs)("div", {
-                className: v.connectionInfo,
+                className: b.connectionInfo,
                 children: [
                     (0, l.jsxs)(a.P3F, {
-                        className: v.connectedAppRoleAccountClickable,
+                        className: b.connectedAppRoleAccountClickable,
                         onClick: () => {
                             null == i || i(),
                                 (0, d.transitionToGlobalDiscovery)({
@@ -68,14 +68,14 @@ function j(e) {
                             (0, l.jsx)(a.Text, {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
-                                className: v.connectedAppRoleAccountPoweredBy,
-                                children: b.intl.format(b.t.zIT9YA, { applicationHook: () => n.application.name }),
+                                className: b.connectedAppRoleAccountPoweredBy,
+                                children: v.intl.format(v.t.zIT9YA, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),
                     null != r && r.length > 0
                         ? (0, l.jsx)("div", {
-                              className: v.metadata,
+                              className: b.metadata,
                               children: r,
                           })
                         : null,
@@ -92,12 +92,12 @@ function g(e) {
     return 0 === n.length
         ? null
         : (0, l.jsx)("ul", {
-              className: o()(v.container, t),
+              className: o()(b.container, t),
               children: n.map((e, n) =>
                   (0, l.jsx)(
                       "li",
                       {
-                          className: v.connection,
+                          className: b.connection,
                           children: (0, l.jsx)(j, {
                               applicationRoleConnection: e,
                               locale: c,

@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(990547),
     a = n(793030),
-    s = n(399606),
-    o = n(481060),
+    o = n(399606),
+    s = n(481060),
     c = n(232567),
     u = n(213609),
     d = n(23434),
@@ -28,9 +28,9 @@ function m(e) {
 }
 function b(e) {
     let { transitionState: t } = e,
-        n = (0, s.e7)([d.Z], () => d.Z.getAction()),
+        n = (0, o.e7)([d.Z], () => d.Z.getAction()),
         [a, b] = i.useState(!1);
-    async function E() {
+    async function _() {
         return b(!0), n === p.c2C.AGREEMENTS && b(await (0, c.Lr)()), null;
     }
     return (
@@ -43,7 +43,7 @@ function b(e) {
             {},
             [],
         ),
-        (0, r.jsx)(o.Ioy, {
+        (0, r.jsx)(s.Ioy, {
             graphic: {
                 src: h.Z,
                 type: "image",
@@ -56,17 +56,17 @@ function b(e) {
                 {
                     variant: "primary",
                     text: f.intl.string(f.t["+TBKL1"]),
-                    onClick: E,
+                    onClick: _,
                     loading: a,
                 },
             ],
             transitionState: t,
             onClose: p.Cyb,
-            children: (0, r.jsxs)(o.Kqy, {
+            children: (0, r.jsxs)(s.Kqy, {
                 gap: 20,
                 children: [
                     n === p.c2C.AGREEMENTS
-                        ? (0, r.jsx)(o.Text, {
+                        ? (0, r.jsx)(s.Text, {
                               variant: "text-md/normal",
                               className: g.description,
                               children: f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }),
@@ -78,11 +78,11 @@ function b(e) {
                             className: g.links,
                             children: [
                                 (0, r.jsx)(m, { text: f.intl.format(f.t.iw0hFi, { url: p.EYA.TERMS }) }),
-                                (0, r.jsx)(o.izJ, {}),
+                                (0, r.jsx)(s.izJ, {}),
                                 (0, r.jsx)(m, { text: f.intl.format(f.t["36klnD"], { url: p.EYA.PAID_TERMS }) }),
-                                (0, r.jsx)(o.izJ, {}),
+                                (0, r.jsx)(s.izJ, {}),
                                 (0, r.jsx)(m, { text: f.intl.format(f.t.TquFBF, { url: p.EYA.PRIVACY }) }),
-                                (0, r.jsx)(o.izJ, {}),
+                                (0, r.jsx)(s.izJ, {}),
                                 (0, r.jsx)(m, { text: f.intl.format(f.t.ia96Tb, { url: p.EYA.GUIDELINES }) }),
                             ],
                         }),

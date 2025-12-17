@@ -14,7 +14,7 @@ var r,
     d = n(522501),
     f = n(981631),
     p = n(354459),
-    _ = n(639965);
+    _ = n(684692);
 function m(e, t, n) {
     return (
         t in e
@@ -396,8 +396,8 @@ let A = (e) => {
             R = a.useCallback(() => {
                 A(!1);
             }, []),
-            D = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
-            w = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
+            w = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
+            D = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
         return null == t
             ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)("div", { className: _.pictureInPicture }) })
             : (0, i.jsx)(d.ZP, {
@@ -422,7 +422,7 @@ let A = (e) => {
                           edgeOffsetLeft: O,
                           edgeOffsetRight: b,
                           roundCorners: E,
-                          resizeConfig: D || w ? void 0 : v,
+                          resizeConfig: w || D ? void 0 : v,
                           children: N,
                       }),
                   }),

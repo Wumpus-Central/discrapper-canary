@@ -2,7 +2,7 @@ t.d(n, { n: () => s });
 var l = t(54381),
     i = t(73346),
     a = t(164670),
-    o = t(104869);
+    o = t(848824);
 function s(e) {
     let { applicationId: n, backgroundImageAssetId: t } = e,
         s = null != t ? (0, i._W)(n, t, 1024, a._Z) : null;

@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(4434),
     y = n(981631),
     O = n(388032),
-    v = n(252633);
+    v = n(965688);
 let S = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: S, transitionState: I, onClose: T } = e,
         C = (0, m.vx)(p.Z.boostSlots);
@@ -34,8 +34,8 @@ let S = (e) => {
             "SUCCESS",
         ].filter((e) => null != e),
         [N, P] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [R, D] = i.useState(A[0]),
-        [w, x] = i.useState(!1),
+        [R, w] = i.useState(A[0]),
+        [D, x] = i.useState(!1),
         [L, j] = i.useState(n),
         [M, k] = i.useState(null != t ? t : C.slice(0, 1)),
         U = i.useMemo(
@@ -60,7 +60,7 @@ let S = (e) => {
             }),
             Promise.resolve()
         ),
-        B = {
+        F = {
             UNUSED_QUANTITY_SELECT: () => (
                 o()(null != t || 0 !== C.length, "Cannot provide no slots if there are no other available slots"),
                 (0, r.jsx)(s.Modal, {
@@ -77,7 +77,7 @@ let S = (e) => {
                         {
                             variant: "primary",
                             text: O.intl.string(O.t["/uwYda"]),
-                            onClick: () => D("CONFIRM"),
+                            onClick: () => w("CONFIRM"),
                         },
                     ],
                     children: (0, r.jsxs)("div", {
@@ -112,7 +112,7 @@ let S = (e) => {
                 (0, r.jsx)(g.default, {
                     onClose: Z,
                     onSelectGuild: (e) => {
-                        j(e), D("CONFIRM");
+                        j(e), w("CONFIRM");
                     },
                     transitionState: I,
                     isTransfer: G,
@@ -123,7 +123,7 @@ let S = (e) => {
                 let e = M.filter((e) => (0, m.tl)(e)).length,
                     t = M.length,
                     n = U.length,
-                    i = "CONFIRM" === A[0] ? Z : () => D(A[A.indexOf(R) - 1]),
+                    i = "CONFIRM" === A[0] ? Z : () => w(A[A.indexOf(R) - 1]),
                     a = async () => {
                         if ((x(!1), null != L && (null == M ? void 0 : M.length) !== 0)) {
                             o()(
@@ -145,7 +145,7 @@ let S = (e) => {
                                         }),
                                         S === E.P.PERK,
                                     ),
-                                    D("SUCCESS");
+                                    w("SUCCESS");
                             } catch (e) {
                                 x(!0);
                             }
@@ -182,7 +182,7 @@ let S = (e) => {
                                   guildCount: n,
                               }),
                               imageClass: v.transferConfirmImage,
-                              error: w ? P : null,
+                              error: D ? P : null,
                               slotCount: t,
                               canceledCount: e,
                           })
@@ -194,7 +194,7 @@ let S = (e) => {
                                   slotCount: t,
                               }),
                               imageClass: v.confirmImage,
-                              error: w ? P : null,
+                              error: D ? P : null,
                               slotCount: t,
                               canceledCount: e,
                           }),
@@ -224,6 +224,6 @@ let S = (e) => {
             location_section: a,
         });
     }, [a]);
-    let F = B[R];
-    return null == F ? null : F();
+    let B = F[R];
+    return null == B ? null : B();
 };

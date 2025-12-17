@@ -85,11 +85,11 @@ function P() {
 function R() {
     return I(), !0;
 }
-function D(e) {
+function w(e) {
     let { lastAssociatedPID: t } = e;
     return null != t && O(!0, t), !0;
 }
-function w() {
+function D() {
     I(), null == h || h.setInteractionEnabled(!1);
 }
 class x extends (r = i.ZP.Store) {
@@ -111,9 +111,9 @@ let L = new x(
                   OVERLAY_SET_INPUT_LOCKED: A,
                   OVERLAY_ACTIVATE_REGION: N,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: P,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: w,
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: D,
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: R,
-                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: D,
+                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: w,
               },
     ),
     j = L;

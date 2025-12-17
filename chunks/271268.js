@@ -19,11 +19,11 @@ var r = n(54381),
     y = n(391876),
     O = n(947189),
     v = n(612776),
-    S = n(860076),
+    S = n(638398),
     I = n(388032),
-    T = n(417788),
-    C = n(284788),
-    A = n(228137);
+    T = n(554445),
+    C = n(102422),
+    A = n(331164);
 let N = 100,
     P = 1;
 function R() {
@@ -38,8 +38,8 @@ function R() {
                 topMonth: { month: 0 },
             },
         } = (0, s.e7)([f.Z], () => f.Z.getCheckpointData()),
-        { duration: R, unit: D } = (0, p.Bi)(e),
-        w = D === l.J6.HOURS,
+        { duration: R, unit: w } = (0, p.Bi)(e),
+        D = w === l.J6.HOURS,
         x = i.useContext(m.$r),
         L = i.useRef(null),
         j = i.useContext(b.xS),
@@ -81,7 +81,7 @@ function R() {
             null != L.current && U && (L.current.currentTime = P);
         }, [U]);
     let { monthName: Z } = (0, p.CE)(n, I.intl.currentLocale),
-        B = null != t;
+        F = null != t;
     return (0, r.jsxs)(E.Z, {
         children: [
             (0, r.jsx)(a.Z, {
@@ -109,7 +109,7 @@ function R() {
                                 className: T.titleIcon,
                                 colorClass: T.iconColor,
                             }),
-                            w
+                            D
                                 ? (0, r.jsx)(y.Z, {
                                       variant: "eyebrow",
                                       className: T.eyebrow,
@@ -129,7 +129,7 @@ function R() {
                     (0, r.jsx)(y.Z, {
                         variant: "heading-xxl/medium",
                         className: C.subtitle,
-                        children: B
+                        children: F
                             ? I.intl.format(S.default["36PZwu"], {
                                   percent: 100 - t,
                                   percentHook: (e, t) => (0, r.jsx)(h.Z, { children: e }, t),

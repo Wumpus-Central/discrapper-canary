@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(823188),
     P = n(611116),
     R = n(306066),
-    D = n(349803),
-    w = n(8231),
+    w = n(349803),
+    D = n(8231),
     x = n(864879),
     L = n(238649),
     j = n(47840),
@@ -37,12 +37,12 @@ var r = n(54381),
     U = n(903250),
     G = n(954003),
     Z = n(664134),
-    B = n(457227),
-    F = n(474936),
+    F = n(457227),
+    B = n(474936),
     V = n(981631),
     H = n(231338),
-    Y = n(379039),
-    W = n(810392),
+    Y = n(759675),
+    W = n(197874),
     K = n(107283);
 let z = () => {
     (0, h.z)(m.X);
@@ -63,7 +63,7 @@ let z = () => {
         ec = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         eu = null != ec ? (0, y.Af)(ec) : null,
         ed = null != eu ? y.ZP.getSkuIdForPlan(eu.planId) : null,
-        ef = null !== ed && ed !== F.Si.TIER_2 ? F.Si.TIER_2 : null,
+        ef = null !== ed && ed !== B.Si.TIER_2 ? B.Si.TIER_2 : null,
         ep = (0, O.Vi)(),
         e_ = null != ep && ep,
         { analyticsLocations: em } = (0, _.ZP)(p.Z.PREMIUM_MARKETING),
@@ -80,13 +80,13 @@ let z = () => {
         eN = (0, T.N)(),
         eP = (0, I.N)(),
         eR =
-            E.Z.getAlmostExpiringTrialOffers([F.Si.TIER_2]).length > 0 &&
+            E.Z.getAlmostExpiringTrialOffers([B.Si.TIER_2]).length > 0 &&
             null != eN &&
             null != eN.expires_at &&
-            eN.trial_id !== F.a7,
-        eD = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eP && null != eP.expires_at,
-        ew = eR ? eN.expires_at : eD ? eP.expires_at : null,
-        ex = eA === v.tE.HERO_COUNTDOWN && (eR || eD) && null != ew,
+            eN.trial_id !== B.a7,
+        ew = E.Z.getAlmostExpiringDiscountOffers([B.Si.TIER_2]).length > 0 && null != eP && null != eP.expires_at,
+        eD = eR ? eN.expires_at : ew ? eP.expires_at : null,
+        ex = eA === v.tE.HERO_COUNTDOWN && (eR || ew) && null != eD,
         eL = (0, r.jsxs)("div", {
             className: o()(eC.container, eC.responsiveContainer, {
                 [eC.containerBackground]: eh || J,
@@ -100,7 +100,7 @@ let z = () => {
                             (0, r.jsx)(R.Z, {
                                 className: o()(Y.topOfPageGradient, { [Y.topOfPageGradientWithCountdown]: ex }),
                             }),
-                            (0, r.jsx)(B.Z, {
+                            (0, r.jsx)(F.Z, {
                                 navBarSections: eb,
                                 activeSectionId: ey,
                             }),
@@ -133,7 +133,7 @@ let z = () => {
                                           ref: a,
                                           subscriptionTier: ef,
                                           isEligibleForBogoPromotion: ep,
-                                          offerExpiresAt: ex ? ew : null,
+                                          offerExpiresAt: ex ? eD : null,
                                       })
                                     : (0, r.jsx)(U.Z, {
                                           ref: a,
@@ -186,12 +186,12 @@ let z = () => {
                         (0, r.jsx)("div", {
                             className: eC.planComparisonTableContainer,
                             ref: eT.ref,
-                            children: eh ? (0, r.jsx)(M.Z, {}) : (0, r.jsx)(w.Z, {}),
+                            children: eh ? (0, r.jsx)(M.Z, {}) : (0, r.jsx)(D.Z, {}),
                         }),
                     ],
                 }),
                 !eh &&
-                    (0, r.jsx)(D.Z, {
+                    (0, r.jsx)(w.Z, {
                         isVisible: eg && es,
                         subscriptionTier: ef,
                         isApplicationHome: !0,

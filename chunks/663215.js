@@ -122,12 +122,12 @@ function T(e) {
                 e
             );
         }),
-        D = d.ZP.canUseSoundboardEverywhere(o),
-        w = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        w = d.ZP.canUseSoundboardEverywhere(o),
+        D = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
         x = (0, i.e7)([l.Z], () => {
-            let { canCreateExpressions: e } = (0, a.Gw)(w);
+            let { canCreateExpressions: e } = (0, a.Gw)(D);
             return e;
-        }, [w]),
+        }, [D]),
         { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: j } = (0, f.k)({
             location: "soundboard-useSoundGrid",
             autoTrackExposure: !0,
@@ -179,23 +179,23 @@ function T(e) {
                     potentialSoundIdsForSection: M.map((e) => e.soundId),
                     sectionType: m.bg.FREQUENTLY_USED,
                 }),
-            void 0 !== w &&
-                S(i, w, {
+            void 0 !== D &&
+                S(i, D, {
                     currentGuildHasAddPermissions: x,
                     allSounds: y,
                     filterOutEmptyCurrentGuild: t,
                     sortSoundsFn: N,
                 }),
-            D || I(i, y),
+            w || I(i, y),
             v({
                 sections: i,
                 guilds: R,
-                currentGuildId: null == w ? void 0 : w.id,
+                currentGuildId: null == D ? void 0 : D.id,
                 allSounds: y,
                 hasNitro: u,
                 sortSoundsFn: N,
             }),
-            D && I(i, y),
+            w && I(i, y),
             i.forEach((t) => {
                 t.categoryInfo.type === m.bg.GUILD &&
                     (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
@@ -211,7 +211,7 @@ function T(e) {
                 },
             }
         );
-    }, [P, y, T, k, M, j, L, w, x, t, D, R, n, C, u, N]);
+    }, [P, y, T, k, M, j, L, D, x, t, w, R, n, C, u, N]);
 }
 function C(e, t, n) {
     return r.useMemo(

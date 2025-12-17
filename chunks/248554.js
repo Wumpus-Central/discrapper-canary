@@ -7,18 +7,18 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(210753),
-    s = n(817053),
-    o = n(932366),
-    c = n(978276);
+    o = n(817053),
+    s = n(713603),
+    c = n(572102);
 function u(e) {
     let { applicationId: t } = e,
         { coverImageUrl: n } = (0, a.$)(t);
     return null != n && "" !== n
         ? (0, r.jsx)("div", {
-              className: l()(o.coverContainer, c.placeholderCover),
-              children: (0, r.jsx)(s.o, { imageSrc: n }),
+              className: l()(s.coverContainer, c.placeholderCover),
+              children: (0, r.jsx)(o.o, { imageSrc: n }),
           })
-        : (0, r.jsx)("div", { className: l()(o.loadingCover, c.placeholderCover) });
+        : (0, r.jsx)("div", { className: l()(s.loadingCover, c.placeholderCover) });
 }
 function d(e) {
     let { applicationId: t, size: n = "default", className: i } = e;
@@ -34,7 +34,7 @@ function d(e) {
         ),
         "aria-hidden": !0,
         children: [
-            null != t ? (0, r.jsx)(u, { applicationId: t }) : (0, r.jsx)("div", { className: o.loadingCover }),
+            null != t ? (0, r.jsx)(u, { applicationId: t }) : (0, r.jsx)("div", { className: s.loadingCover }),
             (0, r.jsxs)("div", {
                 className: c.placeholderText,
                 children: [

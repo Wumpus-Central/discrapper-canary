@@ -26,19 +26,19 @@ var r = n(98405),
     N = n(920029).forEach,
     P = n(108015),
     R = n(573078),
-    D = n(117895),
-    w = n(840991),
+    w = n(117895),
+    D = n(840991),
     x = n(335024),
     L = n(199838),
     j = n(176682),
     M = L.get,
     k = L.set,
     U = L.enforce,
-    G = D.f,
-    Z = w.f,
-    B = i.RangeError,
-    F = c.ArrayBuffer,
-    V = F.prototype,
+    G = w.f,
+    Z = D.f,
+    F = i.RangeError,
+    B = c.ArrayBuffer,
+    V = B.prototype,
     H = c.DataView,
     Y = l.NATIVE_ARRAY_BUFFER_VIEWS,
     W = l.TYPED_ARRAY_TAG,
@@ -78,7 +78,7 @@ var r = n(98405),
             : G(e, t, n);
     };
 o
-    ? (Y || ((w.f = et), (D.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
+    ? (Y || ((D.f = et), (w.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
       r(
           {
               target: "Object",
@@ -159,12 +159,12 @@ o
                             (i = t), (d = h(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % o || (s = f - d) < 0) throw new B(X);
-                            } else if ((s = _(r) * o) + d > f) throw new B(X);
+                                if (f % o || (s = f - d) < 0) throw new F(X);
+                            } else if ((s = _(r) * o) + d > f) throw new F(X);
                             l = s / o;
                         } else if (q(t)) return x(E, t);
                         else return a(A, E, t);
-                    else i = new F((s = (l = m(t)) * o));
+                    else i = new B((s = (l = m(t)) * o));
                     for (
                         k(e, {
                             buffer: i,
@@ -182,13 +182,13 @@ o
               b.constructor !== E && f(b, "constructor", E),
               (U(b).TypedArrayConstructor = E),
               W && f(b, W, l);
-          var D = E !== p;
+          var w = E !== p;
           (y[l] = E),
               r(
                   {
                       global: !0,
                       constructor: !0,
-                      forced: D,
+                      forced: w,
                       sham: !Y,
                   },
                   y,

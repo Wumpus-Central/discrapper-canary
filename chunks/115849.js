@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(755721),
     u = n(481060),
     d = n(194359),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(981631),
     h = n(295907),
     m = n(388032),
-    _ = n(470840),
-    b = n(197571);
+    b = n(794456),
+    _ = n(478411);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,18 +90,18 @@ function N(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [s, p] = i.useReducer(T, y),
-        { canSend: E, hint: O, error: N, success: j } = s;
+        [o, p] = i.useReducer(T, y),
+        { canSend: E, hint: O, error: N, success: j } = o;
     return (
         i.useEffect(() => {
             null != j &&
-                (o()(null != n.current, "Input is submitting when not mounted"),
+                (s()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
         }, [j, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(), o()(null != n.current, "Input is submitted when not mounted");
+                e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
                 let r = (0, f.Zy)(t);
@@ -131,7 +131,7 @@ function N(e) {
             autoComplete: "off",
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.addFriendWumpusWrapper,
+                    className: b.addFriendWumpusWrapper,
                     children: [
                         (0, r.jsx)(u.Text, {
                             tag: "div",
@@ -147,23 +147,23 @@ function N(e) {
                 (0, r.jsx)(u.tEY, {
                     focusTarget: n,
                     ringTarget: l,
-                    ringClassName: _.ring,
+                    ringClassName: b.ring,
                     children: (0, r.jsxs)("div", {
                         ref: l,
-                        className: a()(_.addFriendInputWrapper, {
-                            [_.success]: j,
-                            [_.error]: N,
+                        className: a()(b.addFriendInputWrapper, {
+                            [b.success]: j,
+                            [b.error]: N,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
                                 id: I,
                                 inputRef: n,
-                                className: _.addFriendInput,
-                                inputClassName: _.input,
+                                className: b.addFriendInput,
+                                inputClassName: b.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
                                     if (e.key !== h.mR.Enter && t.includes("#")) {
-                                        o()(null != n.current, "Input is handling keypress when not mounted");
+                                        s()(null != n.current, "Input is handling keypress when not mounted");
                                         let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
                                             l =
@@ -200,7 +200,7 @@ function N(e) {
                             }),
                             null != O &&
                                 (0, r.jsx)("div", {
-                                    className: _.addFriendHint,
+                                    className: b.addFriendHint,
                                     "aria-hidden": !0,
                                     children: O,
                                 }),
@@ -220,7 +220,7 @@ function N(e) {
                         children: (0, r.jsx)(u.Text, {
                             id: S,
                             variant: "text-sm/normal",
-                            className: b.marginTop8,
+                            className: _.marginTop8,
                             color: "text-feedback-critical",
                             children: N,
                         }),
@@ -230,7 +230,7 @@ function N(e) {
                         role: "status",
                         children: (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
-                            className: b.marginTop8,
+                            className: _.marginTop8,
                             color: "text-feedback-positive",
                             children: j,
                         }),

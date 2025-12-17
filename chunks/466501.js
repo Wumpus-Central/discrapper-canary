@@ -1,7 +1,7 @@
 i.d(t, { default: () => f }), i(953529);
 var n = i(54381),
-    r = i(473749),
-    c = i(793030),
+    c = i(473749),
+    r = i(793030),
     l = i(481060),
     o = i(651711),
     s = i(434404),
@@ -11,8 +11,8 @@ var n = i(54381),
     u = i(981631),
     b = i(388032);
 function p(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: c, guildId: b, onEligibilityBecameStale: p } = e,
-        f = r.useMemo(
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: r, guildId: b, onEligibilityBecameStale: p } = e,
+        f = c.useMemo(
             () => ({
                 onEligibilityBecameStale: p,
                 sortedByIneligible: !0,
@@ -26,11 +26,11 @@ function p(e) {
             [b, p],
         ),
         j = (0, o.Z)(t, f);
-    return null != c
+    return null != r
         ? (0, n.jsx)("div", {
               children: (0, n.jsx)(l.M14, {
                   type: "critical",
-                  children: c.message,
+                  children: r.message,
               }),
           })
         : null == j || i
@@ -38,7 +38,7 @@ function p(e) {
           : (0, n.jsx)("div", {
                 children: j.map((e, t) =>
                     (0, n.jsxs)(
-                        r.Fragment,
+                        c.Fragment,
                         {
                             children: [
                                 (0, n.jsx)(d.d, {
@@ -60,12 +60,12 @@ function f(e) {
     let {
         eligibility: t,
         eligibilityLoading: i,
-        eligibilityError: r,
+        eligibilityError: c,
         refreshEligibility: o,
         guildId: s,
         transitionState: a,
     } = e;
-    return (0, n.jsx)(c.Modal, {
+    return (0, n.jsx)(r.Modal, {
         transitionState: a,
         title: b.intl.string(b.t["3s47iN"]),
         actions: [],
@@ -75,7 +75,7 @@ function f(e) {
         children: (0, n.jsx)(p, {
             eligibility: t,
             eligibilityLoading: i,
-            eligibilityError: r,
+            eligibilityError: c,
             guildId: s,
             onEligibilityBecameStale: o,
         }),

@@ -1,9 +1,9 @@
 n.d(t, {
-    B: () => w,
+    B: () => D,
     B5: () => P,
-    Do: () => D,
+    Do: () => w,
     GX: () => M,
-    HR: () => F,
+    HR: () => B,
     Hr: () => N,
     Je: () => C,
     Js: () => b,
@@ -20,7 +20,7 @@ n.d(t, {
     nE: () => G,
     nH: () => S,
     qs: () => E,
-    qz: () => B,
+    qz: () => F,
     ws: () => L,
     xI: () => j,
     zI: () => y,
@@ -264,7 +264,7 @@ function R(e) {
         }),
     );
 }
-function D(e) {
+function w(e) {
     let { guildId: t, channelId: n, forumLayout: i } = e;
     r.ZP.trackWithMetadata(
         p.rMx.FORUM_CHANNEL_LAYOUT_UPDATED,
@@ -275,7 +275,7 @@ function D(e) {
         }),
     );
 }
-function w(e) {
+function D(e) {
     let { postId: t, location: n } = e;
     r.ZP.trackWithMetadata(p.rMx.FORUM_POST_LINK_COPIED, {
         forum_post_id: t,
@@ -318,13 +318,13 @@ function Z(e) {
     ),
         (0, a.a)(p.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
 }
-function B() {
+function F() {
     r.ZP.trackWithMetadata(p.rMx.OPEN_MODAL, {
         type: "Forum Channel Upsell Modal",
         location: { section: p.jXE.CHANNEL_WELCOME_CTA },
     });
 }
-function F(e) {
+function B(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(
         p.rMx.THREAD_CREATION_STARTED,

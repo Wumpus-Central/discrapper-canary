@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(54381),
     r = n(473749),
     l = n(399606),
@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(871499),
     d = n(304388),
     p = n(388032);
-function h() {
-    return (h =
+function f() {
+    return (f =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -20,11 +20,11 @@ function h() {
             return e;
         }).apply(this, arguments);
 }
-function f() {
+function h() {
     let e = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
         t = (null == e ? void 0 : e.type) === c.W.LINE,
         n = r.useRef(null),
-        f = () => {
+        h = () => {
             t ? (0, o.Bo)(null) : (0, o.Bo)({ type: c.W.LINE });
         };
     return (0, i.jsx)(d.Z, {
@@ -33,7 +33,7 @@ function f() {
         children: (e) => {
             var r,
                 l,
-                o = h(
+                o = f(
                     {},
                     (function (e) {
                         if (null == e) throw TypeError("Cannot destructure " + e);
@@ -73,7 +73,7 @@ function f() {
                         label: p.intl.string(p.t.ZQCf9V),
                         isActive: t,
                         iconComponent: a.vdY,
-                        onClick: f,
+                        onClick: h,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))

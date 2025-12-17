@@ -1,38 +1,38 @@
-t.d(n, { Z: () => r });
-var i = t(54381);
+t.d(e, { Z: () => l });
+var r = t(54381);
 t(473749);
-var l = t(906732);
-function r(e, n) {
+var c = t(906732);
+function l(n, e) {
     return function (t) {
-        let { analyticsLocations: r } = (0, l.ZP)(n);
-        return (0, i.jsx)(l.Gt, {
-            value: r,
-            children: (0, i.jsx)(
-                e,
-                (function (e) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var t = null != arguments[n] ? arguments[n] : {},
-                            i = Object.keys(t);
+        let { analyticsLocations: l } = (0, c.ZP)(e);
+        return (0, r.jsx)(c.Gt, {
+            value: l,
+            children: (0, r.jsx)(
+                n,
+                (function (n) {
+                    for (var e = 1; e < arguments.length; e++) {
+                        var t = null != arguments[e] ? arguments[e] : {},
+                            r = Object.keys(t);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(t).filter(function (n) {
+                                    return Object.getOwnPropertyDescriptor(t, n).enumerable;
                                 }),
                             )),
-                            i.forEach(function (n) {
-                                var i;
-                                (i = t[n]),
-                                    n in e
-                                        ? Object.defineProperty(e, n, {
-                                              value: i,
+                            r.forEach(function (e) {
+                                var r;
+                                (r = t[e]),
+                                    e in n
+                                        ? Object.defineProperty(n, e, {
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = i);
+                                        : (n[e] = r);
                             });
                     }
-                    return e;
+                    return n;
                 })({}, t),
             ),
         });

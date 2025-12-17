@@ -8,9 +8,9 @@ var i = n(54381),
     c = n(594174),
     d = n(491302),
     u = n(936726),
-    p = n(981631),
-    m = n(388032),
-    b = n(246906);
+    m = n(981631),
+    b = n(388032),
+    p = n(434593);
 function g(e) {
     let {
             webhooks: t,
@@ -49,7 +49,7 @@ function g(e) {
             [x, f],
         );
     return (0, i.jsx)("div", {
-        className: b.__invalid_list,
+        className: p.__invalid_list,
         children: v.map((e) => {
             let { channel: t, webhooks: n } = e;
             return (function (e) {
@@ -68,13 +68,13 @@ function g(e) {
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: "text-md/medium",
-                                className: b.groupHeader,
-                                children: m.intl.format(m.t.TKDIZg, {
+                                className: p.groupHeader,
+                                children: b.intl.format(b.t.TKDIZg, {
                                     channelHook: () =>
                                         (0, i.jsx)(
                                             "span",
                                             {
-                                                className: b.channelName,
+                                                className: p.channelName,
                                                 children: (0, o.F6)(t, c.default, s.Z, !0),
                                             },
                                             t.id,
@@ -83,7 +83,7 @@ function g(e) {
                             }),
                             n.map((e) => {
                                 var t;
-                                return e.type === p.ylB.CHANNEL_FOLLOWER
+                                return e.type === m.ylB.CHANNEL_FOLLOWER
                                     ? (0, i.jsx)(
                                           d.Z,
                                           {

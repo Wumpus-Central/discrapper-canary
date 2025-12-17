@@ -20,7 +20,7 @@ var r = n(54381),
     Z = n(91159),
     w = n(217702),
     O = n(388032),
-    y = n(712335);
+    y = n(565365);
 function S(e) {
     return e.isActiveThread() ? (0, r.jsx)(N, { channel: e }) : (0, r.jsx)(C, { channel: e });
 }

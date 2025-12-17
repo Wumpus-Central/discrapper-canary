@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(131085),
     y = n(526761),
     O = n(388032),
-    v = n(999087);
+    v = n(149782);
 let S = (0, c.hQ)(),
     I = i.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: c } = e,
@@ -64,7 +64,7 @@ let S = (0, c.hQ)(),
                 },
                 [C],
             ),
-            D = i.useCallback(
+            w = i.useCallback(
                 (e) => {
                     var t;
                     if (null == e) return null;
@@ -81,7 +81,7 @@ let S = (0, c.hQ)(),
                 },
                 [C],
             ),
-            w = i.useCallback(
+            D = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
@@ -144,8 +144,8 @@ let S = (0, c.hQ)(),
                         isSelected: j,
                         options: P,
                         select: L,
-                        renderLeading: D,
-                        renderTrailing: w,
+                        renderLeading: w,
+                        renderTrailing: D,
                         renderOptionValue: x,
                         serialize: M,
                         clear: k,

@@ -3,14 +3,14 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(692547),
-    s = n(481060),
-    o = n(153867),
+    o = n(481060),
+    s = n(153867),
     c = n(906732),
     u = n(705262),
     d = n(210887),
     p = n(981631),
     f = n(388032),
-    g = n(932720);
+    g = n(969373);
 let h = function () {
     let { analyticsLocations: e } = (0, c.ZP)(),
         t = (0, l.e7)([d.Z], () => d.Z.theme),
@@ -18,10 +18,10 @@ let h = function () {
     i.useEffect(() => {
         null == n.current && (n.current = t);
     }, [t]);
-    let h = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
-        m = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
-        _ = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.MIDNIGHT),
-        b = i.useMemo(
+    let h = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
+        m = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
+        b = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.MIDNIGHT),
+        _ = i.useMemo(
             () => [
                 {
                     theme: p.BRd.LIGHT,
@@ -36,10 +36,10 @@ let h = function () {
                 {
                     theme: p.BRd.MIDNIGHT,
                     label: f.t.Do4ZJx,
-                    color: _.hex(),
+                    color: b.hex(),
                 },
             ],
-            [h, m, _],
+            [h, m, b],
         ),
         E = i.useCallback(
             (t) => {
@@ -48,7 +48,7 @@ let h = function () {
                     analyticsLocations: e,
                     themeName: "default ".concat(t),
                 }),
-                    (0, o.ZI)({ theme: t });
+                    (0, s.ZI)({ theme: t });
             },
             [e],
         ),
@@ -60,7 +60,7 @@ let h = function () {
         children: (0, r.jsxs)("div", {
             className: g.themeSelector,
             children: [
-                b.map((e) =>
+                _.map((e) =>
                     (0, r.jsxs)(
                         "button",
                         {
@@ -84,10 +84,10 @@ let h = function () {
                         e.theme,
                     ),
                 ),
-                (0, r.jsx)(s.hU, {
+                (0, r.jsx)(o.hU, {
                     onClick: O,
                     "aria-label": f.intl.string(f.t.yBZMsQ),
-                    icon: s.DuK,
+                    icon: o.DuK,
                     variant: "secondary",
                 }),
             ],

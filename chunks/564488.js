@@ -10,53 +10,53 @@ var r = n(54381),
     u = n(495892);
 let g = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: g = !1 } = e,
-        { hasChanges: m, editingRule: p, createNewEditingRule: f, setEditingRule: h } = (0, s.V)(),
-        { isLoading: b } = (0, s.w)(),
+        { hasChanges: f, editingRule: m, createNewEditingRule: b, setEditingRule: p } = (0, s.V)(),
+        { isLoading: h } = (0, s.w)(),
         [x] = i.useState(() => !(0, l.Vb)(t)),
-        j = (null == p ? void 0 : p.id) === t.id || n,
-        _ = (0, a.U)(null == t ? void 0 : t.id),
-        v = j && null != p ? p : t,
-        O = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
-        C = i.useCallback(() => {
-            f(t.guildId, t.triggerType);
-        }, [t.guildId, t.triggerType, f]),
-        y = i.useCallback(
+        j = (null == m ? void 0 : m.id) === t.id || n,
+        v = (0, a.U)(null == t ? void 0 : t.id),
+        O = j && null != m ? m : t,
+        C = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
+        y = i.useCallback(() => {
+            b(t.guildId, t.triggerType);
+        }, [t.guildId, t.triggerType, b]),
+        N = i.useCallback(
             (e) => {
-                b || h(e, !0);
+                h || p(e, !0);
             },
-            [b, h],
+            [h, p],
         );
     i.useEffect(() => {
-        g && h(t, !0);
-    }, [g, t, h]);
-    let N = i.useCallback(() => {
+        g && p(t, !0);
+    }, [g, t, p]);
+    let E = i.useCallback(() => {
         j
-            ? m || h(null)
-            : m
-              ? O(() => {
-                    h(t);
+            ? f || p(null)
+            : f
+              ? C(() => {
+                    p(t);
                 })
-              : h(t);
-    }, [j, m, O, t, h]);
+              : p(t);
+    }, [j, f, C, t, p]);
     return (0, r.jsx)(d.Z, {
         renderHeader: (0, r.jsx)(u.Z, {
-            rule: v,
-            forceSetup: x && !j && !_,
+            rule: O,
+            forceSetup: x && !j && !v,
             triggerType: t.triggerType,
             isEditMode: j,
-            isDefaultRule: _,
-            onChangeRule: y,
-            onSetupRule: C,
+            isDefaultRule: v,
+            onChangeRule: N,
+            onSetupRule: y,
         }),
-        isStuck: j && m,
+        isStuck: j && f,
         isExpanded: j,
-        onExpand: N,
+        onExpand: E,
         children:
             j &&
             (0, r.jsx)(c.Z, {
-                rule: v,
-                isLoading: b,
-                onChangeRule: y,
+                rule: O,
+                isLoading: h,
+                onChangeRule: N,
             }),
     });
 });

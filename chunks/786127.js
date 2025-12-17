@@ -14,10 +14,10 @@ let s = function (e) {
             onEdit: d,
             onRemove: u,
             canRemove: g,
-            actionsLocation: m,
-            fieldStyle: p,
+            actionsLocation: f,
+            fieldStyle: m,
         } = e,
-        { label: f, placeholder: h } = t;
+        { label: b, placeholder: p } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
@@ -26,12 +26,12 @@ let s = function (e) {
         onDrop: c,
         onEdit: d,
         onRemove: u,
-        title: f,
+        title: b,
         canRemove: g,
-        actionsLocation: m,
-        fieldStyle: p,
+        actionsLocation: f,
+        fieldStyle: m,
         children: (0, r.jsx)(i.Gi, {
-            placeholder: null != h ? h : a.intl.string(a.t["Sqn+Wh"]),
+            placeholder: null != p ? p : a.intl.string(a.t["Sqn+Wh"]),
             disabled: !0,
         }),
     });

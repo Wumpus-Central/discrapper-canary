@@ -129,10 +129,10 @@ function P(e) {
 function R(e) {
     return h(e, p);
 }
-function D(e) {
+function w(e) {
     return l && h(e, _);
 }
-function w(e) {
+function D(e) {
     return c && h(e, m);
 }
 (t.isSharedArrayBuffer = A),
@@ -154,10 +154,10 @@ function w(e) {
     (t.isNumberObject = N),
     (t.isStringObject = P),
     (t.isBooleanObject = R),
-    (t.isBigIntObject = D),
-    (t.isSymbolObject = w),
+    (t.isBigIntObject = w),
+    (t.isSymbolObject = D),
     (t.isBoxedPrimitive = function (e) {
-        return N(e) || P(e) || R(e) || D(e) || w(e);
+        return N(e) || P(e) || R(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return "undefined" != typeof Uint8Array && (v(e) || A(e));

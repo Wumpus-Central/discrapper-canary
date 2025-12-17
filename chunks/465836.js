@@ -10,7 +10,7 @@ var o = n(703558),
     u = n(474936),
     f = n(981631),
     d = n(388032),
-    p = n(330226);
+    p = n(391853);
 function b(t) {
     var { channel: e, onClose: n, content: b } = t,
         g = (function (t, e) {

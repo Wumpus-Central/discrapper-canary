@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(314940);
+n.d(t, { Z: () => O }), n(314940);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -13,7 +13,7 @@ var r = n(54381),
     m = n(388032),
     g = n(176404),
     b = n(223223);
-function h(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,36 +76,36 @@ function j(e, t) {
     }
     return i;
 }
-let P = () => 80,
-    y = (e) => {
+let y = () => 80,
+    P = (e) => {
         var { children: t, className: n, isSelected: i = !1 } = e,
             l = j(e, ["children", "className", "isSelected"]);
         return (0, r.jsx)(
             c.P3F,
-            x(h({ className: o()(g.effectGridItem, n, { [g.selected]: i }) }, l), {
+            h(x({ className: o()(g.effectGridItem, n, { [g.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t,
             }),
         );
     },
-    O = (e) => {
+    v = (e) => {
         var t,
             { profileEffect: n, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
             d = j(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
         let m = (0, f.V)(n.skuId),
-            P = i.useRef(null),
+            y = i.useRef(null),
             {
-                accessibilityLabel: O,
-                thumbnailPreviewSrc: v,
+                accessibilityLabel: v,
+                thumbnailPreviewSrc: O,
                 title: E,
             } = null != (t = null == m ? void 0 : m.config) ? t : {},
-            C = i.useMemo(() => (0, a.JE)(v), [v]);
+            C = i.useMemo(() => (0, a.JE)(O), [O]);
         return (0, r.jsxs)(
-            y,
-            x(
-                h(
+            P,
+            h(
+                x(
                     {
-                        innerRef: null != l ? l : P,
+                        innerRef: null != l ? l : y,
                         isSelected: s,
                     },
                     d,
@@ -114,7 +114,7 @@ let P = () => 80,
                     children: [
                         (0, r.jsx)("img", {
                             src: b,
-                            alt: O,
+                            alt: v,
                             className: g.presetEffectBackground,
                         }),
                         (0, r.jsx)("img", {
@@ -133,7 +133,7 @@ let P = () => 80,
             ),
         );
     },
-    v = (e) => {
+    O = (e) => {
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
             u = (0, p.ZP)(),
             f = null != i,
@@ -152,14 +152,14 @@ let P = () => 80,
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, t, d, x) => {
-                    let { section: j, items: P } = u[e];
-                    return (0, s.EQ)(P[t])
+                renderItem: (e, t, d, h) => {
+                    let { section: j, items: y } = u[e];
+                    return (0, s.EQ)(y[t])
                         .with(p.Tm, () =>
                             (0, r.jsxs)(
-                                y,
+                                P,
                                 {
-                                    style: h({}, d),
+                                    style: x({}, d),
                                     isSelected: !f,
                                     onSelect: () => o(null),
                                     children: [
@@ -175,12 +175,12 @@ let P = () => 80,
                                         }),
                                     ],
                                 },
-                                x,
+                                h,
                             ),
                         )
                         .with(p.oT, () =>
                             (0, r.jsxs)(
-                                y,
+                                P,
                                 {
                                     style: d,
                                     onSelect: a,
@@ -199,15 +199,15 @@ let P = () => 80,
                                         }),
                                     ],
                                 },
-                                x,
+                                h,
                             ),
                         )
                         .otherwise((e) => {
                             let t = (null == i ? void 0 : i.skuId) === e.skuId;
                             return (0, r.jsx)(
-                                O,
+                                v,
                                 {
-                                    style: h({}, d),
+                                    style: x({}, d),
                                     section: j,
                                     profileEffect: e,
                                     innerRef: t ? l : void 0,
@@ -215,14 +215,14 @@ let P = () => 80,
                                     onSelect: () => o(e),
                                     canUsePremiumCollectibles: b,
                                 },
-                                x,
+                                h,
                             );
                         });
                 },
                 renderSection: (e, t) => {
                     let { header: n } = u[e];
                     return (0, r.jsx)("div", {
-                        style: x(h({}, t), {
+                        style: h(x({}, t), {
                             height: "".concat(16, "px"),
                             position: "absolute",
                         }),
@@ -234,7 +234,7 @@ let P = () => 80,
                 },
                 getSectionHeight: () => 16,
                 getItemKey: (e, t) => u[e].items[t].skuId,
-                getItemHeight: P,
+                getItemHeight: y,
                 removeEdgeItemGutters: !0,
             }),
         });

@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(43085),
     p = n(981631),
     _ = n(388032),
-    m = n(132045);
+    m = n(459710);
 function h(e, t, n) {
     return (
         t in e
@@ -117,8 +117,8 @@ function I(e, t) {
         A = (0, s.JA)(n),
         { onFocus: N } = A,
         P = y(A, ["onFocus"]),
-        { handleFocus: R, handleBlur: D } = (0, f.b)(N),
-        w = 0 === C,
+        { handleFocus: R, handleBlur: w } = (0, f.b)(N),
+        D = 0 === C,
         x = null != E,
         L = (e) => {
             if (v) {
@@ -147,7 +147,7 @@ function I(e, t) {
             "li",
             b(g({}, P), {
                 onFocus: R,
-                onBlur: D,
+                onBlur: w,
                 onKeyDown: L,
                 className: o()(m.upload, a, { [m.sizeClip]: 2 === C }),
                 ref: t,
@@ -159,11 +159,11 @@ function I(e, t) {
                             ? (0, r.jsx)("div", {
                                   className: m.actionBarContainer,
                                   children: (0, r.jsx)("div", {
-                                      className: o()(m.actionBar, { [m.smallActionBar]: w }),
+                                      className: o()(m.actionBar, { [m.smallActionBar]: D }),
                                       onContextMenu: S,
                                       "aria-label": _.intl.string(_.t["8Lu3Du"]),
                                       children: (0, r.jsx)(u.ZP, {
-                                          className: o()({ [m.miniPopover]: w }),
+                                          className: o()({ [m.miniPopover]: D }),
                                           children: E,
                                       }),
                                   }),

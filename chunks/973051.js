@@ -1,17 +1,17 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     o = n(399606),
-    l = n(481060),
-    s = n(367907),
-    a = n(863249),
+    a = n(481060),
+    l = n(367907),
+    s = n(863249),
     c = n(944163),
     d = n(454585),
     u = n(626135),
     p = n(981631),
-    m = n(388032),
-    f = n(802179);
-function g(e) {
+    f = n(388032),
+    m = n(613438);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,17 +54,17 @@ function h(e, t) {
         e
     );
 }
-function x(e) {
+function h(e) {
     var t;
     let {
             guild: n,
-            prompts: x,
-            completeOnboarding: _,
-            setCurrentStep: b,
-            disableTracking: v,
-            previousPromptIndex: O,
+            prompts: h,
+            completeOnboarding: x,
+            setCurrentStep: v,
+            disableTracking: O,
+            previousPromptIndex: j,
         } = e,
-        j = i.useRef(null),
+        _ = i.useRef(null),
         y = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
         [N, P] = i.useState(null != (t = null == y ? void 0 : y.response) && t),
         C = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
@@ -73,14 +73,14 @@ function x(e) {
         I = i.useCallback(async () => {
             if (null != C && null != y) {
                 try {
-                    await a.ZP.submitVerificationForm(
+                    await s.ZP.submitVerificationForm(
                         n.id,
-                        h(g({}, C), { formFields: [h(g({}, y), { response: N })] }),
+                        g(b({}, C), { formFields: [g(b({}, y), { response: N })] }),
                     );
                 } catch (e) {}
-                _();
+                x();
             }
-        }, [n.id, C, y, N, _]);
+        }, [n.id, C, y, N, x]);
     function Z(e) {
         let [t] = e;
         t.isIntersecting && P(!0);
@@ -102,41 +102,41 @@ function x(e) {
     null == y)
         ? null
         : (0, r.jsx)("div", {
-              className: f.prompt,
+              className: m.prompt,
               children: (0, r.jsxs)("div", {
-                  className: f.promptContent,
+                  className: m.promptContent,
                   ref: E,
                   children: [
-                      (0, r.jsxs)(l.h21, {
-                          className: f.scrollerContent,
-                          ref: j,
+                      (0, r.jsxs)(a.h21, {
+                          className: m.scrollerContent,
+                          ref: _,
                           children: [
-                              (0, r.jsx)(l.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: m.intl.string(m.t["b1JC+l"]),
+                                  children: f.intl.string(f.t["b1JC+l"]),
                               }),
-                              (0, r.jsx)(l.Heading, {
+                              (0, r.jsx)(a.Heading, {
                                   variant: "heading-xl/semibold",
-                                  children: m.intl.string(m.t.prJqwT),
+                                  children: f.intl.string(f.t.prJqwT),
                               }),
                               (0, r.jsx)("div", {
-                                  className: f.termsFieldBody,
+                                  className: m.termsFieldBody,
                                   ref: D,
                                   children: y.values.map((e, t) =>
                                       (0, r.jsxs)(
                                           "div",
                                           {
-                                              className: f.termsRow,
+                                              className: m.termsRow,
                                               children: [
-                                                  (0, r.jsx)(l.Text, {
+                                                  (0, r.jsx)(a.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "text-muted",
                                                       children: "".concat(t + 1, "."),
                                                   }),
-                                                  (0, r.jsx)(l.Text, {
+                                                  (0, r.jsx)(a.Text, {
                                                       variant: "text-sm/normal",
-                                                      className: f.termsRowContent,
+                                                      className: m.termsRowContent,
                                                       children: d.Z.parseGuildVerificationFormRule(e, !0, {
                                                           channelId: n.rulesChannelId,
                                                       }),
@@ -149,24 +149,24 @@ function x(e) {
                               }),
                           ],
                       }),
-                      (0, r.jsx)("div", { className: f.overlay }),
+                      (0, r.jsx)("div", { className: m.overlay }),
                       (0, r.jsxs)("div", {
-                          className: f.navButtons,
+                          className: m.navButtons,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: f.leftButtons,
+                                  className: m.leftButtons,
                                   children:
-                                      -1 !== O &&
-                                      "cover" !== O &&
-                                      (0, r.jsx)(l.Button, {
+                                      -1 !== j &&
+                                      "cover" !== j &&
+                                      (0, r.jsx)(a.Button, {
                                           variant: "secondary",
                                           size: "md",
-                                          text: m.intl.string(m.t["13/7kX"]),
+                                          text: f.intl.string(f.t["13/7kX"]),
                                           onClick: () => {
-                                              !v &&
+                                              !O &&
                                                   (u.default.track(
                                                       p.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                                                      h(g({}, (0, s.hH)(n.id)), {
+                                                      g(b({}, (0, l.hH)(n.id)), {
                                                           step: -1,
                                                           skipped: !1,
                                                           back: !0,
@@ -175,34 +175,34 @@ function x(e) {
                                                           is_final_step: !1,
                                                       }),
                                                   ),
-                                                  "number" == typeof O &&
-                                                      O >= 0 &&
+                                                  "number" == typeof j &&
+                                                      j >= 0 &&
                                                       u.default.track(
                                                           p.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-                                                          h(g({}, (0, s.hH)(n.id)), {
-                                                              step: O,
-                                                              required: x[O].required,
+                                                          g(b({}, (0, l.hH)(n.id)), {
+                                                              step: j,
+                                                              required: h[j].required,
                                                           }),
                                                       )),
-                                                  b(O);
+                                                  v(j);
                                           },
-                                          icon: l.j9r,
+                                          icon: a.j9r,
                                           iconPosition: "start",
                                       }),
                               }),
                               (0, r.jsxs)("div", {
-                                  className: f.rightButtons,
+                                  className: m.rightButtons,
                                   children: [
-                                      (0, r.jsx)(l.Text, {
-                                          className: f.helpText,
+                                      (0, r.jsx)(a.Text, {
+                                          className: m.helpText,
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: N ? m.intl.string(m.t.arAe3I) : m.intl.string(m.t.D0CVAc),
+                                          children: N ? f.intl.string(f.t.arAe3I) : f.intl.string(f.t.D0CVAc),
                                       }),
-                                      (0, r.jsx)(l.Button, {
+                                      (0, r.jsx)(a.Button, {
                                           variant: "primary",
                                           size: "md",
-                                          text: "".concat(m.intl.string(m.t["8SuVoE"]), " \uD83C\uDF89"),
+                                          text: "".concat(f.intl.string(f.t["8SuVoE"]), " \uD83C\uDF89"),
                                           onClick: I,
                                           disabled: !N,
                                       }),

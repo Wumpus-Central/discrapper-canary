@@ -1,11 +1,11 @@
-r.r(t), r.d(t, { default: () => j });
+r.r(t), r.d(t, { default: () => O });
 var n = r(54381),
     o = r(473749),
     i = r(120356),
     c = r.n(i),
-    s = r(167490),
-    u = r(505609),
-    a = r(417154);
+    a = r(167490),
+    s = r(505609),
+    u = r(585018);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -31,7 +31,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -49,31 +49,31 @@ function f(e, t) {
         e
     );
 }
-function l() {
-    return (0, n.jsx)("div", { className: a.customPointer });
+function f() {
+    return (0, n.jsx)("div", { className: u.customPointer });
 }
-function b() {
-    return (0, n.jsx)("div", { className: c()(a.customPointer, a.huePointer) });
+function d() {
+    return (0, n.jsx)("div", { className: c()(u.customPointer, u.huePointer) });
 }
-let O = (0, s.iS)((e) =>
+let l = (0, a.iS)((e) =>
         (0, n.jsxs)("div", {
-            className: a.pickerWrapper,
+            className: u.pickerWrapper,
             children: [
                 (0, n.jsx)("div", {
-                    className: a.saturation,
-                    children: (0, n.jsx)(u.Saturation, f(p({}, e), { pointer: l })),
+                    className: u.saturation,
+                    children: (0, n.jsx)(s.Saturation, b(p({}, e), { pointer: f })),
                 }),
                 (0, n.jsx)("div", {
-                    className: a.hue,
+                    className: u.hue,
                     children: (0, n.jsx)(
-                        u.Hue,
-                        f(p({}, e), {
+                        s.Hue,
+                        b(p({}, e), {
                             direction: "horizontal",
-                            pointer: b,
+                            pointer: d,
                         }),
                     ),
                 }),
             ],
         }),
     ),
-    j = o.memo(O);
+    O = o.memo(l);

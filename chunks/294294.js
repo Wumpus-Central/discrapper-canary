@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(512722),
@@ -10,7 +10,7 @@ var i = n(512722),
     d = n(909656),
     u = n(430824),
     g = n(388032);
-function m(e) {
+function f(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
     return (

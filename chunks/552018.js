@@ -937,7 +937,7 @@ class P extends o.C {
     }
 }
 let R = new P();
-class D extends o.C {
+class w extends o.C {
     create(e) {
         let t = {
             isoCountry: "",
@@ -999,7 +999,7 @@ class D extends o.C {
         ]);
     }
 }
-let w = new D();
+let D = new w();
 class x extends o.C {
     create(e) {
         let t = { location: { oneofKind: void 0 } };
@@ -1021,7 +1021,7 @@ class x extends o.C {
                 case 1:
                     a.location = {
                         oneofKind: "isoRegion",
-                        isoRegion: w.internalBinaryRead(e, e.uint32(), n, a.location.isoRegion),
+                        isoRegion: D.internalBinaryRead(e, e.uint32(), n, a.location.isoRegion),
                     };
                     break;
                 case 2:
@@ -1050,7 +1050,7 @@ class x extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         "isoRegion" === e.location.oneofKind &&
-            w.internalBinaryWrite(e.location.isoRegion, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
+            D.internalBinaryWrite(e.location.isoRegion, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             "isEu" === e.location.oneofKind && t.tag(2, r.TD.Varint).bool(e.location.isEu),
             "place" === e.location.oneofKind &&
                 R.internalBinaryWrite(e.location.place, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
@@ -1064,7 +1064,7 @@ class x extends o.C {
                 name: "iso_region",
                 kind: "message",
                 oneof: "location",
-                T: () => w,
+                T: () => D,
             },
             {
                 no: 2,
@@ -1267,7 +1267,7 @@ class G extends o.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.ranges.push(F.internalBinaryRead(e, e.uint32(), n));
+                    a.ranges.push(B.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     a.workAroundPyotoBug = e.bool();
@@ -1286,7 +1286,7 @@ class G extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.ranges.length; i++)
-            F.internalBinaryWrite(e.ranges[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+            B.internalBinaryWrite(e.ranges[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         !1 !== e.workAroundPyotoBug && t.tag(2, r.TD.Varint).bool(e.workAroundPyotoBug);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -1298,7 +1298,7 @@ class G extends o.C {
                 name: "ranges",
                 kind: "message",
                 repeat: 1,
-                T: () => F,
+                T: () => B,
             },
             {
                 no: 2,
@@ -1310,7 +1310,7 @@ class G extends o.C {
     }
 }
 let Z = new G();
-class B extends o.C {
+class F extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1369,7 +1369,7 @@ class B extends o.C {
         ]);
     }
 }
-let F = new B();
+let B = new F();
 class V extends o.C {
     create(e) {
         let t = { inclusive: !1 };

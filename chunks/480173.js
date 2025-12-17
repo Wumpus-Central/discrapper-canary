@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     r = n(473749),
-    i = n(442837),
-    l = n(28664),
+    l = n(442837),
+    i = n(28664),
     s = n(481060),
     o = n(607070),
     c = n(7093),
@@ -11,7 +11,7 @@ var a = n(54381),
     m = n(679363);
 let p = r.lazy(() => n.e("979").then(n.bind(n, 739859)));
 function h() {
-    let e = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+    let e = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         t = (0, c.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, d.Z)();
     return e || !t || null == n ? null : (0, a.jsx)(f, { levelUpData: n });
@@ -19,11 +19,11 @@ function h() {
 function f(e) {
     let { levelUpData: t } = e,
         n = r.useRef(null),
-        i = r.useCallback(() => {
+        l = r.useCallback(() => {
             c.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        r.useEffect(() => i, [i]),
+        r.useEffect(() => l, [l]),
         (0, a.jsx)(s.EqS, {
             containerRef: n,
             children: (0, a.jsxs)("div", {
@@ -31,13 +31,13 @@ function f(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: m.closeButton,
-                        children: (0, a.jsx)(l.u, {
+                        children: (0, a.jsx)(i.u, {
                             text: u.intl.string(u.t.cpT0Cq),
                             children: (0, a.jsx)(s.hU, {
                                 icon: s.Dio,
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: i,
+                                onClick: l,
                                 "aria-label": u.intl.string(u.t.cpT0Cq),
                             }),
                         }),

@@ -1,14 +1,14 @@
 t.d(n, {
-    H: () => p,
-    v: () => f,
+    H: () => m,
+    v: () => p,
 });
 var l = t(54381),
     i = t(473749),
     o = t(481060),
     r = t(493683),
-    s = t(732380),
-    a = t(228168),
-    c = t(388032);
+    a = t(475413),
+    c = t(228168),
+    s = t(388032);
 function d(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -54,45 +54,45 @@ function u(e, n) {
     }
     return i;
 }
-function m(e) {
+function f(e) {
     let { userId: n, onClose: t } = e,
         l = i.useCallback(() => {
             r.Z.openPrivateChannel({ recipientIds: n }), null == t || t(), (0, o.pTH)();
         }, [n, t]);
     return {
-        action: a.yM.SEND_MESSAGE,
+        action: c.yM.SEND_MESSAGE,
         icon: o.kBi,
         onClick: l,
-        text: c.intl.string(c.t.zROXEV),
+        text: s.intl.string(s.t.zROXEV),
     };
+}
+function m(e) {
+    var { userId: n, onClose: t, variant: i = "primary" } = e,
+        o = u(e, ["userId", "onClose", "variant"]);
+    let r = f({
+        userId: n,
+        onClose: t,
+    });
+    return (0, l.jsx)(a.i6, d({ variant: i }, r, o));
 }
 function p(e) {
     var { userId: n, onClose: t, variant: i = "primary" } = e,
         o = u(e, ["userId", "onClose", "variant"]);
-    let r = m({
-        userId: n,
-        onClose: t,
-    });
-    return (0, l.jsx)(s.O1, d({ variant: i }, r, o));
-}
-function f(e) {
-    var { userId: n, onClose: t, variant: i = "primary" } = e,
-        o = u(e, ["userId", "onClose", "variant"]);
-    let r = m({
+    let r = f({
             userId: n,
             onClose: t,
         }),
-        { text: a } = r,
-        c = u(r, ["text"]);
+        { text: c } = r,
+        s = u(r, ["text"]);
     return (0, l.jsx)(
-        s.pt,
+        a.ef,
         d(
             {
-                tooltipText: a,
-                "aria-label": a,
+                tooltipText: c,
+                "aria-label": c,
                 variant: i,
             },
-            c,
+            s,
             o,
         ),
     );

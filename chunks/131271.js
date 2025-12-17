@@ -202,7 +202,7 @@ var h = {
     R = function (e) {
         return Array.isArray(e) ? e.join("") : e;
     },
-    D = function (e, t) {
+    w = function (e, t) {
         return Array.isArray(e)
             ? e.reduce(
                   function (e, n) {
@@ -224,7 +224,7 @@ var h = {
               )
             : { default: e };
     },
-    w = function (e, t) {
+    D = function (e, t) {
         var n;
         return f({}, e, (((n = {})[t] = void 0), n));
     },
@@ -353,9 +353,9 @@ var h = {
                 var t = e.linkTags,
                     n = e.scriptTags,
                     r = e.encode,
-                    i = D(e.metaTags, b),
-                    a = D(t, g),
-                    o = D(n, E);
+                    i = w(e.metaTags, b),
+                    a = w(t, g),
+                    o = w(n, E);
                 return {
                     priorityMethods: {
                         toComponent: function () {
@@ -399,7 +399,7 @@ var h = {
         };
     },
     Z = [],
-    B = function (e, t) {
+    F = function (e, t) {
         var n = this;
         void 0 === t && (t = "undefined" != typeof document),
             (this.instances = []),
@@ -437,7 +437,7 @@ var h = {
                     titleAttributes: {},
                 }));
     },
-    F = r.createContext({}),
+    B = r.createContext({}),
     V = a().shape({
         setHelmet: a().func,
         helmetInstances: a().shape({
@@ -450,12 +450,12 @@ var h = {
     Y = (function (e) {
         function t(n) {
             var r;
-            return ((r = e.call(this, n) || this).helmetData = new B(r.props.context, t.canUseDOM)), r;
+            return ((r = e.call(this, n) || this).helmetData = new F(r.props.context, t.canUseDOM)), r;
         }
         return (
             p(t, e),
             (t.prototype.render = function () {
-                return r.createElement(F.Provider, { value: this.helmetData.value }, this.props.children);
+                return r.createElement(B.Provider, { value: this.helmetData.value }, this.props.children);
             }),
             t
         );
@@ -645,7 +645,7 @@ var X = ["children"],
         var n = t.prototype;
         return (
             (n.shouldComponentUpdate = function (e) {
-                return !s()(w(this.props, "helmetData"), w(e, "helmetData"));
+                return !s()(D(this.props, "helmetData"), D(e, "helmetData"));
             }),
             (n.mapNestedChildrenToProps = function (e, t) {
                 if (!t) return null;
@@ -786,7 +786,7 @@ var X = ["children"],
                     a = n.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !a || a instanceof B || (a = new B(a.context, a.instances)),
+                    !a || a instanceof F || (a = new F(a.context, a.instances)),
                     a
                         ? r.createElement(
                               Q,
@@ -795,7 +795,7 @@ var X = ["children"],
                                   helmetData: void 0,
                               }),
                           )
-                        : r.createElement(F.Consumer, null, function (e) {
+                        : r.createElement(B.Consumer, null, function (e) {
                               return r.createElement(Q, f({}, i, { context: e }));
                           })
                 );

@@ -27,11 +27,11 @@ var r = n(54381),
     N = n(134795),
     P = n(451392),
     R = n(490220),
-    D = n(981631),
-    w = n(474936),
+    w = n(981631),
+    D = n(474936),
     x = n(526761),
     L = n(388032),
-    j = n(553330);
+    j = n(691496);
 function M(e, t, n) {
     return (
         t in e
@@ -87,8 +87,8 @@ function G(e, t) {
 function Z(e) {
     var t, n;
     let { user: M, isVisible: U, shouldShow: Z } = e,
-        B = S.ZP.isPremium(M),
-        F = S.ZP.canUseAnimatedAvatar(M),
+        F = S.ZP.isPremium(M),
+        B = S.ZP.canUseAnimatedAvatar(M),
         {
             pendingAvatar: V,
             pendingThemeColors: H,
@@ -113,21 +113,21 @@ function Z(e) {
                 ((0, s.I5)(W),
                 (0, b.z5)(Y),
                 (0, b.ho)(K),
-                v.default.track(D.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: z }));
+                v.default.track(w.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: z }));
         };
     i.useEffect(() => {
         U &&
-            v.default.track(D.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: w.cd.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: D.ZY5.USER_SETTINGS },
+            v.default.track(w.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: D.cd.PREMIUM_PROFILE_TRY_IT_OUT,
+                location: { page: w.ZY5.USER_SETTINGS },
                 location_stack: $,
             });
     }, [$, M, U]);
-    let et = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === w.Si.TIER_2,
+    let et = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === D.Si.TIER_2,
         en = (0, u.N)(),
-        er = (0, _.Wp)(en, w.Si.TIER_2),
+        er = (0, _.Wp)(en, D.Si.TIER_2),
         ei = () =>
-            B
+            F
                 ? L.intl.string(L.t.AfRWI8)
                 : er
                   ? L.intl.formatToPlainString(L.t.bkQ4bH, { percent: null == en ? void 0 : en.discount.amount })
@@ -198,7 +198,7 @@ function Z(e) {
                                       onBannerChange: b.f4,
                                       showPremiumIcon: !1,
                                   }),
-                                  !F &&
+                                  !B &&
                                       (0, r.jsx)(T.Z, {
                                           className: j.customizationSection,
                                           isTryItOut: !0,
@@ -241,8 +241,8 @@ function Z(e) {
                               children: [
                                   (0, r.jsx)("div", { className: j.premiumTier2Divider }),
                                   (0, r.jsx)(h.ZP, {
-                                      type: w.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: w.Si.TIER_2,
+                                      type: D.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                      subscriptionTier: D.Si.TIER_2,
                                   }),
                               ],
                           }),

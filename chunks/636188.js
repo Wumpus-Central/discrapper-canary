@@ -25,7 +25,7 @@ var r = n(54381),
     C = n(486324),
     A = n(474936),
     N = n(388032),
-    P = n(199306);
+    P = n(859554);
 function R(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -210,7 +210,7 @@ function G(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        x(D({}, n), {
+                        x(w({}, n), {
                             backgroundOption: t,
                             optionIsInUse: a,
                         }),
@@ -257,7 +257,7 @@ function Z() {
         ],
     });
 }
-function B(e) {
+function F(e) {
     let { onClick: t, tooltipText: n, disabled: i = !1 } = e,
         a = (0, s.e7)([g.Z], () => g.Z.hasHotspot(T.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function o() {
@@ -304,7 +304,7 @@ function B(e) {
         }),
     });
 }
-function F(e) {
+function B(e) {
     let { onClick: t } = e,
         n = (0, d.O)(),
         { analyticsLocations: i } = (0, _.ZP)(p.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
@@ -316,7 +316,7 @@ function F(e) {
                 location_stack: i,
             });
         }),
-        (0, r.jsx)(B, {
+        (0, r.jsx)(F, {
             onClick: t,
             tooltipText: N.intl.string(N.t["IqE0T/"]),
         })
@@ -330,13 +330,13 @@ function V(e) {
     function l() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(
+                let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("32603")]).then(
                     n.bind(n, 28130),
                 );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        D(
+                        w(
                             {
                                 maxFileSizeBytes: S.SJ,
                                 onComplete: (e) => {
@@ -357,7 +357,7 @@ function V(e) {
             { contextKey: a },
         );
     }
-    return (0, r.jsx)(B, {
+    return (0, r.jsx)(F, {
         disabled: i,
         onClick: l,
         tooltipText: o,
@@ -408,7 +408,7 @@ function H(e) {
                           onAddBackgroundImage: d,
                           disabled: h,
                       })
-                    : (0, r.jsx)(F, { onClick: u }),
+                    : (0, r.jsx)(B, { onClick: u }),
                 m.map((e) => {
                     let t = (0, b.rI)({
                         userId: e.user_id,

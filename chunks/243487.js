@@ -32,15 +32,15 @@ var r = n(54381),
     N = n(136015),
     P = n(426563),
     R = n(444295),
-    D = n(804570),
-    w = n(610394),
+    w = n(804570),
+    D = n(610394),
     x = n(388627),
     L = n(532658),
     j = n(501787),
     M = n(981631),
     k = n(65154),
     U = n(388032),
-    G = n(213285);
+    G = n(864570);
 function Z(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function Z(e, t, n) {
         e
     );
 }
-function B(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function B(e) {
     }
     return e;
 }
-function F(e, t) {
+function B(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,7 +87,7 @@ function V(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : B(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -185,13 +185,13 @@ let K = i.memo(function (e) {
     let N = () =>
             d || !_
                 ? null
-                : (0, r.jsx)(D.E, {
+                : (0, r.jsx)(w.E, {
                       emptyText: U.intl.string(U.t.hEh0l1),
                       icon: l.gj8,
                   }),
         P = y !== j.Og ? S.slice(0, y) : S,
-        w = y !== j.Og ? S.slice(y) : [],
-        x = v.get(w[0]),
+        D = y !== j.Og ? S.slice(y) : [],
+        x = v.get(D[0]),
         Z = u === M.OYC.ALWAYS && y !== j.Og;
     return I
         ? (0, r.jsxs)("div", {
@@ -220,7 +220,7 @@ let K = i.memo(function (e) {
                             );
                   }),
                   Z &&
-                      1 === w.length &&
+                      1 === D.length &&
                       null != x &&
                       (0, r.jsx)(
                           L.ZP,
@@ -237,12 +237,12 @@ let K = i.memo(function (e) {
                               displayUserMode: u,
                               locked: d,
                           },
-                          w[0],
+                          D[0],
                       ),
                   Z &&
-                      w.length > 1 &&
+                      D.length > 1 &&
                       (0, r.jsx)(Y, {
-                          hiddenVoiceStates: w,
+                          hiddenVoiceStates: D,
                           voiceStateMap: v,
                           size: (0, L.px)(b),
                           locked: d,
@@ -327,19 +327,19 @@ function q(e) {
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
         c = (0, x.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
-        _ = (0, s.cj)([E.Z, C.default, w.Z], () => {
+        _ = (0, s.cj)([E.Z, C.default, D.Z], () => {
             let e = E.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: C.default.getDisplayUserMode(),
                 displayNameMode: C.default.getDisplayNameMode(),
                 avatarSizeMode: C.default.getAvatarSizeMode(),
-                streamApplication: (null == l ? void 0 : l.pid) === w.Z.getTargetPID() ? (0, p.Z)(c) : null,
+                streamApplication: (null == l ? void 0 : l.pid) === D.Z.getTargetPID() ? (0, p.Z)(c) : null,
                 stream: e,
             };
         });
     return (0, r.jsx)(
         K,
-        V(B(V(B({}, _), { application: d }), e), {
+        V(F(V(F({}, _), { application: d }), e), {
             overlayVoiceStates: o,
             channel: i,
             guildId: null == i ? void 0 : i.guild_id,

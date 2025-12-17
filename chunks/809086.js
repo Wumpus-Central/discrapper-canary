@@ -74,13 +74,13 @@ function g(e) {
         l = c(e, ["listing", "aspectRatio", "height"]);
     let u = (i - 2 * d) * n,
         g = (0, a.U)(t, u),
-        m = (0, a.U)(t, u, { shouldAnimate: !1 });
+        f = (0, a.U)(t, u, { shouldAnimate: !1 });
     return (0, r.jsx)(
         s.Z,
         o(
             {
                 src: g,
-                backgroundSrc: m,
+                backgroundSrc: f,
                 aspectRatio: n,
             },
             l,

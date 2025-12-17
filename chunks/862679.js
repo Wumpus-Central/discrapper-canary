@@ -21,8 +21,8 @@ let d = function (e) {
             secondaryButtonText: C,
             onSecondaryButtonClick: y,
             children: v,
-            useReducedMotion: O = !1,
-            buttonVariant: x,
+            useReducedMotion: x = !1,
+            buttonVariant: O,
         } = e,
         E = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (l.tq && E) return null;
@@ -38,7 +38,7 @@ let d = function (e) {
             : null != b &&
               (j = (0, i.jsx)(o.Fmz, {
                   importData: b,
-                  shouldAnimate: !O,
+                  shouldAnimate: !x,
                   className: u.animation,
               })),
         (0, i.jsxs)("div", {
@@ -84,7 +84,7 @@ let d = function (e) {
                                 children: (0, i.jsx)(o.Button, {
                                     text: p,
                                     size: "sm",
-                                    variant: null != x ? x : "secondary",
+                                    variant: null != O ? O : "secondary",
                                     onClick: m,
                                     loading: h,
                                     icon: f,

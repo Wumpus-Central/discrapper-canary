@@ -4,8 +4,8 @@ n(473749);
 var i = n(243814),
     l = n(95015),
     a = n(45792),
-    s = n(481060),
-    o = n(278323),
+    o = n(481060),
+    s = n(278323),
     c = n(24124),
     u = n(224706),
     d = n(45114),
@@ -14,8 +14,8 @@ var i = n(243814),
     g = n(566620),
     h = n(531826),
     m = n(596223),
-    _ = n(838195),
-    b = n(333861),
+    b = n(838195),
+    _ = n(333861),
     E = n(728285),
     O = n(928518),
     v = n(23750),
@@ -57,7 +57,7 @@ async function U(e, t, n, r) {
             );
         });
     }
-    await o.Z.sendActivityInviteUser({
+    await s.Z.sendActivityInviteUser({
         userId: n,
         type: r,
         activity: l,
@@ -143,17 +143,17 @@ let G = {
         handler(e) {
             let {
                     socket: t,
-                    args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a, application_id: s },
+                    args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a, application_id: o },
                 } = e,
-                o = t.transport === D.He.IPC && null != s ? s : t.application.id;
-            if (null == o) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No application.");
+                s = t.transport === D.He.IPC && null != o ? o : t.application.id;
+            if (null == s) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No application.");
             let c = Promise.resolve(!1);
             return (
                 n === M.mFx.JOIN &&
                     (c = u.Z.join({
                         userId: r,
                         sessionId: i,
-                        applicationId: o,
+                        applicationId: s,
                         channelId: l,
                         messageId: a,
                     })),
@@ -171,7 +171,7 @@ let G = {
             let { socket: t } = e,
                 i = t.application;
             if (null == i.id) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No application.");
-            let { channel: l, guild: a, frame: o } = (0, L.T)(),
+            let { channel: l, guild: a, frame: s } = (0, L.T)(),
                 u = (0, h.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id,
@@ -179,8 +179,8 @@ let G = {
                 d = null != u ? O.Z.getWindow(u) : void 0;
             (null == d ? void 0 : d.closed) && (d = void 0);
             let p = null != d ? M.IlC.POPOUT : M.IlC.APP;
-            if (((0, P.Pr)({}, null == d ? void 0 : d.document), null != o)) {
-                if (o.applicationId !== i.id)
+            if (((0, P.Pr)({}, null == d ? void 0 : d.document), null != s)) {
+                if (s.applicationId !== i.id)
                     throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "Application is not currently mounted.");
                 let e = I.Z.getApplicationActivity(i.id);
                 if (null != e) (0, c.h7)(e, !1, p);
@@ -190,11 +190,11 @@ let G = {
                         "No eligible activity for application. Ensure an activity was set using setActivity.",
                     );
             } else
-                (0, s.ZDy)(
+                (0, o.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e("7654"), n.e("45965")]).then(n.bind(n, 560114));
                         return (t) => {
-                            var n, s;
+                            var n, o;
                             return (0, r.jsx)(
                                 e,
                                 ((n = (function (e) {
@@ -222,7 +222,7 @@ let G = {
                                     }
                                     return e;
                                 })({}, t)),
-                                (s = s =
+                                (o = o =
                                     {
                                         guild: a,
                                         channel: l,
@@ -231,7 +231,7 @@ let G = {
                                         source: M.t4x.ACTIVITY_INVITE,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -239,14 +239,14 @@ let G = {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(s)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
+                                      })(Object(o)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                                       }),
                                 n),
                             );
                         };
                     },
-                    { contextKey: p === M.IlC.POPOUT ? s.u1M : s.z1l },
+                    { contextKey: p === M.IlC.POPOUT ? o.u1M : o.z1l },
                 );
         },
     },
@@ -322,7 +322,7 @@ let G = {
             let a = (0, w.Z)();
             if (!j.Z.isDiscordCdnUrl(r))
                 throw new x.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
-            (0, _.Z)({
+            (0, b.Z)({
                 applicationId: i,
                 channelId: null == a ? void 0 : a.id,
                 mediaUrl: r,
@@ -341,7 +341,7 @@ let G = {
                     args: {
                         command: i,
                         preview_image: a,
-                        components: o,
+                        components: s,
                         require_launch_channel: c,
                         content: u,
                         options: d,
@@ -355,7 +355,7 @@ let G = {
                 throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let g = (0, w.Z)();
             if (null == g && c) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No channel found");
-            if (null !== a || null !== o || null !== u) {
+            if (null !== a || null !== s || null !== u) {
                 let e = [];
                 void 0 !== a &&
                     (e = [
@@ -373,16 +373,16 @@ let G = {
                         id: N.default.cast(N.default.fromTimestamp(Date.now())),
                         applicationId: f,
                         content: u,
-                        components: o,
+                        components: s,
                         attachments: e,
                     }));
             }
             return new Promise((e) => {
                 let t = !1,
                     r = (0, R.jU)(p),
-                    l = s.z1l;
-                (O.Z.getWindowOpen(M.KJ3.ACTIVITY_POPOUT) || r.context === M.IlC.POPOUT) && (l = s.u1M),
-                    (0, b.M)({
+                    l = o.z1l;
+                (O.Z.getWindowOpen(M.KJ3.ACTIVITY_POPOUT) || r.context === M.IlC.POPOUT) && (l = o.u1M),
+                    (0, _.M)({
                         applicationId: f,
                         channel: g,
                         command: {

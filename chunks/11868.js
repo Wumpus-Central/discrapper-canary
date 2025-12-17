@@ -30,20 +30,20 @@ var r = n(54381),
     A = n(139712),
     N = n(765305),
     P = n(388032),
-    R = n(182279);
-let D = (e, t) => (n) => {
+    R = n(330489);
+let w = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
-    w = (e, t) => (n) => {
+    D = (e, t) => (n) => {
         let r = _.Z.getChannel(e.channel_id);
         null != r && (n.stopPropagation(), (0, p.Cq)(r), null == t || t(n));
     },
     x = (e, t) => {
         switch (null == e ? void 0 : e.entity_type) {
             case N.WX.STAGE_INSTANCE:
-                return w(e, t);
-            case N.WX.VOICE:
                 return D(e, t);
+            case N.WX.VOICE:
+                return w(e, t);
         }
         return () => {};
     },

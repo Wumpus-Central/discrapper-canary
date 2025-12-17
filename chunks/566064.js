@@ -68,22 +68,22 @@ function f(e) {
                 }),
         );
     r.useEffect(() => () => R.clean(), [R]);
-    let D = r.useCallback(
+    let w = r.useCallback(
             (e) => {
                 if (!v.current || !y) return !1;
                 e.focus();
             },
             [y],
         ),
-        w = r.useCallback(
+        D = r.useCallback(
             (e, n) => {
                 let r = c(t, e, n);
                 (null != m ? m(e, n, r) : Promise.resolve()).then(() => {
                     let e = u(r);
-                    null != e ? (D(e), A(!1)) : requestAnimationFrame(() => A(!0));
+                    null != e ? (w(e), A(!1)) : requestAnimationFrame(() => A(!0));
                 });
             },
-            [t, m, D],
+            [t, m, w],
         ),
         x = r.useCallback(
             function () {
@@ -100,28 +100,28 @@ function f(e) {
                 )
                     return void P(!0);
                 let a = u(c(t, n, r));
-                null != a && (P(!0), D(a));
+                null != a && (P(!0), w(a));
             },
-            [g, f, p, h, t, D],
+            [g, f, p, h, t, w],
         ),
         [L, j] = r.useState(!1);
     r.useEffect(() => {
         if (!L || !I) return;
         j(!1);
         let e = u(c(t, f, p));
-        if (null != e) return void D(e);
+        if (null != e) return void w(e);
         T(!1);
         let n = u(c(t));
-        null != n && D(n);
-    }, [t, L, I, D, f, p]);
+        null != n && w(n);
+    }, [t, L, I, w, f, p]);
     let M = r.useCallback((e) => {
         v.current && null == e && j(!0);
     }, []);
     r.useEffect(() => {
-        I && C && null != S && (D(S), A(!1));
+        I && C && null != S && (w(S), A(!1));
     }, [C, S]),
         r.useEffect(() => {
-            I && (N || w(f, p), P(!1));
+            I && (N || D(f, p), P(!1));
         }, [f, p]);
     let k = r.useCallback(
             (e) => {
@@ -166,8 +166,8 @@ function f(e) {
                     ? (I || (T(!0), P(!0)), !1)
                     : I
                       ? (x(!1), !1)
-                      : void (E && null != S ? w(f, p) : x(!0)),
-            [I, E, S, x, w, f, p],
+                      : void (E && null != S ? D(f, p) : x(!0)),
+            [I, E, S, x, D, f, p],
         ),
         G = r.useCallback((e) => {
             if (e.target !== e.currentTarget) {
@@ -176,7 +176,7 @@ function f(e) {
             }
         }, []),
         Z = r.useMemo(() => Math.max(...n), [n]),
-        B = r.useCallback(
+        F = r.useCallback(
             () => ({
                 role: "grid",
                 "aria-rowcount": n.length,
@@ -189,7 +189,7 @@ function f(e) {
             }),
             [n.length, Z, I, E, t, k, U, G],
         ),
-        F = r.useCallback(
+        B = r.useCallback(
             (e, n) => {
                 let r = {
                     role: "gridcell",
@@ -213,11 +213,11 @@ function f(e) {
     return r.useMemo(
         () => ({
             dispatch: g,
-            getContainerProps: B,
-            getItemProps: F,
+            getContainerProps: F,
+            getItemProps: B,
             getRowProps: V,
         }),
-        [g, B, F, V],
+        [g, F, B, V],
     );
 }
 function p(e) {

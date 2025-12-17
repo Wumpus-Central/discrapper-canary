@@ -10,7 +10,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(467721),
+    c = n(236726),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -22,7 +22,7 @@ var r = n(54381),
     E = n(373228),
     b = n(378233),
     y = n(388032),
-    O = n(353681);
+    O = n(431618);
 let v = (e) => e.preventDefault(),
     S = 0.7,
     I = 33,
@@ -80,7 +80,7 @@ let R = (e) => {
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let {
                 shouldAnimate: t,
                 size: a,
@@ -159,7 +159,7 @@ let R = (e) => {
                   }),
               });
     },
-    w = (e) => {
+    D = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -186,7 +186,7 @@ let R = (e) => {
             A = i.useCallback(() => {
                 g(!1);
             }, []),
-            D = i.useCallback(() => {
+            w = i.useCallback(() => {
                 y(!0);
             }, []);
         return (i.useEffect(() => {
@@ -221,7 +221,7 @@ let R = (e) => {
                                   alt: P(n),
                                   src: C,
                                   draggable: !1,
-                                  onError: D,
+                                  onError: w,
                                   onLoad: A,
                                   onContextMenu: v,
                                   ref: T,
@@ -333,7 +333,7 @@ let R = (e) => {
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
         if (null == u) return null;
-        let v = u.format_type === E.u3.LOTTIE ? D : w;
+        let v = u.format_type === E.u3.LOTTIE ? w : D;
         return (0, r.jsxs)(
             i.Fragment,
             {

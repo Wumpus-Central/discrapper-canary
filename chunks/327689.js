@@ -3,14 +3,14 @@ var r,
     i,
     l = n(442837),
     a = n(570140),
-    s = n(430824),
-    o = n(981631);
+    o = n(430824),
+    s = n(981631);
 class c extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), this.syncWith([s.Z], o.dG4);
+        this.waitFor(o.Z), this.syncWith([o.Z], s.dG4);
     }
     channelNoticePredicate(e, t) {
-        return !e.features.has(o.GuildFeatures.BANNER) && Date.now() - t >= o.Hqc;
+        return !e.features.has(s.GuildFeatures.BANNER) && Date.now() - t >= s.Hqc;
     }
 }
 (r = "displayName") in c

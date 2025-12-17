@@ -2,8 +2,8 @@ n.d(t, { k: () => P }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(734610),
+    a = n.n(l),
+    o = n(734610),
     s = n(442837),
     c = n(524437),
     u = n(481060),
@@ -12,18 +12,18 @@ var r = n(54381),
     h = n(2818),
     p = n(768943),
     g = n(453473),
-    m = n(216789),
-    b = n(675478),
+    b = n(216789),
+    m = n(675478),
     y = n(581883),
-    _ = n(585483),
-    O = n(153209),
-    v = n(903672),
-    j = n(791914),
-    C = n(711165),
-    x = n(946443),
-    E = n(981631),
-    S = n(388032),
-    I = n(253107);
+    O = n(585483),
+    v = n(153209),
+    j = n(903672),
+    C = n(791914),
+    x = n(711165),
+    E = n(946443),
+    S = n(981631),
+    I = n(388032),
+    _ = n(424626);
 function P(e) {
     let {
             onOpen: t,
@@ -44,13 +44,13 @@ function P(e) {
                 return null != (t = null == (e = y.Z.settings.inbox) ? void 0 : e.currentTab) ? t : c.X.UNREADS;
             }),
             i.useCallback((e) => {
-                b.hW.updateAsync(
+                m.hW.updateAsync(
                     "inbox",
                     (t) => {
                         if (t.currentTab === e) return !1;
                         t.currentTab = e;
                     },
-                    b.fy.FREQUENT_USER_ACTION,
+                    m.fy.FREQUENT_USER_ACTION,
                 );
             }, []),
         ],
@@ -60,12 +60,12 @@ function P(e) {
                     return null != (t = null == (e = y.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
                 }),
                 n = i.useCallback(() => {
-                    b.hW.updateAsync(
+                    m.hW.updateAsync(
                         "inbox",
                         (e) => {
                             e.viewedTutorial = !0;
                         },
-                        b.fy.INFREQUENT_USER_ACTION,
+                        m.fy.INFREQUENT_USER_ACTION,
                     );
                 }, []);
             return {
@@ -79,7 +79,7 @@ function P(e) {
         F = i.useCallback(() => {
             M(!D), D ? null == n || n() : null == t || t();
         }, [n, t, D]);
-    i.useEffect(() => (_.S.subscribe(E.CkL.TOGGLE_INBOX, F), () => void _.S.unsubscribe(E.CkL.TOGGLE_INBOX, F)), [F]);
+    i.useEffect(() => (O.S.subscribe(S.CkL.TOGGLE_INBOX, F), () => void O.S.unsubscribe(S.CkL.TOGGLE_INBOX, F)), [F]);
     let { enabled: V, inInbox: H } = h.Z.useExperiment({ location: "RecentsPopout" }),
         z = (0, s.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && V && H;
     i.useEffect(() => {
@@ -91,7 +91,7 @@ function P(e) {
             },
             [B],
         ),
-        K = (0, m.Us)({ location: "ForYou" });
+        K = (0, b.Us)({ location: "ForYou" });
     return (0, r.jsx)(f.Gt, {
         value: R,
         children: (0, r.jsx)(u.yRy, {
@@ -104,12 +104,12 @@ function P(e) {
             onRequestClose: B,
             renderPopout: function () {
                 return (0, r.jsx)(u.VqE, {
-                    "aria-label": S.intl.string(S.t.GSmTKJ),
+                    "aria-label": I.intl.string(I.t.GSmTKJ),
                     className: A,
                     children: (0, r.jsx)("div", {
-                        className: o()(I.container, { [I.widerInbox]: K }),
+                        className: a()(_.container, { [_.widerInbox]: K }),
                         children: (0, r.jsx)(u.y5t, {
-                            component: (0, r.jsx)(j.Z, {
+                            component: (0, r.jsx)(C.Z, {
                                 tab: L,
                                 setTab: k,
                                 badgeState: P,
@@ -117,16 +117,16 @@ function P(e) {
                             }),
                             children:
                                 L === c.X.FOR_YOU
-                                    ? (0, r.jsx)(O.ZP, {})
+                                    ? (0, r.jsx)(v.ZP, {})
                                     : L === c.X.MENTIONS
-                                      ? (0, r.jsx)(v.Z, { onJump: W })
+                                      ? (0, r.jsx)(j.Z, { onJump: W })
                                       : V && H && L === c.X.BOOKMARKS
                                         ? (0, r.jsx)(g.K, { closePopout: B })
                                         : L === c.X.SCHEDULED
-                                          ? (0, r.jsx)(C._, {})
-                                          : (0, r.jsx)(a.SV, {
-                                                fallback: (0, r.jsx)(x.h6, {}),
-                                                children: (0, r.jsx)(x.ZP, {
+                                          ? (0, r.jsx)(x._, {})
+                                          : (0, r.jsx)(o.SV, {
+                                                fallback: (0, r.jsx)(E.h6, {}),
+                                                children: (0, r.jsx)(E.ZP, {
                                                     onJump: W,
                                                     showTutorial: G,
                                                     setSeenTutorial: U,

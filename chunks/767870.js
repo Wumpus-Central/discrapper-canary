@@ -4,11 +4,11 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(704215),
-    s = n(927359),
-    o = n(706140),
+    o = n(927359),
+    s = n(706140),
     c = n(325767),
     u = n(382791),
-    d = n(966677);
+    d = n(233409);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,8 +39,8 @@ let f = "premium_tier_gradient",
 function h(e) {
     var t,
         n,
-        { width: i = 14, height: l = 15, color: a = "white", foreground: s } = e,
-        o = (function (e, t) {
+        { width: i = 14, height: l = 15, color: a = "white", foreground: o } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,14 +63,14 @@ function h(e) {
         })(e, ["width", "height", "color", "foreground"]);
     return (0, r.jsxs)(
         "svg",
-        ((t = p({}, (0, c.Z)(p({}, o)))),
+        ((t = p({}, (0, c.Z)(p({}, s)))),
         (n = n =
             {
                 preserveAspectRatio: "none",
                 width: i,
                 height: l,
                 viewBox: "0 0 14 15",
-                className: s,
+                className: o,
                 xmlns: "http://www.w3.org/2000/svg",
                 children: [
                     (0, r.jsx)("defs", {
@@ -138,14 +138,14 @@ function h(e) {
 }
 function m(e) {
     let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: m } = e,
-        [_] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
+        [b] = (0, s.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
             cooldownDurationMs: 0,
         }),
-        b = (0, s.ZP)(i, c);
-    return "" === b
+        _ = (0, o.ZP)(i, c);
+    return "" === _
         ? null
-        : (p && (b = b.toUpperCase()),
+        : (p && (_ = _.toUpperCase()),
           (0, r.jsxs)("div", {
               className: l()(t, d.countDown),
               children: [
@@ -164,9 +164,9 @@ function m(e) {
                         })
                       : null,
                   (0, r.jsx)(u.mn, {
-                      text: b,
+                      text: _,
                       colorOptions:
-                          _ === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL
+                          b === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL
                               ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                               : u.VE.PREMIUM_TIER_2_GREY_FILL,
                   }),

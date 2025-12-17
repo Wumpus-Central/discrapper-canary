@@ -4,18 +4,18 @@ n(473749);
 var i = n(481060),
     l = n(570140),
     a = n(84615),
-    s = n(429142),
-    o = n(886412),
+    o = n(429142),
+    s = n(886412),
     c = n(918714),
     u = n(1964),
     d = n(852758),
     p = n(314897),
     f = n(594174),
     g = n(374023),
-    h = n(886162),
+    h = n(133876),
     m = n(981631),
-    _ = n(815660),
-    b = n(308569),
+    b = n(815660),
+    _ = n(308569),
     E = n(231338);
 let O = {
     init() {
@@ -36,20 +36,20 @@ let O = {
             t === m.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             u.Z.isEmailReverification(t)
-                ? (0, o.bu)({ location: "verification-legacy" })
+                ? (0, s.bu)({ location: "verification-legacy" })
                     ? (0, a.q4)(
                           (e) => {
                               let { closeLayer: t } = e;
                               return (0, r.jsx)(c.Z, { onClose: t });
                           },
                           {
-                              layerKey: b.CV,
-                              Layer: s.ZP,
+                              layerKey: _.CV,
+                              Layer: o.ZP,
                           },
                       )
                     : (0, a.q4)(() => (0, r.jsx)(d.Z, {}), {
-                          layerKey: b.CV,
-                          Layer: s.ZP,
+                          layerKey: _.CV,
+                          Layer: o.ZP,
                       })
                 : t === m.c2C.AGREEMENTS
                   ? (0, i.h7j)(
@@ -83,7 +83,7 @@ let O = {
                                 })({}, e),
                             ),
                         {
-                            modalKey: b.f1,
+                            modalKey: _.f1,
                             onCloseRequest: E.Vq,
                             dismissable: !1,
                         },
@@ -95,18 +95,18 @@ let O = {
                               return (0, r.jsx)(c.Z, { onClose: t });
                           },
                           {
-                              layerKey: b.CV,
-                              Layer: s.ZP,
+                              layerKey: _.CV,
+                              Layer: o.ZP,
                           },
                       )
-                    : null == t && ((0, a.ob)(b.CV), (0, i.nfh)(b.f1) && (0, i.Mr3)(b.f1)));
+                    : null == t && ((0, a.ob)(_.CV), (0, i.nfh)(_.f1) && (0, i.Mr3)(_.f1)));
     },
     handleAuthenticationStoreChanged() {
         null == p.default.getId() &&
-            ((0, a.ob)(b.CV), (0, i.Mr3)(b.f1), (0, i.Mr3)(b.HR), (0, i.Mr3)(b.F0), (0, i.Mr3)(_.M));
+            ((0, a.ob)(_.CV), (0, i.Mr3)(_.f1), (0, i.Mr3)(_.HR), (0, i.Mr3)(_.F0), (0, i.Mr3)(b.M));
     },
     handleCurrentUserUpdate(e) {
         let { user: t } = e;
-        t.verified && (0, i.Mr3)(b.F0);
+        t.verified && (0, i.Mr3)(_.F0);
     },
 };

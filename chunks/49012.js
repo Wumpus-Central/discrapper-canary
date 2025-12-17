@@ -35,7 +35,7 @@ function N(e, t) {
 function P(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         S = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: I, onClick: N, onConfirm: P, onCancel: R, shouldConfirm: D, messageId: w, channelId: x } = e,
+        { trusted: I, onClick: N, onConfirm: P, onCancel: R, shouldConfirm: w, messageId: D, channelId: x } = e,
         L = i().sanitizeUrl(e.href);
     if (null == L) {
         null != t && t.preventDefault(),
@@ -55,21 +55,21 @@ function P(e, t) {
     }
     let M = null,
         k = !1,
-        U = w,
+        U = D,
         G = x,
         Z = null;
-    if (null != w && null != x) {
-        var B, F, V;
-        let e = v.Z.getMessage(x, w),
+    if (null != D && null != x) {
+        var F, B, V;
+        let e = v.Z.getMessage(x, D),
             t = E.Z.getBasicChannel(x);
         M = null != (V = null == t ? void 0 : t.guild_id) ? V : null;
         let n = b.Z.getGuild(M),
             r =
-                (null == e || null == (B = e.messageReference) ? void 0 : B.guild_id) != null &&
+                (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null &&
                 (null == e ? void 0 : e.webhookId) != null &&
                 (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) &&
                 null != M;
-        r && (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null
+        r && (null == e || null == (B = e.messageReference) ? void 0 : B.guild_id) != null
             ? ((U = e.messageReference.message_id),
               (G = e.messageReference.channel_id),
               (Z = e.messageReference.guild_id))
@@ -139,7 +139,7 @@ function P(e, t) {
         K = (0, O.E)(j),
         z = "http:" !== K && "https:" !== K;
     if ((!z && (W || y.Z.isTrustedDomain(j))) || (z && y.Z.isTrustedProtocol(j)))
-        return void (null == t || (null != D && D)
+        return void (null == t || (null != w && w)
             ? H()
             : k &&
               p.Z.trackAnnouncementMessageLinkClicked({

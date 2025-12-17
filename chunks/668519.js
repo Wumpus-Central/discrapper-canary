@@ -1,4 +1,4 @@
-n.d(t, { a: () => o });
+n.d(t, { a: () => a });
 var r = n(818083),
     i = n(984134);
 let l = (0, r.B)({
@@ -14,7 +14,7 @@ let l = (0, r.B)({
         },
     ],
 });
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.Y.useExperiment({ location: t }, { autoTrackExposure: n });
     return l.useExperiment(

@@ -1,59 +1,59 @@
-n.d(t, { _: () => I }), n(781311), n(953529);
-var r = n(54381),
-    i = n(473749),
-    l = n(120356),
-    a = n.n(l),
+n.d(t, { _: () => E }), n(781311), n(953529);
+var a = n(54381),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(512722),
     o = n.n(s),
     c = n(55160),
     d = n(399606),
     u = n(755721),
     m = n(481060),
-    h = n(166459),
-    g = n(607070),
-    f = n(541716),
+    f = n(166459),
+    h = n(607070),
+    g = n(541716),
     x = n(273031),
-    p = n(859235),
-    b = n(313201),
+    b = n(859235),
+    p = n(313201),
     j = n(70097),
     v = n(374794),
-    _ = n(470623),
-    C = n(983200),
-    y = n(127654),
-    T = n(809639),
-    w = n(388032),
-    S = n(272210);
-let N = [
+    C = n(470623),
+    y = n(983200),
+    T = n(127654),
+    w = n(124252),
+    S = n(388032),
+    N = n(238791);
+let O = [
         {
             name: "Media Post Thumbnail",
             extensions: ["jpg", "jpeg", "png", "gif", "webp"],
         },
     ],
-    O = (0, b.hQ)();
+    I = (0, p.hQ)();
 function P(e) {
-    let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        l = (0, C.tu)({
+    let { mediaAttachments: t, containerWidth: n, containerHeight: r } = e,
+        i = (0, y.tu)({
             numAttachments: t.length,
             containerWidth: n,
-            containerHeight: i,
+            containerHeight: r,
         });
-    return (0, r.jsx)(r.Fragment, {
+    return (0, a.jsx)(a.Fragment, {
         children: t.map((e, t) => {
             var n;
-            return (0, r.jsx)(
+            return (0, a.jsx)(
                 "div",
                 {
-                    style: l[t],
+                    style: i[t],
                     children:
                         !0 === e.isVideo
-                            ? (0, r.jsx)(j.Z, {
+                            ? (0, a.jsx)(j.Z, {
                                   src: e.src,
-                                  className: S.thumbnail,
+                                  className: N.thumbnail,
                                   "aria-hidden": !0,
                               })
-                            : (0, r.jsx)("img", {
+                            : (0, a.jsx)("img", {
                                   src: e.src,
-                                  className: S.thumbnail,
+                                  className: N.thumbnail,
                                   "aria-hidden": !0,
                                   alt: null != (n = null == e ? void 0 : e.alt) ? n : "",
                               }),
@@ -63,195 +63,195 @@ function P(e) {
         }),
     });
 }
-let I = (e) => {
+let E = (e) => {
     var t;
-    let { parentChannel: l } = e,
-        { textAreaState: s } = (0, _.xH)((e) => {
+    let { parentChannel: i } = e,
+        { textAreaState: s } = (0, C.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
-        b = (0, d.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        j = (0, T.Z)(l, null == (t = s.textValue) ? void 0 : t.trim()),
-        C = i.useMemo(() => j.find((e) => e.isThumbnail), [j]),
-        I = null != j && j.length > 0,
-        E = i.useMemo(() => {
+        p = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
+        j = (0, w.Z)(i, null == (t = s.textValue) ? void 0 : t.trim()),
+        y = r.useMemo(() => j.find((e) => e.isThumbnail), [j]),
+        E = null != j && j.length > 0,
+        _ = r.useMemo(() => {
             let e = (null == j ? void 0 : j.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e,
             };
         }, [j]),
-        R = i.useCallback(
+        R = r.useCallback(
             (e) => {
-                null != C && h.Z.remove(l.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, y.d)(e.currentTarget.files, l, f.Ie.CREATE_FORUM_POST.drafts.type, {
+                null != y && f.Z.remove(i.id, y.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, T.d)(e.currentTarget.files, i, g.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0,
                         origin: "file_picker",
                     }),
                     (e.currentTarget.value = null);
             },
-            [l, C],
+            [i, y],
         ),
         M = (e) => {
             e.stopPropagation(),
-                (null == C ? void 0 : C.upload) != null &&
+                (null == y ? void 0 : y.upload) != null &&
                     (0, m.ZDy)(async () => {
-                        let e = C.upload;
+                        let e = y.upload;
                         o()(null != e, "upload should not be null");
                         let { default: t } = await Promise.resolve().then(n.bind(n, 403592));
                         return (n) => {
-                            var i, a;
-                            return (0, r.jsx)(
+                            var r, l;
+                            return (0, a.jsx)(
                                 t,
-                                ((i = (function (e) {
+                                ((r = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                            a = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
+                                            (a = a.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
+                                            a.forEach(function (t) {
+                                                var a;
+                                                (a = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: r,
+                                                              value: a,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = r);
+                                                        : (e[t] = a);
                                             });
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a =
+                                (l = l =
                                     {
                                         upload: e,
-                                        channelId: l.id,
-                                        draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
+                                        channelId: i.id,
+                                        draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                                         onSubmit: (t) => {
-                                            let { name: n, description: r, spoiler: i } = t;
-                                            h.Z.update(l.id, e.id, f.Ie.CREATE_FORUM_POST.drafts.type, {
+                                            let { name: n, description: a, spoiler: r } = t;
+                                            f.Z.update(i.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
                                                 filename: n,
-                                                description: r,
-                                                spoiler: i,
+                                                description: a,
+                                                spoiler: r,
                                             });
                                         },
                                         disableSpoiler: !0,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
+                                              var a = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, a);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
-                                i),
+                                r),
                             );
                         };
                     });
         },
-        Z = (0, r.jsx)(v.Z, {
+        Z = (0, a.jsx)(v.Z, {
             color: u.Tt.CUSTOM,
-            className: S.uploadFileInputContainer,
-            innerClassName: S.uploadThumbnailContainer,
+            className: N.uploadFileInputContainer,
+            innerClassName: N.uploadThumbnailContainer,
             onChange: R,
             multiple: !1,
             "aria-hidden": !0,
-            filters: N,
-            "aria-describedby": O,
-            "aria-label": I ? w.intl.string(w.t.MxJI3f) : w.intl.string(w.t.Cbiofa),
-            children: I
-                ? (0, r.jsxs)(r.Fragment, {
+            filters: O,
+            "aria-describedby": I,
+            "aria-label": E ? S.intl.string(S.t.MxJI3f) : S.intl.string(S.t.Cbiofa),
+            children: E
+                ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, r.jsx)(P, {
+                          (0, a.jsx)(P, {
                               mediaAttachments: j,
-                              containerWidth: E.width,
-                              containerHeight: E.height,
+                              containerWidth: _.width,
+                              containerHeight: _.height,
                           }),
-                          (0, r.jsxs)("div", {
-                              className: a()(S.changeThumbnailLabelContainer, {
-                                  [S.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
+                          (0, a.jsxs)("div", {
+                              className: l()(N.changeThumbnailLabelContainer, {
+                                  [N.changeThumbnailLabelOverflow]: (null == j ? void 0 : j.length) > 2,
                               }),
                               children: [
-                                  (0, r.jsx)(m.Text, {
+                                  (0, a.jsx)(m.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: w.intl.string(w.t.MxJI3f),
+                                      children: S.intl.string(S.t.MxJI3f),
                                   }),
-                                  null == C &&
-                                      (0, r.jsx)(m.vdY, {
+                                  null == y &&
+                                      (0, a.jsx)(m.vdY, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: S.editIcon,
+                                          className: N.editIcon,
                                       }),
                               ],
                           }),
                       ],
                   })
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, r.jsx)(m.FmF, {
+                          (0, a.jsx)(m.FmF, {
                               size: "custom",
                               width: 39,
                               height: 39,
                               color: "currentColor",
-                              className: S.uploadIcon,
+                              className: N.uploadIcon,
                           }),
-                          (0, r.jsx)(m.Text, {
+                          (0, a.jsx)(m.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: w.intl.string(w.t.Cbiofa),
+                              children: S.intl.string(S.t.Cbiofa),
                           }),
                       ],
                   }),
         });
-    return (0, r.jsx)("div", {
-        className: S.thumbnailContainer,
-        style: E,
+    return (0, a.jsx)("div", {
+        className: N.thumbnailContainer,
+        style: _,
         children:
-            null != C
-                ? (0, r.jsx)(p.Z, {
-                      actions: (0, r.jsxs)(r.Fragment, {
+            null != y
+                ? (0, a.jsx)(b.Z, {
+                      actions: (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, r.jsx)(x.Z, {
-                                  className: S.action,
-                                  tooltip: w.intl.string(w.t.Y8ujqr),
+                              (0, a.jsx)(x.Z, {
+                                  className: N.action,
+                                  tooltip: S.intl.string(S.t.Y8ujqr),
                                   onClick: M,
-                                  children: (0, r.jsx)(m.vdY, {
+                                  children: (0, a.jsx)(m.vdY, {
                                       size: "xs",
                                       color: "currentColor",
                                   }),
                               }),
-                              (0, r.jsx)(x.Z, {
-                                  className: S.action,
-                                  tooltip: w.intl.string(w.t.vN7REz),
-                                  onClick: () => h.Z.remove(l.id, C.id, f.Ie.CREATE_FORUM_POST.drafts.type),
+                              (0, a.jsx)(x.Z, {
+                                  className: N.action,
+                                  tooltip: S.intl.string(S.t.vN7REz),
+                                  onClick: () => f.Z.remove(i.id, y.id, g.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
-                                  children: (0, r.jsx)(m.XHJ, {
+                                  children: (0, a.jsx)(m.XHJ, {
                                       size: "md",
                                       color: "currentColor",
                                   }),
                               }),
                           ],
                       }),
-                      draftType: f.Ie.CREATE_FORUM_POST.drafts.type,
-                      id: C.id,
-                      channelId: l.id,
+                      draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
+                      id: y.id,
+                      channelId: i.id,
                       handleEditModal: M,
-                      keyboardModeEnabled: b,
-                      size: p.q.SMALL,
-                      className: S.attachmentListItem,
+                      keyboardModeEnabled: p,
+                      size: b.q.SMALL,
+                      className: N.attachmentListItem,
                       children: Z,
                   })
                 : Z,

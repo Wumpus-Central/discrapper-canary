@@ -1,6 +1,6 @@
 n.d(e, {
-    WY: () => S,
-    j$: () => T,
+    WY: () => c,
+    j$: () => E,
 }),
     n(539854);
 var i = n(442837),
@@ -10,23 +10,23 @@ var i = n(442837),
     r = n(460181),
     a = n(292959),
     o = n(313789),
-    c = n(388032);
-let d = (0, s.H)(() => ({ currentPlayingSound: null }));
-function S() {
-    let t = d.getField("currentPlayingSound");
-    null == t || t.stop(), d.setState({ currentPlayingSound: null });
+    S = n(388032);
+let T = (0, s.H)(() => ({ currentPlayingSound: null }));
+function c() {
+    let t = T.getField("currentPlayingSound");
+    null == t || t.stop(), T.setState({ currentPlayingSound: null });
 }
-function T(t) {
+function E(t) {
     return (0, u.qs)("".concat(o.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
         useTitle: t.useTitle,
         useSubtitle: () =>
-            c.intl.format(c.t.OOiGCM, {
+            S.intl.format(S.t.OOiGCM, {
                 onClick: () =>
                     (function (t) {
-                        let e = d.getField("currentPlayingSound");
+                        let e = T.getField("currentPlayingSound");
                         null == e || e.stop();
                         let n = (0, r.GN)(t);
-                        d.setState({ currentPlayingSound: n });
+                        T.setState({ currentPlayingSound: n });
                     })(t.sound),
             }),
         useValue: () => {

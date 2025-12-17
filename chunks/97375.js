@@ -3,8 +3,8 @@ var r = n(24917),
     i = n(106351),
     l = n(252258),
     a = n(243814),
-    s = n(45792),
-    o = n(566620),
+    o = n(45792),
+    s = n(566620),
     c = n(317381),
     u = n(592125),
     d = n(600027),
@@ -12,13 +12,13 @@ var r = n(24917),
     f = n(981631),
     g = n(231338);
 let h = {
-    [g.Et.INVITE_USER_EMBEDDED]: (0, s.S)(g.Et.INVITE_USER_EMBEDDED, {
+    [g.Et.INVITE_USER_EMBEDDED]: (0, o.S)(g.Et.INVITE_USER_EMBEDDED, {
         scope: { [p.Gp.ANY]: [a.x.RELATIONSHIPS_READ] },
         async handler(e) {
             let t,
                 {
                     socket: n,
-                    args: { user_id: a, content: s },
+                    args: { user_id: a, content: o },
                 } = e,
                 p = n.application.id;
             if (null == p) throw new r.O({ errorCode: g.lT.INVALID_COMMAND }, "No application.");
@@ -45,11 +45,11 @@ let h = {
                     throw new r.O({ errorCode: g.lT.NO_ELIGIBLE_ACTIVITY }, "Unsupported activity location");
             }
             try {
-                await (0, o.pu)({
+                await (0, s.pu)({
                     channelId: t.id,
                     applicationId: p,
                     userId: a,
-                    prefixedContent: s,
+                    prefixedContent: o,
                     location: "RPC_ACTIVITY_INVITE_USER",
                     inviteAnalyticsMetadata: { source: f.t4x.ACTIVITY_INVITE },
                 });

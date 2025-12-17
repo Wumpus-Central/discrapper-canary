@@ -7,10 +7,10 @@ var n = A(54381),
     o = A(481060),
     s = A(313201),
     d = A(916001),
-    u = A(981631),
-    c = A(388032),
-    g = A(744422);
-function f(e) {
+    c = A(981631),
+    u = A(388032),
+    f = A(395051);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(A);
@@ -58,29 +58,29 @@ function v(e) {
     let { newRoleParams: t, setNewRoleParams: A } = e,
         a = r.useRef(null),
         { name: s, color: v } = t,
-        h = (e) => A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { color: e })));
+        h = (e) => A((t) => (l()(null != t, "newRoleParams should be defined"), p(g({}, t), { color: e })));
     return (0, n.jsxs)("div", {
-        className: g.roleInputContainer,
+        className: f.roleInputContainer,
         children: [
             (0, n.jsx)(o.oil, {
                 autoFocus: !0,
                 value: s,
                 onChange: (e) =>
-                    A((t) => (l()(null != t, "newRoleParams should be defined"), p(f({}, t), { name: e }))),
+                    A((t) => (l()(null != t, "newRoleParams should be defined"), p(g({}, t), { name: e }))),
                 id: m,
-                placeholder: c.intl.string(c.t.oNauug),
-                maxLength: u.VKK,
+                placeholder: u.intl.string(u.t.oNauug),
+                maxLength: c.VKK,
             }),
             (0, n.jsxs)("div", {
-                className: g.roleColorContainer,
+                className: f.roleColorContainer,
                 children: [
-                    (0, n.jsx)(o.nn4, { children: c.intl.format(c.t["Vlq/pH"], { color: (0, i.Rf)(v) }) }),
+                    (0, n.jsx)(o.nn4, { children: u.intl.format(u.t["Vlq/pH"], { color: (0, i.Rf)(v) }) }),
                     (0, n.jsx)(o.yRy, {
                         targetElementRef: a,
                         renderPopout: (e) =>
                             (0, n.jsx)(
                                 o.Z$W,
-                                p(f({}, e), {
+                                p(g({}, e), {
                                     value: v,
                                     onChange: h,
                                 }),
@@ -88,11 +88,11 @@ function v(e) {
                         children: (e) =>
                             (0, n.jsx)(
                                 o.hU,
-                                p(f({}, e), {
+                                p(g({}, e), {
                                     variant: "secondary",
                                     icon: o.ilE,
                                     buttonRef: a,
-                                    "aria-label": c.intl.string(c.t.QLgdlS),
+                                    "aria-label": u.intl.string(u.t.QLgdlS),
                                 }),
                             ),
                     }),

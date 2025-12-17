@@ -2,8 +2,8 @@ n.d(t, { Z: () => P });
 var l = n(54381),
     i = n(473749),
     r = n(442837),
-    o = n(481060),
-    a = n(570140),
+    a = n(481060),
+    o = n(570140),
     s = n(189432),
     u = n(189357),
     d = n(728285),
@@ -26,7 +26,7 @@ function P(e) {
         x = (0, r.e7)([b.ZP], () => (null == n ? null : b.ZP.getMember(n, t)), [n, t]),
         N = (0, u.m)(n);
     return null != n && null != x && N
-        ? (0, l.jsx)(o.sNh, {
+        ? (0, l.jsx)(a.sNh, {
               id: "mod-view",
               label: j.intl.string(j.t.kj3tz2),
               action: () => {
@@ -38,7 +38,7 @@ function P(e) {
                       };
                   if ((null == e ? void 0 : e.isThread()) && null != e.parent_id) {
                       Z.ZP.getCurrentSidebarChannelId(e.parent_id) === e.id &&
-                          (a.Z.dispatch({
+                          (o.Z.dispatch({
                               type: "SIDEBAR_CLOSE",
                               baseChannelId: e.parent_id,
                           }),

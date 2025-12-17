@@ -3,21 +3,21 @@ var r = n(473749),
     i = n(713081);
 function l(e, t) {
     let [n, l] = r.useState(!1),
-        [o, a] = r.useState(void 0);
+        [a, o] = r.useState(void 0);
     return {
         isLoading: n,
-        error: o,
+        error: a,
         onToggle: r.useCallback(
             (n) => {
                 if (null == t) return Promise.resolve();
                 let r = n ? i.H6 : i.Th;
                 return (
                     l(!0),
-                    a(void 0),
+                    o(void 0),
                     r(e, t.skuId)
                         .catch((e) => {
                             var t;
-                            throw (a(null != (t = e.body.message) ? t : void 0), e);
+                            throw (o(null != (t = e.body.message) ? t : void 0), e);
                         })
                         .finally(() => {
                             l(!1);

@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(660189),
     y = n(868643),
     v = n(245216),
-    O = n(223606),
-    x = n(188597),
+    x = n(223606),
+    O = n(188597),
     E = n(41776),
     j = n(980463),
     S = n(328908),
@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(323873),
     V = n(271383),
     F = n(430824),
-    B = n(607744),
-    H = n(496675),
+    H = n(607744),
+    B = n(496675),
     G = n(626135),
     z = n(572004),
     W = n(176354),
@@ -184,8 +184,8 @@ function ep(e) {
             canPublish: m,
             canReact: g,
             canConfigureJoin: b,
-            canReply: O,
-            canStartThread: x,
+            canReply: x,
+            canStartThread: O,
             canViewThread: T,
             canForward: N,
             isExpanded: A,
@@ -213,14 +213,14 @@ function ep(e) {
                 g = (0, L.$R)(t),
                 b = (0, L.Gu)(t),
                 { firstMessage: v } = (0, u.e7)([C.Z], () => C.Z.getMessage(t.id), [t.id]),
-                O = D.nc.useSetting(),
-                x = D.Sb.useSetting(),
-                j = (0, u.e7)([B.Z], () => null == t.guild_id || B.Z.canChatInGuild(t.guild_id), [t]),
+                x = D.nc.useSetting(),
+                O = D.Sb.useSetting(),
+                j = (0, u.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: S, canAddNewReactions: _ } = (0, u.cj)(
-                    [H.Z],
+                    [B.Z],
                     () => ({
-                        canAddNewReactions: j && H.Z.can(ei.Plq.ADD_REACTIONS, t),
-                        canManageMessages: H.Z.can(ei.Plq.MANAGE_MESSAGES, t),
+                        canAddNewReactions: j && B.Z.can(ei.Plq.ADD_REACTIONS, t),
+                        canManageMessages: B.Z.can(ei.Plq.MANAGE_MESSAGES, t),
                     }),
                     [t, j],
                 ),
@@ -239,7 +239,7 @@ function ep(e) {
                 { disableReactionCreates: $ } = (0, Q.Z)({
                     channel: t,
                     canChat: j,
-                    renderReactions: O,
+                    renderReactions: x,
                     canAddNewReactions: _,
                     isLurking: T,
                     isGuest: N,
@@ -255,7 +255,7 @@ function ep(e) {
                 en =
                     null != et &&
                     n.type === ei.uaV.USER_JOIN &&
-                    H.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
+                    B.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
                 er = (0, y.a)(n),
                 { enabled: el } = M.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([R.Z], () => null != R.Z.getSavedMessage(t.id, n.id)),
@@ -273,8 +273,8 @@ function ep(e) {
                 canViewThread: Z,
                 canForward: er,
                 canCopy: z.wS,
-                hasDeveloperMode: x,
-                canReact: !$ && O,
+                hasDeveloperMode: O,
+                canReact: !$ && x,
                 canPublish: ee,
                 canConfigureJoin: en,
                 isExpanded: eo && !es && !i && !r && !l,
@@ -386,7 +386,7 @@ function ep(e) {
                                     "pin",
                                 )
                               : null,
-                          x && N
+                          O && N
                               ? (0, i.jsx)(
                                     $.sF,
                                     {
@@ -397,7 +397,7 @@ function ep(e) {
                                     "thread",
                                 )
                               : null,
-                          O && p
+                          x && p
                               ? (0, i.jsx)(
                                     $.sF,
                                     {
@@ -458,7 +458,7 @@ function ep(e) {
                       ],
                   })
                 : null,
-            O && !p
+            x && !p
                 ? (0, i.jsx)(
                       $.sF,
                       {
@@ -491,7 +491,7 @@ function ep(e) {
                       "forward",
                   )
                 : null,
-            x && !N
+            O && !N
                 ? (0, i.jsx)(
                       $.sF,
                       {
@@ -502,7 +502,7 @@ function ep(e) {
                       "thread",
                   )
                 : null,
-            !x && T
+            !O && T
                 ? (0, i.jsx)(
                       $.sF,
                       {
@@ -604,8 +604,8 @@ function ep(e) {
 }
 function ef(e) {
     let { channel: t, message: n } = e,
-        r = (0, u.e7)([O.Z], () => null != O.Z.getMessage(n.id), [n.id]),
-        l = null == n.interaction || (null != n.interactionData && (0, x.$s)(n.interactionData));
+        r = (0, u.e7)([x.Z], () => null != x.Z.getMessage(n.id), [n.id]),
+        l = null == n.interaction || (null != n.interactionData && (0, O.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !r &&

@@ -7,8 +7,8 @@ var r = n(392711),
     i = n.n(r),
     l = n(317381),
     a = n(16609),
-    s = n(594174),
-    o = n(823379),
+    o = n(594174),
+    s = n(823379),
     c = n(5192),
     u = n(863141),
     d = n(186901);
@@ -20,7 +20,7 @@ function p() {
     return {
         participants: Array.from(e.userIds, (e) => {
             var r, i;
-            let l = s.default.getUser(e);
+            let l = o.default.getUser(e);
             if (null == l) return;
             let a = (0, c.y)(t, n, l);
             return (
@@ -64,7 +64,7 @@ function p() {
                       }),
                 r
             );
-        }).filter(o.lm),
+        }).filter(s.lm),
     };
 }
 let f = { [d.Gp.ANY]: [d.wE] },

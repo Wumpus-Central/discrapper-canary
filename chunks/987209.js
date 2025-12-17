@@ -30,15 +30,15 @@ function y(e) {
     C && (A = null != f ? f : m);
     let [N, P] = i.useState(A),
         R = (0, l.hi)(),
-        D = (0, l.yX)(),
-        [w, x] = i.useState(),
+        w = (0, l.yX)(),
+        [D, x] = i.useState(),
         [L, j] = i.useState(
             t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? _.intl.string(_.t.ZkOo1U) : c,
         ),
         [M, k] = i.useState(void 0),
         [U, G] = i.useState(void 0),
         Z = (0, u.E5)(b, t),
-        [B, F] = i.useState(!1),
+        [F, B] = i.useState(!1),
         [V, H] = i.useState(!1),
         [Y, W] = i.useState(),
         K = i.useCallback(
@@ -48,14 +48,14 @@ function y(e) {
                     H(!0),
                     (0, s.YD)(y, Z)
                         .then(() => {
-                            H(!1), null == t || t(), F(!0);
+                            H(!1), null == t || t(), B(!0);
                         })
                         .catch((e) => {
-                            H(!1), W(e), F(!0);
+                            H(!1), W(e), B(!0);
                         })
                 );
             },
-            [y, Z, H, F, W],
+            [y, Z, H, B, W],
         ),
         z = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(g.Provider, {
@@ -78,14 +78,14 @@ function y(e) {
             selectedGiftStyle: N,
             setSelectedGiftStyle: P,
             sendGiftMessage: K,
-            hasSentMessage: B,
+            hasSentMessage: F,
             isSendingMessage: V,
             giftMessageError: Y,
             recommendedGiftSkuIds: z,
             giftingOrigin: p,
             claimableRewards: R,
-            claimableVariants: D,
-            selectedGiftingPromotionReward: w,
+            claimableVariants: w,
+            selectedGiftingPromotionReward: D,
             setSelectedGiftingPromotionReward: x,
         },
         children: E,

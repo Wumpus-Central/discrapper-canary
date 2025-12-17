@@ -7,8 +7,8 @@ var i,
     s = n.n(o),
     c = n(481060),
     d = n(600164),
-    u = n(352543);
-function p(e, t, n) {
+    u = n(781466);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function p(e, t, n) {
         e
     );
 }
-function m(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -32,12 +32,12 @@ function m(e) {
                 }),
             )),
             i.forEach(function (t) {
-                p(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,13 +86,13 @@ class f extends (i = a.PureComponent) {
                   children: (0, l.jsx)(c.Ttm, {
                       fade: !0,
                       className: u.scroller,
-                      children: (0, l.jsx)(d.Z.Child, b(m({}, n), { wrap: !0 })),
+                      children: (0, l.jsx)(d.Z.Child, p(b({}, n), { wrap: !0 })),
                   }),
               })
-            : (0, l.jsx)(d.Z.Child, b(m({}, n), { wrap: !0 }));
+            : (0, l.jsx)(d.Z.Child, p(b({}, n), { wrap: !0 }));
     }
 }
-p(f, "defaultProps", {
+m(f, "defaultProps", {
     basis: 232,
     grow: 0,
     shrink: 0,
@@ -104,7 +104,7 @@ class h extends a.PureComponent {
             n = g(e, ["className"]);
         return (0, l.jsx)(
             d.Z.Child,
-            m(
+            b(
                 {
                     className: s()(u.content, t),
                     wrap: !0,
@@ -116,10 +116,10 @@ class h extends a.PureComponent {
 }
 class x extends (r = a.PureComponent) {
     render() {
-        return (0, l.jsx)(d.Z, m({}, this.props));
+        return (0, l.jsx)(d.Z, b({}, this.props));
     }
 }
-p(x, "defaultProps", {
+m(x, "defaultProps", {
     direction: d.Z.Direction.HORIZONTAL,
     justify: d.Z.Justify.START,
     align: d.Z.Align.START,
@@ -128,10 +128,10 @@ p(x, "defaultProps", {
     grow: 1,
     basis: "auto",
 }),
-    p(x, "Direction", d.Z.Direction),
-    p(x, "Justify", d.Z.Justify),
-    p(x, "Align", d.Z.Align),
-    p(x, "Wrap", d.Z.Wrap),
-    p(x, "Sidebar", f),
-    p(x, "Content", h);
+    m(x, "Direction", d.Z.Direction),
+    m(x, "Justify", d.Z.Justify),
+    m(x, "Align", d.Z.Align),
+    m(x, "Wrap", d.Z.Wrap),
+    m(x, "Sidebar", f),
+    m(x, "Content", h);
 let j = x;

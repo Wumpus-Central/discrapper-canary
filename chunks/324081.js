@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(91192),
-    a = n(442837),
+    a = n(91192),
+    o = n(442837),
     s = n(692547),
     c = n(681715),
     u = n(481060),
@@ -13,21 +13,21 @@ var i = n(120356),
     h = n(956221),
     p = n(771173),
     g = n(367907),
-    m = n(43267),
-    b = n(933557),
-    _ = n(471445),
-    y = n(313201),
-    O = n(565138),
-    v = n(199902),
-    j = n(592125),
+    b = n(43267),
+    m = n(933557),
+    y = n(471445),
+    O = n(313201),
+    v = n(565138),
+    j = n(199902),
+    C = n(592125),
     x = n(430824),
-    C = n(158776),
-    E = n(306680),
-    S = n(594174),
-    I = n(259580),
+    E = n(158776),
+    S = n(306680),
+    I = n(594174),
+    _ = n(259580),
     P = n(981631),
     N = n(388032),
-    Z = n(888097);
+    Z = n(397131);
 let w = {
     top: 8,
     bottom: 8,
@@ -52,7 +52,7 @@ function T(e) {
                         is_now_collapsed: !t.collapsed,
                     }));
             },
-            children: (0, r.jsx)(I.Z, {
+            children: (0, r.jsx)(_.Z, {
                 width: 16,
                 height: 16,
             }),
@@ -63,7 +63,7 @@ function A(e) {
     var t, n;
     let {
             channel: i,
-            children: a,
+            children: o,
             gotoChannel: s,
             mentionCount: c,
             channelState: d,
@@ -71,8 +71,8 @@ function A(e) {
             showCollapseButton: h = !1,
             getNumUnreadChannels: p,
         } = e,
-        g = (0, o.JA)("recents-header-".concat(i.id, "-").concat((0, y.Dt)())),
-        m = h && !i.isNSFW() && null != d && "nsfw" !== d.type;
+        g = (0, a.JA)("recents-header-".concat(i.id, "-").concat((0, O.Dt)())),
+        b = h && !i.isNSFW() && null != d && "nsfw" !== d.type;
     return (0, r.jsx)(u.tEY, {
         offset: w,
         children: (0, r.jsxs)(
@@ -101,7 +101,7 @@ function A(e) {
                         });
                 }
                 return e;
-            })({ className: l()(Z.channelHeader, { [Z.showCollapseButton]: m }) }, g)),
+            })({ className: l()(Z.channelHeader, { [Z.showCollapseButton]: b }) }, g)),
             (n = n =
                 {
                     tabIndex: 0,
@@ -113,7 +113,7 @@ function A(e) {
                             (null == f || f(d));
                     },
                     children: [
-                        m && null != d
+                        b && null != d
                             ? (0, r.jsx)(T, {
                                   channelState: d,
                                   toggle: f,
@@ -124,12 +124,12 @@ function A(e) {
                             channel: i,
                             gotoChannel: s,
                         }),
-                        (0, r.jsx)(M, {
+                        (0, r.jsx)(L, {
                             channel: i,
                             gotoChannel: s,
                             mentionCount: c,
                         }),
-                        a,
+                        o,
                     ],
                 }),
             Object.getOwnPropertyDescriptors
@@ -155,15 +155,15 @@ function R(e) {
               channel: t,
               gotoChannel: n,
           })
-        : (0, r.jsx)(L, {
+        : (0, r.jsx)(M, {
               channel: t,
               gotoChannel: n,
           });
 }
 function D(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([S.default], () => (t.isDM() ? S.default.getUser(t.getRecipientId()) : null)),
-        l = null == i ? (0, m.x)(t) : i.getAvatarURL(void 0, 40);
+        i = (0, o.e7)([I.default], () => (t.isDM() ? I.default.getUser(t.getRecipientId()) : null)),
+        l = null == i ? (0, b.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(u.P3F, {
         onClick: n,
         tabIndex: -1,
@@ -175,34 +175,34 @@ function D(e) {
         }),
     });
 }
-function L(e) {
+function M(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([x.Z], () => x.Z.getGuild(t.guild_id));
+        i = (0, o.e7)([x.Z], () => x.Z.getGuild(t.guild_id));
     return null == i
         ? null
-        : (0, r.jsx)(O.Z, {
+        : (0, r.jsx)(v.Z, {
               "aria-hidden": !0,
               className: Z.guildIcon,
               guild: i,
-              size: O.Z.Sizes.MEDIUM,
+              size: v.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1,
           });
 }
-function M(e) {
+function L(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
-        o = (0, a.e7)([x.Z], () => x.Z.getGuild(t.guild_id)),
-        c = (0, a.e7)([j.Z], () => j.Z.getChannel(t.parent_id)),
-        d = (0, a.e7)([E.ZP], () => E.ZP.getIsMentionLowImportance(t.id)),
-        f = (0, _.KS)(t, o),
-        h = (0, b.ZP)(t, !1),
+        a = (0, o.e7)([x.Z], () => x.Z.getGuild(t.guild_id)),
+        c = (0, o.e7)([C.Z], () => C.Z.getChannel(t.parent_id)),
+        d = (0, o.e7)([S.ZP], () => S.ZP.getIsMentionLowImportance(t.id)),
+        f = (0, y.KS)(t, a),
+        h = (0, m.ZP)(t, !1),
         p =
             null == c
-                ? null == o
+                ? null == a
                     ? void 0
-                    : o.name
-                : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(c.name),
+                    : a.name
+                : "".concat(null == a ? void 0 : a.name, " \u203A ").concat(c.name),
         g = t.isMultiUserDM()
             ? N.intl.formatToPlainString(N.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
@@ -262,14 +262,14 @@ function k(e) {
             user: n,
             status: i,
             activities: l,
-            applicationStream: o,
-        } = (0, a.cj)([S.default, C.Z, v.Z], () => {
-            let e = S.default.getUser(t.getRecipientId());
+            applicationStream: a,
+        } = (0, o.cj)([I.default, E.Z, j.Z], () => {
+            let e = I.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? C.Z.getStatus(e.id) : null,
-                activities: null != e ? C.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? v.Z.getAnyStreamForUser(e.id) : null,
+                status: null != e ? E.Z.getStatus(e.id) : null,
+                activities: null != e ? E.Z.getActivities(e.id) : null,
+                applicationStream: null != e ? j.Z.getAnyStreamForUser(e.id) : null,
             };
         }),
         { voiceActivityStatusEnabled: s } = (0, d.U)({ location: "RecentsChannelHeader" }),
@@ -278,14 +278,14 @@ function k(e) {
     return (0, f.Z)({
         activities: l,
         status: i,
-        applicationStream: o,
+        applicationStream: a,
         voiceChannel: u,
     })
         ? (0, r.jsx)(p.Z, {
               location: "RecentsChannelHeader",
               user: n,
               activities: l,
-              applicationStream: o,
+              applicationStream: a,
               voiceChannel: u,
               hideTooltip: !0,
           })

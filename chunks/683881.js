@@ -1,32 +1,32 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
-    l = n(85707),
-    a = n(442837),
+    a = n(85707),
+    l = n(442837),
     o = n(481060),
     c = n(594174),
     s = n(817053),
     u = n(623132),
     d = n(778414),
     f = n(796483),
-    g = n(707804);
+    g = n(814855);
 function p(e) {
     var t;
     let { scrollerRef: n } = e,
         {
             isDragging: p,
-            item: m,
-            sourceClientOffset: b,
-        } = (0, l.f)((e) => ({
+            item: b,
+            sourceClientOffset: m,
+        } = (0, a.f)((e) => ({
             isDragging: e.isDragging(),
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        h = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        h = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         y = (0, o.zPA)(),
         v = i.useMemo(() => {
-            if (null == h || null == m) return null;
-            let { id: e, itemType: t, itemPreviewProps: n } = m;
+            if (null == h || null == b) return null;
+            let { id: e, itemType: t, itemPreviewProps: n } = b;
             if ("WIDGET" === t && (null == n ? void 0 : n.widget) != null)
                 return (0, r.jsx)("div", {
                     className: g.widgetPreview,
@@ -77,7 +77,7 @@ function p(e) {
                 });
             }
             return null;
-        }, [m, h]),
+        }, [b, h]),
         O = i.useRef(null),
         j = i.useCallback(() => {
             if (null == n.current) return;
@@ -95,22 +95,22 @@ function p(e) {
             }
             null == O.current && j();
         }, [p, j]),
-        !0 !== p || null == b || null == v)
+        !0 !== p || null == m || null == v)
     )
         return null;
     null == O.current && j();
-    let { x: x, y: _ } =
+    let { x: x, y: P } =
             null != (t = O.current)
                 ? t
                 : {
                       x: 0,
                       y: 0,
                   },
-        P = b.x - x - 60 * !!y,
-        I = b.y - _;
+        w = m.x - x - 60 * !!y,
+        I = m.y - P;
     return (0, r.jsx)("div", {
         className: g.container,
-        style: { transform: "translate3d(".concat(P, "px, ").concat(I, "px, 0)") },
+        style: { transform: "translate3d(".concat(w, "px, ").concat(I, "px, 0)") },
         children: v,
     });
 }

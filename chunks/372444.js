@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(906732),
     d = n(678558),
     u = n(388032),
-    g = n(736692);
-let m = (e) => {
+    g = n(255258);
+let f = (e) => {
     let {
             guild: t,
             analyticsLocation: n,
@@ -33,17 +33,17 @@ let m = (e) => {
         useExpressiveButton: s,
     });
 };
-function p(e) {
+function m(e) {
     let {
             header: t,
             text: i,
             analyticsLocation: a,
             guild: d,
             className: u,
-            textColor: p,
-            headerColor: f,
-            buttonProps: h,
-            useExpressiveButton: b,
+            textColor: m,
+            headerColor: b,
+            buttonProps: p,
+            useExpressiveButton: h,
         } = e,
         { analyticsLocations: x } = (0, c.ZP)(o.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, r.jsx)(c.Gt, {
@@ -61,25 +61,25 @@ function p(e) {
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-lg/semibold",
-                            color: null != f ? f : "always-white",
+                            color: null != b ? b : "always-white",
                             className: g.header,
                             children: t,
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            color: null != p ? p : "always-white",
+                            color: null != m ? m : "always-white",
                             children: i,
                         }),
                     ],
                 }),
                 (0, r.jsx)("div", {
                     className: g.ctaContainer,
-                    children: (0, r.jsx)(m, {
+                    children: (0, r.jsx)(f, {
                         guild: d,
                         analyticsLocation: a,
                         className: g.button,
-                        buttonProps: h,
-                        useExpressiveButton: b,
+                        buttonProps: p,
+                        useExpressiveButton: h,
                     }),
                 }),
             ],

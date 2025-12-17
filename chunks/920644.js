@@ -4,12 +4,12 @@ n(473749);
 var i = n(990547),
     l = n(793030),
     a = n(703656),
-    s = n(63063),
-    o = n(758119),
+    o = n(63063),
+    s = n(758119),
     c = n(981631),
     u = n(388032);
 function d() {
-    return (0, o.qV)(), (0, a.uL)(c.Z5c.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
+    return (0, s.qV)(), (0, a.uL)(c.Z5c.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
 }
 function p(e) {
     let { underageMessage: t, transitionState: n } = e;
@@ -25,7 +25,7 @@ function p(e) {
             {
                 text: u.intl.string(u.t.hvVgAZ),
                 onClick: () => {
-                    window.open(s.Z.getArticleURL(c.BhN.AGE_GATE), "_blank");
+                    window.open(o.Z.getArticleURL(c.BhN.AGE_GATE), "_blank");
                 },
                 variant: "secondary",
             },

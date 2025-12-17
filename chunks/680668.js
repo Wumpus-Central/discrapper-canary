@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(358595),
     b = n(981631),
     y = n(388032),
-    O = n(105341);
+    O = n(222922);
 function v(e, t, n) {
     return (
         t in e
@@ -56,19 +56,19 @@ function I(e) {
             onTransitionToInviteChannel: N,
             onAcceptInstantInvite: P,
             guild: R,
-            invite: D,
-            message: w,
+            invite: w,
+            message: D,
             currentUserId: x,
         } = e,
-        L = x === w.author.id,
-        { channel: j, approximate_member_count: M, approximate_presence_count: k } = D,
-        U = D.state === b.r2o.ACCEPTING,
+        L = x === D.author.id,
+        { channel: j, approximate_member_count: M, approximate_presence_count: k } = w,
+        U = w.state === b.r2o.ACCEPTING,
         G = null != j ? (0, m.jD)(j) : null,
         Z = null != R,
-        B = null != G,
-        F = null != G && G.isGuildVocal(),
+        F = null != G,
+        B = null != G && G.isGuildVocal(),
         V = null != G && G.isGuildStageVoice(),
-        H = (0, o.yE)(null != (t = D.flags) ? t : 0, a.$.IS_GUEST_INVITE),
+        H = (0, o.yE)(null != (t = w.flags) ? t : 0, a.$.IS_GUEST_INVITE),
         Y = null != (v = null == R ? void 0 : R.features.has(b.GuildFeatures.HUB)) && v,
         W = null == R ? void 0 : R.id,
         { analyticsLocations: K } = (0, d.ZP)(u.Z.INVITE_EMBED),
@@ -83,20 +83,20 @@ function I(e) {
             Z ? (N(), (e = "transition")) : (P(), (e = "accept")),
                 (0, c.r$)(
                     {
-                        invite: D,
+                        invite: w,
                         action: e,
-                        inviter_id: w.author.id,
-                        invite_message_id: w.id,
+                        inviter_id: D.author.id,
+                        invite_message_id: D.id,
                     },
                     K,
                 );
-        }, [D, w, K, Z, N, P]);
+        }, [w, D, K, Z, N, P]);
     if (null == R) {
-        if (null == D.guild) return (0, r.jsx)(E.Z, {});
-        (R = h.Qs(D.guild)).premiumTier = null != (I = D.guild.premium_tier) ? I : b.Eu4.NONE;
+        if (null == w.guild) return (0, r.jsx)(E.Z, {});
+        (R = h.Qs(w.guild)).premiumTier = null != (I = w.guild.premium_tier) ? I : b.Eu4.NONE;
     }
     let ee = (0, g.e)({
-        isVoiceChannel: F,
+        isVoiceChannel: B,
         isOwnInvite: L,
         isGuest: H,
         isHubGuild: Y,
@@ -139,7 +139,7 @@ function I(e) {
                     className: O.infoIcon,
                 }),
             })),
-        F
+        B
             ? ((C = (0, r.jsx)(_.Z.Channel, { channel: G })),
               (T = (0, r.jsxs)("span", {
                   className: O.infoTitle,
@@ -159,7 +159,7 @@ function I(e) {
                     members: M,
                     membersOnline: k,
                 }))
-              : B &&
+              : F &&
                 (T = (0, r.jsx)(_.Z.Channel, {
                     channel: G,
                     guild: R,
@@ -190,8 +190,8 @@ function I(e) {
                                 onClick: $,
                                 loading: U,
                                 variant: "active",
-                                fullWidth: F,
-                                text: F
+                                fullWidth: B,
+                                text: B
                                     ? V
                                         ? y.intl.string(y.t["7vb2cc"])
                                         : y.intl.string(y.t.gpqgah)
@@ -212,7 +212,7 @@ function I(e) {
                                 children: y.intl.format(y.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, l.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("7082"), n.e("98639")]).then(
+                                            let { default: e } = await Promise.all([n.e("7082"), n.e("43790")]).then(
                                                 n.bind(n, 650233),
                                             );
                                             return (t) => (0, r.jsx)(e, S({}, t));

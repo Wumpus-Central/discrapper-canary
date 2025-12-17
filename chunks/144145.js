@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(278323),
-    o = n(287734),
+    o = n(278323),
+    s = n(287734),
     c = n(726542),
     u = n(620662),
     d = n(841784),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(592745),
     h = n(313789),
     m = n(518596),
-    _ = n(553795),
-    b = n(757266),
+    b = n(553795),
+    _ = n(757266),
     E = n(283595),
     O = n(417363),
     v = n(626135),
@@ -71,7 +71,7 @@ function P(e) {
         n = t.length > 1,
         P = (function (e) {
             let { currentActivities: t } = e,
-                n = (0, l.e7)([_.Z], () => _.Z.getAccounts().some((e) => e.type === c.Z.get(C.ABu.XBOX).type)),
+                n = (0, l.e7)([b.Z], () => b.Z.getAccounts().some((e) => e.type === c.Z.get(C.ABu.XBOX).type)),
                 i = t.some((e) => {
                     let { activity: t } = e;
                     return (0, p.Z)(t);
@@ -88,7 +88,7 @@ function P(e) {
             let { currentActivities: t } = e,
                 n = i.useContext(v.AnalyticsContext);
             return (0, l.Wu)(
-                [f.ZP, E.Z, g.Z, O.Z, b.Z],
+                [f.ZP, E.Z, g.Z, O.Z, _.Z],
                 () =>
                     t
                         .filter((e) => !(0, d.Z)(e.activity))
@@ -102,7 +102,7 @@ function P(e) {
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: O.Z,
-                                    ConnectedAppsStore: b.Z,
+                                    ConnectedAppsStore: _.Z,
                                     applicationId: r.id,
                                     branchId: null != i ? i.branchId : null,
                                 }),
@@ -125,13 +125,13 @@ function P(e) {
                     if (!n || null == i) return null;
                     async function c() {
                         if (null == i) return;
-                        let e = await s.Z.sendActivityInviteUser({
+                        let e = await o.Z.sendActivityInviteUser({
                             type: C.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: i,
                             location: C.Sbl.USER_ACTIVITY_ACTIONS,
                         });
-                        null != e && o.default.selectPrivateChannel(e.id);
+                        null != e && s.default.selectPrivateChannel(e.id);
                     }
                     return (0, r.jsx)(a.sNh, {
                         id: "join-".concat(i.session_id),
@@ -146,12 +146,12 @@ function P(e) {
                         activity: n,
                         game: i,
                         libraryApplication: l,
-                        location: s,
-                        canPlay: o,
+                        location: o,
+                        canPlay: s,
                         isRunning: c,
                         isLaunching: u,
                     } = e;
-                    if (!o || null == n) return null;
+                    if (!s || null == n) return null;
                     let d = c
                         ? S.intl.formatToPlainString(S.t["gBme/4"], { name: i.name })
                         : u
@@ -161,7 +161,7 @@ function P(e) {
                         id: "play-".concat(n.session_id),
                         action: function () {
                             (0, I.playApplication)(i.id, l, {
-                                analyticsParams: { location: N(T({}, s), { object: C.qAy.LIST_ITEM }) },
+                                analyticsParams: { location: N(T({}, o), { object: C.qAy.LIST_ITEM }) },
                             });
                         },
                         label: t ? S.intl.formatToPlainString(S.t.ZDZEJN, { name: i.name }) : S.intl.string(S.t.XKUw8m),

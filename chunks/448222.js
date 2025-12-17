@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(473749),
     i = n(238343),
     l = n(343334);
-function o(e, t) {
-    let { isLoading: n, error: o, onToggle: a } = (0, l.Z)(e, t),
+function a(e, t) {
+    let { isLoading: n, error: a, onToggle: o } = (0, l.Z)(e, t),
         { onActivate: s } = (0, i._C)(e, t),
-        c = r.useCallback(() => a(!1), [a]);
+        c = r.useCallback(() => o(!1), [o]);
     return {
         isLoading: n,
-        error: o,
+        error: a,
         onActivate: s,
         onDeactivate: c,
         onShowDeactivate: r.useCallback(() => {

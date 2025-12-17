@@ -3,21 +3,21 @@ var r = n(54381),
     i = n(473749),
     l = n(28664),
     a = n(481060),
-    s = n(51596),
-    o = n(388032),
-    c = n(886190);
+    o = n(51596),
+    s = n(388032),
+    c = n(421523);
 function u(e) {
     var t, n;
     let { focusSectionProps: u } = e,
         d = i.useCallback((e) => {
-            (0, s.ZN)("fast-travel");
+            (0, o.ZN)("fast-travel");
         }, []);
     return (0, r.jsx)(l.u, {
-        "aria-label": o.intl.string(o.t["7P/+qz"]),
+        "aria-label": s.intl.string(s.t["7P/+qz"]),
         asContainer: !0,
         __unsupportedReactNodeAsText: (0, r.jsxs)(r.Fragment, {
             children: [
-                o.intl.string(o.t["7P/+qz"]),
+                s.intl.string(s.t["7P/+qz"]),
                 (0, r.jsx)(a.M2$, {
                     shortcut: ["mod", "k"],
                 }),
@@ -59,7 +59,7 @@ function u(e) {
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             lineClamp: 1,
-                            children: o.intl.string(o.t.ZvKwYa),
+                            children: s.intl.string(s.t.ZvKwYa),
                         }),
                     ],
                 }),

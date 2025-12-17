@@ -82,8 +82,8 @@ async function y(e) {
         trialId: N,
         priceOptions: P,
         paymentSource: R,
-        isPrepaidPaymentPastDue: D,
-        openInvoiceId: w,
+        isPrepaidPaymentPastDue: w,
+        openInvoiceId: D,
         premiumSubscription: x,
         onNext: L,
         metadata: j,
@@ -92,8 +92,8 @@ async function y(e) {
         purchaseType: U,
         referralCode: G,
         loadId: Z,
-        giftInfoOptions: B,
-        invoicePreview: F,
+        giftInfoOptions: F,
+        invoicePreview: B,
         orderId: V,
     } = e;
     t(p.A.PURCHASING), n(!0), r(!0), a.Z.wait(s.fw), h(null);
@@ -103,10 +103,10 @@ async function y(e) {
             (d.default.track(
                 _.rMx.PAYMENT_FLOW_COMPLETED,
                 b(g({}, v), {
-                    subtotal: null == F ? void 0 : F.subtotal,
-                    tax: null == F ? void 0 : F.tax,
-                    expected_amount: null == F ? void 0 : F.total,
-                    expected_currency: null == F ? void 0 : F.currency,
+                    subtotal: null == B ? void 0 : B.subtotal,
+                    tax: null == B ? void 0 : B.tax,
+                    expected_amount: null == B ? void 0 : B.total,
+                    expected_currency: null == B ? void 0 : B.currency,
                     duration_ms: Date.now() - T,
                 }),
             ),
@@ -122,14 +122,14 @@ async function y(e) {
                     isGift: O,
                     paymentSource: R,
                     loadId: Z,
-                    giftInfoOptions: B,
+                    giftInfoOptions: F,
                     orderId: V,
                 }));
         else {
-            i()(null != C, "Missing subscriptionPlan"), i()(null != F, "Missing invoicePreview");
+            i()(null != C, "Missing subscriptionPlan"), i()(null != B, "Missing invoicePreview");
             let t = {
-                    amount: F.total,
-                    currency: F.currency,
+                    amount: B.total,
+                    currency: B.currency,
                 },
                 n = (0, f.BK)((0, f.aS)(C.id, !1, !1, P));
             if (null != x) {
@@ -137,8 +137,8 @@ async function y(e) {
                 (e = (0, f.gB)(e)), (n = (0, f.UX)(e, P.currency.toLowerCase(), P.paymentSourceId));
             }
             if (O) {
-                let t = F.total,
-                    n = F.currency;
+                let t = B.total,
+                    n = B.currency;
                 e = await (0, c.ZZ)(m.CL, C.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
@@ -146,12 +146,12 @@ async function y(e) {
                     subscriptionPlanId: C.id,
                     isGift: !0,
                     loadId: Z,
-                    giftInfoOptions: B,
+                    giftInfoOptions: F,
                     orderId: V,
                 });
-            } else if (D && null != w && null != R && null != x)
+            } else if (w && null != D && null != R && null != x)
                 e = _.Uk1.has(R.type)
-                    ? await (0, o.G)(x, w, R, P.currency)
+                    ? await (0, o.G)(x, D, R, P.currency)
                     : await (0, o.Mg)(
                           x,
                           {

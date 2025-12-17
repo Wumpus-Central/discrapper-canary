@@ -1,15 +1,15 @@
-r.d(t, { default: () => c }), r(953529);
+r.d(t, { default: () => d }), r(953529);
 var n = r(54381),
     o = r(793030),
     a = r(481060),
     i = r(639777),
     s = r(507155),
-    l = r(726527);
-function c(e) {
+    l = r(340236);
+function d(e) {
     var t,
         r,
-        { guildId: c, title: d, description: u, powerups: p, footerInfoText: f, footerAction: v } = e,
-        b = (function (e, t) {
+        { guildId: d, title: c, description: u, powerups: p, footerInfoText: f, footerAction: b } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -30,7 +30,7 @@ function c(e) {
             }
             return o;
         })(e, ["guildId", "title", "description", "powerups", "footerInfoText", "footerAction"]);
-    let j = (0, i.Z)(c),
+    let j = (0, i.Z)(d),
         m =
             null != f && f.length > 0
                 ? (0, n.jsx)("div", {
@@ -69,12 +69,12 @@ function c(e) {
             return e;
         })(
             {
-                title: d,
+                title: c,
                 subtitle: u,
                 actionBarInput: m,
-                actions: null != v ? [v] : [],
+                actions: null != b ? [b] : [],
             },
-            b,
+            v,
         )),
         (r = r =
             {
@@ -84,7 +84,7 @@ function c(e) {
                         (0, n.jsx)(
                             s.Z,
                             {
-                                guildId: c,
+                                guildId: d,
                                 powerup: e,
                                 canUseBoosts: null != j && j,
                             },

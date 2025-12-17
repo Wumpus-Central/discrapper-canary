@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     d = n(926958),
     u = n(964821),
     g = n(981631),
-    m = n(290511),
-    p = n(388032),
-    f = n(407810);
-function h(e) {
+    f = n(290511),
+    m = n(388032),
+    b = n(163022);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,13 +37,13 @@ function h(e) {
     }
     return e;
 }
-function b() {
+function h() {
     let e = (0, l.e7)([d.Z], () => d.Z.getEditedConnections()),
         t = (0, l.e7)([d.Z], () => d.Z.isSubmitting()),
-        b = i.useCallback(() => {
+        h = i.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e("11798").then(n.bind(n, 8656));
-                return (t) => (0, r.jsx)(e, h({}, t));
+                return (t) => (0, r.jsx)(e, p({}, t));
             });
         }, []),
         x = i.useMemo(
@@ -51,8 +51,8 @@ function b() {
                 e.map((e) => {
                     var t, n;
                     return (
-                        (t = h({}, e)),
-                        (n = n = { id: (0, m.a4)(e) }),
+                        (t = p({}, e)),
+                        (n = n = { id: (0, f.a4)(e) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -99,55 +99,55 @@ function b() {
             });
             (0, c.l_)(t);
         }, []),
-        { handleDragStart: _, handleDragReset: v, handleDragComplete: O, draggingId: C } = (0, s.Z)(x, j),
-        y = e.length < m.yx;
+        { handleDragStart: v, handleDragReset: O, handleDragComplete: C, draggingId: y } = (0, s.Z)(x, j),
+        N = e.length < f.yx;
     return (0, r.jsxs)("div", {
-        className: f.connectionsSection,
+        className: b.connectionsSection,
         children: [
             (0, r.jsxs)("div", {
-                className: f.connectionsSectionHeader,
+                className: b.connectionsSectionHeader,
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/bold",
-                        children: p.intl.string(p.t.Cl8F8H),
+                        children: m.intl.string(m.t.Cl8F8H),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-strong",
-                        children: p.intl.format(p.t.vqgyJR, {
+                        children: m.intl.format(m.t.vqgyJR, {
                             linkedRolesUrl: o.Z.getArticleURL(g.BhN.CONNECTION_DETAILS_ADMIN),
                         }),
                     }),
-                    !y &&
+                    !N &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: p.intl.format(p.t.Nc7guW, { max: m.yx }),
+                            children: m.intl.format(m.t.Nc7guW, { max: f.yx }),
                         }),
                 ],
             }),
             e.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: f.connectionsList,
+                    className: b.connectionsList,
                     children: x.map((e, t) =>
                         (0, r.jsx)(
                             u.Z,
                             {
                                 connection: e,
                                 index: t,
-                                onDragStart: _,
-                                onDragReset: v,
-                                onDragComplete: O,
-                                draggingId: C,
+                                onDragStart: v,
+                                onDragReset: O,
+                                onDragComplete: C,
+                                draggingId: y,
                             },
                             e.id,
                         ),
                     ),
                 }),
             (0, r.jsxs)("button", {
-                className: f.addConnectionButton,
-                onClick: b,
-                disabled: !y || t,
+                className: b.addConnectionButton,
+                onClick: h,
+                disabled: !N || t,
                 type: "button",
                 children: [
                     (0, r.jsx)(a.oFk, {
@@ -159,7 +159,7 @@ function b() {
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "text-brand",
-                        children: p.intl.string(p.t["03EqaC"]),
+                        children: m.intl.string(m.t["03EqaC"]),
                     }),
                 ],
             }),

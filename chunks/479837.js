@@ -1,10 +1,10 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => b });
 var r = n(846027),
     i = n(365023),
     l = n(565799),
     a = n(501655),
-    s = n(368442),
-    o = n(829750),
+    o = n(368442),
+    s = n(829750),
     c = n(560688),
     u = n(173507),
     d = n(592125),
@@ -13,17 +13,17 @@ var r = n(846027),
     g = n(594174),
     h = n(981631),
     m = n(65154);
-function _() {
+function b() {
     var e, t;
     if (!(0, i.l)()) return;
     let n = p.Z.isVideoEnabled(),
-        _ = Object.values(p.Z.getVideoDevices())[0],
-        b = !1 === (null == (t = null == _ ? void 0 : _.disabled) || t),
+        b = Object.values(p.Z.getVideoDevices())[0],
+        _ = !1 === (null == (t = null == b ? void 0 : b.disabled) || t),
         E = p.Z.supportsInApp(m.AN.VIDEO) && p.Z.supportsInApp(m.AN.DESKTOP_CAPTURE),
         O = d.Z.getChannel(f.Z.getChannelId()),
         v = null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
     if (null == O || null == v) return;
-    let { reachedLimit: y } = (0, o.t)(O);
+    let { reachedLimit: y } = (0, s.t)(O);
     if (!y) {
         if (O.isGuildStageVoice()) {
             let e = l.Z.getMutableParticipants(O.id, a.pV.SPEAKER),
@@ -34,12 +34,12 @@ function _() {
                               let { user: t } = e;
                               return t.id === v;
                           });
-            if (!(0, s.tu)(O.guild_id) || !E || null == t || t.voiceState.suppress) return;
+            if (!(0, o.tu)(O.guild_id) || !E || null == t || t.voiceState.suppress) return;
         }
         return (
             n
                 ? r.Z.setVideoEnabled(!1)
-                : !n && b
+                : !n && _
                   ? (0, u.Z)(
                         () => {
                             r.Z.setVideoEnabled(!0);
@@ -47,7 +47,7 @@ function _() {
                         h.IlC.APP,
                         !0,
                     )
-                  : b || (0, c.Z)(),
+                  : _ || (0, c.Z)(),
             !1
         );
     }

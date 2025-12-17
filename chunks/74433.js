@@ -3,27 +3,27 @@ var r = n(657305),
     i = n(841784),
     l = n(420660),
     a = n(981631),
-    s = n(388032);
-function o(e, t) {
+    o = n(388032);
+function s(e, t) {
     if (null != e && e.type === a.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? s.intl.string(s.t.eXan7B) : e.name;
+    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? o.intl.string(o.t.eXan7B) : e.name;
     if (null == e || null == e.name) return null;
     if ((0, l.Z)(e)) return null != e.details && "" !== e.details ? e.details : e.name;
     if ((0, i.Z)(e)) return (0, r.Z)(e.name);
     var n = e.type,
-        o = e.name;
+        s = e.name;
     switch (n) {
         case a.IIU.LISTENING:
         case a.IIU.WATCHING:
         case a.IIU.COMPETING:
         case a.IIU.STREAMING:
-            return o;
+            return s;
         case a.IIU.CUSTOM_STATUS:
         case a.IIU.HANG_STATUS:
             return null;
         case a.IIU.PLAYING:
         default:
-            return o;
+            return s;
     }
 }
 function c(e, t) {
@@ -32,7 +32,7 @@ function c(e, t) {
         null != t && !1 !== t.discoverable && (n = [...n, null]);
         let r = null;
         for (let e of n) {
-            let n = o(e, t);
+            let n = s(e, t);
             if (null != n)
                 return {
                     activity: e,
@@ -47,5 +47,5 @@ function c(e, t) {
               }
             : null;
     }
-    return o(e, t);
+    return s(e, t);
 }

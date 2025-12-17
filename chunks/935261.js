@@ -4,8 +4,8 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(442837),
-    s = n(481060),
-    o = n(797258),
+    o = n(481060),
+    s = n(797258),
     c = n(374129),
     u = n(639351),
     d = n(565473),
@@ -23,9 +23,9 @@ function h(e) {
 function m(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
         i = null != n ? (0, d.y)(n.type) : null,
-        c = (0, a.e7)([o.Z], () => {
+        c = (0, a.e7)([s.Z], () => {
             var e, n;
-            return null == (e = o.Z.getSessionById(null != (n = null == t ? void 0 : t.sessionId) ? n : ""))
+            return null == (e = s.Z.getSessionById(null != (n = null == t ? void 0 : t.sessionId) ? n : ""))
                 ? void 0
                 : e.clientInfo.os;
         }),
@@ -43,7 +43,7 @@ function m(e) {
         className: l()(g.root, m ? g.connecting : g.connected),
         children: [
             (0, r.jsx)(h, { platform: u }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 color: m ? "text-strong" : "always-white",
                 variant: "text-xs/medium",
                 children: b,

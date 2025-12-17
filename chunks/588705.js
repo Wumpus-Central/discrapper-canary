@@ -84,8 +84,8 @@ let N = () =>
                 invite: u,
                 disableUser: N = !1,
                 error: C,
-                flatActivityCount: O = !1,
-                isRegister: T = !1,
+                flatActivityCount: T = !1,
+                isRegister: O = !1,
                 inUnclaimedFlow: A = !1,
                 friendMemberIds: Z = [],
                 showInvitedByHeader: P = !0,
@@ -174,7 +174,7 @@ let N = () =>
                         ? null
                         : (0, r.jsx)(o.DK, {
                               className: I.directInviteSubTitle,
-                              children: T
+                              children: O
                                   ? j.intl.format(j.t["6r4JiR"], { username: e })
                                   : j.intl.format(j.t.Quj7HX, { username: e }),
                           }));
@@ -233,7 +233,7 @@ let N = () =>
                                           className: I.activityCount,
                                           online: u.approximate_presence_count,
                                           total: u.approximate_member_count,
-                                          flat: O,
+                                          flat: T,
                                           renderText: L ? S : void 0,
                                       }),
                                 L && (0, r.jsx)(l.Z, { friendMemberIds: Z }),

@@ -156,10 +156,10 @@ function P() {
 function R() {
     (v = m({}, v)).colorblindMode = !v.colorblindMode;
 }
-function D() {
+function w() {
     (v = m({}, v)).lowContrastMode = !v.lowContrastMode;
 }
-function w(e) {
+function D(e) {
     v.syncForcedColors = e.syncForcedColors;
 }
 function x(e) {
@@ -188,11 +188,11 @@ function Z(e) {
     if (v.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
     v = g(m({}, v), { systemPrefersCrossfades: e.systemPrefersCrossfades });
 }
-function B(e) {
+function F(e) {
     if (v.prefersReducedMotion === e.prefersReducedMotion) return !1;
     v = g(m({}, v), { prefersReducedMotion: e.prefersReducedMotion });
 }
-function F(e) {
+function B(e) {
     if (v.systemPrefersContrast === e.systemPrefersContrast) return !1;
     v = g(m({}, v), { systemPrefersContrast: e.systemPrefersContrast });
 }
@@ -437,15 +437,15 @@ let $ = new J(s.Z, {
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: P,
     ACCESSIBILITY_COLORBLIND_TOGGLE: R,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: D,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: w,
     ACCESSIBILITY_SET_SATURATION: x,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: Y,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: F,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: B,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: G,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: Z,
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: B,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: F,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: D,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: V,
     ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: H,
     ACCESSIBILITY_SET_ROLE_STYLE: j,

@@ -1,44 +1,44 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(481060),
     o = n(259580),
-    c = n(422665);
+    c = n(335541);
 function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: i,
+            subtitle: l,
             children: d,
             className: u,
             isExpanded: m,
             onExpandedChange: p,
             defaultExpanded: h = !1,
-            onOpen: x,
-            maxHeight: f,
+            onOpen: f,
+            maxHeight: x,
         } = e,
-        [g, b] = r.useState(h),
+        [b, g] = r.useState(h),
         v = r.useRef(null),
-        [j, _] = r.useState(null),
-        y = void 0 !== m,
-        C = y ? m : g;
+        [j, y] = r.useState(null),
+        C = void 0 !== m,
+        _ = C ? m : b;
     r.useEffect(() => {
-        C && null != v.current && _(v.current.scrollHeight);
-    }, [C, d]);
+        _ && null != v.current && y(v.current.scrollHeight);
+    }, [_, d]);
     let S = r.useCallback(() => {
-            let e = !C;
-            y || b(e), null == p || p(e), e && null != x && x();
-        }, [C, y, p, x]),
+            let e = !_;
+            C || g(e), null == p || p(e), e && null != f && f();
+        }, [_, C, p, f]),
         E = r.useMemo(() => {
-            if (C) {
-                if (null != f) return { maxHeight: "number" == typeof f ? "".concat(f, "px") : f };
+            if (_) {
+                if (null != x) return { maxHeight: "number" == typeof x ? "".concat(x, "px") : x };
                 if (null != j) return { maxHeight: "".concat(j, "px") };
             }
-        }, [f, C, j]);
+        }, [x, _, j]);
     return (0, a.jsxs)("div", {
-        className: l()(c.accordionContainer, u, { [c.opened]: C }),
+        className: i()(c.accordionContainer, u, { [c.opened]: _ }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -57,17 +57,17 @@ function d(e) {
                                 color: "text-default",
                                 children: n,
                             }),
-                            null != i &&
-                                "" !== i &&
+                            null != l &&
+                                "" !== l &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
-                                    children: i,
+                                    children: l,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: l()(c.caret, { [c.opened]: C }),
+                        className: i()(c.caret, { [c.opened]: _ }),
                         children: (0, a.jsx)(o.Z, {
                             width: 20,
                             height: 20,
@@ -78,7 +78,7 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: l()(c.content, { [c.opened]: C }),
+                className: i()(c.content, { [c.opened]: _ }),
                 style: E,
                 children: d,
             }),

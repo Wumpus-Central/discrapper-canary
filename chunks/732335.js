@@ -6,7 +6,7 @@ var i = n(54381),
     s = n(129724),
     o = n(981631),
     c = n(388032),
-    d = n(197571);
+    d = n(478411);
 function u(e) {
     let { label: t, helperText: n, hideLabel: u, channel: h, onChange: g } = e,
         [m, f] = l.useState(null),

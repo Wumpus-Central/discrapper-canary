@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }),
+n.d(t, { Z: () => D }),
     n(413496),
     n(433524),
     n(35282),
@@ -88,10 +88,10 @@ function R(e) {
     }
     return !1;
 }
-function D(e) {
+function w(e) {
     return null != e && C(s.parse(e).protocol);
 }
-let w = {
+let D = {
     URL_REGEX: O,
     makeUrl: function (e, t) {
         let n = (null != t ? t : (0, l.Hc)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
@@ -104,14 +104,14 @@ let w = {
     },
     isDiscordProtocol: C,
     isDiscordUrl: R,
-    isDiscordUri: D,
+    isDiscordUri: w,
     isDiscordCdnUrl: function (e) {
         return null != e && s.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
     isDiscordDirectAssetUrl: A,
     isDiscordProxiedAssetUrl: N,
     isDiscordAssetUrl: P,
-    isDiscordUrlOrUri: (e) => R(e) || D(e),
+    isDiscordUrlOrUri: (e) => R(e) || w(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return (

@@ -1,6 +1,6 @@
 n.d(t, {
     E6: () => g,
-    f4: () => m,
+    f4: () => f,
     mw: () => u,
 });
 var r = n(54381),
@@ -21,7 +21,7 @@ function u(e) {
         analyticsLocations: c,
     } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("91304")]).then(n.bind(n, 28130));
+        let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("81564")]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -92,7 +92,7 @@ function g(e) {
             perks: a,
         });
 }
-function m(e, t, n, r) {
+function f(e, t, n, r) {
     let i = null == r ? void 0 : r.type,
         l = {
             page: d.ZY5.GUILD_SETTINGS,

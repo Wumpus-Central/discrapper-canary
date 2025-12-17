@@ -16,8 +16,8 @@ var r = n(54381),
     g = n(874010),
     O = n(684245),
     h = n(388032),
-    b = n(273339);
-function C(e) {
+    b = n(209668);
+function S(e) {
     let { quest: t, sourceQuestContent: n } = e,
         l = o.useMemo(() => (0, f.fh)(t, f.eC.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [t]);
     return null == l
@@ -37,7 +37,7 @@ function C(e) {
                   }),
           });
 }
-function S(e) {
+function C(e) {
     let { title: t, subtitle: n, icon: l, onClick: s, className: c } = e,
         [u, d] = o.useState(!1),
         m = () => {
@@ -111,12 +111,12 @@ function _(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(C, {
+            (0, r.jsx)(S, {
                 quest: _,
                 sourceQuestContent: g,
             }),
             (0, r.jsx)("div", { className: b.videoContOverlay }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(C, {
                 title: T,
                 subtitle: R,
                 icon: a.d4D,

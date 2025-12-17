@@ -6,7 +6,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(632065);
+    s = n(554315);
 let l = {
         SIZE: {
             default: void 0,

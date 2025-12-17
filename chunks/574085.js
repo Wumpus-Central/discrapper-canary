@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(953529), n(539854);
+n.d(t, { Z: () => m }), n(388685), n(953529), n(539854);
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -34,7 +34,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,10 +52,10 @@ function m(e, t) {
         e
     );
 }
-function p() {
+function m() {
     let { editStateId: e, guildId: t } = (0, a.N)(),
-        [n, p] = s.R7(e);
-    function f(e, t) {
+        [n, m] = s.R7(e);
+    function b(e, t) {
         let { name: r, description: i, emojiId: l, emojiName: a } = e,
             s = [...n],
             o = {
@@ -66,9 +66,9 @@ function p() {
                 ref_type: d.Qs.INTANGIBLE,
                 ref_id: void 0,
             };
-        null != t ? (s[t] = o) : s.push(o), p(s);
+        null != t ? (s[t] = o) : s.push(o), m(s);
     }
-    let h = (0, l.mY)();
+    let p = (0, l.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.p, {
@@ -77,14 +77,14 @@ function p() {
                     (0, i.h7j)((i) =>
                         (0, r.jsx)(
                             o.DI,
-                            m(g({}, i), {
+                            f(g({}, i), {
                                 guildId: t,
                                 initialData: n[e],
-                                onSave: (t) => f(t, e),
+                                onSave: (t) => b(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        t.splice(e, 1), p(t);
+                                        t.splice(e, 1), m(t);
                                     })(e),
                             }),
                         ),
@@ -93,7 +93,7 @@ function p() {
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    r.splice(t, 0, i), p(r);
+                    r.splice(t, 0, i), m(r);
                 },
                 guildId: t,
             }),
@@ -103,14 +103,14 @@ function p() {
                     (0, i.h7j)((e) =>
                         (0, r.jsx)(
                             o.DI,
-                            m(g({}, e), {
+                            f(g({}, e), {
                                 guildId: t,
-                                onSave: (e) => f(e),
+                                onSave: (e) => b(e),
                             }),
                         ),
                     );
                 },
-                disabled: h,
+                disabled: p,
                 children: u.intl.string(u.t["6dwqo0"]),
             }),
         ],

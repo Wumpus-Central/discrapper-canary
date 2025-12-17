@@ -1,7 +1,7 @@
 n.d(t, {
     J6: () => G,
-    LO: () => w,
-    TQ: () => D,
+    LO: () => D,
+    TQ: () => w,
     UB: () => H,
     ZU: () => x,
     Zn: () => L,
@@ -10,7 +10,7 @@ n.d(t, {
     fz: () => W,
     kK: () => M,
     lg: () => Y,
-    om: () => F,
+    om: () => B,
     pL: () => R,
     uV: () => N,
     uX: () => V,
@@ -62,7 +62,7 @@ function P() {
 function R() {
     return g.Z.getArticleURL(C.BhN.END_TO_END_ENCRYPTION);
 }
-function D(e, t, n, r, i) {
+function w(e, t, n, r, i) {
     n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
         (0, I.M1)({
             channelId: r,
@@ -70,7 +70,7 @@ function D(e, t, n, r, i) {
             analyticsLocation: i,
         });
 }
-function w(e, t, n) {
+function D(e, t, n) {
     if (n) {
         let n = (0, c.MK)(new Uint8Array(t));
         O.Z.deleteSecureFramesVerifiedKey(e, n);
@@ -178,14 +178,14 @@ async function Z(e) {
         throw (b.Z.captureException(e), e);
     }
 }
-function B(e) {
+function F(e) {
     return v.Z.getUploadedKeyVersionsCached().includes(e);
 }
-async function F(e) {
-    B(e) || (await Z(e));
+async function B(e) {
+    F(e) || (await Z(e));
 }
 async function V(e) {
-    if (!B(e)) return await Z(e), !0;
+    if (!F(e)) return await Z(e), !0;
     let t = d.default.getId(),
         { key: n } = await k(e),
         r = await G(t, n, e);

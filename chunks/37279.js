@@ -1,4 +1,4 @@
-n.d(e, { v: () => c });
+n.d(e, { v: () => S });
 var i = n(54381);
 n(473749);
 var l = n(120356),
@@ -6,8 +6,8 @@ var l = n(120356),
     u = n(692547),
     r = n(801729),
     a = n(388032),
-    o = n(959576);
-let c = (t) => {
+    o = n(598217);
+let S = (t) => {
     let { className: e = "" } = t;
     return (0, i.jsx)(r.IG, {
         text: a.intl.string(a.t.oW0eUd),

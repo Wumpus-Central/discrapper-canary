@@ -3,7 +3,7 @@ n.d(t, {
     Sq: () => er,
     ZP: () => es,
     el: () => el,
-    oO: () => B,
+    oO: () => F,
     wT: () => eo,
     zO: () => eu,
 }),
@@ -44,8 +44,8 @@ let A = 10,
     N = /^\/([a-zA-Z0-9-]+)$/,
     P = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
-    D = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    w = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
+    w = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     x = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     L = /^\/activities\/([0-9-]+)\/?$/,
     j = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -54,8 +54,8 @@ let A = 10,
     U = /^\/quests\/([0-9-]+)\/?$/,
     G = /^\/oauth2\/authorize/,
     Z = /^#itemSkuId=([0-9]+)$/,
-    B = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-    F = X(window.GLOBAL_ENV.INVITE_HOST),
+    F = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
+    B = X(window.GLOBAL_ENV.INVITE_HOST),
     V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
     H = X(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(C.$R1)),
     Y = X("//canary.".concat(C.$R1)),
@@ -63,7 +63,7 @@ let A = 10,
     K = X("discordapp.com"),
     z = X("discord.com"),
     q = [
-        S.Z.escape(null != (s = F.host) ? s : ""),
+        S.Z.escape(null != (s = B.host) ? s : ""),
         S.Z.escape(null != (l = V.host) ? l : ""),
         S.Z.escape(null != (c = H.host) ? c : ""),
         S.Z.escape(null != (u = K.host) ? u : ""),
@@ -113,7 +113,7 @@ function er(e) {
 }
 function ei(e) {
     if (null == e) return null;
-    let t = e.match(D);
+    let t = e.match(w);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -132,7 +132,7 @@ function ea(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null,
         };
-    let o = en(F, a),
+    let o = en(B, a),
         s = en(V, a),
         l =
             null !=
@@ -150,7 +150,7 @@ function eo(e) {
     if (e.includes("\\")) {
         let r = ec(e);
         if (null == r) return !1;
-        if (et(F, r)) return !0;
+        if (et(B, r)) return !0;
         if ([H, Y, W, K, z].some((e) => et(e, r))) {
             var t, n;
             return null != (n = null == (t = r.pathname) ? void 0 : t.toUpperCase().includes(T.g.INVITE)) && n;
@@ -165,7 +165,7 @@ function es(e) {
         r = J((e = e.replace(Q, (e, t, n, r) => (null == n ? "".concat(t, "http://").concat(r) : e)))).match(
             I.Z.URL_REGEX,
         ),
-        i = e.match(B);
+        i = e.match(F);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
         var a, o, s, l;
@@ -214,7 +214,7 @@ function es(e) {
                 (null == (a = e.scopes) ? void 0 : a.some((e) => e !== E.x.APPLICATIONS_COMMANDS)) ||
                 d(T.g.APP_OAUTH2_LINK, t);
         }
-        let m = null == u ? void 0 : u.match(w);
+        let m = null == u ? void 0 : u.match(D);
         if (null != m) {
             let e = m[2];
             d(T.g.APP_DIRECTORY_PROFILE, e);
@@ -239,8 +239,8 @@ function es(e) {
         null != I && d(T.g.SERVER_SHOP, I[1]);
         let C = null == u ? void 0 : u.match(M);
         null != C && d(T.g.SOCIAL_LAYER_STOREFRONT, "".concat(C[3], "-").concat(null != (o = C[1]) ? o : C[2]));
-        let D = el(e);
-        if ((null != D && d(T.g.QUESTS_EMBED, D), "/shop" === u)) {
+        let w = el(e);
+        if ((null != w && d(T.g.QUESTS_EMBED, w), "/shop" === u)) {
             let e = null != r.query ? (0, _.parse)(r.query).tab : null,
                 t = null == (s = r.hash) ? void 0 : s.match(Z);
             d(

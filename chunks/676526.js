@@ -33,17 +33,17 @@ var i = n(120356),
     N = n(884338),
     P = n(617552),
     R = n(981631),
-    D = n(231338),
-    w = n(388032),
-    x = n(702952),
-    L = n(186880);
+    w = n(231338),
+    D = n(388032),
+    x = n(322785),
+    L = n(290953);
 function j(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
         iconClassName: a()(x.arrowIcon, { [x.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: s.CJ0,
-        label: n ? w.intl.string(w.t["2TiKgS"]) : w.intl.string(w.t.oN8bqe),
+        label: n ? D.intl.string(D.t["2TiKgS"]) : D.intl.string(D.t.oN8bqe),
     });
 }
 function M(e) {
@@ -54,7 +54,7 @@ function M(e) {
             onMouseDown: y,
             onMouseMove: S,
             onMouseLeave: N,
-            onJumpToChannel: w,
+            onJumpToChannel: D,
             idle: j,
             selectedParticipant: M,
             embeddedActivity: k,
@@ -62,15 +62,15 @@ function M(e) {
         U = (0, _.bp)() === R.IlC.POPOUT,
         G = (0, o.e7)([T.Z], () => T.Z.isVideoEnabled()),
         Z = (0, o.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
-        B = !1 === (null == (t = null == Z ? void 0 : Z.disabled) || t),
-        F = (0, u.Z)([s])[0],
+        F = !1 === (null == (t = null == Z ? void 0 : Z.disabled) || t),
+        B = (0, u.Z)([s])[0],
         V = (0, h.Z)(a),
         { parentAnalyticsLocation: H } = (0, c.ZP)(),
         Y = (e) => {
             (0, f.v)(H, f.d.CAMERA, e), l.Z.setVideoEnabled(e);
         },
         W = () => {
-            B ? Y(!0) : (0, g.Z)();
+            F ? Y(!0) : (0, g.Z)();
         },
         K = () => {
             (0, f.v)(H, f.d.POPOUT, !0),
@@ -92,10 +92,10 @@ function M(e) {
                 children: (0, r.jsx)(b.r, {
                     idle: j,
                     title:
-                        null != (i = null != (n = null == F ? void 0 : F.name) ? n : null == a ? void 0 : a.name)
+                        null != (i = null != (n = null == B ? void 0 : B.name) ? n : null == a ? void 0 : a.name)
                             ? i
                             : "",
-                    onJumpToChannel: w,
+                    onJumpToChannel: D,
                     preventIdleComponent: E.Z,
                 }),
             }),
@@ -111,7 +111,7 @@ function M(e) {
                             (0, r.jsx)(I.C, {
                                 className: x.leftPipIcon,
                                 enabled: G,
-                                cameraUnavailable: !B,
+                                cameraUnavailable: !F,
                                 hasPermission: V,
                                 onChange: Y,
                                 onCameraUnavailable: W,
@@ -141,7 +141,7 @@ function M(e) {
                                       className: x.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: K,
-                                      onClosePopout: D.Vq,
+                                      onClosePopout: w.Vq,
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,

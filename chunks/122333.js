@@ -4,8 +4,8 @@ var i = n(54381);
 n(473749);
 var l = n(481060),
     a = n(570140),
-    s = n(317770),
-    o = n(622822),
+    o = n(317770),
+    s = n(622822),
     c = n(391650),
     u = n(305325),
     d = n(983736),
@@ -14,8 +14,8 @@ var l = n(481060),
     g = n(524329),
     h = n(995532),
     m = n(486472),
-    _ = n(430824),
-    b = n(914010),
+    b = n(430824),
+    _ = n(914010),
     E = n(594174),
     O = n(823379),
     v = n(358085),
@@ -72,7 +72,7 @@ function x(e, t) {
 function A() {
     null != r && (0, l.Mr3)(r);
 }
-class Z extends s.Z {
+class Z extends o.Z {
     _initialize() {
         a.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), a.Z.subscribe("LOGOUT", A);
     }
@@ -94,14 +94,14 @@ class Z extends s.Z {
             case C.M5.MARKETING_UNCLAIMED:
                 f.Z.flowStart(j.MK.ORGANIC_MARKETING, j.EW.NUF_STARTED);
         }
-        let s = !1,
-            A = b.Z.getGuildId();
+        let o = !1,
+            A = _.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
-            let e = _.Z.getGuild(A);
-            null != e && (0, d.Dc)(e) && ((s = !0), (0, g.RM)(e.id));
+            let e = b.Z.getGuild(A);
+            null != e && (0, d.Dc)(e) && ((o = !0), (0, g.RM)(e.id));
         }
         let Z = () => 0 === m.Z.totalGuilds && !v.isPlatformEmbedded,
-            w = o.bN();
+            w = s.bN();
         (e = [
             {
                 key: "Unified NUF Modal",
@@ -137,7 +137,7 @@ class Z extends s.Z {
                     };
                     r = await (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("42483"), n.e("91848")]).then(
+                            let { default: e } = await Promise.all([n.e("42483"), n.e("24028")]).then(
                                 n.bind(n, 599219),
                             );
                             return (n) => (0, i.jsx)(e, x(P({}, n), { onSlideChange: t }));
@@ -162,7 +162,7 @@ class Z extends s.Z {
                 predicate: () => {
                     var e;
                     return (
-                        !s &&
+                        !o &&
                         null != E.default.getCurrentUser() &&
                         !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) &&
                         !N.a &&
@@ -175,7 +175,7 @@ class Z extends s.Z {
                 open: (e) => (0, u.hk)(A, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return s && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !N.a;
+                    return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !N.a;
                 },
             },
             {

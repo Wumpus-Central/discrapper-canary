@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var a = n(54381);
 n(473749);
 var r = n(442837),
-    i = n(481060),
-    l = n(911969),
+    l = n(481060),
+    i = n(911969),
     s = n(168107),
     o = n(480916),
     c = n(594174),
@@ -19,7 +19,7 @@ let m = function (e) {
                 text: "Consectetur adipiscing",
                 variant: "primary",
                 onClick: () => {
-                    (null == n ? void 0 : n.ageVerificationStatus) === l.F$.UNVERIFIED
+                    (null == n ? void 0 : n.ageVerificationStatus) === i.F$.UNVERIFIED
                         ? s.Z.showAgeVerificationGetStartedModal({
                               entryPoint: o.cU.SAFETY_FLOWS,
                               onClose: () => t({ type: d.rY.Empty }),
@@ -28,18 +28,18 @@ let m = function (e) {
                 },
             },
         ],
-        children: (0, a.jsxs)(i.Kqy, {
+        children: (0, a.jsxs)(l.Kqy, {
             gap: 8,
             children: [
-                (0, a.jsx)(i.Text, {
+                (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 }),
-                (0, a.jsx)(i.Text, {
+                (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 }),
-                (0, a.jsx)(i.Text, {
+                (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: "Ut enim ad minim veniam quis",
                 }),

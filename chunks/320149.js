@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(541716),
-    o = n(665149),
+    o = n(541716),
+    s = n(665149),
     c = n(910611),
     u = n(355298),
     d = n(333984),
@@ -14,14 +14,14 @@ var r = n(54381),
     h = n(359110),
     m = n(6025),
     b = n(433355),
-    E = n(933557),
-    _ = n(287746),
+    _ = n(933557),
+    E = n(287746),
     O = n(388032),
     v = n(495182),
     y = n(517868);
 function I(e) {
     let { channel: t, baseChannelId: n } = e,
-        I = (0, E.ZP)(t),
+        I = (0, _.ZP)(t),
         C = (0, p.K)(),
         S = (0, p.V)(),
         T = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
@@ -40,7 +40,7 @@ function I(e) {
     if (null == t || !t.isDM()) return null;
     let Z = [
         (0, r.jsx)(
-            o.ZP.Icon,
+            s.ZP.Icon,
             {
                 icon: a.Dio,
                 tooltip: O.intl.string(O.t.cpT0Cq),
@@ -51,7 +51,7 @@ function I(e) {
     ];
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.ZP, {
+            (0, r.jsx)(s.ZP, {
                 toolbar: Z,
                 "aria-label": O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
@@ -81,11 +81,11 @@ function I(e) {
             (0, r.jsx)("div", {
                 className: v.chat,
                 children: (0, r.jsx)(
-                    _.Z,
+                    E.Z,
                     {
                         channel: t,
                         guild: null,
-                        chatInputType: s.Ie.SIDEBAR,
+                        chatInputType: o.Ie.SIDEBAR,
                     },
                     t.id,
                 ),

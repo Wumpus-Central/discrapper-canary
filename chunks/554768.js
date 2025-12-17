@@ -2,9 +2,9 @@ n.d(t, { Z: () => c }), n(784620), n(973216);
 var a = n(54381);
 n(473749);
 var r = n(481060),
-    i = n(968843),
-    l = n(388032),
-    s = n(231411);
+    l = n(968843),
+    i = n(388032),
+    s = n(864983);
 function o(e) {
     let { header: t, children: n } = e;
     return (0, a.jsxs)("div", {
@@ -38,18 +38,18 @@ function o(e) {
 }
 let c = function (e) {
     let { quest: t } = e,
-        n = (0, i.qb)(t);
+        n = (0, l.qb)(t);
     if (0 === n.length) return null;
     let r = n.at(0);
-    return r === l.intl.string(l.t.BV6xDm)
+    return r === i.intl.string(i.t.BV6xDm)
         ? (0, a.jsx)(o, {
-              header: l.intl.string(l.t.onh6ct),
-              children: l.intl.string(l.t.arVHRA),
+              header: i.intl.string(i.t.onh6ct),
+              children: i.intl.string(i.t.arVHRA),
           })
-        : r === l.intl.string(l.t.MFGxFM)
+        : r === i.intl.string(i.t.MFGxFM)
           ? (0, a.jsx)(o, {
-                header: l.intl.string(l.t.JPihZA),
-                children: l.intl.string(l.t.MFGxFM),
+                header: i.intl.string(i.t.JPihZA),
+                children: i.intl.string(i.t.MFGxFM),
             })
           : null;
 };

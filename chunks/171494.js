@@ -1,7 +1,7 @@
 e.d(n, { default: () => g }), e(388685);
 var l = e(54381),
-    i = e(473749),
-    a = e(793030),
+    a = e(473749),
+    i = e(793030),
     s = e(442837),
     r = e(481060),
     o = e(91176),
@@ -14,20 +14,20 @@ var l = e(54381),
     m = e(590433),
     v = e(981631),
     b = e(388032),
-    y = e(266973);
+    y = e(327097);
 function g(t) {
     var n, e;
     let { guildId: g, userId: w, anaylticsLocations: x, transitionState: C, onClose: D } = t,
         { analyticsLocations: k } = (0, c.ZP)(),
-        _ = null != (e = null != (n = null == x ? void 0 : x[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
-        T = (0, s.e7)([h.default], () => h.default.getUser(w), [w]),
+        T = null != (e = null != (n = null == x ? void 0 : x[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
+        _ = (0, s.e7)([h.default], () => h.default.getUser(w), [w]),
         [S, U] = (0, f.ZP)(w, g),
-        [Z, E] = i.useState(!1),
-        P = i.useCallback(async () => {
-            if (null != T) {
+        [Z, E] = a.useState(!1),
+        P = a.useCallback(async () => {
+            if (null != _) {
                 E(!0);
                 try {
-                    await o.Z.setCommunicationDisabledDuration(g, w, null, null, _),
+                    await o.Z.setCommunicationDisabledDuration(g, w, null, null, T),
                         (0, r.showToast)((0, r.createToast)(b.intl.string(b.t["/Mmbfv"]), r.ToastType.SUCCESS)),
                         D();
                 } catch (t) {
@@ -36,29 +36,29 @@ function g(t) {
                     E(!1);
                 }
             }
-        }, [g, T, w, D, _]),
-        j = i.useCallback(() => {
+        }, [g, _, w, D, T]),
+        j = a.useCallback(() => {
             U || D();
         }, [U, D]);
     return ((0, u.ZP)(() => {
-        null != T &&
+        null != _ &&
             p.default.track(v.rMx.OPEN_MODAL, {
                 type: m.av,
                 guild_id: g,
-                other_user_id: T.id,
+                other_user_id: _.id,
             });
     }),
-    i.useEffect(() => {
-        (null == T || null == g) && D();
+    a.useEffect(() => {
+        (null == _ || null == g) && D();
     }),
-    null == T || null == g)
+    null == _ || null == g)
         ? null
-        : (0, l.jsx)(a.Modal, {
+        : (0, l.jsx)(i.Modal, {
               transitionState: C,
               onClose: D,
               title: b.intl.string(b.t["+ZD3ou"]),
               subtitle: b.intl.format(b.t["t+abNU"], {
-                  username: T.username,
+                  username: _.username,
                   countdown: (t) =>
                       null == S
                           ? null

@@ -22,8 +22,8 @@ n.d(t, {
     n(642613);
 var r = n(658722),
     i = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(913527),
     l = n.n(s),
     c = n(212819),
@@ -114,7 +114,7 @@ function x() {
 function L() {
     let e = new Date().getFullYear();
     return new Set(
-        a()
+        o()
             .range(2015, e + 1)
             .map((e) => e.toString()),
     );
@@ -171,10 +171,10 @@ function z(e, t) {
     let n,
         r,
         i = e.getFullMatch().trim().toLowerCase(),
-        o = U()[i];
+        a = U()[i];
     return (
-        null != o
-            ? ([n, r] = o())
+        null != a
+            ? ([n, r] = a())
             : D().has(i)
               ? ([n, r] = k(i, "MMMM", "month"))
               : x().has(i)
@@ -192,14 +192,14 @@ function z(e, t) {
 function q(e, t, n) {
     let r = f.ZP.getChannels(n)[f.sH].concat(f.ZP.getChannels(n)[f.Zb]),
         i = f.ZP.getTextChannelNameDisambiguations(n),
-        o = S.Z.getCurrentConfig({ location: "guildChannelValidator" }).enabled,
-        s = a()
+        a = S.Z.getCurrentConfig({ location: "guildChannelValidator" }).enabled,
+        s = o()
             .chain(r)
             .map((e) => {
                 let { channel: t } = e;
                 return t;
             })
-            .concat(o && null != n ? d.Z.getAllThreadsForGuild(n) : [])
+            .concat(a && null != n ? d.Z.getAllThreadsForGuild(n) : [])
             .filter((e) => {
                 var n, r;
                 return t === (null != (r = null == (n = i[e.id]) ? void 0 : n.name) ? r : e.name);
@@ -268,7 +268,7 @@ function ee() {
     return [...Array.from(D()), ...Array.from(x()), ...Array.from(L()), ...Object.keys(U())];
 }
 function et() {
-    return a().sample(ee());
+    return o().sample(ee());
 }
 function en(e, t, n) {
     return er(e, t, ee()).map((e) =>
@@ -280,7 +280,7 @@ function en(e, t, n) {
 }
 function er(e, t, n) {
     let r = e.toLocaleLowerCase();
-    return a()(n)
+    return o()(n)
         .filter((e) => i()(r, e.toLocaleLowerCase()))
         .take(t)
         .map((e) => ({ text: e }))
@@ -314,15 +314,15 @@ function ei(e) {
         i
     );
 }
-function eo(e) {
+function ea(e) {
     let { query: t, searchContext: n, maxResults: r = 10, tokens: i } = e,
-        o = {
+        a = {
             query: (t = t.trim().split("#")[0]),
             limit: r,
             request: !1,
             boosters: (0, g.Cq)(c.h8.USER),
         },
-        a = [];
+        o = [];
     switch (n.type) {
         case C.aib.GUILD:
         case C.aib.GUILD_CHANNEL:
@@ -340,9 +340,9 @@ function eo(e) {
                             }),
                             t.add(n.id));
                     },
-                    o = _.Z.getCurrentlySelectedChannelId(n.guildId);
+                    a = _.Z.getCurrentlySelectedChannelId(n.guildId);
                 return (
-                    g.ZP.getRecentlyTalked(o, r).forEach((e) => {
+                    g.ZP.getRecentlyTalked(a, r).forEach((e) => {
                         let { record: t } = e;
                         return i(t);
                     }),
@@ -350,23 +350,23 @@ function eo(e) {
                     e.slice(0, r)
                 );
             }
-            a = g.ZP.queryGuildUsers(w(P({}, o), { guildId: n.guildId }));
+            o = g.ZP.queryGuildUsers(w(P({}, a), { guildId: n.guildId }));
             break;
         case C.aib.CHANNEL:
-            a = g.ZP.queryChannelUsers(w(P({}, o), { channelId: n.channelId }));
+            o = g.ZP.queryChannelUsers(w(P({}, a), { channelId: n.channelId }));
             break;
         case C.aib.DMS:
             let s = ei(null != i ? i : []);
             if (null != s && s.length > 0) {
                 let e = h.default.getCurrentUser();
                 null != e && s.push(e),
-                    (a = g.ZP.queryUsers(
-                        w(P({}, o), {
+                    (o = g.ZP.queryUsers(
+                        w(P({}, a), {
                             users: s,
                             boosters: (0, g.Cq)(c.h8.USER),
                         }),
                     ));
-            } else a = g.ZP.queryAllUsers(w(P({}, o), { boosters: (0, g.Cq)(c.h8.USER) }));
+            } else o = g.ZP.queryAllUsers(w(P({}, a), { boosters: (0, g.Cq)(c.h8.USER) }));
             break;
         default:
             return [];
@@ -374,7 +374,7 @@ function eo(e) {
     let l = h.default.getCurrentUser(),
         u = t.toLowerCase().replace(/^@/, ""),
         d = null != l && t.length > 0 && (A.intl.string(A.t.Qf3ptv).startsWith(u) || C.ME.substr(1).startsWith(u)),
-        f = a
+        f = o
             .filter((e) => {
                 let { record: t } = e;
                 return !p.Z.isBlockedOrIgnored(t.id) && (!d || t.id !== (null == l ? void 0 : l.id));
@@ -395,7 +395,7 @@ function eo(e) {
         f
     );
 }
-function ea() {
+function eo() {
     return !m.Z.hidePersonalInformation;
 }
 function es(e, t, n) {
@@ -410,7 +410,7 @@ function es(e, t, n) {
             limit: t,
             boosters: (0, g.Cq)(c.h8.USER),
         }),
-        o = a()(r.concat(i))
+        a = o()(r.concat(i))
             .sort(c.qU)
             .map((e) => {
                 let { record: t, comparator: n } = e;
@@ -426,16 +426,16 @@ function es(e, t, n) {
         let e = _.Z.getChannelId(),
             t = d.Z.getChannel(e);
         if (null != t && t.isPrivate()) {
-            let n = o.findIndex((t) => {
+            let n = a.findIndex((t) => {
                 let { channel: n } = t;
                 return n.id === e;
             });
             if (-1 !== n) {
-                let e = o[n];
-                o.splice(n, 1), o.unshift(e);
+                let e = a[n];
+                a.splice(n, 1), a.unshift(e);
             } else if (t.isGroupDM()) {
                 let e = (0, u.F6)(t, h.default, p.Z);
-                o.unshift({
+                a.unshift({
                     text: e,
                     channel: t,
                     key: t.id,
@@ -445,7 +445,7 @@ function es(e, t, n) {
                     n = h.default.getUser(e);
                 if (null != n) {
                     let e = b.ZP.getUserTag(n);
-                    o.unshift({
+                    a.unshift({
                         text: e,
                         channel: t,
                         key: t.id,
@@ -454,7 +454,7 @@ function es(e, t, n) {
             }
         }
     }
-    return o.slice(0, t);
+    return a.slice(0, t);
 }
 function el(e, t, n) {
     let r = S.Z.getCurrentConfig({ location: "getGuildChannelAutocompletions" }).enabled,
@@ -488,13 +488,13 @@ function el(e, t, n) {
             n = i.find((t) => t.id === e);
         null != n && (i.splice(i.indexOf(n), 1), i.unshift(n));
     }
-    let o = f.ZP.getTextChannelNameDisambiguations(t);
-    return a()(i)
+    let a = f.ZP.getTextChannelNameDisambiguations(t);
+    return o()(i)
         .take(n)
         .map((e) => {
             var t, n;
             return {
-                text: "".concat(null != (n = null == (t = o[e.id]) ? void 0 : t.name) ? n : e.name),
+                text: "".concat(null != (n = null == (t = a[e.id]) ? void 0 : t.name) ? n : e.name),
                 channel: e,
                 key: e.id,
             };
@@ -561,8 +561,8 @@ function ep(e) {
             componentType: "FILTER",
             key: Y(A.intl.string(A.t["1TUdFo"])),
             plainText: A.intl.string(A.t["1TUdFo"]),
-            validator: ea,
-            getAutocompletions: eo,
+            validator: eo,
+            getAutocompletions: ea,
         },
         [C.dCx.ANSWER_USERNAME_FROM]: {
             follows: [C.dCx.FILTER_FROM],
@@ -577,8 +577,8 @@ function ep(e) {
             componentType: "FILTER",
             key: Y(A.intl.string(A.t["i96lO+"])),
             plainText: A.intl.string(A.t["i96lO+"]),
-            validator: ea,
-            getAutocompletions: eo,
+            validator: eo,
+            getAutocompletions: ea,
         },
         [C.dCx.ANSWER_USERNAME_MENTIONS]: {
             follows: [C.dCx.FILTER_MENTIONS],
@@ -755,13 +755,13 @@ function eE(e) {
         n = [];
     for (let r of Object.keys(e_)) {
         if (n.length >= t) break;
-        let o = e_[r].key;
+        let a = e_[r].key;
         eg(r) &&
-            null != o &&
-            i()(e.toLowerCase(), o) &&
+            null != a &&
+            i()(e.toLowerCase(), a) &&
             n.push({
                 token: r,
-                text: o,
+                text: a,
             });
     }
     return n;

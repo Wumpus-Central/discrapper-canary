@@ -27,12 +27,12 @@ var r = n(54381),
     N = n(732659),
     P = n(86724),
     R = n(847302),
-    D = n(657198),
-    w = n(321127),
+    w = n(657198),
+    D = n(321127),
     x = n(645174),
     L = n(120481),
     j = n(981631),
-    M = n(867641);
+    M = n(919148);
 let k = i.forwardRef(function (e, t) {
     let {
             value: n,
@@ -41,8 +41,8 @@ let k = i.forwardRef(function (e, t) {
             className: U,
             id: G,
             disabled: Z,
-            submitting: B,
-            placeholder: F,
+            submitting: F,
+            placeholder: B,
             required: V,
             textAreaPaddingClassName: H,
             onChange: Y,
@@ -81,7 +81,7 @@ let k = i.forwardRef(function (e, t) {
         eS = i.useRef(null),
         eI = i.useRef(!0),
         eT = i.useRef(!0),
-        eC = Z || B,
+        eC = Z || F,
         eA = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -147,7 +147,7 @@ let k = i.forwardRef(function (e, t) {
             onChangeEnd: eP,
             updateState: eA,
         }),
-        eD = i.useCallback(
+        ew = i.useCallback(
             (e, t) => {
                 let n = _.tM(eR, e, k.id),
                     r = _.lk(e, k.guild_id, k.id, n, t);
@@ -158,14 +158,14 @@ let k = i.forwardRef(function (e, t) {
             },
             [k.guild_id, k.id, eR],
         ),
-        ew = i.useCallback(() => {
+        eD = i.useCallback(() => {
             let e,
                 t = b.bN.getNodesOfType(eR, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
                 r = eo ? c.Z.getActiveCommand(k.id) : null,
                 i = !1;
             if (null != r && null != r.options) {
-                let t = eD(r, !1);
+                let t = ew(r, !1);
                 e = t.values;
                 let n = _.cu(eR)
                     .filter((e) => !t.results[e].success)
@@ -208,8 +208,8 @@ let k = i.forwardRef(function (e, t) {
                     r,
                     e,
                 );
-        }, [k.id, eR, ee, et, eD, eo]);
-    (0, T.Z)(t, eR, k, ew), (0, N.Z)(eR, ev, K);
+        }, [k.id, eR, ee, et, ew, eo]);
+    (0, T.Z)(t, eR, k, eD), (0, N.Z)(eR, ev, K);
     let { handleKeyDown: ex, handleKeyUp: eL } = (0, C.Z)({
             editor: eR,
             channel: k,
@@ -219,7 +219,7 @@ let k = i.forwardRef(function (e, t) {
             onTab: J,
             onEnter: $,
             allowNewLines: eu,
-            submit: ew,
+            submit: eD,
             hideAutocomplete: er,
             moveSelection: ei,
         }),
@@ -245,10 +245,10 @@ let k = i.forwardRef(function (e, t) {
             let e = () => {
                 var e;
                 let t = null != (e = c.Z.getActiveCommand(k.id)) ? e : null;
-                null !== t && null != t.options && eD(t, !0);
+                null !== t && null != t.options && ew(t, !0);
             };
             return u.Z.addChangeListener(e), () => u.Z.removeChangeListener(e);
-        }, [k, eR, eD]);
+        }, [k, eR, ew]);
     let eG = i.useCallback(
             (e) => [
                 ...(0, v.Z)(eR, e, k.guild_id),
@@ -263,12 +263,12 @@ let k = i.forwardRef(function (e, t) {
         ),
         eZ = i.useCallback(
             (e) => {
-                let t = (0, D.Z)(eR, e, k.id);
+                let t = (0, w.Z)(eR, e, k.id);
                 return null == t && (t = (0, x.Z)(eR, e)), null == t && (t = (0, L.Z)(eR, e)), t;
             },
             [k.id, eR],
         ),
-        eB = i.useCallback((e) => (0, w.Z)(e), []);
+        eF = i.useCallback((e) => (0, D.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.d9, {
@@ -284,7 +284,7 @@ let k = i.forwardRef(function (e, t) {
                     channelId: k.id,
                     guildId: k.guild_id,
                     className: o()(M.slateTextArea, H),
-                    placeholder: F,
+                    placeholder: B,
                     readOnly: eC,
                     spellCheck: ea,
                     autoFocus: !el,
@@ -298,7 +298,7 @@ let k = i.forwardRef(function (e, t) {
                     onKeyUp: eL,
                     decorate: eG,
                     renderExtraElement: eZ,
-                    renderExtraLeaf: eB,
+                    renderExtraLeaf: eF,
                     "aria-owns": ep,
                     "aria-haspopup": em,
                     "aria-expanded": e_,

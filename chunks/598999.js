@@ -29,7 +29,7 @@ var r = n(54381),
     I = n(294218),
     T = n(981631),
     C = n(388032),
-    A = n(129633);
+    A = n(619629);
 function N(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function D(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -148,7 +148,7 @@ let G = (e) => {
             ],
         });
     };
-class B extends i.PureComponent {
+class F extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsx)("div", {
@@ -201,10 +201,10 @@ class B extends i.PureComponent {
             });
     }
 }
-let F = u.ZP.connectStores([E.Z], (e) => {
+let B = u.ZP.connectStores([E.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && E.Z.can(T.Plq.MANAGE_MESSAGES, t) };
-})(B);
+})(F);
 function V(e) {
     let {
             analyticsName: t,
@@ -244,15 +244,15 @@ function V(e) {
                 }
             );
         }, []);
-    let B = i.useCallback(() => {
+    let F = i.useCallback(() => {
             var e;
             let t = null == (e = R.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < k && a && !s && (null == f || f());
         }, [a, f, s]),
-        F = [],
+        B = [],
         V = !0;
     null == n || (s && 0 === n.length)
-        ? (F = [
+        ? (B = [
               (0, r.jsx)(
                   "div",
                   {
@@ -263,11 +263,11 @@ function V(e) {
               ),
           ])
         : 0 === n.length
-          ? F.push((0, r.jsx)(i.Fragment, { children: h() }, "empty-state"))
+          ? B.push((0, r.jsx)(i.Fragment, { children: h() }, "empty-state"))
           : ((V = !1),
-            (F = []),
+            (B = []),
             l().each(n, (e) => {
-                F.push(...g(e));
+                B.push(...g(e));
             }));
     let H = null;
     null != n &&
@@ -326,7 +326,7 @@ function V(e) {
             children: [
                 (0, r.jsxs)(d.Den, {
                     className: o()(A.messagesPopout, S),
-                    onScroll: z ? B : void 0,
+                    onScroll: z ? F : void 0,
                     ref: R,
                     children: [
                         (0, r.jsx)(c.bG, {
@@ -334,8 +334,8 @@ function V(e) {
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
-                                        n = w(e, ["ref"]);
-                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: F }));
+                                        n = D(e, ["ref"]);
+                                    return (0, r.jsx)("div", w(P({ ref: t }, n), { children: B }));
                                 },
                             }),
                         }),
@@ -372,7 +372,7 @@ function H(e) {
             let e = null != a ? g.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function D(e, n) {
+    function w(e, n) {
         let r = () => {
             let { id: r, channel_id: i } = e,
                 a = h.Z.getChannel(i);
@@ -380,10 +380,10 @@ function H(e) {
         };
         (0, S.Z)(e, r) && !R && r();
     }
-    function w(e) {
+    function D(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];
-        if (null != b) return b(t, (e) => D(t, e));
+        if (null != b) return b(t, (e) => w(t, e));
         let i = [];
         return null == n
             ? []
@@ -398,12 +398,12 @@ function H(e) {
                                   message: t,
                                   channel: n,
                               }),
-                              (0, r.jsx)(F, {
+                              (0, r.jsx)(B, {
                                   channel: a,
                                   message: t,
                                   jumping: R,
                                   canCloseAllMessages: p,
-                                  jumpTo: D,
+                                  jumpTo: w,
                                   onCloseMessage: C,
                                   closeAriaLabel: P,
                               }),
@@ -438,7 +438,7 @@ function H(e) {
         hasMore: s,
         loadMore: c,
         getProTip: y,
-        renderItem: w,
+        renderItem: D,
         listName: N,
         "aria-label": e["aria-label"],
     });

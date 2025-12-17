@@ -164,21 +164,21 @@ function R(e) {
         (y.notifCenterItems = [t, ...y.notifCenterItems]),
         y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
-function D(e) {
+function w(e) {
     let { id: t } = e;
     if (!y.notifCenterIds.has(t)) return !1;
     y.notifCenterIds.delete(t), (y.notifCenterItems = y.notifCenterItems.filter((e) => e.id !== t));
 }
-function w(e, t) {
+function D(e, t) {
     y.notifCenterItems = y.notifCenterItems.map((n) => (e.includes(n.id) ? b(g({}, n), { acked: t }) : n)).filter(O);
 }
 function x(e) {
     let { ids: t } = e;
-    w(t, !0);
+    D(t, !0);
 }
 function L(e) {
     let { ids: t } = e;
-    w(t, !1);
+    D(t, !1);
 }
 function j(e) {
     let { active: t } = e;
@@ -234,7 +234,7 @@ function Z(e) {
             !k(t, p.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id),
     );
 }
-function B(e) {
+function F(e) {
     let { gameRelationship: t } = e,
         { id: n, type: r, since: i, applicationId: a } = t;
     if (u.Z.isBlockedOrIgnored(n)) return !1;
@@ -255,7 +255,7 @@ function B(e) {
         );
     }
 }
-function F(e) {
+function B(e) {
     let { userId: t, applicationId: n } = e;
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter(
         (e) =>
@@ -352,7 +352,7 @@ let z = new K(a.Z, {
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: L,
     GUILD_SCHEDULED_EVENT_UPDATE: H,
     NOTIFICATION_CENTER_ITEM_CREATE: R,
-    NOTIFICATION_CENTER_ITEM_DELETE: D,
+    NOTIFICATION_CENTER_ITEM_DELETE: w,
     NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: R,
     LOAD_NOTIFICATION_CENTER_ITEMS: I,
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: T,
@@ -363,8 +363,8 @@ let z = new K(a.Z, {
     RELATIONSHIP_ADD: G,
     RELATIONSHIP_UPDATE: G,
     RELATIONSHIP_REMOVE: Z,
-    GAME_RELATIONSHIP_ADD: B,
-    GAME_RELATIONSHIP_REMOVE: F,
+    GAME_RELATIONSHIP_ADD: F,
+    GAME_RELATIONSHIP_REMOVE: B,
     NOTIFICATION_CENTER_ITEM_COMPLETED: V,
     SET_RECENT_MENTIONS_FILTER: () => S(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: W,

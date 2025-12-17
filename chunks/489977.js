@@ -3,8 +3,8 @@ var r = n(570140),
     i = n(809206),
     l = n(317770),
     a = n(18438),
-    s = n(378879),
-    o = n(643879),
+    o = n(378879),
+    s = n(643879),
     c = n(350327),
     u = n(594174),
     d = n(74538),
@@ -26,14 +26,14 @@ class f extends l.Z {
                       m = d.ZP.canUseAnimatedAvatar(g);
                   if (m || "image/gif" !== n.type) return void h(t);
                   if (null == g) return;
-                  let _ = (0, o.SD)({
+                  let b = (0, s.SD)({
                       userId: g.id,
                       image: t,
                   });
                   if (!m)
-                      return void (0, s.s)({
+                      return void (0, o.s)({
                           uploadType: p.pC.AVATAR,
-                          imageSrc: _,
+                          imageSrc: b,
                           analyticsSource: l,
                       });
               })(e)
@@ -42,14 +42,14 @@ class f extends l.Z {
                     let { image: t, guildId: n, analyticsSource: r, isTryItOut: i } = e,
                         l = t.imageUri;
                     if (i) return void (0, c.f4)(l);
-                    let o = u.default.getCurrentUser(),
+                    let s = u.default.getCurrentUser(),
                         f = null != n ? a.g_ : c.g_,
-                        g = d.ZP.canUsePremiumProfileCustomization(o);
-                    return d.ZP.canUsePremiumProfileCustomization(o)
+                        g = d.ZP.canUsePremiumProfileCustomization(s);
+                    return d.ZP.canUsePremiumProfileCustomization(s)
                         ? void f(l)
-                        : null == o || g
+                        : null == s || g
                           ? void 0
-                          : void (0, s.s)({
+                          : void (0, o.s)({
                                 uploadType: p.pC.BANNER,
                                 imageSrc: l,
                                 analyticsSource: r,

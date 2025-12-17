@@ -1,17 +1,17 @@
-n.d(i, { default: () => c });
+n.d(i, { default: () => l });
 var e = n(54381);
 n(473749);
 var r = n(481060),
     a = n(600164),
     s = n(313201),
-    o = n(952164),
-    d = n(388032),
-    l = n(551850);
-function c(t) {
+    d = n(952164),
+    o = n(388032),
+    c = n(650021);
+function l(t) {
     let { transitionState: i, onClose: n } = t,
-        c = (0, s.Dt)();
+        l = (0, s.Dt)();
     return (0, e.jsxs)(r.Y0X, {
-        "aria-labelledby": c,
+        "aria-labelledby": l,
         transitionState: i,
         size: r.CgR.SMALL,
         parentComponent: "SpotifyPremiumUpgradeModal",
@@ -19,21 +19,21 @@ function c(t) {
             (0, e.jsx)(r.xBx, {
                 separator: !1,
                 children: (0, e.jsx)(r.Heading, {
-                    id: c,
+                    id: l,
                     variant: "heading-lg/semibold",
-                    children: d.intl.formatToMarkdownString(d.t.DQsSGr, {}),
+                    children: o.intl.formatToMarkdownString(o.t.DQsSGr, {}),
                 }),
             }),
             (0, e.jsxs)(r.hzk, {
                 children: [
                     (0, e.jsx)(a.Z, {
                         justify: a.Z.Justify.CENTER,
-                        children: (0, e.jsx)("div", { className: l.image }),
+                        children: (0, e.jsx)("div", { className: c.image }),
                     }),
                     (0, e.jsx)(r.Text, {
-                        className: l.text,
+                        className: c.text,
                         variant: "text-sm/normal",
-                        children: d.intl.string(d.t.xGMwi9),
+                        children: o.intl.string(o.t.xGMwi9),
                     }),
                 ],
             }),
@@ -43,14 +43,14 @@ function c(t) {
                     children: [
                         (0, e.jsx)(r.Button, {
                             variant: "primary",
-                            text: d.intl.string(d.t.n8U5jd),
+                            text: o.intl.string(o.t.n8U5jd),
                             onClick: function () {
-                                (0, o.KK)(), n();
+                                (0, d.KK)(), n();
                             },
                         }),
                         (0, e.jsx)(r.Button, {
                             variant: "secondary",
-                            text: d.intl.string(d.t["ETE/oC"]),
+                            text: o.intl.string(o.t["ETE/oC"]),
                             onClick: n,
                         }),
                     ],

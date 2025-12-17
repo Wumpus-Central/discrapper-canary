@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(35282);
 var r = n(990547),
     i = n(544891),
     s = n(570140),
-    l = n(881052),
-    a = n(626135),
+    a = n(881052),
+    l = n(626135),
     o = n(573261),
     c = n(109488),
     u = n(981631);
@@ -73,7 +73,7 @@ let h = {
                         : void 0;
         if (null != h)
             return (
-                a.default.track(u.rMx.POMELO_ERRORS, {
+                l.default.track(u.rMx.POMELO_ERRORS, {
                     reason: h,
                     username_error: !0,
                     location: n,
@@ -96,7 +96,7 @@ let h = {
                 rejectWithError: !1,
             });
             t.body.taken &&
-                a.default.track(u.rMx.POMELO_ERRORS, {
+                l.default.track(u.rMx.POMELO_ERRORS, {
                     reason: "already_taken",
                     username_error: !0,
                     location: n,
@@ -108,9 +108,9 @@ let h = {
                     taken: t.body.taken,
                 });
         } catch (o) {
-            let r = new l.Hx(o),
+            let r = new a.Hx(o),
                 i = null != (t = r.getAnyErrorMessage()) ? t : void 0;
-            a.default.track(u.rMx.POMELO_ERRORS, {
+            l.default.track(u.rMx.POMELO_ERRORS, {
                 reason: i,
                 username_error: !0,
                 location: n,

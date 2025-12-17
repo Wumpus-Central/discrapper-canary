@@ -9,36 +9,36 @@ var r = n(54381),
     d = n(999382),
     u = n(614342),
     g = n(303737),
-    m = n(618748),
-    p = n(500395),
-    f = n(975464),
-    h = n(981631),
-    b = n(674563),
-    x = n(423887);
+    f = n(618748),
+    m = n(500395),
+    b = n(975464),
+    p = n(981631),
+    h = n(674563),
+    x = n(970964);
 function j() {
     let e,
         t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
-        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, b.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        _ = i.useRef(null),
-        v = (0, u.Z)(null != t ? t : void 0);
+        { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, h.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        v = i.useRef(null),
+        O = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
         null != t && (0, g.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let O =
-        (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE)) === !1 &&
-        (null == t ? void 0 : t.features.has(h.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let C =
+        (null == t ? void 0 : t.features.has(p.GuildFeatures.CREATOR_MONETIZABLE)) === !1 &&
+        (null == t ? void 0 : t.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j
                 ? (0, r.jsx)(s.$jN, {})
-                : null != v
-                  ? (0, r.jsx)(p.Z, {
+                : null != O
+                  ? (0, r.jsx)(m.Z, {
                         guild: t,
-                        config: v,
+                        config: O,
                     })
-                  : O
-                    ? (0, r.jsx)(f.Z, { guild: t })
-                    : (0, r.jsx)(m.Z, {
+                  : C
+                    ? (0, r.jsx)(b.Z, { guild: t })
+                    : (0, r.jsx)(f.Z, {
                           guild: t,
                           application: n,
                       })),
@@ -49,10 +49,10 @@ function j() {
                 children: (0, r.jsx)(s.w0Z, {
                     className: x.settingsScroller,
                     children: (0, r.jsx)("main", {
-                        ref: _,
+                        ref: v,
                         className: x.settingsContent,
                         children: (0, r.jsx)(s.JcV, {
-                            containerRef: _,
+                            containerRef: v,
                             children: e,
                         }),
                     }),

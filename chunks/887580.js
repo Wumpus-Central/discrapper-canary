@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(453032),
     m = n(493075),
     h = n(987338),
-    g = n(941189);
+    g = n(615838);
 function E(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
@@ -56,9 +56,9 @@ function b(e) {
     if (null == n || null == S) return null;
     let P = (0, u.ak)(S).find((e) => e.value === c),
         R = null != P ? h.su.EXPERIMENT_TREATMENT : h.su.EXPERIMENT,
-        D = null != I && null != P && I.variantId === P.value,
-        w = () => {
-            null != P && (D ? (0, d.rX)(S.system, n, null) : (0, d.rX)(S.system, n, P.value));
+        w = null != I && null != P && I.variantId === P.value,
+        D = () => {
+            null != P && (w ? (0, d.rX)(S.system, n, null) : (0, d.rX)(S.system, n, P.value));
         },
         x = (0, r.jsx)(E, { url: t }),
         L = null;
@@ -111,9 +111,9 @@ function b(e) {
                   null != P
                       ? (0, r.jsx)(o.Button, {
                             fullWidth: !0,
-                            variant: D ? "critical-primary" : "primary",
-                            text: D ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
-                            onClick: w,
+                            variant: w ? "critical-primary" : "primary",
+                            text: w ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
+                            onClick: D,
                         })
                       : (0, r.jsx)("div", {
                             className: g.experimentOverride,

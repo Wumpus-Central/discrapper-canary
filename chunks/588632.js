@@ -6,7 +6,7 @@ var l = n(54381),
     a = n(481060),
     c = n(596454),
     s = n(388032),
-    u = n(870269);
+    u = n(529273);
 function d(e) {
     return null != e && (null != e.id || null != e.name);
 }
@@ -48,7 +48,7 @@ function m(e) {
             },
             [f],
         ),
-        v = i.useCallback(
+        x = i.useCallback(
             (e, t) => {
                 if (null == e || t.inPill) return;
                 let n = f.get(e.value);
@@ -80,7 +80,7 @@ function m(e) {
             },
             [p, h, f],
         ),
-        x = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 let t = [];
                 e.forEach((e) => {
@@ -94,10 +94,10 @@ function m(e) {
     return (0, l.jsx)(o.d, {
         multi: !0,
         options: g,
-        onChange: x,
+        onChange: v,
         value: n,
         closeOnSelect: !1,
-        renderOptionSuffix: v,
+        renderOptionSuffix: x,
         renderOptionPrefix: j,
     });
 }

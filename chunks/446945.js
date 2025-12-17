@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -8,7 +8,7 @@ var i = n(481060),
     o = n(540457),
     c = n(700833),
     d = n(388032),
-    u = n(789113);
+    u = n(624446);
 function g(e) {
     let { addFormField: t, onSelect: n, guild: o, allowTerms: g } = e;
     return (0, r.jsx)(i.v2r, {
@@ -48,7 +48,7 @@ function g(e) {
         }),
     });
 }
-let m = function (e) {
+let f = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
     return (0, r.jsx)(o.A, {
         text: d.intl.string(d.t.CoHdoG),

@@ -16,7 +16,7 @@ n.d(t, {
     wj: () => y,
     xN: () => g,
     xn: () => p,
-    zG: () => D,
+    zG: () => w,
 }),
     n(388685);
 var r = n(991998),
@@ -122,7 +122,7 @@ function R(e) {
         n.assignmentMethod === i.j.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === o.w.REWARD_CODE)
     );
 }
-function D(e) {
+function w(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : s.y$.CROSS_PLATFORM;
 }

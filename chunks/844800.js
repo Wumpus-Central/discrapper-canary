@@ -2,14 +2,14 @@ n.d(t, { Z: () => d });
 var r,
     i,
     s = n(442837),
-    l = n(570140);
-let a = !1,
+    a = n(570140);
+let l = !1,
     o = null,
     c = null;
 class u extends (i = s.ZP.Store) {
     getState() {
         return {
-            verifySuccess: a,
+            verifySuccess: l,
             verifyErrors: o,
             redirectGuildId: c,
         };
@@ -23,13 +23,13 @@ class u extends (i = s.ZP.Store) {
           writable: !0,
       })
     : (u[r] = "HubEmailVerificationStore");
-let d = new u(l.Z, {
+let d = new u(a.Z, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
-        (a = !0), (o = null), (c = t);
+        (l = !0), (o = null), (c = t);
     },
     HUB_VERIFY_EMAIL_FAILURE: function (e) {
         let { errors: t } = e;
-        (a = !1), (o = t);
+        (l = !1), (o = t);
     },
 });

@@ -63,10 +63,10 @@ function d(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
 function f(e) {
-    return B && e instanceof Map;
+    return F && e instanceof Map;
 }
 function p(e) {
-    return F && e instanceof Set;
+    return B && e instanceof Set;
 }
 function _(e) {
     return e.o || e.t;
@@ -206,11 +206,11 @@ function P(e, t, n, r, o, s, c) {
 function R(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && h(t, n);
 }
-function D(e, t) {
+function w(e, t) {
     var n = e[W];
     return (n ? _(n) : e)[t];
 }
-function w(e, t) {
+function D(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
             var r = Object.getOwnPropertyDescriptor(n, t);
@@ -295,8 +295,8 @@ n.d(t, {
 var U,
     G,
     Z = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
-    B = "undefined" != typeof Map,
-    F = "undefined" != typeof Set,
+    F = "undefined" != typeof Map,
+    B = "undefined" != typeof Set,
     V = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
     H = Z ? Symbol.for("immer-nothing") : (((U = {})["immer-nothing"] = !0), U),
     Y = Z ? Symbol.for("immer-draftable") : "__$immer_draftable",
@@ -330,11 +330,11 @@ var U,
             if (!l(n, t))
                 return (function (e, t, n) {
                     var r,
-                        i = w(t, n);
+                        i = D(t, n);
                     return i ? ("value" in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === D(e.t, t) ? (L(e), (e.o[t] = j(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === w(e.t, t) ? (L(e), (e.o[t] = j(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in _(e);
@@ -343,10 +343,10 @@ var U,
             return Reflect.ownKeys(_(e));
         },
         set: function (e, t, n) {
-            var r = w(_(e), t);
+            var r = D(_(e), t);
             if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
             if (!e.P) {
-                var i = D(_(e), t),
+                var i = w(_(e), t),
                     a = null == i ? void 0 : i[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
@@ -361,7 +361,7 @@ var U,
         },
         deleteProperty: function (e, t) {
             return (
-                void 0 !== D(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
             );
         },
         getOwnPropertyDescriptor: function (e, t) {

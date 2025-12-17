@@ -10,8 +10,8 @@ var r = n(120356),
     u = n(626135),
     d = n(738672),
     p = n(981631),
-    h = n(388032),
-    f = n(916796);
+    f = n(388032),
+    h = n(559165);
 function m() {
     return (m =
         Object.assign ||
@@ -60,17 +60,17 @@ function b(e) {
             [t],
         ),
         (0, i.jsxs)("div", {
-            className: l()(f.popoutContainer, { [f.hidden]: t }),
+            className: l()(h.popoutContainer, { [h.hidden]: t }),
             children: [
                 (0, i.jsx)("img", {
-                    className: f.image,
+                    className: h.image,
                     src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
                     alt: "HD Streaming Nitro Perk",
                 }),
                 (0, i.jsx)(o.zx, {
                     "data-migration-pending": !0,
-                    className: f.closeButton,
-                    "aria-label": h.intl.string(h.t.cpT0Cq),
+                    className: h.closeButton,
+                    "aria-label": f.intl.string(f.t.cpT0Cq),
                     look: o.zx.Looks.BLANK,
                     size: o.zx.Sizes.NONE,
                     onClick: () => {
@@ -78,28 +78,28 @@ function b(e) {
                     },
                     children: (0, i.jsx)(s.Dio, {
                         size: "xs",
-                        className: f.closeIcon,
+                        className: h.closeIcon,
                         color: "white",
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: f.infoContainerParent,
+                    className: h.infoContainerParent,
                     children: (0, i.jsxs)("div", {
-                        className: f.infoContainer,
+                        className: h.infoContainer,
                         children: [
                             (0, i.jsx)(s.Text, {
-                                className: f.infoText,
+                                className: h.infoText,
                                 variant: "text-sm/medium",
-                                children: h.intl.format(h.t.ruvD7i, {}),
+                                children: f.intl.format(f.t.ruvD7i, {}),
                             }),
                             (0, i.jsxs)("div", {
-                                className: f.poweredByNitroContainer,
+                                className: h.poweredByNitroContainer,
                                 children: [
                                     (0, i.jsx)(s.SrA, { size: "xs" }),
                                     (0, i.jsx)(s.Text, {
-                                        className: f.infoText,
+                                        className: h.infoText,
                                         variant: "text-sm/medium",
-                                        children: h.intl.string(h.t["BMw+7I"]),
+                                        children: f.intl.string(f.t["BMw+7I"]),
                                     }),
                                 ],
                             }),

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(614277),
     P = n(474936),
     R = n(231338),
-    D = n(388032),
-    w = n(108626);
+    w = n(388032),
+    D = n(267180);
 let x = 500;
 function L(e) {
     var t, n;
@@ -41,8 +41,8 @@ function L(e) {
             planGroup: U,
             openInvoiceId: G,
             analyticsData: Z,
-            analyticsLocation: B,
-            referralTrialOfferId: F,
+            analyticsLocation: F,
+            referralTrialOfferId: B,
             initialPlanId: V,
             subscriptionTier: H,
             handleClose: Y,
@@ -83,11 +83,11 @@ function L(e) {
     o()(null != ec, "Step should be set");
     let eC = i.useRef(null),
         [eA, eN] = (0, l.Z)(!1, x),
-        eP = null != (n = null != j ? j : F) ? n : null,
+        eP = null != (n = null != j ? j : B) ? n : null,
         eR = null != eP && (!ed || P.nG[eP].skus.includes(er)) ? eP : null,
-        eD = (0, f.N)(F),
-        ew = (0, d.N)(),
-        ex = { user_trial_offer_id: null == eD ? void 0 : eD.id };
+        ew = (0, f.N)(B),
+        eD = (0, d.N)(),
+        ex = { user_trial_offer_id: null == ew ? void 0 : ew.id };
     i.useEffect(() => {
         null != $ && null != eC.current && eC.current.scrollIntoView({ behavior: "smooth" });
     }, [$]);
@@ -106,12 +106,12 @@ function L(e) {
             [L, K, e_, em],
         ),
         ej = (0, T.m)(X, Q),
-        eM = null != en && P.o4.has(en.id) && null != ej && !(0, c.aQ)(ej) ? Error(D.intl.string(D.t["2ik8ih"])) : null,
+        eM = null != en && P.o4.has(en.id) && null != ej && !(0, c.aQ)(ej) ? Error(w.intl.string(w.t["2ik8ih"])) : null,
         ek = i.useRef(null),
         [eU, eG] = i.useState(null),
-        eZ = !ev && null != eD && null != er && P.nG[eD.trial_id].skus.includes(er),
-        eB = null == ew || null == (t = ew.discount) ? void 0 : t.plan_ids,
-        eF = !ev && null != ew && null != eB && null != en && eB.includes(en.id),
+        eZ = !ev && null != ew && null != er && P.nG[ew.trial_id].skus.includes(er),
+        eF = null == eD || null == (t = eD.discount) ? void 0 : t.plan_ids,
+        eB = !ev && null != eD && null != eF && null != en && eF.includes(en.id),
         eV = ev && (0, m.pO)(eI),
         eH = null == V && null == H && ep === R.GZ.SUBSCRIPTION,
         eY = (0, S.Kp)({
@@ -168,9 +168,9 @@ function L(e) {
                         trialFooterMessageOverride: M,
                         reviewWarningMessage: k,
                         purchaseState: eu,
-                        referralTrialOfferId: F,
+                        referralTrialOfferId: B,
                         isTrial: eZ || (null != j && null != M),
-                        isDiscount: eF,
+                        isDiscount: eB,
                         handleClose: Y,
                     })))
                   : (o()(null != en, "Expected plan to be selected"),
@@ -201,7 +201,7 @@ function L(e) {
                 !eV && (0, r.jsx)(C.Z, { isEligibleForTrial: eZ }),
                 (0, r.jsxs)(N.C3, {
                     children: [
-                        eb && eY && !eO && (0, r.jsx)("div", { className: w.bodyGradientPadding }),
+                        eb && eY && !eO && (0, r.jsx)("div", { className: D.bodyGradientPadding }),
                         (0, r.jsxs)(s.Kqy, {
                             direction: "vertical",
                             gap: 8,
@@ -221,7 +221,7 @@ function L(e) {
                         flashLegalTerms: () => eN(!0),
                         invoiceError: eU,
                         planError: eM,
-                        analyticsLocation: B,
+                        analyticsLocation: F,
                         baseAnalyticsData: Z,
                         flowStartTime: z.startTime,
                         trialId: eR,

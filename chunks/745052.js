@@ -1,10 +1,10 @@
-n.d(t, { Z: () => eo }), n(388685);
+n.d(t, { Z: () => es }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(91192),
-    o = n(286379),
+    o = n(91192),
+    s = n(286379),
     c = n(442837),
     u = n(704215),
     d = n(907862),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(183126),
     m = n(493773),
     b = n(209613),
-    E = n(325708),
-    _ = n(320149),
+    _ = n(325708),
+    E = n(320149),
     O = n(82295),
     v = n(252618),
     y = n(605236),
@@ -37,8 +37,8 @@ var r = n(54381),
     k = n(385956),
     U = n(610697),
     G = n(26373),
-    B = n(486622),
-    H = n(488634),
+    H = n(486622),
+    B = n(488634),
     V = n(899740),
     F = n(177033),
     z = n(355350),
@@ -104,29 +104,29 @@ function ei() {
         u = i.useCallback(() => {
             (0, p.showToast)((0, p.createToast)($.intl.string($.t["EDYbS+"]), p.ToastType.FAILURE));
         }, []),
-        { rejectAll: d } = (0, B.m)({ onError: u }),
+        { rejectAll: d } = (0, H.m)({ onError: u }),
         f = (0, b.Z)("message-requests-list"),
-        { channelId: g } = (0, H._)(),
+        { channelId: g } = (0, B._)(),
         m = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
-        E = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 var t, i;
-                let { row: s } = e,
-                    o = n[s],
-                    c = null == (i = n[s + 1]) || null == (t = i.channel) ? void 0 : t.id,
-                    u = o.channel.id;
+                let { row: o } = e,
+                    s = n[o],
+                    c = null == (i = n[o + 1]) || null == (t = i.channel) ? void 0 : t.id,
+                    u = s.channel.id;
                 return (0, r.jsx)(
                     W.Z,
                     {
-                        index: s,
+                        index: o,
                         className: a()({
                             [ee.selected]: null != g && g === u,
                             [ee.siblingSelected]: null != g && g === c,
                         }),
-                        channel: o.channel,
-                        user: o.user,
+                        channel: s.channel,
+                        user: s.user,
                         hasSingleMessageRequest: l,
                     },
                     u,
@@ -134,7 +134,7 @@ function ei() {
             },
             [l, n, g],
         ),
-        _ = i.useCallback(
+        E = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     O.Z,
@@ -167,11 +167,11 @@ function ei() {
                 ),
             [t, m, c],
         );
-    return (n.length !== t && S.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && S.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, r.jsx)(Y.Z, { section: K.pS.REQUESTS })
-        : (0, r.jsx)(s.bG, {
+        : (0, r.jsx)(o.bG, {
               navigator: f,
-              children: (0, r.jsx)(s.SJ, {
+              children: (0, r.jsx)(o.SJ, {
                   children: (t) => {
                       var { ref: i, role: l } = t,
                           a = (function (e, t) {
@@ -214,8 +214,8 @@ function ei() {
                                   paddingBottom: 24,
                                   sectionHeight: K.oi,
                                   rowHeight: K.WN,
-                                  renderSection: _,
-                                  renderRow: E,
+                                  renderSection: E,
+                                  renderRow: _,
                                   sections: [n.length],
                                   chunkSize: 30,
                                   fade: !0,
@@ -234,11 +234,11 @@ function el(e) {
         l = (0, c.e7)([L.Z], () => L.Z.getChannel(null == i ? void 0 : i.channelId));
     if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
-    return (0, r.jsx)(E.Z, {
-        sidebarType: E.y.MessageRequestSidebar,
+    return (0, r.jsx)(_.Z, {
+        sidebarType: _.y.MessageRequestSidebar,
         maxWidth: a,
         onWidthChange: n,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(E.Z, {
             channel: l,
             baseChannelId: w.uZ,
         }),
@@ -314,21 +314,21 @@ let ea = (e) => {
               },
           });
 };
-function es(e) {
+function eo(e) {
     let { section: t } = e;
     return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
 }
-let eo = (0, g.Z)(function (e) {
+let es = (0, g.Z)(function (e) {
     let { width: t } = e,
         n = (0, V.q)();
     (0, m.ZP)(() => {
         f.Y(Q.Z5c.MESSAGE_REQUESTS),
             (0, P.e)("message-requests"),
             D.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
-            S.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+            S.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
-        s = (0, z.w)(),
+        o = (0, z.w)(),
         [u, d] = i.useState(!1),
         g = (0, c.e7)([w.ZP], () => {
             let e = w.ZP.getSidebarState(w.uZ);
@@ -336,12 +336,12 @@ let eo = (0, g.Z)(function (e) {
         }),
         h = null == g ? void 0 : g.channelId,
         b = null != g,
-        E = (0, k.T)(h),
-        _ = (0, M.J)(h),
+        _ = (0, k.T)(h),
+        E = (0, M.J)(h),
         O = i.useRef(null);
     i.useEffect(() => {
-        null != h && !E && _ && b && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
-    }, [h, _, b, E]);
+        null != h && !_ && E && b && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
+    }, [h, E, b, _]);
     let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
@@ -390,9 +390,9 @@ let eo = (0, g.Z)(function (e) {
                                                     id: K.pS.SPAM,
                                                     className: ee.item,
                                                     children:
-                                                        0 === s
+                                                        0 === o
                                                             ? $.intl.string($.t.ulKXHp)
-                                                            : $.intl.formatToPlainString($.t["5jtrlZ"], { count: s }),
+                                                            : $.intl.formatToPlainString($.t["5jtrlZ"], { count: o }),
                                                 }),
                                             ],
                                         }),
@@ -401,7 +401,7 @@ let eo = (0, g.Z)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: et.content,
-                            children: (0, r.jsx)(es, { section: y }),
+                            children: (0, r.jsx)(eo, { section: y }),
                         }),
                     ],
                 }),

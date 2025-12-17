@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(913527),
     l = n.n(r),
     i = n(81825),
-    s = n(960048),
-    a = n(709054),
+    a = n(960048),
+    s = n(709054),
     o = n(981631);
 function u(e, t, n) {
     return (
@@ -57,7 +57,7 @@ function c(e) {
     else if (e <= o.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return o.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= o.rsA.GUILD_PROFILE_UPDATE) return o.KFR.GUILD_PROFILE;
     else if (e <= o.rsA.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return o.KFR.GUILD;
-    return s.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
+    return a.Z.captureMessage("Unknown target type for: ".concat(e)), o.KFR.UNKNOWN;
 }
 function E(e) {
     switch (e) {
@@ -158,7 +158,7 @@ class d {
 }
 class _ extends i.Z {
     constructor(e) {
-        var t, n, r, i, s, o;
+        var t, n, r, i, a, o;
         super(),
             u(this, "id", void 0),
             u(this, "actionType", void 0),
@@ -176,13 +176,13 @@ class _ extends i.Z {
             (this.action = e.action),
             (this.actionType = E(this.action)),
             (this.targetId = e.targetId),
-            (this.timestampStart = null != (t = e.timestampStart) ? t : l()(a.default.extractTimestamp(this.id))),
+            (this.timestampStart = null != (t = e.timestampStart) ? t : l()(s.default.extractTimestamp(this.id))),
             (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart),
             (this.userId = e.userId),
             (this.changes = null != (r = e.changes) ? r : []),
             (this.targetType = c(this.action)),
             (this.options = null != (i = e.options) ? i : {}),
-            (this.target = null != (s = e.target) ? s : e.id),
+            (this.target = null != (a = e.target) ? a : e.id),
             (this.user = null != (o = e.user) ? o : null);
     }
 }

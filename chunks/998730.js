@@ -1,4 +1,4 @@
-n.d(t, { N: () => s }), n(388685);
+n.d(t, { N: () => o }), n(388685);
 var r = n(473749),
     i = n(302221),
     l = n(956664);
@@ -22,7 +22,7 @@ async function a(e) {
         return (0, i.vq)(t, n, r);
     });
 }
-function s(e) {
+function o(e) {
     let [t, n] = r.useState(),
         i = r.useRef(!1);
     return (

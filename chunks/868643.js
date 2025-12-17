@@ -8,25 +8,25 @@ var r = n(473749),
     l = n(442837),
     o = n(430198),
     a = n(592125),
-    s = n(430824),
-    c = n(981631);
+    c = n(430824),
+    s = n(981631);
 let u =
-    c.iLy.CROSSPOSTED |
-    c.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
-    c.iLy.GUILD_FEED_HIDDEN |
-    c.iLy.HAS_SNAPSHOT |
-    c.iLy.HAS_THREAD |
-    c.iLy.IS_CROSSPOST |
-    c.iLy.IS_VOICE_MESSAGE |
-    c.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
-    c.iLy.SUPPRESS_EMBEDS |
-    c.iLy.SUPPRESS_NOTIFICATIONS |
-    c.iLy.URGENT |
-    c.iLy.IS_COMPONENTS_V2;
+    s.iLy.CROSSPOSTED |
+    s.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
+    s.iLy.GUILD_FEED_HIDDEN |
+    s.iLy.HAS_SNAPSHOT |
+    s.iLy.HAS_THREAD |
+    s.iLy.IS_CROSSPOST |
+    s.iLy.IS_VOICE_MESSAGE |
+    s.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING |
+    s.iLy.SUPPRESS_EMBEDS |
+    s.iLy.SUPPRESS_NOTIFICATIONS |
+    s.iLy.URGENT |
+    s.iLy.IS_COMPONENTS_V2;
 function d(e) {
     return (
-        e.state !== c.yb.SEND_FAILED &&
-        !!c.V$x.FORWARDABLE.has(e.type) &&
+        e.state !== s.yb.SEND_FAILED &&
+        !!s.V$x.FORWARDABLE.has(e.type) &&
         null == e.poll &&
         null == e.sharedClientTheme &&
         null == e.activity &&
@@ -43,11 +43,11 @@ function f(e) {
     return !(null != n && o.Z.isChannelOrThreadParentGated(n, e.channel_id));
 }
 function g(e) {
-    let t = (0, l.e7)([s.Z, o.Z, a.Z], () => {
+    let t = (0, l.e7)([c.Z, o.Z, a.Z], () => {
         var t, n, r;
         if (null == e) return !0;
         let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-        if (null != i && (null == (n = s.Z.getGuild(i)) ? void 0 : n.features.has(c.GuildFeatures.FORWARDING_DISABLED)))
+        if (null != i && (null == (n = c.Z.getGuild(i)) ? void 0 : n.features.has(s.GuildFeatures.FORWARDING_DISABLED)))
             return !0;
         let l = null != i && o.Z.isChannelOrThreadParentGated(i, e.channel_id),
             u = null != e && (null == (r = a.Z.getChannel(e.channel_id)) ? void 0 : r.isModeratorReportChannel());

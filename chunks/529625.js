@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var a = n(54381),
     r = n(473749),
-    i = n(481060),
-    l = n(881052),
+    l = n(481060),
+    i = n(881052),
     s = n(972959),
     o = n(729345),
     c = n(823385),
@@ -21,15 +21,15 @@ function h() {
         n = p.useField("isSuccess"),
         s = p.useField("errorMessage"),
         h = r.useRef([]),
-        x = r.useRef(""),
-        f = r.useCallback(() => {
+        f = r.useRef(""),
+        x = r.useCallback(() => {
             let { results: e, query: t } = c.Z.getProps();
-            (h.current !== e || x.current !== t) && ((h.current = e), (x.current = t), (0, d.OC)());
+            (h.current !== e || f.current !== t) && ((h.current = e), (f.current = t), (0, d.OC)());
         }, []);
     r.useEffect(() => {
-        if (e) return c.Z.addChangeListener(f), () => c.Z.removeChangeListener(f);
-    }, [f, e]);
-    let g = r.useCallback(async () => {
+        if (e) return c.Z.addChangeListener(x), () => c.Z.removeChangeListener(x);
+    }, [x, e]);
+    let b = r.useCallback(async () => {
         let { isUploading: e } = p.getState();
         if (!e)
             try {
@@ -45,24 +45,24 @@ function h() {
                         errorMessage: null,
                     });
             } catch (t) {
-                let e = new l.Hx(t);
+                let e = new i.Hx(t);
                 p.setState({ errorMessage: e.getAnyErrorMessage() });
             } finally {
                 p.setState({ isUploading: !1 });
             }
     }, []);
-    return (0, a.jsxs)(i.C3N, {
+    return (0, a.jsxs)(l.C3N, {
         label: "Debug Logs Session",
         description:
             "Click to emit debug logs as you search in the Quick Switcher. Includes your search term and all results. For each result, includes the record id, associated names, and frecency scores.",
         children: [
-            (0, a.jsx)(i.Wn, {
-                messageType: i.QYI.INFO,
+            (0, a.jsx)(l.Wn, {
+                messageType: l.QYI.INFO,
                 children: "When you are done, please remember to upload the logs.",
             }),
-            (0, a.jsxs)(i.ButtonGroup, {
+            (0, a.jsxs)(l.ButtonGroup, {
                 children: [
-                    (0, a.jsx)(i.Button, {
+                    (0, a.jsx)(l.Button, {
                         variant: e ? "critical-primary" : "primary",
                         onClick: () => p.setState({ isRecording: !e }),
                         text: e ? "Stop Recording" : "Start Recording",
@@ -71,7 +71,7 @@ function h() {
                         isUploading: t,
                         isSuccess: n,
                         errorMessage: s,
-                        onClick: g,
+                        onClick: b,
                         title: "Upload Session Logs",
                     }),
                 ],

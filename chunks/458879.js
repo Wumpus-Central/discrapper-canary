@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s });
 var i = n(990547),
-    l = n(881052),
-    a = n(573261),
+    a = n(881052),
+    l = n(573261),
     r = n(981631);
 let s = {
     createGuildFromTemplate: async function (e, t, n, s, o) {
         try {
             return (
-                await a.Z.post({
+                await l.Z.post({
                     url: r.ANM.GUILDS,
                     body: {
                         name: e,
@@ -29,7 +29,7 @@ let s = {
                 })
             ).body;
         } catch (e) {
-            throw new l.Hx(e);
+            throw new a.Hx(e);
         }
     },
 };

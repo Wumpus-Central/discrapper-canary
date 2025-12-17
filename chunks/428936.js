@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(893966),
     C = n(527379),
     m = n(388032),
-    b = n(671408);
+    b = n(399158);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,14 +70,14 @@ function h(e) {
         ),
         O = new Intl.NumberFormat(m.intl.currentLocale).format(j),
         H = m.intl.formatToPlainString(m.t["RNDnQ/"], { count: v ? "..." : O }),
-        _ = j > x.pageSize || v,
-        w = j > c.LU["0"];
+        w = j > x.pageSize || v,
+        S = j > c.LU["0"];
     return (0, r.jsxs)("div", {
         className: b.paginationContainer,
         children: [
             (0, r.jsx)("div", {
                 className: b.pageSizeSelection,
-                children: w
+                children: S
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(s.Text, {
@@ -120,7 +120,7 @@ function h(e) {
             (0, r.jsx)("div", {
                 className: b.pagination,
                 children:
-                    _ &&
+                    w &&
                     (0, r.jsx)(s.DsT, {
                         className: b.paginationInput,
                         totalCount: j,

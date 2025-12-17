@@ -1,8 +1,8 @@
 n.d(t, { r: () => d }), n(35282), n(388685);
 var a = n(54381),
     r = n(473749),
-    i = n(481060),
-    l = n(259580),
+    l = n(481060),
+    i = n(259580),
     s = n(478152);
 function o(e) {
     let { text: t } = e;
@@ -50,16 +50,16 @@ function d(e) {
         f = "root" === d ? "status-warning" : "status-positive",
         x = (e) =>
             "migrated" === d
-                ? (0, a.jsx)(i.Text, {
+                ? (0, a.jsx)(l.Text, {
                       variant: e,
                       children: (0, a.jsx)(o, { text: t }),
                   })
                 : "migrated-root" === d
-                  ? (0, a.jsx)(i.Text, {
+                  ? (0, a.jsx)(l.Text, {
                         variant: e,
                         children: (0, a.jsx)(c, { text: t }),
                     })
-                  : (0, a.jsx)(i.Text, {
+                  : (0, a.jsx)(l.Text, {
                         variant: e,
                         color: f,
                         children: t,
@@ -72,13 +72,13 @@ function d(e) {
         : (0, a.jsxs)("div", {
               className: s.settingNode,
               children: [
-                  (0, a.jsxs)(i.P3F, {
+                  (0, a.jsxs)(l.P3F, {
                       className: s.headerBar,
                       onClick: h,
                       children: [
                           x("text-md/bold"),
-                          (0, a.jsx)(l.Z, {
-                              direction: m ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
+                          (0, a.jsx)(i.Z, {
+                              direction: m ? i.Z.Directions.DOWN : i.Z.Directions.RIGHT,
                               className: s.headerCaret,
                           }),
                       ],

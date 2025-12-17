@@ -13,14 +13,14 @@ function g() {
     let e = (0, i.e7)([s.Z], () => s.Z.getGuild()),
         t = (0, o.y)(null == e ? void 0 : e.id, "guild_product_settings"),
         { application: n, loading: g } = (0, a.Z)(null == e ? void 0 : e.id, u.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        m = null != n && (null == e ? void 0 : e.features.has(d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
+        f = null != n && (null == e ? void 0 : e.features.has(d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0;
     return (0, r.jsx)("main", {
         children:
             null == e || !t || g
                 ? (0, r.jsx)(l.$jN, {})
                 : (0, r.jsx)(c.t, {
                       guildId: e.id,
-                      hasValidApplication: m,
+                      hasValidApplication: f,
                   }),
     });
 }

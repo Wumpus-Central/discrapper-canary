@@ -5,15 +5,15 @@ var l = n(481060),
     i = n(507453),
     s = n(48550),
     a = n(388032),
-    o = n(357507);
+    o = n(802371);
 function c(e) {
-    let { mfaChallenge: t, setSlide: n, onClose: c, headerAlignStart: u } = e;
+    let { mfaChallenge: t, setSlide: n, onClose: c, headerAlignStart: d } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.Z.SlideHeader, {
                 subtitle: a.intl.string(a.t["XQaT+8"]),
                 onClose: c,
-                headerAlignStart: u,
+                headerAlignStart: d,
             }),
             (0, r.jsx)(i.Z.SlideContent, {
                 children: t.methods.map((e) =>

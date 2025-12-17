@@ -3,7 +3,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(467721),
+    s = n(236726),
     o = n(442837),
     c = n(780384),
     d = n(481060),
@@ -24,7 +24,7 @@ var a = n(54381),
     S = n(965358),
     N = n(420196),
     O = n(433075);
-function P(e) {
+function I(e) {
     let { handleHide: t } = e;
     return (0, a.jsx)(d.P3F, {
         onClick: t,
@@ -37,7 +37,7 @@ function P(e) {
         }),
     });
 }
-function I(e) {
+function P(e) {
     let { username: t, title: n, videoSrc: r, messageCount: i, reaction: s, reactionCount: o, classname: c } = e;
     return (0, a.jsxs)("div", {
         className: l()(T.videoPreview, c),
@@ -195,7 +195,7 @@ let E = (e) => {
                                           y.intl.string(y.t.znhX2R),
                                       ],
                                   }),
-                                  (0, a.jsx)(P, { handleHide: A }),
+                                  (0, a.jsx)(I, { handleHide: A }),
                               ],
                           }),
                           (0, a.jsxs)("div", {
@@ -209,7 +209,7 @@ let E = (e) => {
                                               children: (0, a.jsxs)("div", {
                                                   className: T.contentVideoContainer,
                                                   children: [
-                                                      (0, a.jsx)(I, {
+                                                      (0, a.jsx)(P, {
                                                           username: y.intl.string(y.t.AkORco),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4",
@@ -219,7 +219,7 @@ let E = (e) => {
                                                           reactionCount: "724",
                                                           classname: T.backgroundVideo,
                                                       }),
-                                                      (0, a.jsx)(I, {
+                                                      (0, a.jsx)(P, {
                                                           username: y.intl.string(y.t.DPg3YM),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4",
@@ -229,7 +229,7 @@ let E = (e) => {
                                                           reaction: "\uD83D\uDC9E",
                                                           classname: T.backgroundVideo,
                                                       }),
-                                                      (0, a.jsx)(I, {
+                                                      (0, a.jsx)(P, {
                                                           username: y.intl.string(y.t.KIelex),
                                                           videoSrc:
                                                               "https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4",

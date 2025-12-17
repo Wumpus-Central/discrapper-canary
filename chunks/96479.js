@@ -4,14 +4,14 @@ n(473749);
 var i = n(6025),
     l = n(433355),
     a = n(626135),
-    s = n(585483),
-    o = n(488634),
+    o = n(585483),
+    s = n(488634),
     c = n(545724),
     u = n(749405),
     d = n(981631);
 function p(e) {
     let { index: t, className: n, channel: p, user: f, hasSingleMessageRequest: g } = e,
-        { channelId: h } = (0, o._)();
+        { channelId: h } = (0, s._)();
     return (0, r.jsx)(c.Z, {
         index: t,
         className: n,
@@ -31,7 +31,7 @@ function p(e) {
                     other_user_id: f.id,
                 }),
                 setTimeout(() => {
-                    s.S.dispatch(d.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: p.id });
+                    o.S.dispatch(d.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: p.id });
                 }, 0);
         },
         children: (e) =>

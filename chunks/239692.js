@@ -7,7 +7,7 @@ var r = n(54381),
     l = n.n(s),
     c = n(155127),
     u = n(780900),
-    d = n(901259);
+    d = n(243902);
 function f(e, t, n) {
     return (
         t in e
@@ -188,8 +188,8 @@ function v(e, t, n, a) {
                 rowHeight: N,
                 footerHeight: P = 0,
                 sidebarHeight: R,
-                listHeaderHeight: D = 0,
-                renderSection: w,
+                listHeaderHeight: w = 0,
+                renderSection: D,
                 renderRow: x,
                 renderFooter: L,
                 renderSidebar: j,
@@ -198,8 +198,8 @@ function v(e, t, n, a) {
                 wrapSection: U,
                 getAnchorId: G,
                 paddingTop: Z,
-                paddingBottom: B,
-                fade: F = !1,
+                paddingBottom: F,
+                fade: B = !1,
                 customTheme: V = !1,
                 chunkSize: H,
                 style: Y,
@@ -270,9 +270,9 @@ function v(e, t, n, a) {
                 rowHeight: N,
                 footerHeight: P,
                 sidebarHeight: R,
-                listHeaderHeight: D,
+                listHeaderHeight: w,
                 paddingTop: Z,
-                paddingBottom: B,
+                paddingBottom: F,
                 chunkSize: H,
                 getScrollerState: eo,
                 getAnchorId: G,
@@ -342,7 +342,7 @@ function v(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== ea.current.dirty && (ea.current.dirty = 2);
-            }, [ec, w, x, L, U, el, es, ea]),
+            }, [ec, D, x, L, U, el, es, ea]),
             (0, u.rS)({
                 scrollerRef: ei,
                 anchor: ep,
@@ -360,7 +360,7 @@ function v(e, t, n, a) {
                             onScroll: eO,
                             className: o()(g, {
                                 [e]: !0,
-                                [t]: F,
+                                [t]: B,
                                 [n]: V,
                                 [d.scrolling]: en,
                             }),
@@ -387,7 +387,7 @@ function v(e, t, n, a) {
                                                 items: ec,
                                                 renderListHeader: M,
                                                 stickyListHeader: k,
-                                                renderSection: w,
+                                                renderSection: D,
                                                 renderRow: x,
                                                 renderFooter: L,
                                                 wrapSection: U,
@@ -395,7 +395,7 @@ function v(e, t, n, a) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, Q, el, X, ec, M, k, w, x, L, U, es],
+                                [J, W, K, z, q, Q, el, X, ec, M, k, D, x, L, U, es],
                             ),
                             i.useMemo(
                                 () =>

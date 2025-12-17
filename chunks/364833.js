@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(210887),
     u = n(22095),
     d = n(617136),
@@ -54,8 +54,8 @@ function P(e) {
     let { quest: n } = e,
         i = (0, h.B6)(n.config.expiresAt),
         l = (0, h.B6)(n.config.rewardsConfig.rewardsExpireAt),
-        a = (0, s.e7)([c.Z], () => c.Z.getState().theme),
-        u = (0, o.wjy)(a) ? S.BRd.DARK : S.BRd.LIGHT,
+        a = (0, o.e7)([c.Z], () => c.Z.getState().theme),
+        u = (0, s.wjy)(a) ? S.BRd.DARK : S.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
     return (0, r.jsxs)("div", {
         className: N.heading,
@@ -68,14 +68,14 @@ function P(e) {
             (0, r.jsxs)("div", {
                 className: N.headingCopy,
                 children: [
-                    (0, r.jsx)(o.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
                         children: d
                             ? T.intl.string(T.t.XBboAK)
                             : T.intl.formatToPlainString(T.t.EQa7os, { questName: n.config.messages.questName }),
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-default",
                         children: d
@@ -91,7 +91,7 @@ function x(e) {
     var t, n, l;
     let { nodeRef: c, quest: m } = e,
         _ = (0, d.O5)(),
-        S = (0, s.e7)([p.Z], () => p.Z.isEnrolling(m.id), [m]),
+        S = (0, o.e7)([p.Z], () => p.Z.isEnrolling(m.id), [m]),
         [x, A] = i.useState(!1),
         Z = i.useCallback(() => A(!0), []),
         w = i.useCallback(() => A(!1), []),
@@ -138,11 +138,11 @@ function x(e) {
             sourceQuestContent: f.jn.ACTIVITY_PANEL,
         }),
         G = (null == (t = m.userStatus) ? void 0 : t.enrolledAt) != null,
-        B = (null == (n = m.userStatus) ? void 0 : n.completedAt) != null,
-        H = (0, h.Rf)(m),
+        H = (null == (n = m.userStatus) ? void 0 : n.completedAt) != null,
+        B = (0, h.Rf)(m),
         V = (0, g.DD)({
             quest: m,
-            taskDetails: H,
+            taskDetails: B,
             location: C.dr.ACTIVITY_PANEL,
             questContent: f.jn.ACTIVITY_PANEL,
             sourceQuestContent: f.jn.ACTIVITY_PANEL,
@@ -175,12 +175,12 @@ function x(e) {
                         children: (e) => {
                             var t, n;
                             return (0, r.jsx)(
-                                o.P3F,
+                                s.P3F,
                                 ((t = j({}, e)),
                                 (n = n =
                                     {
                                         "aria-label": T.intl.string(T.t.DEoVWZ),
-                                        children: (0, r.jsx)(o.xhG, {
+                                        children: (0, r.jsx)(s.xhG, {
                                             size: "md",
                                             color: "currentColor",
                                             className: N.submenuIcon,
@@ -210,7 +210,7 @@ function x(e) {
                         (0, r.jsx)(P, { quest: m }),
                         (0, r.jsx)("div", {
                             className: N.instructions,
-                            children: (0, r.jsx)(o.Text, {
+                            children: (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: V,
@@ -219,31 +219,31 @@ function x(e) {
                     ],
                 }),
             G &&
-                !B &&
+                !H &&
                 (0, r.jsx)(y.Z, {
                     autoplay: x,
                     className: N.rewardTileWithInstructions,
                     quest: m,
                     questContent: f.jn.ACTIVITY_PANEL,
                     location: C.dr.ACTIVITY_PANEL,
-                    taskDetails: H,
+                    taskDetails: B,
                     sourceQuestContent: f.jn.ACTIVITY_PANEL,
                 }),
             (0, r.jsxs)("div", {
                 className: N.ctas,
                 children: [
                     !G &&
-                        (0, r.jsxs)(o.ButtonGroup, {
+                        (0, r.jsxs)(s.ButtonGroup, {
                             size: "sm",
                             direction: F ? "vertical" : "horizontal",
                             fullWidth: !0,
                             children: [
-                                (0, r.jsx)(o.Button, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "secondary",
                                     text: T.intl.string(T.t.LLLLPD),
                                     onClick: k,
                                 }),
-                                (0, r.jsx)(o.Button, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "primary",
                                     text: Y,
                                     onClick: D,
@@ -253,16 +253,16 @@ function x(e) {
                             ],
                         }),
                     G &&
-                        !B &&
-                        (0, r.jsx)(o.Button, {
+                        !H &&
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,
                             text: T.intl.string(T.t.VN1Ajl),
                             onClick: M,
                         }),
-                    B &&
-                        (0, r.jsx)(o.Button, {
+                    H &&
+                        (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",
                             fullWidth: !0,

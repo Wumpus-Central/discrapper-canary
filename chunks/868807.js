@@ -1,4 +1,4 @@
-n.d(t, { a: () => f }), n(388685);
+n.d(t, { a: () => h }), n(388685);
 var i = n(392711),
     r = n.n(i),
     l = n(442837),
@@ -9,8 +9,8 @@ var i = n(392711),
     u = n(748902),
     d = n(981631);
 let p = new Set(),
-    h = null;
-function f(e) {
+    f = null;
+function h(e) {
     var t;
     let { id: n } = e,
         {
@@ -33,7 +33,7 @@ function f(e) {
         }, [n]),
         o = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        !i && null == r && o && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
+        !i && null == r && o && ((t = n), p.add(t), null == f && (f = setTimeout(m, 0))),
         {
             loaded: i,
             error: a,
@@ -45,7 +45,7 @@ async function m() {
     try {
         for (; !r().isEmpty(p); ) await g();
     } finally {
-        h = null;
+        f = null;
     }
 }
 async function g() {

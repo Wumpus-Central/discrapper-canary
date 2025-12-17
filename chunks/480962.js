@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(743236),
     d = n(481060),
     f = n(939350),
-    p = n(334405);
+    p = n(564546);
 function _(e, t, n) {
     return (
         t in e
@@ -128,7 +128,7 @@ function y(e) {
                 return (0, r.jsx)("div", g(m({ ref: t }, i), { children: n }));
             },
         });
-    let D = (0, r.jsx)(d.jRF, {
+    let w = (0, r.jsx)(d.jRF, {
         targetRef: S,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
@@ -140,6 +140,6 @@ function y(e) {
     });
     return (0, r.jsxs)("div", {
         ref: v,
-        children: [(0, r.jsx)("div", { ref: S }), n, a && T ? D : null],
+        children: [(0, r.jsx)("div", { ref: S }), n, a && T ? w : null],
     });
 }

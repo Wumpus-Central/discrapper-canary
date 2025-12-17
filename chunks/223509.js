@@ -26,8 +26,8 @@ var r,
     N = 5,
     P = 6,
     R = 7,
-    D = 8,
-    w = 9,
+    w = 8,
+    D = 9,
     x = 10,
     L = 11,
     j = 12,
@@ -36,8 +36,8 @@ var r,
     U = 15,
     G = 16,
     Z = 17,
-    B = 18,
-    F = 19,
+    F = 18,
+    B = 19,
     V = 20,
     H = 21,
     Y = 22,
@@ -326,8 +326,8 @@ function e_(e, t) {
                     while (eO && eu < er);
                     if ((512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), eO)) break i;
                 } else n.head && (n.head.name = null);
-                (n.length = 0), (n.mode = D);
-            case D:
+                (n.length = 0), (n.mode = w);
+            case w:
                 if (4096 & n.flags) {
                     if (0 === er) break i;
                     eu = 0;
@@ -337,8 +337,8 @@ function e_(e, t) {
                     while (eO && eu < er);
                     if ((512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), eO)) break i;
                 } else n.head && (n.head.comment = null);
-                n.mode = w;
-            case w:
+                n.mode = D;
+            case D:
                 if (512 & n.flags) {
                     for (; es < 16; ) {
                         if (0 === er) break i;
@@ -439,8 +439,8 @@ function e_(e, t) {
                     (e.msg = "too many length or distance symbols"), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = B);
-            case B:
+                (n.have = 0), (n.mode = F);
+            case F:
                 for (; n.have < n.ncode; ) {
                     for (; es < 3; ) {
                         if (0 === er) break i;
@@ -460,8 +460,8 @@ function e_(e, t) {
                     (e.msg = "invalid code lengths set"), (n.mode = $);
                     break;
                 }
-                (n.have = 0), (n.mode = F);
-            case F:
+                (n.have = 0), (n.mode = B);
+            case B:
                 for (; n.have < n.nlen + n.ndist; ) {
                     for (
                         ;

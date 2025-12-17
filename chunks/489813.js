@@ -1,6 +1,6 @@
 n.d(t, {
-    CA: () => d,
-    Ih: () => u,
+    CA: () => u,
+    Ih: () => d,
     PU: () => C,
     hK: () => c,
 });
@@ -26,7 +26,7 @@ function c(e) {
         ],
     });
 }
-function d(e) {
+function u(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)("div", {
         className: s.disabledQuestionContainer,
@@ -41,7 +41,7 @@ function d(e) {
         ],
     });
 }
-function u(e) {
+function d(e) {
     let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, r.jsxs)("div", {
         className: s.requirementContainer,
@@ -75,11 +75,11 @@ function u(e) {
     });
 }
 function C(e) {
-    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: d, className: u } = e;
+    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: u, className: d } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: i()(s.requirementContainer, u),
+                className: i()(s.requirementContainer, d),
                 children: [
                     (0, r.jsx)(t, {
                         className: s.requirementIcon,
@@ -100,7 +100,7 @@ function C(e) {
                               className: s.requirementSuccess,
                               secondaryColor: o.Z.colors.WHITE.css,
                           })
-                        : d,
+                        : u,
                 ],
             }),
             null != l &&

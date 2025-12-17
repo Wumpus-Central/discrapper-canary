@@ -1,7 +1,7 @@
-e.d(t, { Z: () => l });
+e.d(t, { Z: () => o });
 var i = e(703656),
-    o = e(981631);
-function l() {
+    a = e(981631);
+function o() {
     let n = (0, i.s1)();
-    n.length > 0 ? n.goBack() : (0, i.uL)(o.Z5c.ME);
+    n.length > 0 ? n.goBack() : (0, i.uL)(a.Z5c.ME);
 }

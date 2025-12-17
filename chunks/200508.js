@@ -3,7 +3,7 @@ var r = n(822632),
     i = n(791473);
 let a = {
         isJpegFile: Z,
-        findJpegOffsets: B,
+        findJpegOffsets: F,
     },
     o = 2,
     s = 65496,
@@ -30,8 +30,8 @@ let a = {
     N = 65504,
     P = 65505,
     R = 65506,
-    D = 65517,
-    w = 65519,
+    w = 65517,
+    D = 65519,
     x = 65534,
     L = 65535,
     j = "JFIF",
@@ -42,7 +42,7 @@ let a = {
 function Z(e) {
     return !!e && e.byteLength >= o && e.getUint16(0) === s;
 }
-function B(e) {
+function F(e) {
     let t,
         n,
         r,
@@ -54,7 +54,7 @@ function B(e) {
         E,
         O = l;
     for (; O + c + 5 <= e.byteLength; ) {
-        if (i.Z.USE_FILE && F(e, O)) (t = e.getUint16(O + u)), (n = O + u);
+        if (i.Z.USE_FILE && B(e, O)) (t = e.getUint16(O + u)), (n = O + u);
         else if (i.Z.USE_FILE && V(e, O)) (t = e.getUint16(O + u)), (r = O + u);
         else if (i.Z.USE_JFIF && W(e, O)) (t = e.getUint16(O + u)), (a = O + d);
         else if (i.Z.USE_EXIF && K(e, O)) (t = e.getUint16(O + u)), (o = O + f);
@@ -93,7 +93,7 @@ function B(e) {
         mpfDataOffset: E,
     };
 }
-function F(e, t) {
+function B(e, t) {
     return e.getUint16(t) === v;
 }
 function V(e, t) {
@@ -143,11 +143,11 @@ function $(e, t) {
 }
 function ee(e, t) {
     let n = G.length;
-    return e.getUint16(t) === D && (0, r.oH)(e, t + c, n) === G && 0 === e.getUint8(t + c + n);
+    return e.getUint16(t) === w && (0, r.oH)(e, t + c, n) === G && 0 === e.getUint8(t + c + n);
 }
 function et(e, t) {
     let n = e.getUint16(t);
-    return (n >= N && n <= w) || n === x || n === v || n === S || n === I || n === T || n === C || n === A;
+    return (n >= N && n <= D) || n === x || n === v || n === S || n === I || n === T || n === C || n === A;
 }
 function en(e, t) {
     return e.getUint16(t) === L;

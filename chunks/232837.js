@@ -6,8 +6,8 @@ var i = t(54381),
     a = t(481060),
     l = t(287734),
     c = t(493773),
-    u = t(592125),
-    d = t(699516),
+    d = t(592125),
+    u = t(699516),
     _ = t(594174),
     f = t(626135),
     m = t(33194),
@@ -16,12 +16,12 @@ var i = t(54381),
     g = t(110223),
     p = t(981631),
     E = t(388032),
-    h = t(623146);
+    h = t(520386);
 function C(e) {
     let { channelId: n, userId: t, transitionState: C, onClose: k } = e,
         O = r.useRef(!1),
-        v = (0, o.e7)([d.Z], () => d.Z.isBlocked(t)),
-        A = (0, o.e7)([u.Z], () => u.Z.getChannel(n));
+        v = (0, o.e7)([u.Z], () => u.Z.isBlocked(t)),
+        A = (0, o.e7)([d.Z], () => d.Z.getChannel(n));
     if (
         ((0, c.zq)(() => {
             O.current || (0, m.nC)(t);

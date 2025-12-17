@@ -44,7 +44,7 @@ let T = (e, t, n, r) => {
             { parent_title: I, provider: A, image_url: N } = n.extra.media,
             P = n.extra.artist.name,
             R = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
-            { primaryColor: D, secondaryColor: w } = (0, h.Z)(N),
+            { primaryColor: w, secondaryColor: D } = (0, h.Z)(N),
             x = (0, p.Nq)(n),
             L = i.useCallback(() => {
                 if (null == t || null == R || !(0, d.Hi)(x, g.y9)) return;
@@ -55,10 +55,10 @@ let T = (e, t, n, r) => {
                     mediaImageSrc: N,
                     artist: P,
                     description: e,
-                    colors: [D, w],
+                    colors: [w, D],
                     badges: (0, _.UU)(n),
                 });
-            }, [N, P, t, n, D, x, w, R]),
+            }, [N, P, t, n, w, x, D, R]),
             j = (0, m.Z)(O.ABu.SPOTIFY);
         if (null == R || !(0, d.Hi)(x, g.y9)) return null;
         let M = () => {

@@ -1,9 +1,9 @@
 n.d(t, {
-    Eb: () => w,
+    Eb: () => D,
     Fx: () => M,
     IM: () => x,
-    J2: () => F,
-    r$: () => D,
+    J2: () => B,
+    r$: () => w,
 }),
     n(539854),
     n(388685),
@@ -103,7 +103,7 @@ let A = new p.Z("ReadyPayloadUtils"),
     N = {},
     P = null,
     R = {};
-function D(e, t) {
+function w(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = T(e, ["guilds", "merged_members", "merged_presences"]);
@@ -141,7 +141,7 @@ function D(e, t) {
         })
     );
 }
-function w() {
+function D() {
     let e = s.Z.database(),
         t = (0, f.O)() ? l.Z.getCommittedVersions() : Promise.resolve({});
     return Promise.all([
@@ -176,11 +176,11 @@ function x(e, t, n) {
                 null == u
                     ? void 0
                     : u.map((e, t) =>
-                          !0 === e.unavailable ? e : ((e.members = k(R, null == c ? void 0 : c[t])), B(e)),
+                          !0 === e.unavailable ? e : ((e.members = k(R, null == c ? void 0 : c[t])), F(e)),
                       ))
                 ? r
                 : [],
-        _ = L(t, u, (e) => B(e));
+        _ = L(t, u, (e) => F(e));
     return (
         null != _ && p.push(_),
         I(v({}, d), {
@@ -202,7 +202,7 @@ function j(e) {
 function M(e, t) {
     var n;
     let r = E.Z.getGuild(e.id),
-        i = F(
+        i = B(
             e,
             null == r
                 ? void 0
@@ -274,7 +274,7 @@ function Z(e, t, n) {
         }
     );
 }
-function B(e) {
+function F(e) {
     var t, n, r, i, a, o, s, l;
     let c = U(e.id);
     if ("partial" !== e.data_mode)
@@ -342,7 +342,7 @@ function B(e) {
         hasThreadsSubscription: e.has_threads_subscription,
     };
 }
-function F(e, t) {
+function B(e, t) {
     var n, r, i, a, o, s, l, c;
     if ((null == t && (t = U(e.id)), "partial" !== e.data_mode))
         return {

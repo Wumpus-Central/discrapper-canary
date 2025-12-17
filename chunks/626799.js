@@ -26,7 +26,7 @@ var r,
     v = n(73346),
     S = n(981631),
     I = n(388032),
-    T = n(550125);
+    T = n(961482);
 function C(e, t, n) {
     return (
         t in e
@@ -222,8 +222,8 @@ class R extends (r = a.Component) {
     }
 }
 C(R, "defaultProps", { renderFallback: S.dG4 });
-let D = [y.Z, b.Z, E.Z, O.Z];
-function w(e) {
+let w = [y.Z, b.Z, E.Z, O.Z];
+function D(e) {
     let { skuId: t } = e,
         n = y.Z.get(t),
         r = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -237,5 +237,5 @@ function w(e) {
     };
 }
 let x = (0, h.Z)((0, m.Z)(R)),
-    L = s.ZP.connectStores(D, w)(x),
-    j = (0, m.Z)(s.ZP.connectStores(D, w)(R));
+    L = s.ZP.connectStores(w, D)(x),
+    j = (0, m.Z)(s.ZP.connectStores(w, D)(R));

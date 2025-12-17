@@ -1,43 +1,43 @@
-n.d(t, { Z: () => x }), n(388685), n(35282), n(457542);
+n.d(t, { Z: () => _ }), n(388685), n(35282), n(457542);
 var r = n(54381),
     i = n(473749),
     s = n(593473),
-    l = n(828700),
-    a = n(442837),
+    a = n(828700),
+    l = n(442837),
     o = n(893776),
     c = n(899742),
     u = n(493773),
     d = n(743142),
     h = n(893607),
-    g = n(703656),
-    m = n(314897),
-    p = n(781428),
-    f = n(981631),
-    _ = n(176505);
-function x(e) {
+    f = n(703656),
+    g = n(314897),
+    m = n(781428),
+    p = n(981631),
+    x = n(176505);
+function _(e) {
     var t, n;
-    let x = i.useCallback(
+    let _ = i.useCallback(
             (t) => {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, l.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
-                        return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
+                        let n = (0, a.LX)(e, { path: p.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        return (null == n || null == (t = n.params) ? void 0 : t.channelId) === x.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    g.dL(t);
+                    f.dL(t);
                 else {
                     var n;
-                    (null != (n = e.transitionTo) ? n : g.uL)(t);
+                    (null != (n = e.transitionTo) ? n : f.uL)(t);
                 }
             },
             [e.transitionTo],
         ),
-        { isAuthenticated: E, loginStatus: v } = (0, a.cj)([m.default], () => ({
-            isAuthenticated: m.default.isAuthenticated(),
-            loginStatus: m.default.getLoginStatus(),
+        { isAuthenticated: E, loginStatus: v } = (0, l.cj)([g.default], () => ({
+            isAuthenticated: g.default.isAuthenticated(),
+            loginStatus: g.default.getLoginStatus(),
         })),
-        { location: j, redirectTo: b } = e,
+        { location: b, redirectTo: j } = e,
         [I, N] = i.useState(E);
     function y(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
@@ -49,10 +49,10 @@ function x(e) {
             N(!1);
     }
     return ((0, u.ZP)(() => {
-        if (null != j) {
-            let { handoff_key: e, handoff_token: t } = (0, s.parse)(j.search);
+        if (null != b) {
+            let { handoff_key: e, handoff_token: t } = (0, s.parse)(b.search);
             if (null != e && null != t) {
-                let n = null != b ? (0, d.L)(b) : void 0;
+                let n = null != j ? (0, d.L)(j) : void 0;
                 I
                     ? o.Z.logout("handoff", null).finally(() => {
                           y({
@@ -69,10 +69,10 @@ function x(e) {
             }
         }
     }),
-    I || v === f.u34.LOGGING_IN)
-        ? (0, r.jsx)(p.q, {})
+    I || v === p.u34.LOGGING_IN)
+        ? (0, r.jsx)(m.q, {})
         : (0, r.jsx)(
-              p.Z,
+              m.Z,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -98,7 +98,7 @@ function x(e) {
                   }
                   return e;
               })({}, e)),
-              (n = n = { transitionTo: x }),
+              (n = n = { transitionTo: _ }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                   : (function (e, t) {

@@ -4,13 +4,13 @@ n(473749);
 var i = n(6025),
     l = n(433355),
     a = n(626135),
-    s = n(585483),
-    o = n(545724),
+    o = n(585483),
+    s = n(545724),
     c = n(426051),
     u = n(981631);
 function d(e) {
     let { index: t, className: n, channel: d, user: p, hasSingleMessageRequest: f } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         index: t,
         className: n,
         isFocused: !1,
@@ -29,7 +29,7 @@ function d(e) {
                     other_user_id: p.id,
                 }),
                 setTimeout(() => {
-                    s.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: d.id });
+                    o.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: d.id });
                 }, 0);
         },
         children: (e) =>

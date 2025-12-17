@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
     a = n(296009),
@@ -15,13 +15,13 @@ var r = n(54381),
     m = n(430790),
     h = n(795990),
     y = n(388032),
-    O = n(284459);
-function v() {
+    v = n(284459);
+function O() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
-        v = i.useRef(!1),
+        O = i.useRef(!1),
         j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         { application: x, config: P } = (0, p.G)(),
-        { token: I, fetched: w } = (0, s.o)(null == P ? void 0 : P.application_id),
+        { token: w, fetched: I } = (0, s.o)(null == P ? void 0 : P.application_id),
         S = i.useMemo(
             () =>
                 (null == P ? void 0 : P.application_id) != null
@@ -86,29 +86,29 @@ function v() {
                     { stackingBehavior: "stack" },
                 );
         }, [t]),
-        _ = null == j || null == x || null == S || !w,
-        T = null != I;
+        T = null == j || null == x || null == S || !I,
+        _ = null != w;
     if (
         (i.useEffect(() => {
-            !_ &&
-                T &&
-                (v.current ||
+            !T &&
+                _ &&
+                (O.current ||
                     (e({
                         action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE",
                         applicationId: x.id,
                     }),
-                    (v.current = !0)));
-        }, [_, T, e, null == x ? void 0 : x.id]),
-        _)
+                    (O.current = !0)));
+        }, [T, _, e, null == x ? void 0 : x.id]),
+        T)
     )
         return (0, r.jsx)("div", {
-            className: O.loading,
+            className: v.loading,
             children: (0, r.jsx)(c.$jN, {}),
         });
-    if (!T) return (0, r.jsx)(h.Z, {});
+    if (!_) return (0, r.jsx)(h.Z, {});
     let C = (0, r.jsxs)(c.Kqy, {
         gap: 4,
-        className: O.header,
+        className: v.header,
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",

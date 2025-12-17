@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(704215),
-    s = n(433517),
-    o = n(705348),
+    o = n(433517),
+    s = n(705348),
     c = n(243778),
     u = n(377743),
     d = n(834743),
@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(819792),
     h = n(919285),
     m = n(118470),
-    _ = n(413307),
-    b = n(374023),
+    b = n(413307),
+    _ = n(374023),
     E = n(661599),
     O = n(617899),
     v = n(8521),
@@ -29,7 +29,7 @@ function N(e) {
 function j(e) {
     var t;
     let { guild: n } = e,
-        [p, g] = i.useState(null != (t = s.K.get(C.Iv)) ? t : 0),
+        [p, g] = i.useState(null != (t = o.K.get(C.Iv)) ? t : 0),
         h = (0, l.Wu)(
             C.HG,
             () =>
@@ -46,7 +46,7 @@ function j(e) {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
                     var e;
-                    (e = Date.now()), s.K.set(C.Iv, e), g(e), i(S.L.UNKNOWN);
+                    (e = Date.now()), o.K.set(C.Iv, e), g(e), i(S.L.UNKNOWN);
                 },
                 c = (() => {
                     switch (t) {
@@ -76,7 +76,7 @@ function j(e) {
                                 markAsDismissed: l,
                             });
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
-                            return (0, r.jsx)(o.Z, {
+                            return (0, r.jsx)(s.Z, {
                                 guild: n,
                                 markAsDismissed: () => i(S.L.UNKNOWN),
                             });
@@ -97,7 +97,7 @@ let P = (e) => {
     let { guild: t } = e;
     switch ((0, I.Z)(t)) {
         case I.R.ENABLE_PUBLIC_GUILD:
-            return (0, r.jsx)(_.Z, { guild: t });
+            return (0, r.jsx)(b.Z, { guild: t });
         case I.R.MAX_MEMBER_COUNT:
             return (0, r.jsx)(v.Z, { guild: t });
         case I.R.GUILD_LIVE_CHANNEL:
@@ -111,5 +111,5 @@ let P = (e) => {
         case I.R.HUB_STUDY_ROOM:
             return (0, r.jsx)(g.Z, { guild: t });
     }
-    return b.s.isDisallowPopupsSet() ? null : (0, r.jsx)(j, { guild: e.guild });
+    return _.s.isDisallowPopupsSet() ? null : (0, r.jsx)(j, { guild: e.guild });
 };

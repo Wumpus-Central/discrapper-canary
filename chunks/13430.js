@@ -84,8 +84,8 @@ let E = i.forwardRef(function (e, t) {
             setDay: y,
             month: S,
             setMonth: C,
-            year: O,
-            setYear: T,
+            year: T,
+            setYear: O,
         } = (function (e) {
             let t = null,
                 n = null,
@@ -105,10 +105,10 @@ let E = i.forwardRef(function (e, t) {
         })(n),
         A = i.useMemo(
             () =>
-                null != N && null != S && null != O
-                    ? o()("".concat(N, "/").concat(S, "/").concat(O), "DD/MM/YYYY")
+                null != N && null != S && null != T
+                    ? o()("".concat(N, "/").concat(S, "/").concat(T), "DD/MM/YYYY")
                     : null,
-            [N, S, O],
+            [N, S, T],
         );
     i.useEffect(() => {
         l((null == A ? void 0 : A.isValid()) ? A : null);
@@ -205,15 +205,15 @@ let E = i.forwardRef(function (e, t) {
                     key: "year",
                     input: (0, r.jsx)(x, {
                         options: P,
-                        selectOption: T,
+                        selectOption: O,
                         children: (0, r.jsx)(c.y6, {
                             "aria-label": d.intl.string(d.t.ZWr5WA),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.ZWr5WA),
                             options: P,
-                            value: O,
+                            value: T,
                             onChange: (t) => {
-                                T(t), L(e + 1);
+                                O(t), L(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: R === e,

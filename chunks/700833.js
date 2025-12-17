@@ -1,6 +1,6 @@
 n.d(t, {
-    Md: () => f,
-    a0: () => p,
+    Md: () => b,
+    a0: () => m,
 });
 var r = n(54381);
 n(473749);
@@ -37,7 +37,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,83 +55,83 @@ function m(e, t) {
         e
     );
 }
-function p(e) {
+function m(e) {
     let {
             dropHoveredIndex: t,
-            formField: p,
-            guild: f,
-            index: b,
+            formField: m,
+            guild: b,
+            index: h,
             isDragEnabled: x,
             submittedGuildJoinRequestsCount: j,
-            removeFormField: _,
-            updateFormField: v,
-            updateFormFieldOrder: O,
-            canRemove: C,
-            actionsLocation: y,
-            fieldStyle: N,
+            removeFormField: v,
+            updateFormField: O,
+            updateFormFieldOrder: C,
+            canRemove: y,
+            actionsLocation: N,
+            fieldStyle: E,
         } = e,
-        E = async () => {
-            await _(b);
+        I = async () => {
+            await v(h);
         },
-        I = async (e) => {
-            await v(b, e);
+        S = async (e) => {
+            await O(h, e);
         },
-        S = async (e, t, n) => {
-            await O(e, t, n);
+        _ = async (e, t, n) => {
+            await C(e, t, n);
         },
         T = (0, i.uniqueId)(),
-        P = t === b,
+        P = t === h,
         w = {
             key: T,
-            index: b,
+            index: h,
             isDragEnabled: x,
             isDropHovered: P,
             onEdit: () => {
                 0 === j
-                    ? h(p, I, f)
+                    ? p(m, S, b)
                     : (0, l.ZDy)(async () => {
                           let { default: e } = await n.e("74673").then(n.bind(n, 394045));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
-                                  m(g({}, t), {
-                                      guildId: f.id,
+                                  f(g({}, t), {
+                                      guildId: b.id,
                                       submittedGuildJoinRequestsCount: j,
-                                      onConfirm: () => h(p, I, f),
+                                      onConfirm: () => p(m, S, b),
                                   }),
                               );
                       });
             },
-            onRemove: E,
-            onDrop: S,
-            canRemove: C,
-            actionsLocation: y,
-            fieldStyle: N,
+            onRemove: I,
+            onDrop: _,
+            canRemove: y,
+            actionsLocation: N,
+            fieldStyle: E,
         };
-    switch (p.field_type) {
+    switch (m.field_type) {
         case a.QJ.TERMS:
             return (0, r.jsx)(
                 c.Z,
                 g(
                     {
-                        channelId: f.rulesChannelId,
-                        title: N === a.it.COMPACT ? u.intl.string(u.t["55+gic"]) : u.intl.string(u.t["53vNcB"]),
-                        formField: p,
+                        channelId: b.rulesChannelId,
+                        title: E === a.it.COMPACT ? u.intl.string(u.t["55+gic"]) : u.intl.string(u.t["53vNcB"]),
+                        formField: m,
                     },
                     w,
                 ),
             );
         case a.QJ.PARAGRAPH:
-            return (0, r.jsx)(o.Z, g({ formField: p }, w));
+            return (0, r.jsx)(o.Z, g({ formField: m }, w));
         case a.QJ.TEXT_INPUT:
-            return (0, r.jsx)(d.Z, g({ formField: p }, w));
+            return (0, r.jsx)(d.Z, g({ formField: m }, w));
         case a.QJ.MULTIPLE_CHOICE:
-            return (0, r.jsx)(s.Z, g({ formField: p }, w));
+            return (0, r.jsx)(s.Z, g({ formField: m }, w));
         default:
             return null;
     }
 }
-function f(e, t, i) {
+function b(e, t, i) {
     switch (e) {
         case a.QJ.TERMS:
             return (0, l.ZDy)(async () => {
@@ -139,7 +139,7 @@ function f(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: void 0,
                             onSave: t,
                             guild: i,
@@ -152,7 +152,7 @@ function f(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: void 0,
                             onSave: t,
                         }),
@@ -164,7 +164,7 @@ function f(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: void 0,
                             onSave: t,
                         }),
@@ -176,7 +176,7 @@ function f(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: void 0,
                             onSave: t,
                         }),
@@ -184,7 +184,7 @@ function f(e, t, i) {
             });
     }
 }
-function h(e, t, i) {
+function p(e, t, i) {
     switch (e.field_type) {
         case a.QJ.TERMS:
             return (0, l.ZDy)(async () => {
@@ -192,7 +192,7 @@ function h(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         l,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: e,
                             onSave: t,
                             guild: i,
@@ -205,7 +205,7 @@ function h(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         i,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: e,
                             onSave: t,
                         }),
@@ -217,7 +217,7 @@ function h(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         i,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: e,
                             onSave: t,
                         }),
@@ -229,7 +229,7 @@ function h(e, t, i) {
                 return (n) =>
                     (0, r.jsx)(
                         i,
-                        m(g({}, n), {
+                        f(g({}, n), {
                             field: e,
                             onSave: t,
                         }),

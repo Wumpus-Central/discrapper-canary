@@ -1,12 +1,12 @@
 e.d(n, { S: () => l });
-var a = e(308569),
-    r = e(388032);
-let i = {
-    [a.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => r.intl.string(r.t.naBTFO),
-    [a.pw.SOMEONE_ASKED_ME_TO]: () => r.intl.string(r.t.LQ0RUP),
-    [a.pw.NEW_EMAIL]: () => r.intl.string(r.t.oOqQjw),
-    [a.pw.SOMETHING_ELSE]: () => r.intl.string(r.t.p38n1b),
+var r = e(308569),
+    i = e(388032);
+let a = {
+    [r.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => i.intl.string(i.t.naBTFO),
+    [r.pw.SOMEONE_ASKED_ME_TO]: () => i.intl.string(i.t.LQ0RUP),
+    [r.pw.NEW_EMAIL]: () => i.intl.string(i.t.oOqQjw),
+    [r.pw.SOMETHING_ELSE]: () => i.intl.string(i.t.p38n1b),
 };
 function l(t) {
-    return i[t]();
+    return a[t]();
 }

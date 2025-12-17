@@ -1,4 +1,4 @@
-n.d(e, { r: () => d });
+n.d(e, { r: () => T });
 var i = n(779618),
     l = n(341569),
     s = n(39604),
@@ -6,10 +6,10 @@ var i = n(779618),
     r = n(131951),
     a = n(358085),
     o = n(313789),
-    c = n(388032);
-let d = (0, u.qs)(o.n.CLIPS_ENABLE_DECOUPLED_CLIPPING, {
-    useTitle: () => c.intl.string(c.t.yXvykv),
-    useSubtitle: () => c.intl.string(c.t.YP3ujk),
+    S = n(388032);
+let T = (0, u.qs)(o.n.CLIPS_ENABLE_DECOUPLED_CLIPPING, {
+    useTitle: () => S.intl.string(S.t.yXvykv),
+    useSubtitle: () => S.intl.string(S.t.YP3ujk),
     useValue: l.nq,
     setValue: (t) =>
         s._Q({

@@ -1,8 +1,8 @@
-n.d(t, { v: () => s });
-var i = n(944486),
-    l = n(176505);
-function s() {
-    var e;
-    let t = null != (e = i.Z.getCurrentlySelectedChannelId()) ? e : void 0;
-    return null != t && (0, l.AB)(t) ? { channel_static_route: t } : { channel_id: t };
+e.d(n, { v: () => r });
+var l = e(944486),
+    i = e(176505);
+function r() {
+    var t;
+    let n = null != (t = l.Z.getCurrentlySelectedChannelId()) ? t : void 0;
+    return null != n && (0, i.AB)(n) ? { channel_static_route: n } : { channel_id: n };
 }

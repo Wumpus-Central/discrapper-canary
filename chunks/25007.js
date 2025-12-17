@@ -12,7 +12,7 @@ let p = r.memo(function (e) {
     let { channel: t, narrow: n } = e,
         r = (0, s.Z)(t),
         p = (0, l.Z)(),
-        { showUnreadsNotice: h, clearUnreadsNotice: f } = (0, a.Z)(t);
+        { showUnreadsNotice: f, clearUnreadsNotice: h } = (0, a.Z)(t);
     return t.isArchivedLockedThread()
         ? (0, i.jsx)(u.s, {
               channel: t,
@@ -23,10 +23,10 @@ let p = r.memo(function (e) {
                 channel: t,
                 narrow: n,
             })
-          : h
+          : f
             ? (0, i.jsx)(o.Z, {
                   channel: t,
-                  clearUnreadsNotice: f,
+                  clearUnreadsNotice: h,
               })
             : r && p.includes(d.E.OPT_IN_CHANNEL)
               ? (0, i.jsx)(c.Z, {

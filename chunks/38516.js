@@ -8,10 +8,10 @@ var i = n(120356),
     s = n(481060),
     c = n(810568),
     d = n(388032),
-    u = n(226788),
-    m = n(803351);
-let g = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
-function f(e) {
+    u = n(452379),
+    m = n(922522);
+let f = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
+function g(e) {
     let { website: t, trackClick: n } = e,
         {
             action: i,
@@ -61,7 +61,7 @@ let p = function (e) {
     let i = t.websites
         .filter((e) => {
             let { category: t } = e;
-            return g.includes(t);
+            return f.includes(t);
         })
         .sort((e, t) => e.category - t.category);
     return 0 === i.length
@@ -78,7 +78,7 @@ let p = function (e) {
                       className: r()(u.row, u.gapMd),
                       children: i.map((e) =>
                           (0, a.jsx)(
-                              f,
+                              g,
                               {
                                   website: e,
                                   trackClick: n,

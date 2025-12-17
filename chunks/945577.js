@@ -1,5 +1,5 @@
 n.d(t, {
-    U: () => a,
+    U: () => o,
     a: () => s,
 });
 var r = n(818083);
@@ -7,7 +7,7 @@ let i = {
         isXDMSearchEnabled: !1,
         inExperiment: !1,
     },
-    o = (0, r.B)({
+    a = (0, r.B)({
         kind: "user",
         id: "2025-06_search_desktop_xdm_experiment",
         label: "Search Desktop XDM Experiment",
@@ -31,13 +31,13 @@ let i = {
             },
         ],
     });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isXDMSearchEnabled: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isXDMSearchEnabled: r } = a.useExperiment({ location: t }, { autoTrackExposure: n });
     return r;
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isXDMSearchEnabled: r } = o.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { isXDMSearchEnabled: r } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return r;
 }

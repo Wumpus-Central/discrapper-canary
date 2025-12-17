@@ -16,7 +16,7 @@ n.d(t, {
     Us: () => S,
     X: () => u,
     Xr: () => p,
-    aV: () => eF,
+    aV: () => eB,
     az: () => Q,
     bE: () => eh,
     c$: () => ti,
@@ -26,7 +26,7 @@ n.d(t, {
     l1: () => T,
     n9: () => C,
     nI: () => d,
-    o8: () => w,
+    o8: () => D,
     os: () => M,
     p5: () => H,
     sf: () => e_,
@@ -264,7 +264,7 @@ var r = n(230367),
             e
         );
     })({});
-class D extends o.C {
+class w extends o.C {
     create(e) {
         let t = {};
         return (
@@ -557,7 +557,7 @@ class D extends o.C {
         ]);
     }
 }
-let w = new D();
+let D = new w();
 class x extends o.C {
     create(e) {
         let t = {
@@ -1038,7 +1038,7 @@ class G extends o.C {
     }
 }
 let Z = new G();
-class B extends o.C {
+class F extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1107,7 +1107,7 @@ class B extends o.C {
         ]);
     }
 }
-let F = new B();
+let B = new F();
 class V extends o.C {
     create(e) {
         let t = { collapsedInInbox: !1 };
@@ -1130,7 +1130,7 @@ class V extends o.C {
                     a.collapsedInInbox = e.bool();
                     break;
                 case 2:
-                    a.iconEmoji = F.internalBinaryRead(e, e.uint32(), n, a.iconEmoji);
+                    a.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, a.iconEmoji);
                     break;
                 case 3:
                     a.customNotificationSoundConfig = W.internalBinaryRead(
@@ -1154,7 +1154,7 @@ class V extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         !1 !== e.collapsedInInbox && t.tag(1, r.TD.Varint).bool(e.collapsedInInbox),
-            e.iconEmoji && F.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customNotificationSoundConfig &&
                 W.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -1172,7 +1172,7 @@ class V extends o.C {
                 no: 2,
                 name: "icon_emoji",
                 kind: "message",
-                T: () => F,
+                T: () => B,
             },
             {
                 no: 3,
@@ -3917,7 +3917,7 @@ class eP extends o.C {
     }
 }
 let eR = new eP();
-class eD extends o.C {
+class ew extends o.C {
     create(e) {
         let t = {
             colors: [],
@@ -4009,7 +4009,7 @@ class eD extends o.C {
         ]);
     }
 }
-let ew = new eD();
+let eD = new ew();
 class ex extends o.C {
     create(e) {
         let t = {};
@@ -4037,7 +4037,7 @@ class ex extends o.C {
                     );
                     break;
                 case 4:
-                    a.customUserThemeSettings = ew.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
+                    a.customUserThemeSettings = eD.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -4055,7 +4055,7 @@ class ex extends o.C {
         e.backgroundGradientPresetId &&
             s.yC.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                ew.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+                eD.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -4071,7 +4071,7 @@ class ex extends o.C {
                 no: 4,
                 name: "custom_user_theme_settings",
                 kind: "message",
-                T: () => ew,
+                T: () => eD,
             },
         ]);
     }
@@ -4287,7 +4287,7 @@ class eG extends o.C {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = eF.internalBinaryRead(t, t.uint32(), n);
+                    o = eB.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -4295,13 +4295,13 @@ class eG extends o.C {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : eF.create();
+        e[null != a ? a : "0"] = null != o ? o : eB.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.favoriteChannels))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                eF.internalBinaryWrite(e.favoriteChannels[i], t, n),
+                eB.internalBinaryWrite(e.favoriteChannels[i], t, n),
                 t.join().join();
         !1 !== e.muted && t.tag(2, r.TD.Varint).bool(e.muted);
         let i = n.writeUnknownFields;
@@ -4316,7 +4316,7 @@ class eG extends o.C {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => eF,
+                    T: () => eB,
                 },
             },
             {
@@ -4329,7 +4329,7 @@ class eG extends o.C {
     }
 }
 let eZ = new eG();
-class eB extends o.C {
+class eF extends o.C {
     create(e) {
         let t = {
             nickname: "",
@@ -4413,7 +4413,7 @@ class eB extends o.C {
         ]);
     }
 }
-let eF = new eB();
+let eB = new eF();
 class eV extends o.C {
     create(e) {
         let t = {

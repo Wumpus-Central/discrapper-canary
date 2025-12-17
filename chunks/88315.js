@@ -1,8 +1,8 @@
 n.d(t, {
-    P7: () => m,
+    P7: () => b,
     RR: () => p,
     UN: () => u,
-    bg: () => _,
+    bg: () => m,
     hn: () => d,
     np: () => f,
 });
@@ -35,10 +35,10 @@ function p(e, t, n) {
         deltaTime: e.deltaTime,
     };
 }
-function m(e) {
+function b(e) {
     return e.type === c.W.LINE;
 }
-function _(e, t, n, r) {
+function m(e, t, n, r) {
     var c;
     let u = o.default.getUser(e),
         d = null == u ? void 0 : u.getAvatarURL(null, s.Ks),
@@ -53,9 +53,9 @@ function _(e, t, n, r) {
                       }).toHex(),
                   )
                 : r,
-        m = (0, l.Bd)((0, l._i)(p)) > 0.5 ? n : t;
+        b = (0, l.Bd)((0, l._i)(p)) > 0.5 ? n : t;
     return {
         fillColor: p,
-        outlineColor: m,
+        outlineColor: b,
     };
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => R }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(91192),
+    a = n.n(l),
+    o = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(493683),
@@ -12,22 +12,22 @@ var r = n(54381),
     h = n(16609),
     p = n(276952),
     g = n(682662),
-    m = n(674552),
-    b = n(593364),
-    _ = n(905423),
-    y = n(199902),
-    O = n(592125),
-    v = n(944486),
-    j = n(979651),
+    b = n(674552),
+    m = n(593364),
+    y = n(905423),
+    O = n(199902),
+    v = n(592125),
+    j = n(944486),
+    C = n(979651),
     x = n(709054),
-    C = n(853856),
-    E = n(593214),
-    S = n(919755),
-    I = n(110977),
+    E = n(853856),
+    S = n(593214),
+    I = n(919755),
+    _ = n(110977),
     P = n(603274),
     N = n(981631),
     Z = n(388032),
-    w = n(499951);
+    w = n(547355);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,45 +62,45 @@ let A = {
 };
 function R() {
     var e, t;
-    let l = (0, a.Ie)("favorites"),
-        { favoriteAdded: R, clearFavoriteAdded: D } = (0, E.up)(),
-        [L, M] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([C.Z], () => ({
-            favoriteChannels: C.Z.getFavoriteChannels(),
-            favoriteServerMuted: C.Z.favoriteServerMuted,
+    let l = (0, o.Ie)("favorites"),
+        { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
+        [M, L] = i.useState(!1),
+        { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([E.Z], () => ({
+            favoriteChannels: E.Z.getFavoriteChannels(),
+            favoriteServerMuted: E.Z.favoriteServerMuted,
         })),
-        U = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
-        B = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
-        F = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: V, unread: H } = (0, S.Z)(G),
-        W = (function (e) {
-            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(N.I_8)),
+        B = (0, s.e7)([v.Z], () => v.Z.getChannel(U)),
+        F = (0, y.Z)((e) => e.guildId) === N.I_8,
+        { badge: V, unread: H } = (0, I.Z)(G),
+        z = (function (e) {
+            let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, s.e7)([y.Z], () => {
+                r = (0, s.e7)([O.Z], () => {
                     if (!n) return !1;
-                    let t = y.Z.getCurrentUserActiveStream();
+                    let t = O.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, s.e7)([y.Z], () => y.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
-                o = (0, s.Wu)([f.ZP], () =>
+                i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
+                a = (0, s.Wu)([f.ZP], () =>
                     x.default.keys(e).reduce((e, t) => (e.push(...f.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
                 ),
-                a = (0, s.e7)([f.ZP], () =>
+                o = (0, s.e7)([f.ZP], () =>
                     Array.from(f.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
                             r = (0, h.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
-                c = o.length > 0,
+                c = a.length > 0,
                 u = !1,
                 d = !1,
                 p = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (p = r), (g = a)) : ((p = i), (g = c)),
-                (0, m.Or)({
+                n ? ((u = !l), (d = l), (p = r), (g = o)) : ((p = i), (g = c)),
+                (0, b.Or)({
                     audio: u,
                     video: d,
                     screenshare: p,
@@ -110,7 +110,7 @@ function R() {
                 })
             );
         })(G),
-        z = V > 0 ? (0, b.N)(V) : null,
+        W = V > 0 ? (0, m.N)(V) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
@@ -118,17 +118,17 @@ function R() {
         children: [
             (0, r.jsx)(p.Z, {
                 selected: F,
-                hovered: L,
+                hovered: M,
                 unread: H && !k,
                 className: w.pill,
             }),
             (0, r.jsx)(P.Z, {
                 onShow: K,
-                children: (0, r.jsx)(I.S, {
+                children: (0, r.jsx)(_.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: !0,
-                        upperBadge: W,
-                        lowerBadge: z,
+                        upperBadge: z,
+                        lowerBadge: W,
                         children: (0, r.jsx)(
                             c.LYs,
                             ((e = T({}, l)),
@@ -143,9 +143,9 @@ function R() {
                                         pathname: N.Z5c.CHANNEL(N.I_8, U),
                                         state: A,
                                     },
-                                    selected: F || L,
-                                    onMouseEnter: () => M(!0),
-                                    onMouseLeave: () => M(!1),
+                                    selected: F || M,
+                                    onMouseEnter: () => L(!0),
+                                    onMouseLeave: () => L(!1),
                                     onMouseDown: function () {
                                         null != B && u.Z.preload(B.guild_id, B.id);
                                     },
@@ -156,7 +156,7 @@ function R() {
                                         });
                                     },
                                     children: (0, r.jsx)("div", {
-                                        className: o()(w.ring, { [w.ringActive]: R }),
+                                        className: a()(w.ring, { [w.ringActive]: R }),
                                         children: (0, r.jsx)(c.r7p, {
                                             size: "custom",
                                             color: "currentColor",

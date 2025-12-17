@@ -5,12 +5,12 @@ n.d(t, {
     n(388685);
 var a = n(473749),
     r = n(872175),
-    i = n(963307);
-let l = {};
+    l = n(963307);
+let i = {};
 function s(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         s = (0, a.useRef)(null),
-        o = (0, r.Z)(null != t ? t : l),
+        o = (0, r.Z)(null != t ? t : i),
         c = (0, a.useRef)(null),
         d = (0, a.useRef)(e);
     return (
@@ -19,14 +19,14 @@ function s(e, t) {
         }, [e]),
         (0, a.useEffect)(() => {
             if (!n) return;
-            null == c.current && (c.current = (0, i.c)(o.current));
+            null == c.current && (c.current = (0, l.c)(o.current));
             let e = s.current,
                 t = c.current;
             if (null != e && null != t)
                 return (
-                    (0, i.YP)(t, e, d.current),
+                    (0, l.YP)(t, e, d.current),
                     () => {
-                        (0, i.UC)(t, e);
+                        (0, l.UC)(t, e);
                     }
                 );
         }, [n, o]),

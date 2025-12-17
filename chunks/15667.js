@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(54381);
 n(473749);
 var l = n(392711),
@@ -6,7 +6,7 @@ var l = n(392711),
     a = n(388032),
     s = n(792389),
     o = n(22959);
-let d = (e) => {
+let c = (e) => {
     let t = (0, l.flatMap)(e.history, (e) => {
         var t;
         let {

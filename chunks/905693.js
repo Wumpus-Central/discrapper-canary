@@ -1,20 +1,20 @@
 n.d(t, {
-    lW: () => a,
-    tK: () => s,
+    lW: () => s,
+    tK: () => a,
 });
 var i,
     c = n(367907),
     l = n(626135),
     r = n(63063),
     o = n(981631),
-    s =
+    a =
         (((i = {}).DESCRIPTION = "description"),
         (i.CATEGORIES = "categories"),
         (i.TAGS = "tags"),
         (i.AGREE_TO_RULES = "agree_to_rules"),
         i);
-let a = (e) => {
-    let { articleId: t, guildId: n, modalStep: i = null, pageView: s = null } = e;
+let s = (e) => {
+    let { articleId: t, guildId: n, modalStep: i = null, pageView: a = null } = e;
     open(r.Z.getArticleURL(t)),
         l.default.track(
             o.rMx.DISCOVERY_SETUP_CTA_CLICKED,
@@ -45,7 +45,7 @@ let a = (e) => {
             })(
                 {
                     cta_name: o.b8q,
-                    discovery_settings_view: s,
+                    discovery_settings_view: a,
                     help_center_article_id: t,
                     modal_step: i,
                 },

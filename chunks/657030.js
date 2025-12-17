@@ -3,8 +3,8 @@ var r = n(570140),
     i = n(317770),
     l = n(728345),
     a = n(91896),
-    s = n(981631);
-class o extends i.Z {
+    o = n(981631);
+class s extends i.Z {
     _initialize() {
         r.Z.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
     }
@@ -29,10 +29,10 @@ class o extends i.Z {
                 let e = a.Z.getGameRelationships(),
                     t = new Set();
                 e.values().forEach((e) => {
-                    e.type === s.OGo.PENDING_INCOMING && t.add(e.applicationId);
+                    e.type === o.OGo.PENDING_INCOMING && t.add(e.applicationId);
                 }),
                     l.ZP.fetchApplications(Array.from(t));
             });
     }
 }
-let c = new o();
+let c = new s();

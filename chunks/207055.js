@@ -48,8 +48,8 @@ let U = r.memo((e) => {
                     : [!I.Z.isSupported() || I.Z.isLocalMute(T), !1, I.Z.isLocalVideoDisabled(T)],
             [k, T],
         ),
-        B = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
-        H = (0, c.Z)({
+        H = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
+        B = (0, c.Z)({
             userId: T,
             checkSoundSharing: !0,
         }),
@@ -95,7 +95,7 @@ let U = r.memo((e) => {
         );
     return (0, i.jsx)(v.Z, {
         shakeLocation: D.oZ.VOICE_USER,
-        isShaking: H,
+        isShaking: B,
         children: (0, i.jsx)(
             R.ZP,
             ((r = (function (e) {
@@ -134,11 +134,11 @@ let U = r.memo((e) => {
                     localVideoDisabled: F,
                     mute: a || U,
                     deaf: s || V,
-                    speaking: H,
+                    speaking: B,
                     voiceDb: G,
                     latched: W,
                     ringing: K,
-                    priority: B,
+                    priority: H,
                     embeddedApplication: X[0],
                     isStreaming: null != $ && $.channelId === y.id,
                     isWatching: null != ee && ee.state !== L.jm8.ENDED,
@@ -193,20 +193,20 @@ let V = [],
                     P(A.current), (A.current = null);
                 }),
             ),
-            B = r.useRef(
+            H = r.useRef(
                 new s.sW(175, () => {
                     P(null);
                 }),
             ),
-            H = r.useCallback(
+            B = r.useCallback(
                 (e) => {
-                    t && (N(!0), B.current.cancel(), (A.current = e), F.current.delay());
+                    t && (N(!0), H.current.cancel(), (A.current = e), F.current.delay());
                 },
                 [t],
             ),
             G = r.useCallback(
                 (e) => {
-                    t && (F.current.cancel(), (A.current = null), N(!1), B.current.delay());
+                    t && (F.current.cancel(), (A.current = null), N(!1), H.current.delay());
                 },
                 [t],
             ),
@@ -248,7 +248,7 @@ let V = [],
                             channel: l,
                             collapsed: u,
                             canDrag: n && Z.Z.can(L.Plq.MOVE_MEMBERS, l),
-                            showPreview: H,
+                            showPreview: B,
                             hidePreview: G,
                             previewIsOpen: I,
                             shouldShowHoverPopout: S === a.id,

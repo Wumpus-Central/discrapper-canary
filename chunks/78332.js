@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i,
     r,
     l = n(442837),
@@ -17,7 +17,7 @@ function p() {
     } else if (c && !o.Z.isConnected() && null != u) return d(u), (u = null), (c = !1), !0;
     return !1;
 }
-class h extends (r = l.ZP.Store) {
+class f extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(o.Z), this.syncWith([o.Z], p);
     }
@@ -29,15 +29,15 @@ class h extends (r = l.ZP.Store) {
         return null != e && o.Z.isConnected() && o.Z.getChannelId() === e && !this.getIsPopoverDismissed(e);
     }
 }
-(i = "displayName") in h
-    ? Object.defineProperty(h, i, {
+(i = "displayName") in f
+    ? Object.defineProperty(f, i, {
           value: "VoiceInvitesuggestionsStore ",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (h[i] = "VoiceInvitesuggestionsStore ");
-let f = new h(a.Z, {
+    : (f[i] = "VoiceInvitesuggestionsStore ");
+let h = new f(a.Z, {
     VOICE_INVITE_SUGGESTIONS_DISMISS_POPOVER: function (e) {
         let { channelId: t } = e;
         return !s[t] && ((s[t] = !0), !0);

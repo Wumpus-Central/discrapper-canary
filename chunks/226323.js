@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(28664),
+    o = n(442837),
+    s = n(28664),
     c = n(481060),
     u = n(239091),
     d = n(586902),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(906732),
     m = n(538870),
     b = n(522651),
-    E = n(795318),
-    _ = n(512384),
+    _ = n(795318),
+    E = n(512384),
     O = n(670188),
     v = n(314897),
     y = n(131951),
@@ -100,14 +100,14 @@ function Z(e) {
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, h.ZP)(),
         { channel: v, user: Z, nick: w, mute: L, deaf: R, serverMute: D, serverDeaf: M } = e,
-        k = (0, s.e7)([y.Z], () => y.Z.isLocalMute(Z.id)),
+        k = (0, o.e7)([y.Z], () => y.Z.isLocalMute(Z.id)),
         U = (0, d.Z)({
             userId: Z.id,
             checkSoundSharing: !0,
         }),
         G = null != (t = v.getGuildId()) ? t : void 0,
-        B = Z.getAvatarURL(v.guild_id, 24),
-        H = null != w ? w : C.ZP.getName(Z),
+        H = Z.getAvatarURL(v.guild_id, 24),
+        B = null != w ? w : C.ZP.getName(Z),
         {
             icon: V,
             colorize: F,
@@ -132,10 +132,10 @@ function Z(e) {
         Y =
             null != z
                 ? T.intl.formatToPlainString(T.t["1+MVBP"], {
-                      userName: H,
+                      userName: B,
                       status: z(),
                   })
-                : H;
+                : B;
     function W(e) {
         null != G
             ? (0, u.jW)(e, async () => {
@@ -154,7 +154,7 @@ function Z(e) {
                               guildId: G,
                               channel: v,
                               showMediaItems: !0,
-                              onInteraction: (0, E.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
+                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
                                   targetUserId: Z.id,
                               }),
                           }),
@@ -170,12 +170,12 @@ function Z(e) {
                           P(j({}, t), {
                               user: Z,
                               showMediaItems: !0,
-                              onInteraction: (0, E.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
+                              onInteraction: (0, _.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
                           }),
                       );
               });
     }
-    let q = (0, s.e7)([I.Z], () => I.Z.getVoiceVolume(Z.id)),
+    let q = (0, o.e7)([I.Z], () => I.Z.getVoiceVolume(Z.id)),
         K = (0, m._)({
             isSpeaking: U,
             voiceDb: q,
@@ -190,7 +190,7 @@ function Z(e) {
         position: "top",
         clickTrap: !0,
         children: (e) =>
-            (0, r.jsx)(o.u, {
+            (0, r.jsx)(s.u, {
                 text: Y,
                 children: (0, r.jsx)(c.P3F, {
                     innerRef: p,
@@ -200,12 +200,12 @@ function Z(e) {
                     className: N.avatarContainer,
                     onContextMenu: W,
                     focusProps: x,
-                    children: (0, r.jsx)(_.Z, {
+                    children: (0, r.jsx)(E.Z, {
                         shakeLocation: S.oZ.VOICE_USER,
                         isShaking: U,
                         children: (0, r.jsx)("div", {
                             className: N.avatar,
-                            style: j({ backgroundImage: "url(".concat(B, ")") }, K),
+                            style: j({ backgroundImage: "url(".concat(H, ")") }, K),
                             children:
                                 null != V
                                     ? (0, r.jsx)(V, {
@@ -223,7 +223,7 @@ function Z(e) {
 function w(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [u, d] = i.useState(!1),
-        g = (0, s.e7)([v.default], () => v.default.getId()),
+        g = (0, o.e7)([v.default], () => v.default.getId()),
         { containerRef: h, maxVisibleAvatars: m } = (function (e) {
             let [t, n] = i.useState(7),
                 r = (0, f.Z)(() => {
@@ -241,7 +241,7 @@ function w(e) {
                 maxVisibleAvatars: t,
             };
         })(t.length - 1),
-        [b, E] = (function (e, t, n) {
+        [b, _] = (function (e, t, n) {
             let r = [];
             for (let i of e)
                 if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
@@ -250,20 +250,20 @@ function w(e) {
                 }
             return [r, !1];
         })(t, g, m),
-        _ = u ? c.V_R : c.qJs,
+        E = u ? c.V_R : c.qJs,
         O = u ? T.intl.string(T.t["Z/Tya5"]) : T.intl.string(T.t.XR5BAc),
-        y = (0, r.jsx)(o.u, {
+        y = (0, r.jsx)(s.u, {
             text: O,
             ariaHidden: !0,
             children: (0, r.jsx)(c.hU, {
                 "aria-label": O,
                 onClick: () => d(!u),
-                icon: () => (0, r.jsx)(_, { size: "md" }),
+                icon: () => (0, r.jsx)(E, { size: "md" }),
                 variant: "icon-only",
                 size: "sm",
             }),
         }),
-        I = E && u ? t : b;
+        I = _ && u ? t : b;
     return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
@@ -294,7 +294,7 @@ function w(e) {
                                 )
                               : null;
                       }),
-                      E ? y : null,
+                      _ ? y : null,
                   ],
               }),
           });

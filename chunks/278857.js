@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(481060),
     l = n(502762),
     c = n(388032),
-    u = n(588472);
+    u = n(285608);
 function d(e) {
     let { renderCards: t, heading: n, onExpand: a } = e,
         d = i.useId(),

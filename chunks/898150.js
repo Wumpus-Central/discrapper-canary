@@ -8,8 +8,8 @@ var r = n(54381),
     l = n(481060),
     o = n(239091),
     a = n(324701),
-    s = n(550727),
-    c = n(388032);
+    c = n(550727),
+    s = n(388032);
 function u(e) {
     let { createReminder: t } = e,
         o = i.useCallback(() => {
@@ -63,7 +63,7 @@ function u(e) {
             });
         }, [t]);
     return i.useMemo(() => {
-        let e = s.B.map((e) => {
+        let e = c.B.map((e) => {
             let { getDueAt: n, getLabel: i } = e;
             return (0, r.jsx)(
                 l.sNh,
@@ -81,7 +81,7 @@ function u(e) {
                     l.sNh,
                     {
                         id: "create-reminder-custom",
-                        label: c.intl.string(c.t.OLA8Zi),
+                        label: s.intl.string(s.t.OLA8Zi),
                         action: o,
                     },
                     "custom",
@@ -104,7 +104,7 @@ function d(e) {
     return (0, r.jsx)(l.v2r, {
         navId: "message-reminder-create",
         onClose: o.Zy,
-        "aria-label": c.intl.string(c.t.mJ3P0N),
+        "aria-label": s.intl.string(s.t.mJ3P0N),
         onSelect: () => null,
         children: (0, r.jsx)(l.kSQ, {
             label: n,

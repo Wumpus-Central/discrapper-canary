@@ -1,40 +1,40 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var i = n(54381),
     r = n(473749),
-    l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n(120356),
+    l = n.n(a),
+    o = n(442837),
     s = n(28664),
     c = n(481060),
     u = n(493773),
     d = n(178821),
-    h = n(38618),
-    p = n(522474),
-    f = n(333031),
+    f = n(38618),
+    h = n(522474),
+    p = n(333031),
     m = n(76623),
     g = n(501787),
-    y = n(533449);
-function O(e) {
-    let { locked: t, pinned: n, anchorLeft: l } = e,
-        O = (0, a.e7)([h.Z], () => h.Z.getSocket()),
-        v = (0, a.e7)([m.Z], () => m.Z.isGPUBoosted());
+    b = n(596385);
+function y(e) {
+    let { locked: t, pinned: n, anchorLeft: a } = e,
+        y = (0, o.e7)([f.Z], () => f.Z.getSocket()),
+        O = (0, o.e7)([m.Z], () => m.Z.isGPUBoosted());
     (0, d.nU)();
-    let E = (0, a.e7)([p.Z], () => p.Z.getWindow(g.$J)),
-        [b, _] = (0, d.m8)(O),
+    let v = (0, o.e7)([h.Z], () => h.Z.getWindow(g.$J)),
+        [E, S] = (0, d.m8)(y),
         {
-            currentFPS: S,
-            averageFrameTime: x,
-            timeSinceLastDrop: I,
+            currentFPS: x,
+            averageFrameTime: I,
+            timeSinceLastDrop: C,
             onResetFrameData: j,
-            droppedFramesRef: C,
+            droppedFramesRef: _,
             renderedFrameCount: Z,
             bufferFramecountRef: N,
             frameCheckerEffect: w,
-        } = (0, d.d6)(!0, b, !0),
-        [T, P, A] = (0, d.ZF)(O),
-        [k, D] = (0, d.Y5)(T, w, E),
-        R = performance.now() - _.current < d.MC,
-        L = P(x, N.current);
+        } = (0, d.d6)(!0, E, !0),
+        [T, P, A] = (0, d.ZF)(y),
+        [k, D] = (0, d.Y5)(T, w, v),
+        R = performance.now() - S.current < d.MC,
+        L = P(I, N.current);
     (0, u.ZP)(
         () => (
             k(),
@@ -54,15 +54,15 @@ function O(e) {
     return t && !n
         ? null
         : (0, i.jsxs)("div", {
-              className: o()(y.panelGroup, !l && y.rightAligned),
+              className: l()(b.panelGroup, !a && b.rightAligned),
               children: [
                   (z || !t) &&
                       (0, i.jsxs)("div", {
-                          className: y.measurement,
+                          className: b.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: y.measurementCheckbox,
+                                      className: b.measurementCheckbox,
                                       children: (0, i.jsx)(c.rsf, {
                                           checked: z,
                                           onChange: (e) => V(e),
@@ -71,7 +71,7 @@ function O(e) {
                               (0, i.jsxs)(c.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: y.measurementText,
+                                  className: b.measurementText,
                                   children: [
                                       "FPS:",
                                       " ",
@@ -79,12 +79,12 @@ function O(e) {
                                           tag: "span",
                                           variant: "code",
                                           color:
-                                              S < 30
+                                              x < 30
                                                   ? "text-feedback-critical"
-                                                  : S < 45
+                                                  : x < 45
                                                     ? "text-feedback-warning"
                                                     : "text-strong",
-                                          children: S.toFixed(2),
+                                          children: x.toFixed(2),
                                       }),
                                   ],
                               }),
@@ -92,11 +92,11 @@ function O(e) {
                       }),
                   (U || !t) &&
                       (0, i.jsxs)("div", {
-                          className: y.measurement,
+                          className: b.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: y.measurementCheckbox,
+                                      className: b.measurementCheckbox,
                                       children: (0, i.jsx)(c.rsf, {
                                           checked: U,
                                           onChange: (e) => W(e),
@@ -105,15 +105,15 @@ function O(e) {
                               (0, i.jsxs)(c.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: y.measurementText,
+                                  className: b.measurementText,
                                   children: [
                                       "Frame Times:",
                                       " ",
                                       (0, i.jsxs)(c.Text, {
                                           tag: "span",
                                           variant: "code",
-                                          color: x > 1.1 * d.tO ? "text-feedback-warning" : "text-strong",
-                                          children: [x.toFixed(2), "ms"],
+                                          color: I > 1.1 * d.tO ? "text-feedback-warning" : "text-strong",
+                                          children: [I.toFixed(2), "ms"],
                                       }),
                                   ],
                               }),
@@ -121,11 +121,11 @@ function O(e) {
                       }),
                   (G || !t) &&
                       (0, i.jsxs)("div", {
-                          className: y.measurement,
+                          className: b.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: y.measurementCheckbox,
+                                      className: b.measurementCheckbox,
                                       children: (0, i.jsx)(c.rsf, {
                                           checked: G,
                                           onChange: (e) => F(e),
@@ -134,7 +134,7 @@ function O(e) {
                               (0, i.jsxs)(c.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: y.measurementText,
+                                  className: b.measurementText,
                                   children: [
                                       "Dropped Frames:",
                                       " ",
@@ -142,19 +142,19 @@ function O(e) {
                                           tag: "span",
                                           variant: "code",
                                           color:
-                                              I < 2
+                                              C < 2
                                                   ? "text-feedback-critical"
-                                                  : I < 5
+                                                  : C < 5
                                                     ? "text-feedback-warning"
                                                     : "text-strong",
-                                          children: C.current,
+                                          children: _.current,
                                       }),
                                       (0, i.jsxs)(c.Text, {
                                           tag: "span",
                                           variant: "code",
                                           color: "text-subtle",
-                                          className: y.secondaryInfoText,
-                                          children: ["(", ((C.current / Z.current) * 100).toFixed(3), "%)"],
+                                          className: b.secondaryInfoText,
+                                          children: ["(", ((_.current / Z.current) * 100).toFixed(3), "%)"],
                                       }),
                                   ],
                               }),
@@ -162,11 +162,11 @@ function O(e) {
                       }),
                   (H || !t) &&
                       (0, i.jsxs)("div", {
-                          className: y.measurement,
+                          className: b.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: y.measurementCheckbox,
+                                      className: b.measurementCheckbox,
                                       children: (0, i.jsx)(c.rsf, {
                                           checked: H,
                                           onChange: (e) => B(e),
@@ -175,7 +175,7 @@ function O(e) {
                               (0, i.jsxs)(c.Text, {
                                   variant: "text-md/normal",
                                   color: "text-subtle",
-                                  className: y.measurementText,
+                                  className: b.measurementText,
                                   children: [
                                       "Rendered Frames:",
                                       " ",
@@ -191,11 +191,11 @@ function O(e) {
                       }),
                   (Y || !t) &&
                       (0, i.jsxs)("div", {
-                          className: y.measurement,
+                          className: b.measurement,
                           children: [
                               !t &&
                                   (0, i.jsx)("div", {
-                                      className: y.measurementCheckbox,
+                                      className: b.measurementCheckbox,
                                       children: (0, i.jsx)(c.rsf, {
                                           checked: Y,
                                           onChange: (e) => Q(e),
@@ -208,7 +208,7 @@ function O(e) {
                                       children: (0, i.jsxs)(c.Text, {
                                           variant: "text-md/normal",
                                           color: "text-subtle",
-                                          className: y.measurementText,
+                                          className: b.measurementText,
                                           children: [
                                               "Idle Frame Delta:",
                                               " ",
@@ -237,7 +237,7 @@ function O(e) {
                               }),
                           }),
                       }),
-                  v &&
+                  O &&
                       (0, i.jsx)(c.Text, {
                           tag: "span",
                           variant: "code",
@@ -246,8 +246,8 @@ function O(e) {
                       }),
                   !t &&
                       (0, i.jsx)("div", {
-                          className: y.bottomPanelButton,
-                          children: (0, i.jsx)(f.Z, {
+                          className: b.bottomPanelButton,
+                          children: (0, i.jsx)(p.Z, {
                               children: (0, i.jsx)(c.Button, {
                                   variant: "primary",
                                   text: "Reset Frame Data",

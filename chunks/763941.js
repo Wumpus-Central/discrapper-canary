@@ -1,5 +1,5 @@
 n.d(t, {
-    IT: () => i,
+    IT: () => a,
     Pc: () => l,
 });
 let r = (0, n(427164).le)({
@@ -29,4 +29,4 @@ let r = (0, n(427164).le)({
         },
     }),
     l = (e) => r.useConfig({ location: e }).enabled,
-    i = (e) => r.useConfig({ location: e }).rentalDuration;
+    a = (e) => r.useConfig({ location: e }).rentalDuration;

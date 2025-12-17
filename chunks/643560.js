@@ -11,24 +11,24 @@ var r = n(54381),
     p = n(388032);
 function h(e) {
     let { entry: t, onSelect: h, closePopout: f, hideEditButton: g = !1 } = e,
-        { isEntryAdmin: m, canEdit: b, canRemove: _ } = (0, u.Z)(t),
-        y = (0, o.Z)({
+        { isEntryAdmin: m, canEdit: b, canRemove: y } = (0, u.Z)(t),
+        O = (0, o.Z)({
             id: t.guildId,
             label: p.intl.string(p.t["94lLD7"]),
             onSuccess: f,
         });
     i.useEffect(() => {
-        b || _ || null != y || (0, s.Zy)();
+        b || y || null != O || (0, s.Zy)();
     });
-    let O = () => {
+    let x = () => {
         d.kx(t.channelId, t.guildId);
     };
-    function x() {
+    function j() {
         (0, s.Zy)(), null == f || f();
     }
     return (0, r.jsxs)(a.v2r, {
         navId: "guild-entry-context",
-        onClose: x,
+        onClose: j,
         "aria-label": p.intl.string(p.t.HpQykc),
         onSelect: h,
         children: [
@@ -92,11 +92,11 @@ function h(e) {
                                           );
                                       };
                                   }),
-                                      x();
+                                      j();
                               },
                           })
                         : null,
-                    _
+                    y
                         ? (0, r.jsx)(a.sNh, {
                               id: "remove-from-hub",
                               label: p.intl.string(p.t.KUxYWH),
@@ -105,9 +105,9 @@ function h(e) {
                                       title: p.intl.string(p.t.KUxYWH),
                                       subtitle: p.intl.format(p.t["/5y0uV"], { guildName: t.name }),
                                       confirmText: p.intl.string(p.t.N86XcP),
-                                      onConfirm: O,
+                                      onConfirm: x,
                                   }),
-                                      x();
+                                      j();
                               },
                               color: "danger",
                           })
@@ -118,14 +118,14 @@ function h(e) {
                               id: "report-server-listing",
                               label: p.intl.string(p.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, c.sq)(t), x());
+                                  null != t && ((0, c.sq)(t), j());
                               },
                               icon: a.U65,
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(a.kSQ, { children: y }),
+            (0, r.jsx)(a.kSQ, { children: O }),
         ],
     });
 }

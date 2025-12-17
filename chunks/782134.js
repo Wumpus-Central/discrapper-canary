@@ -6,18 +6,18 @@ var i = n(54381),
     r = n(846027),
     a = n(509613),
     o = n(131951),
-    c = n(313789),
-    d = n(269876),
-    S = n(65154),
-    T = n(388032),
-    E = n(670302);
-let g = (0, a.ON)(c.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
-    useSearchTerms: () => [T.intl.string(T.t["sqUm+k"]), T.intl.string(T.t.I1Zuq0), T.intl.string(T.t.nuFtHH)],
+    S = n(313789),
+    T = n(269876),
+    c = n(65154),
+    E = n(388032),
+    d = n(130081);
+let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
+    useSearchTerms: () => [E.intl.string(E.t["sqUm+k"]), E.intl.string(E.t.I1Zuq0), E.intl.string(E.t.nuFtHH)],
     usePredicate: () =>
         (0, u.e7)([o.Z], () => {
             let t = o.Z.getMode(),
                 e = o.Z.isInputProfileCustom();
-            return t === S.pM.VOICE_ACTIVITY && e;
+            return t === c.pM.VOICE_ACTIVITY && e;
         }),
     Component: function () {
         let t = (0, u.e7)([o.Z], () => o.Z.getModeOptions().autoThreshold),
@@ -29,60 +29,60 @@ let g = (0, a.ON)(c.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                     threshold: n,
                 });
             }, []),
-            n = (0, u.e7)([o.Z], () => o.Z.supports(S.AN.AUTOMATIC_VAD)),
-            { volume: a, isSpeaking: c } = (0, d.Kq)(),
+            n = (0, u.e7)([o.Z], () => o.Z.supports(c.AN.AUTOMATIC_VAD)),
+            { volume: a, isSpeaking: S } = (0, T.Kq)(),
             g = (0, u.e7)([o.Z], () => o.Z.isEnabled()),
-            I = l.useMemo(
+            _ = l.useMemo(
                 () =>
                     !g &&
                     (0, i.jsx)("div", {
-                        className: E.noInputDevicesDetectedWarning,
+                        className: d.noInputDevicesDetectedWarning,
                         children: (0, i.jsx)(s.M14, {
                             type: "warning",
-                            children: T.intl.format(T.t["O13I+O"], { onEnableClick: () => r.Z.enable(!0) }),
+                            children: E.intl.format(E.t["O13I+O"], { onEnableClick: () => r.Z.enable(!0) }),
                         }),
                     }),
                 [g],
             ),
-            _ = l.useMemo(() => (t ? T.intl.string(T.t.JsbzjA) : T.intl.string(T.t.MLmyMY)), [t]),
-            O = l.useId(),
-            N = l.useId();
+            I = l.useMemo(() => (t ? E.intl.string(E.t.JsbzjA) : E.intl.string(E.t.MLmyMY)), [t]),
+            N = l.useId(),
+            A = l.useId();
         return n
             ? (0, i.jsxs)("fieldset", {
-                  "aria-describedby": N,
+                  "aria-describedby": A,
                   children: [
                       (0, i.jsx)(s.nn4, {
                           tag: "legend",
-                          id: O,
-                          children: T.intl.string(T.t.GByLar),
+                          id: N,
+                          children: E.intl.string(E.t.GByLar),
                       }),
                       (0, i.jsx)(s.nn4, {
-                          id: N,
-                          children: _,
+                          id: A,
+                          children: I,
                       }),
                       (0, i.jsxs)(s.Kqy, {
                           direction: "vertical",
                           gap: 8,
                           children: [
                               (0, i.jsx)(s.rsf, {
-                                  label: T.intl.string(T.t.lY6j47),
-                                  description: _,
+                                  label: E.intl.string(E.t.lY6j47),
+                                  description: I,
                                   checked: t,
                                   onChange: e,
                               }),
                               t
-                                  ? (0, i.jsx)(d.NP, {
-                                        isSpeaking: c,
-                                        className: E.autoThresholdSlider,
-                                        ariaDescribedBy: N,
-                                        ariaLabelledBy: O,
+                                  ? (0, i.jsx)(T.NP, {
+                                        isSpeaking: S,
+                                        className: d.autoThresholdSlider,
+                                        ariaDescribedBy: A,
+                                        ariaLabelledBy: N,
                                     })
-                                  : (0, i.jsx)(d.t8, {
+                                  : (0, i.jsx)(T.t8, {
                                         volume: a,
-                                        ariaDescribedBy: N,
-                                        ariaLabelledBy: O,
+                                        ariaDescribedBy: A,
+                                        ariaLabelledBy: N,
                                     }),
-                              I,
+                              _,
                           ],
                       }),
                   ],
@@ -92,26 +92,26 @@ let g = (0, a.ON)(c.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                   gap: 8,
                   children: [
                       (0, i.jsx)(s.gNt, {
-                          label: T.intl.string(T.t["sqUm+k"]),
-                          description: _,
+                          label: E.intl.string(E.t["sqUm+k"]),
+                          description: I,
                           layout: "vertical",
                           children: (e) =>
                               t
-                                  ? (0, i.jsx)(d.NP, {
-                                        isSpeaking: c,
-                                        className: E.autoThresholdSlider,
+                                  ? (0, i.jsx)(T.NP, {
+                                        isSpeaking: S,
+                                        className: d.autoThresholdSlider,
                                         id: e.controlId,
                                         ariaDescribedBy: e.describedById,
                                         ariaLabelledBy: e.labelId,
                                     })
-                                  : (0, i.jsx)(d.t8, {
+                                  : (0, i.jsx)(T.t8, {
                                         volume: a,
                                         id: e.controlId,
                                         ariaDescribedBy: e.describedById,
                                         ariaLabelledBy: e.labelId,
                                     }),
                       }),
-                      I,
+                      _,
                   ],
               });
     },

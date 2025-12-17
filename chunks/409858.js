@@ -12,8 +12,8 @@ var i = n(54381),
     p = n(607070),
     m = n(100527),
     h = n(906732),
-    g = n(728345),
-    b = n(812206),
+    b = n(728345),
+    g = n(812206),
     y = n(597688),
     O = n(884697),
     j = n(583434),
@@ -22,12 +22,12 @@ var i = n(54381),
     S = n(745510),
     x = n(313201),
     w = n(925329),
-    _ = n(703656),
-    C = n(164670),
-    Z = n(96418),
-    A = n(146779),
-    T = n(763296),
-    E = n(82142),
+    C = n(703656),
+    Z = n(164670),
+    A = n(96418),
+    T = n(146779),
+    E = n(763296),
+    _ = n(82142),
     I = n(283595),
     R = n(594174),
     k = n(509545),
@@ -44,7 +44,7 @@ var i = n(54381),
     V = n(981631),
     K = n(215023),
     W = n(388032),
-    Y = n(269142),
+    Y = n(655225),
     $ = n(167969),
     q = n(557256);
 function J(e, t, n) {
@@ -92,8 +92,8 @@ let X = (e) => {
             r.useEffect(() => {
                 var e;
                 if (t !== V.wZ8.CONFIRM) return;
-                let i = T.Z.getSoundById(n);
-                (0, A.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
+                let i = E.Z.getSoundById(n);
+                (0, T.playGiftSound)(n, null != (e = null == i ? void 0 : i.volume) ? e : 1);
             }, [t, n]),
             null
         );
@@ -101,7 +101,7 @@ let X = (e) => {
 class et extends r.Component {
     componentDidMount() {
         let { application: e, sku: t, customGiftMessage: n, giftCode: i, emojiName: r } = this.props;
-        null == e && null != t && g.ZP.fetchApplication(t.applicationId);
+        null == e && null != t && b.ZP.fetchApplication(t.applicationId);
         let l = null != n || null != i.giftStyle,
             s = (0, O.mO)(i),
             a = null != r ? G.ZP.getURL(r) : void 0;
@@ -233,7 +233,7 @@ class et extends r.Component {
                 isThemeDark: m,
             } = this.props,
             h = R.default.getUser(r.userId),
-            { isCustomGift: g, isCollectiblesGift: b, accepted: y, opened: O, emojiURL: j } = this.state,
+            { isCustomGift: b, isCollectiblesGift: g, accepted: y, opened: O, emojiURL: j } = this.state,
             v = R.default.getCurrentUser(),
             S = this.step === V.wZ8.ERROR,
             x =
@@ -260,16 +260,16 @@ class et extends r.Component {
                     parentComponent: "GiftCodeModal",
                     children: [
                         null != r.giftStyle &&
-                            !g &&
                             !b &&
+                            !g &&
                             (0, i.jsx)(z.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: r.giftStyle,
                                 className: Y.seasonalGiftIcon,
                             }),
-                        !g && (0, i.jsx)("div", { className: Y.backSplash }),
-                        !b &&
+                        !b && (0, i.jsx)("div", { className: Y.backSplash }),
+                        !g &&
                             (0, i.jsx)(u.olH, {
                                 "data-migration-pending": !0,
                                 onClick: n,
@@ -278,11 +278,11 @@ class et extends r.Component {
                         (0, i.jsxs)(u.hzk, {
                             "data-migration-pending": !0,
                             className: s()({
-                                [Y.content]: !g,
-                                [Y.contentCustomGift]: g,
+                                [Y.content]: !b,
+                                [Y.contentCustomGift]: b,
                             }),
                             children: [
-                                !b && (null == r.giftStyle || (g && y))
+                                !g && (null == r.giftStyle || (b && y))
                                     ? (0, i.jsx)(w.Z, {
                                           size: w.A.LARGE,
                                           game: e,
@@ -297,26 +297,26 @@ class et extends r.Component {
                                 (0, i.jsxs)(u.Heading, {
                                     id: l,
                                     className: s()({
-                                        [Y.customGiftHeader]: g && !y,
-                                        [Y.header]: !g || y,
+                                        [Y.customGiftHeader]: b && !y,
+                                        [Y.header]: !b || y,
                                     }),
                                     variant: "heading-sm/semibold",
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: s()({ [Y.customGiftHeaderText]: g }),
+                                            className: s()({ [Y.customGiftHeaderText]: b }),
                                             children: this.firstHeaderText,
                                         }),
                                         (0, i.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
-                                !(g && !y) &&
+                                !(b && !y) &&
                                     (0, i.jsx)(u.Text, {
                                         className: Y.body,
                                         variant: "text-sm/normal",
                                         children: this.bodyText,
                                     }),
-                                g &&
-                                    !b &&
+                                b &&
+                                    !g &&
                                     null != r.giftStyle &&
                                     !y &&
                                     !S &&
@@ -326,14 +326,14 @@ class et extends r.Component {
                                         className: Y.giftAnimation,
                                         giftStyle: r.giftStyle,
                                     }),
-                                this.state.opened && !S && b && (0, i.jsx)(P.Z, { giftCode: r }),
+                                this.state.opened && !S && g && (0, i.jsx)(P.Z, { giftCode: r }),
                                 S &&
                                     (0, i.jsx)(u.Text, {
                                         className: Y.body,
                                         variant: "text-md/normal",
                                         children: this.errorMessage,
                                     }),
-                                g &&
+                                b &&
                                     this.state.opened &&
                                     !this.state.accepted &&
                                     !S &&
@@ -420,7 +420,7 @@ class et extends r.Component {
             }),
             J(this, "handleGoToLibrary", () => {
                 let { onClose: e, libraryApplication: t } = this.props;
-                (0, _.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
+                (0, C.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
             }),
             J(this, "getDefaultAnimationStatus", () => (this.step === V.wZ8.OPEN ? U.SR.IDLE : U.SR.ACTION)),
             J(this, "getIdleAnimationStatus", () => {
@@ -428,10 +428,10 @@ class et extends r.Component {
             });
     }
 }
-let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
+let en = o.ZP.connectStores([I.Z, N.Z, g.Z, _.Z, k.Z, p.Z, y.Z], (e) => {
         let { giftCode: t } = e,
             n = N.Z.get(t.skuId),
-            i = null != n ? b.Z.getApplication(n.applicationId) : null,
+            i = null != n ? g.Z.getApplication(n.applicationId) : null,
             r = p.Z.useReducedMotion;
         return {
             sku: n,
@@ -441,7 +441,7 @@ let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
                     : null,
             application: i,
             subscriptionPlan: null != t.subscriptionPlanId ? (0, M.oE)(t.subscriptionPlanId) : null,
-            accepting: E.Z.getIsAccepting(t.code),
+            accepting: _.Z.getIsAccepting(t.code),
             useReducedMotion: r,
         };
     })((e) => {
@@ -455,10 +455,10 @@ let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
                 emojiName: c,
                 soundId: u,
             } = e,
-            d = null != t && (0, C.K$)(t);
+            d = null != t && (0, Z.K$)(t);
         return (r.useEffect(() => {
             if (d) {
-                (0, Z.L)({
+                (0, A.L)({
                     sku: t,
                     giftCode: n,
                     channelContext: l,
@@ -500,12 +500,12 @@ let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
                 }
                 return r;
             })(e, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
-        let g = (0, x.Dt)(),
-            b = (0, o.e7)([E.Z], () => E.Z.get(l)),
+        let b = (0, x.Dt)(),
+            g = (0, o.e7)([_.Z], () => _.Z.get(l)),
             y = (0, f.ZP)(),
             { analyticsLocations: P } = (0, h.ZP)(m.Z.GIFT_CODE_MODAL),
-            { product: S } = (0, j.T)(null == b ? void 0 : b.skuId, !0);
-        return null == b
+            { product: S } = (0, j.T)(null == g ? void 0 : g.skuId, !0);
+        return null == g
             ? null
             : (0, i.jsx)(
                   en,
@@ -514,8 +514,8 @@ let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
                       {
                           customGiftMessage: s,
                           channelContext: r,
-                          giftCode: b,
-                          headerId: g,
+                          giftCode: g,
+                          headerId: b,
                           emojiName: a,
                           soundId: u,
                           analyticsLocations: P,

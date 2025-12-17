@@ -8,9 +8,9 @@ var i = n(54381),
     c = n(725875),
     d = n(981631),
     u = n(388032),
-    p = n(437121),
-    m = n(893916),
-    b = n(408942);
+    m = n(431263),
+    b = n(893916),
+    p = n(408942);
 function g(e) {
     let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: f, canNavigate: h } = e,
         x = (0, a.ZP)();
@@ -20,7 +20,7 @@ function g(e) {
                 variant: "text-sm/normal",
                 children: u.intl.format(u.t["5u+aV1"], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) }),
             }),
-            (0, i.jsx)(l.izJ, { className: p.headerDivider }),
+            (0, i.jsx)(l.izJ, { className: m.headerDivider }),
             t.length > 0
                 ? (0, i.jsx)(c.Z, {
                       webhooks: t,
@@ -30,7 +30,7 @@ function g(e) {
                       canNavigate: h,
                   })
                 : (function (e, t) {
-                      let n = (0, r.wj)(e) ? m : b;
+                      let n = (0, r.wj)(e) ? b : p;
                       return (0, i.jsxs)(o.Z, {
                           direction: o.Z.Direction.VERTICAL,
                           align: o.Z.Align.CENTER,
@@ -38,7 +38,7 @@ function g(e) {
                               (0, i.jsx)("img", {
                                   alt: "",
                                   src: n,
-                                  className: p.emptyStateImage,
+                                  className: m.emptyStateImage,
                               }),
                               (0, i.jsx)(l.Heading, {
                                   variant: "heading-md/semibold",
@@ -46,7 +46,7 @@ function g(e) {
                               }),
                               (0, i.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: p.emptyStateButton,
+                                  className: m.emptyStateButton,
                                   children: (0, i.jsx)(l.Button, {
                                       variant: "primary",
                                       text: u.intl.string(u.t["ZwSt+T"]),

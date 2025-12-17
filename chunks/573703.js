@@ -1,41 +1,41 @@
-e.d(t, { Z: () => C });
-var o = e(54381);
-e(473749);
-var i = e(481060),
-    r = e(63063),
-    s = e(376340),
-    l = e(981631),
-    a = e(388032),
-    c = e(224942),
-    d = e(38920);
+t.d(n, { Z: () => C });
+var o = t(54381);
+t(473749);
+var i = t(481060),
+    r = t(63063),
+    s = t(376340),
+    a = t(981631),
+    l = t(388032),
+    d = t(942016),
+    c = t(38920);
 function u() {
     return (0, o.jsx)("div", {
-        className: c.__invalid_getCrunchyrollApp,
+        className: d.__invalid_getCrunchyrollApp,
         children: (0, o.jsx)("div", {
-            className: c.__invalid_getCrunchyrollAppBody,
+            className: d.__invalid_getCrunchyrollAppBody,
             children: (0, o.jsx)(i.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: (0, o.jsx)(i.Anchor, {
-                    href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
-                    children: a.intl.string(a.t.hvVgAZ),
+                    href: r.Z.getArticleURL(a.BhN.CRUNCHYROLL_CONNECTION),
+                    children: l.intl.string(l.t.hvVgAZ),
                 }),
             }),
         }),
     });
 }
-function C(n) {
-    let { onClose: t } = n;
+function C(e) {
+    let { onClose: n } = e;
     return (0, o.jsx)(s.L, {
         img: (0, o.jsx)("img", {
-            src: d,
+            src: c,
             width: "224",
             height: "104",
             alt: "",
         }),
-        title: a.intl.string(a.t.Fnvxvk),
-        body: a.intl.string(a.t.YwXceg),
+        title: l.intl.string(l.t.Fnvxvk),
+        body: l.intl.string(l.t.YwXceg),
         content: (0, o.jsx)(u, {}),
-        onClose: t,
+        onClose: n,
     });
 }

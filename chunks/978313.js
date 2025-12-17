@@ -9,21 +9,21 @@ var a = n(54381),
     d = n(481060),
     u = n(885006),
     m = n(810568),
-    g = n(221370),
-    f = n(388032),
-    p = n(226788),
-    x = n(802318);
+    f = n(221370),
+    g = n(388032),
+    p = n(452379),
+    x = n(772770);
 function v(e) {
     let { detectedGame: t, trackAction: n } = e,
         [r, v] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
         [h, j] = i.useState(!0),
-        [b, _] = i.useState(!1),
-        y = i.useRef(null),
-        { width: I, height: O } = (0, u.Z)();
+        [b, I] = i.useState(!1),
+        O = i.useRef(null),
+        { width: y, height: P } = (0, u.Z)();
     return (i.useEffect(() => {
-        let e = y.current;
-        null != e && _(e.scrollHeight - e.clientHeight > 1 || !h);
-    }, [y, I, O, h]),
+        let e = O.current;
+        null != e && I(e.scrollHeight - e.clientHeight > 1 || !h);
+    }, [O, y, P, h]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -41,13 +41,13 @@ function v(e) {
                                   variant: "text-xs/medium",
                                   color: "text-default",
                                   children: r
-                                      ? f.intl.format(f.t.aZ2iIp, { onShowOriginal: () => v(!1) })
-                                      : f.intl.format(f.t["/2ylF4"], { onShowTranslated: () => v(!0) }),
+                                      ? g.intl.format(g.t.aZ2iIp, { onShowOriginal: () => v(!1) })
+                                      : g.intl.format(g.t["/2ylF4"], { onShowTranslated: () => v(!0) }),
                               }),
                           ],
                       }),
                   (0, a.jsx)(s.xvT, {
-                      ref: y,
+                      ref: O,
                       lineClamp: h ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: r ? t.summaryLocalized : t.summary,
@@ -60,10 +60,10 @@ function v(e) {
                           },
                           children: (0, a.jsx)(s.xvT, {
                               variant: "text-sm/semibold",
-                              children: h ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo/"]),
+                              children: h ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t["6MwJo/"]),
                           }),
                       }),
-                  (0, a.jsx)(g.Z, {
+                  (0, a.jsx)(f.Z, {
                       className: x.platforms,
                       detectedGame: t,
                   }),

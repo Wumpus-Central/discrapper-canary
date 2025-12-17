@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(290780);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    o = n(215569),
-    a = n(481060),
+    a = n(215569),
+    o = n(481060),
     s = n(592125),
     c = n(358652),
     u = n(19780),
@@ -24,13 +24,13 @@ function h() {
         g = null == n && null != h ? e[h] : null;
     return (
         null != g && p.unshift((0, r.jsx)(d.Z, { channel: g }, g.id)),
-        (0, r.jsx)(a.Kqy, {
+        (0, r.jsx)(o.Kqy, {
             id: "guild-list-unread-dms",
             role: "group",
             "aria-label": f.intl.string(f.t.YUU0RF),
             gap: "xs",
             hidden: p.length < 1,
-            children: (0, r.jsx)(o.W, {
+            children: (0, r.jsx)(a.W, {
                 component: i.Fragment,
                 children: p,
             }),

@@ -88,12 +88,12 @@ function P(e) {
 function R() {
     C(!1, !1);
 }
-function D(e) {
+function w(e) {
     let { idle: t } = e;
     if (!t) return !1;
     C(!1, !0);
 }
-function w() {
+function D() {
     T.reset();
 }
 function x(e) {
@@ -138,11 +138,11 @@ function Z(e) {
     let { guildId: t, channelId: n, ranges: r } = e;
     return N(t, n, r);
 }
-function B(e) {
+function F(e) {
     let { guildId: t, channelId: n } = e;
     return A(t, n);
 }
-function F(e) {
+function B(e) {
     let { guildId: t, channelId: n } = e;
     return !h.Z.isUnavailable(t) && A(t, n);
 }
@@ -211,10 +211,10 @@ let q = new z(l.Z, {
     CONNECTION_OPEN: P,
     CONNECTION_RESUMED: P,
     CONNECTION_CLOSED: R,
-    IDLE: D,
-    LOGOUT: w,
-    VOICE_CHANNEL_SELECT: F,
-    CHANNEL_SELECT: F,
+    IDLE: w,
+    LOGOUT: D,
+    VOICE_CHANNEL_SELECT: B,
+    CHANNEL_SELECT: B,
     GUILD_CREATE: x,
     GUILD_DELETE: L,
     GUILD_SUBSCRIPTIONS_MEMBERS_ADD: j,
@@ -223,7 +223,7 @@ let q = new z(l.Z, {
     GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: U,
     GUILD_SUBSCRIPTIONS_CHANNEL: Z,
     GUILD_SUBSCRIPTIONS: G,
-    CHANNEL_PRELOAD: B,
+    CHANNEL_PRELOAD: F,
     INBOX_OPEN: K,
     THREAD_UPDATE: H,
     THREAD_DELETE: Y,

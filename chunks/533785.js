@@ -4,14 +4,14 @@ var l = t(54381),
     a = t(481060),
     o = t(590961),
     s = t(840724),
-    r = t(661009);
+    r = t(746749);
 function d(e) {
-    let { leaderboard: n, skuId: t, applicationId: d, guildId: c, analyticsLocations: u, analyticsSectionId: g } = e,
-        p = i.useMemo(() => ({ pageSection: g }), [g]);
+    let { leaderboard: n, skuId: t, applicationId: d, guildId: c, analyticsLocations: u, analyticsSectionId: f } = e,
+        g = i.useMemo(() => ({ pageSection: f }), [f]);
     return null == n
         ? null
         : (0, l.jsx)(o.hL, {
-              newValue: p,
+              newValue: g,
               children: (0, l.jsxs)("div", {
                   className: r.container,
                   children: [

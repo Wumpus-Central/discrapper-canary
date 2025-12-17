@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(78946);
+    b = n(72247);
 function y(e) {
     let {
             user: t,
@@ -35,14 +35,14 @@ function y(e) {
         }),
         { pendingProfileEffect: N, errors: P } = (0, p.xZ)(null == n ? void 0 : n.id),
         R = void 0 === N ? null != A : null != N,
-        D = () => {
+        w = () => {
             (0, u.H)({
                 analyticsLocations: T,
                 guild: n,
                 initialSelectedEffect: a,
             });
         },
-        w = () => {
+        D = () => {
             (0, p.UK)(null, null == n ? void 0 : n.id);
         };
     i.useEffect(() => {
@@ -66,7 +66,7 @@ function y(e) {
             children: [
                 (0, r.jsx)(x, {
                     size: s.zx.Sizes.SMALL,
-                    onClick: D,
+                    onClick: w,
                     className: o()({ [b.buttonHighlighted]: S }),
                     children: E.intl.string(E.t["/dRfCf"]),
                 }),
@@ -78,7 +78,7 @@ function y(e) {
                             variant: "secondary",
                             size: "sm",
                             text: null != n ? E.intl.string(E.t.CHf9iJ) : E.intl.string(E.t.uMuafO),
-                            onClick: w,
+                            onClick: D,
                         }),
                     }),
             ],

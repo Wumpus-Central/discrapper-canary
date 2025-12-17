@@ -11,11 +11,11 @@ var i = n(399606),
     u = n(388032);
 function g(e) {
     let { guildId: t, allPeriods: g } = e,
-        m = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
-        p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        f = (0, s.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: h } = (0, a.gX)(t),
-        b = g.filter((e) => {
+        f = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
+        m = (0, c.qi)(t, { includeSoftDeleted: !0 }),
+        b = (0, s.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: p } = (0, a.gX)(t),
+        h = g.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (
@@ -23,22 +23,22 @@ function g(e) {
                 (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED
             );
         }),
-        x = p.length > 0,
-        j = f.length > 0,
-        _ = b.length > 0;
-    return null == m
+        x = m.length > 0,
+        j = b.length > 0,
+        v = h.length > 0;
+    return null == f
         ? null
         : (0, r.jsxs)("div", {
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/normal",
-                      children: u.intl.format(u.t.fvOn6J, { guildName: m.name }),
+                      children: u.intl.format(u.t.fvOn6J, { guildName: f.name }),
                   }),
                   (0, r.jsx)(l.LZC, { size: 16 }),
                   (0, r.jsx)(l.Button, {
                       variant: "critical-primary",
                       text: u.intl.string(u.t.FrOFSo),
-                      disabled: !h || x || j || _,
+                      disabled: !p || x || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e("35282").then(n.bind(n, 157429));
@@ -71,7 +71,7 @@ function g(e) {
                                           }
                                           return e;
                                       })({}, t)),
-                                      (i = i = { guild: m }),
+                                      (i = i = { guild: f }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                           : (function (e, t) {

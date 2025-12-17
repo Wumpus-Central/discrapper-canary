@@ -3,8 +3,8 @@ var r = n(828700),
     i = n(772848),
     l = n(626135),
     a = n(893607),
-    s = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,69 +26,69 @@ let c = new (class {
                     page: e,
                     params: "",
                 };
-            if (e === s.Z5c.ME_ACTIVITY)
+            if (e === o.Z5c.ME_ACTIVITY)
                 return {
                     page: "me_activity",
                     params: "",
                 };
-            if (e === s.Z5c.FRIENDS)
+            if (e === o.Z5c.FRIENDS)
                 return {
                     page: "friends",
                     params: "",
                 };
-            if (e === s.Z5c.ICYMI)
+            if (e === o.Z5c.ICYMI)
                 return {
                     page: "icymi",
                     params: "",
                 };
-            if (e.startsWith(s.Z5c.MESSAGE_REQUESTS))
+            if (e.startsWith(o.Z5c.MESSAGE_REQUESTS))
                 return {
                     page: "message-requests",
-                    params: e.slice(s.Z5c.MESSAGE_REQUESTS.length + 1),
+                    params: e.slice(o.Z5c.MESSAGE_REQUESTS.length + 1),
                 };
-            if (e.startsWith(s.Z5c.APPLICATION_LIBRARY))
+            if (e.startsWith(o.Z5c.APPLICATION_LIBRARY))
                 return {
                     page: "library",
-                    params: e.slice(s.Z5c.APPLICATION_LIBRARY.length + 1),
+                    params: e.slice(o.Z5c.APPLICATION_LIBRARY.length + 1),
                 };
-            if (e.startsWith(s.Z5c.APPLICATION_STORE))
+            if (e.startsWith(o.Z5c.APPLICATION_STORE))
                 return {
                     page: "store",
-                    params: e.slice(s.Z5c.APPLICATION_STORE.length + 1),
+                    params: e.slice(o.Z5c.APPLICATION_STORE.length + 1),
                 };
-            if (e.startsWith(s.Z5c.COLLECTIBLES_SHOP))
+            if (e.startsWith(o.Z5c.COLLECTIBLES_SHOP))
                 return {
                     page: "shop",
-                    params: e.slice(s.Z5c.COLLECTIBLES_SHOP.length + 1),
+                    params: e.slice(o.Z5c.COLLECTIBLES_SHOP.length + 1),
                 };
-            if (e.startsWith(s.Z5c.FAMILY_CENTER))
+            if (e.startsWith(o.Z5c.FAMILY_CENTER))
                 return {
                     page: "family-center",
-                    params: e.slice(s.Z5c.FAMILY_CENTER.length + 1),
+                    params: e.slice(o.Z5c.FAMILY_CENTER.length + 1),
                 };
-            if (e.startsWith(s.Z5c.QUEST_HOME_V2))
+            if (e.startsWith(o.Z5c.QUEST_HOME_V2))
                 return {
                     page: "quest-home",
-                    params: e.slice(s.Z5c.QUEST_HOME_V2.length + 1),
+                    params: e.slice(o.Z5c.QUEST_HOME_V2.length + 1),
                 };
-            if (e.startsWith(s.Z5c.QUEST_HOME))
+            if (e.startsWith(o.Z5c.QUEST_HOME))
                 return {
                     page: "discovery/quests",
-                    params: e.slice(s.Z5c.QUEST_HOME.length + 1),
+                    params: e.slice(o.Z5c.QUEST_HOME.length + 1),
                 };
             let t = (0, r.LX)(e, {
-                path: s.Z5c.CHANNEL(a.Hw.guildId(), a.Hw.channelId({ optional: !0 }), ":messageId?"),
+                path: o.Z5c.CHANNEL(a.Hw.guildId(), a.Hw.channelId({ optional: !0 }), ":messageId?"),
                 exact: !0,
             });
             if (null != t) {
                 let { guildId: e, channelId: n, messageId: r } = t.params;
                 return {
-                    page: e === s.ME ? "dm" : "guild_channel",
+                    page: e === o.ME ? "dm" : "guild_channel",
                     params: [e, n, r].filter(Boolean).join("/"),
                 };
             }
             let n = (0, r.LX)(e, {
-                path: s.Z5c.CHANNEL_THREAD_VIEW(
+                path: o.Z5c.CHANNEL_THREAD_VIEW(
                     a.Hw.guildId(),
                     a.Hw.channelId({ optional: !0 }),
                     ":threadId",
@@ -108,9 +108,9 @@ let c = new (class {
                 params: "",
             };
         })(e);
-        if (e !== s.Z5c.ME_DMS && null != t && (t !== this.lastPage || n !== this.lastParams)) {
+        if (e !== o.Z5c.ME_DMS && null != t && (t !== this.lastPage || n !== this.lastParams)) {
             let e = Date.now();
-            l.default.track(s.rMx.SESSION_START_PAGE_VIEWED, {
+            l.default.track(o.rMx.SESSION_START_PAGE_VIEWED, {
                 session_id: this.sessionID,
                 page: t,
                 page_sequence_index: this.pageSequenceIndex,
@@ -124,10 +124,10 @@ let c = new (class {
         }
     }
     constructor() {
-        o(this, "pageSequenceIndex", 0),
-            o(this, "lastPage", null),
-            o(this, "lastParams", null),
-            o(this, "lastPageViewedAt", Date.now()),
-            o(this, "sessionID", (0, i.Z)());
+        s(this, "pageSequenceIndex", 0),
+            s(this, "lastPage", null),
+            s(this, "lastParams", null),
+            s(this, "lastPageViewedAt", Date.now()),
+            s(this, "sessionID", (0, i.Z)());
     }
 })();

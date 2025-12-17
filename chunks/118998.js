@@ -1,11 +1,11 @@
 t.d(n, {
-    H: () => i,
-    T: () => r,
+    H: () => a,
+    T: () => i,
 });
-let i = (e) => {
+let a = (e) => {
     let { guildId: n, guildEventId: t } = e;
     return "https://discord.com/events/".concat(n, "/").concat(t);
 };
-function r(e, n, t) {
+function i(e, n, t) {
     return e && n && null != t;
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     FH: () => A,
     YG: () => C,
-    ZP: () => D,
+    ZP: () => w,
     uo: () => T,
 }),
     n(35282),
@@ -82,7 +82,7 @@ let T = /\.gif($|\?|#)/i,
     N = /\.png($|\?|#)/i,
     P = 400,
     R = 300;
-class D extends (r = a.Component) {
+class w extends (r = a.Component) {
     static isAnimated(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i } = e;
         return (
@@ -106,13 +106,13 @@ class D extends (r = a.Component) {
         return (
             g.$k &&
             (a ||
-                !D.isAnimated({
+                !w.isAnimated({
                     src: t,
                     original: n,
                     animated: r,
                     srcIsAnimated: i,
                 }))
-                ? ((o = "webp"), (D.isSrcPNG({ src: t }) || D.isSrcAVIF({ src: t })) && (s = "lossless"))
+                ? ((o = "webp"), (w.isSrcPNG({ src: t }) || w.isSrcAVIF({ src: t })) && (s = "lossless"))
                 : a && (o = "png"),
             {
                 format: o,
@@ -128,7 +128,7 @@ class D extends (r = a.Component) {
             callback: d,
         } = e;
         if (1 === i && 1 === a) return;
-        let { format: p, quality: _ } = D.getFormatQuality({
+        let { format: p, quality: _ } = w.getFormatQuality({
                 src: t,
                 original: s,
                 animated: l,
@@ -147,7 +147,7 @@ class D extends (r = a.Component) {
             }),
             h = Date.now();
         return (0, f.po)(m, (e, n) => {
-            D.trackLoadingCompleted({
+            w.trackLoadingCompleted({
                 error: e,
                 imageData: n,
                 trigger: "PRELOAD",
@@ -180,7 +180,7 @@ class D extends (r = a.Component) {
         } = e;
         if (
             (i && p.Z.increment({ name: s.V.IMAGE_LOAD_ERROR }),
-            !w.getCurrentConfig({ location: "lazy_image" }).enabled)
+            !D.getCurrentConfig({ location: "lazy_image" }).enabled)
         )
             return;
         let v = await fetch(a.url).catch(() => void 0),
@@ -213,22 +213,22 @@ class D extends (r = a.Component) {
     componentDidMount() {
         let { readyState: e } = this.state;
         e === b.zo9.LOADING &&
-            this.loadImage(this.getSrc(this.getRatio(), D.isAnimated(this.props)), this.handleImageLoad),
-            D.isAnimated(this.props) && this.observeVisibility();
+            this.loadImage(this.getSrc(this.getRatio(), w.isAnimated(this.props)), this.handleImageLoad),
+            w.isAnimated(this.props) && this.observeVisibility();
     }
     componentDidUpdate(e) {
-        let t = D.isAnimated(this.props);
-        D.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
+        let t = w.isAnimated(this.props);
+        w.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
     }
     componentWillUnmount() {
-        D.isAnimated(this.props) && this.unobserveVisibility(),
+        w.isAnimated(this.props) && this.unobserveVisibility(),
             this._cancellers.forEach((e) => e()),
             this._cancellers.clear();
     }
     getSrc(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { src: n, width: r, height: i, maxWidth: a, maxHeight: o, mediaLayoutType: s } = this.props,
-            { format: l, quality: c } = D.getFormatQuality(I(v({}, this.props), { freeze: t }));
+            { format: l, quality: c } = w.getFormatQuality(I(v({}, this.props), { freeze: t }));
         return (0, f.Q4)({
             src: n,
             width: r,
@@ -305,7 +305,7 @@ class D extends (r = a.Component) {
                 placeholder: N,
                 placeholderVersion: P,
                 dataSafeSrc: R,
-                srcIsAnimated: w,
+                srcIsAnimated: D,
             } = this.props,
             { readyState: x, hasMouseOver: L, hasFocus: j } = this.state,
             M = null != n,
@@ -331,7 +331,7 @@ class D extends (r = a.Component) {
                 placeholder: N,
                 placeholderVersion: P,
                 dataSafeSrc: R,
-                srcIsAnimated: w,
+                srcIsAnimated: D,
                 children:
                     null != f
                         ? (e) => {
@@ -357,9 +357,9 @@ class D extends (r = a.Component) {
                 null != t && (Z.src = t);
                 break;
             case b.zo9.READY:
-                if (D.isAnimated(this.props)) {
+                if (w.isAnimated(this.props)) {
                     Z.onMouseLeave = this.onMouseLeave;
-                    let e = (s || L || j) && (null == _ || _) && D.visibilityObserver.isVisible(this);
+                    let e = (s || L || j) && (null == _ || _) && w.visibilityObserver.isVisible(this);
                     e
                         ? ((Z.src = this.getSrc(k)), (Z.renderAccessory = I))
                         : ((Z.src = this.getSrc(k, !p || !s)), (Z.renderAccessory = this.renderAccessory)),
@@ -389,16 +389,16 @@ class D extends (r = a.Component) {
             O(this, "_cancellers", new Set()),
             O(this, "_imageRef", a.createRef()),
             O(this, "observeVisibility", () => {
-                D.visibilityObserver.observe(this, this._imageRef);
+                w.visibilityObserver.observe(this, this._imageRef);
             }),
             O(this, "unobserveVisibility", () => {
-                D.visibilityObserver.unobserve(this);
+                w.visibilityObserver.unobserve(this);
             }),
             O(this, "handleImageLoad", (e, t) => {
                 this.setState({ readyState: e ? b.zo9.ERROR : b.zo9.READY }, () => {
                     var n;
-                    let { format: r, quality: i } = D.getFormatQuality(this.props);
-                    D.trackLoadingCompleted({
+                    let { format: r, quality: i } = w.getFormatQuality(this.props);
+                    w.trackLoadingCompleted({
                         error: e,
                         imageData: t,
                         trigger: null != (n = this.props.trigger) ? n : "LOAD",
@@ -411,17 +411,17 @@ class D extends (r = a.Component) {
                 });
             }),
             O(this, "onMouseEnter", (e) => {
-                D.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
+                w.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
                 let { onMouseEnter: t } = this.props;
                 null == t || t(e);
             }),
             O(this, "onMouseLeave", (e) => {
-                D.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
+                w.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
                 let { onMouseLeave: t } = this.props;
                 null == t || t(e);
             }),
             O(this, "onFocus", (e) => {
-                D.isAnimated(this.props) && this.setState({ hasFocus: !0 });
+                w.isAnimated(this.props) && this.setState({ hasFocus: !0 });
             }),
             O(this, "onBlur", (e) => {
                 let { currentTarget: t, relatedTarget: n } = e;
@@ -444,11 +444,11 @@ class D extends (r = a.Component) {
                     r = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? (n ? r : (0, i.jsx)(d.Z, {})) : null;
             }),
-            (0, f.Vv)(this.getSrc(this.getRatio(), D.isAnimated(this.props))) && (this.state.readyState = b.zo9.READY);
+            (0, f.Vv)(this.getSrc(this.getRatio(), w.isAnimated(this.props))) && (this.state.readyState = b.zo9.READY);
     }
 }
-O(D, "visibilityObserver", new l.Z({ threshold: 0.6 })),
-    O(D, "defaultProps", {
+O(w, "visibilityObserver", new l.Z({ threshold: 0.6 })),
+    O(w, "defaultProps", {
         shouldLink: !1,
         autoPlay: !1,
         animated: !1,
@@ -457,7 +457,7 @@ O(D, "visibilityObserver", new l.Z({ threshold: 0.6 })),
         shouldRenderAccessory: !0,
         srcIsAnimated: !1,
     });
-let w = (0, u.B)({
+let D = (0, u.B)({
     kind: "user",
     id: "2024-02_image_load_metrics",
     label: "Image load metrics Config User Experiment",

@@ -16,9 +16,9 @@ var l = n(54381),
     m = n(651587),
     f = n(870731),
     b = n(52436),
-    y = n(965762),
-    v = n(388032),
-    h = n(862220);
+    v = n(965762),
+    y = n(388032),
+    h = n(114121);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +93,7 @@ function O(e) {
         })(e, ["channelId", "onClose", "onClipClick"]);
     let { analyticsLocations: P } = (0, u.ZP)(o.Z.CLIPS_GALLERY),
         [k, I] = r.useState(new Set()),
-        { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, y.n)(),
+        { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, v.n)(),
         { onShareClick: D } = (0, p.Z)(t),
         Z = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
         L = (0, b.f)((e) => e.selectedGameId),
@@ -112,10 +112,10 @@ function O(e) {
         A = r.useMemo(() => {
             var e;
             return "favorites" === L
-                ? v.intl.string(v.t["9rlCk1"])
+                ? y.intl.string(y.t["9rlCk1"])
                 : null != (e = null == H ? void 0 : H.name)
                   ? e
-                  : v.intl.string(v.t.dPVrEv);
+                  : y.intl.string(y.t.dPVrEv);
         }, [L, H]),
         R = r.useCallback((e) => {
             I((t) => {
@@ -193,24 +193,24 @@ function O(e) {
                                                         (0, l.jsxs)(l.Fragment, {
                                                             children: [
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: v.intl.string(v.t.RDE0Sc),
+                                                                    text: y.intl.string(y.t.RDE0Sc),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: z,
                                                                         icon: c.aAc,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.RDE0Sc),
+                                                                        "aria-label": y.intl.string(y.t.RDE0Sc),
                                                                         loading: Z,
                                                                     }),
                                                                 }),
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: v.intl.string(v.t.oyYWHE),
+                                                                    text: y.intl.string(y.t.oyYWHE),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: U,
                                                                         icon: c.XHJ,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": v.intl.string(v.t.oyYWHE),
+                                                                        "aria-label": y.intl.string(y.t.oyYWHE),
                                                                     }),
                                                                 }),
                                                             ],
@@ -220,7 +220,7 @@ function O(e) {
                                                         icon: c.Uz9,
                                                         size: "sm",
                                                         variant: "icon-only",
-                                                        "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                        "aria-label": y.intl.string(y.t.cpT0Cq),
                                                     }),
                                                 ],
                                             }),

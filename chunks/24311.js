@@ -4,8 +4,8 @@ t(473749);
 var i = t(442837),
     r = t(481060),
     a = t(493683),
-    u = t(728285),
-    o = t(740492),
+    o = t(728285),
+    u = t(740492),
     s = t(314897),
     d = t(592125),
     c = t(699516),
@@ -14,7 +14,7 @@ var i = t(442837),
     f = t(388032);
 function b(e) {
     let { user: n, context: b, label: O, joinCallVideo: m, id: h, onCall: p } = e,
-        P = (0, u.Aq)(),
+        P = (0, o.Aq)(),
         j = (0, i.e7)([s.default], () => s.default.getId() === n.id),
         v = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
         N = (0, i.e7)([g.Z, d.Z], () => g.Z.getVoiceChannelId() === d.Z.getDMFromUserId(n.id));
@@ -29,7 +29,7 @@ function b(e) {
                 P.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        x = !o.ZP.disableCallUserConfirmationPrompt;
+        x = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
         id: null != h ? h : "call",
         label: null != O ? O : f.intl.string(f.t.JJogjm),

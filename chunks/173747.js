@@ -39,12 +39,12 @@ let v = new Set(),
     N = 10 * E.Z.Millis.MINUTE,
     P = 6 * E.Z.Millis.HOUR,
     R = 10 * E.Z.Millis.MINUTE,
-    D = new s.V7();
-function w(e) {
-    D.start(e + Math.random() * N, c.o);
+    w = new s.V7();
+function D(e) {
+    w.start(e + Math.random() * N, c.o);
 }
 function x() {
-    return !p.bm.getSetting() && (w(P), L());
+    return !p.bm.getSetting() && (D(P), L());
 }
 function L() {
     if (!(0, y.Q)() || p.bm.getSetting()) return !1;
@@ -105,11 +105,11 @@ function Z(e) {
     let { buildId: t } = e;
     T.hasOwnProperty(t) || (T[t] = null);
 }
-function B(e) {
+function F(e) {
     let { buildId: t, sizeKB: n } = e;
     T[t] = n;
 }
-function F(e) {
+function B(e) {
     let { buildId: t } = e;
     null == T[t] && delete T[t];
 }
@@ -128,13 +128,13 @@ function V(e) {
         }
         A[t] = r;
     }
-    w(P);
+    D(P);
 }
 function H() {
-    w(R);
+    D(R);
 }
 function Y() {
-    D.stop();
+    w.stop();
 }
 function W(e) {
     let { entitlements: t } = e;
@@ -177,8 +177,8 @@ let z = new K(l.Z, {
     APPLICATION_BUILD_FETCH_SUCCESS: U,
     APPLICATION_BUILD_NOT_FOUND: G,
     APPLICATION_BUILD_SIZE_FETCH_START: Z,
-    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: B,
-    APPLICATION_BUILD_SIZE_FETCH_FAIL: F,
+    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: F,
+    APPLICATION_BUILD_SIZE_FETCH_FAIL: B,
     APPLICATION_BRANCHES_FETCH_SUCCESS: V,
     APPLICATION_BRANCHES_FETCH_FAIL: H,
     CONNECTION_CLOSED: Y,

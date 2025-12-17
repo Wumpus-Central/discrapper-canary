@@ -3,15 +3,15 @@ var r = n(54381),
     i = n(473749),
     l = n(392711),
     a = n.n(l),
-    s = n(755721),
-    o = n(481060),
+    o = n(755721),
+    s = n(481060),
     c = n(367907),
     u = n(626135),
     d = n(986332),
     p = n(428695),
     f = n(981631),
     g = n(388032),
-    h = n(449824);
+    h = n(538505);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,8 +37,8 @@ function m(e) {
     }
     return e;
 }
-let _ = a().debounce(c.ZP.trackWithMetadata, 500),
-    b = (e) => {
+let b = a().debounce(c.ZP.trackWithMetadata, 500),
+    _ = (e) => {
         let {
             guild: t,
             title: n,
@@ -47,7 +47,7 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             type: d,
             imageMarginX: p,
             imageMarginTop: m,
-            trackingSource: b,
+            trackingSource: _,
             undismissable: E,
             onDismissed: O,
             onClick: v,
@@ -55,7 +55,7 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             ctaColor: I,
         } = e;
         i.useEffect(() => {
-            _(f.rMx.CHANNEL_NOTICE_VIEWED, {
+            b(f.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
                 guild_id: t.id,
             });
@@ -64,14 +64,14 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
         "function" == typeof y
             ? (C = y())
             : null != y &&
-              (C = (0, r.jsx)(s.zx, {
+              (C = (0, r.jsx)(o.zx, {
                   "data-migration-pending": !0,
                   className: h.btn,
-                  size: s.zx.Sizes.SMALL,
+                  size: o.zx.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
                           u.default.track(f.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: b,
+                              source: _,
                               guild_id: t.id,
                               notice_type: d,
                           }),
@@ -87,13 +87,13 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             children: [
                 !0 === E
                     ? null
-                    : (0, r.jsx)(o.P3F, {
+                    : (0, r.jsx)(s.P3F, {
                           onClick: () => {
                               c.ZP.trackWithMetadata(f.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == O || O();
                           },
                           className: h.close,
                           "aria-label": g.intl.string(g.t.WAI6xu),
-                          children: (0, r.jsx)(o.Dio, {
+                          children: (0, r.jsx)(s.Dio, {
                               size: "md",
                               color: "currentColor",
                               className: h.closeIcon,
@@ -116,13 +116,13 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
                     className: h.message,
                     children: [
                         null != n
-                            ? (0, r.jsx)(o.Heading, {
+                            ? (0, r.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
                                   className: h.title,
                                   children: n,
                               })
                             : null,
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             children: l,
                         }),
@@ -134,5 +134,5 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
     },
     E = function (e) {
         let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
-        return t ? (0, r.jsx)(p.Z, m({}, e)) : (0, r.jsx)(b, m({}, e));
+        return t ? (0, r.jsx)(p.Z, m({}, e)) : (0, r.jsx)(_, m({}, e));
     };

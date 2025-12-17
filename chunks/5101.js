@@ -8,12 +8,12 @@ var i = n(54381),
     l = n(793030),
     a = n(433517),
     o = n(481060),
-    s = n(864309),
+    s = n(792389),
     c = n(388032);
 let u = "report_to_mod_dont_show_resolve_confirm";
 function d(e) {
     let { transitionState: t, onClose: n, handleResolveFlag: d } = e,
-        [p, h] = r.useState(!1);
+        [p, f] = r.useState(!1);
     return (0, i.jsx)(l.Modal, {
         transitionState: t,
         onClose: n,
@@ -29,7 +29,7 @@ function d(e) {
         ],
         actionBarInput: (0, i.jsx)(o.Checkbox, {
             checked: p,
-            onChange: (e) => h(e),
+            onChange: (e) => f(e),
             label: c.intl.string(s.default["3puq5c"]),
             labelType: "secondary",
         }),

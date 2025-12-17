@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(152376),
     d = n(981631),
     p = n(388032),
-    h = n(245995);
-function f(e) {
+    f = n(550567);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -59,14 +59,14 @@ function g(e) {
         r.useEffect(() => {
             c.default.track(
                 d.rMx.CHANNEL_BANNER_VIEWED,
-                m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "channel_opt_in" }),
+                m(h({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "channel_opt_in" }),
             );
         }, [t]),
         (0, i.jsxs)("div", {
-            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
+            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
                 (0, i.jsx)(o.Text, {
-                    className: h.chatHeaderBarText,
+                    className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: p.intl.string(p.t.iOWmmB),
@@ -77,7 +77,7 @@ function g(e) {
                     onClick: () => {
                         c.default.track(
                             d.rMx.CHANNEL_BANNER_CTA_CLICKED,
-                            m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
+                            m(h({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
                                 banner_type: "channel_opt_in",
                                 cta_type: "add channel",
                             }),

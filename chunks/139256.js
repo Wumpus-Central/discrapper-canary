@@ -1,8 +1,8 @@
 n.d(t, {
     $e: () => j,
     $w: () => Z,
-    Og: () => F,
-    ZY: () => B,
+    Og: () => B,
+    ZY: () => F,
     sc: () => U,
     zs: () => V,
 }),
@@ -28,7 +28,7 @@ var r = n(54381),
     y = n(294608),
     O = n(65145),
     v = n(388032),
-    S = n(313464);
+    S = n(113195);
 function I(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ function R(e) {
         children: n,
     });
 }
-function D(e) {
+function w(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
         "aria-label": v.intl.string(v.t.sJpqBS),
@@ -119,7 +119,7 @@ function D(e) {
         children: n,
     });
 }
-function w(e) {
+function D(e) {
     let { className: t, children: n } = e,
         i = (0, c.Jb)({ orientation: "vertical" }),
         { ref: a } = i,
@@ -184,11 +184,11 @@ function j(e) {
             answersInteraction: n,
         })
             .with({ answersInteraction: b.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: w,
+                ContainerComponent: D,
                 answerElementType: 1,
             }))
             .with({ answersInteraction: b.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: D,
+                ContainerComponent: w,
                 answerElementType: 2,
             }))
             .with(
@@ -327,7 +327,7 @@ function Z(e) {
           ? o
           : null;
 }
-function B(e) {
+function F(e) {
     let { isVictor: t, isExpired: n, size: i, className: a } = e,
         { color: o, backgroundColor: c } = (0, s.EQ)({
             isVictor: t,
@@ -367,7 +367,7 @@ function B(e) {
         "aria-hidden": !0,
     });
 }
-function F(e) {
+function B(e) {
     let { isSelected: t, size: n, className: i } = e,
         a = {
             width: n,

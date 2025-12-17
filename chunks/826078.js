@@ -20,7 +20,7 @@ var l = n(54381),
     y = n(115559),
     N = n(356659),
     C = n(388032),
-    k = n(107657);
+    k = n(245068);
 function E(e) {
     let { eventType: t, importance: n, style: i, title: r, description: s } = e,
         o = a.useMemo(() => (0 === n ? 16 : 0.5 === n ? 20 : 1 === n ? 24 : 16), [n]),

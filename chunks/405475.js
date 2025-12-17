@@ -91,7 +91,7 @@ class c extends r.Z {
     }
     setupEncryptionWorker() {
         let e = new Worker(
-            new URL("/assets/" + n.u("55188"), n.b),
+            new URL("/assets/" + n.u("53061"), n.b),
             Object.assign({}, { name: "encryption-worker" }, { type: void 0 }),
         );
         return (

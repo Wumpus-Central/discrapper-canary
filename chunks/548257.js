@@ -1,18 +1,18 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var l = n(120356),
     a = n.n(l),
-    o = n(907331),
-    i = n(685816),
-    s = n(442837),
+    s = n(907331),
+    o = n(685816),
+    i = n(442837),
     c = n(481060),
     u = n(594174),
     d = n(884697),
     f = n(794324),
     g = n(859788),
-    p = n(497788),
-    b = n(222194);
+    b = n(497788),
+    p = n(222194);
 (0, d.IC)(90);
 let m = {
         rankedSkuIds: [],
@@ -22,76 +22,76 @@ let m = {
         categorySkuId: void 0,
         bannerAsset: void 0,
         summary: "",
-        type: i.z.REWARD_HERO,
+        type: o.z.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
-    C = (e) => {
+    h = (e) => {
         var t;
-        let { isLoading: n = !1, heroBlock: l, tab: i, onVisibilityChange: d } = e,
-            C = (0, o.O)(
+        let { isLoading: n = !1, heroBlock: l, tab: o, onVisibilityChange: d } = e,
+            h = (0, s.O)(
                 (e) => {
                     null == d || d(e);
                 },
                 0.1,
                 null != d,
             ),
-            h = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+            C = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
             {
-                bannerStyleOverrides: v,
-                logoStyleOverrides: E,
+                bannerStyleOverrides: E,
+                logoStyleOverrides: v,
                 heroLogo: S,
                 heroBannerStatic: _,
-                heroBannerAnimated: O,
+                heroBannerAnimated: x,
             } = (0, f.hr)(l),
-            x = null != (t = null == v ? void 0 : v.responsive) && t,
-            y = null == v ? void 0 : v.backgroundStyle;
-        return null != h && (n || l !== m)
+            O = null != (t = null == E ? void 0 : E.responsive) && t,
+            y = null == E ? void 0 : E.backgroundStyle;
+        return null != C && (n || l !== m)
             ? (0, r.jsxs)("div", {
-                  ref: C,
-                  className: b.heroBlock,
+                  ref: h,
+                  className: p.heroBlock,
                   children: [
                       (0, r.jsx)("div", {
-                          className: a()(b.banner, { [b.responsive]: x }),
+                          className: a()(p.banner, { [p.responsive]: O }),
                           style: null != y ? { background: y } : void 0,
                           children:
                               null != _ &&
                               (0, r.jsx)(g.Z, {
                                   bannerStatic: _,
-                                  bannerAnimated: O,
-                                  isResponsive: x,
+                                  bannerAnimated: x,
+                                  isResponsive: O,
                               }),
                       }),
                       (0, r.jsxs)("div", {
-                          className: b.heroBlockContent,
+                          className: p.heroBlockContent,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: a()(b.heroHeaderContainer, { [b.responsive]: x }),
+                                  className: a()(p.heroHeaderContainer, { [p.responsive]: O }),
                                   children: n
-                                      ? (0, r.jsx)("div", { className: b.heroHeaderBadgeLogoSummaryContainer })
+                                      ? (0, r.jsx)("div", { className: p.heroHeaderBadgeLogoSummaryContainer })
                                       : (0, r.jsx)("div", {
-                                            className: b.heroHeaderBadgeLogoSummaryContainer,
+                                            className: p.heroHeaderBadgeLogoSummaryContainer,
                                             children: (0, r.jsxs)("div", {
-                                                className: b.heroLogoNameContainer,
+                                                className: p.heroLogoNameContainer,
                                                 children: [
                                                     null != S &&
                                                         (0, r.jsx)("img", {
-                                                            className: b.heroHeaderLogo,
+                                                            className: p.heroHeaderLogo,
                                                             src: S,
                                                             alt: l.name,
-                                                            style: null == E ? void 0 : E.toDesktopStyles(),
+                                                            style: null == v ? void 0 : v.toDesktopStyles(),
                                                         }),
                                                     null != l.title &&
                                                         (0, r.jsx)(c.Heading, {
                                                             variant: "heading-xxl/bold",
-                                                            className: b.title,
+                                                            className: p.title,
                                                             color: "text-strong",
                                                             children: l.title,
                                                         }),
                                                     "" !== l.summary &&
                                                         (0, r.jsx)(c.Text, {
                                                             variant: "text-md/normal",
-                                                            className: b.subHeaderText,
+                                                            className: p.subHeaderText,
                                                             style:
                                                                 null != l.bannerTextColor
                                                                     ? { color: l.bannerTextColor }
@@ -102,10 +102,10 @@ let m = {
                                             }),
                                         }),
                               }),
-                              (0, r.jsx)(p.Z, {
+                              (0, r.jsx)(b.Z, {
                                   isBlockLoading: n,
                                   heroBlock: l,
-                                  tab: i,
+                                  tab: o,
                               }),
                           ],
                       }),

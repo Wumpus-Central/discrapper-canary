@@ -62,10 +62,10 @@ let S = (e) => {
             S = (0, a.kd)(p),
             _ = (0, f.M)(!h || g),
             A = w(j, h, g, _),
-            k = null == u || j;
+            Z = null == u || j;
         return null != t
             ? (0, r.jsx)("div", {
-                  className: k ? C.effectDescriptionBorderWithGradient : C.effectDescriptionNoGradient,
+                  className: Z ? C.effectDescriptionBorderWithGradient : C.effectDescriptionNoGradient,
                   children: (0, r.jsxs)("div", {
                       className: C.effectDescriptionContainer,
                       children: [
@@ -74,7 +74,7 @@ let S = (e) => {
                               variant: "text-sm/semibold",
                               children: (0, i.isEmpty)(I) ? S : I,
                           }),
-                          k
+                          Z
                               ? (0, r.jsx)(o.Text, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
@@ -150,7 +150,7 @@ let S = (e) => {
                 pendingAvatar: w,
                 pendingAvatarDecoration: _,
                 pendingThemeColors: A,
-                pendingAccentColor: k,
+                pendingAccentColor: Z,
             } = (0, l.cj)([u.Z, y.Z], () =>
                 I(
                     {
@@ -161,8 +161,8 @@ let S = (e) => {
                     null != a ? u.Z.getAllPending() : y.Z.getAllPending(),
                 ),
             ),
-            N = O.ZP.isPremium(i),
-            Z = O.ZP.canUsePremiumProfileCustomization(i),
+            k = O.ZP.isPremium(i),
+            N = O.ZP.canUsePremiumProfileCustomization(i),
             T = (0, b.ZP)(i.id),
             D = !!(null == T ? void 0 : T.getPreviewBio(v)),
             U = {
@@ -180,10 +180,10 @@ let S = (e) => {
                 }),
                 pendingAvatarDecoration: _,
                 pendingThemeColors: A,
-                pendingAccentColor: k,
+                pendingAccentColor: Z,
                 pendingProfileEffect: null != o ? o : null,
                 hideFakeActivity: D,
-                canUsePremiumCustomization: Z,
+                canUsePremiumCustomization: N,
                 onUpsellClick: j.Z,
                 onBannerChange: g.g_,
             };
@@ -217,7 +217,7 @@ let S = (e) => {
                     pendingProfileEffectRecord: o,
                     product: s,
                     purchase: c,
-                    userIsPremium: N,
+                    userIsPremium: k,
                 }),
             ],
         });

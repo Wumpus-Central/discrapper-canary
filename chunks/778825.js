@@ -52,11 +52,11 @@ function R(e) {
           ? (o = t.value)
           : t.type === h.Z.NAMEPLATE && (a = t.value);
 }
-function D(e) {
+function w(e) {
     let { banner: t } = e;
     s = t;
 }
-function w(e) {
+function D(e) {
     let { bio: t } = e;
     l = t;
 }
@@ -88,10 +88,10 @@ function G() {
 function Z() {
     v = {};
 }
-function B() {
+function F() {
     k(), I();
 }
-class F extends (m = g.ZP.Store) {
+class B extends (m = g.ZP.Store) {
     getFormState() {
         return O;
     }
@@ -169,10 +169,10 @@ class F extends (m = g.ZP.Store) {
         return _;
     }
 }
-y(F, "displayName", "GuildIdentitySettingsStore");
-let V = new F(E.Z, {
+y(B, "displayName", "GuildIdentitySettingsStore");
+let V = new B(E.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: S,
-    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
+    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: F,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: C,
     GUILD_IDENTITY_SETTINGS_SUBMIT: T,
     GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: A,
@@ -180,8 +180,8 @@ let V = new F(E.Z, {
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: P,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM: R,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: M,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: D,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: j,

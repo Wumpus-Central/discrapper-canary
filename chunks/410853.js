@@ -17,10 +17,10 @@ var r = n(54381),
     E = n(693018),
     b = n(343438),
     y = n(612776),
-    O = n(860076),
+    O = n(638398),
     v = n(388032),
-    S = n(417788),
-    I = n(559153);
+    S = n(554445),
+    I = n(340206);
 function T(e) {
     let { onClick: t, emoji: n, index: i, reducedMotion: a, isActive: o } = e,
         s = (0, g.gl)();

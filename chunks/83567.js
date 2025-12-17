@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(570140),
     i = n(457330),
     l = n(726542),
     a = n(231757),
-    s = n(553795),
-    o = n(585483),
+    o = n(553795),
+    s = n(585483),
     c = n(996106),
     u = n(914946),
     d = n(452426),
@@ -13,7 +13,7 @@ var r = n(570140),
     g = n(701488),
     h = n(231338);
 let m = new Set([g.Fu, g.JT]),
-    _ = {
+    b = {
         [h.Et.GET_PROVIDER_ACCESS_TOKEN]: {
             scope: { [p.Gp.ANY]: [p.wE] },
             validation: (e) =>
@@ -46,7 +46,7 @@ let m = new Set([g.Fu, g.JT]),
                         "Command not available for this application",
                     );
                 return new Promise(async (e, t) => {
-                    let l = s.Z.getAccount(null, n);
+                    let l = o.Z.getAccount(null, n);
                     if (null == l) {
                         function u(t) {
                             var n;
@@ -60,10 +60,10 @@ let m = new Set([g.Fu, g.JT]),
                         }
                         function m() {
                             r.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u),
-                                o.S.unsubscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p);
+                                s.S.unsubscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p);
                         }
                         r.Z.subscribe("USER_CONNECTIONS_UPDATE", u),
-                            o.S.subscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p),
+                            s.S.subscribe(f.CkL.CONNECTIONS_CALLBACK_ERROR, p),
                             (0, a.Z)({
                                 platformType: g.type,
                                 location: f.Sbl.ACTIVITY_RPC,
@@ -111,9 +111,9 @@ let m = new Set([g.Fu, g.JT]),
                         { errorCode: h.lT.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
-                let o = s.Z.getAccount(null, n);
-                if (null == o) throw new c.Z({ errorCode: h.lT.NO_CONNECTION_FOUND }, "No connection found");
-                let d = await i.Z.refreshAccessToken(a.type, o.id);
+                let s = o.Z.getAccount(null, n);
+                if (null == s) throw new c.Z({ errorCode: h.lT.NO_CONNECTION_FOUND }, "No connection found");
+                let d = await i.Z.refreshAccessToken(a.type, s.id);
                 if (null == d)
                     throw new c.Z(
                         { errorCode: h.lT.OAUTH2_ERROR },

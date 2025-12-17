@@ -10,7 +10,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(467721),
+    c = n(236726),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -22,8 +22,8 @@ var i = n(54381),
     C = n(317381),
     y = n(596040),
     v = n(100527),
-    O = n(906732),
-    x = n(358221),
+    x = n(906732),
+    O = n(358221),
     E = n(659580),
     j = n(855844),
     S = n(793865),
@@ -43,8 +43,8 @@ var i = n(54381),
     U = n(853170),
     V = n(140465),
     F = n(800966),
-    B = n(675547),
-    H = n(641015),
+    H = n(675547),
+    B = n(641015),
     G = n(618158),
     z = n(390322),
     W = n(791592),
@@ -76,8 +76,8 @@ var i = n(54381),
     eC = n(173507),
     ey = n(981631),
     ev = n(354459),
-    eO = n(921944),
-    ex = n(462081);
+    ex = n(921944),
+    eO = n(462081);
 function eE() {
     return (eE =
         Object.assign ||
@@ -139,7 +139,7 @@ function e_(e, t) {
 }
 function eP(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: a, hasPermission: o, disabled: s } = e,
-        { parentAnalyticsLocation: c, analyticsLocations: f } = (0, O.ZP)(),
+        { parentAnalyticsLocation: c, analyticsLocations: f } = (0, x.ZP)(),
         h = (0, k.bp)(),
         m = (0, u.Wu)([en.Z], () => en.Z.getAllActiveStreams()),
         g = m.find((e) => e.ownerId === n.id),
@@ -150,7 +150,7 @@ function eP(e) {
             if ((null == l || l(), !a)) return (0, eg.Z)();
             (0, eb.Z)(y, t.id, f);
         }, [y, t.id, a, l, f]),
-        x = (0, V.B4)(),
+        O = (0, V.B4)(),
         [E, j] = r.useState(!1),
         S = () => {
             if (((0, P.v)(c, P.d.STREAM, !0), a)) return void v();
@@ -162,7 +162,7 @@ function eP(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (() => {
-                if (x && 0 === m.length)
+                if (O && 0 === m.length)
                     return (0, i.jsx)(Z.ZP, {
                         contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                         bypassAutoDismiss: !0,
@@ -175,7 +175,7 @@ function eP(e) {
                                         buttonRef: b,
                                         dismissed: !1,
                                         onDismiss: () => {
-                                            n(eO.L.USER_DISMISS), j(!1);
+                                            n(ex.L.USER_DISMISS), j(!1);
                                         },
                                     })
                                 );
@@ -247,7 +247,7 @@ function eP(e) {
                                     eS(ej({}, l), {
                                         centerButton: !0,
                                         disabled: s || !o,
-                                        className: ex.controlButton,
+                                        className: eO.controlButton,
                                         hasPermission: o,
                                         streamActive: null != g,
                                         isSelfStream: !0,
@@ -276,7 +276,7 @@ function eI(e) {
         a = t.getGuildId();
     return (0, y.Z)(a, t.id)
         ? (0, i.jsx)("div", {
-              className: ex.buttonContainer,
+              className: eO.buttonContainer,
               children: (0, i.jsx)(ed.M, {
                   channel: t,
                   idle: n,
@@ -288,8 +288,8 @@ function eI(e) {
 }
 let eZ = r.memo(function (e) {
     let { currentUser: t, onDisconnectCall: n, channel: l, connectedEmbeddedActivity: a } = e,
-        { parentAnalyticsLocation: o } = (0, O.ZP)(),
-        s = (0, u.e7)([x.Z], () => x.Z.getSelectedParticipant(l.id)),
+        { parentAnalyticsLocation: o } = (0, x.ZP)(),
+        s = (0, u.e7)([O.Z], () => O.Z.getSelectedParticipant(l.id)),
         { reducedMotion: d } = r.useContext(p.Sfi),
         [f, h] = r.useState(!1),
         b = null == s ? void 0 : s.id,
@@ -422,7 +422,7 @@ let eZ = r.memo(function (e) {
 function eT(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: l, currentUser: a } = e,
         o = (0, k.bp)(),
-        { parentAnalyticsLocation: s } = (0, O.ZP)(),
+        { parentAnalyticsLocation: s } = (0, x.ZP)(),
         { reachedLimit: c, limit: d } = (0, es.Z)(t),
         p = r.useCallback(() => {
             (0, P.v)(s, P.d.JOIN_VIDEO_CALL), (0, eC.Z)(() => m.default.selectVoiceChannel(t.id, !0), o);
@@ -435,7 +435,7 @@ function eT(e) {
             return (null == e ? void 0 : e.ringing.includes(a.id)) === !0;
         });
     return (0, i.jsxs)("div", {
-        className: ex.wrapper,
+        className: eO.wrapper,
         children: [
             (0, i.jsx)($.C, {
                 enabled: !0,
@@ -448,20 +448,20 @@ function eT(e) {
                 cameraUnavailable: n,
                 hasPermission: l,
                 onCameraUnavailable: f,
-                className: ex.controlButton,
+                className: eO.controlButton,
                 onChange: p,
             }),
             (0, i.jsx)(q.Z, {
                 centerButton: !0,
                 color: "join",
                 channel: t,
-                className: ex.controlButton,
+                className: eO.controlButton,
             }),
             h
                 ? (0, i.jsx)(W.Z, {
                       color: "disconnect",
                       channel: t,
-                      className: ex.controlButton,
+                      className: eO.controlButton,
                       isTrayButton: !1,
                   })
                 : null,
@@ -480,7 +480,7 @@ let eA = function (e) {
             let e = ea.default.getCurrentUser();
             return s()(null != e, "CenterControlTray: currentUser cannot be undefined"), e;
         }),
-        { cameraUnavailable: x, enabled: P } = (0, eo.Z)(),
+        { cameraUnavailable: O, enabled: P } = (0, eo.Z)(),
         I = (0, ec.Z)(n),
         { suppress: Z, selfMute: A, mute: M } = (0, eu.Z)(n),
         { canGoLive: R } = (0, u.cj)([er.Z], () => ({ canGoLive: (0, w.Z)(er.Z) })),
@@ -491,19 +491,19 @@ let eA = function (e) {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
-        W = (0, B.Z)({
+        W = (0, H.Z)({
             channelId: n.id,
             location: "center-control-tray",
         }),
         q = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: K, limit: Y } = (0, es.Z)(n),
-        { analyticsLocations: Q } = (0, O.ZP)(v.Z.VOICE_CONTROL_TRAY),
+        { analyticsLocations: Q } = (0, x.ZP)(v.Z.VOICE_CONTROL_TRAY),
         en = (0, ee.Hu)({
             location: v.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
         { showRefreshedAudioContextMenu: ei } = (0, U.e)({ location: v.Z.VOICE_CONTROL_TRAY }),
-        ed = (0, H.Z)(n),
+        ed = (0, B.Z)(n),
         eh = r.useRef(null),
         eg = r.useRef(null),
         eb = (0, k.bp)(),
@@ -528,21 +528,21 @@ let eA = function (e) {
               }
             : void 0;
     return G
-        ? (0, i.jsx)(O.Gt, {
+        ? (0, i.jsx)(x.Gt, {
               value: Q,
               children: (0, i.jsxs)(b.Z, {
                   section: ey.jXE.VOICE_CONTROL_TRAY,
                   children: [
                       (0, i.jsx)("div", {
-                          className: ex.eventPromptsContainer,
+                          className: eO.eventPromptsContainer,
                           children: (0, i.jsx)(D.Z, { channelId: n.id }),
                       }),
                       (0, i.jsxs)("div", {
                           ref: f,
-                          className: a()(ex.wrapper, l),
+                          className: a()(eO.wrapper, l),
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: ex.buttonSection,
+                                  className: eO.buttonSection,
                                   children: [
                                       (0, i.jsx)(p.yRy, {
                                           targetElementRef: eh,
@@ -635,7 +635,7 @@ let eA = function (e) {
                                                       centerButton: !0,
                                                       hasPermission: I,
                                                       enabled: P,
-                                                      cameraUnavailable: x,
+                                                      cameraUnavailable: O,
                                                       onChange: e_,
                                                       onCameraUnavailable: em.Z,
                                                       channelLimitReached: K,
@@ -648,7 +648,7 @@ let eA = function (e) {
                                   ],
                               }),
                               (0, i.jsxs)("div", {
-                                  className: ex.buttonSection,
+                                  className: eO.buttonSection,
                                   children: [
                                       !F &&
                                           (0, i.jsx)(eP, {
@@ -698,11 +698,11 @@ let eA = function (e) {
                   ],
               }),
           })
-        : (0, i.jsx)(O.Gt, {
+        : (0, i.jsx)(x.Gt, {
               value: Q,
               children: (0, i.jsx)(eT, {
                   channel: n,
-                  cameraUnavailable: x,
+                  cameraUnavailable: O,
                   hasCameraPermission: I,
                   currentUser: y,
               }),

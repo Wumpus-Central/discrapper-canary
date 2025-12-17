@@ -14,9 +14,9 @@ let a = function (e) {
             onRemove: d,
             canRemove: u,
             actionsLocation: g,
-            fieldStyle: m,
+            fieldStyle: f,
         } = e,
-        { label: p } = t;
+        { label: m } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
@@ -25,10 +25,10 @@ let a = function (e) {
         onDrop: o,
         onEdit: c,
         onRemove: d,
-        title: p,
+        title: m,
         canRemove: u,
         actionsLocation: g,
-        fieldStyle: m,
+        fieldStyle: f,
         children: (0, r.jsx)(i.BO, {
             field: t,
             value: void 0,

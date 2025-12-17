@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    o = n(18998),
-    a = n(664915),
+    a = n(18998),
+    o = n(664915),
     s = n(888369),
     c = n(358652),
     u = n(771845),
@@ -12,29 +12,29 @@ var r = n(54381),
     h = n(251625),
     p = n(981631),
     g = n(388032);
-let m = "app-download-item",
-    b = "add-server-item";
-function _() {
+let b = "app-download-item",
+    m = "add-server-item";
+function y() {
     return !1;
 }
-function y(e) {
+function O(e) {
     var t;
     let n = s.default.getMutableGuildStates();
     return (
         (e === p.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(p.x8Z.SERVER_DISCOVERY_BADGE)) ||
-        (e !== m && e !== b && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
+        (e !== b && e !== m && (null == (t = n[null != e ? e : "null"]) ? void 0 : t.highImportanceMentionCount) > 0)
     );
 }
-let O = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, p.x8Z.E3_SERVER_DISCOVERY_BADGE, m]),
-    v = i.forwardRef(function (e, t) {
+let v = (0, h.oH)((e, t, n) => ["null", ...t, ...e, m, p.x8Z.E3_SERVER_DISCOVERY_BADGE, b]),
+    j = i.forwardRef(function (e, t) {
         var n, i;
         let d = (0, l.Wu)([u.ZP, c.Z, s.default], () =>
-                O(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
+                v(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel()),
             ),
             h = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-            p = (0, l.e7)([a.Z], () => a.Z.getExpandedFolders());
+            p = (0, l.e7)([o.Z], () => o.Z.getExpandedFolders());
         return (0, r.jsx)(
-            o.Z,
+            a.Z,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -64,10 +64,10 @@ let O = (0, h.oH)((e, t, n) => ["null", ...t, ...e, b, p.x8Z.E3_SERVER_DISCOVERY
                 {
                     ref: t,
                     items: d,
-                    isUnread: _,
+                    isUnread: y,
                     textUnread: g.intl.string(g.t.y2b7CA),
                     textMention: g.intl.string(g.t.y2b7CA),
-                    isMentioned: y,
+                    isMentioned: O,
                     animate: h,
                     expandedFolders: p,
                 }),

@@ -7,13 +7,13 @@ var r = n(55160),
     i = n(748521),
     l = n(979554),
     a = n(442837),
-    s = n(1870),
-    o = n(223143);
+    o = n(1870),
+    s = n(223143);
 let c = (0, i.F)(() => ({ selectionStates: new Map() }), r.X),
     u = (e) => {
         var t, n;
-        (0, o.QN)();
-        let r = (0, a.e7)([s.Z], () => s.Z.purchases),
+        (0, s.QN)();
+        let r = (0, a.e7)([o.Z], () => o.Z.purchases),
             i = c((t) => {
                 var n;
                 return (null == e ? void 0 : e.type) !== l.Z.VARIANTS_GROUP

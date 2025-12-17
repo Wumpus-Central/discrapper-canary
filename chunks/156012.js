@@ -53,10 +53,10 @@ let c = !1,
     u = {},
     d = new Set(),
     p = {};
-function h() {
+function f() {
     p = {};
 }
-class f extends (i = r.ZP.Store) {
+class h extends (i = r.ZP.Store) {
     getMessagesPendingDeletion() {
         return d;
     }
@@ -70,8 +70,8 @@ class f extends (i = r.ZP.Store) {
         return c;
     }
 }
-a(f, "displayName", "scheduledMessageStore");
-let m = new f(l.Z, {
+a(h, "displayName", "scheduledMessageStore");
+let m = new h(l.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
         (u = s(o({}, u), { [n.scheduledMessageId]: n })), (p = o({}, p)), delete p[t];
@@ -121,6 +121,6 @@ let m = new f(l.Z, {
         let { channelId: t } = e;
         (p = o({}, p)), delete p[t];
     },
-    LOGOUT: h,
-    CONNECTION_OPEN: h,
+    LOGOUT: f,
+    CONNECTION_OPEN: f,
 });

@@ -1,17 +1,17 @@
-t.d(n, { Z: () => c });
+t.d(n, { Z: () => s });
 var l = t(473749),
     i = t(442837),
     o = t(726542),
     r = t(122021),
-    s = t(621853);
-let a = [];
-function c(e) {
+    a = t(621853);
+let c = [];
+function s(e) {
     let n = (0, r.Xj)({ forUserProfile: !0 }),
-        t = (0, i.e7)([s.Z], () => s.Z.getUserProfile(e));
+        t = (0, i.e7)([a.Z], () => a.Z.getUserProfile(e));
     return (0, l.useMemo)(
         () =>
             (null == t ? void 0 : t.connectedAccounts) == null
-                ? a
+                ? c
                 : t.connectedAccounts.filter((e) => {
                       let { type: t } = e,
                           l = o.Z.get(t);

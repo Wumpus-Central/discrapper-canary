@@ -3,21 +3,21 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(392711),
-    o = n(755721),
+    o = n(392711),
+    s = n(755721),
     c = n(481060),
     u = n(367907),
     d = n(626135),
     p = n(981631),
     f = n(388032),
     g = n(156132);
-let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
+let h = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
     m = function (e) {
         let {
             guild: t,
             title: n,
             message: l,
-            image: s,
+            image: o,
             type: m,
             imageStyles: b,
             imageMarginX: _,
@@ -41,10 +41,10 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
         "function" == typeof C
             ? (j = C())
             : null != C &&
-              (j = (0, r.jsx)(o.zx, {
+              (j = (0, r.jsx)(s.zx, {
                   "data-migration-pending": !0,
                   className: g.button,
-                  size: o.zx.Sizes.SMALL,
+                  size: s.zx.Sizes.SMALL,
                   onClick: () => {
                       null != m &&
                           d.default.track(p.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -65,7 +65,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
               (P = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "text-strong",
-                  className: a()(g.title, { [g.noImageTitle]: null == s }, { [g.center]: T }),
+                  className: a()(g.title, { [g.noImageTitle]: null == o }, { [g.center]: T }),
                   children: n,
               }));
         let x = null;
@@ -96,7 +96,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
                               className: g.closeIcon,
                           }),
                       }),
-                null != s &&
+                null != o &&
                     (0, r.jsx)("div", {
                         className: g.imageContainer,
                         style: {
@@ -107,7 +107,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
                         children: (0, r.jsx)("img", {
                             className: g.image,
                             style: b,
-                            src: s,
+                            src: o,
                             alt: "",
                         }),
                     }),

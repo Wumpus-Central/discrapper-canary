@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(924826),
     a = n(91192),
-    s = n(442837),
-    o = n(215569),
+    o = n(442837),
+    s = n(215569),
     c = n(481060),
     u = n(607070),
     d = n(981631),
@@ -19,16 +19,16 @@ let f = function (e) {
             footer: m,
             renderSectionFooter: b,
         } = e,
-        E = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        _ = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        _ = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        E = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         O = (0, l.ZP)({
             id: "people",
-            isEnabled: E,
+            isEnabled: _,
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
         v = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
-        y = _ || g || v,
+        y = E || g || v,
         I = i.useMemo(
             () =>
                 t.map((e, t) =>
@@ -43,7 +43,7 @@ let f = function (e) {
                                 t,
                             )
                           : (0, r.jsxs)(
-                                o.W,
+                                s.W,
                                 {
                                     transitionAppear: !1,
                                     component: "div",

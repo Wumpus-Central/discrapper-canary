@@ -1,74 +1,74 @@
-t.d(n, { Z: () => G }), t(388685), t(539854), t(472816), t(794429);
-var r = t(54381),
-    l = t(473749),
-    i = t(120356),
-    a = t.n(i),
-    o = t(442837),
-    s = t(704215),
-    c = t(692547),
-    d = t(194983),
-    u = t(28664),
-    p = t(481060),
-    h = t(239091),
-    m = t(266454),
-    f = t(66999),
-    g = t(549631),
-    _ = t(473403),
-    x = t(454585),
-    C = t(22082),
-    b = t(703656),
-    j = t(6025),
-    v = t(922482),
-    O = t(601070),
-    y = t(216306),
-    N = t(163),
-    w = t(753540),
-    Z = t(70297),
-    I = t(981631),
-    P = t(176505),
-    S = t(295907),
-    E = t(388032),
-    T = t(444630),
-    B = t(430864);
+n.d(t, { Z: () => G }), n(388685), n(539854), n(472816), n(794429);
+var a = n(54381),
+    r = n(473749),
+    l = n(120356),
+    i = n.n(l),
+    o = n(442837),
+    c = n(704215),
+    d = n(692547),
+    s = n(194983),
+    u = n(28664),
+    b = n(481060),
+    p = n(239091),
+    f = n(266454),
+    h = n(66999),
+    m = n(549631),
+    g = n(473403),
+    x = n(454585),
+    C = n(22082),
+    j = n(703656),
+    v = n(6025),
+    O = n(922482),
+    y = n(601070),
+    N = n(216306),
+    _ = n(163),
+    w = n(753540),
+    Z = n(70297),
+    I = n(981631),
+    P = n(176505),
+    S = n(295907),
+    E = n(388032),
+    T = n(554966),
+    B = n(960324);
 function A(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
-                              value: r,
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[t] = a);
             });
     }
     return e;
 }
-function D(e, n) {
+function D(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
-                  return t;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
@@ -76,111 +76,111 @@ function D(e, n) {
 let R = new Set([I.d4z.GUILD_FORUM, I.d4z.GUILD_MEDIA]),
     k = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
 function L(e) {
-    let { guild: n, channel: l, onCategoryClick: i } = e,
-        o = (0, w.Mf)(n.id, l.id, l.id),
-        s = (0, w.t4)(n.id, l.id, l.id);
-    return (0, r.jsxs)("div", {
-        className: a()(T.categoryRow, { [T.uncategorized]: "null" === l.id }),
+    let { guild: t, channel: r, onCategoryClick: l } = e,
+        o = (0, w.Mf)(t.id, r.id, r.id),
+        c = (0, w.t4)(t.id, r.id, r.id);
+    return (0, a.jsxs)("div", {
+        className: i()(T.categoryRow, { [T.uncategorized]: "null" === r.id }),
         onContextMenu: (e) => {
-            (0, h.jW)(e, async () => {
-                let { default: e } = await Promise.all([t.e("8965"), t.e("14280")]).then(t.bind(t, 139035));
-                return (t) =>
-                    (0, r.jsx)(
+            (0, p.jW)(e, async () => {
+                let { default: e } = await Promise.all([n.e("8965"), n.e("14280")]).then(n.bind(n, 139035));
+                return (n) =>
+                    (0, a.jsx)(
                         e,
-                        D(A({}, t), {
-                            channel: l,
-                            guild: n,
+                        D(A({}, n), {
+                            channel: r,
+                            guild: t,
                         }),
                     );
             });
         },
         children: [
-            (0, r.jsx)(p.Text, {
+            (0, a.jsx)(b.Text, {
                 className: T.categoryText,
                 color: "text-strong",
                 variant: "text-lg/medium",
                 lineClamp: 1,
-                children: l.name,
+                children: r.name,
             }),
-            "null" !== l.id &&
-                !s &&
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(p.rsf, {
+            "null" !== r.id &&
+                !c &&
+                (0, a.jsx)("div", {
+                    children: (0, a.jsx)(b.rsf, {
                         label: E.intl.string(E.t.mSQwnW),
                         checked: o,
-                        onChange: () => void (!s && i(n.id, l.id, l.id)),
+                        onChange: () => void (!c && l(t.id, r.id, r.id)),
                     }),
                 }),
         ],
     });
 }
-let H = l.memo(function () {
-        return (0, r.jsx)("div", { className: T.separator });
+let H = r.memo(function () {
+        return (0, a.jsx)("div", { className: T.separator });
     }),
-    M = l.memo(function (e) {
-        let { index: n } = e;
-        return (0, r.jsx)(
-            p.Text,
+    M = r.memo(function (e) {
+        let { index: t } = e;
+        return (0, a.jsx)(
+            b.Text,
             {
                 variant: "text-xs/normal",
                 className: T.subtitleSeparator,
                 children: "\xB7",
             },
-            "separator-".concat(n),
+            "separator-".concat(t),
         );
     }),
-    U = l.memo(function (e) {
+    U = r.memo(function (e) {
         let {
-                channel: n,
-                category: l,
-                guild: i,
-                isFirstChannel: s,
-                isLastChannel: m,
-                onChannelClick: N,
+                channel: t,
+                category: r,
+                guild: l,
+                isFirstChannel: c,
+                isLastChannel: f,
+                onChannelClick: _,
                 tooltipDirection: Z = "right",
             } = e,
-            { isSubscriptionGated: L } = (0, f.Z)(n.id),
-            U = (0, w.Mf)(i.id, n.id, l.id),
-            G = (0, w.t4)(i.id, n.id, l.id),
-            W = (0, w.EH)(i.id, l.id),
-            F = (0, o.e7)([O.Z], () => O.Z.getActiveThreadCount(i.id, n.id)),
-            q = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
-            z = (function (e, n) {
-                let t = [];
+            { isSubscriptionGated: L } = (0, h.Z)(t.id),
+            U = (0, w.Mf)(l.id, t.id, r.id),
+            G = (0, w.t4)(l.id, t.id, r.id),
+            W = (0, w.EH)(l.id, r.id),
+            F = (0, o.e7)([y.Z], () => y.Z.getActiveThreadCount(l.id, t.id)),
+            q = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(l.id, t.id)),
+            z = (function (e, t) {
+                let n = [];
                 return (
                     I.TPd.GUILD_THREADS_ONLY.has(e.type) &&
-                        n >= 1 &&
-                        t.push(
-                            (0, r.jsx)(
-                                p.Text,
+                        t >= 1 &&
+                        n.push(
+                            (0, a.jsx)(
+                                b.Text,
                                 {
                                     variant: "text-xs/normal",
                                     className: T.channelSubtitle,
-                                    children: E.intl.format(E.t.z0qML2, { count: n }),
+                                    children: E.intl.format(E.t.z0qML2, { count: t }),
                                 },
                                 "thread-count",
                             ),
                         ),
                     k.has(e.type) ||
-                        t.push(
-                            (0, r.jsx)(
-                                p.Text,
+                        n.push(
+                            (0, a.jsx)(
+                                b.Text,
                                 {
                                     variant: "text-xs/normal",
                                     className: T.channelSubtitle,
-                                    children: (0, y.qw)(e.id),
+                                    children: (0, N.qw)(e.id),
                                 },
                                 "active",
                             ),
                         ),
                     null != e.topic &&
                         e.topic.length > 0 &&
-                        t.push(
-                            (0, r.jsx)(
-                                d.Z,
+                        n.push(
+                            (0, a.jsx)(
+                                s.Z,
                                 {
                                     className: B.markup,
-                                    children: (0, r.jsx)(p.Text, {
+                                    children: (0, a.jsx)(b.Text, {
                                         className: T.topic,
                                         variant: "text-xs/normal",
                                         children: x.Z.parseTopic(e.topic, !0, { channelId: e.id }),
@@ -189,126 +189,126 @@ let H = l.memo(function () {
                                 "topic",
                             ),
                         ),
-                    [t.map((e, n) => [e, (0, r.jsx)(M, { index: n }, "subtitle-separator-".concat(n))])]
+                    [n.map((e, t) => [e, (0, a.jsx)(M, { index: t }, "subtitle-separator-".concat(t))])]
                         .flat(2)
                         .slice(0, -1)
                 );
-            })(n, F),
+            })(t, F),
             V = (e) => (
-                (e.stopPropagation(), R.has(n.type) || e.shiftKey)
-                    ? (0, b.XU)(i.id, n.id)
-                    : n.isGuildStageVoice() || n.isGuildVoice()
-                      ? (0, v.Cq)(n)
-                      : j.Z.openChannelAsSidebar({
-                            guildId: n.guild_id,
-                            channelId: n.id,
+                (e.stopPropagation(), R.has(t.type) || e.shiftKey)
+                    ? (0, j.XU)(l.id, t.id)
+                    : t.isGuildStageVoice() || t.isGuildVoice()
+                      ? (0, O.Cq)(t)
+                      : v.Z.openChannelAsSidebar({
+                            guildId: t.guild_id,
+                            channelId: t.id,
                             baseChannelId: P.oC.CHANNEL_BROWSER,
                         }),
                 !0
             ),
             X = E.intl.string(E.t.vetGQs);
-        n.isGuildStageVoice() || n.isGuildVoice()
+        t.isGuildStageVoice() || t.isGuildVoice()
             ? (X = E.intl.string(E.t.VJlc0S))
-            : n.isForumLikeChannel() && (X = E.intl.string(E.t["3xjX0U"]));
+            : t.isForumLikeChannel() && (X = E.intl.string(E.t["3xjX0U"]));
         let Q = G ? "text-muted" : "text-default",
-            Y = (0, p.dQu)(G ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
-        return (0, r.jsxs)(r.Fragment, {
+            Y = (0, b.dQu)(G ? d.Z.colors.TEXT_MUTED : d.Z.colors.TEXT_DEFAULT).hex();
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, r.jsx)(u.u, {
+                (0, a.jsx)(u.u, {
                     text: W,
                     delay: 500,
                     position: Z,
-                    children: (0, r.jsxs)(p.P3F, {
-                        className: a()(T.channelRow, {
-                            [T.firstChannel]: s,
-                            [T.lastChannel]: m,
+                    children: (0, a.jsxs)(b.P3F, {
+                        className: i()(T.channelRow, {
+                            [T.firstChannel]: c,
+                            [T.lastChannel]: f,
                             [T.disabled]: G,
                         }),
                         onClick: (e) => {
-                            if (!G) return e.stopPropagation(), N(i.id, n.id, l.id), !0;
+                            if (!G) return e.stopPropagation(), _(l.id, t.id, r.id), !0;
                         },
                         onContextMenu: (e) => {
-                            n.isGuildVocal()
-                                ? (0, h.jW)(e, async () => {
+                            t.isGuildVocal()
+                                ? (0, p.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("79695"),
-                                          t.e("18320"),
-                                          t.e("83331"),
-                                          t.e("81070"),
-                                      ]).then(t.bind(t, 213202));
-                                      return (t) =>
-                                          (0, r.jsx)(
+                                          n.e("79695"),
+                                          n.e("18320"),
+                                          n.e("83331"),
+                                          n.e("81070"),
+                                      ]).then(n.bind(n, 213202));
+                                      return (n) =>
+                                          (0, a.jsx)(
                                               e,
-                                              D(A({}, t), {
-                                                  channel: n,
-                                                  guild: i,
+                                              D(A({}, n), {
+                                                  channel: t,
+                                                  guild: l,
                                               }),
                                           );
                                   })
-                                : (0, h.jW)(e, async () => {
+                                : (0, p.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("79695"),
-                                          t.e("18320"),
-                                          t.e("44011"),
-                                      ]).then(t.bind(t, 373651));
-                                      return (t) =>
-                                          (0, r.jsx)(
+                                          n.e("79695"),
+                                          n.e("18320"),
+                                          n.e("44011"),
+                                      ]).then(n.bind(n, 373651));
+                                      return (n) =>
+                                          (0, a.jsx)(
                                               e,
-                                              D(A({}, t), {
-                                                  channel: n,
-                                                  guild: i,
+                                              D(A({}, n), {
+                                                  channel: t,
+                                                  guild: l,
                                               }),
                                           );
                                   });
                         },
                         children: [
-                            (0, r.jsxs)("div", {
+                            (0, a.jsxs)("div", {
                                 className: T.channelInfo,
                                 children: [
-                                    (0, r.jsxs)("div", {
+                                    (0, a.jsxs)("div", {
                                         className: T.channelName,
                                         children: [
-                                            (0, r.jsx)(_._W, {
-                                                channel: n,
-                                                guild: i,
+                                            (0, a.jsx)(g._W, {
+                                                channel: t,
+                                                guild: l,
                                             }),
-                                            (0, r.jsx)(d.Z, {
+                                            (0, a.jsx)(s.Z, {
                                                 className: T.__invalid_name,
-                                                children: (0, r.jsx)(p.Text, {
+                                                children: (0, a.jsx)(b.Text, {
                                                     className: T.channelText,
                                                     variant: "text-md/medium",
                                                     lineClamp: 1,
                                                     color: Q,
-                                                    children: n.name,
+                                                    children: t.name,
                                                 }),
                                             }),
                                             L
-                                                ? (0, r.jsx)(g.Z, {
+                                                ? (0, a.jsx)(m.Z, {
                                                       color: Y,
                                                       className: T.premiumIcon,
                                                   })
                                                 : null,
                                             q
-                                                ? (0, r.jsx)(p.IGR, {
+                                                ? (0, a.jsx)(b.IGR, {
                                                       text: E.intl.string(E.t.y2b7CA),
-                                                      color: c.Z.unsafe_rawColors.BRAND_260.css,
+                                                      color: d.Z.unsafe_rawColors.BRAND_260.css,
                                                       className: T.titleBadge,
                                                   })
                                                 : null,
                                         ],
                                     }),
-                                    (0, r.jsx)("div", {
+                                    (0, a.jsx)("div", {
                                         className: T.channelSubtitles,
                                         children: z,
                                     }),
                                 ],
                             }),
-                            (0, r.jsxs)("div", {
+                            (0, a.jsxs)("div", {
                                 className: T.channelActions,
                                 children: [
-                                    (0, r.jsx)("div", {
+                                    (0, a.jsx)("div", {
                                         className: T.viewChannelButtonWrapper,
-                                        children: (0, r.jsx)(p.Button, {
+                                        children: (0, a.jsx)(b.Button, {
                                             size: "sm",
                                             variant: "overlay-primary",
                                             onClick: V,
@@ -319,7 +319,7 @@ let H = l.memo(function () {
                                             },
                                         }),
                                     }),
-                                    (0, r.jsx)(p.FZ5, {
+                                    (0, a.jsx)(b.FZ5, {
                                         checked: U,
                                         disabled: G,
                                     }),
@@ -328,67 +328,67 @@ let H = l.memo(function () {
                         ],
                     }),
                 }),
-                !m && (0, r.jsx)(H, {}),
+                !f && (0, a.jsx)(H, {}),
             ],
         });
     });
 function G(e) {
-    let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
-        { onChannelClick: d } = (0, N.Z)(t.id),
-        u = (0, m.Nj)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
-        h = l.useCallback(
+    let { categories: t, guild: n, className: l, innerClassName: o, hasSidebar: d } = e,
+        { onChannelClick: s } = (0, _.Z)(n.id),
+        u = (0, f.Nj)(c.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
+        p = r.useCallback(
             (e) => {
-                let { section: l } = e;
-                if (0 === l && -1 === u) return null;
-                let i = n._categories[l + u];
-                return (0, r.jsx)(
+                let { section: r } = e;
+                if (0 === r && -1 === u) return null;
+                let l = t._categories[r + u];
+                return (0, a.jsx)(
                     L,
                     {
-                        channel: i.channel,
-                        guild: t,
-                        onCategoryClick: d,
+                        channel: l.channel,
+                        guild: n,
+                        onCategoryClick: s,
                     },
-                    i.channel.id,
+                    l.channel.id,
                 );
             },
-            [n, t, u, d],
+            [t, n, u, s],
         ),
-        f = l.useCallback(
+        h = r.useCallback(
             (e) => {
-                let { section: l, row: i } = e;
-                if (0 === l && -1 === u) return (0, r.jsx)(Z.Z, { guild: t });
-                let a = n._categories[l + u],
-                    o = n[a.channel.id][i];
+                let { section: r, row: l } = e;
+                if (0 === r && -1 === u) return (0, a.jsx)(Z.Z, { guild: n });
+                let i = t._categories[r + u],
+                    o = t[i.channel.id][l];
                 return null == o
                     ? null
-                    : (0, r.jsx)(
+                    : (0, a.jsx)(
                           U,
                           {
-                              category: a.channel,
+                              category: i.channel,
                               channel: o.channel,
-                              guild: t,
-                              isFirstChannel: 0 === i,
-                              isLastChannel: n[a.channel.id].length - 1 === i,
-                              tooltipDirection: c ? "right" : "top",
-                              onChannelClick: d,
+                              guild: n,
+                              isFirstChannel: 0 === l,
+                              isLastChannel: t[i.channel.id].length - 1 === l,
+                              tooltipDirection: d ? "right" : "top",
+                              onChannelClick: s,
                           },
                           o.channel.id,
                       );
             },
-            [n, t, u, c, d],
+            [t, n, u, d, s],
         ),
-        g = (0, Z.q)(t.id),
-        _ = (0, y.tn)(t.id, n, 64, g);
-    return (0, r.jsx)(
-        p._2F,
+        m = (0, Z.q)(n.id),
+        g = (0, N.tn)(n.id, t, 64, m);
+    return (0, a.jsx)(
+        b._2F,
         {
-            className: i,
-            innerClassName: a()(o, T.scrollerInner),
+            className: l,
+            innerClassName: i()(o, T.scrollerInner),
             sectionHeight: 48,
-            rowHeight: (e) => _[e].rowHeight,
-            renderSection: h,
-            renderRow: f,
-            sections: _.map((e) => e.rowCount),
+            rowHeight: (e) => g[e].rowHeight,
+            renderSection: p,
+            renderRow: h,
+            sections: g.map((e) => e.rowCount),
         },
         "channel-browser-list",
     );

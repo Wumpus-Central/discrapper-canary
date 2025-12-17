@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(525654),
-    o = n.n(s),
+    o = n(525654),
+    s = n.n(o),
     c = n(873546),
     u = n(213919),
     d = n(442837),
@@ -13,22 +13,22 @@ var r = n(54381),
     g = n(391650),
     h = n(314897),
     m = n(594174),
-    _ = n(626135),
-    b = n(361207),
+    b = n(626135),
+    _ = n(361207),
     E = n(981631),
     O = n(388032),
-    v = n(394369);
+    v = n(948864);
 let y = [
         {
             getOs: () => O.intl.string(O.t.NK5ySJ),
             icon: v.apple,
-            url: () => (0, b.w4)("osx", !1),
+            url: () => (0, _.w4)("osx", !1),
             platformKey: 0,
         },
         {
             getOs: () => O.intl.string(O.t.OvKGE6),
             icon: v.windows,
-            url: () => (0, b.w4)("win", !1),
+            url: () => (0, _.w4)("win", !1),
             platformKey: 1,
         },
         {
@@ -36,11 +36,11 @@ let y = [
             icon: v.linux,
             url: [
                 {
-                    url: () => (0, b.w4)("linux", !1, "deb"),
+                    url: () => (0, _.w4)("linux", !1, "deb"),
                     getText: () => O.intl.string(O.t.Sodsus),
                 },
                 {
-                    url: () => (0, b.w4)("linux", !1, "tar.gz"),
+                    url: () => (0, _.w4)("linux", !1, "tar.gz"),
                     getText: () => O.intl.string(O.t.G3U6IV),
                 },
             ],
@@ -64,7 +64,7 @@ let y = [
     C = (e) => {
         let { os: t, url: n, onClick: l } = e,
             a = i.useRef(null),
-            [s, o] = i.useState(!1),
+            [o, s] = i.useState(!1),
             c = i.useCallback(
                 (e) => {
                     let { closePopout: i } = e;
@@ -96,8 +96,8 @@ let y = [
                   targetElementRef: a,
                   align: "left",
                   position: "bottom",
-                  onRequestOpen: () => o(!0),
-                  onRequestClose: () => o(!1),
+                  onRequestOpen: () => s(!0),
+                  onRequestClose: () => s(!1),
                   children: (e) => {
                       var t, n;
                       return (0, r.jsx)(
@@ -134,7 +134,7 @@ let y = [
                                   variant: "primary",
                                   size: "sm",
                                   fullWidth: !0,
-                                  icon: s ? p.sXD : p.hic,
+                                  icon: o ? p.sXD : p.hic,
                                   iconPosition: "end",
                               }),
                           Object.getOwnPropertyDescriptors
@@ -164,9 +164,9 @@ let y = [
     },
     S = (e) => {
         let { platform: t, onClick: n, onMouseEnter: i, isActive: l } = e,
-            { getOs: s, icon: o, url: c, platformKey: u } = t,
-            d = s(),
-            p = a()(v.icon, o);
+            { getOs: o, icon: s, url: c, platformKey: u } = t,
+            d = o(),
+            p = a()(v.icon, s);
         return (0, r.jsx)("li", {
             className: a()(v.platform, { [v.active]: l }),
             onMouseEnter: () => i(u),
@@ -203,13 +203,13 @@ let y = [
     };
 function T(e) {
     let { source: t, onClose: n, transitionState: l } = e,
-        s = (0, d.e7)([m.default], () => m.default.getCurrentUser()),
-        b = (0, d.e7)([h.default], () => h.default.getFingerprint()),
-        C = null == s || s.isClaimed(),
+        o = (0, d.e7)([m.default], () => m.default.getCurrentUser()),
+        _ = (0, d.e7)([h.default], () => h.default.getFingerprint()),
+        C = null == o || o.isClaimed(),
         [T, N] = i.useState(
             (function () {
                 var e;
-                switch (null == (e = o().os) ? void 0 : e.family) {
+                switch (null == (e = s().os) ? void 0 : e.family) {
                     case "OS X":
                         return 0;
                     case "Windows":
@@ -231,8 +231,8 @@ function T(e) {
             })(),
         );
     function j(e, r) {
-        (null != u.getToken() || null != b) &&
-            _.default.track(E.rMx.DOWNLOAD_APP, {
+        (null != u.getToken() || null != _) &&
+            b.default.track(E.rMx.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -247,7 +247,7 @@ function T(e) {
     }
     return (
         i.useEffect(() => {
-            _.default.track(E.rMx.OPEN_MODAL, {
+            b.default.track(E.rMx.OPEN_MODAL, {
                 type: "Download App",
                 source: { location: t },
             });

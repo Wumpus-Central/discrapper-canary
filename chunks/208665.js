@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var l,
     i,
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(570140),
     c = n(45966),
     d = n(999382),
@@ -23,19 +23,19 @@ function p() {
             d.Z.getSection() === u.pNK.ONBOARDING &&
             ((h = c.Z.getOnboardingPrompts(f)), (N = c.Z.isAdvancedMode(f)));
 }
-class O extends (i = s.ZP.Store) {
+class O extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z);
     }
     hasChanges() {
-        return null != f && !a().isEqual(c.Z.getOnboardingPrompts(f), h);
+        return null != f && !s().isEqual(c.Z.getOnboardingPrompts(f), h);
     }
     getChangedPrompts() {
         if (null == f) return [];
         let e = c.Z.getOnboardingPrompts(f);
         return h.filter((t) => {
             let n = e.find((e) => e.id === t.id);
-            return null == n || !a().isEqual(t, n);
+            return null == n || !s().isEqual(t, n);
         });
     }
     get guildId() {

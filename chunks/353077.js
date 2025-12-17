@@ -5,13 +5,13 @@ var i = n(54381),
     a = n.n(l),
     o = n(481060),
     s = n(388032),
-    c = n(917995);
+    c = n(772487);
 function u(e) {
     let { defaultValue: t, onChange: n } = e,
         [l, u] = r.useState(t),
         d = a()(),
         p = a()().add(365, "days"),
-        h = (e) => {
+        f = (e) => {
             e.isValid() && u(e);
         };
     return (
@@ -29,7 +29,7 @@ function u(e) {
                         required: !0,
                         label: s.intl.string(s.t.pSZKvM),
                         value: l,
-                        onSelect: h,
+                        onSelect: f,
                         minDate: d,
                         maxDate: p,
                         disabled: !1,
@@ -41,7 +41,7 @@ function u(e) {
                         label: s.intl.string(s.t.GOmEb8),
                         required: !0,
                         value: l,
-                        onChange: h,
+                        onChange: f,
                         hideValue: !1,
                         disabled: !1,
                     }),

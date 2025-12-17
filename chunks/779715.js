@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(150063),
-    o = n(252618),
+    o = n(150063),
+    s = n(252618),
     c = n(313201),
     u = n(984370),
     d = n(199104),
@@ -13,19 +13,19 @@ var r = n(54381),
     g = n(626135),
     h = n(270759),
     m = n(981631),
-    _ = n(388032),
-    b = n(236202);
+    b = n(388032),
+    _ = n(221534);
 let E = function () {
     i.useEffect(() => {
-        s.Y(m.Z5c.ME_ACTIVITY), (0, p.e)("activity"), g.default.track(m.rMx.ACTIVITY_FEED_VIEWED, {});
+        o.Y(m.Z5c.ME_ACTIVITY), (0, p.e)("activity"), g.default.track(m.rMx.ACTIVITY_FEED_VIEWED, {});
     }, []);
     let e = (0, l.e7)([f.Z], () => f.Z.theme),
         t = (0, c.Dt)();
     return (0, r.jsxs)("main", {
-        className: b.container,
-        "aria-label": _.intl.string(_.t.IC5Ann),
+        className: _.container,
+        "aria-label": b.intl.string(b.t.IC5Ann),
         children: [
-            (0, r.jsx)(o.yY, { location: _.intl.string(_.t.IC5Ann) }),
+            (0, r.jsx)(s.yY, { location: b.intl.string(b.t.IC5Ann) }),
             (0, r.jsx)(a.f6W, {
                 theme: e,
                 children: (e) =>
@@ -41,15 +41,15 @@ let E = function () {
                             }),
                             (0, r.jsx)(u.Z.Title, {
                                 id: t,
-                                children: _.intl.string(_.t.F4Zggw),
+                                children: b.intl.string(b.t.F4Zggw),
                             }),
                         ],
                     }),
             }),
             (0, r.jsx)("div", {
-                className: b.tabBody,
+                className: _.tabBody,
                 children: (0, r.jsx)("div", {
-                    className: b.nowPlayingColumnFullWidth,
+                    className: _.nowPlayingColumnFullWidth,
                     children: (0, r.jsx)(d.Z, { isStandalone: !0 }),
                 }),
             }),

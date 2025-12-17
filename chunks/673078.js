@@ -8,15 +8,15 @@ var n = r(54381),
     s = r(668781),
     u = r(485386),
     d = r(495437),
-    g = r(240864),
-    f = r(981631),
+    f = r(240864),
+    g = r(981631),
     p = r(388032),
-    b = r(696242);
+    b = r(234426);
 function m(t) {
     let { guildProductListing: e, guildId: r } = t,
         o = (0, c.e7)([u.Z], () => {
             var t;
-            return u.Z.getRole(r, null != (t = null == e ? void 0 : e.role_id) ? t : f.lds);
+            return u.Z.getRole(r, null != (t = null == e ? void 0 : e.role_id) ? t : g.lds);
         });
     return null == o
         ? null
@@ -70,8 +70,8 @@ function O(t) {
             }
             return o;
         })(t, ["guildId", "productId"]);
-    let [f] = o.useState(() => g.Z.getGuildProduct(c));
-    l()(null != f, "guildProductListing cannot be null");
+    let [g] = o.useState(() => f.Z.getGuildProduct(c));
+    l()(null != g, "guildProductListing cannot be null");
     let [O, y] = o.useState(!1),
         j = async () => {
             try {
@@ -123,10 +123,10 @@ function O(t) {
                 children: [
                     (0, n.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        children: p.intl.format(p.t.CPQsjo, { productName: f.name }),
+                        children: p.intl.format(p.t.CPQsjo, { productName: g.name }),
                     }),
                     (0, n.jsx)(m, {
-                        guildProductListing: f,
+                        guildProductListing: g,
                         guildId: i,
                     }),
                 ],

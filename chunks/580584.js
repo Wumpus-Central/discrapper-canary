@@ -1,14 +1,14 @@
-o.d(t, { default: () => b });
-var _ = o(54381);
-o(473749);
-var a = o(332664),
-    c = o(814249),
-    i = o(531578),
-    n = o(388032);
-let r = [c.R7.OTHER];
-function b(e) {
-    let { transitionState: t, startRating: o, onClose: b, onSubmit: m } = e;
-    return (0, _.jsx)(a.Z, {
+t.d(e, { default: () => b });
+var c = t(54381);
+t(473749);
+var o = t(332664),
+    d = t(814249),
+    i = t(531578),
+    n = t(388032);
+let r = [d.R7.OTHER];
+function b(a) {
+    let { transitionState: e, startRating: t, onClose: b, onSubmit: m } = a;
+    return (0, c.jsx)(o.Z, {
         modalType: "summary",
         header: n.intl.string(n.t.hghcMh),
         body: n.intl.string(n.t.QFU785),
@@ -17,11 +17,11 @@ function b(e) {
         onClose: b,
         ratingOptions: [i.aZ.GOOD, i.aZ.BAD],
         ratingEmojiKind: "thumb",
-        transitionState: t,
-        problems: (0, c.iq)(),
+        transitionState: e,
+        problems: (0, d.iq)(),
         freeformNeededProblems: r,
-        otherKey: c.R7.OTHER,
-        startRating: o,
+        otherKey: d.R7.OTHER,
+        startRating: t,
         hideDontShowAgainCheckbox: !0,
     });
 }

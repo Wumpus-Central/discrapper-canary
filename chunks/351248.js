@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -36,7 +36,7 @@ let v = {
     EASING_IN: o.Z.Easing.inOut(o.Z.Easing.back()),
     EASING_OUT: o.Z.Easing.quad,
 };
-class O extends r.PureComponent {
+class x extends r.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -147,18 +147,18 @@ class O extends r.PureComponent {
             y(this, "widthAnimation", new o.Z.Value(0));
     }
 }
-function x(e) {
+function O(e) {
     var t;
     let { participants: n, onContextMenu: r, className: l, onClick: o, width: u, guildId: b } = e,
         C = (0, p.ZP)(),
         y = ((t = n.length), ((0, d.dcp)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
         v = (0, s.e7)([f.Z], () => f.Z.isFocused()),
-        x = n.map((e) => {
+        O = n.map((e) => {
             var t, n;
             if (e.type !== m.fO.USER) return null;
             let { user: l, voiceState: a, speaking: s, voiceDb: c = -1 / 0, latched: u, ringing: p } = e;
             return (0, i.jsx)(
-                O,
+                x,
                 {
                     className: g.participant,
                     width: (0, d.dcp)(y),
@@ -191,6 +191,6 @@ function x(e) {
         component: "div",
         role: "list",
         className: a()(g.root, l),
-        children: x,
+        children: O,
     });
 }

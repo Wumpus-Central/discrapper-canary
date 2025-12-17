@@ -1,19 +1,19 @@
 n.d(t, { Z: () => p });
 var a = n(54381),
     r = n(473749),
-    i = n(371286),
-    l = n(785717),
+    l = n(371286),
+    i = n(785717),
     s = n(836197),
     o = n(299560),
     c = n(247397),
     d = n(921944),
     u = n(388032),
-    m = n(285932);
+    m = n(560075);
 function p(e) {
     var t,
         n,
         { handleOpenUserProfileModal: p, markAsDismissed: h } = e,
-        x = (function (e, t) {
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -22,25 +22,25 @@ function p(e) {
                     var n,
                         a,
                         r = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        l = Object.keys(e);
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++)
-                    (n = i[a]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < l.length; a++)
+                    (n = l[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: f } = (0, l.KZ)(),
-        g = c.rR.filter((e) => s.Ki.includes(e)),
-        b = r.useCallback(() => {
-            h(d.L.TAKE_ACTION), f({ action: "PRESS_ADD_WIDGET" }), p();
-        }, [p, h, f]);
+    let { trackUserProfileEditAction: x } = (0, i.KZ)(),
+        b = c.rR.filter((e) => s.Ki.includes(e)),
+        g = r.useCallback(() => {
+            h(d.L.TAKE_ACTION), x({ action: "PRESS_ADD_WIDGET" }), p();
+        }, [p, h, x]);
     return (0, a.jsx)(
-        i.Z,
+        l.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -71,21 +71,21 @@ function p(e) {
                 subheading: u.intl.string(u.t.O9SQ1c),
                 markAsDismissed: h,
             },
-            x,
+            f,
         )),
         (n = n =
             {
                 children: (0, a.jsx)("ul", {
                     "aria-label": u.intl.string(u.t["+EIBSA"]),
                     className: m.options,
-                    children: g.map((e) =>
+                    children: b.map((e) =>
                         (0, a.jsx)(
                             o.Z,
                             {
                                 widgetType: e,
                                 size: "medium",
-                                onAddWidget: b,
-                                trackUserProfileEditAction: f,
+                                onAddWidget: g,
+                                trackUserProfileEditAction: x,
                             },
                             e,
                         ),

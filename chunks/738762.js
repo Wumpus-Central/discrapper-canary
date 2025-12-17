@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(493683),
-    s = n(367907),
-    o = n(205129),
+    o = n(367907),
+    s = n(205129),
     c = n(626135),
     u = n(981631),
     d = n(388032);
@@ -42,14 +42,14 @@ function f(e) {
             return t.id;
         }),
         m = 1 === f.length && 1 === n.length,
-        _ = n.length - f.length > 0;
-    return (m || t) && !_ && 0 !== h.length
+        b = n.length - f.length > 0;
+    return (m || t) && !b && 0 !== h.length
         ? (0, r.jsx)(l.sNh, {
               id: "message",
               action: function () {
                   a.Z.openPrivateChannel({ recipientIds: h }).then((t) => {
                       var n, r;
-                      return s.ZP.trackWithMetadata(
+                      return o.ZP.trackWithMetadata(
                           u.rMx.ACTIVITY_FEED_DM_VISITED,
                           p(
                               {
@@ -73,7 +73,7 @@ function f(e) {
                                   recipient_id: "string" == typeof h ? h : h[0],
                                   af_recently_played: !1,
                               },
-                              (0, o.y)(e),
+                              (0, s.y)(e),
                           ),
                       );
                   });

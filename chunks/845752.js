@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
     a = n(186901),
-    s = n(981631);
-function o(e, t) {
+    o = n(981631);
+function s(e, t) {
     return {
-        [s.zMe.VOICE_SETTINGS_UPDATE]: {
+        [o.zMe.VOICE_SETTINGS_UPDATE]: {
             scope: {
                 [a.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ],
             },
@@ -16,7 +16,7 @@ function o(e, t) {
                 return i().isEqual(l, n) || r(l), l;
             },
         },
-        [s.zMe.VOICE_SETTINGS_UPDATE_2]: {
+        [o.zMe.VOICE_SETTINGS_UPDATE_2]: {
             scope: a.lH,
             handler(e) {
                 let { socket: n } = e;

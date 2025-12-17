@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(772848),
     a = n(873546),
-    s = n(159691),
-    o = n(481060),
+    o = n(159691),
+    s = n(481060),
     c = n(626135),
     u = n(358085),
     d = n(289341),
@@ -15,13 +15,13 @@ var r = n(54381),
 function m(e) {
     let { applicationId: t } = e.match.params,
         [m, b] = i.useState(!1),
-        E = i.useRef(!1),
-        [_, O] = i.useState(null),
+        _ = i.useRef(!1),
+        [E, O] = i.useState(null),
         v = !u.isPlatformEmbedded && !a.tq && !m,
         y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
         v &&
-            !0 !== E.current &&
+            !0 !== _.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
@@ -55,22 +55,22 @@ function m(e) {
                         })
                         .then(() => n.disconnect());
                 }),
-            (E.current = !0));
+            (_.current = !0));
     }, [t, v, y]),
-    v && !1 !== _)
-        ? !0 === _
+    v && !1 !== E)
+        ? !0 === E
             ? (0, r.jsxs)("div", {
                   className: h.container,
                   children: [
-                      (0, r.jsx)(o.Heading, {
+                      (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/bold",
                           children: g.intl.string(g.t.csrAMJ),
                       }),
-                      (0, r.jsx)(o.Text, {
+                      (0, r.jsx)(s.Text, {
                           variant: "text-xs/semibold",
                           children: g.intl.string(g.t["m1+IBn"]),
                       }),
-                      (0, r.jsx)(s.zxk, {
+                      (0, r.jsx)(o.zxk, {
                           variant: "primary",
                           text: g.intl.string(g.t.fIv16B),
                           onClick: () => b(!0),
@@ -80,11 +80,11 @@ function m(e) {
             : (0, r.jsxs)("div", {
                   className: h.container,
                   children: [
-                      (0, r.jsx)(o.Heading, {
+                      (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/bold",
                           children: g.intl.string(g.t["Z+hCVU"]),
                       }),
-                      (0, r.jsx)(o.$jN, {}),
+                      (0, r.jsx)(s.$jN, {}),
                   ],
               })
         : (0, r.jsx)(

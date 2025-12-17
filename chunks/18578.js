@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(70097),
     u = n(475595),
     d = n(388032),
-    f = n(819838);
+    f = n(633515);
 function p(e) {
     var t, n, a;
     let { showVideo: p, imageAsset: _, videoAsset: m, imageSize: h, onLoadComplete: g, assetRef: E } = e,

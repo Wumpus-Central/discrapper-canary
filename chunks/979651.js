@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -83,7 +83,7 @@ function R(e) {
             : e;
     }, !1);
 }
-function D(e) {
+function w(e) {
     let t = !1;
     for (let n of e.voiceStates) {
         let [r] = x(e.guildId, n);
@@ -92,7 +92,7 @@ function D(e) {
     for (let n of e.removedVoiceStateUsers) P(e.guildId, n, () => null), (t = !0);
     return t && m++, t;
 }
-function w(e) {
+function D(e) {
     let { userId: t, channelId: n, platform: r } = e;
     v[S(t, n)] = r;
 }
@@ -152,7 +152,7 @@ function Z(e) {
     let { channelId: t } = e;
     T(t);
 }
-class B extends (a = l.ZP.Store) {
+class F extends (a = l.ZP.Store) {
     getAllVoiceStates() {
         return h;
     }
@@ -224,8 +224,8 @@ class B extends (a = l.ZP.Store) {
         return _;
     }
 }
-p(B, "displayName", "VoiceStateStore");
-let F = new B(c.Z, {
+p(F, "displayName", "VoiceStateStore");
+let B = new F(c.Z, {
     CONNECTION_OPEN: j,
     CONNECTION_OPEN_SUPPLEMENTAL: M,
     OVERLAY_INITIALIZE: k,
@@ -235,6 +235,6 @@ let F = new B(c.Z, {
     GUILD_CREATE: U,
     CHANNEL_DELETE: G,
     CALL_DELETE: Z,
-    PASSIVE_UPDATE_V2: D,
-    RTC_CONNECTION_PLATFORM: w,
+    PASSIVE_UPDATE_V2: w,
+    RTC_CONNECTION_PLATFORM: D,
 });

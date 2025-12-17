@@ -115,8 +115,8 @@ function C(e) {
             guildId: h,
         }),
         R = (0, p.j)({ displayNameStyles: P }),
-        D = T(t, n),
-        w = i.useContext(o.d);
+        w = T(t, n),
+        D = i.useContext(o.d);
     return (
         (0, E.Z)({
             subscribeToGroupId: g,
@@ -134,7 +134,7 @@ function C(e) {
                                 s.rz2,
                                 v(y({}, null != t ? t : {}), {
                                     ref: C,
-                                    onContextMenu: D,
+                                    onContextMenu: w,
                                     name: null != (c = (0, s.qgQ)(i)) ? c : "",
                                     colorString: null != (p = null == e ? void 0 : e.colorString) ? p : null,
                                     roleName: null == e ? void 0 : e.colorRoleName,
@@ -145,14 +145,14 @@ function C(e) {
                             );
                         {
                             let e =
-                                (null == w ? void 0 : w.animate) || (null == n ? void 0 : n.isShown)
+                                (null == D ? void 0 : D.animate) || (null == n ? void 0 : n.isShown)
                                     ? d.F.ANIMATED
                                     : d.F.PLAIN;
                             return (0, r.jsx)(
                                 a.Anchor,
                                 v(y({}, null != t ? t : {}), {
                                     ref: C,
-                                    onContextMenu: D,
+                                    onContextMenu: w,
                                     "aria-label": O,
                                     children: (0, r.jsx)(f.Z, {
                                         userName: null != (o = (0, s.qgQ)(i)) ? o : "",
@@ -193,7 +193,7 @@ function C(e) {
                     o,
                 );
             },
-            [A, t, n, h, g, D, b, O, N, R, null == w ? void 0 : w.animate, P, I],
+            [A, t, n, h, g, w, b, O, N, R, null == D ? void 0 : D.animate, P, I],
         )
     );
 }

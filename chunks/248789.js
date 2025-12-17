@@ -60,8 +60,8 @@ function C(e) {
         v = r.useCallback(() => {
             (0, u.T)(t, [C]);
         }, [t, C]),
-        O = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
-        x = r.useMemo(
+        x = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+        O = r.useMemo(
             () => ({
                 channelId: t,
                 warningId: C,
@@ -71,14 +71,14 @@ function C(e) {
             [t, C, y],
         );
     r.useEffect(() => {
-        (0, p.KQ)(b(g({}, x), { viewName: p.pb.SAFETY_WARNING_BANNER })),
+        (0, p.KQ)(b(g({}, O), { viewName: p.pb.SAFETY_WARNING_BANNER })),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [x]);
+    }, [O]);
     let E = r.useCallback(
             (e) => {
-                (0, p.qc)(b(g({}, x), { cta: e }));
+                (0, p.qc)(b(g({}, O), { cta: e }));
             },
-            [x],
+            [O],
         ),
         j = r.useCallback(() => {
             (0, o.ZDy)(
@@ -141,7 +141,7 @@ function C(e) {
                 variant: "primary",
                 onClick: j,
             },
-            ...(O
+            ...(x
                 ? []
                 : [
                       {

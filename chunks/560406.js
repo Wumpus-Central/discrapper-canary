@@ -62,9 +62,9 @@ var r = n(46015),
                     for (var T = p, C = a; ; ) {
                         var R = C <= _ ? o : C >= _ + s ? s : C - _;
                         if (T < R) break;
-                        var D = T - R,
-                            w = a - R;
-                        S(r, y(N(R + (D % w)))), (T = b(D / w)), (C += a);
+                        var w = T - R,
+                            D = a - R;
+                        S(r, y(N(R + (w % D)))), (T = b(w / D)), (C += a);
                     }
                     S(r, y(N(T))), (_ = P(p, I, E === h)), (p = 0), E++;
                 }

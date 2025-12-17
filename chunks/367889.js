@@ -6,27 +6,27 @@ var i = n(54381),
     r = n(160913),
     a = n(813732),
     o = n(509613),
-    c = n(970013),
+    S = n(970013),
     T = n(313789),
-    S = n(526665),
-    d = n(684610),
-    E = n(726985),
+    c = n(526665),
+    E = n(684610),
+    d = n(726985),
     g = n(388032);
-let I = (0, o.wf)(T.n.SUBSCRIPTIONS_PANEL, {
+let _ = (0, o.wf)(T.n.SUBSCRIPTIONS_PANEL, {
         useTitle: () => g.intl.string(g.t.trSpHX),
         StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
-    _ = (0, o.wf)(T.n.SUBSCRIPTIONS_PANEL, {
+    I = (0, o.wf)(T.n.SUBSCRIPTIONS_PANEL, {
         useTitle: () => g.intl.string(g.t.trSpHX),
-        buildLayout: () => [d.E],
+        buildLayout: () => [E.E],
     }),
     N = (0, o.m7)(T.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t.trSpHX),
-        getLegacySearchKey: () => ((0, S.Gl)("SubscriptionsPanel") ? void 0 : E.s6.SUBSCRIPTIONS),
+        getLegacySearchKey: () => ((0, c.Gl)("SubscriptionsPanel") ? void 0 : d.s6.SUBSCRIPTIONS),
         icon: l.XOf,
         trailing: {
-            type: c.W.STRONGLY_DISCOURAGED_CUSTOM,
+            type: S.W.STRONGLY_DISCOURAGED_CUSTOM,
             useCustomDecoration: () =>
                 (0, r.U)()
                     ? (0, i.jsx)(s.Mgn, {
@@ -35,5 +35,5 @@ let I = (0, o.wf)(T.n.SUBSCRIPTIONS_PANEL, {
                       })
                     : null,
         },
-        buildLayout: () => ((0, S.Gl)("SubscriptionsPanel") ? [_] : [I]),
+        buildLayout: () => ((0, c.Gl)("SubscriptionsPanel") ? [I] : [_]),
     });

@@ -1,7 +1,7 @@
 e.d(n, { Z: () => A }), e(388685);
-var a = e(54381),
-    r = e(473749),
-    i = e(442837),
+var r = e(54381),
+    i = e(473749),
+    a = e(442837),
     l = e(481060),
     s = e(809206),
     o = e(25990),
@@ -11,12 +11,12 @@ var a = e(54381),
 function A(t) {
     var n, e;
     let { emailToken: A, onClose: _, onBack: d, onNext: C, transitionState: x } = t,
-        [N, S] = r.useState(""),
-        [g, p] = r.useState(""),
-        [f, m] = r.useState(!1),
-        v = (0, i.e7)([o.Z], () => o.Z.getErrors()),
-        h = r.useRef(null);
-    async function y(t) {
+        [N, S] = i.useState(""),
+        [g, f] = i.useState(""),
+        [p, m] = i.useState(!1),
+        v = (0, a.e7)([o.Z], () => o.Z.getErrors()),
+        y = i.useRef(null);
+    async function h(t) {
         t.preventDefault(), m(!0);
         let n = await (0, s.Mn)({
             email: N,
@@ -25,18 +25,18 @@ function A(t) {
         });
         if ((m(!1), null == n ? void 0 : n.ok)) C(N);
         else {
-            var e, a;
+            var e, r;
             (null == n || null == (e = n.body) ? void 0 : e.username) != null
                 ? (0, c.P)()
-                : (null == n || null == (a = n.body) ? void 0 : a.email_token) != null && (null == d || d());
+                : (null == n || null == (r = n.body) ? void 0 : r.email_token) != null && (null == d || d());
         }
     }
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             var t;
-            null == (t = h.current) || t.focus();
+            null == (t = y.current) || t.focus();
         }, []),
-        (0, a.jsx)(l.Ioy, {
+        (0, r.jsx)(l.Ioy, {
             graphic: {
                 type: "image",
                 src: E,
@@ -60,27 +60,27 @@ function A(t) {
                 {
                     variant: "primary",
                     text: u.intl.string(u.t.i4jeWR),
-                    loading: f,
-                    onClick: y,
+                    loading: p,
+                    onClick: h,
                 },
             ],
-            children: (0, a.jsxs)(l.Kqy, {
+            children: (0, r.jsxs)(l.Kqy, {
                 gap: 20,
                 children: [
-                    (0, a.jsx)(l.oil, {
+                    (0, r.jsx)(l.oil, {
                         label: u.intl.string(u.t["w/qqKK"]),
                         error: null == v || null == (n = v.email) ? void 0 : n[0],
                         type: "email",
                         value: N,
                         onChange: S,
-                        inputRef: h,
+                        inputRef: y,
                     }),
-                    (0, a.jsx)(l.oil, {
+                    (0, r.jsx)(l.oil, {
                         label: u.intl.string(u.t.TmdnJ3),
                         error: null == v || null == (e = v.password) ? void 0 : e[0],
                         type: "password",
                         value: g,
-                        onChange: p,
+                        onChange: f,
                     }),
                 ],
             }),

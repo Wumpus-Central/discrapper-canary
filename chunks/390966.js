@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(849464),
     m = n(765305),
     h = n(388032),
-    g = n(646615);
+    g = n(791675);
 let E = 20;
 function b(e, t) {
     let n = t.toDate(),
@@ -146,9 +146,9 @@ function I(e) {
         } = e,
         P = (0, d.dQu)(c.Z.colors.TEXT_BRAND).hex(),
         R = (0, d.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        D = (0, d.dQu)(c.Z.colors.TEXT_FEEDBACK_CRITICAL).hex();
+        w = (0, d.dQu)(c.Z.colors.TEXT_FEEDBACK_CRITICAL).hex();
     null == _ && (_ = a === m.WX.EXTERNAL ? h.intl.string(h.t.IyZxjH) : h.intl.string(h.t["X2K3/4"]));
-    let w = (0, f.Z)(N, A),
+    let D = (0, f.Z)(N, A),
         [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: j, upcomingEvent: M, diffMinutes: k }, U] =
             i.useState((0, p.ub)(t, u));
     i.useEffect(() => {
@@ -167,7 +167,7 @@ function I(e) {
         }));
     let Z = i.useMemo(
             () =>
-                n === m.p1.CANCELED || (null == w ? void 0 : w.is_canceled)
+                n === m.p1.CANCELED || (null == D ? void 0 : D.is_canceled)
                     ? 5
                     : n === m.p1.ACTIVE
                       ? 3
@@ -176,11 +176,11 @@ function I(e) {
                         : j
                           ? 2
                           : +!!M,
-            [n, null == w ? void 0 : w.is_canceled, j, M],
+            [n, null == D ? void 0 : D.is_canceled, j, M],
         ),
-        B = y(Z, G, _, L, k),
+        F = y(Z, G, _, L, k),
         {
-            Icon: F,
+            Icon: B,
             iconColor: V,
             textColor: H,
             tooltipText: Y,
@@ -190,11 +190,11 @@ function I(e) {
                     timeStatus: Z,
                     textBrand: P,
                     textPositive: R,
-                    textDanger: D,
+                    textDanger: w,
                     endDateTimeString: L,
                     startDateTimeString: x,
                 }),
-            [Z, P, R, D, L, x],
+            [Z, P, R, w, L, x],
         ),
         W = null;
     if (null != C) {
@@ -209,7 +209,7 @@ function I(e) {
         children: [
             T && n === m.p1.SCHEDULED
                 ? (0, r.jsx)(v, {})
-                : (0, r.jsx)(F, {
+                : (0, r.jsx)(B, {
                       color: V,
                       size: "custom",
                       width: E,
@@ -221,7 +221,7 @@ function I(e) {
                     (0, r.jsx)(d.Text, {
                         color: H,
                         variant: I,
-                        children: B,
+                        children: F,
                     }),
                     null != W &&
                         (0, r.jsx)(d.Text, {

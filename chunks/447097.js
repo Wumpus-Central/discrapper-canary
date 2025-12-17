@@ -6,37 +6,37 @@ var r = n(54381),
     a = n(507453),
     o = n(388032);
 function c(e) {
-    let { mfaChallenge: t, finish: n, setSlide: c, onClose: u, isSlideReady: d, headerAlignStart: f } = e,
+    let { mfaChallenge: t, finish: n, setSlide: c, onClose: d, isSlideReady: u, headerAlignStart: f } = e,
         [h, g] = l.useState(!1),
-        [m, b] = l.useState(null),
-        [p, j] = l.useState(""),
-        y = l.useRef(null),
-        x = o.intl.string(o.t["C/ZAw/"]),
+        [m, p] = l.useState(null),
+        [b, j] = l.useState(""),
+        x = l.useRef(null),
+        y = o.intl.string(o.t["C/ZAw/"]),
         S = o.intl.string(o.t.fZSi1D),
         v = l.useCallback(
             (e) => {
-                j(e), b(null);
+                j(e), p(null);
             },
-            [j, b],
+            [j, p],
         );
     return (
         l.useEffect(() => {
-            if (d) {
+            if (u) {
                 var e;
-                null == (e = y.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
-        }, [d]),
+        }, [u]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     g(!0),
                     n({
                         mfaType: "backup",
-                        data: p.replace(/-/g, ""),
+                        data: b.replace(/-/g, ""),
                     })
                         .catch((e) => {
                             var t, n;
-                            b(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                            p(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             g(!1);
@@ -44,19 +44,19 @@ function c(e) {
             },
             children: [
                 (0, r.jsx)(a.Z.SlideHeader, {
-                    onClose: u,
+                    onClose: d,
                     headerAlignStart: f,
                 }),
                 (0, r.jsxs)(a.Z.SlideContent, {
                     children: [
                         (0, r.jsx)(s.oil, {
-                            label: x,
-                            inputRef: y,
+                            label: y,
+                            inputRef: x,
                             onChange: v,
                             placeholder: S,
                             maxLength: i.tL,
                             minLength: i.th,
-                            value: p,
+                            value: b,
                             spellCheck: "false",
                             disabled: h,
                         }),
@@ -67,7 +67,7 @@ function c(e) {
                     mfaChallenge: t,
                     setSlide: c,
                     showConfirm: !0,
-                    disabled: p.length < 8,
+                    disabled: b.length < 8,
                     submitting: h,
                 }),
             ],

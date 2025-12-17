@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(571457),
-    s = n(823379),
-    o = n(275131),
+    o = n(823379),
+    s = n(275131),
     c = n(356164),
     u = n(726115),
     d = n(962486),
@@ -12,7 +12,7 @@ var r = n(54381),
     f = n(128449);
 function g(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
-        s = (0, l.e7)([c.Z], () => {
+        o = (0, l.e7)([c.Z], () => {
             var e;
             return null != (e = c.Z.getGuildIds({ categoryId: f.Hk })) ? e : f.q5;
         }),
@@ -22,11 +22,11 @@ function g(e) {
         });
     return (
         i.useEffect(() => {
-            o.Z.fetchFeaturedGuilds();
+            s.Z.fetchFeaturedGuilds();
         }, []),
         (0, r.jsx)(d.Z, {
             tab: f.vf.FEATURED,
-            guildIds: s,
+            guildIds: o,
             loading: u,
             onScroll: t,
             onGuildCardSeen: n,
@@ -35,7 +35,7 @@ function g(e) {
     );
 }
 function h(e) {
-    let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
+    let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: o } = e,
         p = (0, u.lg)(t),
         g = (0, l.e7)([c.Z], () => {
             var e;
@@ -47,7 +47,7 @@ function h(e) {
         });
     return (
         i.useEffect(() => {
-            o.Z.fetchCategoryFeaturedGuilds({ categoryId: p });
+            s.Z.fetchCategoryFeaturedGuilds({ categoryId: p });
         }, [p]),
         (0, r.jsx)(d.Z, {
             tab: t,
@@ -55,12 +55,12 @@ function h(e) {
             loading: h,
             onScroll: n,
             onGuildCardSeen: a,
-            onGuildCardClick: s,
+            onGuildCardClick: o,
         })
     );
 }
 function m(e) {
-    let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
+    let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: s } = e;
     switch (
         (i.useEffect(() => {
             let e = (0, u.lg)(t);
@@ -72,7 +72,7 @@ function m(e) {
             return (0, r.jsx)(g, {
                 tab: t,
                 onScroll: n,
-                onGuildCardClick: o,
+                onGuildCardClick: s,
                 onGuildCardSeen: l,
             });
         case f.vf.GAMING:
@@ -85,7 +85,7 @@ function m(e) {
                 {
                     tab: t,
                     onScroll: n,
-                    onGuildCardClick: o,
+                    onGuildCardClick: s,
                     onGuildCardSeen: l,
                 },
                 t,
@@ -93,6 +93,6 @@ function m(e) {
         case f.vf.HUBS:
             return (0, r.jsx)(p.Z, { onScroll: n });
         default:
-            (0, s.vE)(t);
+            (0, o.vE)(t);
     }
 }

@@ -23,8 +23,8 @@ var r = n(54381),
     I = n(374649),
     T = n(981631),
     C = n(388032),
-    A = n(318877),
-    N = n(149715);
+    A = n(356526),
+    N = n(727829);
 function P(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,7 +84,7 @@ function x(e) {
             highlightAddPaymentMethodButton: a,
             dropdownClassName: s,
             analyticsLocation: P,
-            currentInvoicePreview: D,
+            currentInvoicePreview: w,
             disabled: x = !1,
         } = e,
         j = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
@@ -92,14 +92,14 @@ function x(e) {
         U = (0, g.V)((0, S.yb)(t)),
         { analyticsLocations: G } = (0, h.ZP)(),
         Z = i.useMemo(() => Object.values(M).filter((e) => !e.invalid), [M]),
-        [B, F] = i.useState(!1),
+        [F, B] = i.useState(!1),
         [V, H] = i.useState(t.currency),
         Y = async (e, n, r) => {
             if (null == t) throw Error("missing subscription and paymentSource");
-            null == e ? await f.fG(t, n, r, G, P) : await f.tq(t, e, n, r, G, P), F(!1), H(n);
+            null == e ? await f.fG(t, n, r, G, P) : await f.tq(t, e, n, r, G, P), B(!1), H(n);
         },
         W = async (e, n, r) => {
-            F(!0);
+            B(!0);
             let i = await (0, I.hz)({
                     subscriptionId: t.id,
                     paymentSourceId: null == e ? void 0 : e.id,
@@ -112,14 +112,14 @@ function x(e) {
                     amount: i.subtotal,
                     currency: i.currency,
                 };
-            D.currency !== i.currency || (D.currency === i.currency && D.total !== i.total)
+            w.currency !== i.currency || (w.currency === i.currency && w.total !== i.total)
                 ? await L(
                       i,
                       () => {
                           r(e, n, a);
                       },
                       () => {
-                          F(!1);
+                          B(!1);
                       },
                   )
                 : r(e, n, a);
@@ -144,7 +144,7 @@ function x(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         p.default,
-                        w(R({}, e), {
+                        D(R({}, e), {
                             onAddPaymentSource: q,
                             analyticsLocation: P,
                         }),
@@ -173,7 +173,7 @@ function x(e) {
                 selectedPaymentSourceId: e,
                 onChange: z,
                 onPaymentSourceAdd: Q,
-                dropdownLoading: B,
+                dropdownLoading: F,
                 disabled: x,
                 paymentGatewayRestrictions: t.eligiblePaymentGateways,
             });

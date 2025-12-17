@@ -31,8 +31,8 @@ var r,
     N = n(587061),
     P = n(248687),
     R = n(280049),
-    D = n(314910),
-    w = n(728285),
+    w = n(314910),
+    D = n(728285),
     x = n(22205),
     L = n(984802),
     j = n(746106),
@@ -41,10 +41,10 @@ var r,
     U = n(62883),
     G = n(998502),
     Z = n(473159),
-    B = n(928518),
-    F = n(981631),
+    F = n(928518),
+    B = n(981631),
     V = n(501787),
-    H = n(413943);
+    H = n(294863);
 function Y(e, t, n) {
     return (
         t in e
@@ -199,11 +199,11 @@ class Q extends (r = a.Component) {
                                     children: (0, i.jsxs)(O, {
                                         children: [
                                             (0, i.jsx)(C.Co, {}),
-                                            (0, i.jsx)(w.Wu, {
-                                                appContext: null != E ? E : F.IlC.POPOUT,
+                                            (0, i.jsx)(D.Wu, {
+                                                appContext: null != E ? E : B.IlC.POPOUT,
                                                 renderWindow: o,
                                                 children: (0, i.jsx)(T.m, {
-                                                    children: (0, i.jsxs)(D.yP, {
+                                                    children: (0, i.jsxs)(w.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
                                                                 className: H.popout,
@@ -226,7 +226,7 @@ class Q extends (r = a.Component) {
                                                             !g && (0, i.jsx)(m.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
                                                             (0, i.jsx)(f.uZ, {}),
-                                                            (0, i.jsx)(D.Un, {}),
+                                                            (0, i.jsx)(w.Un, {}),
                                                         ],
                                                     }),
                                                 }),
@@ -251,7 +251,7 @@ class Q extends (r = a.Component) {
             Y(this, "beforeUnload", (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
-                        B.Z.unmountWindow(this.props.windowKey),
+                        F.Z.unmountWindow(this.props.windowKey),
                             k.isPlatformEmbedded && G.ZP.close(this.props.windowKey);
                     };
                 null != t
@@ -290,9 +290,9 @@ let X = a.forwardRef(function (e, t) {
     }),
     J = a.forwardRef(function (e, t) {
         var n;
-        let { guestWindow: r, isFullScreen: a } = (0, _.cj)([B.Z], () => ({
-            guestWindow: B.Z.getWindow(e.windowKey),
-            isFullScreen: B.Z.isWindowFullScreen(e.windowKey),
+        let { guestWindow: r, isFullScreen: a } = (0, _.cj)([F.Z], () => ({
+            guestWindow: F.Z.getWindow(e.windowKey),
+            isFullScreen: F.Z.isWindowFullScreen(e.windowKey),
         }));
         c()(null != r, "Missing guestWindow reference");
         let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([b.Z, O.ZP], () => ({

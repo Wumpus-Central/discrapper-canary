@@ -43,8 +43,8 @@ e.exports = function (e, t, n, o, _, h, C) {
                 return new n(this);
             };
         },
-        D = t + " Iterator",
-        w = !1,
+        w = t + " Iterator",
+        D = !1,
         x = e.prototype,
         L = x[O] || x["@@iterator"] || (_ && x[_]),
         j = (!y && L) || R(_),
@@ -53,14 +53,14 @@ e.exports = function (e, t, n, o, _, h, C) {
         (M &&
             (A = c(M.call(new e()))) !== Object.prototype &&
             A.next &&
-            (!a && c(A) !== b && (u ? u(A, b) : s(A[O]) || p(A, O, T)), d(A, D, !0, !0), a && (m[D] = T)),
+            (!a && c(A) !== b && (u ? u(A, b) : s(A[O]) || p(A, O, T)), d(A, w, !0, !0), a && (m[w] = T)),
         g &&
             _ === S &&
             L &&
             L.name !== S &&
             (!a && E
                 ? f(x, "name", S)
-                : ((w = !0),
+                : ((D = !0),
                   (j = function () {
                       return i(L, this);
                   }))),
@@ -74,13 +74,13 @@ e.exports = function (e, t, n, o, _, h, C) {
             }),
             C)
         )
-            for (P in N) (!y && !w && P in x) || p(x, P, N[P]);
+            for (P in N) (!y && !D && P in x) || p(x, P, N[P]);
         else
             r(
                 {
                     target: t,
                     proto: !0,
-                    forced: y || w,
+                    forced: y || D,
                 },
                 N,
             );

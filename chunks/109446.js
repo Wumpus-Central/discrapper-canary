@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685), n(642613), n(583741);
 var r = n(54381),
     i = n(473749),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(99690),
     u = n(359110),
@@ -12,26 +12,26 @@ var r = n(54381),
     h = n(488131),
     p = n(496675),
     g = n(306680),
-    m = n(594174),
-    b = n(768581),
-    _ = n(709054),
-    y = n(981631),
-    O = n(124368),
-    v = n(388032),
-    j = n(531198);
+    b = n(594174),
+    m = n(768581),
+    y = n(709054),
+    O = n(981631),
+    v = n(124368),
+    j = n(388032),
+    C = n(988014);
 function x(e) {
     let { channel: t } = e,
-        l = (0, a.Wu)([d.Z, g.ZP, p.Z], () => {
+        l = (0, o.Wu)([d.Z, g.ZP, p.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-            return o()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
+            return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
-                .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && p.Z.can(y.Plq.VIEW_CHANNEL, t))
+                .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
+                .filter((t) => !(t.id in e) && p.Z.can(O.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
-                    return _.default.compare(n, r);
+                    return y.default.compare(n, r);
                 })
                 .reverse()
                 .value();
@@ -42,21 +42,21 @@ function x(e) {
             (0, f.q)();
         }, []),
         (0, r.jsxs)("div", {
-            className: j.popout,
+            className: C.popout,
             children: [
                 (0, r.jsx)(s.Text, {
-                    className: j.title,
+                    className: C.title,
                     variant: "text-xs/bold",
                     color: "text-default",
-                    children: t.isForumLikeChannel() ? v.intl.string(v.t.ioVdO2) : v.intl.string(v.t.VNYs2v),
+                    children: t.isForumLikeChannel() ? j.intl.string(j.t.ioVdO2) : j.intl.string(j.t.VNYs2v),
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(C, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(E, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
-                    className: j.more,
+                    className: C.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -96,47 +96,47 @@ function x(e) {
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: v.intl.string(v.t["4qdZ93"]),
+                        children: j.intl.string(j.t["4qdZ93"]),
                     }),
                 }),
             ],
         })
     );
 }
-function C(e) {
+function E(e) {
     let { thread: t } = e,
-        n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
+        n = (0, o.e7)([b.default], () => b.default.getUser(t.ownerId)),
         i = (0, f.Ok)(t);
     return (0, r.jsxs)(s.P3F, {
-        className: j.row,
+        className: C.row,
         onClick: (e) => {
-            (0, h.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
+            (0, h.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, v.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, r.jsx)("img", {
-                      className: j.avatar,
-                      src: b.ZP.getDefaultAvatarURL(void 0, void 0),
+                      className: C.avatar,
+                      src: m.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: "",
                   })
                 : (0, r.jsx)(c.Z, {
-                      className: j.avatar,
+                      className: C.avatar,
                       user: n,
                       size: s.EFr.SIZE_16,
                   }),
             (0, r.jsx)(s.Text, {
-                className: j.name,
+                className: C.name,
                 variant: "text-sm/normal",
                 color: "none",
                 children: t.name,
             }),
             (0, r.jsxs)(s.Text, {
-                className: j.timestamp,
+                className: C.timestamp,
                 variant: "text-sm/normal",
                 color: "none",
                 children: [
                     (0, r.jsx)("span", {
-                        className: j.bullet,
+                        className: C.bullet,
                         children: "\u2022",
                     }),
                     (0, f.Ye)(i),

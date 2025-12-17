@@ -8,11 +8,11 @@ var i = n(54381),
     c = n(412899),
     d = n(995648),
     u = n(385499),
-    b = n(600164),
-    p = n(422559),
-    m = n(598077),
-    f = n(271383),
-    g = n(485386),
+    m = n(600164),
+    b = n(422559),
+    p = n(598077),
+    g = n(271383),
+    f = n(485386),
     h = n(768581),
     x = n(388032),
     j = n(939248);
@@ -20,18 +20,18 @@ function v(e) {
     var t;
     let { guild: n, applicationIntegration: v } = e,
         { application: O } = v,
-        y = null != O.bot ? new m.Z(O.bot) : null,
-        C = (0, a.e7)([f.ZP], () => (null != y ? f.ZP.getMember(n.id, y.id) : null), [y, n]),
-        N = (0, a.e7)([g.Z], () => g.Z.getEveryoneRole(n)),
-        S = (0, a.Wu)([g.Z], () => {
+        y = null != O.bot ? new p.Z(O.bot) : null,
+        C = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
+        N = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
+        S = (0, a.Wu)([f.Z], () => {
             var e;
-            return g.Z.getManyRoles(n.id, null != (e = null == C ? void 0 : C.roles) ? e : []);
+            return f.Z.getManyRoles(n.id, null != (e = null == C ? void 0 : C.roles) ? e : []);
         }),
         I = null == y ? void 0 : y.id;
     r.useEffect(() => {
         null != I && s.Z.requestMembersById(n.id, I);
     }, [n.id, I]);
-    let w = r.useMemo(() => l.$e(N.permissions, ...S.map((e) => e.permissions)), [S, N]);
+    let T = r.useMemo(() => l.$e(N.permissions, ...S.map((e) => e.permissions)), [S, N]);
     if (null == y) return null;
     let E = h.ZP.getApplicationIconURL({
         id: O.id,
@@ -43,11 +43,11 @@ function v(e) {
     return (0, i.jsx)(o.Zbd, {
         editable: !0,
         className: j.card,
-        children: (0, i.jsxs)(b.Z, {
-            direction: b.Z.Direction.VERTICAL,
+        children: (0, i.jsxs)(m.Z, {
+            direction: m.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsxs)(b.Z, {
-                    align: b.Z.Align.CENTER,
+                (0, i.jsxs)(m.Z, {
+                    align: m.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
@@ -68,7 +68,7 @@ function v(e) {
                 (function (e, t, n, r) {
                     let a = [],
                         s = [];
-                    for (let e of p.VY) l.e$(r, e) ? a.push(e) : s.push(e);
+                    for (let e of b.VY) l.e$(r, e) ? a.push(e) : s.push(e);
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(o.izJ, { className: j.divider }),
@@ -95,7 +95,7 @@ function v(e) {
                                 : null,
                         ],
                     });
-                })(y, n, null != (t = null == C ? void 0 : C.roles) ? t : [], w),
+                })(y, n, null != (t = null == C ? void 0 : C.roles) ? t : [], T),
             ],
         }),
     });

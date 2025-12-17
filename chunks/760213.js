@@ -44,19 +44,19 @@ function S(e) {
         y = new f.Z(n),
         S = b && (null == s ? void 0 : s.id) === y.id,
         C = n.tokenStatus === v.q.INVALID,
-        O = a || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
-        T = null;
+        T = a || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
+        O = null;
     return (
         h.Z.useConfig({ location: "Account card load" }),
         S
-            ? (T = (0, i.jsx)(c.Text, {
+            ? (O = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: N.hintText,
                   color: "text-feedback-positive",
                   children: I.intl.string(I.t.seV8yt),
               }))
             : C &&
-              (T = (0, i.jsx)(c.Text, {
+              (O = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: N.hintText,
                   color: "text-feedback-critical",
@@ -90,11 +90,11 @@ function S(e) {
                                     (0, i.jsx)(c.Text, {
                                         color: "text-default",
                                         variant: "text-sm/normal",
-                                        children: O,
+                                        children: T,
                                     }),
                                 ],
                             }),
-                            T,
+                            O,
                         ],
                     }),
                     (0, i.jsxs)("div", {

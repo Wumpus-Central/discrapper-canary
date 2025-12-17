@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(155127),
     l = n(780900),
-    c = n(901259);
+    c = n(243902);
 function u(e, t, n) {
     return (
         t in e
@@ -129,7 +129,7 @@ function h(e, t) {
                 ),
             [N, P, R],
         );
-        let D = i.useCallback(
+        let w = i.useCallback(
             (e) => {
                 null == I.current ? A(!0) : clearTimeout(I.current),
                     (I.current = setTimeout(() => {
@@ -170,7 +170,7 @@ function h(e, t) {
                             }),
                             style: v,
                             dir: b,
-                            onScroll: D,
+                            onScroll: w,
                         },
                         S,
                     ),

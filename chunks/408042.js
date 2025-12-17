@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(314897),
-    s = n(592125),
-    o = n(430824),
+    o = n(592125),
+    s = n(430824),
     c = n(709054),
     u = n(231873);
 function d(e, t, n) {
@@ -27,7 +27,7 @@ function f(e, t) {
 }
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.default, s.Z, o.Z),
+        this.waitFor(a.default, o.Z, s.Z),
             (p = {}),
             null != e &&
                 c.default.keys(e).forEach((t) => {
@@ -73,7 +73,7 @@ d(g, "displayName", "GuildProgressStore"),
             let {
                     guild: { id: t, member_count: n },
                 } = e,
-                r = o.Z.getGuild(t);
+                r = s.Z.getGuild(t);
             if (null == r) return !1;
             r.ownerId === a.default.getId() &&
                 null != p[r.id] &&
@@ -101,7 +101,7 @@ d(g, "displayName", "GuildProgressStore"),
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: r } = e,
-                i = s.Z.getChannel(n);
+                i = o.Z.getChannel(n);
             return (
                 (null == (t = r.author) ? void 0 : t.id) === a.default.getId() &&
                 null != i &&

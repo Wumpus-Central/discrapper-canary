@@ -126,7 +126,7 @@ function P(e) {
         r = e.guild_scheduled_event_id;
     null == I[r] && (I[r] = {});
     let i = N(e.guild_scheduled_event_exception_id);
-    null == I[r][i] && (I[r][i] = {}), (I[r][i][e.user_id] = e), t && w(e), n && (O += 1);
+    null == I[r][i] && (I[r][i] = {}), (I[r][i][e.user_id] = e), t && D(e), n && (O += 1);
 }
 function R(e) {
     var t, n, r, i;
@@ -137,11 +137,11 @@ function R(e) {
     (s || !l) &&
         (null == (i = I[e.guild_scheduled_event_id]) || null == (r = i[o]) || delete r[e.user_id], x(e), a && (O += 1));
 }
-function D(e, t, n) {
+function w(e, t, n) {
     let r = N(t);
     null == T[e] && (T[e] = {}), (T[e][r] = n);
 }
-function w(e) {
+function D(e) {
     var t, n;
     let r = N(e.guild_scheduled_event_exception_id),
         i =
@@ -150,7 +150,7 @@ function w(e) {
             (null == e.guild_scheduled_event_exception_id && e.response === f.gv.INTERESTED)
                 ? 1
                 : -1);
-    D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
+    w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
 function x(e) {
     var t, n;
@@ -161,7 +161,7 @@ function x(e) {
             (null == e.guild_scheduled_event_exception_id && e.response === f.gv.INTERESTED)
                 ? -1
                 : 1);
-    D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
+    w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
 function L(e) {
     let { guilds: t } = e;
@@ -207,11 +207,11 @@ function Z(e) {
     let { guildScheduledEvent: t } = e;
     return C(t), !0;
 }
-function B(e) {
+function F(e) {
     let { guildScheduledEvent: t } = e;
     return A(t.id), !0;
 }
-function F(e) {
+function B(e) {
     let { eventException: t } = e,
         n = y.get(t.event_id);
     if (null == n) return !1;
@@ -268,9 +268,9 @@ function z(e) {
 }
 function q(e) {
     let { eventId: t, counts: n } = e;
-    D(t, null, n.eventCount),
+    w(t, null, n.eventCount),
         d.default.forEachKey(n.recurrenceCounts, (e) => {
-            D(t, e, n.eventCount - n.recurrenceCounts[e]);
+            w(t, e, n.eventCount - n.recurrenceCounts[e]);
         });
 }
 function Q() {
@@ -361,15 +361,15 @@ let er = new en(l.Z, {
     FETCH_GUILD_EVENTS_FOR_GUILD: M,
     GUILD_SCHEDULED_EVENT_CREATE: Z,
     GUILD_SCHEDULED_EVENT_UPDATE: Z,
-    GUILD_SCHEDULED_EVENT_DELETE: B,
+    GUILD_SCHEDULED_EVENT_DELETE: F,
     GUILD_SCHEDULED_EVENT_USER_ADD: K,
     GUILD_SCHEDULED_EVENT_USER_REMOVE: z,
     GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: Y,
     GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: W,
     GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: q,
     INVITE_RESOLVE_SUCCESS: X,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: F,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: F,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: B,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: B,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: V,
     GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: H,
     LOGOUT: Q,

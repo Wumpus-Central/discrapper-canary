@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(600164),
-    l = n(388354);
+    l = n(286376);
 function c(e) {
     return e < 400 ? "small" : e < 1000 ? "medium" : "large";
 }

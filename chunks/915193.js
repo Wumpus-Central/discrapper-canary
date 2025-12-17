@@ -1,16 +1,16 @@
-r.d(n, { Z: () => h });
+r.d(n, { Z: () => b });
 var t = r(54381);
 r(473749);
 var i = r(442837),
     o = r(692547),
     s = r(481060),
-    l = r(493683),
-    a = r(129861),
+    a = r(493683),
+    c = r(129861),
     d = r(700582),
-    c = r(594174),
+    l = r(594174),
     u = r(388032),
-    m = r(452438);
-function p(e) {
+    m = r(805171);
+function f(e) {
     let { color: n, className: r } = e;
     return (0, t.jsx)("svg", {
         className: r,
@@ -43,8 +43,8 @@ function p(e) {
         }),
     });
 }
-function h(e, n) {
-    let r = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+function b(e, n) {
+    let r = (0, i.e7)([l.default], () => l.default.getCurrentUser());
     return null == r || n.ownerId !== r.id || e.id === r.id
         ? null
         : (0, t.jsx)(s.sNh, {
@@ -53,10 +53,10 @@ function h(e, n) {
               label: u.intl.string(u.t["6t3CyN"]),
               action: () => {
                   (0, s.h7j)((i) => {
-                      var c, h;
+                      var l, b;
                       return (0, t.jsxs)(
                           s.VoidConfirmModal,
-                          ((c = (function (e) {
+                          ((l = (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var r = null != arguments[n] ? arguments[n] : {},
                                       t = Object.keys(r);
@@ -86,14 +86,14 @@ function h(e, n) {
                                   header: u.intl.string(u.t.WZoUsm),
                                   confirmText: u.intl.string(u.t["cY+Oob"]),
                                   cancelText: u.intl.string(u.t["ETE/oC"]),
-                                  onConfirm: () => l.Z.setDMOwner(n.id, e.id),
+                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id),
                               },
                               i,
                           )),
-                          (h = h =
+                          (b = b =
                               {
                                   children: [
-                                      (0, t.jsx)(p, { color: o.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, t.jsx)(f, { color: o.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, t.jsxs)("div", {
                                           className: m.fromToWrapper,
                                           children: [
@@ -118,7 +118,7 @@ function h(e, n) {
                                           children: u.intl.format(u.t.gsBb3F, {
                                               usernameHook: (n, r) =>
                                                   (0, t.jsx)(
-                                                      a.Z,
+                                                      c.Z,
                                                       {
                                                           usernameIcon: (0, t.jsx)(s.qEK, {
                                                               className: m.avatarIcon,
@@ -138,7 +138,7 @@ function h(e, n) {
                                   ],
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(h))
+                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(b))
                               : (function (e, n) {
                                     var r = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -146,10 +146,10 @@ function h(e, n) {
                                         r.push.apply(r, t);
                                     }
                                     return r;
-                                })(Object(h)).forEach(function (e) {
-                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(h, e));
+                                })(Object(b)).forEach(function (e) {
+                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(b, e));
                                 }),
-                          c),
+                          l),
                       );
                   });
               },

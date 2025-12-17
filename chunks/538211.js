@@ -1,44 +1,44 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => l });
 var r = n(70722),
-    l = n(388032);
-function i(e) {
+    a = n(388032);
+function l(e) {
     let { isEndStream: t } = e;
     return [
         {
             value: r.kr.BLACK_SCREEN,
-            label: t ? l.intl.string(l.t["0X5Zbq"]) : l.intl.string(l.t.fxiRNr),
+            label: t ? a.intl.string(a.t["0X5Zbq"]) : a.intl.string(a.t.fxiRNr),
         },
         {
             value: r.kr.BLURRY,
-            label: t ? l.intl.string(l.t.VVPQyy) : l.intl.string(l.t.E8jTMN),
+            label: t ? a.intl.string(a.t.VVPQyy) : a.intl.string(a.t.E8jTMN),
         },
         {
             value: r.kr.LAGGING,
-            label: t ? l.intl.string(l.t.ObEHd4) : l.intl.string(l.t.VoSJEQ),
+            label: t ? a.intl.string(a.t.ObEHd4) : a.intl.string(a.t.VoSJEQ),
         },
         {
             value: r.kr.OUT_OF_SYNC,
-            label: t ? l.intl.string(l.t.mYmwD3) : l.intl.string(l.t["+NluQm"]),
+            label: t ? a.intl.string(a.t.mYmwD3) : a.intl.string(a.t["+NluQm"]),
         },
         {
             value: r.kr.AUDIO_MISSING,
-            label: t ? l.intl.string(l.t["Xwv41+"]) : l.intl.string(l.t.G2egzT),
+            label: t ? a.intl.string(a.t["Xwv41+"]) : a.intl.string(a.t.G2egzT),
         },
         {
             value: r.kr.AUDIO_POOR,
-            label: t ? l.intl.string(l.t["fHey+d"]) : l.intl.string(l.t.aHOfIo),
+            label: t ? a.intl.string(a.t["fHey+d"]) : a.intl.string(a.t.aHOfIo),
         },
         {
             value: r.kr.STREAM_STOPPED,
-            label: l.intl.string(l.t.uEoqQp),
+            label: a.intl.string(a.t.uEoqQp),
         },
         {
             value: r.kr.VIBES_OFF,
-            label: l.intl.string(l.t["++JLL0"]),
+            label: a.intl.string(a.t["++JLL0"]),
         },
         {
             value: r.kr.OTHER,
-            label: l.intl.string(l.t.emlT91),
+            label: a.intl.string(a.t.emlT91),
         },
     ];
 }

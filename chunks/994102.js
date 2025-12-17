@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(206074),
     l = n(213609),
     c = n(652853),
-    u = n(732380),
+    u = n(475413),
     d = n(671955),
     f = n(388032);
 function p(e) {
@@ -30,7 +30,7 @@ function p(e) {
         : (0, r.jsx)(a.u, {
               text: f.intl.string(f.t.JVwWva),
               position: "top",
-              children: (0, r.jsx)(u.O1, {
+              children: (0, r.jsx)(u.i6, {
                   icon: o.v3n,
                   text: f.intl.string(f.t["jaYS/h"]),
                   size: "sm",

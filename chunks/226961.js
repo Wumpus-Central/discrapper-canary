@@ -125,10 +125,10 @@ function R(e) {
     var t;
     m = null != (t = e.section) ? t : _;
 }
-function D() {
+function w() {
     P();
 }
-function w(e) {
+function D(e) {
     null != e.channelId && (N(), g.clear());
 }
 function x(e) {
@@ -223,11 +223,11 @@ function G(e) {
 function Z(e) {
     S = S.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
-function B(e) {
+function F(e) {
     let { value: t } = e;
     I = t;
 }
-function F(e) {
+function B(e) {
     let { userId: t, context: n, quality: r } = e;
     g.set(O(t, n), r);
 }
@@ -285,14 +285,14 @@ class V extends (r = i.ZP.Store) {
 f(V, "displayName", "RTCDebugStore");
 let H = new V(o.Z, {
     RTC_DEBUG_MODAL_OPEN: R,
-    RTC_DEBUG_MODAL_CLOSE: D,
+    RTC_DEBUG_MODAL_CLOSE: w,
     RTC_DEBUG_MODAL_SET_SECTION: L,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: Z,
-    RTC_DEBUG_SET_RECORDING_FLAG: B,
-    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
-    VOICE_CHANNEL_SELECT: w,
+    RTC_DEBUG_SET_RECORDING_FLAG: F,
+    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: B,
+    VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: x,
     MEDIA_ENGINE_CONNECTION_STATS: M,
 });

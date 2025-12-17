@@ -8,58 +8,58 @@ var i = n(215569),
     o = n(727072),
     c = n(65912),
     d = n(388032),
-    u = n(590745);
+    u = n(896811);
 function g(e) {
     let { guildId: t, existingRules: n } = e,
         {
             cancelEditingRule: g,
-            isLoading: m,
-            hasChanges: p,
-            editingRule: f,
-            errorMessage: h,
-            saveEditingRule: b,
+            isLoading: f,
+            hasChanges: m,
+            editingRule: b,
+            errorMessage: p,
+            saveEditingRule: h,
         } = (0, c.w)(),
         { updateRule: x } = (0, o.pH)(t),
-        j = null != f,
-        _ = j && !(0, s.Vb)(f),
-        v = j || p || _,
-        O = async () => {
-            if (!p && !_) return g();
-            null == f || _ || x(f);
+        j = null != b,
+        v = j && !(0, s.Vb)(b),
+        O = j || m || v,
+        C = async () => {
+            if (!m && !v) return g();
+            null == b || v || x(b);
             let e = n.find((e) => {
                 let { id: t } = e;
-                return t === (null == f ? void 0 : f.id);
+                return t === (null == b ? void 0 : b.id);
             });
             try {
-                let e = await b(n);
+                let e = await h(n);
                 null != e && x(e);
             } catch (t) {
                 null != e && x(e);
             }
         },
-        C = d.intl.string(d.t["ETE/oC"]),
-        y = !p && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == f ? void 0 : f.name }) : void 0;
+        y = d.intl.string(d.t["ETE/oC"]),
+        N = !m && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == b ? void 0 : b.name }) : void 0;
     return (
-        null != h &&
-            (y = (0, r.jsx)(a.Text, {
+        null != p &&
+            (N = (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "text-feedback-critical",
                 className: u.message,
-                children: h,
+                children: p,
             })),
         (0, r.jsx)(i.W, {
             component: "div",
             className: u.saveNoticeContainer,
             children:
-                v &&
+                O &&
                 (0, r.jsx)(a.oXn, {
                     children: (0, r.jsx)(l.Z, {
-                        submitting: m,
-                        disabled: m,
-                        onSave: O,
+                        submitting: f,
+                        disabled: f,
+                        onSave: C,
                         onReset: g,
-                        onResetText: C,
-                        message: y,
+                        onResetText: y,
+                        message: N,
                     }),
                 }),
         })

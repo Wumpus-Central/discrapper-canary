@@ -1,6 +1,6 @@
 t.d(n, {
-    GV: () => m,
-    iQ: () => g,
+    GV: () => v,
+    iQ: () => m,
 }),
     t(539854),
     t(388685),
@@ -15,7 +15,7 @@ var i = t(512722),
     u = t(482241),
     d = t(765305),
     h = t(981631);
-async function v(e, n) {
+async function x(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         i = [];
     i.push(...t);
@@ -28,7 +28,7 @@ async function v(e, n) {
     if (null == l || 201 !== l.status) throw Error("Can't create channel for event");
     return (0, s.q_)(l.body);
 }
-async function m(e, n) {
+async function v(e, n) {
     let { entity_type: t } = e;
     if (t === d.WX.STAGE_INSTANCE) {
         let t = await (function (e, n) {
@@ -36,12 +36,12 @@ async function m(e, n) {
                 l = o.Z.getGuild(t);
             if (null == l) return Promise.resolve(null);
             let a = c.Z.getChannel(i);
-            return null == a ? v(l, e.name, n) : Promise.resolve(a);
+            return null == a ? x(l, e.name, n) : Promise.resolve(a);
         })(e, n);
         l()(null != t, "could not find or create channel");
     }
 }
-async function g(e) {
+async function m(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { channel_id: t, entity_type: i, name: a, id: s, guild_id: c } = e;
     switch (i) {

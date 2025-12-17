@@ -1,8 +1,8 @@
 n.d(e, { default: () => h });
 var i = n(54381),
     r = n(473749),
-    l = n(793030),
-    a = n(442837),
+    a = n(793030),
+    l = n(442837),
     c = n(481060),
     s = n(594174),
     o = n(63063),
@@ -11,7 +11,7 @@ var i = n(54381),
     b = n(872269),
     f = n(228168),
     p = n(388032),
-    g = n(107669);
+    g = n(316067);
 function x(t) {
     let { widget: e, user: n } = t;
     return (0, i.jsx)(d.Z, {
@@ -54,10 +54,10 @@ function h(t) {
                 h(),
                 (0, b.L$)(f.qb.WIDGET_REMOVED);
         }, [n, h, w]),
-        y = (0, a.e7)([s.default], () => s.default.getUser(d));
+        y = (0, l.e7)([s.default], () => s.default.getUser(d));
     return null == y
         ? null
-        : (0, i.jsxs)(l.Modal, {
+        : (0, i.jsxs)(a.Modal, {
               transitionState: e,
               onClose: h,
               title: p.intl.string(p.t.Mm07Yc),

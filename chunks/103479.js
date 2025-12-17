@@ -9,10 +9,10 @@ var i = n(763472),
     o = n(49012),
     s = n(591759),
     l = n(652853),
-    c = n(732380),
+    c = n(475413),
     u = n(671955),
     d = n(388032),
-    f = n(704543);
+    f = n(251806);
 async function p(e) {
     let { activity: t, user: n, index: r } = e;
     try {
@@ -38,7 +38,7 @@ function _(e) {
               className: f.customButtons,
               children: n.buttons.map((e, a) =>
                   (0, r.jsx)(
-                      c.O1,
+                      c.i6,
                       {
                           text: s ? d.intl.string(d.t.I6JG46) : e,
                           onClick: (e) => {
@@ -60,7 +60,7 @@ function _(e) {
               className: f.customButtons,
               children: n.buttons.map((e, a) =>
                   (0, r.jsx)(
-                      c.O1,
+                      c.i6,
                       {
                           text: s ? d.intl.string(d.t.I6JG46) : e,
                           fullWidth: !0,

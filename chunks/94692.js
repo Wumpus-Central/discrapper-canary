@@ -1,4 +1,4 @@
-s.d(e, { Z: () => g }), s(539854), s(388685);
+s.d(e, { Z: () => m }), s(539854), s(388685);
 var l = s(54381),
     n = s(473749),
     a = s(442837),
@@ -8,7 +8,7 @@ var l = s(54381),
     o = s(424218),
     d = s(998502),
     u = s(388032),
-    c = s(901650);
+    c = s(971561);
 function p(t, e, s) {
     return (
         e in t
@@ -23,7 +23,7 @@ function p(t, e, s) {
     );
 }
 let I = "select";
-class m extends n.PureComponent {
+class f extends n.PureComponent {
     fetchAllDirectoryMetadata() {
         let { installationPaths: t } = this.props,
             e = t.map((t) => {
@@ -145,7 +145,7 @@ class m extends n.PureComponent {
             });
     }
 }
-let g = a.ZP.connectStores([h.Z], () => ({
+let m = a.ZP.connectStores([h.Z], () => ({
     installationPaths: h.Z.installationPaths,
     installationPathsMetadata: h.Z.installationPathsMetadata,
-}))(m);
+}))(f);

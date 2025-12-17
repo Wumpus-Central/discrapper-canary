@@ -216,10 +216,10 @@ let R = g(m({}, l().defaultRules.link), {
             y = _.fullySanitized,
             R = E.trim();
         if (0 === h.trim().length || 0 === R.length) return u();
-        let D = P(l().unescapeUrl(o)),
-            w = null == D,
+        let w = P(l().unescapeUrl(o)),
+            D = null == w,
             x = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
-        if (w || x) return u();
+        if (D || x) return u();
         let L = g(m({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0,
@@ -231,13 +231,13 @@ let R = g(m({}, l().defaultRules.link), {
             G = C(t(y, L), k);
         if (null == U || null == G || 0 === A(U).trim().length) return u();
         let Z = i().pick(t.rules, j),
-            B = l().parserFor(Z)(p.whitespaceSanitized, L),
-            F = _.whitespaceSanitized,
-            { target: V } = D;
+            F = l().parserFor(Z)(p.whitespaceSanitized, L),
+            B = _.whitespaceSanitized,
+            { target: V } = w;
         return {
-            content: B,
+            content: F,
             target: V,
-            title: F,
+            title: B,
         };
     },
 });

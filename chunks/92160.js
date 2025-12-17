@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     a = n(481060),
     s = n(388032),
-    o = n(289086);
+    o = n(540203);
 function c(e) {
     let {
         className: t,
@@ -15,8 +15,8 @@ function c(e) {
         onToggle: d,
         animateStatus: u,
         firstLine: g,
-        secondLine: m,
-        disabled: p,
+        secondLine: f,
+        disabled: m,
     } = e;
     return (0, r.jsxs)("div", {
         className: l()(t, o.enableContainer),
@@ -45,7 +45,7 @@ function c(e) {
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
-                        children: m,
+                        children: f,
                     }),
                 ],
             }),
@@ -62,13 +62,13 @@ function c(e) {
                                   size: "sm",
                                   text: null != i ? i : s.intl.string(s.t["5U0kL8"]),
                                   onClick: c,
-                                  disabled: p,
+                                  disabled: m,
                               }),
                           }),
                     (0, r.jsx)(a.Button, {
                         variant: n ? "critical-primary" : "primary",
                         size: "sm",
-                        disabled: null == d || !n || p,
+                        disabled: null == d || !n || m,
                         text: n ? s.intl.string(s.t.R9GHya) : s.intl.string(s.t.JFfins),
                         onClick: d,
                     }),

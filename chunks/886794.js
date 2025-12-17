@@ -13,16 +13,16 @@ var l = t(54381),
     p = t(899007),
     x = t(648052),
     h = t(867176),
-    b = t(280885),
-    v = t(900927),
+    v = t(280885),
+    b = t(900927),
     j = t(678738),
     g = t(502762),
     I = t(530),
     y = t(679332),
     Z = t(544989),
     O = t(228168),
-    N = t(981631),
-    T = t(671955),
+    T = t(981631),
+    N = t(671955),
     A = t(388032),
     P = t(968847),
     E = t(199912),
@@ -41,10 +41,10 @@ function C(e) {
             onClose: B,
             sourceAnalyticsLocations: U = [],
         } = e,
-        k = C === N.ME ? void 0 : C,
+        k = C === T.ME ? void 0 : C,
         G = (0, m.ZP)(t.id, k),
-        V = u.ZP.getName(k, S, t),
-        F = (0, c.Dt)(),
+        F = u.ZP.getName(k, S, t),
+        V = (0, c.Dt)(),
         { analyticsLocations: W } = (0, a.ZP)([...U, r.Z.USER_PROFILE_MODAL]),
         z = (0, f.ZB)({
             layout: "MODAL",
@@ -70,20 +70,20 @@ function C(e) {
                 transitionState: R,
                 className: P.root,
                 hideShadow: !0,
-                "aria-labelledby": F,
+                "aria-labelledby": V,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
                     (0, l.jsx)(o.y5t, {
                         component: (0, l.jsx)(o.nn4, {
                             children: (0, l.jsx)(o.H, {
-                                id: F,
-                                children: A.intl.format(A.t.KRe1Fk, { name: V }),
+                                id: V,
+                                children: A.intl.format(A.t.KRe1Fk, { name: F }),
                             }),
                         }),
                         children: (0, l.jsxs)(g.Z, {
                             user: t,
                             displayProfile: G,
-                            themeType: T.l.MODAL,
+                            themeType: N.l.MODAL,
                             ref: (null == G ? void 0 : G.profileEffect) != null ? H : void 0,
                             children: [
                                 (0, l.jsx)(Z.Z, { children: (0, l.jsx)(y.Z, { user: t }) }),
@@ -92,7 +92,7 @@ function C(e) {
                                         (0, l.jsx)(h.Z, {
                                             user: t,
                                             displayProfile: G,
-                                            themeType: T.l.MODAL,
+                                            themeType: N.l.MODAL,
                                         }),
                                         (0, l.jsx)("div", {
                                             className: P.headerInner,
@@ -101,7 +101,7 @@ function C(e) {
                                                 displayProfile: G,
                                                 guildId: k,
                                                 channelId: S,
-                                                themeType: T.l.MODAL,
+                                                themeType: N.l.MODAL,
                                             }),
                                         }),
                                     ],
@@ -113,12 +113,12 @@ function C(e) {
                                             className: P.username,
                                             user: t,
                                             guildId: k,
-                                            nickname: V,
+                                            nickname: F,
                                             pronouns: null == G ? void 0 : G.pronouns,
                                             nicknameVariant: "heading-xl/bold",
                                             tags: (0, l.jsx)(x.Z, {
                                                 displayProfile: G,
-                                                themeType: T.l.MODAL,
+                                                themeType: N.l.MODAL,
                                                 onClose: B,
                                             }),
                                         }),
@@ -129,7 +129,7 @@ function C(e) {
                                                     className: _.tabBar,
                                                     type: "top",
                                                     selectedItem: O.oh.BOT_INFO,
-                                                    onItemSelect: N.dG4,
+                                                    onItemSelect: T.dG4,
                                                     children: (0, l.jsx)(
                                                         o.njP.Item,
                                                         {
@@ -148,14 +148,14 @@ function C(e) {
                                                     fade: !0,
                                                     className: E.scroller,
                                                     children: [
-                                                        (0, l.jsx)(b.Z, {
+                                                        (0, l.jsx)(v.Z, {
                                                             userId: t.id,
                                                             userBio: null == G ? void 0 : G.bio,
                                                             setLineClamp: !1,
                                                         }),
                                                         (0, l.jsx)(j.Z, {
                                                             heading: A.intl.string(A.t["A//N4k"]),
-                                                            children: (0, l.jsx)(v.Z, {
+                                                            children: (0, l.jsx)(b.Z, {
                                                                 userId: t.id,
                                                                 guildId: k,
                                                                 tooltipDelay: O.vB,

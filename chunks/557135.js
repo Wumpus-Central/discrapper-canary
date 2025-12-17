@@ -72,8 +72,8 @@ let v = {
                 (null == N ? void 0 : N.channelId) === t.id ||
                 p.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id),
             R = c.Z.getBlockedUsersForVoiceChannel(t.id),
-            D = c.Z.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, l.Fd)(new Set([...R, ...D])) && (T = !0), T || v || s || (!(R.size > 0) && !(D.size > 0)))
+            w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
+        return ((0, l.Fd)(new Set([...R, ...w])) && (T = !0), T || v || s || (!(R.size > 0) && !(w.size > 0)))
             ? !I && !v && (0, h._)(t)
                 ? new Promise((e) => {
                       (0, i.ZDy)(async () => {
@@ -111,7 +111,7 @@ let v = {
                               return (0, r.jsx)(i, {
                                   channelId: t.id,
                                   blockedUserIds: R,
-                                  ignoredUserIds: D,
+                                  ignoredUserIds: w,
                                   transitionState: o,
                                   onClose: a,
                                   onJoin: () =>
@@ -135,7 +135,7 @@ let v = {
                                   action: E.q.DISMISS,
                                   channel_id: t.id,
                                   blocked_user_ids: Array.from(R),
-                                  ignored_user_ids: Array.from(D),
+                                  ignored_user_ids: Array.from(w),
                                   warning_surface: E.fz.PRE_JOIN_MODAL,
                               });
                           },

@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(6025),
     y = n(621853),
     v = n(892001),
-    O = n(433355),
-    x = n(699516),
+    x = n(433355),
+    O = n(699516),
     E = n(594174),
     j = n(768581),
     S = n(525541),
@@ -202,10 +202,10 @@ let T = (e) => {
                 (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0hv), c.ToastType.FAILURE));
             }, []),
             a = r.useCallback(() => {
-                C.Z.closeChannelSidebar(O.uZ);
+                C.Z.closeChannelSidebar(x.uZ);
             }, []),
             o = r.useCallback(() => {
-                C.Z.closeChannelSidebar(O.uZ);
+                C.Z.closeChannelSidebar(x.uZ);
             }, []),
             {
                 acceptMessageRequest: s,
@@ -246,7 +246,7 @@ let T = (e) => {
         let { userId: t, channel: n, showingBanner: r } = e,
             { channelId: l } = (0, g._)(),
             u = (0, s.e7)([h.Z], () => null != l && h.Z.isSpam(l), [l]),
-            d = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+            d = (0, s.e7)([O.Z], () => O.Z.getRelationshipType(t), [t]),
             p = n.id === l,
             f = !o.tq && !p,
             m = !!o.tq || p || u,

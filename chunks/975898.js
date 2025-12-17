@@ -49,12 +49,12 @@ function l(e, t, n) {
         }),
         { focusableProps: P } = (0, s.kc)(e, n),
         R = (0, r.d)(T, P),
-        D = (0, i.z)(e, { labelable: !0 });
+        w = (0, i.z)(e, { labelable: !0 });
     return (
         (0, a.y)(n, t.defaultSelected, t.setSelected),
         {
             labelProps: (0, r.d)(A, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.d)(D, {
+            inputProps: (0, r.d)(w, {
                 "aria-invalid": g || "invalid" === h || void 0,
                 "aria-errormessage": e["aria-errormessage"],
                 "aria-controls": e["aria-controls"],

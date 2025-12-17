@@ -1,4 +1,4 @@
-n.d(t, { Q: () => f }), n(781311), n(413496), n(433524), n(35282);
+n.d(t, { Q: () => h }), n(781311), n(413496), n(433524), n(35282);
 var i = n(473749),
     r = n(442837),
     l = n(794433),
@@ -12,21 +12,21 @@ function p(e) {
     let t = e.trim();
     return "@" === t[0] ? t.slice(1) : t;
 }
-function h(e, t) {
+function f(e, t) {
     let n = p(e);
     return RegExp("".concat(c.Z.escape(n)), "i").test(t);
 }
-function f(e, t, n, c) {
-    let f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
+function h(e, t, n, c) {
+    let h = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
         m = (0, r.e7)([o.Z], () => (null != e ? o.Z.getSortedRoles(e.id) : [])),
         g = (0, r.Wu)([a.ZP], () => (null != e ? a.ZP.getMemberIds(e.id) : [])),
         b = i.useMemo(() => {
             if (null == e || "@" === c[0]) return [];
-            if (f) return u.Wx(e, m, null != t ? t : null, n, (e) => h(c, e));
-            let i = u.ik(e, m, null != t ? t : null, n, (e) => h(c, e));
+            if (h) return u.Wx(e, m, null != t ? t : null, n, (e) => f(c, e));
+            let i = u.ik(e, m, null != t ? t : null, n, (e) => f(c, e));
             return 0 === i.length && "" === c.trim() && 1 === m.length && (i = u.aq()), i;
-        }, [m, c, e, t, n, f]),
-        C = i.useMemo(() => (null == e ? [] : u.iI(g, null != t ? t : null, e, n, (e) => h(c, e))), [g, c, e, t, n]);
+        }, [m, c, e, t, n, h]),
+        C = i.useMemo(() => (null == e ? [] : u.iI(g, null != t ? t : null, e, n, (e) => f(c, e))), [g, c, e, t, n]);
     return (
         i.useEffect(() => {
             null != e && s.Z.requestMembers(e.id, p(c), d.EQ);

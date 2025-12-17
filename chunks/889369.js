@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(388685), n(642613);
 var l,
     i,
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(570140),
     c = n(45966),
     d = n(999382),
@@ -18,7 +18,7 @@ function h() {
             d.Z.getSection() === u.pNK.ONBOARDING &&
             (f = new Set(c.Z.getDefaultChannelIds(g)));
 }
-class N extends (l = s.ZP.Store) {
+class N extends (l = a.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z);
     }
@@ -26,7 +26,7 @@ class N extends (l = s.ZP.Store) {
         if (null == g) return !1;
         let e = c.Z.getDefaultChannelIds(g).sort(),
             t = Array.from(f).sort();
-        return !a().isEqual(e, t);
+        return !s().isEqual(e, t);
     }
     get guildId() {
         return g;

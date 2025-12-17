@@ -216,7 +216,7 @@ let E = [
                             className: x.button,
                             children: (0, r.jsx)(d.Button, {
                                 variant: "primary",
-                                text: h.intl.string(h.t.LhlgY9),
+                                text: h.intl.string(h.t.ElKTeb),
                                 onClick: () => {
                                     g.Z.open();
                                 },

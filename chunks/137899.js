@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(442837),
     a = n(481060),
-    s = n(668781),
-    o = n(549388),
+    o = n(668781),
+    s = n(549388),
     c = n(431583),
     u = n(91372),
     d = n(19780),
@@ -87,7 +87,7 @@ class m extends i.PureComponent {
             }),
             h(this, "handleInstallDownload", () => {
                 d.Z.isConnected()
-                    ? s.Z.show({
+                    ? o.Z.show({
                           title: f.intl.string(f.t.tiu1ly),
                           body: f.intl.string(f.t["zK+lqW"]),
                           onConfirm: this.doUpdate,
@@ -98,7 +98,7 @@ class m extends i.PureComponent {
                     : this.doUpdate();
             }),
             h(this, "doUpdate", () => {
-                this.state.clicked || (this.setState({ clicked: !0 }), (0, o.Q)());
+                this.state.clicked || (this.setState({ clicked: !0 }), (0, s.Q)());
             });
     }
 }

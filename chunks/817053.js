@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => E,
     o: () => b,
 }),
     n(388685);
@@ -7,8 +7,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(28664),
+    o = n(442837),
+    s = n(28664),
     c = n(481060),
     u = n(810568),
     d = n(168524),
@@ -44,30 +44,30 @@ function m(e) {
 function b(e) {
     let { imageSrc: t, gameName: n } = e,
         [l, a] = i.useState(!1),
-        s = null != n ? n : g.intl.string(g.t.GIWFlF);
+        o = null != n ? n : g.intl.string(g.t.GIWFlF);
     return l || null == t
         ? (0, r.jsx)("div", {
               role: "img",
-              "aria-label": s,
+              "aria-label": o,
               className: h.fallback,
               children: (0, r.jsx)(c.Text, {
                   variant: "text-xxs/medium",
                   lineClamp: 3,
                   "aria-hidden": !0,
-                  children: s,
+                  children: o,
               }),
           })
         : (0, r.jsx)("img", {
               src: t,
-              alt: s,
+              alt: o,
               className: h.gameCoverImage,
               onError: () => a(!0),
               onLoad: () => a(!1),
           });
 }
-function E(e) {
-    let { imageSrc: t, gameName: n, applicationId: l, userId: m, className: E, hideTooltip: _ = !1, coverRef: O } = e,
-        v = (0, s.e7)([f.Z], () => f.Z.hasUnsavedChanges()),
+function _(e) {
+    let { imageSrc: t, gameName: n, applicationId: l, userId: m, className: _, hideTooltip: E = !1, coverRef: O } = e,
+        v = (0, o.e7)([f.Z], () => f.Z.hasUnsavedChanges()),
         y = (0, d.Z)({
             location: "GameCover",
             applicationId: l,
@@ -88,9 +88,9 @@ function E(e) {
             [v, y],
         ),
         T = (e) =>
-            _
+            E
                 ? e
-                : (0, r.jsx)(o.u, {
+                : (0, r.jsx)(s.u, {
                       text: I,
                       ariaHidden: !0,
                       children: e,
@@ -100,7 +100,7 @@ function E(e) {
             ? (0, r.jsx)(c.tEY, {
                   children: (0, r.jsx)("div", {
                       ref: O,
-                      className: E,
+                      className: _,
                       tabIndex: -1,
                       children: (0, r.jsx)(b, {
                           imageSrc: t,
@@ -112,7 +112,7 @@ function E(e) {
                   innerRef: O,
                   onClick: S,
                   "aria-label": C,
-                  className: a()(h.clickable, E),
+                  className: a()(h.clickable, _),
                   children: (0, r.jsx)(b, {
                       imageSrc: t,
                       gameName: n,
@@ -120,8 +120,8 @@ function E(e) {
               }),
     );
 }
-function _(e) {
-    var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: s, coverRef: o } = e,
+function E(e) {
+    var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: o, coverRef: s } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -147,21 +147,21 @@ function _(e) {
     return l
         ? (0, r.jsx)(c.tEY, {
               children: (0, r.jsx)("div", {
-                  ref: o,
+                  ref: s,
                   className: d,
                   tabIndex: -1,
                   children: (0, r.jsx)(b, m({}, u)),
               }),
           })
         : (0, r.jsx)(
-              E,
+              _,
               m(
                   {
                       className: d,
                       applicationId: t,
                       userId: n,
-                      hideTooltip: s,
-                      coverRef: o,
+                      hideTooltip: o,
+                      coverRef: s,
                   },
                   u,
               ),

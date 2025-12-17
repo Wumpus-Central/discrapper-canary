@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(314172),
     v = n(981631),
     S = n(388032),
-    I = n(641984);
+    I = n(787397);
 function T(e, t, n) {
     return (
         t in e
@@ -94,13 +94,13 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = 4,
-    w = 268,
+let w = 4,
+    D = 268,
     x = 2,
     L = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + D : 0;
+        return t > 0 ? t + w : 0;
     };
 function j(e) {
     let {
@@ -119,35 +119,35 @@ function j(e) {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
         [R, j] = i.useState(f),
-        [M, k] = i.useState(w),
+        [M, k] = i.useState(D),
         [U, G] = i.useState(!1),
         Z = i.useRef(null),
-        B = i.useRef(null),
-        F = i.useRef(0);
+        F = i.useRef(null),
+        B = i.useRef(0);
     i.useLayoutEffect(() => {
-        F.current = 0;
+        B.current = 0;
     }, [f]),
         i.useLayoutEffect(() => {
             if (U) return;
             let e = L(Z.current),
-                t = L(B.current),
+                t = L(F.current),
                 n = [],
-                r = w - e - t;
+                r = D - e - t;
             for (let e = 0; e < x; e++) {
-                let t = e === x - 1 ? r : w;
+                let t = e === x - 1 ? r : D;
                 for (let e = 0, r = n.length; r < f.length; r++) {
                     let i = f[r],
                         a = T.current[i.id];
                     if (null == a) {
-                        0 === F.current && n.push(i);
+                        0 === B.current && n.push(i);
                         continue;
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    (e += o + D), n.push(i);
+                    (e += o + w), n.push(i);
                 }
             }
-            j(n.length === R.length ? R : n), k(r), F.current++;
+            j(n.length === R.length ? R : n), k(r), B.current++;
         }, [f, R, U]);
     let V = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
         H = (0, o.ZP)({
@@ -166,7 +166,7 @@ function j(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== R.length - 1 ? w : M },
+                    style: { maxWidth: U || i !== R.length - 1 ? D : M },
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => b(e),
@@ -236,7 +236,7 @@ function j(e) {
                                     : null,
                                 _ && null != d
                                     ? (0, r.jsx)(O.Z, {
-                                          buttonRef: B,
+                                          buttonRef: F,
                                           guild: l,
                                           guildMember: d,
                                           numRoles: Y,

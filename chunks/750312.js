@@ -44,12 +44,12 @@ function x(e) {
         }),
         x = null != y,
         P = x && t < y,
-        I = x && t > y;
+        w = x && t > y;
     return (0, r.jsxs)("div", {
         ref: u,
         className: l()(j.dragAndDropTarget, {
             [j.dropIndicatorBefore]: P,
-            [j.dropIndicatorAfter]: I,
+            [j.dropIndicatorAfter]: w,
             [j.isDragging]: m,
         }),
         "aria-label": O.intl.formatToPlainString(O.t.YLczh4, { positionNumber: t + 1 }),
@@ -76,18 +76,18 @@ function P(e) {
             headerTitle: v,
             headerSubtitle: O,
             headerActionButtons: P,
-            headerClassName: I,
-            additionalManageWidgetMenuItems: w,
+            headerClassName: w,
+            additionalManageWidgetMenuItems: I,
         } = e,
         S = (0, s.Dt)(),
         E = (0, c.e7)([u.default], () => u.default.getId() === t),
-        _ = (0, m.b)(),
-        { trackUserProfileAction: T } = (0, d.KZ)(),
+        T = (0, m.b)(),
+        { trackUserProfileAction: _ } = (0, d.KZ)(),
         C = (0, p.Z)({
             widget: n,
-            onAction: T,
+            onAction: _,
         }),
-        D = _ === n.type;
+        D = T === n.type;
     (0, g.Z)(C, D);
     let k = E && null != b && !a,
         N = () =>
@@ -102,7 +102,7 @@ function P(e) {
                         actionButtons: P,
                         widget: n,
                         disableInteraction: a,
-                        className: I,
+                        className: w,
                     }),
                     (0, r.jsxs)(o.y5t, {
                         children: [i, h],
@@ -116,7 +116,7 @@ function P(e) {
             ? (0, r.jsx)(x, {
                   index: null != b ? b : 0,
                   widget: n,
-                  additionalManageWidgetMenuItems: w,
+                  additionalManageWidgetMenuItems: I,
                   children: N(),
               })
             : N(),

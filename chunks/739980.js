@@ -6,7 +6,7 @@ var l = n(54381),
     s = n(930282),
     o = n(524444),
     u = n(695346),
-    c = n(315934);
+    c = n(879626);
 function d(e) {
     let { previewMessage: t } = e,
         n = u.jU.useSetting(),

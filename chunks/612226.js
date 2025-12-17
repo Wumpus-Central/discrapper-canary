@@ -1,8 +1,8 @@
 n.d(t, {
     Q2: () => Z,
     Rv: () => Y,
-    U6: () => F,
-    UD: () => B,
+    U6: () => B,
+    UD: () => F,
     ZP: () => W,
     oT: () => H,
 }),
@@ -36,8 +36,8 @@ var r = n(2818),
     N = n(861007),
     P = n(89028),
     R = n(300644),
-    D = n(721383),
-    w = n(207234),
+    w = n(721383),
+    D = n(207234),
     x = n(997292),
     L = n(743810),
     j = n(620212),
@@ -56,7 +56,7 @@ var r = n(2818),
             e
         );
     })({});
-function B(e) {
+function F(e) {
     switch (e) {
         case "NAVIGATION":
             return G.intl.string(G.t["yGE+jg"]);
@@ -72,7 +72,7 @@ function B(e) {
             return G.intl.string(G.t["69j6+4"]);
     }
 }
-function F(e) {
+function B(e) {
     switch (e) {
         case "MESSAGE":
             return G.intl.string(G.t.iepGDn);
@@ -109,8 +109,8 @@ let H = {
     [U.EkH.MARK_SERVER_READ]: p.l,
     [U.EkH.TOGGLE_CHANNEL_PINS]: N.u,
     [U.EkH.TOGGLE_FOR_LATER]: P.f,
-    [U.EkH.TOGGLE_INBOX]: w.a,
-    [U.EkH.MARK_TOP_INBOX_CHANNEL_READ]: w.M,
+    [U.EkH.TOGGLE_INBOX]: D.a,
+    [U.EkH.MARK_TOP_INBOX_CHANNEL_READ]: D.M,
     [U.EkH.TOGGLE_USERS]: x.r,
     [U.EkH.TOGGLE_HELP]: R.O,
     [U.EkH.VIBE_WITH_WUMPUS]: M.w,
@@ -125,7 +125,7 @@ let H = {
     [U.EkH.SEARCH_EMOJIS]: b.S,
     [U.EkH.SEARCH_GIFS]: y.O,
     [U.EkH.SEARCH_STICKERS]: v.U,
-    [U.EkH.TOGGLE_HOTKEYS]: D._,
+    [U.EkH.TOGGLE_HOTKEYS]: w._,
     [U.EkH.JUMP_TO_FIRST_UNREAD]: _.O,
     [U.EkH.CREATE_GUILD]: s.r,
     [U.EkH.UPLOAD_FILE]: j.U,

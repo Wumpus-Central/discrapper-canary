@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(91192),
-    o = n(442837),
+    o = n(91192),
+    s = n(442837),
     c = n(518738),
     u = n(628238),
     d = n(786761),
@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(25015),
     m = n(438075),
     b = n(963550),
-    E = n(845080),
-    _ = n(295790),
+    _ = n(845080),
+    E = n(295790),
     O = n(145807),
     v = n(592125),
     y = n(709054),
@@ -97,8 +97,8 @@ let N = i.memo(function (e) {
         U = N.isFirstMessageInForumPost(Z),
         G = (0, u.A)((null != (n = N.editedTimestamp) ? n : N.timestamp).valueOf()),
         {
-            content: B,
-            hasSpoilerEmbeds: H,
+            content: H,
+            hasSpoilerEmbeds: B,
             hasBailedAst: V,
         } = (0, h.Z)(N, {
             hideSimpleEmbedContent: A,
@@ -107,9 +107,9 @@ let N = i.memo(function (e) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        F = (0, s.JA)(N.id),
+        F = (0, o.JA)(N.id),
         z = (0, p.ZP)(N),
-        Y = (0, o.e7)(
+        Y = (0, s.e7)(
             [v.Z],
             () => N.hasFlag(I.iLy.HAS_THREAD) && v.Z.getChannel(y.default.castMessageIdAsChannelId(N.id)),
         ),
@@ -130,7 +130,7 @@ let N = i.memo(function (e) {
                 }),
                 disableInteraction: k,
                 childrenExecutedCommand: (0, O.Z)(N, Z, !1),
-                childrenHeader: (0, E.Z)({
+                childrenHeader: (0, _.Z)({
                     message: N,
                     channel: Z,
                     author: z,
@@ -142,9 +142,9 @@ let N = i.memo(function (e) {
                     hideTimestamp: !0,
                     hideGuildTag: !1,
                 }),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, m.Q)(e, H, V),
-                childrenMessageContent: (0, b.Z)(e, B),
-                childrenSystemMessage: (0, _.Z)(
+                childrenAccessories: e.hideAccessories ? void 0 : (0, m.Q)(e, B, V),
+                childrenMessageContent: (0, b.Z)(e, H),
+                childrenSystemMessage: (0, E.Z)(
                     ((i = T({}, e)),
                     (l = l = { disableInteraction: k }),
                     Object.getOwnPropertyDescriptors

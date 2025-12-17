@@ -1,28 +1,28 @@
-n.d(t, {
+a.d(t, {
     Z: () => c,
-    f: () => a,
+    f: () => r,
 });
-var o,
-    r = n(388032),
-    a =
-        (((o = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"),
-        (o.CONFUSING_LANGUAGE = "I found the language confusing"),
-        (o.OTHER = "Other"),
-        o);
+var n,
+    o = a(388032),
+    r =
+        (((n = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"),
+        (n.CONFUSING_LANGUAGE = "I found the language confusing"),
+        (n.OTHER = "Other"),
+        n);
 function c() {
     return [
         {
-            label: r.intl.string(r.t.cigGCe),
+            label: o.intl.string(o.t.cigGCe),
             code: 2,
             value: "I couldn't find what I was looking for",
         },
         {
-            label: r.intl.string(r.t.ZyXA0q),
+            label: o.intl.string(o.t.ZyXA0q),
             code: 3,
             value: "I found the language confusing",
         },
         {
-            label: r.intl.string(r.t.emlT91),
+            label: o.intl.string(o.t.emlT91),
             code: 1,
             value: "Other",
         },

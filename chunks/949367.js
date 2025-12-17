@@ -1,4 +1,4 @@
-n.d(e, { k: () => c });
+n.d(e, { k: () => S });
 var i = n(442837),
     l = n(857595),
     s = n(607070),
@@ -11,4 +11,4 @@ let o = (0, u.qs)(r.n.ENABLE_SWITCH_ICONS, {
         useValue: () => (0, i.e7)([s.Z], () => s.Z.isSwitchIconsEnabled),
         setValue: (t) => (0, l.ky)(t),
     }),
-    c = (0, u.k4)(r.n.INPUTS, { buildLayout: () => [o] });
+    S = (0, u.k4)(r.n.INPUTS, { buildLayout: () => [o] });
