@@ -47,11 +47,11 @@ var i,
     U = n(19780),
     V = n(306680),
     F = n(699516),
-    H = n(246946),
-    B = n(594174),
+    B = n(246946),
+    H = n(594174),
     G = n(626135),
-    z = n(572004),
-    W = n(585483),
+    W = n(572004),
+    z = n(585483),
     q = n(823379),
     K = n(709054),
     Y = n(51144),
@@ -253,21 +253,21 @@ class eu extends (i = l.PureComponent) {
                 is_friend: !this.isNotFriends(),
             }),
         ),
-            W.S.subscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            W.S.subscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
+            z.S.subscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            z.S.subscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        W.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            W.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        z.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            z.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
             f.Z.wait(() => C.Z.close());
     }
     isNotFriends() {
-        let { channel: e } = this.props;
+        let { channel: e, isStaffOnlyDM: t } = this.props;
         if (null == e || !e.isDM()) return !1;
-        let t = e.getRecipientId();
-        if (null == t) throw Error("no recipient in DM");
-        return !F.Z.isFriend(t);
+        let n = e.getRecipientId();
+        if (null == n) throw Error("no recipient in DM");
+        return !F.Z.isFriend(n) && !t;
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -281,7 +281,7 @@ class eu extends (i = l.PureComponent) {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = B.default.getCurrentUser();
+            t = H.default.getCurrentUser();
         return null != t && t.isStaff() ? $.p3w : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
@@ -327,7 +327,7 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = B.default.getUser(t),
+            let n = H.default.getUser(t),
                 i = null != n ? n.username : "";
             return et.intl.format(et.t["eg+R9x"], { username: i });
         }
@@ -363,7 +363,7 @@ class eu extends (i = l.PureComponent) {
         let i = [];
         return (
             n.forEach((e) => {
-                let t = B.default.getUser(e);
+                let t = H.default.getUser(e);
                 null != t &&
                     i.push({
                         id: e,
@@ -492,7 +492,7 @@ class eu extends (i = l.PureComponent) {
             label: et.intl.string(et.t.t3O2BR),
             helperText: l.length > 0 ? et.intl.format(et.t.ZVdJMy, { numHours: "".concat(24) }) : void 0,
             children: (0, r.jsx)(p.kO8, {
-                supportsCopy: z.wS,
+                supportsCopy: W.wS,
                 placeholder: (0, T.Z)(et.intl.string(et.t.lPVBqP)),
                 value: a ? (n ? et.intl.string(et.t["6HzNgZ"]) : l) : "",
                 buttonColor: d.zx.Colors.BRAND,
@@ -509,7 +509,7 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = B.default.getUser(e),
+            let n = H.default.getUser(e),
                 i = null != n && F.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
@@ -870,7 +870,7 @@ class eu extends (i = l.PureComponent) {
             }),
             ei(this, "handleCopyInvite", (e) => {
                 let { channel: t, invite: n } = this.props;
-                null != n && (0, z.JG)(e),
+                null != n && (0, W.JG)(e),
                     null != this.copyTimeout && clearTimeout(this.copyTimeout),
                     this.setState({ copied: !0 }),
                     (this.copyTimeout = setTimeout(() => {
@@ -896,7 +896,7 @@ function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, j.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, _.pT)(Array.from(t), B.default, F.Z);
+    let c = (0, _.pT)(Array.from(t), H.default, F.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -929,18 +929,40 @@ function ed(e) {
 function ep(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([k.Z, D.Z, H.Z], () => {
-        let e;
-        return (
-            null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            el(er({}, k.Z.getState()), {
-                invite: e,
-                hideDiscriminator: H.Z.hidePersonalInformation,
-                hideInstantInvites: H.Z.hideInstantInvites,
-            })
-        );
-    });
-    return (0, r.jsx)(eu, er({ channel: t }, n, i));
+    let i = (0, u.cj)([k.Z, D.Z, B.Z], () => {
+            let e;
+            return (
+                null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+                el(er({}, k.Z.getState()), {
+                    invite: e,
+                    hideDiscriminator: B.Z.hidePersonalInformation,
+                    hideInstantInvites: B.Z.hideInstantInvites,
+                })
+            );
+        }),
+        l = (0, u.e7)([H.default], () => {
+            var e;
+            return (
+                !!(null == (e = H.default.getCurrentUser()) ? void 0 : e.isStaff()) &&
+                null != t &&
+                !!t.isDM() &&
+                t.recipients.every((e) => {
+                    var t;
+                    return null == (t = H.default.getUser(e)) ? void 0 : t.isStaff();
+                })
+            );
+        }, [t]);
+    return (0, r.jsx)(
+        eu,
+        er(
+            {
+                channel: t,
+                isStaffOnlyDM: l,
+            },
+            n,
+            i,
+        ),
+    );
 }
 function ef(e) {
     let { channel: t, location: n, subscribeToGlobalHotkey: i, initialPopoutOpen: a } = e,
@@ -969,9 +991,9 @@ function ef(e) {
     return (
         l.useEffect(
             () => (
-                i && W.S.subscribe($.CkL.TOGGLE_DM_CREATE, h),
+                i && z.S.subscribe($.CkL.TOGGLE_DM_CREATE, h),
                 () => {
-                    W.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, h);
+                    z.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, h);
                 }
             ),
             [i, h, c],
@@ -1026,7 +1048,7 @@ function eh(e) {
             location: g,
             subscribeToGlobalHotkey: m,
         }),
-        S = (0, u.e7)([B.default], () => B.default.getUser(null == i ? void 0 : i.getRecipientId()));
+        S = (0, u.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (null != (t = null == S ? void 0 : S.bot) && t) || (null != (n = null == S ? void 0 : S.isProvisional) && n)
         ? null
         : j
