@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,14 +8,15 @@ var r = n(54381),
     c = n(594928),
     u = n(172416),
     d = n(695349),
-    f = n(340625),
-    p = n(119850),
-    _ = n(22189),
-    m = n(391110),
-    h = n(75077),
-    g = n(51636),
-    E = n(877782);
-function b(e, t, n) {
+    f = n(241986),
+    p = n(340625),
+    _ = n(119850),
+    m = n(22189),
+    h = n(391110),
+    g = n(75077),
+    E = n(51636),
+    b = n(877782);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +40,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,122 +57,124 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = (e) => {
+let I = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: a } = e,
             o = (0, r.jsx)(s.Heading, {
                 variant: "heading-xxl/extrabold",
                 color: "text-strong",
-                className: null != a ? a : E.heading,
+                className: null != a ? a : b.heading,
                 children: i,
             });
         return null == t
             ? o
             : n
               ? (0, r.jsxs)("div", {
-                    className: E.sectionHeader,
+                    className: b.sectionHeader,
                     children: [
                         o,
                         null != t &&
                             (0, r.jsx)("div", {
-                                className: E.showAllPerksButton,
+                                className: b.showAllPerksButton,
                                 children: t,
                             }),
                     ],
                 })
               : (0, r.jsx)("div", {
-                    className: E.container,
+                    className: b.container,
                     children: (0, r.jsx)("div", {
-                        className: E.sectionHeaderSeeAll,
+                        className: b.sectionHeaderSeeAll,
                         children: o,
                     }),
                 });
     },
-    I = (e) => {
+    T = (e) => {
         let {
                 className: t,
                 variant: n,
                 noBackground: a = !1,
-                leftAlignHeaders: b = !1,
-                showAllPerksButton: O,
-                headerClassname: I,
+                leftAlignHeaders: y = !1,
+                showAllPerksButton: v,
+                headerClassname: T,
             } = e,
-            T = i.useRef(null),
-            C = n === m.gM.WHATS_NEW,
-            A = (0, p.x)();
+            C = i.useRef(null),
+            A = n === h.gM.WHATS_NEW,
+            N = (0, _.x)();
         i.useEffect(() => {
-            C && A();
-        }, [A, C]);
-        let N = (0, h.re)(C),
-            P = (0, _.Z)(),
-            R = (0, h.mN)(),
-            { fractionalState: w } = (0, l.Z)(),
-            D = (0, d.W)(),
-            x = (0, u.bg)({ location: "PremiumPerks" }),
-            L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
-            j = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
-            M = (0, h.ZM)({
-                perksCards: P,
+            A && N();
+        }, [N, A]);
+        let P = (0, g.re)(A),
+            R = (0, m.Z)(),
+            w = (0, g.mN)(),
+            { fractionalState: D } = (0, l.Z)(),
+            x = (0, d.W)(),
+            L = (0, u.bg)({ location: "PremiumPerks" }),
+            j = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
+            M = p.Z.useExperiment({ location: "PremiumPerks" }).enabled,
+            k = (0, f.Z)({ location: "PremiumPerks" }),
+            U = (0, g.ZM)({
+                perksCards: R,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
-                isPremiumSubscriber: R,
-                fractionalState: w,
-                isInReverseTrial: D,
-                showProfileWidgets: x,
-                showDisplayNameStyles: L,
-                recurring3PPromotionExperiment: j,
+                isPremiumSubscriber: w,
+                fractionalState: D,
+                isInReverseTrial: x,
+                showProfileWidgets: L,
+                showDisplayNameStyles: j,
+                recurring3PPromotionExperiment: M,
+                premiumGroupExperiment: k,
             }),
-            k = M.some((e) => null != e.pillText);
+            G = U.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
-            ref: T,
+            ref: C,
             className: o()(
-                E.section,
+                b.section,
                 {
-                    [E.centerAlignSection]: !b,
-                    [E.leftAlignSection]: b,
+                    [b.centerAlignSection]: !y,
+                    [b.leftAlignSection]: y,
                 },
                 t,
             ),
             children: [
-                (0, r.jsx)(S, {
-                    showAllPerksButton: O,
-                    leftAlignHeaders: b,
-                    title: N.title,
-                    headerClassname: I,
+                (0, r.jsx)(I, {
+                    showAllPerksButton: v,
+                    leftAlignHeaders: y,
+                    title: P.title,
+                    headerClassname: T,
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",
                     color: "text-strong",
-                    className: o()(E.subtitle, {
-                        [E.subtitle]: null == O || b,
-                        [E.subtitleWithButton]: null != O && !b,
-                        [E.fullWidth]: C || b,
-                        [E.moreSubtitleMargin]: k,
-                        [E.leftAlignSubtitle]: b,
-                        [E.centerAlignSubtitle]: !b,
+                    className: o()(b.subtitle, {
+                        [b.subtitle]: null == v || y,
+                        [b.subtitleWithButton]: null != v && !y,
+                        [b.fullWidth]: A || y,
+                        [b.moreSubtitleMargin]: G,
+                        [b.leftAlignSubtitle]: y,
+                        [b.centerAlignSubtitle]: !y,
                     }),
-                    children: N.subtitle,
+                    children: P.subtitle,
                 }),
-                !b &&
-                    null != O &&
+                !y &&
+                    null != v &&
                     (0, r.jsx)("div", {
-                        className: E.showAllPerksButtonCenter,
-                        children: O,
+                        className: b.showAllPerksButtonCenter,
+                        children: v,
                     }),
                 (0, r.jsx)("div", {
-                    className: E.cardContainer,
-                    children: M.map((e, t) =>
-                        (0, r.jsx)(g.Z, v(y({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
+                    className: b.cardContainer,
+                    children: U.map((e, t) =>
+                        (0, r.jsx)(E.Z, S(O({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
                     ),
                 }),
             ],
