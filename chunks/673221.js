@@ -15,9 +15,9 @@ var r = n(54381),
     h = n(415540),
     g = n(345729),
     E = n(483753),
-    b = n(245034),
+    b = n(271860),
     y = n(388032),
-    O = n(680765);
+    O = n(685424);
 function v(e, t, n) {
     return (
         t in e
@@ -111,9 +111,9 @@ function R(e) {
             formatOption: U,
             onSelectionChange: G,
             value: Z,
-            wrapTags: B = !1,
+            wrapTags: F = !1,
         } = e,
-        F = C(e, [
+        B = C(e, [
             "selectionMode",
             "readOnly",
             "autoFocus",
@@ -133,7 +133,7 @@ function R(e) {
             "wrapTags",
         ]);
     let V = i.useRef(null),
-        { fieldProps: H } = (0, l.X)(F),
+        { fieldProps: H } = (0, l.X)(B),
         { id: Y, required: W, label: K, disabled: z } = H,
         {
             isOpen: q,
@@ -155,7 +155,7 @@ function R(e) {
         es = null != I ? I : "multiple" !== t,
         el = Array.isArray(Z) ? Z.length > 0 : null != Z,
         ec = z || n,
-        { measuredWidth: eu, itemsForMeasurement: ed } = D(er, t),
+        { measuredWidth: eu, itemsForMeasurement: ed } = w(er, t),
         ef = i.useCallback(() => {
             ec || Q(!q);
         }, [ec, Q, q]),
@@ -227,7 +227,7 @@ function R(e) {
     i.useEffect(() => {
         clearTimeout(ey.current),
             eb &&
-                !B &&
+                !F &&
                 (ey.current = setTimeout(() => {
                     var e, t;
                     null == (t = V.current) ||
@@ -238,7 +238,7 @@ function R(e) {
                             block: "end",
                         });
                 }, 10));
-    }, [eh, eb, B]);
+    }, [eh, eb, F]);
     let eO = (0, s.Z)(eo, X.setReference),
         ev = i.useCallback(
             (e) => {
@@ -252,21 +252,28 @@ function R(e) {
             },
             [eE, eh, ec],
         ),
-        eS = i.useRef(null);
+        eS = Math.max(
+            er.findIndex((e) => {
+                var t;
+                return e.id === (null == (t = eh[eh.length - 1]) ? void 0 : t.id);
+            }),
+            0,
+        ),
+        eI = i.useRef(null);
     return (
         i.useEffect(
             () => (
                 !ei &&
                     q &&
-                    (eS.current = setTimeout(() => {
+                    (eI.current = setTimeout(() => {
                         var e;
-                        return null == (e = document.getElementById((0, E.cA)(en, 0))) ? void 0 : e.focus();
+                        return null == (e = document.getElementById((0, E.cA)(en, eS))) ? void 0 : e.focus();
                     }, 10)),
                 () => {
-                    null != eS.current && clearTimeout(eS.current);
+                    null != eI.current && clearTimeout(eI.current);
                 }
             ),
-            [ei, en, q],
+            [ei, en, q, eS],
         ),
         (0, r.jsx)(
             l.g,
@@ -306,7 +313,7 @@ function R(e) {
                                             }),
                                             focusProps: { ringTarget: eo },
                                             className: o()(O.selectButton, {
-                                                [O.wrapTags]: B,
+                                                [O.wrapTags]: F,
                                                 [O.multiSelect]: "multiple" === t,
                                             }),
                                             onClick: ef,
@@ -322,7 +329,7 @@ function R(e) {
                                                 (0, r.jsxs)(c.n, {
                                                     children: [K, ", "],
                                                 }),
-                                                (0, r.jsx)(w, {
+                                                (0, r.jsx)(D, {
                                                     tagGroupRef: V,
                                                     placeholder: R,
                                                     selectionMode: t,
@@ -371,6 +378,7 @@ function R(e) {
                                                     renderListItem: (e) => (0, r.jsx)(_.W, S({}, e)),
                                                     maxVisibleItems: M,
                                                     loading: ei,
+                                                    activeDescendantIndex: eS,
                                                     typeahead: !0,
                                                 }),
                                             }),
@@ -383,7 +391,7 @@ function R(e) {
         )
     );
 }
-function D(e, t) {
+function w(e, t) {
     let { ref: n, width: a } = (0, f.ZP)(),
         o = i.useId();
     return {
@@ -414,7 +422,7 @@ function D(e, t) {
         ),
     };
 }
-function w(e) {
+function D(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: o } = e;
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {
