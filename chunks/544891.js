@@ -116,6 +116,7 @@ function E(e, t, n, r, o) {
     if (
         (t.body && b.send(t.body),
         null != t.headers && b.set(t.headers),
+        !0 === t.withCredentials && b.withCredentials(),
         null != t.reason && b.set("X-Audit-Log-Reason", encodeURIComponent(t.reason)),
         null == (c = t.attachments) ||
             c.forEach((e) => {
