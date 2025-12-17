@@ -1,15 +1,15 @@
 n.d(t, {
-    Av: () => m,
-    C9: () => h,
-    FX: () => g,
-    QV: () => p,
-    Sw: () => E,
-    tS: () => _,
+    Av: () => c,
+    FX: () => u,
+    QV: () => s,
+    Sw: () => d,
+    k$: () => o,
+    tS: () => l,
 }),
-    n(388685),
     n(781311),
     n(35282),
     n(539854),
+    n(388685),
     n(49124);
 var r = n(473749);
 function i(e, t, n) {
@@ -47,35 +47,7 @@ function o(e, t) {
         "object" == typeof e && "current" in e && (e.current = t);
     }
 }
-let s = {};
-function l(e) {
-    return null == e ? s : "function" == typeof e || "object" == typeof e ? e : s;
-}
-let c = new WeakMap();
-function u(e) {
-    let t = l(e),
-        n = c.get(t);
-    if (null != n) return n;
-    let r = (t) => {
-        if (null == t) return void e(null);
-        null != t && "function" == typeof t.getBoundingClientRect && e(t);
-    };
-    return c.set(t, r), r;
-}
-let d = new WeakMap();
-function f(e, t) {
-    let n = l(e),
-        r = l(t),
-        i = d.get(n);
-    null == i && ((i = new WeakMap()), d.set(n, i));
-    let a = i.get(r);
-    if (null != a) return a;
-    let s = (n) => {
-        o(e, n), t(n);
-    };
-    return i.set(r, s), s;
-}
-function p(e, t) {
+function s(e, t) {
     let n = (null != e ? e : "").trim(),
         r = (null != t ? t : "").trim();
     if ("" === n) return r;
@@ -89,14 +61,14 @@ function p(e, t) {
     }
     return 0 === o.length ? n : "".concat(n, " ").concat(o.join(" ")).trim();
 }
-function _(e, t) {
+function l(e, t) {
     if (null != e || null != t)
         return function () {
             for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             "function" == typeof e && e(...r), "function" == typeof t && t(...r);
         };
 }
-function m(e) {
+function c(e) {
     switch (e) {
         case "top":
         default:
@@ -109,30 +81,7 @@ function m(e) {
             return "left";
     }
 }
-function h(e, t, n, i) {
-    let a = e.props,
-        o = f(e.props.ref, u(i)),
-        s = {
-            onMouseEnter: _(a.onMouseEnter, t.onMouseEnter),
-            onMouseLeave: _(a.onMouseLeave, t.onMouseLeave),
-            onFocus: _(a.onFocus, t.onFocus),
-            onBlur: _(a.onBlur, t.onBlur),
-            onContextMenu: _(a.onContextMenu, t.onContextMenu),
-            onClick: _(a.onClick, t.onClick),
-        };
-    return (
-        null != n && "" !== n && (s["aria-describedby"] = p(a["aria-describedby"], n)),
-        "string" == typeof e.type
-            ? (s.ref = o)
-            : "buttonRef" in e.props
-              ? ((s.buttonRef = f(e.props.buttonRef, o)), (s.ref = o))
-              : "innerRef" in e.props
-                ? ((s.innerRef = f(e.props.innerRef, o)), (s.ref = o))
-                : ((s.ref = o), (s.innerRef = o)),
-        r.cloneElement(e, s)
-    );
-}
-function g(e) {
+function u(e) {
     let { tag: t, className: n, tabIndex: i, children: o, triggerHandlers: s, describedById: l, triggerRef: c } = e;
     return r.createElement(
         t,
@@ -153,7 +102,7 @@ function g(e) {
         o,
     );
 }
-function E(e) {
+function d(e) {
     if (null == e) return "";
     if ("string" == typeof e) return e;
     try {
