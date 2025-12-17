@@ -4072,6 +4072,7 @@ var np = (function (e) {
             (e.GAME_NEWS_OPENED = "game_news_opened"),
             (e.APPLICATION_OPENED = "application_opened"),
             (e.LAUNCH_GAME = "launch_game"),
+            (e.LAUNCH_NON_GAME_APPLICATION = "launch_non_game_application"),
             (e.GAME_DETECTED = "game_detected"),
             (e.ROBLOX_SUBGAME_DETECTED = "roblox_subgame_detected"),
             (e.RUNNING_GAME_HEARTBEAT = "running_game_heartbeat"),
