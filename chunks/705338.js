@@ -11,12 +11,16 @@ var r = n(447543),
     s = n(411935),
     l = n(981631);
 function c(e) {
-    let { guildId: t, invite: n } = e;
+    let { guildId: t, invite: n, forceFetch: r } = e;
     if (null != n) {
-        var r;
-        t = null == (r = n.guild) ? void 0 : r.id;
+        var i;
+        t = null == (i = n.guild) ? void 0 : i.id;
     }
-    null != t && (0, s.YL)(t, !0);
+    null != t &&
+        (0, s.YL)(t, {
+            eager: !0,
+            forceFetch: r,
+        });
 }
 async function u(e) {
     let { guildId: t, invite: n, pageIndex: s, skuId: c, slug: u } = e,

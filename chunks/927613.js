@@ -58,7 +58,7 @@ function m(e) {
     let { guildId: t, numItems: n, isEligible: a } = e,
         u = (0, i.e7)([c.Z], () => (null != t ? c.Z.getStorefrontData(t) : void 0));
     r.useEffect(() => {
-        a && null != t && null == c.Z.getStorefrontData(t) && 0 !== n && (0, l.YL)(t, !1);
+        a && null != t && null == c.Z.getStorefrontData(t) && 0 !== n && (0, l.YL)(t, { eager: !1 });
     }, [t, n, a]);
     let d = r.useMemo(() => {
             if (null == u || null == u.storefront || "loading" === u.state || "partially-fetched" === u.state)

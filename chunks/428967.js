@@ -42,6 +42,7 @@ let i = [
         r.z.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
         r.z.DISCOUNT_OFFER_ACTION_SHEET,
         r.z.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
+        r.z.GAME_SHOP_NEW_BADGE,
     ],
     s = [
         r.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
@@ -49,7 +50,6 @@ let i = [
         r.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         r.z.GAME_SERVER_HOSTING_NEW_BADGE,
         r.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
-        r.z.GAME_SHOP_NEW_BADGE,
     ],
     l = [];
 function c(e) {

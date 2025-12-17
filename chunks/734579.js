@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -12,48 +12,63 @@ var r = n(54381),
     h = n(243778),
     p = n(703656),
     g = n(164670),
-    b = n(210218),
-    m = n(705338),
-    y = n(445606),
-    O = n(633667),
-    v = n(819640),
-    j = n(434479),
-    C = n(981631),
-    x = n(921944),
-    E = n(388032),
-    S = n(323453);
-let I = i.memo(function (e) {
-    let { guild: t, selected: l } = e,
-        I = i.useRef(null),
-        _ = i.useRef(null),
-        P = (0, u.useHasAnyModalOpen)(),
-        N = (0, o.e7)([v.Z], () => v.Z.hasLayers()),
-        [Z, w] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
+    b = n(411935),
+    m = n(210218),
+    y = n(705338),
+    O = n(445606),
+    v = n(633667),
+    j = n(819640),
+    C = n(73346),
+    x = n(591759),
+    E = n(434479),
+    S = n(981631),
+    I = n(921944),
+    _ = n(388032),
+    P = n(323453);
+let N = i.memo(function (e) {
+    var t;
+    let { guild: l, selected: N } = e,
+        Z = i.useRef(null),
+        w = i.useRef(null),
+        T = (0, u.useHasAnyModalOpen)(),
+        A = (0, o.e7)([j.Z], () => j.Z.hasLayers());
     i.useEffect(() => {
-        l && Z === s.z.GAME_SHOP_NEW_BADGE && w(x.L.INDIRECT_ACTION);
-    }, [w, l, Z]);
-    let T = i.useCallback(() => {
-            var e, n;
-            w(x.L.USER_DISMISS);
-            let r = null != (n = null == (e = b.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, p.uL)(C.Z5c.CHANNELS_GAME_SHOP(t.id, r));
-        }, [t, w]),
-        A = i.useCallback(() => {
-            (0, m.eagerNavigateToSocialLayerStorefront)({ guildId: t.id });
-        }, [t.id]),
-        R = i.useCallback(() => {
-            w(x.L.USER_DISMISS);
-        }, [w]),
-        D = i.useCallback(
+        l.id === (0, g.ac)() && (0, b.Xp)(l.id);
+    }, [l.id]);
+    let R = (0, o.e7)([m.Z], () => m.Z.getAnnouncement(l.id)),
+        [D, M] = (0, h.TE)(
+            (null == R ? void 0 : R.id) != null ? s.z.GAME_SHOP_NEW_BADGE : null,
+            null != (t = null == R ? void 0 : R.id) ? t : "",
+        ),
+        L = D === s.z.GAME_SHOP_NEW_BADGE;
+    i.useEffect(() => {
+        N && L && M(I.L.INDIRECT_ACTION);
+    }, [M, N, L]);
+    let k = i.useCallback(() => {
+            var e, t;
+            M(I.L.USER_DISMISS);
+            let n = null != (t = null == (e = m.Z.getStorefrontState(l.id)) ? void 0 : e.activePage) ? t : 0;
+            (0, p.uL)(S.Z5c.CHANNELS_GAME_SHOP(l.id, n));
+        }, [l, M]),
+        G = i.useCallback(() => {
+            (0, y.eagerNavigateToSocialLayerStorefront)({
+                guildId: l.id,
+                forceFetch: L,
+            });
+        }, [l.id, L]),
+        U = i.useCallback(() => {
+            M(I.L.USER_DISMISS);
+        }, [M]),
+        B = i.useCallback(
             (e) => {
-                null != t &&
+                null != l &&
                     (0, f.jW)(e, async () => {
                         let { default: e } = await n.e("73848").then(n.bind(n, 98409));
-                        return (n) => {
-                            var i, l;
+                        return (t) => {
+                            var n, i;
                             return (0, r.jsx)(
                                 e,
-                                ((i = (function (e) {
+                                ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -77,10 +92,10 @@ let I = i.memo(function (e) {
                                             });
                                     }
                                     return e;
-                                })({}, n)),
-                                (l = l = { guild: t }),
+                                })({}, t)),
+                                (i = i = { guild: l }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -88,71 +103,91 @@ let I = i.memo(function (e) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(i)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                       }),
-                                i),
+                                n),
                             );
                         };
                     });
             },
-            [t],
+            [l],
         ),
-        M = i.useCallback(() => {
+        F = i.useCallback(() => {
             var e;
-            null == (e = I.current) || e.onMouseEnter(null, 500);
-        }, [I]),
-        L = i.useCallback(
-            (e, n, i, o) =>
-                (0, r.jsx)(j.m, {
+            null == (e = Z.current) || e.onMouseEnter(null, 500);
+        }, [Z]),
+        V = i.useCallback(
+            (e, t, n, i) =>
+                (0, r.jsx)(E.m, {
                     innerClassName: e,
-                    ref: _,
-                    id: "game-shop-".concat(t.id),
+                    ref: w,
+                    id: "game-shop-".concat(l.id),
                     renderIcon: (e) =>
                         (0, r.jsx)(d.EOn, {
                             size: "custom",
                             color: "currentColor",
                             width: 20,
                             height: 20,
-                            className: a()(e, i),
+                            className: a()(e, n),
                         }),
                     text: (0, r.jsx)(d.Text, {
                         variant: "text-md/medium",
-                        className: a()(S.name, n),
+                        className: a()(P.name, t),
                         children:
-                            (null == t ? void 0 : t.id) === (0, g.ac)()
-                                ? E.intl.string(E.t.xFQAPs)
-                                : E.intl.string(E.t.vyaWs7),
+                            (null == l ? void 0 : l.id) === (0, g.ac)()
+                                ? _.intl.string(_.t.xFQAPs)
+                                : _.intl.string(_.t.vyaWs7),
                     }),
-                    selected: l,
-                    onMouseDown: A,
-                    onClick: T,
-                    onContextMenu: D,
+                    selected: N,
+                    onMouseDown: G,
+                    onClick: k,
+                    onContextMenu: B,
                     trailing: (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(d.IGR, {
-                                text: E.intl.string(E.t.y2b7CA),
-                                color: c.Z.colors.BACKGROUND_BRAND.css,
-                            }),
-                            o,
+                            L &&
+                                (0, r.jsx)(d.IGR, {
+                                    text: _.intl.string(_.t.y2b7CA),
+                                    color: c.Z.colors.BACKGROUND_BRAND.css,
+                                }),
+                            i,
                         ],
                     }),
                 }),
-            [t.id, l, A, T, D],
-        );
+            [l.id, N, G, k, B, L],
+        ),
+        H = i.useMemo(() => {
+            let e =
+                    null != R && null != R.assetId
+                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.assetId, 512, "webp"))
+                        : void 0,
+                t =
+                    null != R && null != R.backgroundImageAssetId
+                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.backgroundImageAssetId, 1024, "webp"))
+                        : void 0;
+            if (null != e)
+                return {
+                    imageUrl: e,
+                    backgroundImageUrl: t,
+                };
+        }, [R]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(O.Z, {
-                ref: I,
-                children: L,
+            (0, r.jsx)(v.Z, {
+                ref: Z,
+                children: V,
             }),
-            P || N || (null == t ? void 0 : t.id) !== (0, g.ac)() || Z !== s.z.GAME_SHOP_NEW_BADGE
+            T || A || (null == l ? void 0 : l.id) !== (0, g.ac)() || !L || null == R
                 ? null
-                : (0, r.jsx)(y.Z, {
-                      onActionClick: T,
-                      onRender: M,
-                      onRequestClose: R,
-                      targetElementRef: _,
+                : (0, r.jsx)(O.Z, {
+                      onActionClick: k,
+                      onActionMouseDown: G,
+                      onRender: F,
+                      onRequestClose: U,
+                      targetElementRef: w,
+                      skuImageDetails: H,
+                      title: _.intl.string(_.t["7PvvS9"]),
+                      body: _.intl.formatToPlainString(_.t["9J4h1a"], { applicationName: R.applicationName }),
                   }),
         ],
     });

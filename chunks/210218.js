@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => A }), n(415506);
+n.d(t, { Z: () => P }), n(415506);
 var i,
     a = n(442837),
     o = n(570140),
@@ -62,17 +62,18 @@ function f(e) {
 }
 let p = {},
     _ = {},
-    m = {};
-function h() {
+    m = {},
+    h = {};
+function g() {
     m = {};
 }
-function g(e) {
+function E(e) {
     var t;
     let { applicationId: n, userIds: r } = e,
         i = f(r);
     m = d(c({}, m), { [n]: d(c({}, null != (t = m[n]) ? t : {}), { [i]: { state: "loading" } }) });
 }
-function E(e) {
+function b(e) {
     var t;
     let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: o } = e,
         s = f(i);
@@ -89,19 +90,19 @@ function E(e) {
         }),
     });
 }
-function b(e) {
+function y(e) {
     var t;
     let { applicationId: n, userIds: r } = e,
         i = f(r);
     if (null != m[n] && null != m[n][i] && "success" === m[n][i].state) return !1;
     m = d(c({}, m), { [n]: d(c({}, null != (t = m[n]) ? t : {}), { [i]: { state: "error" } }) });
 }
-function y(e) {
+function O(e) {
     let { guildId: t } = e,
         n = _[t];
     (_[t] = d(c({}, n), { state: "loading" })), (_ = c({}, _));
 }
-function O(e) {
+function v(e) {
     let { guildId: t, storefront: n } = e;
     (_[t] = {
         storefront: n,
@@ -110,7 +111,7 @@ function O(e) {
     }),
         (_ = c({}, _));
 }
-function v(e) {
+function S(e) {
     let { guildId: t, storefront: n } = e,
         r = _[t];
     (null == r ? void 0 : r.storefront) != null
@@ -122,7 +123,7 @@ function v(e) {
           }),
         (_ = c({}, _));
 }
-function S(e) {
+function I(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
         let e = _[t];
@@ -137,7 +138,7 @@ function S(e) {
         };
     _ = c({}, _);
 }
-function I(e) {
+function T(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
     (p[t] = {
         activePage: n,
@@ -145,13 +146,17 @@ function I(e) {
     }),
         (p = c({}, p));
 }
-function T() {
+function C(e) {
+    let { guildId: t, announcement: n } = e;
+    (h[t] = n), (h = c({}, h));
+}
+function A() {
     if (r === s.default.locale) return !1;
     (r = s.default.locale), (p = {}), (_ = {}), (m = {});
 }
-class C extends (i = a.ZP.Store) {
+class N extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], A), (r = s.default.locale);
     }
     getStorefrontData(e) {
         return _[e];
@@ -163,16 +168,20 @@ class C extends (i = a.ZP.Store) {
         var n;
         if (null != t && 0 !== t.length) return null == (n = m[e]) ? void 0 : n[f(t)];
     }
+    getAnnouncement(e) {
+        return h[e];
+    }
 }
-l(C, "displayName", "SocialLayerStorefrontStore");
-let A = new C(o.Z, {
-    LOGOUT: h,
-    SOCIAL_LAYER_STOREFRONT_LOAD: y,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: O,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: v,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: S,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: I,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: E,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: b,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: g,
+l(N, "displayName", "SocialLayerStorefrontStore");
+let P = new N(o.Z, {
+    LOGOUT: g,
+    SOCIAL_LAYER_STOREFRONT_LOAD: O,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: v,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: S,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: I,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: T,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: b,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: y,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: E,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: C,
 });

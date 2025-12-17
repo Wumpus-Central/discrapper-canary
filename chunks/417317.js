@@ -10,7 +10,7 @@ function r(e) {
         d = (0, i.e7)([o.Z], () => (null != n ? o.Z.getStorefrontData(n) : void 0), [n]);
     return (
         l.useEffect(() => {
-            null != n && r && (0, a.YL)(n, !1);
+            null != n && r && (0, a.YL)(n, { eager: !1 });
         }, [n, d, r]),
         d
     );
