@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => ei,
-    Zp: () => et,
+    C: () => X,
+    Z: () => q,
 }),
     n(388685);
 var r = n(54381),
@@ -45,92 +45,19 @@ var r = n(54381),
     B = n(231338),
     V = n(388032),
     H = n(171532);
-function Y(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function W(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                Y(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function K(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function z(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : K(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function q(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = Q(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function Q(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let X = 80,
-    J = [
+let Y = 80,
+    W = [
         [0, 30],
         [0, 30],
         [0, 20],
         [0, 0],
     ],
-    $ = 30,
-    ee = 3;
-var et = (function (e) {
+    K = 30,
+    z = 3;
+var q = (function (e) {
     return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.EMBEDDED = 2)] = "EMBEDDED"), e;
 })({});
-function en(e) {
+function Q(e) {
     let {
             guildId: t,
             sku: n,
@@ -182,38 +109,51 @@ function en(e) {
         ],
     });
 }
-function er(e) {
-    var t, n, a, s, c, p, b, O, R, D;
+function X(e) {
+    var t, n, a, s, c, b, O, D, x, q;
     let {
-            isVisible: x,
-            positionInSection: k,
-            applicationId: Y,
-            skuId: W,
-            variant: K = 0,
-            guildId: z,
-            onClick: q,
-            className: Q,
-            analyticsLocations: et,
+            positionInSection: X,
+            applicationId: J,
+            skuId: $,
+            variant: ee = 0,
+            guildId: et,
+            onClick: en,
+            className: er,
+            analyticsLocations: ei,
         } = e,
-        er = i.useRef(null),
-        ei = (0, f.e7)([S.Z], () => S.Z.get(W)),
-        ea = (0, f.e7)([v.Z], () => (0, d.wjy)(v.Z.theme)),
-        eo = (0, f.e7)([m.Z], () => m.Z.useReducedMotion),
-        { isHoveringOrFocusing: es } = (0, y.Z)(er),
-        el = (0, A.oR)(),
-        { analyticsLocations: ec } = (0, g.ZP)(null != et ? et : []),
-        eu = i.useRef({
-            positionInSection: k,
-            analyticsLocations: ec,
+        ea = i.useRef(null),
+        eo = (0, f.e7)([S.Z], () => S.Z.get($)),
+        es = (0, f.e7)([v.Z], () => (0, d.wjy)(v.Z.theme)),
+        el = (0, f.e7)([m.Z], () => m.Z.useReducedMotion),
+        { isHoveringOrFocusing: ec } = (0, y.Z)(ea),
+        eu = (0, A.oR)(),
+        { analyticsLocations: ed } = (0, g.ZP)(null != ei ? ei : []),
+        ef = i.useRef({
+            positionInSection: X,
+            analyticsLocations: ed,
         }),
-        { handleCardHover: ed, handleCardUnhover: ef } = (0, U.A)(W, el, k, ec),
-        { handleCardVisibilityChange: ep } = (0, G.X)(W, el, k, ec);
+        [ep, e_] = i.useState(!1),
+        em = (0, R.Z)($, ep),
+        eh = i.useCallback((e) => {
+            e_(e);
+        }, []),
+        eg = i.useMemo(
+            () =>
+                l()(H.card, {
+                    [H.cardSmall]: 0 === ee,
+                    [H.cardMedium]: 1 === ee,
+                    [H.cardEmbedded]: 2 === ee,
+                }),
+            [ee],
+        ),
+        { handleCardHover: eE, handleCardUnhover: eb } = (0, U.A)($, eu, X, ed),
+        { handleCardVisibilityChange: ey } = (0, G.X)($, eu, X, ed);
     i.useEffect(() => {
-        ep(x);
-    }, [x]);
-    let e_ = i.useCallback(
+        ey(ep);
+    }, [ep]);
+    let eO = i.useCallback(
             (e) => {
-                let { analyticsLocations: t, positionInSection: n } = eu.current,
+                let { analyticsLocations: t, positionInSection: n } = ef.current,
                     {
                         sessionId: r,
                         guildId: i,
@@ -223,10 +163,10 @@ function er(e) {
                         pageSectionTitle: l,
                         isUserGuildMember: c,
                         pageHasLeaderboard: u,
-                    } = el;
+                    } = eu;
                 I.default.track(F.rMx.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED, {
                     slayer_storefront_session_id: r,
-                    sku_id: W,
+                    sku_id: $,
                     guild_id: i,
                     page_index: a,
                     page_title: o,
@@ -239,246 +179,228 @@ function er(e) {
                     location_stack: t,
                 });
             },
-            [W, el],
+            [$, eu],
         ),
-        { primaryIconAsset: em, primaryIconLabel: eh } = i.useMemo(() => (0, C.FE)(ei, Y), [ei, Y]),
-        eg = (0, f.e7)([N.Z], () => {
+        { primaryIconAsset: ev, primaryIconLabel: eS } = i.useMemo(() => (0, C.FE)(eo, J), [eo, J]),
+        eI = (0, f.e7)([N.Z], () => {
             var e, t;
-            return null != z && null != (t = null == (e = N.Z.getStorefrontState(z)) ? void 0 : e.activePage) ? t : 0;
+            return null != et && null != (t = null == (e = N.Z.getStorefrontState(et)) ? void 0 : e.activePage) ? t : 0;
         }),
-        eE = i.useMemo(() => {
+        eT = i.useMemo(() => {
             var e, t;
             if (
-                (null == ei || null == (t = ei.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
+                (null == eo || null == (t = eo.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
                 null
             )
                 return null;
             let n = u()(),
-                r = Math.max(u()(ei.tenantMetadata.socialLayer.expiresAt).diff(n, "days"), 1);
-            return r <= ee ? V.intl.format(V.t.PWw4Vp, { days: r }) : null;
-        }, [null == ei || null == (n = ei.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
-        eb = (0, C.a7)(ei),
-        [ey, eO] = (0, E.Cf)(null == eb ? void 0 : eb.toString(), "#000000"),
-        ev = i.useMemo(() => {
-            let e = o()(ey).darken(1.5).alpha(0.9).hex(),
-                t = o()(ey).alpha(0).hex(),
-                [n, r] = J[K];
-            return 0 === n && 0 === r
-                ? "none"
-                : "linear-gradient(to top, "
+                r = Math.max(u()(eo.tenantMetadata.socialLayer.expiresAt).diff(n, "days"), 1);
+            return r <= z ? V.intl.format(V.t.PWw4Vp, { days: r }) : null;
+        }, [null == eo || null == (n = eo.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
+        eC = (0, C.a7)(eo),
+        [eA, eN] = (0, E.Cf)(null == eC ? void 0 : eC.toString(), "#000000"),
+        eP = i.useMemo(() => {
+            let e = o()(eA).darken(1.5).alpha(0.9).hex(),
+                t = o()(eA).alpha(0).hex(),
+                [n, r] = W[ee];
+            return (0 !== n || 0 !== r) && em
+                ? "linear-gradient(to top, "
                       .concat(e, " ")
-                      .concat($ + n, "%, ")
+                      .concat(K + n, "%, ")
                       .concat(t, " ")
-                      .concat($ + r, "%)");
-        }, [ey, K]),
-        eS = i.useCallback(() => {
-            (0, w.eagerNavigateToSocialLayerStorefront)({ guildId: z });
-        }, [z]),
-        eI = i.useCallback(
+                      .concat(K + r, "%)")
+                : "none";
+        }, [eA, ee, em]),
+        eR = i.useCallback(() => {
+            (0, w.eagerNavigateToSocialLayerStorefront)({ guildId: et });
+        }, [et]),
+        ew = i.useCallback(
             (e) => {
-                if ((e_(Z.rZ.CARD), null != q)) return void q(e);
-                null != z &&
+                if ((eO(Z.rZ.CARD), null != en)) return void en(e);
+                null != et &&
                     (0, P.Z)({
-                        guildId: z,
-                        pageIndex: eg,
-                        skuId: W,
-                        slug: null == ei ? void 0 : ei.slug,
+                        guildId: et,
+                        pageIndex: eI,
+                        skuId: $,
+                        slug: null == eo ? void 0 : eo.slug,
                     });
             },
-            [e_, z, W, q, eg, null == ei ? void 0 : ei.slug],
+            [eO, et, $, en, eI, null == eo ? void 0 : eo.slug],
         );
-    if (null == ei) return null;
-    let eT = (0, C.Do)(ei);
-    return (0, r.jsx)(d.tEY, {
-        children: (0, r.jsxs)(_.kL8, {
-            onClick: eI,
-            onMouseDown: eS,
-            onMouseEnter: ed,
-            onMouseLeave: ef,
-            className: l()(
-                {
-                    [H.cardAnimation]: !eo && 2 !== K,
-                    [H.cardDark]: ea,
-                    [ea ? H.cardDarkHighlighted : H.cardHighlighted]: es,
-                },
-                Q,
-            ),
-            ref: er,
-            "aria-label": ei.name,
-            children: [
-                null != eE &&
-                    (0, r.jsx)(_.IGR, {
-                        text: eE,
-                        disableColor: !0,
-                        className: H.badge,
+    if (null == eo) return null;
+    let eD = (0, C.Do)(eo);
+    return (0, r.jsx)(p.$, {
+        innerRef: ea,
+        onChange: eh,
+        threshold: 0,
+        children: (0, r.jsx)(d.tEY, {
+            children: (0, r.jsxs)(_.kL8, {
+                onClick: ew,
+                onMouseDown: eR,
+                onMouseEnter: eE,
+                onMouseLeave: eb,
+                className: l()(
+                    eg,
+                    {
+                        [H.cardAnimation]: !el && 2 !== ee,
+                        [H.cardDark]: es,
+                        [es ? H.cardDarkHighlighted : H.cardHighlighted]: ec,
+                        [H.cardNotLoaded]: !em,
+                    },
+                    er,
+                ),
+                ref: ea,
+                "aria-label": eo.name,
+                children: [
+                    null != eT &&
+                        (0, r.jsx)(_.IGR, {
+                            text: eT,
+                            disableColor: !0,
+                            className: H.badge,
+                        }),
+                    (0, r.jsx)(Q, {
+                        guildId: et,
+                        sku: eo,
+                        isCardHovered: ec,
+                        variant: ee,
+                        trackCardClick: eO,
+                        analyticsLocations: ed,
+                        analyticsContext: eu,
                     }),
-                (0, r.jsx)(en, {
-                    guildId: z,
-                    sku: ei,
-                    isCardHovered: es,
-                    variant: K,
-                    trackCardClick: e_,
-                    analyticsLocations: ec,
-                    analyticsContext: el,
-                }),
-                null != eT
-                    ? (0, r.jsx)(j.p, {
-                          containerClassName: H.cardImageContainer,
-                          foregroundImageClassName: H.cardImage,
-                          cardImage: eT,
-                          altText: ei.name,
-                          shape: "custom",
-                          backgroundImageClassName: H.cardBackgroundImage,
-                          cardBackgroundImage: eb,
-                      })
-                    : (0, r.jsx)("div", {
-                          className: H.ticketIconContainer,
-                          children: (0, r.jsx)(d.Prq, {
-                              color: "white",
-                              size: "custom",
-                              height: X,
-                              width: X,
-                              className: H.ticketIcon,
+                    null != eD
+                        ? em
+                            ? (0, r.jsx)(j.p, {
+                                  containerClassName: H.cardImageContainer,
+                                  foregroundImageClassName: H.cardImage,
+                                  cardImage: eD,
+                                  altText: eo.name,
+                                  shape: "custom",
+                                  backgroundImageClassName: H.cardBackgroundImage,
+                                  cardBackgroundImage: eC,
+                              })
+                            : (0, r.jsx)(k.$, {})
+                        : (0, r.jsx)("div", {
+                              className: H.ticketIconContainer,
+                              children: (0, r.jsx)(d.Prq, {
+                                  color: "white",
+                                  size: "custom",
+                                  height: Y,
+                                  width: Y,
+                                  className: H.ticketIcon,
+                              }),
                           }),
-                      }),
-                2 !== K
-                    ? (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)("div", {
-                                  className: H.bottomGradient,
-                                  style: { background: ev },
-                              }),
-                              (0, r.jsxs)("div", {
-                                  className: H.details,
-                                  children: [
-                                      (0, r.jsx)("div", {
-                                          className: H.titleContainer,
-                                          children: (0, r.jsx)(_.Text, {
-                                              color: "always-white",
-                                              variant: "text-md/medium",
-                                              lineClamp: 1,
-                                              children: ei.name,
-                                          }),
-                                      }),
-                                      (0, r.jsxs)("div", {
-                                          className: H.descriptionContainer,
-                                          children: [
-                                              null != em &&
-                                                  (0, r.jsx)("img", {
-                                                      src: em.toString(),
-                                                      alt: eh,
-                                                      className: H.iconAsset,
-                                                  }),
-                                              (0, r.jsx)(_.Text, {
-                                                  variant: "text-md/bold",
-                                                  color: "always-white",
-                                                  lineClamp: 1,
-                                                  children: (0, T.T4)(
-                                                      null != (b = null == (a = ei.price) ? void 0 : a.amount) ? b : 0,
-                                                      null != (O = null == (s = ei.price) ? void 0 : s.currency)
-                                                          ? O
-                                                          : B.pK.USD,
-                                                  ),
-                                              }),
-                                          ],
-                                      }),
-                                  ],
-                              }),
-                              (0, r.jsx)("div", {
-                                  className: H.buttonHover,
-                                  children: (0, r.jsxs)(d.hE2, {
-                                      wrap: !1,
-                                      fullWidth: !0,
+                    2 !== ee
+                        ? (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsx)("div", {
+                                      className: H.bottomGradient,
+                                      style: { background: eP },
+                                  }),
+                                  (0, r.jsxs)("div", {
+                                      className: H.details,
                                       children: [
-                                          (0, r.jsx)(d.zxk, {
-                                              variant: "primary",
-                                              onClick: (e) => {
-                                                  e.stopPropagation(),
-                                                      e_(Z.rZ.BUY_BUTTON),
-                                                      (0, L.P)(
-                                                          ei,
-                                                          { isGift: !1 },
-                                                          {
-                                                              analyticsLocations: [
-                                                                  h.Z.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
-                                                              ],
-                                                          },
-                                                      );
-                                              },
-                                              text: V.intl.format(V.t.Xp5WTn, {
-                                                  price: (0, T.T4)(
-                                                      null != (R = null == (c = ei.price) ? void 0 : c.amount) ? R : 0,
-                                                      null != (D = null == (p = ei.price) ? void 0 : p.currency)
-                                                          ? D
-                                                          : B.pK.USD,
-                                                  ),
-                                              }),
-                                              fullWidth: !0,
+                                          (0, r.jsx)("div", {
+                                              className: H.titleContainer,
+                                              children: em
+                                                  ? (0, r.jsx)(_.Text, {
+                                                        color: "always-white",
+                                                        variant: "text-md/medium",
+                                                        lineClamp: 1,
+                                                        children: eo.name,
+                                                    })
+                                                  : (0, r.jsx)(k.G, {}),
                                           }),
-                                          (0, r.jsx)(M.Z, {
-                                              onGift: (e) => {
-                                                  e.stopPropagation(),
-                                                      e_(Z.rZ.GIFT_BUTTON),
-                                                      (0, L.P)(
-                                                          ei,
-                                                          { isGift: !0 },
-                                                          {
-                                                              analyticsLocations: [
-                                                                  h.Z.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
-                                                              ],
-                                                          },
-                                                      );
-                                              },
+                                          (0, r.jsx)("div", {
+                                              className: H.descriptionContainer,
+                                              children: em
+                                                  ? (0, r.jsxs)(r.Fragment, {
+                                                        children: [
+                                                            null != ev &&
+                                                                (0, r.jsx)("img", {
+                                                                    src: ev.toString(),
+                                                                    alt: eS,
+                                                                    className: H.iconAsset,
+                                                                }),
+                                                            (0, r.jsx)(_.Text, {
+                                                                variant: "text-md/bold",
+                                                                color: "always-white",
+                                                                lineClamp: 1,
+                                                                children: (0, T.T4)(
+                                                                    null !=
+                                                                        (O = null == (a = eo.price) ? void 0 : a.amount)
+                                                                        ? O
+                                                                        : 0,
+                                                                    null !=
+                                                                        (D =
+                                                                            null == (s = eo.price)
+                                                                                ? void 0
+                                                                                : s.currency)
+                                                                        ? D
+                                                                        : B.pK.USD,
+                                                                ),
+                                                            }),
+                                                        ],
+                                                    })
+                                                  : (0, r.jsx)(k.G, {}),
                                           }),
                                       ],
                                   }),
-                              }),
-                          ],
-                      })
-                    : null,
-            ],
-        }),
-    });
-}
-function ei(e) {
-    var { variant: t = 0 } = e,
-        n = q(e, ["variant"]);
-    let [a, o] = i.useState(!1),
-        s = (0, R.Z)(n.skuId, a),
-        c = i.useRef(null),
-        u = i.useCallback((e) => {
-            o(e);
-        }, []),
-        d = i.useMemo(
-            () =>
-                l()(
-                    H.card,
-                    {
-                        [H.cardSmall]: 0 === t,
-                        [H.cardMedium]: 1 === t,
-                        [H.cardEmbedded]: 2 === t,
-                    },
-                    n.className,
-                ),
-            [t, n.className],
-        );
-    return (0, r.jsx)(p.$, {
-        innerRef: c,
-        onChange: u,
-        threshold: 0,
-        children: (0, r.jsx)("div", {
-            ref: c,
-            className: l()({ [H.cardContainer]: 2 === t }),
-            children: s
-                ? (0, r.jsx)(
-                      er,
-                      z(W({}, n), {
-                          variant: t,
-                          className: d,
-                          isVisible: a,
-                      }),
-                  )
-                : (0, r.jsx)(k.Z, { className: d }),
+                                  (0, r.jsx)("div", {
+                                      className: H.buttonHover,
+                                      children: (0, r.jsxs)(d.hE2, {
+                                          wrap: !1,
+                                          fullWidth: !0,
+                                          children: [
+                                              (0, r.jsx)(d.zxk, {
+                                                  variant: "primary",
+                                                  onClick: (e) => {
+                                                      e.stopPropagation(),
+                                                          eO(Z.rZ.BUY_BUTTON),
+                                                          (0, L.P)(
+                                                              eo,
+                                                              { isGift: !1 },
+                                                              {
+                                                                  analyticsLocations: [
+                                                                      h.Z.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
+                                                                  ],
+                                                              },
+                                                          );
+                                                  },
+                                                  text: V.intl.format(V.t.Xp5WTn, {
+                                                      price: (0, T.T4)(
+                                                          null != (x = null == (c = eo.price) ? void 0 : c.amount)
+                                                              ? x
+                                                              : 0,
+                                                          null != (q = null == (b = eo.price) ? void 0 : b.currency)
+                                                              ? q
+                                                              : B.pK.USD,
+                                                      ),
+                                                  }),
+                                                  fullWidth: !0,
+                                              }),
+                                              (0, r.jsx)(M.Z, {
+                                                  onGift: (e) => {
+                                                      e.stopPropagation(),
+                                                          eO(Z.rZ.GIFT_BUTTON),
+                                                          (0, L.P)(
+                                                              eo,
+                                                              { isGift: !0 },
+                                                              {
+                                                                  analyticsLocations: [
+                                                                      h.Z.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
+                                                                  ],
+                                                              },
+                                                          );
+                                                  },
+                                              }),
+                                          ],
+                                      }),
+                                  }),
+                              ],
+                          })
+                        : null,
+                ],
+            }),
         }),
     });
 }

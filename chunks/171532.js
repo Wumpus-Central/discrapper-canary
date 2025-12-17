@@ -1,6 +1,5 @@
 e.exports = {
     card: "abfd909f61de9fdf-card",
-    cardContainer: "abfd909f61de9fdf-cardContainer",
     cardMedium: "abfd909f61de9fdf-cardMedium",
     cardSmall: "abfd909f61de9fdf-cardSmall",
     cardImageContainer: "abfd909f61de9fdf-cardImageContainer",
@@ -8,6 +7,7 @@ e.exports = {
     cardDark: "abfd909f61de9fdf-cardDark abfd909f61de9fdf-card",
     cardHighlighted: "abfd909f61de9fdf-cardHighlighted",
     cardDarkHighlighted: "abfd909f61de9fdf-cardDarkHighlighted",
+    cardNotLoaded: "abfd909f61de9fdf-cardNotLoaded",
     cardAnimation: "abfd909f61de9fdf-cardAnimation",
     cardBackgroundImage: "abfd909f61de9fdf-cardBackgroundImage",
     cardImage: "abfd909f61de9fdf-cardImage",
@@ -27,6 +27,5 @@ e.exports = {
     cardButtonContainerHovered: "abfd909f61de9fdf-cardButtonContainerHovered",
     pulse: "abfd909f61de9fdf-pulse",
     placeholderCard: "abfd909f61de9fdf-placeholderCard",
-    placeholderDescription: "abfd909f61de9fdf-placeholderDescription",
-    placeholderTitle: "abfd909f61de9fdf-placeholderTitle",
+    placeholderText: "abfd909f61de9fdf-placeholderText",
 };

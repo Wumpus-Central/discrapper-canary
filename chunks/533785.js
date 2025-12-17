@@ -33,11 +33,11 @@ function d(e) {
                       null != t &&
                           (0, l.jsx)("div", {
                               className: r.cardContainer,
-                              children: (0, l.jsx)(s.ZP, {
+                              children: (0, l.jsx)(s.C, {
                                   positionInSection: 0,
                                   applicationId: d,
                                   skuId: t,
-                                  variant: s.Zp.MEDIUM,
+                                  variant: s.Z.MEDIUM,
                                   guildId: c,
                                   analyticsLocations: u,
                               }),

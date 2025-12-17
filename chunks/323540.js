@@ -71,7 +71,7 @@ function x(e) {
                           applicationId: x,
                           guildId: _,
                           skuIds: L ? void 0 : Z,
-                          variant: c.Zp.MEDIUM,
+                          variant: c.Z.MEDIUM,
                       }),
                       (0, l.jsx)(g.Z, {
                           analyticsSectionId: "non-featured-top-section",

@@ -7,14 +7,7 @@ var l = t(54381),
     r = t(727366),
     d = t(389901);
 function c(e) {
-    let {
-            analyticsSectionId: n,
-            applicationId: t,
-            guildId: c,
-            sectionTitle: u,
-            skuIds: f,
-            variant: g = s.Zp.SMALL,
-        } = e,
+    let { analyticsSectionId: n, applicationId: t, guildId: c, sectionTitle: u, skuIds: f, variant: g = s.Z.SMALL } = e,
         p = i.useMemo(
             () => ({
                 pageSection: n,

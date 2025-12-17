@@ -70043,6 +70043,11 @@ html ._614623a0ca8129b8-progress {
     box-shadow: 0 0 15px 1px var(--primary-700)
 }
 
+.abfd909f61de9fdf-cardNotLoaded {
+    cursor: default;
+    pointer-events: none
+}
+
 .abfd909f61de9fdf-cardAnimation {
     transform: scale(100%)
 }
@@ -70270,17 +70275,16 @@ html ._614623a0ca8129b8-progress {
     pointer-events: none
 }
 
-.full-motion .abfd909f61de9fdf-placeholderCard {
-    animation: abfd909f61de9fdf-pulse 2s ease-in-out infinite alternate;
-    animation-fill-mode: backwards
-}
-
-.abfd909f61de9fdf-placeholderDescription,
-.abfd909f61de9fdf-placeholderTitle {
+.abfd909f61de9fdf-placeholderText {
     background-color: var(--icon-muted);
     border-radius: var(--radius-xs);
     height: var(--space-24);
     opacity: .1
+}
+
+.full-motion .abfd909f61de9fdf-placeholderCard {
+    animation: abfd909f61de9fdf-pulse 2s ease-in-out infinite alternate;
+    animation-fill-mode: backwards
 }
 
 .e95ba0bb7b0945f9-container {
