@@ -102,6 +102,7 @@ function S(e) {
                                       showIcons: !1,
                                       giftingOrigin: y.Wt.SHOP_PAGE,
                                       profileOwner: P,
+                                      additionalUserIds: null == P ? a : void 0,
                                   }),
                               },
                               e.skuId,

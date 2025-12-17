@@ -114,10 +114,10 @@ let C = (e) => {
     );
 };
 function A(e) {
-    let { loadId: t, applicationId: n, isGift: i = !1, giftRecipient: a, giftingOrigin: s } = e,
-        { analyticsLocations: u } = C(e);
+    let { loadId: t, applicationId: n, isGift: i = !1, giftRecipient: a, giftingOrigin: s, additionalUserIds: u } = e,
+        { analyticsLocations: f } = C(e);
     return (0, r.jsx)(o.Gt, {
-        value: u,
+        value: f,
         children: (0, r.jsx)(c.PaymentContextProvider, {
             loadId: t,
             stepConfigs: T(i),
@@ -131,6 +131,7 @@ function A(e) {
                     isGift: i,
                     giftRecipient: a,
                     giftingOrigin: s,
+                    additionalUserIds: u,
                     children: (0, r.jsx)(I, v({}, e)),
                 }),
             }),

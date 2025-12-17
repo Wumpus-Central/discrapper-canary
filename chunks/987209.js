@@ -20,73 +20,82 @@ let m = p.Cj.STANDARD_BOX,
     h = void 0,
     [g, E, b] = (0, c.Z)();
 function y(e) {
-    let { isGift: t = !1, giftRecipient: n, giftMessage: c, giftStyle: f, giftingOrigin: p, children: E } = e,
-        { selectedSkuId: b } = (0, d.JL)(),
-        [y, O] = i.useState(n),
-        [v, S] = i.useState(),
-        [I, T] = i.useState(!1),
-        C = (0, u.pO)(y),
-        A = h;
-    C && (A = null != f ? f : m);
-    let [N, P] = i.useState(A),
-        R = (0, l.hi)(),
-        w = (0, l.yX)(),
-        [D, x] = i.useState(),
-        [L, j] = i.useState(
-            t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? _.intl.string(_.t.ZkOo1U) : c,
+    let {
+            isGift: t = !1,
+            giftRecipient: n,
+            giftMessage: c,
+            giftStyle: f,
+            giftingOrigin: p,
+            children: E,
+            additionalUserIds: b,
+        } = e,
+        { selectedSkuId: y } = (0, d.JL)(),
+        [O, v] = i.useState(n),
+        [S, I] = i.useState(),
+        [T, C] = i.useState(!1),
+        A = (0, u.pO)(O),
+        N = h;
+    A && (N = null != f ? f : m);
+    let [P, R] = i.useState(N),
+        w = (0, l.hi)(),
+        D = (0, l.yX)(),
+        [x, L] = i.useState(),
+        [j, M] = i.useState(
+            t && (0, u.MY)(O) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? _.intl.string(_.t.ZkOo1U) : c,
         ),
-        [M, k] = i.useState(void 0),
-        [U, G] = i.useState(void 0),
-        Z = (0, u.E5)(b, t),
-        [F, B] = i.useState(!1),
-        [V, H] = i.useState(!1),
-        [Y, W] = i.useState(),
-        K = i.useCallback(
+        [k, U] = i.useState(void 0),
+        [G, Z] = i.useState(void 0),
+        F = (0, u.E5)(y, t),
+        [B, V] = i.useState(!1),
+        [H, Y] = i.useState(!1),
+        [W, K] = i.useState(),
+        z = i.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    H(!0),
-                    (0, s.YD)(y, Z)
+                    Y(!0),
+                    (0, s.YD)(O, F)
                         .then(() => {
-                            H(!1), null == t || t(), B(!0);
+                            Y(!1), null == t || t(), V(!0);
                         })
                         .catch((e) => {
-                            H(!1), W(e), B(!0);
+                            Y(!1), K(e), V(!0);
                         })
                 );
             },
-            [y, Z, H, B, W],
+            [O, F, Y, V, K],
         ),
-        z = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
+        q = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(g.Provider, {
         value: {
             isGift: t,
-            giftCode: Z,
+            giftCode: F,
             giftMessage: c,
-            giftRecipient: y,
-            setGiftRecipient: O,
-            giftRecipientError: v,
-            setGiftRecipientError: S,
-            validatingGiftRecipient: I,
-            setValidatingGiftRecipient: T,
-            soundEffect: M,
-            setSoundEffect: k,
-            emojiConfetti: U,
-            setEmojiConfetti: G,
-            customGiftMessage: L,
-            setCustomGiftMessage: j,
-            selectedGiftStyle: N,
-            setSelectedGiftStyle: P,
-            sendGiftMessage: K,
-            hasSentMessage: F,
-            isSendingMessage: V,
-            giftMessageError: Y,
-            recommendedGiftSkuIds: z,
+            giftRecipient: O,
+            setGiftRecipient: v,
+            giftRecipientError: S,
+            setGiftRecipientError: I,
+            validatingGiftRecipient: T,
+            setValidatingGiftRecipient: C,
+            soundEffect: k,
+            setSoundEffect: U,
+            emojiConfetti: G,
+            setEmojiConfetti: Z,
+            customGiftMessage: j,
+            setCustomGiftMessage: M,
+            selectedGiftStyle: P,
+            setSelectedGiftStyle: R,
+            sendGiftMessage: z,
+            hasSentMessage: B,
+            isSendingMessage: H,
+            giftMessageError: W,
+            recommendedGiftSkuIds: q,
             giftingOrigin: p,
-            claimableRewards: R,
-            claimableVariants: w,
-            selectedGiftingPromotionReward: D,
-            setSelectedGiftingPromotionReward: x,
+            claimableRewards: w,
+            claimableVariants: D,
+            selectedGiftingPromotionReward: x,
+            setSelectedGiftingPromotionReward: L,
+            additionalUserIds: b,
         },
         children: E,
     });
