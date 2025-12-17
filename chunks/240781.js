@@ -97,7 +97,7 @@ let y = [
             { product: w, purchase: S } = (0, m.Z)(null == l ? void 0 : l.skuId),
             C = v.ZP.canUseCollectibles(t),
             I = null != S ? (0, u.qS)(S) : (0, u.G1)(w),
-            E = !C && I,
+            E = !C && (0, u.qS)(S),
             A = (0, h.M)(!I || C),
             T = (0, p.ag)(S),
             _ = (0, p.kd)(w),
