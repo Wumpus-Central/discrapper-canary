@@ -93,6 +93,7 @@ function N(e) {
                       children: (0, a.jsx)("div", {
                           className: E.buttonWrapper,
                           children: (0, a.jsx)(c.zx, {
+                              "data-migration-pending": !0,
                               buttonRef: j,
                               type: "submit",
                               size: c.zx.Sizes.LARGE,

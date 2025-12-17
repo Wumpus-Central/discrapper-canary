@@ -136,7 +136,7 @@ let M = (e) => {
             G = (0, h.Dt)(),
             { analyticsLocations: Z } = (0, _.ZP)(),
             { shouldHideGuildPurchaseEntryPoints: F } = (0, g.uP)(null == s ? void 0 : s.id),
-            B = (null == t ? void 0 : t.paymentGateway) === w.gg$.APPLE_PARTNER;
+            B = null == t ? void 0 : t.isPurchasedViaAppleGeneric;
         if (null == a || null == n || null == b) return null;
         let V = () => {
                 null != s &&

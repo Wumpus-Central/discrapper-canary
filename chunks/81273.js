@@ -49,7 +49,7 @@ let D = "MMM DD, YYYY",
             { loading: q, getTrialPurchaseEligibility: Q } = (0, C.F)(),
             X = (0, S.oC)(null == e ? void 0 : e.id),
             { analyticsLocations: J } = (0, p.ZP)(),
-            $ = (null == B ? void 0 : B.paymentGateway) === R.gg$.APPLE_PARTNER,
+            $ = null == B ? void 0 : B.isPurchasedViaAppleGeneric,
             ee = !x && null != F && H && !M && !K && !z && !$;
         M || (x && !L)
             ? (s = w.intl.string(w.t.pQK5ho))
