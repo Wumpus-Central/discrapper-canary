@@ -1,4 +1,8 @@
-function r(e, t, n) {
+n.d(t, { Z: () => s }), n(388685);
+var r = n(512722),
+    i = n.n(r),
+    a = n(28682);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +15,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => i }), n(388685);
-class i {
+class s {
     register(e) {
         let { node: t, parentPanelKey: n, parentTabKey: r, parentCategoryKey: i, parentAccordionKey: a } = e;
         this.map.set(t.key, {
@@ -36,7 +39,14 @@ class i {
     getDefaultPanel() {
         return this.defaultPanel;
     }
+    getPanelOrThrow(e) {
+        let t = this.get(e);
+        return (
+            i()((null == t ? void 0 : t.type) === a.Jq.PANEL, "[SettingsDirectory] key is not for a panel: ".concat(e)),
+            t
+        );
+    }
     constructor() {
-        r(this, "map", new Map()), r(this, "defaultPanel", void 0);
+        o(this, "map", new Map()), o(this, "defaultPanel", void 0);
     }
 }

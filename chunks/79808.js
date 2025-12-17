@@ -26,7 +26,11 @@ function y(e) {
         x = d.Z.useField("currentPanelKey"),
         { node: S, visibleDirectory: P, accessibleDirectory: C } = (0, f.ZP)(n, null != v ? v : ""),
         w = null != y && (null == (t = P.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : p,
-        T = o.useMemo(() => C.get(null != x ? x : w), [x, C, w]),
+        T = o.useMemo(() => {
+            var e;
+            let t = null == (e = C.entry(null != x ? x : w)) ? void 0 : e.parentPanelKey;
+            if (null != t) return C.getPanelOrThrow(t);
+        }, [x, C, w]),
         { navigateWithValidation: k } = (0, s.Cu)();
     (0, i.ZP)(() => {
         var e, t, n;
