@@ -10,8 +10,8 @@ var n = r(54381),
     d = r(481060),
     m = r(100527),
     g = r(906732),
-    h = r(488499),
-    p = r(222062),
+    p = r(488499),
+    h = r(222062),
     E = r(530329),
     C = r(72703),
     f = r(626135),
@@ -315,7 +315,7 @@ function j(e) {
             },
             [N],
         ),
-        eh = i.useCallback(() => {
+        ep = i.useCallback(() => {
             var e;
             if (null == M.current || null == U) return;
             let t = (X + 90) % 360,
@@ -344,7 +344,7 @@ function j(e) {
                         imageRotation: t,
                     });
         }, [H, eg, U, X, es, Z]),
-        ep = i.useCallback(() => {
+        eh = i.useCallback(() => {
             if (null != M.current && null != U) {
                 if (U.width !== U.height && (X - 0) % 180 != 0) {
                     let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: r } = eg(U, 1);
@@ -469,7 +469,7 @@ function j(e) {
                 };
         }, []);
     let eR = N === T.pC.AVATAR || N === T.pC.BANNER,
-        eD = (0, p.M)(!eR);
+        eD = (0, h.M)(!eR);
     return (0, n.jsx)(g.Gt, {
         value: et,
         children: (0, n.jsxs)(c.Modal, {
@@ -478,7 +478,7 @@ function j(e) {
             actionBarInput: (0, n.jsx)(d.Avr, {
                 text: b.intl.string(b.t.yBZMsQ),
                 textVariant: "text-md/medium",
-                onClick: ep,
+                onClick: eh,
                 disabled: !Y,
             }),
             actions: [
@@ -500,7 +500,7 @@ function j(e) {
             children: [
                 j &&
                     !eD &&
-                    (0, n.jsx)(h.Z, {
+                    (0, n.jsx)(p.Z, {
                         type: N,
                         analyticsPage: k,
                         analyticsSection: y.jXE.CROP_GIF_MODAL,
@@ -614,7 +614,7 @@ function j(e) {
                                     ariaHidden: !0,
                                     children: (0, n.jsx)(d.P3F, {
                                         className: o()(w.rotateButton, { [w.disabled]: eo }),
-                                        onClick: eo ? void 0 : eh,
+                                        onClick: eo ? void 0 : ep,
                                         "aria-label": b.intl.string(b.t.LzFiKG),
                                         "aria-disabled": eo,
                                         children: (0, n.jsx)(d.Vk2, {
@@ -633,7 +633,6 @@ function j(e) {
                                 showUpsell: !0,
                                 position: "inline",
                                 className: w.premiumUpsell,
-                                showShadow: !1,
                             }),
                     ],
                 }),

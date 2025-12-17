@@ -234,7 +234,6 @@ function Z(e) {
                               }),
                               button: ei(),
                               position: "inline",
-                              showShadow: !1,
                           }),
                       et &&
                           (0, r.jsxs)("div", {

@@ -22,11 +22,11 @@ var r = n(54381),
     x = n(594174),
     E = n(626135),
     O = n(267642),
-    S = n(74538),
-    N = n(621961),
+    N = n(74538),
+    S = n(621961),
     T = n(884858),
-    w = n(981631),
-    R = n(486324),
+    R = n(981631),
+    w = n(486324),
     P = n(869783),
     _ = n(388032),
     F = n(570162);
@@ -159,8 +159,8 @@ function U(e) {
             handleOpenImageEditingModal: o,
             handleFileSizeError: c,
         } = e,
-        d = (0, N.GY)(n),
-        f = (0, N.C6)(n, { isGIF: !1 }),
+        d = (0, S.GY)(n),
+        f = (0, S.C6)(n, { isGIF: !1 }),
         p = k({
             guildFeature: f,
             guild: a,
@@ -201,8 +201,8 @@ function U(e) {
 function B(e) {
     let { uploadType: t, guild: n, handleOpenGIFPickerModal: a } = e,
         { shouldAnimate: l, onMouseEnter: i, onMouseLeave: s } = (0, j.Z)(),
-        o = (0, N.Kq)(t),
-        c = (0, N.C6)(t, { isGIF: !0 }),
+        o = (0, S.Kq)(t),
+        c = (0, S.C6)(t, { isGIF: !0 }),
         d = k({
             guildFeature: c,
             guild: n,
@@ -243,7 +243,7 @@ function H(e) {
             showUpsellHeader: g,
             filters: j,
             analyticsLocation: O,
-            analyticsLocations: N = [],
+            analyticsLocations: S = [],
             imageSpecifications: I,
             modalTitle: D = _.intl.string(_.t.DToW4e),
             uploadOptionTitle: k = _.intl.string(_.t["MsUY/S"]),
@@ -253,11 +253,11 @@ function H(e) {
         H = (0, s.e7)([v.Z], () => v.Z.getGuildId()),
         V = (0, s.e7)([C.Z], () => C.Z.getGuild(H)),
         G = (0, u.vRw)(),
-        z = o === R.pC.AVATAR || o === R.pC.BANNER,
-        q = !S.ZP.canUseAnimatedAvatar(M) && o === R.pC.AVATAR,
+        z = o === w.pC.AVATAR || o === w.pC.BANNER,
+        q = !N.ZP.canUseAnimatedAvatar(M) && o === w.pC.AVATAR,
         W = (0, m.M)(!z),
         X = (0, b.T)({ location: "NewSelectImageModal" }) && L,
-        { analyticsLocations: Y, newestAnalyticsLocation: J } = (0, f.ZP)(N, d.Z.SELECT_IMAGE_MODAL),
+        { analyticsLocations: Y, newestAnalyticsLocation: J } = (0, f.ZP)(S, d.Z.SELECT_IMAGE_MODAL),
         K = a.useCallback(
             (e) => {
                 let { assetOrigin: t = A.q.NEW_ASSET, imageUri: n, file: r, originalAsset: a, isFromTenor: s = !1 } = e;
@@ -338,19 +338,19 @@ function H(e) {
         }, [null == O ? void 0 : O.page, G, K, g, o]);
     a.useEffect(() => {
         q &&
-            E.default.track(w.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: w.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+            E.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: R.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: Y,
             }),
-            E.default.track(w.rMx.OPEN_MODAL, {
-                type: w.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+            E.default.track(R.rMx.OPEN_MODAL, {
+                type: R.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location: O,
                 location_stack: Y,
                 upload_type: o,
             });
     }, [q, O, Y, o]);
     let et = g && W,
-        en = o === R.pC.AVATAR && X;
+        en = o === w.pC.AVATAR && X;
     return (0, r.jsx)(c.u_l, {
         transitionState: t,
         onClose: l,
@@ -404,7 +404,6 @@ function H(e) {
                         analyticsSource: J,
                         showUpsell: !0,
                         position: "inline",
-                        showShadow: !1,
                         className: F.premiumUpsell,
                     }),
             ],

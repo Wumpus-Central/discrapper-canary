@@ -9,28 +9,29 @@ var r = n(442837),
     u = n(981631),
     d = n(388032);
 function f(e) {
-    let { subscriptionTier: t, buttonTextOverride: n, defaultTextOverride: f } = e,
-        _ = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        m = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
-        h = (0, r.e7)([l.Z], () => l.Z.getPremiumTypeOverride()),
-        g = null != f ? f : d.intl.string(d.t["2pG5Ga"]),
-        E = null != m ? (0, s.Af)(m) : null,
-        b = void 0 !== h ? h : null != E ? (0, s.Rd)(E.planId) : null == _ ? void 0 : _.premiumType,
-        y = t === c.Si.TIER_2 && null != b && [c.PremiumTypes.TIER_0, c.PremiumTypes.TIER_1].includes(b);
-    y && (g = d.intl.string(d.t.IJI7yk));
-    let O = null != m && (0, s.m3)(m);
-    if (!((null != m && m.status !== u.O0b.ACCOUNT_HOLD && !(0, i.Q0)(m.planId) && !y && void 0 === h) || O))
-        return { buttonText: null != n ? n : g };
+    let { subscriptionTier: t, subscriptionPlanId: n, buttonTextOverride: f, defaultTextOverride: _ } = e,
+        m = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        h = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
+        g = (0, r.e7)([l.Z], () => l.Z.getPremiumTypeOverride()),
+        E = null != _ ? _ : d.intl.string(d.t["2pG5Ga"]),
+        b = null != h ? (0, s.Af)(h) : null,
+        y = void 0 !== g ? g : null != b ? (0, s.Rd)(b.planId) : null == m ? void 0 : m.premiumType,
+        O = t === c.Si.TIER_2 && null != y && [c.PremiumTypes.TIER_0, c.PremiumTypes.TIER_1].includes(y),
+        v = null != n && null != b && (null == b ? void 0 : b.planId) !== n;
+    (O || v) && (E = d.intl.string(d.t.IJI7yk));
+    let S = null != h && (0, s.m3)(h);
+    if (!((null != h && h.status !== u.O0b.ACCOUNT_HOLD && !(0, i.Q0)(h.planId) && !O && !v && void 0 === g) || S))
+        return { buttonText: null != f ? f : E };
     {
-        var v, S;
+        var I, T;
         let e = p({
             ctaSubscriptionSkuId: t,
-            currentPremiumType: b,
-            isSwitchingDisabled: O,
-            subscription: m,
+            currentPremiumType: y,
+            isSwitchingDisabled: S,
+            subscription: h,
         });
         return {
-            buttonText: null != (S = null != (v = e.disabledButtonText) ? v : n) ? S : g,
+            buttonText: null != (T = null != (I = e.disabledButtonText) ? I : f) ? T : E,
             buttonTooltipText: e.disabledButtonTooltipText,
             disabled: !0,
         };
