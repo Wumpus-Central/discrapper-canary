@@ -12,8 +12,8 @@ var r = n(54381),
     p = n(29121),
     h = n(222062),
     x = n(706454),
-    f = n(158776),
-    g = n(55935),
+    g = n(158776),
+    f = n(55935),
     v = n(74538),
     b = n(204418),
     j = n(388032),
@@ -40,7 +40,7 @@ let y = [
         let { purchase: t } = e,
             n = (0, c.e7)([x.default], () => x.default.locale),
             i = (0, u.qS)(t),
-            l = null != t.expiresAt ? (0, g.TD)(Date.now(), t.expiresAt) : null,
+            l = null != t.expiresAt ? (0, f.TD)(Date.now(), t.expiresAt) : null,
             a = (0, p.ag)(t),
             s = t.purchasedAt.toLocaleDateString(n, {
                 month: "long",
@@ -64,7 +64,7 @@ let y = [
                     variant: "text-xxs/normal",
                     color: "text-muted",
                     children: [
-                        i ? j.intl.format(j.t["req+eY"], { dateAcquired: s }) : j.intl.format(j.t.gW9R4B, { date: s }),
+                        j.intl.format(j.t.gW9R4B, { date: s }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
@@ -93,7 +93,7 @@ let y = [
     },
     w = (e) => {
         let { user: t, guildId: n, avatarDecoration: l, className: x } = e,
-            g = (0, c.e7)([f.Z], () => f.Z.getStatus(t.id)),
+            f = (0, c.e7)([g.Z], () => g.Z.getStatus(t.id)),
             { product: w, purchase: S } = (0, m.Z)(null == l ? void 0 : l.skuId),
             C = v.ZP.canUseCollectibles(t),
             I = null != S ? (0, u.qS)(S) : (0, u.G1)(w),
@@ -166,7 +166,7 @@ let y = [
                                                   guildId: n,
                                                   avatarSize: i,
                                                   avatarDecorationOverride: l,
-                                                  status: a ? g : void 0,
+                                                  status: a ? f : void 0,
                                                   "aria-hidden": !0,
                                               }),
                                           },
