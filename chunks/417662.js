@@ -150,7 +150,7 @@ function _(e) {
                     break;
                 case d.yXg.ARROW_LEFT:
                 case d.yXg.ARROW_RIGHT: {
-                    let n, o;
+                    let n;
                     if (p(t, { shift: null })) n = "character";
                     else if (
                         p(t, {
@@ -169,20 +169,19 @@ function _(e) {
                     )
                         return !1;
                     else return !1;
-                    t.shiftKey && (o = "focus");
-                    let s =
+                    let o =
                             e.children[
                                 null != (_ = null == (a = e.selection) || null == (r = a.focus) ? void 0 : r.path[0])
                                     ? _
                                     : 0
                             ],
-                        l = "rtl" === i()(u.aj.string(s)),
-                        f = (t.which === d.yXg.ARROW_LEFT) == !l;
+                        s = "rtl" === i()(u.aj.string(o)),
+                        l = (t.which === d.yXg.ARROW_LEFT) == !s;
                     return (
                         c.Q.keyboardMove(e, {
-                            reverse: f,
+                            reverse: l,
                             unit: n,
-                            edge: o,
+                            edge: t.shiftKey ? "focus" : void 0,
                         }),
                         !0
                     );
@@ -191,15 +190,11 @@ function _(e) {
                     if (m && p(t, { ctrl: !0 })) {
                         let t = u.bN.getCurrentBlock(e);
                         if (null != t) {
-                            let [, n] = t,
-                                r = {
-                                    path: u.C0.child(n, 0),
-                                    offset: 0,
-                                };
+                            let n = u.bN.start(e, t[1]);
                             return (
                                 c.Q.select(e, {
-                                    anchor: r,
-                                    focus: r,
+                                    anchor: n,
+                                    focus: n,
                                 }),
                                 !0
                             );
@@ -210,17 +205,11 @@ function _(e) {
                     if (m && p(t, { ctrl: !0 })) {
                         let t = u.bN.getCurrentBlock(e);
                         if (null != t) {
-                            let [n, r] = t,
-                                i = u.C0.child(r, n.children.length - 1),
-                                [a] = u.bN.node(e, i),
-                                o = {
-                                    path: i,
-                                    offset: a.text.length,
-                                };
+                            let n = u.bN.end(e, t[1]);
                             return (
                                 c.Q.select(e, {
-                                    anchor: o,
-                                    focus: o,
+                                    anchor: n,
+                                    focus: n,
                                 }),
                                 !0
                             );
@@ -245,7 +234,7 @@ function _(e) {
                         let [t, n] = u.M8.edges(e.selection),
                             [r, i] = u.bN.node(e, [h ? t.path[0] : n.path[0]]);
                         if (
-                            (o()(u.q.isElement(r) && u.bN.isBlock(e, r), "Top-most node of selection is not a block"),
+                            (o()(u.bN.isBlock(e, r), "Top-most node of selection is not a block"),
                             (h && !u.Jz.isAtStart(t, [r, i])) || (!h && !u.Jz.isAtEnd(n, [r, i])))
                         )
                             return h ? e.deleteBackward("line") : e.deleteForward("line"), !0;

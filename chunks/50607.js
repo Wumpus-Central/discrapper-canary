@@ -21,18 +21,56 @@ let o = (e, t) => {
         (e.insertFragmentData = d),
         (e.insertTextData = f),
         (e.deleteBackward = (n) => {
-            if ("line" !== n || t) s(n);
-            else {
-                let t = a.lP.getLineActionRange(e, !0);
-                null != t && i.Q.delete(e, { at: t });
+            if ("line" === n && !t) {
+                let t = a.M8.toPoint(e.selection);
+                if (null != t) {
+                    let r = a.bN.before(e, t, { unit: n });
+                    if (null != r) {
+                        let n = a.lP.getLineStart(e, t, !1);
+                        null != n && a.Jz.isAfter(n, r)
+                            ? i.Q.delete(e, {
+                                  at: {
+                                      anchor: n,
+                                      focus: t,
+                                  },
+                              })
+                            : i.Q.delete(e, {
+                                  at: {
+                                      anchor: r,
+                                      focus: t,
+                                  },
+                              });
+                        return;
+                    }
+                }
             }
+            s(n);
         }),
         (e.deleteForward = (n) => {
-            if ("line" !== n || t) l(n);
-            else {
-                let t = a.lP.getLineActionRange(e, !1);
-                null != t && i.Q.delete(e, { at: t });
+            if ("line" === n && !t) {
+                let t = a.M8.toPoint(e.selection);
+                if (null != t) {
+                    let r = a.bN.after(e, t, { unit: n });
+                    if (null != r) {
+                        let n = a.lP.getLineEnd(e, t, !1);
+                        null != n && a.Jz.isBefore(n, r)
+                            ? i.Q.delete(e, {
+                                  at: {
+                                      anchor: n,
+                                      focus: t,
+                                  },
+                              })
+                            : i.Q.delete(e, {
+                                  at: {
+                                      anchor: r,
+                                      focus: t,
+                                  },
+                              });
+                        return;
+                    }
+                }
             }
+            l(n);
         }),
         e
     );
