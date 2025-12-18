@@ -2170,7 +2170,8 @@ class em extends o.C {
     create(e) {
         let t = {
             hashKey: "",
-            target: 0,
+            stopRingPosition: 0,
+            startRingPosition: 0,
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -2191,7 +2192,10 @@ class em extends o.C {
                     a.hashKey = e.string();
                     break;
                 case 2:
-                    a.target = e.uint32();
+                    a.stopRingPosition = e.uint32();
+                    break;
+                case 3:
+                    a.startRingPosition = e.uint32();
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -2207,7 +2211,8 @@ class em extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.hashKey && t.tag(1, r.TD.LengthDelimited).string(e.hashKey),
-            0 !== e.target && t.tag(2, r.TD.Varint).uint32(e.target);
+            0 !== e.stopRingPosition && t.tag(2, r.TD.Varint).uint32(e.stopRingPosition),
+            0 !== e.startRingPosition && t.tag(3, r.TD.Varint).uint32(e.startRingPosition);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2221,7 +2226,13 @@ class em extends o.C {
             },
             {
                 no: 2,
-                name: "target",
+                name: "stop_ring_position",
+                kind: "scalar",
+                T: 13,
+            },
+            {
+                no: 3,
+                name: "start_ring_position",
                 kind: "scalar",
                 T: 13,
             },
