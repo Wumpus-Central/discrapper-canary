@@ -2,8 +2,7 @@ n.d(t, {
     G6: () => S,
     hY: () => g,
     og: () => v,
-    rO: () => T,
-    vU: () => I,
+    rO: () => I,
     vu: () => p,
 });
 var r,
@@ -44,10 +43,6 @@ function S() {
     return -1 !== t.indexOf("safari") && -1 === t.indexOf("chrome") && -1 !== t.indexOf("version/");
 }
 function I() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent;
-    return -1 !== e.toLowerCase().indexOf("firefox");
-}
-function T() {
     var e;
     let t = window.navigator,
         n = (null == (e = t.mediaCapabilities) ? void 0 : e.decodingInfo) != null;
