@@ -29,6 +29,7 @@ let m = 3000,
         [f.AEg.MINIMUM]: p.minimum,
         [f.AEg.NO_CHAT]: p.noChat,
         [f.AEg.FULL_SCREEN]: p.fullScreen,
+        [f.AEg.HAVEN]: p.haven,
     };
 class g extends a.PureComponent {
     componentDidAppear() {

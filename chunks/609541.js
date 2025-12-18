@@ -3,6 +3,7 @@ e.exports = {
     animated: "_94748c73ac5ff785-animated",
     normal: "_94748c73ac5ff785-normal",
     minimum: "_94748c73ac5ff785-minimum",
+    haven: "_94748c73ac5ff785-haven",
     noChat: "_94748c73ac5ff785-noChat",
     fullScreen: "_94748c73ac5ff785-fullScreen",
     video: "_94748c73ac5ff785-video",

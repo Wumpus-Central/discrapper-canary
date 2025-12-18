@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -7,101 +7,108 @@ var i = n(54381),
     s = n(358221),
     c = n(351248),
     u = n(600164),
-    d = n(585483),
-    p = n(340295),
-    f = n(171277),
-    h = n(677845),
-    m = n(430371),
-    g = n(45430),
-    b = n(981631),
+    d = n(707920),
+    p = n(585483),
+    f = n(340295),
+    h = n(171277),
+    m = n(677845),
+    g = n(430371),
+    b = n(45430),
+    y = n(981631),
     C = n(354459),
-    y = n(676465);
-let v = (0, a.Z)((e) => {
+    v = n(676465);
+let x = (0, a.Z)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: a,
-        participantsVersion: v,
-        layout: x,
-        onSelectParticipant: O,
-        onContextMenuParticipant: E,
-        onFullscreenParticipant: j,
-        channel: S,
-        hasConnectPermission: _,
-        className: P,
-        inCall: I,
-        showParticipants: Z = !0,
-        width: T,
-        height: N,
-        idle: A,
-        mode: w,
-        popoutType: M,
-        awaitingRemoteSessionInfo: R,
+        participantsVersion: x,
+        layout: O,
+        onSelectParticipant: E,
+        onContextMenuParticipant: j,
+        onFullscreenParticipant: S,
+        channel: _,
+        hasConnectPermission: P,
+        className: I,
+        inCall: Z,
+        showParticipants: T = !0,
+        width: N,
+        height: A,
+        idle: w,
+        mode: M,
+        popoutType: R,
+        awaitingRemoteSessionInfo: D,
         callContainerDimensions: L,
     } = e;
     r.useEffect(() => {
-        d.S.dispatch(b.CkL.REMEASURE_TARGET);
-    }, [T, N, L.width, L.height]);
-    let D = r.useMemo(
+        p.S.dispatch(y.CkL.REMEASURE_TARGET);
+    }, [N, A, L.width, L.height]);
+    let k = r.useMemo(
             () => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))),
-            [n, v],
+            [n, x],
         ),
-        k = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(S.id), [S.id]);
-    if ((null == R ? void 0 : R.channelId) === S.id) return (0, i.jsx)(f.Z, { height: N });
-    if ((null == S ? void 0 : S.isGuildVocalOrThread()) && !I)
-        return (0, i.jsx)(p.Z, {
-            channel: S,
+        U = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(_.id), [_.id]);
+    if ((null == D ? void 0 : D.channelId) === _.id) return (0, i.jsx)(h.Z, { height: A });
+    if ((null == _ ? void 0 : _.isGuildVocalOrThread()) && !Z)
+        return (0, i.jsx)(f.Z, {
+            channel: _,
             participants: t,
-            hasConnectPermission: _,
+            hasConnectPermission: P,
         });
-    if (w === b.WtW.VOICE)
+    if (((n = Z ? n : t), O === y.AEg.HAVEN))
+        return (0, i.jsx)(d.Z, {
+            participants: n,
+            channel: _,
+            idle: w,
+        });
+    if (M === y.WtW.VOICE)
         return (0, i.jsx)(c.Z, {
-            guildId: S.guild_id,
-            width: T,
-            className: y.voiceCallWrapper,
+            guildId: _.guild_id,
+            width: N,
+            className: v.voiceCallWrapper,
             participants: t,
-            onContextMenu: E,
+            onContextMenu: j,
         });
-    if (((n = I ? n : t), null == a)) {
+    if (null == a) {
         if (0 === n.length) {
-            let e = t.length > 0 && !k;
-            return (0, i.jsx)(g.Z, {
-                channelId: S.id,
+            let e = t.length > 0 && !U;
+            return (0, i.jsx)(b.Z, {
+                channelId: _.id,
                 allPoppedOut: e,
             });
         }
         return (0, i.jsx)(u.Z, {
-            className: y.videoGridWrapper,
+            className: v.videoGridWrapper,
             justify: u.Z.Justify.CENTER,
             align: u.Z.Align.CENTER,
-            children: (0, i.jsx)(h.Z, {
-                channel: S,
-                className: y.videoGrid,
-                participants: D,
+            children: (0, i.jsx)(m.Z, {
+                channel: _,
+                className: v.videoGrid,
+                participants: k,
                 totalNumberOfParticipants: t.length,
-                onClick: O,
-                onDoubleClick: j,
-                onContextMenu: E,
-                inCall: I,
-                popoutType: M,
+                onClick: E,
+                onDoubleClick: S,
+                onContextMenu: j,
+                inCall: Z,
+                popoutType: R,
             }),
         });
     }
-    return (0, i.jsx)(m.Z, {
-        onFullscreenParticipant: j,
-        onContextMenuParticipant: E,
-        onSelectParticipant: O,
+    return (0, i.jsx)(g.Z, {
+        onFullscreenParticipant: S,
+        onContextMenuParticipant: j,
+        onSelectParticipant: E,
         selectedParticipant: a,
-        filteredParticipants: D,
+        filteredParticipants: k,
         participants: t,
-        popoutType: M,
-        className: P,
-        idle: A,
-        height: N,
-        width: T,
-        layout: x,
-        inCall: I,
-        channel: S,
-        showParticipants: Z,
+        popoutType: R,
+        className: I,
+        idle: w,
+        height: A,
+        width: N,
+        layout: O,
+        inCall: Z,
+        channel: _,
+        showParticipants: T,
     });
 });

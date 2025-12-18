@@ -1,0 +1,18 @@
+e.exports = {
+    column: "_535e0e3eb4b332ab-column",
+    row: "_535e0e3eb4b332ab-row",
+    gap: "_535e0e3eb4b332ab-gap",
+    chatFlow: "_535e0e3eb4b332ab-chatFlow",
+    hidden: "_535e0e3eb4b332ab-hidden",
+    chat: "_535e0e3eb4b332ab-chat",
+    history: "_535e0e3eb4b332ab-history",
+    idle: "_535e0e3eb4b332ab-idle",
+    message: "_535e0e3eb4b332ab-message",
+    noAnimate: "_535e0e3eb4b332ab-noAnimate",
+    messageIn: "_535e0e3eb4b332ab-messageIn",
+    out: "_535e0e3eb4b332ab-out",
+    content: "_535e0e3eb4b332ab-content",
+    attachment: "_535e0e3eb4b332ab-attachment",
+    outerInput: "_535e0e3eb4b332ab-outerInput",
+    input: "_535e0e3eb4b332ab-input",
+};

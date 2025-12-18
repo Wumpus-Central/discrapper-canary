@@ -1961,6 +1961,10 @@ let ep = "@me",
         GUILD_MIGRATE_SLOWMODE_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-bypass-slowmode-permission"),
         QUEST_PLACEMENT: "/quests/placement-alpha",
         GAME_UPDATE: (e, t) => "/games/".concat(e, "/updates/").concat(t),
+        HAVEN_CONNECT: (e) => "/haven/".concat(e, "/connect"),
+        HAVEN_DISCONNECT: (e) => "/haven/".concat(e, "/disconnect"),
+        HAVEN_UPDATE: (e) => "/haven/".concat(e, "/update"),
+        HAVEN_GET_ASSETS: "/haven/assets",
     }),
     eS = Object.freeze({
         INDEX: "/",
@@ -5508,7 +5512,12 @@ let nb = Object.freeze({
     ny = 86400000;
 var nO = (function (e) {
         return (
-            (e.NORMAL = "normal"), (e.MINIMUM = "minimum"), (e.NO_CHAT = "no-chat"), (e.FULL_SCREEN = "full-screen"), e
+            (e.NORMAL = "normal"),
+            (e.MINIMUM = "minimum"),
+            (e.NO_CHAT = "no-chat"),
+            (e.FULL_SCREEN = "full-screen"),
+            (e.HAVEN = "haven"),
+            e
         );
     })({}),
     nv = (function (e) {

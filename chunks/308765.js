@@ -911,5 +911,9 @@ let i = {
         inlineRequire: () => n(983543).Z,
         neverLoadBeforeConnectionOpen: !1,
     },
+    HavenManager: {
+        actions: ["HAVEN_DISCONNECT"],
+        inlineRequire: () => n(652796).Z,
+    },
 };
 (0, r.j)(i);
