@@ -106,6 +106,7 @@ var r = (function (e) {
         (e.PROFILE_UPDATES_NOTIFICATIONS = "profile_updates_notifications"),
         (e.GAME_UPDATE_NOTIFICATIONS = "game_update_notifications"),
         (e.FRIEND_ANNIVERSARY_NOTIFICATIONS = "friend_anniversary_notifications"),
+        (e.SERVER_TRENDING_NOTIFICATIONS = "server_trending_notifications"),
         (e.USER_RESURRECTION_NOTIFICATIONS = "user_resurrection_notifications"),
         (e.EXPERIMENTAL_UNREADS = "experimental_unreads"),
         (e.NOTIFICATIONS_SOUNDS_CATEGORY = "notifications_sounds_category"),

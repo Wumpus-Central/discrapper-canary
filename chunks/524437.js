@@ -2651,6 +2651,14 @@ class ep extends o.C {
                         a.enableProfileUpdatesNotifications,
                     );
                     break;
+                case 17:
+                    a.enableServerTrendingNotifications = s.D5.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableServerTrendingNotifications,
+                    );
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2721,6 +2729,12 @@ class ep extends o.C {
                 s.D5.internalBinaryWrite(
                     e.enableProfileUpdatesNotifications,
                     t.tag(16, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            e.enableServerTrendingNotifications &&
+                s.D5.internalBinaryWrite(
+                    e.enableServerTrendingNotifications,
+                    t.tag(17, r.TD.LengthDelimited).fork(),
                     n,
                 ).join();
         let i = n.writeUnknownFields;
@@ -2821,6 +2835,12 @@ class ep extends o.C {
             {
                 no: 16,
                 name: "enable_profile_updates_notifications",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 17,
+                name: "enable_server_trending_notifications",
                 kind: "message",
                 T: () => s.D5,
             },
