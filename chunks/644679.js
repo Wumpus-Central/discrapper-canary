@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(481060),
     l = n(570140),
@@ -6,8 +6,9 @@ var r = n(54381),
     o = n(19780),
     s = n(594174),
     c = n(960048),
-    u = n(981631);
-function d(e, t, n) {
+    u = n(215023),
+    d = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,8 +21,8 @@ function d(e, t, n) {
         e
     );
 }
-let p = "CollectiblesExpiryModal";
-class f extends a.Z {
+let f = "CollectiblesExpiryModal";
+class g extends a.Z {
     _initialize() {
         l.Z.subscribe("POST_CONNECTION_OPEN", this.handleMaybeOpenModal),
             l.Z.subscribe("CURRENT_USER_UPDATE", this.handleMaybeOpenModal);
@@ -33,8 +34,8 @@ class f extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            d(this, "timeout", null),
-            d(this, "handleMaybeOpenModal", () => {
+            p(this, "timeout", null),
+            p(this, "handleMaybeOpenModal", () => {
                 var e;
                 let t = s.default.getCurrentUser(),
                     n = null == t || null == (e = t.avatarDecoration) ? void 0 : e.expiresAt;
@@ -43,17 +44,19 @@ class f extends a.Z {
                         (null != this.timeout && clearTimeout(this.timeout),
                         (this.timeout = setTimeout(this.maybeOpenModal, 1000 * n - Date.now() + 1000))));
             }),
-            d(this, "maybeOpenModal", () => {
+            p(this, "maybeOpenModal", () => {
                 var e, t;
                 let l = s.default.getCurrentUser(),
                     a = o.Z.getState(),
-                    f = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
-                    g = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
+                    g = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
+                    h = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt,
+                    m = null != g && u.Hl.includes(g);
                 return (
                     null != l &&
-                    !!(null != g && 1000 * g < Date.now()) &&
-                    a !== u.hes.RTC_CONNECTED &&
-                    ((0, i.Mr3)(p),
+                    !m &&
+                    !!(null != h && 1000 * h < Date.now()) &&
+                    a !== d.hes.RTC_CONNECTED &&
+                    ((0, i.Mr3)(f),
                     (0, i.ZDy)(
                         async () => {
                             let { default: e } = await n.e("77370").then(n.bind(n, 83950));
@@ -93,16 +96,16 @@ class f extends a.Z {
                                                         }),
                                                     )),
                                                     r.forEach(function (t) {
-                                                        d(e, t, n[t]);
+                                                        p(e, t, n[t]);
                                                     });
                                             }
                                             return e;
                                         })({}, t),
-                                        { skuId: f },
+                                        { skuId: g },
                                     ),
                                 );
                         },
-                        { modalKey: p },
+                        { modalKey: f },
                     ),
                     c.Z.captureMessage("Collectible expiry modal shown"),
                     !0)
@@ -110,4 +113,4 @@ class f extends a.Z {
             });
     }
 }
-let g = new f();
+let h = new g();
