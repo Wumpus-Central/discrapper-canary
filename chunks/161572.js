@@ -1,31 +1,45 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
-var i = n(837411),
-    a = n(705556),
-    o = n(955418),
-    s = n(155493);
-function l(e) {
-    let { user: t, guildId: n, channelId: l, onClose: c, appContext: u, disableAutoFocus: d = !1 } = e,
-        f = (0, i.Z)(t.id, n);
+var i = n(442837),
+    a = n(100527),
+    o = n(522558),
+    s = n(441623),
+    l = n(718108),
+    c = n(837411),
+    u = n(705556),
+    d = n(955418),
+    f = n(155493);
+function p(e) {
+    let { user: t, guildId: n, channelId: p, onClose: _, appContext: m, disableAutoFocus: h = !1 } = e,
+        g = (0, c.Z)(t.id, n),
+        E = (0, o.i)(a.Z.USER_PROFILE_POPOUT),
+        b = (0, i.e7)([s.ZP], () => s.ZP.canShowProfilePopoutGiftIntents(t.id), [t.id]),
+        y = E && b;
     return (0, r.jsxs)("div", {
-        className: s.footer,
+        className: f.footer,
         children: [
-            f &&
-                (0, r.jsx)(o.Z, {
-                    user: t,
-                    guildId: n,
-                    channelId: l,
-                    onClose: c,
-                    disableAutoFocus: d,
+            g &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        y && (0, r.jsx)(l.W, { profileUserId: t.id }),
+                        (0, r.jsx)(d.Z, {
+                            user: t,
+                            guildId: n,
+                            channelId: p,
+                            onClose: _,
+                            disableAutoFocus: h,
+                            upsell: y,
+                        }),
+                    ],
                 }),
-            !f &&
-                (0, r.jsx)(a.Z, {
+            !g &&
+                (0, r.jsx)(u.Z, {
                     user: t,
                     guildId: n,
-                    onClose: c,
+                    onClose: _,
                     fullWidth: !0,
-                    appContext: u,
+                    appContext: m,
                 }),
         ],
     });

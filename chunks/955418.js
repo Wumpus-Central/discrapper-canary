@@ -1,18 +1,26 @@
-n.d(t, { Z: () => O }), n(388685), n(781311);
+n.d(t, { Z: () => P }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
-    a = n(906732),
-    o = n(541716),
-    s = n(752305),
-    l = n(893718),
-    c = n(131704),
-    u = n(5192),
-    d = n(785717),
-    f = n(698305),
-    p = n(981631),
-    _ = n(388032),
-    m = n(15);
-function h(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(114101),
+    l = n(481060),
+    c = n(493683),
+    u = n(906732),
+    d = n(541716),
+    f = n(752305),
+    p = n(893718),
+    _ = n(795448),
+    m = n(131704),
+    h = n(5192),
+    g = n(785717),
+    E = n(698305),
+    b = n(302624),
+    y = n(981631),
+    O = n(474936),
+    v = n(388032),
+    S = n(15);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +33,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +44,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,60 +61,96 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = (0, c.createChannelRecord)({
+let N = (0, m.createChannelRecord)({
     id: "1",
-    type: p.d4z.DM,
+    type: y.d4z.DM,
 });
-function O(e) {
-    let { user: t, guildId: n, channelId: c, onClose: p, disableAutoFocus: h = !1 } = e,
-        { newestAnalyticsLocation: E } = (0, a.ZP)(),
-        { trackUserProfileAction: O } = (0, d.KZ)(),
-        [v, S] = i.useState(""),
-        [I, T] = i.useState((0, s.JM)(v)),
-        C = i.useRef(!1),
-        A = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
-    return (0, r.jsx)(l.ZP, {
-        className: m.container,
-        editorClassName: m.editor,
-        type: A,
-        placeholder: _.intl.formatToPlainString(_.t["0ZQw/X"], { name: u.ZP.getName(n, c, t) }),
-        channel: y,
-        textValue: v,
-        richValue: I,
+function P(e) {
+    let { user: t, guildId: a, channelId: m, onClose: y, disableAutoFocus: I = !1, upsell: C = !1 } = e,
+        { newestAnalyticsLocation: P, analyticsLocations: R } = (0, u.ZP)(),
+        { trackUserProfileAction: w } = (0, g.KZ)(),
+        [D, x] = i.useState(""),
+        [L, j] = i.useState((0, f.JM)(D)),
+        M = i.useRef(!1),
+        { Component: k } = (0, s.V)(),
+        U = i.useMemo(() => A(T({}, d.Ie.USER_PROFILE), { disableAutoFocus: I }), [I]),
+        G = i.useCallback(async () => {
+            (0, _.PV)(t.id),
+                await c.Z.openPrivateChannel({ recipientIds: [t.id] }),
+                (0, l.ZDy)(async () => {
+                    let { default: e } = await n.e("5890").then(n.bind(n, 171793));
+                    return (t) =>
+                        (0, r.jsx)(
+                            e,
+                            A(T({}, t), {
+                                giftIntentType: O.hX.FRIEND_ANNIVERSARY,
+                                analyticsLocationHistory: R,
+                            }),
+                        );
+                });
+        }, [t.id, R]),
+        Z = i.useCallback(
+            () =>
+                (0, r.jsxs)("div", {
+                    className: S.buttons,
+                    children: [
+                        (0, r.jsx)(l.hU, {
+                            size: "sm",
+                            variant: "icon-only",
+                            icon: k,
+                            "aria-label": v.intl.string(v.t.I61IsE),
+                            onClick: G,
+                        }),
+                        (0, r.jsx)(b.Z, {
+                            user: t,
+                            analyticsLocations: R,
+                        }),
+                    ],
+                }),
+            [k, G, t, R],
+        );
+    return (0, r.jsx)(p.ZP, {
+        className: o()(S.container, { [S.upsell]: C }),
+        editorClassName: S.editor,
+        type: U,
+        placeholder: v.intl.formatToPlainString(v.t["0ZQw/X"], { name: h.ZP.getName(a, m, t) }),
+        channel: N,
+        textValue: D,
+        richValue: L,
         onChange: (e, t, n) => {
-            t !== v && (S(t), T(n));
+            t !== D && (x(t), j(n));
         },
-        focused: C.current,
+        focused: M.current,
         onFocus: () => {
-            C.current = !0;
+            M.current = !0;
         },
         onBlur: () => {
-            C.current = !1;
+            M.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;
             try {
                 return (
-                    O({ action: "SEND_DIRECT_MESSAGE" }),
-                    await (0, f.Z)({
+                    w({ action: "SEND_DIRECT_MESSAGE" }),
+                    await (0, E.Z)({
                         userId: t.id,
                         content: n.trim(),
                         openChannel: !0,
                         whenReady: !0,
-                        location: E,
+                        location: P,
                     }),
-                    null == p || p(),
+                    null == y || y(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1,
@@ -119,5 +163,6 @@ function O(e) {
                 };
             }
         },
+        renderButtons: C ? Z : void 0,
     });
 }

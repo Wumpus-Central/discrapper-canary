@@ -535,48 +535,49 @@ function eZ(e, t) {
         error: B,
         renderAttachButton: V,
         renderApplicationCommandIcon: H,
-        pendingReply: W,
-        onChange: K,
-        onResize: z,
-        onBlur: q,
-        onFocus: Q,
-        onKeyDown: er,
-        onSubmit: eu,
-        promptToUpload: e_,
-        highlighted: eh,
-        canMentionRoles: eg,
-        canMentionChannels: eE,
-        maxCharacterCount: eb,
-        showRemainingCharsAfterCount: eO,
-        allowNewLines: ev = !0,
-        characterCountClassName: eS,
-        "aria-describedby": eZ,
-        "aria-labelledby": eF,
-        setEditorRef: eB,
-        autoCompletePosition: eV,
-        children: eH,
-        disableThemedBackground: eY = !1,
-        emojiPickerCloseOnModalOuterClick: eW,
-        parentModalKey: eK,
-        pendingScheduledMessage: ez,
-        showValueWhenDisabled: eq = !1,
+        renderButtons: W,
+        pendingReply: K,
+        onChange: z,
+        onResize: q,
+        onBlur: Q,
+        onFocus: er,
+        onKeyDown: eu,
+        onSubmit: e_,
+        promptToUpload: eh,
+        highlighted: eg,
+        canMentionRoles: eE,
+        canMentionChannels: eb,
+        maxCharacterCount: eO,
+        showRemainingCharsAfterCount: ev,
+        allowNewLines: eS = !0,
+        characterCountClassName: eZ,
+        "aria-describedby": eF,
+        "aria-labelledby": eB,
+        setEditorRef: eV,
+        autoCompletePosition: eH,
+        children: eY,
+        disableThemedBackground: eW = !1,
+        emojiPickerCloseOnModalOuterClick: eK,
+        parentModalKey: ez,
+        pendingScheduledMessage: eq,
+        showValueWhenDisabled: eQ = !1,
     } = e;
     c()(null != G, "chat input type must be set");
-    let { analyticsLocations: eQ } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eX = eD(t),
-        eJ = i.useRef(null),
+    let { analyticsLocations: eX } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
+        eJ = eD(t),
         e$ = i.useRef(null),
         e0 = i.useRef(null),
         e1 = i.useRef(null),
-        e3 = i.useRef(null);
-    null == eB || eB(e0.current);
-    let e2 = (0, y.Z)(U),
-        [e4, e5] = i.useState(!e2);
-    (0, h.PM)(eX, (e) => {
+        e3 = i.useRef(null),
+        e2 = i.useRef(null);
+    null == eV || eV(e1.current);
+    let e4 = (0, y.Z)(U),
+        [e5, e8] = i.useState(!e4);
+    (0, h.PM)(eJ, (e) => {
         let { width: t } = e;
-        return e5(!e2 && (null == t || t > ey));
+        return e8(!e4 && (null == t || t > ey));
     });
-    let { activeCommand: e8, activeCommandSection: e6 } = (0, p.cj)([S.Z], () => {
+    let { activeCommand: e6, activeCommandSection: e7 } = (0, p.cj)([S.Z], () => {
             var e, t;
             return {
                 activeCommand: (null == (e = G.commands) ? void 0 : e.enabled) ? S.Z.getActiveCommand(U.id) : null,
@@ -586,153 +587,156 @@ function eZ(e, t) {
             };
         }),
         {
-            isLurking: e7,
-            isPendingMember: e9,
-            disabled: te,
-            canAttachFiles: tt,
-            canCreateThreads: tn,
-            canEveryoneSendMessages: tr,
-        } = eL(U, G, e8, x),
-        ti = G.toolbarType === ee.OW.STATIC,
-        ta = !F.dN.useSetting() && !(0, X.isAndroidWeb)() && null != window.ResizeObserver,
-        to = !ta || !(null == (n = G.commands) ? void 0 : n.enabled) || !Z || f !== ep.GI,
-        ts = (0, L.Z)(),
-        { fontSize: tl } = (0, p.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
-        tc = (0, p.e7)([Y.Z], () => Y.Z.isEnabled());
-    eP(G, te, U.id);
-    let { eventEmitter: tu, handleEditorSelectionChanged: td } = eR(e0, f, m),
-        tf = i.useRef(f);
-    tf.current = f;
-    let tp = i.useCallback(
+            isLurking: e9,
+            isPendingMember: te,
+            disabled: tt,
+            canAttachFiles: tn,
+            canCreateThreads: tr,
+            canEveryoneSendMessages: ti,
+        } = eL(U, G, e6, x),
+        ta = G.toolbarType === ee.OW.STATIC,
+        to = !F.dN.useSetting() && !(0, X.isAndroidWeb)() && null != window.ResizeObserver,
+        ts = !to || !(null == (n = G.commands) ? void 0 : n.enabled) || !Z || f !== ep.GI,
+        tl = (0, L.Z)(),
+        { fontSize: tc } = (0, p.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
+        tu = (0, p.e7)([Y.Z], () => Y.Z.isEnabled());
+    eP(G, tt, U.id);
+    let { eventEmitter: td, handleEditorSelectionChanged: tf } = eR(e1, f, m),
+        tp = i.useRef(f);
+    tp.current = f;
+    let t_ = i.useCallback(
             (e, t, n) => {
                 var r;
                 t === ep.GI &&
-                    "" === tf.current &&
+                    "" === tp.current &&
                     (null == (r = G.commands) ? void 0 : r.enabled) &&
-                    tu.emit("command-sentinel-typed"),
-                    null == K || K(e, t, n);
+                    td.emit("command-sentinel-typed"),
+                    null == z || z(e, t, n);
             },
-            [K, null == (a = G.commands) ? void 0 : a.enabled, tu],
+            [z, null == (a = G.commands) ? void 0 : a.enabled, td],
         ),
-        { submitting: t_, submit: tm, handleSubmit: th } = eI(eu, G, e0, e3, U.id),
-        { autocompleteRef: tg, handleMaybeShowAutocomplete: tE, handleHideAutocomplete: tb } = ew(),
-        ty = eT(tm, G, e0),
-        tO = eC(e0),
-        tv = eA({
-            editorRef: e0,
-            disabled: te,
+        { submitting: tm, submit: th, handleSubmit: tg } = eI(e_, G, e1, e2, U.id),
+        { autocompleteRef: tE, handleMaybeShowAutocomplete: tb, handleHideAutocomplete: ty } = ew(),
+        tO = eT(th, G, e1),
+        tv = eC(e1),
+        tS = eA({
+            editorRef: e1,
+            disabled: tt,
             textValue: f,
             channelId: U.id,
             chatInputType: G,
-            submit: eu,
+            submit: e_,
         }),
-        tS = eN(e0, U),
-        tI = i.useCallback(() => {
+        tI = eN(e1, U),
+        tT = i.useCallback(() => {
             var e;
-            return null == e3 || null == (e = e3.current) ? void 0 : e.hide();
+            return null == e2 || null == (e = e2.current) ? void 0 : e.hide();
         }, []),
-        { editorHeight: tT, handleResize: tC } = ex(z),
-        { handleTab: tA, handleEnter: tN, handleMoveSelection: tP } = eM(tg, eJ, to),
-        { expressionPickerView: tR, shouldHideExpressionPicker: tw, handleOuterClick: tD } = ej(G, e0, U.id),
-        { selectedAutocompleteInputType: tx, selectedAutocompleteInputError: tL } = ek(tu, e0),
-        tj = eU(f),
-        { currentAutocompleteType: tM, handleAutocompleteVisibilityChange: tk } = eG(G, U.id),
-        { moveAppsEntrypointToOverflow: tU } = $.n.useConfig({ location: "ChannelAppLauncher" }),
-        tG = (0, T.Z)({
+        { editorHeight: tC, handleResize: tA } = ex(q),
+        { handleTab: tN, handleEnter: tP, handleMoveSelection: tR } = eM(tE, e$, ts),
+        { expressionPickerView: tw, shouldHideExpressionPicker: tD, handleOuterClick: tx } = ej(G, e1, U.id),
+        { selectedAutocompleteInputType: tL, selectedAutocompleteInputError: tj } = ek(td, e1),
+        tM = eU(f),
+        { currentAutocompleteType: tk, handleAutocompleteVisibilityChange: tU } = eG(G, U.id),
+        { moveAppsEntrypointToOverflow: tG } = $.n.useConfig({ location: "ChannelAppLauncher" }),
+        tZ = (0, T.Z)({
             type: G,
             channelId: U.id,
         }),
-        tZ = i.useCallback(() => {
-            tu.emit("submit-failure");
-        }, [tu]);
-    (0, J.S)(tu, U.guild_id, U.id);
-    let tF = null != W,
-        tB = (te && !((e7 || e9) && tr)) || (t_ && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
-        tV = null;
-    null != e8
-        ? (tV = null == H ? void 0 : H(e8, e6, em.attachButton))
-        : (!te || tn) && (tV = null == V ? void 0 : V(tF, em.attachButton));
-    let tH = ta && null != m && !te && G.showCharacterCount && null == e8,
-        tY = ta && !__OVERLAY__ && null != m && null == e8 && G.toolbarType !== ee.OW.NONE && !te,
-        tW = (0, ei.c)({
+        tF = i.useCallback(() => {
+            td.emit("submit-failure");
+        }, [td]);
+    (0, J.S)(td, U.guild_id, U.id);
+    let tB = null != K,
+        tV = (tt && !((e9 || te) && ti)) || (tm && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
+        tH = null;
+    null != e6
+        ? (tH = null == H ? void 0 : H(e6, e7, em.attachButton))
+        : (!tt || tr) && (tH = null == V ? void 0 : V(tB, em.attachButton));
+    let tY = to && null != m && !tt && G.showCharacterCount && null == e6,
+        tW = to && !__OVERLAY__ && null != m && null == e6 && G.toolbarType !== ee.OW.NONE && !tt,
+        tK = (0, ei.c)({
             channel: U,
             type: G,
-            activeCommand: e8,
-            pendingReply: W,
-            pendingScheduledMessage: ez,
-            selectedAutocompleteInputType: tx,
-            selectedAutocompleteInputError: tL,
+            activeCommand: e6,
+            pendingReply: K,
+            pendingScheduledMessage: eq,
+            selectedAutocompleteInputType: tL,
+            selectedAutocompleteInputError: tj,
         }),
-        tK = 0 === f.trim().length,
-        tz = G.layout === ee.gy.INLINE,
-        tq = G.layout === ee.gy.FLUSH,
-        tQ = (0, r.jsx)("div", {
-            ref: e$,
+        tz = 0 === f.trim().length,
+        tq = G.layout === ee.gy.INLINE,
+        tQ = G.layout === ee.gy.FLUSH,
+        tX = (0, r.jsx)("div", {
+            ref: e0,
             className: em.hiddenAppLauncherAnchor,
         }),
-        tX = tG
+        tJ = tZ
             ? (0, r.jsx)(v.Z, {
-                  align: tU && G !== ee.Ie.SIDEBAR ? "left" : "right",
-                  positionTargetRef: e$,
+                  align: tG && G !== ee.Ie.SIDEBAR ? "left" : "right",
+                  positionTargetRef: e0,
                   channel: U,
               })
             : null,
-        tJ = (0, r.jsx)(ea.Z, {
-            type: G,
-            disabled: te,
-            channel: U,
-            handleSubmit: th,
-            isEmpty: tK,
-            showAllButtons: e4,
-        }),
-        t$ = tH
+        t$ =
+            null != W
+                ? W()
+                : (0, r.jsx)(ea.Z, {
+                      type: G,
+                      disabled: tt,
+                      channel: U,
+                      handleSubmit: tg,
+                      isEmpty: tz,
+                      showAllButtons: e5,
+                  }),
+        t0 = tY
             ? (0, r.jsx)(el.Z, {
                   type: G,
                   textValue: f,
-                  className: eS,
-                  maxCharacterCount: eb,
-                  showRemainingCharsAfterCount: eO,
+                  className: eZ,
+                  maxCharacterCount: eO,
+                  showRemainingCharsAfterCount: ev,
               })
             : null;
     return (0, r.jsx)(N.f6, {
-        value: tu,
+        value: td,
         children: (0, r.jsxs)(b.Gt, {
-            value: eQ,
+            value: eX,
             children: [
-                tY && ti
+                tW && ta
                     ? (0, r.jsx)(ed.Z, {
-                          editorRef: e0,
+                          editorRef: e1,
                           options: G.markdown,
                           channel: U,
                       })
-                    : tY
+                    : tW
                       ? (0, r.jsx)(ec.Z, {
-                            ref: e3,
-                            editorRef: e0,
-                            containerRef: e1,
+                            ref: e2,
+                            editorRef: e1,
+                            containerRef: e3,
                             options: G.markdown,
                         })
                       : null,
                 (0, r.jsxs)("div", {
-                    ref: eX,
+                    ref: eJ,
                     className: o()(O, {
                         [em.channelTextArea]: !0,
-                        [em.channelTextAreaDisabled]: tB,
-                        [em.highlighted]: eh,
+                        [em.channelTextAreaDisabled]: tV,
+                        [em.highlighted]: eg,
                         [em.textAreaMobileThemed]: d.tq,
-                        [em.inlineContainer]: tz,
-                        [em.flushContainer]: tq,
+                        [em.inlineContainer]: tq,
+                        [em.flushContainer]: tQ,
                         [em.error]: null != B,
                     }),
                     children: [
-                        tz || tq ? null : (0, r.jsx)(ei.Z, { bars: tW }),
+                        tq || tQ ? null : (0, r.jsx)(ei.Z, { bars: tK }),
                         (0, r.jsxs)("div", {
-                            ref: e1,
-                            onScroll: tI,
+                            ref: e3,
+                            onScroll: tT,
                             className: o()(A, {
                                 [em.scrollableContainer]: !0,
-                                [em.themedBackground]: !eY,
-                                [em.hasStackedBar]: tW.stacked.length > 0,
+                                [em.themedBackground]: !eW,
+                                [em.hasStackedBar]: tK.stacked.length > 0,
                             }),
                             children: [
                                 (0, r.jsx)(en.Z, {
@@ -744,64 +748,64 @@ function eZ(e, t) {
                                     : (0, r.jsx)(es.Z, {
                                           channelId: U.id,
                                           type: G,
-                                          canAttachFiles: tt,
+                                          canAttachFiles: tn,
                                       }),
                                 (0, r.jsxs)("div", {
                                     className: o()(em.inner, {
-                                        [em.innerDisabled]: tB,
+                                        [em.innerDisabled]: tV,
                                         [em.sansAttachButton]:
-                                            G !== ee.Ie.EDIT && (null != tV || (tB && null == tV) || e7),
+                                            G !== ee.Ie.EDIT && (null != tH || (tV && null == tH) || e9),
                                         [em.sansAttachButtonCreateThread]: G === ee.Ie.THREAD_CREATION,
                                         [em.sansAttachButtonCreatePost]:
                                             G === ee.Ie.CREATE_FORUM_POST || G === ee.Ie.FORWARD_MESSAGE_INPUT,
                                         [em.sansAttachButtonUserProfileReply]: G === ee.Ie.USER_PROFILE_REPLY,
                                     }),
-                                    onMouseDown: tD,
+                                    onMouseDown: tx,
                                     children: [
-                                        tX,
-                                        tU && tQ,
-                                        tV,
+                                        tJ,
+                                        tG && tX,
+                                        tH,
                                         (0, r.jsx)(_.tEY, {
-                                            ringTarget: eX,
+                                            ringTarget: eJ,
                                             ringClassName: em.focusRing,
                                             children: (0, r.jsx)(et.Z, {
-                                                ref: e0,
+                                                ref: e1,
                                                 id: w,
                                                 focused: Z,
-                                                useSlate: ta,
+                                                useSlate: to,
                                                 textValue: f,
                                                 richValue: m,
-                                                disabled: te,
+                                                disabled: tt,
                                                 placeholder: M,
                                                 required: D,
                                                 accessibilityLabel: k,
-                                                isPreviewing: (e7 || e9) && tr,
+                                                isPreviewing: (e9 || te) && ti,
                                                 channel: U,
                                                 type: G,
-                                                canPasteFiles: tt,
+                                                canPasteFiles: tn,
                                                 uploadPromptCharacterCount: ef.en1,
-                                                maxCharacterCount: null != eb ? eb : ts,
-                                                allowNewLines: ev,
-                                                "aria-describedby": eZ,
-                                                onChange: tp,
-                                                onResize: tC,
-                                                onBlur: q,
-                                                onFocus: Q,
-                                                onKeyDown: er,
-                                                onSubmit: tm,
-                                                onSubmitFailure: tZ,
-                                                onTab: tA,
-                                                onEnter: tN,
-                                                onMoveSelection: tP,
-                                                onSelectionChanged: td,
-                                                onMaybeShowAutocomplete: tE,
-                                                onHideAutocomplete: tb,
-                                                promptToUpload: e_,
-                                                fontSize: tl,
-                                                spellcheckEnabled: tc,
-                                                canOnlyUseTextCommands: tF,
-                                                isEditorIdle: tj,
-                                                currentAutocompleteType: tM,
+                                                maxCharacterCount: null != eO ? eO : tl,
+                                                allowNewLines: eS,
+                                                "aria-describedby": eF,
+                                                onChange: t_,
+                                                onResize: tA,
+                                                onBlur: Q,
+                                                onFocus: er,
+                                                onKeyDown: eu,
+                                                onSubmit: th,
+                                                onSubmitFailure: tF,
+                                                onTab: tN,
+                                                onEnter: tP,
+                                                onMoveSelection: tR,
+                                                onSelectionChanged: tf,
+                                                onMaybeShowAutocomplete: tb,
+                                                onHideAutocomplete: ty,
+                                                promptToUpload: eh,
+                                                fontSize: tc,
+                                                spellcheckEnabled: tu,
+                                                canOnlyUseTextCommands: tB,
+                                                isEditorIdle: tM,
+                                                currentAutocompleteType: tk,
                                                 className: o()(
                                                     {
                                                         [em.textAreaThreadCreation]: G === ee.Ie.THREAD_CREATION,
@@ -810,12 +814,12 @@ function eZ(e, t) {
                                                     },
                                                     P,
                                                 ),
-                                                "aria-labelledby": eF,
-                                                showValueWhenDisabled: eq,
+                                                "aria-labelledby": eB,
+                                                showValueWhenDisabled: eQ,
                                             }),
                                         }),
-                                        tJ,
-                                        !tU && tQ,
+                                        t$,
+                                        !tG && tX,
                                     ],
                                 }),
                             ],
@@ -823,62 +827,62 @@ function eZ(e, t) {
                         (0, r.jsx)(eo.P, {
                             channel: U,
                             type: G,
-                            pendingScheduledMessage: ez,
+                            pendingScheduledMessage: eq,
                         }),
-                        to
+                        ts
                             ? null
                             : (0, r.jsx)(I.Z, {
-                                  ref: eJ,
+                                  ref: e$,
                                   channel: U,
-                                  canOnlyUseTextCommands: tF,
+                                  canOnlyUseTextCommands: tB,
                               }),
                         (0, r.jsx)(C.Z, {
-                            ref: tg,
+                            ref: tE,
                             channel: U,
-                            canMentionRoles: eg,
-                            canMentionChannels: eE,
-                            useNewSlashCommands: ta,
-                            canOnlyUseTextCommands: tF,
+                            canMentionRoles: eE,
+                            canMentionChannels: eb,
+                            useNewSlashCommands: to,
+                            canOnlyUseTextCommands: tB,
                             canSendStickers: null == (l = G.stickers) ? void 0 : l.allowSending,
                             canSendSoundmoji: null == (u = G.soundmoji) ? void 0 : u.allowSending,
                             textValue: f,
                             focused: Z,
-                            isEditorIdle: tj,
-                            expressionPickerView: tR,
+                            isEditorIdle: tM,
+                            expressionPickerView: tw,
                             type: G,
-                            targetRef: eX,
-                            editorRef: e0,
-                            onSendMessage: tm,
-                            onSendSticker: tv,
-                            onVisibilityChange: tk,
-                            editorScrollerRef: e1,
-                            editorHeight: tT,
-                            barsHeight: 40 * tW.floating.length,
-                            setValue: (e, t) => (null == tp ? void 0 : tp(null, e, t)),
-                            position: eV,
+                            targetRef: eJ,
+                            editorRef: e1,
+                            onSendMessage: th,
+                            onSendSticker: tS,
+                            onVisibilityChange: tU,
+                            editorScrollerRef: e3,
+                            editorHeight: tC,
+                            barsHeight: 40 * tK.floating.length,
+                            setValue: (e, t) => (null == t_ ? void 0 : t_(null, e, t)),
+                            position: eH,
                         }),
                         (0, r.jsx)(j.Z, {
                             textValue: f,
-                            editorHeight: tT,
+                            editorHeight: tC,
                             channelId: U.id,
                         }),
-                        t$,
-                        eH,
+                        t0,
+                        eY,
                     ],
                 }),
                 (0, r.jsx)(_.pdY, { error: B }),
-                tw
+                tD
                     ? null
                     : (0, r.jsx)(R.Z, {
-                          positionTargetRef: eX,
+                          positionTargetRef: eJ,
                           type: G,
-                          onSelectGIF: ty,
-                          onSelectEmoji: tO,
-                          onSelectSticker: tv,
-                          onSelectSound: tS,
+                          onSelectGIF: tO,
+                          onSelectEmoji: tv,
+                          onSelectSticker: tS,
+                          onSelectSound: tI,
                           channel: U,
-                          closeOnModalOuterClick: eW,
-                          parentModalKey: eK,
+                          closeOnModalOuterClick: eK,
+                          parentModalKey: ez,
                           position: "top",
                           align: "right",
                           positionLayerClassName: em.expressionPickerPositionLayer,

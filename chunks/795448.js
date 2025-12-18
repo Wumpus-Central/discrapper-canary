@@ -1,6 +1,7 @@
 n.d(t, {
     Ni: () => o,
     PV: () => a,
+    X9: () => l,
     Zm: () => s,
     d$: () => i,
 });
@@ -22,4 +23,10 @@ function o(e) {
 }
 function s() {
     r.Z.dispatch({ type: "GIFT_UNREAD_NOTIFICATION_DISMISS" });
+}
+function l(e) {
+    r.Z.dispatch({
+        type: "PROFILE_POPOUT_GIFT_INTENTS_DISMISS",
+        recipientUserId: e,
+    });
 }
