@@ -14,8 +14,8 @@ var r = n(481060),
 function f(e) {
     let { transitionState: t, onClose: n, analyticsLocation: f } = e,
         {
-            slide: x,
-            gotoNext: g,
+            slide: g,
+            gotoNext: x,
             gotoError: h,
             handleWaitingForConnection: C,
             handleAuthToken: m,
@@ -23,18 +23,19 @@ function f(e) {
             callbackData: O,
         } = (0, i.k)(f, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
+        "data-migration-pending": !0,
         className: b.modal,
         transitionState: t,
         disableTrack: !0,
         parentComponent: "XboxLinkModal",
         children: (0, o.jsxs)(r.MyZ, {
-            activeSlide: x,
+            activeSlide: g,
             width: 408,
             children: [
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.LANDING,
                     children: (0, o.jsx)(c.Z, {
-                        onContinue: g,
+                        onContinue: x,
                         onClose: n,
                     }),
                 }),
@@ -62,7 +63,7 @@ function f(e) {
                     id: u.O.DISCORD_CONSENT,
                     children: (0, o.jsx)(s.Z, {
                         authToken: O,
-                        onContinue: g,
+                        onContinue: x,
                         onError: h,
                         onClose: n,
                     }),
@@ -70,7 +71,7 @@ function f(e) {
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.ERROR,
                     children: (0, o.jsx)(a.Z, {
-                        onContinue: g,
+                        onContinue: x,
                         onClose: n,
                     }),
                 }),

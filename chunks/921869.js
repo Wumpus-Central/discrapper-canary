@@ -1,9 +1,9 @@
 a.d(t, { m: () => m });
-var l = a(54381),
-    n = a(473749),
-    s = a(442837),
-    r = a(481060),
-    i = a(600164),
+var n = a(54381),
+    r = a(473749),
+    i = a(442837),
+    l = a(481060),
+    s = a(600164),
     o = a(553795),
     c = a(424071),
     d = a(239358),
@@ -16,86 +16,89 @@ function m(e) {
             onClose: m,
             img: h,
             headerConnect: N,
-            headerReconnect: C,
-            body: j,
-            learnMoreLink: p,
-            valueProps: v,
+            headerReconnect: p,
+            body: g,
+            learnMoreLink: C,
+            valueProps: j,
         } = e,
-        f = (0, s.e7)([o.Z], () => {
+        v = (0, i.e7)([o.Z], () => {
             let e = o.Z.getAccount(null, t);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
-    return (0, l.jsxs)(c.Z, {
+    return (0, n.jsxs)(c.Z, {
         children: [
-            (0, l.jsxs)(r.xBx, {
-                direction: i.Z.Direction.VERTICAL,
+            (0, n.jsxs)(l.xBx, {
+                "data-migration-pending": !0,
+                direction: s.Z.Direction.VERTICAL,
                 className: x.header,
                 separator: !1,
                 children: [
-                    (0, l.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         className: x.illustration,
                         children: [h, " "],
                     }),
-                    (0, l.jsx)(r.Heading, {
+                    (0, n.jsx)(l.Heading, {
                         className: x.title,
                         variant: "heading-xl/extrabold",
-                        children: f && null != C ? C : N,
+                        children: v && null != p ? p : N,
                     }),
-                    (0, l.jsx)(r.olH, {
+                    (0, n.jsx)(l.olH, {
                         className: x.closeButton,
                         onClick: m,
                     }),
                 ],
             }),
-            (0, l.jsxs)(r.hzk, {
+            (0, n.jsxs)(l.hzk, {
+                "data-migration-pending": !0,
                 className: x.body,
                 children: [
-                    (0, l.jsx)(r.Text, {
+                    (0, n.jsx)(l.Text, {
                         tag: "p",
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: j,
+                        children: g,
                     }),
-                    (0, l.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: x.valueProps,
-                        children: v.map((e, t) => {
-                            let { label: a, subLabel: s, icon: r } = e;
-                            return (0, l.jsxs)(
-                                n.Fragment,
+                        children: j.map((e, t) => {
+                            let { label: a, subLabel: i, icon: l } = e;
+                            return (0, n.jsxs)(
+                                r.Fragment,
                                 {
                                     children: [
-                                        (0, l.jsx)(
+                                        (0, n.jsx)(
                                             d.Z,
                                             {
                                                 label: a,
-                                                subLabel: s,
-                                                icon: r,
+                                                subLabel: i,
+                                                icon: l,
                                             },
                                             a,
                                         ),
-                                        t !== v.length - 1 && (0, l.jsx)("div", { className: x.valuePropDivider }),
+                                        t !== j.length - 1 && (0, n.jsx)("div", { className: x.valuePropDivider }),
                                     ],
                                 },
                                 a,
                             );
                         }),
                     }),
-                    null != p
-                        ? (0, l.jsx)(r.Text, {
+                    null != C
+                        ? (0, n.jsx)(l.Text, {
                               tag: "p",
                               variant: "text-sm/normal",
                               color: "text-default",
-                              children: u.intl.format(u.t["/l3n+1"], { helpCenterLink: p }),
+                              children: u.intl.format(u.t["/l3n+1"], { helpCenterLink: C }),
                           })
                         : null,
                 ],
             }),
-            (0, l.jsx)(r.mzw, {
+            (0, n.jsx)(l.mzw, {
+                "data-migration-pending": !0,
                 className: x.footer,
-                children: (0, l.jsx)("div", {
+                children: (0, n.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: x.footerButton,
-                    children: (0, l.jsx)(r.Button, {
+                    children: (0, n.jsx)(l.Button, {
                         variant: "primary",
                         text: u.intl.string(u.t["3PatSz"]),
                         onClick: a,

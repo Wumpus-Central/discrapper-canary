@@ -4,8 +4,8 @@ n(473749);
 var i = n(481060),
     a = n(864762),
     r = n(428681),
-    s = n(42338),
-    d = n(569932),
+    d = n(42338),
+    s = n(569932),
     c = n(555638),
     l = n(42011),
     b = n(798930),
@@ -23,6 +23,7 @@ function p(e) {
             errorCode: N,
         } = (0, a.k)(p, C);
     return (0, o.jsx)(i.Y0X, {
+        "data-migration-pending": !0,
         className: u.modal,
         transitionState: t,
         disableTrack: !0,
@@ -33,7 +34,7 @@ function p(e) {
             children: [
                 (0, o.jsx)(i.Mi4, {
                     id: b.O.LANDING,
-                    children: (0, o.jsx)(d.A, {
+                    children: (0, o.jsx)(s.A, {
                         platformType: C,
                         onContinue: f,
                         onClose: n,
@@ -73,7 +74,7 @@ function p(e) {
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: b.O.ERROR,
-                    children: (0, o.jsx)(s.X, {
+                    children: (0, o.jsx)(d.X, {
                         onContinue: f,
                         onClose: n,
                         errorCode: N,
