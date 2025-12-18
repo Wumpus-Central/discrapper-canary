@@ -171,21 +171,18 @@ function L(e, t) {
             isSingleCard: o = !1,
             profileOwner: s,
             wishlistId: l,
-            showTypeTooltip: c = !1,
-            cardSize: d,
-            analyticsLocations: p,
+            cardSize: c,
+            analyticsLocations: d,
         } = t,
-        _ = null != i && i > 0,
-        m = c && !_,
-        h = _ ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t.pLPjsb),
-        y = {
-            title: m ? v.intl.string(v.t["4yiU7x"]) : h,
-            body: m ? v.intl.string(v.t.ilhtIa) : void 0,
-            renderIcon: m ? f.Q : void 0,
+        p = null != i && i > 0,
+        _ = {
+            title: p ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t["4yiU7x"]),
+            body: p ? void 0 : v.intl.string(v.t.ilhtIa),
+            renderIcon: p ? void 0 : f.Q,
             shouldShow: !0,
         },
-        I = () => {
-            if (_) return void a();
+        m = () => {
+            if (p) return void a();
             (0, g.P)(
                 e.sku,
                 {
@@ -194,11 +191,11 @@ function L(e, t) {
                     giftingOrigin: O.Wt.USER_PROFILE_WISHLIST,
                 },
                 {
-                    analyticsLocations: [...p, u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                    analyticsLocations: [...d, u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
                 },
             );
         },
-        T = () =>
+        h = () =>
             (0, r.jsx)(E.A, {
                 containerClassName: S.card,
                 backgroundImageClassName: S.cardBackgroundImage,
@@ -210,16 +207,16 @@ function L(e, t) {
         x,
         {
             wishlistItem: e,
-            onCardClick: I,
-            tooltipConfig: y,
+            onCardClick: m,
+            tooltipConfig: _,
             shouldScalePreview: !1,
-            renderPreview: T,
+            renderPreview: h,
             moreCount: i,
             isSingleCard: o,
             wishlistId: l,
             showPopover: 0 === n && e.sku.applicationId === b.t9,
             onViewWishlist: a,
-            cardSize: d,
+            cardSize: c,
         },
         e.skuId,
     );
