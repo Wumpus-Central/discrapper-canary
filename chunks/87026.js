@@ -1,4 +1,4 @@
-n.d(e, { default: () => B }), n(539854), n(953529), n(388685);
+n.d(e, { default: () => K }), n(539854), n(953529), n(388685);
 var i = n(54381),
     l = n(473749),
     s = n(149765),
@@ -11,19 +11,20 @@ var i = n(54381),
     p = n(84058),
     g = n(422559),
     f = n(984933),
-    x = n(485386),
-    b = n(699516),
-    S = n(594174),
-    m = n(626135),
+    b = n(485386),
+    x = n(699516),
+    m = n(594174),
+    S = n(626135),
     O = n(63063),
     h = n(700785),
     I = n(245315),
     j = n(135899),
     y = n(981631),
     E = n(388032),
-    v = n(23512);
-function C() {
-    return (C =
+    v = n(23512),
+    C = n(44841);
+function N() {
+    return (N =
         Object.assign ||
         function (t) {
             for (var e = 1; e < arguments.length; e++) {
@@ -33,7 +34,7 @@ function C() {
             return t;
         }).apply(this, arguments);
 }
-function N(t) {
+function P(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -58,7 +59,7 @@ function N(t) {
     }
     return t;
 }
-function P(t, e) {
+function w(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +77,7 @@ function P(t, e) {
         t
     );
 }
-function w(t) {
+function L(t) {
     let { guild: e, verificationLevelMet: n, contentFilterMet: s } = t;
     return (
         l.useEffect(() => {
@@ -90,12 +91,12 @@ function w(t) {
             gap: 12,
             children: [
                 !n &&
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(M, {
                         title: E.intl.string(E.t["rkA56+"]),
                         description: E.intl.string(E.t.fHiGA0),
                     }),
                 !s &&
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(M, {
                         title: E.intl.string(E.t.COu4bk),
                         description: E.intl.string(E.t.b0MaDV),
                     }),
@@ -103,7 +104,7 @@ function w(t) {
         })
     );
 }
-function L(t) {
+function A(t) {
     let {
         guild: e,
         rulesChannelId: n,
@@ -139,7 +140,7 @@ function L(t) {
             e.type === y.d4z.GUILD_TEXT &&
                 g.push({
                     value: e.id,
-                    label: (0, c.F6)(e, S.default, b.Z, !0),
+                    label: (0, c.F6)(e, m.default, x.Z, !0),
                 });
         }),
         (0, i.jsxs)(a.Kqy, {
@@ -167,7 +168,7 @@ function L(t) {
         })
     );
 }
-function A(t) {
+function M(t) {
     let { title: e, description: n } = t;
     return (0, i.jsxs)(a.Kqy, {
         direction: "horizontal",
@@ -196,7 +197,7 @@ function A(t) {
         ],
     });
 }
-function M(t) {
+function T(t) {
     let { enabledPermissions: e, onGetPermisisonName: n } = t;
     return (0, i.jsxs)("div", {
         className: v.tableContainer,
@@ -230,7 +231,7 @@ function M(t) {
         ],
     });
 }
-function T(t) {
+function F(t) {
     let { disabledPermissions: e, onGetPermisisonName: n } = t,
         l = E.intl.string(E.t.Yo5qlq);
     return (
@@ -268,7 +269,7 @@ function T(t) {
         })
     );
 }
-function F(t) {
+function _(t) {
     let { permissions: e } = t,
         n = (t) => {
             switch (t.toString()) {
@@ -287,19 +288,19 @@ function F(t) {
         className: v.table,
         children: [
             0 !== l.length
-                ? (0, i.jsx)(M, {
+                ? (0, i.jsx)(T, {
                       enabledPermissions: l,
                       onGetPermisisonName: n,
                   })
                 : null,
-            (0, i.jsx)(T, {
+            (0, i.jsx)(F, {
                 disabledPermissions: s,
                 onGetPermisisonName: n,
             }),
         ],
     });
 }
-function _(t) {
+function G(t) {
     let { guild: e, defaultNotificationSettingsMet: n, everyonePermissionsMet: s } = t;
     l.useEffect(() => {
         (0, I.BF)({
@@ -327,22 +328,22 @@ function _(t) {
                 gap: 12,
                 children: [
                     !n &&
-                        (0, i.jsx)(A, {
+                        (0, i.jsx)(M, {
                             title: E.intl.string(E.t.uPYswy),
                             description: E.intl.string(E.t.pf6ptp),
                         }),
                     !s &&
-                        (0, i.jsx)(A, {
+                        (0, i.jsx)(M, {
                             title: E.intl.format(E.t.IYQeOA, {}),
                             description: E.intl.string(E.t["+Iyaif"]),
                         }),
                 ],
             }),
-            !s && (0, i.jsx)(F, { permissions: r }),
+            !s && (0, i.jsx)(_, { permissions: r }),
         ],
     });
 }
-function G(t) {
+function B(t) {
     let { guild: e, policyAccepted: n, onPolicyAcceptedChange: s } = t;
     return (
         l.useEffect(() => {
@@ -366,8 +367,8 @@ function G(t) {
         })
     );
 }
-function B(t) {
-    var e = C(
+function K(t) {
+    var e = N(
         {},
         (function (t) {
             if (null == t) throw TypeError("Cannot destructure " + t);
@@ -375,106 +376,117 @@ function B(t) {
         })(t),
     );
     l.useEffect(() => {
-        m.default.track(y.rMx.OPEN_MODAL, { type: j.tA });
+        S.default.track(y.rMx.OPEN_MODAL, { type: j.tA });
     }, []);
     let { guild: n } = (0, r.cj)([d.Z], () => d.Z.getProps()),
         [o, c] = l.useState("intro"),
         [g] = l.useState(() => (null == n ? void 0 : n.verificationLevel)),
         [f] = l.useState(() => (null == n ? void 0 : n.explicitContentFilter)),
-        b = null != g && g > y.sFg.NONE,
-        S = f === y.lxg.ALL_MEMBERS,
-        O = !(b && S),
-        [v, A] = l.useState(j.b4),
-        [M, T] = l.useState(j.b4),
-        [F] = l.useState(() => !j.$X.some((t) => h.oz(t, n))),
-        [B] = l.useState(() => (null == n ? void 0 : n.defaultMessageNotifications)),
-        K = B === y.bL.ONLY_MENTIONS,
-        D = !K || !F,
-        R = (0, r.e7)([x.Z], () => (null != n ? x.Z.getEveryoneRole(n) : void 0)),
-        [Y, U] = l.useState(!1);
+        x = null != g && g > y.sFg.NONE,
+        m = f === y.lxg.ALL_MEMBERS,
+        O = !(x && m),
+        [v, M] = l.useState(j.b4),
+        [T, F] = l.useState(j.b4),
+        [_] = l.useState(() => !j.$X.some((t) => h.oz(t, n))),
+        [K] = l.useState(() => (null == n ? void 0 : n.defaultMessageNotifications)),
+        D = K === y.bL.ONLY_MENTIONS,
+        R = !D || !_,
+        Y = (0, r.e7)([b.Z], () => (null != n ? b.Z.getEveryoneRole(n) : void 0)),
+        [U, k] = l.useState(!1);
     if (null == n) return null;
-    let k = async () => {
-            if (null == R || !Y) return;
-            let t = F ? null : s.Od(R.permissions, j.mu);
-            if (null != t && t !== R.permissions) {
-                let e = P(N({}, R), { permissions: t });
+    let Z = async () => {
+            if (null == Y || !U) return;
+            let t = _ ? null : s.Od(Y.permissions, j.mu);
+            if (null != t && t !== Y.permissions) {
+                let e = w(P({}, Y), { permissions: t });
                 await (0, p.Gf)(n.id, [e], void 0, void 0, void 0, { throwErr: !0 });
             }
-            let e = N(
+            let e = P(
                 {
                     features: new Set([...n.features, y.GuildFeatures.COMMUNITY]),
                     rulesChannelId: v,
-                    publicUpdatesChannelId: M,
+                    publicUpdatesChannelId: T,
                 },
-                !b && { verificationLevel: y.sFg.LOW },
-                !S && { explicitContentFilter: y.lxg.ALL_MEMBERS },
-                !K && { defaultMessageNotifications: y.bL.ONLY_MENTIONS },
+                !x && { verificationLevel: y.sFg.LOW },
+                !m && { explicitContentFilter: y.lxg.ALL_MEMBERS },
+                !D && { defaultMessageNotifications: y.bL.ONLY_MENTIONS },
             );
             u.Z.updateGuild(e), await u.Z.saveGuild(n.id, e, { throwErr: !0 });
         },
-        Z = async () => {
-            m.default.track(y.rMx.MODAL_DISMISSED, { type: j.tA }), await e.onClose();
+        H = async () => {
+            S.default.track(y.rMx.MODAL_DISMISSED, { type: j.tA }), await e.onClose();
         },
-        H = [
+        q = [
             {
                 stepKey: j.IO.INTRO,
-                title: E.intl.string(E.t.ElKTeb),
-                subtitle: E.intl.string(E.t["CwC/ll"]),
+                modalProps: {
+                    title: E.intl.string(E.t.ElKTeb),
+                    subtitle: E.intl.string(E.t["CwC/ll"]),
+                    graphic: {
+                        src: C.Z,
+                        type: "image",
+                    },
+                    gradientColor: "blue",
+                },
                 nextButtonProps: { text: E.intl.string(E.t.LhlgY9) },
             },
             {
                 stepKey: j.IO.SAFETY_CHECK,
-                title: E.intl.string(E.t.QrjLYl),
-                subtitle: E.intl.string(E.t.i1STwu),
-                body: (0, i.jsx)(w, {
+                modalProps: {
+                    title: E.intl.string(E.t.QrjLYl),
+                    subtitle: E.intl.string(E.t.i1STwu),
+                },
+                body: (0, i.jsx)(L, {
                     guild: n,
-                    verificationLevelMet: b,
-                    contentFilterMet: S,
+                    verificationLevelMet: x,
+                    contentFilterMet: m,
                 }),
                 nextButtonProps: { text: E.intl.string(E.t.JFfins) },
             },
             {
                 stepKey: j.IO.BASICS,
-                title: E.intl.string(E.t.YtXpEh),
-                subtitle: E.intl.string(E.t["J/fYR8"]),
-                body: (0, i.jsx)(L, {
+                modalProps: {
+                    title: E.intl.string(E.t.YtXpEh),
+                    subtitle: E.intl.string(E.t["J/fYR8"]),
+                },
+                body: (0, i.jsx)(A, {
                     guild: n,
                     rulesChannelId: v,
-                    publicUpdatesChannelId: M,
-                    onRulesChannelChange: A,
-                    onPublicUpdatesChannelChange: T,
+                    publicUpdatesChannelId: T,
+                    onRulesChannelChange: M,
+                    onPublicUpdatesChannelChange: F,
                 }),
             },
             {
                 stepKey: j.IO.FINISH,
-                title: E.intl.string(E.t.EzGuSr),
-                body: (0, i.jsx)(_, {
+                modalProps: { title: E.intl.string(E.t.EzGuSr) },
+                body: (0, i.jsx)(G, {
                     guild: n,
-                    defaultNotificationSettingsMet: K,
-                    everyonePermissionsMet: F,
+                    defaultNotificationSettingsMet: D,
+                    everyonePermissionsMet: _,
                 }),
                 nextButtonProps: { text: E.intl.string(E.t.JFfins) },
             },
             {
                 stepKey: j.IO.RULES,
-                title: E.intl.string(E.t["Pj/s/a"]),
+                modalProps: { title: E.intl.string(E.t["Pj/s/a"]) },
                 nextButtonProps: { text: E.intl.string(E.t.XGl4ba) },
-                body: (0, i.jsx)(G, {
+                body: (0, i.jsx)(B, {
                     guild: n,
-                    policyAccepted: Y,
-                    onPolicyAcceptedChange: U,
+                    policyAccepted: U,
+                    onPolicyAcceptedChange: k,
                 }),
-                nextEnabled: Y,
+                nextEnabled: U,
             },
-        ].filter((t) => (t.stepKey !== j.IO.SAFETY_CHECK || !!O) && (t.stepKey !== j.IO.FINISH || !!D)),
-        q = H.slice(1).map((t) => t.stepKey);
+        ].filter((t) => (t.stepKey !== j.IO.SAFETY_CHECK || !!O) && (t.stepKey !== j.IO.FINISH || !!R)),
+        X = q.slice(1).map((t) => t.stepKey);
     return (0, i.jsx)(
         a.dGG,
-        P(N({}, e), {
-            steps: H,
-            numberedSteps: q,
+        w(P({}, e), {
+            steps: q,
+            numberedSteps: X,
             currentStepKey: o,
-            onClose: Z,
+            onClose: H,
             onStepChange: (t, e) => {
                 (0, I.BF)({
                     fromStep: e,
@@ -483,7 +495,7 @@ function B(t) {
                 }),
                     c(t);
             },
-            onComplete: k,
+            onComplete: Z,
         }),
     );
 }

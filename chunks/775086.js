@@ -113,7 +113,7 @@ function h(e) {
         p(d({}, v), {
             size: S,
             children: [
-                (0, r.jsx)(l.x, {
+                (0, r.jsx)(l.xB, {
                     title: n,
                     subtitle: u,
                 }),

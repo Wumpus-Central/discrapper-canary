@@ -166,22 +166,29 @@ function C(e) {
         d = [
             {
                 stepKey: "intro",
-                title: "Verify radness",
-                subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
+                modalProps: {
+                    title: "Verify radness",
+                    subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
+                },
                 body: (0, r.jsx)(S, {}),
                 nextButtonProps: { text: "Verify" },
             },
             {
                 stepKey: "safety",
-                title: "Safety first",
-                subtitle: "Before we get started verifying your radness, we need to make sure you're safe and sound.",
+                modalProps: {
+                    title: "Safety first",
+                    subtitle:
+                        "Before we get started verifying your radness, we need to make sure you're safe and sound.",
+                },
                 body: (0, r.jsx)(I, { setIsSafetyAccepted: l }),
                 nextEnabled: s,
             },
             {
                 stepKey: "passcode",
-                title: "Enter passcode",
-                subtitle: "Enter your passcode to complete the radness verification process.",
+                modalProps: {
+                    title: "Enter passcode",
+                    subtitle: "Enter your passcode to complete the radness verification process.",
+                },
                 body: (0, r.jsx)(T, { setIsPasscodeValid: u }),
                 nextButtonProps: { text: "Verify passcode" },
                 nextEnabled: c,

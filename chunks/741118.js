@@ -138,39 +138,49 @@ function b(e) {
             variant: "secondary",
             onClick: I,
         },
-        U = T.hideBackButton || N ? void 0 : (0, r.jsx)(a.A, m(p({}, j, T.backButtonProps), { onClick: x }));
+        U = T.hideBackButton || N ? void 0 : (0, r.jsx)(a.A, m(p({}, j, T.backButtonProps), { onClick: x })),
+        G = T.modalProps,
+        Z = "graphic" in G ? G : null;
     return (0, r.jsx)(E.Provider, {
         value: L,
         children: (0, r.jsxs)(
             s.I,
             m(p({}, v), {
+                paddingSize: null != Z ? "lg" : "sm",
                 children: [
-                    (0, r.jsx)(u.x, {
-                        title: T.title,
-                        subtitle: T.subtitle,
-                        stepNumber: (null == b ? void 0 : b.includes(g)) ? b.indexOf(g) + 1 : void 0,
-                        stepCount: null == b ? void 0 : b.length,
+                    null != Z
+                        ? (0, r.jsx)(u.iM, p({}, Z))
+                        : (0, r.jsx)(u.xB, {
+                              title: G.title,
+                              subtitle: G.subtitle,
+                              stepNumber: (null == b ? void 0 : b.includes(g)) ? b.indexOf(g) + 1 : void 0,
+                              stepCount: null == b ? void 0 : b.length,
+                          }),
+                    "notice" in G &&
+                        (0, r.jsx)(d.Y, {
+                            message: null == (t = G.notice) ? void 0 : t.message,
+                            type: null == (n = G.notice) ? void 0 : n.type,
+                        }),
+                    _.map((e) => {
+                        let t = "graphic" in e.modalProps ? null : e.modalProps;
+                        return (
+                            (null != e.body ||
+                                (null == t ? void 0 : t.input) != null ||
+                                (null == t ? void 0 : t.listProps) != null) &&
+                            (0, r.jsx)(
+                                "div",
+                                {
+                                    style: { display: e.stepKey === g ? void 0 : "none" },
+                                    children: (0, r.jsx)(c.f, {
+                                        controls: null == t ? void 0 : t.input,
+                                        listProps: null == t ? void 0 : t.listProps,
+                                        children: e.body,
+                                    }),
+                                },
+                                e.stepKey,
+                            )
+                        );
                     }),
-                    (0, r.jsx)(d.Y, {
-                        message: null == (t = T.notice) ? void 0 : t.message,
-                        type: null == (n = T.notice) ? void 0 : n.type,
-                    }),
-                    _.map((e) =>
-                        null != e.body || null != e.input || null != e.listProps
-                            ? (0, r.jsx)(
-                                  "div",
-                                  {
-                                      style: { display: e.stepKey === g ? void 0 : "none" },
-                                      children: (0, r.jsx)(c.f, {
-                                          controls: e.input,
-                                          listProps: e.listProps,
-                                          children: e.body,
-                                      }),
-                                  },
-                                  e.stepKey,
-                              )
-                            : void 0,
-                    ),
                     (0, r.jsx)(l.G, {
                         leading: U,
                         actionsFullWidth: N,
