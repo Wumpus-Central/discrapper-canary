@@ -361,6 +361,7 @@ function X(e) {
                       "" !== tl &&
                       (0, r.jsx)(f.Heading, {
                           variant: "heading-md/semibold",
+                          className: Q.header,
                           children: tl,
                       }),
                   e0 &&
