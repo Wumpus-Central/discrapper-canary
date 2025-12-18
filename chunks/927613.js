@@ -52,6 +52,10 @@ function _(e) {
     return {
         state: r.useMemo(() => (null == d ? "loading" : d.state), [d]),
         recommendations: _,
+        skuIdToUserIdsReasons: r.useMemo(
+            () => (null == d || "success" !== d.state ? {} : d.data.skusToRecommendationReasons),
+            [d],
+        ),
     };
 }
 function m(e) {
@@ -100,6 +104,7 @@ function m(e) {
             [u, n],
         ),
         recommendations: _,
+        skuIdToUserIdsReasons: {},
     };
 }
 function h(e) {
@@ -123,7 +128,11 @@ function h(e) {
     r.useEffect(() => {
         y((e) => (null == e ? s : (0, a.E)(e, s) ? e : s));
     }, [s]);
-    let { state: O, recommendations: v } = _({
+    let {
+        state: O,
+        recommendations: v,
+        skuIdToUserIdsReasons: S,
+    } = _({
         applicationId: o,
         userIds: b,
         numItems: n,
@@ -133,5 +142,6 @@ function h(e) {
     return {
         state: r.useMemo(() => (f && 0 !== n ? (h ? O : g) : "success"), [f, n, h, O, g]),
         recommendations: r.useMemo(() => (f && 0 !== n ? (h ? v : E) : []), [f, n, h, v, E]),
+        skuIdToUserIdsReasons: S,
     };
 }

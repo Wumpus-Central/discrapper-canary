@@ -1,113 +1,113 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
-    l = n(442837),
-    c = n(681715),
-    u = n(835473),
-    d = n(688192),
-    f = n(602733),
-    p = n(594174),
-    _ = n(626135),
-    m = n(631863),
-    h = n(927613),
-    g = n(851397),
-    E = n(981631),
-    b = n(701488),
-    y = n(474936),
-    O = n(388032),
-    v = n(687068);
-function S(e) {
+    l = n(835473),
+    c = n(688192),
+    u = n(626135),
+    d = n(823379),
+    f = n(187233),
+    p = n(631863),
+    _ = n(927613),
+    m = n(550642),
+    h = n(981631),
+    g = n(701488),
+    E = n(388032),
+    b = n(687068);
+function y(e) {
     let {
             className: t,
             applicationId: n,
             userIds: a,
-            cardSize: S = d.U.SMALL,
-            location: I,
-            guildId: T,
-            channelId: C,
+            cardSize: y = c.U.SMALL,
+            location: O,
+            guildId: v,
+            channelId: S,
         } = e,
-        A = (0, u.q)(n),
-        N = (0, m.Z)(A, I),
-        P = (0, l.e7)(
-            [p.default],
-            () => (null != a && 1 === a.length ? p.default.getUser(null == a ? void 0 : a[0]) : void 0),
-            [a],
-        ),
-        R = i.useMemo(() => {
-            let e = null != N ? N.getIconURL(b.Si.SMALL) : void 0;
+        I = (0, l.q)(n),
+        T = (0, p.Z)(I, O),
+        C = i.useMemo(() => {
+            let e = null != T ? T.getIconURL(g.Si.SMALL) : void 0;
             return null != e
                 ? (0, r.jsx)("img", {
-                      className: v.applicationIcon,
+                      className: b.applicationIcon,
                       src: e,
                       alt: "",
                   })
                 : void 0;
-        }, [N]),
-        { state: w, recommendations: D } = (0, h.Z)({
-            guildId: null == N ? void 0 : N.guildId,
-            applicationId: null == N ? void 0 : N.id,
+        }, [T]),
+        {
+            state: A,
+            recommendations: N,
+            skuIdToUserIdsReasons: P,
+        } = (0, _.Z)({
+            guildId: null == T ? void 0 : T.guildId,
+            applicationId: null == T ? void 0 : T.id,
             numWishlistItems: 2,
-            location: I,
+            location: O,
             includeWishlists: !0,
             userIds: a,
-        });
+        }),
+        R = i.useMemo(
+            () =>
+                N.map((e) => {
+                    var t, n;
+                    let i =
+                        null !=
+                        (n =
+                            null == (t = P[e.skuId])
+                                ? void 0
+                                : t
+                                      .filter((e) => e.reason === f.g.WISHLIST)
+                                      .map((e) => e.userId)
+                                      .filter(d.lm))
+                            ? n
+                            : [];
+                    return (0, r.jsx)(
+                        m.Z,
+                        {
+                            variant: i.length > 0 ? m.B.WISHLIST : m.B.POPULAR,
+                            wishlistItem: e,
+                            userIds: i,
+                            guildId: v,
+                            channelId: S,
+                            cardSize: y,
+                        },
+                        e.skuId,
+                    );
+                }),
+            [y, S, v, N, P],
+        );
     return (i.useEffect(() => {
-        0 !== D.length &&
-            _.default.track(E.rMx.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
-                guild_id: T,
-                channel_id: C,
-                sku_ids: D.map((e) => e.skuId),
-                location: I,
+        0 !== N.length &&
+            u.default.track(h.rMx.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
+                guild_id: v,
+                channel_id: S,
+                sku_ids: N.map((e) => e.skuId),
+                location: O,
             });
-    }, [T, C, D, I]),
-    "loading" === w || 0 === D.length)
+    }, [v, S, N, O]),
+    "loading" === A || 0 === N.length)
         ? null
         : (0, r.jsxs)("div", {
-              className: o()(v.container, t),
+              className: o()(b.container, t),
               children: [
                   (0, r.jsxs)("div", {
-                      className: v.header,
+                      className: b.header,
                       children: [
                           (0, r.jsx)(s.xvT, {
                               variant: "text-xs/medium",
                               color: "text-muted",
-                              children: O.intl.string(O.t.BCi1gT),
+                              children: E.intl.string(E.t.BCi1gT),
                           }),
-                          null != R ? R : null,
+                          null != C ? C : null,
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: v.items,
-                      children: D.map((e) =>
-                          (0, r.jsx)(
-                              c.i_,
-                              {
-                                  body: O.intl.string(O.t["4yiU7x"]),
-                                  asset: R,
-                                  assetSize: f.EU,
-                                  position: "top",
-                                  asContainer: !0,
-                                  delay: f.rq,
-                                  children: (0, r.jsx)(g.Z, {
-                                      item: e,
-                                      wishlistId: null,
-                                      isOwner: !1,
-                                      cardSize: S,
-                                      showOverlayButton: !0,
-                                      hideButtonIcon: !0,
-                                      showPrice: !0,
-                                      showIcons: !1,
-                                      giftingOrigin: y.Wt.SHOP_PAGE,
-                                      profileOwner: P,
-                                      additionalUserIds: null == P ? a : void 0,
-                                  }),
-                              },
-                              e.skuId,
-                          ),
-                      ),
+                      className: b.items,
+                      children: R,
                   }),
               ],
           });
