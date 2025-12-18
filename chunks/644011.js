@@ -80,7 +80,7 @@ function y(e) {
                 }),
             [y, S, v, N, P],
         );
-    return (i.useEffect(() => {
+    i.useEffect(() => {
         0 !== N.length &&
             u.default.track(h.rMx.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
                 guild_id: v,
@@ -88,27 +88,31 @@ function y(e) {
                 sku_ids: N.map((e) => e.skuId),
                 location: O,
             });
-    }, [v, S, N, O]),
-    "loading" === A || 0 === N.length)
-        ? null
-        : (0, r.jsxs)("div", {
-              className: o()(b.container, t),
-              children: [
-                  (0, r.jsxs)("div", {
-                      className: b.header,
-                      children: [
-                          (0, r.jsx)(s.xvT, {
-                              variant: "text-xs/medium",
-                              color: "text-muted",
-                              children: E.intl.string(E.t.BCi1gT),
-                          }),
-                          null != C ? C : null,
-                      ],
-                  }),
-                  (0, r.jsx)("div", {
-                      className: b.items,
-                      children: R,
-                  }),
-              ],
-          });
+    }, [v, S, N, O]);
+    let w = "loading" === A || 0 === N.length;
+    return (0, r.jsxs)("div", {
+        className: o()(b.container, t),
+        children: [
+            (0, r.jsxs)("div", {
+                className: b.header,
+                children: [
+                    (0, r.jsx)(s.xvT, {
+                        variant: "text-xs/medium",
+                        color: "text-muted",
+                        children: E.intl.string(E.t.BCi1gT),
+                    }),
+                    null != C ? C : null,
+                ],
+            }),
+            (0, r.jsx)("div", {
+                className: b.items,
+                children: w
+                    ? (0, r.jsx)(s.$jN, {
+                          type: s.$jN.Type.SPINNING_CIRCLE,
+                          className: b.spinner,
+                      })
+                    : R,
+            }),
+        ],
+    });
 }

@@ -22,6 +22,8 @@ var r = {
     assetsLargeImageActivityFeedXbox:
         "_2ef4989efde1f4e4-assetsLargeImageActivityFeedXbox _2ef4989efde1f4e4-assetsLargeImage",
     assetsLargeImageVoiceChannel: "_2ef4989efde1f4e4-assetsLargeImageVoiceChannel _2ef4989efde1f4e4-assetsLargeImage",
+    assetsLargeImageVoiceChannelXbox:
+        "_2ef4989efde1f4e4-assetsLargeImageVoiceChannelXbox _2ef4989efde1f4e4-assetsLargeImageVoiceChannel _2ef4989efde1f4e4-assetsLargeImage",
     assetsLargeImageActivityFeedTwitch:
         "_2ef4989efde1f4e4-assetsLargeImageActivityFeedTwitch _2ef4989efde1f4e4-assetsLargeImage",
     assetsSmallImage: "_2ef4989efde1f4e4-assetsSmallImage",

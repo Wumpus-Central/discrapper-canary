@@ -118,30 +118,31 @@ function h(e) {
         } = e,
         c = (0, d.Q)({ location: i }),
         f = (0, u.cZ)({ location: i }),
-        h = r.useMemo(() => c && null != s && s.length > 0, [c, s]),
-        { state: g, recommendations: E } = m({
+        [h, g] = r.useState(s);
+    r.useEffect(() => {
+        g((e) => (null == e ? s : (0, a.E)(e, s) ? e : s));
+    }, [s]);
+    let E = r.useMemo(() => c && null != s && s.length > 0, [c, s]),
+        {
+            state: b,
+            recommendations: y,
+            skuIdToUserIdsReasons: O,
+        } = _({
+            applicationId: o,
+            userIds: h,
+            numItems: n,
+            isEligible: E && f,
+            includeWishlists: l,
+        }),
+        v = r.useMemo(() => "error" !== b && E, [E, b]),
+        { state: S, recommendations: I } = m({
             guildId: t,
             numItems: n,
-            isEligible: !h && f,
-        }),
-        [b, y] = r.useState(s);
-    r.useEffect(() => {
-        y((e) => (null == e ? s : (0, a.E)(e, s) ? e : s));
-    }, [s]);
-    let {
-        state: O,
-        recommendations: v,
-        skuIdToUserIdsReasons: S,
-    } = _({
-        applicationId: o,
-        userIds: b,
-        numItems: n,
-        isEligible: h && f,
-        includeWishlists: l,
-    });
+            isEligible: !v && f,
+        });
     return {
-        state: r.useMemo(() => (f && 0 !== n ? (h ? O : g) : "success"), [f, n, h, O, g]),
-        recommendations: r.useMemo(() => (f && 0 !== n ? (h ? v : E) : []), [f, n, h, v, E]),
-        skuIdToUserIdsReasons: S,
+        state: r.useMemo(() => (f && 0 !== n ? (v ? b : S) : "success"), [f, n, v, b, S]),
+        recommendations: r.useMemo(() => (f && 0 !== n ? (v ? y : I) : []), [f, n, v, y, I]),
+        skuIdToUserIdsReasons: O,
     };
 }
