@@ -817,6 +817,7 @@ let e6 = [
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
             nameUnformatted: o.t.LR1C0a,
+            nameUnformattedNitro: o.t.tx9Fvw,
             tenureReqNumMonths: 1,
             hasWideArt: !1,
             glowColor: "#b54913",
@@ -824,6 +825,7 @@ let e6 = [
         premium_tenure_3_month_v2: {
             id: "premium_tenure_3_month_v2",
             nameUnformatted: o.t["rI1/3H"],
+            nameUnformattedNitro: o.t.xJNb5C,
             tenureReqNumMonths: 3,
             hasWideArt: !1,
             glowColor: "#9e9e9e",
@@ -831,6 +833,7 @@ let e6 = [
         premium_tenure_6_month_v2: {
             id: "premium_tenure_6_month_v2",
             nameUnformatted: o.t.VkhVKS,
+            nameUnformattedNitro: o.t["4scBFY"],
             tenureReqNumMonths: 6,
             hasWideArt: !1,
             glowColor: "#ffa813",
@@ -838,6 +841,7 @@ let e6 = [
         premium_tenure_12_month_v2: {
             id: "premium_tenure_12_month_v2",
             nameUnformatted: o.t.gzUfNS,
+            nameUnformattedNitro: o.t["83Jw2B"],
             tenureReqNumMonths: 12,
             hasWideArt: !1,
             glowColor: "#5eacc2",
@@ -845,6 +849,7 @@ let e6 = [
         premium_tenure_24_month_v2: {
             id: "premium_tenure_24_month_v2",
             nameUnformatted: o.t.fuwTPm,
+            nameUnformattedNitro: o.t.vRSCKv,
             tenureReqNumMonths: 24,
             hasWideArt: !1,
             glowColor: "#6d5cf2",
@@ -852,6 +857,7 @@ let e6 = [
         premium_tenure_36_month_v2: {
             id: "premium_tenure_36_month_v2",
             nameUnformatted: o.t.qNhNk4,
+            nameUnformattedNitro: o.t.mV86tk,
             tenureReqNumMonths: 36,
             hasWideArt: !1,
             glowColor: "#32c102",
@@ -859,6 +865,7 @@ let e6 = [
         premium_tenure_60_month_v2: {
             id: "premium_tenure_60_month_v2",
             nameUnformatted: o.t["wvX+eD"],
+            nameUnformattedNitro: o.t.WcsLxW,
             tenureReqNumMonths: 60,
             hasWideArt: !0,
             glowColor: "#f29cc3",
@@ -866,6 +873,7 @@ let e6 = [
         premium_tenure_72_month_v2: {
             id: "premium_tenure_72_month_v2",
             nameUnformatted: o.t["/menIw"],
+            nameUnformattedNitro: o.t["Z/qgMK"],
             tenureReqNumMonths: 72,
             hasWideArt: !0,
             glowColor: "#078292",
