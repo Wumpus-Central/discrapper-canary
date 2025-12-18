@@ -177,6 +177,7 @@ function I() {
             [p.oAB.OVERLAY, d.n.OVERLAY_PANEL],
             [p.oAB.EXPERIMENTS, d.n.EXPERIMENTS_PANEL],
             [p.oAB.DEVELOPER_OPTIONS, d.n.DEVELOPER_OPTIONS_PANEL],
+            [p.oAB.ACCOUNT_STANDING, d.n.ACCOUNT_STANDING_CATEGORY],
         ]);
     return e && !(0, l.w2)() && t.delete(p.oAB.CLIPS), t;
 }

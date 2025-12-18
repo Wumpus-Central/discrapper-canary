@@ -55,6 +55,7 @@ class I extends i.PureComponent {
                 (0, r.jsx)(m.Z, {
                     backupCodes: e,
                     currentUser: n,
+                    hasTOTPEnabled: t,
                 }),
                 e.length > 0 &&
                     (0, r.jsxs)(l.Kqy, {

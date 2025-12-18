@@ -1,4 +1,4 @@
-n.d(t, { T: () => T }), n(388685), n(415506);
+n.d(t, { T: () => C }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -13,9 +13,10 @@ var r = n(54381),
     _ = n(36361),
     m = n(111161),
     h = n(700425),
-    g = n(921944),
-    E = n(520118);
-function b(e) {
+    g = n(662097),
+    E = n(921944),
+    b = n(520118);
+function y(e) {
     let { notice: t, children: n } = e,
         { showNotice: l, handleStoreUpdate: c } = (0, d.Cu)(),
         u = null == t ? void 0 : t.stores;
@@ -37,7 +38,7 @@ function b(e) {
         if (null == t || !l) return null;
         let { element: e } = t;
         return (0, r.jsx)(s.oXn, {
-            className: E.notice,
+            className: b.notice,
             children: (0, r.jsx)(e, {}),
         });
     }, [t, l]);
@@ -51,19 +52,19 @@ function b(e) {
         ],
     });
 }
-function y(e) {
+function O(e) {
     let { scrollerRef: t, panelKey: n, notice: a, children: o } = e,
         l = i.useRef(null);
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(y, {
         notice: a,
         children: (0, r.jsx)(
             s.w0Z,
             {
                 "data-settings-panel-scroller": !0,
-                className: E.scroller,
+                className: b.scroller,
                 ref: t,
                 children: (0, r.jsx)("div", {
-                    className: E.panel,
+                    className: b.panel,
                     ref: l,
                     children: (0, r.jsx)(s.JcV, {
                         containerRef: l,
@@ -75,17 +76,17 @@ function y(e) {
         ),
     });
 }
-function O(e) {
+function v(e) {
     let { layout: t } = e;
     return (0, r.jsx)("div", {
-        className: E.categories,
+        className: b.categories,
         children: t.map((e, n) =>
             (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
                         (0, r.jsx)(_.Z, { node: e }),
-                        n !== t.length - 1 && (0, r.jsx)(m.Z, { className: E.divider }),
+                        n !== t.length - 1 && (0, r.jsx)(m.Z, { className: b.divider }),
                     ],
                 },
                 e.key,
@@ -93,7 +94,7 @@ function O(e) {
         ),
     });
 }
-function v(e) {
+function S(e) {
     var t, n;
     let { panelKey: a, layout: o, notice: l } = e,
         c =
@@ -113,17 +114,21 @@ function v(e) {
     }, [o, a]);
     let f = (e) => {
             u(() => {
-                let t = new Map(p.Z.getField("currentTabKeys"));
-                t.set(a, e), p.Z.setState({ currentTabKeys: t });
+                var t;
+                if (e === c) return;
+                let n = new Map(p.Z.getField("currentTabKeys"));
+                n.set(a, e), p.Z.setState({ currentTabKeys: n });
+                let r = o.find((t) => t.key === e);
+                null == r || null == (t = r.onItemSelect) || t.call(r);
             });
         },
         _ = null != (n = o.find((e) => e.key === c)) ? n : o[0];
-    return (0, r.jsxs)(y, {
+    return (0, r.jsxs)(O, {
         panelKey: a,
         notice: l,
         children: [
             (0, r.jsx)(s.njP, {
-                className: E.tabBar,
+                className: b.tabBar,
                 selectedItem: c,
                 onItemSelect: f,
                 orientation: "horizontal",
@@ -146,36 +151,37 @@ function v(e) {
                 children:
                     null != _.StronglyDiscouragedCustomComponent
                         ? (0, r.jsx)(_.StronglyDiscouragedCustomComponent, {})
-                        : (0, r.jsx)(O, { layout: _.layout }),
+                        : (0, r.jsx)(v, { layout: _.layout }),
             }),
         ],
     });
 }
-function S(e) {
+function I(e) {
     let { panelKey: t, notice: n, layout: a } = e,
         o = i.useRef(null);
     return (
         (0, h.i)(t, a, o),
-        (0, r.jsx)(y, {
+        (0, r.jsx)(O, {
             scrollerRef: o,
             panelKey: t,
             notice: n,
-            children: (0, r.jsx)(O, { layout: a }),
+            children: (0, r.jsx)(v, { layout: a }),
         })
     );
 }
-function I(e) {
+function T(e) {
     let { component: t, panelKey: n, notice: i } = e;
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(O, {
         panelKey: n,
         notice: i,
         children: (0, r.jsx)(t, {}),
     });
 }
-function T(e) {
+function C(e) {
     let { node: t } = e,
-        { layout: n } = t,
-        o = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation);
+        { layout: n, initialize: o } = t;
+    (0, g.D)(o);
+    let s = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation);
     if (
         (i.useEffect(() => {
             var e, n;
@@ -190,28 +196,28 @@ function T(e) {
             null != i &&
                 i.forEach((e) => {
                     (0, c.Q3)(e, {
-                        dismissAction: g.L.AUTO,
+                        dismissAction: E.L.AUTO,
                         forceTrack: !0,
                     });
                 });
         }, [t]),
-        o && t.hideInStreamerMode)
+        s && t.hideInStreamerMode)
     )
         return (0, r.jsx)(l.Z, {});
     if (null != t.StronglyDiscouragedCustomComponent)
-        return (0, r.jsx)(I, {
+        return (0, r.jsx)(T, {
             component: t.StronglyDiscouragedCustomComponent,
             panelKey: t.key,
             notice: t.notice,
         });
     if ((0, f.sp)(n))
-        return (0, r.jsx)(v, {
+        return (0, r.jsx)(S, {
             panelKey: t.key,
             notice: t.notice,
             layout: n,
         });
     if ((0, f.iU)(n))
-        return (0, r.jsx)(S, {
+        return (0, r.jsx)(I, {
             panelKey: t.key,
             notice: t.notice,
             layout: n,
