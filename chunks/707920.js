@@ -345,6 +345,29 @@ let I = {
                                 idle: n,
                                 showChat: null != A && A,
                             }),
+                            (0, i.jsxs)("div", {
+                                className: a()(_.row, { [_.hidden]: n }),
+                                children: [
+                                    (0, i.jsx)(s.hU, {
+                                        variant: "icon-only",
+                                        "aria-label": "Zoom out Haven",
+                                        icon: s.BlJ,
+                                        disabled: n,
+                                        onClick: (e) => {
+                                            e.preventDefault(), e.stopPropagation(), en(D - 0.05);
+                                        },
+                                    }),
+                                    (0, i.jsx)(s.hU, {
+                                        variant: "icon-only",
+                                        "aria-label": "Zoom in Haven",
+                                        icon: s.OyE,
+                                        disabled: n,
+                                        onClick: (e) => {
+                                            e.preventDefault(), e.stopPropagation(), en(D + 0.05);
+                                        },
+                                    }),
+                                ],
+                            }),
                         ],
                     }),
                     (0, i.jsx)(v.Z, {
