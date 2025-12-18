@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(60779);
 let u = (e) => {
     let { category: t, daysRemainingText: n = i.t.Io7ozn, className: l } = e;
-    if (null == t.unpublishedAt) return null;
+    if (!(0, o.L9)(t.unpublishedAt)) return null;
     let u = (0, o.OT)(t.unpublishedAt),
         d = u > 1 ? i.intl.formatToPlainString(n, { days: u }) : i.intl.string(i.t.Bc13HF);
     return (0, r.jsx)(s.IGR, {

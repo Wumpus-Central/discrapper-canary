@@ -41,14 +41,14 @@ let A = (0, C.IC)(90),
     },
     N = (e) => {
         var t;
-        let { isLoading: n, handleTransition: a, category: N, heroBlock: R, tab: P, onVisibilityChange: w } = e,
-            Z = (0, E.W)("HeroBlock"),
+        let { isLoading: n, handleTransition: a, category: N, heroBlock: R, tab: P, onVisibilityChange: Z } = e,
+            w = (0, E.W)("HeroBlock"),
             D = (0, o.O)(
                 (e) => {
-                    null == w || w(e);
+                    null == Z || Z(e);
                 },
                 0.1,
-                null != w,
+                null != Z,
             ),
             H = l.useRef(null),
             M = (0, O.B)("HeroBlock"),
@@ -171,7 +171,7 @@ let A = (0, C.IC)(90),
                                                 : (0, r.jsxs)("div", {
                                                       className: I.heroHeaderBadgeLogoSummaryContainer,
                                                       children: [
-                                                          null != U.unpublishedAt &&
+                                                          (0, C.L9)(U.unpublishedAt) &&
                                                               (0, r.jsx)(d.IGR, {
                                                                   disableColor: !0,
                                                                   text: L.intl.string(L.t["h/uBCR"]),
@@ -226,7 +226,7 @@ let A = (0, C.IC)(90),
                                   heroBlockRecord: U,
                                   tab: P,
                                   isBlockLoading: n,
-                                  layout: P === T.AW.HOME ? (Z ? "hscroll" : "row") : z ? "row" : "feed",
+                                  layout: P === T.AW.HOME ? (w ? "hscroll" : "row") : z ? "row" : "feed",
                               }),
                           ],
                       }),

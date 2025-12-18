@@ -1,35 +1,36 @@
 n.d(t, {
-    $W: () => ee,
+    $W: () => et,
     Ad: () => k,
     BH: () => P,
     Cs: () => D,
     G1: () => O,
     IC: () => q,
+    L9: () => J,
     OT: () => X,
     QG: () => M,
-    Qf: () => el,
+    Qf: () => ec,
     Vw: () => S,
     XM: () => I,
     Y: () => W,
-    Yq: () => J,
+    Yq: () => $,
     bl: () => V,
-    eu: () => en,
+    eu: () => er,
     f_: () => N,
     gc: () => T,
-    hC: () => es,
+    hC: () => el,
     iC: () => G,
     jT: () => H,
-    jm: () => eo,
+    jm: () => es,
     mO: () => K,
-    ne: () => ea,
+    ne: () => eo,
     qS: () => v,
     ql: () => A,
     rN: () => R,
     uV: () => j,
-    v5: () => et,
-    wO: () => ec,
-    x0: () => er,
-    x6: () => $,
+    v5: () => en,
+    wO: () => eu,
+    x0: () => ei,
+    x6: () => ee,
     yn: () => B,
 }),
     n(539854),
@@ -248,17 +249,18 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / Q);
     },
-    J = (e) => {
+    J = (e) => null != e && X(e) <= _.wS,
+    $ = (e) => {
         let t = _.yf[e];
         return null != t && new Date().getTime() < t;
     },
-    $ = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
-    ee = (e) => {
+    ee = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
+    et = (e) => {
         var t, n;
         if (null != e)
             return e.type === i.Z.BUNDLE ? i.Z.BUNDLE : null == (n = e.items) || null == (t = n[0]) ? void 0 : t.type;
     },
-    et = (e) => {
+    en = (e) => {
         var t, n, r;
         let {
                 selectedSkuPricePreview: i,
@@ -277,42 +279,42 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return p;
     },
-    en =
+    er =
         (h.pK.KZT,
         h.pK.NGN,
         h.pK.EGP,
         (e, t, n) => {
-            if ($(e)) return C(e);
+            if (ee(e)) return C(e);
             let r = A(
                 e,
                 t ? (n ? m.tuJ.MOBILE : m.tuJ.DEFAULT) : n ? m.tuJ.MOBILE_PREMIUM_TIER_2 : m.tuJ.PREMIUM_TIER_2,
             );
             return null == r ? void 0 : r.amount;
         }),
-    er = (e, t) => {
+    ei = (e, t) => {
         let n = [];
         for (let r of e) {
             let e = r.heroRanking;
             if (null != e)
                 for (let r of e) {
                     let e = t.get(r);
-                    if (null != e && !$(e) && (n.push(r), n.length >= _.K8)) return n;
+                    if (null != e && !ee(e) && (n.push(r), n.length >= _.K8)) return n;
                 }
         }
-        return ei(n);
+        return ea(n);
     },
-    ei = (e) => {
+    ea = (e) => {
         if (e.length < _.K8) {
             let t = _.HU.slice(0, _.K8 - e.length);
             return e.concat(t);
         }
         return e;
     },
-    ea = (e) => {
+    eo = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
         return !n && !(_.Vt.ORB_PROFILE_BADGE === (null == t ? void 0 : t.skuId) && r);
     },
-    eo = (e, t) => {
+    es = (e, t) => {
         switch (e) {
             case i.Z.AVATAR_DECORATION:
                 return "avatar decoration";
@@ -332,7 +334,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
                 return "unknown";
         }
     },
-    es = (e, t, n) =>
+    el = (e, t, n) =>
         e.sort((e, r) => {
             var i, a;
             let o = n
@@ -352,7 +354,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
                 (null != (a = null == s ? void 0 : s.amount) ? a : 0)
             );
         }),
-    el = (e, t) => {
+    ec = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
@@ -361,4 +363,4 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
             return (null != (o = null == (i = t.eligibleOffers) ? void 0 : i.some((e) => n.includes(e))) && o) - s;
         });
     },
-    ec = (e) => e.filter((e) => !e.isCategoryReward);
+    eu = (e) => e.filter((e) => !e.isCategoryReward);
