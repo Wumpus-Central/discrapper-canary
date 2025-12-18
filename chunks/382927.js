@@ -1,4 +1,4 @@
-r.d(t, { default: () => I }), r(388685);
+r.d(t, { default: () => U }), r(388685);
 var n = r(54381),
     a = r(473749),
     i = r(512722),
@@ -20,11 +20,11 @@ var n = r(54381),
     h = r(353149),
     O = r(388032),
     S = r(544165),
-    w = r(530641),
-    v = r(491567),
+    v = r(530641),
+    w = r(491567),
     C = r(419698),
     k = r(568368);
-function N(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -49,7 +49,7 @@ function N(e) {
     }
     return e;
 }
-function E(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function E(e, t) {
         e
     );
 }
-function T(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -87,14 +87,14 @@ function T(e, t) {
     }
     return a;
 }
-function Z(e) {
+function I(e) {
     var { onClose: t, isExistingSub: r, premiumGroupPrimaryName: a, currentUser: i } = e,
-        o = T(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]);
+        o = E(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]);
     let u = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
-        p = (0, y.rO)() ? w.Z : v.Z;
+        p = (0, y.rO)() ? v.Z : w.Z;
     return (0, n.jsx)(
         l.IX,
-        E(N({}, o), {
+        N(G({}, o), {
             onClose: t,
             children: (0, n.jsxs)(l.fef, {
                 children: [
@@ -155,40 +155,42 @@ function Z(e) {
         }),
     );
 }
-function G(e) {
+function T(e) {
     var {
             setModalState: t,
             onClose: r,
             premiumGroupSubscriptionId: i,
-            isExistingSub: o,
-            premiumGroupPrimaryName: s,
-            currentUser: c,
-            setError: f,
+            premiumGroupInviteId: o,
+            isExistingSub: s,
+            premiumGroupPrimaryName: c,
+            currentUser: f,
+            setError: d,
         } = e,
-        d = T(e, [
+        m = E(e, [
             "setModalState",
             "onClose",
             "premiumGroupSubscriptionId",
+            "premiumGroupInviteId",
             "isExistingSub",
             "premiumGroupPrimaryName",
             "currentUser",
             "setError",
         ]);
-    let m = (0, x.sO)(),
-        [p, b] = (0, a.useState)(!1),
-        g = async () => {
-            b(!0);
+    let p = (0, x.sO)(),
+        [b, g] = (0, a.useState)(!1),
+        y = async () => {
+            g(!0);
             try {
-                await (0, P.r7)(i, c.id), t(1);
+                await (0, P.r7)(i, f.id, o), t(1);
             } catch (e) {
-                f(0), t(2);
+                d(0), t(2);
             } finally {
-                b(!1);
+                g(!1);
             }
         };
     return (0, n.jsx)(
         l.ExpressiveModal,
-        E(N({}, d), {
+        N(G({}, m), {
             onClose: r,
             gradientColor: "nitro-pink",
             badge: { type: "beta" },
@@ -196,13 +198,13 @@ function G(e) {
                 src: k.Z,
                 type: "image",
             },
-            title: O.intl.formatToPlainString(o ? h.default["0Yxz12"] : h.default.UjA5k8, {
-                premiumGroupProductName: m,
+            title: O.intl.formatToPlainString(s ? h.default["0Yxz12"] : h.default.UjA5k8, {
+                premiumGroupProductName: p,
             }),
-            subtitle: O.intl.format(o ? h.default.YjSsdH : h.default.qkFeBP, {
-                premiumGroupProductName: m,
+            subtitle: O.intl.format(s ? h.default.YjSsdH : h.default.qkFeBP, {
+                premiumGroupProductName: p,
                 cooldownMonths: x.T9,
-                primaryName: s,
+                primaryName: c,
             }),
             actions: [
                 {
@@ -214,19 +216,19 @@ function G(e) {
                 },
                 {
                     text: O.intl.string(h.default.odQeh3),
-                    onClick: g,
+                    onClick: y,
                     variant: "expressive",
                     icon: l.SrA,
-                    loading: p,
+                    loading: b,
                 },
             ],
         }),
     );
 }
-function U(e) {
+function Z(e) {
     let t, r;
     var { error: a, onClose: i } = e,
-        o = T(e, ["error", "onClose"]);
+        o = E(e, ["error", "onClose"]);
     let s = (0, x.sO)();
     switch (a) {
         case 1:
@@ -261,7 +263,7 @@ function U(e) {
     }
     return (0, n.jsx)(
         l.Modal,
-        N(
+        G(
             {
                 size: "md",
                 title: t,
@@ -281,48 +283,49 @@ function U(e) {
         ),
     );
 }
-function I(e) {
-    var { premiumGroupSubscriptionId: t, isExistingSub: r, premiumGroupPrimaryName: i } = e,
-        l = T(e, ["premiumGroupSubscriptionId", "isExistingSub", "premiumGroupPrimaryName"]);
-    let [c, u] = (0, a.useState)(0),
-        [f, d] = (0, a.useState)(null),
-        m = (0, s.e7)([g.default], () => g.default.getCurrentUser());
-    o()(null != m, "UserSettingsProfileCustomization: user cannot be undefined");
-    let b = null;
-    switch (c) {
+function U(e) {
+    var { premiumGroupSubscriptionId: t, premiumGroupInviteId: r, isExistingSub: i, premiumGroupPrimaryName: l } = e,
+        c = E(e, ["premiumGroupSubscriptionId", "premiumGroupInviteId", "isExistingSub", "premiumGroupPrimaryName"]);
+    let [u, f] = (0, a.useState)(0),
+        [d, m] = (0, a.useState)(null),
+        b = (0, s.e7)([g.default], () => g.default.getCurrentUser());
+    o()(null != b, "UserSettingsProfileCustomization: user cannot be undefined");
+    let y = null;
+    switch (u) {
         case 0:
-            b = (0, n.jsx)(
-                G,
-                N(
+            y = (0, n.jsx)(
+                T,
+                G(
                     {
-                        setModalState: u,
+                        setModalState: f,
                         premiumGroupSubscriptionId: t,
-                        isExistingSub: r,
-                        premiumGroupPrimaryName: i,
-                        currentUser: m,
-                        setError: d,
+                        premiumGroupInviteId: r,
+                        isExistingSub: i,
+                        premiumGroupPrimaryName: l,
+                        currentUser: b,
+                        setError: m,
                     },
-                    l,
+                    c,
                 ),
             );
             break;
         case 1:
-            b = (0, n.jsx)(
-                Z,
-                E(N({}, l), {
-                    isExistingSub: r,
-                    premiumGroupPrimaryName: i,
-                    currentUser: m,
+            y = (0, n.jsx)(
+                I,
+                N(G({}, c), {
+                    isExistingSub: i,
+                    premiumGroupPrimaryName: l,
+                    currentUser: b,
                 }),
             );
             break;
         case 2:
-            b = (0, n.jsx)(U, N({ error: f }, l));
+            y = (0, n.jsx)(Z, G({ error: d }, c));
     }
     return (0, n.jsx)(p.Z, {
-        isConfirmationStep: 1 === c,
+        isConfirmationStep: 1 === u,
         isEligibleForWowMoment: !0,
         shouldPrefetchWowMoment: !0,
-        children: b,
+        children: y,
     });
 }

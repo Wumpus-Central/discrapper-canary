@@ -1255,6 +1255,7 @@ let y = {
                 e,
                 j(v({}, t), {
                     premiumGroupSubscriptionId: "1234567890",
+                    premiumGroupInviteId: "1234567890",
                     isExistingSub: !1,
                     premiumGroupPrimaryName: "Test User",
                 }),

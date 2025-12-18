@@ -72,17 +72,19 @@ let S = (e) => {
             l = () => {
                 if (null == a) return;
                 let e = a.subscription,
-                    t = c.default.getUser(a.primary_user);
-                if (null == t) return;
-                let i = (0, d.XM)(t);
+                    t = a.id,
+                    i = c.default.getUser(a.primary_user);
+                if (null == i) return;
+                let l = (0, d.XM)(i);
                 (0, o.ZDy)(async () => {
-                    let { default: t } = await n.e("26450").then(n.bind(n, 382927));
+                    let { default: i } = await n.e("26450").then(n.bind(n, 382927));
                     return (n) =>
                         (0, r.jsx)(
-                            t,
+                            i,
                             v(y({}, n), {
                                 premiumGroupSubscriptionId: e,
-                                premiumGroupPrimaryName: i,
+                                premiumGroupInviteId: t,
+                                premiumGroupPrimaryName: l,
                                 isExistingSub: s,
                             }),
                         );

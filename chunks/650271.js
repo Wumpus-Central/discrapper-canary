@@ -1,41 +1,40 @@
-n.d(e, { zn: () => f });
+n.d(e, { zn: () => C });
 var i = n(657707),
     l = n(93262),
-    s = n(990924),
-    u = n(509613),
-    r = n(970013),
-    a = n(313789),
-    o = n(526665),
-    S = n(620163),
-    T = n(501348),
-    c = n(658091),
-    E = n(601414),
-    d = n(157177),
-    g = n(781060),
-    _ = n(142751),
-    I = n(490555),
-    N = n(726985),
-    A = n(388032);
-let O = (0, u.wf)(a.n.APPEARANCE_PANEL, {
-        useTitle: () => A.intl.string(A.t["iHH+ky"]),
+    s = n(509613),
+    u = n(970013),
+    r = n(313789),
+    a = n(526665),
+    o = n(620163),
+    S = n(501348),
+    T = n(658091),
+    c = n(601414),
+    E = n(157177),
+    d = n(781060),
+    g = n(142751),
+    _ = n(490555),
+    I = n(726985),
+    N = n(388032);
+let A = (0, s.wf)(r.n.APPEARANCE_PANEL, {
+        useTitle: () => N.intl.string(N.t["iHH+ky"]),
         initialize: () => {
-            s.y.getConfig({ location: "AppearancePane" }).enabled && (0, l.w)();
+            (0, l.w)();
         },
-        buildLayout: () => [_.D, E.l, I.G, d.K, g.t, c.R],
+        buildLayout: () => [g.D, c.l, _.G, E.K, d.t, T.R],
     }),
-    C = (0, u.wf)(a.n.APPEARANCE_PANEL, {
-        useTitle: () => A.intl.string(A.t["iHH+ky"]),
-        StronglyDiscouragedCustomComponent: T.ZP,
+    O = (0, s.wf)(r.n.APPEARANCE_PANEL, {
+        useTitle: () => N.intl.string(N.t["iHH+ky"]),
+        StronglyDiscouragedCustomComponent: S.ZP,
         buildLayout: () => [],
     }),
-    f = (0, u.m7)(a.n.APPEARANCE_SIDEBAR_ITEM, {
-        useTitle: () => A.intl.string(A.t["iHH+ky"]),
-        getLegacySearchKey: () => ((0, o.Gl)("AppearanceSidebarItem") ? void 0 : N.s6.APPEARANCE),
+    C = (0, s.m7)(r.n.APPEARANCE_SIDEBAR_ITEM, {
+        useTitle: () => N.intl.string(N.t["iHH+ky"]),
+        getLegacySearchKey: () => ((0, a.Gl)("AppearanceSidebarItem") ? void 0 : I.s6.APPEARANCE),
         icon: i.V3v,
         trailing: {
-            type: r.W.BADGE_NEW,
-            getDismissibleContentTypes: S.$Z,
-            stronglyDiscouragedBadgeComponent: S.c$,
+            type: u.W.BADGE_NEW,
+            getDismissibleContentTypes: o.$Z,
+            stronglyDiscouragedBadgeComponent: o.c$,
         },
-        buildLayout: () => ((0, o.Gl)("AppearanceSidebarItem") ? [O] : [C]),
+        buildLayout: () => ((0, a.Gl)("AppearanceSidebarItem") ? [A] : [O]),
     });
