@@ -1,4 +1,9 @@
-n.d(t, { Z: () => A }), n(642613), n(539854);
+n.d(t, {
+    Z: () => R,
+    e: () => P,
+}),
+    n(642613),
+    n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(524437),
@@ -179,36 +184,50 @@ function C() {
     });
 }
 function A() {
+    return (0, r.jsxs)("div", {
+        className: O.emptyContainer,
+        children: [
+            (0, r.jsx)(s.Text, {
+                variant: "text-md/medium",
+                color: "text-strong",
+                className: O.noGamesConnectedText,
+                children: y.intl.string(y.t["+0U77d"]),
+            }),
+            (0, r.jsx)(s.Text, {
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: y.intl.format(y.t.V8wClM, {
+                    helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS),
+                }),
+            }),
+        ],
+    });
+}
+function N(e) {
+    let { applications: t } = e;
+    return t.length > 0 ? (0, r.jsx)(I, { applications: t }) : (0, r.jsx)(A, {});
+}
+function P() {
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.Z)(!0);
+    return e ? (0, r.jsx)(s.$jN, {}) : (0, r.jsx)(N, { applications: t });
+}
+function R() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.Z)(!0);
     return (0, r.jsx)(m.Z, {
         children: e
             ? (0, r.jsx)(s.$jN, {})
-            : t.length > 0
-              ? (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(I, { applications: t }),
-                        (0, r.jsx)(T, {}),
-                        (0, r.jsx)("div", { className: O.divider }),
-                        (0, r.jsx)(C, {}),
-                    ],
-                })
-              : (0, r.jsxs)("div", {
-                    className: O.emptyContainer,
-                    children: [
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-md/medium",
-                            color: "text-strong",
-                            className: O.noGamesConnectedText,
-                            children: y.intl.string(y.t["+0U77d"]),
-                        }),
-                        (0, r.jsx)(s.Text, {
-                            variant: "text-sm/normal",
-                            color: "text-muted",
-                            children: y.intl.format(y.t.V8wClM, {
-                                helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS),
-                            }),
-                        }),
-                    ],
-                }),
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(N, { applications: t }),
+                      t.length > 0 &&
+                          (0, r.jsxs)(r.Fragment, {
+                              children: [
+                                  (0, r.jsx)(T, {}),
+                                  (0, r.jsx)("div", { className: O.divider }),
+                                  (0, r.jsx)(C, {}),
+                              ],
+                          }),
+                  ],
+              }),
     });
 }

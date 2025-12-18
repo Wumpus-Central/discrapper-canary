@@ -143,7 +143,8 @@ function S(e) {
 }
 function I() {
     let e = (0, f.KV)("getWebUserSettingFromSection"),
-        t = new Map([
+        t = (0, f.Gl)("getWebUserSettingFromSection"),
+        n = new Map([
             [p.oAB.ACCOUNT, d.n.ACCOUNT_PANEL],
             [p.oAB.PROFILE_CUSTOMIZATION, d.n.PROFILE_PANEL],
             [p.oAB.CONTENT_AND_SOCIAL, d.n.CONTENT_AND_SOCIAL_PANEL],
@@ -178,8 +179,9 @@ function I() {
             [p.oAB.EXPERIMENTS, d.n.EXPERIMENTS_PANEL],
             [p.oAB.DEVELOPER_OPTIONS, d.n.DEVELOPER_OPTIONS_PANEL],
             [p.oAB.ACCOUNT_STANDING, d.n.ACCOUNT_STANDING_CATEGORY],
+            [p.oAB.CONNECTED_GAMES, d.n.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
         ]);
-    return e && !(0, l.w2)() && t.delete(p.oAB.CLIPS), t;
+    return e && !(0, l.w2)() && n.delete(p.oAB.CLIPS), t || n.delete(p.oAB.CONNECTED_GAMES), n;
 }
 function T() {
     let e = I(),
