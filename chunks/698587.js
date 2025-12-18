@@ -8,9 +8,9 @@ var r = n(230367),
 class c extends o.C {
     create(e) {
         let t = {
-            headerKey: "",
-            desktopBodyKey: "",
-            mobileBodyKey: "",
+            header: "",
+            desktopBody: "",
+            mobileBody: "",
             bannerAssetUrl: "",
             backgroundAssetUrl: "",
             cardAssetUrl: "",
@@ -31,13 +31,13 @@ class c extends o.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.headerKey = e.string();
+                    a.header = e.string();
                     break;
                 case 2:
-                    a.desktopBodyKey = e.string();
+                    a.desktopBody = e.string();
                     break;
                 case 3:
-                    a.mobileBodyKey = e.string();
+                    a.mobileBody = e.string();
                     break;
                 case 4:
                     a.avatarAsset = l.F.internalBinaryRead(e, e.uint32(), n, a.avatarAsset);
@@ -67,9 +67,9 @@ class c extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.headerKey && t.tag(1, r.TD.LengthDelimited).string(e.headerKey),
-            "" !== e.desktopBodyKey && t.tag(2, r.TD.LengthDelimited).string(e.desktopBodyKey),
-            "" !== e.mobileBodyKey && t.tag(3, r.TD.LengthDelimited).string(e.mobileBodyKey),
+        "" !== e.header && t.tag(1, r.TD.LengthDelimited).string(e.header),
+            "" !== e.desktopBody && t.tag(2, r.TD.LengthDelimited).string(e.desktopBody),
+            "" !== e.mobileBody && t.tag(3, r.TD.LengthDelimited).string(e.mobileBody),
             e.avatarAsset && l.F.internalBinaryWrite(e.avatarAsset, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             "" !== e.bannerAssetUrl && t.tag(5, r.TD.LengthDelimited).string(e.bannerAssetUrl),
             "" !== e.backgroundAssetUrl && t.tag(6, r.TD.LengthDelimited).string(e.backgroundAssetUrl),
@@ -82,19 +82,19 @@ class c extends o.C {
         super("discord_protos.premium_marketing.v1.GiftPlanSelectionCardBanner", [
             {
                 no: 1,
-                name: "header_key",
+                name: "header",
                 kind: "scalar",
                 T: 9,
             },
             {
                 no: 2,
-                name: "desktop_body_key",
+                name: "desktop_body",
                 kind: "scalar",
                 T: 9,
             },
             {
                 no: 3,
-                name: "mobile_body_key",
+                name: "mobile_body",
                 kind: "scalar",
                 T: 9,
             },

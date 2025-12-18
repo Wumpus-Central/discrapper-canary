@@ -6,8 +6,8 @@ var r = n(230367),
 class s extends o.C {
     create(e) {
         let t = {
-            headerKey: "",
-            bodyKey: "",
+            header: "",
+            body: "",
             assetUrl: "",
         };
         return (
@@ -26,10 +26,10 @@ class s extends o.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.headerKey = e.string();
+                    a.header = e.string();
                     break;
                 case 2:
-                    a.bodyKey = e.string();
+                    a.body = e.string();
                     break;
                 case 3:
                     a.assetUrl = e.string();
@@ -47,8 +47,8 @@ class s extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.headerKey && t.tag(1, r.TD.LengthDelimited).string(e.headerKey),
-            "" !== e.bodyKey && t.tag(2, r.TD.LengthDelimited).string(e.bodyKey),
+        "" !== e.header && t.tag(1, r.TD.LengthDelimited).string(e.header),
+            "" !== e.body && t.tag(2, r.TD.LengthDelimited).string(e.body),
             "" !== e.assetUrl && t.tag(3, r.TD.LengthDelimited).string(e.assetUrl);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -57,13 +57,13 @@ class s extends o.C {
         super("discord_protos.premium_marketing.v1.GiftIconCoachmark", [
             {
                 no: 1,
-                name: "header_key",
+                name: "header",
                 kind: "scalar",
                 T: 9,
             },
             {
                 no: 2,
-                name: "body_key",
+                name: "body",
                 kind: "scalar",
                 T: 9,
             },

@@ -5,7 +5,7 @@ var r = n(230367),
     o = n(495852);
 class s extends o.C {
     create(e) {
-        let t = { bodyKey: "" };
+        let t = { body: "" };
         return (
             globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
@@ -20,7 +20,7 @@ class s extends o.C {
             o = e.pos + t;
         for (; e.pos < o; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.bodyKey = e.string();
+            if (1 === t) a.body = e.string();
             else {
                 let o = n.readUnknownField;
                 if ("throw" === o)
@@ -34,7 +34,7 @@ class s extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.bodyKey && t.tag(1, r.TD.LengthDelimited).string(e.bodyKey);
+        "" !== e.body && t.tag(1, r.TD.LengthDelimited).string(e.body);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -42,7 +42,7 @@ class s extends o.C {
         super("discord_protos.premium_marketing.v1.GiftReminderNagbar", [
             {
                 no: 1,
-                name: "body_key",
+                name: "body",
                 kind: "scalar",
                 T: 9,
             },
