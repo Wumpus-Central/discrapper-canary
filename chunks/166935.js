@@ -163,6 +163,7 @@ function v(e) {
                           ref: O,
                           className: _.body,
                           onScroll: T,
+                          disableFocusRingScope: !0,
                           children: (0, r.jsx)("main", {
                               ref: S,
                               className: o()(_.bodyInner, { [_.bodyInnerShouldScroll]: b }),

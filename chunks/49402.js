@@ -94,8 +94,9 @@ function h(e, t, n) {
                 style: S,
                 gap: I,
                 experimental_useStack: T,
+                disableFocusRingScope: C = !1,
             } = u,
-            C = _(u, [
+            A = _(u, [
                 "children",
                 "className",
                 "dir",
@@ -107,29 +108,31 @@ function h(e, t, n) {
                 "style",
                 "gap",
                 "experimental_useStack",
+                "disableFocusRingScope",
             ]);
-        let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
-            P = (0, c.t2)(A, E);
+        let { scrollerRef: N, getScrollerState: P } = (0, c.Ke)(),
+            R = (0, c.t2)(N, E);
         i.useImperativeHandle(
             f,
             () =>
                 d(
                     {
-                        getScrollerNode: () => A.current,
-                        getScrollerState: N,
+                        getScrollerNode: () => N.current,
+                        getScrollerState: P,
                     },
-                    (0, c.Ue)(A, N, P, E),
+                    (0, c.Ue)(N, P, R, E),
                 ),
-            [A, N, E, P],
+            [N, P, E, R],
         );
-        let R = (0, c.tT)({
-            paddingFix: v,
-            orientation: E,
-            dir: g,
-            className: h,
-            scrollerRef: A,
-            specs: a,
-        });
+        let w = C ? i.Fragment : s.Jc,
+            D = (0, c.tT)({
+                paddingFix: v,
+                orientation: E,
+                dir: g,
+                className: h,
+                scrollerRef: N,
+                specs: a,
+            });
         return T
             ? (0, r.jsx)(
                   l.K,
@@ -137,7 +140,7 @@ function h(e, t, n) {
                       d(
                           {
                               gap: I,
-                              ref: A,
+                              ref: N,
                               className: o()(h, {
                                   [e]: !0,
                                   [t]: y,
@@ -146,12 +149,12 @@ function h(e, t, n) {
                               style: (0, c.uT)(S, E, b),
                               dir: g,
                           },
-                          C,
+                          A,
                       ),
                       {
-                          children: (0, r.jsxs)(s.Jc, {
-                              containerRef: A,
-                              children: [m, R],
+                          children: (0, r.jsxs)(w, {
+                              containerRef: N,
+                              children: [m, D],
                           }),
                       },
                   ),
@@ -161,7 +164,7 @@ function h(e, t, n) {
                   p(
                       d(
                           {
-                              ref: A,
+                              ref: N,
                               className: o()(h, {
                                   [e]: !0,
                                   [t]: y,
@@ -170,12 +173,12 @@ function h(e, t, n) {
                               style: (0, c.uT)(S, E, b),
                               dir: g,
                           },
-                          C,
+                          A,
                       ),
                       {
-                          children: (0, r.jsxs)(s.Jc, {
-                              containerRef: A,
-                              children: [m, R],
+                          children: (0, r.jsxs)(w, {
+                              containerRef: N,
+                              children: [m, D],
                           }),
                       },
                   ),
