@@ -46,10 +46,10 @@ let N = i.memo(function (e) {
     }, [M, N, L]);
     let k = i.useCallback(() => {
             var e, t;
-            M(I.L.USER_DISMISS);
+            M(I.L.TAKE_ACTION);
             let n = null != (t = null == (e = m.Z.getStorefrontState(l.id)) ? void 0 : e.activePage) ? t : 0;
             (0, p.uL)(S.Z5c.CHANNELS_GAME_SHOP(l.id, n));
-        }, [l, M]),
+        }, [l.id, M]),
         G = i.useCallback(() => {
             (0, y.eagerNavigateToSocialLayerStorefront)({
                 guildId: l.id,
