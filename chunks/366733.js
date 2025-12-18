@@ -81,11 +81,17 @@ let h = (e) => {
                             children: [g, !!n && " (".concat(f.intl.string(f.t.LuZzxn), ")")],
                         }),
                         null != a &&
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsxs)(l.Text, {
                                 className: p.label,
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: a,
+                                children: [
+                                    (0, r.jsx)("span", {
+                                        className: p.separator,
+                                        children: "\xB7",
+                                    }),
+                                    a,
+                                ],
                             }),
                     ],
                 }),

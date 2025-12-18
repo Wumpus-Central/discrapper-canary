@@ -53196,7 +53196,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .d285a61ed580c689-markdown {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -60141,21 +60141,23 @@ screen and (max-width:485px) {
 }
 
 ._8f41e1f9d50dd427-username {
-    -webkit-margin-end: var(--space-4);
     flex-shrink: 1;
-    margin-inline-end: var(--space-4);
     min-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis
-}
-
-._8f41e1f9d50dd427-label,
-._8f41e1f9d50dd427-username {
+    text-overflow: ellipsis;
     white-space: nowrap
 }
 
+._8f41e1f9d50dd427-separator {
+    -webkit-margin-end: var(--space-4);
+    margin-inline-end: var(--space-4);
+    -webkit-margin-start: var(--space-4);
+    margin-inline-start: var(--space-4)
+}
+
 ._8f41e1f9d50dd427-label {
-    flex-shrink: 0
+    flex-shrink: 0;
+    white-space: nowrap
 }
 
 ._8f41e1f9d50dd427-userIconCircle {
@@ -60551,9 +60553,9 @@ screen and (max-width:485px) {
 
 ._9a9f981d3524e20f-message {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -61903,9 +61905,9 @@ screen and (max-width:485px) {
 }
 
 ._6df1abcb56d96feb-cardTitle {
-    font-size: 32px;
+    font-size: 2rem;
     font-style: italic;
-    line-height: 27px;
+    line-height: 1.6875rem;
     text-transform: uppercase
 }
 
