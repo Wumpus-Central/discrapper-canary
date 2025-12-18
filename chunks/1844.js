@@ -179,6 +179,10 @@ class j extends (r = i.ZP.PersistedStore) {
     get promotionsByType() {
         return b;
     }
+    getPromotionByTypeAndId(e, t) {
+        var n;
+        return null == (n = b[e]) ? void 0 : n[t];
+    }
     getState() {
         return p;
     }
