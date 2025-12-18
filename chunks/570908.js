@@ -15,13 +15,16 @@ let l = i.forwardRef((e, t) => {
         avatarClassName: d,
         innerClassName: f,
         nameClassName: p,
-        withDisplayNameStyles: _ = !1,
+        subtextClassName: _,
+        withDisplayNameStyles: m = !1,
+        fullWidth: h = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
         className: o()(s.layout, f, {
             [s.muted]: n,
             [s.highlighted]: i,
+            [s.fullWidth]: h,
         }),
         children: [
             (0, r.jsx)("div", {
@@ -29,7 +32,7 @@ let l = i.forwardRef((e, t) => {
                 children: a,
             }),
             (0, r.jsxs)("div", {
-                className: o()(s.content, { [s.withDisplayNameStyles]: _ }),
+                className: o()(s.content, { [s.withDisplayNameStyles]: m }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: s.nameAndDecorators,
@@ -43,7 +46,7 @@ let l = i.forwardRef((e, t) => {
                     }),
                     null != u
                         ? (0, r.jsx)("div", {
-                              className: s.subText,
+                              className: o()(s.subText, _),
                               children: u,
                           })
                         : null,

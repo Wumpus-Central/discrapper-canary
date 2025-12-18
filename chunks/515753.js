@@ -1,8 +1,8 @@
 n.d(t, {
     Qj: () => eb,
     RS: () => ev,
-    ZP: () => eO,
-    bU: () => em,
+    ZP: () => eh,
+    bU: () => ef,
 }),
     n(388685);
 var r = n(54381),
@@ -14,15 +14,15 @@ var r = n(54381),
     u = n.n(s),
     c = n(319498),
     d = n(990547),
-    f = n(91192),
-    m = n(873546),
+    m = n(91192),
+    f = n(873546),
     p = n(893999),
     g = n(442837),
     y = n(194983),
     b = n(28664),
     v = n(481060),
-    O = n(493683),
-    h = n(239091),
+    h = n(493683),
+    O = n(239091),
     x = n(420660),
     j = n(468363),
     P = n(326255),
@@ -43,13 +43,13 @@ var r = n(54381),
     A = n(785232),
     L = n(172751),
     G = n(825265),
-    H = n(40620),
-    F = n(850020),
+    F = n(40620),
+    H = n(850020),
     B = n(379839),
     z = n(359135),
     Y = n(516817),
-    K = n(63759),
-    W = n(866834),
+    W = n(63759),
+    K = n(866834),
     q = n(518950),
     V = n(199902),
     X = n(158776),
@@ -128,14 +128,14 @@ function ec(e, t) {
     return i;
 }
 let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
-    ef = {
+    em = {
         offset: {
             top: 2,
             bottom: 2,
             right: 4,
         },
     },
-    em = (e) => {
+    ef = (e) => {
         var { nameplate: t, icon: n, forceShow: i = !1, reducedClickTarget: l = !1, visibleElementRef: o } = e,
             s = ec(e, ["nameplate", "icon", "forceShow", "reducedClickTarget", "visibleElementRef"]);
         let u = (0, B.A)(t);
@@ -203,14 +203,14 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
                 text: s,
                 children: u,
                 locationState: d,
-                onClick: f,
+                onClick: m,
                 className: p,
                 role: g,
                 "aria-posinset": y,
                 "aria-setsize": b,
-                listItemRef: O,
+                listItemRef: h,
             } = e,
-            h = ec(e, [
+            O = ec(e, [
                 "route",
                 "selected",
                 "icon",
@@ -227,13 +227,13 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
                 "listItemRef",
             ]);
         return (0, r.jsx)(k.Z, {
-            className: a()(eo.channel, { [eo.fullWidth]: m.tq }, p),
-            onClick: f,
+            className: a()(eo.channel, { [eo.fullWidth]: f.tq }, p),
+            onClick: m,
             role: g,
-            focusProps: es({ within: !0 }, ef),
+            focusProps: es({ within: !0 }, em),
             "aria-posinset": y,
             "aria-setsize": b,
-            ref: O,
+            ref: h,
             children: (0, r.jsx)(v.vjx, {
                 as: "div",
                 selected: n,
@@ -249,7 +249,7 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
                                 },
                                 className: eo.link,
                             },
-                            h,
+                            O,
                         ),
                         {
                             children: [
@@ -276,11 +276,11 @@ function ev(e) {
             channel: t,
             selected: l = !1,
             user: s,
-            activities: m,
+            activities: f,
             applicationStream: j,
             voiceChannel: S,
             isTyping: G,
-            status: F,
+            status: H,
             isMobile: B,
             nameplate: V,
             latestMessage: X,
@@ -289,7 +289,7 @@ function ev(e) {
             "aria-setsize": ei,
         } = e,
         [eb, ev] = i.useState(!1),
-        [eO, eh] = i.useState(!1),
+        [eh, eO] = i.useState(!1),
         [ex, ej] = i.useState(!1),
         eP = i.useRef(null),
         eS = i.useRef(null),
@@ -301,7 +301,7 @@ function ev(e) {
         } = (0, q.Z)({
             userId: null == s ? void 0 : s.id,
             size: v.EFr.SIZE_32,
-            animateOnHover: !(l || eb || eO || ex),
+            animateOnHover: !(l || eb || eh || ex),
         }),
         eZ = t.isMultiUserDM(),
         eI = t.isSystemDM(),
@@ -319,15 +319,15 @@ function ev(e) {
             hasUnreadMessages: J.ZP.getMentionCount(t.id) > 0,
             lastMessageId: J.ZP.lastMessageId(t.id),
         })),
-        eH = (0, w.ZP)(t),
-        eF = (0, g.e7)([U.Z], () => U.Z.isFavorite(t.id)),
+        eF = (0, w.ZP)(t),
+        eH = (0, g.e7)([U.Z], () => U.Z.isFavorite(t.id)),
         { dotsInsteadOfCloseButton: eB, rearrangeContextMenu: ez } = R.Z.useExperiment(
             { location: "private_channel" },
             { autoTrackExposure: !0 },
         ),
-        { showMessagePreviews: eY, prioritizeOverStatus: eK } = H.U.useConfig({ location: "PrivateChannel" }),
-        eW = (0, g.e7)([$.Z], () => $.Z.hidePersonalInformation),
-        eq = (0, K.l)({ timestamp: er.default.extractTimestamp(null != eG ? eG : t.id) }),
+        { showMessagePreviews: eY, prioritizeOverStatus: eW } = F.U.useConfig({ location: "PrivateChannel" }),
+        eK = (0, g.e7)([$.Z], () => $.Z.hidePersonalInformation),
+        eq = (0, W.l)({ timestamp: er.default.extractTimestamp(null != eG ? eG : t.id) }),
         eV = i.useRef(null),
         eX = null != V && (l || eb || ex),
         eJ = () => {
@@ -337,17 +337,17 @@ function ev(e) {
             ev(!1);
         },
         e$ = () => {
-            eh(!0);
+            eO(!0);
         },
         e0 = () => {
-            eh(!1);
+            eO(!1);
         },
         e1 = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), O.Z.closePrivateChannel(t.id, l, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), h.Z.closePrivateChannel(t.id, l, n);
         },
         e5 = () => {
-            O.Z.preload(el.ME, t.id);
+            h.Z.preload(el.ME, t.id);
         },
         e4 = (e) => {
             e.stopPropagation();
@@ -364,7 +364,7 @@ function ev(e) {
                 o = i ? d.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : d.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
             ej(!0),
                 t.isMultiUserDM()
-                    ? (0, h.jW)(
+                    ? (0, O.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.all([
@@ -388,7 +388,7 @@ function ev(e) {
                               onClose: () => ej(!1),
                           },
                       )
-                    : (0, h.jW)(
+                    : (0, O.jW)(
                           e,
                           async () => {
                               let { default: e } = a
@@ -419,11 +419,11 @@ function ev(e) {
         },
         e8 = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let i = ea.intl.formatToPlainString(ea.t.hJ5Ap4, { name: eH }),
-                l = ea.intl.format(ea.t.SSIVOu, { name: eH });
+            let i = ea.intl.formatToPlainString(ea.t.hJ5Ap4, { name: eF }),
+                l = ea.intl.format(ea.t.SSIVOu, { name: eF });
             t.isManaged() &&
-                ((i = ea.intl.formatToPlainString(ea.t.hVGjEW, { name: eH })),
-                (l = ea.intl.format(ea.t.IK1Qvs, { name: eH }))),
+                ((i = ea.intl.formatToPlainString(ea.t.hVGjEW, { name: eF })),
+                (l = ea.intl.format(ea.t.IK1Qvs, { name: eF }))),
                 (0, v.ZDy)(async () => {
                     let { default: e } = await n.e("14604").then(n.bind(n, 960670));
                     return (t) =>
@@ -441,7 +441,7 @@ function ev(e) {
                 });
         },
         e7 = (0, r.jsx)(_.Z, {
-            userName: eH,
+            userName: eF,
             displayNameStyles: null == s ? void 0 : s.displayNameStyles,
             effectDisplayType: eb || l || ex ? D.F.ANIMATED : D.F.PLAIN,
             loop: eb,
@@ -472,12 +472,33 @@ function ev(e) {
             (0, Z.Yb)({
                 channel: t,
                 muted: eM,
-                userStatus: F,
+                userStatus: H,
             }),
         ]
             .filter(Boolean)
-            .join(", ");
-    return (0, r.jsx)(f.mh, {
+            .join(", "),
+        tr = (0, r.jsxs)(r.Fragment, {
+            children: [
+                eH && !ex ? (0, r.jsx)(ep, {}) : null,
+                eU ? (0, r.jsx)(eg, {}) : null,
+                eR ? (0, r.jsx)(ey, {}) : null,
+            ],
+        }),
+        ti = eY
+            ? (0, r.jsxs)("div", {
+                  className: eo.timestampContainer,
+                  children: [
+                      tr,
+                      (0, r.jsx)(v.Text, {
+                          variant: "text-xs/normal",
+                          color: l ? "interactive-text-active" : eL ? "interactive-text-default" : "text-muted",
+                          className: eo.timestamp,
+                          children: eq,
+                      }),
+                  ],
+              })
+            : null;
+    return (0, r.jsx)(m.mh, {
         id: t.id,
         children: (e) => {
             var { role: n } = e,
@@ -485,7 +506,7 @@ function ev(e) {
             return (0, r.jsxs)(k.Z, {
                 className: a()(eo.channel, eo.dm),
                 role: n,
-                focusProps: eu(es({}, ef), {
+                focusProps: eu(es({}, em), {
                     focusTarget: eP,
                     ringTarget: eN,
                 }),
@@ -538,7 +559,7 @@ function ev(e) {
                                                             recipients: t.recipients,
                                                             size: e,
                                                             isTyping: G,
-                                                            status: F,
+                                                            status: H,
                                                         });
                                                     else
                                                         return (0, r.jsx)(
@@ -547,7 +568,7 @@ function ev(e) {
                                                                 src: (0, I.x)(t),
                                                                 "aria-hidden": !0,
                                                                 size: e,
-                                                                status: G ? el.Skl.ONLINE : F,
+                                                                status: G ? el.Skl.ONLINE : H,
                                                                 isTyping: G,
                                                             }),
                                                         );
@@ -557,7 +578,7 @@ function ev(e) {
                                                 );
                                                 let n = null;
                                                 return (
-                                                    s.isSystemUser() || (n = (0, x.Z)(m) ? el.Skl.STREAMING : F),
+                                                    s.isSystemUser() || (n = (0, x.Z)(f) ? el.Skl.STREAMING : H),
                                                     (0, r.jsx)(
                                                         ed,
                                                         eu(es({}, eT), {
@@ -577,14 +598,14 @@ function ev(e) {
                                             muted: eA,
                                             subText: (() => {
                                                 let e =
-                                                        (null == m
+                                                        (null == f
                                                             ? void 0
-                                                            : m.some((e) => e.type !== el.IIU.CUSTOM_STATUS)) === !0,
+                                                            : f.some((e) => e.type !== el.IIU.CUSTOM_STATUS)) === !0,
                                                     n =
-                                                        eY && null != X && !eW
+                                                        eY && null != X && !eK
                                                             ? (0, r.jsx)("div", {
                                                                   className: eo.subtext,
-                                                                  children: (0, r.jsx)(W.o, {
+                                                                  children: (0, r.jsx)(K.o, {
                                                                       channel: t,
                                                                       message: X,
                                                                   }),
@@ -593,7 +614,7 @@ function ev(e) {
                                                     i =
                                                         null != X &&
                                                         null != n &&
-                                                        (1 > (0, o.Z)(new Date(), X.timestamp) || (eK && !e) || eL);
+                                                        (1 > (0, o.Z)(new Date(), X.timestamp) || (eW && !e) || eL);
                                                 return t.isSystemDM()
                                                     ? (0, r.jsx)("div", {
                                                           className: eo.subtext,
@@ -612,18 +633,18 @@ function ev(e) {
                                                             })
                                                       : !i &&
                                                           (0, P.Z)({
-                                                              activities: m,
-                                                              status: F,
+                                                              activities: f,
+                                                              status: H,
                                                               applicationStream: j,
                                                               voiceChannel: S,
                                                           })
                                                         ? (0, r.jsx)(N.Z, {
                                                               location: "PrivateChannel",
                                                               user: s,
-                                                              activities: m,
+                                                              activities: f,
                                                               voiceChannel: S,
                                                               applicationStream: j,
-                                                              animateEmoji: eb || eO || ex,
+                                                              animateEmoji: eb || eh || ex,
                                                               textClassName: eo.activityStatusText,
                                                               iconClassName: eA ? eo.mutedIcon : void 0,
                                                           })
@@ -631,48 +652,41 @@ function ev(e) {
                                                           ? n
                                                           : null;
                                             })(),
+                                            subtextClassName: eX ? eo.subtextNameplated : void 0,
                                             nameClassName: eo.username,
                                             name: (0, r.jsx)(y.Z, {
                                                 className: a()(eo.overflowTooltip, { [eo.withDisplayNameStyles]: te }),
                                                 children: e9,
                                             }),
-                                            decorators: t.isSystemDM()
-                                                ? (0, r.jsx)(E.Z, {
-                                                      className: eo.decorator,
-                                                      type: E.Z.Types.SYSTEM_DM,
-                                                      verified: !0,
-                                                  })
-                                                : null,
+                                            decorators: (0, r.jsxs)(r.Fragment, {
+                                                children: [
+                                                    t.isSystemDM()
+                                                        ? (0, r.jsx)(E.Z, {
+                                                              className: eo.decorator,
+                                                              type: E.Z.Types.SYSTEM_DM,
+                                                              verified: !0,
+                                                          })
+                                                        : null,
+                                                    ti,
+                                                ],
+                                            }),
                                             withDisplayNameStyles: te,
+                                            fullWidth: !0,
                                         }),
                                     },
                                 ),
                             ),
                             (0, r.jsxs)("div", {
-                                className: a()(eo.iconsContainer, { [eo.nameplated]: eX }),
+                                className: a()(eo.iconsContainer, { [eo.nameplated]: eX && !eY }),
                                 children: [
-                                    eY
-                                        ? (0, r.jsx)(v.Text, {
-                                              variant: "text-xs/normal",
-                                              color: l
-                                                  ? "interactive-text-active"
-                                                  : eL
-                                                    ? "interactive-text-default"
-                                                    : "text-muted",
-                                              className: eo.timestamp,
-                                              children: eq,
-                                          })
-                                        : null,
-                                    eF && !ex ? (0, r.jsx)(ep, {}) : null,
-                                    eU ? (0, r.jsx)(eg, {}) : null,
-                                    eR ? (0, r.jsx)(ey, {}) : null,
+                                    !eY && tr,
                                     eB && !tt
                                         ? (0, r.jsx)(b.u, {
                                               asContainer: !0,
                                               text: ea.intl.string(eZ ? ea.t.Et8qwj : ea.t["d+e27s"]),
                                               delay: 500,
                                               targetElementRef: eV,
-                                              children: (0, r.jsx)(em, {
+                                              children: (0, r.jsx)(ef, {
                                                   icon: v.xhG,
                                                   "aria-label": ea.intl.string(ea.t.PdRCRg),
                                                   onClick: (e) => {
@@ -684,7 +698,7 @@ function ev(e) {
                                                   visibleElementRef: eV,
                                               }),
                                           })
-                                        : (0, r.jsx)(em, {
+                                        : (0, r.jsx)(ef, {
                                               icon: v.Dio,
                                               "aria-label": eZ
                                                   ? ea.intl.string(ea.t["26C4oi"])
@@ -704,7 +718,7 @@ function ev(e) {
         },
     });
 }
-let eO =
+let eh =
     12633 == n.j
         ? (e) => {
               var { channel: t, selected: n } = e,
@@ -726,7 +740,7 @@ let eO =
                   }, [t, a]),
                   { voiceActivityStatusEnabled: s } = (0, j.U)({ location: "PrivateChannel" }),
                   { voiceChannel: u } = (0, S.Z)({ userId: a }),
-                  c = (0, F.K)({ user: l }),
+                  c = (0, H.K)({ user: l }),
                   d = (0, g.e7)(
                       [en.default, ee.Z],
                       () =>
@@ -738,8 +752,8 @@ let eO =
                               : null != l && ee.Z.isTyping(t.id, t.getRecipientId()),
                       [t, l],
                   ),
-                  { showMessagePreviews: f } = H.U.useConfig({ location: "PrivateChannel" }),
-                  m = (0, G.Z)(t, { disabled: !f });
+                  { showMessagePreviews: m } = F.U.useConfig({ location: "PrivateChannel" }),
+                  f = (0, G.Z)(t, { disabled: !m });
               return t.isMultiUserDM()
                   ? (0, r.jsx)(
                         ev,
@@ -749,7 +763,7 @@ let eO =
                                 selected: n,
                                 isTyping: d,
                                 status: o.status === el.Skl.ONLINE ? el.Skl.ONLINE : void 0,
-                                latestMessage: m,
+                                latestMessage: f,
                             },
                             i,
                         ),
@@ -764,7 +778,7 @@ let eO =
                                 voiceChannel: s ? u : void 0,
                                 isTyping: d,
                                 nameplate: c,
-                                latestMessage: m,
+                                latestMessage: f,
                             },
                             i,
                             o,
