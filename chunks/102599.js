@@ -27,6 +27,8 @@ e.exports = {
     iconsContainer: "_972a0d22c8afa7f0-iconsContainer",
     nameplated: "_972a0d22c8afa7f0-nameplated",
     closeIcon: "_972a0d22c8afa7f0-closeIcon",
+    subtextContainer: "_972a0d22c8afa7f0-subtextContainer",
+    moreSpace: "_972a0d22c8afa7f0-moreSpace",
     subtext: "_972a0d22c8afa7f0-subtext",
     mutedIcon: "_972a0d22c8afa7f0-mutedIcon",
     activityStatusText: "_972a0d22c8afa7f0-activityStatusText",

@@ -652,7 +652,10 @@ function ev(e) {
                                                           ? n
                                                           : null;
                                             })(),
-                                            subtextClassName: eX ? eo.subtextNameplated : void 0,
+                                            subtextClassName: a()(eo.subtextContainer, {
+                                                [eo.subtextNameplated]: eX,
+                                                [eo.moreSpace]: eY,
+                                            }),
                                             nameClassName: eo.username,
                                             name: (0, r.jsx)(y.Z, {
                                                 className: a()(eo.overflowTooltip, { [eo.withDisplayNameStyles]: te }),
