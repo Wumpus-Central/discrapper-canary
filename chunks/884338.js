@@ -182,13 +182,16 @@ class R extends (r = a.PureComponent) {
         }
     }
     renderIcon() {
-        return this.props.renderIcon
-            ? (0, i.jsx)(l.gj8, {
-                  size: "md",
-                  color: "currentColor",
-                  colorClass: _.__invalid_foreground,
-                  className: _.icon,
-              })
+        let { renderLeadingIcon: e, renderIcon: t } = this.props;
+        return t
+            ? null != e
+                ? e(_.icon)
+                : (0, i.jsx)(l.gj8, {
+                      size: "md",
+                      color: "currentColor",
+                      colorClass: _.__invalid_foreground,
+                      className: _.icon,
+                  })
             : null;
     }
     render() {
