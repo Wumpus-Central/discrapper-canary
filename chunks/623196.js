@@ -48,7 +48,10 @@ function O() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: E.intl.string(E.t["6Nmv4i"]) })
+                                        ? c.Z.show({
+                                              title: E.intl.string(E.t.i2iul5),
+                                              body: E.intl.string(E.t["6Nmv4i"]),
+                                          })
                                         : c.Z.show({
                                               title: E.intl.string(E.t.OjbtDm),
                                               body: E.intl.string(E.t["0F5Jyt"]),

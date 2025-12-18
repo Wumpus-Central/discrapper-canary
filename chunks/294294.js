@@ -1,30 +1,9 @@
-n.d(t, { Z: () => f });
-var r = n(54381);
-n(473749);
-var i = n(512722),
-    l = n.n(i),
-    a = n(442837),
-    s = n(481060),
-    o = n(395586),
-    c = n(825055),
-    d = n(909656),
-    u = n(430824),
-    g = n(388032);
-function f(e) {
-    let { guildId: t } = e,
-        n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
-    return (
-        l()(null != n, "Guild not found"),
-        (0, r.jsxs)(o.AL, {
-            guildId: t,
-            children: [
-                (0, r.jsx)(c.Z, { children: g.intl.string(g.t["WMyX2+"]) }),
-                (0, r.jsx)(s.LZC, { size: 32 }),
-                (0, r.jsx)(d.Z, {
-                    guild: n,
-                    isGuildProducts: !0,
-                }),
-            ],
-        })
-    );
-}
+n.d(e, { i: () => r });
+var i = n(509613),
+    l = n(313789),
+    s = n(623196),
+    u = n(388032);
+let r = (0, i.ON)(l.n.DATA_HARVEST_REQUEST_SETTING, {
+    useSearchTerms: () => [u.intl.string(u.t.dmBSKo)],
+    Component: s.Z,
+});
