@@ -367,7 +367,6 @@ function J(e) {
         let e = () => {
                 if ((0, y.MY)(ep) === y.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != eh)
                     return (0, r.jsx)(L.Z, {
-                        sectionTitle: V.intl.string(V.t.B3miE8),
                         className: H.customGiftMessageWrapper,
                         innerClassName: H.customGiftMessage,
                         onTextChange: (e) => eh(e),

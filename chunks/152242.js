@@ -148,7 +148,6 @@ let Y = (e) => {
         F = async (e, t) => {},
         B = () =>
             (0, r.jsx)(g.Z, {
-                sectionTitle: k.intl.string(k.t.B3miE8),
                 onTextChange: (e) => (null == a ? void 0 : a(e)),
                 pendingText: i,
                 currentText: i,

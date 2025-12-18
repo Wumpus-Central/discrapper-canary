@@ -155,7 +155,6 @@ let U = (e) => {
         },
         $ = () =>
             (0, r.jsx)(h.Z, {
-                sectionTitle: w.intl.string(w.t.B3miE8),
                 onTextChange: (e) => (null == l ? void 0 : l(e)),
                 pendingText: s,
                 currentText: s,

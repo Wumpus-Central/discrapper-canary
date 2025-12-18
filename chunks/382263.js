@@ -1,8 +1,8 @@
 t.d(n, { PT: () => O });
-var i = t(54381);
+var l = t(54381);
 t(473749);
-var l = t(442837),
-    a = t(481060),
+var a = t(442837),
+    i = t(481060),
     r = t(225657),
     s = t(334636),
     o = t(600164),
@@ -22,29 +22,29 @@ var l = t(442837),
 let O = {
     key: h.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
-        (0, i.jsx)(
+        (0, l.jsx)(
             k,
             (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
-                        i = Object.keys(t);
+                        l = Object.keys(t);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
+                        (l = l.concat(
                             Object.getOwnPropertySymbols(t).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             }),
                         )),
-                        i.forEach(function (n) {
-                            var i;
-                            (i = t[n]),
+                        l.forEach(function (n) {
+                            var l;
+                            (l = t[n]),
                                 n in e
                                     ? Object.defineProperty(e, n, {
-                                          value: i,
+                                          value: l,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[n] = i);
+                                    : (e[n] = l);
                         });
                 }
                 return e;
@@ -56,69 +56,68 @@ let O = {
     },
 };
 function C(e) {
-    let { onStepChange: n, onBackClick: t, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
+    let { onStepChange: n, onBackClick: t, showBackButton: a = !1, disabled: r = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, b.JL)(),
         c = o ? h.h8.REVIEW : h.h8.ADD_PAYMENT_STEPS;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(a.Button, {
+            (0, l.jsx)(i.Button, {
                 onClick: () => n(c),
                 disabled: r,
                 loading: s,
                 text: v.intl.string(v.t.XiOHRX),
             }),
-            l ? (0, i.jsx)(u.Z, { onClick: t }) : null,
+            a ? (0, l.jsx)(u.Z, { onClick: t }) : null,
         ],
     });
 }
 function k(e) {
     var n;
     let { handleStepChange: t, handleClose: u } = e,
-        { customGiftMessage: h = "", setCustomGiftMessage: O, giftRecipient: k } = (0, m.wD)(),
-        { selectedSkuId: P } = (0, b.JL)(),
-        I = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        T = (0, l.e7)([f.Z], () => (null != P ? f.Z.get(P) : null), [P]),
-        E = (0, s.Z)({}),
-        M = (0, l.e7)([g.Z], () => (null != P ? g.Z.getForSKU(P) : null), [P]),
-        Z =
-            (null == M ? void 0 : M.headerBackground) != null && (null == T ? void 0 : T.applicationId) != null
-                ? (0, p._W)(T.applicationId, M.headerBackground, 256)
+        { customGiftMessage: h = "", setCustomGiftMessage: v, giftRecipient: O } = (0, m.wD)(),
+        { selectedSkuId: k } = (0, b.JL)(),
+        P = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        I = (0, a.e7)([f.Z], () => (null != k ? f.Z.get(k) : null), [k]),
+        T = (0, s.Z)({}),
+        E = (0, a.e7)([g.Z], () => (null != k ? g.Z.getForSKU(k) : null), [k]),
+        M =
+            (null == E ? void 0 : E.headerBackground) != null && (null == I ? void 0 : I.applicationId) != null
+                ? (0, p._W)(I.applicationId, E.headerBackground, 256)
                 : void 0,
-        S = async (e, n) => {};
-    return (0, i.jsxs)(i.Fragment, {
+        Z = async (e, n) => {};
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(y.C3, {
-                children: (0, i.jsxs)("div", {
+            (0, l.jsx)(y.C3, {
+                children: (0, l.jsxs)("div", {
                     className: x.stepBody,
                     children: [
-                        (0, i.jsxs)("div", {
+                        (0, l.jsxs)("div", {
                             className: x.bodyColumnLeft,
                             children: [
-                                (null == T ? void 0 : T.name) != null &&
-                                    (0, i.jsx)(a.Heading, {
+                                (null == I ? void 0 : I.name) != null &&
+                                    (0, l.jsx)(i.Heading, {
                                         variant: "heading-lg/semibold",
                                         color: "text-strong",
-                                        children: T.name,
+                                        children: I.name,
                                     }),
-                                null != Z &&
-                                    (0, i.jsx)("img", {
-                                        src: Z,
-                                        alt: null != (n = null == T ? void 0 : T.name) ? n : "",
+                                null != M &&
+                                    (0, l.jsx)("img", {
+                                        src: M,
+                                        alt: null != (n = null == I ? void 0 : I.name) ? n : "",
                                         className: x.skuImage,
                                     }),
                             ],
                         }),
-                        (0, i.jsxs)("div", {
+                        (0, l.jsxs)("div", {
                             className: x.bodyColumnRight,
                             children: [
-                                (0, i.jsx)(r.Z, {
-                                    recipients: E,
-                                    selectedSkuId: P,
-                                    validateSelectedGift: S,
+                                (0, l.jsx)(r.Z, {
+                                    recipients: T,
+                                    selectedSkuId: k,
+                                    validateSelectedGift: Z,
                                 }),
-                                (0, i.jsx)(c.Z, {
-                                    sectionTitle: v.intl.string(v.t.B3miE8),
-                                    onTextChange: (e) => (null == O ? void 0 : O(e)),
+                                (0, l.jsx)(c.Z, {
+                                    onTextChange: (e) => (null == v ? void 0 : v(e)),
                                     pendingText: h,
                                     currentText: h,
                                     disableThemedBackground: !0,
@@ -130,15 +129,15 @@ function k(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(y.O3, {
-                children: (0, i.jsx)(a.mzw, {
+            (0, l.jsx)(y.O3, {
+                children: (0, l.jsx)(i.mzw, {
                     "data-migration-pending": !0,
                     justify: o.Z.Justify.BETWEEN,
                     align: o.Z.Align.CENTER,
-                    children: (0, i.jsx)(C, {
+                    children: (0, l.jsx)(C, {
                         onStepChange: t,
                         onBackClick: u,
-                        disabled: null == k || k.id === (null == I ? void 0 : I.id) || h.length > j.$n,
+                        disabled: null == O || O.id === (null == P ? void 0 : P.id) || h.length > j.$n,
                     }),
                 }),
             }),
