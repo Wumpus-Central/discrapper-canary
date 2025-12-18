@@ -1,62 +1,60 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var i = n(54381),
     s = n(473749),
     l = n(120356),
     r = n.n(l),
     a = n(442837),
-    o = n(692547),
-    d = n(755721),
-    c = n(481060),
-    u = n(239091),
-    h = n(87051),
-    g = n(225433),
-    m = n(933557),
-    x = n(775666),
-    p = n(471445),
-    j = n(592125),
-    v = n(324067),
-    f = n(699516),
-    N = n(9156),
-    b = n(594174),
-    S = n(823379),
-    E = n(621600),
-    O = n(423589),
-    C = n(221259),
-    Z = n(113449),
-    L = n(686660),
-    _ = n(569658),
-    y = n(981631),
-    A = n(388032),
-    M = n(986955);
-let P = s.forwardRef(function (e, t) {
+    o = n(481060),
+    d = n(239091),
+    c = n(87051),
+    u = n(225433),
+    h = n(933557),
+    g = n(775666),
+    m = n(471445),
+    x = n(592125),
+    p = n(324067),
+    j = n(699516),
+    f = n(9156),
+    v = n(594174),
+    b = n(823379),
+    N = n(621600),
+    S = n(423589),
+    E = n(221259),
+    C = n(113449),
+    O = n(686660),
+    Z = n(569658),
+    L = n(981631),
+    _ = n(388032),
+    y = n(986955);
+let A = s.forwardRef(function (e, t) {
     let { guildId: n } = e,
         [l, r] = s.useState(null),
-        o = (0, a.Wu)([j.Z, N.ZP], () =>
-            (0, O.OD)(N.ZP.getChannelOverrides(n), {
+        d = (0, a.Wu)([x.Z, f.ZP], () =>
+            (0, S.OD)(f.ZP.getChannelOverrides(n), {
                 ignoreMute: !0,
                 ignoreUnreadSetting: !1,
                 ignoreNotificationSetting: !1,
             })
-                .map((e) => j.Z.getChannel(e))
-                .filter(S.lm),
+                .map((e) => x.Z.getChannel(e))
+                .filter(b.lm),
         ),
-        d = (0, a.e7)([v.Z], () => v.Z.getCategories(n)),
-        u = o.map((e, t) =>
+        u = (0, a.e7)([p.Z], () => p.Z.getCategories(n)),
+        h = d.map((e, t) =>
             (0, i.jsxs)(
                 "div",
                 {
-                    className: M.channelRow,
+                    className: y.channelRow,
                     children: [
                         (0, i.jsx)(
-                            T,
+                            P,
                             {
                                 channel: e,
-                                categories: d,
+                                categories: u,
                                 autoFocus: l === e.id,
                             },
                             e.id,
                         ),
-                        t < o.length - 1 && (0, i.jsx)("div", { className: M.separator }),
+                        t < d.length - 1 && (0, i.jsx)("div", { className: y.separator }),
                     ],
                 },
                 e.id,
@@ -65,195 +63,206 @@ let P = s.forwardRef(function (e, t) {
     return (0, i.jsxs)("div", {
         ref: t,
         children: [
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(Z.Z, {
                 guildId: n,
                 onSelected: (e) => {
-                    if (null != o.find((t) => t.id === e)) return;
-                    let t = j.Z.getChannel(e);
+                    if (null != d.find((t) => t.id === e)) return;
+                    let t = x.Z.getChannel(e);
                     null != t &&
-                        (h.Z.updateChannelOverrideSettings(
+                        (c.Z.updateChannelOverrideSettings(
                             n,
                             e,
                             {
                                 muted: !1,
-                                message_notifications: N.ZP.resolvedMessageNotifications(t),
-                                flags: (0, Z.pq)(
-                                    N.ZP.getChannelIdFlags(t.guild_id, t.id),
-                                    N.ZP.resolveUnreadSetting(t),
+                                message_notifications: f.ZP.resolvedMessageNotifications(t),
+                                flags: (0, C.pq)(
+                                    f.ZP.getChannelIdFlags(t.guild_id, t.id),
+                                    f.ZP.resolveUnreadSetting(t),
                                 ),
                             },
-                            E.ZB.OverrideCreated,
+                            N.ZB.OverrideCreated,
                         ),
                         r(e));
                 },
             }),
-            u.length > 0 &&
+            h.length > 0 &&
                 (0, i.jsxs)("div", {
-                    className: M.table,
+                    className: y.table,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: M.row,
+                            className: y.row,
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: M.rowName,
-                                    children: A.intl.string(A.t.uShwWv),
+                                    className: y.rowName,
+                                    children: _.intl.string(_.t.uShwWv),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: M.rowOption,
-                                    children: A.intl.string(A.t.hZrr6k),
+                                    className: y.rowOption,
+                                    children: _.intl.string(_.t.hZrr6k),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: M.rowOption,
-                                    children: A.intl.string(A.t.y59NJm),
+                                    className: y.rowOption,
+                                    children: _.intl.string(_.t.y59NJm),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: M.rowOption,
-                                    children: A.intl.string(A.t["pGn/bJ"]),
+                                    className: y.rowOption,
+                                    children: _.intl.string(_.t["pGn/bJ"]),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: M.rowOption,
-                                    children: A.intl.string(A.t["32yow9"]),
+                                    className: y.rowOption,
+                                    children: _.intl.string(_.t["32yow9"]),
                                 }),
                             ],
                         }),
-                        u.length > 0 &&
+                        h.length > 0 &&
                             (0, i.jsx)("div", {
-                                className: M.channels,
-                                children: u,
+                                className: y.channels,
+                                children: h,
                             }),
                     ],
                 }),
         ],
     });
 });
-function T(e) {
+function P(e) {
     let { channel: t, categories: n, autoFocus: l } = e,
-        h = (0, c.dQu)(o.Z.unsafe_rawColors.GREEN_360).hex(),
-        v = (0, a.e7)([j.Z], () => j.Z.getChannel(null == t ? void 0 : t.parent_id)),
-        N = (0, C.ZA)(t),
-        S = s.useRef(null),
-        [E, O] = s.useState(!1);
+        c = (0, a.e7)([x.Z], () => x.Z.getChannel(null == t ? void 0 : t.parent_id)),
+        p = (0, E.ZA)(t),
+        f = s.useRef(null),
+        b = s.useRef(null),
+        [N, S] = s.useState(!1);
     if (
         (s.useEffect(() => {
             if (l) {
                 var e;
-                null == (e = S.current) || e.scrollIntoView({ behavior: "smooth" });
+                null == (e = f.current) || e.scrollIntoView({ behavior: "smooth" });
             }
         }, []),
         null == t)
     )
         return null;
-    let Z = A.intl.string(A.t.uIzfCE),
-        _ = (0, p.KS)(t);
-    t.type === y.d4z.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id
-        ? (Z = A.intl.formatToPlainString(A.t["2KzH89"], { num: null != n[t.id] ? n[t.id].length : 0 }))
-        : null != v && (Z = A.intl.formatToPlainString(A.t.L1zJgb, { categoryName: (0, m.F6)(v, b.default, f.Z) }));
-    let P = E ? L.s8.CUSTOM : N.preset;
+    let C = _.intl.string(_.t.uIzfCE),
+        Z = (0, m.KS)(t);
+    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id
+        ? (C = _.intl.formatToPlainString(_.t["2KzH89"], { num: null != n[t.id] ? n[t.id].length : 0 }))
+        : null != c && (C = _.intl.formatToPlainString(_.t.L1zJgb, { categoryName: (0, h.F6)(c, v.default, j.Z) }));
+    let A = N ? O.s8.CUSTOM : p.preset;
     return (0, i.jsx)("div", {
-        ref: S,
+        ref: f,
         children: (0, i.jsxs)("div", {
-            className: r()(M.row, M.channel),
+            className: r()(y.row, y.channel),
             children: [
                 (0, i.jsxs)("div", {
-                    className: r()(M.rowName, M.modColor),
+                    className: r()(y.rowName, y.modColor),
                     children: [
-                        null != _
-                            ? (0, i.jsx)(_, {
+                        null != Z
+                            ? (0, i.jsx)(Z, {
                                   size: "custom",
                                   color: "currentColor",
                                   height: 20,
                                   width: 20,
-                                  className: M.icon,
+                                  className: y.icon,
                               })
                             : null,
                         (0, i.jsxs)("div", {
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-md/semibold",
-                                    className: M.modColor,
-                                    children: (0, m.F6)(t, b.default, f.Z),
+                                    className: y.modColor,
+                                    children: (0, h.F6)(t, v.default, j.Z),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xs/medium",
-                                    className: M.modColor,
-                                    children: Z,
+                                    className: y.modColor,
+                                    children: C,
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: M.rowOption,
+                    className: y.rowOption,
                     children: (0, i.jsx)("div", {
-                        children: (0, i.jsx)(d.$q, {
-                            color: h,
-                            shape: d.zV.ROUND,
-                            type: d.M0.INVERTED,
-                            value: P === L.s8.ALL_MESSAGES,
-                            onChange: () => ((0, C._m)(t.guild_id, t.id, L.s8.ALL_MESSAGES), O(!1)),
-                        }),
-                    }),
-                }),
-                (0, i.jsx)("div", {
-                    className: M.rowOption,
-                    children: (0, i.jsx)("div", {
-                        children: (0, i.jsx)(d.$q, {
-                            color: h,
-                            shape: d.zV.ROUND,
-                            type: d.M0.INVERTED,
-                            value: P === L.s8.MENTIONS,
-                            onChange: () => ((0, C._m)(t.guild_id, t.id, L.s8.MENTIONS), O(!1)),
-                        }),
-                    }),
-                }),
-                (0, i.jsx)("div", {
-                    className: M.rowOption,
-                    children: (0, i.jsx)("div", {
-                        children: (0, i.jsx)(d.$q, {
-                            color: h,
-                            shape: d.zV.ROUND,
-                            type: d.M0.INVERTED,
-                            value: P === L.s8.NOTHING,
-                            onChange: () => ((0, C._m)(t.guild_id, t.id, L.s8.NOTHING), O(!1)),
-                        }),
-                    }),
-                }),
-                (0, i.jsx)("div", {
-                    className: M.rowOption,
-                    children: (0, i.jsx)("div", {
-                        children: (0, i.jsx)(d.$q, {
-                            onClick: (e) => {
-                                (0, u.vq)(e, () =>
-                                    (0, i.jsx)(c.v2r, {
-                                        navId: "ChannelNotificationCustomSettingsItems",
-                                        "aria-label": A.intl.string(A.t.kMdneQ),
-                                        onClose: () => {},
-                                        onSelect: () => {},
-                                        children: (0, x.T5)(t, () => O(!1)),
-                                    }),
-                                );
+                        children: (0, i.jsx)(o.Checkbox, {
+                            checked: A === O.s8.ALL_MESSAGES,
+                            label: "",
+                            onChange: () => {
+                                (0, E._m)(t.guild_id, t.id, O.s8.ALL_MESSAGES), S(!1);
                             },
-                            color: h,
-                            shape: d.zV.ROUND,
-                            type: d.M0.INVERTED,
-                            value: P === L.s8.CUSTOM,
-                            onChange: () => O(!0),
                         }),
                     }),
                 }),
-                (0, i.jsx)(g.Z, {
-                    onClick: () => (0, C.JK)(t.guild_id, t.id),
-                    className: M.removeButton,
+                (0, i.jsx)("div", {
+                    className: y.rowOption,
+                    children: (0, i.jsx)("div", {
+                        children: (0, i.jsx)(o.Checkbox, {
+                            checked: A === O.s8.MENTIONS,
+                            label: "",
+                            onChange: () => {
+                                (0, E._m)(t.guild_id, t.id, O.s8.MENTIONS), S(!1);
+                            },
+                        }),
+                    }),
+                }),
+                (0, i.jsx)("div", {
+                    className: y.rowOption,
+                    children: (0, i.jsx)("div", {
+                        children: (0, i.jsx)(o.Checkbox, {
+                            checked: A === O.s8.NOTHING,
+                            label: "",
+                            onChange: () => {
+                                (0, E._m)(t.guild_id, t.id, O.s8.NOTHING), S(!1);
+                            },
+                        }),
+                    }),
+                }),
+                (0, i.jsx)("div", {
+                    className: y.rowOption,
+                    children: (0, i.jsx)("div", {
+                        children: (0, i.jsx)("span", {
+                            ref: b,
+                            style: { display: "inline-flex" },
+                            children: (0, i.jsx)(o.Checkbox, {
+                                checked: A === O.s8.CUSTOM,
+                                label: "",
+                                onChange: () => {
+                                    S(!0);
+                                    let e = b.current;
+                                    null != e &&
+                                        (0, d.vq)(
+                                            {
+                                                stopPropagation: () => {},
+                                                preventDefault: () => {},
+                                                currentTarget: e,
+                                                target: e,
+                                            },
+                                            () =>
+                                                (0, i.jsx)(o.v2r, {
+                                                    navId: "ChannelNotificationCustomSettingsItems",
+                                                    "aria-label": _.intl.string(_.t.kMdneQ),
+                                                    onClose: () => {},
+                                                    onSelect: () => {},
+                                                    children: (0, g.T5)(t, () => S(!1)),
+                                                }),
+                                        );
+                                },
+                            }),
+                        }),
+                    }),
+                }),
+                (0, i.jsx)(u.Z, {
+                    onClick: () => (0, E.JK)(t.guild_id, t.id),
+                    className: y.removeButton,
                 }),
             ],
         }),
