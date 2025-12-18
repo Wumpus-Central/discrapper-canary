@@ -1,6 +1,6 @@
 n.d(t, {
-    c: () => E,
-    g: () => b,
+    c: () => b,
+    g: () => y,
 });
 var r = n(54381),
     i = n(979554),
@@ -9,64 +9,67 @@ var r = n(54381),
     s = n(525302),
     l = n(216541),
     c = n(333867),
-    u = n(221300),
-    d = n(766717),
-    f = n(474936),
-    p = n(388032),
-    _ = n(669155),
-    m = n(788015);
-function h(e, t, n) {
+    u = n(602733),
+    d = n(221300),
+    f = n(766717),
+    p = n(474936),
+    _ = n(388032),
+    m = n(669155),
+    h = n(788015);
+function g(e, t, n) {
     (0, c.Z)({
         skuId: e.skuId,
         isGift: !0,
-        giftingOrigin: f.Wt.USER_PROFILE_WISHLIST,
+        giftingOrigin: p.Wt.USER_PROFILE_WISHLIST,
         analyticsLocations: n,
         giftRecipient: t,
         variantsReturnStyle: a.v.VARIANTS_GROUP,
     });
 }
-function g(e) {
+function E(e) {
     switch (e.collectiblesItem.type) {
         case i.Z.AVATAR_DECORATION:
-            return p.intl.string(p.t["7v0T9P"]);
+            return _.intl.string(_.t["7v0T9P"]);
         case i.Z.PROFILE_EFFECT:
-            return p.intl.string(p.t.wR5wOo);
+            return _.intl.string(_.t.wR5wOo);
         case i.Z.NAMEPLATE:
-            return p.intl.string(p.t.x5CoXR);
+            return _.intl.string(_.t.x5CoXR);
         default:
             return "";
     }
 }
-function E(e, t) {
+function b(e, t) {
     let {
             moreCount: n,
             profileOwner: a,
             analyticsLocations: o,
             onViewWishlist: c,
-            isSingleCard: f = !1,
-            wishlistId: m,
-            showTypeTooltip: g = !1,
-            cardSize: E,
+            isSingleCard: p = !1,
+            wishlistId: h,
+            showTypeTooltip: E = !1,
+            cardSize: b,
+            itemSource: y,
         } = t,
-        b = null != e.bundleItems && e.bundleItems.length > 0,
-        y = null != n && n > 0,
-        O = g && !y,
-        v = y ? p.intl.string(p.t.TxBQzD) : p.intl.string(p.t.pLPjsb),
-        S = {
-            title: O ? p.intl.string(p.t.HFhcqh) : v,
-            body: O ? p.intl.string(p.t.ilhtIa) : void 0,
-            renderIcon: O ? s.Q : void 0,
+        O = null != e.bundleItems && e.bundleItems.length > 0,
+        v = null != n && n > 0,
+        S = E && !v,
+        I = v ? _.intl.string(_.t.TxBQzD) : _.intl.string(_.t.pLPjsb),
+        T = y === u.lr.POPULAR ? _.intl.string(_.t.Ig6VDH) : _.intl.string(_.t.ilhtIa),
+        C = {
+            title: S ? _.intl.string(_.t.HFhcqh) : I,
+            body: S ? T : void 0,
+            renderIcon: S ? s.Q : void 0,
             shouldShow: !0,
         },
-        I = () => {
-            if (y) return void c();
-            h(e, a, o);
+        A = () => {
+            if (v) return void c();
+            g(e, a, o);
         },
-        T = () => {
-            if (b) {
+        N = () => {
+            if (O) {
                 let t = { items: e.bundleItems };
                 return (0, r.jsx)("div", {
-                    className: _.bundlePreview,
+                    className: m.bundlePreview,
                     children: (0, r.jsx)(l.d, {
                         product: t,
                         isHighlighted: !1,
@@ -74,37 +77,38 @@ function E(e, t) {
                     }),
                 });
             }
-            return (0, r.jsx)(u.Z, {
+            return (0, r.jsx)(d.Z, {
                 item: e,
                 profileOwner: a,
                 isHighlighted: !1,
             });
         },
-        C = !b && e.collectiblesItem.type === i.Z.PROFILE_EFFECT,
-        A = b || !C;
+        P = !O && e.collectiblesItem.type === i.Z.PROFILE_EFFECT,
+        R = O || !P;
     return (0, r.jsx)(
-        d.Z,
+        f.Z,
         {
-            onCardClick: I,
-            tooltipConfig: S,
-            shouldScalePreview: A,
-            renderPreview: T,
+            onCardClick: A,
+            tooltipConfig: C,
+            shouldScalePreview: R,
+            renderPreview: N,
             moreCount: n,
-            isSingleCard: f,
+            isSingleCard: p,
             wishlistItem: e,
-            wishlistId: m,
-            cardSize: E,
+            wishlistId: h,
+            cardSize: b,
+            itemSource: y,
         },
         e.skuId,
     );
 }
-function b(e, t) {
+function y(e, t) {
     let { profileOwner: n, analyticsLocations: i, wishlistId: a, onViewWishlist: s } = t,
         l = null != e.bundleItems && e.bundleItems.length > 0,
         c = () => {
-            h(e, n, i);
+            g(e, n, i);
         },
-        u = E(e, {
+        u = b(e, {
             profileOwner: n,
             analyticsLocations: i,
             onViewWishlist: s,
@@ -112,18 +116,18 @@ function b(e, t) {
             wishlistId: a,
             index: 0,
         }),
-        d = l ? p.intl.string(p.t.Zr5tjn) : g(e);
+        d = l ? _.intl.string(_.t.Zr5tjn) : E(e);
     return (0, r.jsxs)("div", {
-        className: m.singleItemContainer,
+        className: h.singleItemContainer,
         children: [
             u,
             (0, r.jsxs)("div", {
-                className: m.singleItemInfo,
+                className: h.singleItemInfo,
                 children: [
                     (0, r.jsx)(o.P3F, {
                         onClick: c,
-                        className: m.singleItemName,
-                        "aria-label": p.intl.string(p.t.pLPjsb),
+                        className: h.singleItemName,
+                        "aria-label": _.intl.string(_.t.pLPjsb),
                         children: (0, r.jsx)(o.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
