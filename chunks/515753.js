@@ -1,7 +1,7 @@
 n.d(t, {
     Qj: () => eb,
     RS: () => ev,
-    ZP: () => eh,
+    ZP: () => eO,
     bU: () => ef,
 }),
     n(388685);
@@ -21,8 +21,8 @@ var r = n(54381),
     y = n(194983),
     b = n(28664),
     v = n(481060),
-    h = n(493683),
-    O = n(239091),
+    O = n(493683),
+    h = n(239091),
     x = n(420660),
     j = n(468363),
     P = n(326255),
@@ -48,8 +48,8 @@ var r = n(54381),
     B = n(379839),
     z = n(359135),
     Y = n(516817),
-    W = n(63759),
-    K = n(866834),
+    K = n(63759),
+    W = n(866834),
     q = n(518950),
     V = n(199902),
     X = n(158776),
@@ -208,9 +208,9 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
                 role: g,
                 "aria-posinset": y,
                 "aria-setsize": b,
-                listItemRef: h,
+                listItemRef: O,
             } = e,
-            O = ec(e, [
+            h = ec(e, [
                 "route",
                 "selected",
                 "icon",
@@ -233,7 +233,7 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
             focusProps: es({ within: !0 }, em),
             "aria-posinset": y,
             "aria-setsize": b,
-            ref: h,
+            ref: O,
             children: (0, r.jsx)(v.vjx, {
                 as: "div",
                 selected: n,
@@ -249,7 +249,7 @@ let ed = ei.ZP.getEnableHardwareAcceleration() ? v.Xo$ : v.qEK,
                                 },
                                 className: eo.link,
                             },
-                            O,
+                            h,
                         ),
                         {
                             children: [
@@ -289,7 +289,7 @@ function ev(e) {
             "aria-setsize": ei,
         } = e,
         [eb, ev] = i.useState(!1),
-        [eh, eO] = i.useState(!1),
+        [eO, eh] = i.useState(!1),
         [ex, ej] = i.useState(!1),
         eP = i.useRef(null),
         eS = i.useRef(null),
@@ -301,7 +301,7 @@ function ev(e) {
         } = (0, q.Z)({
             userId: null == s ? void 0 : s.id,
             size: v.EFr.SIZE_32,
-            animateOnHover: !(l || eb || eh || ex),
+            animateOnHover: !(l || eb || eO || ex),
         }),
         eZ = t.isMultiUserDM(),
         eI = t.isSystemDM(),
@@ -325,9 +325,9 @@ function ev(e) {
             { location: "private_channel" },
             { autoTrackExposure: !0 },
         ),
-        { showMessagePreviews: eY, prioritizeOverStatus: eW } = F.U.useConfig({ location: "PrivateChannel" }),
-        eK = (0, g.e7)([$.Z], () => $.Z.hidePersonalInformation),
-        eq = (0, W.l)({ timestamp: er.default.extractTimestamp(null != eG ? eG : t.id) }),
+        { showMessagePreviews: eY, prioritizeOverStatus: eK } = F.U.useConfig({ location: "PrivateChannel" }),
+        eW = (0, g.e7)([$.Z], () => $.Z.hidePersonalInformation),
+        eq = (0, K.l)({ timestamp: er.default.extractTimestamp(null != eG ? eG : t.id) }),
         eV = i.useRef(null),
         eX = null != V && (l || eb || ex),
         eJ = () => {
@@ -337,17 +337,17 @@ function ev(e) {
             ev(!1);
         },
         e$ = () => {
-            eO(!0);
+            eh(!0);
         },
         e0 = () => {
-            eO(!1);
+            eh(!1);
         },
         e1 = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), h.Z.closePrivateChannel(t.id, l, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), O.Z.closePrivateChannel(t.id, l, n);
         },
         e5 = () => {
-            h.Z.preload(el.ME, t.id);
+            O.Z.preload(el.ME, t.id);
         },
         e4 = (e) => {
             e.stopPropagation();
@@ -364,7 +364,7 @@ function ev(e) {
                 o = i ? d.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : d.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
             ej(!0),
                 t.isMultiUserDM()
-                    ? (0, O.jW)(
+                    ? (0, h.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.all([
@@ -388,7 +388,7 @@ function ev(e) {
                               onClose: () => ej(!1),
                           },
                       )
-                    : (0, O.jW)(
+                    : (0, h.jW)(
                           e,
                           async () => {
                               let { default: e } = a
@@ -602,10 +602,10 @@ function ev(e) {
                                                             ? void 0
                                                             : f.some((e) => e.type !== el.IIU.CUSTOM_STATUS)) === !0,
                                                     n =
-                                                        eY && null != X && !eK
+                                                        eY && null != X && !eW
                                                             ? (0, r.jsx)("div", {
                                                                   className: eo.subtext,
-                                                                  children: (0, r.jsx)(K.o, {
+                                                                  children: (0, r.jsx)(W.o, {
                                                                       channel: t,
                                                                       message: X,
                                                                   }),
@@ -614,7 +614,7 @@ function ev(e) {
                                                     i =
                                                         null != X &&
                                                         null != n &&
-                                                        (1 > (0, o.Z)(new Date(), X.timestamp) || (eW && !e) || eL);
+                                                        (1 > (0, o.Z)(new Date(), X.timestamp) || (eK && !e) || eL);
                                                 return t.isSystemDM()
                                                     ? (0, r.jsx)("div", {
                                                           className: eo.subtext,
@@ -644,7 +644,7 @@ function ev(e) {
                                                               activities: f,
                                                               voiceChannel: S,
                                                               applicationStream: j,
-                                                              animateEmoji: eb || eh || ex,
+                                                              animateEmoji: eb || eO || ex,
                                                               textClassName: eo.activityStatusText,
                                                               iconClassName: eA ? eo.mutedIcon : void 0,
                                                           })
@@ -658,20 +658,15 @@ function ev(e) {
                                                 className: a()(eo.overflowTooltip, { [eo.withDisplayNameStyles]: te }),
                                                 children: e9,
                                             }),
-                                            decorators: (0, r.jsxs)(r.Fragment, {
-                                                children: [
-                                                    t.isSystemDM()
-                                                        ? (0, r.jsx)(E.Z, {
-                                                              className: eo.decorator,
-                                                              type: E.Z.Types.SYSTEM_DM,
-                                                              verified: !0,
-                                                          })
-                                                        : null,
-                                                    ti,
-                                                ],
-                                            }),
+                                            decorators: t.isSystemDM()
+                                                ? (0, r.jsx)(E.Z, {
+                                                      className: eo.decorator,
+                                                      type: E.Z.Types.SYSTEM_DM,
+                                                      verified: !0,
+                                                  })
+                                                : null,
+                                            rightDecorators: ti,
                                             withDisplayNameStyles: te,
-                                            fullWidth: !0,
                                         }),
                                     },
                                 ),
@@ -718,7 +713,7 @@ function ev(e) {
         },
     });
 }
-let eh =
+let eO =
     12633 == n.j
         ? (e) => {
               var { channel: t, selected: n } = e,

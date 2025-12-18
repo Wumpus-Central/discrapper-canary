@@ -10,44 +10,50 @@ let l = i.forwardRef((e, t) => {
         highlighted: i = !1,
         avatar: a,
         decorators: l,
-        name: c,
-        subText: u,
-        avatarClassName: d,
-        innerClassName: f,
-        nameClassName: p,
-        subtextClassName: _,
-        withDisplayNameStyles: m = !1,
-        fullWidth: h = !1,
+        rightDecorators: c,
+        name: u,
+        subText: d,
+        avatarClassName: f,
+        innerClassName: p,
+        nameClassName: _,
+        subtextClassName: m,
+        withDisplayNameStyles: h = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
-        className: o()(s.layout, f, {
+        className: o()(s.layout, p, {
             [s.muted]: n,
             [s.highlighted]: i,
-            [s.fullWidth]: h,
+            [s.fullWidth]: null != c,
         }),
         children: [
             (0, r.jsx)("div", {
-                className: o()(s.avatar, d),
+                className: o()(s.avatar, f),
                 children: a,
             }),
             (0, r.jsxs)("div", {
-                className: o()(s.content, { [s.withDisplayNameStyles]: m }),
+                className: o()(s.content, { [s.withDisplayNameStyles]: h }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: s.nameAndDecorators,
                         children: [
-                            (0, r.jsx)("div", {
-                                className: o()(s.name, p),
-                                children: c,
+                            (0, r.jsxs)("div", {
+                                className: s.leftName,
+                                children: [
+                                    (0, r.jsx)("div", {
+                                        className: o()(s.name, _),
+                                        children: u,
+                                    }),
+                                    l,
+                                ],
                             }),
-                            l,
+                            c,
                         ],
                     }),
-                    null != u
+                    null != d
                         ? (0, r.jsx)("div", {
-                              className: o()(s.subText, _),
-                              children: u,
+                              className: o()(s.subText, m),
+                              children: d,
                           })
                         : null,
                 ],

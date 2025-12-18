@@ -45021,10 +45021,19 @@ body .b54a5b2f01b57ad8-headerAnimation {
     font-weight: var(--font-weight-semibold-1x-light-theme, 500)
 }
 
+._20a53846fe2e8513-leftName {
+    justify-content: flex-start;
+    overflow: hidden
+}
+
+._20a53846fe2e8513-leftName,
 ._20a53846fe2e8513-nameAndDecorators {
     align-items: center;
-    display: flex;
-    justify-content: flex-start
+    display: flex
+}
+
+._20a53846fe2e8513-nameAndDecorators {
+    justify-content: space-between
 }
 
 ._20a53846fe2e8513-subText {
