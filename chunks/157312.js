@@ -1,4 +1,4 @@
-r.d(e, { default: () => f }), r(388685);
+r.d(e, { default: () => b }), r(388685);
 var n = r(54381),
     i = r(473749),
     o = r(793030),
@@ -7,9 +7,9 @@ var n = r(54381),
     u = r(282793),
     c = r(353149),
     s = r(388032);
-let f = (t) => {
-    var { subscriptionId: e, invitedUser: r, onClose: f } = t,
-        b = (function (t, e) {
+let b = (t) => {
+    var { subscriptionId: e, invitedUser: r, subscriptionGroupMemberId: b, onClose: f } = t,
+        p = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -29,10 +29,10 @@ let f = (t) => {
                         !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
             }
             return i;
-        })(t, ["subscriptionId", "invitedUser", "onClose"]);
-    let [p, d] = (0, i.useState)(!1),
+        })(t, ["subscriptionId", "invitedUser", "subscriptionGroupMemberId", "onClose"]);
+    let [d, m] = (0, i.useState)(!1),
         O = async () => {
-            d(!0), await (0, a.if)(e, r.id), d(!1), f();
+            m(!0), await (0, a.if)(e, r.id, b), m(!1), f();
         };
     return (0, n.jsx)(
         o.Modal,
@@ -74,11 +74,11 @@ let f = (t) => {
                         text: s.intl.string(c.default["2blqtw"]),
                         variant: "critical-primary",
                         onClick: O,
-                        loading: p,
+                        loading: d,
                     },
                 ],
             },
-            b,
+            p,
         ),
     );
 };

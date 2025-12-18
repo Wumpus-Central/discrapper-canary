@@ -150,10 +150,13 @@ async function h(e, t, n) {
         );
     }
 }
-async function g(e, t) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_START" });
+async function g(e, t, n) {
+    o.Z.dispatch({
+        type: "PREMIUM_GROUP_REMOVE_INVITE_START",
+        subscriptionGroupMemberId: n,
+    });
     try {
-        let n = await a.tn.del({
+        let r = await a.tn.del({
             url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
             rejectWithError: !0,
         });
@@ -161,11 +164,18 @@ async function g(e, t) {
             o.Z.dispatch({
                 type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS",
                 subscriptionId: e,
+                subscriptionGroupMemberId: n,
             }),
-            n
+            r
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE" }), null;
+        return (
+            o.Z.dispatch({
+                type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE",
+                subscriptionGroupMemberId: n,
+            }),
+            null
+        );
     }
 }
 async function E(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r,
     i = n(275726),
     a = n(442837),
@@ -129,14 +129,36 @@ function A(e) {
     });
 }
 function N(e) {
-    let { message: t } = e;
-    return R(t);
+    let { subscriptionGroupMemberId: t } = e;
+    if (null == t) return !1;
+    let n = m.get(t);
+    if ((null == n ? void 0 : n.invite) == null) return !1;
+    m.set(t, {
+        state: c.bZ.REMOVED,
+        invite: _(f({}, n.invite), { removed_at: new Date().toISOString() }),
+        errorStatus: null,
+    });
 }
 function P(e) {
-    let { messages: t } = e;
-    return t.map((e) => R(e)).some(Boolean);
+    let { subscriptionGroupMemberId: t } = e;
+    if (null == t) return !1;
+    let n = m.get(t);
+    if ((null == n ? void 0 : n.invite) == null) return !1;
+    m.set(t, {
+        state: c.bZ.PENDING,
+        invite: _(f({}, n.invite), { removed_at: null }),
+        errorStatus: null,
+    });
 }
 function R(e) {
+    let { message: t } = e;
+    return D(t);
+}
+function w(e) {
+    let { messages: t } = e;
+    return t.map((e) => D(e)).some(Boolean);
+}
+function D(e) {
     if (e.type !== i.u.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;
     if (null == t || "" === t || !s.default.isProbablyAValidSnowflake(t)) return !1;
@@ -152,7 +174,7 @@ function R(e) {
         !0)
     );
 }
-class w extends (r = a.ZP.Store) {
+class x extends (r = a.ZP.Store) {
     getInvite(e) {
         var t;
         return null != (t = m.get(e)) ? t : null;
@@ -176,8 +198,8 @@ class w extends (r = a.ZP.Store) {
         return g;
     }
 }
-d(w, "displayName", "PremiumGroupInviteStore");
-let D = new w(o.Z, {
+d(x, "displayName", "PremiumGroupInviteStore");
+let L = new x(o.Z, {
     PREMIUM_GROUP_INVITES_FETCH_START: b,
     PREMIUM_GROUP_INVITES_FETCH_SUCCESS: y,
     PREMIUM_GROUP_INVITES_FETCH_FAIL: O,
@@ -186,9 +208,11 @@ let D = new w(o.Z, {
     PREMIUM_GROUP_INVITE_FETCH_FAIL: T,
     PREMIUM_GROUP_ACCEPT_INVITE_START: C,
     PREMIUM_GROUP_ACCEPT_INVITE_FAIL: A,
-    MESSAGE_CREATE: N,
-    LOCAL_MESSAGES_LOADED: P,
-    LOAD_MESSAGES_SUCCESS: P,
-    LOAD_MESSAGES_AROUND_SUCCESS: P,
+    PREMIUM_GROUP_REMOVE_INVITE_START: N,
+    PREMIUM_GROUP_REMOVE_INVITE_FAILURE: P,
+    MESSAGE_CREATE: R,
+    LOCAL_MESSAGES_LOADED: w,
+    LOAD_MESSAGES_SUCCESS: w,
+    LOAD_MESSAGES_AROUND_SUCCESS: w,
     LOGOUT: E,
 });
