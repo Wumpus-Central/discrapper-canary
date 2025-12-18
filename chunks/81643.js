@@ -189,5 +189,7 @@ function F(e, t) {
         ? v.intl.string(v.t["S/xS/w"])
         : n
           ? v.intl.string(O.default["1/6wta"])
-          : v.intl.format(O.default.RpMIT0, { handleOnHelpUrlHook: t });
+          : null != t
+            ? v.intl.format(O.default.RpMIT0, { handleOnHelpUrlHook: t })
+            : v.intl.string(v.t["+BLIGh"]);
 }

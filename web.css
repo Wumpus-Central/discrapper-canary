@@ -77194,12 +77194,15 @@ html ._614623a0ca8129b8-progress {
     }
 }
 
+.abac7bf510fef1f8-badgeContainer {
+    margin-bottom: var(--space-8)
+}
+
 .abac7bf510fef1f8-badge {
     align-items: center;
     background: linear-gradient(90deg, #db00a4, #5968f0);
     border-radius: 19px;
     justify-content: center;
-    margin-bottom: var(--space-8);
     padding: 0 var(--space-4);
     text-transform: uppercase;
     width: -webkit-fit-content;
@@ -77247,12 +77250,15 @@ html ._614623a0ca8129b8-progress {
     margin-bottom: 10px
 }
 
+.b0db003538002d93-badgeContainer {
+    margin-bottom: var(--space-8)
+}
+
 .b0db003538002d93-badge {
     align-items: center;
     background: linear-gradient(90deg, #db00a4, #5968f0);
     border-radius: 19px;
     justify-content: center;
-    margin-bottom: var(--space-8);
     padding: 0 var(--space-4);
     text-transform: uppercase;
     width: -webkit-fit-content;

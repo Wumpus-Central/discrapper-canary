@@ -6,6 +6,7 @@ var r = {
     backgroundColor: "b0db003538002d93-backgroundColor",
     description: "b0db003538002d93-description",
     boxesSubHeader: "b0db003538002d93-boxesSubHeader",
+    badgeContainer: "b0db003538002d93-badgeContainer",
     badge: "b0db003538002d93-badge",
     boxVideo: "b0db003538002d93-boxVideo",
     header: "b0db003538002d93-header",

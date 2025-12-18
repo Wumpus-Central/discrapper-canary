@@ -26,6 +26,7 @@ var r = {
     textBox: "abac7bf510fef1f8-textBox",
     bentoBoxButtonWhite: "abac7bf510fef1f8-bentoBoxButtonWhite",
     bentoBoxButtonBrand: "abac7bf510fef1f8-bentoBoxButtonBrand",
+    badgeContainer: "abac7bf510fef1f8-badgeContainer",
     badge: "abac7bf510fef1f8-badge",
 };
 n.r((e.exports = r));

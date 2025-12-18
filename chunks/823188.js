@@ -103,8 +103,6 @@ function Y(e) {
                     {
                         Icon: i,
                         text: a(),
-                        className: Z.itemApplicationHome,
-                        textVariant: "text-sm/normal",
                         enablePremiumBrandRefresh: !0,
                         isApplicationHome: t,
                     },
