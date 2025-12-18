@@ -116,7 +116,7 @@ function v(e) {
                     className: m.root,
                     children: [
                         (0, r.jsx)(l.Text, {
-                            variant: "text-sm/medium",
+                            variant: "text-sm/semibold",
                             color: "text-default",
                             className: m.rolesHeading,
                             children: _.intl.string(_.t.stcSfI),
@@ -137,6 +137,7 @@ function v(e) {
                                         (0, r.jsx)(
                                             c.UB,
                                             {
+                                                className: m.rolePill,
                                                 role: e,
                                                 canRemove: !1,
                                                 onRemove: () => {},

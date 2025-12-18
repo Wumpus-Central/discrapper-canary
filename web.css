@@ -71215,6 +71215,29 @@ html ._614623a0ca8129b8-progress {
     gap: 4px
 }
 
+._373b58a5c752510b-rolePill {
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-active);
+    height: 24px;
+    margin: 0;
+    padding: 4px
+}
+
+._373b58a5c752510b-rolePill>:first-child {
+    -webkit-margin-end: 4px;
+    margin-inline-end: 4px
+}
+
+._373b58a5c752510b-rolePill>div:last-child {
+    -webkit-margin-end: 2px;
+    margin-inline-end: 2px
+}
+
+._373b58a5c752510b-rolePill>div:last-child span {
+    font-weight: var(--font-weight-semibold)
+}
+
 ._083ae98ea5145b08-guildInviteContainer {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
