@@ -74,14 +74,18 @@ let b = new o.Z("ConnectionStore"),
 (y.handleIdentify = () => {
     let e = s.default.getToken();
     if ((b.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
-    let t = a.Z.getState();
+    let t = a.Z.getState(),
+        n = s.default.getInstallationForTracking();
     return {
         token: e,
-        properties: E(h({}, l.default.getSuperProperties()), {
-            client_app_state: t,
-            is_fast_connect: !1,
-            gateway_connect_reasons: _.Pf(),
-        }),
+        properties: h(
+            E(h({}, l.default.getSuperProperties()), {
+                client_app_state: t,
+                is_fast_connect: !1,
+                gateway_connect_reasons: _.Pf(),
+            }),
+            null != n ? { installation_id: n } : {},
+        ),
         presence: O.getInitialState(),
     };
 }),

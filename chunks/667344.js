@@ -52,7 +52,7 @@ function d(e) {
 }
 function f() {
     (0, r.useEffect)(() => {
-        (0, s.e)(a.dR.APP);
+        (0, s.e$)(a.dR.APP);
     }, []);
     let e = (0, i.e7)([l.Z], () => l.Z.getExperimentsMetadata()),
         t = (0, i.e7)([l.Z], () => l.Z.getRegisteredExperiments()),
