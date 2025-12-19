@@ -69,35 +69,34 @@ function _(e) {
             location: "Social Layer Gifting Mini Shelf",
             includeWishlists: !0,
         }),
-        D = r.useMemo(
-            () =>
-                M.map((e) => {
-                    var t, n;
-                    let r =
-                        null !=
-                        (n =
-                            null == (t = R[e.skuId])
-                                ? void 0
-                                : t
-                                      .filter((e) => e.reason === b.g.WISHLIST)
-                                      .map((e) => e.userId)
-                                      .filter(m.lm))
-                            ? n
-                            : [];
-                    return (0, i.jsx)(
-                        C.Z,
-                        {
-                            variant: r.length > 0 ? C.B.WISHLIST : C.B.POPULAR,
-                            wishlistItem: e,
-                            userIds: r,
-                            guildId: I.guild_id,
-                            channelId: I.id,
-                        },
-                        e.skuId,
-                    );
-                }),
-            [I.guild_id, I.id, M, R],
-        );
+        D = r.useMemo(() => {
+            let e = new Set(A);
+            return M.map((t) => {
+                var n, r;
+                let l =
+                    null !=
+                    (r =
+                        null == (n = R[t.skuId])
+                            ? void 0
+                            : n
+                                  .filter((t) => t.reason === b.g.WISHLIST && e.has(t.userId))
+                                  .map((e) => e.userId)
+                                  .filter(m.lm))
+                        ? r
+                        : [];
+                return (0, i.jsx)(
+                    C.Z,
+                    {
+                        variant: l.length > 0 ? C.B.WISHLIST : C.B.POPULAR,
+                        wishlistItem: t,
+                        userIds: l,
+                        guildId: I.guild_id,
+                        channelId: I.id,
+                    },
+                    t.skuId,
+                );
+            });
+        }, [I.guild_id, I.id, M, R, A]);
     return (
         r.useEffect(() => {
             0 !== M.length &&

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => y }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -50,36 +50,47 @@ function y(e) {
             includeWishlists: !0,
             userIds: a,
         }),
-        R = i.useMemo(
+        R = i.useMemo(() => new Set(a), [a]),
+        w = i.useMemo(
             () =>
-                N.map((e) => {
-                    var t, n;
-                    let i =
-                        null !=
-                        (n =
-                            null == (t = P[e.skuId])
-                                ? void 0
-                                : t
-                                      .filter((e) => e.reason === f.g.WISHLIST)
-                                      .map((e) => e.userId)
-                                      .filter(d.lm))
-                            ? n
-                            : [];
-                    return (0, r.jsx)(
-                        m.Z,
-                        {
-                            variant: i.length > 0 ? m.B.WISHLIST : m.B.POPULAR,
-                            wishlistItem: e,
-                            userIds: i,
-                            guildId: v,
-                            channelId: S,
-                            cardSize: y,
-                        },
-                        e.skuId,
-                    );
+                N.length > 0 &&
+                N.every((e) => {
+                    var t;
+                    return null == (t = P[e.skuId])
+                        ? void 0
+                        : t.some((e) => e.reason === f.g.WISHLIST && R.has(e.userId));
                 }),
-            [y, S, v, N, P],
-        );
+            [N, P, R],
+        ),
+        D = i.useMemo(() => {
+            let e = w && 1 === a.length;
+            return N.map((t) => {
+                var n, i;
+                let a =
+                    null !=
+                    (i =
+                        null == (n = P[t.skuId])
+                            ? void 0
+                            : n
+                                  .filter((e) => e.reason === f.g.WISHLIST && R.has(e.userId))
+                                  .map((e) => e.userId)
+                                  .filter(d.lm))
+                        ? i
+                        : [];
+                return (0, r.jsx)(
+                    m.Z,
+                    {
+                        variant: e ? m.B.NO_ICON : a.length > 0 ? m.B.WISHLIST : m.B.POPULAR,
+                        wishlistItem: t,
+                        userIds: a,
+                        guildId: v,
+                        channelId: S,
+                        cardSize: y,
+                    },
+                    t.skuId,
+                );
+            });
+        }, [y, S, v, N, P, w, a, R]);
     i.useEffect(() => {
         0 !== N.length &&
             u.default.track(h.rMx.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
@@ -89,7 +100,7 @@ function y(e) {
                 location: O,
             });
     }, [v, S, N, O]);
-    let w = "loading" === A || 0 === N.length;
+    let x = "loading" === A || 0 === N.length;
     return (0, r.jsxs)("div", {
         className: o()(b.container, t),
         children: [
@@ -99,19 +110,19 @@ function y(e) {
                     (0, r.jsx)(s.xvT, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: E.intl.string(E.t.BCi1gT),
+                        children: w ? E.intl.string(E.t["7lZ31J"]) : E.intl.string(E.t.BCi1gT),
                     }),
                     null != C ? C : null,
                 ],
             }),
             (0, r.jsx)("div", {
                 className: b.items,
-                children: w
+                children: x
                     ? (0, r.jsx)(s.$jN, {
                           type: s.$jN.Type.SPINNING_CIRCLE,
                           className: b.spinner,
                       })
-                    : R,
+                    : D,
             }),
         ],
     });

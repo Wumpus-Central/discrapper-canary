@@ -19,7 +19,7 @@ var r = n(54381),
     h = n(388032),
     g = n(264940),
     E = (function (e) {
-        return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), e;
+        return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), (e.NO_ICON = "no_icon"), e;
     })({});
 let b = 3;
 function y(e) {
@@ -42,29 +42,31 @@ function y(e) {
     return (0, r.jsxs)("div", {
         className: g.container,
         children: [
-            (0, r.jsx)(c.u, {
-                text: "popular" === t ? h.intl.string(h.t["DP0o+u"]) : h.intl.string(h.t["OnWY3/"]),
-                position: "top",
-                children: (0, r.jsx)("div", {
-                    className: g.contextContainer,
-                    children:
-                        "popular" === t || 0 === T.length
-                            ? (0, r.jsx)("div", {
-                                  className: g.contextIcon,
-                                  children: (0, r.jsx)(a.YqE, {
-                                      size: "sm",
-                                      color: "currentColor",
-                                  }),
-                              })
-                            : (0, r.jsx)(l.g, {
-                                  users: T,
-                                  guildId: null != y ? y : void 0,
-                                  channelId: null != O ? O : void 0,
-                                  maxUsers: b,
-                                  size: m.EF.SIZE_20,
-                              }),
-                }),
-            }),
+            "no_icon" === t
+                ? null
+                : (0, r.jsx)(c.u, {
+                      text: "popular" === t ? h.intl.string(h.t["DP0o+u"]) : h.intl.string(h.t["OnWY3/"]),
+                      position: "top",
+                      children: (0, r.jsx)("div", {
+                          className: g.contextContainer,
+                          children:
+                              "popular" === t || 0 === T.length
+                                  ? (0, r.jsx)("div", {
+                                        className: g.contextIcon,
+                                        children: (0, r.jsx)(a.YqE, {
+                                            size: "sm",
+                                            color: "currentColor",
+                                        }),
+                                    })
+                                  : (0, r.jsx)(l.g, {
+                                        users: T,
+                                        guildId: null != y ? y : void 0,
+                                        channelId: null != O ? O : void 0,
+                                        maxUsers: b,
+                                        size: m.EF.SIZE_20,
+                                    }),
+                      }),
+                  }),
             (0, r.jsx)(p.Z, {
                 item: n,
                 wishlistId: null,
