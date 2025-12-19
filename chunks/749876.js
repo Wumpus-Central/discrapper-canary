@@ -4,19 +4,19 @@ var r = n(473749),
     a = n(384275),
     o = n(870822),
     s = n(881998);
-function l(e) {
-    let t = (0, i.e7)([s.default], () => s.default.getFetchState()),
-        n = (0, i.e7)([s.default], () =>
+function l(e, t) {
+    let n = (0, i.e7)([s.default], () => s.default.getFetchState()),
+        l = (0, i.e7)([s.default], () =>
             e ? s.default.getNewestTokensForNonChildrenApplications() : s.default.getNewestTokens(),
         ),
-        l = r.useMemo(() => (null == n ? [] : n.filter((e) => (0, o.Z)(e.application)).map((e) => e.application)), [n]);
+        c = r.useMemo(() => (null == l ? [] : l.filter((e) => (0, o.Z)(e.application)).map((e) => e.application)), [l]);
     return (
         r.useEffect(() => {
-            a.Z.fetch();
-        }, []),
+            t || a.Z.fetch();
+        }, [t]),
         {
-            showLoadingIndicator: t === s.FetchState.FETCHING && null == n,
-            slayerSdkApplications: l,
+            showLoadingIndicator: n !== s.FetchState.FETCHED && (null == l || 0 === l.length),
+            slayerSdkApplications: c,
         }
     );
 }
