@@ -1,4 +1,4 @@
-n.d(t, { u: () => g }), n(415506);
+n.d(t, { u: () => g }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(635041),
@@ -111,9 +111,9 @@ function g(e) {
                 N,
             ),
         ),
-        x = (0, u.Q)({ shouldShow: R }),
-        { defaultLayerContext: L } = (0, o.ZFG)(),
-        j = i.useMemo(
+        [x, L] = i.useState(!1),
+        { defaultLayerContext: j } = (0, o.ZFG)(),
+        M = i.useMemo(
             () =>
                 null != h
                     ? h
@@ -132,39 +132,51 @@ function g(e) {
                           })
                         : n,
             [n, p, h],
-        );
-    if (null == j || ("string" == typeof j && "" === j)) return t;
+        ),
+        k = null != M && ("string" != typeof M || "" !== M),
+        U = R || x;
+    i.useEffect(() => {
+        R && k ? L(!0) : k || L(!1);
+    }, [R, k]);
+    let G = i.useCallback(() => {
+            L(!1);
+        }, []),
+        Z = (0, u.Q)({
+            shouldShow: R,
+            onExitComplete: G,
+        });
+    if (!k && (R || !x)) return t;
     if (null == t || (!g && !i.isValidElement(t))) return null;
-    let M = null != C ? C : (0, c.Sw)(n),
-        k = x((e, t) =>
+    let F = null != C ? C : (0, c.Sw)(n),
+        B = Z((e, t) =>
             t
                 ? (0, r.jsx)(l.N, {
                       isVisible: R,
-                      isRendered: !0,
+                      isRendered: U,
                       targetElementRef: w,
                       anchorRef: I,
                       id: P,
-                      content: j,
+                      content: M,
                       position: b,
                       align: y,
                       spacing: O,
                       caretConfig: T,
-                      layerContext: null != v ? v : L,
+                      layerContext: null != v ? v : j,
                       animationStyle: e,
-                      positionKey: M,
+                      positionKey: F,
                   })
                 : null,
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             D,
-            A || null == j || "" === j
+            A || null == M || "" === M
                 ? null
                 : (0, r.jsx)(a.n, {
                       id: P,
-                      children: j,
+                      children: M,
                   }),
-            k,
+            B,
         ],
     });
 }
