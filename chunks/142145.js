@@ -1,50 +1,91 @@
-n.d(t, { Z: () => s });
-var r = n(54381);
-n(473749);
-var i = n(480210),
-    a = n(119837),
-    o = n(664545);
-let s = (e) => {
-    var t, n, s, l, c;
+n.d(t, { Z: () => u }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+var r = n(54381),
+    i = n(473749),
+    a = n(480210),
+    o = n(526167),
+    s = n(960048),
+    l = n(119837),
+    c = n(664545);
+let u = (e) => {
+    var t, n, u, d, f, p;
     let {
-            layerConfig: u,
-            animationType: d,
-            ticking: f,
-            time: p,
-            hasPlayedThrough: _,
-            setHasPlayedThrough: m,
-            maxLoops: h,
-            loopEnd: g,
-            bannerAdjustment: E,
-            imageData: b,
+            layerConfig: _,
+            animationType: m,
+            ticking: h,
+            time: g,
+            hasPlayedThrough: E,
+            setHasPlayedThrough: b,
+            maxLoops: y,
+            loopEnd: O,
+            bannerAdjustment: v,
+            imageData: S,
         } = e,
-        y = !0;
+        I = !0,
+        T = 0,
+        C = (0, o.vU)() && null != _.loopDelay && _.loopDelay > 0 && (null == S ? void 0 : S.src) != null,
+        [A, N] = i.useState("reset"),
+        P = i.useRef(null != (u = null == S ? void 0 : S.src) ? u : _.src),
+        [R, w] = i.useState(null != (d = null == S ? void 0 : S.src) ? d : _.src);
+    i.useEffect(() => {
+        if (!C || "layer" === A) return;
+        let e = new AbortController();
+        return (
+            (async () => {
+                try {
+                    let t = P.current,
+                        n = await fetch(t, { signal: e.signal }),
+                        r = await n.blob();
+                    if (e.signal.aborted) return;
+                    t !== (null == S ? void 0 : S.src) && URL.revokeObjectURL(t),
+                        (P.current = URL.createObjectURL(r)),
+                        w(() => P.current);
+                } catch (e) {
+                    if ("AbortError" === e.name) return null;
+                    s.Z.captureException(e);
+                }
+            })(),
+            () => {
+                e.abort();
+            }
+        );
+    }, [A, C, w, null == S ? void 0 : S.src]),
+        i.useEffect(
+            () => () => {
+                P.current !== (null == S ? void 0 : S.src) && URL.revokeObjectURL(P.current);
+            },
+            [],
+        );
+    let D = (e) => {
+        (0, o.vU)() && e !== A && N(e);
+    };
     if (
-        (f || (y = !1),
-        p < u.start && (y = !1),
-        !u.loop && p > u.duration + u.start && (y = !1),
-        d === i.y.ANIMATION_TYPE_PERSISTENT && !_ && null != h && p >= g && m(!0),
-        u.loop && void 0 !== u.loopDelay && u.loopDelay > 0)
+        (h || (I = !1),
+        g < _.start && (I = !1),
+        !_.loop && g > _.duration + _.start && (I = !1),
+        m === a.y.ANIMATION_TYPE_PERSISTENT && !E && null != y && g >= O && b(!0),
+        _.loop && void 0 !== _.loopDelay && _.loopDelay > 0)
     ) {
-        let e = u.duration + u.loopDelay,
-            t = Math.floor((p - u.start) / e);
-        p - u.start - t * e > u.duration &&
-            (d === i.y.ANIMATION_TYPE_INTERMITTENT && !_ && null != h && t >= h && m(!0), (y = !1));
+        let e = _.duration + _.loopDelay;
+        (T = Math.floor((g - _.start) / e)),
+            g - _.start - T * e > _.duration &&
+                (m === a.y.ANIMATION_TYPE_INTERMITTENT && !E && null != y && T >= y && b(!0), (I = !1));
     }
-    return y
-        ? (0, r.jsx)("img", {
-              src: null != (s = null == b ? void 0 : b.src) ? s : u.src,
-              className: o.effect,
+    return I
+        ? (D("layer"),
+          (0, r.jsx)("img", {
+              src: R,
+              className: c.effect,
               style: {
-                  top: (null != (l = null == (t = u.position) ? void 0 : t.y) ? l : 0) - E,
-                  left: null != (c = null == (n = u.position) ? void 0 : n.x) ? c : 0,
+                  top: (null != (f = null == (t = _.position) ? void 0 : t.y) ? f : 0) - v,
+                  left: null != (p = null == (n = _.position) ? void 0 : n.x) ? p : 0,
               },
               alt: "",
               "aria-hidden": !0,
-          })
-        : (0, r.jsx)("img", {
-              src: a.td,
+          }))
+        : (D("reset"),
+          (0, r.jsx)("img", {
+              src: l.td,
               alt: "",
               "aria-hidden": !0,
-          });
+          }));
 };
