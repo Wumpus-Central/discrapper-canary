@@ -1,77 +1,76 @@
-a.d(t, { t: () => j }), a(415506);
+a.d(t, { t: () => C }), a(415506);
 var n = a(54381),
-    r = a(473749),
-    i = a(512722),
-    l = a.n(i),
+    i = a(473749),
+    r = a(512722),
+    l = a.n(r),
     s = a(478677),
-    o = a(755721),
-    c = a(481060),
-    d = a(570140),
-    u = a(275759),
-    x = a(202120),
-    m = a(600164),
-    h = a(710845),
-    N = a(424071),
+    o = a(481060),
+    c = a(570140),
+    d = a(275759),
+    u = a(202120),
+    x = a(600164),
+    m = a(710845),
+    h = a(424071),
     p = a(388032),
-    g = a(926375);
-let C = new h.Z("TwoWayLink");
-function j(e) {
+    N = a(926375);
+let g = new m.Z("TwoWayLink");
+function C(e) {
     let {
             platformType: t,
             isWaitingForConnection: a,
-            onWaitingForConnection: i,
-            expectedCallbackState: h,
-            onAuthToken: j,
-            onError: v,
-            onClose: f,
-            img: b,
+            onWaitingForConnection: r,
+            expectedCallbackState: m,
+            onAuthToken: C,
+            onError: j,
+            onClose: v,
+            img: f,
             title: k,
-            body: E,
-            redirectDestination: T,
+            body: b,
+            redirectDestination: E,
         } = e,
-        O = r.useCallback(async () => {
+        T = i.useCallback(async () => {
             let e;
             try {
-                if (((e = await (0, x.H)(t, { twoWayLinkType: s.g.DESKTOP })), null == e))
+                if (((e = await (0, u.H)(t, { twoWayLinkType: s.g.DESKTOP })), null == e))
                     throw Error("missing authorizeURL");
             } catch (e) {
-                C.error("Error opening provider authorize page", e), v();
+                g.error("Error opening provider authorize page", e), j();
                 return;
             }
-            let { state: a } = (0, u.xp)(e);
-            l()(null != a, "Authorize URL state query parameter must be present"), null == i || i(a);
-        }, [t, v, i]),
-        R = r.useCallback(
+            let { state: a } = (0, d.xp)(e);
+            l()(null != a, "Authorize URL state query parameter must be present"), null == r || r(a);
+        }, [t, j, r]),
+        O = i.useCallback(
             (e) => {
                 let { callbackCode: a, callbackState: n } = e;
-                if (n !== h) return void C.warn("".concat(t, " link: received mismatching callback state!"));
-                j({
+                if (n !== m) return void g.warn("".concat(t, " link: received mismatching callback state!"));
+                C({
                     callbackCode: a,
                     callbackState: n,
                 });
             },
-            [t, h, j],
+            [t, m, C],
         );
     return (
-        r.useEffect(
+        i.useEffect(
             () => (
-                d.Z.subscribe("USER_CONNECTIONS_LINK_CALLBACK", R),
+                c.Z.subscribe("USER_CONNECTIONS_LINK_CALLBACK", O),
                 () => {
-                    d.Z.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", R);
+                    c.Z.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", O);
                 }
             ),
-            [R],
+            [O],
         ),
-        (0, n.jsxs)(N.Z, {
+        (0, n.jsxs)(h.Z, {
             children: [
-                (0, n.jsxs)(c.xBx, {
+                (0, n.jsxs)(o.xBx, {
                     "data-migration-pending": !0,
-                    direction: m.Z.Direction.VERTICAL,
-                    className: g.header,
+                    direction: x.Z.Direction.VERTICAL,
+                    className: N.header,
                     separator: !1,
                     children: [
-                        (0, n.jsx)(c.Text, {
-                            className: g.stepHeader,
+                        (0, n.jsx)(o.Text, {
+                            className: N.stepHeader,
                             variant: "text-xs/bold",
                             color: "text-default",
                             children: p.intl.format(p.t.fHz6eR, {
@@ -80,57 +79,58 @@ function j(e) {
                             }),
                         }),
                         (0, n.jsxs)("div", {
-                            className: g.illustration,
-                            children: [b, " "],
+                            className: N.illustration,
+                            children: [f, " "],
                         }),
-                        (0, n.jsx)(c.Heading, {
-                            className: g.title,
+                        (0, n.jsx)(o.Heading, {
+                            className: N.title,
                             variant: "heading-xl/extrabold",
                             children: k,
                         }),
-                        null != f &&
-                            (0, n.jsx)(c.olH, {
-                                className: g.closeButton,
-                                onClick: f,
+                        null != v &&
+                            (0, n.jsx)(o.olH, {
+                                className: N.closeButton,
+                                onClick: v,
                             }),
                     ],
                 }),
-                (0, n.jsxs)(c.hzk, {
+                (0, n.jsxs)(o.hzk, {
                     "data-migration-pending": !0,
-                    className: g.body,
+                    className: N.body,
                     paddingFix: !1,
                     children: [
-                        (0, n.jsx)(c.Text, {
+                        (0, n.jsx)(o.Text, {
                             tag: "p",
                             variant: "text-md/normal",
                             color: "text-default",
-                            children: E,
+                            children: b,
                         }),
                         !a &&
-                            null != T &&
-                            (0, n.jsx)(c.Text, {
+                            null != E &&
+                            (0, n.jsx)(o.Text, {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: p.intl.format(p.t.XhlYYn, { redirectUrl: T }),
+                                children: p.intl.format(p.t.XhlYYn, { redirectUrl: E }),
                             }),
                     ],
                 }),
-                (0, n.jsx)(c.mzw, {
+                (0, n.jsx)(o.mzw, {
                     "data-migration-pending": !0,
-                    className: g.footer,
-                    children: (0, n.jsxs)(o.zx, {
-                        className: g.footerButton,
-                        color: a ? o.zx.Colors.PRIMARY : o.zx.Colors.BRAND,
-                        onClick: O,
-                        children: [
-                            a ? p.intl.string(p.t["5911Lb"]) : p.intl.string(p.t["3PatSz"]),
-                            (0, n.jsx)(c.rgF, {
-                                color: "currentColor",
-                                className: g.launchIcon,
-                                size: "xs",
-                            }),
-                        ],
+                    className: N.footer,
+                    children: (0, n.jsx)(o.Button, {
+                        variant: a ? "secondary" : "primary",
+                        text: p.intl.format(a ? p.t["8Laby+"] : p.t["6623tt"], {
+                            popoutWindowIcon: {},
+                            popoutWindowIconHook: () =>
+                                (0, n.jsx)(o.rgF, {
+                                    color: "currentColor",
+                                    className: N.launchIcon,
+                                    size: "xs",
+                                }),
+                        }),
+                        onClick: T,
+                        fullWidth: !0,
                     }),
                 }),
             ],
