@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var i = n(54381);
 n(473749);
 var r = n(399606),
@@ -56,21 +56,21 @@ function b(e, t) {
         e
     );
 }
-function C(e) {
+function y(e) {
     let t = (0, r.e7)([s.Z], () => s.Z.getChannelId() === e.id),
-        C = (0, d.Z)(),
-        y = (null == C ? void 0 : C.channelId) === e.id,
+        y = (0, d.Z)(),
+        C = (null == y ? void 0 : y.channelId) === e.id,
         v = (0, o.V)(e) && !e.isPrivate(),
         x = (0, o.Z)(e),
         O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && x) || v,
         E = (0, p.Z)();
-    return y || 0 !== E.length
-        ? y
+    return C || 0 !== E.length
+        ? C
             ? (0, i.jsx)(l.sNh, {
                   label: m.intl.string(m.t.PlwgdU),
                   id: "handoff",
                   action: () => {
-                      (0, u.F)(C);
+                      (0, u.F)(y);
                   },
                   icon: (0, f.Z)(void 0),
                   disabled: O,
@@ -106,7 +106,7 @@ function C(e) {
                                       });
                                   t.type === h.ABu.XBOX
                                       ? (0, l.ZDy)(async () => {
-                                            let { default: t } = await Promise.all([n.e("8753"), n.e("45929")]).then(
+                                            let { default: t } = await Promise.all([n.e("61283"), n.e("45929")]).then(
                                                 n.bind(n, 200623),
                                             );
                                             return (n) => (0, i.jsx)(t, b(g({}, n), { channel: e }));
