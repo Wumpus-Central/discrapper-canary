@@ -1,4 +1,5 @@
 n.d(t, {
+    JR: () => h,
     Xp: () => O,
     YL: () => g,
     g$: () => y,
@@ -156,43 +157,42 @@ function b(e, t, n) {
 async function y(e) {
     let { applicationId: t, userIds: n, maxRecommendations: a = p, includeWishlists: c = !1 } = e;
     if (0 === n.length) return;
-    let d = n.slice(0, h),
-        _ = s.Z.recommendationsByApplicationsAndUsers(t, d);
+    let d = s.Z.recommendationsByApplicationsAndUsers(t, n);
     if (
-        null == _ ||
-        ("error" !== _.state && "loading" !== _.state && ("success" !== _.state || !(_.data.numItemsRequested >= a)))
+        null == d ||
+        ("error" !== d.state && "loading" !== d.state && ("success" !== d.state || !(d.data.numItemsRequested >= a)))
     )
         try {
             i.Z.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START",
                 applicationId: t,
-                userIds: d,
+                userIds: n,
             });
             let e = await r.tn.get({
                     url: l.ANM.SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS(t),
                     rejectWithError: !0,
                     query: {
-                        user_ids: d,
+                        user_ids: n,
                         max_recommendations: a,
                         include_wishlists: c,
                     },
                 }),
-                n = (0, o.X0)(e.body);
+                s = (0, o.X0)(e.body);
             return (
                 i.Z.dispatch(
-                    f(u({ type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS" }, n), {
-                        userIds: d,
+                    f(u({ type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS" }, s), {
+                        userIds: n,
                         numItemsRequested: a,
                     }),
                 ),
-                n
+                s
             );
         } catch (e) {
             return (
                 i.Z.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE",
                     applicationId: t,
-                    userIds: d,
+                    userIds: n,
                 }),
                 null
             );

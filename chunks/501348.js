@@ -192,13 +192,13 @@ let W = {
                 (0, r.jsxs)("div", {
                     className: Z.themeTitleContainer,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: Z.title,
-                            children: G.intl.string(G.t["0EzVst"]),
+                        (0, r.jsxs)(u.Text, {
+                            variant: "text-md/medium",
+                            children: [" ", G.intl.string(G.t["0EzVst"])],
                         }),
-                        (0, r.jsx)(u.R94, {
-                            type: u.R94.Types.DESCRIPTION,
-                            className: Z.subtext,
+                        (0, r.jsx)(u.Text, {
+                            variant: "text-sm/normal",
+                            color: "text-subtle",
                             children: G.intl.string(G.t.PV3dGX),
                         }),
                     ],
@@ -319,9 +319,8 @@ class et extends i.Component {
               })
             : (0, r.jsx)(u.C3N, {
                   label: G.intl.string(G.t.Ksh3ik),
-                  children: (0, r.jsx)(u.xJW, {
-                      title: (0, r.jsx)(X, {}),
-                      children: (0, r.jsx)(D.i, {}),
+                  children: (0, r.jsxs)("div", {
+                      children: [(0, r.jsx)(X, {}), (0, r.jsx)(D.i, {})],
                   }),
               });
     }

@@ -442,7 +442,7 @@ let q = i.memo(function (e) {
                                 rightAlign: !0,
                             }),
                         (0, r.jsx)(X, {
-                            className: j.avatar,
+                            className: o()(j.avatar, { [j.avatarSpeakingOutline]: eE === -1 / 0 }),
                             size: em,
                             src: eg,
                             isSpeaking: es,
@@ -450,6 +450,7 @@ let q = i.memo(function (e) {
                             speakingStylesConfig: {
                                 spreadDirection: E.h.OUTSET_ONLY,
                                 maxOuterSpreadRadius: 4,
+                                hideIfVolumeMissing: !0,
                             },
                             "aria-hidden": !0,
                         }),
@@ -475,7 +476,7 @@ let q = i.memo(function (e) {
                     onMouseLeave: eu,
                     children: [
                         (0, r.jsx)(X, {
-                            className: j.avatar,
+                            className: o()(j.avatar, { [j.avatarSpeakingOutline]: eE === -1 / 0 }),
                             size: em,
                             src: eg,
                             isSpeaking: es,
@@ -483,6 +484,7 @@ let q = i.memo(function (e) {
                             speakingStylesConfig: {
                                 spreadDirection: E.h.OUTSET_ONLY,
                                 maxOuterSpreadRadius: 4,
+                                hideIfVolumeMissing: !0,
                             },
                             "aria-hidden": !0,
                         }),

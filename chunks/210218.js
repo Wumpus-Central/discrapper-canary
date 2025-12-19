@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => P }), n(415506), n(388685), n(642613);
+n.d(t, { Z: () => P }), n(415506), n(388685);
 var i,
     a = n(442837),
     o = n(570140),
@@ -58,7 +58,7 @@ function d(e, t) {
 }
 function f(e) {
     if (0 === e.length) throw Error("No user IDs provided");
-    return e.length > 1 ? [...e].sort().join(",") : e[0];
+    return e.length > 1 ? [...e].join(",") : e[0];
 }
 let p = {},
     _ = {},

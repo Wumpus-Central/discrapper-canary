@@ -11,6 +11,7 @@ e.exports = {
     voiceIcon: "adebbad0504cfbbb-voiceIcon",
     interactive: "adebbad0504cfbbb-interactive",
     speaking: "adebbad0504cfbbb-speaking",
+    avatarSpeakingOutline: "adebbad0504cfbbb-avatarSpeakingOutline",
     justConnected: "adebbad0504cfbbb-justConnected",
     connectedAnimationContainer: "adebbad0504cfbbb-connectedAnimationContainer",
     right: "adebbad0504cfbbb-right",

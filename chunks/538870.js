@@ -28,20 +28,22 @@ function g(e) {
             spreadDirection: d = "BOTH",
             maxOuterSpreadRadius: h = f,
             maxInnerSpreadRadius: g = p,
+            hideIfVolumeMissing: E = !1,
         } = e,
-        { shouldReduceMotion: E, isAppFocused: b } = (0, i.cj)([a.Z, o.Z], () => ({
+        { shouldReduceMotion: b, isAppFocused: y } = (0, i.cj)([a.Z, o.Z], () => ({
             shouldReduceMotion: a.Z.useReducedMotion,
             isAppFocused: o.Z.isAppFocused(),
         }));
     return r.useMemo(() => {
         let e = {};
+        if (u === -1 / 0 && E) return e;
         if (t) {
             let t = s,
                 n = l,
                 r = c;
             u !== -1 / 0 &&
-                !E &&
-                b &&
+                !b &&
+                y &&
                 ((t = m(u, "INSET_ONLY" === d ? 0 : h)),
                 (n = m(u, "OUTSET_ONLY" === d ? 0 : g)),
                 (r = "OUTSET_ONLY" === d ? 0 : n + 1)),
@@ -51,6 +53,6 @@ function g(e) {
                     "inset 0 0 0 ".concat(r, "px var(--background-base-lower)"),
                 ].join(", "));
         } else n && (e.boxShadow = _);
-        return b && (e.transition = "box-shadow 50ms ease-out"), e;
-    }, [t, n, b, E, u, d, h, g]);
+        return y && (e.transition = "box-shadow 50ms ease-out"), e;
+    }, [t, n, y, b, u, d, h, g, E]);
 }

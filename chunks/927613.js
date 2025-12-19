@@ -19,26 +19,27 @@ var r = n(473749),
 let p = 6;
 function _(e) {
     let { applicationId: t, numItems: n, userIds: a, isEligible: s, includeWishlists: u } = e,
-        d = (0, i.e7)([c.Z], () => (null != t ? c.Z.recommendationsByApplicationsAndUsers(t, a) : void 0));
+        d = null == a ? void 0 : a.slice(0, l.JR),
+        p = (0, i.e7)([c.Z], () => (null != t ? c.Z.recommendationsByApplicationsAndUsers(t, d) : void 0));
     r.useEffect(() => {
         s &&
             null != t &&
-            null != a &&
-            0 !== a.length &&
+            null != d &&
+            0 !== d.length &&
             0 !== n &&
             (0, l.g$)({
                 applicationId: t,
-                userIds: a,
+                userIds: d,
                 maxRecommendations: n,
                 includeWishlists: u,
             });
-    }, [t, a, s, n, u]);
-    let p = r.useMemo(() => (null == d || "success" !== d.state ? [] : d.data.skus.slice(0, n)), [d, n]),
-        _ = r.useMemo(
+    }, [t, d, s, n, u]);
+    let _ = r.useMemo(() => (null == p || "success" !== p.state ? [] : p.data.skus.slice(0, n)), [p, n]),
+        m = r.useMemo(
             () =>
-                null == d || "success" !== d.state
+                null == p || "success" !== p.state
                     ? []
-                    : p.map(
+                    : _.map(
                           (e) =>
                               new o.Z({
                                   sku_id: e.id,
@@ -47,14 +48,14 @@ function _(e) {
                                   sku: e,
                               }),
                       ),
-            [p, d],
+            [_, p],
         );
     return {
-        state: r.useMemo(() => (null == d ? "loading" : d.state), [d]),
-        recommendations: _,
+        state: r.useMemo(() => (null == p ? "loading" : p.state), [p]),
+        recommendations: m,
         skuIdToUserIdsReasons: r.useMemo(
-            () => (null == d || "success" !== d.state ? {} : d.data.skusToRecommendationReasons),
-            [d],
+            () => (null == p || "success" !== p.state ? {} : p.data.skusToRecommendationReasons),
+            [p],
         ),
     };
 }
