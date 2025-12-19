@@ -1,7 +1,8 @@
 n.d(t, { b: () => u });
 var r = n(54381),
-    i = n(481060);
-function a(e, t, n) {
+    i = n(481060),
+    a = n(912332);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,12 +26,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -42,40 +43,37 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = "social-layer-storefront-forward-link-modal",
-    u = (e) => {
-        let { sku: t, guildId: a, source: s, analyticsLocations: u, analyticsContext: d } = e;
-        (0, i.ZDy)(
-            async () => {
-                let { default: e } = await Promise.all([n.e("36653"), n.e("33648"), n.e("8193")]).then(
-                    n.bind(n, 560083),
+let u = (e) => {
+    let { sku: t, guildId: o, source: l, analyticsLocations: u, analyticsContext: d } = e;
+    (0, i.ZDy)(
+        async () => {
+            let { default: e } = await Promise.all([n.e("36653"), n.e("33648"), n.e("8193")]).then(n.bind(n, 560083));
+            return (n) =>
+                (0, r.jsx)(
+                    e,
+                    c(s({}, n), {
+                        sku: t,
+                        guildId: o,
+                        source: l,
+                        analyticsLocations: u,
+                        analyticsContext: d,
+                    }),
                 );
-                return (n) =>
-                    (0, r.jsx)(
-                        e,
-                        l(o({}, n), {
-                            sku: t,
-                            guildId: a,
-                            source: s,
-                            analyticsLocations: u,
-                            analyticsContext: d,
-                        }),
-                    );
-            },
-            {
-                stackingBehavior: "stack",
-                modalKey: c,
-            },
-        );
-    };
+        },
+        {
+            stackingBehavior: "stack",
+            modalKey: a.so,
+        },
+    );
+};
