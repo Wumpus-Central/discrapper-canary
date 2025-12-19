@@ -5,4 +5,5 @@ e.exports = {
     categoryIcon: "a1e0e01524490cf9-categoryIcon a1e0e01524490cf9-category",
     selected: "a1e0e01524490cf9-selected",
     categoryIconIcon: "a1e0e01524490cf9-categoryIconIcon",
+    defaultsShortcut: "a1e0e01524490cf9-defaultsShortcut",
 };

@@ -267,8 +267,12 @@ function ed(e) {
         eN = (0, b.Iu)((e) => e.searchQuery),
         eP = null != eN && "" !== eN,
         eR = (0, h.Dt)(),
-        ew = j.V.useConfig({ location: "SoundboardSoundGrid" }).enabled,
-        { categories: eD, availableSounds: ex, soundCounts: eL } = (0, Z.ZP)(a, {}, ep),
+        ew = j.V.useConfig({ location: "SoundboardSoundGrid" }),
+        {
+            categories: eD,
+            availableSounds: ex,
+            soundCounts: eL,
+        } = (0, Z.ZP)(a, { moveDefaultsToBottom: ew.enabled }, ep),
         [ej, eM] = i.useState([]),
         ek = (0, Z.FS)(eD, ej, eN),
         eU = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
@@ -278,7 +282,7 @@ function ed(e) {
             [eG],
         ),
         eF = !eT && J && -1 !== eZ,
-        eB = i.useMemo(() => (eF ? [0, 0, 8, 0] : [0, 0, 0, 0]), [eF]),
+        eB = !eT && ew.enabled && !ew.bottomBar && eD.length > 6,
         eV = C.T4.useSetting(),
         eH = i.useMemo(() => new Set(eV), [eV]),
         eY = null == a,
@@ -399,7 +403,7 @@ function ed(e) {
         e1 = i.useCallback(
             (e) => {
                 let t = e === eG.length - 1;
-                return eF && t ? 50 : eF && e === eZ ? 20 : 0;
+                return eF && t ? 70 : eF && e === eZ ? 20 : 0;
             },
             [eG.length, eF, eZ],
         ),
@@ -496,22 +500,25 @@ function ed(e) {
             [e_, e8],
         ),
         e7 = i.useCallback(
-            (e) =>
-                (0, r.jsx)(F.Z, {
+            (e) => {
+                let n = eD.filter((e) => !eB || e.categoryInfo.type !== L.bg.DEFAULTS);
+                return (0, r.jsx)(F.Z, {
                     soundboardListRef: e,
-                    categories: eD,
+                    categories: n,
                     shouldUpsellLockedCategories: eF,
                     listPadding: ed,
                     guildId: t,
                     inExpressionPicker: e_,
-                }),
-            [eD, eF, ed, t, e_],
+                    showPinnedDefaultsShortcut: eB,
+                });
+            },
+            [eD, eF, ed, t, e_, eB],
         ),
         e9 = i.useCallback(() => {
             if (eF) {
                 let e = eU;
                 return (
-                    ew && (e = !0),
+                    ew.enabled && (e = !0),
                     (0, r.jsx)(v.p, {
                         showUpsell: e,
                         text: e$(),
@@ -521,7 +528,7 @@ function ed(e) {
                 );
             }
             return null;
-        }, [e$, eF, ew, eU]),
+        }, [e$, eF, ew.enabled, eU]),
         te = i.useCallback(
             (e) => {
                 var t;
@@ -603,7 +610,6 @@ function ed(e) {
                     rowHeight: et,
                     sectionHeaderHeight: e0,
                     sectionFooterHeight: e1,
-                    listPadding: eB,
                     itemNodeWidth: ea,
                     gridNavigatorId: eR,
                     renderEmptySearchState: eu,

@@ -145,6 +145,7 @@ function A(e) {
                         ? N.intl.string(N.t.X1lQli)
                         : N.intl.string(N.t["6EJvHt"]),
                 asContainer: !0,
+                shouldShow: !D,
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: A,
                     animation: p.yRy.Animation.FADE,

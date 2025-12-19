@@ -190,13 +190,22 @@ function j(e) {
             listPadding: o = P,
             guildId: s,
             inExpressionPicker: c,
+            showPinnedDefaultsShortcut: d = !1,
         } = e,
-        u = i.useRef(null),
-        d = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
-        _ = (0, g.I5)(d, v.PremiumTypes.TIER_2),
-        E = i.useCallback(
+        _ = i.useRef(null),
+        E = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        T = (0, g.I5)(E, v.PremiumTypes.TIER_2),
+        C = i.useCallback(
+            (e) => {
+                var r;
+                let i = n.length - 1;
+                e(i), null == (r = t.current) || r.scrollToSectionTop(i);
+            },
+            [n.length, t],
+        ),
+        A = i.useCallback(
             (e, t, n, i) => {
-                let o = a && (0, b.O)(e.categoryInfo, _, s),
+                let o = a && (0, b.O)(e.categoryInfo, T, s),
                     l = () => {
                         h.default.track(y.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: y.ZY5.SOUNDBOARD_POPOUT },
@@ -216,17 +225,30 @@ function j(e) {
                     isNitroLocked: o,
                 });
             },
-            [s, a, _],
+            [s, a, T],
         );
     return (0, r.jsx)(p.Z, {
         className: c ? I.expressionPickerCategoryList : I.categoryList,
-        categoryListRef: u,
+        categoryListRef: _,
         expressionsListRef: t,
         store: f.Wq,
         categories: n,
         listPadding: o,
-        renderCategoryListItem: E,
+        renderCategoryListItem: A,
         rowCount: n.length,
         categoryHeight: R,
+        children: (e) =>
+            d &&
+            (0, r.jsx)(u.P3F, {
+                "aria-label": S.intl.string(S.t.Rtvk9X),
+                className: I.defaultsShortcut,
+                onClick: () => C(e),
+                children: (0, r.jsx)(u.gw7, {
+                    size: "custom",
+                    width: 24,
+                    height: 24,
+                    color: "currentColor",
+                }),
+            }),
     });
 }
