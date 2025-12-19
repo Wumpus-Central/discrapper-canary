@@ -6,8 +6,8 @@ var l = n(54381),
     s = n(100527),
     o = n(906732),
     c = n(335131),
-    u = n(884697),
-    d = n(449217),
+    d = n(884697),
+    u = n(449217),
     p = n(223143),
     m = n(269982),
     x = n(767714),
@@ -23,65 +23,65 @@ var l = n(54381),
     E = n(388032),
     w = n(997305);
 function O(e) {
-    var t, n, o, p;
+    var t, n, o, p, v;
     let {
-            currentUser: v,
-            categories: f,
-            purchases: C,
-            analyticsLocations: O,
-            onClose: _,
-            guildId: Z,
-            initialSelectedNameplate: A,
+            currentUser: f,
+            categories: C,
+            purchases: O,
+            analyticsLocations: _,
+            onClose: Z,
+            guildId: A,
+            initialSelectedNameplate: N,
         } = e,
-        N = (0, i.e7)([h.ZP], () => (null != Z && null != v ? h.ZP.getMember(Z, v.id) : null)),
-        I =
-            null != N
-                ? null == (t = N.collectibles)
+        I = (0, i.e7)([h.ZP], () => (null != A && null != f ? h.ZP.getMember(A, f.id) : null)),
+        S =
+            null != I
+                ? null == (t = I.collectibles)
                     ? void 0
                     : t.nameplate
-                : null == (n = v.collectibles)
+                : null == (n = f.collectibles)
                   ? void 0
                   : n.nameplate,
-        { pendingNameplate: S } = (0, g.Zx)(v, Z),
-        [k, T] = (0, r.useState)(() => {
+        { pendingNameplate: k } = (0, g.Zx)(f, A),
+        [T, U] = (0, r.useState)(() => {
             var e;
-            return null != A
-                ? A
-                : void 0 !== S
-                  ? S
-                  : null == I
+            return null != N
+                ? N
+                : void 0 !== k
+                  ? k
+                  : null == S
                     ? null
                     : null !=
-                        (e = (0, u.Y)(C, f).find((e) => {
+                        (e = (0, d.Y)(O, C).find((e) => {
                             let { skuId: t } = e;
-                            return t === I.skuId;
+                            return t === S.skuId;
                         }))
                       ? e
                       : null;
         }),
-        U = (0, g.Ys)({
-            pendingValue: k,
-            userValue: null == v || null == (o = v.collectibles) ? void 0 : o.nameplate,
-            guildValue: null == N || null == (p = N.collectibles) ? void 0 : p.nameplate,
-            guildId: Z,
+        B = (0, g.Ys)({
+            pendingValue: T,
+            userValue: null == f || null == (o = f.collectibles) ? void 0 : o.nameplate,
+            guildValue: null == I || null == (p = I.collectibles) ? void 0 : p.nameplate,
+            guildId: A,
         }),
-        { product: B, purchase: D } = (0, d.Z)(null == k ? void 0 : k.skuId),
-        L = null != D ? (0, u.qS)(D) : (0, u.G1)(B),
-        R = b.ZP.canUseCollectibles(v),
-        M =
-            void 0 === S
-                ? (null == k ? void 0 : k.skuId) === (null == I ? void 0 : I.skuId)
-                : (null == k ? void 0 : k.skuId) === (null == S ? void 0 : S.skuId),
-        F = (0, r.useCallback)(
+        { product: D, purchase: L } = (0, u.Z)(null == T ? void 0 : T.skuId),
+        R = null != L ? (0, d.qS)(L) : (0, d.G1)(D),
+        M = b.ZP.canUseCollectibles(f),
+        F =
+            void 0 === k
+                ? (null == T ? void 0 : T.skuId) === (null == S ? void 0 : S.skuId)
+                : (null == T ? void 0 : T.skuId) === (null == k ? void 0 : k.skuId),
+        G = (0, r.useCallback)(
             (e) => {
-                _(),
+                Z(),
                     (0, c.mK)({
-                        analyticsLocations: O,
+                        analyticsLocations: _,
                         analyticsSource: s.Z.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [O, _],
+            [_, Z],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -97,7 +97,7 @@ function O(e) {
                     (0, l.jsx)(a.olH, {
                         "data-migration-pending": !0,
                         className: w.closeButton,
-                        onClick: _,
+                        onClick: Z,
                     }),
                 ],
             }),
@@ -107,16 +107,16 @@ function O(e) {
                 scrollbarType: "none",
                 children: [
                     (0, l.jsx)(y.Z, {
-                        currentUser: v,
-                        selectedNameplate: k,
-                        guildId: Z,
-                        onSelect: T,
-                        onOpenShop: F,
+                        currentUser: f,
+                        selectedNameplate: T,
+                        guildId: A,
+                        onSelect: U,
+                        onOpenShop: G,
                     }),
                     (0, l.jsx)(j.Z, {
-                        user: v,
-                        guildId: Z,
-                        nameplate: U,
+                        user: f,
+                        guildId: A,
+                        nameplate: B,
                     }),
                 ],
             }),
@@ -124,41 +124,41 @@ function O(e) {
                 "data-migration-pending": !0,
                 className: w.modalFooter,
                 children: [
-                    (null != D && (!L || R)) || null === k
+                    (null != L && (!R || M)) || null === T
                         ? (0, l.jsx)(a.Button, {
                               variant: "primary",
                               text: E.intl.string(E.t.Jh8fJz),
                               onClick: () => {
-                                  (0, g.Wh)(k, Z), _();
+                                  (0, g.Wh)(T, A), Z();
                               },
-                              disabled: M,
+                              disabled: F,
                           })
-                        : null == D && (R || !L)
+                        : null == L && (M || !R)
                           ? (0, l.jsx)(a.Button, {
                                 variant: "primary",
-                                onClick: () => F(null == B ? void 0 : B.skuId),
+                                onClick: () => G(null == D ? void 0 : D.skuId),
                                 text: E.intl.string(E.t.fYfGgK),
                             })
                           : (0, l.jsx)(x.Z, {
                                 subscriptionTier: P.Si.TIER_2,
-                                showGradient: !R,
+                                showGradient: !M,
                                 textOptions: {
-                                    textOverride: b.ZP.isPremium(v)
+                                    textOverride: b.ZP.isPremium(f)
                                         ? E.intl.string(E.t.KXLX7l)
-                                        : R
+                                        : M
                                           ? E.intl.string(E.t.mr4K7D)
                                           : E.intl.string(E.t.pj0XBN),
                                 },
                             }),
-                    !R && L
+                    !M && R
                         ? (0, l.jsx)(m.Z, {
-                              product: null != D ? D : B,
-                              onClose: _,
+                              itemType: null != (v = null == L ? void 0 : L.type) ? v : null == D ? void 0 : D.type,
+                              onClose: Z,
                           })
                         : (0, l.jsx)(a.Button, {
                               variant: "secondary",
                               text: E.intl.string(E.t["ETE/oC"]),
-                              onClick: _,
+                              onClick: Z,
                           }),
                 ],
             }),
@@ -166,7 +166,7 @@ function O(e) {
     });
 }
 function _(e) {
-    let { transitionState: t, analyticsLocations: n, onClose: c, guildId: u, initialSelectedNameplate: d } = e,
+    let { transitionState: t, analyticsLocations: n, onClose: c, guildId: d, initialSelectedNameplate: u } = e,
         m = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: x } = (0, o.ZP)(n, s.Z.EDIT_NAMEPLATE_MODAL),
         { categories: g, purchases: h, isFetchingCategories: b, isFetchingPurchases: j } = (0, p.ZP)(),
@@ -196,8 +196,8 @@ function _(e) {
                             categories: g,
                             purchases: h,
                             analyticsLocations: x,
-                            guildId: u,
-                            initialSelectedNameplate: d,
+                            guildId: d,
+                            initialSelectedNameplate: u,
                             onClose: c,
                         }),
               }),

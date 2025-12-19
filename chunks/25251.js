@@ -26,7 +26,16 @@ let u = {},
         if (e.type !== a.Z.PROFILE_EFFECT && e.type !== a.Z.VARIANTS_GROUP) return r;
         let o = [
             ...e.items,
-            ...(null != (n = null == (t = e.variants) ? void 0 : t.flatMap((e) => e.items)) ? n : []),
+            ...(null !=
+            (n =
+                null == (t = e.variants)
+                    ? void 0
+                    : t.flatMap((e) => {
+                          let { items: t } = e;
+                          return t;
+                      }))
+                ? n
+                : []),
         ].filter(l.H);
         for (let e of (0, i.uniqBy)(o, "skuId")) {
             let t = {
