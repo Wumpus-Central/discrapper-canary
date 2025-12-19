@@ -265,7 +265,7 @@ O(D, "Sizes", A),
         showTooltip: !1,
         active: !1,
         tooltipPosition: "top",
-        badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
+        badgeStrokeColor: u.Z.unsafe_rawColors.WHITE.css,
         animate: !1,
     });
 let x = D;

@@ -11,6 +11,6 @@ let c = () =>
         text: s.intl.string(s.t.GMZqSi),
         children: (0, r.jsx)("div", {
             className: o.container,
-            children: (0, r.jsx)(a.Z, { color: i.Z.unsafe_rawColors.WHITE_500.css }),
+            children: (0, r.jsx)(a.Z, { color: i.Z.unsafe_rawColors.WHITE.css }),
         }),
     });

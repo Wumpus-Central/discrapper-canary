@@ -206,7 +206,7 @@ function Y(e) {
                         color: c.Z.unsafe_rawColors.TWITTER.css,
                         children: (0, r.jsx)(f.kmB, {
                             size: "xs",
-                            color: c.Z.unsafe_rawColors.WHITE_500.css,
+                            color: c.Z.unsafe_rawColors.WHITE.css,
                         }),
                     }),
                 })),

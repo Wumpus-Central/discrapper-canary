@@ -69,7 +69,7 @@ let O = l().memoize((e) => {
         let n = (0, c._i)(e);
         null != n && (t = 0.2 > (0, c.Bd)(n));
     }
-    return t ? d.Z.unsafe_rawColors.BLACK_500.css : d.Z.unsafe_rawColors.WHITE_500.css;
+    return t ? d.Z.unsafe_rawColors.BLACK.css : d.Z.unsafe_rawColors.WHITE.css;
 });
 class v extends i.PureComponent {
     render() {

@@ -225,7 +225,7 @@ function _(e) {
                                   children: [
                                       (0, n.jsx)(p.owK, {
                                           size: "md",
-                                          color: d.Z.colors.CONTROL_CONNECT_BACKGROUND_DEFAULT.css,
+                                          color: d.Z.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT.css,
                                           secondaryColor: d.Z.colors.WHITE.css,
                                       }),
                                       (0, n.jsx)(p.Text, {

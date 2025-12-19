@@ -127,7 +127,7 @@ function O(e) {
                               onClick: I,
                               children: (0, r.jsx)(c.Text, {
                                   variant: "text-xs/semibold",
-                                  color: "badge-text-default",
+                                  color: "badge-text-brand",
                                   className: b.barText,
                                   children: g.intl.format(g.t.EQcLyp, { count: C }),
                               }),

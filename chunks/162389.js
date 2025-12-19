@@ -131,7 +131,7 @@ function y(e) {
                       children: (0, i.jsx)(c.qJs, {
                           size: "custom",
                           "aria-label": b.intl.string(b.t["/jubeD"]),
-                          color: o.Z.unsafe_rawColors.WHITE_500.css,
+                          color: o.Z.unsafe_rawColors.WHITE.css,
                           width: 20,
                           height: 20,
                       }),

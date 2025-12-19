@@ -64,7 +64,7 @@ function v(e) {
                 ? n
                 : (0, r.jsx)(c.SrA, {
                       size: "sm",
-                      color: s ? l.Z.unsafe_rawColors.WHITE_500.css : u.JX.PREMIUM_TIER_2,
+                      color: s ? l.Z.unsafe_rawColors.WHITE.css : u.JX.PREMIUM_TIER_2,
                   });
     return (0, r.jsxs)(r.Fragment, {
         children: [

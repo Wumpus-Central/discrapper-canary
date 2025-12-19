@@ -232,14 +232,14 @@ class es extends (i = a.PureComponent) {
                     children: [
                         (0, r.jsx)(f.Vni, {
                             size: "custom",
-                            color: c.Z.unsafe_rawColors.WHITE_500.css,
+                            color: c.Z.unsafe_rawColors.WHITE.css,
                             width: 20,
                             height: 20,
                             className: o()(et.icon, et.faded, et.dragIcon),
                         }),
                         (0, r.jsx)(f.gj8, {
                             size: "custom",
-                            color: c.Z.unsafe_rawColors.WHITE_500.css,
+                            color: c.Z.unsafe_rawColors.WHITE.css,
                             width: 20,
                             height: 20,
                             className: o()(et.icon, et.faded, et.speakerIcon),

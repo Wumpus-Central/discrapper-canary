@@ -137,7 +137,7 @@ function A(e, t) {
     let n = {};
     return (
         "Selected" === t
-            ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css))
+            ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE.css))
             : ("Hover" === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)),
         n
     );
@@ -173,7 +173,7 @@ class N extends (r = o.Component) {
                 else
                     return {
                         backgroundColor: e,
-                        color: d.Z.unsafe_rawColors.WHITE_500.css,
+                        color: d.Z.unsafe_rawColors.WHITE.css,
                     };
         }
     }

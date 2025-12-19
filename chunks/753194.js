@@ -18,11 +18,7 @@ function f(e) {
         O = (0, i.ho)(y, !1, g ? E : null);
     return (
         (t =
-            null != p
-                ? p
-                : 0.3 > (0, i.Bd)(y)
-                  ? o.Z.unsafe_rawColors.PRIMARY_630.css
-                  : o.Z.unsafe_rawColors.WHITE_500.css),
+            null != p ? p : 0.3 > (0, i.Bd)(y) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE.css),
         (0, r.jsx)(s.u, {
             text: null != h ? h : d.intl.string(d.t.T3PvV4),
             children: (0, r.jsx)(u.Z, {

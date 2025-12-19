@@ -15,8 +15,8 @@ var r = n(473749),
 let g = 1000 / 60;
 function v(e, t, n, v) {
     let h = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
-        E = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK_500).hex(),
-        _ = (0, a.dQu)(l.Z.unsafe_rawColors.WHITE_500).hex(),
+        E = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK).hex(),
+        _ = (0, a.dQu)(l.Z.unsafe_rawColors.WHITE).hex(),
         y = r.useRef({}),
         S = r.useRef(new i.Xp()),
         O = r.useCallback(

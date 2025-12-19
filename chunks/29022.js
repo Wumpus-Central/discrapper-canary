@@ -149,7 +149,7 @@ function L(t) {
                               size: "md",
                               className: h.checklistIcon,
                               color: r.Z.unsafe_rawColors.GREEN_360.css,
-                              secondaryColor: r.Z.unsafe_rawColors.WHITE_100.css,
+                              secondaryColor: r.Z.unsafe_rawColors.WHITE.css,
                           }),
                           (0, i.jsx)(u.Text, {
                               variant: "text-md/normal",
@@ -177,7 +177,7 @@ function L(t) {
                               size: "md",
                               className: h.checklistIcon,
                               color: r.Z.unsafe_rawColors.GREEN_360.css,
-                              secondaryColor: r.Z.unsafe_rawColors.WHITE_100.css,
+                              secondaryColor: r.Z.unsafe_rawColors.WHITE.css,
                           }),
                           (0, i.jsx)(u.Text, {
                               variant: "text-md/normal",

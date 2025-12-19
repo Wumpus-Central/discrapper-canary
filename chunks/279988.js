@@ -59,7 +59,7 @@ let f = function (e) {
                             className: g.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: a.Z.unsafe_rawColors.WHITE_500.css,
+                            color: a.Z.unsafe_rawColors.WHITE.css,
                         }),
                     ],
                 }),

@@ -63,7 +63,7 @@ function p(e) {
                       size: "custom",
                       width: 20,
                       height: 20,
-                      secondaryColor: s.Z.unsafe_rawColors.WHITE_500.css,
+                      secondaryColor: s.Z.unsafe_rawColors.WHITE.css,
                       color: s.Z.unsafe_rawColors.BRAND_500.css,
                   })
                 : (0, n.jsx)("svg", {

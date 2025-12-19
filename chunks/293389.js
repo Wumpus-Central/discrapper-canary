@@ -262,7 +262,7 @@ function V(e) {
                                   size: "custom",
                                   width: Z,
                                   height: Z,
-                                  color: l.Z.unsafe_rawColors.WHITE_500.css,
+                                  color: l.Z.unsafe_rawColors.WHITE.css,
                               }),
                           }),
                       }),

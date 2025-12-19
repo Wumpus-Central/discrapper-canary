@@ -9,7 +9,7 @@ function o(e) {
         {
             width: o = 24,
             height: s = 24,
-            color: l = i.Z.unsafe_rawColors.WHITE_500.css,
+            color: l = i.Z.unsafe_rawColors.WHITE.css,
             backgroundColor: c = i.Z.unsafe_rawColors.BRAND_500.css,
         } = e,
         u = (function (e, t) {

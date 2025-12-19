@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(784620), n(973216);
+n.d(t, { Z: () => D }), n(784620), n(973216);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -10,15 +10,15 @@ var a = n(54381),
     u = n(481060),
     m = n(393238),
     p = n(410030),
-    h = n(297700),
-    f = n(617136),
+    f = n(297700),
+    h = n(617136),
     x = n(616022),
     b = n(49436),
     g = n(968843),
     v = n(862657),
     j = n(254579),
-    y = n(283689),
-    C = n(623249),
+    C = n(283689),
+    y = n(623249),
     _ = n(477005),
     S = n(698716),
     E = n(685613),
@@ -48,11 +48,11 @@ function A(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: l, isDarkTheme: o, sourceQuestContent: c } = e,
         { ref: d, height: p = 0 } = (0, m.ZP)([i]),
-        h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        f = (0, g.z)(n),
+        f = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+        h = (0, g.z)(n),
         { type: x, hints: b } = r.useMemo(
             () =>
-                h || f
+                f || h
                     ? {
                           type: 2,
                           hints: [],
@@ -71,7 +71,7 @@ function A(e) {
                               type: 2,
                               hints: [],
                           },
-            [i, h, f, l],
+            [i, f, h, l],
         ),
         v = 2 !== x,
         j = (0, u.q_F)({
@@ -79,7 +79,7 @@ function A(e) {
             height: v ? p : 0,
             config: P.Y,
         }),
-        y = 0 === x ? u.Mgn : u.d3s,
+        C = 0 === x ? u.Mgn : u.d3s,
         _ = u.TVs.unsafe_rawColors.RED_345.css,
         S = 0 === x ? _ : o ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, a.jsx)(s.animated.div, {
@@ -91,7 +91,7 @@ function A(e) {
                 (0, a.jsxs)("div", {
                     className: k.hintsContainer,
                     children: [
-                        (0, a.jsx)(y, {
+                        (0, a.jsx)(C, {
                             size: "xs",
                             color: S,
                         }),
@@ -106,7 +106,7 @@ function A(e) {
                     (0, a.jsx)(u.Avr, {
                         text: I.intl.string(I.t["yKJi+/"]),
                         onClick: () =>
-                            (0, C.y)({
+                            (0, y.y)({
                                 quest: n,
                                 errorHints: i,
                                 sourceQuestContent: c,
@@ -118,57 +118,57 @@ function A(e) {
         }),
     });
 }
-function Z(e) {
+function D(e) {
     var t, n, i, s, m;
     let {
-            quest: C,
+            quest: y,
             isHovering: P,
-            errorHints: Z,
-            warningHints: D,
+            errorHints: D,
+            warningHints: Z,
             isVisibleInViewport: L,
             onCtxMenuClose: M,
             onCtxMenuOpen: U,
             onCtxMenuSelect: B,
             sourceQuestContent: F,
         } = e,
-        G = (0, j.PB)(C),
+        G = (0, j.PB)(y),
         V = (0, p.ZP)(),
-        H = ((0, d.wj)(V) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
-        z = (0, g.tP)(C),
-        W = (null == (t = C.userStatus) ? void 0 : t.claimedAt) != null,
-        K = (0, g.B6)(C.config.expiresAt, {
+        z = ((0, d.wj)(V) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
+        W = (0, g.tP)(y),
+        H = (null == (t = y.userStatus) ? void 0 : t.claimedAt) != null,
+        q = (0, g.B6)(y.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
-        q = (null == (n = C.userStatus) ? void 0 : n.enrolledAt) != null,
-        Y = (null == (i = C.userStatus) ? void 0 : i.completedAt) != null,
+        K = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
+        Y = (null == (i = y.userStatus) ? void 0 : i.completedAt) != null,
         { onAssetLoadComplete: Q } = r.useContext(O.k),
-        X = H ? "text-muted" : "always-white",
+        X = z ? "text-muted" : "always-white",
         J = r.useCallback(async () => {
             G &&
-                ((0, v.zi)(C) || q
+                ((0, v.zi)(y) || K
                     ? (0, T.openVideoQuestModal)({
-                          quest: C,
+                          quest: y,
                           questContent: b.jn.QUEST_HOME_DESKTOP,
                           sourceQuestContent: F,
-                          sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                          sourceQuestContentCTA: h.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                       })
-                    : await (0, T.enrollAndStartVideoQuestWithErrorHandling)(C, {
+                    : await (0, T.enrollAndStartVideoQuestWithErrorHandling)(y, {
                           questContent: b.jn.QUEST_HOME_DESKTOP,
-                          questContentCTA: f.jZ.ACCEPT_QUEST,
+                          questContentCTA: h.jZ.ACCEPT_QUEST,
                           sourceQuestContent: F,
-                          sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                          sourceQuestContentCTA: h.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                       }));
-        }, [G, C, q, F]),
+        }, [G, y, K, F]),
         $ = (0, o.e7)([x.Z], () => x.Z.getQuestHomeTakeoverConfig()),
-        ee = r.useMemo(() => null != $ && (0, y.P9)($, C.id), [$, C.id]);
+        ee = r.useMemo(() => null != $ && (0, C.P9)($, y.id), [$, y.id]);
     return (0, a.jsxs)("div", {
         className: k.container,
         children: [
             (0, a.jsx)("div", {
                 className: k.heroAssetWrapper,
                 children: (0, a.jsx)(_.Z, {
-                    quest: C,
+                    quest: y,
                     isInteracting: P,
                     hideAssets: !L,
                     imageSize: {
@@ -195,7 +195,7 @@ function Z(e) {
                             (0, a.jsxs)("div", {
                                 className: k.topRow,
                                 children: [
-                                    (ee || C.preview) &&
+                                    (ee || y.preview) &&
                                         (0, a.jsxs)(u.Kqy, {
                                             className: k.pills,
                                             direction: "horizontal",
@@ -203,9 +203,9 @@ function Z(e) {
                                             gap: 8,
                                             children: [
                                                 ee &&
-                                                    !(0, v.zi)(C) &&
+                                                    !(0, v.zi)(y) &&
                                                     (0, a.jsx)(R, { children: I.intl.string(I.t.Jt6u7B) }),
-                                                C.preview &&
+                                                y.preview &&
                                                     (0, a.jsx)(R, {
                                                         variant: "brand",
                                                         children: I.intl.string(I.t.SKNnqq),
@@ -216,9 +216,9 @@ function Z(e) {
                                         (0, a.jsx)(c.u, {
                                             text: Y
                                                 ? I.intl.string(I.t.YsCuyF)
-                                                : q
+                                                : K
                                                   ? I.intl.string(I.t["74KqrR"])
-                                                  : (0, v.zi)(C)
+                                                  : (0, v.zi)(y)
                                                     ? I.intl.string(I.t.I6JG46)
                                                     : I.intl.string(I.t.umdNin),
                                             asContainer: !0,
@@ -238,7 +238,7 @@ function Z(e) {
                                         onClose: M,
                                         onSelect: B,
                                         questContent: b.jn.QUEST_HOME_DESKTOP,
-                                        quest: C,
+                                        quest: y,
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
@@ -313,7 +313,7 @@ function Z(e) {
                                 children: (0, a.jsx)(E.ZP, {
                                     className: k.partnerBranding,
                                     logotypeClassName: k.partnerLogotypes,
-                                    quest: C,
+                                    quest: y,
                                     separatorSpacing: E.US.MEDIUM,
                                     withGameTile: !1,
                                     onLoadComplete: Q,
@@ -330,13 +330,13 @@ function Z(e) {
                                                 color: X,
                                                 children: I.intl.string(I.t.VAbKhK),
                                             }),
-                                            (0, a.jsx)(h.Z, {
+                                            (0, a.jsx)(f.Z, {
                                                 className: k.verifiedIcon,
                                                 size: 16,
                                                 color: u.TVs.unsafe_rawColors.GREEN_360.css,
                                                 allowFullSizedIcon: !0,
                                                 children: (0, a.jsx)(u.kSu, {
-                                                    color: u.TVs.unsafe_rawColors.WHITE_500.css,
+                                                    color: u.TVs.unsafe_rawColors.WHITE.css,
                                                     size: "custom",
                                                     width: 13,
                                                     height: 13,
@@ -347,28 +347,28 @@ function Z(e) {
                                                 color: "always-white",
                                                 children:
                                                     null !=
-                                                    (m = null == (s = C.config.cosponsorMetadata) ? void 0 : s.name)
+                                                    (m = null == (s = y.config.cosponsorMetadata) ? void 0 : s.name)
                                                         ? m
-                                                        : C.config.messages.gamePublisher,
+                                                        : y.config.messages.gamePublisher,
                                             }),
                                         ],
                                     }),
-                                    z || W
+                                    W || H
                                         ? null
                                         : (0, a.jsx)(u.Text, {
                                               variant: "text-sm/medium",
                                               color: X,
-                                              children: I.intl.format(I.t["7D8r4F"], { expiryDate: K }),
+                                              children: I.intl.format(I.t["7D8r4F"], { expiryDate: q }),
                                           }),
                                 ],
                             }),
                         ],
                     }),
                     (0, a.jsx)(A, {
-                        quest: C,
-                        errorHints: Z,
-                        warningHints: D,
-                        isDarkTheme: H,
+                        quest: y,
+                        errorHints: D,
+                        warningHints: Z,
+                        isDarkTheme: z,
                         sourceQuestContent: F,
                     }),
                 ],

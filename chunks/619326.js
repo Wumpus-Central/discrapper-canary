@@ -60,7 +60,7 @@ let x = (0, g.Un)({
     webpackId: 797967,
 });
 function j(e) {
-    return (0, s.Bd)(e) > 0.25 ? o.Z.unsafe_rawColors.WHITE_500.css : o.Z.unsafe_rawColors.PRIMARY_530.css;
+    return (0, s.Bd)(e) > 0.25 ? o.Z.unsafe_rawColors.WHITE.css : o.Z.unsafe_rawColors.PRIMARY_530.css;
 }
 function v(e) {
     let { value: t, onChange: n, disabled: l = !1 } = e,

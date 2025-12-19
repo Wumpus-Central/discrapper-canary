@@ -339,8 +339,8 @@ function F(e) {
                     isVictor: !0,
                 },
                 () => ({
-                    color: l.Z.colors.CONTROL_CONNECT_BACKGROUND_DEFAULT.css,
-                    backgroundColor: l.Z.unsafe_rawColors.WHITE_500.css,
+                    color: l.Z.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT.css,
+                    backgroundColor: l.Z.unsafe_rawColors.WHITE.css,
                 }),
             )
             .with(
@@ -355,7 +355,7 @@ function F(e) {
             )
             .otherwise(() => ({
                 color: l.Z.unsafe_rawColors.BRAND_500.css,
-                backgroundColor: l.Z.unsafe_rawColors.WHITE_500.css,
+                backgroundColor: l.Z.unsafe_rawColors.WHITE.css,
             }));
     return (0, r.jsx)(u.owK, {
         size: "custom",
@@ -401,7 +401,7 @@ function V(e) {
                 size: "custom",
                 width: a,
                 height: a,
-                color: l.Z.unsafe_rawColors.WHITE_500.css,
+                color: l.Z.unsafe_rawColors.WHITE.css,
             }),
     });
 }

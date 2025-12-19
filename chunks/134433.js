@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(393951),
     f = n(319796);
 let p = l.Z.unsafe_rawColors.PRIMARY_300,
-    _ = l.Z.unsafe_rawColors.WHITE_500,
+    _ = l.Z.unsafe_rawColors.WHITE,
     m = l.Z.unsafe_rawColors.PRIMARY_630;
 function h(e) {
     let { color: t, size: n, forcedIconColor: i, className: l, iconClassName: h } = e,

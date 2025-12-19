@@ -169,7 +169,7 @@ let T = function (e) {
                           innerRef: l,
                           children: (0, r.jsx)(s.Huf, {
                               size: "md",
-                              color: o.Z.unsafe_rawColors.WHITE_500.css,
+                              color: o.Z.unsafe_rawColors.WHITE.css,
                           }),
                       }),
                   ),

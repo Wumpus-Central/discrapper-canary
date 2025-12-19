@@ -390,7 +390,7 @@ class I extends (r = a.PureComponent) {
 function T(e) {
     var { theme: t } = e,
         n = y(e, ["theme"]);
-    let r = (0, d.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(),
+    let r = (0, d.dQu)(c.Z.unsafe_rawColors.WHITE).hex(),
         a = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
         o = (0, u.wj)(t) ? r : a;
     return (0, i.jsx)(

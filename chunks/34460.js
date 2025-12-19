@@ -16,8 +16,8 @@ var n = a(54381),
     g = a(923726),
     j = a(570849),
     T = a(853439),
-    _ = a(303737),
-    v = a(862239),
+    v = a(303737),
+    _ = a(862239),
     C = a(847004),
     N = a(981631),
     b = a(388032),
@@ -44,7 +44,7 @@ function I(e) {
                     r &&
                         (0, n.jsx)(m.owK, {
                             size: "md",
-                            secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
+                            secondaryColor: o.Z.unsafe_rawColors.WHITE.css,
                             color: o.Z.unsafe_rawColors.BRAND_500.css,
                         }),
                 ],
@@ -96,7 +96,7 @@ function R(e) {
             setShowPriceReselection: d,
             handleCreateTierFromTemplate: m,
         } = e,
-        f = (0, _.g4)(
+        f = (0, v.g4)(
             i,
             c,
             null != l ? (null == (a = l[s]) || null == (t = a.listings[0]) ? void 0 : t.price_tier) : void 0,
@@ -116,7 +116,7 @@ function R(e) {
                 handleSelectTemplate: m,
                 newPricesToPick: f,
             })
-          : (0, n.jsx)(v.Z, {
+          : (0, n.jsx)(_.Z, {
                 selectedTemplate: l[s],
                 handleSelectTemplate: u,
             });
@@ -131,11 +131,11 @@ function w(e) {
             priceTiers: d,
         } = e,
         p = (0, c.e7)([T.Z], () => T.Z.getTemplates(i)),
-        [_, { loading: v, error: C }] = (0, f.Z)(j.u),
+        [v, { loading: _, error: C }] = (0, f.Z)(j.u),
         I = r.useRef("voluntarily_exit");
     r.useEffect(() => {
-        (null == p || 0 === p.length) && _(i);
-    }, [_, i, p]),
+        (null == p || 0 === p.length) && v(i);
+    }, [v, i, p]),
         r.useEffect(() => {
             t === m.Dvm.EXITING &&
                 h.default.track(
@@ -239,7 +239,7 @@ function w(e) {
                                         (0, n.jsx)("div", {
                                             className: y.templatesContentContainer,
                                             children: (0, n.jsx)(O, {
-                                                loading: v,
+                                                loading: _,
                                                 error: C,
                                                 templates: p,
                                                 selectedTemplateIndex: w,

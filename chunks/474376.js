@@ -1,4 +1,4 @@
-n.d(t, { g: () => y }), n(539854);
+n.d(t, { g: () => C }), n(539854);
 var a = n(54381);
 n(473749);
 var r = n(442837),
@@ -11,22 +11,22 @@ var r = n(442837),
     u = n(594174),
     m = n(626135),
     p = n(51144),
-    h = n(480387),
-    f = n(726745),
+    f = n(480387),
+    h = n(726745),
     x = n(251423),
     b = n(383832),
     g = n(981631),
     v = n(388032),
     j = n(608125);
-function y(e) {
+function C(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
         n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        y = (0, r.e7)([o.Z], () => (0, l.wj)(o.Z.theme)),
-        { multiAccountUsers: C } = (0, x.L)(),
-        _ = C.map((r) => {
+        C = (0, r.e7)([o.Z], () => (0, l.wj)(o.Z.theme)),
+        { multiAccountUsers: y } = (0, x.L)(),
+        _ = y.map((r) => {
             let l = new c.Z(r),
                 o = l.id === (null == t ? void 0 : t.id),
-                d = r.tokenStatus === f.q.INVALID,
+                d = r.tokenStatus === h.q.INVALID,
                 u = n ? null : "#".concat(l.discriminator);
             return (0, a.jsx)(
                 s.sNh,
@@ -65,22 +65,20 @@ function y(e) {
                                 o &&
                                     (0, a.jsx)(s.owK, {
                                         size: "sm",
-                                        color: t
-                                            ? i.Z.unsafe_rawColors.WHITE_500.css
-                                            : i.Z.unsafe_rawColors.BRAND_500.css,
+                                        color: t ? i.Z.unsafe_rawColors.WHITE.css : i.Z.unsafe_rawColors.BRAND_500.css,
                                         secondaryColor:
-                                            (t && y) || (t && !y)
+                                            (t && C) || (t && !C)
                                                 ? i.Z.unsafe_rawColors.BRAND_500.css
-                                                : i.Z.unsafe_rawColors.WHITE_500.css,
+                                                : i.Z.unsafe_rawColors.WHITE.css,
                                         className: j.activeIcon,
                                     }),
                                 d &&
                                     (0, a.jsx)(s.Mgn, {
                                         color: i.Z.unsafe_rawColors.RED_400.css,
                                         secondaryColor:
-                                            (t && y) || (t && !y)
+                                            (t && C) || (t && !C)
                                                 ? i.Z.unsafe_rawColors.BRAND_500.css
-                                                : i.Z.unsafe_rawColors.WHITE_500.css,
+                                                : i.Z.unsafe_rawColors.WHITE.css,
                                         size: "xs",
                                         className: j.activeIcon,
                                     }),
@@ -95,7 +93,7 @@ function y(e) {
                                 (m.default.track(g.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                     location: { section: g.jXE.USER_PROFILE },
                                 }),
-                                h.yD(n));
+                                f.yD(n));
                         }
                     },
                 },

@@ -72,7 +72,7 @@ function P(e) {
     if (D)
         return (0, r.jsx)(a.IGR, {
             text: _.intl.string(_.t.y2b7CA),
-            color: l.Z.colors.BADGE_BACKGROUND_DEFAULT.css,
+            color: l.Z.colors.BADGE_BACKGROUND_BRAND.css,
         });
     if (!M && L === I.i.ALL_MESSAGES && n.isForumLikeChannel() && null != z && z > 0)
         return (0, r.jsx)(a.Text, {

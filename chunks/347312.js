@@ -98,7 +98,7 @@ function k(e, t) {
         r = (0, l.dQu)(s.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
         i = (0, l.dQu)(s.Z.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
         a = (0, l.dQu)(s.Z.unsafe_rawColors.BRAND_430).hex(),
-        o = (0, l.dQu)(s.Z.unsafe_rawColors.WHITE_500).hex(),
+        o = (0, l.dQu)(s.Z.unsafe_rawColors.WHITE).hex(),
         c = t ? a : n,
         [u, d] = M(c, t, e),
         [f, p] = M(t ? o : e ? i : r, t, e),

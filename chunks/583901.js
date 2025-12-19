@@ -81,7 +81,7 @@ function v() {
             color: "currentColor",
             className: g.checkmarkCircle,
             colorClass: g.checkmark,
-            secondaryColor: l.Z.unsafe_rawColors.WHITE_500.css,
+            secondaryColor: l.Z.unsafe_rawColors.WHITE.css,
         }),
     });
 }

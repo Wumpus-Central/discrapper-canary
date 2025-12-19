@@ -103,7 +103,7 @@ function v(e) {
         N = (0, f.DP)(a),
         P = (0, l.Rf)(a),
         R = P === C ? A : P,
-        w = N ? c.Z.unsafe_rawColors.WHITE_500.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
+        w = N ? c.Z.unsafe_rawColors.WHITE.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
         D = (0, d.Z)(v),
         x = (0, d.Z)(S),
         [L, j] = i.useState((0, s.Z)());

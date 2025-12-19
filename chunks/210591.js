@@ -25,7 +25,7 @@ function m(e) {
                 ? (0, r.jsx)(c.owK, {
                       size: "md",
                       color: "currentColor",
-                      secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
+                      secondaryColor: o.Z.unsafe_rawColors.WHITE.css,
                       className: a()(f.rowIcon, f.rowIconChecked),
                   })
                 : (0, r.jsx)("div", { className: a()(f.rowIcon, f.rowIconEmpty) }),

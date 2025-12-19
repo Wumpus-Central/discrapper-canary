@@ -84,7 +84,7 @@ function v(e) {
                 { background: "var(--background-gradient), ".concat(n) }
             );
         }, [A, a, N]),
-        D = R ? u.Z.unsafe_rawColors.WHITE_500.css : void 0,
+        D = R ? u.Z.unsafe_rawColors.WHITE.css : void 0,
         x = i.useCallback(() => {
             v && S(), null == n || n();
         }, [v, S, n]);
