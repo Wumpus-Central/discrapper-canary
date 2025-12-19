@@ -1,99 +1,101 @@
-a.d(n, { default: () => C }), a(388685);
+a.d(n, { default: () => g }), a(388685);
 var e = a(54381),
     i = a(473749),
     l = a(793030),
-    s = a(481060),
-    o = a(904245),
+    o = a(481060),
+    s = a(904245),
     d = a(455708),
     r = a(944486),
     c = a(626135),
     u = a(981631),
-    h = a(959517),
-    g = a(388032),
-    p = a(557142);
-function C(t) {
+    C = a(959517),
+    m = a(388032),
+    h = a(557142);
+function g(t) {
     let {
             transitionState: n,
             onClose: a,
-            onGIFSelected: C,
-            hideFavorites: S = !1,
-            modalTitle: k = g.intl.string(g.t["0VinIJ"]),
-            defaultText: E = g.intl.string(g.t.OrwKgi),
-            giftIntentType: I,
-            analyticsLocationHistory: m,
+            onGIFSelected: g,
+            hideFavorites: p = !1,
+            modalTitle: b = m.intl.string(m.t["0VinIJ"]),
+            defaultText: N = m.intl.string(m.t.OrwKgi),
+            giftIntentType: S,
+            analyticsLocationHistory: _,
         } = t,
-        [v, N] = i.useState(null),
-        [_, f] = i.useState(""),
-        j = i.useCallback(
+        [f, k] = i.useState(null),
+        [E, I] = i.useState(""),
+        v = i.useCallback(
             (t) => {
-                N(t), null == C || C(t);
+                k(t), null == g || g(t);
             },
-            [C],
+            [g],
         ),
-        x = i.useCallback(async () => {
-            if (null != v) {
+        j = i.useCallback(async () => {
+            if (null != f) {
                 let t = r.Z.getChannelId();
                 null != t &&
-                    ("" !== _ &&
-                        (await o.Z.sendMessage(
+                    ("" !== E &&
+                        (await s.Z.sendMessage(
                             t,
                             {
-                                content: _,
+                                content: E,
                                 tts: !1,
                                 invalidEmojis: [],
                                 validNonShortcutEmojis: [],
                             },
                             !0,
-                            { location: h.dy.GIFTING },
+                            { location: C.dy.GIFTING },
                         )),
-                    await o.Z.sendMessage(
+                    await s.Z.sendMessage(
                         t,
                         {
-                            content: v.url,
+                            content: f.url,
                             tts: !1,
                             invalidEmojis: [],
                             validNonShortcutEmojis: [],
                         },
                         !0,
-                        { location: h.dy.GIFTING },
+                        { location: C.dy.GIFTING },
                     ),
-                    null != I &&
+                    null != S &&
                         c.default.track(u.rMx.GIFT_INTENT_MESSAGE_SENT, {
-                            gift_intent_type: I,
-                            location_stack: m,
+                            gift_intent_type: S,
+                            location_stack: _,
                         }),
                     await a());
             }
-        }, [v, _, a, I, m]);
+        }, [f, E, a, S, _]);
     return (0, e.jsx)(l.Modal, {
         transitionState: n,
         onClose: a,
-        title: k,
-        input: (0, e.jsx)(s.Kx8, {
-            value: _,
-            onChange: (t) => f(t),
-            placeholder: E,
+        title: b,
+        input: (0, e.jsx)(o.Kx8, {
+            value: E,
+            onChange: (t) => I(t),
+            placeholder: N,
         }),
         actions: [
             {
                 variant: "secondary",
-                text: g.intl.string(g.t["ETE/oC"]),
+                text: m.intl.string(m.t["ETE/oC"]),
                 onClick: a,
             },
             {
                 variant: "primary",
-                text: g.intl.string(g.t.TXNS7S),
-                onClick: x,
+                text: m.intl.string(m.t.TXNS7S),
+                onClick: j,
                 loading: !1,
-                disabled: null == v,
+                disabled: null == f,
             },
         ],
         children: (0, e.jsx)(d.Z, {
-            hideFavorites: S,
-            onSelectGIF: j,
-            selectedGIF: v,
-            initialQuery: g.intl.string(g.t.jrtJi4),
-            headerClassName: p.modalHeader,
+            hideFavorites: p,
+            onSelectGIF: v,
+            selectedGIF: f,
+            initialQuery: m.intl.string(m.t.jrtJi4),
+            className: h.modalContainer,
+            headerClassName: h.modalHeader,
+            contentClassName: h.modalContent,
         }),
     });
 }
