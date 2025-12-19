@@ -1,8 +1,9 @@
 n.d(t, {
+    QJ: () => h,
     QN: () => m,
-    ZP: () => h,
+    ZP: () => g,
     c7: () => _,
-    mw: () => g,
+    mw: () => E,
 }),
     n(388685);
 var r = n(473749),
@@ -101,8 +102,12 @@ function _() {
         }
     );
 }
-let m = () => _(!0);
-function h(e, t) {
+let m = () => _(!0),
+    h = (e) => {
+        let { purchases: t } = _(!0);
+        return null != e ? t.get(e) : void 0;
+    };
+function g(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
@@ -140,4 +145,4 @@ function h(e, t) {
         hasPreviouslyFetched: p,
     };
 }
-let g = (e) => h(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let E = (e) => g(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));

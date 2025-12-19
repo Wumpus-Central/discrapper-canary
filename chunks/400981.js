@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(979554),
@@ -8,76 +8,80 @@ var r = n(54381),
     u = n(607070),
     c = n(906732),
     d = n(821982),
-    p = n(832149),
-    m = n(600164),
-    h = n(4242),
-    f = n(566697),
-    g = n(347896),
-    y = n(594174),
-    j = n(614277),
-    v = n(215023),
-    b = n(350928);
-function O(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: O } = e,
-        S = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+    p = n(583434),
+    m = n(832149),
+    h = n(600164),
+    f = n(4242),
+    g = n(566697),
+    y = n(347896),
+    j = n(594174),
+    v = n(614277),
+    b = n(215023),
+    O = n(350928);
+function S(e) {
+    let { reward: t, purchase: n, onClose: S } = e,
+        x = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
         P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        { analyticsLocations: x } = (0, c.ZP)(),
-        E = o.EFr.SIZE_32,
-        w = (0, d.Z)(null == O ? void 0 : O.assetId, E, !P),
-        I = (0, g.Z)(),
-        T = null == I ? void 0 : I.giftPurchaseConfirmation,
-        k = (null == O ? void 0 : O.type) === i.Z.NAMEPLATE,
-        [C, N] = l.useState(!1),
-        M = l.useMemo(() => {
-            var e, t;
-            return k && (null == O ? void 0 : O.assetId) != null
+        { analyticsLocations: E } = (0, c.ZP)(),
+        w = o.EFr.SIZE_32,
+        I = (0, d.Z)(t.assetId, w, !P),
+        T = (0, y.Z)(),
+        k = null == T ? void 0 : T.giftPurchaseConfirmation,
+        { product: C, isFetching: N } = (0, p.T)(n.skuId),
+        M = t.type === i.Z.NAMEPLATE,
+        [_, A] = l.useState(!1),
+        R = l.useMemo(() => {
+            var e, n;
+            return M && null != t.assetId
                 ? {
-                      src: O.assetId,
-                      palette: (0, h.t1)(null != (t = O.palette) ? t : "sky"),
-                      imgAlt: null == (e = O.a11yLabel) ? void 0 : e.call(O),
+                      src: t.assetId,
+                      palette: (0, f.t1)(null != (n = t.palette) ? n : "sky"),
+                      imgAlt: null == (e = t.a11yLabel) ? void 0 : e.call(t),
                   }
                 : null;
-        }, [k, O]);
-    return null == n || null == T
+        }, [M, t]);
+    return null == k
         ? null
-        : (0, r.jsx)(j.O3, {
+        : (0, r.jsx)(v.O3, {
               children: (0, r.jsx)(o.mzw, {
-                  align: m.Z.Align.CENTER,
+                  align: h.Z.Align.CENTER,
                   "data-migration-pending": !0,
                   children: (0, r.jsxs)("div", {
-                      className: b.promotionalFooter,
+                      className: O.promotionalFooter,
                       children: [
-                          k && null != M
+                          M && null != R
                               ? (0, r.jsx)("div", {
-                                    className: b.nameplatePreviewContainer,
-                                    onMouseEnter: () => N(!0),
-                                    onMouseLeave: () => N(!1),
-                                    children: (0, r.jsx)(f.R, {
-                                        user: S,
+                                    className: O.nameplatePreviewContainer,
+                                    onMouseEnter: () => A(!0),
+                                    onMouseLeave: () => A(!1),
+                                    children: (0, r.jsx)(g.R, {
+                                        user: x,
                                         nameplate: null,
-                                        nameplateData: M,
+                                        nameplateData: R,
                                         showPlaceholderUser: !0,
                                         nameplatePreviewSize: "xsmall",
-                                        isHighlighted: C,
+                                        isHighlighted: _,
                                     }),
                                 })
                               : (0, r.jsx)(o.Xo$, {
-                                    "aria-label": null == S ? void 0 : S.username,
-                                    size: E,
-                                    src: null == S ? void 0 : S.getAvatarURL(void 0, (0, o.dcp)(E), !P),
-                                    avatarDecoration: w,
+                                    "aria-label": null == x ? void 0 : x.username,
+                                    size: w,
+                                    src: null == x ? void 0 : x.getAvatarURL(void 0, (0, o.dcp)(w), !P),
+                                    avatarDecoration: I,
                                 }),
                           (0, r.jsx)(s.zxk, {
                               variant: "primary",
-                              text: T.collectRewardButtonText(),
+                              text: k.collectRewardButtonText(),
+                              loading: N,
                               onClick: () => {
-                                  t(),
-                                      (0, p.Z)({
-                                          product: n,
+                                  null != C &&
+                                      (S(),
+                                      (0, m.Z)({
+                                          product: C,
                                           shouldShowPromotionalExperience: !0,
-                                          analyticsLocations: x,
-                                          purchaseType: v.o8.PROMOTIONAL,
-                                      });
+                                          analyticsLocations: E,
+                                          purchaseType: b.o8.PROMOTIONAL,
+                                      }));
                               },
                           }),
                       ],
