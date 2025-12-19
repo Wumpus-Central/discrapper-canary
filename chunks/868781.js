@@ -1,146 +1,62 @@
-n.d(t, { Z: () => S });
-var r = n(54381),
-    i = n(473749),
-    a = n(657707),
-    o = n(841784),
-    s = n(906732),
-    l = n(482798),
-    c = n(750154),
-    u = n(209698),
-    d = n(802529),
-    f = n(11133),
-    p = n(814454),
-    _ = n(473919),
-    m = n(170187),
-    h = n(532657),
-    g = n(981631);
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let y = function (e) {
+n.d(t, { Z: () => _ });
+var r = n(54381);
+n(473749);
+var i = n(657707),
+    a = n(841784),
+    o = n(482798),
+    s = n(750154),
+    l = n(802529),
+    c = n(11133),
+    u = n(473919),
+    d = n(532657),
+    f = n(981631);
+let p = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, c.dS)(e)
-        ? a.ewx
-        : (0, o.Z)(e)
+    return (0, s.dS)(e)
+        ? i.ewx
+        : (0, a.Z)(e)
           ? t
-              ? a.iWm
-              : a.jje
-          : e.type === g.IIU.PLAYING
-            ? a.iWm
-            : e.type === g.IIU.LISTENING
-              ? a.RZG
-              : e.type === g.IIU.WATCHING || e.type === g.IIU.STREAMING
-                ? a.ARS
-                : e.type === g.IIU.COMPETING
-                  ? a.iWm
+              ? i.iWm
+              : i.jje
+          : e.type === f.IIU.PLAYING
+            ? i.iWm
+            : e.type === f.IIU.LISTENING
+              ? i.RZG
+              : e.type === f.IIU.WATCHING || e.type === f.IIU.STREAMING
+                ? i.ARS
+                : e.type === f.IIU.COMPETING
+                  ? i.iWm
                   : null;
 };
-function O(e) {
-    let {
-            activity: t,
-            textVariant: n,
-            textClassName: a,
-            iconClassName: o,
-            hideIcon: c = !1,
-            hideText: u = !1,
-            hideTooltip: h = !1,
-            canTruncate: g = !0,
-        } = e,
-        { descriptiveTextEnabled: E } = (0, d.f)({ location: "PresenceActivityStatus" }),
-        { enableTopNavButton: b } = (0, l.Cq)({ location: "PresenceActivityStatus" }),
-        { analyticsLocations: O } = (0, s.ZP)(),
-        v = i.useCallback(() => {
-            (0, p.A)({
-                analyticsLocations: O,
-                activityType: t.type,
-                applicationId: t.application_id,
-            });
-        }, [O, t.application_id, t.type]);
-    if (c && u) return null;
-    let { text: S, tooltip: I } = (0, f.Z)(t, E || b),
-        T = y(t),
-        C = u && !h && null != I;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            !c &&
-                null != T &&
-                (0, r.jsx)(_.Z, {
-                    icon: T,
-                    tooltipText: C ? I : void 0,
-                    className: o,
-                    onTooltipShow: C ? v : void 0,
-                }),
-            !u &&
-                (0, r.jsx)(m.Z, {
-                    variant: n,
-                    className: a,
-                    canTruncate: g,
-                    hideTooltip: h,
-                    children: S,
-                }),
-        ],
-    });
-}
-function v(e) {
+function _(e) {
     let {
             activity: t,
             textVariant: n,
             textClassName: i,
             iconClassName: a,
-            hideIcon: o = !1,
-            hideText: s = !1,
-            hideTooltip: c = !1,
-            canTruncate: u = !0,
+            hideIcon: s = !1,
+            hideText: f = !1,
+            hideTooltip: _ = !1,
+            canTruncate: m = !0,
         } = e,
-        { descriptiveTextEnabled: p } = (0, d.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { enableTopNavButton: m } = (0, l.Cq)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { text: g, tooltip: E } = (0, f.Z)(t, p || m),
-        b = y(t),
-        O = null != b && !o;
-    return (0, r.jsx)(h.Z, {
+        { descriptiveTextEnabled: h } = (0, l.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { enableTopNavButton: g } = (0, o.Cq)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { text: E, tooltip: b } = (0, c.Z)(t, h || g),
+        y = p(t),
+        O = null != y && !s;
+    return (0, r.jsx)(d.Z, {
         icon: O
-            ? (0, r.jsx)(_.Z, {
-                  icon: b,
+            ? (0, r.jsx)(u.Z, {
+                  icon: y,
                   className: a,
               })
             : void 0,
-        text: null != g ? g : "",
+        text: null != E ? E : "",
         textVariant: n,
         textClassName: i,
-        hideTooltip: c,
-        canTruncate: u,
-        "aria-label": null != E ? E : "",
-        hideText: s,
+        hideTooltip: _,
+        canTruncate: m,
+        "aria-label": null != b ? b : "",
+        hideText: f,
     });
-}
-function S(e) {
-    return (0, u.b)({ location: "VoiceActivityStatusExperimentWrapper" })
-        ? (0, r.jsx)(v, b({}, e))
-        : (0, r.jsx)(O, b({}, e));
 }

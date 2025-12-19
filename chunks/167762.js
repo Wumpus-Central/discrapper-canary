@@ -27,7 +27,7 @@ var r,
     S = n(420660),
     N = n(326255),
     y = n(956221),
-    v = n(771173),
+    v = n(747017),
     b = n(297781),
     _ = n(82295),
     P = n(554300),
@@ -246,7 +246,6 @@ let ei = l.memo((e) => {
                 user: t,
             });
             return (0, i.jsx)(v.Z, {
-                location: "FriendsPopout",
                 user: t,
                 activities: r,
                 applicationStream: em,

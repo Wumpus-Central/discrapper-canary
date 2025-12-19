@@ -1,7 +1,7 @@
 n.d(t, {
     Qj: () => eh,
-    RS: () => ev,
-    ZP: () => eO,
+    RS: () => eO,
+    ZP: () => ev,
     bU: () => em,
 }),
     n(388685);
@@ -21,13 +21,13 @@ var r = n(54381),
     y = n(194983),
     b = n(28664),
     h = n(481060),
-    v = n(493683),
-    O = n(239091),
+    O = n(493683),
+    v = n(239091),
     x = n(420660),
     j = n(468363),
     P = n(326255),
     S = n(956221),
-    N = n(771173),
+    N = n(747017),
     E = n(385499),
     C = n(570908),
     T = n(702321),
@@ -209,9 +209,9 @@ let ef = el.ZP.getEnableHardwareAcceleration() ? h.Xo$ : h.qEK,
                 role: g,
                 "aria-posinset": y,
                 "aria-setsize": b,
-                listItemRef: v,
+                listItemRef: O,
             } = e,
-            O = ed(e, [
+            v = ed(e, [
                 "route",
                 "selected",
                 "icon",
@@ -234,7 +234,7 @@ let ef = el.ZP.getEnableHardwareAcceleration() ? h.Xo$ : h.qEK,
             focusProps: eu({ within: !0 }, ep),
             "aria-posinset": y,
             "aria-setsize": b,
-            ref: v,
+            ref: O,
             children: (0, r.jsx)(h.vjx, {
                 as: "div",
                 selected: n,
@@ -250,7 +250,7 @@ let ef = el.ZP.getEnableHardwareAcceleration() ? h.Xo$ : h.qEK,
                                 },
                                 className: es.link,
                             },
-                            O,
+                            v,
                         ),
                         {
                             children: [
@@ -272,7 +272,7 @@ let ef = el.ZP.getEnableHardwareAcceleration() ? h.Xo$ : h.qEK,
             }),
         });
     };
-function ev(e) {
+function eO(e) {
     let {
             channel: t,
             selected: l = !1,
@@ -289,7 +289,7 @@ function ev(e) {
             "aria-posinset": el,
             "aria-setsize": eh,
         } = e,
-        [ev, eO] = i.useState(!1),
+        [eO, ev] = i.useState(!1),
         [ex, ej] = i.useState(!1),
         [eP, eS] = i.useState(!1),
         eN = i.useRef(null),
@@ -302,7 +302,7 @@ function ev(e) {
         } = (0, q.Z)({
             userId: null == s ? void 0 : s.id,
             size: h.EFr.SIZE_32,
-            animateOnHover: !(l || ev || ex || eP),
+            animateOnHover: !(l || eO || ex || eP),
         }),
         eI = t.isMultiUserDM(),
         ek = t.isSystemDM(),
@@ -315,7 +315,7 @@ function ev(e) {
         })),
         eL = eM && eU,
         eA = eM && eR,
-        eF = (e_ || eL || eA) && !(l || ev),
+        eF = (e_ || eL || eA) && !(l || eO),
         { hasUnreadMessages: eG, lastMessageId: eH } = (0, g.cj)([Q.ZP], () => ({
             hasUnreadMessages: Q.ZP.getMentionCount(t.id) > 0,
             lastMessageId: Q.ZP.lastMessageId(t.id),
@@ -331,12 +331,12 @@ function ev(e) {
         eV = (0, G.X)(t.guild_id),
         eJ = (0, W.l)({ timestamp: ei.default.extractTimestamp(null != eH ? eH : t.id) }),
         eQ = i.useRef(null),
-        e$ = null != J && (l || ev || eP),
+        e$ = null != J && (l || eO || eP),
         e0 = () => {
-            eO(!0);
+            ev(!0);
         },
         e1 = () => {
-            eO(!1);
+            ev(!1);
         },
         e5 = () => {
             ej(!0);
@@ -344,12 +344,12 @@ function ev(e) {
         e4 = () => {
             ej(!1);
         },
-        e3 = function (e) {
+        e6 = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), v.Z.closePrivateChannel(t.id, l, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), O.Z.closePrivateChannel(t.id, l, n);
         },
-        e6 = () => {
-            v.Z.preload(ea.ME, t.id);
+        e3 = () => {
+            O.Z.preload(ea.ME, t.id);
         },
         e8 = (e) => {
             e.stopPropagation();
@@ -366,7 +366,7 @@ function ev(e) {
                 o = i ? d.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : d.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
             eS(!0),
                 t.isMultiUserDM()
-                    ? (0, O.jW)(
+                    ? (0, v.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.all([
@@ -390,7 +390,7 @@ function ev(e) {
                               onClose: () => eS(!1),
                           },
                       )
-                    : (0, O.jW)(
+                    : (0, v.jW)(
                           e,
                           async () => {
                               let { default: e } = a
@@ -435,7 +435,7 @@ function ev(e) {
                                 {
                                     header: i,
                                     body: l,
-                                    onSubmit: e3,
+                                    onSubmit: e6,
                                 },
                                 t,
                             ),
@@ -445,8 +445,8 @@ function ev(e) {
         te = (0, r.jsx)(_.Z, {
             userName: eB,
             displayNameStyles: null == s ? void 0 : s.displayNameStyles,
-            effectDisplayType: ev || l || eP ? D.F.ANIMATED : D.F.PLAIN,
-            loop: ev,
+            effectDisplayType: eO || l || eP ? D.F.ANIMATED : D.F.PLAIN,
+            loop: eO,
             boldFontOpacity: 0.9,
         }),
         tt = eD
@@ -517,7 +517,7 @@ function ev(e) {
                 ref: eC,
                 onMouseEnter: e0,
                 onMouseLeave: e1,
-                onMouseDown: e6,
+                onMouseDown: e3,
                 onFocus: e5,
                 onBlur: e4,
                 onContextMenu: e9,
@@ -535,7 +535,7 @@ function ev(e) {
                             (0, r.jsx)(Y.Z, {
                                 nameplate: e$ ? J : void 0,
                                 selected: l,
-                                hovered: ev,
+                                hovered: eO,
                                 content: tn,
                                 placement: K.i.CHANNEL,
                             }),
@@ -643,12 +643,11 @@ function ev(e) {
                                                               voiceChannel: S,
                                                           })
                                                         ? (0, r.jsx)(N.Z, {
-                                                              location: "PrivateChannel",
                                                               user: s,
                                                               activities: p,
                                                               voiceChannel: S,
                                                               applicationStream: j,
-                                                              animateEmoji: ev || ex || eP,
+                                                              animateEmoji: eO || ex || eP,
                                                               textClassName: es.activityStatusText,
                                                               iconClassName: eF ? es.mutedIcon : void 0,
                                                           })
@@ -705,7 +704,7 @@ function ev(e) {
                                               "aria-label": eI
                                                   ? eo.intl.string(eo.t["26C4oi"])
                                                   : eo.intl.string(eo.t.jsvgc3),
-                                              onClick: eI ? e2 : e3,
+                                              onClick: eI ? e2 : e6,
                                               onMouseDown: e8,
                                               nameplate: J,
                                               reducedClickTarget: !0,
@@ -720,7 +719,7 @@ function ev(e) {
         },
     });
 }
-let eO =
+let ev =
     12633 == n.j
         ? (e) => {
               var { channel: t, selected: n } = e,
@@ -758,7 +757,7 @@ let eO =
                   p = (0, G.Z)(t, { disabled: !f });
               return t.isMultiUserDM()
                   ? (0, r.jsx)(
-                        ev,
+                        eO,
                         eu(
                             {
                                 channel: t,
@@ -771,7 +770,7 @@ let eO =
                         ),
                     )
                   : (0, r.jsx)(
-                        ev,
+                        eO,
                         eu(
                             {
                                 channel: t,

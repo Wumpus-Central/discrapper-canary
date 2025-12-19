@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => N });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -11,92 +11,85 @@ var i = n(657707),
     u = n(246946),
     p = n(5192),
     h = n(621853),
-    f = n(209698),
-    g = n(172351),
-    m = n(648052),
-    b = n(280885),
-    y = n(483424),
-    O = n(407699),
-    x = n(78806),
-    j = n(91433),
-    v = n(900927),
-    C = n(944043),
-    I = n(678738),
-    _ = n(638970),
-    S = n(502762),
-    E = n(530),
-    Z = n(827313),
-    P = n(981631),
-    T = n(671955),
-    N = n(388032),
-    R = n(82600);
-function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, channel: A, isHoveringOrFocusing: D, onOpenProfile: L } = e,
-        { relationshipType: M, originApplicationId: k } = (0, l.cj)([d.Z], () => ({
+    f = n(172351),
+    g = n(648052),
+    m = n(280885),
+    b = n(407699),
+    y = n(78806),
+    O = n(91433),
+    x = n(900927),
+    j = n(944043),
+    v = n(678738),
+    C = n(638970),
+    I = n(502762),
+    _ = n(530),
+    S = n(827313),
+    E = n(981631),
+    Z = n(671955),
+    P = n(388032),
+    T = n(82600);
+function N(e) {
+    let { user: t, currentUser: n, displayProfile: N, channel: R, isHoveringOrFocusing: w, onOpenProfile: A } = e,
+        { relationshipType: D, originApplicationId: L } = (0, l.cj)([d.Z], () => ({
             relationshipType: d.Z.getRelationshipType(t.id),
             originApplicationId: d.Z.getOriginApplicationId(t.id),
         })),
-        U = (0, s.vh)(t.id),
-        G = (0, o.Y)({ userId: t.id }),
-        H = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        F = (0, l.e7)([h.Z], () => {
+        M = (0, s.vh)(t.id),
+        k = (0, o.Y)({ userId: t.id }),
+        U = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        G = (0, l.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getUserProfile(t.id)) ? void 0 : e.application;
-        }),
-        B = (0, f.b)({ location: "UserProfileSidebarBody" });
+        });
     return (0, r.jsxs)("div", {
-        className: R.body,
+        className: T.body,
         children: [
-            (0, r.jsx)(O.Z, { userId: t.id }),
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(b.Z, { userId: t.id }),
+            (0, r.jsx)(_.Z, {
                 user: t,
-                guildId: A.guild_id,
-                nickname: p.ZP.getName(null, A.id, t),
-                pronouns: null == w ? void 0 : w.pronouns,
-                onOpenProfile: L,
-                tags: (0, r.jsx)(m.Z, {
-                    displayProfile: w,
-                    themeType: T.l.SIDEBAR,
+                guildId: R.guild_id,
+                nickname: p.ZP.getName(null, R.id, t),
+                pronouns: null == N ? void 0 : N.pronouns,
+                onOpenProfile: A,
+                tags: (0, r.jsx)(g.Z, {
+                    displayProfile: N,
+                    themeType: Z.l.SIDEBAR,
                 }),
-                nicknameIcons: H
+                nicknameIcons: U
                     ? null
-                    : (0, r.jsx)(Z.Z, {
+                    : (0, r.jsx)(S.Z, {
                           userId: t.id,
-                          isVisible: D,
-                          onOpenProfile: L,
+                          isVisible: w,
+                          onOpenProfile: A,
                       }),
             }),
-            M === P.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(S.Z.Overlay, {
-                    children: (0, r.jsx)(j.Z, {
+            D === E.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(I.Z.Overlay, {
+                    children: (0, r.jsx)(O.Z, {
                         user: t,
-                        channelId: A.id,
-                        applicationId: k,
+                        channelId: R.id,
+                        applicationId: L,
                     }),
                 }),
-            U.map((e) =>
+            M.map((e) =>
                 (0, r.jsx)(
-                    S.Z.Overlay,
+                    I.Z.Overlay,
                     {
-                        children: (0, r.jsx)(j.Z, {
+                        children: (0, r.jsx)(O.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: A.id,
+                            channelId: R.id,
                         }),
                     },
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(C.Z, {
-                user: t,
-                className: R.card,
-            }),
+            (0, r.jsx)(j.Z, { user: t }),
             t.isProvisional &&
-                (0, r.jsx)(S.Z.Overlay, {
-                    className: R.card,
-                    children: (0, r.jsx)(I.Z, {
-                        heading: N.intl.string(N.t.Iyka0U),
+                (0, r.jsx)(I.Z.Overlay, {
+                    children: (0, r.jsx)(v.Z, {
+                        heading: P.intl.string(P.t.Iyka0U),
                         headingIcon: (0, r.jsx)(i.Mgn, {
                             size: "xxs",
                             color: a.Z.colors.TEXT_STRONG,
@@ -105,49 +98,43 @@ function w(e) {
                         children: (0, r.jsx)(c.n, { userId: t.id }),
                     }),
                 }),
-            B
-                ? (0, r.jsx)(_.Z, {
-                      user: t,
-                      currentUser: n,
-                      onOpenUserProfileModal: L,
-                  })
-                : (0, r.jsx)(y.Z, {
-                      user: t,
-                      currentUser: n,
-                      className: R.card,
-                  }),
-            (0, r.jsxs)(S.Z.Overlay, {
-                className: R.overlay,
+            (0, r.jsx)(C.Z, {
+                user: t,
+                currentUser: n,
+                onOpenUserProfileModal: A,
+            }),
+            (0, r.jsxs)(I.Z.Overlay, {
+                className: T.overlay,
                 children: [
-                    !H &&
-                        (null == w ? void 0 : w.bio) != null &&
-                        (null == w ? void 0 : w.bio) !== "" &&
-                        (0, r.jsx)(I.Z, {
-                            heading: N.intl.string(N.t["61W33d"]),
+                    !U &&
+                        (null == N ? void 0 : N.bio) != null &&
+                        (null == N ? void 0 : N.bio) !== "" &&
+                        (0, r.jsx)(v.Z, {
+                            heading: P.intl.string(P.t["61W33d"]),
                             headingColor: "text-strong",
-                            children: (0, r.jsx)(b.Z, {
+                            children: (0, r.jsx)(m.Z, {
                                 userId: t.id,
-                                userBio: w.bio,
-                                isHoveringOrFocusing: D,
+                                userBio: N.bio,
+                                isHoveringOrFocusing: w,
                                 animateOnHoverOrFocusOnly: !0,
                             }),
                         }),
-                    (null == F ? void 0 : F.popularApplicationCommandIds) != null &&
-                        (0, r.jsx)(g.Z, {
-                            applicationId: F.id,
-                            commandIds: F.popularApplicationCommandIds,
-                            channel: A,
+                    (null == G ? void 0 : G.popularApplicationCommandIds) != null &&
+                        (0, r.jsx)(f.Z, {
+                            applicationId: G.id,
+                            commandIds: G.popularApplicationCommandIds,
+                            channel: R,
                         }),
-                    G.length > 0 &&
-                        (0, r.jsx)(I.Z, {
-                            heading: N.intl.string(N.t["Uv/eTx"]),
+                    k.length > 0 &&
+                        (0, r.jsx)(v.Z, {
+                            heading: P.intl.string(P.t["Uv/eTx"]),
                             headingColor: "text-strong",
-                            children: (0, r.jsx)(x.Z, { applicationIds: G }),
+                            children: (0, r.jsx)(y.Z, { applicationIds: k }),
                         }),
-                    (0, r.jsx)(I.Z, {
-                        heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
+                    (0, r.jsx)(v.Z, {
+                        heading: t.bot ? P.intl.string(P.t["A//N4k"]) : P.intl.string(P.t.a6XYD9),
                         headingColor: "text-strong",
-                        children: (0, r.jsx)(v.Z, { userId: t.id }),
+                        children: (0, r.jsx)(x.Z, { userId: t.id }),
                     }),
                 ],
             }),

@@ -4,7 +4,7 @@ n(473749);
 var i = n(468363),
     l = n(326255),
     a = n(956221),
-    o = n(771173),
+    o = n(747017),
     s = n(51144),
     c = n(388032),
     u = n(768142);
@@ -25,7 +25,6 @@ let d = function (e) {
                 voiceChannel: b,
             })
           ? (0, r.jsx)(o.Z, {
-                location: "StatusText",
                 textClassName: u.statusText,
                 activities: n,
                 applicationStream: d,

@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(468363),
     f = n(326255),
     h = n(956221),
-    p = n(771173),
+    p = n(747017),
     g = n(367907),
     b = n(43267),
     m = n(933557),
@@ -282,7 +282,6 @@ function k(e) {
         voiceChannel: u,
     })
         ? (0, r.jsx)(p.Z, {
-              location: "RecentsChannelHeader",
               user: n,
               activities: l,
               applicationStream: a,

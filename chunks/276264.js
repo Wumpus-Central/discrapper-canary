@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(468363),
     f = n(326255),
     p = n(956221),
-    _ = n(771173),
+    _ = n(747017),
     m = n(385499),
     h = n(693728),
     g = n(554300),
@@ -307,7 +307,6 @@ let B = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return t || !m
             ? null
             : (0, r.jsx)(_.Z, {
-                  location: "MemberListSubtext",
                   user: c,
                   activities: a,
                   applicationStream: s,
