@@ -205,7 +205,7 @@ function w(e) {
                 a !== K.current && ((K.current = a), null == k || k(a)),
                 er((e, i) => {
                     if (!i) return null;
-                    let a = (0, r.jsx)(
+                    let u = (0, r.jsx)(
                         l.VqE,
                         y(E({}, c), {
                             setDialogRef: t,
@@ -226,6 +226,7 @@ function w(e) {
                         style: y(E({}, e), {
                             "--custom-caret-edge-offset-horizontal": "".concat(I, "px"),
                             "--custom-caret-edge-offset-vertical": "".concat(T, "px"),
+                            "--custom-caret-edge-offset-horizontal-nudge": "".concat(a, "px"),
                             "--custom-popover-width": "".concat(C, "px"),
                         }),
                         children:
@@ -234,9 +235,9 @@ function w(e) {
                                       offsetBottom: j,
                                       color: L,
                                       className: h.popoverGradientWrapper,
-                                      children: a,
+                                      children: u,
                                   })
-                                : a,
+                                : u,
                     });
                 })
             );
