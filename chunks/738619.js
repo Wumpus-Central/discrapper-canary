@@ -1,36 +1,37 @@
 n.d(t, {
-    ZP: () => A,
-    d7: () => k,
-    iD: () => _,
+    ZP: () => U,
+    d7: () => A,
+    iD: () => k,
 }),
     n(539854),
     n(388685);
 var i = n(54381),
     r = n(473749),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     s = n(392711),
     a = n.n(s),
     c = n(442837),
     u = n(692547),
     d = n(481060),
     p = n(980568),
-    f = n(560768),
-    O = n(812206),
-    b = n(405701),
-    h = n(624030),
-    m = n(699516),
-    g = n(885110),
-    y = n(111583),
-    v = n(594174),
-    S = n(451478),
-    j = n(626135),
-    I = n(823379),
-    Z = n(5192),
-    E = n(981631),
-    x = n(388032),
-    w = n(747212);
-function P(e, t, n) {
+    f = n(393903),
+    O = n(560768),
+    b = n(812206),
+    h = n(405701),
+    m = n(624030),
+    g = n(699516),
+    y = n(885110),
+    v = n(111583),
+    S = n(594174),
+    j = n(451478),
+    I = n(626135),
+    Z = n(823379),
+    E = n(5192),
+    x = n(981631),
+    w = n(388032),
+    P = n(747212);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-function T(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -54,13 +55,13 @@ function T(e) {
                 }),
             )),
             i.forEach(function (t) {
-                P(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-let C = [];
-class D extends r.PureComponent {
+let D = [];
+class N extends r.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -72,12 +73,12 @@ class D extends r.PureComponent {
     logShownEventIfNeeded() {
         let e = this.props.activity.application_id;
         null != e &&
-            -1 === C.indexOf(e) &&
-            (j.default.track(E.rMx.SHOW_TUTORIAL, {
+            -1 === D.indexOf(e) &&
+            (I.default.track(x.rMx.SHOW_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
             }),
-            C.push(e));
+            D.push(e));
     }
     componentWillUnmount() {
         null !== this.timeout && clearTimeout(this.timeout);
@@ -85,11 +86,11 @@ class D extends r.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, i.jsxs)("div", {
-            className: l()(w.activityInviteEducation, { [w.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: o()(P.activityInviteEducation, { [P.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, i.jsx)("div", { className: w.activityInviteEducationArrow }),
+                (0, i.jsx)("div", { className: P.activityInviteEducationArrow }),
                 (0, i.jsx)("span", {
-                    children: x.intl.format(x.t["i/MoCt"], {
+                    children: w.intl.format(w.t["i/MoCt"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -99,143 +100,125 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, "state", { fadeIn: !1 }),
-            P(this, "timeout", null),
-            P(this, "handleDismissInviteEducation", () => {
+            T(this, "state", { fadeIn: !1 }),
+            T(this, "timeout", null),
+            T(this, "handleDismissInviteEducation", () => {
                 let { activity: e } = this.props;
                 null != e && null != e.application_id && p.Z.dismissForApplicationId(e.application_id);
             });
     }
 }
-function N(e) {
+function _(e) {
     let {
             activityInviteEducationActivity: t,
             isFocused: n,
-            typingUsers: o,
+            typingUsers: l,
             className: s,
             channel: a,
             isThreadCreation: c,
             renderDots: u,
-            isInTextChannel: p,
+            isInTextChannel: p = !1,
         } = e,
-        { rateLimitPerUser: f } = a,
-        O = r.useRef(null),
-        h = r.useRef(null),
-        [m, g] = r.useState(!1);
-    if (
-        (r.useLayoutEffect(() => {
-            if (null != O.current && null != h.current && p) {
-                let e = () => {
-                    if (null != O.current && null != h.current) {
-                        let e = O.current.getBoundingClientRect();
-                        h.current.scrollWidth + 48 > e.width ? g(!0) : g(!1);
-                    }
-                };
-                e();
-                let t = new ResizeObserver(() => {
-                    e();
-                });
-                return (
-                    t.observe(O.current),
-                    t.observe(h.current),
-                    () => {
-                        t.disconnect();
-                    }
-                );
-            }
-        }, [p]),
-        0 === o.length && !(f > 0))
-    )
+        { rateLimitPerUser: O } = a,
+        b = r.useRef(null),
+        m = r.useRef(null),
+        [g, y] = r.useState(!1),
+        v = r.useCallback(() => {
+            if (null == b.current || null == m.current) return;
+            let e = b.current.getBoundingClientRect();
+            m.current.scrollWidth + 48 > e.width ? y(!0) : y(!1);
+        }, []);
+    if (((0, f.s)(b, v, [], { enabled: p }), (0, f.s)(m, v, [], { enabled: p }), 0 === l.length && !(O > 0)))
         return null != t
-            ? (0, i.jsx)(D, {
+            ? (0, i.jsx)(N, {
                   activity: t,
                   isFocused: n,
               })
             : null;
-    let [y, v, S] = o,
-        j = "";
-    1 === o.length
-        ? (j = x.intl.format(x.t.lJ9sZX, { a: y }))
-        : 2 === o.length
-          ? (j = x.intl.format(x.t.rB0CUa, {
-                a: y,
-                b: v,
+    let [S, j, I] = l,
+        Z = "";
+    1 === l.length
+        ? (Z = w.intl.format(w.t.lJ9sZX, { a: S }))
+        : 2 === l.length
+          ? (Z = w.intl.format(w.t.rB0CUa, {
+                a: S,
+                b: j,
             }))
-          : 3 === o.length
-            ? (j = x.intl.format(x.t.StKThj, {
-                  a: y,
-                  b: v,
-                  c: S,
+          : 3 === l.length
+            ? (Z = w.intl.format(w.t.StKThj, {
+                  a: S,
+                  b: j,
+                  c: I,
               }))
-            : o.length > 3 && (j = x.intl.format(x.t.Q8lUnE, {}));
-    let I = m && o.length > 0 && o.length <= 3 ? x.intl.format(x.t["qD/0qZ"], {}) : j;
+            : l.length > 3 && (Z = w.intl.format(w.t.Q8lUnE, {}));
+    let E = g && l.length > 0 && l.length <= 3 ? w.intl.format(w.t["qD/0qZ"], {}) : Z;
     return (0, i.jsxs)("div", {
-        className: l()(
-            w.typing,
+        className: o()(
+            P.typing,
             {
                 "stop-animation": !n,
-                [w.inTextChannel]: p,
+                [P.inTextChannel]: p,
             },
             s,
         ),
         children: [
             (0, i.jsxs)("div", {
-                className: w.typingDots,
-                ref: O,
+                className: P.typingDots,
+                ref: b,
                 children: [
-                    o.length > 0 &&
+                    l.length > 0 &&
                         !1 !== u &&
                         (0, i.jsx)(d.bbz, {
-                            className: w.ellipsis,
+                            className: P.ellipsis,
                             dotRadius: 3.5,
                             themed: !0,
                         }),
                     (0, i.jsx)("span", {
-                        className: w.text,
+                        className: P.text,
                         "aria-live": "polite",
                         "aria-atomic": !0,
-                        children: I,
+                        children: E,
                     }),
                     (0, i.jsx)("span", {
-                        className: w.text,
+                        className: P.text,
                         style: {
                             position: "absolute",
                             visibility: "hidden",
                         },
                         "aria-hidden": !0,
-                        ref: h,
-                        children: j,
+                        ref: m,
+                        children: Z,
                     }),
                 ],
             }),
-            (0, i.jsx)(b.Z, {
+            (0, i.jsx)(h.Z, {
                 channel: a,
                 isThreadCreation: c,
             }),
         ],
     });
 }
-function _(e) {
-    let t = (0, c.e7)([y.Z], () => y.Z.getTypingUsers(e.id)),
-        n = (0, c.e7)([v.default], () => v.default.getCurrentUser());
+function k(e) {
+    let t = (0, c.e7)([v.Z], () => v.Z.getTypingUsers(e.id)),
+        n = (0, c.e7)([S.default], () => S.default.getCurrentUser());
     return a()(t)
         .keys()
         .filter((e) => e !== (null == n ? void 0 : n.id))
-        .reject((e) => m.Z.isBlockedOrIgnored(e))
-        .map((e) => v.default.getUser(e))
-        .filter(I.lm)
-        .map((t) => Z.ZP.getName(e.guild_id, e.id, t))
+        .reject((e) => g.Z.isBlockedOrIgnored(e))
+        .map((e) => S.default.getUser(e))
+        .filter(Z.lm)
+        .map((t) => E.ZP.getName(e.guild_id, e.id, t))
         .value();
 }
-function k(e) {
-    let t = (0, c.e7)([g.Z], () => g.Z.findActivity((e) => null != e.application_id));
-    return (0, c.e7)([h.Z, O.Z, m.Z], () => (0, f.Z)(e, t, h.Z, O.Z, m.Z)) ? t : null;
-}
 function A(e) {
+    let t = (0, c.e7)([y.Z], () => y.Z.findActivity((e) => null != e.application_id));
+    return (0, c.e7)([m.Z, b.Z, g.Z], () => (0, O.Z)(e, t, m.Z, b.Z, g.Z)) ? t : null;
+}
+function U(e) {
     var t,
         n,
-        { channel: r, isThreadCreation: o = !1 } = e,
-        l = (function (e, t) {
+        { channel: r, isThreadCreation: l = !1 } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -244,31 +227,31 @@ function A(e) {
                     var n,
                         i,
                         r = {},
-                        o = Object.keys(e);
-                    for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        l = Object.keys(e);
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < o.length; i++)
-                    (n = o[i]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ["channel", "isThreadCreation"]);
-    let s = _(r),
+    let s = k(r),
         a =
-            ((t = T({}, l)),
+            ((t = C({}, o)),
             (n = n =
                 {
                     baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
                     activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
-                    activityInviteEducationActivity: k(r),
-                    typingUsers: o ? [] : s,
-                    isFocused: (0, c.e7)([S.Z], () => S.Z.isFocused()),
+                    activityInviteEducationActivity: A(r),
+                    typingUsers: l ? [] : s,
+                    isFocused: (0, c.e7)([j.Z], () => j.Z.isFocused()),
                     guildId: r.guild_id,
                     channel: r,
-                    isThreadCreation: o,
+                    isThreadCreation: l,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -283,5 +266,5 @@ function A(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t);
-    return (0, i.jsx)(N, T({}, a));
+    return (0, i.jsx)(_, C({}, a));
 }
