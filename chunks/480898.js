@@ -38,7 +38,6 @@ function m(e) {
                     return (0, a.jsx)(o.Z, {
                         handleOpenUserProfileModal: n,
                         markAsDismissed: r,
-                        height: m,
                     });
                 default:
                     return null;
