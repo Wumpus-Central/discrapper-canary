@@ -27548,8 +27548,9 @@ input[type=checkbox]:focus-visible+._0d242e583d6053f6-label {
 }
 
 ._0b69f200eb3bf411-upsellContainer._0b69f200eb3bf411-upsellRedesignEnabled {
-    background: radial-gradient(#000 0, #000 60%, var(--background-surface-high) 100%);
+    background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
+    overflow: hidden;
     padding: 0
 }
 
@@ -35581,9 +35582,32 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .a1e0e01524490cf9-categoryIconIcon {
-    color: var(--interactive-text-default);
     height: 24px;
     width: 24px
+}
+
+.a1e0e01524490cf9-categoryIconIcon,
+.a1e0e01524490cf9-defaultsShortcut {
+    color: var(--interactive-text-default)
+}
+
+.a1e0e01524490cf9-defaultsShortcut {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-top: 1px solid var(--border-normal);
+    bottom: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: var(--custom-expression-picker-constants-expression-picker-inspector-bar-height);
+    inset-inline-start: 0;
+    justify-content: center;
+    position: absolute;
+    width: 100%
+}
+
+.a1e0e01524490cf9-defaultsShortcut:hover {
+    color: var(--interactive-text-hover)
 }
 
 ._46002dafa54b8395-keybindHint {
@@ -35705,19 +35729,23 @@ div._3d3b08df7e9aa942-mobilePushContainer {
     height: 70px
 }
 
-._614244fbcb264b94-lastSectionFooter._614244fbcb264b94-nitroLocked,
-._614244fbcb264b94-smallPaddingFooter._614244fbcb264b94-nitroLocked {
+._614244fbcb264b94-nitroLocked._614244fbcb264b94-lastSectionFooter,
+._614244fbcb264b94-nitroLocked._614244fbcb264b94-smallPaddingFooter {
     background-color: hsl(var(--premium-tier-2-purple-hsl)/.35)
 }
 
-._614244fbcb264b94-lastSectionFooter._614244fbcb264b94-nitroLocked._614244fbcb264b94-brandRefresh,
-._614244fbcb264b94-smallPaddingFooter._614244fbcb264b94-nitroLocked._614244fbcb264b94-brandRefresh {
+._614244fbcb264b94-nitroLocked._614244fbcb264b94-lastSectionFooter._614244fbcb264b94-brandRefresh,
+._614244fbcb264b94-nitroLocked._614244fbcb264b94-smallPaddingFooter._614244fbcb264b94-brandRefresh {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.theme-light ._614244fbcb264b94-lastSectionFooter._614244fbcb264b94-nitroLocked._614244fbcb264b94-brandRefresh,
-.theme-light ._614244fbcb264b94-smallPaddingFooter._614244fbcb264b94-nitroLocked._614244fbcb264b94-brandRefresh {
+.theme-light ._614244fbcb264b94-nitroLocked._614244fbcb264b94-lastSectionFooter._614244fbcb264b94-brandRefresh,
+.theme-light ._614244fbcb264b94-nitroLocked._614244fbcb264b94-smallPaddingFooter._614244fbcb264b94-brandRefresh {
     background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
+}
+
+._614244fbcb264b94-nitroLocked:not(._614244fbcb264b94-lastSectionFooter) {
+    margin-bottom: var(--space-4)
 }
 
 ._614244fbcb264b94-sectionTitle {
@@ -70431,7 +70459,7 @@ html ._614623a0ca8129b8-progress {
 
 .abfd909f61de9fdf-cardButtonContainer {
     align-items: center;
-    background-color: color-mix(in srgb, var(--black-500) 20%, transparent);
+    background-color: color-mix(in srgb, var(--black-500) 40%, transparent);
     border-radius: var(--radius-sm);
     cursor: pointer;
     display: flex;
@@ -83443,10 +83471,6 @@ div.d74ef86df6475678-nagbar {
 
 ._0d7935199308d4a9-textContainer {
     margin: 0 12px
-}
-
-._0d7935199308d4a9-reconnectButton {
-    flex-shrink: 0
 }
 
 ._0d7935199308d4a9-headerText {
