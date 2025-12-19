@@ -2639,7 +2639,6 @@ var tN = (function (e) {
             (e.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings"),
             (e.APP_DIRECTORY_PROFILE = "App Directory Profile"),
             (e.INTERACTION_RESPONSE = "Interaction Response"),
-            (e.CONSOLE_LAN_DETECTION_ACTION_SHEET = "Console LAN Detection Action Sheet"),
             (e.PARTNER_PROMOTIONS_CLAIM_MODAL = "Partner Promotions Claim Modal"),
             (e.APP_STOREFRONT = "app storefront"),
             (e.APP_SUBSCRIPTIONS_MANAGEMENT = "app subscriptions management"),
