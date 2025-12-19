@@ -4,8 +4,8 @@ var n = r(54381),
     l = r(851397),
     o = r(541699),
     s = r(321947),
-    c = r(835255),
-    a = r(688192);
+    a = r(835255),
+    c = r(688192);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -32,8 +32,8 @@ function u(e) {
     return e;
 }
 let d = i.memo(function (e) {
-    var { item: t, cardSize: r = a.U.MEDIUM, showOverlayButton: i = !0, isDragging: d = !1 } = e,
-        f = (function (e, t) {
+    var { item: t, cardSize: r = c.U.MEDIUM, showOverlayButton: i = !0, isDragging: d = !1, dragHandle: f } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -53,18 +53,19 @@ let d = i.memo(function (e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["item", "cardSize", "showOverlayButton", "isDragging"]);
+        })(e, ["item", "cardSize", "showOverlayButton", "isDragging", "dragHandle"]);
     return (0, o.Q)(t)
         ? (0, n.jsx)(
-              c.ZP,
+              a.ZP,
               u(
                   {
                       item: t,
                       cardSize: r,
                       showOverlayButton: i,
                       isDragging: d,
+                      dragHandle: f,
                   },
-                  f,
+                  m,
               ),
           )
         : (0, s.F)(t)
@@ -75,8 +76,10 @@ let d = i.memo(function (e) {
                         item: t,
                         cardSize: r,
                         showOverlayButton: i,
+                        isDragging: d,
+                        dragHandle: f,
                     },
-                    f,
+                    m,
                 ),
             )
           : null;

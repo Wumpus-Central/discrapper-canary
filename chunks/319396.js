@@ -20,7 +20,7 @@ var r = n(54381),
     j = n(796647);
 function x(e) {
     let { item: t, index: n, wishlistId: i, onReorder: a, children: l } = e,
-        { registerDragHandleRef: o, manageFocusOnReorder: c } = (0, y.C)();
+        { manageFocusOnReorder: o } = (0, y.C)();
     return (0, r.jsx)(h.yW, {
         index: n,
         itemId: String(t.skuId),
@@ -29,20 +29,14 @@ function x(e) {
         itemPreviewProps: { item: t },
         "aria-label": O.intl.formatToPlainString(O.t["7SnyMA"], { positionNumber: n + 1 }),
         onReorder: a,
-        onEnd: () => c(String(t.skuId)),
+        onEnd: () => o(String(t.skuId)),
         className: j.dragAndDropContainer,
         dropBeforeClassName: j.dropIndicatorBefore,
         dropAfterClassName: j.dropIndicatorAfter,
         draggingClassName: j.isDragging,
-        children: (0, r.jsxs)("div", {
+        children: (0, r.jsx)("div", {
             className: j.dragHandleContainer,
-            children: [
-                l,
-                (0, r.jsx)(h.e_, {
-                    buttonRef: o(String(t.skuId)),
-                    className: j.dragHandle,
-                }),
-            ],
+            children: l,
         }),
     });
 }
@@ -58,47 +52,56 @@ let P = i.memo(function (e) {
             isDragging: d,
             onReorder: g,
         } = e,
-        p = (0, r.jsx)(v.Z, {
+        { registerDragHandleRef: p } = (0, y.C)(),
+        b = s
+            ? (0, r.jsx)(h.e_, {
+                  buttonRef: p(String(t.skuId)),
+                  className: j.dragHandle,
+                  onFocus: (e) => e.stopPropagation(),
+              })
+            : void 0,
+        m = (0, r.jsx)(v.Z, {
             item: t,
             profileOwner: i,
             wishlistId: l,
             isOwner: a,
             isDragging: d,
+            dragHandle: b,
         }),
-        b = p;
+        O = m;
     if (u.shouldShow && !d)
         if (null != u.title && null == u.body && null == u.renderIcon)
-            b = (0, r.jsx)(c.u, {
+            O = (0, r.jsx)(c.u, {
                 text: u.title,
                 position: "top",
                 asContainer: !0,
                 delay: f.rq,
-                children: p,
+                children: m,
             });
         else {
-            var m, h;
-            b = (0, r.jsx)(o.i, {
+            var P, w;
+            O = (0, r.jsx)(o.i, {
                 title: u.title,
-                body: null != (h = u.body) ? h : "",
-                asset: null == (m = u.renderIcon) ? void 0 : m.call(u, t),
+                body: null != (w = u.body) ? w : "",
+                asset: null == (P = u.renderIcon) ? void 0 : P.call(u, t),
                 assetSize: f.EU,
                 position: "top",
                 asContainer: !0,
                 delay: f.rq,
-                children: p,
+                children: m,
             });
         }
-    return (
-        s &&
-            (b = (0, r.jsx)(x, {
-                item: t,
-                index: n,
-                wishlistId: l,
-                onReorder: g,
-                children: b,
-            })),
-        (0, r.jsx)("li", { children: b })
-    );
+    return s
+        ? (0, r.jsx)("li", {
+              children: (0, r.jsx)(x, {
+                  item: t,
+                  index: n,
+                  wishlistId: l,
+                  onReorder: g,
+                  children: O,
+              }),
+          })
+        : (0, r.jsx)("li", { children: O });
 });
 function w(e) {
     let { items: t, profileOwner: n, isOwner: o } = e,
