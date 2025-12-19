@@ -1,7 +1,6 @@
 e.exports = {
     baseControlItem: "dbfbe01105eb2897-baseControlItem",
     clickable: "dbfbe01105eb2897-clickable",
-    baseControlItemDescription: "dbfbe01105eb2897-baseControlItemDescription",
     baseControlItemLeadingElement: "dbfbe01105eb2897-baseControlItemLeadingElement",
     baseControlItemTrailingElements: "dbfbe01105eb2897-baseControlItemTrailingElements",
     baseControlItemTitle: "dbfbe01105eb2897-baseControlItemTitle",
