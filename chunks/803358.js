@@ -99,6 +99,7 @@ class _ extends o.Z {
         );
     }
     constructor(e) {
+        var t;
         super(),
             s(this, "storeListingId", void 0),
             s(this, "skuId", void 0),
@@ -109,7 +110,7 @@ class _ extends o.Z {
             (this.storeListingId = e.storeListingId),
             (this.skuId = e.skuId),
             (this.name = e.name),
-            (this.summary = e.summary.trim()),
+            (this.summary = null == (t = e.summary) ? void 0 : t.trim()),
             (this.unpublishedAt = e.unpublishedAt),
             (this.styles = e.styles);
     }

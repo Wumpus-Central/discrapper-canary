@@ -35,7 +35,7 @@ let A = (0, C.IC)(90),
         logoUrl: "",
         categorySkuId: void 0,
         bannerAsset: void 0,
-        summary: "",
+        summary: void 0,
         type: c.z.HERO,
         categoryStoreListingId: "",
     },
@@ -195,7 +195,8 @@ let A = (0, C.IC)(90),
                                                                           color: "text-strong",
                                                                           children: U.title,
                                                                       }),
-                                                                  "" !== U.summary &&
+                                                                  null != U.summary &&
+                                                                      "" !== U.summary &&
                                                                       (0, r.jsx)(d.Text, {
                                                                           variant: "text-md/normal",
                                                                           className: ee
