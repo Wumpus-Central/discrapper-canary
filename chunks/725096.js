@@ -12,7 +12,12 @@ function f(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
 function p(e, t, n) {
-    if ("focused" !== a.Z.getState() || f(e) || l.Z.isFetchingQuestToDeliverByPlacement(t)) return;
+    if (f(e)) return;
+    if ("focused" !== a.Z.getState()) {
+        null != e && (0, s.jo)(t, e.ttlMillis);
+        return;
+    }
+    if (l.Z.isFetchingQuestToDeliverByPlacement(t)) return;
     let { enableNewRequestBehavior: r } = c.Z.getConfig({ location: "maybeRefreshAd" });
     r && ((0, s.xw)(), (0, s.w)(t, n));
 }
