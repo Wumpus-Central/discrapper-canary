@@ -84,7 +84,7 @@ function m(e) {
         { trackUserProfileEditAction: O } = (0, s.KZ)(),
         [j, x] = i.useState(""),
         P = i.useRef(""),
-        w = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 (0, u.ES)({
                     widgetType: t,
@@ -100,16 +100,16 @@ function m(e) {
             },
             [t, O, m],
         ),
-        { options: I, matchSorterOptions: S } = (0, c.h)(),
+        { options: w, matchSorterOptions: S } = (0, c.h)(),
         E = i.useMemo(
             () =>
-                I.map((e) => ({
+                w.map((e) => ({
                     id: String(e.value),
                     value: String(e.value),
                     label: e.label,
                     disabled: v.has(e.value),
                 })),
-            [I, v],
+            [w, v],
         ),
         T = i.useMemo(
             () =>
@@ -164,7 +164,7 @@ function m(e) {
                         selectionMode: "single",
                         value: null,
                         onSelectionChange: (e) => {
-                            null != e && (w(e), t());
+                            null != e && (I(e), t());
                         },
                         options: E,
                         matchSorterOptions: T,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685), n(642613);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(442837),
     o = n(544891),
     c = n(199849),
@@ -70,7 +70,7 @@ let C = async () =>
 function S() {
     let e = (0, s.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
         t = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        [n, l] = r.useState("511651880837840896"),
+        [n, i] = r.useState("511651880837840896"),
         [p, v] = r.useState([]),
         [S, E] = r.useState(!1),
         T = r.useCallback(async () => {
@@ -92,7 +92,7 @@ function S() {
             }),
                 await T();
         },
-        w = async () => {
+        P = async () => {
             await o.tn.del({
                 url: "/debug/subscription",
                 rejectWithError: !1,
@@ -123,7 +123,7 @@ function S() {
                     ],
                 }),
                 (0, a.jsx)("section", {
-                    className: i()([j.section, j.buttons]),
+                    className: l()([j.section, j.buttons]),
                     children:
                         null == e &&
                         (0, a.jsxs)(a.Fragment, {
@@ -132,7 +132,7 @@ function S() {
                                     serialize: (e) => e,
                                     isSelected: (e) => e === n,
                                     options: _,
-                                    select: l,
+                                    select: i,
                                     popoutLayerContext: x.O$,
                                 }),
                                 (0, a.jsx)(d.Button, {
@@ -155,12 +155,12 @@ function S() {
                     children: "Bulk Actions",
                 }),
                 (0, a.jsx)("section", {
-                    className: i()([j.section, j.buttons]),
+                    className: l()([j.section, j.buttons]),
                     children: (0, a.jsx)(d.Button, {
                         variant: "primary",
                         size: "sm",
                         text: "End All Subscriptions",
-                        onClick: w,
+                        onClick: P,
                     }),
                 }),
                 O.length > 0 &&

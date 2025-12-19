@@ -6,13 +6,13 @@ var i = n(657707),
     r = n(313789),
     a = n(526665),
     o = n(620163),
-    S = n(501348),
-    T = n(658091),
+    T = n(501348),
+    S = n(658091),
     c = n(601414),
     E = n(157177),
     d = n(781060),
-    g = n(142751),
-    _ = n(490555),
+    _ = n(142751),
+    g = n(490555),
     I = n(726985),
     N = n(388032);
 let A = (0, s.wf)(r.n.APPEARANCE_PANEL, {
@@ -20,11 +20,11 @@ let A = (0, s.wf)(r.n.APPEARANCE_PANEL, {
         initialize: () => {
             (0, l.w)();
         },
-        buildLayout: () => [g.D, c.l, _.G, E.K, d.t, T.R],
+        buildLayout: () => [_.D, c.l, g.G, E.K, d.t, S.R],
     }),
     O = (0, s.wf)(r.n.APPEARANCE_PANEL, {
         useTitle: () => N.intl.string(N.t["iHH+ky"]),
-        StronglyDiscouragedCustomComponent: S.ZP,
+        StronglyDiscouragedCustomComponent: T.ZP,
         buildLayout: () => [],
     }),
     C = (0, s.m7)(r.n.APPEARANCE_SIDEBAR_ITEM, {

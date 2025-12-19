@@ -1,4 +1,4 @@
-n.d(e, { T: () => S });
+n.d(e, { T: () => T });
 var i = n(657707),
     l = n(230711),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(657707),
     r = n(313789),
     a = n(526665),
     o = n(342386);
-let S = (0, s.m7)(r.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
+let T = (0, s.m7)(r.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
     useTitle: () => "Open Legacy Settings",
     icon: i.ewm,
     onClick: () => {

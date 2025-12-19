@@ -24,14 +24,14 @@ let f = (e) => {
             a11yLabel: b,
             selectedSkuId: O,
             category: S,
-            type: P,
-            palette: x,
+            type: x,
+            palette: P,
         } = e,
         E = l.useRef(null),
         { isHoveringOrFocusing: w } = (0, u.Z)(E),
         I = !y && w;
     return (
-        P === s.Z.AVATAR_DECORATION
+        x === s.Z.AVATAR_DECORATION
             ? ((t = {
                   type: s.Z.AVATAR_DECORATION,
                   label: b,
@@ -43,12 +43,12 @@ let f = (e) => {
                   isHighlighted: I,
                   avatarSize: o.EFr.SIZE_96,
               })))
-            : P === s.Z.NAMEPLATE &&
+            : x === s.Z.NAMEPLATE &&
               ((t = {
                   type: s.Z.NAMEPLATE,
                   label: b,
                   asset: f,
-                  palette: null != x ? x : "none",
+                  palette: null != P ? P : "none",
               }),
               (n = (0, r.jsx)(p.Z, {
                   nameplate: t,
@@ -71,8 +71,8 @@ let f = (e) => {
                 children: [
                     (0, r.jsx)("div", {
                         className: a()(h.preview, {
-                            [h.avatarPreview]: P === s.Z.AVATAR_DECORATION,
-                            [h.nameplatePreview]: P === s.Z.NAMEPLATE,
+                            [h.avatarPreview]: x === s.Z.AVATAR_DECORATION,
+                            [h.nameplatePreview]: x === s.Z.NAMEPLATE,
                             [h.previewTrick]: S === c.KN.Trick,
                             [h.previewTreat]: S === c.KN.Treat,
                         }),

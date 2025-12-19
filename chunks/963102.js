@@ -35,11 +35,11 @@ function N(e) {
         N = (0, i.e7)([S.default], () => S.default.getCurrentUser()),
         { enabled: R } = (0, E.W)({ location: "collectibles_shop_header_bar" }),
         P = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
-        { searchQuery: w } = (0, x.S)(),
-        Z = l.useRef(null),
+        { searchQuery: Z } = (0, x.S)(),
+        w = l.useRef(null),
         [D, H] = l.useState(!1);
     (0, d.s)(
-        Z,
+        w,
         l.useCallback((e) => {
             H(e.contentRect.width < j.J);
         }, []),
@@ -103,7 +103,7 @@ function N(e) {
         theme: a,
         children: (e) =>
             (0, r.jsx)("div", {
-                ref: Z,
+                ref: w,
                 children: (0, r.jsxs)(b.Z, {
                     disableDoubleClick: !0,
                     className: s()(e, B.headerBar),
@@ -131,7 +131,7 @@ function N(e) {
                                     handleTransition: n,
                                     selectedTab: t,
                                     isNarrow: D,
-                                    hasText: "" !== w,
+                                    hasText: "" !== Z,
                                 }),
                                 P &&
                                     (0, r.jsx)(u.P3F, {

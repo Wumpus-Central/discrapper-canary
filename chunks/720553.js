@@ -2,8 +2,8 @@ n.d(t, { default: () => f }), n(704826), n(35282);
 var a = n(54381);
 n(473749);
 var r = n(734610),
-    l = n(990547),
-    i = n(793030),
+    i = n(990547),
+    l = n(793030),
     s = n(481060),
     o = n(213609),
     c = n(528477),
@@ -32,10 +32,10 @@ function f(e) {
         });
     return (
         (0, o.Z)({
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.MASKED_LINK_MODAL,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.MASKED_LINK_MODAL,
         }),
-        (0, a.jsxs)(i.Modal, {
+        (0, a.jsxs)(l.Modal, {
             size: "md",
             transitionState: v,
             onClose: g,

@@ -1,4 +1,4 @@
-n.d(e, { B: () => S });
+n.d(e, { B: () => T });
 var i = n(657707),
     l = n(248514),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(657707),
     r = n(313789),
     a = n(981631),
     o = n(388032);
-let S = (0, s.m7)(r.n.LOGOUT_SIDEBAR_ITEM, {
+let T = (0, s.m7)(r.n.LOGOUT_SIDEBAR_ITEM, {
     useTitle: () => o.intl.string(o.t["2jxGer"]),
     icon: i.PBZ,
     onClick: () => {

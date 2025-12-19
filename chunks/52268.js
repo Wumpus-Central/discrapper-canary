@@ -77,7 +77,7 @@ function j(e, t) {
     return i;
 }
 let y = () => 80,
-    P = (e) => {
+    v = (e) => {
         var { children: t, className: n, isSelected: i = !1 } = e,
             l = j(e, ["children", "className", "isSelected"]);
         return (0, r.jsx)(
@@ -88,20 +88,20 @@ let y = () => 80,
             }),
         );
     },
-    v = (e) => {
+    P = (e) => {
         var t,
             { profileEffect: n, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
             d = j(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
         let m = (0, f.V)(n.skuId),
             y = i.useRef(null),
             {
-                accessibilityLabel: v,
+                accessibilityLabel: P,
                 thumbnailPreviewSrc: O,
                 title: E,
             } = null != (t = null == m ? void 0 : m.config) ? t : {},
             C = i.useMemo(() => (0, a.JE)(O), [O]);
         return (0, r.jsxs)(
-            P,
+            v,
             h(
                 x(
                     {
@@ -114,7 +114,7 @@ let y = () => 80,
                     children: [
                         (0, r.jsx)("img", {
                             src: b,
-                            alt: v,
+                            alt: P,
                             className: g.presetEffectBackground,
                         }),
                         (0, r.jsx)("img", {
@@ -157,7 +157,7 @@ let y = () => 80,
                     return (0, s.EQ)(y[t])
                         .with(p.Tm, () =>
                             (0, r.jsxs)(
-                                P,
+                                v,
                                 {
                                     style: x({}, d),
                                     isSelected: !f,
@@ -180,7 +180,7 @@ let y = () => 80,
                         )
                         .with(p.oT, () =>
                             (0, r.jsxs)(
-                                P,
+                                v,
                                 {
                                     style: d,
                                     onSelect: a,
@@ -205,7 +205,7 @@ let y = () => 80,
                         .otherwise((e) => {
                             let t = (null == i ? void 0 : i.skuId) === e.skuId;
                             return (0, r.jsx)(
-                                v,
+                                P,
                                 {
                                     style: x({}, d),
                                     section: j,

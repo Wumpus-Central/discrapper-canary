@@ -1,4 +1,4 @@
-n.d(e, { G: () => S });
+n.d(e, { G: () => T });
 var i = n(442837),
     l = n(846027),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(358085),
     a = n(313789),
     o = n(388032);
-let S = (0, s.qs)(a.n.VOICE_SILENCE_WARNING_SETTING, {
+let T = (0, s.qs)(a.n.VOICE_SILENCE_WARNING_SETTING, {
     useTitle: () => o.intl.string(o.t["4rsOPQ"]),
     useSubtitle: () => o.intl.string(o.t.jtiiCw),
     useValue: function () {

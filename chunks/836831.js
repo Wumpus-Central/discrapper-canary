@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m });
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
-    s = n(236726),
+    i = n(120356),
+    l = n.n(i),
+    s = n(620792),
     o = n(481060),
     c = n(617889),
     d = n(642145),
@@ -12,7 +12,7 @@ let m = r.forwardRef((e, t) => {
     let {
             quest: n,
             percentComplete: r,
-            size: l = 42,
+            size: i = 42,
             strokeWidth: m = 3,
             glowBlur: p = 0.4,
             percentCompleteText: h,
@@ -20,8 +20,8 @@ let m = r.forwardRef((e, t) => {
             children: x,
         } = e,
         b = (0, c.EK)(n, r > 0),
-        g = l / 2,
-        v = l / 2 - m / 2,
+        g = i / 2,
+        v = i / 2 - m / 2,
         j = 2 * Math.PI * v,
         y = j - r * j,
         C = {
@@ -48,9 +48,9 @@ let m = r.forwardRef((e, t) => {
                     x,
                     (0, a.jsxs)(s.animated.div, {
                         style: { opacity: E },
-                        className: i()(u.coverContent, u.progressTextWrapper),
+                        className: l()(u.coverContent, u.progressTextWrapper),
                         children: [
-                            (0, a.jsx)("div", { className: i()(u.coverContent, u.progressTextOverlay) }),
+                            (0, a.jsx)("div", { className: l()(u.coverContent, u.progressTextOverlay) }),
                             (0, a.jsx)(o.Text, {
                                 variant: f,
                                 color: "text-strong",
@@ -63,8 +63,8 @@ let m = r.forwardRef((e, t) => {
             }),
             (0, a.jsxs)("svg", {
                 className: u.progressBar,
-                height: l,
-                width: l,
+                height: i,
+                width: i,
                 children: [
                     (0, a.jsxs)("defs", {
                         children: [

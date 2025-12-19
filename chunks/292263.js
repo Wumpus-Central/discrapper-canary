@@ -1,11 +1,11 @@
 n.d(t, { Z: () => d });
 var a,
     r,
-    l = n(442837),
-    i = n(570140);
+    i = n(442837),
+    l = n(570140);
 let s = null,
     o = !1;
-class c extends (r = l.ZP.Store) {
+class c extends (r = i.ZP.Store) {
     get loading() {
         return o;
     }
@@ -21,7 +21,7 @@ class c extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (c[a] = "AgeVerificationStore");
-let d = new c(i.Z, {
+let d = new c(l.Z, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
         o = !0;
     },

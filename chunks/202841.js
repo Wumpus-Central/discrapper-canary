@@ -1,4 +1,4 @@
-n.d(e, { f: () => g });
+n.d(e, { f: () => _ });
 var i = n(657707),
     l = n(509613),
     s = n(313789),
@@ -6,8 +6,8 @@ var i = n(657707),
     r = n(675047),
     a = n(374630),
     o = n(896049),
-    S = n(9297),
-    T = n(726985),
+    T = n(9297),
+    S = n(726985),
     c = n(388032);
 let E = (0, l.wf)(s.n.DATA_AND_PRIVACY_PANEL, {
         useTitle: () => c.intl.string(c.t.OAuOHD),
@@ -16,11 +16,11 @@ let E = (0, l.wf)(s.n.DATA_AND_PRIVACY_PANEL, {
     }),
     d = (0, l.wf)(s.n.DATA_AND_PRIVACY_PANEL, {
         useTitle: () => c.intl.string(c.t.OAuOHD),
-        buildLayout: () => [o.K, a.M, S.i],
+        buildLayout: () => [o.K, a.M, T.i],
     }),
-    g = (0, l.m7)(s.n.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
+    _ = (0, l.m7)(s.n.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.OAuOHD),
         icon: i.tQf,
-        getLegacySearchKey: () => ((0, u.Gl)("DataAndPrivacyPanel") ? void 0 : T.s6.DATA_PRIVACY),
+        getLegacySearchKey: () => ((0, u.Gl)("DataAndPrivacyPanel") ? void 0 : S.s6.DATA_PRIVACY),
         buildLayout: () => [(0, u.Gl)("DataAndPrivacyPanel") ? d : E],
     });

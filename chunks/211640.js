@@ -14,16 +14,16 @@ var i = n(54381),
 function m(e) {
     let { message: t, user: n, guild: m, channel: g } = e,
         b = (0, r.e7)([d.Z], () => null != n && null != m && (0, o.CX)(n, m, [d.Z])),
-        { messageReference: C } = t,
-        y = (0, r.e7)([u.Z], () => (null != C ? u.Z.getMessage(C.channel_id, C.message_id) : null)),
-        v = (0, r.e7)([c.Z], () => (null != y ? c.Z.getChannel(y.channel_id) : null)),
+        { messageReference: y } = t,
+        C = (0, r.e7)([u.Z], () => (null != y ? u.Z.getMessage(y.channel_id, y.message_id) : null)),
+        v = (0, r.e7)([c.Z], () => (null != C ? c.Z.getChannel(C.channel_id) : null)),
         x = (0, r.e7)([c.Z], () => {
             var e, t;
             return null != (t = null == (e = c.Z.getChannel(g.id)) ? void 0 : e.isArchivedThread()) && t;
         });
     if (!b) return null;
-    let O = null == y ? h.intl.string(f.default["0IZbwC"]) : h.intl.string(f.default.Uj6oD4),
-        E = null == y,
+    let O = null == C ? h.intl.string(f.default["0IZbwC"]) : h.intl.string(f.default.Uj6oD4),
+        E = null == C,
         j = "delete-message-".concat(t.id);
     return (0, i.jsx)(
         p.Z,
@@ -32,8 +32,8 @@ function m(e) {
             icon: a.XHJ,
             onClick: () => {
                 null != v &&
-                    null != y &&
-                    s.Z.confirmDelete(v, y, !1, {
+                    null != C &&
+                    s.Z.confirmDelete(v, C, !1, {
                         isFlagResolved: x,
                         moderatorReportChannelId: g.id,
                     });

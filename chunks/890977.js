@@ -1,4 +1,4 @@
-n.d(t, { b: () => y }), n(49124);
+n.d(t, { b: () => C }), n(49124);
 var i,
     r,
     l = n(54381),
@@ -42,14 +42,14 @@ function b(e) {
         className: s()(m.glow, t),
     });
 }
-function C(e) {
+function y(e) {
     let { className: t } = e;
     return (0, l.jsx)("div", {
         ref: g(r || (r = n.t(h, 2))),
         className: s()(m.trinkets, t),
     });
 }
-let y = (e) => {
+let C = (e) => {
     let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: r, onMount: o } = e;
     return (
         a.useEffect(() => {
@@ -64,7 +64,7 @@ let y = (e) => {
                     className: m.entrypoint,
                     children: t,
                 }),
-                (0, l.jsx)(C, { className: r }),
+                (0, l.jsx)(y, { className: r }),
             ],
         })
     );

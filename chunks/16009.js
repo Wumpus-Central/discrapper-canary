@@ -6,12 +6,12 @@ var i = n(442837),
     r = n(383451),
     a = n(313789),
     o = n(595373),
-    S = n(65154),
-    T = n(388032);
+    T = n(65154),
+    S = n(388032);
 let c = (0, s.qs)(a.n.VOICE_PUSH_TO_TALK_LATCHING_SETTING, {
-    useTitle: () => T.intl.string(T.t.EGn1eN),
-    useSubtitle: () => T.intl.string(T.t.iT257i),
-    useSearchTerms: () => [T.intl.string(T.t["pS+K2L"]), T.intl.string(T.t.nuFtHH)],
+    useTitle: () => S.intl.string(S.t.EGn1eN),
+    useSubtitle: () => S.intl.string(S.t.iT257i),
+    useSearchTerms: () => [S.intl.string(S.t["pS+K2L"]), S.intl.string(S.t.nuFtHH)],
     useValue: function () {
         return (0, i.e7)([u.Z], () => {
             let { pttLatchingEnabled: t } = u.Z.getModeOptions();
@@ -19,7 +19,7 @@ let c = (0, s.qs)(a.n.VOICE_PUSH_TO_TALK_LATCHING_SETTING, {
         });
     },
     setValue: function (t) {
-        l.Z.setMode(S.pM.PUSH_TO_TALK, { pttLatchingEnabled: t });
+        l.Z.setMode(T.pM.PUSH_TO_TALK, { pttLatchingEnabled: t });
     },
     usePredicate: function () {
         let t = (0, o.J)(),

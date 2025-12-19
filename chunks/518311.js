@@ -23,8 +23,8 @@ var i,
     m = n(493683),
     g = n(529103),
     b = n(447543),
-    C = n(708690),
-    y = n(194359),
+    y = n(708690),
+    C = n(194359),
     v = n(425493),
     x = n(493773),
     O = n(100527),
@@ -41,14 +41,14 @@ var i,
     w = n(93127),
     M = n(752048),
     R = n(131704),
-    L = n(592125),
-    D = n(341165),
-    k = n(544610),
+    D = n(592125),
+    k = n(341165),
+    L = n(544610),
     U = n(19780),
     V = n(306680),
-    F = n(699516),
-    B = n(246946),
-    H = n(594174),
+    H = n(699516),
+    F = n(246946),
+    B = n(594174),
     G = n(626135),
     W = n(572004),
     z = n(585483),
@@ -165,7 +165,7 @@ let eo = (0, P.hQ)(),
     ec = (e) => {
         var { onConfirm: t, channelIds: n } = e,
             i = ea(e, ["onConfirm", "channelIds"]);
-        let l = (0, u.Wu)([L.Z], () => Array.from(n).map(L.Z.getChannel), [n]);
+        let l = (0, u.Wu)([D.Z], () => Array.from(n).map(D.Z.getChannel), [n]);
         return (0, r.jsx)(
             c.Modal,
             el(
@@ -243,7 +243,7 @@ class eu extends (i = l.PureComponent) {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        f.Z.wait(() => C.Z.open(null == e ? void 0 : e.id));
+        f.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
         let t = (0, E.v_)(e);
         G.default.track(
             $.rMx.OPEN_POPOUT,
@@ -260,14 +260,14 @@ class eu extends (i = l.PureComponent) {
         z.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
             z.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
-            f.Z.wait(() => C.Z.close());
+            f.Z.wait(() => y.Z.close());
     }
     isNotFriends() {
         let { channel: e, isStaffOnlyDM: t } = this.props;
         if (null == e || !e.isDM()) return !1;
         let n = e.getRecipientId();
         if (null == n) throw Error("no recipient in DM");
-        return !F.Z.isFriend(n) && !t;
+        return !H.Z.isFriend(n) && !t;
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -281,7 +281,7 @@ class eu extends (i = l.PureComponent) {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = H.default.getCurrentUser();
+            t = B.default.getCurrentUser();
         return null != t && t.isStaff() ? $.p3w : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
@@ -327,7 +327,7 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = H.default.getUser(t),
+            let n = B.default.getUser(t),
                 i = null != n ? n.username : "";
             return et.intl.format(et.t["eg+R9x"], { username: i });
         }
@@ -363,7 +363,7 @@ class eu extends (i = l.PureComponent) {
         let i = [];
         return (
             n.forEach((e) => {
-                let t = H.default.getUser(e);
+                let t = B.default.getUser(e);
                 null != t &&
                     i.push({
                         id: e,
@@ -509,8 +509,8 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = H.default.getUser(e),
-                i = null != n && F.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+            let n = B.default.getUser(e),
+                i = null != n && H.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -614,7 +614,7 @@ class eu extends (i = l.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            y.Z.sendRequest({
+            C.Z.sendRequest({
                 discordTag: Y.ZP.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
             });
@@ -704,14 +704,14 @@ class eu extends (i = l.PureComponent) {
                 null == e || e.focus();
             }),
             ei(this, "focusResult", (e) => {
-                C.Z.select(e);
+                y.Z.select(e);
             }),
             ei(this, "handleSelect", (e) => {
                 let { results: t, channel: n } = this.props;
-                null == e ? C.Z.clear(null == n ? void 0 : n.id) : null != t && this.handleClick(t[e].user.id);
+                null == e ? y.Z.clear(null == n ? void 0 : n.id) : null != t && this.handleClick(t[e].user.id);
             }),
             ei(this, "handleSelectionChange", (e) => {
-                C.Z.select(e);
+                y.Z.select(e);
                 let t = this.scrollerRef.current;
                 null != t &&
                     t.scrollToIndex({
@@ -723,7 +723,7 @@ class eu extends (i = l.PureComponent) {
             ei(this, "handleQueryChange", (e) => {
                 let { channel: t } = this.props,
                     n = (0, E.v_)(t);
-                C.Z.search(e, null == t ? void 0 : t.id),
+                y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
                         G.default.track(
@@ -739,19 +739,19 @@ class eu extends (i = l.PureComponent) {
             }),
             ei(this, "handleRemoveTag", (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                C.Z.removeUser(t[e]);
+                y.Z.removeUser(t[e]);
             }),
             ei(this, "handleRemoveUser", (e) => {
                 e.forEach((e) => {
-                    C.Z.removeUser(e);
+                    y.Z.removeUser(e);
                 }),
                     this.forceFocus();
             }),
             ei(this, "handleClick", (e) => {
                 let { selectedUsers: t, query: n, channel: i } = this.props;
                 t.has(e)
-                    ? C.Z.removeUser(e)
-                    : this.getRemaining() > 0 && (C.Z.addUser(e), n.length > 0 && C.Z.clear(null == i ? void 0 : i.id)),
+                    ? y.Z.removeUser(e)
+                    : this.getRemaining() > 0 && (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == i ? void 0 : i.id)),
                     this.forceFocus();
             }),
             ei(this, "handleAddFriendNavigation", () => {
@@ -896,7 +896,7 @@ function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, j.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, _.pT)(Array.from(t), H.default, F.Z);
+    let c = (0, _.pT)(Array.from(t), B.default, H.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -929,26 +929,26 @@ function ed(e) {
 function ep(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([k.Z, D.Z, B.Z], () => {
+    let i = (0, u.cj)([L.Z, k.Z, F.Z], () => {
             let e;
             return (
-                null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-                el(er({}, k.Z.getState()), {
+                null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+                el(er({}, L.Z.getState()), {
                     invite: e,
-                    hideDiscriminator: B.Z.hidePersonalInformation,
-                    hideInstantInvites: B.Z.hideInstantInvites,
+                    hideDiscriminator: F.Z.hidePersonalInformation,
+                    hideInstantInvites: F.Z.hideInstantInvites,
                 })
             );
         }),
-        l = (0, u.e7)([H.default], () => {
+        l = (0, u.e7)([B.default], () => {
             var e;
             return (
-                !!(null == (e = H.default.getCurrentUser()) ? void 0 : e.isStaff()) &&
+                !!(null == (e = B.default.getCurrentUser()) ? void 0 : e.isStaff()) &&
                 null != t &&
                 !!t.isDM() &&
                 t.recipients.every((e) => {
                     var t;
-                    return null == (t = H.default.getUser(e)) ? void 0 : t.isStaff();
+                    return null == (t = B.default.getUser(e)) ? void 0 : t.isStaff();
                 })
             );
         }, [t]);
@@ -1034,9 +1034,9 @@ function eh(e) {
             location: g,
         } = e,
         b = l.useRef(null),
-        C = null != s ? s : null == i ? p.kL_ : p.ejJ,
+        y = null != s ? s : null == i ? p.kL_ : p.ejJ,
         {
-            showModal: y,
+            showModal: C,
             renderPopout: v,
             toggleVisible: x,
             popoutOpen: O,
@@ -1048,14 +1048,14 @@ function eh(e) {
             location: g,
             subscribeToGlobalHotkey: m,
         }),
-        S = (0, u.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.getRecipientId()));
+        S = (0, u.e7)([B.default], () => B.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (null != (t = null == S ? void 0 : S.bot) && t) || (null != (n = null == S ? void 0 : S.isProvisional) && n)
         ? null
         : j
           ? (0, r.jsx)(J.ZP.Icon, {
                 ref: b,
-                onClick: y,
-                icon: C,
+                onClick: C,
+                icon: y,
                 className: o,
                 iconClassName: a,
                 tooltip: c,
@@ -1079,7 +1079,7 @@ function eh(e) {
                         el(er({}, e), {
                             ref: b,
                             onClick: x,
-                            icon: C,
+                            icon: y,
                             className: o,
                             iconClassName: a,
                             tooltip: c,
@@ -1106,14 +1106,14 @@ function em(e) {
             toggleVisible: m,
             popoutOpen: g,
             setPopoutOpen: b,
-            inBornThisNamedExperiment: C,
+            inBornThisNamedExperiment: y,
         } = ef({
             initialPopoutOpen: !1,
             channel: t,
             location: "PrivateChannelRecipientsInviteTextButton",
             subscribeToGlobalHotkey: c,
         });
-    return C
+    return y
         ? (0, r.jsx)(
               p.Button,
               el(er({}, u), {
@@ -1156,7 +1156,7 @@ function em(e) {
 function eg(e) {
     let t = eb(e);
     return new Set(
-        (0, a.chain)(L.Z.getMutablePrivateChannels())
+        (0, a.chain)(D.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, R.bc)(e.type))
             .filter((e) => eb(e.recipients) === t)

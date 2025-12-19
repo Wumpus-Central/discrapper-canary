@@ -3,8 +3,8 @@ var o = t(54381);
 t(473749);
 var i = t(212598),
     r = t(728151),
-    s = t(981631),
-    a = t(388032),
+    a = t(981631),
+    s = t(388032),
     l = t(344595),
     d = t(322539);
 function c(e) {
@@ -16,7 +16,7 @@ function c(e) {
             onError: C,
             onClose: b,
         } = e,
-        h = n
+        p = n
             ? (0, o.jsx)("img", {
                   src: d,
                   width: "168",
@@ -29,18 +29,18 @@ function c(e) {
                   height: "123",
                   alt: "",
               }),
-        p = n ? a.intl.string(a.t.tZ6ze7) : a.intl.string(a.t.siPkNp),
-        x = n ? a.intl.string(a.t.VgWnwP) : a.intl.string(a.t.oS4NEH);
+        h = n ? s.intl.string(s.t.tZ6ze7) : s.intl.string(s.t.siPkNp),
+        x = n ? s.intl.string(s.t.VgWnwP) : s.intl.string(s.t.oS4NEH);
     return (0, o.jsx)(i.t, {
-        platformType: s.ABu.CRUNCHYROLL,
+        platformType: a.ABu.CRUNCHYROLL,
         isWaitingForConnection: n,
         onWaitingForConnection: t,
         expectedCallbackState: c,
         onAuthToken: u,
         onError: C,
         onClose: b,
-        img: h,
-        title: p,
+        img: p,
+        title: h,
         body: x,
         redirectDestination: r.pY,
     });

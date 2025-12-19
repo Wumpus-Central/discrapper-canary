@@ -1,4 +1,4 @@
-n.d(e, { U: () => S });
+n.d(e, { U: () => T });
 var i = n(509613),
     l = n(313789),
     s = n(755856),
@@ -6,6 +6,6 @@ var i = n(509613),
     r = n(260390),
     a = n(449771),
     o = n(119511);
-let S = (0, i.k4)(l.n.ADVANCED_CATEGORY, {
+let T = (0, i.k4)(l.n.ADVANCED_CATEGORY, {
     buildLayout: () => [u.p, r.A, a.U, s.I, o.i],
 });

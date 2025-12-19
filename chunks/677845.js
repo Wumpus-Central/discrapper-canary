@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(728285),
     g = n(800329),
     b = n(470956),
-    C = n(430824),
-    y = n(496675),
+    y = n(430824),
+    C = n(496675),
     v = n(434488),
     x = n(27457),
     O = n(251564),
@@ -35,11 +35,11 @@ function _(e) {
             popoutType: A,
         } = e,
         w = (0, m.bp)() === j.IlC.POPOUT,
-        M = (0, o.e7)([C.Z], () => C.Z.getGuild(I.guild_id), [I.guild_id]),
+        M = (0, o.e7)([y.Z], () => y.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, O.d)(),
-        L = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
-        D = (0, b.bt)(I.id, t),
-        k = r.useCallback(() => {
+        D = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
+        k = (0, b.bt)(I.id, t),
+        L = r.useCallback(() => {
             (0, a.j)(() => {
                 O.d.setState({ dismissedActivityEntryPointTileChannel: I.id });
             });
@@ -51,14 +51,14 @@ function _(e) {
                 O.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [I.id, R]);
-    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, h.b)(y.Z, M, I), [M, I]),
+    let U = (0, o.e7)([C.Z], () => I.isPrivate() || (0, h.b)(C.Z, M, I), [M, I]),
         V = (null == M ? void 0 : M.afkChannelId) === I.id,
-        F = I.userLimit <= 0 || I.userLimit > 1,
-        H = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        H = I.userLimit <= 0 || I.userLimit > 1,
+        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
         B = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
-        z = null != R && R === I.id,
-        W = D.map(
+        W = null != R && R === I.id,
+        z = k.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     x.ZP,
@@ -92,22 +92,22 @@ function _(e) {
     ),
         null != M &&
             !V &&
-            (!(L >= 2) || !H || G || B || z
-                ? F &&
-                  1 === L &&
+            (!(D >= 2) || !F || G || B || W
+                ? H &&
+                  1 === D &&
                   U &&
-                  (H && !G
-                      ? W.push((e) =>
+                  (F && !G
+                      ? z.push((e) =>
                             (0, i.jsx)(v.h, {
                                 channel: I,
                                 guild: M,
                                 width: e,
                                 inPopout: w,
-                                handleClose: k,
-                                userParticipantCount: L,
+                                handleClose: L,
+                                userParticipantCount: D,
                             }),
                         )
-                      : W.push((e) =>
+                      : z.push((e) =>
                             (0, i.jsx)(E.Z, {
                                 width: e,
                                 channel: I,
@@ -115,28 +115,28 @@ function _(e) {
                                 inPopout: w,
                             }),
                         ))
-                : W.push((e) =>
+                : z.push((e) =>
                       (0, i.jsx)(v.h, {
                           channel: I,
                           guild: M,
                           width: e,
                           inPopout: w,
-                          handleClose: k,
-                          userParticipantCount: L,
+                          handleClose: L,
+                          userParticipantCount: D,
                       }),
                   ));
     let q = r.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = D[e]) ? void 0 : t.id) ? n : "empty-tile";
+            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : "empty-tile";
         },
-        [D],
+        [k],
     );
     return (0, i.jsx)(g.Z, {
         className: Z,
         keyExtractor: q,
         paddingTop: 64,
         paddingBottom: 64,
-        children: W,
+        children: z,
     });
 }

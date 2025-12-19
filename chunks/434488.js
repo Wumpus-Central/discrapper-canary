@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(906732),
     g = n(397698),
     b = n(895924),
-    C = n(266454),
-    y = n(448239),
+    y = n(266454),
+    C = n(448239),
     v = n(626135),
     x = n(607187),
     O = n(981631),
@@ -276,10 +276,10 @@ function Z(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, C.Q3)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, y.Q3)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, i.jsx)(y.Z, {}),
+                        (0, i.jsx)(C.Z, {}),
                         (0, i.jsx)(u.Text, {
                             variant: "text-sm/medium",
                             children: E.intl.string(E.t["5E9SB9"]),

@@ -1,4 +1,4 @@
-n.d(e, { q: () => g });
+n.d(e, { q: () => _ });
 var i = n(54381),
     l = n(473749),
     s = n(793030),
@@ -6,12 +6,12 @@ var i = n(54381),
     r = n(846027),
     a = n(509613),
     o = n(131951),
-    S = n(313789),
-    T = n(269876),
+    T = n(313789),
+    S = n(269876),
     c = n(65154),
     E = n(388032),
     d = n(130081);
-let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
+let _ = (0, a.ON)(T.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
     useSearchTerms: () => [E.intl.string(E.t["sqUm+k"]), E.intl.string(E.t.I1Zuq0), E.intl.string(E.t.nuFtHH)],
     usePredicate: () =>
         (0, u.e7)([o.Z], () => {
@@ -30,11 +30,11 @@ let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                 });
             }, []),
             n = (0, u.e7)([o.Z], () => o.Z.supports(c.AN.AUTOMATIC_VAD)),
-            { volume: a, isSpeaking: S } = (0, T.Kq)(),
-            g = (0, u.e7)([o.Z], () => o.Z.isEnabled()),
-            _ = l.useMemo(
+            { volume: a, isSpeaking: T } = (0, S.Kq)(),
+            _ = (0, u.e7)([o.Z], () => o.Z.isEnabled()),
+            g = l.useMemo(
                 () =>
-                    !g &&
+                    !_ &&
                     (0, i.jsx)("div", {
                         className: d.noInputDevicesDetectedWarning,
                         children: (0, i.jsx)(s.M14, {
@@ -42,7 +42,7 @@ let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                             children: E.intl.format(E.t["O13I+O"], { onEnableClick: () => r.Z.enable(!0) }),
                         }),
                     }),
-                [g],
+                [_],
             ),
             I = l.useMemo(() => (t ? E.intl.string(E.t.JsbzjA) : E.intl.string(E.t.MLmyMY)), [t]),
             N = l.useId(),
@@ -71,18 +71,18 @@ let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                                   onChange: e,
                               }),
                               t
-                                  ? (0, i.jsx)(T.NP, {
-                                        isSpeaking: S,
+                                  ? (0, i.jsx)(S.NP, {
+                                        isSpeaking: T,
                                         className: d.autoThresholdSlider,
                                         ariaDescribedBy: A,
                                         ariaLabelledBy: N,
                                     })
-                                  : (0, i.jsx)(T.t8, {
+                                  : (0, i.jsx)(S.t8, {
                                         volume: a,
                                         ariaDescribedBy: A,
                                         ariaLabelledBy: N,
                                     }),
-                              _,
+                              g,
                           ],
                       }),
                   ],
@@ -97,21 +97,21 @@ let g = (0, a.ON)(S.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                           layout: "vertical",
                           children: (e) =>
                               t
-                                  ? (0, i.jsx)(T.NP, {
-                                        isSpeaking: S,
+                                  ? (0, i.jsx)(S.NP, {
+                                        isSpeaking: T,
                                         className: d.autoThresholdSlider,
                                         id: e.controlId,
                                         ariaDescribedBy: e.describedById,
                                         ariaLabelledBy: e.labelId,
                                     })
-                                  : (0, i.jsx)(T.t8, {
+                                  : (0, i.jsx)(S.t8, {
                                         volume: a,
                                         id: e.controlId,
                                         ariaDescribedBy: e.describedById,
                                         ariaLabelledBy: e.labelId,
                                     }),
                       }),
-                      _,
+                      g,
                   ],
               });
     },

@@ -6,8 +6,8 @@ var i = n(473749),
     r = n(292959),
     a = n(313789),
     o = n(518596),
-    S = n(103644),
-    T = n(320851),
+    T = n(103644),
+    S = n(320851),
     c = n(388032);
 let E = (0, s.k4)(a.n.SOUNDS_CATEGORY, {
     useTitle: () => c.intl.string(c.t.MKWyKc),
@@ -25,5 +25,5 @@ let E = (0, s.k4)(a.n.SOUNDS_CATEGORY, {
                 };
         }, [t]);
     },
-    buildLayout: () => [T.J, S.X],
+    buildLayout: () => [S.J, T.X],
 });

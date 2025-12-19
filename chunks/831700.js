@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(934415),
     V = n(98597),
     H = n(648501),
-    z = n(473403),
-    W = n(830993),
+    W = n(473403),
+    z = n(830993),
     K = n(653577),
     Y = n(207055),
     q = n(981631),
@@ -209,7 +209,7 @@ class en extends V.ZP {
                             children: () =>
                                 (0, r.jsx)(c.u, {
                                     text: this.getTooltipText(),
-                                    children: (0, r.jsxs)(z.ZP, {
+                                    children: (0, r.jsxs)(W.ZP, {
                                         ref: this.channelItemRef,
                                         className: J.iconVisibility,
                                         iconClassName: a()({ [J.iconLive]: C || _ || T }),
@@ -369,7 +369,7 @@ class en extends V.ZP {
                     { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
                 if (o && !n && !i && !s) {
                     let n = R.SE.getSetting().includes(a.id);
-                    return (0, r.jsx)(W.Z, {
+                    return (0, r.jsx)(z.Z, {
                         onAction: this.closePopout,
                         guild: a,
                         channel: e,
@@ -465,8 +465,8 @@ function ei(e) {
         ),
         { enableHighlight: M, enableWaveformIcon: F } = (0, m.M)(t.id, "VoiceChannel"),
         V = null != c && c.length > 0,
-        z = M && V,
-        W = F && V,
+        W = M && V,
+        z = F && V,
         K = (0, H.Z)({
             channel: n,
             isChannelSelected: a,
@@ -506,8 +506,8 @@ function ei(e) {
                 enableOpenTIVForPing: R,
                 hasChannelInfo: null != K,
                 hasStartTime: v,
-                shouldHighlightChannel: z,
-                shouldUseAnimatedWaveform: W,
+                shouldHighlightChannel: W,
+                shouldUseAnimatedWaveform: z,
             },
         ),
     );

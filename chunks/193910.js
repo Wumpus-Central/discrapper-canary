@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(413496), n(433524), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => D }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(266454),
     g = n(706140),
     b = n(243778),
-    C = n(618857),
-    y = n(346479),
+    y = n(618857),
+    C = n(346479),
     v = n(286934),
     x = n(488131),
     O = n(375954),
@@ -58,30 +58,30 @@ function R() {
         })
     );
 }
-function L(e) {
+function D(e) {
     let {
             channel: t,
             chatInputType: g,
             options: b,
             onFileUpload: O,
-            onClose: L,
-            onSelect: D,
-            draftType: k,
+            onClose: D,
+            onSelect: k,
+            draftType: L,
             editorTextContent: U,
             setValue: V,
-            openClips: F,
+            openClips: H,
         } = e,
-        { analyticsLocations: H, newestAnalyticsLocation: B } = (0, d.ZP)(),
-        G = (0, C.Dt)({ channel: t }),
-        z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
-    function W() {
+        { analyticsLocations: F, newestAnalyticsLocation: B } = (0, d.ZP)(),
+        G = (0, y.Dt)({ channel: t }),
+        W = (0, l.e7)([v.Z], () => v.Z.isInProgress());
+    function z() {
         (0, x.R6)(t, void 0, "Plus Button");
     }
     function q() {
         E.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
-        F();
+        H();
     }
     function Y() {
         (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
@@ -162,7 +162,7 @@ function L(e) {
             i = "",
             r = U.match(M);
         null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, _.d)([(0, S.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            (0, _.d)([(0, S.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, L),
             j.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
             "" !== i && j.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
@@ -175,9 +175,9 @@ function L(e) {
             });
         }, [t.guild_id, t.id]),
         (0, i.jsx)(s.v2r, {
-            onSelect: D,
+            onSelect: k,
             navId: "channel-attach",
-            onClose: L,
+            onClose: D,
             "aria-label": A.intl.string(A.t.Xm41aV),
             className: w.menu,
             children: b.map(function (e) {
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -313,7 +313,7 @@ function L(e) {
                             {
                                 id: "THREAD",
                                 label: r,
-                                action: W,
+                                action: z,
                             },
                             "THREAD",
                         );
@@ -354,7 +354,7 @@ function L(e) {
                             {
                                 id: "scheduled_message",
                                 label: r,
-                                action: () => (0, C.$f)({ channel: t }),
+                                action: () => (0, y.$f)({ channel: t }),
                                 children: G,
                             },
                             "scheduled_message",
@@ -365,10 +365,10 @@ function L(e) {
                             {
                                 id: "summarize_thread",
                                 label: r,
-                                action: () => y.Z.summarizeThread(t),
-                                icon: z ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: z,
-                                children: z
+                                action: () => C.Z.summarizeThread(t),
+                                icon: W ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: W,
+                                children: W
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
@@ -378,7 +378,7 @@ function L(e) {
                                                       id: "summarize_thread_for_everyone",
                                                       label: A.intl.string(A.t.eCzSdd),
                                                       iconLeft: s.BFJ,
-                                                      action: () => y.Z.summarizeThread(t, !1),
+                                                      action: () => C.Z.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
@@ -388,7 +388,7 @@ function L(e) {
                                                       id: "summarize_thread_for_me",
                                                       label: A.intl.string(A.t["HOe+Hq"]),
                                                       iconLeft: s.tBG,
-                                                      action: () => y.Z.summarizeThread(t),
+                                                      action: () => C.Z.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),

@@ -20,8 +20,8 @@ var r = n(54381),
     j = n(533815),
     x = n(919498),
     P = n(394606),
-    w = n(388032),
-    I = n(713603),
+    I = n(388032),
+    w = n(713603),
     S = n(447921);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -78,7 +78,7 @@ function _(e) {
             game: i,
             widgetType: n,
         },
-        "aria-label": w.intl.formatToPlainString(w.t["0dR3gw"], { positionNumber: t + 1 }),
+        "aria-label": I.intl.formatToPlainString(I.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, b.Eq)(n, e, t),
         onEnd: () => l(i.applicationId),
         className: S.dropTarget,
@@ -135,7 +135,7 @@ function D(e) {
     let { user: t, guildId: n, channelId: i, id: a } = e;
     return (0, r.jsx)(c.nn4, {
         id: a,
-        children: w.intl.format(w.t.TM0XDY, { name: g.ZP.getName(n, i, t) }),
+        children: I.intl.format(I.t.TM0XDY, { name: g.ZP.getName(n, i, t) }),
     });
 }
 function k(e) {
@@ -180,7 +180,7 @@ function A(e) {
         [O, j] = i.useState(null != t ? t : ""),
         x = i.useRef(null),
         P = i.useRef(null),
-        I = w.intl.string(w.t.xKSfBT),
+        w = I.intl.string(I.t.xKSfBT),
         E = null != t && "" !== t.trim(),
         T = i.useCallback(() => {
             h({
@@ -221,12 +221,12 @@ function A(e) {
                       (0, r.jsx)(c.nn4, {
                           tag: "label",
                           htmlFor: g,
-                          children: w.intl.string(w.t.JxKXeT),
+                          children: I.intl.string(I.t.JxKXeT),
                       }),
                       (0, r.jsx)(c.Kx8, {
                           id: g,
                           value: O,
-                          placeholder: I,
+                          placeholder: w,
                           onChange: C,
                           onBlur: _,
                           rows: 3,
@@ -257,12 +257,12 @@ function A(e) {
                           id: m,
                       }),
                       (0, r.jsx)(k, {
-                          text: null != t ? t : I,
+                          text: null != t ? t : w,
                           className: l()(S.editableCommentText, !E && S.placeholder),
                       }),
                       (0, r.jsx)(c.P3F, {
                           innerRef: x,
-                          "aria-label": w.intl.string(w.t.ppb9MJ),
+                          "aria-label": I.intl.string(I.t.ppb9MJ),
                           onClick: (e) => {
                               e.stopPropagation(), T();
                           },
@@ -285,27 +285,27 @@ function Z(e) {
             coverRef: g,
             className: p,
         } = e,
-        { applicationId: w, comment: D, tags: k } = a,
-        { coverImageUrl: Z, gameName: R, isLoading: G } = (0, P.Z)(w),
+        { applicationId: I, comment: D, tags: k } = a,
+        { coverImageUrl: Z, gameName: R, isLoading: G } = (0, P.Z)(I),
         M = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
         L = f.default.getCurrentUser(),
         B = (null == L ? void 0 : L.id) === t.id,
-        U = 1 === (0, b.Gv)(o),
-        F = !s && B,
-        W = F && (0, b.vI)(o),
-        H = F && !U,
+        F = 1 === (0, b.Gv)(o),
+        U = !s && B,
+        W = U && (0, b.vI)(o),
+        H = U && !F,
         { registerDragHandleRef: z } = (0, h.C)();
     if (G) return (0, r.jsx)(v.i, {});
     let K = () =>
             (0, r.jsx)(y.Z, {
                 coverRef: g,
-                className: null == Z || s ? void 0 : I.hoverActiveEffect,
+                className: null == Z || s ? void 0 : w.hoverActiveEffect,
                 imageSrc: Z,
                 gameName: R,
-                applicationId: w,
+                applicationId: I,
                 userId: t.id,
                 disableInteraction: s,
                 hideTooltip: !0,
@@ -335,7 +335,7 @@ function Z(e) {
                                       C,
                                       E(
                                           {
-                                              applicationId: w,
+                                              applicationId: I,
                                               userId: t.id,
                                               gameName: R,
                                           },
@@ -349,7 +349,7 @@ function Z(e) {
                                       guildId: n,
                                       channelId: i,
                                       widgetType: o,
-                                      applicationId: w,
+                                      applicationId: I,
                                   })
                                 : (0, r.jsx)(N, {
                                       text: D,
@@ -361,14 +361,14 @@ function Z(e) {
                                 tags: k,
                                 isCurrentUser: B,
                                 widgetType: o,
-                                applicationId: w,
+                                applicationId: I,
                                 disableInteraction: s,
                                 className: S.tags,
                             }),
                             !s &&
                                 (0, r.jsx)(x.F, {
                                     className: S.socialProof,
-                                    applicationId: w,
+                                    applicationId: I,
                                     guildId: n,
                                     channelId: i,
                                 }),

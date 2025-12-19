@@ -41,7 +41,7 @@ var r = n(54381),
     F = n(388032),
     V = n(642915),
     H = n(257516);
-function z(e, t, n) {
+function W(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function z(e, t, n) {
         e
     );
 }
-function W(e) {
+function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function W(e) {
                 }),
             )),
             r.forEach(function (t) {
-                z(e, t, n[t]);
+                W(e, t, n[t]);
             });
     }
     return e;
@@ -201,12 +201,12 @@ class Y extends M.ZP {
     }
     constructor(...e) {
         super(...e),
-            z(this, "channelItemRef", i.createRef()),
-            z(this, "state", { shouldShowGuildVerificationPopout: !1 }),
-            z(this, "closeGuildVerificationPopout", () => {
+            W(this, "channelItemRef", i.createRef()),
+            W(this, "state", { shouldShowGuildVerificationPopout: !1 }),
+            W(this, "closeGuildVerificationPopout", () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            z(this, "handleClick", () => {
+            W(this, "handleClick", () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
                 null != i && (0, m.n)(i) && (0, b.hk)(i),
@@ -214,11 +214,11 @@ class Y extends M.ZP {
                     t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, j.Cq)(e),
                     __OVERLAY__ || (0, v.Kh)(e.id);
             }),
-            z(this, "handleClickChat", () => {
+            W(this, "handleClickChat", () => {
                 let { channel: e, locked: t } = this.props;
                 __OVERLAY__ || t || (0, v.Kh)(e.id);
             }),
-            z(this, "handleContextMenu", (e) => {
+            W(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
                     i = N.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -232,14 +232,14 @@ class Y extends M.ZP {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                K(W({}, n), {
+                                K(z({}, n), {
                                     channel: t,
                                     guild: i,
                                 }),
                             );
                     });
             }),
-            z(this, "renderPopout", () => {
+            W(this, "renderPopout", () => {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
@@ -250,7 +250,7 @@ class Y extends M.ZP {
                     });
                 throw Error("VoiceChannel.renderPopout: There must always be something to render");
             }),
-            z(this, "renderOpenChatButton", () => {
+            W(this, "renderOpenChatButton", () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, r.jsx)(c.u, {
@@ -270,11 +270,11 @@ class Y extends M.ZP {
                         }),
                     });
             }),
-            z(this, "getTooltipText", () => {
+            W(this, "getTooltipText", () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? F.intl.string(F.t.rZfiNq) : null;
             }),
-            z(this, "renderSubtitle", () => {
+            W(this, "renderSubtitle", () => {
                 var e;
                 let t = null == (e = this.props.stageInstance) ? void 0 : e.topic;
                 return null == t ? null : (0, r.jsx)(s.Z, { children: t });
@@ -324,7 +324,7 @@ function Q(e) {
     return (0, r.jsx)(
         q,
         K(
-            W(
+            z(
                 {
                     categoryCollapsed: f,
                     connectAction: h,

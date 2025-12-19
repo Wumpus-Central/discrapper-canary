@@ -106,11 +106,11 @@ function p(e) {
                       x: 0,
                       y: 0,
                   },
-        w = m.x - x - 60 * !!y,
-        I = m.y - P;
+        I = m.x - x - 60 * !!y,
+        w = m.y - P;
     return (0, r.jsx)("div", {
         className: g.container,
-        style: { transform: "translate3d(".concat(w, "px, ").concat(I, "px, 0)") },
+        style: { transform: "translate3d(".concat(I, "px, ").concat(w, "px, 0)") },
         children: v,
     });
 }

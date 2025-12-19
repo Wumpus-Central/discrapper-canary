@@ -6,10 +6,10 @@ var i = n(512722),
     r = n(509613),
     a = n(716364),
     o = n(474873),
-    S = n(313789),
-    T = n(871465),
+    T = n(313789),
+    S = n(871465),
     c = n(388032);
-let E = (0, r.qs)(S.n.NOTIFICATION_HOLIDAY_SOUNDPACK, {
+let E = (0, r.qs)(T.n.NOTIFICATION_HOLIDAY_SOUNDPACK, {
     useTitle: () => {
         let t = u.Z.useHolidaySoundpack();
         return null == t ? "" : c.intl.format(c.t["E/OyBr"], { soundpack: c.intl.string(t.soundpackLabel) });
@@ -21,7 +21,7 @@ let E = (0, r.qs)(S.n.NOTIFICATION_HOLIDAY_SOUNDPACK, {
     },
     setValue: function (t) {
         let e = u.Z.getHolidaySoundpack();
-        l()(null != e, "predicate should fail if no soundpack is available"), (0, a.c)(t ? e : T.Y.CLASSIC);
+        l()(null != e, "predicate should fail if no soundpack is available"), (0, a.c)(t ? e : S.Y.CLASSIC);
     },
     usePredicate: u.Z.useIsEligible,
 });

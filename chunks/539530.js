@@ -1,5 +1,5 @@
 n.d(t, {
-    $0: () => d,
+    $0: () => u,
     ZP: () => x,
 }),
     n(388685),
@@ -11,8 +11,8 @@ var l,
     s = n(1870),
     o = n(884697),
     c = n(235897),
-    u = n(388032),
-    d = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
+    d = n(388032),
+    u = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
 let p = { skuId: "None" },
     m = { skuId: "Shop" },
     x = () => {
@@ -48,19 +48,19 @@ let p = { skuId: "None" },
                         section: "purchase",
                         items: [p, m, ...l.purchase],
                         height: 12,
-                        header: u.intl.string(u.t.WfGV52),
+                        header: d.intl.string(d.t.WfGV52),
                     },
                     {
                         section: "premium_purchase",
                         items: l.premium_purchase,
                         height: 12,
-                        header: u.intl.string(u.t.TiLCgw),
+                        header: d.intl.string(d.t.TiLCgw),
                     },
                     {
                         section: "preview",
                         items: l.preview,
                         height: 12,
-                        header: u.intl.string(u.t["1vbbee"]),
+                        header: d.intl.string(d.t["1vbbee"]),
                     },
                 ].filter((e) => {
                     let { items: t } = e;

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(271383),
     g = n(594174),
     b = n(51144),
-    C = n(967128),
-    y = n(981631),
+    y = n(967128),
+    C = n(981631),
     v = n(388032),
     x = n(616508);
 function O(e) {
@@ -63,12 +63,12 @@ function E(e, t) {
 }
 function j(e) {
     var t, l, p;
-    let { userId: C, channel: y } = e,
+    let { userId: y, channel: C } = e,
         v = r.useRef(null),
         { analyticsLocations: j } = (0, d.ZP)(u.Z.USERNAME),
-        S = (0, o.e7)([g.default], () => g.default.getUser(C)),
-        _ = (0, o.e7)([m.ZP], () => (null != C ? m.ZP.getMember(y.guild_id, C) : null)),
-        P = (0, f.X7)(y.guild_id, null != C ? C : void 0, null != (t = null == _ ? void 0 : _.colorStrings) ? t : null);
+        S = (0, o.e7)([g.default], () => g.default.getUser(y)),
+        _ = (0, o.e7)([m.ZP], () => (null != y ? m.ZP.getMember(C.guild_id, y) : null)),
+        P = (0, f.X7)(C.guild_id, null != y ? y : void 0, null != (t = null == _ ? void 0 : _.colorStrings) ? t : null);
     function I(e) {
         if (null == S) return null;
         (0, c.jW)(e, async () => {
@@ -78,8 +78,8 @@ function j(e) {
                     e,
                     E(O({}, t), {
                         user: S,
-                        guildId: y.guild_id,
-                        channel: y,
+                        guildId: C.guild_id,
+                        channel: C,
                     }),
                 );
         });
@@ -96,8 +96,8 @@ function j(e) {
               children: (0, i.jsx)(h.Z, {
                   targetElementRef: v,
                   user: S,
-                  guildId: y.guild_id,
-                  channelId: y.id,
+                  guildId: C.guild_id,
+                  channelId: C.id,
                   roleId: null == _ ? void 0 : _.colorRoleId,
                   clickTrap: !0,
                   children: (e) =>
@@ -143,7 +143,7 @@ function S(e) {
                           }),
                       }),
                   }),
-                  t.type === y.d4z.PRIVATE_THREAD
+                  t.type === C.d4z.PRIVATE_THREAD
                       ? (0, i.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-default",
@@ -157,14 +157,14 @@ function _(e) {
     var t;
     let { channel: n } = e,
         r = null != (t = (0, p.KS)(n)) ? t : s.or_;
-    return (0, i.jsxs)(C.ZP, {
+    return (0, i.jsxs)(y.ZP, {
         channelId: n.id,
         children: [
             (0, i.jsx)("div", {
                 className: x.iconWrapper,
                 children: (0, i.jsx)(r, { className: x.icon }),
             }),
-            (0, i.jsx)(C.Ot, { children: n.name }),
+            (0, i.jsx)(y.Ot, { children: n.name }),
             (0, i.jsx)(S, { channel: n }),
         ],
     });

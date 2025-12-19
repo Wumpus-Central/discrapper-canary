@@ -6,11 +6,11 @@ var i = n(100527),
     r = n(63063),
     a = n(36703),
     o = n(313789),
-    S = n(981631),
-    T = n(388032);
+    T = n(981631),
+    S = n(388032);
 let c = (0, l.UO)(o.n.SOUNDBOARD_VOLUME_SETTING, {
-    useTitle: () => T.intl.string(T.t.kbFsAD),
-    useSubtitle: () => T.intl.format(T.t.BPbGq7, { helpCenterArticle: r.Z.getArticleURL(S.BhN.SOUNDBOARD) }),
+    useTitle: () => S.intl.string(S.t.kbFsAD),
+    useSubtitle: () => S.intl.format(S.t.BPbGq7, { helpCenterArticle: r.Z.getArticleURL(T.BhN.SOUNDBOARD) }),
     setValue: function (t) {
         let e = [i.Z.USER_SETTINGS_VOICE_AND_VIDEO],
             n = (0, a.A)(t);

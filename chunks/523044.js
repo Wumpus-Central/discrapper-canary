@@ -6,10 +6,10 @@ var i = n(473749),
     r = n(88658),
     a = n(695346),
     o = n(313789),
-    S = n(981631),
-    T = n(388032);
+    T = n(981631),
+    S = n(388032);
 let c = (0, u.qs)(o.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING, {
-    useTitle: () => T.intl.string(T.t.NfeuZ3),
+    useTitle: () => S.intl.string(S.t.NfeuZ3),
     useValue: () => {
         let t = a.xq.useSetting(),
             e = i.useMemo(() => (0, r.bL)(t), [t]);
@@ -17,7 +17,7 @@ let c = (0, u.qs)(o.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING,
     },
     setValue: (t) => {
         let e = a.xq.getSetting();
-        a.xq.updateSetting(t ? l.pj(e, S.SOq.MUTUAL_FRIENDS) : l.M1(e, S.SOq.MUTUAL_FRIENDS, S.SOq.NO_RELATION));
+        a.xq.updateSetting(t ? l.pj(e, T.SOq.MUTUAL_FRIENDS) : l.M1(e, T.SOq.MUTUAL_FRIENDS, T.SOq.NO_RELATION));
     },
     useDisabled: () => (0, s.LN)(),
 });

@@ -11,8 +11,8 @@ var i = n(657707),
     c = n(393681),
     E = n(995644),
     d = n(172320),
-    g = n(439175),
-    _ = n(202011),
+    _ = n(439175),
+    g = n(202011),
     I = n(726985),
     N = n(981631),
     A = n(388032);
@@ -21,14 +21,14 @@ let O = (0, u.ZH)(T.n.ACCOUNT_STANDING_TAB, {
         onItemSelect: () => {
             o.default.track(N.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: c.D.STANDING });
         },
-        buildLayout: () => [_.v],
+        buildLayout: () => [g.v],
     }),
     C = (0, u.ZH)(T.n.ACCOUNT_SECURITY_TAB, {
         getTitle: () => A.intl.string(A.t.Am9YHi),
         onItemSelect: () => {
             o.default.track(N.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: c.D.SECURITY });
         },
-        buildLayout: () => [d.z, E.v, g.v],
+        buildLayout: () => [d.z, E.v, _.v],
     }),
     f = (0, u.wf)(T.n.ACCOUNT_PANEL, {
         useTitle: () => A.intl.string(A.t["JAIM/m"]),

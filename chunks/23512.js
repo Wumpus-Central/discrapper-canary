@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     checklistIcon: "ef2eb43282958c32-checklistIcon",
     table: "ef2eb43282958c32-table",
     tableContainer: "ef2eb43282958c32-tableContainer",

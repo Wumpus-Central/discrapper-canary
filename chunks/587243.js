@@ -6,8 +6,8 @@ n.d(t, {
 var a = n(54381);
 n(473749);
 var r = n(481060),
-    l = n(734934),
-    i = n(158238),
+    i = n(734934),
+    l = n(158238),
     s = n(695346),
     o = n(70956),
     c = n(51144),
@@ -44,25 +44,25 @@ let f = [
     ],
     x = "forever";
 function b(e) {
-    let { status: t, currentStatus: n, description: l } = e,
-        i = t !== m.Skl.ONLINE,
+    let { status: t, currentStatus: n, description: i } = e,
+        l = t !== m.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
             children: f.map((e) => {
-                let { duration: l, label: i } = e;
+                let { duration: i, label: l } = e;
                 return (0, a.jsx)(
                     r.sNh,
                     {
-                        id: "".concat(t, "-").concat(l),
-                        label: i(),
+                        id: "".concat(t, "-").concat(i),
+                        label: l(),
                         action: () =>
                             (0, u.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
-                                durationMillis: l,
+                                durationMillis: i,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != l ? l : x,
+                    null != i ? i : x,
                 );
             }),
         });
@@ -70,7 +70,7 @@ function b(e) {
         id: t,
         className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: i,
+        hasSubmenu: l,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
@@ -86,10 +86,10 @@ function b(e) {
                         className: h.status,
                         children: (0, c.u5)(t),
                     }),
-                    null != l &&
+                    null != i &&
                         (0, a.jsx)("div", {
                             className: h.description,
-                            children: l,
+                            children: i,
                         }),
                 ],
             });
@@ -101,7 +101,7 @@ function b(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: i ? s : void 0,
+        children: l ? s : void 0,
     });
 }
 function g(e) {
@@ -116,8 +116,8 @@ function g(e) {
 }
 function v(e) {
     let t = s.Cr.useSetting(),
-        n = (0, l.p)(),
-        o = i.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
+        n = (0, i.p)(),
+        o = l.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         c = s.fv.useSetting(),
         d = e === m.Skl.DND,
         u = (n) => {
@@ -134,14 +134,14 @@ function v(e) {
         },
         v = (0, a.jsx)(a.Fragment, {
             children: f.map((t) => {
-                let { duration: n, label: i } = t;
+                let { duration: n, label: l } = t;
                 return (0, a.jsx)(
                     r.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
-                        label: i(),
+                        label: l(),
                         action: () => {
-                            (0, l.oW)(!0, n);
+                            (0, i.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
@@ -233,7 +233,7 @@ function v(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, l.oW)(!n);
+                                      (0, i.oW)(!n);
                                   },
                                   dontCloseOnAction: !0,
                                   children: v,

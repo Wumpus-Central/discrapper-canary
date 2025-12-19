@@ -6,20 +6,20 @@ var i = n(657707),
     r = n(526665),
     a = n(200645),
     o = n(788869),
-    S = n(726985),
-    T = n(388032);
+    T = n(726985),
+    S = n(388032);
 let c = (0, l.wf)(u.n.LINUX_PANEL, {
-        useTitle: () => T.intl.string(T.t["7pPjTW"]),
+        useTitle: () => S.intl.string(S.t["7pPjTW"]),
         buildLayout: () => [o.P],
     }),
     E = (0, l.wf)(u.n.LINUX_PANEL, {
-        useTitle: () => T.intl.string(T.t["7pPjTW"]),
+        useTitle: () => S.intl.string(S.t["7pPjTW"]),
         StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
     d = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
-        useTitle: () => T.intl.string(T.t["7pPjTW"]),
-        getLegacySearchKey: () => ((0, r.Gl)("LinuxPanel") ? void 0 : S.s6.LINUX_SETTINGS),
+        useTitle: () => S.intl.string(S.t["7pPjTW"]),
+        getLegacySearchKey: () => ((0, r.Gl)("LinuxPanel") ? void 0 : T.s6.LINUX_SETTINGS),
         icon: i.pzj,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isLinux)(),
         buildLayout: () => [(0, r.Gl)("LinuxPanel") ? c : E],

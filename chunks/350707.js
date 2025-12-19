@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => O,
     cy: () => v,
-    iu: () => y,
+    iu: () => C,
 }),
     n(388685);
 var i,
@@ -46,7 +46,7 @@ function b(e) {
     }
     return e;
 }
-function C(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function C(e, t) {
         e
     );
 }
-var y = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
+var C = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
     v = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
 class x extends o.PureComponent {
     componentDidMount() {
@@ -194,7 +194,7 @@ class O extends (i = o.PureComponent) {
             m = "top" === h.position || "bottom" === h.position ? "center" : "top";
         return (0, a.jsx)(
             u.yRy,
-            C(b({ targetElementRef: f }, h), {
+            y(b({ targetElementRef: f }, h), {
                 align: m,
                 spacing: null != d ? d : 0,
                 renderPopout: this.renderPopoutContent,
@@ -221,7 +221,7 @@ class O extends (i = o.PureComponent) {
                     children: (e) =>
                         (0, a.jsx)(
                             x,
-                            C(b({}, this.props), {
+                            y(b({}, this.props), {
                                 className: c()(
                                     {
                                         [m.bottom]: "bottom" === n,
@@ -246,4 +246,4 @@ class O extends (i = o.PureComponent) {
             });
     }
 }
-g(O, "TextAlignments", y), g(O, "defaultProps", { textAlign: "left" });
+g(O, "TextAlignments", C), g(O, "defaultProps", { textAlign: "left" });

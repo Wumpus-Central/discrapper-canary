@@ -74,18 +74,18 @@ let p = r.forwardRef(function (e, t) {
             isPopoutBlocked: m,
             onPopoutOpen: g,
             onPopoutClose: b,
-            onRequestClose: C,
+            onRequestClose: y,
         } = e,
-        [y, v] = r.useState(!1),
+        [C, v] = r.useState(!1),
         { isHovered: x, setIsHovered: O, onMouseEnter: E, onMouseLeave: j, cancelTimers: S } = (0, o.Z)(200, 300);
     function _(e) {
-        "focus" === e.type || y || E();
+        "focus" === e.type || C || E();
     }
     function P() {
-        y || j();
+        C || j();
     }
     function I(e) {
-        S(), v(!y), y ? null == b || b() : null == g || g(), (!x || y) && e();
+        S(), v(!C), C ? null == b || b() : null == g || g(), (!x || C) && e();
     }
     r.useImperativeHandle(
         t,
@@ -96,7 +96,7 @@ let p = r.forwardRef(function (e, t) {
         }),
         [O, v],
     );
-    let Z = (x && !m) || y;
+    let Z = (x && !m) || C;
     return (0, i.jsx)(a.yRy, {
         targetElementRef: p,
         animation: a.yRy.Animation.FADE,
@@ -106,7 +106,7 @@ let p = r.forwardRef(function (e, t) {
         align: h,
         spacing: 16,
         onRequestClose: () => {
-            if ((null == C ? void 0 : C()) === l.F) return l.F;
+            if ((null == y ? void 0 : y()) === l.F) return l.F;
             O(!1), v(!1), null == b || b();
         },
         renderPopout: (e) =>
@@ -134,7 +134,7 @@ let p = r.forwardRef(function (e, t) {
                     className: c.actionBarButton,
                     onMouseEnter: _,
                     onMouseLeave: P,
-                    isActive: y,
+                    isActive: C,
                 }),
             });
         },

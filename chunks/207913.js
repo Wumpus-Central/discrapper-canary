@@ -197,7 +197,7 @@ function V(e) {
                                                           className: U.mentionBadge,
                                                           count: 1,
                                                       })
-                                                    : (0, r.jsx)(z, { message: t }),
+                                                    : (0, r.jsx)(W, { message: t }),
                                             ],
                                         }),
                                     ],
@@ -228,7 +228,7 @@ function V(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(W, {
+                                (0, r.jsx)(z, {
                                     message: t,
                                     isUnread: s,
                                     isSelected: o,
@@ -276,7 +276,7 @@ function H(e) {
         ],
     });
 }
-function z(e) {
+function W(e) {
     let { message: t } = e,
         n = (0, E.a3)(t.timestamp.getTime());
     return (0, r.jsx)(v.Z, {
@@ -287,7 +287,7 @@ function z(e) {
         children: n,
     });
 }
-function W(e) {
+function z(e) {
     let { message: t, channel: n, isUnread: l, isSelected: o } = e,
         { previewContent: s, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,

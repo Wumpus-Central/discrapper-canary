@@ -21,8 +21,8 @@ var i = n(442837),
     j = n(661462),
     x = n(228168),
     P = n(981631),
-    w = n(388032),
-    I = n(644773);
+    I = n(388032),
+    w = n(644773);
 function S(e) {
     let { user: t, currentUser: n, displayProfile: S, guildId: E, channelId: T, onClose: _ } = e,
         { voiceActivityStatusEnabled: C } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
@@ -39,17 +39,17 @@ function S(e) {
             return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
         }),
         B = k.length > 0 || null != A,
-        U = C && null == A && null == R && null != Z,
-        F = !L && (B || U),
+        F = C && null == A && null == R && null != Z,
+        U = !L && (B || F),
         W = N.length > 0;
-    if (!F && !W && G)
+    if (!U && !W && G)
         return (0, r.jsx)("div", {
-            className: I.cards,
+            className: w.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: I.loadingItem,
+                        className: w.loadingItem,
                         children: [
                             (0, r.jsx)(c.ZT, {
                                 width: 60,
@@ -65,7 +65,7 @@ function S(e) {
                 ),
             ),
         });
-    if (!F && !W && !G) {
+    if (!U && !W && !G) {
         var H;
         return M
             ? (0, r.jsx)(v.Uf, { onClose: _ })
@@ -77,17 +77,17 @@ function S(e) {
               });
     }
     return (0, r.jsxs)(j.F, {
-        className: I.scroller,
+        className: w.scroller,
         fade: !0,
         children: [
-            F
+            U
                 ? (0, r.jsx)(O.Z, {
-                      heading: w.intl.string(w.t.J6STd9),
+                      heading: I.intl.string(I.t.J6STd9),
                       children: (0, r.jsxs)("ul", {
-                          className: I.cards,
+                          className: w.cards,
                           children: [
                               !D &&
-                                  U &&
+                                  F &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
                                           user: t,
@@ -120,7 +120,7 @@ function S(e) {
                                   ),
                               ),
                               D &&
-                                  U &&
+                                  F &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(y.Z, {
                                           user: t,
@@ -135,9 +135,9 @@ function S(e) {
                 : null,
             W
                 ? (0, r.jsx)(O.Z, {
-                      heading: w.intl.string(w.t.jzgEoL),
+                      heading: I.intl.string(I.t.jzgEoL),
                       introText: M
-                          ? w.intl.format(w.t["4bk9Ak"], {
+                          ? I.intl.format(I.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
                                         a.Anchor,
@@ -151,7 +151,7 @@ function S(e) {
                           : void 0,
                       scrollTargetId: x.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: I.cards,
+                          className: w.cards,
                           children: N.map((e) =>
                               (0, r.jsx)(
                                   "li",

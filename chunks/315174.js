@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(236726),
+    o = n(620792),
     s = n(873546),
     c = n(442837),
     u = n(28664),
@@ -271,7 +271,7 @@ let w = i.memo(function (e) {
         i.useEffect(() => {
             U.current = n;
         }, [n]);
-    let z = () => {
+    let W = () => {
         let { renderBanner: t, guildBanner: n } = e;
         return null != n && !t;
     };
@@ -281,12 +281,12 @@ let w = i.memo(function (e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        "data-has-banner": z(),
+                        "data-has-banner": W(),
                         "data-banner-visible": n,
                         ref: F,
                         className: a()(o, {
                             [x.container]: !0,
-                            [x.hasBanner]: z(),
+                            [x.hasBanner]: W(),
                             [x.bannerVisible]: n,
                             [e]: !1,
                             [x.communityInfoVisible]: M || (w && D),
@@ -329,7 +329,7 @@ let w = i.memo(function (e) {
                             (0, r.jsx)(T, { controller: l }),
                         ],
                     }),
-                    L && z()
+                    L && W()
                         ? (0, r.jsx)("div", {
                               className: x.animatedBannerHoverLayer,
                               onMouseEnter: () => {

@@ -21,7 +21,7 @@ function O() {
         O = i.useRef(!1),
         j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         { application: x, config: P } = (0, p.G)(),
-        { token: w, fetched: I } = (0, s.o)(null == P ? void 0 : P.application_id),
+        { token: I, fetched: w } = (0, s.o)(null == P ? void 0 : P.application_id),
         S = i.useMemo(
             () =>
                 (null == P ? void 0 : P.application_id) != null
@@ -86,8 +86,8 @@ function O() {
                     { stackingBehavior: "stack" },
                 );
         }, [t]),
-        T = null == j || null == x || null == S || !I,
-        _ = null != w;
+        T = null == j || null == x || null == S || !w,
+        _ = null != I;
     if (
         (i.useEffect(() => {
             !T &&

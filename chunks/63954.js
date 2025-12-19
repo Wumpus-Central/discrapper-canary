@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685), n(314940);
 var a = n(54381),
     r = n(473749),
-    l = n(512722),
-    i = n.n(l),
+    i = n(512722),
+    l = n.n(i),
     s = n(278074),
     o = n(754700),
     c = n(887003),
@@ -25,8 +25,8 @@ var a = n(54381),
     T = n(602683),
     O = n(916028),
     N = n(749912),
-    w = n(815183),
-    P = n(899457),
+    P = n(815183),
+    w = n(899457),
     I = n(110560),
     k = n(70956),
     R = n(607814);
@@ -170,12 +170,12 @@ let F = "1193992107035983872",
         targetedContent: [],
     };
 function V() {
-    var e, t, l, d, u, A;
+    var e, t, i, d, u, A;
     let [F, V] = r.useState(G),
         H = r.useCallback((e) => {
             V(D(Z({}, e), { preview: !0 }));
         }, []),
-        [z, W] = r.useState(P.a.UNENROLLED),
+        [z, W] = r.useState(w.a.UNENROLLED),
         [K, q] = r.useState(!1),
         [Y, Q] = r.useState(!1),
         [X, J] = r.useState(null),
@@ -275,16 +275,16 @@ function V() {
     function er(e, t) {
         H(D(Z({}, F), { config: D(Z({}, F.config), { colors: D(Z({}, F.config.colors), { [e]: t }) }) }));
     }
-    function el() {
+    function ei() {
         (0, h.Xv)(F.config) &&
             (0, I.openQuestCollectibleRewardModal)(F, p.jn.GIFT_INVENTORY_FOR_YOU, p.jn.INTERNAL_PREVIEW_TOOL, !0);
     }
-    let ei = r.useMemo(() => {
+    let el = r.useMemo(() => {
             for (let [e, t] of Object.entries(F.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * k.Z.Seconds.MINUTE;
         }, [F.config.taskConfigV2.tasks]),
         es = r.useMemo(() => o.X.WATCH_VIDEO in F.config.taskConfigV2.tasks, [F.config.taskConfigV2.tasks]);
-    i()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
+    l()(!1 !== F.preview && null != F.preview, "Preview config must have property preview: true");
     let eo = F.config.taskConfigV2.tasks[o.X.WATCH_VIDEO];
     return (0, a.jsxs)(m.zJl, {
         className: R.container,
@@ -302,21 +302,21 @@ function V() {
                             null != e &&
                                 (W(
                                     (function (e) {
-                                        if (null == e.userStatus) return P.a.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return P.a.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return P.a.COMPLETED_100;
+                                        if (null == e.userStatus) return w.a.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return w.a.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return w.a.COMPLETED_100;
                                         let t = (0, f.il)(e),
                                             n = t.progressSeconds,
                                             a = t.targetSeconds;
                                         return n / a >= 1
-                                            ? P.a.COMPLETED_100
+                                            ? w.a.COMPLETED_100
                                             : n / a >= 0.75
-                                              ? P.a.COMPLETED_75
+                                              ? w.a.COMPLETED_75
                                               : n / a >= 0.5
-                                                ? P.a.COMPLETED_50
+                                                ? w.a.COMPLETED_50
                                                 : n / a >= 0.25
-                                                  ? P.a.COMPLETED_25
-                                                  : P.a.ENROLLED;
+                                                  ? w.a.COMPLETED_25
+                                                  : w.a.ENROLLED;
                                     })(e),
                                 ),
                                 H(e));
@@ -332,7 +332,7 @@ function V() {
             (0, a.jsx)("div", {
                 className: R.fields,
                 children: (0, a.jsx)(N.Z, {
-                    taskDuration: ei,
+                    taskDuration: el,
                     taskConfigV2: F.config.taskConfigV2,
                     onSelect: function (e) {
                         H(D(Z({}, F), { config: D(Z({}, F.config), { taskConfigV2: e }) }));
@@ -542,7 +542,7 @@ function V() {
                                             (0, a.jsx)(m.Button, {
                                                 variant: "primary",
                                                 text: "Open Reward Modal",
-                                                onClick: el,
+                                                onClick: ei,
                                             }),
                                         ],
                                     }),
@@ -581,66 +581,66 @@ function V() {
                     }),
                     (0, a.jsx)("div", {
                         className: R.fields,
-                        children: (0, a.jsx)(w.Z, {}),
+                        children: (0, a.jsx)(P.Z, {}),
                     }),
-                    (0, a.jsx)(P.Z, {
+                    (0, a.jsx)(w.Z, {
                         onChange: function (e) {
                             switch ((W(e), e)) {
-                                case P.a.UNENROLLED:
+                                case w.a.UNENROLLED:
                                     H(D(Z({}, F), { userStatus: null }));
                                     break;
-                                case P.a.ENROLLED:
+                                case w.a.ENROLLED:
                                     H(D(Z({}, F), { userStatus: B({ enrolledAt: new Date().toISOString() }) }));
                                     break;
-                                case P.a.COMPLETED_25:
+                                case w.a.COMPLETED_25:
                                     H(
                                         D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * ei,
+                                                streamProgressSeconds: 0.25 * el,
                                             }),
                                         }),
                                     );
                                     break;
-                                case P.a.COMPLETED_50:
+                                case w.a.COMPLETED_50:
                                     H(
                                         D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * ei,
+                                                streamProgressSeconds: 0.5 * el,
                                             }),
                                         }),
                                     );
                                     break;
-                                case P.a.COMPLETED_75:
+                                case w.a.COMPLETED_75:
                                     H(
                                         D(Z({}, F), {
                                             userStatus: B({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * ei,
+                                                streamProgressSeconds: 0.75 * el,
                                             }),
                                         }),
                                     );
                                     break;
-                                case P.a.COMPLETED_100:
+                                case w.a.COMPLETED_100:
                                     H(
                                         D(Z({}, F), {
                                             userStatus: B({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ei,
+                                                streamProgressSeconds: el,
                                             }),
                                         }),
                                     );
                                     break;
-                                case P.a.CLAIMED:
+                                case w.a.CLAIMED:
                                     H(
                                         D(Z({}, F), {
                                             userStatus: B({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ei,
+                                                streamProgressSeconds: el,
                                             }),
                                         }),
                                     );
@@ -716,7 +716,7 @@ function V() {
                                 variant: "heading-sm/semibold",
                                 children: "Channel Call Header",
                             }),
-                            (null == (l = F.userStatus) ? void 0 : l.claimedAt) != null &&
+                            (null == (i = F.userStatus) ? void 0 : i.claimedAt) != null &&
                                 (0, a.jsx)(m.Text, {
                                     color: "text-subtle",
                                     variant: "text-sm/normal",

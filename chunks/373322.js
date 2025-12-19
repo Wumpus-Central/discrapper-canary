@@ -1,11 +1,11 @@
 n.d(t, { Z: () => y }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(921254),
     o = n(24156),
-    c = n(236726),
+    c = n(620792),
     d = n(442837),
     u = n(110924),
     m = n(607070),
@@ -19,14 +19,14 @@ var a = n(54381),
 let j = ["#51BC9D"],
     y = (e) => {
         var t;
-        let { overlayRef: n, progressBarRef: l, isHovered: y } = e,
+        let { overlayRef: n, progressBarRef: i, isHovered: y } = e,
             { quest: C, isExpanded: _ } = r.useContext(f.A),
             { expansionSpring: S } = r.useContext(h.xo),
             { completionSpring: E, startCompletionAnimation: T } = (0, x.GX)(),
             O = (null == (t = C.userStatus) ? void 0 : t.completedAt) != null,
             N = r.useRef(!1),
-            w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
-            P = r.useRef(null),
+            P = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+            w = r.useRef(null),
             I = (0, d.e7)([p.Z], () => p.Z.hasLayers()),
             k = (0, u.Z)(I),
             [R, A] = r.useState(null),
@@ -39,18 +39,18 @@ let j = ["#51BC9D"],
             ),
             M = (0, s.uR)(R, Z),
             U = r.useCallback(() => {
-                if (w) return;
-                let e = l.current,
-                    t = P.current;
+                if (P) return;
+                let e = i.current,
+                    t = w.current;
                 if (null != t && null != e && M.isReady) {
-                    var n, a, r, i, s, o;
-                    let { x: l, y: c } = e.getBoundingClientRect(),
+                    var n, a, r, l, s, o;
+                    let { x: i, y: c } = e.getBoundingClientRect(),
                         { x: d, y: u } = t.getBoundingClientRect();
                     M.createMultipleConfetti(
-                        ((n = l - d),
+                        ((n = i - d),
                         (a = c - u),
                         (r = e.clientHeight),
-                        (i = e.clientWidth),
+                        (l = e.clientWidth),
                         (s = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -86,7 +86,7 @@ let j = ["#51BC9D"],
                                     },
                                     maxValue: {
                                         x: n + r,
-                                        y: a + i,
+                                        y: a + l,
                                     },
                                 },
                                 velocity: {
@@ -131,7 +131,7 @@ let j = ["#51BC9D"],
                         100,
                     );
                 }
-            }, [l, P, M, w]),
+            }, [i, w, M, P]),
             B = (0, u.Z)(_);
         return (r.useEffect(() => {
             O && _ && !B && (T(), U());
@@ -150,19 +150,19 @@ let j = ["#51BC9D"],
         r.useEffect(() => {
             y && O && (T(), U());
         }, [y, O, T, U]),
-        w)
+        P)
             ? null
             : (0, a.jsxs)("div", {
                   className: g.wrapper,
                   "aria-hidden": "true",
-                  ref: P,
+                  ref: w,
                   children: [
                       (0, a.jsx)(c.animated.div, {
                           className: g.background,
                           style: { opacity: E },
                       }),
                       (0, a.jsx)(c.animated.div, {
-                          className: i()(g.borders, g.bordersTopLeft),
+                          className: l()(g.borders, g.bordersTopLeft),
                           style: { opacity: E },
                       }),
                       (0, a.jsxs)(c.animated.div, {
@@ -189,7 +189,7 @@ let j = ["#51BC9D"],
                               null != n.current &&
                                   (0, o.createPortal)(
                                       (0, a.jsx)(c.animated.div, {
-                                          className: i()(g.borders, g.bordersBottom),
+                                          className: l()(g.borders, g.bordersBottom),
                                           style: { opacity: E },
                                       }),
                                       n.current,

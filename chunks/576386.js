@@ -6,17 +6,17 @@ var l = n(54381),
     s = n(481060),
     o = n(135483),
     c = n(171019),
-    u = n(104505),
-    d = n(74538),
+    d = n(104505),
+    u = n(74538),
     p = n(539530),
     m = n(566697),
     x = n(388032),
     g = n(332502);
 let h = (e) => {
         var t;
-        let { currentUser: n, nameplate: i, section: o, canUsePremiumCollectibles: d, isSelected: h, onClick: v } = e,
+        let { currentUser: n, nameplate: i, section: o, canUsePremiumCollectibles: u, isSelected: h, onClick: v } = e,
             f = (0, r.useRef)(null),
-            { isHoveringOrFocusing: b } = (0, u.Z)(f);
+            { isHoveringOrFocusing: b } = (0, d.Z)(f);
         return (0, l.jsxs)(s.P3F, {
             innerRef: f,
             "aria-label": null != (t = i.label) ? t : x.intl.string(x.t.x5CoXR),
@@ -33,7 +33,7 @@ let h = (e) => {
                 (0, l.jsx)(c.Z, {
                     isPurchaseSection: o === p.$0.PURCHASE,
                     isPremiumSection: o === p.$0.PREMIUM_PURCHASE,
-                    canUsePremiumCollectibles: d,
+                    canUsePremiumCollectibles: u,
                     skuId: i.skuId,
                 }),
             ],
@@ -41,7 +41,7 @@ let h = (e) => {
     },
     v = (e) => {
         let { currentUser: t, selectedNameplate: n, guildId: r, onSelect: i, onOpenShop: c } = e,
-            u = d.ZP.canUseCollectibles(t),
+            d = u.ZP.canUseCollectibles(t),
             m = (0, p.ZP)();
         return (0, l.jsx)(s.u2D, {
             className: g.inventory,
@@ -101,7 +101,7 @@ let h = (e) => {
                                             currentUser: t,
                                             nameplate: r,
                                             section: e.section,
-                                            canUsePremiumCollectibles: u,
+                                            canUsePremiumCollectibles: d,
                                             isSelected: (null == n ? void 0 : n.skuId) === r.skuId,
                                             onClick: () => i(r),
                                         },

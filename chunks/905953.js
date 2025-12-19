@@ -25,15 +25,15 @@ function _(e) {
         [S, E] = r.useState(!1),
         { trackUserProfileEditAction: T } = (0, m.KZ)(),
         O = (0, l.e7)([v.default], () => v.default.getId()),
-        { config: N, application: w } = (0, f.G)(),
-        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: k, startAuthorization: R } = (0, d.FG)(w),
+        { config: N, application: P } = (0, f.G)(),
+        { fetched: w, hasAlreadyLinked: I, canStartAuthorization: k, startAuthorization: R } = (0, d.FG)(P),
         A = (0, x.ZP)(O),
         { analyticsLocations: Z } = (0, c.ZP)(),
         D =
             null == A || null == (t = A.widgets)
                 ? void 0
-                : t.some((e) => e instanceof p.q && e.applicationId === (null == w ? void 0 : w.id));
-    return null != N && null != N.edit_profile_upsell_image && null != w && P
+                : t.some((e) => e instanceof p.q && e.applicationId === (null == P ? void 0 : P.id));
+    return null != N && null != N.edit_profile_upsell_image && null != P && w
         ? (0, a.jsx)(u.ZP, {
               contentTypes: I
                   ? D
@@ -54,7 +54,7 @@ function _(e) {
                           type: "image",
                           src: N.edit_profile_upsell_image,
                       },
-                      title: C.intl.format(C.t.TXDztH, { applicationName: w.name }),
+                      title: C.intl.format(C.t.TXDztH, { applicationName: P.name }),
                       body: l ? C.intl.string(C.t["63Kso0"]) : C.intl.string(C.t.HwXoeC),
                       onRequestClose: () => {
                           r(j.L.USER_DISMISS);
@@ -72,7 +72,7 @@ function _(e) {
                                                 .then(() => {
                                                     r(j.L.TAKE_ACTION), _();
                                                     let e = new p.q({
-                                                        applicationId: w.id,
+                                                        applicationId: P.id,
                                                         type: i.l.APPLICATION,
                                                     });
                                                     (0, h.qH)(e.type, e),

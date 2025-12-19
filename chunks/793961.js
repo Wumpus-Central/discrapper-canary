@@ -1,4 +1,4 @@
-n.d(e, { D: () => T });
+n.d(e, { D: () => S });
 var i = n(945577),
     l = n(611004),
     s = n(315322),
@@ -6,17 +6,17 @@ var i = n(945577),
     r = n(695346),
     a = n(313789),
     o = n(981631),
-    S = n(388032);
-let T = (0, u.J9)(a.n.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
-    useTitle: () => S.intl.string(S.t["NxjN+q"]),
-    useSearchTerms: () => [S.intl.string(S.t["t4+fbe"])],
+    T = n(388032);
+let S = (0, u.J9)(a.n.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
+    useTitle: () => T.intl.string(T.t["NxjN+q"]),
+    useSearchTerms: () => [T.intl.string(T.t["t4+fbe"])],
     useOptions: () => [
         {
-            name: S.intl.string(S.t["t+fGsk"]),
+            name: T.intl.string(T.t["t+fGsk"]),
             value: 0,
         },
         {
-            name: S.intl.string(S.t.MwlEGN),
+            name: T.intl.string(T.t.MwlEGN),
             value: 1,
         },
     ],

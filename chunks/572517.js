@@ -31,13 +31,13 @@ function h() {
         S = (0, d.Tl)(O, {
             colorStops: [0, 12, 100],
         }),
-        P = (0, d.$q)(b, S, {
+        x = (0, d.$q)(b, S, {
             backgroundSize: "cover, auto",
             backgroundPosition: "right center, 0% 0%",
         });
     return (0, r.jsxs)("div", {
         className: m.promotionalFooterBanner,
-        style: P,
+        style: x,
         children: [
             (0, r.jsx)("div", {
                 className: m.avatar,

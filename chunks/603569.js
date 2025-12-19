@@ -6,35 +6,35 @@ var i = n(54381),
     r = n(631885),
     a = n(106939),
     o = n(509613),
-    S = n(970013),
-    T = n(313789),
+    T = n(970013),
+    S = n(313789),
     c = n(526665),
     E = n(231582),
     d = n(726985),
-    g = n(388032),
-    _ = n(517319);
-let I = (0, o.wf)(T.n.FAMILY_CENTER_PANEL, {
+    _ = n(388032),
+    g = n(517319);
+let I = (0, o.wf)(S.n.FAMILY_CENTER_PANEL, {
         usePredicate: () => !(0, c.gN)("LegacyFamilyCenterPanel"),
-        useTitle: () => g.intl.string(_.default.RZqaJn),
+        useTitle: () => _.intl.string(g.default.RZqaJn),
         StronglyDiscouragedCustomComponent: a.M,
         buildLayout: () => [],
     }),
-    N = (0, o.wf)(T.n.FAMILY_CENTER_PANEL, {
+    N = (0, o.wf)(S.n.FAMILY_CENTER_PANEL, {
         usePredicate: () => (0, c.gN)("FamilyCenterPanel"),
-        useTitle: () => g.intl.string(_.default.RZqaJn),
+        useTitle: () => _.intl.string(g.default.RZqaJn),
         buildLayout: () => [E.W],
     }),
-    A = (0, o.m7)(T.n.FAMILY_CENTER_SIDEBAR_ITEM, {
-        useTitle: () => g.intl.string(_.default.RZqaJn),
+    A = (0, o.m7)(S.n.FAMILY_CENTER_SIDEBAR_ITEM, {
+        useTitle: () => _.intl.string(g.default.RZqaJn),
         getLegacySearchKey: () => ((0, c.Gl)("FamilyCenterPanel") ? void 0 : d.s6.PRIVACY_FAMILY_CENTER),
         icon: l.BFJ,
         trailing: {
-            type: S.W.STRONGLY_DISCOURAGED_CUSTOM,
+            type: T.W.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [s.z.FAMILY_CENTER_NEW_BADGE],
             useCustomDecoration: function (t) {
                 let e = (0, r.gU)();
                 return t === s.z.FAMILY_CENTER_NEW_BADGE
-                    ? (0, i.jsx)(u.IGR, { text: g.intl.string(g.t.y2b7CA) })
+                    ? (0, i.jsx)(u.IGR, { text: _.intl.string(_.t.y2b7CA) })
                     : e > 0
                       ? (0, i.jsx)(u.mAB, { count: e })
                       : null;

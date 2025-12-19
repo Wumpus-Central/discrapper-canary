@@ -1,11 +1,11 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(392711),
     o = n.n(s),
-    c = n(236726),
+    c = n(620792),
     d = n(442837),
     u = n(481060),
     m = n(607070),
@@ -17,7 +17,7 @@ let h = {
 };
 function f(e) {
     let { className: t, pageMultiplier: n } = e,
-        l = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        i = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         [s, f] = r.useState({
             x: 0,
             y: 0,
@@ -25,13 +25,13 @@ function f(e) {
         x = r.useMemo(
             () =>
                 o().throttle((e) => {
-                    if (!l)
+                    if (!i)
                         f({
                             x: (window.innerWidth - e.pageX * n) / 90,
                             y: (window.innerHeight - e.pageY * n) / 90,
                         });
                 }, 20),
-            [n, l],
+            [n, i],
         );
     r.useEffect(() => (window.addEventListener("mousemove", x), () => window.removeEventListener("mousemove", x)), [x]);
     let [b, g] = (0, u.q_F)(() => ({
@@ -50,7 +50,7 @@ function f(e) {
             style: {
                 transform: (0, c.to)([b.x, b.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
             },
-            className: i()(p.background, t),
+            className: l()(p.background, t),
         })
     );
 }

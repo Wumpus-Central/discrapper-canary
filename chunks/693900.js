@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(236726),
-    i = n(442837),
+    i = n(620792),
+    l = n(442837),
     s = n(481060),
     o = n(393238),
     c = n(110924),
@@ -32,7 +32,7 @@ function p(e) {
     var t;
     let { children: n } = e,
         { springConfig: m, isExpanded: p } = r.useContext(u),
-        h = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        h = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         { ref: f, height: x = null } = (0, o.ZP)(),
         b = null != (t = (0, c.Z)(x)) ? t : null,
         [{ height: g }, v] = (0, s.q_F)(() => ({
@@ -47,7 +47,7 @@ function p(e) {
                     immediate: !p || h || null === b,
                 });
         }, [x, v, p, h, b]),
-        (0, a.jsx)(l.animated.div, {
+        (0, a.jsx)(i.animated.div, {
             style: {
                 height: null === b ? "auto" : g,
                 overflow: "hidden",

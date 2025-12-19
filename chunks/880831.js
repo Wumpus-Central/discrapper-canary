@@ -8,7 +8,7 @@ var i = n(54381),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    s = n(236726),
+    s = n(620792),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -18,8 +18,8 @@ var i = n(54381),
     m = n(937889),
     g = n(739566),
     b = n(267128),
-    C = n(378233),
-    y = n(419922),
+    y = n(378233),
+    C = n(419922),
     v = n(375954),
     x = n(699516),
     O = n(768581),
@@ -66,12 +66,12 @@ function Z(e) {
             leadingIconClass: P.messageContentLeadingIcon,
             iconSize: _.WW,
         }),
-        A = (0, C.cv)(n),
+        A = (0, y.cv)(n),
         w =
             A.length > 0
                 ? A.map((e) =>
                       (0, i.jsx)(
-                          y.Z,
+                          C.Z,
                           {
                               className: P.sticker,
                               size: 128,
@@ -174,12 +174,12 @@ function T(e) {
         }),
         m = r.useRef({}),
         [g, b] = r.useState({}),
-        C = r.useCallback((e, t) => {
+        y = r.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        y = r.useRef(g);
+        C = r.useRef(g);
     r.useLayoutEffect(() => {
-        y.current = g;
+        C.current = g;
     }),
         r.useLayoutEffect(() => {
             let e = {},
@@ -189,7 +189,7 @@ function T(e) {
                 let r = null != (n = m.current[i.id]) ? n : 0;
                 (e[i.id] = t), (t += r + 8);
             }
-            (0, o.isEqual)(e, y.current) || b(e);
+            (0, o.isEqual)(e, C.current) || b(e);
         }, [h]);
     let x = h.map((e) => ({
             message: e,
@@ -232,7 +232,7 @@ function T(e) {
                 },
                 children: O((e, t) =>
                     (0, i.jsx)(s.animated.div, {
-                        ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
+                        ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
                         className: P.toastWrapper,
                         style: e,
                         children: (0, i.jsx)(Z, { message: t.message }),

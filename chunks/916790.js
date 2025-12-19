@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(35282), n(388685), n(49124), n(975844), n(781311);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(299608),
     o = n.n(s),
     c = n(913527),
@@ -25,10 +25,10 @@ var a = n(54381),
     T = n(981631),
     O = n(461015),
     N = n(663618);
-function w(e) {
+function P(e) {
     return parseFloat(e.toFixed(3));
 }
-let P = [
+let w = [
     {
         key: "store",
         cellClassName: O.actionColumn,
@@ -42,7 +42,7 @@ let P = [
         cellClassName: O.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return "".concat(w(t.time), " ms");
+            return "".concat(P(t.time), " ms");
         },
     },
 ];
@@ -58,7 +58,7 @@ function I(e) {
         );
     return (0, a.jsx)(p.zJl, {
         children: (0, a.jsx)(S.Z, {
-            columns: P,
+            columns: w,
             data: n,
         }),
     });
@@ -87,7 +87,7 @@ let k = [
                             }),
                             (0, a.jsxs)(C.Z9, {
                                 name: "Total Time",
-                                children: [w(n.totalTime), " ms"],
+                                children: [P(n.totalTime), " ms"],
                             }),
                         ],
                     }),
@@ -111,7 +111,7 @@ let k = [
 ];
 function R(e) {
     let { actionLog: t, initialHeight: n } = e,
-        l = r.useMemo(
+        i = r.useMemo(
             () =>
                 t.error
                     ? [
@@ -127,7 +127,7 @@ function R(e) {
                                   return (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)("div", {
-                                              className: i()(O.errorToolbar, N.toolbar),
+                                              className: l()(O.errorToolbar, N.toolbar),
                                               children: (0, a.jsx)("div", {
                                                   className: N.toolbarGroup,
                                                   children: (0, a.jsx)(m.zx, {
@@ -150,7 +150,7 @@ function R(e) {
                     : k,
             [t],
         ),
-        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: l }, [l]);
+        { TabBar: s, renderSelectedTab: o } = (0, E.ZP)({ tabs: i }, [i]);
     return (0, a.jsxs)(_.Z, {
         className: O.subPanel,
         minHeight: 100,
@@ -158,14 +158,14 @@ function R(e) {
         children: [
             (0, a.jsx)(s, {}),
             (0, a.jsxs)(f.ZP, {
-                className: i()(N.headerBar, O.subPanelHeaderBar),
+                className: l()(N.headerBar, O.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(f.ZP.Icon, {
                         icon: p.xVZ,
                         tooltip: t.name,
                     }),
                     (0, a.jsx)(f.ZP.Title, {
-                        wrapperClassName: i()(N.headerTitle, N.dispatcherHeader),
+                        wrapperClassName: l()(N.headerTitle, N.dispatcherHeader),
                         className: N.headerTitleText,
                         children: t.name,
                     }),
@@ -213,7 +213,7 @@ let A = [
             cellClassName: O.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return "".concat(w(t.totalTime), " ms");
+                return "".concat(P(t.totalTime), " ms");
             },
         },
         {
@@ -236,7 +236,7 @@ let A = [
 function D() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        l = (function (e) {
+        i = (function (e) {
             let [t, n] = r.useState(e.logs);
             return (
                 r.useEffect(() => {
@@ -255,13 +255,13 @@ function D() {
         })(h.Z.actionLogger),
         s = r.useMemo(
             () =>
-                l
+                i
                     .map((e) => ({
                         key: e.id.toString(),
                         actionLog: e,
                     }))
                     .toReversed(),
-            [l],
+            [i],
         ),
         [c, d] = r.useState(s),
         [m, f] = r.useState(s),
@@ -282,7 +282,7 @@ function D() {
         T = x ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(N.panel, O.panel),
+        className: l()(N.panel, O.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: O.toolbar,

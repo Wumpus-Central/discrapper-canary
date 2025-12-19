@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var i = n(54381);
 n(473749);
 var r = n(512722),
@@ -15,7 +15,7 @@ var r = n(512722),
     m = n(871499),
     g = n(981631),
     b = n(388032);
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -40,11 +40,11 @@ function C(e) {
     }
     return e;
 }
-function y(e) {
+function C(e) {
     var {
             applicationId: t,
             stream: r,
-            channel: y,
+            channel: C,
             exitFullScreen: v,
             appContext: x,
             analyticsLocation: O,
@@ -95,32 +95,32 @@ function y(e) {
         ]);
     let A = (0, d.bp)(),
         { parentAnalyticsLocation: w } = (0, c.ZP)(),
-        M = null == y ? void 0 : y.getGuildId(),
+        M = null == C ? void 0 : C.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
-        L = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0)),
-        D = null == t || j ? o.ejJ : o.gQj,
-        k = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
-    return null != L && S
+        D = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0)),
+        k = null == t || j ? o.ejJ : o.gQj,
+        L = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
+    return null != D && S
         ? (0, i.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, u.v)(w, u.d.INVITE), s.h7(L, !1, A);
+                  null != w && (0, u.v)(w, u.d.INVITE), s.h7(D, !1, A);
               },
-              iconComponent: D,
-              label: k,
+              iconComponent: k,
+              label: L,
               iconClassName: _,
               look: P,
               size: I,
               buttonText: Z,
               color: null != T ? T : void 0,
           })
-        : null != R && null != y && h.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
+        : null != R && null != C && h.Z.can(g.Plq.CREATE_INSTANT_INVITE, C)
           ? (0, i.jsx)(
                 m.Z,
-                C(
+                y(
                     {
                         onClick: () => {
                             l()(null != R, "guild cannot be null"),
-                                l()(null != y, "channel cannot be null"),
+                                l()(null != C, "channel cannot be null"),
                                 null != w && (0, u.v)(w, u.d.INVITE),
                                 (function (e) {
                                     let {
@@ -145,7 +145,7 @@ function y(e) {
                                                     var o, s;
                                                     return (0, i.jsx)(
                                                         e,
-                                                        ((o = C({}, n)),
+                                                        ((o = y({}, n)),
                                                         (s = s =
                                                             {
                                                                 guild: t,
@@ -188,7 +188,7 @@ function y(e) {
                                         );
                                 })({
                                     guild: R,
-                                    channel: y,
+                                    channel: C,
                                     streamUserId: null == r ? void 0 : r.ownerId,
                                     applicationId: t,
                                     appContext: null != x ? x : A,
@@ -197,8 +197,8 @@ function y(e) {
                                     guildScheduledEvent: E,
                                 });
                         },
-                        iconComponent: D,
-                        label: k,
+                        iconComponent: k,
+                        label: L,
                         iconClassName: _,
                         look: P,
                         size: I,

@@ -11,8 +11,8 @@ var i = n(442837),
     c = n(341968),
     E = n(743725),
     d = n(374509),
-    g = n(968021),
-    _ = n(921356),
+    _ = n(968021),
+    g = n(921356),
     I = n(388032);
 let N = (0, l.k4)(r.n.ACCOUNT_AUTHENTICATION_CATEGORY, {
     useTitle: () => I.intl.string(I.t.pKSjEj),
@@ -27,5 +27,5 @@ let N = (0, l.k4)(r.n.ACCOUNT_AUTHENTICATION_CATEGORY, {
               }
             : null;
     },
-    buildLayout: () => [c.W, g.M, _.a, S.g, o.D, T.o, E.c, d.g],
+    buildLayout: () => [c.W, _.M, g.a, S.g, o.D, T.o, E.c, d.g],
 });

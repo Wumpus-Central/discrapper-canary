@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(177342),
     g = n(621600),
     b = n(870991),
-    C = n(981631),
-    y = n(388032);
+    y = n(981631),
+    C = n(388032);
 function v(e) {
     let { channelId: t, warningId: v, senderId: x } = e,
         O = (0, b.E4)(),
@@ -36,7 +36,7 @@ function v(e) {
         };
     return (
         r.useEffect(() => {
-            (0, h.MC)(C.rMx.SAFETY_WARNING_VIEWED, {
+            (0, h.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: v,
                 senderId: x,
@@ -49,12 +49,12 @@ function v(e) {
             warningId: v,
             senderId: x,
             warningType: f.pj.LIKELY_ATO,
-            header: y.intl.string(y.t.R8UsiI),
-            description: y.intl.string(y.t.lI8nQl),
+            header: C.intl.string(C.t.R8UsiI),
+            description: C.intl.string(C.t.lI8nQl),
             onDismiss: E,
             buttons: [
                 {
-                    text: y.intl.string(y.t.tC1pvL),
+                    text: C.intl.string(C.t.tC1pvL),
                     variant: "primary",
                     onClick: () => {
                         (0, a.ZDy)(async () => {
@@ -67,7 +67,7 @@ function v(e) {
                                     channelId: t,
                                     warningId: v,
                                     senderId: x,
-                                    description: y.intl.string(y.t["/uid3p"]),
+                                    description: C.intl.string(C.t["/uid3p"]),
                                     safetyTipRows: O.map((e, t) =>
                                         (0, i.jsx)(
                                             u.q,
@@ -84,9 +84,9 @@ function v(e) {
                                         (0, i.jsx)(
                                             d.JZ,
                                             {
-                                                title: y.intl.string(y.t.ftIK2A),
-                                                description: y.intl.string(y.t.w2ve0t),
-                                                buttonText: y.intl.string(y.t.ftIK2A),
+                                                title: C.intl.string(C.t.ftIK2A),
+                                                description: C.intl.string(C.t.w2ve0t),
+                                                buttonText: C.intl.string(C.t.ftIK2A),
                                                 onButtonPress: () => {
                                                     j(h.NM.USER_MODAL_MUTE), l();
                                                 },
@@ -106,7 +106,7 @@ function v(e) {
                                         children: (0, i.jsx)(a.Heading, {
                                             variant: "heading-sm/medium",
                                             color: "text-link",
-                                            children: y.intl.format(y.t.UkH122, { learnMoreLink: b.D8 }),
+                                            children: C.intl.format(C.t.UkH122, { learnMoreLink: b.D8 }),
                                         }),
                                     }),
                                 });
@@ -122,7 +122,7 @@ function v(e) {
                     },
                 },
                 {
-                    text: y.intl.string(y.t.ftIK2A),
+                    text: C.intl.string(C.t.ftIK2A),
                     onClick: () => j(h.NM.USER_BANNER_MUTE),
                 },
             ],

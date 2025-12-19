@@ -7,8 +7,8 @@ n.d(t, {
     n(539854);
 var a = n(54381),
     r = n(473749),
-    l = n(24156),
-    i = n(236726),
+    i = n(24156),
+    l = n(620792),
     s = n(393238),
     o = n(945165);
 function c(e) {
@@ -62,7 +62,7 @@ let u = r.createContext({
         collapsedContentRef: r.createRef(),
         recalculateAnimationPositions: () => {},
         animatedComponentProps: [],
-        expansionSpring: new i.SpringValue(0),
+        expansionSpring: new l.SpringValue(0),
         mountPoints: new Map(),
     }),
     m = r.forwardRef(function (e, t) {
@@ -107,8 +107,8 @@ let u = r.createContext({
                   ? (_ = (0, a.jsxs)(a.Fragment, {
                         children: [
                             "collapsed" === d &&
-                                (0, l.createPortal)(
-                                    (0, a.jsx)(i.animated.div, {
+                                (0, i.createPortal)(
+                                    (0, a.jsx)(l.animated.div, {
                                         style: {
                                             position: "absolute",
                                             opacity: x.to({
@@ -121,8 +121,8 @@ let u = r.createContext({
                                     C,
                                 ),
                             "expanded" === d &&
-                                (0, l.createPortal)(
-                                    (0, a.jsx)(i.animated.div, {
+                                (0, i.createPortal)(
+                                    (0, a.jsx)(l.animated.div, {
                                         style: {
                                             position: "absolute",
                                             opacity: x.to({
@@ -136,7 +136,7 @@ let u = r.createContext({
                                 ),
                         ],
                     }))
-                  : "collapsed" === d && (_ = (0, l.createPortal)(o(v), C)),
+                  : "collapsed" === d && (_ = (0, i.createPortal)(o(v), C)),
             (0, a.jsxs)("div", {
                 style: { opacity: +((null == _ && "collapsed" === d) || null == C) },
                 ref: t,
@@ -145,21 +145,21 @@ let u = r.createContext({
         );
     }),
     p = (e) => {
-        let { children: t, expandedContentRef: n, collapsedContentRef: l, expansionSpring: i } = e,
+        let { children: t, expandedContentRef: n, collapsedContentRef: i, expansionSpring: l } = e,
             [s, m] = r.useState({}),
             [p, h] = r.useState([]),
             [f, x] = r.useState(() => new Map()),
             b = r.useCallback((e, t, n) => {
                 m((a) => {
                     var r;
-                    let l =
+                    let i =
                         null != (r = a[t])
                             ? r
                             : {
                                   expanded: null,
                                   collapsed: null,
                               };
-                    return d(c({}, a), { [t]: d(c({}, l), { [n]: e }) });
+                    return d(c({}, a), { [t]: d(c({}, i), { [n]: e }) });
                 }),
                     x((e) => {
                         let n = new Map(e);
@@ -170,14 +170,14 @@ let u = r.createContext({
                 let n = !1;
                 m((a) => {
                     var r;
-                    let l =
+                    let i =
                         null != (r = a[e])
                             ? r
                             : {
                                   expanded: null,
                                   collapsed: null,
                               };
-                    return (l[t] = null), (n = null == l.expanded && null == l.collapsed), d(c({}, a), { [e]: l });
+                    return (i[t] = null), (n = null == i.expanded && null == i.collapsed), d(c({}, a), { [e]: i });
                 }),
                     n &&
                         x((t) => {
@@ -188,19 +188,19 @@ let u = r.createContext({
             v = r.useCallback(() => {
                 let e = [];
                 for (let t in s) {
-                    if (null == s[t] || null == n.current || null == l.current) continue;
+                    if (null == s[t] || null == n.current || null == i.current) continue;
                     let a = s[t].collapsed,
                         r = s[t].expanded;
                     if (null == a || null == r) continue;
-                    let i = r.getBoundingClientRect(),
+                    let l = r.getBoundingClientRect(),
                         c = n.current.getBoundingClientRect(),
                         d = a.getBoundingClientRect(),
-                        u = l.current.getBoundingClientRect(),
-                        m = i.top - c.top + o.jK,
+                        u = i.current.getBoundingClientRect(),
+                        m = l.top - c.top + o.jK,
                         p = d.top - u.top,
-                        h = i.left - c.left + o.jK,
+                        h = l.left - c.left + o.jK,
                         f = d.left - u.left,
-                        x = -i.right + c.right + o.jK,
+                        x = -l.right + c.right + o.jK,
                         b = -d.right + u.right;
                     e.push({
                         id: t,
@@ -210,21 +210,21 @@ let u = r.createContext({
                         expandedRight: x,
                         collapsedTop: p,
                         expandedTop: m,
-                        width: i.width,
+                        width: l.width,
                     });
                 }
                 h(e);
-            }, [s, n, l, h]);
+            }, [s, n, i, h]);
         return (0, a.jsx)(u.Provider, {
             value: {
                 registerComponent: b,
                 unregisterComponent: g,
                 animatedComponents: s,
                 expandedContentRef: n,
-                collapsedContentRef: l,
+                collapsedContentRef: i,
                 recalculateAnimationPositions: v,
                 animatedComponentProps: p,
-                expansionSpring: i,
+                expansionSpring: l,
                 mountPoints: f,
             },
             children: t,

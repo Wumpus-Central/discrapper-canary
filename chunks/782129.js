@@ -6,10 +6,10 @@ var i = n(323472),
     r = n(476203),
     a = n(231365),
     o = n(485356),
-    S = n(91981),
-    T = n(388032);
+    T = n(91981),
+    S = n(388032);
 let c = (0, l.CB)(s.n.STREAMING_ADVANCED_ACCORDION, {
-    useTitle: (t) => (t ? T.intl.string(T.t.qrMyvm) : T.intl.string(T.t.LEtTNl)),
+    useTitle: (t) => (t ? S.intl.string(S.t.qrMyvm) : S.intl.string(S.t.LEtTNl)),
     useCollapsedSubtitle: () => (0, i.u)(s.n.STREAMING_ADVANCED_ACCORDION),
-    buildLayout: () => [a.b, o.r, S.W, r.B, u.s],
+    buildLayout: () => [a.b, o.r, T.W, r.B, u.s],
 });

@@ -2,8 +2,8 @@ n.d(t, { Q: () => h });
 var a = n(54381);
 n(473749);
 var r = n(481060),
-    l = n(313789),
-    i = n(518596),
+    i = n(313789),
+    l = n(518596),
     s = n(617136),
     o = n(49436),
     c = n(981631),
@@ -21,7 +21,7 @@ function m(e) {
                 questContentCTA: s.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                 sourceQuestContent: d,
             }),
-                (0, i.openUserSettings)(l.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
+                (0, l.openUserSettings)(i.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
         },
         children: (0, a.jsx)(r.Text, {
             "aria-label": t,

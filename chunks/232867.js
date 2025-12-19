@@ -1,13 +1,13 @@
 n.d(t, { m: () => m }), n(388685);
 var a = n(473749),
     r = n(544891),
-    l = n(959546),
-    i = n(981631),
+    i = n(959546),
+    l = n(981631),
     s = n(474936);
 let o = async () =>
         (
             await r.tn.get({
-                url: i.ANM.ENTITLEMENTS_FOR_APPLICATION(s.CL),
+                url: l.ANM.ENTITLEMENTS_FOR_APPLICATION(s.CL),
                 oldFormErrors: !0,
                 query: {
                     exclude_consumed: !0,
@@ -15,7 +15,7 @@ let o = async () =>
                 },
                 rejectWithError: !0,
             })
-        ).body.map((e) => l.Z.createFromServer(e)),
+        ).body.map((e) => i.Z.createFromServer(e)),
     c = async (e) => {
         await r.tn.post({
             url: "/debug/entitlements/fractional-premium",
@@ -43,7 +43,7 @@ let o = async () =>
     m = () => {
         let [e, t] = a.useState([]),
             [n, r] = a.useState(!1),
-            l = (0, a.useCallback)(async () => {
+            i = (0, a.useCallback)(async () => {
                 try {
                     r(!0);
                     let e = await o();
@@ -52,24 +52,24 @@ let o = async () =>
                     r(!1);
                 }
             }, []),
-            i = (0, a.useCallback)(
+            l = (0, a.useCallback)(
                 async (e) => {
-                    await c(e), await l();
+                    await c(e), await i();
                 },
-                [l],
+                [i],
             );
         return {
-            grantFractionalPremium: i,
+            grantFractionalPremium: l,
             deleteFractionalPremium: (0, a.useCallback)(
                 async (e) => {
-                    await d(e), await l();
+                    await d(e), await i();
                 },
-                [l],
+                [i],
             ),
             triggerNextEntitlementFulfillment: (0, a.useCallback)(async () => {
-                await u(), await l();
-            }, [l]),
-            refreshEntitlementList: l,
+                await u(), await i();
+            }, [i]),
+            refreshEntitlementList: i,
             entitlements: e,
             loading: n,
         };

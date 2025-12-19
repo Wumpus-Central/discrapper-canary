@@ -1,4 +1,4 @@
-n.d(e, { Q: () => T });
+n.d(e, { Q: () => S });
 var i = n(442837),
     l = n(179658),
     s = n(509613),
@@ -6,10 +6,10 @@ var i = n(442837),
     r = n(695346),
     a = n(313789),
     o = n(569550),
-    S = n(388032);
-let T = (0, s.qs)(a.n.VOICE_AND_VIDEO_STREAM_INFO_OVERLAY, {
-    useTitle: () => S.intl.string(S.t["0CEP6e"]),
-    useSubtitle: () => S.intl.string(S.t["kBXuW+"]),
+    T = n(388032);
+let S = (0, s.qs)(a.n.VOICE_AND_VIDEO_STREAM_INFO_OVERLAY, {
+    useTitle: () => T.intl.string(T.t["0CEP6e"]),
+    useSubtitle: () => T.intl.string(T.t["kBXuW+"]),
     useValue: function () {
         return (0, i.e7)([u.default], () => u.default.isStreamInfoOverlayEnabled);
     },

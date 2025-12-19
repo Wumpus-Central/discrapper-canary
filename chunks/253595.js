@@ -6,51 +6,51 @@ var i = n(54381),
     r = n(442837),
     a = n(579806),
     o = n(972959),
-    S = n(509613),
-    T = n(131951),
+    T = n(509613),
+    S = n(131951),
     c = n(313789),
     E = n(710808),
     d = n(65154),
-    g = n(388032);
-let _ = (0, o.H)(() => ({
+    _ = n(388032);
+let g = (0, o.H)(() => ({
     isUploading: !1,
     isDisabled: !1,
 }));
 async function I() {
     await (0, E.xI)({
-        onUploadStart: () => _.setState({ isUploading: !0 }),
+        onUploadStart: () => g.setState({ isUploading: !0 }),
         onUploadFinish: () =>
-            _.setState({
+            g.setState({
                 isUploading: !1,
                 isDisabled: !0,
             }),
     });
 }
-let N = (0, S.ON)(c.n.VOICE_AND_VIDEO_DEBUG_LOGGING, {
-    useSearchTerms: () => [g.intl.string(g.t["726JHL"]), g.intl.string(g.t.EbwFfR), g.intl.string(g.t.nuPtYi)],
+let N = (0, T.ON)(c.n.VOICE_AND_VIDEO_DEBUG_LOGGING, {
+    useSearchTerms: () => [_.intl.string(_.t["726JHL"]), _.intl.string(_.t.EbwFfR), _.intl.string(_.t.nuPtYi)],
     usePredicate: function () {
-        let t = (0, r.e7)([T.Z], () => T.Z.supports(d.AN.DEBUG_LOGGING));
+        let t = (0, r.e7)([S.Z], () => S.Z.supports(d.AN.DEBUG_LOGGING));
         return s.FB && t && null != a.Z.fileManager.readLogFiles;
     },
     Component: function () {
-        let t = (0, r.e7)([T.Z], () => T.Z.getDebugLogging()),
-            e = _.useField("isUploading"),
-            n = _.useField("isDisabled"),
+        let t = (0, r.e7)([S.Z], () => S.Z.getDebugLogging()),
+            e = g.useField("isUploading"),
+            n = g.useField("isDisabled"),
             s = l.useId();
         return (0, i.jsxs)("fieldset", {
             children: [
                 (0, i.jsx)(u.nn4, {
                     tag: "legend",
                     id: s,
-                    children: g.intl.string(g.t["FjN+et"]),
+                    children: _.intl.string(_.t["FjN+et"]),
                 }),
                 (0, i.jsxs)(u.Kqy, {
                     direction: "vertical",
                     gap: 4,
                     children: [
                         (0, i.jsx)(u.rsf, {
-                            label: g.intl.string(g.t["726JHL"]),
-                            description: g.intl.string(g.t["/7ak9Q"]),
+                            label: _.intl.string(_.t["726JHL"]),
+                            description: _.intl.string(_.t["/7ak9Q"]),
                             checked: t,
                             onChange: E.rT,
                         }),
@@ -61,17 +61,17 @@ let N = (0, S.ON)(c.n.VOICE_AND_VIDEO_DEBUG_LOGGING, {
                                 children: [
                                     (0, i.jsx)(u.zxk, {
                                         variant: "secondary",
-                                        text: g.intl.string(g.t.EbwFfR),
+                                        text: _.intl.string(_.t.EbwFfR),
                                         onClick: I,
                                         loading: e,
                                         disabled: n,
-                                        "aria-label": g.intl.string(g.t.aY1OH2),
+                                        "aria-label": _.intl.string(_.t.aY1OH2),
                                     }),
                                     (0, i.jsx)(u.zxk, {
                                         variant: "secondary",
-                                        text: g.intl.string(g.t.nuPtYi),
+                                        text: _.intl.string(_.t.nuPtYi),
                                         onClick: E.W2,
-                                        "aria-label": g.intl.string(g.t["L/hFOe"]),
+                                        "aria-label": _.intl.string(_.t["L/hFOe"]),
                                     }),
                                 ],
                             }),

@@ -19,8 +19,8 @@ var r = n(54381),
     b = n(509545),
     O = n(669079),
     S = n(63063),
-    P = n(74538),
-    x = n(987209),
+    x = n(74538),
+    P = n(987209),
     E = n(563132),
     w = n(409813),
     I = n(51499),
@@ -30,8 +30,8 @@ var r = n(54381),
     N = n(809144),
     M = n(698708),
     _ = n(844068),
-    R = n(405685),
-    A = n(981631),
+    A = n(405685),
+    R = n(981631),
     L = n(474936),
     Z = n(388032),
     D = n(903845);
@@ -59,7 +59,7 @@ function F(e) {
             isPremium: en,
             premiumBrandRefreshBackgroundClassName: er,
         } = (0, E.JL)(),
-        { isGift: el, giftRecipient: ei, giftMessage: ea, claimableRewards: es } = (0, x.wD)(),
+        { isGift: el, giftRecipient: ei, giftMessage: ea, claimableRewards: es } = (0, P.wD)(),
         eo = (0, h.a5)(X),
         eu = (null == (t = (0, m.Z)()) ? void 0 : t.planSelectionBanner) != null,
         ec = el && eo && null != es && es.length > 0 && eu,
@@ -83,7 +83,7 @@ function F(e) {
         eb = null != (i = eg || ev) && i,
         eO = l.useMemo(
             () =>
-                (0, P.V7)({
+                (0, x.V7)({
                     skuId: Q,
                     isPremium: en,
                     multiMonthPlans: eh ? ep : [],
@@ -93,16 +93,16 @@ function F(e) {
             [Q, en, ep, V, eh, ee],
         ),
         eS = ev && eO.includes(L.Xh.PREMIUM_MONTH_TIER_2) ? L.Xh.PREMIUM_MONTH_TIER_2 : eO[0],
-        eP = (0, s.e7)([b.Z], () => b.Z.get(eS)),
-        ex = [
+        ex = (0, s.e7)([b.Z], () => b.Z.get(eS)),
+        eP = [
             {
-                planId: null == eP ? void 0 : eP.id,
+                planId: null == ex ? void 0 : ex.id,
                 quantity: 1,
             },
         ],
         [eE, ew] = l.useState(eb),
         [eI, eT] = (0, p.ED)({
-            items: ex,
+            items: eP,
             renewal: !1,
             preventFetch: !eb,
             applyEntitlements: !0,
@@ -138,8 +138,8 @@ function F(e) {
                   (0, r.jsxs)(k.C3, {
                       children: [
                           eC && (0, r.jsx)("hr", { className: D.planSelectSeparatorUpper }),
-                          (0, r.jsx)(R.a, {
-                              planSkuId: null == eP ? void 0 : eP.skuId,
+                          (0, r.jsx)(A.a, {
+                              planSkuId: null == ex ? void 0 : ex.skuId,
                               referralTrialOfferId: K,
                           }),
                           (0, r.jsx)(_.Z, {}),
@@ -167,7 +167,7 @@ function F(e) {
                                       (0, r.jsx)(o.Text, {
                                           variant: "text-xs/normal",
                                           children: Z.intl.format(Z.t.BHtnqA, {
-                                              link: S.Z.getArticleURL(A.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                              link: S.Z.getArticleURL(R.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                           }),
                                       }),
                                   ],

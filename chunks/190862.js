@@ -84,8 +84,8 @@ function O(e) {
         j = O && !i && g,
         x = (0, o.mR)(t),
         P = (0, o.Hy)(t, { isCurrentUser: O }),
-        w = (0, o.kQ)(t),
-        I = 1 === (0, o.Gv)(t.type);
+        I = (0, o.kQ)(t),
+        w = 1 === (0, o.Gv)(t.type);
     return (0, r.jsx)(
         v,
         h(
@@ -96,12 +96,12 @@ function O(e) {
                 headerTitle: x,
                 headerSubtitle: P,
                 headerActionButtons:
-                    O && !I
+                    O && !w
                         ? [
                               (0, r.jsx)(
                                   s.yX,
                                   {
-                                      disabled: w,
+                                      disabled: I,
                                       widgetType: t.type,
                                       widget: t,
                                       onAddGame: () => f(!0),

@@ -9,14 +9,14 @@ var n = r(54381),
     l = r(120356),
     o = r.n(l),
     s = r(828700),
-    c = r(979554),
-    a = r(311570),
+    a = r(979554),
+    c = r(311570),
     u = r(442837),
     d = r(481060),
     f = r(100527),
     m = r(906732),
-    O = r(597688),
-    g = r(237031),
+    g = r(597688),
+    O = r(237031),
     h = r(216541),
     p = r(956472),
     I = r(104505),
@@ -66,13 +66,13 @@ function A(e) {
     });
 }
 function R(e) {
-    let { item: t, cardSize: r = w.U.SMALL, remainingCount: l, onClick: s, renderItemPreview: c } = e,
-        a = i.useRef(null),
+    let { item: t, cardSize: r = w.U.SMALL, remainingCount: l, onClick: s, renderItemPreview: a } = e,
+        c = i.useRef(null),
         u = i.useRef(null),
         { isHoveringOrFocusing: f } = (0, I.Z)(u),
         m = !0 === t.isOwned;
     return (0, n.jsx)("div", {
-        ref: a,
+        ref: c,
         className: x.container,
         children: (0, n.jsx)(d.P3F, {
             tag: "div",
@@ -82,7 +82,7 @@ function R(e) {
             children: (0, n.jsxs)("div", {
                 className: o()(x.cardPreview, x.seeMoreCardPreview),
                 children: [
-                    c(!m && f),
+                    a(!m && f),
                     (0, n.jsx)("div", {
                         className: x.seeMoreOverlay,
                         children: (0, n.jsx)(d.Text, {
@@ -139,8 +139,8 @@ function _(e) {
             "analyticsLocations",
             "isDragging",
         ]);
-    let { item: Z, isOwner: F } = U,
-        { analyticsLocations: H } = (0, m.ZP)(...(null != _ ? _ : [])),
+    let { item: Z, isOwner: H } = U,
+        { analyticsLocations: F } = (0, m.ZP)(...(null != _ ? _ : [])),
         D = (0, s.TH)(),
         W = i.useRef(null),
         { isHoveringOrFocusing: z } = (0, I.Z)(W),
@@ -151,32 +151,32 @@ function _(e) {
             if (q) return k.intl.formatToPlainString(k.t["/l2CAE"], { itemName: Z.skuName });
             let e = Z.collectiblesItem.type;
             switch (e) {
-                case c.Z.AVATAR_DECORATION:
+                case a.Z.AVATAR_DECORATION:
                     return k.intl.formatToPlainString(k.t.IQQYef, { itemName: Z.skuName });
-                case c.Z.PROFILE_EFFECT:
+                case a.Z.PROFILE_EFFECT:
                     return k.intl.formatToPlainString(k.t["x/MGWy"], { itemName: Z.skuName });
-                case c.Z.NAMEPLATE:
+                case a.Z.NAMEPLATE:
                     return k.intl.formatToPlainString(k.t.eVNt6E, { itemName: Z.skuName });
                 default:
                     (0, v.vE)(e);
             }
         })(),
-        Y = F || B ? k.intl.string(k.t.FdGl5A) : k.intl.string(k.t.ilhtIa),
-        V = F || B ? void 0 : d.OgN,
+        Y = H || B ? k.intl.string(k.t.FdGl5A) : k.intl.string(k.t.ilhtIa),
+        V = H || B ? void 0 : d.OgN,
         J = i.useCallback(() => {
             let e = D.pathname.startsWith(E.Z5c.COLLECTIBLES_SHOP);
-            if (F || B) {
-                let t = !F && B;
+            if (H || B) {
+                let t = !H && B;
                 if (e) {
-                    let e = O.Z.getProduct(Z.skuId),
-                        r = O.Z.getCategoryForProduct(Z.skuId);
+                    let e = g.Z.getProduct(Z.skuId),
+                        r = g.Z.getCategoryForProduct(Z.skuId);
                     if (null != e && null != r) {
                         t || (0, L.closeUserProfileModal)(),
-                            (0, g.T)({
+                            (0, O.T)({
                                 product: e,
                                 category: r,
                                 shouldCheckoutWithOrbs: (0, p.oQ)({ product: e }),
-                                analyticsLocations: H,
+                                analyticsLocations: F,
                                 analyticsSource: f.Z.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
                                 tab: void 0,
@@ -192,11 +192,11 @@ function _(e) {
                         skuId: Z.skuId,
                         isGift: !0,
                         giftingOrigin: T,
-                        analyticsLocations: H,
+                        analyticsLocations: F,
                         giftRecipient: l,
-                        variantsReturnStyle: a.v.VARIANTS_GROUP,
+                        variantsReturnStyle: c.v.VARIANTS_GROUP,
                     });
-        }, [D.pathname, Z.skuId, H, F, B, l, T, A]),
+        }, [D.pathname, Z.skuId, F, H, B, l, T, A]),
         K = i.useCallback(
             () =>
                 q || !o

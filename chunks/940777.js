@@ -73,7 +73,7 @@ function R() {
         B = (0, s.e7)([v.Z], () => v.Z.getChannel(U)),
         F = (0, y.Z)((e) => e.guildId) === N.I_8,
         { badge: V, unread: H } = (0, I.Z)(G),
-        z = (function (e) {
+        W = (function (e) {
             let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 r = (0, s.e7)([O.Z], () => {
@@ -110,7 +110,7 @@ function R() {
                 })
             );
         })(G),
-        W = V > 0 ? (0, m.N)(V) : null,
+        z = V > 0 ? (0, m.N)(V) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
@@ -127,8 +127,8 @@ function R() {
                 children: (0, r.jsx)(_.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: !0,
-                        upperBadge: z,
-                        lowerBadge: W,
+                        upperBadge: W,
+                        lowerBadge: z,
                         children: (0, r.jsx)(
                             c.LYs,
                             ((e = T({}, l)),

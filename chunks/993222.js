@@ -27,33 +27,33 @@ let j = (e) => {
             T = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
             O = c.ZP.canUseCollectibles(T),
             N = (0, x.Iw)(t),
-            { isOrbExclusive: w } = (0, b.Ip)({
+            { isOrbExclusive: P } = (0, b.Ip)({
                 product: t,
                 isPremiumUser: O,
                 prioritizedCurrency: f,
                 hasDiscountOffer: null != N,
             }),
-            P = n;
+            w = n;
         if (
-            (null == P &&
+            (null == w &&
                 (!r && (0, m.L9)(null == S ? void 0 : S.unpublishedAt)
-                    ? (P = h.Zh.LIMITED_TIME)
+                    ? (w = h.Zh.LIMITED_TIME)
                     : !C && !y && (0, m.Yq)(t.skuId)
-                      ? (P = h.Zh.NEW)
+                      ? (w = h.Zh.NEW)
                       : null != j && 3 === j
-                        ? (P = h.Zh.THREE_DAY_RENTAL)
+                        ? (w = h.Zh.THREE_DAY_RENTAL)
                         : null != j && 7 === j
-                          ? (P = h.Zh.SEVEN_DAY_RENTAL)
+                          ? (w = h.Zh.SEVEN_DAY_RENTAL)
                           : null != j
-                            ? (P = h.Zh.RENTAL)
-                            : w
-                              ? (P = h.Zh.ORBS_EXCLUSIVE)
-                              : _ && (P = h.Zh.NITRO_EXCLUSIVE)),
-            null == P || P === h.Zh.NONE)
+                            ? (w = h.Zh.RENTAL)
+                            : P
+                              ? (w = h.Zh.ORBS_EXCLUSIVE)
+                              : _ && (w = h.Zh.NITRO_EXCLUSIVE)),
+            null == w || w === h.Zh.NONE)
         )
             return null;
         let I = null;
-        switch (P) {
+        switch (w) {
             case h.Zh.LIMITED_TIME:
                 I =
                     null != E

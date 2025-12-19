@@ -18,8 +18,8 @@ var i = n(54381),
     m = n(933557),
     g = n(592125),
     b = n(626135),
-    C = n(140106),
-    y = n(981631),
+    y = n(140106),
+    C = n(981631),
     v = n(388032),
     x = n(718937);
 function O(e) {
@@ -85,7 +85,7 @@ function j(e) {
             (0, i.jsxs)(c.P3F, {
                 className: a()(x.iconContainer, { [x.petite]: s }),
                 "aria-label": v.intl.string(v.t["0qPSMV"]),
-                onClick: () => (0, C.ND)(r, g),
+                onClick: () => (0, y.ND)(r, g),
                 children: [
                     null != m
                         ? (0, i.jsx)("img", {
@@ -155,9 +155,9 @@ let S = function (e) {
     }, [Z, P, w, a]),
     (0, d.ZP)(
         () => (
-            b.default.track(y.rMx.GDM_EDIT_INTERACTED, E(O({}, R), { action: "opened" })),
+            b.default.track(C.rMx.GDM_EDIT_INTERACTED, E(O({}, R), { action: "opened" })),
             () => {
-                b.default.track(y.rMx.GDM_EDIT_INTERACTED, E(O({}, R), { action: "dismissed" }));
+                b.default.track(C.rMx.GDM_EDIT_INTERACTED, E(O({}, R), { action: "dismissed" }));
             }
         ),
     ),
@@ -172,7 +172,7 @@ let S = function (e) {
                           r = void 0 !== N;
                       if (
                           (b.default.track(
-                              y.rMx.GDM_EDIT_INTERACTED,
+                              C.rMx.GDM_EDIT_INTERACTED,
                               E(O({}, R), {
                                   action: "saved",
                                   new_name_set: "" !== Z,
@@ -184,7 +184,7 @@ let S = function (e) {
                           i || r)
                       ) {
                           let e = {};
-                          i && (e.name = Z), r && (e.icon = N), u.Z.updateChannel(t, e, S).catch(C.g6);
+                          i && (e.name = Z), r && (e.icon = N), u.Z.updateChannel(t, e, S).catch(y.g6);
                       }
                       n();
                   },

@@ -1,4 +1,4 @@
-n.d(e, { X: () => S });
+n.d(e, { X: () => T });
 var i = n(54381),
     l = n(793030),
     s = n(197344),
@@ -6,7 +6,7 @@ var i = n(54381),
     r = n(313789),
     a = n(518596),
     o = n(388032);
-let S = (0, u.ON)(r.n.SOUNDS_HOLIDAY_NOTICE, {
+let T = (0, u.ON)(r.n.SOUNDS_HOLIDAY_NOTICE, {
     useSearchTerms: () => [o.intl.string(o.t.fgSHf8)],
     usePredicate: () => null != s.Z.useHolidaySoundpack(),
     Component: () =>

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(111583),
     g = n(459273),
     b = n(880831),
-    C = n(774168),
-    y = n(871499),
+    y = n(774168),
+    C = n(871499),
     v = n(981631),
     x = n(388032);
 function O(e) {
@@ -39,7 +39,7 @@ function O(e) {
 function E(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = O(n);
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(y.Z, {
         className: t,
         unreadCount: r,
         mentionCount: l,
@@ -56,7 +56,7 @@ function j(e) {
             onClick: f,
             inPopout: h,
             showRequestToSpeakSidebar: m,
-            toggleRequestToSpeakSidebar: C,
+            toggleRequestToSpeakSidebar: y,
         } = e,
         j = (function (e, t) {
             if (null == e) return {};
@@ -116,8 +116,8 @@ function j(e) {
             );
         })(n),
         A = r.useCallback(() => {
-            (0, p.v)(S, p.d.CHAT, !I), null == f || f(), !I && m && (null == C || C()), c.Z.updateChatOpen(n, !I);
-        }, [n, I, f, m, C, S]),
+            (0, p.v)(S, p.d.CHAT, !I), null == f || f(), !I && m && (null == y || y()), c.Z.updateChatOpen(n, !I);
+        }, [n, I, f, m, y, S]),
         w = r.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -136,32 +136,32 @@ function j(e) {
         event: v.CkL.FOCUS_CHAT_BUTTON,
         handler: _ ? null : M,
     });
-    let [R, L] = r.useState(!1),
-        D = r.useCallback(() => {
-            h && L(!0);
+    let [R, D] = r.useState(!1),
+        k = r.useCallback(() => {
+            h && D(!0);
         }, [h]);
     (0, g.yp)({
         event: v.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: D,
+        handler: k,
     }),
         r.useEffect(() => {
             let e;
             return (
                 R &&
                     (e = setTimeout(() => {
-                        L(!1);
+                        D(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
         }, [R]);
-    let k = [(t = h && _ ? x.intl.string(x.t.DPgc5h) : I ? x.intl.string(x.t.nthdxB) : x.intl.string(x.t["5KxXrK"]))];
+    let L = [(t = h && _ ? x.intl.string(x.t.DPgc5h) : I ? x.intl.string(x.t.nthdxB) : x.intl.string(x.t["5KxXrK"]))];
     return (
-        N > 0 && k.push(x.intl.formatToPlainString(x.t["3l1GOx"], { mentionCount: N })),
-        T > 0 && k.push(x.intl.string(x.t.x5zAGZ)),
+        N > 0 && L.push(x.intl.formatToPlainString(x.t["3l1GOx"], { mentionCount: N })),
+        T > 0 && L.push(x.intl.string(x.t.x5zAGZ)),
         (0, i.jsx)(
-            y.Z,
+            C.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -191,7 +191,7 @@ function j(e) {
                     buttonRef: P,
                     onClick: A,
                     label: t,
-                    "aria-label": k.join(", "),
+                    "aria-label": L.join(", "),
                     iconComponent: w,
                     tooltipPosition: "bottom",
                     wrapperClassName: a()(l, null != o && { [o]: Z }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(664751),
-    i = n(772848),
+    i = n(664751),
+    l = n(772848),
     s = n(311570),
     o = n(442837),
     c = n(199849),
@@ -25,8 +25,8 @@ var a = n(54381),
     T = n(736519),
     O = n(43747),
     N = n(970815),
-    w = n(430824),
-    P = n(78839),
+    P = n(430824),
+    w = n(78839),
     I = n(246992),
     k = n(981631),
     R = n(474936),
@@ -96,8 +96,8 @@ function L(e) {
 let M = function () {
     let [e, t] = r.useState(R.Si.TIER_2),
         [n, y] = r.useState(null),
-        C = (0, o.Wu)([w.Z], () => w.Z.getGuildsArray()),
-        [M] = (0, o.Wu)([P.Z], () => [P.Z.getPremiumSubscription()]),
+        C = (0, o.Wu)([P.Z], () => P.Z.getGuildsArray()),
+        [M] = (0, o.Wu)([w.Z], () => [w.Z.getPremiumSubscription()]),
         U = C.map((e) => ({
             value: e,
             label: e.name,
@@ -114,8 +114,8 @@ let M = function () {
         [Q, X] = r.useState(""),
         [J, $] = r.useState(k.lds),
         { balance: ee, isFetching: et, error: en } = (0, O.A)(),
-        { isSubmitting: ea, responseMessage: er, redeemVirtualCurrency: el } = (0, O.f)(),
-        [ei, es] = r.useState(k.lds),
+        { isSubmitting: ea, responseMessage: er, redeemVirtualCurrency: ei } = (0, O.f)(),
+        [el, es] = r.useState(k.lds),
         [eo, ec] = r.useState(""),
         [ed, eu] = r.useState(k.lds),
         [em, ep] = r.useState(k.lds);
@@ -311,7 +311,7 @@ let M = function () {
                             text: "Open Link",
                             disabled: W,
                             onClick: () => {
-                                window.open(k.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + l.stringify(Z({}, H)));
+                                window.open(k.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + i.stringify(Z({}, H)));
                             },
                         }),
                     }),
@@ -355,14 +355,14 @@ let M = function () {
                             (0, a.jsx)(m.oil, {
                                 label: "SKU ID",
                                 placeholder: "SKU ID",
-                                value: ei,
+                                value: el,
                                 onChange: (e) => es(e),
                             }),
                             (0, a.jsx)(m.Button, {
                                 variant: "primary",
                                 text: "Redeem Virtual Currency for SKU",
                                 loading: ea,
-                                onClick: () => el(ei, (0, i.Z)()),
+                                onClick: () => ei(el, (0, l.Z)()),
                             }),
                             null != er &&
                                 (0, a.jsx)(m.Text, {

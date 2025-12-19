@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d });
 var a = n(54381),
     r = n(481060),
-    l = n(410030),
-    i = n(583901),
+    i = n(410030),
+    l = n(583901),
     s = n(780771),
     o = n(981631),
     c = n(108162);
 function d(e) {
     let { selected: t, onSelect: n } = e,
-        d = (0, l.ZP)();
+        d = (0, i.ZP)();
     return (0, a.jsxs)("div", {
         className: c.picker,
         children: [
@@ -20,14 +20,14 @@ function d(e) {
                 className: c.themes,
                 children: s.vs.map((e) => {
                     let r = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
-                        l = t === e.name;
+                        i = t === e.name;
                     return (0, a.jsx)(
-                        i.S4,
+                        l.S4,
                         {
                             onSelect: () => n(e),
                             style: { background: r },
                             name: e.name,
-                            isSelected: l,
+                            isSelected: i,
                         },
                         e.name,
                     );

@@ -6,13 +6,13 @@ var i = n(54381),
     r = n(199849),
     a = n(846027),
     o = n(509613),
-    S = n(131951),
-    T = n(63063),
+    T = n(131951),
+    S = n(63063),
     c = n(210887),
     E = n(313789),
     d = n(803567),
-    g = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    g = n(388032);
 let I = n(775322),
     N = n(353385);
 function A() {
@@ -25,9 +25,9 @@ function A() {
     });
 }
 let O = (0, o.ON)(E.n.VOICE_NOISE_SUPPRESSION_SETTING, {
-    useSearchTerms: () => [_.intl.string(_.t.t8Qhib), _.intl.string(_.t.hmfkCi)],
+    useSearchTerms: () => [g.intl.string(g.t.t8Qhib), g.intl.string(g.t.hmfkCi)],
     usePredicate: function () {
-        return (0, u.e7)([S.Z], () => S.Z.isInputProfileCustom() && S.Z.isNoiseSuppressionSupported());
+        return (0, u.e7)([T.Z], () => T.Z.isInputProfileCustom() && T.Z.isNoiseSuppressionSupported());
     },
     Component: function () {
         let t = l.useCallback((t) => {
@@ -38,11 +38,11 @@ let O = (0, o.ON)(E.n.VOICE_NOISE_SUPPRESSION_SETTING, {
                 noiseSuppression: n,
                 isNoiseSuppressionSupported: o,
                 isNoiseCancellationSupported: c,
-            } = (0, u.cj)([S.Z], () => ({
-                noiseCancellation: S.Z.getNoiseCancellation(),
-                noiseSuppression: S.Z.getNoiseSuppression(),
-                isNoiseSuppressionSupported: S.Z.isNoiseSuppressionSupported(),
-                isNoiseCancellationSupported: S.Z.isNoiseCancellationSupported(),
+            } = (0, u.cj)([T.Z], () => ({
+                noiseCancellation: T.Z.getNoiseCancellation(),
+                noiseSuppression: T.Z.getNoiseSuppression(),
+                isNoiseSuppressionSupported: T.Z.isNoiseSuppressionSupported(),
+                isNoiseCancellationSupported: T.Z.isNoiseCancellationSupported(),
             })),
             E = n ? d.Q4.STANDARD : d.Q4.NONE,
             I = e ? d.Q4.KRISP : E,
@@ -51,30 +51,30 @@ let O = (0, o.ON)(E.n.VOICE_NOISE_SUPPRESSION_SETTING, {
                 return (
                     c &&
                         t.push({
-                            label: _.intl.string(_.t.rdoNzt),
+                            label: g.intl.string(g.t.rdoNzt),
                             value: d.Q4.KRISP,
                         }),
                     o &&
                         t.push({
-                            label: _.intl.string(_.t.qXeYHw),
+                            label: g.intl.string(g.t.qXeYHw),
                             value: d.Q4.STANDARD,
                         }),
                     t.push({
-                        label: _.intl.string(_.t.wkYAlz),
+                        label: g.intl.string(g.t.wkYAlz),
                         value: d.Q4.NONE,
                     }),
                     t
                 );
             }, [c, o]),
             O = c
-                ? _.intl.format(_.t["1q5aTp"], { helpArticle: T.Z.getArticleURL(g.BhN.NOISE_SUPPRESSION) })
-                : _.intl.string(_.t.OWKjw5);
+                ? g.intl.format(g.t["1q5aTp"], { helpArticle: S.Z.getArticleURL(_.BhN.NOISE_SUPPRESSION) })
+                : g.intl.string(g.t.OWKjw5);
         return (0, i.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 0,
             children: [
                 (0, i.jsx)(r.y6, {
-                    label: _.intl.string(_.t.t8Qhib),
+                    label: g.intl.string(g.t.t8Qhib),
                     description: O,
                     layout: "horizontal",
                     value: I,

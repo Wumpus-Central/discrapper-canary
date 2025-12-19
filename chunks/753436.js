@@ -53,7 +53,7 @@ function O(e) {
             onRemoveGame: x,
             coverRef: P,
         } = e,
-        { coverImageUrl: w, gameName: I, isLoading: S } = (0, p.Z)(t.applicationId),
+        { coverImageUrl: I, gameName: w, isLoading: S } = (0, p.Z)(t.applicationId),
         { registerDragHandleRef: E } = (0, u.C)(),
         T = (0, b.Z)(t.applicationId).length > 0,
         _ = o.default.getCurrentUser(),
@@ -64,14 +64,14 @@ function O(e) {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.Z, {
-                        imageSrc: w,
-                        gameName: I,
+                        imageSrc: I,
+                        gameName: w,
                         applicationId: t.applicationId,
                         userId: n,
                         disableInteraction: O,
                         className: a()(
                             T ? y.socialProofBackdrop : void 0,
-                            null == w || O ? void 0 : h.hoverActiveEffect,
+                            null == I || O ? void 0 : h.hoverActiveEffect,
                         ),
                         hideTooltip: k,
                         coverRef: P,
@@ -106,8 +106,8 @@ function O(e) {
                 widgetType: i,
                 index: null != j ? j : 0,
                 game: t,
-                coverImageUrl: w,
-                gameName: I,
+                coverImageUrl: I,
+                gameName: w,
                 children: N(),
             })
           : (0, r.jsx)("div", {

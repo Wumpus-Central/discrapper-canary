@@ -1,4 +1,4 @@
-n.d(t, { f: () => N }), n(388685);
+n.d(t, { f: () => b }), n(388685);
 var i = n(54381),
     s = n(473749),
     l = n(481060),
@@ -14,8 +14,8 @@ var i = n(54381),
     x = n(621600),
     p = n(981631),
     j = n(388032),
-    v = n(99079);
-function f(e, t, n) {
+    f = n(99079);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-class N extends s.PureComponent {
+class b extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
             null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
@@ -89,20 +89,20 @@ class N extends s.PureComponent {
                     : j.intl.string(j.t.uIzfCE);
         return (0, i.jsxs)(c.Z, {
             grow: 1,
-            className: v.nameContainer,
+            className: f.nameContainer,
             children: [
-                null != s ? (0, i.jsx)(s, { className: v.icon }) : null,
+                null != s ? (0, i.jsx)(s, { className: f.icon }) : null,
                 (0, i.jsxs)("div", {
-                    className: v.channelNameContainer,
+                    className: f.channelNameContainer,
                     children: [
                         (0, i.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            className: v.channelName,
+                            className: f.channelName,
                             children: (0, o.F6)(n, m.default, g.Z),
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: "text-xs/normal",
-                            className: v.channelNameByline,
+                            className: f.channelNameByline,
                             children: t,
                         }),
                     ],
@@ -115,7 +115,7 @@ class N extends s.PureComponent {
         return (0, i.jsxs)(c.Z, {
             grow: 0,
             shrink: 0,
-            className: v.checkboxGroup,
+            className: f.checkboxGroup,
             justify: c.Z.Justify.AROUND,
             align: c.Z.Align.CENTER,
             children: [
@@ -123,28 +123,28 @@ class N extends s.PureComponent {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
                     children: this.renderMessageNotificationsRadioOption(p.bL.ALL_MESSAGES),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
                     children: this.renderMessageNotificationsRadioOption(p.bL.ONLY_MENTIONS),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
                     children: this.renderMessageNotificationsRadioOption(p.bL.NO_MESSAGES),
                 }),
                 (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: v.checkboxMute,
+                    className: f.checkboxMute,
                     children: (0, i.jsx)(l.Checkbox, {
                         checked: e,
                         label: "",
@@ -160,12 +160,12 @@ class N extends s.PureComponent {
             ref: this.contentDomRef,
             outline: !0,
             editable: !0,
-            className: e ? v.overrideHighlight : v.override,
+            className: e ? f.overrideHighlight : f.override,
             children: [
                 this.renderName(),
                 this.renderOptions(),
                 (0, i.jsx)(a.Z, {
-                    className: v.removeOverride,
+                    className: f.removeOverride,
                     onClick: this.handleDelete,
                 }),
             ],
@@ -173,17 +173,17 @@ class N extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, "_timeout", void 0),
-            f(this, "contentDomRef", s.createRef()),
-            f(this, "state", { highlight: !1 }),
-            f(this, "unhighlight", () => {
+            v(this, "_timeout", void 0),
+            v(this, "contentDomRef", s.createRef()),
+            v(this, "state", { highlight: !1 }),
+            v(this, "unhighlight", () => {
                 this.setState({ highlight: !1 });
             }),
-            f(this, "handleMute", (e) => {
+            v(this, "handleMute", (e) => {
                 let { messageNotifications: t } = this.props;
                 this.setMessageNotification(null != t ? t : p.bL.NULL, e, x.UE.muted(e));
             }),
-            f(this, "handleDelete", () => {
+            v(this, "handleDelete", () => {
                 let { onDelete: e, channel: t } = this.props;
                 this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id);
             });

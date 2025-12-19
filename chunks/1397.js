@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(391650),
     g = n(693546),
     b = n(881952),
-    C = n(305325),
-    y = n(246364),
+    y = n(305325),
+    C = n(246364),
     v = n(983736),
     x = n(937111),
     O = n(270801),
@@ -32,13 +32,13 @@ var i = n(54381),
     w = n(607744),
     M = n(496675),
     R = n(594174),
-    L = n(700785),
-    D = n(413251),
-    k = n(862679),
+    D = n(700785),
+    k = n(413251),
+    L = n(862679),
     U = n(981631),
     V = n(701488),
-    F = n(815660),
-    H = n(388032),
+    H = n(815660),
+    F = n(388032),
     B = n(309957);
 function G(e, t, n) {
     return (
@@ -53,7 +53,7 @@ function G(e, t, n) {
         e
     );
 }
-function z(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +69,7 @@ function z(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -118,7 +118,7 @@ class q extends r.PureComponent {
                 showLurkerModeUpsellPopout: m,
                 showMemberVerificationModal: g,
                 useReducedMotion: b,
-                isStaff: C,
+                isStaff: y,
                 guildJoinRequest: v,
                 showLinkedLobbyApplicationLoadingIndicator: x,
                 requiredLinkedLobbyApplication: O,
@@ -129,59 +129,59 @@ class q extends r.PureComponent {
                 useReducedMotion: b,
             };
         if (e && !f) {
-            if (((S.message = H.intl.string(H.t.Hl0Mqh)), null != h && h >= 1000)) {
+            if (((S.message = F.intl.string(F.t.Hl0Mqh)), null != h && h >= 1000)) {
                 let e = 1000 * Math.floor(h / 1000);
-                S.subtitle = H.intl.formatToPlainString(H.t.C5bgrC, { count: e.toLocaleString() });
+                S.subtitle = F.intl.formatToPlainString(F.t.C5bgrC, { count: e.toLocaleString() });
             }
-            (S.buttonText = H.intl.string(H.t["3aOv+h"])),
+            (S.buttonText = F.intl.string(F.t["3aOv+h"])),
                 (S.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((S.onSecondaryButtonClick = this.handleJoinServer),
-                    (S.secondaryButtonText = H.intl.string(H.t.RLch70)));
+                    (S.secondaryButtonText = F.intl.string(F.t.RLch70)));
         } else if (n)
-            (S.message = H.intl.string(H.t["Eg3/c9"])),
-                (S.buttonText = H.intl.string(H.t.fiNVin)),
+            (S.message = F.intl.string(F.t["Eg3/c9"])),
+                (S.buttonText = F.intl.string(F.t.fiNVin)),
                 (S.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == v ? void 0 : v.applicationStatus) {
-                case y.wB.SUBMITTED:
-                    (S.message = H.intl.string(H.t["5iLvSx"])),
-                        (S.subtitle = H.intl.string(H.t.FdsK4h)),
-                        (S.buttonText = H.intl.string(H.t.mqtdmQ)),
+                case C.wB.SUBMITTED:
+                    (S.message = F.intl.string(F.t["5iLvSx"])),
+                        (S.subtitle = F.intl.string(F.t.FdsK4h)),
+                        (S.buttonText = F.intl.string(F.t.mqtdmQ)),
                         (S.onButtonClick = this.handleCancelApplication);
                     break;
-                case y.wB.REJECTED:
-                    (S.message = H.intl.string(H.t.lk30cY)),
-                        (S.buttonText = H.intl.string(H.t["8RrsHr"])),
+                case C.wB.REJECTED:
+                    (S.message = F.intl.string(F.t.lk30cY)),
+                        (S.buttonText = F.intl.string(F.t["8RrsHr"])),
                         (S.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (S.message = H.intl.string(H.t.rEBKvg)),
-                        (S.buttonText = H.intl.string(H.t["r8/DT+"])),
+                    (S.message = F.intl.string(F.t.rEBKvg)),
+                        (S.buttonText = F.intl.string(F.t["r8/DT+"])),
                         (S.buttonVariant = "primary"),
                         (S.onButtonClick = this.handleShowMemberVerification);
             }
         else if (x || null == O)
-            r && !C
-                ? ((S.message = H.intl.string(H.t["2dThMM"])),
-                  (S.buttonText = H.intl.string(H.t["50gfOv"])),
+            r && !y
+                ? ((S.message = F.intl.string(F.t["2dThMM"])),
+                  (S.buttonText = F.intl.string(F.t["50gfOv"])),
                   (S.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((S.message = H.intl.string(H.t.FkGPS5)),
-                    (S.buttonText = H.intl.string(H.t.lm1UKt)),
+                  ? ((S.message = F.intl.string(F.t.FkGPS5)),
+                    (S.buttonText = F.intl.string(F.t.lm1UKt)),
                     (S.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((S.message = H.intl.formatToPlainString(H.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
+                    ? ((S.message = F.intl.formatToPlainString(F.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
                       (S.countdown = o))
                     : s &&
-                      ((S.message = H.intl.formatToPlainString(H.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
+                      ((S.message = F.intl.formatToPlainString(F.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
                       (S.countdown = c));
         else {
             var _;
             (S.imageSrc = null != (_ = O.getIconURL(V.Si.SMALL)) ? _ : void 0),
-                (S.message = H.intl.format(H.t.EvDn1D, { name: O.name })),
+                (S.message = F.intl.format(F.t.EvDn1D, { name: O.name })),
                 null != O.connectionEntrypointUrl &&
-                    ((S.buttonText = H.intl.string(H.t.S0W8Z5)),
+                    ((S.buttonText = F.intl.string(F.t.S0W8Z5)),
                     (S.onButtonClick = () => {
                         window.open(O.connectionEntrypointUrl, "_blank");
                     }));
@@ -195,8 +195,8 @@ class q extends r.PureComponent {
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, i.jsx)(
-                    k.Z,
-                    W(z({}, S), {
+                    L.Z,
+                    z(W({}, S), {
                         children: (0, i.jsxs)("div", {
                             ref: this.textAreaContainerRef,
                             children: [
@@ -210,7 +210,7 @@ class q extends r.PureComponent {
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   u.P3F,
-                                                  W(z({ innerRef: this.upsellTargetRef }, e), {
+                                                  z(W({ innerRef: this.upsellTargetRef }, e), {
                                                       className: B.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: p,
@@ -248,10 +248,10 @@ class q extends r.PureComponent {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.Z)({
-                        title: H.intl.string(H.t.aIz1oV),
-                        subtitle: H.intl.string(H.t["13tjTU"]),
+                        title: F.intl.string(F.t.aIz1oV),
+                        subtitle: F.intl.string(F.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: H.intl.string(H.t["cY+Oob"]),
+                        confirmText: F.intl.string(F.t["cY+Oob"]),
                         onConfirm: () => g.Z.removeGuildJoinRequest(e.id),
                     });
             }),
@@ -260,12 +260,12 @@ class q extends r.PureComponent {
                 null != e &&
                     (0, u.ZDy)(async () => {
                         let { default: t } = await n.e("3378").then(n.bind(n, 76075));
-                        return (n) => (0, i.jsx)(t, z({ guildId: e.id }, n));
+                        return (n) => (0, i.jsx)(t, W({ guildId: e.id }, n));
                     });
             }),
             G(this, "handleShowMemberVerification", () => {
                 let { guild: e } = this.props;
-                null != e && (0, C.hk)(e.id);
+                null != e && (0, y.hk)(e.id);
             }),
             G(this, "handleClaimAccount", () => {
                 m.j();
@@ -274,9 +274,9 @@ class q extends r.PureComponent {
                 (0, u.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                        return (t) => (0, i.jsx)(e, z({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
+                        return (t) => (0, i.jsx)(e, W({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: F.M },
+                    { modalKey: H.M },
                 );
             }),
             G(this, "handleResendVerification", () => {
@@ -285,8 +285,8 @@ class q extends r.PureComponent {
                 let t = null == (e = R.default.getCurrentUser()) ? void 0 : e.email;
                 null != t &&
                     (0, s.Z)({
-                        title: H.intl.string(H.t.LykQYk),
-                        subtitle: H.intl.format(H.t.azKEPy, { email: t }),
+                        title: F.intl.string(F.t.LykQYk),
+                        subtitle: F.intl.format(F.t.azKEPy, { email: t }),
                     });
             }),
             G(this, "handleTextAreaClick", () => {
@@ -309,7 +309,7 @@ class q extends r.PureComponent {
                 let { channel: e } = this.props;
                 (0, u.ZDy)(async () => {
                     let { default: t } = await n.e("96964").then(n.bind(n, 807007));
-                    return (n) => (0, i.jsx)(t, z({ channel: e }, n));
+                    return (n) => (0, i.jsx)(t, W({ channel: e }, n));
                 });
             }),
             G(this, "closeLurkerModeUpsellPopout", () => {
@@ -328,7 +328,7 @@ class q extends r.PureComponent {
             }),
             G(this, "renderMemberVerificationSuccessModal", () => {
                 let { guild: e, guildJoinRequest: t } = this.props,
-                    n = (null == t ? void 0 : t.applicationStatus) === y.wB.APPROVED;
+                    n = (null == t ? void 0 : t.applicationStatus) === C.wB.APPROVED;
                 if (null == e || null == t || !n || (0, b.d3)(t)) return null;
                 let r = () => {
                     g.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -337,7 +337,7 @@ class q extends r.PureComponent {
                     renderModal: (t) =>
                         (0, i.jsx)(
                             O.Z,
-                            W(z({}, t), {
+                            z(W({}, t), {
                                 onAccept: r,
                                 guildName: e.name,
                             }),
@@ -363,22 +363,22 @@ function K(e) {
             return null != f && null != (t = null == (e = N.ZP.getMember(a, f.id)) ? void 0 : e.isPending) && t;
         }),
         b = !!(0, v.Dc)(s),
-        C = (0, o.e7)([E.Z], () => E.Z.shouldShowPopout(a)),
+        y = (0, o.e7)([E.Z], () => E.Z.shouldShowPopout(a)),
         O = (0, o.e7)([M.Z], () => M.Z.can(U.Plq.SEND_MESSAGES, r)),
         S = (0, o.e7)([x.Z], () => x.Z.getRequest(a)),
-        { showLinkedLobbyApplicationLoadingIndicator: _, requiredLinkedLobbyApplication: P } = (0, D.Z)(r.linkedLobby),
-        I = W(z({}, c), {
+        { showLinkedLobbyApplicationLoadingIndicator: _, requiredLinkedLobbyApplication: P } = (0, k.Z)(r.linkedLobby),
+        I = z(W({}, c), {
             guild: s,
             isLurking: p,
             isFollowable: u,
-            shouldShowLurkerModeSuccessPopout: C,
-            showLurkerModeUpsellPopout: p && null != s && L.Uu(U.Plq.SEND_MESSAGES, r),
+            shouldShowLurkerModeSuccessPopout: y,
+            showLurkerModeUpsellPopout: p && null != s && D.Uu(U.Plq.SEND_MESSAGES, r),
             theme: Z.Z.theme,
             canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: b,
             showMemberVerificationModal: g && b,
-            guildJoinRequestStatus: null != (n = null == S ? void 0 : S.applicationStatus) ? n : y.wB.STARTED,
+            guildJoinRequestStatus: null != (n = null == S ? void 0 : S.applicationStatus) ? n : C.wB.STARTED,
             guildJoinRequest: S,
             showLinkedLobbyApplicationLoadingIndicator: _,
             requiredLinkedLobbyApplication: P,
@@ -387,7 +387,7 @@ function K(e) {
         });
     return (0, i.jsx)(
         q,
-        W(z({}, I), {
+        z(W({}, I), {
             channel: r,
             children: l,
         }),

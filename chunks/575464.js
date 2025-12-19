@@ -19,8 +19,8 @@ function m(e) {
             row: m,
             hideDiscriminator: g,
             comparator: b,
-            selected: C,
-            checked: y,
+            selected: y,
+            checked: C,
             disabled: v = !1,
             inlineUsername: x = !0,
             onClick: O,
@@ -72,14 +72,14 @@ function m(e) {
         (n = n =
             {
                 role: "option",
-                "aria-selected": y,
+                "aria-selected": C,
                 "aria-disabled": v,
                 "aria-setsize": j,
                 "aria-posinset": S,
                 children: (0, i.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: l()(h.friend, {
-                        [h.friendSelected]: C,
+                        [h.friendSelected]: y,
                         [h.twoRows]: !x,
                     }),
                     children: [
@@ -120,7 +120,7 @@ function m(e) {
                             ],
                         }),
                         (0, i.jsx)(s.FZ5, {
-                            checked: y,
+                            checked: C,
                             disabled: v,
                         }),
                     ],

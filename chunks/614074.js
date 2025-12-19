@@ -1,4 +1,4 @@
-n.d(e, { C: () => T });
+n.d(e, { C: () => S });
 var i = n(54381),
     l = n(473749),
     s = n(793030),
@@ -6,8 +6,8 @@ var i = n(54381),
     r = n(773275),
     a = n(388032),
     o = n(472057),
-    S = n(977701);
-let T = () => {
+    T = n(977701);
+let S = () => {
         let { isWeb: t, installationStatus: e } = (0, r.xf)(),
             n = (0, l.useMemo)(() => {
                 if (t) return a.intl.string(o.default.KN6HOb);
@@ -41,14 +41,14 @@ let T = () => {
         switch ((0, r.xf)((t) => t.connectionStatus)) {
             case u.Ij.INITIALIZING:
                 return (0, i.jsxs)("span", {
-                    className: S.connectedStatus,
+                    className: T.connectedStatus,
                     children: [
                         a.intl.string(o.default["00vkCU"]),
                         " ",
                         (0, i.jsx)("span", {
                             children: (0, i.jsx)(s.$jN, {
                                 type: s.RAz.SPINNING_CIRCLE,
-                                className: S.spinner,
+                                className: T.spinner,
                             }),
                         }),
                     ],

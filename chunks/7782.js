@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(486622),
     g = n(488634),
     b = n(86203),
-    C = n(6025),
-    y = n(621853),
+    y = n(6025),
+    C = n(621853),
     v = n(892001),
     x = n(433355),
     O = n(699516),
@@ -28,7 +28,7 @@ var i = n(54381),
     Z = n(60845);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
-            l = (0, s.e7)([y.Z], () => y.Z.getMutualGuilds(t), [t]),
+            l = (0, s.e7)([C.Z], () => C.Z.getMutualGuilds(t), [t]),
             a = r.useMemo(
                 () =>
                     null != l
@@ -202,10 +202,10 @@ let T = (e) => {
                 (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0hv), c.ToastType.FAILURE));
             }, []),
             a = r.useCallback(() => {
-                C.Z.closeChannelSidebar(x.uZ);
+                y.Z.closeChannelSidebar(x.uZ);
             }, []),
             o = r.useCallback(() => {
-                C.Z.closeChannelSidebar(x.uZ);
+                y.Z.closeChannelSidebar(x.uZ);
             }, []),
             {
                 acceptMessageRequest: s,
@@ -250,7 +250,7 @@ let T = (e) => {
             p = n.id === l,
             f = !o.tq && !p,
             m = !!o.tq || p || u,
-            C =
+            y =
                 u || p
                     ? (0, i.jsxs)("div", {
                           className: Z.inline,
@@ -278,7 +278,7 @@ let T = (e) => {
                                   }),
                           ],
                       }),
-            y =
+            C =
                 d !== _.OGo.PENDING_INCOMING || u || p
                     ? null
                     : (0, i.jsx)(c.Text, {
@@ -299,7 +299,7 @@ let T = (e) => {
                 !m && (0, i.jsx)("div", { className: Z.divider }),
                 (0, i.jsxs)("div", {
                     className: a()(Z.inline, Z.wrap),
-                    children: [y, C],
+                    children: [C, y],
                 }),
             ],
         });

@@ -6,13 +6,13 @@ var i = n(755721),
     r = n(626135),
     a = n(88658),
     o = n(976978),
-    S = n(695346),
-    T = n(313789),
+    T = n(695346),
+    S = n(313789),
     c = n(997950),
     E = n(87820),
     d = n(639814),
-    g = n(922628),
-    _ = n(703115),
+    _ = n(922628),
+    g = n(703115),
     I = n(526761),
     N = n(981631),
     A = n(388032);
@@ -22,7 +22,7 @@ let O = (t, e) => {
             applied_to_existing_guilds: e,
         });
     },
-    C = (0, s.qs)(T.n.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
+    C = (0, s.qs)(S.n.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
         useTitle: () => ((0, E.r)() ? A.intl.string(A.t.PMsfcH) : A.intl.string(A.t.RAQUSN)),
         useSubtitle: () => {
             let t = (0, d.is)(),
@@ -40,7 +40,7 @@ let O = (t, e) => {
         },
         useValue: () => {
             let t = (0, d.is)(),
-                e = S.h2.useSetting().includes(t),
+                e = T.h2.useSetting().includes(t),
                 n = (0, o.q)();
             return t === c.Th ? !n : !e;
         },
@@ -53,25 +53,25 @@ let O = (t, e) => {
             if (e === c.Th) {
                 var n;
                 (n = !t),
-                    (0, g.V)({
+                    (0, _.V)({
                         header: A.intl.string(A.t["uUr+GR"]),
                         body: A.intl.string(A.t.hjGJBp),
                         confirmText: A.intl.string(A.t.gm1Vej),
                         cancelText: A.intl.string(A.t.p89ACt),
                         confirmButtonColor: i.zx.Colors.BRAND,
                         onConfirm: () => {
-                            S.gR.updateSetting(n), O(n, !1);
+                            T.gR.updateSetting(n), O(n, !1);
                         },
                         onCancel: () => {
-                            S.gR.updateSetting(n), S.h2.updateSetting(n ? u.Z.getGuildIds() : []), O(n, !0);
+                            T.gR.updateSetting(n), T.h2.updateSetting(n ? u.Z.getGuildIds() : []), O(n, !0);
                         },
                     });
             } else {
                 let n = (0, a.YK)();
                 t ? n.delete(e) : n.add(e),
-                    S.h2.updateSetting(Array.from(n)),
+                    T.h2.updateSetting(Array.from(n)),
                     r.default.track(N.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: _.Y.DIRECT_MESSAGES_TOGGLE,
+                        action: g.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: I.f4.USER_SETTINGS_PRIVACY_SAFETY,
                         guild_id: e,
                     });

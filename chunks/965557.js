@@ -6,8 +6,8 @@ var i = n(657707),
     r = n(526665),
     a = n(287490),
     o = n(430404);
-let S = (0, l.k4)(u.n.EXPERIMENTS_CATEGORY, { buildLayout: () => [o.z] }),
-    T = (0, l.wf)(u.n.EXPERIMENTS_PANEL, {
+let T = (0, l.k4)(u.n.EXPERIMENTS_CATEGORY, { buildLayout: () => [o.z] }),
+    S = (0, l.wf)(u.n.EXPERIMENTS_PANEL, {
         usePredicate: () => !(0, r.gN)("LegacyExperimentsPanel"),
         useTitle: () => "Experiments",
         StronglyDiscouragedCustomComponent: a.Z,
@@ -16,11 +16,11 @@ let S = (0, l.k4)(u.n.EXPERIMENTS_CATEGORY, { buildLayout: () => [o.z] }),
     c = (0, l.wf)(u.n.EXPERIMENTS_PANEL, {
         usePredicate: () => (0, r.gN)("ExperimentsPanel"),
         useTitle: () => "Experiments",
-        buildLayout: () => [S],
+        buildLayout: () => [T],
     }),
     E = (0, l.m7)(u.n.EXPERIMENTS_SIDEBAR_ITEM, {
         useTitle: () => "Experiments",
         icon: i.uOV,
         usePredicate: () => s.Z.isDeveloper,
-        buildLayout: () => ((0, r.Gl)("ExperimentsPanel") ? [c] : [T]),
+        buildLayout: () => ((0, r.Gl)("ExperimentsPanel") ? [c] : [S]),
     });

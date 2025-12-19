@@ -15,13 +15,13 @@ var r = n(120356),
     m = n(359110),
     g = n(601964),
     b = n(430824),
-    C = n(933557),
-    y = n(354459),
+    y = n(933557),
+    C = n(354459),
     v = n(388032),
     x = n(943856);
 function O(e) {
     let { recipientUser: t, voiceChannel: n } = e,
-        r = (0, C.ZP)(n),
+        r = (0, y.ZP)(n),
         s = (0, f.s)(t, "RingToVoiceBanner", n.id),
         { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
             let e = null;
@@ -29,7 +29,7 @@ function O(e) {
                 s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
                 {
                     userIsInCall: null != e,
-                    isUserRinging: null != e && e.type === y.fO.USER && e.ringing,
+                    isUserRinging: null != e && e.type === C.fO.USER && e.ringing,
                 }
             );
         }),

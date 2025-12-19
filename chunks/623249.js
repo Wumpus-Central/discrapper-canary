@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(793030),
     o = n(442837),
     c = n(28664),
@@ -28,8 +28,8 @@ var a = n(54381),
     E = n(574508);
 function T(e) {
     var t;
-    let { quest: n, errorHints: l, transitionState: y, onClose: T, sourceQuestContent: N } = e,
-        [w, P] = (0, r.useState)(l),
+    let { quest: n, errorHints: i, transitionState: y, onClose: T, sourceQuestContent: N } = e,
+        [P, w] = (0, r.useState)(i),
         I = (0, b.KX)(),
         k = (0, h.O5)(),
         R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
@@ -38,7 +38,7 @@ function T(e) {
             useReducedMotion: A,
             className: E.colorTransition,
         }),
-        D = w.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
+        D = P.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
         L = (0, j.Bz)(n),
         M = (0, o.e7)([p.Z], () => p.Z.getState().theme),
         U = (0, d.wj)(M) ? _.BR.DARK : _.BR.LIGHT,
@@ -54,7 +54,7 @@ function T(e) {
                     });
             },
             afterRequest: (e) => {
-                Z.stopAnimation(), P(e);
+                Z.stopAnimation(), w(e);
             },
         });
     return (0, a.jsx)(s.Modal, {
@@ -95,7 +95,7 @@ function T(e) {
                             children: S.intl.string(S.t["+/hZM/"]),
                         }),
                         (0, a.jsxs)(u.P3F, {
-                            className: i()(E.refreshWrapper, { [E.disabled]: F }),
+                            className: l()(E.refreshWrapper, { [E.disabled]: F }),
                             onClick: B,
                             children: [
                                 Z.render(),
@@ -152,14 +152,14 @@ function T(e) {
     });
 }
 function O(e) {
-    let { icon: t, text: n, errors: r = [], gameTile: l } = e,
+    let { icon: t, text: n, errors: r = [], gameTile: i } = e,
         s = r.length > 0,
         o = s ? u._3e : u.B_b;
     return (0, a.jsxs)("div", {
         className: E.connectionRow,
         children: [
             (0, a.jsxs)("div", {
-                className: i()(E.connectionRowHeader, { [E.connectionRowHeaderError]: s }),
+                className: l()(E.connectionRowHeader, { [E.connectionRowHeaderError]: s }),
                 children: [
                     (0, a.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
@@ -175,11 +175,11 @@ function O(e) {
                     (0, a.jsxs)("div", {
                         className: E.connectionRowHeaderContent,
                         children: [
-                            l,
+                            i,
                             (0, a.jsx)(o, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: i()({
+                                className: l()({
                                     [E.success]: !s,
                                     [E.error]: s,
                                 }),

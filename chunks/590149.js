@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(259580),
     c = n(335541);
@@ -10,7 +10,7 @@ function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: l,
+            subtitle: i,
             children: d,
             className: u,
             isExpanded: m,
@@ -38,7 +38,7 @@ function d(e) {
             }
         }, [x, _, j]);
     return (0, a.jsxs)("div", {
-        className: i()(c.accordionContainer, u, { [c.opened]: _ }),
+        className: l()(c.accordionContainer, u, { [c.opened]: _ }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -57,17 +57,17 @@ function d(e) {
                                 color: "text-default",
                                 children: n,
                             }),
-                            null != l &&
-                                "" !== l &&
+                            null != i &&
+                                "" !== i &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
-                                    children: l,
+                                    children: i,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: i()(c.caret, { [c.opened]: _ }),
+                        className: l()(c.caret, { [c.opened]: _ }),
                         children: (0, a.jsx)(o.Z, {
                             width: 20,
                             height: 20,
@@ -78,7 +78,7 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: i()(c.content, { [c.opened]: _ }),
+                className: l()(c.content, { [c.opened]: _ }),
                 style: E,
                 children: d,
             }),

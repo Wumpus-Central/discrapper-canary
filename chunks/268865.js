@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var a = n(54381);
 n(473749);
 var r = n(567400),
-    l = n(429368),
-    i = n(786040),
+    i = n(429368),
+    l = n(786040),
     s = n(143941),
     o = n(742964);
 let c = (e) => {
@@ -18,8 +18,8 @@ let c = (e) => {
     d = (e) => {
         let { skuId: t, isCardHovered: n } = e,
             s = (0, r.Y)({ location: "ProductWishlistButton" }),
-            o = (0, i.LJ)(t),
-            d = (0, l.o)(o);
+            o = (0, l.LJ)(t),
+            d = (0, i.o)(o);
         return null != o && s
             ? (0, a.jsx)(c, {
                   product: o,

@@ -66,8 +66,8 @@ let D = i.memo(function (e) {
                 frame: F,
                 activity: V,
                 application: H,
-                analyticsContext: z,
-                inviteButtonRef: W,
+                analyticsContext: W,
+                inviteButtonRef: z,
                 accountLinkButtonRef: K,
                 startAuthorization: Y,
                 canStartAuthorization: q,
@@ -93,10 +93,10 @@ let D = i.memo(function (e) {
                     P.default.track(Z.rMx.OPEN_MODAL, {
                         type: "Send Join Invite",
                         application_id: V.application_id,
-                        location: z.location,
+                        location: W.location,
                     }),
                     (0, d.h7)(V, !1);
-            }, [V, z, $, U]),
+            }, [V, W, $, U]),
             ei = i.useCallback(
                 (e, t) => () => {
                     (0, m.v)($, m.d.LEAVE_ACTIVITY),
@@ -236,7 +236,7 @@ let D = i.memo(function (e) {
             eh =
                 en && null == B
                     ? (0, r.jsx)(N.Z, {
-                          ref: W,
+                          ref: z,
                           tooltipText: T.intl.string(T.t["hC/Zey"]),
                           onClick: er,
                           icon: u.ejJ,

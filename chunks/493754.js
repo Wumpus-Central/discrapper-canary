@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => b,
-    Z: () => C,
+    Z: () => y,
 });
 var i = n(54381);
 n(473749);
@@ -95,14 +95,14 @@ function b(e) {
             },
         );
 }
-function C(e) {
+function y(e) {
     let {
             stream: t,
             applicationId: n,
             channel: r,
             exitFullScreen: a,
-            appContext: C,
-            analyticsLocation: y,
+            appContext: y,
+            analyticsLocation: C,
             className: v,
             size: x = "sm",
         } = e,
@@ -130,9 +130,9 @@ function C(e) {
                                     channel: r,
                                     streamUserId: null == t ? void 0 : t.ownerId,
                                     applicationId: n,
-                                    appContext: C,
+                                    appContext: y,
                                     exitFullScreen: a,
-                                    analyticsLocation: y,
+                                    analyticsLocation: C,
                                     guildScheduledEvent: S,
                                 });
                         },
@@ -141,10 +141,10 @@ function C(e) {
                 (0, i.jsx)(d.Z, {
                     channel: r,
                     stream: t,
-                    appContext: C,
+                    appContext: y,
                     className: l()(v, g.iconButton),
                     exitFullScreen: a,
-                    analyticsLocation: y,
+                    analyticsLocation: C,
                     guildScheduledEvent: S,
                 }),
             ],

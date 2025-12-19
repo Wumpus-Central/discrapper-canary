@@ -1,4 +1,4 @@
-n.d(e, { z: () => D });
+n.d(e, { z: () => b });
 var i = n(54381),
     l = n(657707),
     s = n(442837),
@@ -6,13 +6,13 @@ var i = n(54381),
     r = n(570140),
     a = n(809206),
     o = n(230711),
-    S = n(18438),
-    T = n(778825),
+    T = n(18438),
+    S = n(778825),
     c = n(398140),
     E = n(564344),
     d = n(509613),
-    g = n(970013),
-    _ = n(518950),
+    _ = n(970013),
+    g = n(518950),
     I = n(25990),
     N = n(594174),
     A = n(313789),
@@ -27,37 +27,37 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
         usePredicate: () => !(0, O.gN)("LegacyProfilePanel"),
         useTitle: () => L.intl.string(L.t["vi7f+q"]),
         notice: {
-            stores: [T.Z, I.Z],
+            stores: [S.Z, I.Z],
             element: c.Z,
         },
         initialize: () => () =>
             r.Z.wait(() => {
-                (0, S.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
+                (0, T.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
             }),
         StronglyDiscouragedCustomComponent: E.Z,
         buildLayout: () => [],
     }),
-    b = (0, d.wf)(A.n.PROFILE_PANEL, {
+    D = (0, d.wf)(A.n.PROFILE_PANEL, {
         usePredicate: () => (0, O.gN)("ProfilePanel"),
         useTitle: () => L.intl.string(L.t["vi7f+q"]),
         notice: {
-            stores: [T.Z, I.Z],
+            stores: [S.Z, I.Z],
             element: c.Z,
         },
         initialize: () => () =>
             r.Z.wait(() => {
-                (0, S.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
+                (0, T.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
             }),
         buildLayout: () => [f.i],
     }),
-    D = (0, d.m7)(A.n.PROFILE_SIDEBAR_ITEM, {
+    b = (0, d.m7)(A.n.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => L.intl.string(L.t["vi7f+q"]),
         getLegacySearchKey: () => ((0, O.Gl)("ProfilePanel") ? void 0 : P.s6.PROFILE_CUSTOMIZATION),
         icon: l.tBG,
         stronglyDiscouragedCustomComponent: () => {
             var t;
             let e = (0, s.e7)([N.default], () => N.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: r } = (0, _.Z)({
+                { avatarSrc: n, avatarDecorationSrc: r } = (0, g.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: u.EFr.SIZE_48,
                 });
@@ -102,8 +102,8 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
                   });
         },
         trailing: {
-            type: g.W.BADGE_NEW,
+            type: _.W.BADGE_NEW,
             getDismissibleContentTypes: C.OF,
         },
-        buildLayout: () => ((0, O.Gl)("ProfilePanel") ? [b] : [m]),
+        buildLayout: () => ((0, O.Gl)("ProfilePanel") ? [D] : [m]),
     });

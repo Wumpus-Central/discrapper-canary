@@ -105,15 +105,15 @@ function x(e) {
         x = a.useRef([]),
         E = a.useRef(null),
         O = a.useRef(t.length),
-        S = a.useRef(null),
-        [N, T] = a.useState(!1),
-        [w, R] = a.useState(!1),
+        N = a.useRef(null),
+        [S, T] = a.useState(!1),
+        [R, w] = a.useState(!1),
         P = t.length,
         _ = Math.max(A.iZ - P, 0),
         F = (0, c.vRw)(),
         Z = a.useCallback(
             async (e) => {
-                if (null == m || N) return;
+                if (null == m || S) return;
                 T(!0), o(null);
                 let { id: t, storageHash: a, description: i } = e,
                     s = (0, d.fD)({
@@ -157,15 +157,15 @@ function x(e) {
                     T(!1);
                 }
             },
-            [F, N, l, o, m],
+            [F, S, l, o, m],
         ),
         I = a.useCallback(
             (e, a, l, i, s) => {
                 let o = a + 1 < t.length ? a + 1 : a - 1;
-                (S.current = o >= 0 ? x.current[o] : E.current),
+                (N.current = o >= 0 ? x.current[o] : E.current),
                     e.shiftKey
                         ? (0, f.B)(l)
-                        : (R(!0),
+                        : (w(!0),
                           (0, c.ZDy)(async () => {
                               let { default: e } = await n.e("70871").then(n.bind(n, 225525));
                               return (t) => {
@@ -205,7 +205,7 @@ function x(e) {
                                               onClose: async () => {
                                                   await n(),
                                                       requestAnimationFrame(() => {
-                                                          R(!1);
+                                                          w(!1);
                                                       });
                                               },
                                           },
@@ -219,15 +219,15 @@ function x(e) {
         );
     return (
         a.useEffect(() => {
-            w ||
+            R ||
                 (t.length < O.current &&
-                    null != S.current &&
+                    null != N.current &&
                     requestAnimationFrame(() => {
                         var e;
-                        null == (e = S.current) || e.focus();
+                        null == (e = N.current) || e.focus();
                     }),
                 (O.current = t.length));
-        }, [t.length, w]),
+        }, [t.length, R]),
         (0, r.jsx)("div", {
             className: i()(j.recentAvatarContainer, p),
             children: (0, r.jsxs)("div", {

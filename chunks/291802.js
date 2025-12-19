@@ -6,16 +6,16 @@ var i = n(168107),
     r = n(509613),
     a = n(519207),
     o = n(695346),
-    S = n(313789),
-    T = n(682578),
+    T = n(313789),
+    S = n(682578),
     c = n(388032);
-let E = (0, r.qs)(S.n.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING, {
+let E = (0, r.qs)(T.n.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING, {
     useTitle: () => c.intl.string(c.t.XahVjj),
     useSubtitle: () => c.intl.string(c.t.R9fXyS),
     useValue: a.Xg,
     useDisabled: () => {
         var t;
-        let e = null == (t = (0, T.J)()) || t,
+        let e = null == (t = (0, S.J)()) || t,
             n = (0, u.xi)(),
             i = (0, s.Jm)();
         return (!n || !!i) && !e;

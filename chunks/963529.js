@@ -1,4 +1,4 @@
-n.d(e, { Z: () => S });
+n.d(e, { Z: () => T });
 var i = n(725095),
     l = n(820942),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(725095),
     r = n(313789),
     a = n(388032),
     o = n(307139);
-let S = (0, s.qs)(r.n.GAME_UPDATE_NOTIFICATIONS, {
+let T = (0, s.qs)(r.n.GAME_UPDATE_NOTIFICATIONS, {
     useTitle: () => a.intl.string(o.default["3TO4/r"]),
     useValue: u.p1.useSetting,
     setValue: l.c,

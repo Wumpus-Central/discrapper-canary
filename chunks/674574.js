@@ -6,12 +6,12 @@ var i = n(657707),
     r = n(61512),
     a = n(441302),
     o = n(736608),
-    S = n(802),
-    T = n(348911),
+    T = n(802),
+    S = n(348911),
     c = n(388032);
 let E = (0, l.wf)(s.n.NOTIFICATIONS_PANEL, {
         useTitle: () => c.intl.string(c.t.HcoRu0),
-        buildLayout: () => [S.o, T.p, a.s, o.r, r.G],
+        buildLayout: () => [T.o, S.p, a.s, o.r, r.G],
     }),
     d = (0, l.m7)(s.n.NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.HcoRu0),

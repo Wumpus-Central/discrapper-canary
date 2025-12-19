@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(642613), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(481060),
-    i = n(131051),
+    i = n(481060),
+    l = n(131051),
     s = n(28682),
     o = n(920952),
     c = n(206412),
@@ -33,7 +33,7 @@ function p(e) {
 }
 function h(e) {
     var t;
-    let { setting: n, depth: l, highlightMode: i } = e,
+    let { setting: n, depth: i, highlightMode: l } = e,
         s = null == (t = r.useContext(x)) ? void 0 : t.get(n),
         o = null;
     return (
@@ -46,23 +46,23 @@ function h(e) {
                         h,
                         {
                             setting: e,
-                            depth: l + 1,
-                            highlightMode: i,
+                            depth: i + 1,
+                            highlightMode: l,
                         },
                         e,
                     ),
                 )),
         (0, a.jsx)(c.r, {
             title: n,
-            initExpanded: l <= 2,
-            highlightMode: i,
+            initExpanded: i <= 2,
+            highlightMode: l,
             children: o,
         })
     );
 }
 function f(e) {
     let { setting: t, depth: n, inheritedHighlightMode: r } = e,
-        l = (function (e, t) {
+        i = (function (e, t) {
             if ("migrated" === t) return "migrated";
             switch (e.type) {
                 case s.Jq.ROOT:
@@ -76,7 +76,7 @@ function f(e) {
                     return null != t ? t : "migrated";
             }
         })(t, r),
-        i = "migrated" === l ? "migrated" : void 0,
+        l = "migrated" === i ? "migrated" : void 0,
         o = null;
     if ((0, s.Lk)(t)) {
         var d, u, x;
@@ -86,7 +86,7 @@ function f(e) {
             ? (o = (0, a.jsx)(h, {
                   setting: e,
                   depth: n + 1,
-                  highlightMode: null != i ? i : "legacy",
+                  highlightMode: null != l ? l : "legacy",
               }))
             : t.layout.length > 0 &&
               (o = t.layout.map((e) =>
@@ -95,7 +95,7 @@ function f(e) {
                       {
                           setting: e,
                           depth: n + 1,
-                          inheritedHighlightMode: i,
+                          inheritedHighlightMode: l,
                       },
                       e.key,
                   ),
@@ -104,7 +104,7 @@ function f(e) {
     return (0, a.jsx)(c.r, {
         title: t.key,
         initExpanded: n <= 2,
-        highlightMode: l,
+        highlightMode: i,
         children: o,
     });
 }
@@ -112,18 +112,18 @@ let x = r.createContext(null);
 function b() {
     let [e, t] = r.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
-        { node: s } = (0, i.ZP)(o.E, ""),
-        c = (0, i.ZA)();
-    return (0, a.jsxs)(l.C3N, {
+        { node: s } = (0, l.ZP)(o.E, ""),
+        c = (0, l.ZA)();
+    return (0, a.jsxs)(i.C3N, {
         label: "Settings Tree",
         children: [
-            (0, a.jsx)(l.rsf, {
+            (0, a.jsx)(i.rsf, {
                 label: "Bypass Predicates",
                 description: "Forces all migrated settings to be visible.",
                 checked: c,
-                onChange: i.go,
+                onChange: l.go,
             }),
-            (0, a.jsx)(l.rsf, {
+            (0, a.jsx)(i.rsf, {
                 checked: e,
                 onChange: (e) => t(e),
                 label: "Show Legacy Settings Tree",

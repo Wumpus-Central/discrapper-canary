@@ -85,7 +85,7 @@ function b(e) {
         { expanded: O, setExpanded: j } = (0, s.g)(),
         x = O ? m : m.slice(0, 8),
         P = m.length > 8,
-        w = (0, r.jsxs)(r.Fragment, {
+        I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
                     p,
@@ -121,9 +121,9 @@ function b(e) {
                   }),
                   (0, r.jsx)(l.d, {
                       emptyListFallbackRef: v,
-                      children: w,
+                      children: I,
                   }),
               ],
           })
-        : w;
+        : I;
 }

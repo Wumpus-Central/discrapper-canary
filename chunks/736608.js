@@ -1,4 +1,4 @@
-n.d(e, { r: () => S }), n(388685);
+n.d(e, { r: () => T }), n(388685);
 var i = n(509613),
     l = n(960412),
     s = n(151662),
@@ -6,7 +6,7 @@ var i = n(509613),
     r = n(996231),
     a = n(663623),
     o = n(388032);
-let S = (0, i.k4)(u.n.NOTIFICATIONS_EMAIL_CATEGORY, {
+let T = (0, i.k4)(u.n.NOTIFICATIONS_EMAIL_CATEGORY, {
     useTitle: () => o.intl.string(o.t["w/qqKK"]),
     initialize: function () {
         let { initialized: t } = s.Z.getEmailSettings();

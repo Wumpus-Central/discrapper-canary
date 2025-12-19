@@ -7,10 +7,10 @@ var l = n(442837),
     r = n(509613),
     a = n(695103),
     o = n(695346),
-    S = n(313789),
-    T = n(399970),
+    T = n(313789),
+    S = n(399970),
     c = n(388032);
-let E = (0, r.qs)(S.n.ADVANCED_APPLICATION_TEST_MODE, {
+let E = (0, r.qs)(T.n.ADVANCED_APPLICATION_TEST_MODE, {
     useTitle: () => c.intl.string(c.t.erOqlh),
     useSubtitle: () => c.intl.string(c.t["52hMnD"]),
     usePredicate: o.Sb.useSetting,
@@ -19,7 +19,7 @@ let E = (0, r.qs)(S.n.ADVANCED_APPLICATION_TEST_MODE, {
         t
             ? (0, s.h7j)((t) =>
                   (0, i.jsx)(
-                      T.Z,
+                      S.Z,
                       (function (t) {
                           for (var e = 1; e < arguments.length; e++) {
                               var n = null != arguments[e] ? arguments[e] : {},

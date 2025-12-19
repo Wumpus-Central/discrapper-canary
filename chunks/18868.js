@@ -1,8 +1,8 @@
 n.d(t, { L: () => h }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(310752),
     c = n(897842),
@@ -55,7 +55,7 @@ let m = () => {
         e.stopPropagation(), e.preventDefault();
     },
     h = (e) => {
-        let { className: t, onDrop: n, children: l } = e,
+        let { className: t, onDrop: n, children: i } = e,
             [h, f] = r.useState(!1),
             x = r.useRef(null),
             b = r.useCallback((e) => {
@@ -84,13 +84,13 @@ let m = () => {
             );
         return (0, a.jsxs)("div", {
             ref: x,
-            className: i()(t, u.wrapper),
+            className: l()(t, u.wrapper),
             onDragEnter: b,
             onDragOver: p,
             onDragLeave: g,
             onDrop: v,
             children: [
-                l,
+                i,
                 h &&
                     (0, a.jsx)("div", {
                         className: u.uploadModal,

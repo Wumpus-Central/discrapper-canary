@@ -1,4 +1,4 @@
-n.d(e, { w: () => T });
+n.d(e, { w: () => S });
 var i = n(657707),
     l = n(509613),
     s = n(313789),
@@ -6,15 +6,15 @@ var i = n(657707),
     r = n(593648),
     a = n(726985),
     o = n(388032);
-let S = (0, l.wf)(s.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
+let T = (0, l.wf)(s.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
         useTitle: () => o.intl.string(o.t.HcoRu0),
         StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    T = (0, l.m7)(s.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
+    S = (0, l.m7)(s.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.HcoRu0),
         getLegacySearchKey: () => a.s6.NOTIFICATIONS,
         icon: i.Dkj,
         usePredicate: () => !(0, u.gj)("LegacyNotificationsPanel"),
-        buildLayout: () => [S],
+        buildLayout: () => [T],
     });

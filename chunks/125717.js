@@ -6,11 +6,11 @@ var i = n(473749),
     r = n(695346),
     a = n(313789),
     o = n(580183),
-    S = n(981631),
-    T = n(388032);
+    T = n(981631),
+    S = n(388032);
 let c = (0, l.J9)(a.n.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
-    useTitle: () => T.intl.string(T.t.tiCXaH),
-    useSubtitle: () => T.intl.format(T.t.RvjRRI, { appealLink: s.Z.getArticleURL(S.BhN.SAFE_DIRECT_MESSAGING) }),
+    useTitle: () => S.intl.string(S.t.tiCXaH),
+    useSubtitle: () => S.intl.format(S.t.RvjRRI, { appealLink: s.Z.getArticleURL(T.BhN.SAFE_DIRECT_MESSAGING) }),
     useValue: o.m,
     setValue: (t) => r.Xr.updateSetting(t),
     useOptions: function () {

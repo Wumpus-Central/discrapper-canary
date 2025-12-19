@@ -2,8 +2,8 @@ n.d(t, { ZP: () => j });
 var a = n(54381);
 n(473749);
 var r = n(442837),
-    l = n(704215),
-    i = n(198168),
+    i = n(704215),
+    l = n(198168),
     s = n(907862),
     o = n(570140),
     c = n(710845),
@@ -25,7 +25,7 @@ function g(e) {
         }),
             null == (n = e.onDismiss) || n.call(e, t);
     }
-    let { isAdopting: n, onAdoptTag: r, onEditProfile: l } = (0, h.Z)(e.guild.id, () => t(f.L.TAKE_ACTION)),
+    let { isAdopting: n, onAdoptTag: r, onEditProfile: i } = (0, h.Z)(e.guild.id, () => t(f.L.TAKE_ACTION)),
         c = [
             {
                 text: x.intl.string(x.t.jwEaiX),
@@ -35,7 +35,7 @@ function g(e) {
             },
             {
                 text: x.intl.string(x.t.s5vZlQ),
-                onClick: l,
+                onClick: i,
                 variant: "secondary",
             },
         ];
@@ -48,7 +48,7 @@ function g(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,
@@ -71,7 +71,7 @@ function v(e) {
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag },
         }),
-            (0, d.Qd)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, f.L.DISMISS),
+            (0, d.Qd)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, f.L.DISMISS),
             null == (n = e.onDismiss) || n.call(e, t);
     }
     let { isAdopting: n, onAdoptTag: r, onEditProfile: c } = (0, h.Z)(e.guild.id, () => t(f.L.TAKE_ACTION)),
@@ -97,7 +97,7 @@ function v(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,

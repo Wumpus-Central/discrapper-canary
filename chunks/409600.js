@@ -1,8 +1,8 @@
 t.d(n, { default: () => p }), t(388685);
-var i = t(54381);
+var l = t(54381);
 t(473749);
-var l = t(100527),
-    a = t(906732),
+var a = t(100527),
+    i = t(906732),
     r = t(987209),
     s = t(563132),
     o = t(107998),
@@ -11,10 +11,10 @@ var l = t(100527),
     d = t(382263),
     f = t(231338);
 function g(e) {
-    let { onClose: n, onComplete: t, transitionState: l, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
+    let { onClose: n, onComplete: t, transitionState: a, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
         {} = (0, s.JL)(),
-        { analyticsLocations: d } = (0, a.ZP)();
-    return (0, i.jsx)(c.PaymentModal, {
+        { analyticsLocations: d } = (0, i.ZP)();
+    return (0, l.jsx)(c.PaymentModal, {
         onClose: n,
         onComplete: t,
         applicationId: r,
@@ -22,15 +22,15 @@ function g(e) {
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
-        transitionState: l,
+        transitionState: a,
     });
 }
 function p(e) {
     let { loadId: n, applicationId: t, skuId: c, analyticsLocations: p, isGift: m = !1 } = e,
-        { analyticsLocations: b } = (0, a.ZP)(p, l.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, i.jsx)(a.Gt, {
+        { analyticsLocations: b } = (0, i.ZP)(p, a.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, l.jsx)(i.Gt, {
         value: b,
-        children: (0, i.jsx)(s.PaymentContextProvider, {
+        children: (0, l.jsx)(s.PaymentContextProvider, {
             loadId: n,
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -41,32 +41,32 @@ function p(e) {
             activeSubscription: null,
             purchaseType: f.GZ.ONE_TIME,
             isGift: m,
-            children: (0, i.jsx)(o.c1, {
-                children: (0, i.jsx)(r.KB, {
+            children: (0, l.jsx)(o.c1, {
+                children: (0, l.jsx)(r.KB, {
                     isGift: m,
-                    children: (0, i.jsx)(
+                    children: (0, l.jsx)(
                         g,
                         (function (e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},
-                                    i = Object.keys(t);
+                                    l = Object.keys(t);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
+                                    (l = l.concat(
                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                         }),
                                     )),
-                                    i.forEach(function (n) {
-                                        var i;
-                                        (i = t[n]),
+                                    l.forEach(function (n) {
+                                        var l;
+                                        (l = t[n]),
                                             n in e
                                                 ? Object.defineProperty(e, n, {
-                                                      value: i,
+                                                      value: l,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[n] = i);
+                                                : (e[n] = l);
                                     });
                             }
                             return e;

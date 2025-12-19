@@ -3,7 +3,7 @@ var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(236726),
+    o = n(620792),
     s = n(990547),
     c = n(442837),
     u = n(681715),
@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(213609),
     g = n(496675),
     b = n(626135),
-    C = n(415397),
-    y = n(771027),
+    y = n(415397),
+    C = n(771027),
     v = n(981631),
     x = n(388032),
     O = n(165343),
@@ -65,11 +65,11 @@ function _(e) {
     });
     let w = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.CREATE_INSTANT_INVITE, t), [t]),
         [M, R] = r.useState(!1),
-        [L, D] = r.useState("unknown"),
-        k = r.useRef(null),
-        { isHoveringOrFocusing: U } = (0, y.Tu)(w ? l : k),
-        [V, F] = r.useState(!1),
-        H = U || V,
+        [D, k] = r.useState("unknown"),
+        L = r.useRef(null),
+        { isHoveringOrFocusing: U } = (0, C.Tu)(w ? l : L),
+        [V, H] = r.useState(!1),
+        F = U || V,
         B = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
@@ -94,23 +94,23 @@ function _(e) {
                 clamp: !0,
             },
             onRest: () => {
-                M && B(L);
+                M && B(D);
             },
         }),
-        z = r.useCallback(function () {
+        W = r.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-            R(!0), D(e);
+            R(!0), k(e);
         }, []),
-        W = r.useCallback(
+        z = r.useCallback(
             () => (
                 null != I.current && clearTimeout(I.current),
-                (I.current = setTimeout(() => z("timeout"), 10000)),
+                (I.current = setTimeout(() => W("timeout"), 10000)),
                 N((e) => e + 1),
                 () => {
                     null != I.current && clearTimeout(I.current);
                 }
             ),
-            [z],
+            [W],
         ),
         q = r.useCallback(
             () => (
@@ -124,19 +124,19 @@ function _(e) {
             ),
             [],
         );
-    (0, p.ZP)(W),
+    (0, p.ZP)(z),
         r.useEffect(() => {
-            if (!H) {
-                W(), q();
+            if (!F) {
+                z(), q();
                 return;
             }
             null != I.current && clearTimeout(I.current), null != Z.current && clearTimeout(Z.current), P(!0);
-        }, [H, W, q]);
+        }, [F, z, q]);
     let K = r.useCallback(() => {
             P(!0);
         }, []),
         Y = r.useCallback(() => {
-            P(!1), F(!1);
+            P(!1), H(!1);
         }, []);
     return w
         ? (0, i.jsx)(d.yRy, {
@@ -148,11 +148,11 @@ function _(e) {
               popoutKey: "voice-invite-suggestions-button",
               renderPopout: (e) =>
                   (0, i.jsx)(
-                      C.B,
+                      y.B,
                       j(
                           {
                               channel: t,
-                              onHoverOrFocus: F,
+                              onHoverOrFocus: H,
                           },
                           e,
                       ),
@@ -187,7 +187,7 @@ function _(e) {
                                                   (0, i.jsxs)(
                                                       "svg",
                                                       {
-                                                          className: a()(O.timer, { [O.paused]: H }),
+                                                          className: a()(O.timer, { [O.paused]: F }),
                                                           viewBox: "0 0 ".concat(24, " ").concat(24),
                                                           style: {
                                                               "--custom-voice-invite-suggestions-timer-duration": 10000,
@@ -221,7 +221,7 @@ function _(e) {
                                           U
                                               ? (0, i.jsx)(d.P3F, {
                                                     className: O.close,
-                                                    onClick: () => z("user_explicit"),
+                                                    onClick: () => W("user_explicit"),
                                                     "aria-label": x.intl.string(x.t.cpT0Cq),
                                                     children: (0, i.jsx)(d.Dio, {
                                                         size: "xs",

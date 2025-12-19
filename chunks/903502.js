@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(442837),
-    i = n(199849),
+    i = n(442837),
+    l = n(199849),
     s = n(481060),
     o = n(570140),
     c = n(178635),
@@ -33,7 +33,7 @@ function f() {
         [n, f] = r.useState(0),
         [x, b] = r.useState(1000),
         [g, v] = r.useState(0),
-        j = (0, l.e7)([d.Z], () => {
+        j = (0, i.e7)([d.Z], () => {
             var t;
             return null === e ? null : null != (t = d.Z.getFeedbackConfig(m.nw[e])) ? t : c.R[m.nw[e]];
         }),
@@ -51,7 +51,7 @@ function f() {
         children: (0, a.jsxs)(s.Kqy, {
             gap: 32,
             children: [
-                (0, a.jsx)(i.y6, {
+                (0, a.jsx)(l.y6, {
                     label: "Feedback Survey",
                     options: C,
                     value: e,
@@ -101,7 +101,7 @@ function f() {
                                     placeholder: "Duration length",
                                     onChange: (e) => f(parseFloat(e)),
                                 }),
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     options: h,
                                     value: x,
                                     onChange: (e) => {

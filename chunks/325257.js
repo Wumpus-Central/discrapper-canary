@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(120356),
     a = n.n(l),
     o = n(891371),
-    s = n(236726),
+    s = n(620792),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -112,8 +112,8 @@ let L = i.memo(function (e) {
             route: F,
             guild: V,
             animatable: H,
-            selected: z = !1,
-            unread: W = !1,
+            selected: W = !1,
+            unread: z = !1,
             mediaState: K,
             unavailable: Y = !1,
             badge: q = 0,
@@ -205,7 +205,7 @@ let L = i.memo(function (e) {
                 ? (0, r.jsx)(E.Z, {
                       guild: V,
                       show: ey,
-                      active: z,
+                      active: W,
                       onAnimationStart: function () {
                           em(ey);
                       },
@@ -214,7 +214,7 @@ let L = i.memo(function (e) {
                       },
                   })
                 : (0, r.jsx)(f.aRk, {
-                      selected: z,
+                      selected: W,
                       children: (0, r.jsx)("div", {
                           ref: J
                               ? (e) => {
@@ -244,14 +244,14 @@ let L = i.memo(function (e) {
                                           onContextMenu: eE,
                                           onKeyDown: eS,
                                           icon: (0, O.EB)(V, 2 * eP, eg && H, !0),
-                                          selected: z || eg,
+                                          selected: W || eg,
                                       },
                                       ef,
                                   ),
                                   {
                                       "aria-setsize": er,
                                       "aria-posinset": ei,
-                                      "aria-selected": z,
+                                      "aria-selected": W,
                                   },
                               ),
                           ),
@@ -264,11 +264,11 @@ let L = i.memo(function (e) {
                   className: a()(T.blobContainer, {
                       [T.sorting]: $,
                       [T.wobble]: ey,
-                      [T.selected]: ey || z,
+                      [T.selected]: ey || W,
                   }),
                   "data-drop-hovering": ey,
                   children: (0, r.jsx)(f.aRk, {
-                      selected: z,
+                      selected: W,
                       upperBadge: eo,
                       lowerBadge: es,
                       lowerBadgeSize: ec,
@@ -280,8 +280,8 @@ let L = i.memo(function (e) {
         children: [
             (0, r.jsx)(x.Z, {
                 hovered: !eu && eg,
-                selected: !eu && z,
-                unread: !eu && W,
+                selected: !eu && W,
+                unread: !eu && z,
                 className: T.pill,
             }),
             (0, r.jsx)(I.Z, {

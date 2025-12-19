@@ -8,8 +8,8 @@ n.d(t, {
     n(457542);
 var a = n(473749),
     r = n(524437),
-    l = n(809206),
-    i = n(153867),
+    i = n(809206),
+    l = n(153867),
     s = n(857595),
     o = n(607070),
     c = n(1870),
@@ -46,7 +46,7 @@ async function E() {
                 let e = j.qt[r];
                 t = null != (n = null == e ? void 0 : e.theme) ? n : v.BRd.DARK;
             } else t = S([v.BRd.DARK, v.BRd.DARKER, v.BRd.MIDNIGHT]);
-            await i.ZI(
+            await l.ZI(
                 {
                     theme: t,
                     backgroundGradientPresetId: null != r ? r : void 0,
@@ -56,7 +56,7 @@ async function E() {
             );
         } else {
             let e = S(C);
-            await i.ZI(
+            await l.ZI(
                 {
                     theme: e,
                     backgroundGradientPresetId: void 0,
@@ -84,8 +84,8 @@ async function T() {
                 (0, u.Wh)(e);
             }
             let e = x.Z.getAllPending(),
-                i = (0, m.ED)(e);
-            await (0, l.Mn)(i).finally(l.si);
+                l = (0, m.ED)(e);
+            await (0, i.Mn)(l).finally(i.si);
         } catch (e) {}
 }
 function O() {
@@ -112,12 +112,12 @@ function N() {
             T = null == g || null == (n = g.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
             O = null != E && null != (a = y.find((e) => e.skuId === E)) ? a : null,
             N = null != T && null != (r = C.find((e) => e.skuId === T)) ? r : null,
-            w = o.Z.fontSize,
-            P = o.Z.messageGroupSpacing,
+            P = o.Z.fontSize,
+            w = o.Z.messageGroupSpacing,
             I = h.YC.getSetting();
         return () => {
             try {
-                i.ZI(
+                l.ZI(
                     {
                         theme: _,
                         backgroundGradientPresetId: null != S ? S : void 0,
@@ -129,7 +129,7 @@ function N() {
                     (0, u.Wh)(N);
                 let e = x.Z.getAllPending(),
                     t = (0, m.ED)(e);
-                (0, l.Mn)(t).finally(l.si), (0, s.oL)(w), (0, s.ZZ)(P), h.YC.updateSetting(I);
+                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(w), h.YC.updateSetting(I);
             } catch (e) {}
         };
     }, []);

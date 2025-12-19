@@ -1,8 +1,8 @@
 n.d(t, { L: () => o });
 var a = n(473749),
     r = n(442837),
-    l = n(570140),
-    i = n(480387),
+    i = n(570140),
+    l = n(480387),
     s = n(726745);
 function o() {
     let e = (0, r.cj)([s.Z], () => ({
@@ -11,8 +11,8 @@ function o() {
     }));
     return (
         a.useEffect(() => {
-            l.Z.wait(() => {
-                i.HJ();
+            i.Z.wait(() => {
+                l.HJ();
             });
         }, []),
         e

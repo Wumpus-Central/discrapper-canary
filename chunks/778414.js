@@ -24,8 +24,8 @@ var r = n(54381),
     j = n(50130),
     x = n(5136),
     P = n(690760),
-    w = n(517157),
-    I = n(860717),
+    I = n(517157),
+    w = n(860717),
     S = n(28671),
     E = n(729424),
     T = n(34335),
@@ -86,7 +86,7 @@ function L(e) {
     var { widget: t } = e,
         n = M(e, ["widget"]);
     return t instanceof h.q
-        ? (0, r.jsx)(I.Z, G({ widget: t }, n))
+        ? (0, r.jsx)(w.Z, G({ widget: t }, n))
         : t instanceof y.zy
           ? (0, r.jsx)(C.Z, G({ widget: t }, n))
           : null;
@@ -105,11 +105,11 @@ function B() {
         ],
     });
 }
-function U(e) {
+function F(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        a = (0, w.Z)(t.id),
+        a = (0, I.Z)(t.id),
         l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
         o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
@@ -128,9 +128,9 @@ function U(e) {
               },
           });
 }
-function F(e) {
+function U(e) {
     let { user: t, guildId: n, channelId: a } = e,
-        l = (0, w.Z)(t.id),
+        l = (0, I.Z)(t.id),
         c = (0, o.e7)([b.default], () => b.default.getId() === t.id),
         s = (() => {
             let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
@@ -147,9 +147,9 @@ function F(e) {
         j = i.useMemo(() => l.filter(y.Wc), [l]),
         x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
     (0, O.J)(c, j);
-    var I = t.id;
+    var w = t.id;
     (0, P.s)(x);
-    let { data: S, refetch: _ } = (0, p.O)(I),
+    let { data: S, refetch: _ } = (0, p.O)(w),
         C = i.useRef(S);
     (C.current = S),
         i.useEffect(() => {
@@ -163,7 +163,7 @@ function F(e) {
                         children: [
                             (0, r.jsx)(E.Z, { className: R.editingHeader }),
                             s && (0, r.jsx)(B, {}),
-                            (0, r.jsx)(U, { user: t }),
+                            (0, r.jsx)(F, { user: t }),
                         ],
                     }),
                 l.map((e, i) =>
@@ -197,6 +197,6 @@ function W(e) {
         scrollerRef: a,
         className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(_.Z, { scrollerRef: a }), (0, r.jsx)(F, G({ user: t }, n))],
+        children: [(0, r.jsx)(_.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
     });
 }

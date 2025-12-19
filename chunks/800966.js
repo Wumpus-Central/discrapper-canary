@@ -1,4 +1,4 @@
-n.d(t, { h: () => C });
+n.d(t, { h: () => y });
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -110,7 +110,7 @@ function b(e) {
         })
     );
 }
-function C(e) {
+function y(e) {
     var t,
         n,
         r = m(

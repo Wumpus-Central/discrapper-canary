@@ -1,5 +1,5 @@
 n.d(e, {
-    D: () => g,
+    D: () => _,
     N: () => d,
 }),
     n(539854);
@@ -20,7 +20,7 @@ function d() {
         return null != t && t.mfaEnabled;
     });
 }
-let g = (0, s.ON)(o.n.ACCOUNT_AUTHENTICATOR_APP_SETTING, {
+let _ = (0, s.ON)(o.n.ACCOUNT_AUTHENTICATOR_APP_SETTING, {
     useSearchTerms: function () {
         let t = (0, l.e7)([u.default], () => u.default.hasTOTPEnabled()),
             e = [E.intl.string(E.t.m0FidJ), E.intl.string(E.t.xZEzbu)];

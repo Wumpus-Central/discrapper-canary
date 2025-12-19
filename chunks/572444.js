@@ -21,8 +21,8 @@ n.d(t, { Z: () => _ }),
     n(539854);
 var a = n(54381),
     r = n(473749),
-    l = n(345959),
-    i = n.n(l),
+    i = n(345959),
+    l = n.n(i),
     s = n(442837),
     o = n(199849),
     c = n(755721),
@@ -69,7 +69,7 @@ function y(e) {
     });
 }
 function C(e) {
-    let { recording: t, playing: n, onPlay: r, onStop: l } = e;
+    let { recording: t, playing: n, onPlay: r, onStop: i } = e;
     return (0, a.jsx)(d.zF9, {
         collapsibleContent: (0, a.jsx)(y, { recording: t }),
         children: (e) => {
@@ -85,7 +85,7 @@ function C(e) {
                     (0, a.jsx)(d.P3F, {
                         tag: "span",
                         onClick: (e) => {
-                            e.stopPropagation(), n ? l() : r(t);
+                            e.stopPropagation(), n ? i() : r(t);
                         },
                         children: n ? (0, a.jsx)(d.fpf, { size: "xxs" }) : (0, a.jsx)(d.o1U, { size: "xxs" }),
                     }),
@@ -93,7 +93,7 @@ function C(e) {
                         tag: "span",
                         onClick: (e) => {
                             e.stopPropagation();
-                            let n = new Blob([i()(t.audioBuffer)], { type: "audio/wav" }),
+                            let n = new Blob([l()(t.audioBuffer)], { type: "audio/wav" }),
                                 a = URL.createObjectURL(n),
                                 r = document.createElement("a");
                             (r.href = a),
@@ -113,15 +113,15 @@ function C(e) {
 function _() {
     let { name: e } = (0, f.p6)(g.h7.AUDIO_INPUT),
         [t, n] = r.useState(!1),
-        [l, i] = r.useState([]),
+        [i, l] = r.useState([]),
         y = (0, s.e7)([x.Z], () => x.Z.getKrispSuppressionLevel()),
         [_, S] = r.useState(null),
         E = r.useRef(null),
         T = r.useRef(null),
         [O, N] = r.useState(0.5),
         {
-            krispModels: w,
-            krispModelOverride: P,
+            krispModels: P,
+            krispModelOverride: w,
             inputMode: I,
             echoCancellation: k,
             autoThreshold: R,
@@ -234,8 +234,8 @@ function _() {
                                     clear: () => {
                                         u.Z.setKrispModelOverride("");
                                     },
-                                    isSelected: (e) => e === P,
-                                    options: w.map((e) => ({
+                                    isSelected: (e) => e === w,
+                                    options: P.map((e) => ({
                                         label: e,
                                         value: e,
                                     })),
@@ -310,7 +310,7 @@ function _() {
                                               u.Z.setLoopback("krisp_test", !0),
                                               x.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
                                                   n(!1), u.Z.setLoopback("krisp_test", !1);
-                                                  let l = new AudioBuffer({
+                                                  let i = new AudioBuffer({
                                                       length: t.length,
                                                       sampleRate: r,
                                                       numberOfChannels: a,
@@ -319,13 +319,13 @@ function _() {
                                                       let n = new Float32Array(t.length / a);
                                                       for (let r = 0; r < t.length / a; r++)
                                                           n[r] = t[r * a + e] / 32768;
-                                                      l.copyToChannel(n, e);
+                                                      i.copyToChannel(n, e);
                                                   }
-                                                  i((t) => [
+                                                  l((t) => [
                                                       ...t,
                                                       {
                                                           inputName: e,
-                                                          audioBuffer: l,
+                                                          audioBuffer: i,
                                                           createdAt: Date.now(),
                                                           suppression: G,
                                                           echoCancellation: k,
@@ -354,7 +354,7 @@ function _() {
                                 variant: "text-sm/semibold",
                                 children: "Recordings",
                             }),
-                            l.map((e, t) =>
+                            i.map((e, t) =>
                                 (0, a.jsx)(
                                     C,
                                     {

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(530472),
     g = n(453687),
     b = n(930282),
-    C = n(318713),
-    y = n(981631),
+    y = n(318713),
+    C = n(981631),
     v = n(388032),
     x = n(402157),
     O = n(549578),
@@ -56,7 +56,7 @@ let j = r.memo(function (e) {
                             tag: "span",
                             className: x.learnMore,
                             children: v.intl.format(v.t["Nd3Gh+"], {
-                                helpUrl: h.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                helpUrl: h.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
                     }),
@@ -66,7 +66,7 @@ let j = r.memo(function (e) {
     }),
     S = r.memo(function (e) {
         var t, n;
-        let { className: l, compact: o, message: u, children: h, content: m, onUpdate: y } = e,
+        let { className: l, compact: o, message: u, children: h, content: m, onUpdate: C } = e,
             S = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
             _ = r.useRef(!1),
             P = (0, c.e7)([f.Z], () => f.Z.getMessage(u.id), [u.id]),
@@ -75,8 +75,8 @@ let j = r.memo(function (e) {
             }, [u, P]);
         return (
             r.useLayoutEffect(() => {
-                _.current ? null != y && y() : (_.current = !0);
-            }, [y, u.content, m, S, h]),
+                _.current ? null != C && C() : (_.current = !0);
+            }, [C, u.content, m, S, h]),
             (0, i.jsxs)("div", {
                 id: (0, g.ut)(u),
                 className: a()(l, E.markup, {
@@ -92,7 +92,7 @@ let j = r.memo(function (e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 " ",
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(y.Z, {
                                     timestamp: u.timestamp,
                                     isEdited: !0,
                                     isInline: !1,

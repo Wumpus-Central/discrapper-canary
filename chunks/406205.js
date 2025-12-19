@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(997841);
+n.d(t, { Z: () => C }), n(388685), n(997841);
 var i = n(54381),
     s = n(473749),
     l = n(120356),
@@ -14,22 +14,22 @@ var i = n(54381),
     x = n(748756),
     p = n(732760),
     j = n(686660),
-    v = n(981631),
-    f = n(490897),
-    N = n(526761),
-    b = n(388032),
+    f = n(981631),
+    v = n(490897),
+    b = n(526761),
+    N = n(388032),
     S = n(874238),
     E = n(650455);
-function O(e) {
+function C(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([h.ZP], () => h.ZP.getGuildFlags(t)),
         l = (0, a.e7)([h.ZP], () => {
             let e = h.ZP.getGuildUnreadSetting(t),
                 n = h.ZP.getMessageNotifications(t);
-            return e === f.i.UNSET ? (n === v.bL.ALL_MESSAGES ? f.i.ALL_MESSAGES : f.i.ONLY_MENTIONS) : e;
+            return e === v.i.UNSET ? (n === f.bL.ALL_MESSAGES ? v.i.ALL_MESSAGES : v.i.ONLY_MENTIONS) : e;
         }),
         r = (0, a.e7)([h.ZP], () => h.ZP.getMessageNotifications(t)),
-        [E, O] = (0, s.useState)(!1),
+        [E, C] = (0, s.useState)(!1),
         L = E ? j.s8.CUSTOM : (0, j.gs)(l, r);
     return (0, i.jsxs)("div", {
         children: [
@@ -40,24 +40,24 @@ function O(e) {
                     options: [
                         {
                             value: j.s8.ALL_MESSAGES,
-                            name: b.intl.string(b.t.hZrr6k),
+                            name: N.intl.string(N.t.hZrr6k),
                         },
                         {
                             value: j.s8.MENTIONS,
-                            name: b.intl.string(b.t.y59NJm),
+                            name: N.intl.string(N.t.y59NJm),
                         },
                         {
                             value: j.s8.NOTHING,
-                            name: b.intl.string(b.t["pGn/bJ"]),
+                            name: N.intl.string(N.t["pGn/bJ"]),
                         },
                         {
                             value: j.s8.CUSTOM,
-                            name: b.intl.string(b.t["32yow9"]),
+                            name: N.intl.string(N.t["32yow9"]),
                         },
                     ],
                     onChange: (e) => {
                         let { value: n } = e;
-                        return n === j.s8.CUSTOM ? void O(!0) : (O(!1), void (0, x.V)(t, n));
+                        return n === j.s8.CUSTOM ? void C(!0) : (C(!1), void (0, x.V)(t, n));
                     },
                     className: S.segmentedControl,
                     look: "pill",
@@ -69,7 +69,7 @@ function O(e) {
                 children: [
                     (0, i.jsxs)("div", {
                         className: S.grid,
-                        children: [(0, i.jsx)(C, { unreadSetting: l }), (0, i.jsx)(Z, { notificationSetting: r })],
+                        children: [(0, i.jsx)(O, { unreadSetting: l }), (0, i.jsx)(Z, { notificationSetting: r })],
                     }),
                     (0, i.jsxs)("div", {
                         className: S.grid,
@@ -79,12 +79,12 @@ function O(e) {
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: b.intl.string(b.t.Tqd1Af),
+                                        children: N.intl.string(N.t.Tqd1Af),
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        children: b.intl.string(b.t.RpQgm5),
+                                        children: N.intl.string(N.t.RpQgm5),
                                     }),
                                 ],
                             }),
@@ -93,12 +93,12 @@ function O(e) {
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: b.intl.string(b.t["1m22ZB"]),
+                                        children: N.intl.string(N.t["1m22ZB"]),
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        children: b.intl.string(b.t["4bP2ZZ"]),
+                                        children: N.intl.string(N.t["4bP2ZZ"]),
                                     }),
                                 ],
                             }),
@@ -111,15 +111,15 @@ function O(e) {
                                 value: l,
                                 className: S.input,
                                 onChange: (e) => {
-                                    O(!1),
+                                    C(!1),
                                         u.Z.updateGuildNotificationSettings(
                                             t,
                                             {
                                                 flags: (0, m.Q4)(
                                                     n,
-                                                    e === f.i.ALL_MESSAGES
-                                                        ? N.vc.UNREADS_ALL_MESSAGES
-                                                        : N.vc.UNREADS_ONLY_MENTIONS,
+                                                    e === v.i.ALL_MESSAGES
+                                                        ? b.vc.UNREADS_ALL_MESSAGES
+                                                        : b.vc.UNREADS_ONLY_MENTIONS,
                                                 ),
                                             },
                                             g.UE.unreads(e),
@@ -127,7 +127,7 @@ function O(e) {
                                 },
                                 options: (0, p.y)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
-                                    let t = e.disabled && e.value === f.i.ONLY_MENTIONS && l !== f.i.ONLY_MENTIONS;
+                                    let t = e.disabled && e.value === v.i.ONLY_MENTIONS && l !== v.i.ONLY_MENTIONS;
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)("div", {
@@ -139,7 +139,7 @@ function O(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(d.u, {
-                                                    text: b.intl.string(b.t.eP8yWU),
+                                                    text: N.intl.string(N.t.eP8yWU),
                                                     children: (0, i.jsx)(c.t6m, {
                                                         size: "custom",
                                                         width: 20,
@@ -155,19 +155,19 @@ function O(e) {
                                 className: S.input,
                                 value: r,
                                 onChange: (e) => {
-                                    O(!1);
+                                    C(!1);
                                     let n = { message_notifications: e };
-                                    e === v.bL.ALL_MESSAGES &&
-                                        l !== f.i.ALL_MESSAGES &&
-                                        (n.flags = (0, m.Q4)(h.ZP.getGuildFlags(t), N.vc.UNREADS_ALL_MESSAGES)),
+                                    e === f.bL.ALL_MESSAGES &&
+                                        l !== v.i.ALL_MESSAGES &&
+                                        (n.flags = (0, m.Q4)(h.ZP.getGuildFlags(t), b.vc.UNREADS_ALL_MESSAGES)),
                                         u.Z.updateGuildNotificationSettings(t, n, g.UE.notifications(e));
                                 },
                                 options: (0, p.d)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
                                     let t =
-                                        e.value === v.bL.ALL_MESSAGES &&
-                                        l !== f.i.ALL_MESSAGES &&
-                                        r !== v.bL.ALL_MESSAGES;
+                                        e.value === f.bL.ALL_MESSAGES &&
+                                        l !== v.i.ALL_MESSAGES &&
+                                        r !== f.bL.ALL_MESSAGES;
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(c.Text, {
@@ -176,7 +176,7 @@ function O(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(d.u, {
-                                                    text: b.intl.string(b.t.idXSbI),
+                                                    text: N.intl.string(N.t.idXSbI),
                                                     children: (0, i.jsx)(c.d3s, {
                                                         size: "custom",
                                                         width: 20,
@@ -195,30 +195,30 @@ function O(e) {
         ],
     });
 }
-function C(e) {
+function O(e) {
     let { unreadSetting: t } = e,
         n = [
             {
                 badged: !0,
                 unread: !0,
                 muted: !1,
-                name: b.intl.string(b.t.EjLobP),
+                name: N.intl.string(N.t.EjLobP),
             },
             {
                 badged: !1,
                 unread: !0,
                 muted: !0,
-                name: b.intl.string(b.t.Wgpwpp),
+                name: N.intl.string(N.t.Wgpwpp),
             },
             {
                 badged: !1,
                 unread: !1,
                 muted: !0,
-                name: b.intl.string(b.t.g9VImh),
+                name: N.intl.string(N.t.g9VImh),
             },
         ];
     return (
-        t === f.i.ALL_MESSAGES && (n[1].muted = !1),
+        t === v.i.ALL_MESSAGES && (n[1].muted = !1),
         (0, i.jsx)("div", {
             className: S.channeList,
             children: n.map((e) =>
@@ -264,7 +264,7 @@ function Z(e) {
     return (0, i.jsxs)("div", {
         className: S.mockMessage,
         children: [
-            e.notificationSetting === v.bL.NO_MESSAGES && (0, i.jsx)("div", { className: S.mockMessageDisabled }),
+            e.notificationSetting === f.bL.NO_MESSAGES && (0, i.jsx)("div", { className: S.mockMessageDisabled }),
             (0, i.jsx)("div", {
                 children: (0, i.jsx)("img", {
                     className: S.mockMessageAvatar,
@@ -276,15 +276,15 @@ function Z(e) {
                 children: [
                     (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
-                        children: b.intl.string(b.t.qSq0tD),
+                        children: N.intl.string(N.t.qSq0tD),
                     }),
-                    e.notificationSetting === v.bL.ALL_MESSAGES &&
+                    e.notificationSetting === f.bL.ALL_MESSAGES &&
                         (0, i.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: b.intl.string(b.t.WYyzI5),
+                            children: N.intl.string(N.t.WYyzI5),
                         }),
-                    e.notificationSetting !== v.bL.ALL_MESSAGES &&
+                    e.notificationSetting !== f.bL.ALL_MESSAGES &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(c.Text, {
@@ -297,7 +297,7 @@ function Z(e) {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     tag: "span",
-                                    children: b.intl.string(b.t.WYyzI5),
+                                    children: N.intl.string(N.t.WYyzI5),
                                 }),
                             ],
                         }),

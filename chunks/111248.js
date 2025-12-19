@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -14,20 +14,20 @@ var i = n(54381),
     m = n(354459),
     g = n(29005),
     b = n(533348);
-let C = "CameraPreviewPosition";
-function y(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: v, onSelectParticipant: x } = e,
+let y = "CameraPreviewPosition";
+function C(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: C, participants: v, onSelectParticipant: x } = e,
         [O, E] = (function () {
-            let [e, t] = r.useState(() => s.K.get(C, h.VD2.BOTTOM_RIGHT));
+            let [e, t] = r.useState(() => s.K.get(y, h.VD2.BOTTOM_RIGHT));
             return [
                 e,
                 r.useCallback((e) => {
-                    s.K.set(C, e), t(e);
+                    s.K.set(y, e), t(e);
                 }, []),
             ];
         })(),
         j = r.useRef(null),
-        S = null == y.getGuildId() ? 70 : 50,
+        S = null == C.getGuildId() ? 70 : 50,
         _ = (0, o.e7)([p.Z], () => p.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
         P = v.length,
         I = _ * P + 8 * (P - 1),
@@ -78,7 +78,7 @@ function y(e) {
                         f.ZP,
                         {
                             participant: e,
-                            channel: y,
+                            channel: C,
                             onContextMenu: n,
                             className: a()(g.tile, b.elevationHigh),
                             fit: f.BP.COVER,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(442837),
-    i = n(199849),
+    i = n(442837),
+    l = n(199849),
     s = n(159691),
     o = n(755721),
     c = n(481060),
@@ -72,21 +72,21 @@ function O(e) {
     }
 }
 function N(e) {
-    var t, n, N, w;
+    var t, n, N, P;
     let {
-            quest: P,
+            quest: w,
             questContent: I,
             onReceiveErrorHints: k,
             contentPosition: R,
             rowIndex: A,
             sourceQuestContent: Z,
         } = e,
-        D = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        D = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         L = (0, j.g2)({ useReducedMotion: D }),
         M = (0, m.O5)(),
-        U = (0, x._s)({ quest: P }),
-        B = (0, x.z)(P),
-        F = (0, x.B6)(P.config.expiresAt, {
+        U = (0, x._s)({ quest: w }),
+        B = (0, x.z)(w),
+        F = (0, x.B6)(w.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
@@ -94,25 +94,25 @@ function N(e) {
             isClaiming: G,
             isEnrolling: V,
             isQuestEnrollmentBlocked: H,
-        } = (0, l.cj)([p.Z], () => ({
-            isClaiming: p.Z.isClaimingReward(P.id) || p.Z.isFetchingRewardCode(P.id),
-            isEnrolling: p.Z.isEnrolling(P.id),
+        } = (0, i.cj)([p.Z], () => ({
+            isClaiming: p.Z.isClaimingReward(w.id) || p.Z.isFetchingRewardCode(w.id),
+            isEnrolling: p.Z.isEnrolling(w.id),
             isQuestEnrollmentBlocked: null != p.Z.questEnrollmentBlockedUntil,
         })),
-        z = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        W = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
-        K = W && (null == (N = P.userStatus) ? void 0 : N.claimedAt) == null,
-        q = (0, b.iQ)(P),
-        Y = !(0, b.zi)(P),
-        Q = (0, x._Q)(P),
-        X = (0, g.PB)(P),
-        J = (0, g.HJ)(P),
-        $ = (0, g.Vl)(P),
-        ee = (0, x.Rf)(P),
-        [et, en, ea] = (0, x.me)(P, ee),
+        z = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
+        W = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
+        K = W && (null == (N = w.userStatus) ? void 0 : N.claimedAt) == null,
+        q = (0, b.iQ)(w),
+        Y = !(0, b.zi)(w),
+        Q = (0, x._Q)(w),
+        X = (0, g.PB)(w),
+        J = (0, g.HJ)(w),
+        $ = (0, g.Vl)(w),
+        ee = (0, x.Rf)(w),
+        [et, en, ea] = (0, x.me)(w, ee),
         er = Y && Q === x.OH.ACCEPTED,
-        el = er && et === h.LI.SELECT,
-        ei = er && !el && en.length > 1,
+        ei = er && et === h.LI.SELECT,
+        el = er && !ei && en.length > 1,
         es = r.useCallback(
             (e) => {
                 ea(e), e === C.cd.DESKTOP && k([]);
@@ -121,7 +121,7 @@ function N(e) {
         ),
         { text: eo, onClick: ec } = (0, j.Ks)({
             progressState: Q,
-            quest: P,
+            quest: w,
             questContent: I,
             questContentPosition: R,
             questContentRowIndex: A,
@@ -131,11 +131,11 @@ function N(e) {
             sourceQuestContent: Z,
         }),
         { startingConsoleQuest: ed, startConsoleQuest: eu } = (0, x.GI)({
-            questId: P.id,
+            questId: w.id,
             beforeRequest: () => {
                 L.startAnimation(),
                     M({
-                        questId: P.id,
+                        questId: w.id,
                         questContent: I,
                         questContentCTA: m.jZ.DEFIBRILLATOR,
                         questContentPosition: R,
@@ -147,10 +147,10 @@ function N(e) {
                 L.stopAnimation(), k(e);
             },
         }),
-        em = (null == (w = P.userStatus) ? void 0 : w.claimedAt) != null,
-        { launchInGameActivity: ep } = (0, x.zB)(P),
+        em = (null == (P = w.userStatus) ? void 0 : P.claimedAt) != null,
+        { launchInGameActivity: ep } = (0, x.zB)(w),
         eh = (0, f.CR)({
-            quest: P,
+            quest: w,
             shortText: !0,
         }),
         ef = null;
@@ -177,7 +177,7 @@ function N(e) {
                               text: _.intl.string(_.t.YsCuyF),
                               onClick: () => {
                                   (0, y.openVideoQuestModal)({
-                                      quest: P,
+                                      quest: w,
                                       questContent: I,
                                       sourceQuestContent: Z,
                                       sourceQuestContentCTA: m.jZ.WATCH_VIDEO,
@@ -192,14 +192,14 @@ function N(e) {
                           }),
                       ],
                   })
-                : (0, v.Rt)(P)
+                : (0, v.Rt)(w)
                   ? (0, a.jsxs)(s.hE2, {
                         direction: "horizontal",
                         fullWidth: !0,
                         children: [
                             (0, a.jsx)(s.zxk, {
                                 variant: "secondary",
-                                icon: P.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY) ? c.v3n : c.iWm,
+                                icon: w.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY) ? c.v3n : c.iWm,
                                 text: eh,
                                 onClick: () => {
                                     ep();
@@ -245,8 +245,8 @@ function N(e) {
                         }),
                     }))
                   : Y && z && !em
-                    ? (ef = el
-                          ? (0, a.jsx)(i.B6, {
+                    ? (ef = ei
+                          ? (0, a.jsx)(l.B6, {
                                 className: S.platformSelectorPrimary,
                                 isSelected: () => !1,
                                 options: E,
@@ -266,7 +266,7 @@ function N(e) {
                                 },
                                 size: "sm",
                             })
-                          : (0, g.$J)(P) && !B && et !== h.LI.DESKTOP
+                          : (0, g.$J)(w) && !B && et !== h.LI.DESKTOP
                             ? U
                                 ? (0, a.jsx)("div", {
                                       className: S.button,
@@ -298,12 +298,12 @@ function N(e) {
                                         fullWidth: !0,
                                     }),
                                 })
-                              : (0, v.Rt)(P)
+                              : (0, v.Rt)(w)
                                 ? (0, a.jsx)("div", {
                                       className: S.button,
                                       children: (0, a.jsx)(s.zxk, {
                                           variant: "primary",
-                                          icon: (0, y.getPrimaryCtaIcon)(P),
+                                          icon: (0, y.getPrimaryCtaIcon)(w),
                                           onClick: null != ec ? ec : void 0,
                                           text: eo,
                                           fullWidth: !0,
@@ -332,7 +332,7 @@ function N(e) {
                                     }),
                                     (0, a.jsx)(s.zxk, {
                                         variant: "primary",
-                                        onClick: () => (0, y.openQuestMinorEnrollmentBlockModal)(P, I, Z),
+                                        onClick: () => (0, y.openQuestMinorEnrollmentBlockModal)(w, I, Z),
                                         text: _.intl.string(_.t.vY9GgG),
                                     }),
                                 ],
@@ -344,7 +344,7 @@ function N(e) {
                                     variant: "primary",
                                     onClick: null != ec ? ec : void 0,
                                     text: eo,
-                                    icon: (0, y.getPrimaryCtaIcon)(P),
+                                    icon: (0, y.getPrimaryCtaIcon)(w),
                                     fullWidth: !0,
                                 }),
                             }))
@@ -366,10 +366,10 @@ function N(e) {
                       className: S.ctaItem,
                       children: ef,
                   }),
-                  ei &&
+                  el &&
                       (0, a.jsx)("div", {
                           className: S.ctaItem,
-                          children: (0, a.jsx)(i.B6, {
+                          children: (0, a.jsx)(l.B6, {
                               className: S.platformSelectorSecondary,
                               isSelected: (e) => {
                                   switch (et) {

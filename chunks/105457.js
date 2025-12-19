@@ -12,7 +12,7 @@ var i = n(54381),
     f = n(868691),
     h = n(960324);
 function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: C, popoutText: y, animation: v } = e;
+    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: y, popoutText: C, animation: v } = e;
     r.useEffect(() => {
         u.default.track(
             d.rMx.OPEN_POPOUT,
@@ -40,9 +40,9 @@ function m(e) {
                         });
                 }
                 return e;
-            })({ type: C }, (0, s.v_)(b)),
+            })({ type: y }, (0, s.v_)(b)),
         );
-    }, [C, b]);
+    }, [y, b]);
     let x = r.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
@@ -102,7 +102,7 @@ function m(e) {
                                         id: "content-warning-popout-label",
                                         className: h.markup,
                                         variant: "text-sm/normal",
-                                        children: y.body,
+                                        children: C.body,
                                     }),
                                     (0, i.jsxs)("div", {
                                         className: f.buttonWrapper,
@@ -150,7 +150,7 @@ function m(e) {
                             }),
                         ],
                     }),
-                    null != y.footer && "" !== y.footer
+                    null != C.footer && "" !== C.footer
                         ? (0, i.jsxs)("div", {
                               className: f.footer,
                               children: [
@@ -161,7 +161,7 @@ function m(e) {
                                   }),
                                   (0, i.jsx)(o.Text, {
                                       variant: "text-sm/normal",
-                                      children: y.footer,
+                                      children: C.footer,
                                   }),
                               ],
                           })

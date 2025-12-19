@@ -2,8 +2,8 @@ n.d(t, { U: () => f });
 var a = n(54381);
 n(473749);
 var r = n(442837),
-    l = n(755721),
-    i = n(481060),
+    i = n(755721),
+    l = n(481060),
     s = n(767714),
     o = n(594174),
     c = n(74538),
@@ -21,10 +21,10 @@ function f(e) {
         children: (0, a.jsxs)("div", {
             className: p.content,
             children: [
-                (0, a.jsx)(i.P3F, {
+                (0, a.jsx)(l.P3F, {
                     className: p.closeIcon,
                     onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, a.jsx)(i.Dio, { size: "xs" }),
+                    children: (0, a.jsx)(l.Dio, { size: "xs" }),
                 }),
                 (0, a.jsx)("img", {
                     src: h,
@@ -33,13 +33,13 @@ function f(e) {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
                             className: p.title,
                             children: m.intl.string(m.t.PRXV49),
                         }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-subtle",
                             children: m.intl.string(m.t["RSHtF+"]),
@@ -47,7 +47,7 @@ function f(e) {
                     ],
                 }),
                 x
-                    ? (0, a.jsx)(i.Button, {
+                    ? (0, a.jsx)(l.Button, {
                           text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,
                           onClick: () => {
@@ -60,8 +60,8 @@ function f(e) {
                           },
                           showGradient: !0,
                           subscriptionTier: u.Si.TIER_2,
-                          size: l.zx.Sizes.LARGE,
-                          color: l.zx.Colors.CUSTOM,
+                          size: i.zx.Sizes.LARGE,
+                          color: i.zx.Colors.CUSTOM,
                           textOptions: { textOverride: m.intl.string(m.t.pj0XBN) },
                           className: p.button,
                       }),

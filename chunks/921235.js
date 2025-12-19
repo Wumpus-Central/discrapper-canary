@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(594174),
     g = n(626135),
     b = n(51144),
-    C = n(901461),
-    y = n(981631),
+    y = n(901461),
+    C = n(981631),
     v = n(388032),
     x = n(42241);
 let O = "749054660769218631";
@@ -31,7 +31,7 @@ function E(e) {
             () =>
                 !!a()(h.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== f.default.getId() && e.state === y.yb.SENT && !(0, C.Z)(e)),
+                    .find((e) => e.author.id !== f.default.getId() && e.state === C.yb.SENT && !(0, y.Z)(e)),
         ),
         S = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         _ = null != (t = b.ZP.useName(S)) ? t : v.intl.string(v.t.y1Wu2f),
@@ -40,7 +40,7 @@ function E(e) {
             if (null == l || "" === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, O),
-                        g.default.track(y.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: "Wave",

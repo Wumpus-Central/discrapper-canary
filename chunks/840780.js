@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(102172),
     V = n(74299),
     H = n(914923),
-    z = n(165393),
-    W = n(989941),
+    W = n(165393),
+    z = n(989941),
     K = n(690221),
     Y = n(522474),
     q = n(231664),
@@ -287,7 +287,7 @@ class eZ extends i.PureComponent {
             ref: this.accountLinkUpsellTargetRef,
             children: [
                 e
-                    ? (0, r.jsx)(z.Z, {
+                    ? (0, r.jsx)(W.Z, {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon,
                       })
@@ -515,7 +515,7 @@ let ew = (0, v.Z)(function (e) {
             return i;
         })(e, ["guildId"]);
     let a = (0, u.e7)([ee.default], () => ee.default.getId()),
-        o = (0, u.e7)([U.ZP, eu.Z], () => (0, W.Z)(U.ZP, eu.Z)),
+        o = (0, u.e7)([U.ZP, eu.Z], () => (0, z.Z)(U.ZP, eu.Z)),
         s = (0, u.e7)([es.Z, et.Z], () => et.Z.getChannel(es.Z.getVoiceChannelId())),
         d = (0, u.e7)([S.ZP], () => S.ZP.getConnectedActivityChannelId()),
         f = (0, u.e7)([et.Z], () => et.Z.getChannel(d)),
@@ -551,7 +551,7 @@ let ew = (0, v.Z)(function (e) {
         L = (0, u.e7)([ec.default, eo.Z], () => (null != f ? (0, A.F6)(f, ec.default, eo.Z) : void 0)),
         k = (0, q.Z)(),
         [B, H] = i.useState(!1),
-        z = (0, u.e7)([Y.Z], () => Y.Z.getWindowOpen(eO.KJ3.ACTIVITY_POPOUT)),
+        W = (0, u.e7)([Y.Z], () => Y.Z.getWindowOpen(eO.KJ3.ACTIVITY_POPOUT)),
         {
             hasAlreadyLinked: K,
             canStartAuthorization: Q,
@@ -599,7 +599,7 @@ let ew = (0, v.Z)(function (e) {
             streamQualityIndicator: k,
             isForceShowSharingPopout: B,
             setIsForceShowSharingPopout: H,
-            isActivityPopoutOpen: z,
+            isActivityPopoutOpen: W,
             hasAlreadyLinked: K,
             blockAccountLinkDismissibleContent: !ev || !ey,
             accountLinkCopyConfig: eE,

@@ -1,4 +1,4 @@
-n.d(e, { K: () => T });
+n.d(e, { K: () => S });
 var i = n(857595),
     l = n(607070),
     s = n(509613),
@@ -6,8 +6,8 @@ var i = n(857595),
     r = n(313789),
     a = n(959517),
     o = n(388032);
-let S = (t) => "".concat(t.toFixed(0), "px"),
-    T = (0, s.UO)(r.n.APPEARANCE_MESSAGE_GROUP_SPACING, {
+let T = (t) => "".concat(t.toFixed(0), "px"),
+    S = (0, s.UO)(r.n.APPEARANCE_MESSAGE_GROUP_SPACING, {
         useTitle: () => o.intl.string(o.t.Q6lKkg),
         useSubtitle: () => o.intl.string(o.t.p7eUrb),
         markers: a.fP,
@@ -19,8 +19,8 @@ let S = (t) => "".concat(t.toFixed(0), "px"),
                 e = u.jU.getSetting();
             return null != t ? t : e ? a.c8 : a.pq;
         },
-        onValueRender: S,
-        onMarkerRender: S,
+        onValueRender: T,
+        onMarkerRender: T,
         setValue: (t) => {
             switch (t) {
                 case 0:

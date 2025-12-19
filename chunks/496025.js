@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(35282);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(602715),
     o = n(95015),
     c = n(442837),
@@ -25,8 +25,8 @@ var a = n(54381),
 function T() {
     var e;
     let t = (0, c.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
-        [n, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: m } = (0, c.cj)([x.Z, g.default, b.Z], () => ({
+        [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
+        { selectedChannel: l, options: m } = (0, c.cj)([x.Z, g.default, b.Z], () => ({
             selectedChannel: x.Z.getChannel(n),
             options: t.map((e) => {
                 let t = x.Z.getChannel(e.channelId);
@@ -38,14 +38,14 @@ function T() {
         })),
         j = r.useCallback(() => {
             var e;
-            if (null == i || !i.isPrivate()) return;
-            let t = (0, o.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            f.Z.updatePrivateChannelRecipientFlags(i.id, t);
-        }, [i]),
+            if (null == l || !l.isPrivate()) return;
+            let t = (0, o.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            f.Z.updatePrivateChannelRecipientFlags(l.id, t);
+        }, [l]),
         y =
-            null != i &&
-            !!i.isPrivate() &&
-            (0, o.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            null != l &&
+            !!l.isPrivate() &&
+            (0, o.yE)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.Text, {
@@ -60,7 +60,7 @@ function T() {
                         options: m,
                         placeholder: "Select DM",
                         value: n,
-                        onChange: l,
+                        onChange: i,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
                             let t = x.Z.getChannel(e.value);
@@ -112,7 +112,7 @@ function N() {
         );
     });
     return (0, a.jsxs)("div", {
-        className: i()(E.panel, S.panel),
+        className: l()(E.panel, S.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: S.divider }),

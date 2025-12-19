@@ -1,10 +1,10 @@
-n.d(t, { Z: () => i }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var a = n(54381),
     r = n(199849),
-    l = n(968843);
-let i = function (e) {
+    i = n(968843);
+let l = function (e) {
     let { onSelect: t, quest: n } = e,
-        { quests: i } = (0, l.J2)({
+        { quests: l } = (0, i.J2)({
             fetchPolicy: "cache-and-network",
             callerSource: "prefill_selector",
         }),
@@ -13,7 +13,7 @@ let i = function (e) {
                 label: "NONE",
                 value: null,
             },
-            ...i.map((e) => ({
+            ...l.map((e) => ({
                 label: e.config.messages.questName,
                 value: e,
             })),

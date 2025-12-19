@@ -17,7 +17,7 @@ function p(e) {
     let { guildId: s } = e,
         p = (0, r.e7)([c.Z], () => c.Z.getGuild(s)),
         j = (0, r.e7)([u.ZP], () => u.ZP.isMuted(s)),
-        v = (0, r.e7)([u.ZP], () => u.ZP.getMuteConfig(s));
+        f = (0, r.e7)([u.ZP], () => u.ZP.getMuteConfig(s));
     return null == p
         ? null
         : (0, i.jsxs)(o.C3N, {
@@ -34,7 +34,7 @@ function p(e) {
                       (0, i.jsx)(a.y6, {
                           label: x.intl.string(x.t.Ztu2Yo),
                           description:
-                              null == (n = v) || null == n.end_time
+                              null == (n = f) || null == n.end_time
                                   ? null
                                   : x.intl.formatToPlainString(x.t.j7h4AJ, {
                                         endTime: new Date(n.end_time).toLocaleString(x.intl.currentLocale, {
@@ -59,7 +59,7 @@ function p(e) {
                               );
                           },
                           options: (0, g.W9)(),
-                          value: null != (t = null == v ? void 0 : v.selected_time_window) ? t : m.Oe.ALWAYS,
+                          value: null != (t = null == f ? void 0 : f.selected_time_window) ? t : m.Oe.ALWAYS,
                       }),
               ],
           });

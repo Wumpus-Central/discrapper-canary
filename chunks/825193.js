@@ -6,21 +6,21 @@ var i = n(657707),
     r = n(64914),
     a = n(546424),
     o = n(726985),
-    S = n(388032);
-let T = (0, l.wf)(s.n.ADVANCED_PANEL, {
-        useTitle: () => S.intl.string(S.t["8/udY0"]),
+    T = n(388032);
+let S = (0, l.wf)(s.n.ADVANCED_PANEL, {
+        useTitle: () => T.intl.string(T.t["8/udY0"]),
         usePredicate: () => !(0, u.gN)("LegacyAdvancedPanel"),
         StronglyDiscouragedCustomComponent: r.ZP,
         buildLayout: () => [],
     }),
     c = (0, l.wf)(s.n.ADVANCED_PANEL, {
-        useTitle: () => S.intl.string(S.t["8/udY0"]),
+        useTitle: () => T.intl.string(T.t["8/udY0"]),
         usePredicate: () => (0, u.gN)("AdvancedPanel"),
         buildLayout: () => [a.U],
     }),
     E = (0, l.m7)(s.n.ADVANCED_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(S.t["8/udY0"]),
+        useTitle: () => T.intl.string(T.t["8/udY0"]),
         getLegacySearchKey: () => ((0, u.Gl)("AdvancedPanel") ? void 0 : o.s6.SETTINGS_ADVANCED),
         icon: i.xhG,
-        buildLayout: () => ((0, u.Gl)("AdvancedPanel") ? [c] : [T]),
+        buildLayout: () => ((0, u.Gl)("AdvancedPanel") ? [c] : [S]),
     });

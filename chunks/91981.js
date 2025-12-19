@@ -1,4 +1,4 @@
-n.d(e, { W: () => S });
+n.d(e, { W: () => T });
 var i = n(818710),
     l = n(442837),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(818710),
     r = n(313789),
     a = n(546997),
     o = n(388032);
-let S = (0, s.qs)(r.n.STREAMING_OS_MENU_SCREEN_CAPTURE, {
+let T = (0, s.qs)(r.n.STREAMING_OS_MENU_SCREEN_CAPTURE, {
     useTitle: () => o.intl.string(o.t.lt8rRx),
     useSubtitle: () => o.intl.string(o.t.ie1mgY),
     useValue: function () {

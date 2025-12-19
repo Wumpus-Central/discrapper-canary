@@ -1,4 +1,4 @@
-n.d(e, { z: () => g }), n(539854);
+n.d(e, { z: () => _ }), n(539854);
 var i = n(54381),
     l = n(442837),
     s = n(332473),
@@ -41,4 +41,4 @@ let d = (0, u.ON)(o.n.ACCOUNT_PROFILE_SETTING, {
             });
         },
     }),
-    g = (0, u.k4)(o.n.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [d] });
+    _ = (0, u.k4)(o.n.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [d] });

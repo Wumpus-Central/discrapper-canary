@@ -13,8 +13,8 @@ var i = n(54381),
     h = n(564546);
 function m(e) {
     let { label: t, icon: n, setStatus: l, isFavorited: m, onFavoriteClick: g } = e,
-        [b, C] = r.useState(!1),
-        y = (0, o.e7)([d.Z], () => d.Z.getFavoritedStatuses().length >= d.o),
+        [b, y] = r.useState(!1),
+        C = (0, o.e7)([d.Z], () => d.Z.getFavoritedStatuses().length >= d.o),
         v = null != g,
         x = r.useCallback(
             (e) => {
@@ -26,10 +26,10 @@ function m(e) {
     return (0, i.jsxs)(u.P3F, {
         onClick: l,
         onMouseEnter: () => {
-            C(!0);
+            y(!0);
         },
         onMouseLeave: () => {
-            C(!1);
+            y(!1);
         },
         className: a()(h.item, h.labelContainer, f.container),
         children: [
@@ -42,7 +42,7 @@ function m(e) {
             b &&
                 v &&
                 (0, i.jsx)(c.u, {
-                    text: y && !m ? p.intl.string(p.t.YSDH9n) : void 0,
+                    text: C && !m ? p.intl.string(p.t.YSDH9n) : void 0,
                     children: (0, i.jsx)(u.P3F, {
                         className: a()(f.centerAlign, f.favoriteIcon),
                         onClick: x,

@@ -33,7 +33,7 @@ function f(e) {
     }
     return e;
 }
-function m(e) {
+function p(e) {
     var { icon: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -75,7 +75,7 @@ function m(e) {
             return (0, r.jsx)(o.gkL, f({}, n));
     }
 }
-let p = i.memo(function (e) {
+let m = i.memo(function (e) {
         let { message: t } = e;
         return (0, c.ZP)(t, {
             formatInline: !0,
@@ -103,7 +103,7 @@ function y(e) {
                     markup: l.markup,
                     channelId: i.channel_id,
                 }))
-              : "message" === l.type && (t = (0, r.jsx)(p, { message: l.message })),
+              : "message" === l.type && (t = (0, r.jsx)(m, { message: l.message })),
         (0, r.jsxs)("div", {
             className: a()(d.messagePreviewLine, { [d.colorTextFeedbackPositive]: "text-feedback-positive" === s }),
             children: [
@@ -112,7 +112,7 @@ function y(e) {
                     children: [null != o && "".concat(o, ": "), t],
                 }),
                 null != c &&
-                    (0, r.jsx)(m, {
+                    (0, r.jsx)(p, {
                         icon: c,
                         size: "xs",
                         color: "currentColor",

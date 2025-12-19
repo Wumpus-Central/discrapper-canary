@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v });
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
-    s = n(236726),
+    i = n(120356),
+    l = n.n(i),
+    s = n(620792),
     o = n(442837),
     c = n(481060),
     d = n(607070),
@@ -17,11 +17,11 @@ var a = n(54381),
     g = n(964907);
 let v = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
-        l = (0, f.qe)().label,
+        i = (0, f.qe)().label,
         v = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         { quest: j } = r.useContext(h.A),
         { expansionSpring: y } = r.useContext(p.xo),
-        C = l ? -4 : 6;
+        C = i ? -4 : 6;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(s.animated.div, {
@@ -62,7 +62,7 @@ let v = (e) => {
                 }),
             }),
             (0, a.jsxs)(s.animated.div, {
-                className: i()(g.rewardHighlightLogoCTA, { [g.rewardHighlightLogoCTALabel]: l }),
+                className: l()(g.rewardHighlightLogoCTA, { [g.rewardHighlightLogoCTALabel]: i }),
                 style: {
                     transform: (0, s.to)(
                         [
@@ -80,15 +80,15 @@ let v = (e) => {
                 },
                 children: [
                     (0, a.jsx)("div", {
-                        className: i()({ [g.partnerBranding]: !l }),
+                        className: l()({ [g.partnerBranding]: !i }),
                         children: n,
                     }),
                     (0, a.jsx)(s.animated.div, {
-                        className: i()(g.rewardHighlightCTA, { [g.rewardHighlightCTALabel]: l }),
+                        className: l()(g.rewardHighlightCTA, { [g.rewardHighlightCTALabel]: i }),
                         style: {
                             opacity: y.to({
                                 range: [0, 1],
-                                output: [l ? 1 : 0.7, 0],
+                                output: [i ? 1 : 0.7, 0],
                             }),
                         },
                         children: (0, a.jsx)(c.Text, {

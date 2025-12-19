@@ -6,21 +6,21 @@ var i = n(54381),
     r = n(626135),
     a = n(960048),
     o = n(323183),
-    S = n(5900),
-    T = n(773275),
+    T = n(5900),
+    S = n(773275),
     c = n(981631);
 let E = () => {
-    let { connectionStatus: t, setConnectionStatus: e, connect: n, disconnect: E } = (0, T.xf)(),
-        d = [S.Ij.CONNECTED, S.Ij.INITIALIZING].includes(t),
-        g = (0, l.useCallback)(
+    let { connectionStatus: t, setConnectionStatus: e, connect: n, disconnect: E } = (0, S.xf)(),
+        d = [T.Ij.CONNECTED, T.Ij.INITIALIZING].includes(t),
+        _ = (0, l.useCallback)(
             () =>
                 d
-                    ? (e(S.Ij.DISCONNECTED), (0, u.j)(c.rMx.NITRO_WARP_TOGGLED, { is_connecting: !1 }), E())
+                    ? (e(T.Ij.DISCONNECTED), (0, u.j)(c.rMx.NITRO_WARP_TOGGLED, { is_connecting: !1 }), E())
                     : ((0, u.j)(c.rMx.NITRO_WARP_TOGGLED, { is_connecting: !0 }),
-                      e(S.Ij.INITIALIZING),
+                      e(T.Ij.INITIALIZING),
                       n()
                           .then((t) => {
-                              t || e(S.Ij.DISCONNECTED);
+                              t || e(T.Ij.DISCONNECTED);
                           })
                           .catch((t) => {
                               a.Z.captureException(t, { tags: { source: o.D.PRIVATE_BROWSING_PERK_CONNECT } }),
@@ -28,13 +28,13 @@ let E = () => {
                                       error_message: t instanceof Error ? t.message : JSON.stringify(t),
                                       error_source: o.D.PRIVATE_BROWSING_PERK_CONNECT,
                                   }),
-                                  e(S.Ij.DISCONNECTED);
+                                  e(T.Ij.DISCONNECTED);
                           })),
             [d, E, n, e],
         );
     return (0, i.jsx)("div", {
         children: (0, i.jsx)(s.rsf, {
-            onChange: g,
+            onChange: _,
             checked: d,
         }),
     });

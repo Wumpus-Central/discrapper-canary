@@ -1,13 +1,13 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(442837),
-    i = n(481060),
+    i = n(442837),
+    l = n(481060),
     s = n(581612),
     o = n(91311),
     c = n(431135);
 function d() {
-    let e = (0, l.e7)([o.Z], () => o.Z.allWithDescriptions(), [], l.pF),
+    let e = (0, i.e7)([o.Z], () => o.Z.allWithDescriptions(), [], i.pF),
         t = r.useMemo(
             () =>
                 e.map((e) => {
@@ -15,7 +15,7 @@ function d() {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(
-                                i.rsf,
+                                l.rsf,
                                 {
                                     label: r,
                                     description: t,
@@ -24,7 +24,7 @@ function d() {
                                 },
                                 t,
                             ),
-                            (0, a.jsx)(i.izJ, { gap: 16 }),
+                            (0, a.jsx)(l.izJ, { gap: 16 }),
                         ],
                     });
                 }),
@@ -36,7 +36,7 @@ function d() {
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.button,
-                children: (0, a.jsx)(i.Button, {
+                children: (0, a.jsx)(l.Button, {
                     variant: "primary",
                     text: "Clear all",
                     onClick: s.q,

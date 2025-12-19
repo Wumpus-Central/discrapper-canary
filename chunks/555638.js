@@ -1,15 +1,15 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => s });
 var o = n(54381);
 n(473749);
 var i = n(212598),
     a = n(388032),
     r = n(60236),
-    s = n(254564);
-function d(e) {
+    d = n(254564);
+function s(e) {
     let {
             platformType: t,
             isWaitingForConnection: n,
-            onWaitingForConnection: d,
+            onWaitingForConnection: s,
             expectedCallbackState: c,
             onAuthToken: l,
             onError: b,
@@ -17,7 +17,7 @@ function d(e) {
         } = e,
         p = n
             ? (0, o.jsx)("img", {
-                  src: s.Z,
+                  src: d.Z,
                   width: "231",
                   height: "172",
                   alt: "",
@@ -33,7 +33,7 @@ function d(e) {
     return (0, o.jsx)(i.t, {
         platformType: t,
         isWaitingForConnection: n,
-        onWaitingForConnection: d,
+        onWaitingForConnection: s,
         expectedCallbackState: c,
         onAuthToken: l,
         onError: b,

@@ -69,8 +69,8 @@ let I = {
             null != N && T(!0);
         }, [N]);
         let [M, R] = r.useState(0.65),
-            [D, L] = r.useState(0.65),
-            [k, U] = r.useState(0.65),
+            [D, k] = r.useState(0.65),
+            [L, U] = r.useState(0.65),
             [V, H] = r.useState({
                 x: 0,
                 y: 0,
@@ -124,7 +124,7 @@ let I = {
                         c = r.y * n,
                         u = i.width / 2 - s,
                         d = i.height / 2 - c;
-                    L(n),
+                    k(n),
                         H({
                             x: u,
                             y: d,
@@ -133,8 +133,8 @@ let I = {
                 [et, M],
             );
         r.useEffect(() => {
-            en(k);
-        }, [k, en]);
+            en(L);
+        }, [L, en]);
         let ei = r.useCallback(
             (e) => {
                 var t;

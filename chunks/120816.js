@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(539854), n(388685);
 var a,
     r,
-    l = n(772848),
-    i = n(756647),
+    i = n(772848),
+    l = n(756647),
     s = n(442837),
     o = n(570140),
     c = n(314897),
@@ -45,25 +45,25 @@ let b = new x(o.Z, {
                 key: (u++).toString(),
                 event: t,
                 properties: n,
-                fingerprint: null != a ? (0, i.s)(a) : c.default.getId(),
+                fingerprint: null != a ? (0, l.s)(a) : c.default.getId(),
                 timestamp: new Date(),
             }),
             p++,
             m.length > 500 && (m = m.slice(-Math.floor(250))));
     },
     TRACK_TRIGGER: function (e) {
-        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: i, previouslyTracked: s } = e;
+        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: s } = e;
         d.Z.isDeveloper &&
             f &&
             (h = [
                 ...h,
                 {
-                    key: (0, l.Z)(),
+                    key: (0, i.Z)(),
                     experimentId: t,
                     descriptor: n,
                     exposureType: a,
                     excluded: r,
-                    location: i,
+                    location: l,
                     previouslyTracked: s,
                     timestamp: new Date(),
                 },

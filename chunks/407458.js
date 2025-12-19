@@ -10,23 +10,23 @@ var i = n(442837),
     r = n(460181),
     a = n(292959),
     o = n(313789),
-    S = n(388032);
-let T = (0, s.H)(() => ({ currentPlayingSound: null }));
+    T = n(388032);
+let S = (0, s.H)(() => ({ currentPlayingSound: null }));
 function c() {
-    let t = T.getField("currentPlayingSound");
-    null == t || t.stop(), T.setState({ currentPlayingSound: null });
+    let t = S.getField("currentPlayingSound");
+    null == t || t.stop(), S.setState({ currentPlayingSound: null });
 }
 function E(t) {
     return (0, u.qs)("".concat(o.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
         useTitle: t.useTitle,
         useSubtitle: () =>
-            S.intl.format(S.t.OOiGCM, {
+            T.intl.format(T.t.OOiGCM, {
                 onClick: () =>
                     (function (t) {
-                        let e = T.getField("currentPlayingSound");
+                        let e = S.getField("currentPlayingSound");
                         null == e || e.stop();
                         let n = (0, r.GN)(t);
-                        T.setState({ currentPlayingSound: n });
+                        S.setState({ currentPlayingSound: n });
                     })(t.sound),
             }),
         useValue: () => {

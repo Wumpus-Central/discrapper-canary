@@ -1,4 +1,4 @@
-n.d(e, { b: () => T });
+n.d(e, { b: () => S });
 var i = n(442837),
     l = n(846027),
     s = n(100527),
@@ -6,10 +6,10 @@ var i = n(442837),
     r = n(131951),
     a = n(313789),
     o = n(65154),
-    S = n(388032);
-let T = (0, u.qs)(a.n.STREAMING_STREAM_ATTENUATION, {
-    useTitle: () => S.intl.string(S.t["/jwMtn"]),
-    useSubtitle: () => S.intl.string(S.t.zlA23F),
+    T = n(388032);
+let S = (0, u.qs)(a.n.STREAMING_STREAM_ATTENUATION, {
+    useTitle: () => T.intl.string(T.t["/jwMtn"]),
+    useSubtitle: () => T.intl.string(T.t.zlA23F),
     useValue: function () {
         return (0, i.e7)([r.Z], () => r.Z.getSidechainCompression());
     },

@@ -9,8 +9,8 @@ var i = n(442837),
     r = n(226961),
     a = n(594174),
     o = n(998502),
-    S = n(313789),
-    T = n(65154),
+    T = n(313789),
+    S = n(65154),
     c = n(388032);
 function E() {
     return (0, i.e7)([a.default, u.Z], () => {
@@ -18,11 +18,11 @@ function E() {
         let e = a.default.getCurrentUser(),
             n = null != (t = null == e ? void 0 : e.isStaff()) && t,
             i = "canary" === o.ZP.releaseChannel || "development" === o.ZP.releaseChannel,
-            l = u.Z.supports(T.AN.CONNECTION_REPLAY);
+            l = u.Z.supports(S.AN.CONNECTION_REPLAY);
         return n && i && l;
     });
 }
-let d = (0, s.qs)(S.n.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
+let d = (0, s.qs)(T.n.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
     useTitle: () => c.intl.string(c.t.U4FgFK),
     useSubtitle: () => c.intl.string(c.t.Lm72RU),
     useValue: function () {

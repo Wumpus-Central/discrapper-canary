@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(473092),
     g = n(177342),
     b = n(134612),
-    C = n(981631),
-    y = n(388032);
+    y = n(981631),
+    C = n(388032);
 function v(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: o } = (0, a.cj)([p.Z], () => ({ isIgnored: p.Z.isIgnored(t) }), [t]),
@@ -40,9 +40,9 @@ function v(e) {
                 s.Z.unignoreUser(t, "web_stranger_danger_more", n);
         }, [n, l, t]);
     return (0, i.jsx)(d.JZ, {
-        title: y.intl.string(y.t.avyV7P),
-        description: y.intl.string(y.t.naWE6W),
-        buttonText: o ? y.intl.string(y.t["3SrzRT"]) : y.intl.string(y.t.avyV7P),
+        title: C.intl.string(C.t.avyV7P),
+        description: C.intl.string(C.t.naWE6W),
+        buttonText: o ? C.intl.string(C.t["3SrzRT"]) : C.intl.string(C.t.avyV7P),
         onButtonPress: o ? u : c,
     });
 }
@@ -69,7 +69,7 @@ function x(e) {
             [j, t, x, O],
         );
     r.useEffect(() => {
-        (0, m.MC)(C.rMx.SAFETY_WARNING_VIEWED, {
+        (0, m.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: x,
             senderId: O,
@@ -88,7 +88,7 @@ function x(e) {
                         channelId: t,
                         warningId: x,
                         senderId: O,
-                        description: y.intl.string(y.t.DJMZX6),
+                        description: C.intl.string(C.t.DJMZX6),
                         safetyTipRows: S.map((e, t) =>
                             (0, i.jsx)(
                                 u.q,
@@ -114,9 +114,9 @@ function x(e) {
                                 (0, i.jsx)(
                                     d.JZ,
                                     {
-                                        title: y.intl.string(y.t["5QYPO2"]),
-                                        description: y.intl.string(y.t.G08MKu),
-                                        buttonText: y.intl.string(y.t["5QYPO2"]),
+                                        title: C.intl.string(C.t["5QYPO2"]),
+                                        description: C.intl.string(C.t.G08MKu),
+                                        buttonText: C.intl.string(C.t["5QYPO2"]),
                                         buttonVariant: "critical-primary",
                                         onButtonPress: () => {
                                             l(), I(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P);
@@ -199,12 +199,12 @@ function x(e) {
         warningId: x,
         senderId: O,
         warningType: h.pj.STRANGER_DANGER,
-        header: y.intl.string(y.t.iOkDpM),
-        description: y.intl.string(y.t.ISUbcM),
+        header: C.intl.string(C.t.iOkDpM),
+        description: C.intl.string(C.t.ISUbcM),
         onDismiss: j,
         buttons: [
             {
-                text: y.intl.string(y.t["Qk/c48"]),
+                text: C.intl.string(C.t["Qk/c48"]),
                 variant: "primary",
                 onClick: () => {
                     P(),
@@ -221,7 +221,7 @@ function x(e) {
                 ? []
                 : [
                       {
-                          text: y.intl.string(y.t.ie0QdN),
+                          text: C.intl.string(C.t.ie0QdN),
                           variant: "critical-primary",
                           onClick: () => I(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL),
                       },

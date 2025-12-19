@@ -8,8 +8,8 @@ var r = a(54381),
     d = a(563132),
     s = a(409813),
     b = a(518727),
-    f = a(7305),
-    p = a(74538),
+    p = a(7305),
+    f = a(74538),
     u = a(16989),
     m = a(540310),
     C = a(320941),
@@ -60,8 +60,8 @@ function v(e, t) {
 let w = (e) => {
     var t;
     let { analyticsLocations: a, premiumSubscription: o } = e,
-        w = null == (t = (0, p.Af)(o)) ? void 0 : t.planId,
-        y = null != w ? (0, p.Rd)(w) : null;
+        w = null == (t = (0, f.Af)(o)) ? void 0 : t.planId,
+        y = null != w ? (0, f.Rd)(w) : null;
     i()(null != y, "Should not be resubscribing Nitro without premiumType");
     let P = y === h.PremiumTypes.TIER_0,
         [x, O] = n.useState(m.R.CONFIRM),
@@ -79,7 +79,7 @@ let w = (e) => {
         value: a,
         children: (0, r.jsx)(d.PaymentContextProvider, {
             activeSubscription: o,
-            stepConfigs: (0, f.O)(),
+            stepConfigs: (0, p.O)(),
             skuIDs: [],
             breadcrumbs: [s.h8.CONFIRM],
             children: (0, r.jsx)(l.b6, {

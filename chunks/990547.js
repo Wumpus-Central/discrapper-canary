@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("481003", 10);
+    let i = parseInt("482162", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (

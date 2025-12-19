@@ -1,5 +1,5 @@
 n.d(t, {
-    TE: () => y,
+    TE: () => C,
     h_: () => v,
 }),
     n(388685);
@@ -18,15 +18,15 @@ var i = n(473749),
     m = n(375954),
     g = n(496675),
     b = n(709054),
-    C = n(981631);
-function y(e, t) {
+    y = n(981631);
+function C(e, t) {
     return (0, a.cj)(
         [g.Z],
         () => ({
             canInvite: (0, o.b)(g.Z, t, e),
-            canManageGuild: null != t && g.Z.can(C.Plq.MANAGE_GUILD, t),
-            canMessage: null != e && g.Z.can(C.Plq.SEND_MESSAGES, e),
-            canCreateChannel: null != t && g.Z.can(C.Plq.MANAGE_CHANNELS, t),
+            canManageGuild: null != t && g.Z.can(y.Plq.MANAGE_GUILD, t),
+            canMessage: null != e && g.Z.can(y.Plq.SEND_MESSAGES, e),
+            canCreateChannel: null != t && g.Z.can(y.Plq.MANAGE_CHANNELS, t),
         }),
         [t, e],
     );
@@ -39,7 +39,7 @@ function v(e) {
             return (0, a.e7)([p.Z], () => {
                 var t;
                 let i = null != (t = p.Z.getMemberCount(null == e ? void 0 : e.id)) ? t : 0,
-                    r = n.some((e) => e.type === C.uaV.USER_JOIN);
+                    r = n.some((e) => e.type === y.uaV.USER_JOIN);
                 return i > 1 || r;
             }, [e, n]);
         })(e),

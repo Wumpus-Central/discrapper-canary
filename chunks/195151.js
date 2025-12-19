@@ -1,4 +1,4 @@
-n.d(e, { b: () => S });
+n.d(e, { b: () => T });
 var i = n(442837),
     l = n(857595),
     s = n(607070),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(509613),
     a = n(313789),
     o = n(388032);
-let S = (0, r.qs)(a.n.ENABLE_CUSTOM_CURSOR, {
+let T = (0, r.qs)(a.n.ENABLE_CUSTOM_CURSOR, {
     useTitle: () => o.intl.string(o.t["+Isihb"]),
     useSubtitle: () => o.intl.string(o.t.nNZ1Tz),
     useValue: () => (0, i.e7)([s.Z], () => s.Z.enableCustomCursor),

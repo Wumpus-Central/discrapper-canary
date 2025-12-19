@@ -75,7 +75,7 @@ let R = (e) => {
                           Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 n),
-            [w, Z] = l.useState(!1),
+            [Z, w] = l.useState(!1),
             D = (0, g.sp)(),
             H = null != (t = null == D ? void 0 : D.sessionId) ? t : "";
         l.useEffect(() => {
@@ -231,7 +231,7 @@ let R = (e) => {
                                         S.J,
                                         {
                                             countdownTimerBlock: e,
-                                            isVisible: w,
+                                            isVisible: Z,
                                         },
                                         n,
                                     )),
@@ -242,7 +242,7 @@ let R = (e) => {
                                         y.Z,
                                         {
                                             immersiveBannerBlock: e,
-                                            onVisibilityChange: (e) => Z(!e),
+                                            onVisibilityChange: (e) => w(!e),
                                         },
                                         n,
                                     );

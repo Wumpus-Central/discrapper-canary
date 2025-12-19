@@ -12,8 +12,8 @@ function d(e) {
         n,
         d,
         { channel: p, messages: f, oldestUnreadMessageId: h, treatSpam: m, summaries: g, selectedSummary: b } = e,
-        C = [],
-        y = !1,
+        y = [],
+        C = !1,
         v = null != h ? a.default.extractTimestamp(h) : null,
         x = null;
     return (
@@ -28,7 +28,7 @@ function d(e) {
                         i = a.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
                         if (x === g[e].id) break;
-                        C.push({
+                        y.push({
                             type: u.ys_.DIVIDER,
                             content: g[e].topic,
                             contentKey: g[e].id,
@@ -41,16 +41,16 @@ function d(e) {
             let _ = (0, l.vc)(e.timestamp, "LL");
             _ !== t &&
                 null == x &&
-                (C.push({
+                (y.push({
                     type: u.ys_.DIVIDER,
                     content: _,
                     contentKey: _,
                 }),
                 (t = _));
-            let P = C[C.length - 1],
+            let P = y[y.length - 1],
                 I = null,
                 Z = (0, s.DQ)(e);
-            y = y || Z;
+            C = C || Z;
             let T = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
@@ -67,7 +67,7 @@ function d(e) {
                               content: [],
                               key: e.id,
                           }),
-                          C.push(j))
+                          y.push(j))
                         : (S = (j = O).content[j.content.length - 1]),
                     [j, S])),
             h === e.id && null != v)
@@ -82,7 +82,7 @@ function d(e) {
                               }),
                           (E.hasUnread = !0))
                         : e.isFirstMessageInForumPost(p) ||
-                          C.push({
+                          y.push({
                               type: u.ys_.DIVIDER,
                               unreadId: e.id,
                           }),
@@ -90,7 +90,7 @@ function d(e) {
                 : null != v &&
                   a.default.extractTimestamp(e.id) > v &&
                   (e.isFirstMessageInForumPost(p) ||
-                      C.push({
+                      y.push({
                           type: u.ys_.DIVIDER,
                           unreadId: e.id,
                       }),
@@ -98,7 +98,7 @@ function d(e) {
             let N = (0, c.f)(e, p);
             null != N &&
                 "before" === N.position &&
-                C.push({
+                y.push({
                     type: u.ys_.MESSAGE,
                     content: N.message,
                     groupId: N.message.id,
@@ -111,23 +111,23 @@ function d(e) {
                 groupId: n,
             };
             n === e.id && (d = w);
-            let { jumpSequenceId: M, jumpFlash: R, jumpTargetId: L } = f;
-            R && e.id === L && null != M && (w.flashKey = M),
+            let { jumpSequenceId: M, jumpFlash: R, jumpTargetId: D } = f;
+            R && e.id === D && null != M && (w.flashKey = M),
                 f.jumpTargetId === e.id && (w.jumpTarget = !0),
                 null != b &&
                     e.id === b.startId &&
                     b.count > 1 &&
-                    C.push({
+                    y.push({
                         type: u.ys_.DIVIDER,
                         content: b.topic,
                         contentKey: b.startId,
                         isSummaryDivider: !0,
                     }),
-                null !== I ? (I.content.push(w), w.jumpTarget && (I.hasJumpTarget = !0)) : C.push(w),
-                e.isFirstMessageInForumPost(p) && C.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
+                null !== I ? (I.content.push(w), w.jumpTarget && (I.hasJumpTarget = !0)) : y.push(w),
+                e.isFirstMessageInForumPost(p) && y.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
                 null != N &&
                     "after" === N.position &&
-                    C.push({
+                    y.push({
                         type: u.ys_.MESSAGE,
                         content: N.message,
                         groupId: N.message.id,
@@ -135,13 +135,13 @@ function d(e) {
                 null != b &&
                     e.id === b.endId &&
                     b.count > 1 &&
-                    C.push({
+                    y.push({
                         type: u.ys_.DIVIDER,
                         contentKey: b.endId,
                         isSummaryDivider: !0,
                     });
         }),
-        y && (0, s.P1)(p) && r.Z.trackExposure({ location: "416cc9_1" }),
-        C
+        C && (0, s.P1)(p) && r.Z.trackExposure({ location: "416cc9_1" }),
+        y
     );
 }

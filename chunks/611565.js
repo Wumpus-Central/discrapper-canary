@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var a = n(54381),
     r = n(120356),
-    l = n.n(r),
-    i = n(399606),
+    i = n.n(r),
+    l = n(399606),
     s = n(481060),
     o = n(570140),
     c = n(681619),
@@ -14,7 +14,7 @@ var a = n(54381),
 let f = [
         {
             key: "channelName",
-            cellClassName: l()(p.cell, p.channelName),
+            cellClassName: i()(p.cell, p.channelName),
             render(e) {
                 let { channelName: t } = e;
                 return (0, a.jsx)(s.Text, {
@@ -25,7 +25,7 @@ let f = [
         },
         {
             key: "channelId",
-            cellClassName: l()(p.cell, p.channelId),
+            cellClassName: i()(p.cell, p.channelId),
             render(e) {
                 let { channelId: t } = e;
                 return (0, a.jsx)(s.Text, {
@@ -38,7 +38,7 @@ let f = [
     x = [
         {
             key: "channelName",
-            cellClassName: l()(p.cell, p.channelName),
+            cellClassName: i()(p.cell, p.channelName),
             render(e) {
                 let { channelName: t } = e;
                 return (0, a.jsx)(s.Text, {
@@ -49,7 +49,7 @@ let f = [
         },
         {
             key: "loadState",
-            cellClassName: l()(p.cell, p.loadState),
+            cellClassName: i()(p.cell, p.loadState),
             render(e) {
                 let { loadState: t } = e;
                 return (0, a.jsx)(s.Text, {
@@ -60,7 +60,7 @@ let f = [
         },
         {
             key: "channelId",
-            cellClassName: l()(p.cell, p.channelId),
+            cellClassName: i()(p.cell, p.channelId),
             render(e) {
                 let { channelId: t } = e;
                 return (0, a.jsx)(s.Text, {
@@ -75,19 +75,19 @@ function b() {
         {
             isLoading: n,
             hasLoadedEver: r,
-            hasPreloaded: l,
+            hasPreloaded: i,
             hasMoreToLoad: b,
             isLoadingComplete: g,
-        } = (0, i.cj)([u.Z], () => ({
+        } = (0, l.cj)([u.Z], () => ({
             isLoading: u.Z.isLoading,
             hasLoadedEver: u.Z.hasLoadedEver,
             hasPreloaded: u.Z.hasPreloaded,
             hasMoreToLoad: u.Z.hasMoreToLoad,
             isLoadingComplete: u.Z.isLoadingComplete,
         })),
-        v = (0, i.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
-        j = (0, i.cj)([u.Z], () => u.Z.getChannelInfoMap()),
-        y = (0, i.cj)([d.Z], () => {
+        v = (0, l.e7)([u.Z], () => u.Z.currentRequestAnalyticsPayload),
+        j = (0, l.cj)([u.Z], () => u.Z.getChannelInfoMap()),
+        y = (0, l.cj)([d.Z], () => {
             let e = {};
             return (
                 Object.entries(j).forEach((t) => {
@@ -98,14 +98,14 @@ function b() {
                 e
             );
         }),
-        C = (0, i.cj)([d.Z], () =>
+        C = (0, l.cj)([d.Z], () =>
             t.reduce((e, t) => {
                 let n = d.Z.getChannel(t);
                 return (e[t] = null != n ? n : null), e;
             }, {}),
         ),
-        _ = (0, i.e7)([u.Z], () => u.Z.getInboxMessages()),
-        S = (0, i.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
+        _ = (0, l.e7)([u.Z], () => u.Z.getInboxMessages()),
+        S = (0, l.e7)([u.Z], () => u.Z.getDevOverrides().navOnClick);
     return (0, a.jsx)("div", {
         className: h.panel,
         children: (0, a.jsxs)(s.zJl, {
@@ -184,7 +184,7 @@ function b() {
                             children: ["Is Loading: ", n ? "\u2705" : "\u274C"],
                         }),
                         (0, a.jsxs)("div", {
-                            children: ["Has Preloaded: ", l ? "\u2705" : "\u274C"],
+                            children: ["Has Preloaded: ", i ? "\u2705" : "\u274C"],
                         }),
                         (0, a.jsxs)("div", {
                             children: ["Has Loaded Ever: ", r ? "\u2705" : "\u274C"],

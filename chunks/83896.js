@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(833858),
     g = n(866071),
     b = n(699263),
-    C = n(797156),
-    y = n(223135),
+    y = n(797156),
+    C = n(223135),
     v = n(505905),
     x = n(981631),
     O = n(388032),
@@ -99,7 +99,7 @@ function P(e) {
         }, [Z, T, n.id, l]),
         w = r.useCallback(() => {
             if (!Z || !N || null == t.state) return;
-            let [e] = (0, C.F)(l, t.state);
+            let [e] = (0, y.F)(l, t.state);
             if (null != e) {
                 if (e === v.tN.CUSTOM) {
                     if (null == t.details || null == t.emoji) return;
@@ -118,7 +118,7 @@ function P(e) {
         ref: I,
         className: a()(j.popover, E.container),
         children: [
-            (0, i.jsx)(y.Z, {
+            (0, i.jsx)(C.Z, {
                 userId: l,
                 size: 32,
                 className: E.icon,

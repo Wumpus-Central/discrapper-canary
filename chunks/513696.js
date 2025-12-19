@@ -1,4 +1,4 @@
-n.d(e, { g: () => _ });
+n.d(e, { g: () => g });
 var i = n(54381),
     l = n(442837),
     s = n(351780),
@@ -6,8 +6,8 @@ var i = n(54381),
     r = n(509613),
     a = n(313789),
     o = n(526665),
-    S = n(246383),
-    T = n(726985),
+    T = n(246383),
+    S = n(726985),
     c = n(388032),
     E = n(242379);
 let d = (0, r.wf)(a.n.POGGERMODE_PANEL, {
@@ -16,14 +16,14 @@ let d = (0, r.wf)(a.n.POGGERMODE_PANEL, {
         StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    g = (0, r.wf)(a.n.POGGERMODE_PANEL, {
+    _ = (0, r.wf)(a.n.POGGERMODE_PANEL, {
         usePredicate: () => (0, o.gN)("PoggermodePanel"),
         useTitle: () => c.intl.string(c.t.AtCukI),
-        buildLayout: () => [S.v],
+        buildLayout: () => [T.v],
     }),
-    _ = (0, r.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
+    g = (0, r.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.AtCukI),
-        getLegacySearchKey: () => ((0, o.Gl)("PoggermodePanel") ? void 0 : T.s6.POGGERMODE),
+        getLegacySearchKey: () => ((0, o.Gl)("PoggermodePanel") ? void 0 : S.s6.POGGERMODE),
         icon: () =>
             (0, i.jsx)("img", {
                 alt: "",
@@ -31,5 +31,5 @@ let d = (0, r.wf)(a.n.POGGERMODE_PANEL, {
                 className: E.poggermodeIcon,
             }),
         usePredicate: () => (0, l.e7)([s.Z], () => s.Z.settingsVisible),
-        buildLayout: () => ((0, o.Gl)("PoggermodePanel") ? [g] : [d]),
+        buildLayout: () => ((0, o.Gl)("PoggermodePanel") ? [_] : [d]),
     });

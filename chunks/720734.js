@@ -116,8 +116,8 @@ var a = n(54381),
     e8 = n(541769),
     e7 = n(981631),
     e5 = n(921944),
-    e6 = n(324805),
-    e2 = n(65154),
+    e2 = n(324805),
+    e6 = n(65154),
     e9 = n(388032),
     te = n(484036);
 function tt(e, t, n) {
@@ -852,7 +852,7 @@ function tm() {
             user: t,
             guildId: r && null != F ? F : void 0,
         }),
-        { isQuestBarEmpty: en, hasLoadedQuestBar: er } = (0, eo.Ws)({ location: e6.dr.CONFLICT_CHECKS }),
+        { isQuestBarEmpty: en, hasLoadedQuestBar: er } = (0, eo.Ws)({ location: e2.dr.CONFLICT_CHECKS }),
         es = (0, d.e7)([ec.Z, eU.default, eI.Z], () => {
             let e,
                 t = ec.Z.getSyncingWith(),
@@ -880,8 +880,8 @@ function tm() {
         X && em.avatar.push(u.z.TENURE_BADGE_CHURN_REMINDER),
         eu && em.avatar.push(u.z.WIDGETS_RTC_UPSELL_COACHMARK),
         J && em.settings.push(u.z.NITRO_PRIVACY_PERK_BETA_COACHMARK));
-    let { shouldShowTooltip: ep, dismissTooltip: eh } = tu(e2.h7.AUDIO_INPUT),
-        { shouldShowTooltip: ef, dismissTooltip: eg } = tu(e2.h7.AUDIO_OUTPUT);
+    let { shouldShowTooltip: ep, dismissTooltip: eh } = tu(e6.h7.AUDIO_INPUT),
+        { shouldShowTooltip: ef, dismissTooltip: eg } = tu(e6.h7.AUDIO_OUTPUT);
     return (0, a.jsx)(N.Gt, {
         value: ee,
         children: (0, a.jsx)(tc, {
@@ -942,8 +942,8 @@ function tp(e) {
         g = r.useRef(null),
         { showRefreshedAudioContextMenu: v } = (0, e$.e)({ location: "SettingsCogButton" }),
         j = !v && (f || b),
-        { name: y } = (0, X.p6)(e2.h7.AUDIO_INPUT),
-        { name: C } = (0, X.p6)(e2.h7.AUDIO_OUTPUT);
+        { name: y } = (0, X.p6)(e6.h7.AUDIO_INPUT),
+        { name: C } = (0, X.p6)(e6.h7.AUDIO_OUTPUT);
     !v && f
         ? ((t = e9.intl.format(e9.t["18wnuD"], { inputDeviceName: y })),
           (n = e9.intl.formatToPlainString(e9.t["18wnuD"], { inputDeviceName: y })),
@@ -1086,7 +1086,7 @@ function th(e) {
         }, [I]),
         et = _ ? x.TVs.colors.STATUS_DANGER : "currentColor",
         en = (0, er.Z)({ location: "Account" }),
-        { name: ea } = (0, X.p6)(e2.h7.AUDIO_INPUT),
+        { name: ea } = (0, X.p6)(e6.h7.AUDIO_INPUT),
         { showRefreshedAudioContextMenu: ei } = (0, e$.e)({ location: "MicrophoneButton" }),
         { enabledInputProfiles: el } = (0, eh.G)({ location: "MicrophoneButton" });
     return ei
@@ -1384,7 +1384,7 @@ function tf(e) {
             events: { onMouseEnter: g, onMouseLeave: v },
         } = (0, p.l)(h ? "undeafen" : "deafen"),
         j = n ? x.Vm4 : f,
-        { name: y } = (0, X.p6)(e2.h7.AUDIO_OUTPUT),
+        { name: y } = (0, X.p6)(e6.h7.AUDIO_OUTPUT),
         { showRefreshedAudioContextMenu: C } = (0, e$.e)({ location: "HeadphonesButton" }),
         _ = (0, Z.Z)(t, n, i),
         { analyticsLocations: S } = (0, N.ZP)(O.Z.AUDIO_OUTPUT_BUTTON),

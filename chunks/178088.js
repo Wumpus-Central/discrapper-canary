@@ -81,11 +81,11 @@ function P(e) {
         }, [n, t, D]);
     i.useEffect(() => (O.S.subscribe(S.CkL.TOGGLE_INBOX, F), () => void O.S.unsubscribe(S.CkL.TOGGLE_INBOX, F)), [F]);
     let { enabled: V, inInbox: H } = h.Z.useExperiment({ location: "RecentsPopout" }),
-        z = (0, s.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && V && H;
+        W = (0, s.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && V && H;
     i.useEffect(() => {
         L !== c.X.BOOKMARKS || V || H || k(c.X.MENTIONS), L === c.X.GAME_INVITES && k(c.X.MENTIONS);
     });
-    let W = i.useCallback(
+    let z = i.useCallback(
             (e) => {
                 e.shiftKey || B();
             },
@@ -119,7 +119,7 @@ function P(e) {
                                 L === c.X.FOR_YOU
                                     ? (0, r.jsx)(v.ZP, {})
                                     : L === c.X.MENTIONS
-                                      ? (0, r.jsx)(j.Z, { onJump: W })
+                                      ? (0, r.jsx)(j.Z, { onJump: z })
                                       : V && H && L === c.X.BOOKMARKS
                                         ? (0, r.jsx)(g.K, { closePopout: B })
                                         : L === c.X.SCHEDULED
@@ -127,7 +127,7 @@ function P(e) {
                                           : (0, r.jsx)(o.SV, {
                                                 fallback: (0, r.jsx)(E.h6, {}),
                                                 children: (0, r.jsx)(E.ZP, {
-                                                    onJump: W,
+                                                    onJump: z,
                                                     showTutorial: G,
                                                     setSeenTutorial: U,
                                                     closePopout: B,
@@ -142,7 +142,7 @@ function P(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return l(F, n, e, z);
+                return l(F, n, e, W);
             },
         }),
     });

@@ -18,15 +18,15 @@ function h(e) {
     let { scheduledMessage: t, transitionState: n, onClose: l } = e,
         h = a()(t.sendAtTimestamp.substring(0, 200)),
         [m, g] = r.useState(h),
-        [b, C] = r.useState(!1),
-        y = async () => {
-            C(!0);
+        [b, y] = r.useState(!1),
+        C = async () => {
+            y(!0);
             try {
                 await (0, c.P4)(t.scheduledMessageId, m.toISOString()), (0, d.eD)(), (0, s.Mr3)(f);
             } catch (e) {
                 (0, d.$X)(e.message);
             } finally {
-                C(!1);
+                y(!1);
             }
         };
     return (0, i.jsx)(o.Modal, {
@@ -43,7 +43,7 @@ function h(e) {
             {
                 variant: "primary",
                 text: p.intl.string(p.t.VZANAD),
-                onClick: y,
+                onClick: C,
                 loading: b,
             },
         ],

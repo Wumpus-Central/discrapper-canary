@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => v }), n(953529);
 var i = n(54381);
 n(473749);
 var s = n(120356),
@@ -34,7 +34,7 @@ function j(e) {
         }),
     });
 }
-function v(e) {
+function f(e) {
     return (0, i.jsxs)("div", {
         children: [
             null != e.title && (0, i.jsx)(p, { title: e.title }),
@@ -48,7 +48,7 @@ function v(e) {
         ],
     });
 }
-function f(e) {
+function v(e) {
     var t,
         n,
         { guildId: s } = e,
@@ -111,17 +111,17 @@ function f(e) {
                     },
                 ],
                 children: [
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(f, {
                         noPadding: !0,
                         noContainer: !0,
                         children: (0, i.jsx)(h.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(f, {
                         title: m.intl.string(m.t.R9Ej96),
                         noPadding: !0,
                         children: (0, i.jsx)(g.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(f, {
                         title: m.intl.string(m.t["31DySj"]),
                         children: (0, i.jsx)(d.Z, { guildId: s }),
                     }),
@@ -130,7 +130,7 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(p, { title: m.intl.string(m.t.D9yVAH) }),
                                 (0, i.jsx)(j, { description: m.intl.string(m.t["0PhAOH"]) }),
-                                (0, i.jsx)(v, { children: (0, i.jsx)(u.Z, { guildId: s }) }),
+                                (0, i.jsx)(f, { children: (0, i.jsx)(u.Z, { guildId: s }) }),
                             ],
                         }),
                     (0, i.jsx)(p, { title: m.intl.string(m.t.JrySi3) }),

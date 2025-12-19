@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(990547),
-    i = n(442837),
+    i = n(990547),
+    l = n(442837),
     s = n(544891),
     o = n(481060),
     c = n(893776),
@@ -47,17 +47,17 @@ function E(e) {
     return e;
 }
 function T() {
-    let { action: e, theme: t } = (0, i.cj)([g.Z, b.Z], () => ({
+    let { action: e, theme: t } = (0, l.cj)([g.Z, b.Z], () => ({
             action: g.Z.getAction(),
             theme: b.Z.theme,
         })),
         T = v.Z.getVerificationTypes(e),
         [O, N] = r.useState(0),
-        w = (0, m.Z)(T);
+        P = (0, m.Z)(T);
     (0, h.Z)(
         {
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.USER_ACTION_REQUIRED,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: T[0],
                 verification_types: T,
@@ -66,7 +66,7 @@ function T() {
         {},
         [T.toString()],
     );
-    let P = () => {
+    let w = () => {
         (0, u.FD)(),
             (0, o.ZDy)(
                 async () => {
@@ -90,7 +90,7 @@ function T() {
             [],
         ),
         r.useEffect(() => {
-            (null == w ? void 0 : w[0]) === C.PUi.PHONE &&
+            (null == P ? void 0 : P[0]) === C.PUi.PHONE &&
                 (null == T ? void 0 : T[0]) === C.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
@@ -125,10 +125,10 @@ function T() {
                     {
                         modalKey: y.HR,
                         Layer: f.ZP,
-                        onCloseCallback: P,
+                        onCloseCallback: w,
                     },
                 );
-        }, [T, w]),
+        }, [T, P]),
         (0, a.jsx)(j.Z, {
             types: T,
             captchaKey: O,
@@ -147,7 +147,7 @@ function T() {
             theme: t,
             onClick: (e) => {
                 e === C.PUi.EMAIL_OR_PHONE || e === C.PUi.EMAIL || e === C.PUi.REVERIFY_EMAIL
-                    ? P()
+                    ? w()
                     : (0, o.ZDy)(
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 607018));

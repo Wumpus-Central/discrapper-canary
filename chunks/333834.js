@@ -116,8 +116,8 @@ function R(e) {
             hasLoadedEver: j.Z.hasLoadedEver,
         })),
         V = !F && U,
-        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
-        W = (function () {
+        { messageCategoryOpenStates: H, toggleOpenState: W } = (0, v.Z)(),
+        z = (function () {
             let e = (0, u.Wu)([j.Z], () => {
                 var e;
                 return null != (e = j.Z.getNotifyingChannelIds()) ? e : [];
@@ -223,7 +223,7 @@ function R(e) {
                                               isOpen: H[t],
                                               toggleOpenedState: () => {
                                                   let e = H[t];
-                                                  z(t),
+                                                  W(t),
                                                       (0, O.RZ)({
                                                           section: t,
                                                           enabled: !e,
@@ -238,7 +238,7 @@ function R(e) {
                           }),
                 e
             );
-        }, [t, n, o, H, z, Y, R, h, q, Q, D]),
+        }, [t, n, o, H, W, Y, R, h, q, Q, D]),
         J = X[X.length - 1],
         $ = i.isValidElement(J) && J.type === w,
         ee = (0, x.d)((e) => e.setInboxReadState);
@@ -265,8 +265,8 @@ function R(e) {
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
     }, [H, Y]);
     i.useEffect(() => {
-        Q || U || 0 >= en() || ((!$ || W) && (null == l || l(S.X.FILL_SCROLLER)));
-    }, [en, l, Q, U, $, W]);
+        Q || U || 0 >= en() || ((!$ || z) && (null == l || l(S.X.FILL_SCROLLER)));
+    }, [en, l, Q, U, $, z]);
     let er = i.useMemo(() => {
         let e = Math.min(Math.max(2, en()), 20);
         return (0, r.jsx)(E.Z, {

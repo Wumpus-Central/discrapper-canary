@@ -102,7 +102,7 @@ var F =
         r),
     V = (((i = {}).Loading = "loading"), (i.Loaded = "loaded"), (i.Done = "done"), i);
 let H = 25;
-class z extends a.EventEmitter {
+class W extends a.EventEmitter {
     loadMore() {
         let { loadState: e, channels: t } = this.state;
         if ("loaded" !== e) return;
@@ -126,7 +126,7 @@ class z extends a.EventEmitter {
             });
     }
     populateInitialStateFromStore(e) {
-        if ("messages" === e.type) return W(e, !1);
+        if ("messages" === e.type) return z(e, !1);
         if ("nsfw" === e.type)
             return B(U({}, e), {
                 isFullyLoaded: !0,
@@ -164,7 +164,7 @@ class z extends a.EventEmitter {
                         loadState: "loaded",
                         channels: this.updateChannel(e.channelId, (e) => {
                             s()("messages" === e.type, "channel cannot change type");
-                            let n = W(e, !0);
+                            let n = z(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
                                     (n = B(U({}, n), {
@@ -184,7 +184,7 @@ class z extends a.EventEmitter {
                             var t;
                             return (
                                 s()("messages" === e.type, "channel cannot change type"),
-                                B(U({}, W(e, !0)), {
+                                B(U({}, z(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -237,7 +237,7 @@ class z extends a.EventEmitter {
             (this.reloadMessages = () => {
                 this.setState({
                     channels: this.state.channels.map((e) =>
-                        "messages" === e.type && e.hasLoadedAnything ? W(e, !1, !0) : e,
+                        "messages" === e.type && e.hasLoadedAnything ? z(e, !1, !0) : e,
                     ),
                 });
             }),
@@ -358,7 +358,7 @@ class z extends a.EventEmitter {
         for (let t = 0; t < e.channels.length; t++) e.channels[t].order = t;
     }
 }
-function W(e, t) {
+function z(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = N.Z.getMessages(e.channelId),
@@ -496,7 +496,7 @@ function Y(e, t, n, r) {
 let q = 2 * R.Z.Millis.DAY,
     Q = 10 * R.Z.Millis.DAY;
 function X(e) {
-    let [t, n] = l.useState(() => new z(K(), e)),
+    let [t, n] = l.useState(() => new W(K(), e)),
         [r, i] = l.useState(!1),
         a = l.useRef(Date.now()),
         [o, s] = l.useState(() => K());
@@ -516,7 +516,7 @@ function X(e) {
                 l = K();
             0 === l.channels.length || t - a.current < 10 * R.Z.Millis.SECOND
                 ? i(!0)
-                : ((a.current = Date.now()), n(new z(l, e)));
+                : ((a.current = Date.now()), n(new W(l, e)));
         }, [o, r, e]);
     let c = l.useRef(t);
     return (

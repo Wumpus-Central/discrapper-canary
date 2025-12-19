@@ -47,9 +47,9 @@ function T(e) {
 }
 let O = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: y, dismissable: O, classificationId: N } = e,
-        [w, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = r.useRef(w),
-        [k, R] = (0, c.US)([w], void 0, !0),
+        [P, w] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        I = r.useRef(P),
+        [k, R] = (0, c.US)([P], void 0, !0),
         A = r.useMemo(() => (0, i.Z)(), []),
         Z = r.useRef(!1),
         D = (0, m.GE)();
@@ -61,7 +61,7 @@ let O = function (e) {
             null == y || y(), u();
         },
         onMethodClick: () => {
-            P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            w(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
         classificationId: N,
     });

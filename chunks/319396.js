@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => I });
 var r = n(54381),
     i = n(473749),
     a = n(85707),
@@ -79,10 +79,10 @@ let P = i.memo(function (e) {
                 children: m,
             });
         else {
-            var P, w;
+            var P, I;
             O = (0, r.jsx)(o.i, {
                 title: u.title,
-                body: null != (w = u.body) ? w : "",
+                body: null != (I = u.body) ? I : "",
                 asset: null == (P = u.renderIcon) ? void 0 : P.call(u, t),
                 assetSize: f.EU,
                 position: "top",
@@ -103,7 +103,7 @@ let P = i.memo(function (e) {
           })
         : (0, r.jsx)("li", { children: O });
 });
-function w(e) {
+function I(e) {
     let { items: t, profileOwner: n, isOwner: o } = e,
         c = p.default.getCurrentUser(),
         { defaultWishlistId: f } = (0, l.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
@@ -126,7 +126,7 @@ function w(e) {
             [f, t],
         );
     if (null == c || null == f) return null;
-    let w = (0, r.jsx)("ul", {
+    let I = (0, r.jsx)("ul", {
         className: j.grid,
         children: t.map((e, t) =>
             (0, r.jsx)(
@@ -149,7 +149,7 @@ function w(e) {
     return v
         ? (0, r.jsx)(y.d, {
               emptyListFallbackRef: null,
-              children: w,
+              children: I,
           })
-        : w;
+        : I;
 }

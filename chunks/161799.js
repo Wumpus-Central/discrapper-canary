@@ -1,4 +1,4 @@
-n.d(e, { z: () => S }), n(539854);
+n.d(e, { z: () => T }), n(539854);
 var i = n(435064),
     l = n(39604),
     s = n(509613),
@@ -10,7 +10,7 @@ let o = (() => {
         for (let e = 10; e <= r.b0; e += 10) t.push(e);
         return t[t.length - 1] !== r.b0 && t.push(r.b0), t;
     })(),
-    S = (0, s.UO)(u.n.CLIPS_AUTO_CLIP_STORAGE_LIMIT, {
+    T = (0, s.UO)(u.n.CLIPS_AUTO_CLIP_STORAGE_LIMIT, {
         useTitle: () => a.intl.string(a.t.yfsrDI),
         useSubtitle: () => a.intl.string(a.t.vlDHdC),
         minValue: r.qb,

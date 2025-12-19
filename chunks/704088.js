@@ -1,8 +1,8 @@
 n.d(t, { U: () => S }), n(388685), n(49124), n(415506);
 var a = n(54381),
     r = n(473749),
-    l = n(663042),
-    i = n(442837),
+    i = n(663042),
+    l = n(442837),
     s = n(544891),
     o = n(199849),
     c = n(159691),
@@ -19,17 +19,17 @@ var a = n(54381),
     j = n(246992),
     y = n(474936);
 let C = r.forwardRef((e, t) => {
-    let [n, l] = r.useState(null),
-        [i, o] = r.useState(null),
+    let [n, i] = r.useState(null),
+        [l, o] = r.useState(null),
         [d, u] = r.useState(!1),
         m = r.useCallback(async () => {
-            u(!0), o(null), l(null);
+            u(!0), o(null), i(null);
             try {
                 let e = await s.tn.get({
                     url: "/users/@me/debug/warp/license",
                     rejectWithError: !0,
                 });
-                l(e.body);
+                i(e.body);
             } catch (r) {
                 var e, t;
                 let n =
@@ -56,7 +56,7 @@ let C = r.forwardRef((e, t) => {
                     onClick: m,
                     disabled: d,
                 }),
-                null != i &&
+                null != l &&
                     (0, a.jsx)("div", {
                         style: {
                             padding: "12px",
@@ -66,7 +66,7 @@ let C = r.forwardRef((e, t) => {
                             fontFamily: "monospace",
                             fontSize: "12px",
                         },
-                        children: i,
+                        children: l,
                     }),
                 null != n &&
                     (0, a.jsx)("pre", {
@@ -94,19 +94,19 @@ let C = r.forwardRef((e, t) => {
 C.displayName = "DebugWarpLicenseInfo";
 let _ = (e) => {
         let { onSuccess: t } = e,
-            [n, l] = r.useState(!1),
-            [i, o] = r.useState(0),
+            [n, i] = r.useState(!1),
+            [l, o] = r.useState(0),
             [d, u] = r.useState(null);
         r.useEffect(() => {
-            if (i > 0) {
+            if (l > 0) {
                 let e = setTimeout(() => {
-                    o(i - 1), 1 === i && t();
+                    o(l - 1), 1 === l && t();
                 }, 1000);
                 return () => clearTimeout(e);
             }
-        }, [i, t]);
+        }, [l, t]);
         let m = async () => {
-            l(!0), u(null);
+            i(!0), u(null);
             try {
                 await s.tn.post({
                     url: "/users/@me/debug/warp/license/extension-task",
@@ -122,7 +122,7 @@ let _ = (e) => {
                     a = (null == r ? void 0 : r.status) || (null == r || null == (t = r.body) ? void 0 : t.code);
                 u("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
-                l(!1);
+                i(!1);
             }
         };
         return (0, a.jsxs)("div", {
@@ -135,11 +135,11 @@ let _ = (e) => {
                 (0, a.jsx)(c.zxk, {
                     text: n
                         ? "Triggering Task..."
-                        : i > 0
-                          ? "Refreshing in ".concat(i, "s...")
+                        : l > 0
+                          ? "Refreshing in ".concat(l, "s...")
                           : "Trigger License Extension Task",
                     onClick: m,
-                    disabled: n || i > 0,
+                    disabled: n || l > 0,
                 }),
                 null != d &&
                     (0, a.jsx)("div", {
@@ -161,9 +161,9 @@ let _ = (e) => {
             [n, s] = r.useState(-1),
             [S, E] = r.useState(!1),
             [T, O] = r.useState(5000),
-            [N, w] = r.useState(!1),
-            P = r.useRef(null),
-            I = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
+            [N, P] = r.useState(!1),
+            w = r.useRef(null),
+            I = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
             k = (0, f.u)(),
             [R] = r.useState(() =>
                 (0, x.o8)({
@@ -186,7 +186,7 @@ let _ = (e) => {
                 setGetWarpInstallationStatus: z,
                 perkAvailableToUser: W,
                 setPerkAvailableToUser: K,
-            } = (0, l.o)(R),
+            } = (0, i.o)(R),
             q = r.useCallback(
                 async () => (
                     L(p.Ij.INITIALIZING),
@@ -473,18 +473,18 @@ let _ = (e) => {
                                       (0, a.jsx)(c.zxk, {
                                           text: "Show exit modal",
                                           onClick: () => {
-                                              w(!0);
+                                              P(!0);
                                           },
                                       }),
                                       N &&
                                           (0, a.jsx)(u.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,
-                                              onCancel: () => w(!1),
+                                              onCancel: () => P(!1),
                                               isProtocol: !1,
                                               onConfirm: () => {},
                                               onClose: async () => {
-                                                  w(!1);
+                                                  P(!1);
                                               },
                                               transitionState: d.Dvm.ENTERED,
                                           }),
@@ -499,7 +499,7 @@ let _ = (e) => {
                                       (0, a.jsx)(_, {
                                           onSuccess: () => {
                                               var e;
-                                              null == (e = P.current) || e.refresh();
+                                              null == (e = w.current) || e.refresh();
                                           },
                                       }),
                                   ],
@@ -510,7 +510,7 @@ let _ = (e) => {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk WARP License Info",
                                       }),
-                                      (0, a.jsx)(C, { ref: P }),
+                                      (0, a.jsx)(C, { ref: w }),
                                   ],
                               }),
                           ],

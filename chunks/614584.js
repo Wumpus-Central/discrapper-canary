@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(352736),
     g = n(937889),
     b = n(739566),
-    C = n(267128),
-    y = n(507418),
+    y = n(267128),
+    C = n(507418),
     v = n(348238),
     x = n(981631),
     O = n(388032);
@@ -78,8 +78,8 @@ let S = r.memo(function (e) {
         w = S.state === f.Y.LOADED ? S.message : void 0,
         M = (0, b.Uj)(w),
         R = s.d.useExperiment({ location: "repliedMessage" }).enabled,
-        L = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        D = r.useMemo(() => {
+        D = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        k = r.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
             if (e.type === x.uaV.USER_JOIN)
@@ -134,15 +134,15 @@ let S = r.memo(function (e) {
                           })
                         : j(E({}, t), {
                               formatInline: !0,
-                              allowHeading: L,
-                              allowList: L,
+                              allowHeading: D,
+                              allowList: D,
                               allowGameMentions: R,
                           });
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [w, M, _, L, R]),
-        { isReplyAuthorBlocked: k, isReplyAuthorIgnored: U } = (0, l.cj)(
+        }, [w, M, _, D, R]),
+        { isReplyAuthorBlocked: L, isReplyAuthorIgnored: U } = (0, l.cj)(
             [h.Z],
             () => ({
                 isReplyAuthorBlocked: null != w && h.Z.isBlockedForMessage(w),
@@ -151,8 +151,8 @@ let S = r.memo(function (e) {
             [w],
         ),
         V = (0, v.wq)(null == w ? void 0 : w.author.id, _.id),
-        F = (0, v.$3)(n, w),
-        H = (0, v.Wl)(w, _, I, T),
+        H = (0, v.$3)(n, w),
+        F = (0, v.Wl)(w, _, I, T),
         B = (0, v.rY)(Z, T),
         G = r.useCallback(() => {
             T({
@@ -160,23 +160,23 @@ let S = r.memo(function (e) {
                 referencedAvatarProfile: !1,
             });
         }, [T]),
-        z = (0, b.Uj)(n);
-    return (0, i.jsx)(C.Z, {
+        W = (0, b.Uj)(n);
+    return (0, i.jsx)(y.Z, {
         repliedAuthor: M,
         baseMessage: n,
         channel: _,
-        baseAuthor: z,
+        baseAuthor: W,
         referencedMessage: S,
-        content: D,
+        content: k,
         compact: P,
-        isReplyAuthorBlocked: k,
+        isReplyAuthorBlocked: L,
         isReplyAuthorIgnored: U,
         showAvatarPopout: Z,
         showUsernamePopout: I,
-        renderPopout: y.Z,
+        renderPopout: C.Z,
         onClickAvatar: B,
-        onClickUsername: H,
-        onClickReply: F,
+        onClickUsername: F,
+        onClickReply: H,
         onContextMenu: V,
         onPopoutRequestClose: G,
         isReplySpineClickable: N,

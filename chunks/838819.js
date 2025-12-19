@@ -32,8 +32,8 @@ var r = n(54381),
     N = n(215023),
     R = n(981631),
     P = n(295907),
-    w = n(213875),
-    Z = n(868090);
+    Z = n(213875),
+    w = n(868090);
 let D = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             a = (0, c.useHasAnyModalOpen)();
@@ -107,7 +107,7 @@ let D = (e) => {
                         onClose: P,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {
-                            className: s()(w.shop, { [Z.customCursors]: c }),
+                            className: s()(Z.shop, { [w.customCursors]: c }),
                             ref: en,
                             tabIndex: -1,
                             children: [
@@ -116,10 +116,10 @@ let D = (e) => {
                                     selectedTab: J,
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: s()(w.shopViewWrapper, {
-                                        [w.visible]: X === N.f7.VISIBLE,
-                                        [w.in]: X === N.f7.IN,
-                                        [w.out]: X === N.f7.OUT,
+                                    className: s()(Z.shopViewWrapper, {
+                                        [Z.visible]: X === N.f7.VISIBLE,
+                                        [Z.in]: X === N.f7.IN,
+                                        [Z.out]: X === N.f7.OUT,
                                     }),
                                     children: (0, r.jsx)(T.Z, {
                                         tab: J,

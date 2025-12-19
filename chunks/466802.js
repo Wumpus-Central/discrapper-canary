@@ -1,4 +1,4 @@
-n.d(e, { J: () => g });
+n.d(e, { J: () => _ });
 var i = n(657707),
     l = n(509613),
     s = n(970013),
@@ -6,8 +6,8 @@ var i = n(657707),
     r = n(526665),
     a = n(748717),
     o = n(126848),
-    S = n(112121),
-    T = n(726985),
+    T = n(112121),
+    S = n(726985),
     c = n(388032);
 let E = (0, l.wf)(u.n.NITRO_PANEL, {
         usePredicate: () => !(0, r.gN)("LegacyNitroPanel"),
@@ -18,11 +18,11 @@ let E = (0, l.wf)(u.n.NITRO_PANEL, {
     d = (0, l.wf)(u.n.NITRO_PANEL, {
         usePredicate: () => (0, r.gN)("NitroPanel"),
         useTitle: () => c.intl.string(c.t.Ipxkog),
-        buildLayout: () => [S.I],
+        buildLayout: () => [T.I],
     }),
-    g = (0, l.m7)(u.n.NITRO_SIDEBAR_ITEM, {
+    _ = (0, l.m7)(u.n.NITRO_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.Ipxkog),
-        getLegacySearchKey: () => ((0, r.Gl)("NitroPanel") ? void 0 : T.s6.PREMIUM),
+        getLegacySearchKey: () => ((0, r.Gl)("NitroPanel") ? void 0 : S.s6.PREMIUM),
         icon: i.SrA,
         trailing: {
             type: s.W.STRONGLY_DISCOURAGED_CUSTOM,

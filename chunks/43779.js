@@ -1,9 +1,9 @@
 n.d(t, { Z: () => O }), n(953529);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
-    s = n(236726),
+    i = n(120356),
+    l = n.n(i),
+    s = n(620792),
     o = n(442837),
     c = n(481060),
     d = n(393238),
@@ -24,9 +24,9 @@ var a = n(54381),
     E = n(710294);
 let T = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
 function O(e) {
-    var t, n, l, O, w;
+    var t, n, i, O, P;
     let {
-            quest: P,
+            quest: w,
             questContent: I,
             isHovering: k,
             contentPosition: R,
@@ -36,9 +36,9 @@ function O(e) {
             sourceQuestContent: L,
         } = e,
         M = r.useRef(null),
-        U = (0, x.w8)(P.config),
-        B = (0, x.B3)(P.config),
-        F = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
+        U = (0, x.w8)(w.config),
+        B = (0, x.B3)(w.config),
+        F = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: G, scrollHeight: V } = (0, d.kE)(),
         H = 104 !== V,
         { onAssetLoadComplete: z } = r.useContext(v.k),
@@ -70,9 +70,9 @@ function O(e) {
                     }
                     return e;
                 })({}, _.Y)),
-                (w = w = { clamp: !0 }),
+                (P = P = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(w))
+                    ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(P))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -80,17 +80,17 @@ function O(e) {
                               n.push.apply(n, a);
                           }
                           return n;
-                      })(Object(w)).forEach(function (e) {
-                          Object.defineProperty(O, e, Object.getOwnPropertyDescriptor(w, e));
+                      })(Object(P)).forEach(function (e) {
+                          Object.defineProperty(O, e, Object.getOwnPropertyDescriptor(P, e));
                       }),
                 O),
         }),
-        K = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
-        q = (null == (l = P.userStatus) ? void 0 : l.claimedAt) != null,
-        Y = (0, x.xN)(P.config),
-        Q = (0, x.LM)(P.config),
-        { completedRatio: X, completedRatioDisplay: J } = (0, h.I)(P),
-        $ = (0, p.Bd)(P, L, M),
+        K = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
+        q = (null == (i = w.userStatus) ? void 0 : i.claimedAt) != null,
+        Y = (0, x.xN)(w.config),
+        Q = (0, x.LM)(w.config),
+        { completedRatio: X, completedRatioDisplay: J } = (0, h.I)(w),
+        $ = (0, p.Bd)(w, L, M),
         ee = r.useMemo(
             () =>
                 q && Y
@@ -99,7 +99,7 @@ function O(e) {
                               (0, a.jsxs)(
                                   N,
                                   {
-                                      questId: P.id,
+                                      questId: w.id,
                                       children: [
                                           (0, a.jsx)(m.Z, {
                                               shouldUseThemeColor: !0,
@@ -109,12 +109,12 @@ function O(e) {
                                           Q,
                                       ],
                                   },
-                                  P.id,
+                                  w.id,
                               ),
                       })
                     : q
                       ? (0, a.jsx)(N, {
-                            questId: P.id,
+                            questId: w.id,
                             children: U,
                         })
                       : Y
@@ -123,7 +123,7 @@ function O(e) {
                                   (0, a.jsxs)(
                                       N,
                                       {
-                                          questId: P.id,
+                                          questId: w.id,
                                           children: [
                                               (0, a.jsx)(m.Z, {
                                                   shouldUseThemeColor: !0,
@@ -133,7 +133,7 @@ function O(e) {
                                               Q,
                                           ],
                                       },
-                                      P.id,
+                                      w.id,
                                   ),
                           })
                         : S.intl.format(S.t["0IUT4Y"], {
@@ -141,13 +141,13 @@ function O(e) {
                                   (0, a.jsx)(
                                       N,
                                       {
-                                          questId: P.id,
+                                          questId: w.id,
                                           children: B,
                                       },
-                                      P.id,
+                                      w.id,
                                   ),
                           }),
-            [U, q, B, P.id, Q, Y],
+            [U, q, B, w.id, Q, Y],
         ),
         et = r.useMemo(() => {
             if (null != $)
@@ -190,14 +190,14 @@ function O(e) {
                                                       shouldAnimate: !en,
                                                   }),
                                               (0, a.jsx)(b.Z, {
-                                                  quest: P,
+                                                  quest: w,
                                                   size: 76,
                                                   percentComplete: X,
-                                                  percentCompleteText: k && !(0, f.zi)(P) ? J : void 0,
+                                                  percentCompleteText: k && !(0, f.zi)(w) ? J : void 0,
                                                   children: (0, a.jsx)("div", {
                                                       className: E.circularRewardTileWrapper,
                                                       children: (0, a.jsx)(g.Z, {
-                                                          quest: P,
+                                                          quest: w,
                                                           questContent: I,
                                                           className: E.circularQuestRewardTileAsset,
                                                           location: C.dr.QUEST_HOME_DESKTOP,
@@ -211,7 +211,7 @@ function O(e) {
                                           ],
                                       })
                                     : (0, a.jsx)(g.Z, {
-                                          quest: P,
+                                          quest: w,
                                           autoplay: k,
                                           questContent: I,
                                           className: E.questRewardTileAsset,
@@ -225,13 +225,13 @@ function O(e) {
                     }),
                     (0, a.jsxs)("div", {
                         ref: G,
-                        className: i()(E.textContainer, { [E.justifyCenter]: !H }),
+                        className: l()(E.textContainer, { [E.justifyCenter]: !H }),
                         children: [
                             (0, a.jsx)(c.Heading, {
                                 variant: "eyebrow",
                                 color: "text-brand",
                                 className: E.questName,
-                                children: S.intl.format(S.t.EAYZAr, { questName: P.config.messages.questName }),
+                                children: S.intl.format(S.t.EAYZAr, { questName: w.config.messages.questName }),
                             }),
                             (0, a.jsx)(c.Text, {
                                 variant: "text-md/semibold",
@@ -252,7 +252,7 @@ function O(e) {
                 ],
             }),
             (0, a.jsx)(y.Z, {
-                quest: P,
+                quest: w,
                 questContent: I,
                 contentPosition: R,
                 rowIndex: A,

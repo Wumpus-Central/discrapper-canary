@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(314940), n(388685);
+n.d(t, { Z: () => C }), n(314940), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -14,7 +14,7 @@ var i = n(54381),
     m = n(388032),
     g = n(884193),
     b = n(548498);
-function C(e) {
+function y(e) {
     let { expanded: t, onClick: n, count: r, compact: l, collapsedReason: a } = e,
         c = (0, o.EQ)({ collapsedReason: a })
             .with({ collapsedReason: m.t["VFWjc+"] }, () =>
@@ -62,14 +62,14 @@ function C(e) {
         }),
     });
 }
-let y = r.memo(function (e) {
+let C = r.memo(function (e) {
     var t;
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: u } = e,
         { hasJumpTarget: f = !1 } = n,
-        [m, y] = r.useState(f),
-        v = r.useCallback(() => y((e) => !e), []);
+        [m, C] = r.useState(f),
+        v = r.useCallback(() => C((e) => !e), []);
     r.useEffect(() => {
-        f && y(!0);
+        f && C(!0);
     }, [f]);
     let x = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)("div", {
@@ -89,7 +89,7 @@ let y = r.memo(function (e) {
                   )
                 : null,
             (0, i.jsx)(
-                C,
+                y,
                 {
                     count: x,
                     compact: o,

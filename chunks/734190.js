@@ -177,8 +177,8 @@ let T = i.memo(function (e) {
         ),
         V = null == R ? 0 : R.length,
         H = (0, o.JA)(t.id),
-        { role: z } = H,
-        W = (function (e, t) {
+        { role: W } = H,
+        z = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -210,7 +210,7 @@ let T = i.memo(function (e) {
                   ? S.intl.formatToPlainString(S.t.YlVvmc, { channelName: t.name })
                   : S.intl.formatToPlainString(S.t["0nZpiF"], { channelName: t.name });
     return (0, r.jsxs)("li", {
-        role: z,
+        role: W,
         className: a()(I.containerDefault, { [I.selected]: l }),
         children: [
             (0, r.jsx)(w, { withGuildIcon: A }),
@@ -242,7 +242,7 @@ let T = i.memo(function (e) {
                         !M || G || l ? null : (0, r.jsx)("div", { className: a()(_.unread, _.unreadImportant) }),
                         (0, r.jsx)(
                             u.P3F,
-                            Z(N({}, W), {
+                            Z(N({}, z), {
                                 innerRef: K,
                                 className: _.link,
                                 onClick: U,

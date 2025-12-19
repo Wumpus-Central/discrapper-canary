@@ -42,13 +42,13 @@ function m(e) {
             ],
             [],
         ),
-        P = l.useCallback(
+        x = l.useCallback(
             (e) => {
                 j(e.value), f(e.value);
             },
             [f],
         ),
-        x =
+        P =
             null == O || null == (n = O.segmentedControlAnimations) || null == (t = n.trick)
                 ? void 0
                 : t.getAnimationData,
@@ -62,10 +62,10 @@ function m(e) {
             (0, r.jsx)(c.w, {
                 options: S,
                 value: y,
-                onChange: P,
+                onChange: x,
             }),
             v === u.KN.Trick &&
-                null != x &&
+                null != P &&
                 (0, r.jsx)("div", {
                     className: a()(p.animationOverlay, p.trickAnimation),
                     children: (0, r.jsx)(s.Fmz, {
@@ -73,7 +73,7 @@ function m(e) {
                         loop: !0,
                         autoplay: !0,
                         className: p.lottieAnimation,
-                        importData: x,
+                        importData: P,
                         renderer: s.Fmz.Renderers.SVG,
                         versionKey: +(v === u.KN.Trick),
                     }),

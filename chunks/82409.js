@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(236726),
+    o = n(620792),
     s = n(442837),
     c = n(692547);
 n(28664);
@@ -165,8 +165,8 @@ function k(e) {
                 }),
             [G],
         ),
-        z = U(_, l, o),
-        W = U(P, l, null);
+        W = U(_, l, o),
+        z = U(P, l, null);
     (0, h.ZP)(() => {
         var e;
         d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -203,7 +203,7 @@ function k(e) {
                       },
                       isUnread: null != (i = O.ZP.hasUnread(c)) && i,
                   };
-        })(z, W);
+        })(W, z);
         null != i &&
             C.Z.inboxItemClick({
                 message: i,
@@ -240,8 +240,8 @@ function k(e) {
                 (0, r.jsx)(Z.Z, {
                     className: R.messageList,
                     renderMessageGroup: F,
-                    messages: l === w.V5.BOOKMARKS ? H : z,
-                    unreadMessages: l === w.V5.BOOKMARKS ? [] : W,
+                    messages: l === w.V5.BOOKMARKS ? H : W,
+                    unreadMessages: l === w.V5.BOOKMARKS ? [] : z,
                     listName: "notifications-inbox",
                     renderLoadingState: B,
                     ignoreGrouping: l === w.V5.BOOKMARKS,

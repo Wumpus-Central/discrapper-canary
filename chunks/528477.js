@@ -1,8 +1,8 @@
 n.d(t, { n: () => T });
 var a = n(54381),
     r = n(473749),
-    l = n(159691),
-    i = n(594421),
+    i = n(159691),
+    l = n(594421),
     s = n(100527),
     o = n(906732),
     c = n(336197),
@@ -29,8 +29,8 @@ let T = (e) => {
             installationStatus: T,
             perkAvailableToUser: O,
             isSupportedPrivateBrowsingPerkPlatform: N,
-            isWeb: w,
-            connectionStatus: P,
+            isWeb: P,
+            connectionStatus: w,
         } = (0, v.xf)(),
         { enabled: I } = b.H.useConfig({ location: "private_browsing_perk_settings_page" }),
         k = (0, r.useCallback)(() => {
@@ -39,10 +39,10 @@ let T = (e) => {
         R = (0, r.useCallback)(() => {
             (0, p.openUserSettings)(m.n.PRIVATE_BROWSING_PANEL, { section: j.oAB.PRIVATE_BROWSING });
         }, []),
-        A = [x.Ij.CONNECTED].includes(P),
-        Z = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(T) && !w && (!n || O),
+        A = [x.Ij.CONNECTED].includes(w),
+        Z = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(T) && !P && (!n || O),
         D = (0, r.useMemo)(() => {
-            switch (P) {
+            switch (w) {
                 case x.Ij.CONNECTED:
                     return _.intl.string(C.default.FBu3XJ);
                 case x.Ij.INITIALIZING:
@@ -50,7 +50,7 @@ let T = (e) => {
                 default:
                     return _.intl.string(C.default["A70/wR"]);
             }
-        }, [P]),
+        }, [w]),
         L = (0, r.useMemo)(() => {
             if (!O) return _.intl.string(C.default.KN6HOb);
             switch (T) {
@@ -63,7 +63,7 @@ let T = (e) => {
         }, [T, O, D]),
         M = (0, r.useMemo)(() => {
             if (!O)
-                return (0, a.jsx)(l.xvT, {
+                return (0, a.jsx)(i.xvT, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
                     children: _.intl.format(C.default["0UfKTY"], { helpdeskArticle: f.w }),
@@ -71,28 +71,28 @@ let T = (e) => {
             switch (T) {
                 case x._n.INSTALLED:
                 case x._n.EXISTING_INSTALLATION:
-                    return (0, a.jsx)(l.xvT, {
+                    return (0, a.jsx)(i.xvT, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: A
                             ? _.intl.format(C.default.zwW10o, {
                                   onClick: () => {
-                                      (0, i.j)(j.rMx.NITRO_PRIVACY_UPSELL_PERKS_CLICKED, {}), k();
+                                      (0, l.j)(j.rMx.NITRO_PRIVACY_UPSELL_PERKS_CLICKED, {}), k();
                                   },
                               })
                             : _.intl.format(C.default.D4hu0v, {
                                   onClick: () => {
-                                      (0, i.j)(j.rMx.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED, {}), R();
+                                      (0, l.j)(j.rMx.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED, {}), R();
                                   },
                               }),
                     });
                 default:
-                    return (0, a.jsx)(l.xvT, {
+                    return (0, a.jsx)(i.xvT, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: _.intl.format(C.default.D4hu0v, {
                             onClick: () => {
-                                (0, i.j)(j.rMx.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED, {}), R();
+                                (0, l.j)(j.rMx.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED, {}), R();
                             },
                         }),
                     });
@@ -115,7 +115,7 @@ let T = (e) => {
                       className: S.contentContainer,
                       children: [
                           O &&
-                              (0, a.jsx)(l.$1m, {
+                              (0, a.jsx)(i.$1m, {
                                   className: S.imageWrapper,
                                   offsetBottom: -5,
                                   color: "nitro-pink",
@@ -131,7 +131,7 @@ let T = (e) => {
                           (0, a.jsxs)("div", {
                               className: S.details,
                               children: [
-                                  (0, a.jsx)(l.X6q, {
+                                  (0, a.jsx)(i.X6q, {
                                       variant: "heading-md/semibold",
                                       children: L,
                                   }),

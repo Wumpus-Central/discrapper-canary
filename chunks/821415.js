@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(594174),
     g = n(607361),
     b = n(463421),
-    C = n(981631),
-    y = n(486014),
+    y = n(981631),
+    C = n(486014),
     v = n(388032),
     x = n(67103);
 function O(e) {
@@ -29,7 +29,7 @@ function O(e) {
         g(1);
         try {
             await c.Z.sendActivityInvite({
-                type: C.mFx.STREAM_REQUEST,
+                type: y.mFx.STREAM_REQUEST,
                 channelId: l.id,
                 activity: n,
                 content: "<@".concat(a, ">"),
@@ -42,7 +42,7 @@ function O(e) {
         }
         g(2);
     }
-    if ((b && (t = v.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
+    if ((b && (t = v.intl.string(C.default.qRXats)), n.type === y.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
         return (0, i.jsxs)("div", {
             className: x.activityRow,
@@ -81,7 +81,7 @@ function O(e) {
                     disabled: b || 2 === m,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === m ? v.intl.string(y.default["8HU1M2"]) : v.intl.string(y.default.DKHhec),
+                    text: 2 === m ? v.intl.string(C.default["8HU1M2"]) : v.intl.string(C.default.DKHhec),
                     onClick: O,
                 }),
                 null != t &&
@@ -110,16 +110,16 @@ function E(e) {
                 }),
             [c],
         ),
-        C = null == s || !d || 0 === h.length;
+        y = null == s || !d || 0 === h.length;
     return ((0, u.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
             properties: {},
         },
-        { disableTrack: C },
+        { disableTrack: y },
     ),
-    C)
+    y)
         ? null
         : (0, i.jsx)(p.Z.Provider, {
               value: n.guild_id,

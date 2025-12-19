@@ -1,10 +1,10 @@
 n.d(t, {
-    A: () => l,
-    g: () => i,
+    A: () => i,
+    g: () => l,
 });
 var a = n(54381),
     r = n(473749);
-let l = r.createContext({
+let i = r.createContext({
         onCtxMenuClose: () => {},
         onCtxMenuOpen: () => {},
         onCtxMenuSelect: () => {},
@@ -16,11 +16,11 @@ let l = r.createContext({
         quest: null,
         taskDetails: null,
     }),
-    i = (e) => {
+    l = (e) => {
         let {
                 children: t,
                 isExpanded: n,
-                isExpansionAnimationComplete: i,
+                isExpansionAnimationComplete: l,
                 onCtxMenuClose: s,
                 onCtxMenuOpen: o,
                 onCtxMenuSelect: c,
@@ -33,7 +33,7 @@ let l = r.createContext({
             f = r.useMemo(
                 () => ({
                     isExpanded: n,
-                    isExpansionAnimationComplete: i,
+                    isExpansionAnimationComplete: l,
                     onCtxMenuClose: s,
                     onCtxMenuOpen: o,
                     onCtxMenuSelect: c,
@@ -43,9 +43,9 @@ let l = r.createContext({
                     quest: p,
                     taskDetails: h,
                 }),
-                [n, i, s, o, c, d, u, m, p, h],
+                [n, l, s, o, c, d, u, m, p, h],
             );
-        return (0, a.jsx)(l.Provider, {
+        return (0, a.jsx)(i.Provider, {
             value: f,
             children: t,
         });

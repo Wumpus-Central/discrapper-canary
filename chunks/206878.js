@@ -1,7 +1,7 @@
 n.d(t, { g: () => v }), n(388685), n(35282);
 var a = n(473749),
     r = n(281598);
-function l(e) {
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -26,7 +26,7 @@ function l(e) {
     }
     return e;
 }
-function i(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -108,17 +108,17 @@ let s = new Set([
     },
     b = (e, t, n, a) => {
         let r = t.size,
-            l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
-            i = "".concat(t.name, " - ").concat(l);
+            i = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
+            l = "".concat(t.name, " - ").concat(i);
         if (r > e.max) {
             let t =
                 e.max > 1000000
                     ? "".concat(Math.round(e.max / 1000000), "MB")
                     : "".concat(Math.round(e.max / 1000), "KB");
             n("Files exceed the recommended size limit - make sure they are optimized!", [
-                "".concat(i, " (max: ").concat(t, ")"),
+                "".concat(l, " (max: ").concat(t, ")"),
             ]);
-        } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
+        } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(l)]);
     },
     g = (e, t, n, a) => {
         let r = h[e];
@@ -133,7 +133,7 @@ let s = new Set([
                 u((n) => {
                     var a;
                     let r = null != (a = n[e]) ? a : [];
-                    return i(l({}, n), {
+                    return l(i({}, n), {
                         [e]: [...r, ...t],
                     });
                 });
@@ -143,7 +143,7 @@ let s = new Set([
                 c((n) => {
                     var a;
                     let r = null != (a = n[e]) ? a : [];
-                    return i(l({}, n), {
+                    return l(i({}, n), {
                         [e]: [...r, ...t],
                     });
                 });
@@ -170,19 +170,19 @@ let s = new Set([
                                 let { files: t, addError: n, addWarning: a } = e;
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
-                                        l = null != t ? h[t] : null;
-                                    null != l && b(l, e, n, a);
+                                        i = null != t ? h[t] : null;
+                                    null != i && b(i, e, n, a);
                                 }
                                 x({
                                     names: t.collectionFiles.map((e) => e.name),
                                     addError: n,
                                 });
-                                let l = new Set(t.collectionFiles.map((e) => e.name)),
-                                    i = Array.from(s).filter((e) => !l.has(e));
-                                i.length > 0 && n("Missing required files", i);
+                                let i = new Set(t.collectionFiles.map((e) => e.name)),
+                                    l = Array.from(s).filter((e) => !i.has(e));
+                                l.length > 0 && n("Missing required files", l);
                                 let o = Object.values(r.jE)
                                     .filter((e) => !s.has(e))
-                                    .filter((e) => !l.has(e));
+                                    .filter((e) => !i.has(e));
                                 o.length > 0 && a("Missing optional assets", o);
                             })({
                                 files: n,
@@ -196,26 +196,26 @@ let s = new Set([
                                     addError: n,
                                 }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
-                                        let [t, l] = e,
-                                            i = l.map((e) => e.name);
+                                        let [t, i] = e,
+                                            l = i.map((e) => e.name);
                                         x({
-                                            names: i.map((e) => {
+                                            names: l.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
                                             }),
                                             addError: n,
                                         }),
-                                            g(r.aB.PROFILE_EFFECT, l, n, a);
+                                            g(r.aB.PROFILE_EFFECT, i, n, a);
                                         let s = o
-                                            .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
+                                            .filter((e) => !l.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
                                         s.length > 0 && n("Missing required PFX files with prefix", s),
-                                            i.some((e) => e.endsWith(".txt")) ||
+                                            l.some((e) => e.endsWith(".txt")) ||
                                                 n(
                                                     "PFX configs required - please include both exports! (exception: duplicate variant configs are optional)",
                                                     [t],
                                                 );
-                                        let c = i
+                                        let c = l
                                             .filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
                                             .map((e) => "".concat(t, "/").concat(e));
                                         c.length > 0 && a("Contains unrecognized files", c);

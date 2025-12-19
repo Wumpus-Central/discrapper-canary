@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(543241),
     g = n(633302),
     b = n(856985),
-    C = n(660189),
-    y = n(868643),
+    y = n(660189),
+    C = n(868643),
     v = n(245216),
     x = n(223606),
     O = n(188597),
@@ -32,17 +32,17 @@ var i = n(54381),
     w = n(280845),
     M = n(2818),
     R = n(768943),
-    L = n(665906),
-    D = n(695346),
-    k = n(314897),
+    D = n(665906),
+    k = n(695346),
+    L = n(314897),
     U = n(323873),
     V = n(271383),
-    F = n(430824),
-    H = n(607744),
+    H = n(430824),
+    F = n(607744),
     B = n(496675),
     G = n(626135),
-    z = n(572004),
-    W = n(176354),
+    W = n(572004),
+    z = n(176354),
     q = n(823379),
     K = n(970257),
     Y = n(418476),
@@ -110,7 +110,7 @@ let ed = r.memo(function (e) {
     let { channel: t, message: n } = e,
         r = (0, m.q5)(t.guild_id).filter(
             (e) =>
-                !W.ZP.isEmojiFilteredOrLocked({
+                !z.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: er.Hz.REACTION,
@@ -190,7 +190,7 @@ function ep(e) {
             canForward: N,
             isExpanded: A,
             showMoreUtilities: U,
-            showEmojiPicker: W,
+            showEmojiPicker: z,
             showMessageBookmarksActions: q,
             isMessageBookmark: en,
             setPopout: er,
@@ -208,14 +208,14 @@ function ep(e) {
                     isFocused: s,
                 } = e,
                 { author: d } = n,
-                p = (0, u.e7)([F.Z], () => F.Z.getGuild(t.guild_id), [t.guild_id]),
-                m = (0, u.e7)([k.default], () => k.default.getId()),
-                g = (0, L.$R)(t),
-                b = (0, L.Gu)(t),
-                { firstMessage: v } = (0, u.e7)([C.Z], () => C.Z.getMessage(t.id), [t.id]),
-                x = D.nc.useSetting(),
-                O = D.Sb.useSetting(),
-                j = (0, u.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
+                p = (0, u.e7)([H.Z], () => H.Z.getGuild(t.guild_id), [t.guild_id]),
+                m = (0, u.e7)([L.default], () => L.default.getId()),
+                g = (0, D.$R)(t),
+                b = (0, D.Gu)(t),
+                { firstMessage: v } = (0, u.e7)([y.Z], () => y.Z.getMessage(t.id), [t.id]),
+                x = k.nc.useSetting(),
+                O = k.Sb.useSetting(),
+                j = (0, u.e7)([F.Z], () => null == t.guild_id || F.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: S, canAddNewReactions: _ } = (0, u.cj)(
                     [B.Z],
                     () => ({
@@ -225,8 +225,8 @@ function ep(e) {
                     [t, j],
                 ),
                 P = (0, w.U)(t, n),
-                I = (0, L.NE)(t, n),
-                Z = (0, L.Ek)(n),
+                I = (0, D.NE)(t, n),
+                Z = (0, D.Ek)(n),
                 T = (0, u.e7)([E.Z], () => null != t.guild_id && E.Z.isLurking(t.guild_id), [t]),
                 N = (0, u.e7)([V.ZP], () => null != t.guild_id && V.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = d.id === m,
@@ -234,7 +234,7 @@ function ep(e) {
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (U = U && S),
                 t.isModeratorReportChannel() && (U = U && n.id !== (null == v ? void 0 : v.id) && !(0, J.Z)(n));
             let G = (0, K.a4)(n),
-                W = (0, X.Z)(n, t),
+                z = (0, X.Z)(n, t),
                 q = !t.isSystemDM() && (0, Y.Z)(n, m) && g && !b,
                 { disableReactionCreates: $ } = (0, Q.Z)({
                     channel: t,
@@ -256,7 +256,7 @@ function ep(e) {
                     null != et &&
                     n.type === ei.uaV.USER_JOIN &&
                     B.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
-                er = (0, y.a)(n),
+                er = (0, C.a)(n),
                 { enabled: el } = M.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([R.Z], () => null != R.Z.getSavedMessage(t.id, n.id)),
                 eo = (0, c.Z)(a),
@@ -264,7 +264,7 @@ function ep(e) {
             return {
                 channel: t,
                 message: n,
-                canPin: W,
+                canPin: z,
                 canEdit: q,
                 canDelete: U,
                 canReport: G,
@@ -272,7 +272,7 @@ function ep(e) {
                 canStartThread: I,
                 canViewThread: Z,
                 canForward: er,
-                canCopy: z.wS,
+                canCopy: W.wS,
                 hasDeveloperMode: O,
                 canReact: !$ && x,
                 canPublish: ee,
@@ -298,13 +298,13 @@ function ep(e) {
                 er({ moreUtilities: !U });
         }, [U, er, n]),
         ef = r.useCallback(() => {
-            er({ emojiPicker: !W });
-        }, [W, er]),
-        eh = (0, L.$R)(t),
+            er({ emojiPicker: !z });
+        }, [z, er]),
+        eh = (0, D.$R)(t),
         eg = n.hasFlag(ei.iLy.CROSSPOSTED),
         eb = (0, Z.Z)(t),
-        eC = (0, I.Nt)(),
-        ey = eb && eC && !n.hasPotions(),
+        ey = (0, I.Nt)(),
+        eC = eb && ey && !n.hasPotions(),
         ev = r.useCallback(
             (e) => {
                 try {
@@ -428,12 +428,12 @@ function ep(e) {
                           (0, i.jsx)(et.Z, {
                               togglePopout: ef,
                               renderEmojiPicker: em,
-                              shouldShow: W,
+                              shouldShow: z,
                               isFocused: es,
                               channel: t,
                               message: n,
                           }),
-                          ey
+                          eC
                               ? (0, i.jsx)(
                                     $.sF,
                                     {

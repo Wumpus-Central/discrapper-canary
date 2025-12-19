@@ -1,8 +1,8 @@
 n.d(t, { P: () => y }), n(388685), n(35282), n(49124);
 var a = n(54381),
     r = n(473749),
-    l = n(394900),
-    i = n(661105),
+    i = n(394900),
+    l = n(661105),
     s = n(609067),
     o = n(94367),
     c = n(407146),
@@ -73,8 +73,8 @@ let v = Object.keys(f.jQ).map((e) => ({
     }));
 function y(e) {
     let { state: t, setState: n } = e,
-        { scales: l } = t,
-        [i, s] = r.useState(null),
+        { scales: i } = t,
+        [l, s] = r.useState(null),
         o = (0, a.jsxs)("div", {
             className: x.section,
             children: [
@@ -107,7 +107,7 @@ function y(e) {
                 }),
                 (0, a.jsx)("ul", {
                     className: x.overrides,
-                    children: l.map((e) =>
+                    children: i.map((e) =>
                         (0, a.jsx)(
                             "li",
                             {
@@ -127,7 +127,7 @@ function y(e) {
                 }),
             ],
         }),
-        u = l.find((e) => e.name === i),
+        u = i.find((e) => e.name === l),
         p =
             null != u
                 ? (0, a.jsx)(C, {
@@ -173,7 +173,7 @@ function C(e) {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
-                                        value: (0, l.Z)((0, i.Z)(a, f.HW.sRGB), { format: "hex" }),
+                                        value: (0, i.Z)((0, l.Z)(a, f.HW.sRGB), { format: "hex" }),
                                         type: "color",
                                     }),
                                     e
@@ -305,7 +305,7 @@ function C(e) {
                                                     color: u,
                                                 },
                                                 children: [
-                                                    (0, l.Z)((0, i.Z)(c, f.HW.sRGB), { format: "hex" }).toUpperCase(),
+                                                    (0, i.Z)((0, l.Z)(c, f.HW.sRGB), { format: "hex" }).toUpperCase(),
                                                     " - ",
                                                     d,
                                                 ],
@@ -324,7 +324,7 @@ function C(e) {
 function _(e) {
     let { scale: t, onRemove: n } = e,
         s = r.useMemo(
-            () => Object.values((0, f.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, f.HW.sRGB), { format: "hex" })),
+            () => Object.values((0, f.XM)(t)).map((e) => (0, i.Z)((0, l.Z)(e, f.HW.sRGB), { format: "hex" })),
             [t],
         );
     return (0, a.jsxs)("li", {

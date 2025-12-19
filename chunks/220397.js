@@ -6,11 +6,11 @@ var i = n(473749),
     r = n(622822),
     a = n(509613),
     o = n(519207),
-    S = n(695346),
-    T = n(313789),
+    T = n(695346),
+    S = n(313789),
     c = n(682578),
     E = n(388032);
-let d = (0, a.qs)(T.n.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
+let d = (0, a.qs)(S.n.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
     useTitle: () => E.intl.string(E.t["L+yTsa"]),
     useSubtitle: () => E.intl.string(E.t.hiM8pU),
     useValue: o.q3,
@@ -26,6 +26,6 @@ let d = (0, a.qs)(T.n.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
             return void l.Z.showAgeVerificationGetStartedModal({
                 entryPoint: s.cU.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS,
             });
-        S.DC.updateSetting(t);
+        T.DC.updateSetting(t);
     },
 });

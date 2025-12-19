@@ -20,17 +20,17 @@ function u(e) {
             onMouseLeave: g,
         } = e,
         b = (0, o.Q)(t),
-        C = (0, s.V)(n.id, t);
-    if (!b || null == C) return null;
-    let y = () => {
+        y = (0, s.V)(n.id, t);
+    if (!b || null == y) return null;
+    let C = () => {
         null == h || h(), l.Z.closePrivateChannel(n.id, p);
     };
     return (0, i.jsx)(r.Button, {
         size: d,
         variant: "critical-primary",
-        disabled: null == C,
+        disabled: null == y,
         onClick: () => {
-            null == f || f(), (0, a.WL)(C, y);
+            null == f || f(), (0, a.WL)(y, C);
         },
         onMouseEnter: m,
         onMouseLeave: g,

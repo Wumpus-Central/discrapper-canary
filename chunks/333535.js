@@ -17,7 +17,7 @@ function b(e) {
     let { threadId: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getChannel(t)),
         b = (0, l.e7)([s.Z], () => s.Z.getChannel(null == n ? void 0 : n.parent_id)),
-        C = r.useCallback(() => {
+        y = r.useCallback(() => {
             null != n &&
                 null != b &&
                 ((0, o.yw)(h.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
@@ -46,7 +46,7 @@ function b(e) {
                         text: m.intl.string(m.t.C5UQC9),
                         variant: "primary",
                         icon: a.xPt,
-                        onClick: C,
+                        onClick: y,
                     }),
                 ],
             }),

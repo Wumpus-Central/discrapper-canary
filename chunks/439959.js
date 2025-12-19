@@ -8,8 +8,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(473749),
-    l = n(399606),
-    a = n(597688),
+    a = n(399606),
+    l = n(597688),
     s = n(1870),
     o = n(884697),
     c = n(388032),
@@ -17,8 +17,8 @@ var r,
 let u = { skuId: "None" },
     m = { skuId: "Shop" },
     p = () => {
-        let e = (0, l.e7)([s.Z], () => s.Z.purchases),
-            [t, n] = (0, l.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
+        let e = (0, a.e7)([s.Z], () => s.Z.purchases),
+            [t, n] = (0, a.Wu)([l.Z], () => [l.Z.categories, l.Z.products]);
         return (0, i.useMemo)(() => {
             let r = (0, o.iC)(e, t).reduce(
                 (t, r) => {

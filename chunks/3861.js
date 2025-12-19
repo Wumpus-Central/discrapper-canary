@@ -38,12 +38,12 @@ let x = (0, a.Z)((e) => {
         mode: M,
         popoutType: R,
         awaitingRemoteSessionInfo: D,
-        callContainerDimensions: L,
+        callContainerDimensions: k,
     } = e;
     r.useEffect(() => {
         p.S.dispatch(y.CkL.REMEASURE_TARGET);
-    }, [N, A, L.width, L.height]);
-    let k = r.useMemo(
+    }, [N, A, k.width, k.height]);
+    let L = r.useMemo(
             () => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))),
             [n, x],
         ),
@@ -84,7 +84,7 @@ let x = (0, a.Z)((e) => {
             children: (0, i.jsx)(m.Z, {
                 channel: _,
                 className: v.videoGrid,
-                participants: k,
+                participants: L,
                 totalNumberOfParticipants: t.length,
                 onClick: E,
                 onDoubleClick: S,
@@ -99,7 +99,7 @@ let x = (0, a.Z)((e) => {
         onContextMenuParticipant: j,
         onSelectParticipant: E,
         selectedParticipant: a,
-        filteredParticipants: k,
+        filteredParticipants: L,
         participants: t,
         popoutType: R,
         className: I,

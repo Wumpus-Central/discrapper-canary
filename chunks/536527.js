@@ -1,4 +1,4 @@
-n.d(e, { r: () => g });
+n.d(e, { r: () => _ });
 var i = n(442837),
     l = n(493773),
     s = n(972959),
@@ -6,17 +6,17 @@ var i = n(442837),
     r = n(607070),
     a = n(627845),
     o = n(509613),
-    S = n(63063),
-    T = n(313789),
+    T = n(63063),
+    S = n(313789),
     c = n(981631),
     E = n(388032);
 let d = (0, s.H)(() => ({
         syncEnabled: null,
         updateTimeout: null,
     })),
-    g = (0, o.qs)(T.n.SYNC_FORCED_COLORS, {
+    _ = (0, o.qs)(S.n.SYNC_FORCED_COLORS, {
         useTitle: () => E.intl.string(E.t.cguiec),
-        useSubtitle: () => E.intl.format(E.t.GwEVE2, { learnMoreLink: S.Z.getArticleURL(c.BhN.FORCED_COLORS) }),
+        useSubtitle: () => E.intl.format(E.t.GwEVE2, { learnMoreLink: T.Z.getArticleURL(c.BhN.FORCED_COLORS) }),
         useValue: () => {
             var t;
             let e = (0, i.e7)([r.Z], () => r.Z.syncForcedColors);

@@ -19,8 +19,8 @@ var i = n(54381),
     m = n(434404),
     g = n(330010),
     b = n(978946),
-    C = n(314897),
-    y = n(430824),
+    y = n(314897),
+    C = n(430824),
     v = n(594174),
     x = n(259580),
     O = n(585483),
@@ -116,24 +116,24 @@ function w(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
+        l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && S.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        x = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
-        { canInvite: M, canManageGuild: R, canMessage: L } = (0, h.TE)(t, l),
-        D = (0, s.e7)([v.default], () => {
+        x = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
+        { canInvite: M, canManageGuild: R, canMessage: D } = (0, h.TE)(t, l),
+        k = (0, s.e7)([v.default], () => {
             var e, t;
             return (
                 (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, h.h_)(l),
+        { guildPopulated: L, guildMessaged: U, guildPersonalized: V } = (0, h.h_)(l),
         {
-            handleInvite: F,
-            handleMessage: H,
+            handleInvite: H,
+            handleMessage: F,
             handlePersonalize: B,
             handleDownload: G,
-            handleAddApplication: z,
+            handleAddApplication: W,
         } = (function (e) {
             let t = r.useCallback(() => {
                     f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(D || k || U || V),
+        z = !(k || L || U || V),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -265,7 +265,7 @@ function M(e) {
                     opacities: i,
                 }
             );
-        })(W),
+        })(z),
         [Y, X] = r.useState([]),
         J = Y.length > 0;
     if (
@@ -289,12 +289,12 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
-                            completed: k,
-                            onClick: F,
+                            completed: L,
+                            onClick: H,
                         }),
                     },
                     "invite",
@@ -306,7 +306,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
@@ -317,18 +317,18 @@ function M(e) {
                     "customize",
                 ),
             ),
-        L &&
+        D &&
             Q.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: H,
+                            onClick: F,
                         }),
                     },
                     "message",
@@ -340,11 +340,11 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
-                            completed: D,
+                            completed: k,
                             onClick: G,
                         }),
                     },
@@ -356,12 +356,12 @@ function M(e) {
                 o.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: W ? { opacity: K[Q.length] } : {},
+                    style: z ? { opacity: K[Q.length] } : {},
                     children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEO),
                         completed: J,
-                        onClick: z,
+                        onClick: W,
                     }),
                 },
                 "addapp",

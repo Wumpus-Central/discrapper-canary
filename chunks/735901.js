@@ -6,12 +6,12 @@ var i = n(442837),
     r = n(313789),
     a = n(564428),
     o = n(738070),
-    S = n(981631),
-    T = n(388032);
+    T = n(981631),
+    S = n(388032);
 let c = (0, l.k4)(r.n.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
-    useTitle: () => T.intl.string(T.t["3wRort"]),
+    useTitle: () => S.intl.string(S.t["3wRort"]),
     useSubtitle: () =>
-        T.intl.format(T.t["0aNQo9"], { helpArticle: u.Z.getArticleURL(S.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) }),
+        S.intl.format(S.t["0aNQo9"], { helpArticle: u.Z.getArticleURL(T.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) }),
     buildLayout: () => [a.a, o.s],
     usePredicate: () => {
         let { hasBlockedUsers: t, hasIgnoredUsers: e } = (0, i.cj)([s.Z], () => ({

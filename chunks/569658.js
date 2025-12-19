@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => b });
 var i = n(54381),
     s = n(392711),
     l = n.n(s),
@@ -14,23 +14,23 @@ var i = n(54381),
     x = n(699516),
     p = n(594174),
     j = n(981631),
-    v = n(388032);
-let f = (e) => {
+    f = n(388032);
+let v = (e) => {
     let {
         channel: { type: t },
     } = e;
     return (0, h.r8)(t) || t === j.d4z.GUILD_CATEGORY;
 };
-function N(e) {
+function b(e) {
     let { guildId: t, onSelected: n } = e,
         { channels: s, categories: h } = (0, r.cj)([m.Z], () => {
             let e = m.Z.getCategories(t);
             return {
-                channels: (0, d.Z)(e._categories, e, f),
+                channels: (0, d.Z)(e._categories, e, v),
                 categories: e,
             };
         }),
-        N = l()(s)
+        b = l()(s)
             .filter((e) => {
                 let { channel: t } = e;
                 return t.type !== j.d4z.GUILD_CATEGORY || (null != h[t.id] && h[t.id].length > 0);
@@ -44,10 +44,10 @@ function N(e) {
             })
             .value();
     return (0, i.jsx)(o.d, {
-        description: v.intl.string(v.t["2Y9ZfA"]),
+        description: f.intl.string(f.t["2Y9ZfA"]),
         value: j.lds,
         onChange: n,
-        options: N,
+        options: b,
         renderOptionLabel: (e) => {
             let t = g.Z.getChannel(e.value);
             if (null == t) return e.label;
@@ -59,6 +59,6 @@ function N(e) {
                 subtitle: s,
             });
         },
-        placeholder: v.intl.string(v.t["Z+oF8h"]),
+        placeholder: f.intl.string(f.t["Z+oF8h"]),
     });
 }

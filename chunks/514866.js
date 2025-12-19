@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var a = n(54381);
 n(473749);
 var r = n(120356),
-    l = n.n(r),
-    i = n(668757),
+    i = n.n(r),
+    l = n(668757),
     s = n(481060),
     o = n(110478),
     c = n(515970),
@@ -26,11 +26,11 @@ function C() {
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: l()(j.buttonsContainer, y.marginBottom20),
+                className: i()(j.buttonsContainer, y.marginBottom20),
                 children: (0, a.jsx)(f.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(j.buttonsContainer, y.marginBottom8),
+                className: i()(j.buttonsContainer, y.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -39,7 +39,7 @@ function C() {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(j.buttonsContainer, y.marginBottom8),
+                className: i()(j.buttonsContainer, y.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
@@ -102,7 +102,7 @@ function C() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -111,7 +111,7 @@ function C() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -120,7 +120,7 @@ function C() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -129,16 +129,16 @@ function C() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Force libdiscore Crash",
-                                onClick: i.$R,
+                                onClick: l.$R,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -147,7 +147,7 @@ function C() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(j.buttonsContainer, y.marginBottom20),
+                            className: i()(j.buttonsContainer, y.marginBottom20),
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: r,

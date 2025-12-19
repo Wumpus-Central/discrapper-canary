@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(473749),
-    l = n(80721);
-let a = (e) => {
+    s = n(80721);
+let l = (e) => {
     let { subscriptionId: t, searchQuery: n } = e,
-        [a, s] = r.useState([]),
+        [l, a] = r.useState([]),
         [i, o] = r.useState(0),
         [c, u] = r.useState(!1),
         [p, f] = r.useState(!1),
@@ -11,8 +11,8 @@ let a = (e) => {
             if (!c && null != e)
                 try {
                     u(!0), f(!1);
-                    let r = await (0, l.MT)(t, e, n);
-                    s((t) => (0 === e ? r.users : [...t, ...r.users])), o(r.nextIndex);
+                    let r = await (0, s.MT)(t, e, n);
+                    a((t) => (0 === e ? r.users : [...t, ...r.users])), o(r.nextIndex);
                 } catch (e) {
                     f(!0);
                 } finally {
@@ -24,7 +24,7 @@ let a = (e) => {
             o(0), h(0);
         }, [t, n]),
         {
-            eligibleUsers: a,
+            eligibleUsers: l,
             isFetching: c,
             hasError: p,
             getNextRows: () => h(i),

@@ -2,8 +2,8 @@ n.d(t, { K: () => u });
 var a = n(54381);
 n(473749);
 var r = n(442837),
-    l = n(481060),
-    i = n(565138),
+    i = n(481060),
+    l = n(565138),
     s = n(300284),
     o = n(430824),
     c = n(388032),
@@ -19,7 +19,7 @@ function u(e, t, n, u, m) {
         children: [
             null != p
                 ? (0, a.jsx)(
-                      l.sNh,
+                      i.sNh,
                       {
                           id: "edit-server-profile",
                           "aria-label": c.intl.string(c.t["9ESaO7"]),
@@ -27,18 +27,18 @@ function u(e, t, n, u, m) {
                               (0, a.jsxs)("div", {
                                   className: d.item,
                                   children: [
-                                      (0, a.jsx)(i.Z, {
+                                      (0, a.jsx)(l.Z, {
                                           guild: p,
-                                          size: i.Z.Sizes.SMOL,
+                                          size: l.Z.Sizes.SMOL,
                                           className: d.guildIcon,
                                       }),
                                       (0, a.jsxs)("div", {
                                           children: [
-                                              (0, a.jsx)(l.Text, {
+                                              (0, a.jsx)(i.Text, {
                                                   variant: "text-sm/medium",
                                                   children: c.intl.string(c.t["9ESaO7"]),
                                               }),
-                                              (0, a.jsx)(l.Text, {
+                                              (0, a.jsx)(i.Text, {
                                                   variant: "text-xs/normal",
                                                   lineClamp: 1,
                                                   style: { maxWidth: "150px" },
@@ -56,7 +56,7 @@ function u(e, t, n, u, m) {
                   )
                 : null,
             (0, a.jsx)(
-                l.sNh,
+                i.sNh,
                 {
                     id: "edit-main-profile",
                     "aria-label": c.intl.string(c.t.HmFaFB),
@@ -64,16 +64,16 @@ function u(e, t, n, u, m) {
                         (0, a.jsxs)("div", {
                             className: d.item,
                             children: [
-                                (0, a.jsx)(l.kYE, {
+                                (0, a.jsx)(i.kYE, {
                                     size: "custom",
                                     width: 18,
                                     height: 18,
                                 }),
-                                (0, a.jsx)(l.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/medium",
                                     children: c.intl.string(c.t.HmFaFB),
                                 }),
-                                n ? (0, a.jsx)(l.IGR, { text: c.intl.string(c.t.y2b7CA) }) : void 0,
+                                n ? (0, a.jsx)(i.IGR, { text: c.intl.string(c.t.y2b7CA) }) : void 0,
                             ],
                         }),
                     action: () => {

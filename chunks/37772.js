@@ -89,8 +89,8 @@ let B = i.memo(function e(t) {
             onContextMenu: B,
             onClick: V,
             disableInteraction: H = !1,
-            hasThread: z,
-            treatSpam: W,
+            hasThread: W,
+            treatSpam: z,
         } = t,
         K = D.OBS.has(s.type) ? s.messageReference : void 0,
         Y = (0, o.e7)([h.Z], () => h.Z.getMessageByReference(K)),
@@ -146,7 +146,7 @@ let B = i.memo(function e(t) {
                 ? (i = M.t["+FcYM/"])
                 : b.Z.isIgnoredForMessage(s)
                   ? (i = M.t["VFWjc+"])
-                  : (0, v.DQ)(s) && W && (i = M.t.xfkfTK),
+                  : (0, v.DQ)(s) && z && (i = M.t.xfkfTK),
             void 0 !== i)
           ? (0, r.jsx)(F, {
                 className: L,
@@ -180,7 +180,7 @@ let B = i.memo(function e(t) {
                     disableReactionCreates: en,
                     disableComponentInteractivity: !0,
                     disableReactionUpdates: !1,
-                    renderThreadAccessory: z,
+                    renderThreadAccessory: W,
                     inlineAttachmentMedia: Q,
                     inlineEmbedMedia: X,
                     renderEmbeds: J,
@@ -197,7 +197,7 @@ let B = i.memo(function e(t) {
                 childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: B,
                 onClick: V,
-                hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
+                hasThread: !1 !== W && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: s.type === D.uaV.REPLY,
                 isSystemMessage: (0, j.Z)(s),
                 messageRef: eu,

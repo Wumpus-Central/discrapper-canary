@@ -1,4 +1,4 @@
-n.d(e, { D: () => T });
+n.d(e, { D: () => S });
 var i = n(54381),
     l = n(481060),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(54381),
     r = n(518596),
     a = n(981631),
     o = n(388032);
-let S = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
+let T = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
         useSearchTerms: () => [],
         Component: () =>
             (0, i.jsx)(l.Text, {
@@ -18,4 +18,4 @@ let S = (0, s.ON)(u.n.APPEARANCE_REDIRECT, {
                 }),
             }),
     }),
-    T = (0, s.k4)(u.n.APPEARANCE_REDIRECT_CATEGORY, { buildLayout: () => [S] });
+    S = (0, s.k4)(u.n.APPEARANCE_REDIRECT_CATEGORY, { buildLayout: () => [T] });

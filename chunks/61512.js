@@ -6,11 +6,11 @@ var i = n(323472),
     r = n(392231),
     a = n(271524),
     o = n(388032);
-let S = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
-    T = (0, l.CB)(S, {
+let T = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
+    S = (0, l.CB)(T, {
         useTitle: (t) => (t ? o.intl.string(o.t.RyimDk) : o.intl.string(o.t.CUICbO)),
         useCollapsedSubtitle: function () {
-            return (0, i.u)(S, {
+            return (0, i.u)(T, {
                 formatter: (t) => {
                     let { title: e, index: n } = t;
                     return "string" != typeof e
@@ -25,5 +25,5 @@ let S = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
     }),
     c = (0, l.k4)(s.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => o.intl.string(o.t["31DySj"]),
-        buildLayout: () => [T],
+        buildLayout: () => [S],
     });

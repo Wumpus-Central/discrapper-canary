@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(187237),
     g = n(769409),
     b = n(518311),
-    C = n(518950),
-    y = n(967128),
+    y = n(518950),
+    C = n(967128),
     v = n(388032),
     x = n(701766);
 function O(e) {
@@ -27,7 +27,7 @@ function O(e) {
             avatarDecorationSrc: _,
             eventHandlers: P,
             isAnimating: I,
-        } = (0, C.Z)({
+        } = (0, y.Z)({
             userId: null == E ? void 0 : E.id,
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
@@ -40,7 +40,7 @@ function O(e) {
             P.onMouseLeave(), T(!1);
         }, [P]),
         w = !n.isMultiUserDM() && (null == E ? void 0 : E.displayNameStyles) != null;
-    return (0, i.jsxs)(y.ZP, {
+    return (0, i.jsxs)(C.ZP, {
         channelId: n.id,
         onMouseEnter: N,
         onMouseLeave: A,
@@ -66,7 +66,7 @@ function O(e) {
                           avatarDecoration: _,
                       });
             })(),
-            (0, i.jsx)(y.Ot, {
+            (0, i.jsx)(C.Ot, {
                 children: w
                     ? (0, i.jsx)(f.Z, {
                           userName: S,
@@ -76,7 +76,7 @@ function O(e) {
                       })
                     : S,
             }),
-            (0, i.jsx)(y.jz, { children: O }),
+            (0, i.jsx)(C.jz, { children: O }),
             n.isMultiUserDM() &&
                 (0, i.jsxs)(a.hE2, {
                     className: x.buttonContainer,

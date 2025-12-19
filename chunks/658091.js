@@ -1,4 +1,4 @@
-n.d(e, { R: () => S });
+n.d(e, { R: () => T });
 var i = n(54381);
 n(473749);
 var l = n(481060),
@@ -15,4 +15,4 @@ let o = (0, s.ON)(u.n.APPEARANCE_ACCESSIBILITY_LINK, {
                 children: (0, i.jsx)(r.$w, {}),
             }),
     }),
-    S = (0, s.k4)(u.n.APPEARANCE_ACCESSIBILITY_LINK_CATEGORY, { buildLayout: () => [o] });
+    T = (0, s.k4)(u.n.APPEARANCE_ACCESSIBILITY_LINK_CATEGORY, { buildLayout: () => [o] });

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(974339),
     g = n(215157),
     b = n(71080),
-    C = n(981631),
-    y = n(388032),
+    y = n(981631),
+    C = n(388032),
     v = n(828494);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,7 +68,7 @@ function E(e) {
     let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
     return (r.useEffect(() => {
-        f.default.track(C.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
+        f.default.track(y.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
     null == l || null == o)
         ? null
@@ -86,7 +86,7 @@ function E(e) {
 function j(e) {
     var t,
         n,
-        { guild: a, channel: d, onClose: p, newChannel: f, inSettings: C } = e,
+        { guild: a, channel: d, onClose: p, newChannel: f, inSettings: y } = e,
         E = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
     let [j, S] = r.useState(""),
         [_, P] = r.useState({}),
@@ -94,12 +94,12 @@ function j(e) {
         [T, N] = r.useState(null),
         A = r.useRef(null),
         { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
-        L = m.Z.useSections({
+        D = m.Z.useSections({
             roles: w,
             members: M,
         }),
-        D = f && 0 === Object.keys(_).length;
-    async function k() {
+        k = f && 0 === Object.keys(_).length;
+    async function L() {
         if (null == d || 0 === Object.keys(_).length) return void p();
         Z(!0);
         try {
@@ -116,7 +116,7 @@ function j(e) {
                     }),
                     (0, s.hw)(e.id, i, n)
                 );
-            })(d, _, C),
+            })(d, _, y),
                 p(),
                 Z(!1);
         } catch (t) {
@@ -139,7 +139,7 @@ function j(e) {
             ((t = x({}, E)),
             (n = n =
                 {
-                    title: y.intl.string(y.t.dMJ3Y6),
+                    title: C.intl.string(C.t.dMJ3Y6),
                     onClose: p,
                     input: (0, i.jsxs)("div", {
                         children: [
@@ -161,13 +161,13 @@ function j(e) {
                                     color: "text-default",
                                     className: v.description,
                                     variant: "text-sm/normal",
-                                    children: y.intl.string(y.t.f7VbhF),
+                                    children: C.intl.string(C.t.f7VbhF),
                                 }),
-                            (0, i.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
+                            (0, i.jsx)(m.Z.SearchBox, { placeholderText: C.intl.string(C.t.iezLLn) }),
                             (0, i.jsx)(o.Text, {
                                 className: v.subtext,
                                 variant: "text-xs/normal",
-                                children: y.intl.string(y.t.rwFx85),
+                                children: C.intl.string(C.t.rwFx85),
                             }),
                             null != T
                                 ? (0, i.jsx)(o.Text, {
@@ -185,26 +185,26 @@ function j(e) {
                         renderSection: m.Z.renderSection,
                         rowHeight: m.Z.ROW_HEIGHT,
                         renderRow: m.Z.renderRow,
-                        sections: L,
+                        sections: D,
                     },
-                    actions: D
+                    actions: k
                         ? [
                               {
                                   variant: "secondary",
-                                  text: y.intl.string(y.t.u46sxe),
+                                  text: C.intl.string(C.t.u46sxe),
                                   onClick: p,
                               },
                           ]
                         : [
                               {
                                   variant: "secondary",
-                                  text: y.intl.string(y.t["ETE/oC"]),
+                                  text: C.intl.string(C.t["ETE/oC"]),
                                   onClick: p,
                               },
                               {
                                   variant: "primary",
-                                  text: y.intl.string(y.t.i4jeWR),
-                                  onClick: k,
+                                  text: C.intl.string(C.t.i4jeWR),
+                                  onClick: L,
                                   loading: I,
                               },
                           ],

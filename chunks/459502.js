@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -15,12 +15,12 @@ var r = n(442837),
     m = n(688641),
     g = n(388032),
     b = n(144914);
-function C(e) {
-    let { channelId: t, showDismiss: C = !0 } = e,
-        y = (0, r.e7)([s.Z], () => s.Z.getChannel(t), [t]),
+function y(e) {
+    let { channelId: t, showDismiss: y = !0 } = e,
+        C = (0, r.e7)([s.Z], () => s.Z.getChannel(t), [t]),
         v = (0, f.sz)(t),
         x = null != (0, f.qY)(t),
-        { canManageGuildEvent: O } = (0, o.XJ)(y),
+        { canManageGuildEvent: O } = (0, o.XJ)(C),
         E = (0, r.e7)([c.Z], () => v.filter((e) => !c.Z.isEventDismissed(e.id)), [v]),
         j = (0, r.cj)([d.ZP], () => E.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
             E,
@@ -102,7 +102,7 @@ function C(e) {
                                     })
                                   : (0, u.bO)({ eventId: e.id });
                           },
-                          onDismiss: C
+                          onDismiss: y
                               ? () => {
                                     var t;
                                     return (t = e.id), void (0, p.Xy)(t);

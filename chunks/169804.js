@@ -1,4 +1,4 @@
-n.d(e, { v: () => T });
+n.d(e, { v: () => S });
 var i = n(442837),
     l = n(857595),
     s = n(607070),
@@ -6,11 +6,11 @@ var i = n(442837),
     r = n(313789),
     a = n(518596),
     o = n(981631),
-    S = n(388032);
-let T = (0, u.qs)(r.n.SYNC_PROFILE_THEMES, {
-    useTitle: () => S.intl.string(S.t["sSY+mD"]),
+    T = n(388032);
+let S = (0, u.qs)(r.n.SYNC_PROFILE_THEMES, {
+    useTitle: () => T.intl.string(T.t["sSY+mD"]),
     useSubtitle: () =>
-        S.intl.format(S.t.u6UjrL, {
+        T.intl.format(T.t.u6UjrL, {
             onThemeClick() {
                 (0, a.openUserSettings)(r.n.APPEARANCE_PANEL, { section: o.oAB.APPEARANCE });
             },

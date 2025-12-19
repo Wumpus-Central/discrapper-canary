@@ -20,8 +20,8 @@ var r = n(54381),
     j = n(768494),
     x = n(124347),
     P = n(929677),
-    w = n(706454),
-    I = n(314897),
+    I = n(706454),
+    w = n(314897),
     S = n(77498),
     E = n(823379),
     T = n(785717),
@@ -192,7 +192,7 @@ function M(e) {
 }
 function L(e) {
     let { component: t } = e;
-    if (Array.isArray(t)) return U(t);
+    if (Array.isArray(t)) return F(t);
     switch (t.type) {
         case "HERO":
             let { body: n } = t,
@@ -219,9 +219,9 @@ function L(e) {
                     }
                     return i;
                 })(t, ["body"]);
-            return (0, r.jsx)(F, Z(A({}, i), { body: U(n) }));
+            return (0, r.jsx)(U, Z(A({}, i), { body: F(n) }));
         case "GRID":
-            return (0, r.jsx)(W, { children: U(t.children) });
+            return (0, r.jsx)(W, { children: F(t.children) });
         case "FIELD":
             return (0, r.jsx)(H, {
                 value: B(t.value),
@@ -240,10 +240,10 @@ function L(e) {
 function B(e, t) {
     return (0, r.jsx)(L, { component: e }, t);
 }
-function U(e) {
+function F(e) {
     return e.map((e, t) => B(e, t));
 }
-function F(e) {
+function U(e) {
     let { title: t, body: n, image: i, imagePlaceholder: a } = e;
     return (0, r.jsxs)("div", {
         className: N.heroSection,
@@ -477,7 +477,7 @@ let et = Object.assign(
     function (e) {
         let { trackUserProfileAction: t } = (0, T.KZ)(),
             { user: n, widget: a, cta: s, subtle: g = !1 } = e,
-            m = (0, o.e7)([I.default], () => I.default.getId()) === n.id,
+            m = (0, o.e7)([w.default], () => w.default.getId()) === n.id,
             { application: h, game: y, config: v } = J(a),
             O = null == h ? void 0 : h.getIconURL(16),
             x = (0, P.O)(n.id).data,
@@ -490,15 +490,15 @@ let et = Object.assign(
                 trackEntryPointImpression: !0,
             }),
             { fetched: D, hasAlreadyLinked: R, canStartAuthorization: M, startAuthorization: B } = (0, f.FG)(h),
-            { analyticsLocations: U } = (0, d.ZP)(u.Z.USER_PROFILE_APPLICATION_WIDGET),
-            F = i.useCallback(() => {
+            { analyticsLocations: F } = (0, d.ZP)(u.Z.USER_PROFILE_APPLICATION_WIDGET),
+            U = i.useCallback(() => {
                 M &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: a.applicationId,
                     }),
-                    B({ analyticsLocations: U }));
-            }, [M, B, t, a.applicationId, U]),
+                    B({ analyticsLocations: F }));
+            }, [M, B, t, a.applicationId, F]),
             W = null == s && D && !R && M,
             H = (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -531,7 +531,7 @@ let et = Object.assign(
                           onClick: _,
                           children: H,
                       }),
-            K = (0, o.e7)([w.default], () => w.default.locale),
+            K = (0, o.e7)([I.default], () => I.default.locale),
             q = i.useMemo(() => {
                 let e = (function (e, t, n) {
                     var r, i, a;
@@ -679,7 +679,7 @@ let et = Object.assign(
                                           content: k.intl.string(k.t["OW/2al"]),
                                           buttons: (0, r.jsx)(c.Button, {
                                               text: k.intl.string(k.t.S0W8Z5),
-                                              onClick: F,
+                                              onClick: U,
                                           }),
                                       })
                                     : s,

@@ -9,8 +9,8 @@ var r = n(392711),
     c = n(314897),
     d = n(699516),
     f = n(594174),
-    m = n(352736),
-    p = n(981631),
+    p = n(352736),
+    m = n(981631),
     g = n(388032);
 function y(e, t) {
     let { isBlocked: n, isIgnored: y } = (0, l.cj)(
@@ -22,9 +22,9 @@ function y(e, t) {
             [e.author.id],
         ),
         b = (0, a.ZP)(t.id, e.id),
-        v = (0, l.e7)([c.default], () => c.default.getId()),
-        O = (0, u.ZP)(e).nick,
-        h = e.author.id === v ? g.intl.string(g.t.LuZzxn) : O,
+        h = (0, l.e7)([c.default], () => c.default.getId()),
+        v = (0, u.ZP)(e).nick,
+        O = e.author.id === h ? g.intl.string(g.t.LuZzxn) : v,
         x = (0, l.e7)([f.default], () => (e.mentions.length > 0 ? f.default.getUser(e.mentions[0]) : void 0)),
         j = (0, u.Sw)(x, t).nick;
     return (function (e, t) {
@@ -66,7 +66,7 @@ function y(e, t) {
                         type: "message",
                         message: e,
                     };
-                if (e.hasFlag(p.iLy.IS_VOICE_MESSAGE))
+                if (e.hasFlag(m.iLy.IS_VOICE_MESSAGE))
                     return {
                         type: "text",
                         text: g.intl.string(g.t.slFYgi),
@@ -271,7 +271,7 @@ function y(e, t) {
                           : e.type === i.u.USER_JOIN
                             ? {
                                   type: "text",
-                                  text: g.intl.formatToPlainString(m.Z.getSystemMessageUserJoin(e.id), {
+                                  text: g.intl.formatToPlainString(p.Z.getSystemMessageUserJoin(e.id), {
                                       username: l,
                                       usernameHook: r.identity,
                                   }),
@@ -297,8 +297,8 @@ function y(e, t) {
     })(e, {
         message: e,
         channel: t,
-        currentUserId: v,
-        authorNick: h,
+        currentUserId: h,
+        authorNick: O,
         otherUser: x,
         otherUserNick: j,
         isBlocked: n,

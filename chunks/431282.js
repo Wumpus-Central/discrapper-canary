@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(657707),
-    i = n(481060),
+    i = n(657707),
+    l = n(481060),
     s = n(475413),
     o = n(388032),
     c = n(787224);
@@ -58,7 +58,7 @@ function m(e) {
     return (0, a.jsx)("div", {
         className: c.submenuPaddingContainer,
         children: (0, a.jsx)(
-            i.v2r,
+            l.v2r,
             d(
                 {
                     variant: "fixed",
@@ -96,7 +96,7 @@ function p(e) {
         N = r.useCallback(() => {
             y(!1);
         }, []),
-        w = () =>
+        P = () =>
             (0, a.jsxs)(a.Fragment, {
                 children: [
                     (0, a.jsx)("div", {
@@ -111,13 +111,13 @@ function p(e) {
                         children: [
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         color: "currentColor",
                                         variant: "text-sm/medium",
                                         className: c.menuItemLabelText,
                                         children: p,
                                     }),
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         color: "currentColor",
                                         variant: "text-xs/medium",
                                         children: h,
@@ -129,20 +129,20 @@ function p(e) {
                     }),
                 ],
             }),
-        P = (e) => {
+        w = (e) => {
             let t;
             return (
                 (t = E
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, a.jsx)(i.P3F, {
+                              (0, a.jsx)(l.P3F, {
                                   className: c.menuItemContent,
                                   onClick: v,
                                   focusProps: { offset: u(d({}, T.offset), { right: 0 }) },
-                                  children: w(),
+                                  children: P(),
                               }),
                               (0, a.jsx)(
-                                  i.P3F,
+                                  l.P3F,
                                   u(
                                       d(
                                           {
@@ -154,7 +154,7 @@ function p(e) {
                                       {
                                           onClick: O,
                                           focusProps: T,
-                                          children: (0, a.jsx)(l.Fbu, {
+                                          children: (0, a.jsx)(i.Fbu, {
                                               size: "xs",
                                               color: "currentColor",
                                           }),
@@ -165,15 +165,15 @@ function p(e) {
                       })
                     : S
                       ? (0, a.jsxs)(
-                            i.P3F,
+                            l.P3F,
                             u(d({ className: c.menuItemContent }, e), {
                                 onClick: O,
                                 focusProps: T,
                                 children: [
-                                    w(),
+                                    P(),
                                     (0, a.jsx)("div", {
                                         className: c.submenuIconWrapper,
-                                        children: (0, a.jsx)(l.Fbu, {
+                                        children: (0, a.jsx)(i.Fbu, {
                                             size: "xs",
                                             color: "currentColor",
                                         }),
@@ -181,11 +181,11 @@ function p(e) {
                                 ],
                             }),
                         )
-                      : (0, a.jsx)(i.P3F, {
+                      : (0, a.jsx)(l.P3F, {
                             className: c.menuItemContent,
                             onClick: v,
                             focusProps: T,
-                            children: w(),
+                            children: P(),
                         })),
                 (0, a.jsx)("div", {
                     ref: _,
@@ -199,18 +199,18 @@ function p(e) {
               className: c.menuItem,
               onMouseEnter: O,
               onMouseLeave: N,
-              children: (0, a.jsx)(i.yRy, {
+              children: (0, a.jsx)(l.yRy, {
                   targetElementRef: _,
                   spacing: 0,
                   renderPopout: x,
                   shouldShow: j,
                   onRequestClose: N,
-                  children: P,
+                  children: w,
               }),
           })
         : (0, a.jsx)("li", {
               className: c.menuItem,
-              children: P(),
+              children: w(),
           });
 }
 function h(e) {

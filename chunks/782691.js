@@ -12,8 +12,8 @@ n.d(t, { Z: () => S }),
     n(97749);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(480210),
     o = n(442837),
     c = n(481060),
@@ -79,11 +79,11 @@ let C = {
     S = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, h.n6)(),
-            l = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+            i = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
             [S, E] = r.useState(!0),
             T = r.useRef({}),
             [O, N] = r.useState(!1),
-            [w, P] = r.useState(!1),
+            [P, w] = r.useState(!1),
             [I, k] = r.useState([]),
             [R, A] = r.useState(C),
             Z = r.useRef([]),
@@ -167,7 +167,7 @@ let C = {
             },
             [],
         ),
-        null == l)
+        null == i)
             ? (0, a.jsx)("div", {})
             : (0, a.jsxs)("div", {
                   className: b.root,
@@ -216,7 +216,7 @@ let C = {
                           className: b.grid,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: i()(b.col, b.preview),
+                                  className: l()(b.col, b.preview),
                                   children: [
                                       (0, a.jsx)("img", {
                                           src: O ? g : v,
@@ -230,7 +230,7 @@ let C = {
                                   className: b.col,
                                   children: [
                                       (0, a.jsxs)("div", {
-                                          className: i()(b.col, b.section),
+                                          className: l()(b.col, b.section),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-md/normal",
@@ -275,10 +275,10 @@ let C = {
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
-                                                          checked: w,
+                                                          checked: P,
                                                           className: b.checkBox,
                                                           onChange: () => {
-                                                              P(!w);
+                                                              w(!P);
                                                           },
                                                       }),
                                                   ],
@@ -353,7 +353,7 @@ let C = {
                                           }),
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: i()(b.bottomControls, b.shareSection),
+                                          className: l()(b.bottomControls, b.shareSection),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-sm/semibold",
@@ -447,7 +447,7 @@ let C = {
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
                                           (0, a.jsxs)("div", {
-                                              className: i()(b.section, b.randomizedRules),
+                                              className: l()(b.section, b.randomizedRules),
                                               children: [
                                                   (0, a.jsx)(c.Text, {
                                                       variant: "text-md/bold",
@@ -477,12 +477,12 @@ let C = {
                                           }),
                                       (0, a.jsx)("div", {
                                           children:
-                                              w &&
+                                              P &&
                                               (0, a.jsxs)("div", {
-                                                  className: i()(b.userProfilePreview, b.preview),
+                                                  className: l()(b.userProfilePreview, b.preview),
                                                   children: [
                                                       (0, a.jsx)(m.Z, {
-                                                          user: l,
+                                                          user: i,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffect: null,
                                                           canUsePremiumCustomization: !0,
@@ -495,7 +495,7 @@ let C = {
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: i()(b.grid, b.layers),
+                                  className: l()(b.grid, b.layers),
                                   children: [
                                       (0, a.jsx)("div", {
                                           className: b.dangerControls,
@@ -561,7 +561,7 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(b.grid, b.section),
+                                                          className: l()(b.grid, b.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
                                                                   className: b.col,
@@ -618,7 +618,7 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(b.grid, b.section),
+                                                          className: l()(b.grid, b.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
                                                                   className: b.col,
@@ -691,17 +691,17 @@ let C = {
                                                                           (0, f.i0)(n, (e) => {
                                                                               k((a) => {
                                                                                   let r = [...a],
-                                                                                      l = a[t];
-                                                                                  if (null == l) return a;
-                                                                                  let i = j({}, l);
+                                                                                      i = a[t];
+                                                                                  if (null == i) return a;
+                                                                                  let l = j({}, i);
                                                                                   return (
-                                                                                      null == i.randomizedSources &&
-                                                                                          (i.randomizedSources = []),
-                                                                                      i.randomizedSources.push({
+                                                                                      null == l.randomizedSources &&
+                                                                                          (l.randomizedSources = []),
+                                                                                      l.randomizedSources.push({
                                                                                           src: e,
                                                                                           filename: n.name,
                                                                                       }),
-                                                                                      (r[t] = i),
+                                                                                      (r[t] = l),
                                                                                       r
                                                                                   );
                                                                               });
@@ -711,7 +711,7 @@ let C = {
                                                           }),
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: i()(b.row, b.end),
+                                                          className: l()(b.row, b.end),
                                                           children: [
                                                               (0, a.jsx)(c.Button, {
                                                                   variant: "secondary",

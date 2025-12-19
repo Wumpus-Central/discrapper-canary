@@ -6,8 +6,8 @@ var i = n(54381),
     r = n(825655),
     a = n(313789),
     o = n(665388),
-    S = n(589741),
-    T = n(97951),
+    T = n(589741),
+    S = n(97951),
     c = n(388032);
 function E() {
     return (0, i.jsx)(r.Z, { sourcePage: "voice" });
@@ -27,5 +27,5 @@ let d = (0, s.k4)(a.n.VOICE_CATEGORY, {
             [t.canPrompt],
         );
     },
-    buildLayout: () => [o.J, S.d, T.F],
+    buildLayout: () => [o.J, T.d, S.F],
 });

@@ -15,12 +15,12 @@ var r = n(442837),
     m = n(388032);
 function g(e) {
     var t, g;
-    let { channel: b, children: C } = e,
-        y = (0, r.e7)([c.Z], () => c.Z.isBlocked(b.getRecipientId()));
+    let { channel: b, children: y } = e,
+        C = (0, r.e7)([c.Z], () => c.Z.isBlocked(b.getRecipientId()));
     (0, o.Z)(b.id);
     let v = (0, s.Z)(b.id),
         x = b.isSystemDM(),
-        O = y && !x && !b.isMultiUserDM(),
+        O = C && !x && !b.isMultiUserDM(),
         E = {};
     if (x) {
         let e = v ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
@@ -74,7 +74,7 @@ function g(e) {
             }
             return e;
         })({}, E)),
-        (g = g = { children: C }),
+        (g = g = { children: y }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(g))
             : (function (e, t) {

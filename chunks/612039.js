@@ -1,4 +1,4 @@
-n.d(e, { E: () => S });
+n.d(e, { E: () => T });
 var i = n(442837),
     l = n(90641),
     s = n(615830),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(509613),
     a = n(313789),
     o = n(388032);
-let S = (0, r.qs)(a.n.PERSISTENT_VERIFICATION_CODES_SETTING, {
+let T = (0, r.qs)(a.n.PERSISTENT_VERIFICATION_CODES_SETTING, {
     useTitle: () => o.intl.string(o.t["opi/XK"]),
     useSubtitle: () => o.intl.format(o.t["/T+ZlP"], { helpArticle: (0, u.aZ)() }),
     useValue: function () {

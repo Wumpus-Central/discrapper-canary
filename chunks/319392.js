@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => g });
 var o = n(54381);
 n(473749);
 var r = n(481060),
@@ -56,7 +56,7 @@ function f() {
         ],
     });
 }
-function x(e) {
+function g(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(c.L, {
         img: (0, o.jsx)("img", {

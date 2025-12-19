@@ -1,7 +1,7 @@
 a.d(t, { m: () => m });
 var n = a(54381),
-    r = a(473749),
-    i = a(442837),
+    i = a(473749),
+    r = a(442837),
     l = a(481060),
     s = a(600164),
     o = a(553795),
@@ -15,13 +15,13 @@ function m(e) {
             onContinue: a,
             onClose: m,
             img: h,
-            headerConnect: N,
-            headerReconnect: p,
+            headerConnect: p,
+            headerReconnect: N,
             body: g,
             learnMoreLink: C,
             valueProps: j,
         } = e,
-        v = (0, i.e7)([o.Z], () => {
+        v = (0, r.e7)([o.Z], () => {
             let e = o.Z.getAccount(null, t);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
@@ -40,7 +40,7 @@ function m(e) {
                     (0, n.jsx)(l.Heading, {
                         className: x.title,
                         variant: "heading-xl/extrabold",
-                        children: v && null != p ? p : N,
+                        children: v && null != N ? N : p,
                     }),
                     (0, n.jsx)(l.olH, {
                         className: x.closeButton,
@@ -61,16 +61,16 @@ function m(e) {
                     (0, n.jsx)("div", {
                         className: x.valueProps,
                         children: j.map((e, t) => {
-                            let { label: a, subLabel: i, icon: l } = e;
+                            let { label: a, subLabel: r, icon: l } = e;
                             return (0, n.jsxs)(
-                                r.Fragment,
+                                i.Fragment,
                                 {
                                     children: [
                                         (0, n.jsx)(
                                             d.Z,
                                             {
                                                 label: a,
-                                                subLabel: i,
+                                                subLabel: r,
                                                 icon: l,
                                             },
                                             a,

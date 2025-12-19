@@ -4,7 +4,7 @@ var i,
     l = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(236726),
+    s = n(620792),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -14,17 +14,17 @@ var i,
     m = n(388032),
     g = n(218877);
 let b = ["embedded_cover"],
-    C = {
+    y = {
         tension: 800,
         friction: 24,
     };
-var y =
-    (((i = y || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+var C =
+    (((i = C || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function v(e) {
     var t;
-    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: v, commandOrigin: x } = e,
+    let { context: n, activityItem: i, onClick: a, aspectRatio: C = 0, animatedDivClass: v, commandOrigin: x } = e,
         {
             onActivityItemSelected: O,
             imageBackground: E,
@@ -97,7 +97,7 @@ function v(e) {
         onMouseLeave: Z,
         className: g.activityItemButtonInnerClass,
         children: (0, r.jsx)(c.AMe, {
-            config: C,
+            config: y,
             from: { value: 0 },
             to: { value: +!!_ },
             children: (e) => {
@@ -107,8 +107,8 @@ function v(e) {
                     children: (e) =>
                         (0, r.jsxs)(s.animated.div, {
                             className: o()(e, g.activityItem, v, {
-                                [g.activityItem_13_11]: 0 === y,
-                                [g.activityItem_16_9]: 1 === y,
+                                [g.activityItem_13_11]: 0 === C,
+                                [g.activityItem_16_9]: 1 === C,
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
@@ -129,4 +129,4 @@ function v(e) {
         }),
     });
 }
-v.AspectRatio = y;
+v.AspectRatio = C;

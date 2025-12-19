@@ -1,10 +1,10 @@
 n.d(t, {
     Vm: () => x,
-    ZP: () => C,
+    ZP: () => y,
     eF: () => j,
     gM: () => v,
     k5: () => O,
-    qY: () => y,
+    qY: () => C,
     sz: () => S,
     u1: () => E,
 }),
@@ -24,7 +24,7 @@ var i = n(473749),
     m = n(981631);
 let g = [],
     b = 15 * s.Z.Millis.MINUTE;
-function C(e, t) {
+function y(e, t) {
     return (0, r.Wu)([a.Z, c.ZP, o.Z, l.Z], () => {
         let n = a.Z.getGuild(e);
         return null == n
@@ -37,7 +37,7 @@ function C(e, t) {
               });
     }, [t, e]);
 }
-function y(e) {
+function C(e) {
     return (0, r.e7)([c.ZP, l.Z, o.Z], () => {
         let t = l.Z.getChannel(e);
         if (!o.Z.can(m.Plq.VIEW_CHANNEL, t) || null == (null == t ? void 0 : t.guild_id)) return null;

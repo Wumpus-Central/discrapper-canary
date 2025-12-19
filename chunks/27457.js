@@ -46,8 +46,8 @@ var r = n(54381),
     F = n(358085),
     V = n(998502),
     H = n(584729),
-    z = n(334374),
-    W = n(849171),
+    W = n(334374),
+    z = n(849171),
     K = n(607187),
     Y = n(833519),
     q = n(462061),
@@ -150,7 +150,7 @@ let ei = [$.fO.ACTIVITY],
             eF = (0, o.e7)([w.Z], () => (O.type === $.fO.USER && null != eZ ? w.Z.getEffectForUserId(eZ) : null)),
             eV = (0, o.e7)([k.Z], () => k.Z.getVoicePlatformForChannel(el.id, null != eZ ? eZ : J.lds)),
             { showGameIcon: eH } = j.ZP.useExperiment({ location: "voice_users" }, { autoTrackExposure: !1 }),
-            ez = (0, o.e7)(
+            eW = (0, o.e7)(
                 [L.Z],
                 () =>
                     eH && null != eZ
@@ -158,12 +158,12 @@ let ei = [$.fO.ACTIVITY],
                         : null,
                 [eH, eZ],
             ),
-            eW = (0, o.e7)([D.Z], () =>
-                (null == ez ? void 0 : ez.application_id) != null ? D.Z.getDetectableGame(ez.application_id) : null,
+            ez = (0, o.e7)([D.Z], () =>
+                (null == eW ? void 0 : eW.application_id) != null ? D.Z.getDetectableGame(eW.application_id) : null,
             ),
             eK = (0, o.e7)([h.Z], () =>
-                null != eW && (null == ez ? void 0 : ez.application_id) != null
-                    ? h.Z.getApplication(null == ez ? void 0 : ez.application_id)
+                null != ez && (null == eW ? void 0 : eW.application_id) != null
+                    ? h.Z.getApplication(null == eW ? void 0 : eW.application_id)
                     : void 0,
             ),
             eY = (0, _.wV)({
@@ -252,7 +252,7 @@ let ei = [$.fO.ACTIVITY],
                     (e3 = en.intl.formatToPlainString(en.t["iC/x/Q"], { username: O.user.username }));
                 break;
             case $.fO.ACTIVITY:
-                (e1 = (0, r.jsx)(W.ZP, {
+                (e1 = (0, r.jsx)(z.ZP, {
                     interactible: eh,
                     participant: O,
                     selected: eu,
@@ -456,7 +456,7 @@ let ei = [$.fO.ACTIVITY],
                         eE &&
                             eS &&
                             eI &&
-                            (0, r.jsx)(z.Z, {
+                            (0, r.jsx)(W.Z, {
                                 currentUserId: eP,
                                 participant: O,
                             }),
@@ -572,7 +572,7 @@ let ec = i.memo((e) => {
         return G.Z.addChangeListener(t), () => G.Z.removeChangeListener(t);
     }, []);
     let H = !T && y === $.fO.STREAM && w && (!B || P),
-        z = (function (e) {
+        W = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: r, deafened: i, muted: l } = e;
             return r ? u.Vm4 : n ? u.v0G : i ? u.wE8 : t ? u.v0G : l ? u.nRN : null;
         })({
@@ -582,11 +582,11 @@ let ec = i.memo((e) => {
             deafened: _,
             muted: I,
         }),
-        W = [];
+        z = [];
     return (
         d
             ? R === b.P.CALL_TILE &&
-              W.push(
+              z.push(
                   (0, r.jsx)(
                       es,
                       {
@@ -597,7 +597,7 @@ let ec = i.memo((e) => {
                       "stay-on-top",
                   ),
               )
-            : (W.push(
+            : (z.push(
                   (0, r.jsx)(
                       eo,
                       {
@@ -612,7 +612,7 @@ let ec = i.memo((e) => {
                   ),
               ),
               H &&
-                  W.push(
+                  z.push(
                       (0, r.jsx)(
                           eo,
                           {
@@ -670,9 +670,9 @@ let ec = i.memo((e) => {
                                 color: "none",
                                 variant: B ? "text-sm/normal" : "text-md/normal",
                                 children: [
-                                    null != z &&
+                                    null != W &&
                                         y === $.fO.USER &&
-                                        (0, r.jsx)(z, {
+                                        (0, r.jsx)(W, {
                                             className: a()(er.experimentTitleIcon, { [er.compact]: B }),
                                             size: "xs",
                                             color: "currentColor",
@@ -721,10 +721,10 @@ let ec = i.memo((e) => {
                                         }),
                                 ],
                             }),
-                            W.length > 0
+                            z.length > 0
                                 ? (0, r.jsx)("div", {
                                       className: er.overlayButtonContainer,
-                                      children: W,
+                                      children: z,
                                   })
                                 : null,
                         ],

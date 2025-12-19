@@ -9,8 +9,8 @@ function r() {
             var n;
             let [a, r] = e;
             if (null != r.predicate && !r.predicate()) return;
-            let l = null != (n = r.parent) ? n : "root";
-            t.set(a, []), t.has(l) || t.set(l, []), t.get(l).push(a);
+            let i = null != (n = r.parent) ? n : "root";
+            t.set(a, []), t.has(i) || t.set(i, []), t.get(i).push(a);
         }),
         { legacySettingDirectory: t }
     );

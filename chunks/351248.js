@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(354459),
     g = n(159310),
     b = n(727829),
-    C = n(982681);
-function y(e, t, n) {
+    y = n(982681);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -117,8 +117,8 @@ class x extends r.PureComponent {
         let { theme: e, children: t, className: n } = this.props,
             r = (0, u.wj)(e),
             l = a()(g.sprite, {
-                [C.crossWhite]: r,
-                [C.crossGrey]: !r,
+                [y.crossWhite]: r,
+                [y.crossGrey]: !r,
             });
         return (0, i.jsxs)(o.Z.div, {
             role: "listitem",
@@ -141,17 +141,17 @@ class x extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, "scaleAnimation", new o.Z.Value(0)),
-            y(this, "spriteAnimation", new o.Z.Value(0)),
-            y(this, "spriteOpacity", new o.Z.Value(0)),
-            y(this, "widthAnimation", new o.Z.Value(0));
+            C(this, "scaleAnimation", new o.Z.Value(0)),
+            C(this, "spriteAnimation", new o.Z.Value(0)),
+            C(this, "spriteOpacity", new o.Z.Value(0)),
+            C(this, "widthAnimation", new o.Z.Value(0));
     }
 }
 function O(e) {
     var t;
     let { participants: n, onContextMenu: r, className: l, onClick: o, width: u, guildId: b } = e,
-        C = (0, p.ZP)(),
-        y = ((t = n.length), ((0, d.dcp)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
+        y = (0, p.ZP)(),
+        C = ((t = n.length), ((0, d.dcp)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
         v = (0, s.e7)([f.Z], () => f.Z.isFocused()),
         O = n.map((e) => {
             var t, n;
@@ -161,8 +161,8 @@ function O(e) {
                 x,
                 {
                     className: g.participant,
-                    width: (0, d.dcp)(y),
-                    theme: C,
+                    width: (0, d.dcp)(C),
+                    theme: y,
                     children: (0, i.jsx)(d.kL8, {
                         "aria-label": l.username,
                         onClick: (t) => (null == o ? void 0 : o(e, t)),
@@ -171,8 +171,8 @@ function O(e) {
                             h.Z,
                             {
                                 userId: l.id,
-                                src: l.getAvatarURL(b, (0, d.dcp)(y), s && v),
-                                size: y,
+                                src: l.getAvatarURL(b, (0, d.dcp)(C), s && v),
+                                size: C,
                                 muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
                                 deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,
                                 speaking: s,

@@ -1,4 +1,4 @@
-n.d(e, { r: () => S });
+n.d(e, { r: () => T });
 var i = n(442837),
     l = n(292556),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(442837),
     r = n(313789),
     a = n(981631),
     o = n(388032);
-let S = (0, s.qs)(r.n.DESKTOP_NOTIFICATIONS, {
+let T = (0, s.qs)(r.n.DESKTOP_NOTIFICATIONS, {
     useTitle: () => o.intl.string(o.t["/0WCll"]),
     useSubtitle: () => o.intl.string(o.t.wF9ih3),
     useValue: () => (0, i.e7)([u.Z], () => u.Z.getDesktopType()) !== a.qrD.NEVER,

@@ -1,8 +1,8 @@
-a.d(t, { h: () => p }), a(388685);
+a.d(t, { h: () => N }), a(388685);
 var n = a(54381),
-    r = a(473749),
-    i = a(512722),
-    l = a.n(i),
+    i = a(473749),
+    r = a(512722),
+    l = a.n(r),
     s = a(481060),
     o = a(457330),
     c = a(600164),
@@ -11,51 +11,51 @@ var n = a(54381),
     x = a(424071),
     m = a(388032),
     h = a(926375);
-let N = new d.Z("TwoWayLinkDiscordConsentWeb");
-function p(e) {
+let p = new d.Z("TwoWayLinkDiscordConsentWeb");
+function N(e) {
     let {
             platformType: t,
             clientId: a,
-            scopes: i,
+            scopes: r,
             authToken: d,
-            onContinue: p,
+            onContinue: N,
             onError: g,
             onClose: C,
             redirectUri: j,
         } = e,
-        [v, f] = r.useState(!1),
-        b = r.useCallback(
+        [v, f] = i.useState(!1),
+        k = i.useCallback(
             async (e) => {
                 let a,
                     n,
-                    { location: r } = e,
-                    { callbackCode: i, callbackState: l } = d;
+                    { location: i } = e,
+                    { callbackCode: r, callbackState: l } = d;
                 try {
-                    a = await o.Z.completeTwoWayLink(t, r, i, l);
+                    a = await o.Z.completeTwoWayLink(t, i, r, l);
                 } catch (e) {
                     var s;
-                    N.error("".concat(t, " link error:"), e), (n = null == (s = e.body) ? void 0 : s.code);
+                    p.error("".concat(t, " link error:"), e), (n = null == (s = e.body) ? void 0 : s.code);
                 }
-                null != a ? p() : g(n);
+                null != a ? N() : g(n);
             },
-            [t, d, p, g],
+            [t, d, N, g],
         ),
         {
-            header: k,
+            header: b,
             body: E,
             appDetails: T,
             sendAuthorize: O,
         } = (0, u.useOAuth2AuthorizeForm)({
             clientId: a,
-            scopes: i,
+            scopes: r,
             responseType: "code",
-            callback: b,
+            callback: k,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: j,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        R = r.useCallback(() => {
+        w = i.useCallback(() => {
             l()(null != O, "sendAuthorize not available"), f(!0), O(!0);
         }, [O]);
     return (0, n.jsxs)(x.Z, {
@@ -89,7 +89,7 @@ function p(e) {
                 children: [
                     (0, n.jsx)("div", {
                         className: h.consentHeader,
-                        children: k,
+                        children: b,
                     }),
                     E,
                     T,
@@ -105,7 +105,7 @@ function p(e) {
                         variant: "primary",
                         text: m.intl.string(m.t.ZN4hkc),
                         loading: v,
-                        onClick: R,
+                        onClick: w,
                     }),
                 }),
             }),

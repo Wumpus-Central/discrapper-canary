@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(397698),
     g = n(895924),
     b = n(471518),
-    C = n(425986),
-    y = n(216780),
+    y = n(425986),
+    C = n(216780),
     v = n(728285),
     x = n(390322),
     O = n(857192),
@@ -42,14 +42,14 @@ function A(e) {
                     });
                 }, [e]),
                 {
-                    fetchState: (0, c.e7)([C.Z], () =>
-                        C.Z.getFetchState({
+                    fetchState: (0, c.e7)([y.Z], () =>
+                        y.Z.getFetchState({
                             surface: T,
                             activeState: e,
                         }),
                     ),
-                    voiceBannerCollection: (0, c.e7)([C.Z], () =>
-                        C.Z.getCollections({
+                    voiceBannerCollection: (0, c.e7)([y.Z], () =>
+                        y.Z.getCollections({
                             surface: T,
                             activeState: e,
                         }),
@@ -57,7 +57,7 @@ function A(e) {
                 }
             );
         })(),
-        x = g === C.M.FETCHING,
+        x = g === y.M.FETCHING,
         E = r.useMemo(() => {
             let e = null == v ? void 0 : v.application_directory_collection_items[0];
             return null == e ? null : e.type === s.C.APPLICATION_BANNER ? e : null;
@@ -74,7 +74,7 @@ function A(e) {
         ? null
         : (null != E.id &&
               null != E.image_hash &&
-              (n = (0, y.$_)({
+              (n = (0, C.$_)({
                   itemId: E.id,
                   hash: E.image_hash,
                   containerWidth: 584,
@@ -107,19 +107,19 @@ function A(e) {
 let w = r.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: a, closePopout: o, onMouseEnter: s, onMouseLeave: c, onClick: f, className: h } = e,
-        { id: b, guild_id: C } = l;
+        { id: b, guild_id: y } = l;
     r.useEffect(() => {
         E.default.track(P.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: b,
-            guild_id: C,
+            guild_id: y,
         });
-    }, [b, C]),
+    }, [b, y]),
         r.useEffect(() => {
             a || o();
         }, [o, a]);
-    let y = (0, v.bp)(),
+    let C = (0, v.bp)(),
         { analyticsLocations: O, newestAnalyticsLocation: T } = (0, p.ZP)(d.Z.ACTIVITIES_MINI_SHELF),
-        w = y === P.IlC.POPOUT,
+        w = C === P.IlC.POPOUT,
         M = ((n = l.getGuildId()), (0, S.Z)({ guildId: n }).slice(0, 5));
     r.useEffect(() => {
         let e = setTimeout(() => j.ux(), 1000);
@@ -140,7 +140,7 @@ let w = r.forwardRef(function (e, t) {
                 c(),
                 f();
         }, [l, T, f, c, w]),
-        L = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 s(),
                     E.default.track(P.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -169,7 +169,7 @@ let w = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsxs)("div", {
                         className: Z.container,
-                        onMouseEnter: L,
+                        onMouseEnter: D,
                         onMouseLeave: c,
                         children: [
                             (0, i.jsxs)("div", {

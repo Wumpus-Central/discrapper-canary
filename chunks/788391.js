@@ -1,4 +1,4 @@
-n.d(e, { S: () => S });
+n.d(e, { S: () => T });
 var i = n(857595),
     l = n(607070),
     s = n(509613),
@@ -6,7 +6,7 @@ var i = n(857595),
     r = n(981631),
     a = n(388032);
 let o = (t) => "".concat(t.toFixed(0), "px"),
-    S = (0, s.UO)(u.n.APPEARANCE_FONT_SCALING, {
+    T = (0, s.UO)(u.n.APPEARANCE_FONT_SCALING, {
         useTitle: () => a.intl.string(a.t.qPOqoK),
         useSubtitle: () => a.intl.string(a.t.XrtbPo),
         markers: r.yqN.FONT_SIZES,

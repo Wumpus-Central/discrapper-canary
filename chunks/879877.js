@@ -19,8 +19,8 @@ function h(e) {
         v = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         O = v.length > 0,
         P = o.qH,
-        w = a && !h && (0, f.M8)(c) && v.length < P,
-        { trackUserProfileAction: I } = (0, d.KZ)(),
+        I = a && !h && (0, f.M8)(c) && v.length < P,
+        { trackUserProfileAction: w } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
         T = (0, i.useRef)(null),
@@ -38,7 +38,7 @@ function h(e) {
             ),
             [N, null == v ? void 0 : v.join("")],
         ),
-        !O && !w)
+        !O && !I)
     )
         return null;
     let A = D ? v : v.slice(0, v.length - _);
@@ -74,16 +74,16 @@ function h(e) {
                                 isExpanded: D,
                                 numberOfOverflowingTags: _,
                                 onExpandTags: () => {
-                                    k(!0), I({ action: "EXPAND_GAME_TAGS" });
+                                    k(!0), w({ action: "EXPAND_GAME_TAGS" });
                                 },
                                 onCollapseTags: () => {
-                                    k(!1), I({ action: "COLLAPSE_GAME_TAGS" });
+                                    k(!1), w({ action: "COLLAPSE_GAME_TAGS" });
                                 },
                                 disableInteraction: h,
                             }),
                     ],
                 }),
-            w &&
+            I &&
                 (0, r.jsx)(g.Z, {
                     tags: n,
                     widgetType: c,

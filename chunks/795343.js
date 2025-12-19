@@ -30,14 +30,14 @@ function y(e) {
         I = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         { skus: A, currentPage: B, totalCount: N, isFetchingResults: R } = (0, p.a)(),
         P = (0, o.Wu)([f.Z], () => f.Z.getProductsBySkus(A)),
-        w = l.useCallback(() => {
+        Z = l.useCallback(() => {
             var e;
             null == a || null == (e = a.current) || e.scrollToTop({ animate: !0 });
         }, [a]),
-        Z = null == A ? void 0 : A.join("");
+        w = null == A ? void 0 : A.join("");
     l.useEffect(() => {
-        w();
-    }, [Z, w]);
+        Z();
+    }, [w, Z]);
     let D = (0, g.a)(),
         H = l.useMemo(() => D(P), [D, P]);
     l.useEffect(() => {

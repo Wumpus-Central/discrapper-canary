@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(442837),
-    i = n(199849),
+    i = n(442837),
+    l = n(199849),
     s = n(481060),
     o = n(435064),
     c = n(894694),
@@ -51,7 +51,7 @@ function m(e, t) {
     );
 }
 function p() {
-    let { mlPipelinesEnabled: e } = (0, l.cj)([o.Z], () => ({
+    let { mlPipelinesEnabled: e } = (0, i.cj)([o.Z], () => ({
             mlPipelinesEnabled: o.Z.getSettings().mlPipelinesEnabled,
         })),
         [t, n] = r.useState(
@@ -134,7 +134,7 @@ function p() {
                     children: [
                         (0, a.jsxs)(s.NIo, {
                             children: [
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     label: "Event Type",
                                     value: p,
                                     onChange: (e) => h(e),
@@ -181,7 +181,7 @@ function p() {
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     label: "Importance",
                                     value: f,
                                     onChange: x,

@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(187835),
     V = n(118122),
     H = n(780367),
-    z = n(193154),
-    W = n(602147),
+    W = n(193154),
+    z = n(602147),
     K = n(222059),
     Y = n(65721),
     q = n(843343),
@@ -255,7 +255,7 @@ function ec(e) {
         s = o.getRoots(),
         c = (0, f.Wu)([T.Z], () => T.Z.getGeoRestrictedGuilds()).map((e) =>
             (0, r.jsx)(
-                z.Z,
+                W.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -323,7 +323,7 @@ function eu(e) {
             return i;
         })(B, ["ref"]),
         H = (0, b.mFp)(),
-        [z, K] = i.useState(!1),
+        [W, K] = i.useState(!1),
         q = (0, b.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
         J = (0, b.dQu)(g.Z.space.SPACE_XS),
         $ = (0, x.Z)(),
@@ -434,7 +434,7 @@ function eu(e) {
             },
             [E, S, O, ef.setNodeRef],
         ),
-        em = (0, r.jsx)(W.Z, {
+        em = (0, r.jsx)(z.Z, {
             selected: ep,
             className: en.discoveryIcon,
         }),
@@ -469,7 +469,7 @@ function eu(e) {
                                             (0, r.jsxs)(b.xVE, {
                                                 className: a()({
                                                     [en.scroller]: !0,
-                                                    [en.scrolling]: z,
+                                                    [en.scrolling]: W,
                                                 }),
                                                 experimental_useStack: !0,
                                                 gap: "xs",

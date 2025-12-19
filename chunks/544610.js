@@ -14,8 +14,8 @@ var r,
     m = n(480294),
     g = n(580005),
     b = n(699516),
-    C = n(594174),
-    y = n(981631);
+    y = n(594174),
+    C = n(981631);
 let v = !1,
     x = "",
     O = 0,
@@ -37,19 +37,19 @@ function Z() {
             null != i && i.clearQuery(),
             (E = (function (e) {
                 let t = b.Z.getFriendIDs(),
-                    n = C.default.getCurrentUser();
+                    n = y.default.getCurrentUser();
                 return (
                     (null == n ? void 0 : n.isStaff()) &&
                         (t = Array.from(
                             new Set([
                                 ...t,
-                                ...C.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
+                                ...y.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
                             ]),
                         )),
                     (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
                     t
                         .reduce((e, t) => {
-                            let n = C.default.getUser(t);
+                            let n = y.default.getUser(t);
                             return (
                                 null == n ||
                                     n.isProvisional ||
@@ -68,7 +68,7 @@ function Z() {
     let t = null != e ? e.recipients : [];
     if (null != i) {
         var n;
-        let e = C.default.getCurrentUser(),
+        let e = y.default.getCurrentUser(),
             r = null != (n = null == e ? void 0 : e.isStaff()) && n;
         i.setQuery({
             query: x,
@@ -108,7 +108,7 @@ function T() {
     return (j = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
-    if (m.Z.hasConsented(y.pjP.PERSONALIZATION)) {
+    if (m.Z.hasConsented(C.pjP.PERSONALIZATION)) {
         var n, i, r, l;
         let a =
                 null != (r = null == (n = u.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability)
@@ -129,33 +129,33 @@ function A(e) {
     if (!v || "" === x) return;
     let n = [];
     for (let { id: e, comparator: i } of t) {
-        let t = C.default.getUser(e);
+        let t = y.default.getUser(e);
         null != t &&
             n.push({
                 user: t,
                 comparator: i,
             });
     }
-    (E = n), k.emitChange();
+    (E = n), L.emitChange();
 }
 function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
 }
 function M(e) {
-    if (e.key !== y.vTt) return !1;
+    if (e.key !== C.vTt) return !1;
     (v = !0), T(), (i = w()), (_ = null), I("");
 }
 function R(e) {
-    if (e.key !== y.vTt) return !1;
-    L();
+    if (e.key !== C.vTt) return !1;
+    D();
 }
-function L() {
+function D() {
     null != i && (i.destroy(), (i = null)), P();
 }
-class D extends (r = a.ZP.Store) {
+class k extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, m.Z, c.Z, g.Z, b.Z, u.Z, C.default),
-            this.syncWith([C.default, h.Z], Z),
+        this.waitFor(h.Z, m.Z, c.Z, g.Z, b.Z, u.Z, y.default),
+            this.syncWith([y.default, h.Z], Z),
             this.syncWith([b.Z], T);
     }
     getResults() {
@@ -180,15 +180,15 @@ class D extends (r = a.ZP.Store) {
         };
     }
 }
-(l = "displayName") in D
-    ? Object.defineProperty(D, l, {
+(l = "displayName") in k
+    ? Object.defineProperty(k, l, {
           value: "PrivateChannelRecipientsInviteStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (D[l] = "PrivateChannelRecipientsInviteStore");
-let k = new D(o.Z, {
+    : (k[l] = "PrivateChannelRecipientsInviteStore");
+let L = new k(o.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -205,7 +205,7 @@ let k = new D(o.Z, {
         },
         MODAL_POP: R,
         HIDE_ACTION_SHEET: R,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: D,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
             (_ = e.channelId), I(e.query);
         },
@@ -221,4 +221,4 @@ let k = new D(o.Z, {
             S.delete(t), (S = new Set(S));
         },
     }),
-    U = k;
+    U = L;

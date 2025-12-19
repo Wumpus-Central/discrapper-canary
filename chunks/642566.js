@@ -1,9 +1,9 @@
-t.d(n, { Z: () => s });
+t.d(n, { Z: () => a });
 var o = t(54381);
 t(473749);
 var i = t(859097),
     r = t(388032);
-function s(e) {
+function a(e) {
     let { onContinue: n, onClose: t } = e;
     return (0, o.jsx)(i.C, {
         title: r.intl.string(r.t["8YK70c"]),

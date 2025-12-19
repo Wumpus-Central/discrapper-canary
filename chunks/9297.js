@@ -1,4 +1,4 @@
-n.d(e, { i: () => T });
+n.d(e, { i: () => S });
 var i = n(473749),
     l = n(630759),
     s = n(509613),
@@ -6,15 +6,15 @@ var i = n(473749),
     r = n(313789),
     a = n(612039),
     o = n(616211),
-    S = n(388032);
-let T = (0, s.k4)(r.n.VOICE_SECURITY_CATEGORY, {
-    useTitle: () => S.intl.string(S.t.WWaFn5),
+    T = n(388032);
+let S = (0, s.k4)(r.n.VOICE_SECURITY_CATEGORY, {
+    useTitle: () => T.intl.string(T.t.WWaFn5),
     useNotice: function () {
         return i.useMemo(
             () => ({
                 type: u.v.INLINE_NOTICE,
                 noticeType: "info",
-                useText: () => S.intl.format(S.t["/6sFWa"], { helpArticle: (0, l.uV)() }),
+                useText: () => T.intl.format(T.t["/6sFWa"], { helpArticle: (0, l.uV)() }),
             }),
             [],
         );

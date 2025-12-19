@@ -1,4 +1,4 @@
-n.d(e, { W: () => P });
+n.d(e, { W: () => R });
 var i = n(473749),
     l = n(442837),
     s = n(846027),
@@ -6,20 +6,20 @@ var i = n(473749),
     r = n(509613),
     a = n(970013),
     o = n(463395),
-    S = n(131951),
-    T = n(313789),
+    T = n(131951),
+    S = n(313789),
     c = n(846071),
     E = n(375258),
     d = n(383713),
-    g = n(782134),
-    _ = n(833682),
+    _ = n(782134),
+    g = n(833682),
     I = n(815194),
     N = n(16009),
     A = n(387076),
     O = n(595373),
     C = n(345655),
     f = n(388032);
-let R = (0, r.J9)(T.n.VOICE_INPUT_PROFILE_SETTING, {
+let P = (0, r.J9)(S.n.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => f.intl.string(f.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: t } = (0, c.P)({ location: "SettingsRendererConfig" });
@@ -27,9 +27,9 @@ let R = (0, r.J9)(T.n.VOICE_INPUT_PROFILE_SETTING, {
         },
         useSearchTerms: () => [f.intl.string(f.t.nuFtHH), f.intl.string(f.t.VZPR0R), f.intl.string(f.t.cjPbpT)],
         useValue: function () {
-            return (0, l.e7)([S.Z], () => {
+            return (0, l.e7)([T.Z], () => {
                 var t;
-                return null != (t = S.Z.getActiveInputProfile()) ? t : C._.CUSTOM;
+                return null != (t = T.Z.getActiveInputProfile()) ? t : C._.CUSTOM;
             });
         },
         setValue: function (t) {
@@ -60,13 +60,13 @@ let R = (0, r.J9)(T.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    P = (0, r.k4)(T.n.VOICE_INPUT_PROFILE_CATEGORY, {
+    R = (0, r.k4)(S.n.VOICE_INPUT_PROFILE_CATEGORY, {
         useNotice: function () {
-            let t = (0, l.e7)([o.Z, S.Z], () => {
-                let t = S.Z.getInputDeviceId();
+            let t = (0, l.e7)([o.Z, T.Z], () => {
+                let t = T.Z.getInputDeviceId();
                 return (
                     (o.Z.hasEchoCancellation(t) || o.Z.hasNoiseSuppression(t) || o.Z.hasAutomaticGainControl(t)) &&
-                    S.Z.isInputProfileCustom()
+                    T.Z.isInputProfileCustom()
                 );
             });
             return i.useMemo(() => {
@@ -78,5 +78,5 @@ let R = (0, r.J9)(T.n.VOICE_INPUT_PROFILE_SETTING, {
                     };
             }, [t]);
         },
-        buildLayout: () => [R, g.q, _.L, d.A, O.Y, I.h, A.q, N.X, E.h],
+        buildLayout: () => [P, _.q, g.L, d.A, O.Y, I.h, A.q, N.X, E.h],
     });

@@ -1,4 +1,4 @@
-n.d(e, { B: () => S });
+n.d(e, { B: () => T });
 var i = n(657707),
     l = n(509613),
     s = n(906467),
@@ -10,7 +10,7 @@ let o = (0, l.wf)(u.n.DEVELOPER_OPTIONS_PANEL, {
         StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    S = (0, l.m7)(u.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
+    T = (0, l.m7)(u.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
         useTitle: () => "Developer Options",
         getLegacySearchKey: () => a.s6.DEVELOPER_OPTIONS,
         icon: i.Che,

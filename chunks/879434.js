@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(793030),
     o = n(442837),
     c = n(678717),
@@ -23,7 +23,7 @@ let x = (e) => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(f.banner, f.pfxBanner),
+                        className: l()(f.banner, f.pfxBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -36,7 +36,7 @@ let x = (e) => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(f.banner, f.nameplateBanner),
+                        className: l()(f.banner, f.nameplateBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -49,7 +49,7 @@ let x = (e) => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(f.banner, f.bundlesBanner),
+                        className: l()(f.banner, f.bundlesBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",

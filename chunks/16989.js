@@ -8,8 +8,8 @@ var r = a(54381),
     d = a(845220),
     s = a(706454),
     b = a(626135),
-    f = a(74538),
-    p = a(937615),
+    p = a(74538),
+    f = a(937615),
     u = a(323321),
     m = a(540310),
     C = a(981631),
@@ -27,8 +27,8 @@ let v = (e) => {
         } = e,
         O = (0, i.e7)([s.default], () => s.default.locale),
         _ = new Date(y.subscriptionPeriodStart);
-    w.isBoostOnly || (_ = f.ZP.extendDateWithUnconsumedFractionalPremium(_, P.unactivatedUnits));
-    let g = (0, p.T4)(y.total, y.currency),
+    w.isBoostOnly || (_ = p.ZP.extendDateWithUnconsumedFractionalPremium(_, P.unactivatedUnits));
+    let g = (0, f.T4)(y.total, y.currency),
         [j, R] = (0, n.useState)(!1),
         [T, k] = (0, n.useState)(!1),
         M = _.toLocaleDateString(O, {

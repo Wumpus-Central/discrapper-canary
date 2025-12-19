@@ -14,20 +14,20 @@ var i = n(54381),
     m = n(585483),
     g = n(909820),
     b = n(981631),
-    C = n(921944),
-    y = n(388032),
+    y = n(921944),
+    C = n(388032),
     v = n(19055);
 let x = function (e) {
     let { channel: t, guild: n, maxWidth: x } = e;
     r.useEffect(() => {
-        (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
+        (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: y.L.AUTO });
     }, []);
     let O = r.useCallback(() => {
             o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         E = (0, i.jsx)(f.ZP.Icon, {
             icon: a.Dio,
-            tooltip: y.intl.string(y.t.cpT0Cq),
+            tooltip: C.intl.string(C.t.cpT0Cq),
             onClick: O,
         });
     return (0, i.jsxs)(u.Z, {
@@ -41,11 +41,11 @@ let x = function (e) {
             }),
             (0, i.jsxs)(f.ZP, {
                 toolbar: E,
-                "aria-label": y.intl.string(y.t.BIYAqa),
+                "aria-label": C.intl.string(C.t.BIYAqa),
                 children: [
                     (0, i.jsx)(f.ZP.ChannelIcon, {
                         icon: a.kBi,
-                        "aria-label": y.intl.string(y.t.Kx5kCN),
+                        "aria-label": C.intl.string(C.t.Kx5kCN),
                     }),
                     (0, i.jsx)(f.ZP.Title, { children: t.name }),
                 ],

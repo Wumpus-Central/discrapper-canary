@@ -1,9 +1,9 @@
 n.d(t, { Z: () => Z }), n(784620), n(973216);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
-    s = n(236726),
+    i = n(120356),
+    l = n.n(i),
+    s = n(620792),
     o = n(399606),
     c = n(28664),
     d = n(780384),
@@ -25,14 +25,14 @@ var a = n(54381),
     T = n(110560),
     O = n(251360),
     N = n(19148),
-    w = n(642145),
-    P = n(981631),
+    P = n(642145),
+    w = n(981631),
     I = n(388032),
     k = n(598589);
 function R(e) {
     let { children: t, variant: n = "default" } = e;
     return (0, a.jsx)("div", {
-        className: i()(k.pill, {
+        className: l()(k.pill, {
             [k.pillBrand]: "brand" === n,
             "theme-light": "default" === n,
         }),
@@ -46,8 +46,8 @@ function R(e) {
 }
 function A(e) {
     var t;
-    let { quest: n, errorHints: l, warningHints: i, isDarkTheme: o, sourceQuestContent: c } = e,
-        { ref: d, height: p = 0 } = (0, m.ZP)([l]),
+    let { quest: n, errorHints: i, warningHints: l, isDarkTheme: o, sourceQuestContent: c } = e,
+        { ref: d, height: p = 0 } = (0, m.ZP)([i]),
         h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         f = (0, g.z)(n),
         { type: x, hints: b } = r.useMemo(
@@ -57,27 +57,27 @@ function A(e) {
                           type: 2,
                           hints: [],
                       }
-                    : l.length > 0
+                    : i.length > 0
                       ? {
                             type: 0,
-                            hints: l.map((e) => e.message),
+                            hints: i.map((e) => e.message),
                         }
-                      : i.length > 0
+                      : l.length > 0
                         ? {
                               type: 1,
-                              hints: i,
+                              hints: l,
                           }
                         : {
                               type: 2,
                               hints: [],
                           },
-            [l, h, f, i],
+            [i, h, f, l],
         ),
         v = 2 !== x,
         j = (0, u.q_F)({
             opacity: +!!v,
             height: v ? p : 0,
-            config: w.Y,
+            config: P.Y,
         }),
         y = 0 === x ? u.Mgn : u.d3s,
         _ = u.TVs.unsafe_rawColors.RED_345.css,
@@ -108,7 +108,7 @@ function A(e) {
                         onClick: () =>
                             (0, C.y)({
                                 quest: n,
-                                errorHints: l,
+                                errorHints: i,
                                 sourceQuestContent: c,
                             }),
                         variant: "always-white",
@@ -119,10 +119,10 @@ function A(e) {
     });
 }
 function Z(e) {
-    var t, n, l, s, m;
+    var t, n, i, s, m;
     let {
             quest: C,
-            isHovering: w,
+            isHovering: P,
             errorHints: Z,
             warningHints: D,
             isVisibleInViewport: L,
@@ -133,7 +133,7 @@ function Z(e) {
         } = e,
         G = (0, j.PB)(C),
         V = (0, p.ZP)(),
-        H = ((0, d.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT) === P.BRd.DARK,
+        H = ((0, d.wj)(V) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
         z = (0, g.tP)(C),
         W = (null == (t = C.userStatus) ? void 0 : t.claimedAt) != null,
         K = (0, g.B6)(C.config.expiresAt, {
@@ -141,7 +141,7 @@ function Z(e) {
             day: "numeric",
         }),
         q = (null == (n = C.userStatus) ? void 0 : n.enrolledAt) != null,
-        Y = (null == (l = C.userStatus) ? void 0 : l.completedAt) != null,
+        Y = (null == (i = C.userStatus) ? void 0 : i.completedAt) != null,
         { onAssetLoadComplete: Q } = r.useContext(O.k),
         X = H ? "text-muted" : "always-white",
         J = r.useCallback(async () => {
@@ -169,7 +169,7 @@ function Z(e) {
                 className: k.heroAssetWrapper,
                 children: (0, a.jsx)(_.Z, {
                     quest: C,
-                    isInteracting: w,
+                    isInteracting: P,
                     hideAssets: !L,
                     imageSize: {
                         width: 1320,
@@ -179,11 +179,11 @@ function Z(e) {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(k.overlay, {
-                    [k.lightThemeGradient]: V === P.BRd.LIGHT,
-                    [k.darkThemeGradient]: V === P.BRd.DARK,
-                    [k.darkerThemeGradient]: V === P.BRd.DARKER,
-                    [k.midnightThemeGradient]: V === P.BRd.MIDNIGHT,
+                className: l()(k.overlay, {
+                    [k.lightThemeGradient]: V === w.BRd.LIGHT,
+                    [k.darkThemeGradient]: V === w.BRd.DARK,
+                    [k.darkerThemeGradient]: V === w.BRd.DARKER,
+                    [k.midnightThemeGradient]: V === w.BRd.MIDNIGHT,
                 }),
             }),
             (0, a.jsxs)("div", {

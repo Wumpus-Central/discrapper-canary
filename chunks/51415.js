@@ -2,8 +2,8 @@ n.d(t, { Z: () => c });
 var a = n(54381);
 n(473749);
 var r = n(481060),
-    l = n(703656),
-    i = n(22095),
+    i = n(703656),
+    l = n(22095),
     s = n(981631),
     o = n(192172);
 let c = function () {
@@ -18,7 +18,7 @@ let c = function () {
             }),
             (0, a.jsx)(r.Button, {
                 onClick: () => {
-                    (0, i.it)(), (0, l.uL)(s.Z5c.QUEST_HOME_V2);
+                    (0, l.it)(), (0, i.uL)(s.Z5c.QUEST_HOME_V2);
                 },
                 text: "Clear History",
             }),
