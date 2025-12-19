@@ -309,7 +309,7 @@ function W(e) {
     null == r || r.setSimulcastDebugOverride(t, n, i);
 }
 function K(e) {
-    let { streamId: t, width: n, height: i } = e;
+    let { streamId: t, dimensions: n, zoom: i } = e;
     null == r || r.setVideoSize(t, n, i);
 }
 class z extends (a = o.ZP.Store) {

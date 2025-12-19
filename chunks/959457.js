@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => $ }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var i,
     a = n(512722),
     o = n.n(a),
@@ -138,7 +138,7 @@ function G(e) {
         let e = new p.A({
             streamRegion: i,
             streamApplication: C[t],
-            streamSourceType: X(N[t]),
+            streamSourceType: Q(N[t]),
             actionContext: null == (l = T[t]) ? void 0 : l.appContext,
             numViewers: null != a ? a.length : 0,
             goLiveModalDurationMs: P[t],
@@ -216,18 +216,12 @@ function z(e) {
     });
 }
 function q(e) {
-    let { streamId: t, width: n, height: r } = e;
+    let { streamId: t, dimensions: n, zoom: r } = e;
     l().forEach(D, (e) => {
         null == e || e.setVideoSize(t, n, r);
     });
 }
 function Q(e) {
-    let { streamId: t, zoom: n } = e;
-    l().forEach(D, (e) => {
-        null == e || e.setVideoZoom(t, n);
-    });
-}
-function X(e) {
     var t, n, r;
     if (null == e) return "unknown";
     if (g.isPlatformEmbedded || (null == (t = platform) ? void 0 : t.name) === "Chrome") {
@@ -240,7 +234,7 @@ function X(e) {
     else if ((null == (r = platform) ? void 0 : r.name) === "Safari") return "window";
     return "unknown";
 }
-class J extends (i = c.ZP.Store) {
+class X extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(E.default, b.Z, O.Z, f.ZP);
     }
@@ -311,8 +305,8 @@ class J extends (i = c.ZP.Store) {
         return null == r ? void 0 : r.get(t);
     }
 }
-I(J, "displayName", "StreamRTCConnectionStore");
-let $ = new J(
+I(X, "displayName", "StreamRTCConnectionStore");
+let J = new X(
     d.Z,
     !b.Z.isSupported() || __OVERLAY__
         ? {}
@@ -335,6 +329,5 @@ let $ = new J(
               STREAM_LAYOUT_UPDATE: H,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: z,
               VIDEO_SIZE_UPDATE: q,
-              VIDEO_ZOOM_UPDATE: Q,
           },
 );

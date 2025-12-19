@@ -860,8 +860,10 @@ function t9() {
                 S.Z.dispatch({
                     type: "VIDEO_SIZE_UPDATE",
                     streamId: e,
-                    width: t,
-                    height: n,
+                    dimensions: {
+                        width: t,
+                        height: n,
+                    },
                 }),
             );
         }),

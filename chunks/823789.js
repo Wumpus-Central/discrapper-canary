@@ -1,9 +1,10 @@
-n.d(t, { N: () => i });
+n.d(t, { $: () => i });
 var r = n(570140);
-function i(e, t) {
+function i(e, t, n) {
     r.Z.dispatch({
-        type: "VIDEO_ZOOM_UPDATE",
+        type: "VIDEO_SIZE_UPDATE",
         streamId: e,
-        zoom: t,
+        dimensions: t,
+        zoom: n,
     });
 }

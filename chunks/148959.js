@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => E,
-    y: () => h,
+    Z: () => y,
+    y: () => E,
 }),
     n(388685);
 var r = n(392711),
@@ -8,11 +8,13 @@ var r = n(392711),
     a = n(47770),
     o = n(846519),
     s = n(710845),
-    l = n(314897),
-    c = n(70956),
-    u = n(960048),
-    d = n(65154);
-function f(e, t, n) {
+    l = n(347101),
+    c = n(314897),
+    u = n(70956),
+    d = n(358085),
+    f = n(960048),
+    p = n(65154);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,18 +27,18 @@ function f(e, t, n) {
         e
     );
 }
-let p = 10 * c.Z.Millis.SECOND,
-    _ = 10 * c.Z.Millis.SECOND,
-    m = 500;
-var h = (function (e) {
+let m = 10 * u.Z.Millis.SECOND,
+    h = 10 * u.Z.Millis.SECOND,
+    g = 500;
+var E = (function (e) {
     return (
         (e.RequestedSSRCsUpdate = "requested-ssrcs-update"), (e.RequestedStreamsUpdate = "requested-streams-update"), e
     );
 })({});
-function g(e, t) {
-    e || u.Z.captureMessage("Assert failed in GoLiveQualityManager: " + t);
+function b(e, t) {
+    e || f.Z.captureMessage("Assert failed in GoLiveQualityManager: " + t);
 }
-class E extends a.Z {
+class y extends a.Z {
     setUserID(e) {
         this.userId = e;
     }
@@ -62,7 +64,7 @@ class E extends a.Z {
     }
     setGoLiveStreamDowngraded(e) {
         !(!this.senderSupportsSimulcast() || this.isOneToOneCall()) &&
-            this.debugQualityOverride === d.Z.NO_OVERRIDE &&
+            this.debugQualityOverride === p.Z.NO_OVERRIDE &&
             e !== this.downgraded &&
             this.isDowngradeChangeAllowed(e) &&
             (this.logger.info("Setting downgraded to ".concat(e)),
@@ -101,7 +103,7 @@ class E extends a.Z {
         return this.videoStreams.length > 1;
     }
     updateCallUserIds(e) {
-        (this.otherUsers = new Set(e)), this.otherUsers.delete(l.default.getId()), this.update();
+        (this.otherUsers = new Set(e)), this.otherUsers.delete(c.default.getId()), this.update();
     }
     onIncomingVideoEnabled(e) {
         this.incomingVideoEnabled !== e && ((this.incomingVideoEnabled = e), this.update());
@@ -124,7 +126,7 @@ class E extends a.Z {
         }
         switch (this.switchState) {
             case 0:
-                g(-1 === this.pendingSSRC, "Ready state should not have a pendingSSRC"),
+                b(-1 === this.pendingSSRC, "Ready state should not have a pendingSSRC"),
                     this.shouldSeamlessTransition(e)
                         ? (this.logger.info(
                               "Starting seamless transition to "
@@ -144,7 +146,7 @@ class E extends a.Z {
                           100 === e ? this.requestHQ() : this.requestLQ());
                 break;
             case 2:
-                g(-1 !== this.pendingSSRC, "PendingSeamless state should have a pendingSSRC"),
+                b(-1 !== this.pendingSSRC, "PendingSeamless state should have a pendingSSRC"),
                     60 === e && this.pendingHQ()
                         ? (this.logger.info(
                               "Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc ".concat(
@@ -168,7 +170,7 @@ class E extends a.Z {
                           this.requestHQ());
                 break;
             case 1:
-                g(-1 !== this.pendingSSRC, "Pending state should have a pendingSSRC"),
+                b(-1 !== this.pendingSSRC, "Pending state should have a pendingSSRC"),
                     60 === e && this.pendingHQ()
                         ? (this.logger.info(
                               "Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc ".concat(
@@ -190,7 +192,7 @@ class E extends a.Z {
                           this.requestHQ());
                 break;
             case 3:
-                g(this.isReceiving(), "Should be receiving a stream in Finalizing state"),
+                b(this.isReceiving(), "Should be receiving a stream in Finalizing state"),
                     this.logger.info("Finalizing seamless transition to ".concat(100 === e ? "HQ" : "LQ")),
                     100 === e ? this.requestHQ() : 60 === e && this.requestLQ(),
                     (this.switchState = 0),
@@ -211,12 +213,12 @@ class E extends a.Z {
             60 === e ? this.requestLQ() : this.requestHQ();
     }
     singleCastUpdate() {
-        g(
+        b(
             1 === this.videoStreams.length,
             "singleCastUpdate should only be called when there is exactly one video stream",
         ),
-            g(0 === this.switchState, "Switch state should not be set for non-simulcast streams"),
-            g(-1 === this.pendingSSRC, "Pending SSRC should not be set for non-simulcast streams"),
+            b(0 === this.switchState, "Switch state should not be set for non-simulcast streams"),
+            b(-1 === this.pendingSSRC, "Pending SSRC should not be set for non-simulcast streams"),
             this.incomingVideoEnabled ? this.requestDefaultStream() : this.stopDefaultStream();
     }
     pendingHQ() {
@@ -238,7 +240,7 @@ class E extends a.Z {
         return (
             !this.throttleDowngradeChanges ||
             void 0 === this.lastDowngradeChangeTime ||
-            (e ? Date.now() - this.lastDowngradeChangeTime >= _ : Date.now() - this.lastDowngradeChangeTime >= p)
+            (e ? Date.now() - this.lastDowngradeChangeTime >= h : Date.now() - this.lastDowngradeChangeTime >= m)
         );
     }
     shouldSeamlessTransition(e) {
@@ -276,7 +278,7 @@ class E extends a.Z {
         }
     }
     requestDefaultStream() {
-        g(
+        b(
             1 === this.videoStreams.length,
             "requestDefaultStream should only be called when there is exactly one video stream",
         );
@@ -286,7 +288,7 @@ class E extends a.Z {
         this.request(e, t);
     }
     stopDefaultStream() {
-        g(
+        b(
             1 === this.videoStreams.length,
             "stopDefaultStream should only be called when there is exactly one video stream",
         );
@@ -296,12 +298,12 @@ class E extends a.Z {
         this.request(e, t);
     }
     requestBoth() {
-        g(2 === this.videoStreams.length, "requestBoth should only be called when there are two video streams"),
-            g(
+        b(2 === this.videoStreams.length, "requestBoth should only be called when there are two video streams"),
+            b(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC),
                 "requestBoth called with invalid hqSSRC",
             ),
-            g(
+            b(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC),
                 "requestBoth called with invalid lqSSRC",
             );
@@ -315,34 +317,34 @@ class E extends a.Z {
             }, 2000);
     }
     requestHQ() {
-        g(2 === this.videoStreams.length, "requestHQ should only be called when there are two video streams"),
-            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestHQ called with invalid hqSSRC"),
-            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestHQ called with invalid lqSSRC");
+        b(2 === this.videoStreams.length, "requestHQ should only be called when there are two video streams"),
+            b(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestHQ called with invalid hqSSRC"),
+            b(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestHQ called with invalid lqSSRC");
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 100);
         let t = [this.hqSSRC];
         this.request(e, t);
     }
     requestLQ() {
-        g(2 === this.videoStreams.length, "requestLQ should only be called when there are two video streams"),
-            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestLQ called with invalid hqSSRC"),
-            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestLQ called with invalid lqSSRC");
+        b(2 === this.videoStreams.length, "requestLQ should only be called when there are two video streams"),
+            b(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestLQ called with invalid hqSSRC"),
+            b(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestLQ called with invalid lqSSRC");
         let e = {};
         (e[this.lqSSRC] = 60), (e[this.hqSSRC] = 0);
         let t = [this.lqSSRC];
         this.request(e, t);
     }
     stopStreams() {
-        g(2 === this.videoStreams.length, "stopStreams should only be called when there are two video streams"),
-            g(
+        b(2 === this.videoStreams.length, "stopStreams should only be called when there are two video streams"),
+            b(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC),
                 "stopStreams called with invalid hqSSRC",
             ),
-            g(
+            b(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC),
                 "stopStreams called with invalid lqSSRC",
             ),
-            g(-1 === this.pendingSSRC, "pendingSSRC should be reset before stopping streams");
+            b(-1 === this.pendingSSRC, "pendingSSRC should be reset before stopping streams");
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 0);
         let t = [];
@@ -350,9 +352,9 @@ class E extends a.Z {
     }
     getQuality() {
         return this.incomingVideoEnabled
-            ? this.debugQualityOverride === d.Z.LOW
+            ? this.debugQualityOverride === p.Z.LOW
                 ? 60
-                : this.debugQualityOverride === d.Z.HIGH || this.isOneToOneCall()
+                : this.debugQualityOverride === p.Z.HIGH || this.isOneToOneCall()
                   ? 100
                   : this.downgraded && this.senderSupportsSimulcast()
                     ? 60
@@ -360,7 +362,11 @@ class E extends a.Z {
             : 0;
     }
     setVideoSize(e, t, n) {
-        this.streamId === e && ((this.resolutionWidth = t), (this.resolutionHeight = n), this.delayedUpdate());
+        this.streamId === e &&
+            (!((0, d.isAndroid)() || (0, d.isIOS)()) || (0, l.w)("GoLiveQualityManager").enabled) &&
+            (null != t && ((this.resolutionWidth = t.width), (this.resolutionHeight = t.height)),
+            null != n && (this.zoom = n),
+            this.delayedUpdate());
     }
     setStreamId(e) {
         this.streamId !== e &&
@@ -370,33 +376,30 @@ class E extends a.Z {
             (this.zoom = 1),
             this.delayedUpdate());
     }
-    setVideoZoom(e, t) {
-        this.streamId === e && this.zoom !== t && ((this.zoom = t), this.delayedUpdate());
-    }
     constructor(e) {
         super(),
-            f(this, "supportsSeamless", void 0),
-            f(this, "logger", void 0),
-            f(this, "userId", void 0),
-            f(this, "streamId", void 0),
-            f(this, "resolutionWidth", void 0),
-            f(this, "resolutionHeight", void 0),
-            f(this, "zoom", void 0),
-            f(this, "videoStreams", void 0),
-            f(this, "audioSSRC", void 0),
-            f(this, "hqSSRC", void 0),
-            f(this, "lqSSRC", void 0),
-            f(this, "switchState", void 0),
-            f(this, "pendingSSRC", void 0),
-            f(this, "currentSSRC", void 0),
-            f(this, "downgraded", void 0),
-            f(this, "throttleDowngradeChanges", void 0),
-            f(this, "lastDowngradeChangeTime", void 0),
-            f(this, "otherUsers", void 0),
-            f(this, "debugQualityOverride", void 0),
-            f(this, "incomingVideoEnabled", void 0),
-            f(this, "delayedCall", void 0),
-            f(this, "delayedUpdate", void 0),
+            _(this, "supportsSeamless", void 0),
+            _(this, "logger", void 0),
+            _(this, "userId", void 0),
+            _(this, "streamId", void 0),
+            _(this, "resolutionWidth", void 0),
+            _(this, "resolutionHeight", void 0),
+            _(this, "zoom", void 0),
+            _(this, "videoStreams", void 0),
+            _(this, "audioSSRC", void 0),
+            _(this, "hqSSRC", void 0),
+            _(this, "lqSSRC", void 0),
+            _(this, "switchState", void 0),
+            _(this, "pendingSSRC", void 0),
+            _(this, "currentSSRC", void 0),
+            _(this, "downgraded", void 0),
+            _(this, "throttleDowngradeChanges", void 0),
+            _(this, "lastDowngradeChangeTime", void 0),
+            _(this, "otherUsers", void 0),
+            _(this, "debugQualityOverride", void 0),
+            _(this, "incomingVideoEnabled", void 0),
+            _(this, "delayedCall", void 0),
+            _(this, "delayedUpdate", void 0),
             (this.supportsSeamless = e),
             (this.streamId = null),
             (this.resolutionWidth = 0),
@@ -413,13 +416,13 @@ class E extends a.Z {
             (this.throttleDowngradeChanges = !0),
             (this.lastDowngradeChangeTime = void 0),
             (this.otherUsers = new Set()),
-            (this.debugQualityOverride = d.Z.NO_OVERRIDE),
+            (this.debugQualityOverride = p.Z.NO_OVERRIDE),
             (this.incomingVideoEnabled = !0),
             (this.delayedUpdate = () => {
                 this.delayedCall.delay();
             }),
             (this.logger = new s.Z("GoLiveQualityManager")),
-            (this.delayedCall = new o.sW(m, () => {
+            (this.delayedCall = new o.sW(g, () => {
                 this.update();
             }));
     }
