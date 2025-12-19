@@ -8,24 +8,24 @@ var r = n(493683),
     c = n(838440),
     u = n(959517);
 let d = async (e) => {
-    let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: p = !1, entry: _ } = e,
-        { valid: m, failureReason: h } = await (0, c.v)({
+    let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: p = !1, entry: _, nonce: m } = e,
+        { valid: h, failureReason: g } = await (0, c.v)({
             type: a.Ie.NORMAL,
             content: n,
             channel: null,
         });
-    if (!m) throw Error(h);
-    let g = f
+    if (!h) throw Error(g);
+    let E = f
             ? await r.Z.openPrivateChannel({
                   recipientIds: t,
                   location: d,
               })
             : await r.Z.getOrEnsurePrivateChannel(t),
-        E = l.Z.getChannel(g);
-    if (null == E) throw Error("Failed to open private channel");
+        b = l.Z.getChannel(E);
+    if (null == b) throw Error("Failed to open private channel");
     if (null != _)
         (0, o.p)({
-            channel: E,
+            channel: b,
             content: n,
             entry: _,
             whenReady: p,
@@ -33,7 +33,10 @@ let d = async (e) => {
             location: u.dy.USER_PROFILE,
         });
     else {
-        let e = s.ZP.parse(E, n);
-        return i.Z.sendMessage(E.id, e, p, { location: u.dy.USER_PROFILE });
+        let e = s.ZP.parse(b, n);
+        return i.Z.sendMessage(b.id, e, p, {
+            location: u.dy.USER_PROFILE,
+            nonce: m,
+        });
     }
 };
