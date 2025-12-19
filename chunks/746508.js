@@ -247,7 +247,6 @@ function e$() {
         t = (0, u.e7)([es.Z], () => es.Z.isMuted()),
         n = t ? eF.intl.string(eF.t.ScHlfl) : eF.intl.string(eF.t.zqxfrf);
     return (0, r.jsx)(eR.Z, {
-        "aria-label": n,
         tooltipText: n,
         icon: t ? E.xjP : E.RZG,
         onClick: () => {

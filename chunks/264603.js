@@ -47,7 +47,7 @@ function O() {
         [i, o] = r.useState(""),
         O = (0, s.e7)([g.ZP, C.Z], () => (0, v.Z)(g.ZP, C.Z)),
         N = (0, b.q)(i),
-        w = (0, s.Wu)([x.Z], () => {
+        P = (0, s.Wu)([x.Z], () => {
             var e, t;
             return null !=
                 (t =
@@ -57,7 +57,7 @@ function O() {
                 ? t
                 : [];
         }),
-        P = (0, f.FG)(N, { allowedFlows: [f.ro.RPC] }),
+        w = (0, f.FG)(N, { allowedFlows: [f.ro.RPC] }),
         I = (0, f.FG)(N, { allowedFlows: [f.ro.WEB] }),
         k = (0, f.FG)(N),
         { canDeauthorize: R, deauthorize: A } = (function (e) {
@@ -119,15 +119,13 @@ function O() {
                         children: [
                             "Linked Games:",
                             " ",
-                            w.length > 0
-                                ? w
-                                      .map((e) => {
-                                          var t;
-                                          return (null == (t = (0, h.r)(N)) ? void 0 : t.id) === e.id
-                                              ? "".concat(e.name, "*")
-                                              : e.name;
-                                      })
-                                      .join(", ")
+                            P.length > 0
+                                ? P.map((e) => {
+                                      var t;
+                                      return (null == (t = (0, h.r)(N)) ? void 0 : t.id) === e.id
+                                          ? "".concat(e.name, "*")
+                                          : e.name;
+                                  }).join(", ")
                                 : "N/A",
                         ],
                     }),
@@ -153,8 +151,8 @@ function O() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !P.canStartAuthorization,
-                        onClick: () => P.startAuthorization({ analyticsLocations: t }),
+                        disabled: !w.canStartAuthorization,
+                        onClick: () => w.startAuthorization({ analyticsLocations: t }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
