@@ -1,84 +1,95 @@
 n.d(t, {
-    B: () => E,
-    Z: () => y,
+    B: () => y,
+    Z: () => v,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(793030),
-    o = n(442837),
-    s = n(902704),
-    l = n(36563),
-    c = n(681715),
-    u = n(688192),
-    d = n(594174),
-    f = n(823379),
-    p = n(851397),
-    _ = n(474936),
-    m = n(268685),
-    h = n(388032),
-    g = n(264940),
-    E = (function (e) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(793030),
+    l = n(442837),
+    c = n(902704),
+    u = n(36563),
+    d = n(681715),
+    f = n(688192),
+    p = n(594174),
+    _ = n(823379),
+    m = n(851397),
+    h = n(474936),
+    g = n(268685),
+    E = n(388032),
+    b = n(264940),
+    y = (function (e) {
         return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), (e.NO_ICON = "no_icon"), e;
     })({});
-let b = 3;
-function y(e) {
-    let { variant: t, wishlistItem: n, userIds: E, guildId: y, channelId: O, cardSize: v = u.U.SMALL } = e,
-        [S, I] = i.useState(new Set(E));
+let O = 3;
+function v(e) {
+    let {
+            variant: t,
+            wishlistItem: n,
+            userIds: a,
+            guildId: y,
+            channelId: v,
+            cardSize: S = f.U.SMALL,
+            contextContainerClassName: I,
+        } = e,
+        [T, C] = i.useState(new Set(a));
     i.useEffect(() => {
-        I((e) => {
-            let t = new Set(E);
-            return (0, s.E)(Array.from(e), Array.from(t)) ? e : t;
+        C((e) => {
+            let t = new Set(a);
+            return (0, c.E)(Array.from(e), Array.from(t)) ? e : t;
         });
-    }, [E]);
-    let T = (0, o.Wu)(
-        [d.default],
+    }, [a]);
+    let A = (0, l.Wu)(
+        [p.default],
         () =>
-            Array.from(S)
-                .map((e) => d.default.getUser(e))
-                .filter(f.lm),
-        [S],
+            Array.from(T)
+                .map((e) => p.default.getUser(e))
+                .filter(_.lm),
+        [T],
     );
     return (0, r.jsxs)("div", {
-        className: g.container,
+        className: b.container,
         children: [
             "no_icon" === t
                 ? null
-                : (0, r.jsx)(c.u, {
-                      text: "popular" === t ? h.intl.string(h.t["DP0o+u"]) : h.intl.string(h.t["OnWY3/"]),
+                : (0, r.jsx)(d.u, {
+                      text: "popular" === t ? E.intl.string(E.t["DP0o+u"]) : E.intl.string(E.t["OnWY3/"]),
                       position: "top",
                       children: (0, r.jsx)("div", {
-                          className: g.contextContainer,
+                          className: o()(b.contextContainer, I),
                           children:
-                              "popular" === t || 0 === T.length
+                              "popular" === t || 0 === A.length
                                   ? (0, r.jsx)("div", {
-                                        className: g.contextIcon,
-                                        children: (0, r.jsx)(a.YqE, {
+                                        className: b.contextIcon,
+                                        children: (0, r.jsx)(s.YqE, {
                                             size: "sm",
                                             color: "currentColor",
+                                            className: b.fireIcon,
                                         }),
                                     })
-                                  : (0, r.jsx)(l.g, {
-                                        users: T,
+                                  : (0, r.jsx)(u.g, {
+                                        users: A,
                                         guildId: null != y ? y : void 0,
-                                        channelId: null != O ? O : void 0,
-                                        maxUsers: b,
-                                        size: m.EF.SIZE_20,
+                                        channelId: null != v ? v : void 0,
+                                        maxUsers: O,
+                                        size: g.EF.SIZE_20,
                                     }),
                       }),
                   }),
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(m.Z, {
                 item: n,
                 wishlistId: null,
                 isOwner: !1,
-                cardSize: v,
+                cardSize: S,
                 showOverlayButton: !0,
                 hideButtonIcon: !0,
                 showPrice: !0,
                 showIcons: !1,
-                giftingOrigin: _.Wt.SHOP_PAGE,
-                profileOwner: 1 === T.length ? T[0] : void 0,
-                additionalUserIds: T.length > 1 ? T.map((e) => e.id) : void 0,
+                giftingOrigin: h.Wt.SHOP_PAGE,
+                profileOwner: 1 === A.length ? A[0] : void 0,
+                additionalUserIds: A.length > 1 ? A.map((e) => e.id) : void 0,
             }),
         ],
     });

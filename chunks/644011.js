@@ -86,6 +86,7 @@ function y(e) {
                         guildId: v,
                         channelId: S,
                         cardSize: y,
+                        contextContainerClassName: b.contextContainer,
                     },
                     t.skuId,
                 );

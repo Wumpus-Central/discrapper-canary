@@ -92,6 +92,7 @@ function _(e) {
                         userIds: l,
                         guildId: I.guild_id,
                         channelId: I.id,
+                        contextContainerClassName: j.contextContainer,
                     },
                     t.skuId,
                 );
