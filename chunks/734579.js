@@ -159,11 +159,11 @@ let N = i.memo(function (e) {
         H = i.useMemo(() => {
             let e =
                     null != R && null != R.assetId
-                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.assetId, 512, "webp"))
+                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.assetId, 128, "webp"))
                         : void 0,
                 t =
                     null != R && null != R.backgroundImageAssetId
-                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.backgroundImageAssetId, 1024, "webp"))
+                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.backgroundImageAssetId, 128, "webp"))
                         : void 0;
             if (null != e)
                 return {
