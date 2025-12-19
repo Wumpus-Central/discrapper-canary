@@ -538,6 +538,7 @@ var r = (function (e) {
         (e.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL = "social layer claim purchased item modal"),
         (e.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL = "social layer gift code claim modal"),
         (e.SOCIAL_LAYER_STOREFRONT = "social layer storefront"),
+        (e.WISHLIST_ACCOUNT_POPOUT_UPSSELL = "wishlist account popout upsell"),
         (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.CF_WARP_SETTINGS = "cloudflare warp settings"),

@@ -1,24 +1,34 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => p });
 var a = n(54381),
     r = n(473749),
-    l = n(236726),
-    i = n(481060),
-    s = n(313201),
-    o = n(921944),
-    c = n(388032),
-    d = n(312529);
-function u(e) {
-    let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
-        h = (0, s.Dt)(),
-        f = r.useRef(null),
-        x = (0, i.q_F)({
+    i = n(120356),
+    l = n.n(i),
+    s = n(236726),
+    o = n(481060),
+    c = n(313201),
+    d = n(921944),
+    u = n(388032),
+    m = n(312529);
+function p(e) {
+    let {
+            markAsDismissed: t,
+            heading: n,
+            subheading: i,
+            children: p,
+            height: h,
+            className: f,
+            contentClassName: x,
+        } = e,
+        b = (0, c.Dt)(),
+        g = r.useRef(null),
+        v = (0, o.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
-                height: p,
+                height: h,
             },
             to: {
                 transform: "translate3d(0, 0, 0)",
-                height: p,
+                height: h,
             },
             config: {
                 mass: 1,
@@ -26,47 +36,47 @@ function u(e) {
                 damping: 15,
             },
             onRest: () => {
-                null != f.current && f.current.focus();
+                null != g.current && g.current.focus();
             },
         });
-    return (0, a.jsx)(l.animated.div, {
-        className: d.container,
-        style: x,
+    return (0, a.jsx)(s.animated.div, {
+        className: l()(m.container, f),
+        style: v,
         children: (0, a.jsxs)("aside", {
-            "aria-labelledby": h,
-            className: d.content,
+            "aria-labelledby": b,
+            className: m.content,
             children: [
                 (0, a.jsxs)("div", {
-                    className: d.headerRow,
+                    className: m.headerRow,
                     children: [
-                        (0, a.jsx)(i.P3F, {
-                            innerRef: f,
-                            "aria-label": c.intl.string(c.t.WAI6xu),
-                            className: d.closeButton,
+                        (0, a.jsx)(o.P3F, {
+                            innerRef: g,
+                            "aria-label": u.intl.string(u.t.WAI6xu),
+                            className: m.closeButton,
                             onClick: () => {
-                                t(o.L.USER_DISMISS);
+                                t(d.L.USER_DISMISS);
                             },
-                            children: (0, a.jsx)(i.Dio, { color: "currentColor" }),
+                            children: (0, a.jsx)(o.Dio, { color: "currentColor" }),
                         }),
-                        (0, a.jsx)(i.Heading, {
-                            id: h,
+                        (0, a.jsx)(o.Heading, {
+                            id: b,
                             variant: "heading-lg/semibold",
                             children: n,
                         }),
                     ],
                 }),
-                null != u &&
-                    (0, a.jsx)(i.Text, {
+                null != i &&
+                    (0, a.jsx)(o.Text, {
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        children: u,
+                        children: i,
                     }),
-                (0, a.jsx)(i.Ttm, {
-                    className: d.scroller,
+                (0, a.jsx)(o.Ttm, {
+                    className: m.scroller,
                     fade: !0,
                     children: (0, a.jsx)("div", {
-                        className: d.scrollerContent,
-                        children: m,
+                        className: l()(m.scrollerContent, x),
+                        children: p,
                     }),
                 }),
             ],
