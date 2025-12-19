@@ -97,7 +97,7 @@ async function _(e, t) {
             n
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), null;
+        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), e;
     }
 }
 async function m(e) {
@@ -132,21 +132,24 @@ async function h(e, t, n) {
         subscriptionGroupMemberId: n,
     });
     try {
-        await a.tn.patch({
+        let r = await a.tn.patch({
             url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
             rejectWithError: !0,
-        }),
+        });
+        return (
             o.Z.dispatch({
                 type: "PREMIUM_GROUP_ACCEPT_INVITE_SUCCESS",
                 subscriptionGroupMemberId: n,
-            });
+            }),
+            r
+        );
     } catch (e) {
-        throw (
-            (o.Z.dispatch({
+        return (
+            o.Z.dispatch({
                 type: "PREMIUM_GROUP_ACCEPT_INVITE_FAIL",
                 subscriptionGroupMemberId: n,
             }),
-            e)
+            e
         );
     }
 }
@@ -168,13 +171,16 @@ async function g(e, t, n) {
             }),
             r
         );
-    } catch (e) {
+    } catch (t) {
+        var r;
         return (
             o.Z.dispatch({
                 type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE",
                 subscriptionGroupMemberId: n,
+                errorCode: null == (r = t.body) ? void 0 : r.code,
+                subscriptionId: e,
             }),
-            null
+            t
         );
     }
 }

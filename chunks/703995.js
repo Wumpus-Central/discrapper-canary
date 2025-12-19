@@ -140,15 +140,24 @@ function N(e) {
     });
 }
 function P(e) {
-    let { subscriptionGroupMemberId: t } = e;
+    let { subscriptionGroupMemberId: t, errorCode: n } = e;
     if (null == t) return !1;
-    let n = m.get(t);
-    if ((null == n ? void 0 : n.invite) == null) return !1;
-    m.set(t, {
-        state: c.bZ.PENDING,
-        invite: _(f({}, n.invite), { removed_at: null }),
-        errorStatus: null,
-    });
+    let r = m.get(t);
+    return (
+        (null == r ? void 0 : r.invite) != null &&
+        (n === c.YW.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
+            ? (m.set(t, {
+                  state: c.bZ.ACCEPTED,
+                  invite: _(f({}, r.invite), { accepted_at: new Date().toISOString() }),
+                  errorStatus: null,
+              }),
+              !0)
+            : void m.set(t, {
+                  state: c.bZ.PENDING,
+                  invite: _(f({}, r.invite), { removed_at: null }),
+                  errorStatus: null,
+              }))
+    );
 }
 function R(e) {
     let { message: t } = e;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r,
     i = n(442837),
     a = n(570140),
@@ -66,14 +66,20 @@ function O(e) {
     let { subscriptionId: t } = e;
     a.Z.wait(() => (0, s.i1)(t).catch(c.VqG)), (d.membersData.isUpdating = !1);
 }
-function v() {
+function v(e) {
+    let { errorCode: t, subscriptionId: n } = e;
+    if (t === l.YW.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED)
+        return a.Z.wait(() => (0, s.i1)(n).catch(c.VqG)), (d.membersData.isUpdating = !1), !0;
+    S();
+}
+function S() {
     d.membersData.isUpdating = !1;
 }
-function S(e) {
+function I(e) {
     let { subscriptionId: t } = e;
     return !d.membersData.isFetching && (a.Z.wait(() => (0, s.i1)(t).catch(c.VqG)), !0);
 }
-function I() {
+function T() {
     d = {
         membersData: {
             data: null,
@@ -87,7 +93,7 @@ function I() {
         },
     };
 }
-class T extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z);
     }
@@ -145,9 +151,9 @@ class T extends (r = i.ZP.Store) {
         return l.v$;
     }
 }
-u(T, "displayName", "PremiumGroupStore");
-let C = new T(a.Z, {
-    PREMIUM_GROUP_MEMBERS_REQUEST: S,
+u(C, "displayName", "PremiumGroupStore");
+let A = new C(a.Z, {
+    PREMIUM_GROUP_MEMBERS_REQUEST: I,
     PREMIUM_GROUP_MEMBERS_FETCH_START: f,
     PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: p,
     PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: _,
@@ -158,12 +164,12 @@ let C = new T(a.Z, {
     PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: E,
     PREMIUM_GROUP_INVITE_USERS_START: y,
     PREMIUM_GROUP_INVITE_USERS_SUCCESS: O,
-    PREMIUM_GROUP_INVITE_USERS_FAILURE: v,
+    PREMIUM_GROUP_INVITE_USERS_FAILURE: S,
     PREMIUM_GROUP_REMOVE_MEMBER_START: y,
     PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS: O,
-    PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: v,
+    PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: S,
     PREMIUM_GROUP_REMOVE_INVITE_START: y,
     PREMIUM_GROUP_REMOVE_INVITE_SUCCESS: O,
     PREMIUM_GROUP_REMOVE_INVITE_FAILURE: v,
-    LOGOUT: I,
+    LOGOUT: T,
 });
