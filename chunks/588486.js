@@ -15,7 +15,12 @@ var r = n(230367),
     l = n(381499),
     c = n(835913),
     u = (function (e) {
-        return (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"), (e[(e.USER = 1)] = "USER"), e;
+        return (
+            (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+            (e[(e.USER = 1)] = "USER"),
+            (e[(e.INSTALLATION = 2)] = "INSTALLATION"),
+            e
+        );
     })({}),
     d = (function (e) {
         return (
