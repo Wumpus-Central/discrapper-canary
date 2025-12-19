@@ -6106,6 +6106,7 @@ var nF = (function (e) {
             (e.PREMIUM_GROUP_ABOUT = "36320645875479"),
             (e.SOCIAL_LAYER_STOREFRONT = "36394123113239"),
             (e.CHECKPOINT = "36415877391511"),
+            (e.NITRO_TRIAL_FOR_ALL = "37127619588375-Nitro-2-Week-Trial-Offer"),
             e
         );
     })({}),

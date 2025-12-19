@@ -1592,7 +1592,7 @@ function tN(e) {
     return null != e && P.OT.includes(e) ? 1 : 2;
 }
 function tP(e) {
-    return e === P.Rt ? P.NV : P.tL;
+    return e === P.Rt ? P.NV : e === P.jz ? P.Qm : P.tL;
 }
 function tR() {
     return P.tL;
