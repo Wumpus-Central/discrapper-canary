@@ -8,98 +8,35 @@ var i = n(120356),
     c = n(481060),
     s = n(313201),
     u = n(224724),
-    d = n(747101),
-    f = n(817053),
-    g = n(890814),
+    d = n(817053),
+    f = n(890814),
+    g = n(394606),
     p = n(388032),
     b = n(713603),
     m = n(813347);
 function h(e) {
-    var t,
-        n,
-        { gameName: i, onClick: a } = e,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
-            return i;
-        })(e, ["gameName", "onClick"]);
-    let g = null != i ? i : p.intl.string(p.t.GIWFlF),
-        h = p.intl.formatToPlainString(p.t["3mb1s5"], { game: g }),
-        y = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
-    return (0, d.kO)(s.applicationId) || y
+    let { applicationId: t, userId: n, onClick: i } = e,
+        { coverImageUrl: a, gameName: s, isLoading: f } = (0, g.Z)(t),
+        h = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading),
+        y = p.intl.formatToPlainString(p.t["3mb1s5"], { game: s });
+    return f || h
         ? (0, r.jsx)("div", { className: b.loadingCover })
         : (0, r.jsx)(o.u, {
-              text: h,
+              text: y,
               ariaHidden: !0,
               children: (0, r.jsxs)(c.P3F, {
                   className: m.addButton,
-                  onClick: a,
-                  "aria-label": h,
+                  onClick: i,
+                  "aria-label": y,
                   children: [
-                      (0, r.jsx)(
-                          f.Z,
-                          ((t = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      r = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (r = r.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      r.forEach(function (t) {
-                                          var r;
-                                          (r = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: r,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = r);
-                                      });
-                              }
-                              return e;
-                          })(
-                              {
-                                  className: m.cover,
-                                  gameName: i,
-                              },
-                              s,
-                          )),
-                          (n = n = { disableInteraction: !0 }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var r = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, r);
-                                    }
-                                    return n;
-                                })(Object(n)).forEach(function (e) {
-                                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                }),
-                          t),
-                      ),
+                      (0, r.jsx)(d.Z, {
+                          className: m.cover,
+                          imageSrc: a,
+                          gameName: s,
+                          applicationId: t,
+                          userId: n,
+                          disableInteraction: !0,
+                      }),
                       (0, r.jsx)(c.svS, {
                           size: "md",
                           className: m.addIcon,
@@ -136,16 +73,14 @@ function y(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(f.Z, {
                 games: n,
                 renderGame: (e) => {
-                    let { applicationId: n, gameName: i, imageSrc: a } = e;
+                    let { applicationId: n } = e;
                     return (0, r.jsx)(h, {
-                        onClick: () => l(n, i, a),
+                        onClick: () => l(n),
                         userId: t,
                         applicationId: n,
-                        gameName: i,
-                        imageSrc: a,
                     });
                 },
             }),
