@@ -119,7 +119,9 @@ function s(e) {
                                 console.warn("Unknown property type: ".concat(C));
                         }
                     }
-                })(),
+                })().catch((e) => {
+                    if ("AbortError" !== e.name) throw e;
+                }),
                 () => {
                     e.abort("New data binding applied - aborting previous image fetches."), (E.current = p);
                 }

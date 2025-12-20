@@ -1,6 +1,6 @@
 n.d(t, {
-    wl: () => y,
-    yX: () => h,
+    wl: () => v,
+    yX: () => y,
 }),
     n(388685),
     n(781311);
@@ -12,9 +12,10 @@ var r = n(54381),
     c = n(510231),
     s = n(785717),
     u = n(86419),
-    d = n(388032),
-    f = n(935587);
-function g(e) {
+    d = n(206599),
+    f = n(388032),
+    g = n(935587);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +40,7 @@ function g(e) {
     }
     return e;
 }
-function p(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function b(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,122 +78,130 @@ function b(e, t) {
     }
     return i;
 }
-function m(e) {
-    var { widgetType: t, widget: n, onAddGame: m, children: h } = e,
-        y = b(e, ["widgetType", "widget", "onAddGame", "children"]);
-    let v = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
-        { trackUserProfileEditAction: O } = (0, s.KZ)(),
-        [j, x] = i.useState(""),
-        P = i.useRef(""),
-        I = i.useCallback(
+function h(e) {
+    var { widgetType: t, widget: n, onAddGame: h, children: y } = e,
+        v = m(e, ["widgetType", "widget", "onAddGame", "children"]);
+    let O = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
+        { trackUserProfileEditAction: j } = (0, s.KZ)(),
+        [x, P] = i.useState(""),
+        I = i.useRef(""),
+        { options: w, matchSorterOptions: S } = (0, c.h)(),
+        { applicationIds: E, onAddGame: T } = (0, d.K)(t),
+        _ = i.useCallback(
             (e) => {
                 (0, u.ES)({
                     widgetType: t,
                     game: { applicationId: e },
                 }),
-                    o.uvj.announce(d.intl.string(d.t.q0U3DE)),
-                    O({
+                    o.uvj.announce(f.intl.string(f.t.q0U3DE)),
+                    j({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: t,
                     }),
-                    null == m || m();
+                    E.includes(e) && T(e),
+                    null == h || h();
             },
-            [t, O, m],
+            [t, j, h, E, T],
         ),
-        { options: w, matchSorterOptions: S } = (0, c.h)(),
-        E = i.useMemo(
+        C = i.useMemo(() => {
+            let e = new Map(
+                    w.map((e) => [
+                        String(e.value),
+                        {
+                            id: String(e.value),
+                            value: String(e.value),
+                            label: e.label,
+                            disabled: O.has(e.value),
+                        },
+                    ]),
+                ),
+                t = E.map((t) => e.get(t)).filter((e) => null != e && !e.disabled),
+                n = [...e.values()].filter((e) => !t.includes(e));
+            return [...t, ...n];
+        }, [w, O, E]),
+        D = i.useMemo(
             () =>
-                w.map((e) => ({
-                    id: String(e.value),
-                    value: String(e.value),
-                    label: e.label,
-                    disabled: v.has(e.value),
-                })),
-            [w, v],
-        ),
-        T = i.useMemo(
-            () =>
-                p(g({}, S), {
+                b(p({}, S), {
                     threshold: a.Lu.rankings.CONTAINS,
                     keys: ["label"],
                 }),
             [S],
         ),
-        _ = i.useCallback((e) => ("" === e.trim() ? E.length : (0, a.Lu)(E, e, T).length), [E, T]),
-        C = i.useCallback(
+        k = i.useCallback((e) => ("" === e.trim() ? C.length : (0, a.Lu)(C, e, D).length), [C, D]),
+        N = i.useCallback(
             (e) => {
                 let n = e.target.value;
-                "" === j.trim() &&
+                "" === x.trim() &&
                     "" !== n.trim() &&
-                    O({
+                    j({
                         action: "GAME_SEARCH_SESSION_STARTED",
                         widgetEdited: t,
                         numCharacters: n.trim().length,
-                        numResults: _(n),
+                        numResults: k(n),
                     }),
-                    x(n),
-                    (P.current = n);
+                    P(n),
+                    (I.current = n);
             },
-            [j, O, t, _],
+            [x, j, t, k],
         );
     return (0, r.jsx)(
         o.yRy,
-        p(g({}, y), {
+        b(p({}, v), {
             onRequestOpen: () => {
-                O({
+                j({
                     action: "PRESS_ADD_GAME",
                     widgetEdited: t,
                 }),
-                    x(""),
-                    (P.current = "");
+                    P(""),
+                    (I.current = "");
             },
             onRequestClose: () => {
-                O({
+                j({
                     action: "GAME_SEARCH_SESSION_ENDED",
                     widgetEdited: t,
-                    numCharacters: P.current.trim().length,
-                    numResults: _(P.current),
+                    numCharacters: I.current.trim().length,
+                    numResults: k(I.current),
                 });
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(o.VqE, {
-                    className: f.gameSearchCombobox,
-                    "aria-label": d.intl.string(d.t.uqw8wK),
+                    className: g.gameSearchCombobox,
+                    "aria-label": f.intl.string(f.t.uqw8wK),
                     children: (0, r.jsxs)(l.uz, {
                         selectionMode: "single",
                         value: null,
                         onSelectionChange: (e) => {
-                            null != e && (I(e), t());
+                            null != e && (_(e), t());
                         },
-                        options: E,
-                        matchSorterOptions: T,
+                        options: C,
+                        matchSorterOptions: D,
                         children: [
                             (0, r.jsx)(l.Ct, {
-                                label: d.intl.string(d.t["5h0QOP"]),
+                                label: f.intl.string(f.t["5h0QOP"]),
                                 hideLabel: !0,
-                                placeholder: d.intl.string(d.t["5h0QOP"]),
+                                placeholder: f.intl.string(f.t["5h0QOP"]),
                                 autoFocus: !0,
-                                onQueryChange: C,
+                                onQueryChange: N,
                             }),
                             (0, r.jsx)(l.px, { maxVisibleItems: 7 }),
                         ],
                     }),
                 });
             },
-            children: (e) => h(e),
+            children: (e) => y(e),
         }),
     );
 }
-function h(e) {
+function y(e) {
     var { disabled: t } = e,
-        n = b(e, ["disabled"]);
+        n = m(e, ["disabled"]);
     let a = i.useRef(null);
     return (0, r.jsx)(
-        m,
-        p(
-            g(
+        h,
+        b(
+            p(
                 {
                     targetElementRef: a,
                     position: "bottom",
@@ -204,13 +213,13 @@ function h(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         o.Button,
-                        g(
+                        p(
                             {
                                 buttonRef: a,
                                 variant: "secondary",
                                 size: "sm",
                                 icon: o.qJs,
-                                text: d.intl.string(d.t.SgTOtX),
+                                text: f.intl.string(f.t.SgTOtX),
                                 disabled: t,
                             },
                             e,
@@ -220,12 +229,12 @@ function h(e) {
         ),
     );
 }
-function y(e) {
+function v(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        m,
-        p(
-            g(
+        h,
+        b(
+            p(
                 {
                     targetElementRef: t,
                     position: "right",
@@ -237,12 +246,12 @@ function y(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         o.P3F,
-                        p(
-                            g(
+                        b(
+                            p(
                                 {
                                     innerRef: t,
-                                    className: f.coverButton,
-                                    "aria-label": d.intl.string(d.t.SgTOtX),
+                                    className: g.coverButton,
+                                    "aria-label": f.intl.string(f.t.SgTOtX),
                                 },
                                 e,
                             ),
