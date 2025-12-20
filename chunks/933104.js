@@ -18,9 +18,9 @@ var i = n(120356),
     d = n(703656),
     f = n(430824),
     h = n(326660),
-    p = n(473952),
-    g = n(156732),
-    b = n(448222),
+    p = n(156732),
+    g = n(448222),
+    b = n(317169),
     m = n(639777),
     y = n(441536),
     O = n(795338),
@@ -81,8 +81,8 @@ function R(e) {
             var e;
             return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        { onActivate: c } = (0, b.Z)(t, n[0]),
-        d = (0, g.Z)(n[0], !0);
+        { onActivate: c } = (0, g.Z)(t, n[0]),
+        d = (0, p.Z)(n[0], !0);
     if (0 === n.length) return;
     let h =
             n.length >= 3
@@ -96,7 +96,7 @@ function R(e) {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
                   : I.intl.formatToPlainString(S.default.ZF8NT6, { perk: n[0].title }),
-        p = 1 === n.length;
+        b = 1 === n.length;
     return (0, r.jsx)(k, {
         size: 1 === n.length ? "video" : "lg",
         asset:
@@ -111,10 +111,10 @@ function R(e) {
         body: h,
         actions: [
             {
-                text: p ? I.intl.string(S.default.gSxlHf) : I.intl.string(I.t.RzWDqY),
+                text: b ? I.intl.string(S.default.gSxlHf) : I.intl.string(I.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), p ? c() : (0, y.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                    e.stopPropagation(), b ? c() : (0, y.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
                 },
             },
         ],
@@ -169,7 +169,7 @@ function D(e) {
 }
 function M(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: a } = e,
-        o = (0, p.Z)(t, void 0);
+        { available: o } = (0, b.Z)(t);
     return (0, r.jsx)(k, {
         targetElementRef: a,
         asset: (0, r.jsx)("img", {

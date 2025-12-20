@@ -14,11 +14,11 @@ var l = t(54381),
     c = t(975104),
     d = t(823379),
     m = t(713081),
-    v = t(473952),
+    v = t(317169),
     f = t(905551),
     g = t(578756),
-    p = t(60482),
-    b = t(627045),
+    b = t(60482),
+    p = t(627045),
     _ = t(619733),
     x = t(914820),
     j = t(388032);
@@ -43,11 +43,11 @@ function y(e) {
     i.useEffect(() => {
         (0, f.ce)(k), (0, m.BN)(k, !0), null == I && (0, f.mF)(k);
     }, [k, I]);
-    let M = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(k)),
+    let M = (0, a.e7)([b.Z], () => b.Z.getStateForGuild(k)),
         T = (0, a.e7)([o.Z], () => o.Z.getGuild(k)),
         { analyticsLocations: G } = (0, r.ZP)(w),
         [L, R] = i.useState(null != (n = P.initialStep) ? n : Object.keys(P.steps)[0]),
-        A = (0, v.Z)(k, void 0),
+        { available: A } = (0, v.Z)(k),
         D = P.steps[L],
         [B, V] = i.useState(null == C ? void 0 : C.id);
     i.useEffect(() => {
@@ -69,9 +69,9 @@ function y(e) {
         [Y, H] = i.useState(null != (t = S(C)) ? t : null == I ? void 0 : I.planId),
         W = (function (e, n, t, l) {
             var i, r, s, u, o, c, d, m;
-            let v = (0, a.e7)([p.Z], () => {
+            let v = (0, a.e7)([b.Z], () => {
                     var n;
-                    return null == (n = p.Z.getStateForGuild(e)) ? void 0 : n.entitlements;
+                    return null == (n = b.Z.getStateForGuild(e)) ? void 0 : n.entitlements;
                 }),
                 f = null != (d = null == n || null == (i = n.plans.find((e) => e.id === t)) ? void 0 : i.cost) ? d : 0;
             return null == l
@@ -144,7 +144,7 @@ function y(e) {
                     .then(() => {
                         Z(),
                             (null == U ? void 0 : U.planId) !== Y &&
-                                (0, b.Z)(T.id, J, null == U ? "created" : "updated");
+                                (0, p.Z)(T.id, J, null == U ? "created" : "updated");
                     })
                     .catch((e) => {
                         var n, t;
