@@ -419,6 +419,7 @@ function er(e) {
     null == _ || null == T)
         ? null
         : (0, a.jsxs)(g.Y0X, {
+              "data-migration-pending": !0,
               transitionState: s,
               size: g.CgR.DYNAMIC,
               className: l()(f, q.gameProfileModal),
@@ -476,6 +477,7 @@ function el(e) {
     return null == r || null == l
         ? null
         : (0, a.jsxs)(g.Y0X, {
+              "data-migration-pending": !0,
               transitionState: n,
               size: g.CgR.DYNAMIC,
               className: i,
