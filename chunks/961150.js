@@ -41,7 +41,10 @@ let p = (e) => {
             : f.intl.format(t ? d.default["xF+upx"] : d.default.qqfnOm, { helpCenterLink: u.j3 }),
     g = (e, t) => {
         let n = e === i.bF.MEMBER,
-            a = (0, c.Z)(n),
+            a = (0, c.Z)({
+                useCachedData: !0,
+                fetch: n,
+            }),
             s = (0, r.e7)([o.Z], () => o.Z.getPremiumGroupSubscription());
         return e === i.bF.UNSPECIFIED
             ? null

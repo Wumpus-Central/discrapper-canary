@@ -33,7 +33,7 @@ async function d() {
                           subscriptionId: e.subscription_id,
                           memberType: e.member_type,
                           subscriptionStatus: e.subscription_status,
-                          currentPeriodEnd: e.current_period_end,
+                          currentPeriodEnd: new Date(e.current_period_end),
                       },
                   })
                 : o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND" }),

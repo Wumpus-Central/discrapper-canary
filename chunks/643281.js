@@ -55,9 +55,7 @@ function E() {
     (d.membershipData.isFetching = !1), (d.membershipData.hasFetched = !0);
 }
 function b() {
-    return (
-        !d.membershipData.isFetching && !d.membershipData.hasFetched && (a.Z.wait(() => (0, s.WH)().catch(c.VqG)), !0)
-    );
+    return !d.membershipData.isFetching && (a.Z.wait(() => (0, s.WH)().catch(c.VqG)), !0);
 }
 function y() {
     d.membersData.isUpdating = !0;
@@ -117,27 +115,6 @@ class C extends (r = i.ZP.Store) {
     }
     hasFetchedMembership() {
         return null !== d.membershipData.data;
-    }
-    getPremiumGroupSubscriptionId() {
-        var e, t, n;
-        let r = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.id;
-        return null != r ? r : null != (n = null == (t = d.membershipData.data) ? void 0 : t.subscriptionId) ? n : null;
-    }
-    getPremiumGroupSubscriptionStatus() {
-        var e, t, n;
-        let r = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.status;
-        return null != r
-            ? r
-            : null != (n = null == (t = d.membershipData.data) ? void 0 : t.subscriptionStatus)
-              ? n
-              : null;
-    }
-    getPremiumGroupCurrentPeriodEnd() {
-        var e, t;
-        let n = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.currentPeriodEnd;
-        if (null != n) return n;
-        let r = null == (t = d.membershipData.data) ? void 0 : t.currentPeriodEnd;
-        return null != r && "" !== r ? new Date(r) : null;
     }
     getNumUsedSeats() {
         return null == d.membersData.data ? 0 : d.membersData.data.members.length;
