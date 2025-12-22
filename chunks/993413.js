@@ -66,12 +66,14 @@ let _ = i.forwardRef(function (e, t) {
                 (0, r.jsxs)(s.vwX, {
                     className: d.title,
                     id: a,
+                    "data-migration-pending": !0,
                     children: [n, v && (0, r.jsx)(c.Z, {}), i],
                 }),
                 null != l
                     ? (0, r.jsx)(s.R94, {
                           type: s.R94.Types.DESCRIPTION,
                           className: d.sectionDescription,
+                          "data-migration-pending": !0,
                           children: l,
                       })
                     : null,
