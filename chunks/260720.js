@@ -1,87 +1,110 @@
-n.d(t, { x: () => f });
-var r = n(313789),
-    i = n(518596),
-    a = n(594174),
-    o = n(51144),
-    s = n(282793),
-    l = n(981631),
-    c = n(353149),
-    u = n(388032);
-let d = (e, t) => {
+n.d(t, {
+    QL: () => E,
+    x9: () => g,
+    xf: () => h,
+});
+var r = n(442837),
+    i = n(313789),
+    a = n(518596),
+    o = n(594174),
+    s = n(78839),
+    l = n(51144),
+    c = n(241986),
+    u = n(474936),
+    d = n(282793),
+    f = n(981631),
+    p = n(353149),
+    _ = n(388032);
+let m = (e, t) => {
         var n;
         if (null == t) return null;
         let r = null == (n = t.recipients) ? void 0 : n.find((t) => t !== e.id),
-            i = a.default.getUser(r);
-        return null == i ? null : (0, o.XM)(i);
+            i = o.default.getUser(r);
+        return null == i ? null : (0, l.XM)(i);
     },
-    f = (e) => {
+    h = (e) => {
         let t,
             n,
-            { sender: a, channel: f, isSender: p, inviteState: _ } = e,
-            m = (0, s.sO)();
-        if (p) {
-            let e = d(a, f);
+            { sender: r, channel: o, isSender: s, inviteState: c } = e,
+            u = (0, d.sO)();
+        if (s) {
+            let e = m(r, o);
             if (null == e) return null;
-            let o = u.intl.format(c.default.MkcFjx, {
+            let s = _.intl.format(p.default.MkcFjx, {
                 receiverName: e,
-                premiumGroupProductName: m,
+                premiumGroupProductName: u,
             });
-            switch (_) {
-                case s.bZ.ACCEPTED:
-                    (t = u.intl.formatToPlainString(c.default["5uwv8J"], { premiumGroupProductName: m })),
-                        (n = u.intl.formatToPlainString(c.default["W7e/z1"], { receiverName: e }));
+            switch (c) {
+                case d.bZ.ACCEPTED:
+                    (t = _.intl.formatToPlainString(p.default["5uwv8J"], { premiumGroupProductName: u })),
+                        (n = _.intl.formatToPlainString(p.default["W7e/z1"], { receiverName: e }));
                     break;
-                case s.bZ.REMOVED:
-                case s.bZ.NOT_FOUND:
-                case s.bZ.ERROR:
-                    (t = u.intl.formatToPlainString(c.default.YLvraS, { premiumGroupProductName: m })),
-                        (n = u.intl.format(c.default.BHxlIR, {
-                            premiumGroupProductName: m,
+                case d.bZ.REMOVED:
+                case d.bZ.NOT_FOUND:
+                case d.bZ.ERROR:
+                    (t = _.intl.formatToPlainString(p.default.YLvraS, { premiumGroupProductName: u })),
+                        (n = _.intl.format(p.default.BHxlIR, {
+                            premiumGroupProductName: u,
                             onClick: () => {
-                                (0, i.openUserSettings)(r.n.SUBSCRIPTIONS_PANEL, { section: l.oAB.SUBSCRIPTIONS });
+                                (0, a.openUserSettings)(i.n.SUBSCRIPTIONS_PANEL, { section: f.oAB.SUBSCRIPTIONS });
                             },
                         }));
                     break;
-                case s.bZ.PENDING:
+                case d.bZ.PENDING:
                 default:
-                    (t = u.intl.formatToPlainString(c.default["5uwv8J"], { premiumGroupProductName: m })),
-                        (n = u.intl.formatToPlainString(c.default["AmE0B/"], { receiverName: e }));
+                    (t = _.intl.formatToPlainString(p.default["5uwv8J"], { premiumGroupProductName: u })),
+                        (n = _.intl.formatToPlainString(p.default["AmE0B/"], { receiverName: e }));
             }
             return {
-                message: o,
+                message: s,
                 header: t,
                 body: n,
             };
         } else {
-            let e = (0, o.XM)(a),
-                r = u.intl.format(c.default["51Kv/4"], {
+            let e = (0, l.XM)(r),
+                i = _.intl.format(p.default["51Kv/4"], {
                     senderName: e,
-                    premiumGroupProductName: m,
-                    helpCenterLink: s.j3,
+                    premiumGroupProductName: u,
+                    helpCenterLink: d.j3,
                 });
-            switch (_) {
-                case s.bZ.ACCEPTED:
-                    (t = u.intl.string(c.default.ssge1y)),
-                        (n = u.intl.formatToPlainString(c.default.fTAcw3, { senderName: e }));
+            switch (c) {
+                case d.bZ.ACCEPTED:
+                    (t = _.intl.string(p.default.ssge1y)),
+                        (n = _.intl.formatToPlainString(p.default.fTAcw3, { senderName: e }));
                     break;
-                case s.bZ.REMOVED:
-                case s.bZ.NOT_FOUND:
-                case s.bZ.ERROR:
-                    (t = u.intl.formatToPlainString(c.default["AmLUw+"], { premiumGroupProductName: m })),
-                        (n = u.intl.formatToPlainString(c.default["7XAuyg"], { premiumGroupProductName: m }));
+                case d.bZ.REMOVED:
+                case d.bZ.NOT_FOUND:
+                case d.bZ.ERROR:
+                    (t = _.intl.formatToPlainString(p.default["AmLUw+"], { premiumGroupProductName: u })),
+                        (n = _.intl.formatToPlainString(p.default["7XAuyg"], { premiumGroupProductName: u }));
                     break;
-                case s.bZ.PENDING:
+                case d.bZ.PENDING:
                 default:
-                    (t = u.intl.string(c.default.ssge1y)),
-                        (n = u.intl.formatToPlainString(c.default.MkcdX8, {
+                    (t = _.intl.string(p.default.ssge1y)),
+                        (n = _.intl.formatToPlainString(p.default.MkcdX8, {
                             senderName: e,
-                            premiumGroupProductName: m,
+                            premiumGroupProductName: u,
                         }));
             }
             return {
-                message: r,
+                message: i,
                 header: t,
                 body: n,
             };
         }
+    },
+    g = () => {
+        var e;
+        let t = (0, c.Z)({ location: "PremiumGroupPurchase" }),
+            n = (0, r.e7)([s.Z], () => s.Z.getPremiumSubscription());
+        return (
+            !!t &&
+            (null == n || (u.No.has(null != (e = n.premiumPlanIdFromItems) ? e : "") && !n.isPurchasedExternally))
+        );
+    },
+    E = () => {
+        let e = (0, c.Z)({ location: "PremiumGroupPurchase" }),
+            t = g(),
+            n = (0, r.e7)([o.default], () => o.default.getCurrentUser());
+        return !!e && !!t && (null == n || !n.isPremiumWithPremiumGroup());
     };

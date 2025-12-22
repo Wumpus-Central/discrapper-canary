@@ -23,7 +23,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 showProfileWidgets: r,
                 showDisplayNameStyles: i,
                 recurring3PPromotionExperiment: a,
-                premiumGroupExperiment: o,
+                showPremiumGroup: o,
             } = e,
             s = null != n.tenureBadge ? [n.tenureBadge] : [],
             l = f - s.length,
@@ -54,7 +54,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 showProfileWidgets: s,
                 showDisplayNameStyles: u,
                 recurring3PPromotionExperiment: d,
-                premiumGroupExperiment: f,
+                showPremiumGroup: f,
             } = e,
             _ = [];
         switch (n) {
@@ -73,7 +73,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                     showProfileWidgets: s,
                     showDisplayNameStyles: u,
                     recurring3PPromotionExperiment: d,
-                    premiumGroupExperiment: f,
+                    showPremiumGroup: f,
                 });
                 break;
             case l.gM.CARD_CAROUSEL_FIRST_ROW:

@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(120356),
     i = n.n(l),
     a = n(481060),
-    s = n(241986),
-    o = n(639119),
+    s = n(639119),
+    o = n(260720),
     u = n(973007),
     c = n(74538),
     d = n(987209),
@@ -20,7 +20,7 @@ function v(e) {
         {
             setSelectedSkuId: i,
             activeSubscription: a,
-            startedPaymentFlowWithPaymentSourcesRef: s,
+            startedPaymentFlowWithPaymentSourcesRef: o,
             setSelectedPlanId: u,
             priceOptions: y,
             defaultPlanId: j,
@@ -28,7 +28,7 @@ function v(e) {
         } = (0, p.JL)(),
         { isGift: O, claimableRewards: S } = (0, d.wD)(),
         x = O && null != S && S.length > 0,
-        P = (0, o.N)(l);
+        P = (0, s.N)(l);
     return (0, r.jsx)(b, {
         selectSku: (e) =>
             (function (e) {
@@ -67,7 +67,7 @@ function v(e) {
                 handleStepChange: t,
                 isGift: O,
                 userTrialOffer: P,
-                startedPaymentFlowWithPaymentSources: s.current,
+                startedPaymentFlowWithPaymentSources: o.current,
                 setSelectedPlanId: u,
                 defaultPlanId: j,
             }),
@@ -94,11 +94,11 @@ function b(e) {
             selectSku: t,
             onClose: n,
             isGift: l,
-            priceOptions: o,
+            priceOptions: s,
             showPromotionalGiftBanner: d,
             onSelectPremiumGroup: p,
         } = e,
-        m = (0, s.Z)({ location: "PremiumPaymentSKUSelectStep" }) && !l;
+        m = (0, o.x9)() && !l;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.xBx, {
@@ -129,7 +129,7 @@ function b(e) {
                       children: (0, r.jsx)(u.wz, {
                           onSelectSku: (e) => t((0, c.Wz)(e)),
                           onSelectPremiumGroup: p,
-                          priceOptions: o,
+                          priceOptions: s,
                           showPromotionalGiftBanner: d,
                       }),
                   })
@@ -139,7 +139,7 @@ function b(e) {
                       children: (0, r.jsx)(u.ZP, {
                           onSelectSku: (e) => t((0, c.Wz)(e)),
                           isGift: l,
-                          priceOptions: o,
+                          priceOptions: s,
                           showPromotionalGiftBanner: d,
                       }),
                   }),

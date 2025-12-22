@@ -212,7 +212,7 @@ let I = (e) => {
         let E = t.author,
             b = h.id === E.id;
         if (d || l === m.bZ.FETCHING || l === m.bZ.UNKNOWN) return (0, r.jsx)(s.OR, { isHorizontal: !0 });
-        let y = (0, _.x)({
+        let y = (0, _.xf)({
             sender: E,
             channel: n,
             isSender: b,
