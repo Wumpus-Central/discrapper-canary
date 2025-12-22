@@ -61,19 +61,20 @@ function T(e) {
 }
 function C(e) {
     let { promotions: t, consumedInboundPromotionId: n } = e;
-    t.forEach((e) => {
-        let t = s.Z.createFromServer(e);
-        if (!0 === (0, c.pD)({ promotionPartner: t.outboundTitle })) t.id in y || (y[t.id] = t);
-        else if (e.promotion_type === u.$k.THIRD_PARTY) b[u.$k.THIRD_PARTY_OUTBOUND][e.id] = t;
-        else {
-            var n;
-            (b[e.promotion_type][e.id] = t),
-                null == (n = e.marketing_components) ||
-                    n.forEach((e) => {
-                        v.set(e.component_type, l.Z.createFromServer(e));
-                    });
-        }
-    }),
+    (y = {}),
+        t.forEach((e) => {
+            let t = s.Z.createFromServer(e);
+            if (!0 === (0, c.pD)({ promotionPartner: t.outboundTitle })) t.id in y || (y[t.id] = t);
+            else if (e.promotion_type === u.$k.THIRD_PARTY) b[u.$k.THIRD_PARTY_OUTBOUND][e.id] = t;
+            else {
+                var n;
+                (b[e.promotion_type][e.id] = t),
+                    null == (n = e.marketing_components) ||
+                        n.forEach((e) => {
+                            v.set(e.component_type, l.Z.createFromServer(e));
+                        });
+            }
+        }),
         (E = Date.now()),
         (g = !1),
         p.hasFetchedConsumedInboundPromotionId ||

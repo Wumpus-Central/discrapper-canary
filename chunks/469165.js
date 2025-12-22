@@ -444,6 +444,7 @@ let D = {
     F = (e) => {
         let { analyticsLocations: t } = e;
         u.default.track(S.rMx.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
+            h.ZP.fetchActivePromotions(),
             (0, s.ZDy)(async () => {
                 let { Recurring3PModal: e } = await Promise.resolve().then(n.bind(n, 469165));
                 return (t) => (0, r.jsx)(e, P({}, t));
