@@ -5129,6 +5129,7 @@ var np = (function (e) {
             (e.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT = "user_settings_in_app_feedback_opted_out"),
             (e.APP_ICON_UPDATED = "app_icon_updated"),
             (e.APP_ICON_PREVIEW_VIEWED = "app_icon_preview_viewed"),
+            (e.APP_ICON_AUTO_RESET = "app_icon_auto_reset"),
             (e.CHANNEL_LIST_END_REACHED = "channel_list_end_reached"),
             (e.SHOP_LINK_MENTION_CLICKED = "shop_link_mention_clicked"),
             (e.COLLECTIBLES_SHOP_VIEWED = "collectibles_shop_viewed"),
