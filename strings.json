@@ -4554,6 +4554,8 @@
   "zQ1+Jw": "We can't hear you!",
   "UQolSy": "Cancel anytime in Subscriptions Settings.",
   "dbGGui": "By clicking confirm, your Nitro subscription will reactivate. You’ll be charged **!!{price}!!** on **!!{date}!!**, and your billing cycle will continue as scheduled.",
+  "kXtIIn": "By clicking confirm, your Nitro subscription will reactivate. On your next billing cycle, we’ll use your Nitro gift, and you’ll be charged **!!{discountedPrice}!!** on **!!{date}!!**. After that, your subscription will renew for **!!{regularPrice}!!** plus any applicable taxes per !!{billingPeriod}!!.",
+  "G8IxyE": "By clicking confirm, your Nitro subscription will reactivate. On your next billing cycle, we’ll use your Nitro gift, and you’ll be charged **!!{discountedPrice}!!** on **!!{date}!!**. After that, your subscription will renew for **!!{regularPrice}!!** per !!{billingPeriod}!!.",
   "fYEWlq": "Resubscribe to Nitro",
   "FCsTCk": "Welcome back! You now have superpowered perks and Server Boosts once again. Enjoy friend!",
   "apGCUT": "Check your phone!",
