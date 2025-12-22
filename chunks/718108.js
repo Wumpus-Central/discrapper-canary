@@ -18,10 +18,6 @@ function p(e) {
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
-            (0, r.jsx)(a.ZX5, {
-                className: f.shine,
-                shineSize: a.rHe.SMALL,
-            }),
             (0, r.jsx)("div", {
                 className: f.closeButton,
                 children: (0, r.jsx)(a.hU, {
