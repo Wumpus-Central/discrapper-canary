@@ -22115,6 +22115,10 @@ screen and (max-width:485px) {
     width: fit-content
 }
 
+._0c507a672a52b3e0-guildBoostUnavailableNotice._0c507a672a52b3e0-lightTheme {
+    border: 2px solid var(--black-500)
+}
+
 ._0c507a672a52b3e0-guildBoostUnavailableNoticeText {
     font-size: 16px
 }

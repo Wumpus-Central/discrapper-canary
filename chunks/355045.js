@@ -105,7 +105,7 @@ let I = function (e) {
                         : null,
                 ],
             }),
-            A ? (0, r.jsx)(m.Z, {}) : null,
+            A ? (0, r.jsx)(m.Z, { alwaysWhite: !0 }) : null,
             (0, r.jsxs)("div", {
                 className: S.guildBoostCtas,
                 children: [

@@ -1,21 +1,29 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => _ });
 var r = n(54381),
-    i = n(28664),
-    a = n(481060),
-    o = n(282793),
-    s = n(353149),
-    l = n(388032),
-    c = n(787411);
-let u = () =>
-    (0, r.jsx)(i.u, {
-        text: l.intl.formatToPlainString(s.default["5xN/C1"], { premiumGroupProductName: (0, o.sO)() }),
+    i = n(120356),
+    a = n.n(i),
+    o = n(28664),
+    s = n(780384),
+    l = n(481060),
+    c = n(410030),
+    u = n(282793),
+    d = n(353149),
+    f = n(388032),
+    p = n(787411);
+let _ = (e) => {
+    let { alwaysWhite: t = !1 } = e,
+        n = (0, c.Fg)(),
+        i = (0, s.ap)(n);
+    return (0, r.jsx)(o.u, {
+        text: f.intl.formatToPlainString(d.default["5xN/C1"], { premiumGroupProductName: (0, u.sO)() }),
         children: (0, r.jsx)("div", {
-            className: c.guildBoostUnavailableNotice,
-            children: (0, r.jsx)(a.Text, {
+            className: a()(p.guildBoostUnavailableNotice, { [p.lightTheme]: !t && i }),
+            children: (0, r.jsx)(l.Text, {
                 variant: "eyebrow",
-                color: "always-white",
-                className: c.guildBoostUnavailableNoticeText,
-                children: l.intl.string(l.t["5nrJDO"]),
+                color: t ? "always-white" : void 0,
+                className: p.guildBoostUnavailableNoticeText,
+                children: f.intl.string(f.t["5nrJDO"]),
             }),
         }),
     });
+};
