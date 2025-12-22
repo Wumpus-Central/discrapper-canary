@@ -69,7 +69,7 @@ var r = n(54381),
     em = n(703656),
     eb = n(359110),
     ey = n(607802),
-    eO = n(14091),
+    eO = n(673676),
     ex = n(6025),
     ej = n(897473),
     ev = n(922482),
@@ -107,8 +107,8 @@ var r = n(54381),
     e0 = n(194082),
     e1 = n(176505),
     e4 = n(981631),
-    e3 = n(918559),
-    e7 = n(354459),
+    e7 = n(918559),
+    e3 = n(354459),
     e8 = n(921944),
     e2 = n(408491),
     e9 = n(440493),
@@ -605,7 +605,7 @@ class tl extends i.PureComponent {
             }),
             tt(this, "renderStreamQualityLiveIndicatorToolbarItem", () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e7.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e3.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           V.Z,
@@ -893,7 +893,7 @@ let ta = (0, j.Z)(tl),
         }, [D, c, P, R]);
         let L = (0, p.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
             M = (0, p.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            k = null != L && !(0, S.Z)(null == c ? void 0 : c.id) && M === e3.Ez.PANEL,
+            k = null != L && !(0, S.Z)(null == c ? void 0 : c.id) && M === e7.Ez.PANEL,
             G = (0, p.e7)(
                 [eY.Z],
                 () => null != c && c.isVocalThread() && !d().isEmpty(eY.Z.getVoiceStatesForChannel(c.id)),
@@ -908,8 +908,8 @@ let ta = (0, j.Z)(tl),
             Q = (0, p.e7)(
                 [N.Z, I.ZP],
                 () =>
-                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e3.Ez.PANEL
-                        ? I.ZP.getFocusedLayout() === e3.MI.NO_CHAT
+                    null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e7.Ez.PANEL
+                        ? I.ZP.getFocusedLayout() === e7.MI.NO_CHAT
                             ? e4.AEg.NO_CHAT
                             : e4.AEg.NORMAL
                         : null != s
