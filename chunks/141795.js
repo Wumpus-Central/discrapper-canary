@@ -416,7 +416,7 @@ class k extends S.ZP {
                     error: e instanceof Error ? e.message : String(e),
                 });
             }
-        if (0 === this.currentSize) return void this.handleError(A.evJ.INVALID_FILE_ASSET);
+        if (0 === this.currentSize) return void this.handleError(A.evJ.ENTITY_EMPTY);
         if ((null != (e = this.currentSize) ? e : 0) > o.getMaxFileSize(this.channelId))
             return void this.handleError(A.evJ.ENTITY_TOO_LARGE);
         if (c.ZP.get("upload_fail_50") && 0.5 > Math.random())

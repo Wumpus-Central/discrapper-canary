@@ -1,8 +1,9 @@
-n.d(t, { Z: () => o });
-var r = n(865275),
-    i = n(237992),
-    a = n(959517);
-class o extends r.Z {
+n.d(t, { Z: () => s }), n(415506);
+var r = n(141795),
+    i = n(865275),
+    a = n(237992),
+    o = n(959517);
+class s extends i.Z {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
@@ -25,16 +26,24 @@ class o extends r.Z {
                 this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
             )
                 return t;
-            this.setUploadingTextForUI(), await (0, i.Z)(this.files, !0, this._recomputeProgress.bind(this));
-        } catch (e) {
+            this.setUploadingTextForUI(), await (0, a.Z)(this.files, !0, this._recomputeProgress.bind(this));
+        } catch (a) {
+            let e = this.files.find((e) => e.status === r.mw.ERROR),
+                t = null == e ? void 0 : e.error,
+                n = a instanceof Error ? a.message : String(a),
+                i = {
+                    type: o.xi.ERROR_SOURCE_UNKNOWN,
+                    msg: n,
+                };
             throw (
-                (this._handleException(e),
+                (this._handleError({
+                    code: t,
+                    reason: i,
+                }),
                 {
                     file: this._file,
-                    reason: {
-                        type: a.xi.ERROR_SOURCE_UNKNOWN,
-                        msg: e.toString(),
-                    },
+                    code: t,
+                    reason: i,
                 })
             );
         }
