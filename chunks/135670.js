@@ -58,9 +58,6 @@ class c extends r.Z {
     }
     setAsyncVideoInputDeviceInit(e) {}
     setAsyncClipsSourceDeinit(e) {}
-    getSupportedVideoCodecs(e) {
-        e([]);
-    }
     getCodecCapabilities(e) {
         e("");
     }
@@ -123,9 +120,6 @@ class c extends r.Z {
     getLoopback() {
         return !1;
     }
-    setH264Enabled(e) {}
-    setAv1Enabled(e) {}
-    setH265Enabled(e) {}
     setExperimentFlag(e, t) {}
     startAecDump() {}
     stopAecDump() {}

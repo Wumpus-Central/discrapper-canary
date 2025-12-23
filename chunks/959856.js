@@ -211,9 +211,6 @@ class N extends s.Z {
     }
     setAsyncVideoInputDeviceInit(e) {}
     setAsyncClipsSourceDeinit(e) {}
-    getSupportedVideoCodecs(e) {
-        e([]);
-    }
     getCodecCapabilities(e) {
         e("");
     }
@@ -290,9 +287,6 @@ class N extends s.Z {
     getLoopback() {
         return null != this.loopback;
     }
-    setH264Enabled(e) {}
-    setAv1Enabled(e) {}
-    setH265Enabled(e) {}
     getCodecSurvey() {
         return Promise.reject(Error("getCodecSurvey is not implemented on MediaEngine of browsers."));
     }
