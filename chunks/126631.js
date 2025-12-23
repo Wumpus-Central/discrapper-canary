@@ -31,11 +31,12 @@ function y(e) {
         } = e,
         [S, I] = i.useState(null != f ? f : O),
         [T, C] = i.useState((0, s.JM)(S)),
-        A = i.useRef(!1);
-    function N(e, t, n) {
+        A = i.useRef(O),
+        N = i.useRef(!1);
+    function P(e, t, n) {
         t !== S && (I(t), C(n), c(t));
     }
-    function P() {
+    function R() {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
@@ -44,12 +45,13 @@ function y(e) {
         });
     }
     i.useEffect(() => {
-        if (void 0 === f) {
+        if (A.current !== O) {
             let e = (0, s.JM)(O);
             I(O), C(e);
         }
-    }, [f, O]);
-    let R = (0, u.wy)("AboutMeSection");
+        A.current = O;
+    }, [O]);
+    let w = (0, u.wy)("AboutMeSection");
     return (0, r.jsxs)(p.Z, {
         title: t,
         titleId: g,
@@ -63,22 +65,22 @@ function y(e) {
                 className: h.bioTextAreaContainer,
                 innerClassName: h.bioTextArea,
                 maxCharacterCount: _.tPV,
-                onChange: N,
+                onChange: P,
                 placeholder: y,
                 channel: E,
                 textValue: S,
                 richValue: T,
-                emojiPickerCloseOnModalOuterClick: R,
-                parentModalKey: R ? d.USER_SETTINGS_MODAL_KEY : void 0,
+                emojiPickerCloseOnModalOuterClick: w,
+                parentModalKey: w ? d.USER_SETTINGS_MODAL_KEY : void 0,
                 type: o.Ie.PROFILE_BIO_INPUT,
                 onBlur: () => {
-                    A.current = !1;
+                    N.current = !1;
                 },
                 onFocus: () => {
-                    A.current = !0;
+                    N.current = !0;
                 },
-                focused: A.current,
-                onSubmit: P,
+                focused: N.current,
+                onSubmit: R,
             }),
             (0, r.jsx)(a.nn4, {
                 id: b,
