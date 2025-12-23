@@ -583,6 +583,7 @@ function t9() {
         }
         if (
             ((0, eh.isWindows)() &&
+                (null == tF ? void 0 : tF.startsWith("AMD")) &&
                 (0, en.C)("MediaEngineStore").enabled &&
                 e.setExperimentFlag(eL.V8.WMF_GPU_ENCODE, !0),
             e4.setHasFullbandPerformance((0, w.Z)()),
