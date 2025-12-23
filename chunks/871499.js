@@ -229,7 +229,7 @@ function A(e) {
     let M = null != (t = R.onContextMenu) ? t : y,
         k = null == y && !N,
         U = null != y && !N,
-        G = N && null != y,
+        G = N && null != y && !x,
         Z = (0, r.jsx)(
             I,
             O(b({}, R), {
