@@ -80,94 +80,103 @@ function h(e) {
     }[e];
 }
 function g(e) {
+    var t;
     let {
-            deviceType: t,
-            analyticsLocations: n,
-            asSubmenu: o = !1,
-            onDeviceSelect: u,
-            showAllDevices: f = !1,
-            selectedDeviceId: _,
-            menuGroupOverrideProps: g,
-            menuItemOverrideProps: E,
-            computeMenuRadioItemOverrideProps: b,
+            deviceType: n,
+            analyticsLocations: o,
+            asSubmenu: u = !1,
+            onDeviceSelect: f,
+            showAllDevices: _ = !1,
+            selectedDeviceId: g,
+            menuGroupOverrideProps: E,
+            menuItemOverrideProps: b,
+            computeMenuRadioItemOverrideProps: y,
         } = e,
-        { setDevice: y, getLabel: O, getLocation: v } = h(t),
-        [S, I] = i.useState(f),
-        T = v(n[n.length - 1]),
-        [C, A] = (0, l.Ls)(t, { location: T }),
-        N = S ? C.concat(A) : C,
-        { id: P, name: R } = (0, l.p6)(t),
-        w = null != _ ? _ : P,
-        D = N.map((e) => {
-            let i,
-                { id: o, disabled: s, name: c } = e,
-                d = c,
-                f = (0, l.rX)(c);
+        { setDevice: O, getLabel: v, getLocation: S } = h(n),
+        [I, T] = i.useState(_),
+        C = S(o[o.length - 1]),
+        [A, N] = (0, l.Ls)(n, { location: C }),
+        P = I ? A.concat(N) : A,
+        { id: R, name: w } = (0, l.p6)(n),
+        D = null != g ? g : R,
+        x = i.useMemo(
+            () =>
+                A.concat(N).find((e) => {
+                    let { id: t } = e;
+                    return t === D;
+                }),
+            [A, N, D],
+        ),
+        L = P.map((e) => {
+            let t,
+                { id: i, disabled: s, name: c } = e,
+                u = c,
+                d = (0, l.rX)(c);
             return (
-                null != f && ((d = f.prefix), (i = f.subName)),
+                null != d && ((u = d.prefix), (t = d.subName)),
                 (0, r.jsx)(
                     a.k5B,
                     p(
                         {
-                            id: "".concat(t, "-").concat(o),
-                            group: "".concat(t, "-devices"),
+                            id: "".concat(n, "-").concat(i),
+                            group: "".concat(n, "-devices"),
                             disabled: s,
-                            label: d,
+                            label: u,
                             subtext:
-                                null != i &&
+                                null != t &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
-                                    children: i,
+                                    children: t,
                                 }),
-                            checked: o === w,
+                            checked: i === D,
                             action: () => {
                                 var e;
-                                (null == (e = null == u ? void 0 : u(o)) || e) && y(o, { analyticsLocations: n });
+                                (null == (e = null == f ? void 0 : f(i)) || e) && O(i, { analyticsLocations: o });
                             },
                         },
-                        null == b ? void 0 : b(o),
+                        null == y ? void 0 : y(i),
                     ),
-                    "".concat(t, "-").concat(o),
+                    "".concat(n, "-").concat(i),
                 )
             );
         }),
-        x = (0, r.jsx)(a.sNh, {
+        j = (0, r.jsx)(a.sNh, {
             id: "SHOW_MORE",
             label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
             action: () => {
-                I(!0),
+                T(!0),
                     s.default.track(c.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
-                        device_type: t,
-                        location: T,
-                        shown_device_count: C.length,
-                        hidden_device_count: A.length,
-                        location_stack: n,
+                        device_type: n,
+                        location: C,
+                        shown_device_count: A.length,
+                        hidden_device_count: N.length,
+                        location_stack: o,
                     });
             },
         }),
-        L = !S && (null == A ? void 0 : A.length) > 0;
-    return o
+        M = !I && (null == N ? void 0 : N.length) > 0;
+    return u
         ? (0, r.jsxs)(
               a.sNh,
               m(
                   p(
                       {
-                          id: "".concat(t, "-devices"),
-                          label: O(),
-                          subtext: R,
+                          id: "".concat(n, "-devices"),
+                          label: v(),
+                          subtext: null != (t = null == x ? void 0 : x.name) ? t : w,
                       },
-                      E,
+                      b,
                   ),
                   {
-                      children: [D, L && x],
+                      children: [L, M && j],
                   },
               ),
           )
         : (0, r.jsxs)(
               a.kSQ,
-              m(p({ label: O() }, g), {
-                  children: [D, L && x],
+              m(p({ label: v() }, E), {
+                  children: [L, M && j],
               }),
           );
 }
