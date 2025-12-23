@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(911969),
@@ -24,7 +24,26 @@ function p(e, t, n) {
 function f(e) {
     e.stopPropagation();
 }
-class h extends r.PureComponent {
+function h() {
+    let e = window.getSelection();
+    if (null == e)
+        return {
+            selection: null,
+            rangeStartContainer: null,
+            rangeStartOffset: null,
+        };
+    let t = e.getRangeAt(0);
+    return {
+        selection: e,
+        rangeStartContainer: t.startContainer,
+        rangeStartOffset: t.startOffset,
+    };
+}
+function m(e, t, n) {
+    let i = document.createRange();
+    i.setStart(t, n), i.collapse(!0), e.removeAllRanges(), e.addRange(i);
+}
+class g extends r.PureComponent {
     render() {
         let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
             s = (0, i.jsx)("div", {
@@ -122,6 +141,20 @@ class h extends r.PureComponent {
                 if (e.key === c.vn.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
+                }
+                if (e.key === c.vn.HOME && !e.shiftKey) {
+                    e.preventDefault();
+                    let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = h();
+                    if (null == t || null == n || null == i) return;
+                    m(t, n, 0);
+                }
+                if (e.key === c.vn.END && !e.shiftKey) {
+                    e.preventDefault();
+                    let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = h();
+                    if (null == t || null == n || null == i) return;
+                    let r = n.textContent;
+                    if (null == r) return;
+                    m(t, n, r.length);
                 }
             });
     }
