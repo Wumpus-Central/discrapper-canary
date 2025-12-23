@@ -22,13 +22,13 @@ var r = n(54381),
     S = n(610794),
     I = n(935147),
     T = n(643879),
-    C = n(246946),
-    A = n(25990),
-    N = n(594174),
-    P = n(626135),
-    R = n(74538),
-    w = n(413182),
-    D = n(695346),
+    C = n(113334),
+    A = n(246946),
+    N = n(25990),
+    P = n(594174),
+    R = n(626135),
+    w = n(74538),
+    D = n(413182),
     x = n(265159),
     L = n(532495),
     j = n(981631),
@@ -109,12 +109,12 @@ function V(e, t) {
 }
 function H() {
     var e;
-    let t = (0, s.e7)([N.default], () => {
-            let e = N.default.getCurrentUser();
+    let t = (0, s.e7)([P.default], () => {
+            let e = P.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        n = (0, s.e7)([C.Z], () => C.Z.hidePersonalInformation),
-        a = (0, s.cj)([A.Z], () => A.Z.getAllPending()),
+        n = (0, s.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        a = (0, s.cj)([N.Z], () => N.Z.getAllPending()),
         { pendingBio: U, pendingAvatar: Z, pendingNameplate: V } = a,
         H = B(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
         Y = (0, T.SD)({
@@ -125,13 +125,13 @@ function H() {
             pendingValue: V,
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
-        K = (0, s.e7)([A.Z], () => A.Z.showNotice()),
-        z = D.dN.useSetting() && null != U ? h.ZP.parse(void 0, U).content : U,
-        q = R.ZP.canUsePremiumProfileCustomization(t),
+        K = (0, s.e7)([N.Z], () => N.Z.showNotice()),
+        z = (0, C.Z)() && null != U ? h.ZP.parse(void 0, U).content : U,
+        q = w.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: Q, newestAnalyticsLocation: X } = (0, _.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
     i.useEffect(() => () => u.Z.wait(d.W3), []);
     let [J, $] = i.useState(!1),
-        { showRedesign: ee } = w.b.useExperiment({ location: "profile customization" }),
+        { showRedesign: ee } = D.b.useExperiment({ location: "profile customization" }),
         et = !q,
         en = i.useRef(null);
     return n
@@ -200,7 +200,7 @@ function H() {
                               variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  P.default.track(j.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  R.default.track(j.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == en ||

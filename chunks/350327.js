@@ -21,12 +21,12 @@ var r = n(442837),
     a = n(570140),
     o = n(881052),
     s = n(957730),
-    l = n(695346),
-    c = n(594174),
-    u = n(626135),
-    d = n(956664),
-    f = n(960048),
-    p = n(621853),
+    l = n(594174),
+    c = n(626135),
+    u = n(956664),
+    d = n(960048),
+    f = n(621853),
+    p = n(113334),
     _ = n(981631),
     m = n(474936);
 function h(e, t, n) {
@@ -59,17 +59,17 @@ function g(e) {
     return e;
 }
 function E(e) {
-    u.default.track(_.rMx.PREMIUM_FEATURE_TRY_OUT, {
+    c.default.track(_.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
         feature_tier: m.h1.PREMIUM_STANDARD,
     });
 }
 async function b(e, t) {
     var n;
-    let r = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+    let r = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
     if (null == r) return;
-    let u = l.dN.getSetting();
-    null != e.bio && u && (e.bio = s.ZP.parse(void 0, e.bio).content);
+    let c = (0, p.b)();
+    null != e.bio && c && (e.bio = s.ZP.parse(void 0, e.bio).content);
     try {
         a.Z.dispatch({
             type: "USER_PROFILE_UPDATE_START",
@@ -113,7 +113,7 @@ async function b(e, t) {
 }
 function y(e, t) {
     var n;
-    let r = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+    let r = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
     null != r &&
         a.Z.dispatch({
             type: "USER_PROFILE_PIN_BADGES_ON_CLIENT",
@@ -129,7 +129,7 @@ function v(e) {
     (null == e ? void 0 : e.startsWith("https:")) === !0
         ? fetch(e)
               .then((e) => e.blob())
-              .then((e) => (0, d.fD)(e))
+              .then((e) => (0, u.fD)(e))
               .then((e) => S(e))
         : null != e && S(e);
 }
@@ -202,7 +202,7 @@ function x(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(m.QP.PRESET);
 }
 async function L() {
-    if (null == p.Z.applicationWidgetApplicationConfigs || !(p.Z.applicationWidgetApplicationConfigs.length > 0)) {
+    if (null == f.Z.applicationWidgetApplicationConfigs || !(f.Z.applicationWidgetApplicationConfigs.length > 0)) {
         a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
         try {
             let e = await i.tn.get({
@@ -216,14 +216,14 @@ async function L() {
         } catch (e) {
             throw (
                 (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_FAILURE" }),
-                f.Z.captureException(e),
+                d.Z.captureException(e),
                 e)
             );
         }
     }
 }
-let j = (0, r.Kb)(p.Z, {
+let j = (0, r.Kb)(f.Z, {
     getQueryId: _.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
-    get: () => p.Z.applicationWidgetApplicationConfigs,
+    get: () => f.Z.applicationWidgetApplicationConfigs,
     load: () => L(),
 });
