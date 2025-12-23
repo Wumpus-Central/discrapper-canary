@@ -27,7 +27,7 @@ function c(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(s.ZP, {
                             onClose: t,
-                            onSelect: t,
+                            onSelect: void 0,
                         });
                     },
                     children: (e) =>
