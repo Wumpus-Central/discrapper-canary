@@ -88387,22 +88387,33 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 ._9d98d3a9398a6f7d-voiceWidgetContainer {
+    align-items: flex-start;
     background: rgba(0, 0, 0, .16);
     border: 1px dashed hsla(0, 0%, 100%, .16);
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
     padding: 12px;
     width: 100%
 }
 
-._9d98d3a9398a6f7d-voiceWidgetContainer,
-._9d98d3a9398a6f7d-widgetContainer {
-    align-items: flex-start;
+._9d98d3a9398a6f7d-widgetSettingsContainer {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 8px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    justify-content: center;
+    min-height: 270px;
+    padding: 32px;
+    width: 100%
 }
 
 ._9d98d3a9398a6f7d-widgetContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
     gap: 4px;
     -webkit-padding-start: 24px;
     padding-inline-start: 24px

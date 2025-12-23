@@ -18,17 +18,18 @@ function s(e) {
             markers: m,
             onMarkerRender: h,
             stickToMarkers: g,
+            fieldLayout: E,
         } = t,
-        [E] = i.useState(() => s()),
-        b = u(),
-        y = null == d ? void 0 : d(),
-        O = null == f ? void 0 : f();
+        [b] = i.useState(() => s()),
+        y = u(),
+        O = null == d ? void 0 : d(),
+        v = null == f ? void 0 : f();
     return (0, r.jsx)(o.X, {
         children: (0, r.jsx)(a.iRW, {
-            label: b,
-            description: y,
-            disabled: O,
-            initialValue: E,
+            label: y,
+            description: O,
+            disabled: v,
+            initialValue: b,
             minValue: l,
             maxValue: c,
             onValueRender: p,
@@ -38,6 +39,7 @@ function s(e) {
             markers: m,
             onMarkerRender: h,
             stickToMarkers: g,
+            layout: E,
         }),
     });
 }

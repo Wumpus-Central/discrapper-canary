@@ -8,7 +8,7 @@ var i = n(442837),
     l = n(663389),
     c = n(309739),
     u = n(293389),
-    d = n(327885),
+    d = n(794704),
     f = n(326528),
     p = n(332325),
     _ = n(981631),
@@ -26,10 +26,7 @@ function g() {
                 case p.Z.CLIPS:
                     return (0, r.jsx)(s.Z, {});
                 case p.Z.OVERLAY:
-                    return (0, r.jsx)(d.Z, {
-                        className: h.body,
-                        showHeader: !1,
-                    });
+                    return (0, r.jsx)(d.ZP, {});
                 case p.Z.ACTIVITY_PRIVACY:
                     return (0, r.jsx)(c.ZP, {});
                 case p.Z.MY_GAMES:
