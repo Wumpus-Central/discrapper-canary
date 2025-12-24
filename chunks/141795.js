@@ -705,10 +705,10 @@ class k extends S.ZP {
         });
     }
     trackUploadFinished(e) {
-        var t, n, r, i, a, o;
-        let s = null != this.startTime ? performance.now() - this.startTime : -1;
+        var t, n, r, i, a;
+        let o = null != this.startTime ? performance.now() - this.startTime : -1;
         g.default.track(A.rMx.ATTACHMENT_UPLOAD_FINISHED, {
-            duration_ms: s,
+            duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
             final_state: e,
@@ -724,7 +724,6 @@ class k extends S.ZP {
             converted_mime_type: null != (r = this.uploadAnalytics.convertedMimeType) ? r : "unknown",
             image_compression_quality: null != (i = this.uploadAnalytics.imageCompressionQuality) ? i : 0,
             video_compression_quality: null != (a = this.uploadAnalytics.videoCompressionQuality) ? a : "unknown",
-            image_encoder_type: null != (o = this.uploadAnalytics.imageEncoderType) ? o : "unknown",
             was_converted:
                 null != this.uploadAnalytics.convertedMimeType &&
                 this.mimeType !== this.uploadAnalytics.convertedMimeType,
