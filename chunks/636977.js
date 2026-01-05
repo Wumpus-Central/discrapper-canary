@@ -44,6 +44,7 @@ var r = (function (e) {
         (e[(e.RUNNING_ACTIVITY = 40)] = "RUNNING_ACTIVITY"),
         (e[(e.VIDEO_MODAL_PRIMARY_CTA = 41)] = "VIDEO_MODAL_PRIMARY_CTA"),
         (e[(e.QUEST_HOME_TAKEOVER = 42)] = "QUEST_HOME_TAKEOVER"),
+        (e[(e.USER_PROFILE_ACTIVITY = 43)] = "USER_PROFILE_ACTIVITY"),
         e
     );
 })({});
