@@ -104,7 +104,7 @@ let G = (e) => {
             text: R.intl.string(R.t.y2b7CA),
         });
     },
-    H = () => {
+    B = () => {
         let { noCache: e, includeUnpublished: t } = (0, x.Z)();
         return (
             (0, T.E)(
@@ -120,7 +120,7 @@ let G = (e) => {
             null
         );
     },
-    B = (e) => {
+    H = (e) => {
         var {
                 selected: t,
                 locationState: n,
@@ -162,7 +162,7 @@ let G = (e) => {
             I = w.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                O && (0, r.jsx)(H, {}),
+                O && (0, r.jsx)(B, {}),
                 (0, r.jsx)(
                     g.Qj,
                     k(
@@ -188,7 +188,7 @@ let G = (e) => {
             ],
         });
     },
-    V = (e) => (0, r.jsx)(B, k(M({}, e), { children: (0, r.jsx)(G, {}) })),
+    V = (e) => (0, r.jsx)(H, k(M({}, e), { children: (0, r.jsx)(G, {}) })),
     F = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -253,7 +253,7 @@ let G = (e) => {
             [x, A] = i.useState(!1),
             [Z, w] = i.useState(!1),
             L = i.useRef(null),
-            H = i.useRef(null),
+            B = i.useRef(null),
             V = (0, h.ZP)(),
             Y = (0, d.wj)(V),
             W = (0, S.p)({ location: "CollectiblesShopButton" }),
@@ -275,19 +275,19 @@ let G = (e) => {
                     let t = () => {
                         w(W.useNewHoverStyle && z(L));
                     };
-                    t(), (H.current = requestAnimationFrame(t)), null == e || e();
+                    t(), (B.current = requestAnimationFrame(t)), null == e || e();
                 },
                 [C.assetIds.length, W.useNewHoverStyle],
             ),
             Q = i.useCallback((e) => {
                 A(!1),
                     w(!1),
-                    null != H.current && (cancelAnimationFrame(H.current), (H.current = null)),
+                    null != B.current && (cancelAnimationFrame(B.current), (B.current = null)),
                     null == e || e();
             }, []);
         i.useEffect(
             () => () => {
-                null != H.current && cancelAnimationFrame(H.current);
+                null != B.current && cancelAnimationFrame(B.current);
             },
             [],
         );
@@ -307,7 +307,7 @@ let G = (e) => {
             "aria-label": "string" == typeof J ? J : R.intl.string(R.t.rSXaxY),
             children: (e) =>
                 (0, r.jsxs)(
-                    B,
+                    H,
                     k(
                         M(
                             k(
@@ -362,13 +362,14 @@ let G = (e) => {
             });
         }, [t]);
         return (0, r.jsx)(p.aML, {
+            "data-migration-pending": !0,
             text: l,
             tooltipClassName: D.marketingBadgeTooltip,
             position: "right",
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(B, k(M({}, n, e), { children: (0, r.jsx)(G, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(H, k(M({}, n, e), { children: (0, r.jsx)(G, { color: t.badgeColor }) })),
         });
     },
     q = (e) => {
@@ -408,7 +409,7 @@ let G = (e) => {
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(
-                        B,
+                        H,
                         k(M({}, s), {
                             onClick: () => o(L.L.TAKE_ACTION),
                             listItemRef: c,
@@ -450,7 +451,7 @@ let G = (e) => {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
-                    B,
+                    H,
                     k(M({}, n), {
                         onClick: () => t(L.L.TAKE_ACTION),
                         listItemRef: l,
@@ -491,5 +492,5 @@ let G = (e) => {
             }
         return d === c.z.WISHLIST_SHOP_BUTTON_POPOVER
             ? (0, r.jsx)(K, k(M({}, g), { dismissContent: f }))
-            : (0, r.jsx)(B, M({}, g));
+            : (0, r.jsx)(H, M({}, g));
     };
