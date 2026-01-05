@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(748610),
     p = n(607802),
     _ = n(187462),
-    m = n(971128),
-    h = n(532496),
+    m = n(532496),
+    h = n(423880),
     g = n(532428),
     E = n(991896),
     b = n(817190),
@@ -74,7 +74,7 @@ function A(e, t) {
 }
 function N(e) {
     let t = (0, p.Tm)(e);
-    E.Z.clearSearchEditorState(e), f.Z.clearSearchMessages(t), _.Z.cleanUp(t), h.Z.cleanUp(t);
+    E.Z.clearSearchEditorState(e), f.Z.clearSearchMessages(t), _.Z.cleanUp(t), m.Z.cleanUp(t);
 }
 function P(e) {
     let { searchContext: t, searchQueryString: n, searchQuery: r, offset: i } = e,
@@ -164,10 +164,10 @@ function j(e, t, n) {
         o = t.type === S.aib.CHANNEL ? (0, p.EX)(a) : a;
     D(t, (o = o.trim()));
     let l = b.Z.getSearchMode(r);
-    E.Z.updateSearchMode(t, null != l ? l : v.o), m.Z.transitionSessionAnalytics(e, t);
+    E.Z.updateSearchMode(t, null != l ? l : v.o), h.Z.transferSession(e, t);
     let c = (0, p.kG)(o),
         d = (0, p.$G)(c);
-    m.Z.refreshSearchQueryAnalyticsId(t),
+    h.Z.refreshQueryId(t),
         (0, y.tI)({
             searchContext: t,
             query: d,
@@ -234,7 +234,7 @@ let k = {
         (0, y.aR)({ searchContext: e }),
             (0, a.openModalLazy)(
                 async () => {
-                    let { default: t } = await n.e("37979").then(n.bind(n, 238088));
+                    let { default: t } = await n.e("27065").then(n.bind(n, 659013));
                     return (n) => (0, r.jsx)(t, A(T({}, n), { searchContext: e }));
                 },
                 { modalKey: v.L },

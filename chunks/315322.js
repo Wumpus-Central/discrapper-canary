@@ -26,7 +26,7 @@ var r = n(367907),
     a = n(626135),
     o = n(171900),
     s = n(607802),
-    l = n(971128),
+    l = n(423880),
     c = n(981631);
 function u(e) {
     var t, n;
@@ -147,7 +147,7 @@ function g(e) {
 }
 function E(e) {
     let { searchContext: t } = e;
-    l.Z.initialize({ searchContext: t }),
+    l.Z.initialize(t),
         r.ZP.trackWithMetadata(c.rMx.SEARCH_OPENED, {
             search_id: f(t),
             search_session_id: l.Z.getSessionId(t),
@@ -280,12 +280,13 @@ function I(e) {
 }
 function T(e) {
     let { searchContext: t } = e;
-    l.Z.initialize({ searchContext: t }),
+    l.Z.enqueueEvent(t, () => {
         r.ZP.trackWithMetadata(c.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
             search_type: t.type,
             search_id: f(t),
             search_session_id: l.Z.getSessionId(t),
         });
+    });
 }
 new i.Z("SearchTracking");
 let C = new Map([

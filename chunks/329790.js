@@ -3,8 +3,7 @@ n.d(t, {
     uh: () => H,
 }),
     n(35282),
-    n(704826),
-    n(388685);
+    n(704826);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -31,7 +30,7 @@ var r = n(54381),
     C = n(607802),
     A = n(612806),
     N = n(28964),
-    P = n(971128),
+    P = n(423880),
     R = n(532428),
     w = n(991896),
     D = n(611004),
@@ -252,7 +251,7 @@ class K extends i.PureComponent {
                         searchQuerySource: i,
                     }),
                         d.uvj.announce(F.intl.string(F.t.pKCxWP)),
-                        this.handleBlur(!0);
+                        this.handleBlur();
                 }
                 return !0;
             }),
@@ -305,13 +304,13 @@ class K extends i.PureComponent {
                 this._editorRef = e;
             }),
             V(this, "onFocus", () => {
-                let { searchContext: e, isSearchSidebarOrModalOpen: t } = this.props;
-                this.setState({ focused: !0 }), t || (0, j.I1)({ searchContext: e });
+                let { searchContext: e } = this.props;
+                this.setState({ focused: !0 }), P.Z.setFocused(e, !0);
             }),
-            V(this, "handleBlur", (e) => {
-                let { searchContext: t, isSearchSidebarOrModalOpen: n } = this.props;
+            V(this, "handleBlur", () => {
+                let { searchContext: e } = this.props;
                 this.setState({ focused: !1 }, () => {
-                    n || e || (0, j.IZ)({ searchContext: t }), v.xb(this.props.editorState) && this.clearSearch();
+                    P.Z.setFocused(e, !1), v.xb(this.props.editorState) && this.clearSearch();
                 });
             }),
             V(this, "onBlur", (e) => {
@@ -477,27 +476,22 @@ function z(e) {
                 isSearching: T.Z.getIsFetching(a),
             };
         }),
-        O = (0, u.e7)([g.ZP], () => g.ZP.getCurrentSearchContextId()),
-        [I, A] = i.useState(!1),
-        x = i.useRef(I),
-        M = (0, u.e7)([g.ZP, y.Z, E.Z], () => {
+        O = (0, u.e7)([g.ZP, y.Z, E.Z], () => {
             let e = y.Z.getCurrentlySelectedChannelId(),
                 t = E.Z.getChannel(e);
             return g.ZP.getSection(e, null == t ? void 0 : t.isDM()) === Z.ULH.SEARCH;
-        }),
-        k = M || I;
+        });
     i.useEffect(() => {
-        O === (0, C.Tm)(t) && A(M);
-    }, [O, M, t]);
-    let U = (0, d.VXO)(G.L),
-        B = k || U;
+        P.Z.setSidebarOpen(t, O);
+    }, [t, O]);
+    let I = (0, d.VXO)(G.L);
     i.useEffect(() => {
-        x.current && !I && ((x.current = !1), (0, j.IZ)({ searchContext: t })), !x.current && I && (x.current = !0);
+        P.Z.setFiltersModalOpen(t, I);
     }, [t, I]);
-    let V = i.useCallback(
+    let A = i.useCallback(
             (e) => {
                 let { queryString: n, query: r, searchEverywhere: i, searchQuerySource: a } = e;
-                P.Z.refreshSearchQueryAnalyticsId(t),
+                P.Z.refreshQueryId(t),
                     (0, j.tI)({
                         searchContext: t,
                         query: r,
@@ -514,7 +508,7 @@ function z(e) {
             },
             [t],
         ),
-        H = (0, u.e7)([b.Z, E.Z], () => {
+        x = (0, u.e7)([b.Z, E.Z], () => {
             let e = (0, C.b7)(t) ? t.guildId : null;
             if (null != e) {
                 let t = b.Z.getGuild(e);
@@ -527,17 +521,17 @@ function z(e) {
             }
             return null;
         }),
-        Y = (0, N.kU)({ location: "Search" }),
-        z = i.useMemo(() => {
+        M = (0, N.kU)({ location: "Search" }),
+        k = i.useMemo(() => {
             switch (t.type) {
                 case Z.aib.DMS:
                     return F.intl.string(F.t.m7OrlR);
                 case Z.aib.FAVORITES:
                     return F.intl.string(F.t["5h0QOP"]);
                 default:
-                    return F.intl.formatToPlainString(F.t.LDZtFO, { name: H });
+                    return F.intl.formatToPlainString(F.t.LDZtFO, { name: x });
             }
-        }, [t.type, H]);
+        }, [t.type, x]);
     return (0, r.jsx)(K, {
         className: n,
         searchContext: t,
@@ -545,10 +539,9 @@ function z(e) {
         editorState: f,
         hasResults: m,
         keyboardModeEnabled: o,
-        onSearch: V,
-        isSearchSidebarOrModalOpen: B,
-        placeholder: z,
-        isSearchFiltersRedesignEnabled: Y,
+        onSearch: A,
+        placeholder: k,
+        isSearchFiltersRedesignEnabled: M,
     });
 }
 function q(e) {
