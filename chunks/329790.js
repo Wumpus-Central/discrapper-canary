@@ -309,9 +309,10 @@ class K extends i.PureComponent {
             }),
             V(this, "handleBlur", () => {
                 let { searchContext: e } = this.props;
-                this.setState({ focused: !1 }, () => {
-                    P.Z.setFocused(e, !1), v.xb(this.props.editorState) && this.clearSearch();
-                });
+                P.Z.setFocused(e, !1),
+                    this.setState({ focused: !1 }, () => {
+                        v.xb(this.props.editorState) && this.clearSearch();
+                    });
             }),
             V(this, "onBlur", (e) => {
                 this.handleBlur();
