@@ -1,6 +1,6 @@
 n.d(t, { r: () => l });
 var r = n(473749),
-    i = n(85707),
+    i = n(505805),
     a = n(481060);
 function l(e) {
     let { containerRef: t, itemType: n = "WIDGET", edgeDistance: l = 130, maxSpeed: o = 1700, power: c = 2.2 } = e,

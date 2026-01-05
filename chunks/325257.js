@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(891371),
-    s = n(620792),
+    o = n(17163),
+    s = n(554916),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -22,8 +22,8 @@ var r = n(54381),
     x = n(276952),
     E = n(249792),
     S = n(40153),
-    I = n(593618),
-    _ = n(252686),
+    _ = n(593618),
+    I = n(252686),
     P = n(682662),
     N = n(674552),
     Z = n(981631),
@@ -185,14 +185,14 @@ let L = i.memo(function (e) {
             },
             [ea],
         ),
-        eI = i.useCallback(
+        e_ = i.useCallback(
             (e) => {
                 if (e) return void ev.delay();
                 ev.cancel(), eO(!1);
             },
             [ev],
         ),
-        e_ = i.useCallback(
+        eI = i.useCallback(
             (e) => {
                 null == G || G(el, e);
             },
@@ -258,7 +258,7 @@ let L = i.memo(function (e) {
                       }),
                   }),
         eZ = eu
-            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(_.Z, {}) })
+            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(I.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   style: { scale: null == en ? 1 : en },
                   className: a()(T.blobContainer, {
@@ -276,7 +276,7 @@ let L = i.memo(function (e) {
                   }),
               });
     return (0, r.jsxs)(P.H, {
-        ref: e_,
+        ref: eI,
         children: [
             (0, r.jsx)(x.Z, {
                 hovered: !eu && eg,
@@ -284,7 +284,7 @@ let L = i.memo(function (e) {
                 unread: !eu && z,
                 className: T.pill,
             }),
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(_.Z, {
                 guild: V,
                 disabled: $,
                 isDragging: eu,
@@ -294,7 +294,7 @@ let L = i.memo(function (e) {
                 ? (0, r.jsx)(S.ZP, {
                       name: V.name,
                       targetNode: k,
-                      onDragOverChanged: eI,
+                      onDragOverChanged: e_,
                   })
                 : null,
         ],
