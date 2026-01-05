@@ -76636,7 +76636,7 @@ html ._614623a0ca8129b8-progress {
 
 @container premium-marketing-page-container (max-width: 960px) {
     ._62eb1df151d8bf49-bannerHeader {
-        font-size: 2rem;
+        font-size: 32px;
         font-weight: 800
     }
 
@@ -76647,21 +76647,21 @@ html ._614623a0ca8129b8-progress {
     }
 
     ._62eb1df151d8bf49-bannerText {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 500
     }
 }
 
 @container premium-marketing-page-container (max-width: 960px) and (min-width: 720px) {
     ._62eb1df151d8bf49-bannerHeader {
-        font-size: 1.25rem;
+        font-size: 20px;
         font-style: normal;
         font-weight: 800;
-        line-height: 1.5rem
+        line-height: 24px
     }
 
     ._62eb1df151d8bf49-bannerText {
-        font-size: .875rem;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.2857142857142858
@@ -76670,14 +76670,14 @@ html ._614623a0ca8129b8-progress {
 
 @container premium-marketing-page-container (max-width: 720px) {
     ._62eb1df151d8bf49-bannerHeader {
-        font-size: 1.25rem;
+        font-size: 20px;
         font-style: normal;
         font-weight: 800;
-        line-height: 1.5rem
+        line-height: 24px
     }
 
     ._62eb1df151d8bf49-bannerText {
-        font-size: .875rem;
+        font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 1.2857142857142858
