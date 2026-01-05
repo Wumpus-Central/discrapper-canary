@@ -1,6 +1,7 @@
 n.d(t, {
     DL: () => i,
     EO: () => o,
+    VG: () => d,
     eC: () => l,
     m_: () => a,
     n0: () => c,
@@ -88,6 +89,12 @@ let o = (0, r.le)({
     }),
     u = (0, r.le)({
         name: "2025-11-quest-bar-listen-for-source-error",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    d = (0, r.le)({
+        name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
