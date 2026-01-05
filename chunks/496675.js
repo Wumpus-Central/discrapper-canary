@@ -192,7 +192,7 @@ function X(e, t, n, r) {
     if (e instanceof _.Sf) {
         if (_.Ec.has(e.type)) {
             let i = y.Z.getChannel(e.parent_id);
-            return null == i ? b.Hn : b.Og(e, X(i, t, n, r), f.Z.hasJoined(e.id));
+            return null == i ? b.Hn : b.Og(e, X(i, t, n, r), f.Z.hasJoined(e.id), O.ZP.isCurrentUserGuest(e.guild_id));
         }
         i = x(e.id);
     } else (0, E.lM)(e) && (i = w(e.id));

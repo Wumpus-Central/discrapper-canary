@@ -149,7 +149,7 @@ function ep(e, t) {
 function e_(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === ei.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return en.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !k.tx.has(t.type) && (0, C.s)(e)) return en.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !(0, k.tW)(t.type) && (0, C.s)(e)) return en.oC.GUILD_HOME;
     let a = G.Z.getChannel(t.id);
     return H.Z.can(ee.Plq.VIEW_CHANNEL, a)
         ? t.id
@@ -189,7 +189,7 @@ function eh(e) {
         h = e_(t, r, i),
         b = _ === ee.d4z.GUILD_STAGE_VOICE,
         y = ee.Z5c.CHANNEL(t, h);
-    k.tx.has(_)
+    (0, k.tW)(_)
         ? (0, S.h)(() => {
               Promise.resolve()
                   .then(n.bind(n, 287734))
@@ -284,7 +284,7 @@ let eb = function (e, t) {
             return (
                 null == i ||
                 null == a ||
-                (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocal() && (0, y.RW)(e))) &&
+                (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocalOrThread() && (0, y.RW)(e))) &&
                     ((null == t ? void 0 : t.guildScheduledEvent) != null
                         ? eg(t)
                         : eh({

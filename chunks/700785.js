@@ -197,6 +197,7 @@ function k(e) {
                           excludeGuildPermissions: s,
                       }),
                       !1,
+                      !1,
                   );
         }
         (l = null != (c = r.computeLurkerPermissionsAllowList()) ? c : l),
@@ -254,6 +255,7 @@ function U(e) {
                     excludeGuildPermissions: _,
                 }),
                 t,
+                g.ZP.isCurrentUserGuest(o.guild_id),
             );
         }
         (E = null != (r = o.computeLurkerPermissionsAllowList()) ? r : E),
@@ -279,8 +281,8 @@ function U(e) {
         lurkerPermissionsMask: E,
     });
 }
-function G(e, t, n) {
-    return e.type !== S.d4z.PRIVATE_THREAD || n || a.e$(t, S.Plq.MANAGE_THREADS)
+function G(e, t, n, r) {
+    return e.type !== S.d4z.PRIVATE_THREAD || n || r || a.e$(t, S.Plq.MANAGE_THREADS)
         ? a.e$(t, S.Plq.SEND_MESSAGES_IN_THREADS)
             ? e.isLockedThread() && !a.e$(t, S.Plq.MANAGE_THREADS)
                 ? a.Od(t, S.Plq.SEND_MESSAGES)

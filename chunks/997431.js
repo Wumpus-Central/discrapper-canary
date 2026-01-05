@@ -18,5 +18,5 @@ function o(e, t) {
 function s(e) {
     if (null == e.guild || (0, i.Qs)(e.guild).features.has(a.GuildFeatures.HUB)) return !1;
     let t = (null == e ? void 0 : e.channel) != null ? (0, r.jD)(e.channel) : null;
-    return null == t || !t.isGuildVocal();
+    return null == t || !t.isGuildVoiceOrThread();
 }
