@@ -1,18 +1,19 @@
-n.d(t, { Z: () => v }), n(642613);
+n.d(t, { Z: () => S }), n(642613);
 var r = n(54381),
     i = n(473749),
-    a = n(772848),
-    o = n(924826),
-    s = n(91192),
-    l = n(481060),
-    c = n(412899),
-    u = n(635042),
-    d = n(411198),
-    f = n(539600),
-    p = n(981631),
-    _ = n(388032),
-    m = n(122316);
-function h(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(772848),
+    l = n(924826),
+    c = n(91192),
+    u = n(481060),
+    d = n(412899),
+    f = n(635042),
+    p = n(539600),
+    _ = n(981631),
+    m = n(388032),
+    h = n(122316);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +54,22 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +77,7 @@ function y(e, t) {
     }
     return i;
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,64 +86,60 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function v(e) {
-    let { invite: t } = e,
-        n = i.useMemo(() => "invite-roles-".concat((0, a.Z)()), []),
-        h = (0, o.ZP)({
-            id: n,
+function S(e) {
+    let { guild: t, roles: n, className: a } = e,
+        g = i.useMemo(() => "invite-roles-".concat((0, s.Z)()), []),
+        b = (0, l.ZP)({
+            id: g,
             isEnabled: !0,
-            scrollToStart: p.Cyb,
-            scrollToEnd: p.Cyb,
+            scrollToStart: _.Cyb,
+            scrollToEnd: _.Cyb,
             wrap: !0,
         }),
-        E = i.useMemo(() => (null != t.guild ? (0, d.Qs)(t.guild) : null), [t.guild]),
-        O = i.useMemo(
-            () =>
-                null == t.guild || null == t.roles || 0 === t.roles.length
-                    ? []
-                    : t.roles.map((e) => (0, f.wD)(t.guild.id, e)).sort(u.Z),
-            [t],
+        v = i.useMemo(
+            () => (null == t || null == n || 0 === n.length ? [] : n.map((e) => (0, p.wD)(t.id, e)).sort(f.Z)),
+            [t, n],
         );
-    if (0 === O.length || null == E) return null;
-    let v = O.length,
-        S = _.intl.formatToPlainString(_.t.PCs0oo, { numRoles: v });
-    return (0, r.jsx)(s.bG, {
-        navigator: h,
-        children: (0, r.jsx)(s.SJ, {
+    if (null == t || 0 === v.length) return null;
+    let S = v.length,
+        I = m.intl.formatToPlainString(m.t.PCs0oo, { numRoles: S });
+    return (0, r.jsx)(c.bG, {
+        navigator: b,
+        children: (0, r.jsx)(c.SJ, {
             children: (e) => {
-                var { ref: t } = e,
-                    n = y(e, ["ref"]);
+                var { ref: n } = e,
+                    i = O(e, ["ref"]);
                 return (0, r.jsxs)("div", {
-                    className: m.root,
+                    className: o()(h.root, a),
                     children: [
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(u.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
-                            className: m.rolesHeading,
-                            children: _.intl.string(_.t.stcSfI),
+                            className: h.rolesHeading,
+                            children: m.intl.string(m.t.stcSfI),
                         }),
                         (0, r.jsx)(
                             "div",
-                            b(
-                                g(
+                            y(
+                                E(
                                     {
-                                        className: m.rolesList,
-                                        "aria-label": S,
-                                        ref: t,
+                                        className: h.rolesList,
+                                        "aria-label": I,
+                                        ref: n,
                                     },
-                                    n,
+                                    i,
                                 ),
                                 {
-                                    children: O.map((e) =>
+                                    children: v.map((e) =>
                                         (0, r.jsx)(
-                                            c.UB,
+                                            d.UB,
                                             {
-                                                className: m.rolePill,
+                                                className: h.rolePill,
                                                 role: e,
                                                 canRemove: !1,
                                                 onRemove: () => {},
-                                                guildId: E.id,
-                                                guild: E,
+                                                guildId: t.id,
+                                                guild: t,
                                                 disableBorderColor: !1,
                                             },
                                             e.id,

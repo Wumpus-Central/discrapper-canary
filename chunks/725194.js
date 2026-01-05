@@ -13,4 +13,5 @@ e.exports = {
     appIn: "fa285ee86b386220-appIn",
     appGuildName: "fa285ee86b386220-appGuildName",
     icon: "fa285ee86b386220-icon",
+    rolesList: "fa285ee86b386220-rolesList",
 };

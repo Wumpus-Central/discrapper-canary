@@ -11,4 +11,5 @@ e.exports = {
     collapsedFooterContent: "_083ae98ea5145b08-collapsedFooterContent",
     buttonContainer: "_083ae98ea5145b08-buttonContainer",
     hideDetailsButtonContainer: "_083ae98ea5145b08-hideDetailsButtonContainer",
+    rolesList: "_083ae98ea5145b08-rolesList",
 };
