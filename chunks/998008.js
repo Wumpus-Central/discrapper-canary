@@ -7,6 +7,5 @@ e.exports = {
     questRewardTileAssetStatic: "_281417ebc313bb72-questRewardTileAssetStatic",
     questRewardTileDetailsLearnMore: "_281417ebc313bb72-questRewardTileDetailsLearnMore",
     Shine: "_281417ebc313bb72-Shine",
-    shine: "_281417ebc313bb72-shine",
     imageVideoOverlay: "_281417ebc313bb72-imageVideoOverlay",
 };

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(554916),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -320,7 +320,6 @@ function U(e) {
                                             quest: Z,
                                             questContent: b.jn.MEMBERS_LIST,
                                             learnMoreStyle: "icon",
-                                            location: N.dr.MEMBERS_LIST,
                                             onClick: eu,
                                             sourceQuestContent: b.jn.MEMBERS_LIST,
                                         }),

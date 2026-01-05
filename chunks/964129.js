@@ -2,8 +2,8 @@ n.d(t, { default: () => C }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(481060),
-    o = n(22095),
-    s = n(968843),
+    s = n(22095),
+    o = n(968843),
     l = n(115179),
     c = n(644646),
     d = n(187546),
@@ -12,7 +12,7 @@ var a = n(54381),
     f = n(388032),
     x = n(897619);
 function p(e) {
-    let { quest: t, rewardName: n, location: r, sourceQuestContent: o } = e;
+    let { quest: t, rewardName: n, location: r, sourceQuestContent: s } = e;
     return (0, a.jsxs)("div", {
         className: x.contentContainer,
         children: [
@@ -24,8 +24,7 @@ function p(e) {
                     learnMoreStyle: null,
                     quest: t,
                     questContent: r,
-                    location: m.dr.INGAME_REWARD_MODAL,
-                    sourceQuestContent: o,
+                    sourceQuestContent: s,
                 }),
             }),
             (0, a.jsxs)("div", {
@@ -57,7 +56,7 @@ function p(e) {
 function C(e) {
     var t, n;
     let { initialQuest: i, onClose: c, transitionState: f, location: x, sourceQuestContent: C } = e,
-        g = null != (n = (0, s.B4)(i.id)) ? n : i,
+        g = null != (n = (0, o.B4)(i.id)) ? n : i,
         h = r.useMemo(() => (0, l.K)(g.config), [g]),
         j = (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null,
         b = !g.preview && !j,
@@ -65,12 +64,12 @@ function C(e) {
     r.useEffect(() => {
         if (b) {
             let e = (0, l.zG)(g.config);
-            (0, o.QB)(g.id, e, x)
+            (0, s.QB)(g.id, e, x)
                 .then(() => N("claimed"))
                 .catch(() => N("error"));
         }
     }, [g, x, b]);
-    let _ = "error" === v || null == h;
+    let y = "error" === v || null == h;
     return (0, a.jsx)(u.Z, {
         onClose: c,
         transitionState: f,
@@ -78,8 +77,8 @@ function C(e) {
         sourceQuestContent: C,
         location: m.dr.INGAME_REWARD_MODAL,
         isRewardContentLoading: "loading" === v,
-        rewardContentHasError: _,
-        rewardContent: _
+        rewardContentHasError: y,
+        rewardContent: y
             ? null
             : (0, a.jsx)(d.Z, {
                   rewardName: h.messages.name,

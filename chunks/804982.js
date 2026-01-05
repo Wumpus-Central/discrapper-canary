@@ -7,8 +7,6 @@ e.exports = {
     questRewardEmbedXs: "fbc6f7283f697ba7-questRewardEmbedXs",
     taskDetails: "fbc6f7283f697ba7-taskDetails",
     taskInstructions: "fbc6f7283f697ba7-taskInstructions",
-    fullWidthShinyCtaButtonWrapper: "fbc6f7283f697ba7-fullWidthShinyCtaButtonWrapper",
-    ctaButtonWrapper: "fbc6f7283f697ba7-ctaButtonWrapper",
     learnMoreLink: "fbc6f7283f697ba7-learnMoreLink",
     root: "fbc6f7283f697ba7-root",
     rewardTileWrapper: "fbc6f7283f697ba7-rewardTileWrapper",

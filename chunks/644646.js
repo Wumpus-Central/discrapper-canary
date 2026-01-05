@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,174 +8,151 @@ var r = n(54381),
     c = n(481060),
     u = n(607070),
     d = n(70097),
-    f = n(451478),
-    p = n(617136),
-    _ = n(132581),
-    m = n(475595),
-    h = n(115179),
-    g = n(455357),
-    E = n(18578),
-    b = n(352084),
-    y = n(110560),
-    O = n(388032),
-    v = n(998008);
-function S(e) {
-    let { appFocused: t, location: n } = e,
-        { shouldUseShine: i } = _.Z.useConfig({ location: n });
-    return i
-        ? (0, r.jsx)(c.ZX5, {
-              "data-migration-pending": !0,
-              className: v.shine,
-              shineSize: c.rHe.SMALL,
-              shinePaused: !t,
-          })
-        : null;
-}
-let I = function (e) {
+    f = n(617136),
+    p = n(475595),
+    _ = n(115179),
+    m = n(455357),
+    h = n(18578),
+    g = n(352084),
+    E = n(110560),
+    b = n(388032),
+    y = n(998008);
+let O = function (e) {
     let t,
         {
             className: n,
             quest: a,
-            autoplay: _ = !0,
-            learnMoreStyle: I = null,
-            learnMoreFontSize: T,
-            sourceQuestContent: C,
-            lazyLoad: A = !1,
-            style: N,
-            showShine: P = !0,
-            location: R,
+            autoplay: O = !0,
+            learnMoreStyle: v = null,
+            learnMoreFontSize: S,
+            sourceQuestContent: I,
+            lazyLoad: T = !1,
+            style: C,
         } = e,
-        w = (0, p.O5)(),
-        D = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        L = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
-        j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
-        M = i.useCallback(
+        A = (0, f.O5)(),
+        N = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        P = i.useMemo(() => (0, p.fh)(a, p.eC.REWARD), [a]),
+        R = i.useMemo(() => (0, p.fh)(a, p.eC.REWARD_IMAGE), [a]),
+        w = i.useCallback(
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    w({
+                    A({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
-                        questContentCTA: p.jZ.REWARD_LEARN_MORE,
-                        sourceQuestContent: C,
+                        questContentCTA: f.jZ.REWARD_LEARN_MORE,
+                        sourceQuestContent: I,
                     }),
-                    (0, y.navigateToQuestHome)({
+                    (0, E.navigateToQuestHome)({
                         fromContent: e.questContent,
                         questId: a.id,
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [w, a.id, e, C],
+            [A, a.id, e, I],
         ),
-        k = i.useRef(null),
-        U = i.useRef(_),
-        G = (0, h.Bg)(a.config);
+        D = i.useRef(null),
+        x = i.useRef(O),
+        L = (0, _.Bg)(a.config);
     return (
         i.useEffect(() => {
-            if (null != k.current) {
-                if (!L.isAnimated || x) {
-                    (k.current.currentTime = 0), k.current.pause();
+            if (null != D.current) {
+                if (!P.isAnimated || N) {
+                    (D.current.currentTime = 0), D.current.pause();
                     return;
                 }
-                _ && !U.current
-                    ? k.current.play()
-                    : !_ && U.current && ((k.current.currentTime = 0), k.current.pause()),
-                    (U.current = _);
+                O && !x.current
+                    ? D.current.play()
+                    : !O && x.current && ((D.current.currentTime = 0), D.current.pause()),
+                    (x.current = O);
             }
-        }, [_, L, x]),
-        (t = G
-            ? (0, r.jsx)(g.Fl, {
+        }, [O, P, N]),
+        (t = L
+            ? (0, r.jsx)(m.Fl, {
                   id: "QuestRewardTile_rewardTileNitro",
                   children: (e) =>
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(g.Z, {
                           ref: e,
-                          className: v.questRewardTileAsset,
+                          className: y.questRewardTileAsset,
                       }),
               })
-            : A
-              ? (0, r.jsx)(E.K, {
-                    showVideo: _,
+            : T
+              ? (0, r.jsx)(h.K, {
+                    showVideo: O,
                     imageAsset:
-                        null != j
+                        null != R
                             ? {
-                                  asset: j,
+                                  asset: R,
                                   assetId: "QuestRewardTile_rewardTileStatic",
-                                  className: v.imageVideoOverlay,
-                                  alt: O.intl.string(O.t.UMclVN),
+                                  className: y.imageVideoOverlay,
+                                  alt: b.intl.string(b.t.UMclVN),
                               }
                             : void 0,
                     videoAsset: {
-                        asset: L,
+                        asset: P,
                         assetId: "QuestRewardTile_rewardTileAnimated",
-                        className: o()(v.questRewardTileAsset, v.questRewardTileAssetLazyVideo),
+                        className: o()(y.questRewardTileAsset, y.questRewardTileAssetLazyVideo),
                     },
                     onLoadComplete: e.onLoadComplete,
                 })
-              : L.isAnimated
-                ? (0, r.jsx)(g.Fl, {
+              : P.isAnimated
+                ? (0, r.jsx)(m.Fl, {
                       id: "QuestRewardTile_rewardTileAnimated",
                       children: (t) => {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  (t.current = e), (k.current = e);
+                                  (t.current = e), (D.current = e);
                               },
-                              autoPlay: !x && _,
+                              autoPlay: !N && O,
                               loop: !0,
                               muted: !0,
                               playsInline: !0,
-                              className: v.questRewardTileAsset,
+                              className: y.questRewardTileAsset,
                               controls: !1,
                               onProgress: e.onLoadComplete,
                               children: (0, r.jsx)("source", {
-                                  src: L.url,
-                                  type: null != (n = L.mimetype) ? n : void 0,
+                                  src: P.url,
+                                  type: null != (n = P.mimetype) ? n : void 0,
                               }),
                           });
                       },
                   })
-                : (0, r.jsx)(g.Fl, {
+                : (0, r.jsx)(m.Fl, {
                       id: "QuestRewardTile_rewardTileStatic",
                       children: (t) =>
                           (0, r.jsx)("img", {
                               ref: t,
-                              alt: (0, h.w8)(a.config),
-                              className: o()(v.questRewardTileAsset, v.questRewardTileAssetStatic),
-                              src: L.url,
+                              alt: (0, _.w8)(a.config),
+                              className: o()(y.questRewardTileAsset, y.questRewardTileAssetStatic),
+                              src: P.url,
                               onLoad: e.onLoadComplete,
                           }),
                   })),
-        null == I
+        null == v
             ? (0, r.jsx)("div", {
-                  className: o()(v.questRewardTile, n),
-                  style: N,
+                  className: o()(y.questRewardTile, n),
+                  style: C,
                   children: t,
               })
             : (0, r.jsxs)(c.P3F, {
-                  className: o()(v.questRewardTileInteractive, v.questRewardTile, v.rewardHighlight, n),
-                  onClick: M,
-                  style: N,
+                  className: o()(y.questRewardTileInteractive, y.questRewardTile, y.rewardHighlight, n),
+                  onClick: w,
+                  style: C,
                   children: [
                       t,
-                      P &&
-                          !x &&
-                          (0, r.jsx)(S, {
-                              appFocused: D,
-                              location: R,
-                          }),
-                      "text" === I &&
+                      "text" === v &&
                           (0, r.jsx)(c.Text, {
                               color: "always-white",
                               variant: "text-xs/normal",
-                              className: v.questRewardTileDetailsLearnMore,
-                              style: { fontSize: T },
-                              children: O.intl.format(O.t.DYAleT, {}),
+                              className: y.questRewardTileDetailsLearnMore,
+                              style: { fontSize: S },
+                              children: b.intl.format(b.t.DYAleT, {}),
                           }),
-                      "icon" === I &&
+                      "icon" === v &&
                           (0, r.jsx)("div", {
-                              className: v.questRewardTileDetailsLearnMore,
+                              className: y.questRewardTileDetailsLearnMore,
                               children: (0, r.jsx)(c.d3s, {
                                   size: "xxs",
                                   color: c.TVs.colors.WHITE.css,

@@ -27,7 +27,7 @@ function S(e) {
         I = o.useRef(null == (t = y.userStatus) ? void 0 : t.completedAt),
         [N, A] = o.useState(!1),
         w = (0, m.w8)(y.config),
-        { completedRatio: L, completedRatioDisplay: k } = (0, d.I)(y),
+        { completedRatio: k, completedRatioDisplay: L } = (0, d.I)(y),
         M = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
         V = (null == (S = y.userStatus) ? void 0 : S.claimedAt) != null,
         Z = O.intl.formatToPlainString(M && !V && P ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: w });
@@ -73,15 +73,14 @@ function S(e) {
                     children: (0, r.jsx)(f.Z, {
                         quest: y,
                         size: 48,
-                        percentComplete: L,
-                        percentCompleteText: D ? k : void 0,
+                        percentComplete: k,
+                        percentCompleteText: D ? L : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
                         children: (0, r.jsx)(p.Z, {
                             className: h.questProgressRewardTile,
                             quest: y,
                             questContent: c.jn.VIDEO_MODAL,
                             autoplay: !1,
-                            location: g.dr.VIDEO_MODAL,
                             sourceQuestContent: x,
                         }),
                     }),

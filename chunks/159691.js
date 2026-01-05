@@ -88,7 +88,6 @@ n.d(t, {
     M14: () => r.M14,
     MTm: () => r.MTm,
     Mec: () => r.Mec,
-    MgI: () => r.MgI,
     Mgn: () => r.Mgn,
     Mjp: () => r.Mjp,
     Mko: () => r.Mko,

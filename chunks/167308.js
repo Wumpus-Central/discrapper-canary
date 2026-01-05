@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var a = n(54381),
     r = n(473749),
     i = n(481060),
@@ -8,54 +8,52 @@ var a = n(54381),
     c = n(444134),
     d = n(836831),
     u = n(526188),
-    m = n(324805),
-    p = n(674293);
-let h = (e) => {
+    m = n(674293);
+let p = (e) => {
     let {
             isExpanded: t,
             contentLocation: n,
-            progressBarRef: h,
+            progressBarRef: p,
             percentComplete: f,
-            activeScreen: x,
-            popoutTargetElementRef: b,
+            activeScreen: h,
+            popoutTargetElementRef: x,
         } = e,
-        { quest: g, onGameSheetOpen: v, onGameSheetClose: j } = r.useContext(u.A),
-        y = (0, s.eQ)(g),
+        { quest: b, onGameSheetOpen: g, onGameSheetClose: v } = r.useContext(u.A),
+        j = (0, s.eQ)(b),
         C = (0, s.vf)({
-            quest: g,
+            quest: b,
             isExpanded: t,
-            activeScreen: x,
+            activeScreen: h,
             sourceQuestContent: l.jn.QUEST_BAR_V2,
-            popoutTargetElementRef: b,
-            onGameSheetOpened: v,
-            onGameSheetClosed: j,
+            popoutTargetElementRef: x,
+            onGameSheetOpened: g,
+            onGameSheetClosed: v,
         });
     return (0, a.jsxs)("div", {
-        className: p.questProgressWrapper,
+        className: m.questProgressWrapper,
         children: [
             (0, a.jsx)(c.JC, {
                 inState: n,
                 id: "progress-bar",
-                ref: h,
+                ref: p,
                 children: (e) =>
                     (0, a.jsx)(d.Z, {
                         ref: e,
-                        quest: g,
+                        quest: b,
                         percentComplete: f,
                         size: 42,
                         strokeWidth: 3,
                         children: (0, a.jsx)(o.Z, {
-                            className: p.questProgressRewardTile,
-                            quest: g,
+                            className: m.questProgressRewardTile,
+                            quest: b,
                             questContent: l.jn.QUEST_BAR_V2,
                             autoplay: !1,
-                            location: m.dr.QUESTS_BAR,
                             sourceQuestContent: l.jn.QUEST_BAR_V2,
                         }),
                     }),
             }),
             (0, a.jsxs)("div", {
-                className: p.questProgressCopy,
+                className: m.questProgressCopy,
                 children: [
                     (0, a.jsx)(c.JC, {
                         inState: n,
@@ -63,10 +61,10 @@ let h = (e) => {
                         children: (e) =>
                             (0, a.jsx)(i.Text, {
                                 ref: e,
-                                className: p.questProgressHint,
+                                className: m.questProgressHint,
                                 color: "text-strong",
                                 variant: "text-sm/semibold",
-                                children: y,
+                                children: j,
                             }),
                     }),
                     (0, a.jsx)(c.JC, {
@@ -76,7 +74,7 @@ let h = (e) => {
                         children: (e) =>
                             (0, a.jsx)(i.Text, {
                                 ref: e,
-                                className: p.questProgressHint,
+                                className: m.questProgressHint,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: C,

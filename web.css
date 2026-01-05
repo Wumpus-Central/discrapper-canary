@@ -50829,9 +50829,9 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
 }
 
 ._1689b6e8323d95c2-title {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 1.25rem;
+    line-height: 20px;
     text-transform: uppercase
 }
 
@@ -50921,8 +50921,8 @@ h3._1689b6e8323d95c2-improved:after {
     border-radius: 5px;
     color: var(--white);
     display: flex;
-    font-size: 1rem;
-    line-height: 1.125rem;
+    font-size: 16px;
+    line-height: 18px;
     padding: 16px
 }
 
@@ -69525,21 +69525,6 @@ html ._614623a0ca8129b8-progress {
     flex: 1 0 auto
 }
 
-.fbc6f7283f697ba7-fullWidthShinyCtaButtonWrapper {
-    flex: 1;
-    width: 100%
-}
-
-.fbc6f7283f697ba7-ctaButtonWrapper {
-    flex: 1 0 auto
-}
-
-.fbc6f7283f697ba7-outerContainerSm .fbc6f7283f697ba7-ctaButtonWrapper,
-.fbc6f7283f697ba7-outerContainerXs .fbc6f7283f697ba7-ctaButtonWrapper {
-    flex-grow: 1
-}
-
-.fbc6f7283f697ba7-outerContainerXs .fbc6f7283f697ba7-ctaButtonWrapper,
 .fbc6f7283f697ba7-outerContainerXs .fbc6f7283f697ba7-questEnrollmentBlockedButton {
     width: 100%
 }
