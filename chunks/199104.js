@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -11,55 +11,45 @@ var i = n(120356),
     d = n(906732),
     p = n(313201),
     f = n(243778),
-    g = n(365113),
-    h = n(352455),
+    g = n(352455),
     m = n(480294),
-    b = n(791359),
-    _ = n(981631),
-    E = n(388032),
-    O = n(833047);
-function v(e) {
-    let { isStandalone: t } = e,
-        { analyticsLocations: n } = (0, d.ZP)(u.Z.ACTIVE_NOW_COLUMN),
-        i = (0, a.e7)([m.Z], () => m.Z.hasConsented(_.pjP.PERSONALIZATION)) ? [] : [o.z.NOW_PLAYING_CONSENT_CARD],
-        v = g.o.useConfig({ location: "nowplaying" }).demureActivityCards,
-        y = g.o.useConfig({ location: "nowplaying" }).friendsTab,
-        I = (0, p.Dt)();
+    h = n(791359),
+    b = n(981631),
+    _ = n(388032),
+    E = n(833047);
+function O() {
+    let { analyticsLocations: e } = (0, d.ZP)(u.Z.ACTIVE_NOW_COLUMN),
+        t = (0, a.e7)([m.Z], () => m.Z.hasConsented(b.pjP.PERSONALIZATION)) ? [] : [o.z.NOW_PLAYING_CONSENT_CARD],
+        n = (0, p.Dt)();
     return (0, r.jsx)(d.Gt, {
-        value: n,
+        value: e,
         children: (0, r.jsx)(c.Z, {
-            section: _.jXE.ACTIVE_NOW_COLUMN,
+            section: b.jXE.ACTIVE_NOW_COLUMN,
             children: (0, r.jsx)("aside", {
-                className: l()(O.container, {
-                    [O.refreshActiveNow]: v,
-                    "refresh-active-now": v,
-                }),
-                "aria-labelledby": I,
+                className: l()(E.container, "refresh-active-now"),
+                "aria-labelledby": n,
                 children: (0, r.jsx)(s.Ttm, {
-                    className: l()(O.scroller, { [O.standalone]: t }),
+                    className: E.scroller,
                     children: (0, r.jsxs)("div", {
-                        className: l()({ [O.standaloneContainer]: t }),
                         children: [
-                            y
-                                ? null
-                                : (0, r.jsx)(s.Heading, {
-                                      variant: "heading-lg/semibold",
-                                      className: O.header,
-                                      id: I,
-                                      children: E.intl.string(E.t.F4Zggw),
-                                  }),
+                            (0, r.jsx)(s.Heading, {
+                                variant: "heading-lg/semibold",
+                                className: E.header,
+                                id: n,
+                                children: _.intl.string(_.t.F4Zggw),
+                            }),
                             (0, r.jsx)(f.ZP, {
-                                contentTypes: i,
+                                contentTypes: t,
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
                                     if (t === o.z.NOW_PLAYING_CONSENT_CARD)
-                                        return (0, r.jsx)(h.Z, {
-                                            className: O.__invalid_consentCard,
+                                        return (0, r.jsx)(g.Z, {
+                                            className: E.__invalid_consentCard,
                                             markAsDismissed: n,
                                         });
                                 },
                             }),
-                            (0, r.jsx)(b.Z, {}),
+                            (0, r.jsx)(h.Z, {}),
                         ],
                     }),
                 }),

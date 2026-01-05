@@ -1,4 +1,4 @@
-n.d(t, { u: () => L }), n(388685);
+n.d(t, { u: () => M }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(91192),
@@ -10,28 +10,27 @@ var r = n(54381),
     d = n(975298),
     f = n(550385),
     h = n(899740),
-    p = n(365113),
-    g = n(849862),
-    b = n(460181),
-    m = n(155409),
-    y = n(944486),
-    O = n(594174),
-    v = n(431),
-    j = n(774343),
-    C = n(417363),
-    x = n(941128),
-    E = n(780570),
-    S = n(278464),
-    I = n(276952),
+    p = n(849862),
+    g = n(460181),
+    b = n(155409),
+    m = n(944486),
+    y = n(594174),
+    O = n(431),
+    v = n(774343),
+    j = n(417363),
+    C = n(941128),
+    x = n(780570),
+    E = n(278464),
+    S = n(276952),
     _ = n(682662),
-    P = n(662146),
-    N = n(674552),
-    Z = n(981631),
-    w = n(474936),
-    T = n(871465),
-    A = n(388032),
-    R = n(992397);
-let D = {
+    I = n(662146),
+    P = n(674552),
+    N = n(981631),
+    Z = n(474936),
+    w = n(871465),
+    T = n(388032),
+    A = n(992397);
+let R = {
     origin: {
         x: -16,
         y: 0,
@@ -43,34 +42,33 @@ let D = {
         y: 0,
     },
 };
-function M(e) {
+function D(e) {
     var t, n;
-    let { selected: a, user: d, badge: h, link: g, showProgressBadge: y } = e,
-        [O, v] = i.useState(!1),
-        [j, C] = i.useState(!1),
-        [x, E] = i.useState(null),
-        [S, w] = i.useState(0),
-        M = (0, l.Ie)("home"),
-        L = (0, f.oq)().activePanel === f.wh.APP_ICON,
-        k = () => {
-            E(null), w(0), clearTimeout(x);
-        },
-        G = p.o.useConfig({ location: "home button" }).dmsTab;
+    let { selected: a, user: d, badge: h, link: p, showProgressBadge: m } = e,
+        [y, O] = i.useState(!1),
+        [v, j] = i.useState(!1),
+        [C, x] = i.useState(null),
+        [E, Z] = i.useState(0),
+        D = (0, l.Ie)("home"),
+        M = (0, f.oq)().activePanel === f.wh.APP_ICON,
+        L = () => {
+            x(null), Z(0), clearTimeout(C);
+        };
     if (null == d) return null;
-    let U = G ? A.intl.string(A.t.Ym2Ri6) : A.intl.string(A.t.YUU0RF);
-    j && (U = o.K.get(Z.wli) ? A.intl.string(A.t["nkq1l+"]) : A.intl.string(A.t.Be8Q5E));
-    let B = null;
+    let k = T.intl.string(T.t.YUU0RF);
+    v && (k = o.K.get(N.wli) ? T.intl.string(T.t["nkq1l+"]) : T.intl.string(T.t.Be8Q5E));
+    let G = null;
     !a &&
-        y &&
-        (B = (0, r.jsx)(c.Z, {
-            className: R.downloadProgress,
+        m &&
+        (G = (0, r.jsx)(c.Z, {
+            className: A.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let F = a || O || L,
-        V = (0, r.jsx)(s.aRk, {
+    let U = a || y || M,
+        B = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: h > 0 ? (0, N.Ne)(h) : null,
-            upperBadge: B,
+            lowerBadge: h > 0 ? (0, P.Ne)(h) : null,
+            upperBadge: G,
             lowerBadgeSize: { width: (0, s.OVM)(h) },
             children: (0, r.jsx)(
                 s.LYs,
@@ -100,40 +98,40 @@ function M(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => v(!0),
-                        onMouseLeave: () => v(!1),
+                        onMouseEnter: () => O(!0),
+                        onMouseLeave: () => O(!1),
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != x && clearTimeout(x), E(setTimeout(k, 500)), w(S + 1), 15 === S)
+                                (null != C && clearTimeout(C), x(setTimeout(L, 500)), Z(E + 1), 15 === E)
                             ) {
-                                k();
-                                let e = !o.K.get(Z.wli);
-                                o.K.set(Z.wli, e),
-                                    e && o.K.set(T.O, !0),
-                                    e ? (0, b.GN)("discodo") : (0, b.GN)("user_leave"),
-                                    C(!0),
+                                L();
+                                let e = !o.K.get(N.wli);
+                                o.K.set(N.wli, e),
+                                    e && o.K.set(w.O, !0),
+                                    e ? (0, g.GN)("discodo") : (0, g.GN)("user_leave"),
+                                    j(!0),
                                     setTimeout(() => {
-                                        C(!1);
+                                        j(!1);
                                     }, 1000);
                             }
                         },
-                        selected: F,
-                        ariaLabel: A.intl.string(A.t.YUU0RF),
+                        selected: U,
+                        ariaLabel: T.intl.string(T.t.YUU0RF),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": a,
                     },
-                    M,
+                    D,
                 )),
                 (n = n =
                     {
                         to: {
-                            pathname: g,
+                            pathname: p,
                             state: {
                                 analyticsSource: {
-                                    page: Z.ZY5.GUILD_CHANNEL,
-                                    section: Z.jXE.NAVIGATION,
-                                    object: Z.qAy.BUTTON_HOME,
+                                    page: N.ZY5.GUILD_CHANNEL,
+                                    section: N.jXE.NAVIGATION,
+                                    object: N.qAy.BUTTON_HOME,
                                 },
                             },
                         },
@@ -155,58 +153,58 @@ function M(e) {
             ),
         });
     return (0, r.jsx)("div", {
-        className: R.tutorialContainer,
-        children: (0, r.jsx)(m.Z, {
-            inlineSpecs: D,
+        className: A.tutorialContainer,
+        children: (0, r.jsx)(b.Z, {
+            inlineSpecs: R,
             tutorialId: "friends-list",
             position: "right",
             children: (0, r.jsxs)(_.H, {
                 children: [
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(S.Z, {
                         selected: a,
-                        hovered: O,
-                        className: R.pill,
+                        hovered: y,
+                        className: A.pill,
                     }),
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(I.Z, {
                         hideOnClick: !0,
-                        text: U,
+                        text: k,
                         selected: a,
-                        children: V,
+                        children: B,
                     }),
                 ],
             }),
         }),
     });
 }
-function L() {
-    let e = (0, S.n)(),
-        t = (0, a.e7)([x.Z, C.Z], () => {
-            let e = (0, c.E)(x.Z.activeItems, C.Z),
-                { total: t, progress: n } = E.lK(e),
-                r = E.xI(n, t);
+function M() {
+    let e = (0, E.n)(),
+        t = (0, a.e7)([C.Z, j.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, j.Z),
+                { total: t, progress: n } = x.lK(e),
+                r = x.xI(n, t);
             return r > 0 && r < 100;
         }),
-        n = (0, g.If)(),
-        i = Object.keys(w.nG),
+        n = (0, p.If)(),
+        i = Object.keys(Z.nG),
         l = (0, d.Z)(),
-        { unviewedTrialCount: o, unviewedDiscountCount: s } = (0, a.cj)([v.Z], () => ({
-            unviewedTrialCount: v.Z.getUnacknowledgedOffers(i).length,
-            unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length,
+        { unviewedTrialCount: o, unviewedDiscountCount: s } = (0, a.cj)([O.Z], () => ({
+            unviewedTrialCount: O.Z.getUnacknowledgedOffers(i).length,
+            unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length,
         })),
-        u = l.fractionalState === w.a$.NONE ? o + s : 0,
-        f = (0, a.e7)([O.default], () => O.default.getCurrentUser()),
-        p = (0, h.q)(),
-        b = n + u + p,
-        m = b === u && u > 0 && n + p === 0,
-        I = j.Z.getHomeLink();
+        u = l.fractionalState === Z.a$.NONE ? o + s : 0,
+        f = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+        g = (0, h.q)(),
+        b = n + u + g,
+        S = b === u && u > 0 && n + g === 0,
+        _ = v.Z.getHomeLink();
     return (
-        m && (I = Z.Z5c.APPLICATION_STORE),
-        (0, r.jsx)(M, {
+        S && (_ = N.Z5c.APPLICATION_STORE),
+        (0, r.jsx)(D, {
             selected: e,
             user: f,
-            selectedChannelId: y.Z.getChannelId(Z.ME),
+            selectedChannelId: m.Z.getChannelId(N.ME),
             badge: b,
-            link: I,
+            link: _,
             showProgressBadge: t,
         })
     );

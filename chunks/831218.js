@@ -22,8 +22,8 @@ var r,
     x = n(214852),
     E = n(518311),
     S = n(355298),
-    I = n(869404),
-    _ = n(333984),
+    _ = n(869404),
+    I = n(333984),
     P = n(984802),
     N = n(592125),
     Z = n(158776),
@@ -375,10 +375,7 @@ class U extends (r = l.Component) {
                         }),
                     );
             }),
-            M(this, "getSectionHeight", (e) => {
-                let { showDMHeader: t } = this.props;
-                return 0 === e ? 0 : 24 * !!t;
-            }),
+            M(this, "getSectionHeight", (e) => 24 * (0 !== e)),
             M(
                 this,
                 "handleScroll",
@@ -419,18 +416,18 @@ class U extends (r = l.Component) {
             }),
             M(this, "renderRow", (e) => {
                 let { section: t, row: n } = e,
-                    { privateChannelIds: r, hideAllDMs: l } = this.props;
+                    { privateChannelIds: r } = this.props;
                 return 0 === t
                     ? this.renderChild(n)
-                    : 0 !== n || 0 !== r.length || l
-                      ? this.renderDM(t, n)
-                      : (0, i.jsx)(G, {}, "no-private-channels");
+                    : 0 === n && 0 === r.length
+                      ? (0, i.jsx)(G, {}, "no-private-channels")
+                      : this.renderDM(t, n);
             }),
             M(this, "renderSection", (e) => {
-                let { section: t } = e,
-                    { showDMHeader: n } = this.props;
-                return 0 !== t && n
-                    ? (0, i.jsxs)(
+                let { section: t } = e;
+                return 0 === t
+                    ? null
+                    : (0, i.jsxs)(
                           v.Z,
                           {
                               className: D.privateChannelsHeaderContainer,
@@ -452,8 +449,7 @@ class U extends (r = l.Component) {
                               ],
                           },
                           t,
-                      )
-                    : null;
+                      );
             }),
             M(this, "getRowHeight", (e, t) => {
                 let { privateChannelIds: n, density: r } = this.props,
@@ -477,28 +473,27 @@ class U extends (r = l.Component) {
 M(U, "defaultProps", { padding: 8 });
 let B = (e) => {
     let { density: t } = (0, f.TCT)(),
-        { version: n, theme: r, children: a, showDMHeader: o, listScrollerRef: d, hideAllDMs: h } = e,
-        b = l.Children.count(a),
-        y = N.Z.getMutablePrivateChannels(),
-        O = h ? {} : (0, I.k1)(y),
-        v = (0, u.Wu)([w.Z, S.Z, _.Z], () => {
-            let e = w.Z.getPrivateChannelIds(),
-                t = (0, I.tU)(e, [S.Z, _.Z]);
-            return h ? [] : t;
-        }, [h]);
+        { version: n, theme: r, children: a, listScrollerRef: o } = e,
+        d = l.Children.count(a),
+        h = N.Z.getMutablePrivateChannels(),
+        b = (0, _.k1)(h),
+        y = (0, u.Wu)([w.Z, S.Z, I.Z], () => {
+            let e = w.Z.getPrivateChannelIds();
+            return (0, _.tU)(e, [S.Z, I.Z]);
+        });
     (0, x.z)(C.R);
-    let { analyticsLocations: E } = (0, m.ZP)(g.Z.CONTACTS_LIST),
-        Z = (0, P.Ll)(),
-        { keyboardModeEnabled: T, version: A } = (0, u.cj)([p.Z, N.Z], () => ({
+    let { analyticsLocations: O } = (0, m.ZP)(g.Z.CONTACTS_LIST),
+        v = (0, P.Ll)(),
+        { keyboardModeEnabled: E, version: Z } = (0, u.cj)([p.Z, N.Z], () => ({
             keyboardModeEnabled: p.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(N.Z.getPrivateChannelsVersion()) : N.Z.getPrivateChannelsVersion(),
         })),
-        R = l.useRef(null),
-        D = null != d ? d : R,
-        M = l.useCallback(
+        T = l.useRef(null),
+        A = null != o ? o : T,
+        R = l.useCallback(
             (e) => {
-                let t = D.current,
+                let t = A.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -514,21 +509,21 @@ let B = (e) => {
                         },
                     });
             },
-            [D],
+            [A],
         ),
-        G = l.useCallback(
+        D = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = D.current;
+                    let t = A.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [D],
+            [A],
         ),
-        B = l.useCallback(
+        M = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = D.current;
+                    let t = A.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -536,30 +531,30 @@ let B = (e) => {
                         },
                     });
                 }),
-            [D],
+            [A],
         ),
-        F = (0, j.Dt)(),
-        V = (0, c.ZP)({
-            id: "private-channels-".concat(F),
-            isEnabled: T,
-            scrollToStart: G,
-            scrollToEnd: B,
-            defaultFocused: (b + +!!o).toString(),
-            setFocus: M,
+        G = (0, j.Dt)(),
+        B = (0, c.ZP)({
+            id: "private-channels-".concat(G),
+            isEnabled: E,
+            scrollToStart: D,
+            scrollToEnd: M,
+            defaultFocused: (d + 1).toString(),
+            setFocus: R,
         });
     return (0, i.jsx)(m.Gt, {
-        value: E,
+        value: O,
         children: (0, i.jsx)(s.bG, {
-            navigator: V,
+            navigator: B,
             children: (0, i.jsx)(
                 U,
                 k(L({}, e), {
                     density: t,
-                    channels: O,
-                    privateChannelIds: v,
-                    listRef: D,
-                    theme: null != Z ? Z : r,
-                    version: A,
+                    channels: b,
+                    privateChannelIds: y,
+                    listRef: A,
+                    theme: null != v ? v : r,
+                    version: Z,
                 }),
             ),
         }),

@@ -11,8 +11,8 @@ var r = n(54381),
     p = n(719961),
     f = n(916069),
     g = n(591472),
-    h = n(565138),
-    m = n(370774),
+    m = n(565138),
+    h = n(370774),
     b = n(51596),
     _ = n(592125),
     E = n(430824),
@@ -35,16 +35,16 @@ function j(e) {
         L = null != A ? A : null == w ? void 0 : w.guild_id,
         R = (0, s.e7)([E.Z], () => E.Z.getGuild(L), [L]),
         D = (0, f.Z)(),
-        M = (0, m.D)(),
+        M = (0, h.D)(),
         { guildTitleIconSize: k, guildIconSize: U } = (0, p.T)({ location: "GuildTitle" }),
-        { application: G, isFrameInFocusedMode: H } = (0, s.cj)([d.Z, g.Z], () => {
+        { application: G, isFrameInFocusedMode: B } = (0, s.cj)([d.Z, g.Z], () => {
             let e = g.Z.getConnectedFrame();
             return {
                 application: d.Z.getApplication(null == e ? void 0 : e.applicationId),
                 isFrameInFocusedMode: g.Z.getFrameLayoutMode() === C.U.FOCUSED,
             };
         }),
-        B =
+        H =
             null != G
                 ? y.ZP.getApplicationIconURL({
                       id: G.id,
@@ -53,12 +53,12 @@ function j(e) {
                   })
                 : void 0,
         V = null;
-    null != G && H
+    null != G && B
         ? ((l = G.name),
           (V = (0, r.jsx)("img", {
               className: N.appIcon,
               alt: S.intl.string(S.t.X4IxWL),
-              src: B,
+              src: H,
               "aria-hidden": !0,
               draggable: !1,
           })))
@@ -67,7 +67,7 @@ function j(e) {
           : null != R
             ? ((V = D
                   ? (0, r.jsx)(u.r7p, { size: k })
-                  : (0, r.jsx)(h.Z, {
+                  : (0, r.jsx)(m.Z, {
                         guild: R,
                         size: U,
                         active: !0,
@@ -84,16 +84,12 @@ function j(e) {
                     ? ((l = S.intl.string(S.t.Ipxkog)), (V = (0, r.jsx)(u.SrA, { size: k })))
                     : x.pathname.startsWith(I.Z5c.COLLECTIBLES_SHOP)
                       ? ((l = S.intl.string(S.t.pWG4ze)), (V = (0, r.jsx)(u.EOn, { size: k })))
-                      : x.pathname.startsWith(I.Z5c.ME_ACTIVITY)
-                        ? ((l = S.intl.string(S.t.IC5Ann)), (V = (0, r.jsx)(u.g8d, { size: k })))
-                        : x.pathname.startsWith(I.Z5c.ME_DMS)
-                          ? ((l = S.intl.string(S.t.YUU0RF)), (V = (0, r.jsx)(u.gw7, { size: k })))
-                          : x.pathname.startsWith(I.Z5c.FRIENDS)
-                            ? ((l = S.intl.string(S.t.TdEu5X)), (V = (0, r.jsx)(u.iFz, { size: k })))
-                            : x.pathname.startsWith(I.Z5c.FAMILY_CENTER)
-                              ? ((l = S.intl.string(T.default.RZqaJn)), (V = (0, r.jsx)(u.BFJ, { size: k })))
-                              : x.pathname.startsWith(I.Z5c.QUEST_HOME_V2) &&
-                                ((l = S.intl.string(S.t.JALI2K)), (V = (0, r.jsx)(u.qDn, { size: k })));
+                      : x.pathname.startsWith(I.Z5c.FRIENDS)
+                        ? ((l = S.intl.string(S.t.TdEu5X)), (V = (0, r.jsx)(u.iFz, { size: k })))
+                        : x.pathname.startsWith(I.Z5c.FAMILY_CENTER)
+                          ? ((l = S.intl.string(T.default.RZqaJn)), (V = (0, r.jsx)(u.BFJ, { size: k })))
+                          : x.pathname.startsWith(I.Z5c.QUEST_HOME_V2) &&
+                            ((l = S.intl.string(S.t.JALI2K)), (V = (0, r.jsx)(u.qDn, { size: k })));
     let F = i.useCallback((e) => {
             (0, b.ZN)("fast-travel");
         }, []),

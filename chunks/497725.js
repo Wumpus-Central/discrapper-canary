@@ -11,7 +11,5 @@ e.exports = {
     themedHeaderMobile: "e6b7699ce8339e1c-themedHeaderMobile",
     familyCenterButtonContainer: "e6b7699ce8339e1c-familyCenterButtonContainer",
     withPadding: "e6b7699ce8339e1c-withPadding",
-    directMessagesHeader: "e6b7699ce8339e1c-directMessagesHeader",
-    directMessagesButton: "e6b7699ce8339e1c-directMessagesButton",
     preAlphaText: "e6b7699ce8339e1c-preAlphaText",
 };

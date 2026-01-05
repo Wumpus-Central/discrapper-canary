@@ -1,4 +1,4 @@
-n.d(t, { a: () => h }), n(388685), n(539854);
+n.d(t, { a: () => m }), n(388685), n(539854);
 var r = n(473749),
     i = n(442837),
     l = n(699682),
@@ -11,23 +11,23 @@ var r = n(473749),
     p = n(769102),
     f = n(390536),
     g = n(11543);
-function h(e) {
-    let { showDot: t, notificationItem: n, setScrollState: h } = e,
-        [m, b] = r.useState(!1),
-        { unreadItems: _, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
-        v = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
-        y = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && v > 0));
+function m(e) {
+    let { showDot: t, notificationItem: n } = e,
+        [m, h] = r.useState(!1),
+        { unreadItems: b, readItems: _, allUnreadItemsHydrated: E } = (0, p.Z)(),
+        O = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
+        v = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && O > 0));
     r.useEffect(() => {
         null != c.Z.getLoadId() && o.m.trackFeedShown({ homeSessionId: "gravity" });
-    }, [v]);
-    let I = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
-        C = (0, i.e7)([c.Z], () => c.Z.isHydrating(), []),
-        [S, T] = r.useState([]),
-        { loadId: N, lastScrollEventTimestamp: j } = (0, i.cj)([c.Z], () => ({
+    }, [O]);
+    let y = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
+        I = (0, i.e7)([c.Z], () => c.Z.isHydrating(), []),
+        [C, S] = r.useState([]),
+        { loadId: T, lastScrollEventTimestamp: N } = (0, i.cj)([c.Z], () => ({
             loadId: c.Z.getLoadId(),
             lastScrollEventTimestamp: c.Z.lastScrollEvent(),
         })),
-        P = S.filter((e) => {
+        j = C.filter((e) => {
             let { item: t } = e;
             return !s.X.has(t.data.kind);
         })
@@ -36,44 +36,42 @@ function h(e) {
                 return t.id;
             })
             .pop(),
-        x = (0, l.Z)(P);
+        P = (0, l.Z)(j);
     r.useEffect(() => {
-        if (I || y || null == x || null == P || P === x) return;
+        if (y || v || null == P || null == j || j === P) return;
         let e = Date.now();
-        e - j > g.C && (a.Z.gravityScrollEvent(e), o.m.trackFeedFirstScrollStarted());
-    }, [I, j, x, P, N, y]);
-    let A = r.useCallback(
+        e - N > g.C && (a.Z.gravityScrollEvent(e), o.m.trackFeedFirstScrollStarted());
+    }, [y, N, P, j, T, v]);
+    let x = r.useCallback(
             (e) => {
-                var t, n;
-                let { viewableItems: r } = e;
-                if ((r.some((e) => "end" === e.item.data.kind) && b(!0), 0 === r.length)) return;
-                T(r),
-                    (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == h || h());
-                let i = [],
-                    l = (0, d.FJ)(r),
-                    s = Date.now();
-                for (let e = l.length - 1; e >= 0; e--) {
-                    let t = l[e];
+                let { viewableItems: t } = e;
+                if ((t.some((e) => "end" === e.item.data.kind) && h(!0), 0 === t.length)) return;
+                S(t);
+                let n = [],
+                    r = (0, d.FJ)(t),
+                    i = Date.now();
+                for (let e = r.length - 1; e >= 0; e--) {
+                    let t = r[e];
                     null != t &&
-                        i.push({
+                        n.push({
                             id: t.id,
                             type: (0, u.v$)(t),
-                            timestamp: s++,
+                            timestamp: i++,
                         });
                 }
-                i.length > 0 && a.Z.ackGravityItems(i, !0),
+                n.length > 0 && a.Z.ackGravityItems(n, !0),
                     o.m.trackItemShortImpression(
-                        r,
-                        l.map((e) => ({
+                        t,
+                        r.map((e) => ({
                             id: e.id,
                             type: (0, u.v$)(e),
                         })),
-                        v,
+                        O,
                     );
             },
-            [v, b, h],
+            [O, h],
         ),
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 let { viewableItems: t } = e;
                 if (0 === t.length) return;
@@ -84,7 +82,7 @@ function h(e) {
                         id: e.id,
                         type: (0, u.v$)(e),
                     })),
-                    v,
+                    O,
                 ),
                     a.Z.triggerItemsLongImpression(
                         t
@@ -107,9 +105,9 @@ function h(e) {
                             }),
                     );
             },
-            [v],
+            [O],
         ),
-        w = r.useCallback((e) => {
+        Z = r.useCallback((e) => {
             let { viewableItems: t } = e;
             a.Z.startItemsDwell(
                 t
@@ -132,7 +130,7 @@ function h(e) {
                     }),
             );
         }, []),
-        L = r.useMemo(
+        w = r.useMemo(
             () => [
                 {
                     viewabilityConfig: {
@@ -140,7 +138,7 @@ function h(e) {
                         viewAreaCoveragePercentThreshold: 100,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: A,
+                    onViewableItemsChanged: x,
                 },
                 {
                     viewabilityConfig: {
@@ -148,7 +146,7 @@ function h(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 1000,
                     },
-                    onViewableItemsChanged: Z,
+                    onViewableItemsChanged: A,
                 },
                 {
                     viewabilityConfig: {
@@ -156,19 +154,19 @@ function h(e) {
                         viewAreaCoveragePercentThreshold: 50,
                         minimumViewTime: 50,
                     },
-                    onViewableItemsChanged: w,
+                    onViewableItemsChanged: Z,
                 },
             ],
-            [A, Z, w],
+            [x, A, Z],
         );
     r.useEffect(() => {
         a.Z.openICYMITab();
     }, []);
-    let R = (0, f.G)(t),
-        { data: D, stickyHeaderIndices: M } = r.useMemo(() => {
+    let L = (0, f.G)(t),
+        { data: R, stickyHeaderIndices: D } = r.useMemo(() => {
             let e = [];
             return (
-                y &&
+                v &&
                     null != n &&
                     n.type === u.Ni.CUSTOM_STATUS &&
                     e.push({
@@ -181,28 +179,28 @@ function h(e) {
                         score: n.score,
                         unread: !0,
                     }),
-                y
+                v
                     ? e.push({
                           id: "loading",
                           timestamp: 0,
                           unread: !1,
                           data: { kind: "loading" },
                       })
-                    : (_.forEach((t) => {
+                    : (b.forEach((t) => {
                           (0, d.eO)(t) || e.push(t);
                       }),
-                      O &&
+                      E &&
                           e.push({
                               id: "end",
                               timestamp: 0,
                               unread: !1,
                               data: { kind: "end" },
                           }),
-                      E.length > 0 &&
-                          E.forEach((t) => {
+                      _.length > 0 &&
+                          _.forEach((t) => {
                               (0, d.eO)(t) || e.push(t);
                           }),
-                      C &&
+                      I &&
                           e.push({
                               id: "bottomLoading",
                               timestamp: 0,
@@ -214,16 +212,16 @@ function h(e) {
                     stickyHeaderIndices: [],
                 }
             );
-        }, [y, n, _, O, E, C]);
+        }, [v, n, b, E, _, I]);
     return {
-        data: D,
-        loading: y,
-        version: v,
-        visibleItemIds: S,
+        data: R,
+        loading: v,
+        version: O,
+        visibleItemIds: C,
         endVisible: m,
-        isRefreshing: I,
-        handleOnRefresh: R,
-        stickyHeaderIndices: M,
-        viewabilityConfigCallbackPairs: L,
+        isRefreshing: y,
+        handleOnRefresh: L,
+        stickyHeaderIndices: D,
+        viewabilityConfigCallbackPairs: w,
     };
 }
