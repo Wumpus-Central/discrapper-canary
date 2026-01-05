@@ -2,6 +2,7 @@ e.exports = {
     row: "_5adc3c5373eedda6-row",
     havenWrapper: "_5adc3c5373eedda6-havenWrapper",
     haven: "_5adc3c5373eedda6-haven",
+    noTransition: "_5adc3c5373eedda6-noTransition",
     overlay: "_5adc3c5373eedda6-overlay",
     out: "_5adc3c5373eedda6-out",
     welcome: "_5adc3c5373eedda6-welcome",
@@ -11,4 +12,5 @@ e.exports = {
     noInteract: "_5adc3c5373eedda6-noInteract",
     bottomActions: "_5adc3c5373eedda6-bottomActions",
     hidden: "_5adc3c5373eedda6-hidden",
+    interactionOverlay: "_5adc3c5373eedda6-interactionOverlay",
 };

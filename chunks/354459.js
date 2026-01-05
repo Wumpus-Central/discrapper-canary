@@ -58,19 +58,24 @@ function u(e) {
     return (null == e ? void 0 : e.type) === 3;
 }
 var d = (function (e) {
-    return (e[(e.VIDEO = 0)] = "VIDEO"), (e[(e.CAMERA_PREVIEW = 1)] = "CAMERA_PREVIEW"), e;
+    return (
+        (e[(e.VIDEO = 0)] = "VIDEO"), (e[(e.CAMERA_PREVIEW = 1)] = "CAMERA_PREVIEW"), (e[(e.HAVEN = 2)] = "HAVEN"), e
+    );
 })({});
 let f = {
         0: 320,
         1: 160,
+        2: 320,
     },
     p = {
         0: 960,
         1: 480,
+        2: 960,
     },
     _ = {
         0: 200,
         1: 160,
+        2: 200,
     },
     m = 8,
     h = 550,

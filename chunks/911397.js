@@ -1,56 +1,61 @@
-n.d(t, { Z: () => u });
-var i = n(54381),
-    r = n(473749),
-    l = n(120356),
-    a = n.n(l),
-    o = n(481060),
-    s = n(195045),
+n.d(t, { Z: () => f });
+var r = n(54381),
+    i = n(473749),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(195045),
     c = n(663537);
-let u = (e) => {
-    let {
-            id: t,
-            occupant: n,
-            x: l,
-            y: u,
-            assetKey: d,
-            onClick: p,
-            skipNewUserEducation: f = !1,
-            shadowPosition: h,
-        } = e,
-        m = (0, s.Z)(),
-        g = r.useMemo(() => (null == m ? void 0 : m.seats[d]), [m, d]),
-        b = r.useMemo(() => (null == g ? void 0 : g.seat), [g]),
-        y = r.useMemo(() => (null == g ? void 0 : g.shadow), [g]);
-    return (0, i.jsx)(o.P3F, {
-        "aria-label": "claim seat",
-        onClick: (e) => {
-            e.preventDefault(), e.stopPropagation(), p(t);
-        },
-        className: a()(c.seat, { [c.claimed]: null != n }),
-        style: { transform: "translate(".concat(l, "px, ").concat(u, "px)") },
-        children: (0, i.jsxs)("div", {
-            className: c.seatWrapper,
-            children: [
-                null != y &&
-                    null != h &&
-                    (0, i.jsx)("img", {
-                        className: a()(c.image, c.shadow),
-                        style: { transform: "translate(".concat(h.x, "px, ").concat(h.y, "px)") },
-                        src: null == g ? void 0 : g.shadow,
-                        alt: "",
-                    }),
-                null != b &&
-                    (0, i.jsx)("img", {
-                        onDragStart: (e) => e.preventDefault(),
-                        className: a()(c.image, {
-                            [c.claimed]: null != n,
-                            [c.noAnimation]: f,
+let u = 5500,
+    d = 150,
+    f = (e) => {
+        let {
+                id: t,
+                occupant: n,
+                x: a,
+                y: f,
+                assetKey: p,
+                onClick: _,
+                skipNewUserEducation: m = !1,
+                shadowPosition: h,
+            } = e,
+            g = (0, l.Z)(),
+            E = i.useMemo(() => (null == g ? void 0 : g.seats[p]), [g, p]),
+            b = i.useMemo(() => (null == E ? void 0 : E.seat), [E]),
+            y = i.useMemo(() => (null == E ? void 0 : E.shadow), [E]);
+        return (0, r.jsx)(s.P3F, {
+            "aria-label": "claim seat",
+            onClick:
+                null != _
+                    ? (e) => {
+                          e.preventDefault(), e.stopPropagation(), _(t);
+                      }
+                    : void 0,
+            className: o()(c.seat, { [c.claimed]: null != n }),
+            style: { transform: "translate(".concat(a, "px, ").concat(f, "px)") },
+            children: (0, r.jsxs)("div", {
+                className: c.seatWrapper,
+                children: [
+                    null != y &&
+                        null != h &&
+                        (0, r.jsx)("img", {
+                            className: o()(c.image, c.shadow),
+                            style: { transform: "translate(".concat(h.x, "px, ").concat(h.y, "px)") },
+                            src: null == E ? void 0 : E.shadow,
+                            alt: "",
                         }),
-                        style: { animationDelay: "".concat(5500 + 150 * t, "ms") },
-                        src: null == g ? void 0 : g.seat,
-                        alt: "",
-                    }),
-            ],
-        }),
-    });
-};
+                    null != b &&
+                        (0, r.jsx)("img", {
+                            onDragStart: (e) => e.preventDefault(),
+                            className: o()(c.image, {
+                                [c.claimed]: null != n,
+                                [c.noAnimation]: m,
+                            }),
+                            style: { animationDelay: "".concat(u + d * t, "ms") },
+                            src: null == E ? void 0 : E.seat,
+                            alt: "",
+                        }),
+                ],
+            }),
+        });
+    };

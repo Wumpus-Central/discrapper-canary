@@ -5896,7 +5896,7 @@ var nj = (function (e) {
         );
     })({}),
     nU = (function (e) {
-        return (e.VIDEO = "VIDEO"), (e.ACTIVITY = "ACTIVITY"), (e.FRAME = "FRAME"), e;
+        return (e.VIDEO = "VIDEO"), (e.ACTIVITY = "ACTIVITY"), (e.FRAME = "FRAME"), (e.HAVEN = "HAVEN"), e;
     })({}),
     nG = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;

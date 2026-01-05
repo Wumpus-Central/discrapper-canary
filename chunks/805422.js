@@ -1,10 +1,10 @@
-let i;
-n.d(t, { Z: () => p });
-var r,
-    l = n(442837),
-    a = n(570140),
-    o = n(594174);
-function s(e, t, n) {
+let r;
+n.d(t, { Z: () => E });
+var i,
+    a = n(442837),
+    o = n(570140),
+    s = n(594174);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,74 +20,82 @@ function s(e, t, n) {
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                s(e, t, n[t]);
+            r.forEach(function (t) {
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-let u = {};
-class d extends (r = l.ZP.Store) {
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = {},
+    p = (e) => {
+        console.log("HAVEN_CONNECT", e), (f[e.room.roomId] = e.room);
+    },
+    _ = (e) => {
+        if ((console.log("HAVEN_DISCONNECT", e), null == f[e.roomId])) return !1;
+        let t = s.default.getCurrentUser();
+        if (e.userId === (null == t ? void 0 : t.id)) return void delete f[e.roomId];
+        let n = c({}, f[e.roomId]);
+        (n.participants = n.participants.filter((t) => t.userId !== e.userId)),
+            (n.seats = n.seats.map((t) => (t.claimedBy === e.userId ? d(c({}, t), { claimedBy: null }) : t))),
+            (f[e.roomId] = n);
+    },
+    m = (e) => {
+        console.log("HAVEN_UPDATE", e), (f[e.room.roomId] = e.room);
+    },
+    h = (e) => {
+        r = e.assets;
+    };
+class g extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(s.default);
     }
     get state() {
-        return u;
+        return f;
     }
     getRoom(e) {
-        return u[e];
+        return f[e];
     }
     isUserConnected(e) {
-        return null != u[e];
+        return null != f[e];
     }
     get assets() {
-        return i;
+        return r;
     }
 }
-s(d, "displayName", "HavenStore");
-let p = new d(a.Z, {
-    HAVEN_CONNECT: (e) => {
-        console.log("HAVEN_CONNECT", e), (u[e.room.roomId] = e.room);
-    },
-    HAVEN_DISCONNECT: (e) => {
-        if ((console.log("HAVEN_DISCONNECT", e), null == u[e.roomId])) return !1;
-        let t = o.default.getCurrentUser();
-        if (e.userId === (null == t ? void 0 : t.id)) return void delete u[e.roomId];
-        let n = c({}, u[e.roomId]);
-        (n.participants = n.participants.filter((t) => t.userId !== e.userId)),
-            (n.seats = n.seats.map((t) => {
-                var n, i;
-                return t.claimedBy === e.userId
-                    ? ((n = c({}, t)),
-                      (i = i = { claimedBy: null }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                          : (function (e, t) {
-                                var n = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, i);
-                                }
-                                return n;
-                            })(Object(i)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                            }),
-                      n)
-                    : t;
-            })),
-            (u[e.roomId] = n);
-    },
-    HAVEN_UPDATE: (e) => {
-        console.log("HAVEN_UPDATE", e), (u[e.room.roomId] = e.room);
-    },
-    HAVEN_GOT_ASSETS: (e) => {
-        i = e.assets;
-    },
+l(g, "displayName", "HavenStore");
+let E = new g(o.Z, {
+    HAVEN_CONNECT: p,
+    HAVEN_DISCONNECT: _,
+    HAVEN_UPDATE: m,
+    HAVEN_GOT_ASSETS: h,
 });
