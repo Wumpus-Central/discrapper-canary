@@ -29,10 +29,10 @@ function s(e, t) {
         r = [];
     return (
         n.forEach((t) => {
-            let n = e.find((e) => t.name === e.codec);
+            let n = e.find((e) => t.name === e.name);
             null != n &&
                 r.push({
-                    name: n.codec,
+                    name: n.name,
                     encode: n.encode && t.encode,
                     decode: n.decode && t.decode,
                 });
@@ -71,23 +71,14 @@ function l(e) {
     );
 }
 function c(e, t) {
-    return "string" == typeof e
-        ? s(
-              JSON.parse(e).map((e) => ({
-                  codec: u(e.codec),
-                  encode: e.encode,
-                  decode: e.decode,
-              })),
-              t,
-          )
-        : s(
-              e.map((e) => ({
-                  codec: u(e),
-                  encode: !0,
-                  decode: !0,
-              })),
-              t,
-          );
+    return s(
+        JSON.parse(e).map((e) => ({
+            name: u(e.codec),
+            encode: e.encode,
+            decode: e.decode,
+        })),
+        t,
+    );
 }
 function u(e) {
     return "AV1X" === e ? "AV1" : e;

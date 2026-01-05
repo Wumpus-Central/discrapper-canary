@@ -100,10 +100,9 @@ class x extends p.Z {
             },
         ]);
         let i = (t, i) => {
-                let a = null != r.getCodecCapabilities ? r.getCodecCapabilities : r.getSupportedVideoCodecs;
                 n.on(h.Sh.Stats, n.handleStats),
                     n.conn.setOnVideoCallback(n.handleVideo),
-                    a((t) => {
+                    r.getCodecCapabilities((t) => {
                         let r = (0, g.DY)(n.experimentFlags);
                         (n.codecs = [
                             {
@@ -154,19 +153,18 @@ class x extends p.Z {
             ]),
             (e.context = this.context);
         let n = (0, b.zS)(),
-            r = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs,
-            i = (i, a) => {
+            r = (r, i) => {
                 if (this.destroyed) return;
-                if (null != i && "" !== i) {
-                    this.setConnectionState(v.$j.NO_ROUTE), this.emit(h.Sh.Error, i);
+                if (null != r && "" !== r) {
+                    this.setConnectionState(v.$j.NO_ROUTE), this.emit(h.Sh.Error, r);
                     return;
                 }
-                if (null == a) throw Error("Invalid transport info");
-                this.transportInfo = a;
-                let { protocol: o, address: s, port: l } = a;
-                this.logger.info("Connected with local address ".concat(s, ":").concat(l, " and protocol: ").concat(o)),
+                if (null == i) throw Error("Invalid transport info");
+                this.transportInfo = i;
+                let { protocol: a, address: o, port: s } = i;
+                this.logger.info("Connected with local address ".concat(o, ":").concat(s, " and protocol: ").concat(a)),
                     (this.onConnectCallbackAt = performance.now()),
-                    r((r) => {
+                    n.getCodecCapabilities((r) => {
                         (this.onVideoCodecsCallbackAt = performance.now()),
                             this.logger.info("Available codecs: ".concat(JSON.stringify(r)));
                         let i = (0, g.DY)(this.experimentFlags);
@@ -205,7 +203,7 @@ class x extends p.Z {
                                 ),
                             ),
                             t.getEncryptionModes((r) => {
-                                var i, a, c, u, d, f, p, _, m, g, E, b, y, O, S;
+                                var i, l, c, u, d, f, p, _, m, g, E, b, y, O, S;
                                 (this.onEncryptionModesCallbackAt = performance.now()),
                                     this.logger.info("Encryption modes: ".concat(r)),
                                     t.setTransportOptions(this.getConnectionTransportOptions()),
@@ -214,8 +212,8 @@ class x extends p.Z {
                                     t.setOnSpeakingCallback(this.handleSpeakingNative),
                                     null == (i = t.setOnNativeMuteToggleCallback) ||
                                         i.call(t, this.handleNativeMuteToggled),
-                                    null == (a = t.setOnNativeMuteChangedCallback) ||
-                                        a.call(t, this.handleNativeMuteChanged),
+                                    null == (l = t.setOnNativeMuteChangedCallback) ||
+                                        l.call(t, this.handleNativeMuteChanged),
                                     null == (c = t.setOnSpeakingWhileMutedCallback) ||
                                         c.call(t, this.handleSpeakingWhileMuted),
                                     null == (u = t.setPingInterval) || u.call(t, v.$B),
@@ -253,9 +251,9 @@ class x extends p.Z {
                                             S.call(t, this.handleSoundshareFailed)),
                                     null == (_ = t.setOnMLSFailureCallback) || _.call(t, this.handleMLSFailure),
                                     this.setConnectionState(v.$j.CONNECTED),
-                                    this.emit(h.Sh.Connected, o, {
-                                        address: s,
-                                        port: l,
+                                    this.emit(h.Sh.Connected, a, {
+                                        address: o,
+                                        port: s,
                                         mode: this.chooseEncryptionMode(e.modes, r),
                                         codecs: this.codecs,
                                     }),
@@ -280,28 +278,28 @@ class x extends p.Z {
                     });
             };
         if (null != n.createOwnStreamConnectionWithOptions)
-            s =
+            o =
                 this.context === v.Yn.STREAM && this.streamUserId === this.userId
                     ? n.createOwnStreamConnectionWithOptions
                     : n.createVoiceConnectionWithOptions;
         else if (null != n.createOwnStreamConnection) {
-            var a,
+            var i,
+                a,
                 o,
-                s,
-                l =
+                s =
                     this.context === v.Yn.STREAM && this.streamUserId === this.userId
                         ? n.createOwnStreamConnection
                         : n.createVoiceConnection;
-            s = (e, t, n) => l(t.ssrc, this.userId, t.address, t.port, n, t.experiments, t.streamParameters);
+            o = (e, t, n) => s(t.ssrc, this.userId, t.address, t.port, n, t.experiments, t.streamParameters);
         } else
-            s = (e, t, r) => new n.VoiceConnection(t.ssrc, e, t.address, t.port, r, t.experiments, t.streamParameters);
-        null == (a = (t = this.conn = s(this.userId, e, i)).setSecureFramesStateUpdateCallback) ||
-            a.call(t, (e) => {
+            o = (e, t, r) => new n.VoiceConnection(t.ssrc, e, t.address, t.port, r, t.experiments, t.streamParameters);
+        null == (i = (t = this.conn = o(this.userId, e, r)).setSecureFramesStateUpdateCallback) ||
+            i.call(t, (e) => {
                 this.logger.info("DAVE protocol state update: ".concat(JSON.stringify(e))),
                     this.emit(h.Sh.SecureFramesUpdate, e);
             }),
-            null == (o = t.setDesktopSourceStatusCallback) ||
-                o.call(t, (e) => {
+            null == (a = t.setDesktopSourceStatusCallback) ||
+                a.call(t, (e) => {
                     if ("videohook_start" === e.type) this.emit(h.Sh.VideoHookStart);
                     else if ("videohook_stop" === e.type) this.emit(h.Sh.VideoHookStop);
                     else if ("videohook_initialize" === e.type)
