@@ -182,7 +182,11 @@ function er(e) {
     let t = W(e);
     if (0 === t.size()) return;
     let n = eU(e) || et(t) ? A.WtW.VIDEO : A.WtW.VOICE;
-    n === A.WtW.VOICE ? (delete U[e], delete G[e]) : (U[e] = n);
+    if (n === A.WtW.VOICE) {
+        var r;
+        let t = null == (r = G[e]) ? void 0 : r[A.IlC.APP];
+        delete U[e], t !== A.AEg.HAVEN && delete G[e];
+    } else U[e] = n;
 }
 function ei(e) {
     delete j[e], delete M[e], delete U[e], delete G[e];
