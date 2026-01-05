@@ -321,7 +321,6 @@ function ee(e) {
         },
         te = (0, Z.U)({
             renderHeader: eo,
-            referralTrialOfferId: ec,
             handleClose: e8,
         });
     return (0, r.jsx)(c.UkV, {
