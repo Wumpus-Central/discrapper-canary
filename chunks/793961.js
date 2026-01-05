@@ -1,35 +1,33 @@
-n.d(e, { D: () => S });
-var i = n(945577),
-    l = n(611004),
-    s = n(315322),
-    u = n(509613),
-    r = n(695346),
-    a = n(313789),
-    o = n(981631),
-    T = n(388032);
-let S = (0, u.J9)(a.n.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
-    useTitle: () => T.intl.string(T.t["NxjN+q"]),
-    useSearchTerms: () => [T.intl.string(T.t["t4+fbe"])],
+n.d(e, { D: () => T });
+var i = n(611004),
+    l = n(315322),
+    s = n(509613),
+    u = n(695346),
+    r = n(313789),
+    a = n(981631),
+    o = n(388032);
+let T = (0, s.J9)(r.n.CHAT_MESSAGE_SEARCH_DEFAULT_DM_SEARCH_BEHAVIOR, {
+    useTitle: () => o.intl.string(o.t["NxjN+q"]),
+    useSearchTerms: () => [o.intl.string(o.t["t4+fbe"])],
     useOptions: () => [
         {
-            name: T.intl.string(T.t["t+fGsk"]),
+            name: o.intl.string(o.t["t+fGsk"]),
             value: 0,
         },
         {
-            name: T.intl.string(T.t.MwlEGN),
+            name: o.intl.string(o.t.MwlEGN),
             value: 1,
         },
     ],
-    useValue: () => +!!r.rR.useSetting(),
+    useValue: () => +!!u.rR.useSetting(),
     setValue: (t) => {
         let e = 1 === t;
-        e ? l.Z.cleanUpPrivateChannelSearchState() : l.Z.cleanUpSearchState({ type: o.aib.DMS }),
-            (0, s.yn)({
-                prevIsCrossDMSettingEnabled: r.rR.getSetting(),
+        e ? i.Z.cleanUpPrivateChannelSearchState() : i.Z.cleanUpSearchState({ type: a.aib.DMS }),
+            (0, l.yn)({
+                prevIsCrossDMSettingEnabled: u.rR.getSetting(),
                 isCrossDMSettingEnabled: e,
-                location: s.Ix.USER_SETTINGS,
+                location: l.Ix.USER_SETTINGS,
             }),
-            r.rR.updateSetting(e);
+            u.rR.updateSetting(e);
     },
-    usePredicate: () => (0, i.U)({ location: "DefaultDMSearchBehavior" }),
 });

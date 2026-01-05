@@ -171,9 +171,8 @@ let eZ = () => [
             activeInputProfile: tt,
             isInputProfileCustom: tn,
             isChatMentionSuggestionsSettingEnabled: tr,
-            isCrossDMSearchEnabledSettingVisible: ti,
-            isRedesignedNotificationsEnabled: ta,
-            isHDRAccessibilitySettingExperimentEnabled: to,
+            isRedesignedNotificationsEnabled: ti,
+            isHDRAccessibilitySettingExperimentEnabled: ta,
         } = e;
         return Object.freeze({
             [eR.s6.SEARCH_NO_RESULTS]: {
@@ -931,7 +930,7 @@ let eZ = () => [
                 section: eD.oAB.ACCESSIBILITY,
                 searchableTitles: [eL.intl.string(eL.t.qvTIwX)],
                 parent: eR.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
-                predicate: () => !ta,
+                predicate: () => !ti,
             },
             [eR.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
                 section: eD.oAB.ACCESSIBILITY,
@@ -942,7 +941,7 @@ let eZ = () => [
                 section: eD.oAB.ACCESSIBILITY,
                 searchableTitles: [eL.intl.string(eL.t.nemtgW), "HDR", eL.intl.string(eL.t["O/Gjvn"])],
                 parent: eR.s6.ACCESSIBILITY,
-                predicate: () => to,
+                predicate: () => ta,
             },
             [eR.s6.ACCESSIBILITY_APPEARANCE_UPSELL]: {
                 section: eD.oAB.ACCESSIBILITY,
@@ -1256,13 +1255,11 @@ let eZ = () => [
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t.VYODPD)],
                 parent: eR.s6.CHAT,
-                predicate: () => ti,
             },
             [eR.s6.MESSAGE_SEARCH_ALL_DMS]: {
                 section: eD.oAB.TEXT,
                 searchableTitles: [eL.intl.string(eL.t["t4+fbe"])],
                 parent: eR.s6.MESSAGE_SEARCH,
-                predicate: () => ti,
             },
             [eR.s6.CHAT_INLINE_MEDIA]: {
                 section: eD.oAB.TEXT,
