@@ -180,6 +180,7 @@ var r = (function (e) {
         (e.SOUNDBOARD_CONTEXT_MENU = "soundboard context menu"),
         (e.PREMIUM_PREVIEW_UPSELL_HEADER = "premium preview upsell header"),
         (e.PREMIUM_UPSELL_OVERLAY = "premium upsell overlay"),
+        (e.OVERLAY_NUDGE = "overlay nudge"),
         (e.SELECT_IMAGE_MODAL = "select image modal"),
         (e.VIDEO_BACKGROUND_OPTIONS = "video background options"),
         (e.VIDEO_BACKGROUND_IMAGE_OPTION = "video background image option"),

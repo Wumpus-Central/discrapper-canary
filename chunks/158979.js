@@ -3,11 +3,11 @@ var i = n(54381);
 n(473749);
 var r = n(481060),
     a = n(13245),
-    s = n(371651),
-    o = n(594174),
-    l = n(145597),
-    c = n(312839),
-    d = n(981631),
+    s = n(100527),
+    o = n(371651),
+    l = n(594174),
+    c = n(145597),
+    d = n(312839),
     u = n(987650),
     f = n(388032),
     h = n(433461);
@@ -69,7 +69,7 @@ function m(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: h } = e,
-                { trackView: m, trackClick: y } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: m, trackClick: y } = (0, d.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -84,24 +84,21 @@ function m(e) {
                 },
                 onNotificationClick: (e, t) => {
                     y("unlock");
-                    let c = (0, l.getPID)();
+                    let d = (0, c.getPID)();
                     a.Z.updateNotificationStatus(t);
-                    let u = s.default.isOverlayOOPEnabledForPid(c);
-                    if ((u ? a.Z.setInputLocked(!1, c) : a.Z.setInstanceLocked(!1), null == o.default.getCurrentUser()))
+                    let u = o.default.isOverlayOOPEnabledForPid(d);
+                    if ((u ? a.Z.setInputLocked(!1, d) : a.Z.setInstanceLocked(!1), null == l.default.getCurrentUser()))
                         return;
                     let f = u ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("4093"), n.e("44183"), n.e("50442")]).then(
-                            n.bind(n, 60594),
-                        );
+                        let { default: e } = await Promise.all([n.e("46746"), n.e("95200")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
                                 g(p({}, t), {
-                                    sourcePID: c,
+                                    sourcePID: d,
                                     selectSource: !1,
-                                    guildId: h.id,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE,
+                                    analyticsLocations: [s.Z.OVERLAY_NUDGE],
                                 }),
                             );
                     }, f);
@@ -113,7 +110,7 @@ function m(e) {
         }
         case u.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: o, trackClick: h } = (0, c.R)(u.n0.GoLiveNonVoiceNudge, {
+                { trackView: l, trackClick: h } = (0, d.R)(u.n0.GoLiveNonVoiceNudge, {
                     notif_type: u.n0.GoLiveNonVoiceNudge,
                 });
             return {
@@ -123,27 +120,24 @@ function m(e) {
                 hint: () => (0, i.jsx)(b, {}),
                 renderFooter: () => (0, i.jsx)(b, {}),
                 onNotificationShow: () => {
-                    o();
+                    l();
                 },
                 onNotificationClick: (e, t) => {
                     h("unlock");
-                    let o = (0, l.getPID)();
+                    let l = (0, c.getPID)();
                     a.Z.updateNotificationStatus(t);
-                    let c = s.default.isOverlayOOPEnabledForPid(o);
-                    c ? a.Z.setInputLocked(!1, o) : a.Z.setInstanceLocked(!1);
-                    let u = c ? { contextKey: r.u1M } : void 0;
+                    let d = o.default.isOverlayOOPEnabledForPid(l);
+                    d ? a.Z.setInputLocked(!1, l) : a.Z.setInstanceLocked(!1);
+                    let u = d ? { contextKey: r.u1M } : void 0;
                     (0, r.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("4093"), n.e("44183"), n.e("50442")]).then(
-                            n.bind(n, 60594),
-                        );
+                        let { default: e } = await Promise.all([n.e("46746"), n.e("95200")]).then(n.bind(n, 60594));
                         return (t) =>
                             (0, i.jsx)(
                                 e,
                                 g(p({}, t), {
-                                    sourcePID: o,
+                                    sourcePID: l,
                                     selectSource: !1,
-                                    selectGuild: !0,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE,
+                                    analyticsLocations: [s.Z.OVERLAY_NUDGE],
                                 }),
                             );
                     }, u);

@@ -1,19 +1,18 @@
 n.d(t, {
-    C7: () => o,
-    Ec: () => a,
-    Mm: () => E,
-    T6: () => c,
-    ZM: () => m,
-    c5: () => _,
-    jR: () => l,
+    C7: () => a,
+    Mm: () => g,
+    T6: () => l,
+    ZM: () => _,
+    c5: () => p,
+    jR: () => s,
     kr: () => i,
-    lb: () => f,
-    lo: () => h,
-    sA: () => u,
-    sN: () => d,
-    tB: () => g,
-    yG: () => s,
-    zj: () => p,
+    lb: () => d,
+    lo: () => m,
+    sA: () => c,
+    sN: () => u,
+    tB: () => h,
+    yG: () => o,
+    zj: () => f,
 }),
     n(388685);
 var r = n(214627),
@@ -33,19 +32,18 @@ var r = n(214627),
             e
         );
     })({});
-let a = ">=19.0.0",
+let a = ">=22.0.0",
     o = ">=22.0.0",
-    s = ">=22.0.0",
-    l = ">=24.0.0",
-    c = ">=10.0.17763",
-    u = "<10.0.22000",
+    s = ">=24.0.0",
+    l = ">=10.0.17763",
+    c = "<10.0.22000",
+    u = ">=10.0.26100",
     d = ">=10.0.26100",
-    f = ">=10.0.26100",
-    p = 26100,
-    _ = ">=10.0.22000",
-    m = 22000;
-var h = (function (e) {
+    f = 26100,
+    p = ">=10.0.22000",
+    _ = 22000;
+var m = (function (e) {
     return (e.GUILD = "guild"), (e.CALL = "call"), e;
 })({});
-let g = r.T.StreamNotificationsGuildMaxSize,
-    E = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
+let h = r.T.StreamNotificationsGuildMaxSize,
+    g = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);

@@ -100,9 +100,9 @@ function O() {
         n = Number(null != (e = i.K.get(h)) ? e : 0);
     if (!t || n >= g) return;
     let r = c.Z.getState();
-    if (r.preset !== u.ApplicationStreamPresets.PRESET_CUSTOM) {
+    if (r.preset !== u.tI.PRESET_CUSTOM) {
         (0, a.Rc)({
-            preset: u.ApplicationStreamPresets.PRESET_AUTO,
+            preset: u.tI.PRESET_AUTO,
             resolution: r.resolution,
             frameRate: r.fps,
             soundshareEnabled: r.soundshareEnabled,

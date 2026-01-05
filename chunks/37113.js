@@ -1,17 +1,14 @@
 n.d(t, {
-    ApplicationStreamFPS: () => l,
-    ApplicationStreamPresets: () => c,
-    ApplicationStreamResolutions: () => o,
     L9: () => u,
+    LY: () => o,
     ND: () => f,
-    WC: () => _,
     aW: () => s,
-    af: () => b,
-    k0: () => E,
-    km: () => g,
+    af: () => h,
+    km: () => m,
     no: () => d,
-    o6: () => h,
-    z8: () => m,
+    o6: () => _,
+    tI: () => c,
+    ws: () => l,
 }),
     n(415506);
 var r = n(981631),
@@ -209,13 +206,12 @@ function p(e, t) {
         },
     };
 }
-let _ = [p(720), p(1080), p(1440), p(0, () => a.intl.string(a.t.XjXqzh))],
-    m = [p(720), p(1080), p(1440)],
-    h = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
-    g = [p(480, () => h(480)), p(720, () => h(720)), p(1080, () => h(1080)), p(1440, () => h(1440)), p(0, () => h(0))],
-    E = [p(15), p(30), p(60)],
-    b = [
-        p(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
-        p(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
-        p(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
-    ];
+p(720), p(1080), p(1440), p(0, () => a.intl.string(a.t.XjXqzh)), p(720), p(1080), p(1440);
+let _ = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
+    m = [p(480, () => _(480)), p(720, () => _(720)), p(1080, () => _(1080)), p(1440, () => _(1440)), p(0, () => _(0))];
+p(15), p(30), p(60);
+let h = [
+    p(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
+    p(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
+    p(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
+];

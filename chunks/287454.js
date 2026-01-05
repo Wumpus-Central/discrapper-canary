@@ -20,35 +20,27 @@ let T = (0, u.Em)(r.n.CLIPS_RESOLUTION, {
     useOptions: () => [
         {
             id: "480p",
-            value: a.ApplicationStreamResolutions.RESOLUTION_480,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, {
-                resolution: a.ApplicationStreamResolutions.RESOLUTION_480,
-            }),
+            value: a.LY.RESOLUTION_480,
+            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.LY.RESOLUTION_480 }),
         },
         {
             id: "720p",
-            value: a.ApplicationStreamResolutions.RESOLUTION_720,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, {
-                resolution: a.ApplicationStreamResolutions.RESOLUTION_720,
-            }),
+            value: a.LY.RESOLUTION_720,
+            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.LY.RESOLUTION_720 }),
         },
         {
             id: "1080p",
-            value: a.ApplicationStreamResolutions.RESOLUTION_1080,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, {
-                resolution: a.ApplicationStreamResolutions.RESOLUTION_1080,
-            }),
+            value: a.LY.RESOLUTION_1080,
+            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.LY.RESOLUTION_1080 }),
         },
         {
             id: "1440p",
-            value: a.ApplicationStreamResolutions.RESOLUTION_1440,
-            label: o.intl.formatToPlainString(o.t.TEOC0I, {
-                resolution: a.ApplicationStreamResolutions.RESOLUTION_1440,
-            }),
+            value: a.LY.RESOLUTION_1440,
+            label: o.intl.formatToPlainString(o.t.TEOC0I, { resolution: a.LY.RESOLUTION_1440 }),
         },
         {
             id: "source",
-            value: a.ApplicationStreamResolutions.RESOLUTION_SOURCE,
+            value: a.LY.RESOLUTION_SOURCE,
             label: o.intl.string(o.t.XjXqzh),
         },
     ],

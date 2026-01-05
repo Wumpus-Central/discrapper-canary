@@ -92,7 +92,7 @@ function N(e) {
         k = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
         U = b.default.extractTimestamp(I.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(I, N, t) }),
-        { newestAnalyticsLocation: Z } = (0, l.ZP)(P, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
+        { analyticsLocations: Z } = (0, l.ZP)(P, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
         F = S.intl.string(v.default["5+172e"]),
         B = !1;
     return (
@@ -125,12 +125,10 @@ function N(e) {
                                           ? (0, p.Z)(j.pid)
                                           : (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("38697"),
-                                                    n.e("4093"),
-                                                    n.e("44183"),
-                                                    n.e("59416"),
+                                                    n.e("46746"),
+                                                    n.e("84064"),
                                                 ]).then(n.bind(n, 60594));
-                                                return (t) => (0, r.jsx)(e, A(T({}, t), { analyticsLocation: Z }));
+                                                return (t) => (0, r.jsx)(e, A(T({}, t), { analyticsLocations: Z }));
                                             }));
                               },
                           },

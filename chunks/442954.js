@@ -464,50 +464,6 @@ let C = {
                 }),
             );
     },
-    GoLiveConfirmModal: async () => {
-        let { default: e } = await Promise.all([n.e("38697"), n.e("4093"), n.e("8218")]).then(n.bind(n, 504580)),
-            {
-                ApplicationStreamPresets: t,
-                ApplicationStreamResolutions: r,
-                ApplicationStreamFPS: i,
-            } = await Promise.resolve().then(n.bind(n, 37113)),
-            l = {
-                id: "screen:0:0",
-                name: "Entire Screen",
-                thumbnail:
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
-                url: "screen:0:0",
-            };
-        return (n) =>
-            (0, a.jsx)(
-                e,
-                j(v({}, n), {
-                    selectedSource: l,
-                    selectedPreset: t.PRESET_VIDEO,
-                    selectedResolution: r.RESOLUTION_1080,
-                    selectedFPS: i.FPS_60,
-                    sound: !0,
-                    previewDisabled: !1,
-                    selectedChannelId: "987654321",
-                    sourceChanged: !1,
-                    selectGuild: !1,
-                    selectSource: !1,
-                    selectedGuildId: "123456789",
-                    targetGuildPremiumTier: 2,
-                    onChangeSelectedChannelId: (e) => console.log("Channel changed:", e),
-                    onChangeSelectedFPS: (e) => console.log("FPS changed:", e),
-                    onChangeSelectedPreset: (e) => console.log("Preset changed:", e),
-                    onChangeSelectedResolution: (e) => console.log("Resolution changed:", e),
-                    onChangeSelectedSource: (e, t) => console.log("Source changed:", e, t),
-                    onChangeSource: () => console.log("Change source clicked"),
-                    onChangeAudioDevice: (e) => console.log("Audio device changed:", e),
-                    onChangeGuild: () => console.log("Change guild clicked"),
-                    onChangeSound: (e) => console.log("Sound changed:", e),
-                    onChangePreviewDisabled: (e) => console.log("Preview disabled changed:", e),
-                    onClose: () => console.log("Go Live Confirm modal closed"),
-                }),
-            );
-    },
     GuildDisableCommunicationModal: async () => {
         let {
                 Button: e,

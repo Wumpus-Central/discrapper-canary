@@ -22,14 +22,11 @@ var r = n(473749),
     m = n(388032);
 function h(e) {
     if (null == e) return;
-    let t =
-            e.maxResolution.type === _.uA.SOURCE
-                ? f.ApplicationStreamResolutions.RESOLUTION_SOURCE
-                : e.maxResolution.height,
+    let t = e.maxResolution.type === _.uA.SOURCE ? f.LY.RESOLUTION_SOURCE : e.maxResolution.height,
         n = (0, f.aW)(t);
     return (
-        (0, f.L9)(e.maxFrameRate) !== f.ApplicationStreamFPS.FPS_5 &&
-        null == f.ND.find((e) => e.resolution === n && e.fps !== f.ApplicationStreamFPS.FPS_5 && !E(e))
+        (0, f.L9)(e.maxFrameRate) !== f.ws.FPS_5 &&
+        null == f.ND.find((e) => e.resolution === n && e.fps !== f.ws.FPS_5 && !E(e))
     );
 }
 function g(e) {

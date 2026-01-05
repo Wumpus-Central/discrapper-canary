@@ -1,10 +1,9 @@
 n.d(t, {
-    NS: () => m,
+    NS: () => _,
     NV: () => s,
-    PP: () => p,
-    Zq: () => d,
-    iL: () => f,
-    n7: () => _,
+    PP: () => f,
+    iL: () => d,
+    n7: () => p,
     w2: () => c,
     w9: () => u,
 });
@@ -118,37 +117,28 @@ function u() {
         { enableViewerClipping: r } = i.Z.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
     return (n || t || r) && e;
 }
-let d = (e) => {
-    let { autoTrackExposure: t } = e,
-        n = (0, o.Z)(a.Z),
-        { enablePremiumEarlyAccessGoLiveRoadblock: r } = l.useExperiment(
-            { location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock" },
-            { autoTrackExposure: t && n },
-        );
-    return !!n && r;
-};
-function f() {
+function d() {
     let { enableScreenshotKeybind: e } = s.getCurrentConfig(
         { location: "isScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function p() {
+function f() {
     let { enableScreenshotKeybind: e } = s.useExperiment(
         { location: "useScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function _() {
+function p() {
     let { enableVoiceOnlyClips: e } = s.getCurrentConfig(
         { location: "areVoiceOnlyClipsEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function m() {
+function _() {
     let { enableAdvancedSignals: e } = s.getCurrentConfig(
         { location: "areAdvancedSignalsEnabled" },
         { autoTrackExposure: !1 },

@@ -112,31 +112,23 @@ function D() {
         Z = i.useMemo(
             () => [
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_480,
-                    label: C.intl.formatToPlainString(C.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_480,
-                    }),
+                    value: T.LY.RESOLUTION_480,
+                    label: C.intl.formatToPlainString(C.t.TEOC0I, { resolution: T.LY.RESOLUTION_480 }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_720,
-                    label: C.intl.formatToPlainString(C.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_720,
-                    }),
+                    value: T.LY.RESOLUTION_720,
+                    label: C.intl.formatToPlainString(C.t.TEOC0I, { resolution: T.LY.RESOLUTION_720 }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_1080,
-                    label: C.intl.formatToPlainString(C.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1080,
-                    }),
+                    value: T.LY.RESOLUTION_1080,
+                    label: C.intl.formatToPlainString(C.t.TEOC0I, { resolution: T.LY.RESOLUTION_1080 }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_1440,
-                    label: C.intl.formatToPlainString(C.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1440,
-                    }),
+                    value: T.LY.RESOLUTION_1440,
+                    label: C.intl.formatToPlainString(C.t.TEOC0I, { resolution: T.LY.RESOLUTION_1440 }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_SOURCE,
+                    value: T.LY.RESOLUTION_SOURCE,
                     label: C.intl.string(C.t.XjXqzh),
                 },
             ],
@@ -145,16 +137,16 @@ function D() {
         F = i.useMemo(
             () => [
                 {
-                    value: T.ApplicationStreamFPS.FPS_15,
-                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_15 }),
+                    value: T.ws.FPS_15,
+                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ws.FPS_15 }),
                 },
                 {
-                    value: T.ApplicationStreamFPS.FPS_30,
-                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_30 }),
+                    value: T.ws.FPS_30,
+                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ws.FPS_30 }),
                 },
                 {
-                    value: T.ApplicationStreamFPS.FPS_60,
-                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_60 }),
+                    value: T.ws.FPS_60,
+                    label: C.intl.formatToPlainString(C.t.Qb44XH, { fps: T.ws.FPS_60 }),
                 },
             ],
             [U],

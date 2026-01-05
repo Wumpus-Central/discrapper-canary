@@ -65,28 +65,16 @@ function h(e, t) {
 function g(e, t, p) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e("38697"), n.e("4093"), n.e("44183"), n.e("59416")]).then(
-                n.bind(n, 60594),
-            );
-            return (n) => {
-                var i;
-                return (0, r.jsx)(
-                    t,
-                    h(_({}, n), {
-                        guildId: e,
-                        analyticsLocation: null != (i = p[p.length - 1]) ? i : "unknown location",
-                        analyticsLocations: p,
-                    }),
-                );
-            };
+            let { default: e } = await Promise.all([n.e("46746"), n.e("84064")]).then(n.bind(n, 60594));
+            return (t) => (0, r.jsx)(e, h(_({}, t), { analyticsLocations: p }));
         });
     else {
         var m;
         let n = s.Z.getChannel(t),
             r = (0, o.Z)(
-                f.ApplicationStreamPresets.PRESET_CUSTOM,
-                f.ApplicationStreamResolutions.RESOLUTION_1080,
-                f.ApplicationStreamFPS.FPS_30,
+                f.tI.PRESET_CUSTOM,
+                f.LY.RESOLUTION_1080,
+                f.ws.FPS_30,
                 u.default.getCurrentUser(),
                 null == (m = l.Z.getGuild(e)) ? void 0 : m.premiumTier,
                 n,
@@ -100,9 +88,9 @@ function g(e, t, p) {
                       height: 720,
                   };
         (0, a.Rc)({
-            preset: f.ApplicationStreamPresets.PRESET_CUSTOM,
+            preset: f.tI.PRESET_CUSTOM,
             resolution: r.height,
-            frameRate: f.ApplicationStreamFPS.FPS_30,
+            frameRate: f.ws.FPS_30,
             soundshareEnabled: !0,
         }),
             c.Z.getMediaEngine()
