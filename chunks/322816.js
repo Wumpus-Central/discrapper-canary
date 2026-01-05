@@ -135,7 +135,7 @@ function w(e) {
                 role: n,
                 locked: l,
             }),
-            i.map((e, t) =>
+            i.map((e, i) =>
                 (0, r.jsx)(
                     g.Z,
                     {
@@ -149,8 +149,9 @@ function w(e) {
                         },
                         permissionRender: o,
                         hasBypassSlowmodePermission: a,
+                        guildId: t.id,
                     },
-                    t,
+                    i,
                 ),
             ),
         ],

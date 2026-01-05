@@ -200,6 +200,7 @@ function ee(e) {
                         permissionRender: m,
                         className: J.permissionsForm,
                         hasBypassSlowmodePermission: s,
+                        guildId: o,
                     },
                     n,
                 ),

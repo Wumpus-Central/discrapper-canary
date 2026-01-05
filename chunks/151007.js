@@ -1,14 +1,19 @@
-n.d(t, { Z: () => a });
-var i = n(665906),
-    l = n(496675),
-    s = n(901461),
-    r = n(981631);
-function a(e, t) {
-    let n = !t.isSystemDM() && !(0, s.Z)(e),
-        a =
-            (l.Z.can(r.Plq.MANAGE_MESSAGES, t) || l.Z.can(r.Plq.PIN_MESSAGES, t)) &&
-            l.Z.can(r.Plq.READ_MESSAGE_HISTORY, t);
+n.d(t, { Z: () => o });
+var i = n(110259),
+    l = n(665906),
+    s = n(496675),
+    r = n(901461),
+    a = n(981631);
+function o(e, t) {
+    let n = !t.isSystemDM() && !(0, r.Z)(e),
+        { enabled: o } = i.Z.getCurrentConfig({
+            guildId: t.guild_id,
+            location: "isMessagePinnable",
+        }),
+        u =
+            ((s.Z.can(a.Plq.MANAGE_MESSAGES, t) && !o) || s.Z.can(a.Plq.PIN_MESSAGES, t)) &&
+            s.Z.can(a.Plq.READ_MESSAGE_HISTORY, t);
     return (
-        n && (a || t.isPrivate()) && (0, i.RG)(t) && t.type !== r.d4z.GUILD_VOICE && t.type !== r.d4z.GUILD_STAGE_VOICE
+        n && (u || t.isPrivate()) && (0, l.RG)(t) && t.type !== a.d4z.GUILD_VOICE && t.type !== a.d4z.GUILD_STAGE_VOICE
     );
 }

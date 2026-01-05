@@ -36,19 +36,19 @@ class m extends r.PureComponent {
     }
     renderComponent(e, t) {
         let { title: n, description: r, flag: l } = e,
-            { permissions: a, locked: c, permissionRender: u, hasBypassSlowmodePermission: m } = this.props,
-            b = null == u ? void 0 : u(l),
-            p = !!(c || b),
-            g = "string" == typeof b && "" !== b ? o.t6m : void 0,
-            f =
+            { permissions: a, locked: c, permissionRender: u, hasBypassSlowmodePermission: m, guildId: b } = this.props,
+            p = null == u ? void 0 : u(l),
+            g = !!(c || p),
+            f = "string" == typeof p && "" !== p ? o.t6m : void 0,
+            h =
                 null == a
                     ? (0, i.jsx)(
                           d.Z,
                           {
                               label: n,
                               description: (0, s._u)(r),
-                              icon: g,
-                              disabled: p,
+                              icon: f,
+                              disabled: g,
                               value: this.getOverwriteValue(l),
                               onChange: (e) => this.handleChange(l, e),
                           },
@@ -59,32 +59,32 @@ class m extends r.PureComponent {
                           {
                               label: n,
                               description: (0, s._u)(r),
-                              icon: g,
-                              disabled: p,
+                              icon: f,
+                              disabled: g,
                               checked: this.getPermissionValue(l, a),
                               onChange: (e) => this.handleChange(l, e),
                           },
                           String(l),
                       ),
-            h = (0, s.ih)(l, m);
+            x = (0, s.ih)(l, m, b);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 t > 0 && (0, i.jsx)(o.izJ, {}),
                 (0, i.jsxs)(o.Kqy, {
                     gap: 8,
                     children: [
-                        f,
-                        null != h &&
+                        h,
+                        null != x &&
                             (0, i.jsx)(o.Wn, {
                                 messageType: o.QYI.WARNING,
-                                children: h,
+                                children: x,
                             }),
-                        "string" == typeof b &&
-                            "" !== b &&
+                        "string" == typeof p &&
+                            "" !== p &&
                             (0, i.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-feedback-critical",
-                                children: b,
+                                children: p,
                             }),
                     ],
                 }),
