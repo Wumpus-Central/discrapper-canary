@@ -23,8 +23,8 @@ var i = n(442837),
     x = n(876548),
     E = n(25601),
     S = n(981631),
-    I = n(490897),
-    _ = n(388032);
+    _ = n(490897),
+    I = n(388032);
 function P(e) {
     var t;
     let {
@@ -71,14 +71,14 @@ function P(e) {
     if ((0, d.O)(A)) return (0, r.jsx)(d.Z, { locked: R });
     if (D)
         return (0, r.jsx)(a.IGR, {
-            text: _.intl.string(_.t.y2b7CA),
+            text: I.intl.string(I.t.y2b7CA),
             color: l.Z.colors.BADGE_BACKGROUND_BRAND.css,
         });
-    if (!M && L === I.i.ALL_MESSAGES && n.isForumLikeChannel() && null != z && z > 0)
+    if (!M && L === _.i.ALL_MESSAGES && n.isForumLikeChannel() && null != z && z > 0)
         return (0, r.jsx)(a.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: _.intl.format(_.t.GkAbqY, { count: (0, a.NGo)(z) }),
+            children: I.intl.format(I.t.GkAbqY, { count: (0, a.NGo)(z) }),
         });
     if (!M && n.isForumLikeChannel() && null != K && K > 0)
         return (0, r.jsx)(a.Text, {
@@ -95,11 +95,11 @@ function P(e) {
           })
         : N && (0, y.a)(Z) && Y
           ? (0, r.jsx)(a.IGR, {
-                text: _.intl.string(_.t.dI3q4h),
+                text: I.intl.string(I.t.dI3q4h),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
           : null != F
-            ? (0, r.jsx)(c.x3, {
+            ? (0, r.jsx)(c.x, {
                   textColor: "text-feedback-positive",
                   entry: { start: F },
               })
