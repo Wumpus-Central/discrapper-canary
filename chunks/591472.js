@@ -67,7 +67,6 @@ function m(e) {
         r = (0, o.ZP)(t);
     if (null == r) return void p.delete(t);
     p.delete(t),
-        null != f && (f = null),
         (f = {
             applicationId: t,
             url: r,
