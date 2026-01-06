@@ -7,11 +7,11 @@ n(473749);
 var i = n(120356),
     l = n.n(i),
     a = n(159691),
-    o = n(448222),
-    s = n(686866),
-    c = n(639777),
-    u = n(880419),
-    d = n(827397),
+    o = n(686866),
+    s = n(639777),
+    c = n(880419),
+    u = n(827397),
+    d = n(700092),
     f = n(535396),
     h = n(556970),
     p = n(388032),
@@ -53,9 +53,9 @@ function m(e) {
     return e;
 }
 function y(e) {
-    let { className: t, guildId: n, powerup: i, onClick: s } = e,
+    let { className: t, guildId: n, powerup: i, onClick: o } = e,
+        s = (0, u.Z)(n, i),
         c = (0, d.Z)(n, i),
-        { onShowMore: u } = (0, o.Z)(n, i),
         b = f.uc.has(i.skuId);
     return (0, r.jsx)("div", {
         className: l()(g.primaryButton, t),
@@ -64,14 +64,14 @@ function y(e) {
             fullWidth: !0,
             text: b ? p.intl.string(h.default.g5Ds69) : p.intl.string(p.t["0Q61kF"]),
             onClick: (e) => {
-                null == s || s(e), b ? null == c || c(e) : null == u || u();
+                null == o || o(e), b ? null == s || s(e) : null == c || c();
             },
         }),
     });
 }
 function O(e) {
     let { className: t, guildId: n, powerup: i } = e,
-        { onShowMore: s } = (0, o.Z)(n, i);
+        o = (0, d.Z)(n, i);
     return (0, r.jsx)("div", {
         className: l()(g.container, t),
         children: (0, r.jsx)("div", {
@@ -80,27 +80,27 @@ function O(e) {
                 variant: "primary",
                 fullWidth: !0,
                 text: i.type === f.Us.LEVEL ? p.intl.string(p.t["0Q61kF"]) : p.intl.string(p.t.Xa11Ep),
-                onClick: s,
+                onClick: o,
             }),
         }),
     });
 }
 function v(e) {
     let { className: t, guildId: n, powerup: i, onError: a } = e,
-        { showToggleButton: o, isPowerupActive: c } = (0, s.Z)(n, i),
-        d = !c;
+        { showToggleButton: s, isPowerupActive: u } = (0, o.Z)(n, i),
+        d = !u;
     return (0, r.jsxs)("div", {
         className: l()(g.container, t),
         children: [
-            o &&
-                (0, r.jsx)(u.Z, {
+            s &&
+                (0, r.jsx)(c.Z, {
                     guildId: n,
                     powerup: i,
                     onError: a,
                     grow: d,
                     compact: !d,
                 }),
-            c &&
+            u &&
                 (0, r.jsx)(y, {
                     guildId: n,
                     powerup: i,
@@ -116,5 +116,5 @@ function j(e) {
             return e;
         })(e),
     );
-    return (0, c.Z)(t.guildId) ? (0, r.jsx)(v, m({}, t)) : (0, r.jsx)(O, m({}, t));
+    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, m({}, t)) : (0, r.jsx)(O, m({}, t));
 }

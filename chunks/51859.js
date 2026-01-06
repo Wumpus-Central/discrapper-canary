@@ -4,51 +4,51 @@ var r = n(54381),
     l = n(494497),
     o = n(481060),
     a = n(158638),
-    s = n(238343),
-    c = n(973772),
+    s = n(973772),
     u = n(838968),
-    d = n(262212),
-    f = n(795338),
-    p = n(226278),
-    m = n(707541),
+    c = n(262212),
+    d = n(795338),
+    f = n(226278),
+    p = n(707541),
+    m = n(192958),
     g = n(535396),
     v = n(138545);
 function x(e) {
     let { guildId: t, powerup: n } = e,
         [x, b] = i.useState(void 0);
-    (0, s.KT)(x);
+    (0, m.Z)(x);
     let [h, j] = i.useState(!1),
-        _ = (0, c.ZP)(t, n).type !== g.A3.INACTIVE,
-        { textColor: C } = (0, m.Z)(_),
-        Z = (0, a.g1)(t, "GuildPowerupPerkCard"),
+        Z = (0, s.ZP)(t, n).type !== g.A3.INACTIVE,
+        { textColor: _ } = (0, p.Z)(Z),
+        C = (0, a.g1)(t, "GuildPowerupPerkCard"),
         w = n.skuId === l.A$;
-    return (0, r.jsxs)(p.Z, {
+    return (0, r.jsxs)(f.Z, {
         onHover: (e) => j(e),
         guildId: t,
         powerup: n,
-        badge: w && Z ? "beta" : void 0,
+        badge: w && C ? "beta" : void 0,
         children: [
-            (0, r.jsx)(f.m, {
+            (0, r.jsx)(d.m, {
                 className: v.image,
                 powerup: n,
                 isHovering: h,
             }),
             (0, r.jsx)(u.Q9, {
                 title: n.title,
-                textColor: C,
-                footer: (0, r.jsx)(p.g, {
+                textColor: _,
+                footer: (0, r.jsx)(f.g, {
                     guildId: t,
                     powerup: n,
                 }),
                 children: (0, r.jsx)(o.Text, {
                     className: v.description,
-                    color: C,
+                    color: _,
                     variant: "text-sm/medium",
                     children: n.description,
                 }),
             }),
             (0, r.jsx)(u.N4, {
-                children: (0, r.jsx)(d.ZP, {
+                children: (0, r.jsx)(c.ZP, {
                     guildId: t,
                     powerup: n,
                     onError: b,

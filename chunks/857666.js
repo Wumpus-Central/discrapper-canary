@@ -9,9 +9,9 @@ var r = n(54381),
     o = n(442837),
     a = n(481060),
     s = n(434404),
-    c = n(905128),
-    u = n(238343),
-    d = n(639777),
+    u = n(905128),
+    c = n(639777),
+    d = n(196806),
     f = n(981631),
     p = n(556970),
     m = n(388032),
@@ -19,39 +19,39 @@ var r = n(54381),
     v = n(337003);
 function x(e, t) {
     var x;
-    let b = null != (x = (0, d.Z)(t)) && x,
-        h = (0, o.e7)([c.Z], () => {
+    let b = null != (x = (0, c.Z)(t)) && x,
+        h = (0, o.e7)([u.Z], () => {
             var e;
-            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
+            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
         }),
-        j = (0, o.e7)([c.Z], () => {
+        j = (0, o.e7)([u.Z], () => {
             var e;
-            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
+            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
         });
     return i.useMemo(() => {
         let i = (e) =>
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
-                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: c } = e,
-                              d = m.intl.string(p.default.KC9HRW),
+                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: u } = e,
+                              c = m.intl.string(p.default.KC9HRW),
                               x = m.intl.string(p.default.GJiSmP),
                               b = null == o ? void 0 : o[l.IN],
-                              h = (null == c ? void 0 : c[l.IN]) != null,
+                              h = (null == u ? void 0 : u[l.IN]) != null,
                               j = m.intl.string(p.default["/egwJA"]),
-                              _ = h ? void 0 : m.intl.string(p.default.W6Vwn3),
-                              C = h ? void 0 : m.intl.string(p.default.lvk1Gc),
-                              Z = h ? m.intl.string(p.default["9CfkLO"]) : m.intl.string(m.t["+7XY31"]),
+                              Z = h ? void 0 : m.intl.string(p.default.W6Vwn3),
+                              _ = h ? void 0 : m.intl.string(p.default.lvk1Gc),
+                              C = h ? m.intl.string(p.default["9CfkLO"]) : m.intl.string(m.t["+7XY31"]),
                               w = h ? "secondary" : "expressive",
-                              I = i
+                              E = i
                                   ? () => {
                                         h
                                             ? s.Z.open(t, f.pNK.TAG, f.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != b && (0, u.KE)(t, b),
+                                            : null != b && (0, d.Z)(t, b),
                                             (0, a.pTH)();
                                     }
                                   : void 0;
                           return {
-                              title: d,
+                              title: c,
                               description: x,
                               openModal: function (e) {
                                   let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -89,17 +89,17 @@ function x(e, t) {
                                                   })(
                                                       {
                                                           guildId: t,
-                                                          title: d,
+                                                          title: c,
                                                           description: m.intl.string(p.default.BBRFRd),
                                                           powerups: e,
-                                                          footerInfoText: C,
+                                                          footerInfoText: _,
                                                           footerAction:
-                                                              i && null != I && null != Z
+                                                              i && null != E && null != C
                                                                   ? {
                                                                         variant: w,
-                                                                        text: Z,
+                                                                        text: C,
                                                                         icon: "expressive" === w ? a.Ucv : void 0,
-                                                                        onClick: I,
+                                                                        onClick: E,
                                                                     }
                                                                   : void 0,
                                                       },
@@ -111,7 +111,7 @@ function x(e, t) {
                                   );
                               },
                               viewCta: j,
-                              viewCtaTooltip: _,
+                              viewCtaTooltip: Z,
                               image: {
                                   staticUrl: v.Z,
                                   animatedUrl: g.Z,

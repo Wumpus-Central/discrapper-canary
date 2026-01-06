@@ -6,61 +6,61 @@ n.d(t, {
 var r = n(54381),
     i = n(473749),
     l = n(907331),
-    o = n(448222),
-    a = n(10765),
-    s = n(639777),
-    c = n(973772),
+    o = n(10765),
+    a = n(639777),
+    s = n(973772),
     u = n(329134),
-    d = n(838968),
-    f = n(69323),
+    c = n(838968),
+    d = n(69323),
+    f = n(700092),
     p = n(535396);
 function m(e) {
     let { guildId: t, powerup: n, className: i } = e,
-        l = (0, c.ZP)(t, n),
-        o = l.type !== p.A3.LEVEL_ACTIVATED,
-        s = (0, a.Z)(t, n, "GuildPowerupCardBodyFooter"),
-        f = (0, u.P)(n, l, s);
-    return (0, r.jsx)(d.uf, {
+        l = (0, s.ZP)(t, n),
+        a = l.type !== p.A3.LEVEL_ACTIVATED,
+        d = (0, o.Z)(t, n, "GuildPowerupCardBodyFooter"),
+        f = (0, u.P)(n, l, d);
+    return (0, r.jsx)(c.uf, {
         status: f,
-        cost: o ? n.cost : void 0,
+        cost: a ? n.cost : void 0,
         className: i,
     });
 }
 function g(e) {
     var t;
     let { guildId: n, powerup: u, badge: m, className: g, onHover: v, children: x } = e,
-        b = (0, s.Z)(n),
-        h = (0, c.ZP)(n, u),
+        b = (0, a.Z)(n),
+        h = (0, s.ZP)(n, u),
         j = h.type !== p.A3.INACTIVE,
-        _ = (null == (t = h.sourceEntitlement) ? void 0 : t.ends_at) != null,
-        C = (0, a.Z)(n, u, "GuildPowerupCard"),
-        Z = i.useRef(null),
-        { onShowMore: w } = (0, o.Z)(n, u),
-        [I, E] = i.useState(!1),
-        P = (0, l.O)(E, 1);
+        Z = (null == (t = h.sourceEntitlement) ? void 0 : t.ends_at) != null,
+        _ = (0, o.Z)(n, u, "GuildPowerupCard"),
+        C = i.useRef(null),
+        w = (0, f.Z)(n, u),
+        [E, I] = i.useState(!1),
+        P = (0, l.O)(I, 1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(d.aB, {
+            (0, r.jsx)(c.aB, {
                 label: u.title,
                 isActive: j,
-                isWarning: _,
+                isWarning: Z,
                 badge: m,
-                canRollback: C,
+                canRollback: _,
                 onClick: w,
                 onMouseOver: () => (null == v ? void 0 : v(!0)),
                 onMouseLeave: () => (null == v ? void 0 : v(!1)),
                 className: g,
                 ref: (e) => {
-                    (Z.current = e), (P.current = e);
+                    (C.current = e), (P.current = e);
                 },
                 children: x,
             }),
-            !C &&
+            !_ &&
                 b &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(d.Z, {
                     powerup: u,
-                    targetRef: Z,
-                    isCardVisible: I,
+                    targetRef: C,
+                    isCardVisible: E,
                 }),
         ],
     });
