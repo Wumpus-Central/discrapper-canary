@@ -60,22 +60,22 @@ function C(e) {
             let e = [
                 {
                     value: s.m.POPULAR,
-                    label: h.intl.string(h.t["1wQj4E"]),
+                    label: h.intl.string(h.t.Y68e5p),
                 },
                 {
                     value: s.m.RECENT,
-                    label: h.intl.string(h.t["6NZpt6"]),
+                    label: h.intl.string(h.t["51Bhiz"]),
                 },
                 {
                     value: s.m.PRICE_LOW_TO_HIGH,
-                    label: h.intl.string(h.t.RTG4yJ),
+                    label: h.intl.string(h.t.m8RVU2),
                 },
             ];
             return (
                 _ &&
                     e.unshift({
                         value: s.m.RECOMMENDED,
-                        label: h.intl.string(h.t.JrlKlh),
+                        label: h.intl.string(h.t.zPWgFG),
                     }),
                 e
             );
