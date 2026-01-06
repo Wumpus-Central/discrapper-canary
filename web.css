@@ -53775,6 +53775,7 @@ h2.feb59c8c6ec00ad9-title {
 .c1e9c47c23f12ca3-menu {
     --custom-menu-viewport-padding: 16px;
     --custom-menu-separator-margin: 8px;
+    --custom-menu-flexible-min-width: 188px;
     background: var(--background-surface-high);
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
@@ -53798,7 +53799,7 @@ h2.feb59c8c6ec00ad9-title {
 
 .c1e9c47c23f12ca3-flexible {
     max-width: 320px;
-    min-width: 188px
+    min-width: var(--custom-menu-flexible-min-width)
 }
 
 .c1e9c47c23f12ca3-item {
@@ -53834,9 +53835,38 @@ h2.feb59c8c6ec00ad9-title {
 
 .c1e9c47c23f12ca3-label {
     flex: 1 1 auto;
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.c1e9c47c23f12ca3-label,
+.c1e9c47c23f12ca3-marqueeContainer {
+    overflow: hidden
+}
+
+.c1e9c47c23f12ca3-labelContainer.c1e9c47c23f12ca3-focused .c1e9c47c23f12ca3-marqueeContainer[data-overflow],
+.c1e9c47c23f12ca3-labelContainer:hover .c1e9c47c23f12ca3-marqueeContainer[data-overflow] {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8px, #000 calc(100% - 8px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8px, #000 calc(100% - 8px), transparent)
+}
+
+.c1e9c47c23f12ca3-marqueeText {
+    display: inline-block;
+    inset-inline-start: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap
+}
+
+.c1e9c47c23f12ca3-labelContainer.c1e9c47c23f12ca3-focused .c1e9c47c23f12ca3-marqueeContainer[data-overflow] .c1e9c47c23f12ca3-marqueeText,
+.c1e9c47c23f12ca3-labelContainer:hover .c1e9c47c23f12ca3-marqueeContainer[data-overflow] .c1e9c47c23f12ca3-marqueeText {
+    inset-inline-start: calc(var(--custom-marquee-overflow, 0px)*-1);
+    max-width: none;
+    overflow: visible;
+    transition: inset-inline-start 2s linear
 }
 
 .c1e9c47c23f12ca3-switchItem {

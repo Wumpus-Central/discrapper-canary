@@ -130,7 +130,7 @@ let l = {
                                             (0, r.jsx)(o.Clw, {}),
                                             (0, r.jsx)(o.S89, {
                                                 id: "notifications",
-                                                label: "Enable Notifications",
+                                                label: "Enable Notifications Enable Notifications Enable Notifications",
                                                 checked: b,
                                                 action: () => y(!b),
                                             }),
@@ -164,7 +164,7 @@ let l = {
                                                     (0, r.jsx)(o.k5B, {
                                                         id: "radio-text",
                                                         group: "channel-type",
-                                                        label: "Text Channel",
+                                                        label: "Text Channel Text Channel Text Channel Text Channel Text Channel Text Channel ",
                                                         checked: "text" === S,
                                                         action: () => I("text"),
                                                     }),
