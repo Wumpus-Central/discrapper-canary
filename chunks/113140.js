@@ -13,7 +13,7 @@ var r = e(793030),
 function p(t) {
     let { transitionState: n, onClose: e, channel: p } = t,
         f = (t) => {
-            if (!t && (0, l.u1)()) {
+            if (!t && (0, l.u1)(p.id)) {
                 s.Z.showAgeVerificationGetStartedModal({ entryPoint: o.cU.STAGE_CHANNEL_RAISE_HAND }), e();
                 return;
             }

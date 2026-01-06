@@ -19,7 +19,7 @@ function u(e) {
         [
             p,
             function () {
-                if ((0, d.u1)())
+                if ((0, d.u1)(e.id))
                     return void l.Z.showAgeVerificationGetStartedModal({ entryPoint: a.cU.STAGE_CHANNEL_RAISE_HAND });
                 n === c.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ? (0, o.RK)(e, !0) : (0, o.Q1)(e, !p), h(!p);
             },
