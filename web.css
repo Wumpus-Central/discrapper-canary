@@ -38637,18 +38637,23 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 ._183e81c0d76dd7cd-container {
     display: flex;
     flex-direction: column;
-    margin-inline: 16px;
     overflow: hidden
 }
 
 ._183e81c0d76dd7cd-banner {
     align-items: center;
     background-color: var(--background-base-lowest);
-    border-start-end-radius: 8px;
-    border-start-start-radius: 8px;
+    border-start-end-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm);
     display: flex;
     flex-grow: 1;
-    padding: 8px 16px 16px
+    padding: var(--space-md) var(--space-md);
+    padding-bottom: var(--space-md)
+}
+
+._183e81c0d76dd7cd-bannerForumChannel {
+    border-end-end-radius: var(--radius-sm);
+    border-end-start-radius: var(--radius-sm)
 }
 
 ._183e81c0d76dd7cd-text {
