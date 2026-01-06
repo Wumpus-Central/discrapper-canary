@@ -2,10 +2,10 @@ n.d(t, { Z: () => k }), n(415506), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
-    o = n(442837),
-    s = n(692547),
-    l = n(28664),
-    c = n(755721),
+    o = n(793030),
+    s = n(442837),
+    l = n(692547),
+    c = n(28664),
     u = n(481060),
     d = n(58642),
     f = n(2052),
@@ -169,46 +169,50 @@ class M extends (r = a.Component) {
             libraryApplication: e,
             fullWidth: t,
             size: n,
-            color: r,
-            customDisabledColor: a,
-            isPlayShiny: o,
-            onDropdownOpen: s,
-            onDropdownClose: l,
-            analyticsListSort: c,
-            analyticsListIndex: u,
+            playButtonVariant: r = "secondary",
+            disabledVariant: a,
+            onDropdownOpen: o,
+            onDropdownClose: s,
+            analyticsListSort: l,
+            analyticsListIndex: c,
         } = this.props;
         return (0, i.jsx)(I.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
             size: n,
-            color: r,
-            customDisabledColor: a,
-            isShiny: o,
-            onDropdownOpen: s,
-            onDropdownClose: l,
-            analyticsListSort: c,
-            analyticsListIndex: u,
+            variant: r,
+            disabledVariant: a,
+            onDropdownOpen: o,
+            onDropdownClose: s,
+            analyticsListSort: l,
+            analyticsListIndex: c,
         });
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: r, size: a, customDisabledColor: o, tooltipPosition: s } = this.props;
+        let { fullWidth: n, size: r, disabledVariant: a = "secondary", tooltipPosition: s } = this.props,
+            l = this.renderProgressBar();
         return (0, i.jsxs)("div", {
-            className: A.disabledButtonWrapper,
+            className: null != l ? A.buttonWithProgress : void 0,
             children: [
-                (0, i.jsxs)(c.zx, {
-                    className: n,
-                    fullWidth: r,
-                    size: a,
-                    color: null != o ? o : A.disabledButtonColor,
-                    disabled: !0,
-                    children: [this.getText(e), this.renderProgressBar()],
+                (0, i.jsxs)("div", {
+                    className: A.disabledButtonWrapper,
+                    children: [
+                        (0, i.jsx)(o.zxk, {
+                            text: this.getText(e),
+                            fullWidth: n,
+                            size: r,
+                            variant: a,
+                            disabled: !0,
+                        }),
+                        (0, i.jsx)(c.u, {
+                            text: t,
+                            position: s,
+                            children: (0, i.jsx)("div", { className: A.disabledButtonOverlay }),
+                        }),
+                    ],
                 }),
-                (0, i.jsx)(l.u, {
-                    text: t,
-                    position: s,
-                    children: (0, i.jsx)("div", { className: A.disabledButtonOverlay }),
-                }),
+                l,
             ],
         });
     }
@@ -221,21 +225,27 @@ class M extends (r = a.Component) {
         return (0, i.jsx)(u.Exd, {
             percent: r,
             size: u.Exd.Sizes.XSMALL,
-            foregroundColor: n.paused ? s.Z.unsafe_rawColors.PRIMARY_500.css : s.Z.unsafe_rawColors.GREEN_360.css,
-            backgroundColor: s.Z.unsafe_rawColors.TRANSPARENT.css,
+            foregroundColor: n.paused ? l.Z.unsafe_rawColors.PRIMARY_500.css : l.Z.unsafe_rawColors.GREEN_360.css,
+            backgroundColor: l.Z.unsafe_rawColors.TRANSPARENT.css,
             className: A.progress,
         });
     }
     renderActionButton(e, t) {
-        let { className: n, fullWidth: r, size: a, color: o, isCloudSyncing: s } = this.props;
-        return (0, i.jsxs)(c.zx, {
-            className: n,
-            fullWidth: r,
-            size: a,
-            color: null != o ? o : c.zx.Colors.GREEN,
-            submitting: "uninstalling" === e || s,
-            onClick: (e) => this.handleClick(e, t),
-            children: [this.getText(e), this.renderProgressBar()],
+        let { fullWidth: n, size: r, actionButtonVariant: a = "primary", isCloudSyncing: s } = this.props,
+            l = this.renderProgressBar();
+        return (0, i.jsxs)("div", {
+            className: null != l ? A.buttonWithProgress : void 0,
+            children: [
+                (0, i.jsx)(o.zxk, {
+                    text: this.getText(e),
+                    fullWidth: n,
+                    size: r,
+                    variant: a,
+                    loading: "uninstalling" === e || s,
+                    onClick: (e) => this.handleClick(e, t),
+                }),
+                l,
+            ],
         });
     }
     render() {
@@ -285,25 +295,24 @@ class M extends (r = a.Component) {
 function k(e) {
     let { libraryApplication: t } = e,
         n = (0, f.O)(),
-        [r, a] = (0, o.Wu)([E.Z, b.Z], () => [(0, h.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
-        s = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
-        l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
+        [r, a] = (0, s.Wu)([E.Z, b.Z], () => [(0, h.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
+        o = (0, s.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
+        l = (0, s.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
         M,
         w(P({}, e), {
             analyticsContext: n,
             actionState: r,
             dispatchState: a,
-            isCloudSyncing: s,
+            isCloudSyncing: o,
             hasNoBuild: l,
         }),
     );
 }
 N(M, "defaultProps", {
     fullWidth: !1,
-    size: c.zx.Sizes.LARGE,
+    size: "md",
     hideProgress: !1,
-    isPlayShiny: !1,
     tooltipPosition: "top",
 }),
     N(M, "ButtonStates", D);

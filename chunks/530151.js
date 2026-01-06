@@ -487,8 +487,7 @@ let W = () =>
                               null != e.libraryApplication
                                   ? (0, r.jsx)(_.Z, {
                                         libraryApplication: e.libraryApplication,
-                                        size: f.zx.Sizes.SMALL,
-                                        className: M.gameActionButton,
+                                        size: "sm",
                                         source: R.Sbl.APPLICATION_LIBRARY_UPDATES,
                                     })
                                   : null)

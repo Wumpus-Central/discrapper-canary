@@ -16,6 +16,5 @@ e.exports = {
     progressCellText: "_4903508b8d56909a-progressCellText",
     actionButton: "_4903508b8d56909a-actionButton",
     actionButtonContents: "_4903508b8d56909a-actionButtonContents",
-    gameActionButton: "_4903508b8d56909a-gameActionButton",
     actionIcon: "_4903508b8d56909a-actionIcon",
 };

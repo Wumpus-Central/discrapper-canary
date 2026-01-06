@@ -63609,14 +63609,15 @@ screen and (max-width:485px) {
     opacity: 1
 }
 
-._614623a0ca8129b8-button {
-    padding: 0
+._614623a0ca8129b8-buttonWithProgress {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
 }
 
-html ._614623a0ca8129b8-progress {
-    bottom: 0;
-    inset-inline-start: 0;
-    position: absolute
+._614623a0ca8129b8-progress {
+    width: 100%
 }
 
 ._614623a0ca8129b8-disabledButtonWrapper {
