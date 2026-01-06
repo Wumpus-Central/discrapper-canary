@@ -60,16 +60,16 @@ function j(e, t) {
     );
 }
 function _(e) {
-    let { guildId: t, onComplete: n, isLastStep: _, disableTracking: y } = e,
-        N = i.useRef(!1),
-        { onboardingConnections: P, isLoading: C } = (0, o.cj)([f.Z], () => ({
+    let { guildId: t, onComplete: n, isLastStep: _, isSubmitting: y = !1, disableTracking: N } = e,
+        P = i.useRef(!1),
+        { onboardingConnections: C, isLoading: E } = (0, o.cj)([f.Z], () => ({
             onboardingConnections: f.Z.getConnections(t),
             isLoading: f.Z.isLoading(),
         })),
-        E = (0, o.e7)(
+        D = (0, o.e7)(
             [c.default, d.Z],
             () =>
-                P.some((e) => {
+                C.some((e) => {
                     if (e.connection_type === g.zz.APPLICATION && null != e.application_id) {
                         let t = c.default.getNewestTokenForApplication(e.application_id);
                         return (
@@ -83,12 +83,12 @@ function _(e) {
                     }
                     return !1;
                 }),
-            [P],
+            [C],
         );
     i.useEffect(() => {
-        if (y || C || 0 === P.length || N.current) return;
-        let e = (0, m.OZ)(P),
-            n = (0, m.N4)(P);
+        if (N || E || 0 === C.length || P.current) return;
+        let e = (0, m.OZ)(C),
+            n = (0, m.N4)(C);
         u.default.track(
             h.rMx.GUILD_ONBOARDING_STEP_VIEWED,
             j(O({}, (0, s.hH)(t)), {
@@ -100,17 +100,17 @@ function _(e) {
                 application_connections_not_connected: n.notConnected,
             }),
         ),
-            (N.current = !0);
-    }, [t, C, P, y]);
-    let D = i.useCallback(() => {
-        if (!y) {
-            let e = (0, m.OZ)(P),
-                n = (0, m.N4)(P);
+            (P.current = !0);
+    }, [t, E, C, N]);
+    let I = i.useCallback(() => {
+        if (!N) {
+            let e = (0, m.OZ)(C),
+                n = (0, m.N4)(C);
             u.default.track(
                 h.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                 j(O({}, (0, s.hH)(t)), {
                     step: p.Xx,
-                    skipped: !E,
+                    skipped: !D,
                     back: !1,
                     options_selected: 0,
                     in_onboarding: !0,
@@ -123,8 +123,8 @@ function _(e) {
             );
         }
         n();
-    }, [n, y, t, P, E, _]);
-    return C
+    }, [n, N, t, C, D, _]);
+    return E
         ? (0, r.jsxs)("div", {
               className: v.loadingContainer,
               children: [
@@ -168,7 +168,7 @@ function _(e) {
                                   className: v.connectionsListScroller,
                                   children: (0, r.jsx)("div", {
                                       className: v.connectionsList,
-                                      children: P.map((e, n) =>
+                                      children: C.map((e, n) =>
                                           (0, r.jsx)(
                                               b.Z,
                                               {
@@ -192,13 +192,15 @@ function _(e) {
                                   (0, r.jsx)("div", {
                                       className: v.primaryActions,
                                       children: (0, r.jsx)(a.Button, {
-                                          variant: E ? "primary" : "secondary",
-                                          onClick: D,
-                                          text: E
+                                          variant: D ? "primary" : "secondary",
+                                          onClick: I,
+                                          text: D
                                               ? _
                                                   ? "".concat(x.intl.string(x.t["8SuVoE"]), " \uD83C\uDF89")
                                                   : x.intl.string(x.t.PDTjLN)
                                               : x.intl.string(x.t["5Wxrcd"]),
+                                          disabled: y,
+                                          loading: y,
                                           icon: _ ? void 0 : a.d4D,
                                           iconPosition: "end",
                                       }),

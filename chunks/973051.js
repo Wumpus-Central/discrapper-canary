@@ -67,45 +67,47 @@ function h(e) {
         _ = i.useRef(null),
         y = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
         [N, P] = i.useState(null != (t = null == y ? void 0 : y.response) && t),
-        C = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
-        E = i.useRef(null),
-        D = i.useRef(null),
-        I = i.useCallback(async () => {
-            if (null != C && null != y) {
+        [C, E] = i.useState(!1),
+        D = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
+        I = i.useRef(null),
+        S = i.useRef(null),
+        Z = i.useCallback(async () => {
+            if (null != D && null != y) {
+                E(!0);
                 try {
                     await s.ZP.submitVerificationForm(
                         n.id,
-                        g(b({}, C), { formFields: [g(b({}, y), { response: N })] }),
+                        g(b({}, D), { formFields: [g(b({}, y), { response: N })] }),
                     );
                 } catch (e) {}
                 x();
             }
-        }, [n.id, C, y, N, x]);
-    function Z(e) {
+        }, [n.id, D, y, N, x]);
+    function T(e) {
         let [t] = e;
         t.isIntersecting && P(!0);
     }
     return (i.useEffect(() => {
-        let e = new IntersectionObserver(Z, {
-                root: E.current,
+        let e = new IntersectionObserver(T, {
+                root: I.current,
                 rootMargin: "0px",
                 threshold: 0,
             }),
-            t = D.current;
+            t = S.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [D, E]),
+    }, [S, I]),
     null == y)
         ? null
         : (0, r.jsx)("div", {
               className: m.prompt,
               children: (0, r.jsxs)("div", {
                   className: m.promptContent,
-                  ref: E,
+                  ref: I,
                   children: [
                       (0, r.jsxs)(a.h21, {
                           className: m.scrollerContent,
@@ -122,7 +124,7 @@ function h(e) {
                               }),
                               (0, r.jsx)("div", {
                                   className: m.termsFieldBody,
-                                  ref: D,
+                                  ref: S,
                                   children: y.values.map((e, t) =>
                                       (0, r.jsxs)(
                                           "div",
@@ -203,8 +205,9 @@ function h(e) {
                                           variant: "primary",
                                           size: "md",
                                           text: "".concat(f.intl.string(f.t["8SuVoE"]), " \uD83C\uDF89"),
-                                          onClick: I,
-                                          disabled: !N,
+                                          onClick: Z,
+                                          disabled: !N || C,
+                                          loading: C,
                                       }),
                                   ],
                               }),
