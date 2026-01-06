@@ -9,8 +9,7 @@ var r = n(992774),
             if (__OVERLAY__);
             else if (a.isPlatformEmbedded) {
                 let e = (0, r.zS)();
-                if (null == e.VoiceConnection || (null == e.setVideoOutputSink && null == e.addVideoOutputSink))
-                    throw Error("voe function missing");
+                if (null == e.VoiceConnection) throw Error("voe function missing");
                 return !0;
             }
         } catch (e) {
