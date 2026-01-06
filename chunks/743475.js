@@ -3,7 +3,8 @@ n.d(t, {
     DO: () => h,
     pt: () => p,
 }),
-    n(388685);
+    n(388685),
+    n(415506);
 var r = n(570140),
     i = n(668781),
     l = n(881052),
@@ -30,20 +31,37 @@ async function h(e) {
         n = g.Z.advancedMode,
         [b] = (0, s.d9)(e.id, [...t]),
         p = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts, s.V7);
-    if (a.Z.getEnabled(e.id) && ((!n && b.length < f.X) || (n && p.length < f.X)))
-        return void i.Z.show({
-            title: m.intl.string(m.t.iLdiqY),
-            body: m.intl.string(m.t.JOT74c),
-        });
+    if (a.Z.getEnabled(e.id) && ((!n && b.length < f.X) || (n && p.length < f.X))) {
+        if (
+            (i.Z.show({
+                title: m.intl.string(m.t.iLdiqY),
+                body: m.intl.string(m.t.JOT74c),
+            }),
+            n)
+        )
+            throw Error("Chattable channels with questions requirement not met");
+        return;
+    }
     if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT" });
         try {
-            await (0, u.n_)(e.id, { default_channel_ids: t }),
+            let i = n ? (0, u.GP)(e, { ignoreDefaultPrompt: !0 }) : null,
+                l = null != i ? i.map(f.dr) : void 0;
+            await (0, u.n_)(e.id, {
+                default_channel_ids: t,
+                prompts: l,
+            }),
                 r.Z.dispatch({
                     type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS",
                     guildId: e.id,
                     channelIds: t,
-                });
+                }),
+                null != i &&
+                    r.Z.dispatch({
+                        type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
+                        guildId: e.id,
+                        updates: { prompts: i },
+                    });
         } catch (n) {
             var h;
             let { fieldName: e, error: t } = null != (h = new l.Hx(n).getAnyErrorMessageAndField()) ? h : {};
