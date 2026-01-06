@@ -193,7 +193,7 @@ function U(e) {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(O.Z, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -238,7 +238,7 @@ function Z(e) {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(O.Z, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -368,7 +368,7 @@ function q(e) {
                 size: "xxs",
                 color: l,
             }),
-            (0, r.jsx)(O.ZP, {
+            (0, r.jsx)(O.Z, {
                 entry: t,
                 textColor: c,
                 hovered: n,

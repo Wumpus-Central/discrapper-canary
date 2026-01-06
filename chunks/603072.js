@@ -22,8 +22,8 @@ var a = n(54381),
     y = n(921944),
     N = n(388032),
     _ = n(453223),
-    w = n(978966);
-function Z(e) {
+    Z = n(978966);
+function w(e) {
     let { guild: t } = e,
         n = (0, C.Z)(t);
     r.useEffect(() => {
@@ -58,7 +58,10 @@ function I(e) {
         [u, b] = r.useState(null != n ? n : v.l7.CUSTOMIZE);
     r.useEffect(() => {
         null != n && b(n);
-    }, [n]);
+    }, [n]),
+        r.useEffect(() => {
+            c || u !== v.l7.CUSTOMIZE || b(v.l7.BROWSE);
+        }, [c, u]);
     let p = (0, o.e7)([g.ZP], () => g.ZP.getCurrentSidebarChannelId(O.oC.CHANNEL_BROWSER)),
         y = null != p && u === v.l7.BROWSE,
         I = (0, o.e7)([m.Z], () => m.Z.getNewChannelIds(t).size > 0),
@@ -68,11 +71,11 @@ function I(e) {
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsxs)("div", {
-                      className: i()(w.chat, { [w.threadSidebarOpen]: y }),
+                      className: i()(Z.chat, { [Z.threadSidebarOpen]: y }),
                       children: [
-                          (0, a.jsx)(Z, { guild: l }),
+                          (0, a.jsx)(w, { guild: l }),
                           (0, a.jsxs)("div", {
-                              className: i()(w.content, _.container),
+                              className: i()(Z.content, _.container),
                               children: [
                                   c &&
                                       (0, a.jsxs)(s.njP, {

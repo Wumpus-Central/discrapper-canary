@@ -22,8 +22,8 @@ var a = n(54381),
     y = n(287008),
     N = n(484459),
     _ = n(271383),
-    w = n(485386),
-    Z = n(430824),
+    Z = n(485386),
+    w = n(430824),
     I = n(306680),
     P = n(594174),
     S = n(823379),
@@ -94,8 +94,8 @@ function et(e) {
         }),
         h = (0, o.e7)([_.ZP], () => _.ZP.getSelfMember(l.id)),
         x = (0, o.Wu)([_.ZP], () => _.ZP.getMemberRoleWithPendingUpdates(l.id, c.id)),
-        v = (0, o.e7)([w.Z], () => w.Z.getSortedRoles(l.id)),
-        Z = (0, j.ZP)(l.id, c.id),
+        v = (0, o.e7)([Z.Z], () => Z.Z.getSortedRoles(l.id)),
+        w = (0, j.ZP)(l.id, c.id),
         I = v.filter((e) => x.includes(e.id)),
         P = (0, O.ZP)(c.id, l.id);
     (0, p.ZP)(() => {
@@ -182,7 +182,7 @@ function et(e) {
                                                           children: [
                                                               (0, a.jsx)(s.xko, {
                                                                   color: null != (t = e.colorString) ? t : q.Pbq,
-                                                                  colors: Z ? e.colorStrings : null,
+                                                                  colors: w ? e.colorStrings : null,
                                                                   className: Q.roleDot,
                                                               }),
                                                               (0, a.jsx)(s.Text, {
@@ -405,26 +405,27 @@ function er(e) {
 function el(e) {
     let { guildId: t, onBrowseChannels: n } = e,
         l = (0, d.wj)((0, f.ZP)()),
-        p = (0, o.e7)([Z.Z], () => Z.Z.getGuild(t)),
+        p = (0, o.e7)([w.Z], () => w.Z.getGuild(t)),
         h = (0, o.e7)([P.default], () => P.default.getCurrentUser()),
         m = (0, b.Z)("(min-width: 1344px)") && null != h,
         g = r.useCallback(() => {
             (0, v.uL)(q.Z5c.CHANNEL(t, z.oC.CHANNEL_BROWSER)), null == n || n();
         }, [t, n]),
         C = (0, o.e7)([I.ZP], () => I.ZP.hasUnread(t, V.W.GUILD_ONBOARDING_QUESTION)),
+        j = null == p ? void 0 : p.latestOnboardingQuestionId,
         {
-            onboardingPromptsRaw: j,
-            newOnboardingPrompts: O,
-            onboardingPromptsWithNewAnswers: y,
-            newAnswersCount: N,
-            onboardingPrompts: _,
+            onboardingPromptsRaw: O,
+            newOnboardingPrompts: y,
+            onboardingPromptsWithNewAnswers: N,
+            newAnswersCount: _,
+            onboardingPrompts: Z,
         } = (0, H.Z)(t);
     r.useEffect(() => {
         (null == p ? void 0 : p.id) != null &&
             !x.Z.isFullServerPreview(p.id) &&
             (D.Z.shouldFetchPrompts(p.id) || C) &&
             (0, A.eM)(p.id);
-    }, [null == p ? void 0 : p.id, C]),
+    }, [null == p ? void 0 : p.id, C, j]),
         r.useEffect(() => {
             if ((null == p ? void 0 : p.id) != null && !x.Z.isFullServerPreview(p.id))
                 return () => {
@@ -432,7 +433,7 @@ function el(e) {
                         B.Z.updateOnboardingResponses(p.id);
                 };
         }, [null == p ? void 0 : p.id]);
-    let w = r.useCallback(
+    let E = r.useCallback(
         (e) => {
             if (null == p) return null;
             switch (e.type) {
@@ -461,7 +462,7 @@ function el(e) {
         [p],
     );
     if (null == p) return null;
-    if (0 === j.length) {
+    if (0 === O.length) {
         let e = l ? c.Z.unsafe_rawColors.PRIMARY_300.css : c.Z.unsafe_rawColors.PRIMARY_500.css,
             t = l ? c.Z.unsafe_rawColors.PRIMARY_700.css : c.Z.unsafe_rawColors.PRIMARY_230.css;
         return (0, a.jsx)("div", {
@@ -494,22 +495,22 @@ function el(e) {
             (0, a.jsxs)("div", {
                 className: Q.pageBody,
                 children: [
-                    (O.length > 0 || y.length > 0) &&
+                    (y.length > 0 || N.length > 0) &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)("div", {
                                     children: (0, a.jsx)(s.Heading, {
                                         variant: "heading-md/semibold",
                                         color: "text-strong",
-                                        children: X.intl.format(X.t.iB5Gqe, { count: O.length + N }),
+                                        children: X.intl.format(X.t.iB5Gqe, { count: y.length + _ }),
                                     }),
                                 }),
-                                O.map(w),
-                                y.map(w),
+                                y.map(E),
+                                N.map(E),
                                 (0, a.jsx)("div", { className: Q.sectionSeparator }),
                             ],
                         }),
-                    _.length > 0 &&
+                    Z.length > 0 &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsxs)("div", {
@@ -517,7 +518,7 @@ function el(e) {
                                         (0, a.jsx)(s.Heading, {
                                             variant: "heading-md/semibold",
                                             color: "text-strong",
-                                            children: X.intl.format(X.t["8IV8K9"], { count: _.length }),
+                                            children: X.intl.format(X.t["8IV8K9"], { count: Z.length }),
                                         }),
                                         (0, a.jsx)(s.Text, {
                                             variant: "text-xs/normal",
@@ -526,7 +527,7 @@ function el(e) {
                                         }),
                                     ],
                                 }),
-                                _.map(w),
+                                Z.map(E),
                             ],
                         }),
                     (0, a.jsx)(ea, { guild: p }),

@@ -99,7 +99,7 @@ function P(e) {
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
           : null != F
-            ? (0, r.jsx)(c.x3, {
+            ? (0, r.jsx)(c.x, {
                   textColor: "text-feedback-positive",
                   entry: { start: F },
               })

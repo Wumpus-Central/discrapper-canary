@@ -150,7 +150,7 @@ function k(e) {
                               size: "xxs",
                               color: "currentColor",
                           }),
-                          (0, r.jsx)(m.x3, {
+                          (0, r.jsx)(m.x, {
                               entry: {
                                   start: ee,
                                   end: null == Y || null == (e = Y.timestamps) ? void 0 : e.end,
