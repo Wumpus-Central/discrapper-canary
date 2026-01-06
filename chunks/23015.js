@@ -66,7 +66,7 @@ function m(e) {
                               size: "xxs",
                               color: "currentColor",
                           }),
-                          (0, r.jsx)(l.x, {
+                          (0, r.jsx)(l.x3, {
                               entry: {
                                   start: w,
                                   end: null == y || null == (e = y.timestamps) ? void 0 : e.end,

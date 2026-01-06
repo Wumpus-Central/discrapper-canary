@@ -36,7 +36,7 @@ function d() {
                     "Last fetch:",
                     " ",
                     null != d
-                        ? (0, a.jsx)(o.x, {
+                        ? (0, a.jsx)(o.x3, {
                               inline: !0,
                               entry: { start: d.getTime() },
                           })

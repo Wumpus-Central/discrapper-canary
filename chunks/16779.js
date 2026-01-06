@@ -36,7 +36,7 @@ function f(e) {
                 size: "xxs",
                 color: i.TVs.colors.TEXT_FEEDBACK_POSITIVE,
             }),
-            (0, r.jsx)(s.x, {
+            (0, r.jsx)(s.x3, {
                 entry: {
                     start: u,
                     end: null == (n = l.timestamps) ? void 0 : n.end,
