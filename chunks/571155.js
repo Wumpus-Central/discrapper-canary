@@ -17,6 +17,6 @@ function s(e) {
         : (0, r.jsx)(o.Ik, {
               value: t,
               disabled: n,
-              size: s,
+              size: null != s ? s : 20,
           });
 }
