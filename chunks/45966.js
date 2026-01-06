@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(539854), n(472816), n(794429);
+n.d(t, { Z: () => B }), n(539854), n(472816), n(794429);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -194,29 +194,33 @@ function j(e) {
         r = b[t];
     null != r && (r.mode = n);
 }
-let M = [],
-    k = [],
+function M(e) {
+    let { guild: t } = e;
+    delete b[t.id], delete y[t.id], delete O[t.id];
+}
+let k = [],
     U = [],
-    G = [];
-class Z extends (r = o.ZP.Store) {
+    G = [],
+    Z = [];
+class F extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, p.ZP, l.Z);
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : k;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : k;
     }
     getOnboardingResponses(e) {
         var t, n, r;
         return l.Z.isFullServerPreview(e)
-            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : k)
+            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : U)
             : null != (r = null == (t = b[e]) ? void 0 : t.responses)
               ? r
-              : k;
+              : U;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -227,10 +231,10 @@ class Z extends (r = o.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return k;
+        if (null == n) return U;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? k
+            ? U
             : a().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e),
@@ -242,14 +246,14 @@ class Z extends (r = o.ZP.Store) {
         return l.Z.isFullServerPreview(e)
             ? null != (t = null == r ? void 0 : r.prompts)
                 ? t
-                : M
+                : k
             : null != r && r.enabled && null != (n = r.prompts)
               ? n
-              : M;
+              : k;
     }
     getDefaultChannelIds(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : U;
+        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : G;
     }
     getEnabled(e) {
         var t, n;
@@ -295,12 +299,13 @@ class Z extends (r = o.ZP.Store) {
     }
     getConnections(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.connections) ? n : G;
+        return null != (n = null == (t = b[e]) ? void 0 : t.connections) ? n : Z;
     }
 }
-m(Z, "displayName", "GuildOnboardingPromptsStore");
-let F = new Z(s.Z, {
+m(F, "displayName", "GuildOnboardingPromptsStore");
+let B = new F(s.Z, {
     CONNECTION_OPEN: I,
+    GUILD_DELETE: M,
     GUILD_ONBOARDING_PROMPTS_FETCH_START: S,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: A,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: N,
