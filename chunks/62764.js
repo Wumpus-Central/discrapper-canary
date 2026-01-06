@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(48929),
     g = n(333535),
     b = n(566006),
-    y = n(443877),
-    C = n(490597),
+    C = n(443877),
+    y = n(490597),
     v = n(216337),
     x = n(920888),
     O = n(287151),
@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(109590),
     R = n(228392),
     D = n(981631),
-    k = n(388032),
-    L = n(792389),
+    L = n(388032),
+    k = n(792389),
     U = n(519576),
     V = n(860302),
-    H = n(414103);
-function F(e) {
+    F = n(414103);
+function H(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
         a = (0, j.P0)(t),
@@ -53,7 +53,7 @@ function F(e) {
         ? (0, i.jsx)(u.Button, {
               size: "sm",
               variant: "secondary",
-              text: l ? k.intl.string(L.default["2Y4vkk"]) : k.intl.string(L.default.YIbR4r),
+              text: l ? L.intl.string(k.default["2Y4vkk"]) : L.intl.string(k.default.YIbR4r),
               onClick: () => {
                   !0 === s.K.get(_.F)
                       ? d()
@@ -78,7 +78,7 @@ function F(e) {
 function B(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: E, width: j } = (0, f.ZP)(),
-        [_, L] = r.useState(3),
+        [_, k] = r.useState(3),
         [B, G] = r.useState(!n),
         [W, z] = (0, h.Z)(!1, 2000),
         q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
@@ -90,7 +90,7 @@ function B(e) {
             isLurking: Q,
             isGuest: $,
             isPendingMember: ee,
-        } = (0, y.Z)(q),
+        } = (0, C.Z)(q),
         et = (0, S.nw)(q),
         en = (0, o.e7)([T.Z], () => T.Z.getChannel(s)),
         ei = (0, w.Bs)(en),
@@ -120,7 +120,7 @@ function B(e) {
     let [ea, eo] = r.useState(!0);
     if (
         (r.useEffect(() => {
-            null != j && (L(Math.floor((j - 280) / 58)), eo(!1));
+            null != j && (k(Math.floor((j - 280) / 58)), eo(!1));
         }, [j]),
         null == q || null == K)
     )
@@ -188,13 +188,13 @@ function B(e) {
                                       forceHideReactionCreates: !0,
                                   }),
                                   !J &&
-                                      (0, i.jsx)(C.X, {
+                                      (0, i.jsx)(y.X, {
                                           message: K,
                                           channel: q,
                                           useChatFontScaling: !1,
-                                          className: a()(H.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
+                                          className: a()(F.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
-                                          children: !es && k.intl.string(k.t.xpOyTO),
+                                          children: !es && L.intl.string(L.t.xpOyTO),
                                       }),
                               ],
                           }),
@@ -202,14 +202,15 @@ function B(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(F, { channel: q })
-                                : (0, i.jsx)(c.u, {
-                                      text: k.intl.string(k.t.F7oeDv),
+                                ? (0, i.jsx)(H, { channel: q })
+                                : !Q &&
+                                  (0, i.jsx)(c.u, {
+                                      text: L.intl.string(L.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {
                                           icon: eu,
                                           size: "sm",
                                           variant: "secondary",
-                                          text: Y ? k.intl.string(k.t["7OkUzs"]) : k.intl.string(k.t["3aOv+h"]),
+                                          text: Y ? L.intl.string(L.t["7OkUzs"]) : L.intl.string(L.t["3aOv+h"]),
                                           onClick: () => {
                                               Y
                                                   ? Z.Z.leaveThread(q, "Forum Toolbar")
@@ -218,26 +219,26 @@ function B(e) {
                                       }),
                                   }),
                             (0, i.jsx)(c.u, {
-                                text: k.intl.string(k.t.WqhZss),
+                                text: L.intl.string(L.t.WqhZss),
                                 children: W
                                     ? (0, i.jsx)(u.Button, {
                                           icon: u.dz2,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          text: k.intl.string(k.t.t5VZ88),
+                                          text: L.intl.string(L.t.t5VZ88),
                                       })
                                     : (0, i.jsx)(u.hU, {
                                           icon: u.xPt,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          "aria-label": k.intl.string(k.t.WqhZss),
+                                          "aria-label": L.intl.string(L.t.WqhZss),
                                       }),
                             }),
                             !n &&
                                 (0, i.jsx)(c.u, {
-                                    text: k.intl.string(k.t.nFP4oa),
+                                    text: L.intl.string(L.t.nFP4oa),
                                     children: (0, i.jsx)(u.hU, {
                                         icon: u.Za2,
                                         size: "sm",
@@ -250,7 +251,7 @@ function B(e) {
                                                 jumpType: p.SR.INSTANT,
                                             });
                                         },
-                                        "aria-label": k.intl.string(k.t.nFP4oa),
+                                        "aria-label": L.intl.string(L.t.nFP4oa),
                                     }),
                                 }),
                         ],

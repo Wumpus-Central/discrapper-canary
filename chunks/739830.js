@@ -1,15 +1,17 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    a = n(665149),
-    s = n(585483),
-    o = n(723170),
-    c = n(64247),
-    d = n(124368),
-    u = n(981631),
-    p = n(388032);
-function h(e) {
+    l = n(442837),
+    a = n(481060),
+    s = n(665149),
+    o = n(41776),
+    c = n(585483),
+    d = n(723170),
+    u = n(64247),
+    p = n(124368),
+    h = n(981631),
+    f = n(388032);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,48 +54,53 @@ function f(e, t) {
         e
     );
 }
-function g(e) {
+function b(e) {
     let { channel: t } = e,
-        n = (0, o.B)(t),
-        [g, m] = i.useState(!1),
-        b = i.useRef(null);
-    i.useEffect(() => {
-        let e = () => m(!0);
-        return (
-            s.S.subscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
-            () => {
-                s.S.unsubscribe(u.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
-            }
-        );
-    }, []);
-    let y = p.intl.string(p.t.h850Ss);
-    return (0, r.jsx)(l.yRy, {
-        targetElementRef: b,
-        shouldShow: g,
-        animation: l.yRy.Animation.NONE,
+        n = (0, d.B)(t),
+        [b, y] = i.useState(!1),
+        O = i.useRef(null),
+        x = (0, l.e7)([o.Z], () => null != t.guild_id && o.Z.isLurking(t.guild_id));
+    if (
+        (i.useEffect(() => {
+            let e = () => y(!0);
+            return (
+                c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+                () => {
+                    c.S.unsubscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                }
+            );
+        }, []),
+        x)
+    )
+        return null;
+    let j = f.intl.string(f.t.h850Ss);
+    return (0, r.jsx)(a.yRy, {
+        targetElementRef: O,
+        shouldShow: b,
+        animation: a.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => m(!1),
+        onRequestClose: () => y(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
-                c.Z,
-                f(h({}, e), {
+                u.Z,
+                m(g({}, e), {
                     channel: t,
                     navId: "thread-context",
-                    label: p.intl.string(p.t["1NBjqb"]),
+                    label: f.intl.string(f.t["1NBjqb"]),
                 }),
             ),
         children: (e, t) => {
             let { isShown: i } = t;
             return (0, r.jsx)(
-                a.ZP.Icon,
-                f(h({}, e), {
-                    ref: b,
-                    onClick: () => m((e) => !e),
-                    tooltip: i ? null : y,
-                    icon: n === d.iN.NO_MESSAGES ? l.owu : l.Dkj,
-                    "aria-label": y,
+                s.ZP.Icon,
+                m(g({}, e), {
+                    ref: O,
+                    onClick: () => y((e) => !e),
+                    tooltip: i ? null : j,
+                    icon: n === p.iN.NO_MESSAGES ? a.owu : a.Dkj,
+                    "aria-label": j,
                     selected: i,
                 }),
             );
