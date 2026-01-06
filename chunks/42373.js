@@ -1,271 +1,185 @@
-n.d(t, { Z: () => N }), n(953529);
+n.d(t, { Z: () => y }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(313666),
-    c = n(159691),
-    u = n(780384),
-    d = n(755721),
-    f = n(481060),
-    p = n(410030),
-    _ = n(70097),
-    m = n(626135),
-    h = n(526167),
-    g = n(572995),
-    E = n(981631),
-    b = n(869783),
-    y = n(291049),
-    O = n(538654);
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function I(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function T(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function C(e) {
-    let t;
-    switch (e) {
-        case g.NA.EMOJIS:
-            t = y.emojisBackground;
-            break;
-        case g.NA.REFERRAL_PROGRAM:
-            t = y.referralProgramBackground;
-            break;
-        case g.NA.NO_LIMITS:
-            t = y.noLimitsBackground;
-            break;
-        case g.NA.YOUR_SPACE:
-            t = y.yourSpaceBackground;
-            break;
-        case g.NA.SERVER_PROFILES:
-            t = y.serverProfilesBackground;
-            break;
-        case g.NA.SHOW_YOUR_STYLE:
-            t = y.yourStyleBackground;
-            break;
-        case g.NA.CUSTOM_THEMES:
-            t = y.customThemesBackground;
-            break;
-        case g.NA.DISPLAY_NAME_STYLES:
-            t = y.displayNameStylesBackground;
-            break;
-        default:
-            t = "";
-    }
-    return t;
-}
-let A = (e) => {
-        let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: i, enablePremiumBrandRefreshDesign: a } = e,
-            s = (0, p.ZP)(),
-            l = (0, u.wj)(s),
-            f = l ? d.Tt.WHITE : d.Tt.BRAND,
-            _ = () => {
+    l = n(159691),
+    c = n(481060),
+    u = n(131388),
+    d = n(70097),
+    f = n(626135),
+    p = n(526167),
+    _ = n(572995),
+    m = n(981631),
+    h = n(869783),
+    g = n(538654);
+let E = 1140,
+    b = (e) => {
+        let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: i } = e,
+            a = () => {
                 i(), n();
             };
-        return a
-            ? (0, r.jsx)("div", {
-                  className: O.bentoBoxButton,
-                  children: (0, r.jsx)(c.zxk, {
-                      variant: "secondary",
-                      onClick: _,
-                      text: t,
-                  }),
-              })
-            : (0, r.jsx)(d.zx, {
-                  "data-migration-pending": !0,
-                  look: d.iL.OUTLINED,
-                  color: f,
-                  className: o()(y.bentoBoxButton, l ? y.bentoBoxButtonWhite : y.bentoBoxButtonBrand),
-                  onClick: _,
-                  children: t,
-              });
+        return (0, r.jsx)("div", {
+            className: g.bentoBoxButton,
+            children: (0, r.jsx)(l.zxk, {
+                variant: "secondary",
+                onClick: a,
+                text: t,
+            }),
+        });
     },
-    N = (e) => {
-        let t,
-            {
-                name: n,
-                title: a,
-                description: c,
-                descriptionCta: u,
-                previewImage: d,
-                videoUrl: p,
-                shouldLoadVideo: v,
+    y = (e) => {
+        let {
+                name: t,
+                title: n,
+                description: a,
+                descriptionCta: y,
+                previewImage: O,
+                videoUrl: v,
+                shouldLoadVideo: S,
                 index: I,
-                customVideoStyle: N,
-                isReducedMotion: P,
-                onClick: R,
-                badgeText: w,
-                badgeVariant: D = "gradient",
-                size: x,
-                enablePremiumBrandRefreshDesign: L,
+                customVideoStyle: T,
+                isReducedMotion: C,
+                onClick: A,
+                badgeText: N,
+                badgeVariant: P = "gradient",
+                size: R,
+                backgroundVideoUrl: w,
+                previewImageStyle: D = _.P6.CONTAINED,
             } = e,
-            j = (0, h.rO)(),
-            M = i.useRef(null),
-            k = i.useRef(0),
-            U = C(n),
-            G = i.useMemo(
+            x = (0, p.rO)(),
+            L = i.useRef(null),
+            j = i.useRef(0),
+            M = (0, u.Z)("(min-width: ".concat(E, "px)")),
+            k = D === _.P6.OVERLAY && (R !== _.y$.LARGE || !M),
+            U = R === _.y$.LARGE && M && D === _.P6.OVERLAY,
+            G = null != w && M && R === _.y$.LARGE,
+            Z = i.useMemo(
                 () =>
                     (0, s.debounce)(() => {
-                        m.default.track(E.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
+                        f.default.track(m.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(t) });
                     }, 800),
-                [n],
+                [t],
             ),
-            Z = () => {
-                null == M.current || P || ((M.current.currentTime = k.current), M.current.play());
-            },
             F = () => {
-                null == M.current || P || ((k.current = M.current.currentTime), M.current.pause());
+                null == L.current || C || ((L.current.currentTime = j.current), L.current.play());
             },
-            B = L ? O : y;
-        t = L
-            ? x === g.y$.LARGE
-                ? "heading-xxl/bold"
-                : "heading-xl/bold"
-            : x === g.y$.SMALL
-              ? "heading-xl/extrabold"
-              : "heading-xxl/extrabold";
-        let V = () =>
+            B = () => {
+                null == L.current || C || ((j.current = L.current.currentTime), L.current.pause());
+            },
+            V = R === _.y$.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
+            H = () =>
+                null == N
+                    ? null
+                    : "gradient" === P
+                      ? (0, r.jsx)("div", {
+                            className: g.badgeContainer,
+                            children: (0, r.jsx)("div", {
+                                className: g.badge,
+                                children: (0, r.jsx)(c.Heading, {
+                                    variant: "eyebrow",
+                                    color: "always-white",
+                                    children: N,
+                                }),
+                            }),
+                        })
+                      : (0, r.jsx)("div", {
+                            className: g.badgeContainer,
+                            children: (0, r.jsx)(l.Cts, {
+                                type: { text: N },
+                                variant: P,
+                            }),
+                        }),
+            Y = () =>
                 (0, r.jsxs)("div", {
-                    className: o()(B.textBox, B["".concat(x)]),
+                    className: o()(g.textBox, g["".concat(R)], U && g.overlayTextBox),
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                null != w &&
-                                    ("gradient" === D
-                                        ? (0, r.jsx)("div", {
-                                              className: B.badgeContainer,
-                                              children: (0, r.jsx)("div", {
-                                                  className: B.badge,
-                                                  children: (0, r.jsx)(f.Heading, {
-                                                      variant: "eyebrow",
-                                                      color: "always-white",
-                                                      children: w,
-                                                  }),
-                                              }),
-                                          })
-                                        : (0, r.jsx)("div", {
-                                              className: B.badgeContainer,
-                                              children: (0, r.jsx)(l.C, {
-                                                  type: { text: w },
-                                                  variant: D,
-                                              }),
-                                          })),
-                                (0, r.jsx)(f.Heading, {
-                                    variant: t,
+                                H(),
+                                (0, r.jsx)(c.Heading, {
+                                    variant: V,
                                     color: "text-strong",
-                                    className: o()(B.header, !L && B["".concat(x)]),
-                                    children: a,
+                                    className: g.header,
+                                    children: n,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(f.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: "text-md/medium",
-                            color: L ? "text-strong" : "text-muted",
-                            className: B.description,
-                            children: c,
+                            color: "text-strong",
+                            className: g.description,
+                            children: a,
                         }),
-                        null != u &&
-                            null != R &&
-                            (0, r.jsx)(A, {
-                                descriptionCta: u,
-                                onClick: R,
-                                debouncedOnClickAnalytics: G,
-                                enablePremiumBrandRefreshDesign: L,
+                        null != y &&
+                            null != A &&
+                            (0, r.jsx)(b, {
+                                descriptionCta: y,
+                                onClick: A,
+                                debouncedOnClickAnalytics: Z,
                             }),
                     ],
                 }),
-            H = () =>
+            W = () =>
                 (0, r.jsx)("div", {
-                    className: o()(B.boxArtContainer, B["".concat(x)]),
+                    className: o()(g.boxArtContainer, g["".concat(R)]),
                     children: (0, r.jsx)(
-                        _.Z,
+                        d.Z,
                         {
                             playsInline: !0,
-                            preload: v ? "auto" : "none",
+                            preload: S ? "auto" : "none",
                             muted: !0,
-                            poster: d,
+                            poster: O,
                             loop: !0,
-                            className: o()(B.boxVideo, { [N]: null != N }),
-                            ref: M,
+                            className: o()(U ? g.overlayImage : g.boxVideo, { [T]: null != T }),
+                            ref: L,
                             children: (0, r.jsx)("source", {
-                                src: p,
-                                type: j ? b.m.MP4 : b.m.WEBM,
+                                src: v,
+                                type: x ? h.m.MP4 : h.m.WEBM,
                             }),
                         },
-                        p,
+                        v,
                     ),
                 }),
-            Y = I % 2 != 0,
-            W = () =>
-                Y
+            K = I % 2 != 0,
+            z = () =>
+                K
                     ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(V, {}), (0, r.jsx)(H, {})],
+                          children: [(0, r.jsx)(Y, {}), (0, r.jsx)(W, {})],
                       })
                     : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(H, {}), (0, r.jsx)(V, {})],
-                      }),
-            K = {
-                className: o()(L ? O.backgroundColor : U, B.boxContainer, B["".concat(x)], L && O.gradientBackground),
-                onMouseEnter: Z,
-                onFocus: Z,
-                onBlur: F,
-                onMouseLeave: F,
-            };
-        return L
-            ? (0, r.jsx)(
-                  f.$1m,
-                  T(S({}, K), {
-                      color: "purple",
-                      children: (0, r.jsx)(W, {}),
-                  }),
-              )
-            : (0, r.jsx)("div", T(S({}, K), { children: (0, r.jsx)(W, {}) }));
+                          children: [(0, r.jsx)(W, {}), (0, r.jsx)(Y, {})],
+                      });
+        return (0, r.jsxs)(c.$1m, {
+            className: o()(
+                g.backgroundColor,
+                g.boxContainer,
+                g["".concat(R)],
+                g.gradientBackground,
+                k && g.overlayImageMode,
+                U && g.overlayMode,
+            ),
+            onMouseEnter: F,
+            onFocus: F,
+            onBlur: B,
+            onMouseLeave: B,
+            color: "purple",
+            children: [
+                G &&
+                    (0, r.jsx)("div", {
+                        className: g.backgroundVideoContainer,
+                        children: (0, r.jsx)(d.Z, {
+                            muted: !0,
+                            autoPlay: !C,
+                            playsInline: !0,
+                            loop: !0,
+                            preload: S ? "auto" : "none",
+                            className: g.backgroundVideo,
+                            src: w,
+                        }),
+                    }),
+                (0, r.jsx)(z, {}),
+            ],
+        });
     };

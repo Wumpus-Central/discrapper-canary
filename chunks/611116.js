@@ -107,7 +107,6 @@ function g(e) {
                                     size: n,
                                     shouldLoadVideo: a,
                                     isReducedMotion: u,
-                                    enablePremiumBrandRefreshDesign: g,
                                 }),
                                 e.name,
                             ),

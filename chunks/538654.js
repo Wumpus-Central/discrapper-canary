@@ -5,7 +5,6 @@ var r = {
     bentoBoxButton: "b0db003538002d93-bentoBoxButton",
     backgroundColor: "b0db003538002d93-backgroundColor",
     description: "b0db003538002d93-description",
-    boxesSubHeader: "b0db003538002d93-boxesSubHeader",
     badgeContainer: "b0db003538002d93-badgeContainer",
     badge: "b0db003538002d93-badge",
     boxVideo: "b0db003538002d93-boxVideo",
@@ -15,7 +14,13 @@ var r = {
     medium: "b0db003538002d93-medium",
     small: "b0db003538002d93-small",
     boxContainer: "b0db003538002d93-boxContainer",
+    overlayMode: "b0db003538002d93-overlayMode",
+    overlayImageMode: "b0db003538002d93-overlayImageMode",
     textBox: "b0db003538002d93-textBox",
     gradientBackground: "b0db003538002d93-gradientBackground",
+    overlayTextBox: "b0db003538002d93-overlayTextBox",
+    backgroundVideoContainer: "b0db003538002d93-backgroundVideoContainer",
+    backgroundVideo: "b0db003538002d93-backgroundVideo",
+    overlayImage: "b0db003538002d93-overlayImage",
 };
 n.r((e.exports = r));
