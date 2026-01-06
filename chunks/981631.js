@@ -3997,6 +3997,7 @@ var np = (function (e) {
             (e.START_SPEAKING = "start_speaking"),
             (e.START_LISTENING = "start_listening"),
             (e.VOICE_WATCHDOG_TIMEOUT = "voice_watchdog_timeout"),
+            (e.DEVICE_ENUMERATION_TIMEOUT = "device_enumeration_timeout"),
             (e.VOICE_PROCESSING = "voice_processing"),
             (e.CALL_REPORT_PROBLEM = "call_report_problem"),
             (e.NOISE_CANCELLATION_LINK_CLICKED = "noise_cancellation_link_clicked"),
