@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(620792),
+    u = n(554916),
     d = n(374470),
     f = n(793030),
     p = n(506802),
@@ -173,7 +173,8 @@ class S extends (r = a.PureComponent) {
             } = this.props,
             { fieldProps: F } = (0, f.XF_)(this.props),
             B = 0;
-        y ? null != o && (null != c ? (B = o[c]) : null != l && (B = o[l])) : (B = this.scaleValue(t));
+        y ? null != o && (null != c ? (B = o[c]) : null != l && (B = o[l])) : (B = this.scaleValue(t)),
+            (B = Math.min(Math.max(B, 0), 100));
         let V = "".concat(B, "%"),
             H =
                 null != o && null != a
