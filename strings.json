@@ -9195,7 +9195,7 @@
   "N7vTg4": "You have not set up Customization Questions.",
   "rkREld": "You have not set up a Welcome Card.",
   "HxEwSv": "You have {numDefaultChannels, plural, one { Default Channel} other { Default Channels} }",
-  "nHwnLK": "You have {numDefaultChannels, plural, one { Default Channel} other { Default Channels} } and at least {numFromQuestions} channels assigned by questions.",
+  "nHwnLK": "You have {numDefaultChannels, plural, one { Default Channel} other { Default Channels} } and at least {numFromQuestions, plural, one { channel} other { channels} } assigned by questions.",
   "xGojCs": "You have created {numOnboardingPrompts, plural, =0 {no Customization Questions} one { Customization Question} other { Customization Questions} }",
   "jRXWJV": "You have {numWelcomeChannels, plural, =0 {no channels} one { channel} other { channels} } in your Welcome Card",
   "0GWElc": "Set up",
