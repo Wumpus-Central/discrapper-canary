@@ -129,7 +129,7 @@ let j = function (e) {
                     o = r.channelId;
                 null != s &&
                     null != d.Z.getSettings() &&
-                    (null == d.Z.getPendingIconDataForChannel(o) && (0, c.ad)(t, s, i, l), (0, c.el)(s, r));
+                    (null == d.Z.getPendingDataForChannel(o) && l && (0, c.gi)(t, s, i), (0, c.el)(s, r));
             },
             [n, t],
         ),

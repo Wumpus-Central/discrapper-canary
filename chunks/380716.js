@@ -69,7 +69,7 @@ function w(e, n) {
         e
     );
 }
-function M(e, n) {
+function Z(e, n) {
     switch (e) {
         case p.NewMemberActionTypes.VIEW:
             return C.Uu(O.Plq.VIEW_CHANNEL, n);
@@ -81,7 +81,7 @@ function M(e, n) {
             return !1;
     }
 }
-function Z() {
+function M() {
     return {
         channelId: [],
         title: [],
@@ -92,14 +92,14 @@ function Z() {
     };
 }
 function A(e) {
-    let n = Z(),
+    let n = M(),
         l = j.Z.getChannel(e.channelId);
     return (
         (null == e.title || e.title.length < p.Wz) &&
             n.title.push(P.intl.formatToPlainString(P.t.iu6AGk, { minLength: p.Wz })),
         null == e.actionType ||
             null == l ||
-            M(e.actionType, l) ||
+            Z(e.actionType, l) ||
             n.actionType.push(
                 (function (e) {
                     switch (e) {
@@ -117,7 +117,7 @@ function A(e) {
 }
 function D(e) {
     var n, l, a, y, C, D;
-    let { transitionState: _, onClose: L, guildId: R, action: H, onSave: G, onDelete: U } = e,
+    let { transitionState: _, onClose: R, guildId: H, action: L, onSave: G, onDelete: U } = e,
         F = i.useRef(null),
         z = i.useRef(null),
         [W] = i.useState(
@@ -130,7 +130,7 @@ function D(e) {
                           value: e.channelId,
                           label: n.name,
                       };
-            })(H),
+            })(L),
         ),
         [V, Y] = i.useState(W),
         q = (0, s.e7)([j.Z], () => j.Z.getChannel(null == V ? void 0 : V.value)),
@@ -153,8 +153,8 @@ function D(e) {
             ],
             [null == q ? void 0 : q.type, X],
         ),
-        [K, Q] = i.useState(Z()),
-        [J, $] = i.useState(null != (n = null == H ? void 0 : H.title) ? n : ""),
+        [K, Q] = i.useState(M()),
+        [J, $] = i.useState(null != (n = null == L ? void 0 : L.title) ? n : ""),
         ee = (0, s.e7)([S.Z], () => {
             let e = S.Z.getSettings();
             if (null == e.newMemberActions) return new Set();
@@ -162,19 +162,19 @@ function D(e) {
             return null != W && n.delete(W.value), n;
         }),
         [en, el] = i.useState(
-            null == H
+            null == L
                 ? null
-                : null != (D = null == (C = B.find((e) => e.value === H.actionType)) ? void 0 : C.value)
+                : null != (D = null == (C = B.find((e) => e.value === L.actionType)) ? void 0 : C.value)
                   ? D
                   : null,
         ),
-        [et, ei] = i.useState(null != (l = null == H ? void 0 : H.emoji) ? l : null),
+        [et, ei] = i.useState(null != (l = null == L ? void 0 : L.emoji) ? l : null),
         ea = (0, s.e7)([S.Z], () => {
             var e;
-            return null == (e = S.Z.getNewMemberAction(null == H ? void 0 : H.channelId)) ? void 0 : e.icon;
+            return null == (e = S.Z.getNewMemberAction(null == L ? void 0 : L.channelId)) ? void 0 : e.icon;
         }),
-        er = null == H ? void 0 : H.channelId,
-        eo = (0, s.e7)([S.Z], () => S.Z.getPendingIconDataForChannel(er), [er]),
+        er = null == L ? void 0 : L.channelId,
+        eo = (0, s.e7)([S.Z], () => S.Z.getPendingDataForChannel(er), [er]),
         [es, eu] = i.useState(
             null != eo && null != eo.iconData
                 ? eo.iconData
@@ -185,10 +185,11 @@ function D(e) {
                     })
                   : null,
         ),
-        ec = (0, m.Z)(es),
-        ed = null == J || 0 === J.length || null == en || null == V,
-        em = Object.values(K).flat().length > 0,
-        eh = i.useCallback(() => {
+        ec = (0, m.Z)(et),
+        ed = (0, m.Z)(es),
+        em = null == J || 0 === J.length || null == en || null == V,
+        eh = Object.values(K).flat().length > 0,
+        ev = i.useCallback(() => {
             if (null == V || null == en || J.length <= 0) return;
             let e = {
                     channelId: V.value,
@@ -198,18 +199,21 @@ function D(e) {
                     emoji: null != et ? et : null,
                     icon: null != ea ? ea : null,
                 },
-                n = void 0 !== er && V.value !== er;
-            null != et
-                ? (0, N.Lt)(er)
-                : (n || (void 0 !== eo && void 0 !== es)) &&
-                  (void 0 !== eo && (0, N.Lt)(er), (0, N.Di)(V.value, null != es ? es : null));
-            let l = es !== ec;
-            G(e, null != es ? es : null, l && !n), L();
-        }, [G, L, J, en, V, et, ea, es, ec, er, eo]),
-        ev = i.useCallback(() => {
-            null == U || U(), L();
-        }, [U, L]),
-        ep = i.useCallback(
+                n = void 0 !== er && V.value !== er,
+                l = void 0 !== eo,
+                t = null != et || void 0 !== es,
+                i = {
+                    icon: null != es ? es : null,
+                    emoji: et,
+                };
+            (n || (l && t)) && (l && (0, N.Lo)(er), (0, N.Wp)(V.value, i));
+            let a = es !== ed;
+            G(e, i, (et !== ec || a) && !n), R();
+        }, [G, R, J, en, V, et, ea, es, ec, ed, er, eo]),
+        ep = i.useCallback(() => {
+            null == U || U(), R();
+        }, [U, R]),
+        eg = i.useCallback(
             (e) => {
                 $(e),
                     Q(
@@ -224,7 +228,7 @@ function D(e) {
             },
             [$, Q, V, en, et],
         ),
-        eg = i.useCallback(
+        ej = i.useCallback(
             (e) => {
                 Y(e),
                     Q(
@@ -239,7 +243,7 @@ function D(e) {
             },
             [Y, Q, J, en, et],
         ),
-        ej = i.useCallback(
+        ex = i.useCallback(
             (e) => {
                 el(e),
                     Q(
@@ -254,23 +258,23 @@ function D(e) {
             },
             [el, Q, V, J, et],
         ),
-        ex = i.useCallback(
+        eb = i.useCallback(
             (e) =>
                 Promise.resolve(
-                    x.ZP.getSelectableChannels(R)
+                    x.ZP.getSelectableChannels(H)
                         .filter((n) => !ee.has(n.channel.id) && (0, p.kb)(n.channel) && r()(e, n.channel.name))
                         .map((e) => ({
                             value: e.channel.id,
                             label: e.channel.name,
                         })),
                 ),
-            [R, ee],
+            [H, ee],
         ),
-        eb = i.useCallback(
+        ef = i.useCallback(
             (e) => {
-                if (null == e || null == R) return null;
+                if (null == e || null == H) return null;
                 let n = j.Z.getChannel(e.value),
-                    l = b.Z.getGuild(R);
+                    l = b.Z.getGuild(H);
                 if (null == n || null == l) return null;
                 let i = (0, h.KS)(n, l);
                 return null == i
@@ -281,26 +285,26 @@ function D(e) {
                           className: k.channelIcon,
                       });
             },
-            [R],
+            [H],
         ),
-        ef = i.useCallback(function (e) {
+        ey = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
             ei(n), eu(e);
         }, []),
-        ey = i.useCallback(() => (null != es ? es : null), [es, et])(),
-        eC = i.useCallback(
+        eC = i.useCallback(() => (null != es ? es : null), [es, et])(),
+        eN = i.useCallback(
             (e) => {
-                null != e && ef(e, null);
+                null != e && ey(e, null);
             },
-            [ef],
+            [ey],
         ),
-        eN = null;
-    eN =
-        null != ey
+        eS = null;
+    eS =
+        null != eC
             ? (0, t.jsxs)(t.Fragment, {
                   children: [
                       (0, t.jsx)("img", {
-                          src: ey,
+                          src: eC,
                           alt: "",
                           "aria-hidden": !0,
                           className: k.__invalid_image,
@@ -337,32 +341,32 @@ function D(e) {
                     size: "md",
                     color: "currentColor",
                 });
-    let eS = i.useMemo(
+    let eT = i.useMemo(
         () => [
             {
                 text: P.intl.string(P.t["ETE/oC"]),
-                onClick: L,
+                onClick: R,
                 variant: "secondary",
             },
             {
                 text: P.intl.string(P.t["R3BPH+"]),
                 variant: "primary",
-                onClick: eh,
-                disabled: ed || em,
+                onClick: ev,
+                disabled: em || eh,
             },
         ],
-        [eh, em, ed, L],
+        [ev, eh, em, R],
     );
     return (0, t.jsxs)(o.Modal, {
         title: P.intl.string(P.t.ncTLSo),
         transitionState: _,
-        onClose: L,
-        actions: eS,
+        onClose: R,
+        actions: eT,
         actionBarInput:
-            null != H
+            null != L
                 ? (0, t.jsx)(c.Avr, {
                       text: P.intl.string(P.t.N86XcP),
-                      onClick: ev,
+                      onClick: ep,
                       variant: "critical",
                   })
                 : void 0,
@@ -378,7 +382,7 @@ function D(e) {
                     (0, t.jsx)(c.oil, {
                         value: J,
                         error: (null != (y = null == J ? void 0 : J.length) ? y : 0) > 0 ? K.title.join(", ") : null,
-                        onChange: ep,
+                        onChange: eg,
                         placeholder: P.intl.string(P.t.oN1Sm2),
                         maxLength: p.Z3,
                     }),
@@ -395,9 +399,9 @@ function D(e) {
                     }),
                     (0, t.jsx)(u.d, {
                         value: V,
-                        renderOptionPrefix: eb,
-                        options: ex,
-                        onChange: eg,
+                        renderOptionPrefix: ef,
+                        options: eb,
+                        onChange: ej,
                     }),
                     (0, t.jsx)(c.Text, {
                         variant: "text-xs/medium",
@@ -434,7 +438,7 @@ function D(e) {
                                         children: [
                                             (0, t.jsx)(g.ZP, {
                                                 onChange: (e) => {
-                                                    eC(e), n();
+                                                    eN(e), n();
                                                 },
                                                 tabIndex: 0,
                                             }),
@@ -463,7 +467,7 @@ function D(e) {
                                                         var n, t;
                                                         let { emoji: i, willClose: a } = e;
                                                         if (null != i)
-                                                            ef(
+                                                            ey(
                                                                 null,
                                                                 null == i.id
                                                                     ? {
@@ -515,14 +519,14 @@ function D(e) {
                                             label: l,
                                             icon: c.rG2,
                                         }),
-                                        null != ey || null != et
+                                        null != eC || null != et
                                             ? (0, t.jsx)(c.sNh, {
                                                   id: "clear",
                                                   color: "danger",
                                                   label: P.intl.string(P.t.ZCLmoR),
                                                   icon: c.XHJ,
                                                   action: () => {
-                                                      ef(null);
+                                                      ey(null);
                                                   },
                                               })
                                             : null,
@@ -536,7 +540,7 @@ function D(e) {
                                     w(E({}, e), {
                                         className: k.iconUpload,
                                         ref: z,
-                                        children: eN,
+                                        children: eS,
                                     }),
                                 ),
                         }),
@@ -554,8 +558,8 @@ function D(e) {
                     }),
                     (0, t.jsx)(c.FXm, {
                         value: en,
-                        onChange: ej,
-                        options: null == q ? B : B.map((e) => w(E({}, e), { disabled: !M(e.value, q) })),
+                        onChange: ex,
+                        options: null == q ? B : B.map((e) => w(E({}, e), { disabled: !Z(e.value, q) })),
                     }),
                     null != en && K.actionType.length > 0
                         ? K.actionType.map((e) =>

@@ -1,14 +1,14 @@
 n.d(t, {
-    Di: () => x,
     Hr: () => O,
     Hz: () => I,
-    Lt: () => j,
+    Lo: () => j,
     To: () => P,
+    Wp: () => x,
     XG: () => E,
     _N: () => p,
-    ad: () => y,
     bj: () => A,
     el: () => v,
+    gi: () => y,
     hS: () => C,
     lq: () => S,
     mM: () => _,
@@ -44,19 +44,19 @@ function h(e, t) {
     a.Z.dispatch({
         type: "GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION",
         action: e,
-        pendingIconData: t,
+        pendingData: t,
     });
 }
 function x(e, t) {
     a.Z.dispatch({
-        type: "GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_PENDING_ICON_DATA",
+        type: "GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_PENDING_DATA",
         channelId: e,
-        pendingIconData: t,
+        pendingData: t,
     });
 }
 function j(e) {
     a.Z.dispatch({
-        type: "GUILD_SETTINGS_ONBOARDING_CLEAR_NEW_MEMBER_ACTION_PENDING_ICON_DATA",
+        type: "GUILD_SETTINGS_ONBOARDING_CLEAR_NEW_MEMBER_ACTION_PENDING_DATA",
         channelId: e,
     });
 }
@@ -79,23 +79,24 @@ function C(e) {
         actions: e,
     });
 }
-async function y(e, t, n, r) {
-    if (!r) return Promise.resolve();
+async function y(e, t, n) {
+    let r = {};
+    null != n.emoji ? (r.emoji = n.emoji) : (r.icon = n.icon);
     try {
-        let r = await l.tn.patch({
+        let n = await l.tn.patch({
                 url: m.ANM.NEW_MEMBER_ACTION(e, t),
-                body: { icon: n },
+                body: r,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-            i = (0, c.cq)(r.body);
+            i = (0, c.cq)(n.body);
         return (
             a.Z.dispatch({
                 type: "GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS",
                 guildId: e,
                 action: i,
             }),
-            Promise.resolve(r.body)
+            Promise.resolve(n.body)
         );
     } catch (t) {
         var o;
@@ -233,7 +234,7 @@ function P(e, t) {
 async function w(e, t) {
     var n, r, o, u, g, p, h, x, v;
     a.Z.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_START" });
-    let O = f.Z.getPendingIconData();
+    let O = f.Z.getPendingData();
     try {
         let i = await l.tn.put({
                 url: m.ANM.GUILD_HOME_SETTINGS(e),
@@ -251,9 +252,11 @@ async function w(e, t) {
             Object.entries(O).forEach((t) => {
                 let [n, r] = t;
                 null != r &&
-                    Z(e, n, r).finally(() => {
-                        j(n);
-                    });
+                    (null != r.iconData
+                        ? Z(e, n, r).finally(() => {
+                              j(n);
+                          })
+                        : j(n));
             }),
             d.default.track(m.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
                 guild_id: e,
@@ -290,14 +293,18 @@ async function w(e, t) {
     }
 }
 async function Z(e, t, n) {
-    let { iconData: r, isUrl: i } = n,
-        l = null != r && i ? await R(e, t, r) : r;
-    await y(e, t, l, !0);
+    let { iconData: r, isUrl: i, emoji: l } = n;
+    if (null != l) return;
+    let a = null != r && i ? await R(r) : r;
+    await y(e, t, {
+        icon: a,
+        emoji: null,
+    });
 }
-async function R(e, t, n) {
-    let r = await fetch(n),
-        i = await r.blob();
-    return await (0, u.fD)(i);
+async function R(e) {
+    let t = await fetch(e),
+        n = await t.blob();
+    return await (0, u.fD)(n);
 }
 function D(e, t) {
     null != e &&
