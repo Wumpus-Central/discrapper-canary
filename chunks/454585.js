@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(25209),
@@ -58,68 +58,67 @@ function f(e, t) {
     );
 }
 let p = null;
-function _(e, t) {
+p = n(878611).Z;
+let _ = ["url", "autolink", "link", "mailto", "tel"];
+function m(e, t) {
     let n = {};
     return null != e.mention && null != p && (n = { mention: p }), (0, l.Z)([e, ...t, n]);
 }
-p = n(878611).Z;
-let m = {
+let h = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0,
     },
-    h = _(s.Z.RULES, [(0, o.Z)({ enableBuildOverrides: !0 })]),
-    g = i().omit(_(s.Z.RULES, [(0, o.Z)(m)]), "paragraph", "newline"),
-    E = _(s.Z.CHANNEL_TOPIC_RULES, [
-        (0, o.Z)(f(u({}, m), { emojiTooltipPosition: "bottom" })),
+    g = m(s.Z.RULES, [(0, o.Z)({ enableBuildOverrides: !0 })]),
+    E = i().omit(m(s.Z.RULES, [(0, o.Z)(h)]), "paragraph", "newline"),
+    b = m(s.Z.CHANNEL_TOPIC_RULES, [
+        (0, o.Z)(f(u({}, h), { emojiTooltipPosition: "bottom" })),
         { codeBlock: { react: s.Z.RULES.text.react } },
     ]),
-    b = _(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(f(u({}, m), { enableEmojiClick: !1 }))]),
-    y = _(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(m)]),
-    O = i().omit(_(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(m)]), ["url", "autolink", "link"]),
-    v = _(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(m)]),
-    S = _(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(m)]),
-    I = _(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(m)]),
-    T = _(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(m)]),
-    C = i().omit(
-        _(s.Z.RULES, [(0, o.Z)(m)]),
+    y = m(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
+    O = m(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(h)]),
+    v = i().omit(m(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(h)]), _),
+    S = m(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(h)]),
+    I = m(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(h)]),
+    T = m(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(h)]),
+    C = m(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(h)]),
+    A = i().omit(
+        m(s.Z.RULES, [(0, o.Z)(h)]),
         "paragraph",
         "newline",
         "strong",
         "codeBlock",
         "inlineCode",
         "u",
-        "link",
-        "url",
-        "autolink",
         "list",
         "heading",
         "subtext",
+        ..._,
     ),
-    A = { text: s.Z.RULES.text },
-    N = {
-        combineAndInjectMentionRule: _,
+    N = { text: s.Z.RULES.text },
+    P = {
+        combineAndInjectMentionRule: m,
         createReactRules: o.Z,
-        defaultReactRuleOptions: m,
-        defaultRules: h,
-        guildEventRules: I,
-        notifCenterV2MessagePreviewRules: C,
-        lockscreenWidgetMessageRules: A,
+        defaultReactRuleOptions: h,
+        defaultRules: g,
+        guildEventRules: T,
+        notifCenterV2MessagePreviewRules: A,
+        lockscreenWidgetMessageRules: N,
         astParserFor: a._p,
         reactParserFor: a.w4,
-        parse: a.w4(h),
-        parseTopic: (e, t, n, r) => a.w4(E)(e, t, u({ allowLinks: !0 }, n), r),
-        parseVoiceChannelStatus: a.w4(b),
-        parseEmbedTitle: a.w4(y),
-        parseEmbedTitleWithoutLinks: a.w4(O),
-        parseInlineReply: a.w4(v),
-        parseGuildVerificationFormRule: a.w4(S),
-        parseGuildEventDescription: a.w4(I),
-        parseAutoModerationSystemMessage: a.w4(T),
-        parseForumPostGuidelines: a.w4(g),
-        parseToAST: a._p(h),
-        parseTopicToAST: a._p(E),
-        parseEmbedTitleToAST: a._p(y),
-        parseEmbedTitleWithoutLinksToAST: a._p(O),
-        parseInlineReplyToAST: a._p(v),
-        parseAutoModerationSystemMessageToAST: a._p(T),
+        parse: a.w4(g),
+        parseTopic: (e, t, n, r) => a.w4(b)(e, t, u({ allowLinks: !0 }, n), r),
+        parseVoiceChannelStatus: a.w4(y),
+        parseEmbedTitle: a.w4(O),
+        parseEmbedTitleWithoutLinks: a.w4(v),
+        parseInlineReply: a.w4(S),
+        parseGuildVerificationFormRule: a.w4(I),
+        parseGuildEventDescription: a.w4(T),
+        parseAutoModerationSystemMessage: a.w4(C),
+        parseForumPostGuidelines: a.w4(E),
+        parseToAST: a._p(g),
+        parseTopicToAST: a._p(b),
+        parseEmbedTitleToAST: a._p(O),
+        parseEmbedTitleWithoutLinksToAST: a._p(v),
+        parseInlineReplyToAST: a._p(S),
+        parseAutoModerationSystemMessageToAST: a._p(C),
     };
