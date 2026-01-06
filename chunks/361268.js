@@ -10,6 +10,7 @@ var r = (function (e) {
         (e[(e.UNFULFILLED = 6)] = "UNFULFILLED"),
         (e[(e.UNFULFILLMENT_FAILED = 7)] = "UNFULFILLMENT_FAILED"),
         (e[(e.UNFULFILLMENT_NEEDED_MANUAL = 8)] = "UNFULFILLMENT_NEEDED_MANUAL"),
+        (e[(e.INITIAL_FULFILLMENT_NEEDED = 9)] = "INITIAL_FULFILLMENT_NEEDED"),
         e
     );
 })({});
