@@ -361,7 +361,6 @@ var r = (function (e) {
         (e.ADVANCED_HARDWARE_ACCELERATION_WARNING = "advanced_hardware_acceleration_warning"),
         (e.ADVANCED_SHOW_GAME_LIBRARY = "advanced_show_game_library"),
         (e.ADVANCED_APPLICATION_TEST_MODE = "advanced_application_test_mode"),
-        (e.ADVANCED_SHOW_PLAY_AGAIN = "advanced_show_play_again"),
         (e.ACTIVITY_SECTION = "activity_section"),
         (e.ACTIVITY_PRIVACY_SIDEBAR_ITEM = "activity_privacy_sidebar_item"),
         (e.ACTIVITY_PRIVACY_PANEL = "activity_privacy_panel"),

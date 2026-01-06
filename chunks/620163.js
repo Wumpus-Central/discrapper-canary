@@ -1629,11 +1629,6 @@ let eZ = () => [
                 parent: eR.s6.SETTINGS_ADVANCED,
                 predicate: () => e4,
             },
-            [eR.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
-                section: eD.oAB.ADVANCED,
-                searchableTitles: [eL.intl.string(eL.t.qDZryG)],
-                parent: eR.s6.SETTINGS_ADVANCED,
-            },
             [eR.s6.PRIVATE_BROWSING_PERK]: {
                 section: eD.oAB.PRIVATE_BROWSING,
                 label: eL.intl.string(eU.default.bU5ANm),

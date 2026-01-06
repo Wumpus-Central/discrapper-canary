@@ -175,10 +175,6 @@ class A extends (r = o.ZP.DeviceSettingsStore) {
         var e;
         return null == (e = y.saveCameraUploadsToDevice) || e;
     }
-    get showPlayAgain() {
-        var e;
-        return null == (e = y.showPlayAgain) || e;
-    }
     isVisualRefreshDisabled(e) {
         var t;
         return null != (t = y.disableVisualRefresh) ? t : e;
@@ -216,7 +212,6 @@ _(A, "displayName", "UnsyncedUserSettingsStore"),
                     "disableCallUserConfirmationPrompt",
                     "disableApplicationSubscriptionCancellationSurvey",
                     "enableAndroidChatListAnimations",
-                    "showPlayAgain",
                 )
             );
         },
