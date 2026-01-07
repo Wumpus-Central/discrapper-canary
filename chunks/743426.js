@@ -479,6 +479,13 @@ class S extends a.Z {
                 : n([]);
         });
     }
+    async getSingleWindowPreview(e, t, n) {
+        if (null != (0, d.zS)().getSingleWindowPreview) {
+            let r = await (0, d.zS)().getSingleWindowPreview(e, t, n);
+            return r.length > 0 ? r[0] : null;
+        }
+        return null;
+    }
     setAudioSubsystem(e) {
         null != (0, d.zS)().setAudioSubsystem
             ? (0, d.zS)().setAudioSubsystem(e)

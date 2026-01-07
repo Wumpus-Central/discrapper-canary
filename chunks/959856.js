@@ -224,6 +224,9 @@ class N extends s.Z {
     getWindowPreviews(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
+    getSingleWindowPreview(e, t, n) {
+        return Promise.reject(Error("UNSUPPORTED"));
+    }
     setClipBufferLength(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
