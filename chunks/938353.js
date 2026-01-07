@@ -963,7 +963,7 @@ function e7(e) {
             !1 !== a &&
             !(0, c.yE)(r.flags, eK.iLy.EPHEMERAL) &&
             S &&
-            1 === (0, eA.Z)(r),
+            (0, eA.Z)(r) >= 1,
         T = s === r.author.id && S && !o,
         C = r.author.id === s,
         A = r.isFirstMessageInForumPost(n),
