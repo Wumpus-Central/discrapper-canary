@@ -8,6 +8,8 @@ class s extends o.C {
         let t = {
             lightUrl: "",
             darkUrl: "",
+            lightStaticUrl: "",
+            darkStaticUrl: "",
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -30,6 +32,12 @@ class s extends o.C {
                 case 2:
                     a.darkUrl = e.string();
                     break;
+                case 3:
+                    a.lightStaticUrl = e.string();
+                    break;
+                case 4:
+                    a.darkStaticUrl = e.string();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -44,7 +52,9 @@ class s extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.lightUrl && t.tag(1, r.TD.LengthDelimited).string(e.lightUrl),
-            "" !== e.darkUrl && t.tag(2, r.TD.LengthDelimited).string(e.darkUrl);
+            "" !== e.darkUrl && t.tag(2, r.TD.LengthDelimited).string(e.darkUrl),
+            "" !== e.lightStaticUrl && t.tag(3, r.TD.LengthDelimited).string(e.lightStaticUrl),
+            "" !== e.darkStaticUrl && t.tag(4, r.TD.LengthDelimited).string(e.darkStaticUrl);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -59,6 +69,18 @@ class s extends o.C {
             {
                 no: 2,
                 name: "dark_url",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 3,
+                name: "light_static_url",
+                kind: "scalar",
+                T: 9,
+            },
+            {
+                no: 4,
+                name: "dark_static_url",
                 kind: "scalar",
                 T: 9,
             },
