@@ -1,6 +1,7 @@
 n.d(t, {
     Cs: () => l,
     GP: () => c,
+    J0: () => u,
     LV: () => s,
 }),
     n(415506);
@@ -81,6 +82,24 @@ async function c(e) {
         });
         if (null == a.body) throw Error("Invalid sign order response");
         return a.body;
+    } catch (e) {
+        throw e;
+    }
+}
+async function u(e) {
+    try {
+        let t = await r.tn.post({
+            url: o.ANM.ORDER_DISCARD(e),
+            rejectWithError: !1,
+        });
+        if (null == t.body) throw Error("Invalid discard order response");
+        return (
+            await i.Z.dispatch({
+                type: "ORDER_DISCARD_SUCCESS",
+                orderId: e,
+            }),
+            t.body
+        );
     } catch (e) {
         throw e;
     }

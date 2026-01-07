@@ -56,6 +56,12 @@ class s extends (r = i.ZP.Store) {
         let {} = e;
         this._isUpdatingOrder = !1;
     }
+    handleOrderDiscardSuccess(e) {
+        var t;
+        let { orderId: n } = e;
+        if ((null == (t = this._order) ? void 0 : t.id) !== n) return !1;
+        this._order = null;
+    }
     handlePaymentModalOpen(e) {
         let {} = e;
         this._order = null;
@@ -68,6 +74,7 @@ class s extends (r = i.ZP.Store) {
             ORDER_UPDATE_START: (e) => this.handleOrderUpdateStart(e),
             ORDER_UPDATE_SUCCESS: (e) => this.handleOrderUpdateSuccess(e),
             ORDER_UPDATE_FAIL: (e) => this.handleOrderUpdateFail(e),
+            ORDER_DISCARD_SUCCESS: (e) => this.handleOrderDiscardSuccess(e),
             PAYMENT_MODAL_OPEN: (e) => this.handlePaymentModalOpen(e),
         }),
             o(this, "_isCreatingOrder", !1),
