@@ -5436,6 +5436,7 @@ var np = (function (e) {
             (e.GAME_COMMUNITY_UPSELL_ACCEPTED = "game_community_upsell_accepted"),
             (e.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED = "on_platform_account_link_flow_started"),
             (e.CONNECTION_INDICATOR_SHOWN = "connection_indicator_shown"),
+            (e.CACHE_STATS_RECORDED = "cache_stats_recorded"),
             e
         );
     })({}),
