@@ -21144,7 +21144,7 @@ screen and (max-width:485px) {
 .dfb989b3f435152a-showEffect.dfb989b3f435152a-container .dfb989b3f435152a-neon {
     paint-order: stroke fill;
     -webkit-text-stroke-width: calc(1px + .04em);
-    -webkit-text-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h calc(s * 1.2) calc(min(60, l + 10 * clamp(0, (60 - l), 1))));
+    -webkit-text-stroke-color: var(--custom-display-name-styles-neon-stroke-color);
     color: var(--white);
     position: relative;
     z-index: 0;
