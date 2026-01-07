@@ -29,23 +29,24 @@ var r = n(164369),
     l = n(70956),
     c = n(709054),
     u = n(388032);
-let d = (e) => {
-        let { start: t, now: n } = e,
-            r = Math.max(n - t, 0) / l.Z.Millis.SECOND,
-            i = Math.floor(r) % l.Z.Seconds.MINUTE,
-            a = Math.floor(r / l.Z.Seconds.MINUTE) % l.Z.Seconds.MINUTE;
+let d = (e, t) => {
+        let n = Math.max(e - t, 0) / l.Z.Millis.SECOND,
+            r = Math.floor(n) % l.Z.Seconds.MINUTE,
+            i = Math.floor(n / l.Z.Seconds.MINUTE) % l.Z.Seconds.MINUTE;
         return {
-            seconds: i,
-            minutes: a,
-            hours: Math.floor(r / l.Z.Seconds.HOUR),
-            days: Math.floor(r / l.Z.Seconds.DAY),
+            seconds: r,
+            minutes: i,
+            hours: Math.floor(n / l.Z.Seconds.HOUR),
+            days: Math.floor(n / l.Z.Seconds.DAY),
         };
     },
-    f = (e, t) =>
-        d({
-            start: "id" in e ? c.default.extractTimestamp(e.id) : e.start,
-            now: "end" in e && null != e.end ? Math.min(e.end, t) : t,
-        }),
+    f = (e, t) => {
+        let n = "end" in e ? e.end : void 0,
+            r = "isCountDown" in e && null != e.isCountDown && e.isCountDown;
+        return r && null != n && n > t
+            ? d(n, t)
+            : d(null == n || r ? t : Math.min(n, t), "id" in e ? c.default.extractTimestamp(e.id) : e.start);
+    },
     p = (e, t) => {
         let { seconds: n, minutes: r, hours: i } = f(e, t);
         function a(e) {
