@@ -577,9 +577,7 @@ function nt() {
             }
             if (
                 ((0, eh.isWindows)()
-                    ? (null == tV ? void 0 : tV.startsWith("NVIDIA")) || (null == tV ? void 0 : tV.startsWith("AMD"))
-                        ? e.setExperimentFlag(eL.V8.SIGNAL_AV1, !0)
-                        : e.setExperimentFlag(eL.V8.SIGNAL_AV1_DECODE, !0)
+                    ? e.setExperimentFlag(eL.V8.SIGNAL_AV1, !0)
                     : ((0, eh.isMac)() || (0, eh.isLinux)()) && e.setExperimentFlag(eL.V8.SIGNAL_AV1_DECODE, !0),
                 (0, eh.isWindows)() && e.setExperimentFlag(eL.V8.SIGNAL_AV1_HARDWARE_DECODE, !0),
                 (0, eh.isWeb)())
@@ -590,6 +588,10 @@ function nt() {
             if (
                 ((0, eh.isWindows)() &&
                     (null == tV ? void 0 : tV.startsWith("AMD")) &&
+                    (0, en.C)("MediaEngineStore").enabled &&
+                    e.setExperimentFlag(eL.V8.WMF_GPU_ENCODE, !0),
+                (0, eh.isWindows)() &&
+                    (null == tV ? void 0 : tV.startsWith("Qualcomm")) &&
                     (0, en.C)("MediaEngineStore").enabled &&
                     e.setExperimentFlag(eL.V8.WMF_GPU_ENCODE, !0),
                 e5.setHasFullbandPerformance((0, w.Z)()),
