@@ -1,17 +1,19 @@
-r.d(e, { default: () => y }), r(388685);
+r.d(e, { default: () => P }), r(388685);
 var n = r(54381),
     i = r(473749),
     o = r(793030),
     l = r(481060),
+    s = r(493773),
     c = r(313789),
-    s = r(518596),
-    a = r(51144),
-    u = r(80721),
-    p = r(282793),
-    b = r(981631),
-    O = r(353149),
-    f = r(388032);
-function d(t) {
+    a = r(518596),
+    u = r(626135),
+    d = r(51144),
+    p = r(80721),
+    b = r(282793),
+    O = r(981631),
+    f = r(353149),
+    y = r(388032);
+function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
@@ -36,11 +38,11 @@ function d(t) {
     }
     return t;
 }
-let y = (t) => {
+let P = (t) => {
     var e,
         r,
-        { subscriptionId: y, invitedUser: g, subscriptionGroupMemberId: j, onClose: m } = t,
-        P = (function (t, e) {
+        { subscriptionId: P, invitedUser: _, subscriptionGroupMemberId: j, onClose: m } = t,
+        I = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -62,71 +64,81 @@ let y = (t) => {
             return i;
         })(t, ["subscriptionId", "invitedUser", "subscriptionGroupMemberId", "onClose"]);
     let [S, v] = (0, i.useState)(!1),
-        [w, h] = (0, i.useState)(!1),
-        [I, C] = (0, i.useState)(!1),
-        k = async () => {
-            C(!0);
-            let t = await (0, u.if)(y, g.id, j);
-            if ((C(!1), t.ok)) m();
-            else {
-                var e;
-                (null == (e = t.body) ? void 0 : e.code) === p.YW.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
-                    ? v(!0)
-                    : h(!0);
-            }
-        };
+        [C, E] = (0, i.useState)(!1),
+        [w, h] = (0, i.useState)(!1);
+    (0, s.ZP)(() => {
+        u.default.track(O.rMx.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED, {
+            subscription_id: P,
+            invited_user_id: _.id,
+        });
+    });
+    let k = async () => {
+        u.default.track(O.rMx.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED, {
+            subscription_id: P,
+            invited_user_id: _.id,
+        }),
+            h(!0);
+        let t = await (0, p.if)(P, _.id, j);
+        if ((h(!1), t.ok)) m();
+        else {
+            var e;
+            (null == (e = t.body) ? void 0 : e.code) === b.YW.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
+                ? v(!0)
+                : E(!0);
+        }
+    };
     return S
         ? (0, n.jsx)(
               o.Modal,
-              d(
+              g(
                   {
                       size: "md",
-                      title: f.intl.string(O.default.grjTat),
-                      subtitle: f.intl.string(O.default.VgTgGu),
+                      title: y.intl.string(f.default.grjTat),
+                      subtitle: y.intl.string(f.default.VgTgGu),
                       actions: [
                           {
-                              text: f.intl.string(O.default["+YO9kw"]),
+                              text: y.intl.string(f.default["+YO9kw"]),
                               variant: "secondary",
                               onClick: () => {
-                                  (0, s.openUserSettings)(c.n.SUBSCRIPTIONS_PANEL, { section: b.oAB.SUBSCRIPTIONS }),
+                                  (0, a.openUserSettings)(c.n.SUBSCRIPTIONS_PANEL, { section: O.oAB.SUBSCRIPTIONS }),
                                       m();
                               },
                           },
                       ],
                       onClose: m,
                   },
-                  P,
+                  I,
               ),
           )
         : (0, n.jsx)(
               o.Modal,
-              ((e = d(
+              ((e = g(
                   {
                       size: "md",
-                      title: f.intl.string(O.default.U439m2),
-                      subtitle: f.intl.formatToPlainString(O.default["Sv6+Ox"], {
-                          memberName: (0, a.XM)(g),
-                          premiumGroupProductName: (0, p.sO)(),
+                      title: y.intl.string(f.default.U439m2),
+                      subtitle: y.intl.formatToPlainString(f.default["Sv6+Ox"], {
+                          memberName: (0, d.XM)(_),
+                          premiumGroupProductName: (0, b.sO)(),
                       }),
                       onClose: m,
                       actions: [
                           {
-                              text: f.intl.string(O.default["2blqtw"]),
+                              text: y.intl.string(f.default["2blqtw"]),
                               variant: "critical-primary",
                               onClick: k,
-                              loading: I,
+                              loading: w,
                           },
                       ],
                   },
-                  P,
+                  I,
               )),
               (r = r =
                   {
                       children:
-                          w &&
+                          C &&
                           (0, n.jsx)(l.M14, {
                               type: "critical",
-                              children: f.intl.string(f.t["rTU7/z"]),
+                              children: y.intl.string(y.t["rTU7/z"]),
                           }),
                   }),
               Object.getOwnPropertyDescriptors

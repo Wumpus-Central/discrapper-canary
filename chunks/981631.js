@@ -5092,6 +5092,15 @@ var np = (function (e) {
             (e.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED = "premium_group_member_cancellation_started"),
             (e.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP = "premium_group_member_cancellation_step"),
             (e.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED = "premium_group_member_cancellation_completed"),
+            (e.PREMIUM_GROUP_REMOVE_MEMBER_MODAL_VIEWED = "premium_group_remove_member_modal_viewed"),
+            (e.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED = "premium_group_remove_member_cta_clicked"),
+            (e.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED = "premium_group_subscription_card_invite_clicked"),
+            (e.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED =
+                "premium_group_subscription_card_remove_member_clicked"),
+            (e.PREMIUM_GROUP_SUBSCRIPTION_CARD_CANCEL_INVITE_CLICKED =
+                "premium_group_subscription_card_cancel_invite_clicked"),
+            (e.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED = "premium_group_cancel_invite_modal_viewed"),
+            (e.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED = "premium_group_cancel_invite_cta_clicked"),
             (e.FETCH_USER_OFFER_STARTED = "fetch_user_offer_started"),
             (e.SHARE_NITRO_FLOW_STEPS = "share_nitro_flow_steps"),
             (e.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED = "referral_program_share_modal_cta_clicked"),

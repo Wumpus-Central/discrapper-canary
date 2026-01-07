@@ -1,47 +1,60 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => d }), r(388685);
 var n = r(54381),
-    o = r(473749),
-    i = r(793030),
+    i = r(473749),
+    o = r(793030),
     c = r(481060),
-    l = r(51144),
-    a = r(80721),
-    s = r(282793),
-    u = r(353149),
-    p = r(388032);
-let b = (e) => {
+    l = r(493773),
+    a = r(626135),
+    s = r(51144),
+    u = r(80721),
+    b = r(282793),
+    p = r(981631),
+    O = r(353149),
+    f = r(388032);
+let d = (e) => {
     var t,
         r,
-        { subscriptionId: b, member: f, onClose: O } = e,
-        y = (function (e, t) {
+        { subscriptionId: d, member: y, onClose: m } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return o;
+            return i;
         })(e, ["subscriptionId", "member", "onClose"]);
-    let [d, g] = (0, o.useState)(!1),
-        [j, m] = (0, o.useState)(!1),
-        w = async () => {
-            g(!0);
-            let e = await (0, a.Jn)(b, f.id);
-            g(!1), e.ok ? O() : m(!0);
-        };
+    let [j, P] = (0, i.useState)(!1),
+        [M, _] = (0, i.useState)(!1);
+    (0, l.ZP)(() => {
+        a.default.track(p.rMx.PREMIUM_GROUP_REMOVE_MEMBER_MODAL_VIEWED, {
+            subscription_id: d,
+            member_user_id: y.id,
+        });
+    });
+    let E = async () => {
+        a.default.track(p.rMx.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, {
+            subscription_id: d,
+            member_user_id: y.id,
+        }),
+            P(!0);
+        let e = await (0, u.Jn)(d, y.id);
+        P(!1), e.ok ? m() : _(!0);
+    };
     return (0, n.jsx)(
-        i.Modal,
+        o.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -69,31 +82,31 @@ let b = (e) => {
         })(
             {
                 size: "md",
-                title: p.intl.string(u.default.MJIHXY),
-                subtitle: p.intl.formatToPlainString(u.default.gMyQrH, {
-                    memberName: (0, l.XM)(f),
-                    premiumGroupProductName: (0, s.sO)(),
-                    cooldownMonths: s.T9,
+                title: f.intl.string(O.default.MJIHXY),
+                subtitle: f.intl.formatToPlainString(O.default.gMyQrH, {
+                    memberName: (0, s.XM)(y),
+                    premiumGroupProductName: (0, b.sO)(),
+                    cooldownMonths: b.T9,
                 }),
-                onClose: O,
+                onClose: m,
                 actions: [
                     {
-                        text: p.intl.string(u.default.dlr8CX),
+                        text: f.intl.string(O.default.dlr8CX),
                         variant: "critical-primary",
-                        onClick: w,
-                        loading: d,
+                        onClick: E,
+                        loading: j,
                     },
                 ],
             },
-            y,
+            g,
         )),
         (r = r =
             {
                 children:
-                    j &&
+                    M &&
                     (0, n.jsx)(c.M14, {
                         type: "critical",
-                        children: p.intl.string(p.t["rTU7/z"]),
+                        children: f.intl.string(f.t["rTU7/z"]),
                     }),
             }),
         Object.getOwnPropertyDescriptors
