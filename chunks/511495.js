@@ -1,6 +1,6 @@
 n.d(t, {
-    X: () => p,
     e: () => f,
+    u: () => p,
 });
 var r = n(579092),
     i = n(128813);
@@ -27,11 +27,11 @@ function f() {
             (a = (async () => {
                 await i.mX();
                 let e = i.Qw();
-                e.installLogCallback(s, l, c, u, d), await e.initLibdiscore();
+                e.installLogCallback(s, l, c, u, d), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
             })()),
         a
     );
 }
 function p() {
-    return void 0 !== window._libdiscoreWasm;
+    return !0 === window._libdiscoreInitialized;
 }
