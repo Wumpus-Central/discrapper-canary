@@ -157,6 +157,23 @@ let H = (e) => {
         mailto: k(j({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ["<"],
+            parse(e) {
+                let t = e[1],
+                    n = e[1];
+                return (
+                    n.startsWith("mailto:") || (n = "mailto:" + n),
+                    {
+                        type: "link",
+                        content: [
+                            {
+                                type: "text",
+                                content: t,
+                            },
+                        ],
+                        target: n,
+                    }
+                );
+            },
         }),
         tel: k(j({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ["<"],
