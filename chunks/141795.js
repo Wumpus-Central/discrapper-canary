@@ -185,15 +185,15 @@ class M {
 r = n(224497).Z;
 class k extends S.ZP {
     static fromJson(e) {
-        let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new k(t, n, r, i);
+        let { item: t, channelId: n, reactNativeFileIndex: r } = e,
+            i = new k(t, n, r);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
-                t.startsWith("_") || (a[t] = n);
+                t.startsWith("_") || (i[t] = n);
             }),
-            "COMPLETED" !== a.status && (a.status = "NOT_STARTED"),
-            a
+            "COMPLETED" !== i.status && (i.status = "NOT_STARTED"),
+            i
         );
     }
     parseRangeHeader(e) {
@@ -764,9 +764,9 @@ class k extends S.ZP {
             service_provider: h.Z.getServiceProvider(),
         });
     }
-    constructor(e, t, n, r, i) {
-        var a, o, s, l;
-        super(e, n),
+    constructor(e, t, n, r) {
+        var i, a, o, s;
+        super(e),
             N(this, "status", "NOT_STARTED"),
             N(this, "channelId", void 0),
             N(this, "responseUrl", void 0),
@@ -796,10 +796,10 @@ class k extends S.ZP {
                 this.emit("progress", n, r, i), (this.loaded = n);
             }),
             (this.channelId = t),
-            (this.preCompressionSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
-            (this.currentSize = null != (l = null == (o = e.file) ? void 0 : o.size) ? l : 0),
-            (this.reactNativeFileIndex = r),
-            null != i && (this.allowOptimization = i),
+            (this.preCompressionSize = null != (o = null == (i = e.file) ? void 0 : i.size) ? o : 0),
+            (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
+            (this.reactNativeFileIndex = n),
+            null != r && (this.allowOptimization = r),
             e.platform === S.ow.WEB &&
                 null != e.compressionMetadata &&
                 (this.mimeType = e.compressionMetadata.originalContentType),

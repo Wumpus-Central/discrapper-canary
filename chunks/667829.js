@@ -423,34 +423,33 @@ class U extends i.Component {
                     b = null != (r = null != d ? d : g) ? r : a,
                     y = (0, T._K)(i, this._getEditorWindow()) ? a : b;
                 if (null == l || (!y.isPrivate() && !o) || (y.isPrivate() && y.isManaged())) return !1;
-                let O = (e, t) => {
-                        var n, r;
-                        let i = h.Z.getActiveCommand(y.id);
-                        if (null == i)
+                let O = (e) => {
+                        var t, n;
+                        let r = h.Z.getActiveCommand(y.id);
+                        if (null == r)
                             return l(e, y, u.drafts.type, {
                                 requireConfirm: !0,
-                                showLargeMessageDialog: t,
                                 origin: "clipboard",
                             });
-                        let a = null != (n = u.drafts.commandType) ? n : u.drafts.type,
-                            o = null,
-                            s = h.Z.getActiveOption(y.id);
+                        let i = null != (t = u.drafts.commandType) ? t : u.drafts.type,
+                            a = null,
+                            o = h.Z.getActiveOption(y.id);
                         null !=
-                            (o =
-                                (null == s ? void 0 : s.type) === _.jw.ATTACHMENT
-                                    ? s
-                                    : null == (r = i.options)
+                            (a =
+                                (null == o ? void 0 : o.type) === _.jw.ATTACHMENT
+                                    ? o
+                                    : null == (n = r.options)
                                       ? void 0
-                                      : r.find((e) => {
+                                      : n.find((e) => {
                                             if (e.type === _.jw.ATTACHMENT)
-                                                return null == E.Z.getUpload(y.id, e.name, a);
+                                                return null == E.Z.getUpload(y.id, e.name, i);
                                         })) &&
                             f.Z.setFile({
                                 channelId: y.id,
-                                id: o.name,
-                                draftType: a,
+                                id: a.name,
+                                draftType: i,
                                 file: {
-                                    id: o.name,
+                                    id: a.name,
                                     platform: m.ow.WEB,
                                     file: e[0],
                                 },

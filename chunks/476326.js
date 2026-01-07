@@ -43,8 +43,8 @@ class p extends r.EventEmitter {
     resetState() {
         return this;
     }
-    constructor(e, t) {
-        var n, r;
+    constructor(e) {
+        var t, n;
         if (
             (super(),
             c(this, "id", void 0),
@@ -57,7 +57,6 @@ class p extends r.EventEmitter {
             c(this, "isImage", void 0),
             c(this, "isVideo", void 0),
             c(this, "uploadedFilename", void 0),
-            c(this, "showLargeMessageDialog", void 0),
             c(this, "mimeType", void 0),
             c(this, "origin", void 0),
             c(this, "durationSecs", void 0),
@@ -67,21 +66,21 @@ class p extends r.EventEmitter {
             (this.item = e),
             0 === e.platform)
         ) {
-            this.id = null != (n = e.id) ? n : e.uri;
-            let t = (0, l.hn)({
+            this.id = null != (t = e.id) ? t : e.uri;
+            let n = (0, l.hn)({
                 uri: e.uri,
                 overrideFilename: e.filename,
                 overrideType: e.mimeType,
             });
-            (this.filename = t.filename),
-                (this.isImage = t.isImage),
-                (this.isVideo = t.isVideo),
-                (this.mimeType = t.type),
+            (this.filename = n.filename),
+                (this.isImage = n.isImage),
+                (this.isVideo = n.isVideo),
+                (this.mimeType = n.type),
                 (this.origin = e.origin),
                 (this.durationSecs = e.durationSecs),
                 (this.waveform = e.waveform);
         } else
-            (this.id = null != (r = e.id) ? r : a().uniqueId("upload")),
+            (this.id = null != (n = e.id) ? n : a().uniqueId("upload")),
                 (this.classification = s.f3(e.file)),
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
@@ -91,7 +90,6 @@ class p extends r.EventEmitter {
         (this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
             (this.uniqueId = (0, o.Z)()),
-            (this.showLargeMessageDialog = t),
             (this.spoiler = !1),
             (this.description = null);
     }

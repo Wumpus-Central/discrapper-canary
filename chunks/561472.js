@@ -14,14 +14,14 @@ var i = n(54381),
     m = n(585483),
     g = n(127654),
     b = n(205822),
-    y = n(731994),
-    C = n(981631),
+    C = n(731994),
+    y = n(981631),
     v = n(388032);
 let x = function (e) {
     let { className: t, style: n, channel: x, draftType: O } = e,
         [E, j] = r.useState(!0),
         S = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        _ = (0, l.e7)([p.Z], () => null != x && p.Z.can(C.Plq.ATTACH_FILES, x), [x]),
+        _ = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
         P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
         I = x.getGuildId(),
         Z = O === c.d.FirstThreadMessage,
@@ -31,7 +31,7 @@ let x = function (e) {
             [_, T, x, I, S],
         ),
         A = Z
-            ? C.TPd.GUILD_THREADS_ONLY.has(x.type)
+            ? y.TPd.GUILD_THREADS_ONLY.has(x.type)
                 ? v.intl.string(v.t.RBBLhL)
                 : v.intl.string(v.t.gUx4eu)
             : E
@@ -44,17 +44,16 @@ let x = function (e) {
               style: n,
               title: A,
               description: Z ? v.intl.string(v.t.lpgkzq) : v.intl.string(v.t.usQh4J),
-              icons: y.J6,
+              icons: C.J6,
               onDrop: (e) => {
                   if (P) return !1;
                   N &&
                       null != x &&
                       ((0, g.d)(e, x, O, {
                           requireConfirm: E,
-                          showLargeMessageDialog: !1,
                           origin: "drag_drop",
                       }),
-                      m.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
+                      m.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS));
               },
               onDragClear: () => j(!0),
               onDragOver: (e) => {

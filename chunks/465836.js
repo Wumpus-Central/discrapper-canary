@@ -2,18 +2,18 @@ n.d(e, { default: () => b });
 var r = n(54381);
 n(473749);
 var o = n(703558),
-    a = n(585483),
-    i = n(403182),
+    i = n(585483),
+    a = n(403182),
     c = n(127654),
     l = n(98278),
-    s = n(790527),
-    u = n(474936),
+    u = n(790527),
+    s = n(474936),
     f = n(981631),
     d = n(388032),
     p = n(391853);
 function b(t) {
     var { channel: e, onClose: n, content: b } = t,
-        g = (function (t, e) {
+        y = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -22,23 +22,23 @@ function b(t) {
                     var n,
                         r,
                         o = {},
-                        a = Object.keys(t);
-                    for (r = 0; r < a.length; r++) (n = a[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                        i = Object.keys(t);
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var i = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
                         !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
         })(t, ["channel", "onClose", "content"]);
-    function y() {
+    function g() {
         n(), (0, l.z)();
     }
     return (0, r.jsx)(
-        s.Z,
+        u.Z,
         (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
@@ -66,14 +66,14 @@ function b(t) {
         })(
             {
                 artURL: p.Z,
-                type: u.cd.MESSAGE_LENGTH_UPSELL,
+                type: s.cd.MESSAGE_LENGTH_UPSELL,
                 title: d.intl.string(d.t.TZT3sJ),
                 body: d.intl.format(d.t.QhcEAL, {
                     maxLength: f.J6R,
-                    onLearnMore: y,
+                    onLearnMore: g,
                 }),
                 context: d.intl.formatToPlainString(d.t.Fc1uVe, { maxLength: f.J6R }),
-                glowUp: d.intl.format(d.t.Mi8kt1, { onLearnMore: y }),
+                glowUp: d.intl.format(d.t.Mi8kt1, { onLearnMore: g }),
                 analyticsSource: {
                     page:
                         (null == e ? void 0 : e.getGuildId()) != null
@@ -91,14 +91,13 @@ function b(t) {
                 onSecondaryClick: function () {
                     n();
                     let t = new Blob([b], { type: "text/plain" });
-                    (0, c.d)([(0, i.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
+                    (0, c.d)([(0, a.dp)(t, "message.txt", "text/plain")], e, o.d.ChannelMessage, {
                         requireConfirm: !0,
-                        showLargeMessageDialog: !0,
                     }),
-                        a.S.dispatchToLastSubscribed(f.CkL.CLEAR_TEXT);
+                        i.S.dispatchToLastSubscribed(f.CkL.CLEAR_TEXT);
                 },
             },
-            g,
+            y,
         ),
     );
 }

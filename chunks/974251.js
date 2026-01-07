@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(924557),
     g = n(435064),
     b = n(341569),
-    y = n(712114),
-    C = n(680056),
+    C = n(712114),
+    y = n(680056),
     v = n(266454),
     x = n(536442),
     O = n(728285),
@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(127654),
     R = n(316595),
     D = n(443603),
-    k = n(193910),
-    L = n(951211),
+    L = n(193910),
+    k = n(951211),
     U = n(981631),
     V = n(356659),
-    H = n(921944),
-    F = n(388032),
+    F = n(921944),
+    H = n(388032),
     B = n(815308);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -106,7 +106,7 @@ let z = r.memo(function (e) {
             { location: "ChannelAttachButton" },
             { autoTrackExposure: !1 },
         ),
-        { onShareClick: es } = (0, C.Z)(q.id),
+        { onShareClick: es } = (0, y.Z)(q.id),
         ec = (0, o.e7)([x.qc], () => x.qc.hasHotspot(x.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         eu = (0, c.s9z)((e) => (0, c.DEQ)(e, V.Qr)),
         ed = (0, o.e7)([I.Z], () => I.Z.hasLayers()),
@@ -115,8 +115,8 @@ let z = r.memo(function (e) {
         em = (0, m.w9)() && (ei || ep),
         eg = q.isPrivate(),
         eb = (0, o.e7)([T.Z], () => eg || (T.Z.can(U.Plq.ATTACH_FILES, q) && T.Z.can(U.Plq.SEND_MESSAGES, q))),
-        ey = (0, d.Z)(er);
-    (null == ey ? void 0 : ey.newClipIds.length) !== (null == er ? void 0 : er.newClipIds.length) &&
+        eC = (0, d.Z)(er);
+    (null == eC ? void 0 : eC.newClipIds.length) !== (null == er ? void 0 : er.newClipIds.length) &&
         (null != (t = null == er ? void 0 : er.newClipIds.length) ? t : 0) > 0 &&
         null == ef &&
         ec &&
@@ -125,7 +125,7 @@ let z = r.memo(function (e) {
         !eo &&
         !ed &&
         eh("recentClips");
-    let eC = (0, o.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
+    let ey = (0, o.e7)([Z.Z], () => Z.Z.hasCurrentUserSentMessageSinceAppStart());
     function ev() {
         (0, c.ZDy)(
             async () => {
@@ -170,7 +170,7 @@ let z = r.memo(function (e) {
         eP = (0, j.Us)({ location: "ChannelAttachButton" }),
         eI = (0, f.o)(),
         eZ = null != (l = null == el ? void 0 : el.length) ? l : 0,
-        eT = (0, L.Z)({
+        eT = (0, k.Z)({
             canAttachFiles: eb,
             canStartThreads: ex || eO,
             useSlate: eE,
@@ -200,18 +200,18 @@ let z = r.memo(function (e) {
             position: "top",
             positionKey: null != ef ? ef : "null",
             onRequestOpen: () => {
-                eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: H.L.TAKE_ACTION }),
+                ey && (0, v.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: F.L.TAKE_ACTION }),
                     eh("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.$sL)() ||
-                    (eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: H.L.TAKE_ACTION }), eh(null));
+                    (ey && (0, v.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: F.L.TAKE_ACTION }), eh(null));
             },
             renderPopout: (e) => {
                 switch (ef) {
                     case "recentClips":
                         return (0, i.jsx)(
-                            y.Z,
+                            C.Z,
                             W(G({}, e), {
                                 onOpenClips: ev,
                                 lastClipsSession: er,
@@ -219,7 +219,7 @@ let z = r.memo(function (e) {
                         );
                     case "attachMenu":
                         return (0, i.jsx)(
-                            k.Z,
+                            L.Z,
                             W(G({}, e), {
                                 onClose: () => eh(null),
                                 options: eT,
@@ -249,7 +249,7 @@ let z = r.memo(function (e) {
                                 className: a()(B.attachButton, z),
                                 childClassName: B.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": F.intl.string(F.t.d56gCa),
+                                "aria-label": H.intl.string(H.t.d56gCa),
                                 onDoubleClick: eb
                                     ? () => {
                                           var e;
@@ -271,13 +271,12 @@ let z = r.memo(function (e) {
                 children: (0, i.jsx)(u.Z, {
                     ref: ee,
                     onChange: (e) => {
-                        var t, n, i;
+                        var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, M.G)(q, [])
                                 : (0, M.d)(t, q, K, {
                                       requireConfirm: !0,
-                                      showLargeMessageDialog: i,
                                       origin: "file_picker",
                                   }),
                             A.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS),

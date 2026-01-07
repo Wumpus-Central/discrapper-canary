@@ -92,27 +92,26 @@ async function T(e, t, n) {
     let {
         filesMetadata: c,
         requireConfirm: p = !0,
-        showLargeMessageDialog: m = !1,
-        isThumbnail: h = !1,
-        origin: y,
+        isThumbnail: m = !1,
+        origin: h,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
     if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-    let v = t.getGuildId(),
-        T = Array.from(e),
-        C = T.map((e) => ({
+    let y = t.getGuildId(),
+        v = Array.from(e),
+        T = v.map((e) => ({
             originalContentType: e.type,
             preCompressionSize: e.size,
         }));
-    if ((await Promise.resolve(), (0, g.Bf)(T, v))) return void I(t, T);
-    if (f.Z.getUploadCount(t.id, n) + T.length > E.dN1) {
+    if ((await Promise.resolve(), (0, g.Bf)(v, y))) return void I(t, v);
+    if (f.Z.getUploadCount(t.id, n) + v.length > E.dN1) {
         (0, o.openUploadError)({
             title: O.intl.string(O.t.wOr6hB),
             help: O.intl.formatToPlainString(O.t["qqyp/e"], { limit: E.dN1 }),
         }),
             _.default.track(E.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: f.Z.getUploadCount(t.id, n),
-                new_count: T.length,
+                new_count: v.length,
             });
         return;
     }
@@ -122,14 +121,14 @@ async function T(e, t, n) {
             r.Z.updateChatOpen(t.id, !0),
         p)
     ) {
-        let e = T.map((e, t) =>
+        let e = v.map((e, t) =>
             S(
                 {
                     file: e,
                     platform: l.ow.WEB,
-                    isThumbnail: h,
-                    origin: y,
-                    compressionMetadata: C[t],
+                    isThumbnail: m,
+                    origin: h,
+                    compressionMetadata: T[t],
                 },
                 null == c ? void 0 : c[t],
             ),
@@ -137,20 +136,19 @@ async function T(e, t, n) {
         a.Z.addFiles({
             files: e,
             channelId: t.id,
-            showLargeMessageDialog: m,
             draftType: n,
         });
     } else {
-        let e = T.map((e, n) => {
+        let e = v.map((e, n) => {
             let r = null != c ? c[n] : {};
             return new s.nH(
                 S(
                     {
                         file: e,
                         platform: l.ow.WEB,
-                        isThumbnail: h,
-                        origin: y,
-                        compressionMetadata: C[n],
+                        isThumbnail: m,
+                        origin: h,
+                        compressionMetadata: T[n],
                     },
                     r,
                 ),
