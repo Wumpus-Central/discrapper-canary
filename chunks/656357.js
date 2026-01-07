@@ -116,8 +116,8 @@ function Q(e) {
         e4 = (0, o.useRef)(null),
         e8 = o.useRef(!0),
         e3 = (null == (t = en.userStatus) ? void 0 : t.completedAt) != null,
-        [e9, e6] = o.useState(null),
-        [e7, e5] = o.useState(!1),
+        [e9, e7] = o.useState(null),
+        [e6, e5] = o.useState(!1),
         [te, tt] = o.useState(!1),
         [tn, tr] = o.useState(null),
         to = e3
@@ -184,7 +184,7 @@ function Q(e) {
         { forceSendCurrentSegment: tT } = (0, y.Z)({
             getCurrentVideoTime: tP,
             isPlaying: eO === L.rq.PLAYING,
-            isMetadataLoaded: e7,
+            isMetadataLoaded: e6,
             isInitialSeekComplete: te,
             onAnalytics: t_,
             emitIntervalMs: 4000,
@@ -195,7 +195,7 @@ function Q(e) {
                 if ((tl.info("[QV] | updatePlayerState | playerState: ".concat(e)), eh(e), null != e2.current))
                     switch (e) {
                         case L.rq.PLAYING:
-                            e2.current.paused && tg(e9), e6(null), e2.current.play();
+                            e2.current.paused && tg(e9), e7(null), e2.current.play();
                             break;
                         case L.rq.PAUSED:
                             e2.current.paused || tT(), e2.current.pause(), (eK.current = !1);
@@ -239,7 +239,7 @@ function Q(e) {
                     .concat(e3),
             ),
             tR(L.rq.PAUSED),
-            e3 || e6(C.yE.LOST_FOCUS));
+            e3 || e7(C.yE.LOST_FOCUS));
     }, [$, ef, ep, ev, eE, eO, e3, tR, tN, tl]);
     let [tI, tA] = o.useState(!1),
         tL = o.useRef(null),
@@ -320,7 +320,7 @@ function Q(e) {
                         tU(0), tR(L.rq.PLAYING);
                         break;
                     case L.rq.PLAYING:
-                        tR(L.rq.PAUSED), e6(C.yE.PAUSE_BUTTON);
+                        tR(L.rq.PAUSED), e7(C.yE.PAUSE_BUTTON);
                         break;
                     default:
                         tR(L.rq.PLAYING);
@@ -761,6 +761,7 @@ function Q(e) {
                             backgroundColor: tV ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tV ? eL : void 0,
                             duration: null != (Q = null == (u = e2.current) ? void 0 : u.duration) ? Q : 1,
+                            isFullyVisible: tV && eH,
                             maxSeekableTime: tV && eH ? to : void 0,
                             onClick: (e) => {
                                 tU(e), eO === L.rq.ENDED && tR(L.rq.PLAYING);
