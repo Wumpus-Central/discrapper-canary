@@ -51061,9 +51061,9 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
 }
 
 ._1689b6e8323d95c2-title {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 1.25rem;
     text-transform: uppercase
 }
 
@@ -51153,8 +51153,8 @@ h3._1689b6e8323d95c2-improved:after {
     border-radius: 5px;
     color: var(--white);
     display: flex;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
     padding: 16px
 }
 
