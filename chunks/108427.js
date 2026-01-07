@@ -99,6 +99,9 @@ class _ {
                     t,
                 ),
             );
+            try {
+                o.ZP.appFirstRenderAfterReadyPayload();
+            } catch (e) {}
         });
     }
     trackAppUIViewed(e) {

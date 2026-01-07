@@ -921,6 +921,9 @@ let q = {
         appViewed() {
             (0, m.isDesktop)() && this.send("APP_VIEWED");
         },
+        appFirstRenderAfterReadyPayload() {
+            (0, m.isDesktop)() && this.send("APP_FIRST_RENDER_AFTER_READY_PAYLOAD");
+        },
         appLoaded() {
             z("APP_LOADED");
         },
