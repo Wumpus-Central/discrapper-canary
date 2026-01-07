@@ -1,102 +1,55 @@
-n.d(t, { Z: () => C }), n(539854), n(388685);
+n.d(t, { Z: () => g });
 var r = n(54381),
-    i = n(494497),
-    l = n(793030),
-    o = n(442837),
-    a = n(704215),
-    s = n(243778),
-    c = n(430824),
-    u = n(765703),
-    d = n(618460),
-    f = n(431971),
-    p = n(800869),
-    m = n(366751),
-    g = n(309945),
-    v = n(981631),
-    x = n(914820),
-    b = n(556970),
-    h = n(388032),
-    j = n(754747);
-function _() {
+    i = n(793030),
+    o = n(166146),
+    l = n(247048),
+    a = n(975706),
+    s = n(800869),
+    u = n(366751),
+    c = n(309945),
+    d = n(225039),
+    f = n(556970),
+    p = n(388032),
+    m = n(754747);
+function v(e) {
+    let { text: t } = e;
     return (0, r.jsx)("div", {
-        className: j.staffContainer,
-        children: (0, r.jsx)(l.xvT, {
+        className: m.staffContainer,
+        children: (0, r.jsx)(i.xvT, {
             variant: "text-sm/medium",
-            children: h.intl.string(b.default.l9n4QZ),
+            children: t,
         }),
     });
 }
-function C(e) {
+function g(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([c.Z], () => {
-            var e;
-            return (
-                (null == (e = c.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
-                !0
-            );
-        }),
-        C = (0, d.Z)(t),
-        Z = (0, u.Z)(t),
-        w = C.length > 0 || Z.length > 0,
-        { shouldShow: I, notificationConfig: E } = (0, f._)(t, "GuildPowerupNotificationContainer"),
-        P = [];
-    I && P.push(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [T, N] = (0, s.ZT)(P, t),
-        y = null != T && null != E,
-        O = [];
-    y || w || O.push(a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
-    let [S, A] = (0, s.US)(O),
-        L = ((e) => {
-            let n = [];
-            if (w) {
-                let e = C.some((e) => e.skuId === i.A$),
-                    l = Z.length > 0 ? h.intl.string(x.default["B3OfL/"]) : void 0,
-                    o = [];
-                e && o.push(h.intl.string(b.default.Sfr0Jw)),
-                    Z.length > 0 && o.push(h.intl.string(x.default.wiungr)),
-                    n.push(
-                        (0, r.jsx)(
-                            g.Z,
-                            {
-                                guildId: t,
-                                powerupNames: [...C.map((e) => e.title), ...(null != l ? [l] : [])],
-                                warnings: o,
-                            },
-                            "expiring-powerups",
-                        ),
-                    );
-            }
-            return (
-                y &&
-                    n.push(
-                        (0, r.jsx)(
-                            m.Z,
-                            {
-                                notificationConfig: E,
-                                markAsDismissed: (e) => {
-                                    N(e);
-                                },
-                            },
-                            "rollback-notification",
-                        ),
-                    ),
-                null != e &&
-                    e === a.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK &&
-                    n.push((0, r.jsx)(p.Z, { markAsDismissed: A }, "info-card")),
-                n
-            );
-        })(S);
-    return 0 !== L.length || n
+        n = (0, a.Z)(t),
+        g = (0, o.Z)(t),
+        x = (0, l.Z)(t),
+        b = (0, d.Z)(g.shouldShow || x.shouldShow);
+    return n.shouldShow || g.shouldShow || x.shouldShow || b.shouldShow
         ? (0, r.jsxs)("div", {
-              className: j.container,
+              className: m.container,
               children: [
-                  (0, r.jsx)(l.xvT, {
+                  (0, r.jsx)(i.xvT, {
                       variant: "eyebrow",
                       color: "text-subtle",
-                      children: h.intl.string(b.default["3FRirU"]),
+                      children: p.intl.string(f.default["3FRirU"]),
                   }),
-                  n && (0, r.jsx)(_, {}),
-                  L.map((e) => e),
+                  n.shouldShow && (0, r.jsx)(v, { text: n.text }),
+                  g.shouldShow &&
+                      (0, r.jsx)(c.Z, {
+                          guildId: t,
+                          powerupNames: g.expiringPowerupNames,
+                          warnings: g.warnings,
+                      }),
+                  x.shouldShow &&
+                      null != x.notificationConfig &&
+                      (0, r.jsx)(u.Z, {
+                          notificationConfig: x.notificationConfig,
+                          markAsDismissed: x.markAsDismissed,
+                      }),
+                  b.shouldShow && (0, r.jsx)(s.Z, { markAsDismissed: b.markAsDismissed }),
               ],
           })
         : null;
