@@ -5,6 +5,8 @@ e.exports = {
     members: "c8ffbb79449f399c-members",
     member: "c8ffbb79449f399c-member",
     membersGroup: "c8ffbb79449f399c-membersGroup",
+    membersGroupHeader: "c8ffbb79449f399c-membersGroupHeader",
+    membersGroupName: "c8ffbb79449f399c-membersGroupName",
     hiddenMembers: "c8ffbb79449f399c-hiddenMembers",
     memberGroupsPlaceholder: "c8ffbb79449f399c-memberGroupsPlaceholder",
     roleIcon: "c8ffbb79449f399c-roleIcon",

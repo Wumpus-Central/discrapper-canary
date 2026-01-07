@@ -3659,8 +3659,6 @@
   "TVBCKZ": "Channel Locked",
   "ETJqLl": "Permissions synced with category: **!!{categoryName}!!**",
   "Uaqbke": "!!{title}!!, {count, plural, one { member} other { members} }",
-  "CuAQkJ": "!!{title}!! — {count}",
-  "F3bubU": "!!{title}!! — 99+",
   "9oMmZC": "+{count} more",
   "feGACE": "Channel Mention Actions",
   "Spb3s/": "Use the up and down arrow keys to navigate between messages quickly. New messages will be added to the bottom of the list as they come in.",

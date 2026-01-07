@@ -1,16 +1,29 @@
 n.d(t, {
-    MemberListContentSettingsMenu: () => p,
+    MemberListContentSettingsMenu: () => m,
     Z: () => h,
 });
 var r = n(54381),
     i = n(473749),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(485267),
-    o = n(71585),
+    l = n(71585),
     c = n(981631),
-    d = n(388032);
-function u(e) {
+    u = n(388032);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -21,45 +34,59 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-let p = (e) => {
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let m = (e) => {
         let { closePopout: t } = e,
-            i = (0, l.e7)([o.Z], () => o.Z.hidden);
-        return (0, r.jsx)(a.v2r, {
+            i = (0, a.e7)([l.Z], () => l.Z.hidden);
+        return (0, r.jsx)(o.v2r, {
             onSelect: () => {},
             navId: "member-list-settings-menu",
             onClose: null != t ? t : c.dG4,
-            "aria-label": d.intl.string(d.t.w2jvOf),
-            children: (0, r.jsxs)(a.kSQ, {
+            "aria-label": u.intl.string(u.t.w2jvOf),
+            children: (0, r.jsxs)(o.kSQ, {
                 children: [
-                    (0, r.jsx)(a.sNh, {
+                    (0, r.jsx)(o.sNh, {
                         id: "about",
-                        label: d.intl.string(d.t.pWLGnF),
-                        icon: a.d3s,
+                        label: u.intl.string(u.t.pWLGnF),
+                        icon: o.d3s,
                         action: () => {
-                            (0, a.ZDy)(async () => {
+                            (0, o.ZDy)(async () => {
                                 let { default: e } = await n.e("71517").then(n.bind(n, 549505));
-                                return (t) => (0, r.jsx)(e, u({}, t));
+                                return (t) => (0, r.jsx)(e, f({}, t));
                             }),
                                 null == t || t();
                         },
                     }),
-                    (0, r.jsx)(a.S89, {
+                    (0, r.jsx)(o.S89, {
                         id: "hide",
-                        label: d.intl.string(d.t.AhNYuY),
+                        label: u.intl.string(u.t.AhNYuY),
                         checked: i,
                         action: () => {
                             (0, s.lY)(), null == t || t();
@@ -71,47 +98,30 @@ let p = (e) => {
     },
     h = () => {
         let e = i.useRef(null);
-        return (0, r.jsx)(a.yRy, {
+        return (0, r.jsx)(o.yRy, {
             targetElementRef: e,
-            animation: a.yRy.Animation.NONE,
+            animation: o.yRy.Animation.NONE,
             position: "bottom",
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(p, { closePopout: t });
+                return (0, r.jsx)(m, { closePopout: t });
             },
-            children: (t) => {
-                var n, i;
-                return (0, r.jsx)(
-                    a.P3F,
-                    ((n = u({}, t)),
-                    (i = i =
-                        {
-                            innerRef: e,
-                            onClick: (e) => {
-                                e.stopPropagation(), t.onClick(e);
-                            },
-                            style: {
-                                width: "12px",
-                                height: "12px",
-                                display: "flex",
-                            },
-                            children: (0, r.jsx)(a.ewm, { size: "xxs" }),
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    n),
-                );
-            },
+            children: (t) =>
+                (0, r.jsx)(
+                    o.P3F,
+                    _(f({}, t), {
+                        innerRef: e,
+                        onClick: (e) => {
+                            e.stopPropagation(), t.onClick(e);
+                        },
+                        style: {
+                            width: "12px",
+                            height: "12px",
+                            display: "flex",
+                        },
+                        children: (0, r.jsx)(o.ewm, { size: "xxs" }),
+                    }),
+                ),
         });
     };

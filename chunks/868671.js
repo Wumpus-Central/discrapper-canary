@@ -1,135 +1,139 @@
 n.d(t, {
-    H: () => v,
-    T: () => j,
+    H: () => I,
+    T: () => v,
 }),
     n(388685);
 var r = n(473749),
     i = n(442837),
-    l = n(570140),
-    a = n(439170),
+    a = n(570140),
+    o = n(439170),
     s = n(592125),
-    o = n(430824),
+    l = n(430824),
     c = n(451478),
-    d = n(626135),
-    u = n(162461),
-    p = n(71585),
-    h = n(34586),
-    f = n(69259),
-    g = n(590026),
-    m = n(178762),
-    b = n(206583),
-    y = n(809017),
-    O = n(981631),
-    x = n(388032);
-let j = 0;
-function v(e) {
+    u = n(626135),
+    d = n(162461),
+    f = n(71585),
+    p = n(34586),
+    _ = n(69259),
+    m = n(590026),
+    h = n(178762),
+    g = n(206583),
+    E = n(809017),
+    b = n(981631),
+    y = n(388032);
+let O = 3,
+    v = 0,
+    S = 3000;
+function I(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: j },
-            channelId: v,
-            guildId: C,
+            memberStoreProps: { groups: t, rows: n, version: v },
+            channelId: I,
+            guildId: T,
         } = e,
-        [I, _] = r.useState(!1),
-        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(v),
-        P = (0, i.e7)([p.Z], () => p.Z.hidden),
-        T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        N = (0, i.e7)([s.Z], () => s.Z.getChannel(v)),
-        R = (0, i.e7)([o.Z], () => o.Z.getGuild(C), [C]),
-        w = (0, h.E)(R),
-        A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
-        [D, L, M, k] = r.useMemo(() => {
+        [C, A] = r.useState(!1),
+        { requestId: N, entries: P, impressionCappedEntryIds: R } = (0, m.Z)(I),
+        w = (0, i.e7)([f.Z], () => f.Z.hidden),
+        D = (0, i.e7)([c.Z], () => c.Z.isFocused()),
+        x = (0, i.e7)([s.Z], () => s.Z.getChannel(I)),
+        L = (0, i.e7)([l.Z], () => l.Z.getGuild(T), [T]),
+        j = (0, p.E)(L),
+        M = null != j && j && (null == x ? void 0 : x.isForumChannel()) === !1,
+        [k, U, G, Z] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, j];
-            let r = I ? E.length : 3,
-                i = E.slice(0, r);
-            e = P
-                ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
-                : i.map((e) => ({
-                      type: a.so.CONTENT_INVENTORY,
+            if (null == P || 0 === P.length || null == N || !M) return [t, n, v];
+            let r = O,
+                i = C ? P.length : r,
+                a = P.slice(0, i);
+            e = w
+                ? [{ type: o.so.HIDDEN_CONTENT_INVENTORY }]
+                : a.map((e) => ({
+                      type: o.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: S,
+                      requestId: N,
                   }));
-            let l = {
-                id: y.G,
-                type: a.so.CONTENT_INVENTORY_GROUP,
-                key: y.G,
-                count: e.length,
-                index: n.length,
-                title: x.intl.string(x.t["6gwSFY"]),
-                onToggleExpand: () => {
-                    _((e) => {
+            let s = () => {
+                    A((e) => {
                         let t = !e;
                         return (
-                            d.default.track(O.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: v,
-                                guild_id: C,
+                            u.default.track(b.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                                channel_id: I,
+                                guild_id: T,
                                 expanded: t,
                             }),
                             t
                         );
                     });
                 },
-                expanded: I,
-                expandedCount: E.length,
-                feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
-            };
+                l = {
+                    id: E.G,
+                    type: o.so.CONTENT_INVENTORY_GROUP,
+                    key: E.G,
+                    count: e.length,
+                    index: n.length,
+                    title: y.intl.string(y.t["6gwSFY"]),
+                    onToggleExpand: s,
+                    expanded: C,
+                    expandedCount: P.length,
+                    feedHeight: e.map(h.iZ).reduce((e, t) => e + t, 0),
+                };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, E, I, t, C, S, n, j, P, A]),
-        U = r.useRef(0),
-        G = r.useRef(E),
-        H = r.useRef(void 0),
-        F = r.useRef({ impressionCappedEntryIds: Z }),
-        B = r.useCallback(
+        }, [I, P, C, t, T, N, n, v, w, M]),
+        F = r.useRef(0),
+        B = r.useRef(P),
+        V = r.useRef(void 0),
+        H = r.useRef({ impressionCappedEntryIds: R }),
+        Y = r.useCallback(
             (e) => {
                 var t;
-                let n = Math.floor(e / m.YN),
-                    r = Math.min(null != (t = null == k ? void 0 : k.length) ? t : 0, n);
-                U.current = Math.max(U.current, r);
+                let n = Math.floor(e / h.YN),
+                    r = Math.min(null != (t = null == Z ? void 0 : Z.length) ? t : 0, n);
+                F.current = Math.max(F.current, r);
             },
-            [k],
+            [Z],
         );
     return (
         r.useEffect(() => {
-            G.current = E;
-        }, [E]),
+            B.current = P;
+        }, [P]),
         r.useEffect(() => {
-            F.current = { impressionCappedEntryIds: Z };
-        }, [Z]),
+            H.current = { impressionCappedEntryIds: R };
+        }, [R]),
         r.useEffect(
             () => (
-                (U.current = 0),
-                (H.current = Date.now()),
+                (F.current = 0),
+                (V.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == S || null == H.current || Date.now() - H.current < 3000) return;
-                    let n = null != (t = null == (e = G.current) ? void 0 : e.map((e) => e.id)) ? t : [],
-                        r = n.slice(0, U.current);
-                    !P &&
-                        T &&
-                        A &&
-                        ((0, f.e)(O.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: S,
-                            first_shown_at: H.current,
+                    if (null == N || null == V.current || Date.now() - V.current < S) return;
+                    let n = null != (t = null == (e = B.current) ? void 0 : e.map((e) => e.id)) ? t : [],
+                        r = n.slice(0, F.current);
+                    !w &&
+                        D &&
+                        M &&
+                        ((0, _.e)(b.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                            request_id: N,
+                            first_shown_at: V.current,
                             item_ids: r,
-                            surface_type: b.Kd.GUILD_MEMBER_LIST,
-                            channel_id: v,
-                            guild_id: C,
+                            surface_type: g.Kd.GUILD_MEMBER_LIST,
+                            channel_id: I,
+                            guild_id: T,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
+                            impression_capped_item_ids: [...H.current.impressionCappedEntryIds],
                         }),
-                        (0, u.wm)("useInjectContentInventoryFeed") &&
-                            l.Z.dispatch({
+                        (0, d.wm)("useInjectContentInventoryFeed") &&
+                            a.Z.dispatch({
                                 type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
                                 itemIds: r,
                             }));
                 }
             ),
-            [S, v, C, P, T, A],
+            [N, I, T, w, D, M],
         ),
         {
-            groups: D,
-            rows: L,
-            version: M,
-            updateMaxRowSeen: B,
+            groups: k,
+            rows: U,
+            version: G,
+            updateMaxRowSeen: Y,
         }
     );
 }

@@ -1,26 +1,26 @@
 n.d(t, {
-    V: () => E,
-    Z: () => j,
+    V: () => I,
+    Z: () => T,
 }),
     n(388685);
-var i = n(54381),
-    r = n(473749),
-    l = n(120356),
-    a = n.n(l),
-    o = n(512722),
-    s = n.n(o),
+var r = n(54381),
+    i = n(473749),
+    a = n(120356),
+    o = n.n(a),
+    s = n(512722),
+    l = n.n(s),
     c = n(374470),
     u = n(442837),
     d = n(481060),
-    p = n(260300),
-    f = n(819640),
-    h = n(451478),
+    f = n(260300),
+    p = n(819640),
+    _ = n(451478),
     m = n(350707),
-    g = n(21825),
-    b = n(232495),
-    y = n(10401),
-    C = n(261473);
-function v(e, t, n) {
+    h = n(21825),
+    g = n(232495),
+    E = n(10401),
+    b = n(261473);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,177 +33,183 @@ function v(e, t, n) {
         e
     );
 }
-function x(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                v(e, t, n[t]);
+            r.forEach(function (t) {
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class E extends r.PureComponent {
+class I extends i.PureComponent {
     componentDidMount() {
         this.updateCache();
     }
     componentDidUpdate(e) {
         let {
             tutorialId: t,
-            origin: { x: n, y: i },
-            targetWidth: r,
-            targetHeight: l,
-            position: a,
-            offset: o,
+            origin: { x: n, y: r },
+            targetWidth: i,
+            targetHeight: a,
+            position: o,
+            offset: s,
         } = e;
         (this.props.tutorialId !== t ||
             this.props.origin.x !== n ||
-            this.props.origin.y !== i ||
-            this.props.targetWidth !== r ||
-            this.props.targetHeight !== l ||
-            this.props.position !== a ||
-            this.props.offset.x !== o.x ||
-            this.props.offset.y !== o.y) &&
+            this.props.origin.y !== r ||
+            this.props.targetWidth !== i ||
+            this.props.targetHeight !== a ||
+            this.props.position !== o ||
+            this.props.offset.x !== s.x ||
+            this.props.offset.y !== s.y) &&
             this.updateCache();
     }
     updateCache() {
         var e, t;
         let n = this.contentRef.current;
         if (null == n || !(0, c.kK)(n, HTMLElement)) return;
-        let { offsetWidth: i, offsetHeight: r } = n,
-            l = {
-                offsetX: (this.props.targetWidth - i) / 2,
-                offsetY: (this.props.targetHeight - r) / 2,
+        let { offsetWidth: r, offsetHeight: i } = n,
+            a = {
+                offsetX: (this.props.targetWidth - r) / 2,
+                offsetY: (this.props.targetHeight - i) / 2,
             };
         switch (this.props.position) {
             case "left":
-                l.offsetX = -i;
+                a.offsetX = -r;
                 break;
             case "right":
-                l.offsetX = this.props.targetWidth;
+                a.offsetX = this.props.targetWidth;
                 break;
             case "bottom":
-                l.offsetY = this.props.targetHeight;
+                a.offsetY = this.props.targetHeight;
                 break;
             default:
-                l.offsetY = -r;
+                a.offsetY = -i;
         }
-        (l.offsetX += null != (e = this.props.offset.x) ? e : 0),
-            (l.offsetY += null != (t = this.props.offset.y) ? t : 0),
-            this.setState(l);
+        (a.offsetX += null != (e = this.props.offset.x) ? e : 0),
+            (a.offsetY += null != (t = this.props.offset.y) ? t : 0),
+            this.setState(a);
     }
     handleSkipTips() {
-        p.Z.suppressAll();
+        f.Z.suppressAll();
     }
     getTutorialPopoutText() {
         let { tutorialId: e } = this.props;
-        return (0, b.k)(e);
+        return (0, g.k)(e);
     }
     render() {
-        let { tutorialId: e, autoInvert: t, focused: n, origin: r } = this.props,
-            l = (0, g.S)(e);
-        if (null == l) return null;
+        let { tutorialId: e, autoInvert: t, focused: n, origin: i } = this.props,
+            a = (0, h.S)(e);
+        if (null == a) return null;
         let {
-                media: o,
-                textAlign: s,
+                media: s,
+                textAlign: l,
                 isLongText: c,
                 highPriority: u,
-                spacing: p,
-                arrowAlignment: f = m.cy.TOP,
-                popoutPosition: h,
-            } = l,
-            { offsetX: b, offsetY: y } = this.state,
-            v = {
-                left: null != b ? r.x + b : void 0,
-                top: null != y ? r.y + y : void 0,
+                spacing: f,
+                arrowAlignment: p = m.cy.TOP,
+                popoutPosition: _,
+            } = a,
+            { offsetX: g, offsetY: E } = this.state,
+            y = {
+                left: null != g ? i.x + g : void 0,
+                top: null != E ? i.y + E : void 0,
             },
-            E = (e) => {
+            v = (e) => {
+                let t = n && !e;
+                return !0 !== u
+                    ? null
+                    : (0, r.jsxs)("div", {
+                          children: [
+                              (0, r.jsx)("div", {
+                                  className: o()(b.top, {
+                                      [b.animating]: t,
+                                      [b.notAnimating]: !t,
+                                  }),
+                              }),
+                              (0, r.jsx)("div", {
+                                  className: o()(b.bottom, {
+                                      [b.animating]: t,
+                                      [b.notAnimating]: !t,
+                                  }),
+                              }),
+                          ],
+                      });
+            },
+            I = (e) => {
                 let t = n && !e;
                 return {
-                    [C.animating]: t,
-                    [C.notAnimating]: !t,
-                    [C.highPriority]: u,
+                    [b.animating]: t,
+                    [b.notAnimating]: !t,
+                    [b.highPriority]: u,
                 };
             },
-            j = this.getTutorialPopoutText();
-        return (0, i.jsx)(
+            T = this.getTutorialPopoutText();
+        return (0, r.jsx)(
             m.ZP,
-            O(
-                x(
+            S(
+                O(
                     {
                         innerRef: this.contentRef,
-                        position: h,
-                        renderMedia: o,
-                        textAlign: s,
-                        spacing: p,
+                        position: _,
+                        renderMedia: s,
+                        textAlign: l,
+                        spacing: f,
                         isLongText: c,
                         uniqueId: e,
                         autoInvert: t,
-                        arrowAlignment: f,
+                        arrowAlignment: p,
                         onSkipAll: this.handleSkipTips,
                         onComplete: this.handleDismiss,
                     },
-                    j,
+                    T,
                 ),
                 {
                     children: (e, t) => {
-                        let { isShown: r } = t;
-                        return (0, i.jsx)(
+                        let { isShown: n } = t;
+                        return (0, r.jsx)(
                             d.P3F,
-                            O(x({}, e), {
-                                className: C.indicator,
-                                style: v,
+                            S(O({}, e), {
+                                className: b.indicator,
+                                style: y,
                                 innerRef: this.contentRef,
-                                children: (0, i.jsxs)("div", {
-                                    className: a()(C.animationContainer, E(r)),
+                                children: (0, r.jsxs)("div", {
+                                    className: o()(b.animationContainer, I(n)),
                                     children: [
-                                        ((e) => {
-                                            let t = n && !e;
-                                            return !0 !== u
-                                                ? null
-                                                : (0, i.jsxs)("div", {
-                                                      children: [
-                                                          (0, i.jsx)("div", {
-                                                              className: a()(C.top, {
-                                                                  [C.animating]: t,
-                                                                  [C.notAnimating]: !t,
-                                                              }),
-                                                          }),
-                                                          (0, i.jsx)("div", {
-                                                              className: a()(C.bottom, {
-                                                                  [C.animating]: t,
-                                                                  [C.notAnimating]: !t,
-                                                              }),
-                                                          }),
-                                                      ],
-                                                  });
-                                        })(r),
-                                        (0, i.jsx)("div", { className: a()(C.innerCircle, E(r)) }),
-                                        (0, i.jsx)("div", { className: a()(C.outerCircle, E(r)) }),
+                                        v(n),
+                                        (0, r.jsx)("div", { className: o()(b.innerCircle, I(n)) }),
+                                        (0, r.jsx)("div", { className: o()(b.outerCircle, I(n)) }),
                                     ],
                                 }),
                             }),
@@ -215,52 +221,49 @@ class E extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, "state", {
+            y(this, "state", {
                 offsetX: null,
                 offsetY: null,
             }),
-            v(this, "contentRef", r.createRef()),
-            v(this, "handleDismiss", () => {
-                p.Z.dismiss(this.props.tutorialId);
+            y(this, "contentRef", i.createRef()),
+            y(this, "handleDismiss", () => {
+                f.Z.dismiss(this.props.tutorialId);
             });
     }
 }
-let j =
-    12633 == n.j
-        ? function () {
-              let {
-                  indicators: e,
-                  tutorialData: t,
-                  windowFocused: n,
-                  shouldShowAny: r,
-              } = (0, u.cj)([y.Z, h.Z, f.Z], () => ({
-                  indicators: y.Z.getIndicators(),
-                  tutorialData: y.Z.getData(),
-                  shouldShowAny: y.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
-                  windowFocused: h.Z.isFocused(),
-              }));
-              return r
-                  ? (0, i.jsx)(i.Fragment, {
-                        children: Object.entries(e).map((e) => {
-                            let [r, l] = e,
-                                a = t[r];
-                            return (
-                                s()(null != a, "Missing tutorial definition for ".concat(r)),
-                                (0, i.jsx)(
-                                    E,
-                                    x(
-                                        {
-                                            tutorialId: r,
-                                            tutorialDefinition: a,
-                                            focused: n,
-                                        },
-                                        l,
-                                    ),
-                                    r,
-                                )
-                            );
-                        }),
-                    })
-                  : null;
-          }
+let T = function () {
+    let {
+        indicators: e,
+        tutorialData: t,
+        windowFocused: n,
+        shouldShowAny: i,
+    } = (0, u.cj)([E.Z, _.Z, p.Z], () => ({
+        indicators: E.Z.getIndicators(),
+        tutorialData: E.Z.getData(),
+        shouldShowAny: E.Z.shouldShowAnyIndicators() && !p.Z.hasLayers(),
+        windowFocused: _.Z.isFocused(),
+    }));
+    return i
+        ? (0, r.jsx)(r.Fragment, {
+              children: Object.entries(e).map((e) => {
+                  let [i, a] = e,
+                      o = t[i];
+                  return (
+                      l()(null != o, "Missing tutorial definition for ".concat(i)),
+                      (0, r.jsx)(
+                          I,
+                          O(
+                              {
+                                  tutorialId: i,
+                                  tutorialDefinition: o,
+                                  focused: n,
+                              },
+                              a,
+                          ),
+                          i,
+                      )
+                  );
+              }),
+          })
         : null;
+};
