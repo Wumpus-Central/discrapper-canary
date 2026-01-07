@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => u,
-    g: () => c,
+    A: () => d,
+    g: () => u,
 }),
     n(997841);
 var r = n(473749),
@@ -16,10 +16,13 @@ function l(e) {
         o = (0, i.yE)(n, s.udG.CONTEXTLESS_ACTIVITY);
     return r && o;
 }
-function c(e) {
-    return !!l(e) && (0, o.QK)("canLaunchFrame").enabled;
+function c(e, t) {
+    return null != e && !!l(e);
 }
 function u(e) {
-    let { enabled: t } = (0, o.u$)("canLaunchFrame");
-    return r.useMemo(() => null != e && l(e) && t, [e, t]);
+    return c(e, (0, o.sd)("canLaunchFrame"));
+}
+function d(e) {
+    let t = (0, o.WA)("canLaunchFrame");
+    return r.useMemo(() => c(e, t), [e, t]);
 }

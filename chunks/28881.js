@@ -1,25 +1,12 @@
 n.d(t, {
-    QK: () => a,
-    u$: () => i,
+    WA: () => i,
+    sd: () => a,
 });
-let r = (0, n(818083).B)({
+let r = (0, n(427164).le)({
+        name: "2026-01-contextless-frames-mobile",
         kind: "user",
-        id: "2025-06_contextless_frames",
-        label: "Contextless Frames",
         defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enable Contextless Frames",
-                config: { enabled: !0 },
-            },
-        ],
+        variations: { 1: { enabled: !0 } },
     }),
-    i = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return r.useExperiment({ location: e }, { autoTrackExposure: t });
-    },
-    a = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    };
+    i = (e) => r.useConfig({ location: e }),
+    a = (e) => r.getConfig({ location: e });
