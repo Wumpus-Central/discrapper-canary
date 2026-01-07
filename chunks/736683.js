@@ -1,26 +1,20 @@
-n.d(t, {
-    Z: () => u,
-    j: () => d,
-}),
-    n(388685),
-    n(642613);
+n.d(t, { Z: () => c }), n(388685), n(642613);
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(968843),
     a = n(786089),
     o = n(383747),
-    s = n(710914),
-    c = n(799323);
-function u(e) {
+    s = n(799323);
+function c(e) {
     let { onSelectTab: t } = e,
-        { claimedQuests: n, isFetchingClaimedQuests: s } = (0, l.eN)();
-    return s && 0 === n.length
-        ? (0, r.jsx)(i.$jN, { className: c.spinner })
+        { claimedQuests: n, isFetchingClaimedQuests: c } = (0, l.eN)();
+    return c && 0 === n.length
+        ? (0, r.jsx)(i.$jN, { className: s.spinner })
         : 0 === n.length
           ? (0, r.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
           : (0, r.jsx)("div", {
-                className: c.gridContainer,
+                className: s.gridContainer,
                 children: [...n]
                     .sort((e, t) => {
                         var n, r, i, l;
@@ -29,19 +23,5 @@ function u(e) {
                         );
                     })
                     .map((e) => (0, r.jsx)(a.Z, { quest: e }, e.id)),
-            });
-}
-function d(e) {
-    let { onSelectTab: t } = e,
-        { quests: n, excludedQuests: a, isFetchingCurrentQuests: u, hasFetched: d } = (0, l.bA)(l.e5.CLAIMED);
-    return u && 0 === n.length
-        ? (0, r.jsx)(i.$jN, { className: c.spinner })
-        : 0 === n.length
-          ? (0, r.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
-          : (0, r.jsx)(s.Z, {
-                quests: n,
-                excludedQuests: a,
-                isFetching: u,
-                hasFetched: d,
             });
 }
