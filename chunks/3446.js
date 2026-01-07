@@ -1,14 +1,17 @@
-r.d(e, { default: () => y }), r(388685);
+r.d(e, { default: () => w }), r(388685);
 var n = r(54381),
     o = r(473749),
     i = r(793030),
-    l = r(807163),
-    a = r(80721),
-    s = r(474936),
-    c = r(282793),
-    u = r(353149),
-    p = r(388032);
-function f(t) {
+    a = r(493773),
+    s = r(626135),
+    u = r(807163),
+    l = r(80721),
+    c = r(474936),
+    p = r(282793),
+    f = r(981631),
+    O = r(353149),
+    d = r(388032);
+function m(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
@@ -33,7 +36,7 @@ function f(t) {
     }
     return t;
 }
-function m(t, e) {
+function b(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -51,7 +54,7 @@ function m(t, e) {
         t
     );
 }
-function b(t, e) {
+function y(t, e) {
     if (null == t) return {};
     var r,
         n,
@@ -71,18 +74,22 @@ function b(t, e) {
     }
     return o;
 }
-let O = (t) => {
+let P = {
+        1: "what_you_lose",
+        2: "confirmation",
+    },
+    g = (t) => {
         var { onClose: e, currentUser: r, onNext: o } = t,
-            a = b(t, ["onClose", "currentUser", "onNext"]);
+            a = y(t, ["onClose", "currentUser", "onNext"]);
         return (0, n.jsx)(
             i.Modal,
-            m(
-                f(
+            b(
+                m(
                     {
-                        title: p.intl.formatToPlainString(u.default["4e7WtF"], {
-                            premiumGroupProductName: (0, c.sO)(),
+                        title: d.intl.formatToPlainString(O.default["4e7WtF"], {
+                            premiumGroupProductName: (0, p.sO)(),
                         }),
-                        subtitle: p.intl.formatToPlainString(u.default["3kVEg0"], { cooldownMonths: c.T9 }),
+                        subtitle: d.intl.formatToPlainString(O.default["3kVEg0"], { cooldownMonths: p.T9 }),
                         onClose: e,
                     },
                     a,
@@ -90,19 +97,19 @@ let O = (t) => {
                 {
                     actions: [
                         {
-                            text: p.intl.string(u.default.UFHNtO),
+                            text: d.intl.string(O.default.UFHNtO),
                             variant: "secondary",
                             onClick: e,
                         },
                         {
-                            text: p.intl.string(p.t["3PatSz"]),
+                            text: d.intl.string(d.t["3PatSz"]),
                             variant: "primary",
                             onClick: o,
                         },
                     ],
-                    children: (0, n.jsx)(l.g, {
+                    children: (0, n.jsx)(u.g, {
                         currentUser: r,
-                        premiumType: s.PremiumTypes.TIER_2,
+                        premiumType: c.PremiumTypes.TIER_2,
                         onClose: e,
                         isDowngrade: !1,
                         isPremiumRebrand: !0,
@@ -111,62 +118,89 @@ let O = (t) => {
             ),
         );
     },
-    d = (t) => {
+    _ = (t) => {
         var { onClose: e, onConfirm: r, isRemovingUser: o } = t,
-            l = b(t, ["onClose", "onConfirm", "isRemovingUser"]);
+            a = y(t, ["onClose", "onConfirm", "isRemovingUser"]);
         return (0, n.jsx)(
             i.Modal,
-            f(
+            m(
                 {
                     size: "md",
-                    title: p.intl.formatToPlainString(u.default.IrvJHs, { premiumGroupProductName: (0, c.sO)() }),
-                    subtitle: p.intl.formatToPlainString(u.default.cQDYKU, {
-                        premiumGroupProductName: (0, c.sO)(),
-                        cooldownMonths: c.T9,
+                    title: d.intl.formatToPlainString(O.default.IrvJHs, { premiumGroupProductName: (0, p.sO)() }),
+                    subtitle: d.intl.formatToPlainString(O.default.cQDYKU, {
+                        premiumGroupProductName: (0, p.sO)(),
+                        cooldownMonths: p.T9,
                     }),
                     onClose: e,
                     actions: [
                         {
-                            text: p.intl.string(u.default.UFHNtO),
+                            text: d.intl.string(O.default.UFHNtO),
                             variant: "secondary",
                             onClick: e,
                         },
                         {
-                            text: p.intl.string(p.t["cY+Oob"]),
+                            text: d.intl.string(d.t["cY+Oob"]),
                             variant: "critical-primary",
                             onClick: r,
                             loading: o,
                         },
                     ],
                 },
-                l,
+                a,
             ),
         );
     },
-    y = (t) => {
+    w = (t) => {
         var { premiumGroupSubscriptionId: e, currentUser: r, onClose: i } = t,
-            l = b(t, ["premiumGroupSubscriptionId", "currentUser", "onClose"]);
-        let [s, c] = o.useState(1),
-            [u, p] = o.useState(!1),
-            y = async () => {
-                p(!0), await (0, a.Jn)(e, r.id), p(!1), i();
+            u = y(t, ["premiumGroupSubscriptionId", "currentUser", "onClose"]);
+        let [c, p] = o.useState(1),
+            [O, d] = o.useState(!1),
+            w = o.useRef(0),
+            j = o.useRef(0);
+        (0, a.ZP)(() => {
+            let t = Date.now();
+            (w.current = t),
+                (j.current = t),
+                s.default.track(f.rMx.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: e });
+        });
+        let C = (t, r) => {
+                s.default.track(f.rMx.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
+                    subscription_id: e,
+                    from_step: P[t],
+                    to_step: r,
+                    step_duration_ms: Date.now() - j.current,
+                    flow_duration_ms: Date.now() - w.current,
+                }),
+                    (j.current = Date.now());
+            },
+            E = async () => {
+                C(c, null), await i();
+            },
+            v = async () => {
+                d(!0),
+                    (await (0, l.Jn)(e, r.id)).ok &&
+                        (s.default.track(f.rMx.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: e }),
+                        i()),
+                    d(!1);
             };
-        return 1 === s
+        return 1 === c
             ? (0, n.jsx)(
-                  O,
-                  m(f({}, l), {
-                      onNext: () => c(2),
+                  g,
+                  b(m({}, u), {
+                      onNext: () => {
+                          C(c, P[2]), p(2);
+                      },
                       currentUser: r,
-                      onClose: i,
+                      onClose: E,
                   }),
               )
-            : 2 === s
+            : 2 === c
               ? (0, n.jsx)(
-                    d,
-                    m(f({}, l), {
-                        onConfirm: y,
-                        onClose: i,
-                        isRemovingUser: u,
+                    _,
+                    b(m({}, u), {
+                        onConfirm: v,
+                        onClose: E,
+                        isRemovingUser: O,
                     }),
                 )
               : null;
