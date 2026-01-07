@@ -23,8 +23,8 @@ function f(e, t, n) {
     );
 }
 let g = s.ZP.requireModule("discord_rpc").RPCIPC,
-    h = new o.Z("RPCServer:IPC"),
-    m = {
+    m = new o.Z("RPCServer:IPC"),
+    h = {
         HANDSHAKE: 0,
         FRAME: 1,
         CLOSE: 2,
@@ -46,7 +46,7 @@ function E(e) {
                 r.read(t);
             } catch (t) {
                 e.end(
-                    O(m.CLOSE, {
+                    O(h.CLOSE, {
                         code: 1003,
                         message: t.message,
                     }),
@@ -57,7 +57,7 @@ function E(e) {
         let i = () => {
                 try {
                     e.end(
-                        O(m.CLOSE, {
+                        O(h.CLOSE, {
                             code: p.$VG.CLOSE_NORMAL,
                             message: "test client going away",
                         }),
@@ -81,7 +81,7 @@ function E(e) {
                     throw (i(), e);
                 },
             );
-        return e.write(O(m.PING, a().uniqueId())), l.then(t, n);
+        return e.write(O(h.PING, a().uniqueId())), l.then(t, n);
     });
 }
 function O(e, t) {
@@ -101,11 +101,11 @@ class v extends u.Z {
         return e.copy(i, 0, t, n), i;
     }
     send(e) {
-        h.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(O(m.FRAME, e));
+        m.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(O(h.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
-            O(m.CLOSE, {
+            O(h.CLOSE, {
                 code: e,
                 message: t,
             }),
@@ -129,7 +129,7 @@ class v extends u.Z {
                         opcode: this.messageBuffer.readInt32LE(0),
                         size: this.messageBuffer.readInt32LE(4),
                     }),
-                    !Object.values(m).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
+                    !Object.values(h).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
                 )
                     throw Error("protocol error");
                 if (this.currentHeader.size > 3145728) throw Error("message too large");
@@ -149,22 +149,22 @@ class v extends u.Z {
     }
     dispatchMessage(e, t, n) {
         switch (t) {
-            case m.PING:
-                e.emit("ping", n), e.write(O(m.PONG, n));
+            case h.PING:
+                e.emit("ping", n), e.write(O(h.PONG, n));
                 break;
-            case m.PONG:
+            case h.PONG:
                 e.emit("pong", n);
                 break;
-            case m.HANDSHAKE:
+            case h.HANDSHAKE:
                 this.handleHandshake(e, n), e.emit("handshake", n);
                 break;
-            case m.FRAME:
+            case h.FRAME:
                 if (!_(e)) throw Error("did not handshake");
                 e.emit("request", n);
                 break;
-            case m.CLOSE:
+            case h.CLOSE:
                 e.end(
-                    O(m.CLOSE, {
+                    O(h.CLOSE, {
                         code: p.$VG.CLOSE_NORMAL,
                         message: "client disconnect",
                     }),
@@ -189,18 +189,31 @@ class v extends u.Z {
 }
 class y extends i.EventEmitter {
     handleConnection(e) {
-        let t = new v(e, "json");
+        let t = new v(e, "json"),
+            n = setTimeout(() => {
+                m.warn("Handshake timeout for connection, closing socket");
+                try {
+                    e.end(
+                        O(h.CLOSE, {
+                            code: p.$VG.CLOSE_ABNORMAL,
+                            message: "Handshake timeout",
+                        }),
+                    );
+                } catch (e) {}
+                e.destroy();
+            }, 10000);
         e.on("readable", () => {
             let n = e.read();
             null != n && t.read(r.Buffer.from(n));
         }),
-            e.on("data", (n) => {
+            e.on("data", (i) => {
                 try {
-                    t.read(r.Buffer.from(n));
+                    t.read(r.Buffer.from(i));
                 } catch (t) {
-                    h.error("Socket Error: ".concat(t.message)),
+                    clearTimeout(n),
+                        m.error("Socket Error: ".concat(t.message)),
                         e.end(
-                            O(m.CLOSE, {
+                            O(h.CLOSE, {
                                 code: p.$VG.CLOSE_UNSUPPORTED,
                                 message: t.message,
                             }),
@@ -209,16 +222,17 @@ class y extends i.EventEmitter {
                 }
             }),
             e.once("handshake", () => {
-                let n = t.clientId;
-                h.info("Socket Opened: ".concat(t.id)),
-                    e.on("error", (e) => h.error("Socket Error: ".concat(e.message))),
+                clearTimeout(n);
+                let r = t.clientId;
+                m.info("Socket Opened: ".concat(t.id)),
+                    e.on("error", (e) => m.error("Socket Error: ".concat(e.message))),
                     e.on("close", () => {
-                        h.info("Socket Close: ".concat(t.id)), this.emit("disconnect", t);
+                        m.info("Socket Close: ".concat(t.id)), this.emit("disconnect", t);
                     }),
-                    (0, d.em)(t, null, n)
+                    (0, d.em)(t, null, r)
                         .then(() => {
                             e.on("request", (e) => {
-                                h.info("Socket Message: ".concat(t.id), (0, c.Z)(e)), this.emit("request", t, e);
+                                m.info("Socket Message: ".concat(t.id), (0, c.Z)(e)), this.emit("request", t, e);
                             }),
                                 this.emit("connect", t);
                         })
@@ -231,11 +245,11 @@ class y extends i.EventEmitter {
     constructor() {
         super();
         let e = g.net.createServer((e) => this.handleConnection(e));
-        e.on("error", (e) => h.error("Error: ".concat(e.message))),
+        e.on("error", (e) => m.error("Error: ".concat(e.message))),
             g.getAvailableSocket(E).then((t) => {
                 e.listen(t, () => {
                     ("function" == typeof e.listening ? e.listening() : e.listening) &&
-                        h.info("Starting on ".concat(e.address()));
+                        m.info("Starting on ".concat(e.address()));
                 });
             });
     }
