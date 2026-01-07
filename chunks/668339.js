@@ -646,82 +646,86 @@ function U(e) {
     let t = (0, S.l)("SearchableSelect"),
         {
             id: n,
-            options: i,
-            required: a,
-            disabled: o,
-            isDisabled: s,
-            value: l,
-            multi: c,
-            clearable: u,
-            closeOnSelect: d = !0,
-            filter: f,
-            matchSorterOptions: p,
-            placeholder: m,
-            "aria-required": h,
-            onChange: g,
-            onSearchChange: E,
-            onKeyDown: y,
-            onFocus: O,
-            onBlur: v,
-            debounceTime: I,
-            hidePills: T,
-            renderOptionLabel: C,
-            renderOptionPrefix: N,
-            renderOptionSuffix: R,
+            options: a,
+            required: o,
+            disabled: s,
+            isDisabled: l,
+            value: c,
+            multi: u,
+            clearable: d,
+            closeOnSelect: f = !0,
+            filter: p,
+            matchSorterOptions: m,
+            placeholder: h,
+            "aria-required": g,
+            onChange: E,
+            onSearchChange: y,
+            onKeyDown: O,
+            onFocus: v,
+            onBlur: I,
+            debounceTime: T,
+            hidePills: C,
+            renderOptionLabel: N,
+            renderOptionPrefix: R,
+            renderOptionSuffix: w,
         } = e,
-        { fieldProps: w } = (0, _.XF_)(e),
-        D = null != I || "function" == typeof i || null != C;
-    if (t && !D) {
-        let e = null != f && "function" == typeof f ? f : void 0;
+        { fieldProps: D } = (0, _.XF_)(e),
+        x = null != T || "function" == typeof a || null != N,
+        L = i.useCallback(
+            (e) => {
+                let { key: t, value: n, label: r, disabled: i } = e;
+                return {
+                    id: null != t ? t : n,
+                    value: n,
+                    label: r,
+                    disabled: i,
+                    leading:
+                        null == R
+                            ? void 0
+                            : R(e, {
+                                  inPill: !1,
+                                  inDropdown: !0,
+                              }),
+                    trailing:
+                        null == w
+                            ? void 0
+                            : w(e, {
+                                  inPill: !1,
+                                  inDropdown: !0,
+                              }),
+                };
+            },
+            [R, w],
+        );
+    if (t && !x) {
+        let e = null != p && "function" == typeof p ? p : void 0;
         return (0, r.jsx)(
             b.V,
             P(
                 A(
                     {
                         id: n,
-                        selectionMode: c ? "multiple" : "single",
-                        required: a || h,
-                        disabled: o || s,
-                        hideTags: T,
+                        selectionMode: u ? "multiple" : "single",
+                        required: o || g,
+                        disabled: s || l,
+                        hideTags: C,
                     },
-                    w,
+                    D,
                 ),
                 {
-                    value: l,
-                    options: i,
-                    formatOption: (e) => {
-                        let { key: t, value: n, label: r, disabled: i } = e;
-                        return {
-                            id: null != t ? t : n,
-                            value: n,
-                            label: r,
-                            disabled: i,
-                            leading:
-                                null == N
-                                    ? void 0
-                                    : N(e, {
-                                          inPill: !1,
-                                          inDropdown: !0,
-                                      }),
-                            trailing:
-                                null == R
-                                    ? void 0
-                                    : R(e, {
-                                          inPill: !1,
-                                          inDropdown: !0,
-                                      }),
-                        };
-                    },
-                    onSelectionChange: g,
+                    value: c,
+                    options: a,
+                    formatOption: L,
+                    onSelectionChange: E,
                     customMatchSorter: e,
-                    matchSorterOptions: p,
-                    placeholder: m,
-                    onQueryChange: (e) => (null == E ? void 0 : E(e.target.value)),
-                    onKeyDown: y,
-                    onFocus: O,
-                    onBlur: v,
-                    clearable: u,
-                    closeOnSelect: d,
+                    matchSorterOptions: m,
+                    placeholder: h,
+                    onQueryChange: (e) => (null == y ? void 0 : y(e.target.value)),
+                    onKeyDown: O,
+                    onFocus: v,
+                    onBlur: I,
+                    clearable: d,
+                    closeOnSelect: f,
                 },
             ),
         );
