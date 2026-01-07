@@ -22,8 +22,8 @@ var a = n(54381),
     y = n(592125),
     N = n(703558),
     _ = n(430824),
-    w = n(375954),
-    Z = n(933557),
+    Z = n(375954),
+    w = n(933557),
     I = n(287746),
     P = n(981631),
     S = n(388032),
@@ -75,7 +75,7 @@ function A(e) {
     let { channelId: t, baseChannelId: A, channelViewSource: D = "Split View", isResourceChannelView: R } = e,
         k = (0, l.e7)([y.Z], () => y.Z.getChannel(t)),
         L = (0, l.e7)([_.Z], () => _.Z.getGuild(null == k ? void 0 : k.getGuildId())),
-        H = (0, Z.ZP)(k),
+        H = (0, w.ZP)(k),
         M = (0, l.e7)([C.Z], () => (null == L ? void 0 : L.id) != null && C.Z.isLurking(L.id), [L]),
         U = (0, h.Z)(t),
         G = (0, l.e7)([f.Z], () => {
@@ -129,9 +129,7 @@ function A(e) {
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([n.e("24783"), n.e("45917")]).then(
-                                      n.bind(n, 439635),
-                                  );
+                                  let { default: e } = await n.e("24783").then(n.bind(n, 439635));
                                   return (t) =>
                                       (0, a.jsx)(
                                           e,
@@ -143,7 +141,7 @@ function A(e) {
                               });
                           },
                           handleClick: () => {
-                              let e = w.Z.getMessages(k.id);
+                              let e = Z.Z.getMessages(k.id);
                               if (R) {
                                   (0, j.uL)(P.Z5c.CHANNEL(k.guild_id, k.id)), (0, p.C3)(k.guild_id, null);
                                   return;
