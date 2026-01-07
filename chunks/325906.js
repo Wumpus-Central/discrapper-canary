@@ -1,12 +1,13 @@
-n.d(t, { WrappedUnifiedPaymentModal: () => y });
+n.d(t, { WrappedUnifiedPaymentModal: () => O });
 var r = n(54381),
     o = n(473749),
     i = n(987209),
-    l = n(563132),
-    a = n(791785),
+    a = n(563132),
+    l = n(791785),
     c = n(733579),
-    s = n(467368);
-function p(e) {
+    s = n(467368),
+    p = n(231338);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +32,7 @@ function p(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -49,107 +50,108 @@ function u(e, t) {
         e
     );
 }
-let d = (e) => {
+let y = (e) => {
         let {
                 skuId: t,
                 applicationId: n,
                 analyticsLocations: i,
-                returnRef: l,
+                returnRef: a,
                 onComplete: c,
-                onClose: u,
+                onClose: p,
                 renderHeader: d,
-                transitionState: b,
-                modalOnClose: y,
-                paymentModalVersion: f = "v2",
+                transitionState: y,
+                modalOnClose: b,
+                paymentModalVersion: O = "v2",
             } = e,
-            { paymentModalProps: O } = (0, s.Li)(),
-            j = o.useCallback(
+            { paymentModalProps: f } = (0, s.Li)(),
+            C = o.useCallback(
                 (e, t) => {
-                    y(), null != u && u(e, t);
+                    b(), null != p && p(e, t);
                 },
-                [y, u],
+                [b, p],
             );
         return (0, r.jsx)(
-            a.PaymentModal,
-            p(
+            l.PaymentModal,
+            u(
                 {
-                    transitionState: b,
-                    returnRef: l,
+                    transitionState: y,
+                    returnRef: a,
                     applicationId: n,
                     onComplete: c,
-                    onClose: j,
+                    onClose: C,
                     hideShadow: !0,
                     skuId: t,
                     renderHeader: d,
                     initialPlanId: null,
                     analyticsLocations: i,
-                    paymentModalVersion: f,
+                    paymentModalVersion: O,
                 },
-                O,
+                f,
             ),
         );
     },
     b = (e) => {
         let { skuId: t } = e;
         return (0, r.jsx)(
-            l.PaymentContextProvider,
-            u(p({}, e), {
+            a.PaymentContextProvider,
+            d(u({}, e), {
                 skuIDs: null != t ? [t] : [],
                 children: e.children,
             }),
         );
     },
-    y = (e) => {
+    O = (e) => {
         let {
                 loadId: t,
                 skuId: n,
                 applicationId: o,
-                analyticsLocations: l,
-                analyticsSourceLocation: a,
+                analyticsLocations: a,
+                analyticsSourceLocation: l,
                 giftContextProps: s,
-                flowSpecificOptions: y,
+                flowSpecificOptions: O,
                 onComplete: f,
-                onClose: O,
+                onClose: C,
                 renderModalProps: j,
                 checkoutFlow: P,
                 checkoutFlowConfiguration: h,
-                tenantCheckoutFlowConfig: C,
-                renderHeader: m,
-                stepConfigs: w,
+                tenantCheckoutFlowConfig: m,
+                renderHeader: w,
+                stepConfigs: S,
             } = e,
-            { purchaseType: S } = h,
-            { CustomPaymentContextProvider: k = b, UnifiedCheckoutContextProvider: v } = C,
-            I = null != s ? i.KB : i.b6;
-        return (0, r.jsx)(k, {
+            { purchaseType: g } = h,
+            { CustomPaymentContextProvider: v = b, UnifiedCheckoutContextProvider: I } = m,
+            k = null != s ? i.KB : i.b6;
+        return (0, r.jsx)(v, {
             applicationId: o,
             skuId: n,
             activeSubscription: null,
             loadId: t,
-            stepConfigs: w,
-            purchaseType: S,
+            stepConfigs: S,
+            purchaseType: g,
+            paymentGateway: P === c.G.ORB_CHECKOUT ? p.gg.VIRTUAL_CURRENCY : void 0,
             isGift: null == s ? void 0 : s.isGift,
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: P === c.G.ORB_CHECKOUT,
             children: (0, r.jsx)(
-                I,
-                u(p({}, s), {
-                    children: (0, r.jsx)(v, {
+                k,
+                d(u({}, s), {
+                    children: (0, r.jsx)(I, {
                         applicationId: o,
                         skuId: n,
                         loadId: t,
-                        analyticsLocations: l,
-                        analyticsSourceLocation: a,
+                        analyticsLocations: a,
+                        analyticsSourceLocation: l,
                         onComplete: f,
-                        onClose: O,
+                        onClose: C,
                         renderModalProps: j,
-                        flowSpecificOptions: y,
-                        children: (0, r.jsx)(d, {
+                        flowSpecificOptions: O,
+                        children: (0, r.jsx)(y, {
                             applicationId: o,
                             skuId: n,
-                            renderHeader: m,
-                            analyticsLocations: l,
+                            renderHeader: w,
+                            analyticsLocations: a,
                             onComplete: f,
-                            onClose: O,
+                            onClose: C,
                             modalOnClose: j.onClose,
                             transitionState: j.transitionState,
                             returnRef: j.returnRef,
