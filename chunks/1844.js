@@ -62,6 +62,14 @@ function T(e) {
 function C(e) {
     let { promotions: t, consumedInboundPromotionId: n } = e;
     (y = {}),
+        (b = {
+            [u.$k.BOGO]: {},
+            [u.$k.MARKETING_MOMENT]: {},
+            [u.$k.THIRD_PARTY_INBOUND]: {},
+            [u.$k.THIRD_PARTY_OUTBOUND]: {},
+            [u.$k.GIFT_PROMOTION]: {},
+        }),
+        (v = new Map()),
         t.forEach((e) => {
             let t = s.Z.createFromServer(e);
             if (!0 === (0, c.pD)({ promotionPartner: t.outboundTitle })) t.id in y || (y[t.id] = t);
@@ -91,6 +99,7 @@ function N() {
         [u.$k.THIRD_PARTY_OUTBOUND]: {},
         [u.$k.GIFT_PROMOTION]: {},
     }),
+        (v = new Map()),
         (g = !1),
         (y = {});
 }
