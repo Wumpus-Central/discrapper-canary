@@ -61,7 +61,7 @@ let O = "premiumRetentionEmojiPickerNotice",
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            children: (0, r.jsx)(c.Anchor, {
+                            children: (0, r.jsx)(c.eee, {
                                 onClick: () => {
                                     (0, h.A3)(n),
                                         t(),

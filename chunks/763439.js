@@ -348,7 +348,7 @@ let er = {
                 position: "left",
                 children: (0, r.jsx)("div", {
                     className: Z.searchLearnMore,
-                    children: (0, r.jsx)(h.Anchor, {
+                    children: (0, r.jsx)(h.eee, {
                         href: A.Z.getArticleURL(U.BhN.USING_SEARCH),
                         title: G.intl.string(G.t.hvVgAZ),
                         children: (0, r.jsx)(h.idN, {

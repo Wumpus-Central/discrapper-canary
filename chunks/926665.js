@@ -30,14 +30,14 @@ function x() {
                         children: o.tq
                             ? h.intl.format(h.t["0EikXi"], {
                                   link: () =>
-                                      (0, n.jsx)(c.Anchor, {
+                                      (0, n.jsx)(c.eee, {
                                           href: b,
                                           children: b,
                                       }),
                               })
                             : h.intl.format(h.t.hKHZhO, {
                                   link: () =>
-                                      (0, n.jsx)(c.Anchor, {
+                                      (0, n.jsx)(c.eee, {
                                           href: b,
                                           children: b,
                                       }),

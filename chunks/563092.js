@@ -32,7 +32,7 @@ let N = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
                         g.intl.format(I.default.i284fU, {
                             hook: (t, e) =>
                                 (0, i.jsx)(
-                                    s.Anchor,
+                                    s.eee,
                                     {
                                         onClick: n,
                                         children: t,

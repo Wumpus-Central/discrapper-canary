@@ -6,7 +6,7 @@ var a = e(481060),
     l = e(110024);
 function r(n) {
     let { url: t, text: e, onClick: r } = n;
-    return (0, i.jsx)(a.Anchor, {
+    return (0, i.jsx)(a.eee, {
         href: t,
         onClick: r,
         className: l.externalLinkWrapper,

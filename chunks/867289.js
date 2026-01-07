@@ -105,7 +105,7 @@ function b(e) {
             variant: "text-sm/normal",
             children: [
                 p.intl.format(p.t.PXVoEO, { phoneNumber: e }),
-                (0, r.jsx)(a.Anchor, {
+                (0, r.jsx)(a.eee, {
                     onClick: O,
                     className: _.phoneRevealer,
                     children: b ? p.intl.string(p.t.FfltIN) : p.intl.string(p.t.llArAg),

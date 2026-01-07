@@ -36,7 +36,7 @@ let f = (0, o.k4)(S.n.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
                         O.intl.format(C.default.i284fU, {
                             hook: (t, e) =>
                                 (0, i.jsx)(
-                                    s.Anchor,
+                                    s.eee,
                                     {
                                         onClick: o,
                                         children: t,

@@ -17,8 +17,8 @@ var a = n(54381),
     E = n(626135),
     N = n(179645),
     x = n(436046),
-    A = n(963209),
-    T = n(436457),
+    T = n(963209),
+    A = n(436457),
     C = n(877758),
     g = n(701476),
     j = n(785997),
@@ -148,7 +148,7 @@ function S(e) {
             },
             isSlideReady: R === j.F.CHANNEL_PROMPT,
         }),
-        { content: en, footer: ea } = (0, T.Z)({
+        { content: en, footer: ea } = (0, A.Z)({
             onBack: () => U(j.F.CHOOSE_TEMPLATE),
             onComplete: () => {
                 S();
@@ -180,7 +180,7 @@ function S(e) {
                 className: s()(G.modal, G.completed),
                 "aria-labelledby": t,
                 parentComponent: "NUFModal",
-                children: (0, a.jsx)(A.Z, { onComplete: S }),
+                children: (0, a.jsx)(T.Z, { onComplete: S }),
             }),
         );
     let er = { impression_group: r.ImpressionGroups.GUILD_ADD_NUF };
@@ -288,7 +288,7 @@ function S(e) {
                                           "data-migration-pending": !0,
                                           justify: u.Z.Justify.BETWEEN,
                                           className: s()(G.footer, G.join),
-                                          children: (0, a.jsx)(c.Anchor, {
+                                          children: (0, a.jsx)(c.eee, {
                                               className: G.joinCTA,
                                               onClick: () => {
                                                   U(j.F.JOIN_GUILD);

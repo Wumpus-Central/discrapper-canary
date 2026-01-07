@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(554916),
     l = n(399606),
     c = n(28664),
     u = n(481060),
@@ -136,7 +136,7 @@ let v = i.forwardRef(function (e, t) {
                                     position: "top",
                                     text: b.intl.formatToPlainString(b.t.bhrgkA, { legacyUsername: F }),
                                     spacing: 12,
-                                    children: (0, r.jsx)(u.Anchor, {
+                                    children: (0, r.jsx)(u.eee, {
                                         children: (0, r.jsx)("img", {
                                             className: x.legacyUsernameBadge,
                                             alt: "",

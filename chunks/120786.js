@@ -80,7 +80,7 @@ let y = () => {
                                 className: h.linkPreText,
                                 children: [s, "\xA0"],
                             }),
-                        (0, r.jsx)(c.Anchor, {
+                        (0, r.jsx)(c.eee, {
                             target: "_blank",
                             rel: "author",
                             href: f.Z.getArticleURL(_.BhN.ORBS_FAQ),

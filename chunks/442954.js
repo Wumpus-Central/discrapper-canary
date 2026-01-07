@@ -906,15 +906,14 @@ let C = {
             );
     },
     ConsentCheckBoxModal: async () => {
-        let { default: e } = await n.e("63490").then(n.bind(n, 853268)),
-            { VoidConfirmModal: t } = await Promise.resolve().then(n.bind(n, 288022)),
-            { Text: r, Heading: i, Anchor: l } = await Promise.resolve().then(n.bind(n, 481060)),
-            s = await Promise.resolve().then(n.t.bind(n, 473749, 19));
-        function o(n) {
-            let [o, c] = s.useState(!1),
-                [d, u] = s.useState(!1);
+        let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 288022)),
+            { Text: t, Heading: r } = await Promise.resolve().then(n.bind(n, 481060)),
+            i = await Promise.resolve().then(n.t.bind(n, 473749, 19));
+        function l(n) {
+            let [l, o] = i.useState(!1),
+                [c, d] = i.useState(!1);
             return (0, a.jsx)(
-                t,
+                e,
                 j(v({}, n), {
                     header: "Consent CheckBox Examples",
                     confirmText: "Close",
@@ -931,80 +930,43 @@ let C = {
                         children: [
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(i, {
+                                    (0, a.jsx)(r, {
                                         variant: "heading-md/semibold",
                                         style: { marginBottom: "12px" },
                                         children: "Terms of Service Consent",
                                     }),
-                                    (0, a.jsx)(e, {
-                                        value: o,
-                                        onChange: c,
-                                        subText: (0, a.jsxs)("span", {
-                                            children: [
-                                                "I agree to Discord's",
-                                                " ",
-                                                (0, a.jsx)(l, {
-                                                    href: "https://discord.com/terms",
-                                                    target: "_blank",
-                                                    rel: "noopener noreferrer",
-                                                    children: "Terms of Service",
-                                                }),
-                                                " ",
-                                                "and",
-                                                " ",
-                                                (0, a.jsx)(l, {
-                                                    href: "https://discord.com/privacy",
-                                                    target: "_blank",
-                                                    rel: "noopener noreferrer",
-                                                    children: "Privacy Policy",
-                                                }),
-                                            ],
-                                        }),
+                                    (0, a.jsx)(s.Checkbox, {
+                                        label: "I agree to Discord's Terms of Service and Privacy Policy",
+                                        checked: l,
+                                        onChange: (e) => o(e),
+                                        labelType: "secondary",
                                     }),
-                                    (0, a.jsxs)(r, {
+                                    (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
                                         style: { marginTop: "8px" },
-                                        children: ["Consent status: ", o ? "Agreed" : "Not agreed"],
+                                        children: ["Consent status: ", l ? "Agreed" : "Not agreed"],
                                     }),
                                 ],
                             }),
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(i, {
+                                    (0, a.jsx)(r, {
                                         variant: "heading-md/semibold",
                                         style: { marginBottom: "12px" },
                                         children: "Promotional Email Consent",
                                     }),
-                                    (0, a.jsx)(e, {
-                                        value: d,
-                                        onChange: u,
-                                        subText:
-                                            "I would like to receive promotional emails from Discord about new features, events, and other updates.",
-                                        muted: !0,
+                                    (0, a.jsx)(s.Checkbox, {
+                                        label: "I would like to receive promotional emails from Discord about new features, events, and other updates.",
+                                        checked: c,
+                                        onChange: (e) => d(e),
+                                        labelType: "secondary",
                                     }),
-                                    (0, a.jsxs)(r, {
+                                    (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
                                         style: { marginTop: "8px" },
-                                        children: ["Promo consent status: ", d ? "Opted in" : "Not opted in"],
-                                    }),
-                                ],
-                            }),
-                            (0, a.jsxs)("div", {
-                                children: [
-                                    (0, a.jsx)(i, {
-                                        variant: "heading-md/semibold",
-                                        style: { marginBottom: "12px" },
-                                        children: "Custom Styled Consent",
-                                    }),
-                                    (0, a.jsx)(e, {
-                                        value: !1,
-                                        onChange: () => {},
-                                        subText:
-                                            "This is a custom styled consent checkbox with different styling options.",
-                                        marginTopStyle: "margin-top-16",
-                                        subtextClassName: "custom-consent-text",
+                                        children: ["Promo consent status: ", c ? "Opted in" : "Not opted in"],
                                     }),
                                 ],
                             }),
@@ -1013,7 +975,7 @@ let C = {
                 }),
             );
         }
-        return (o.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(o, v({}, e));
+        return (l.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(l, v({}, e));
     },
     GuildRaidLockdownFeedbackModal: async () => {
         let { default: e } = await n.e("53324").then(n.bind(n, 821312));

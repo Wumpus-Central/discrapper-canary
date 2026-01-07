@@ -86,7 +86,7 @@ function h(e) {
                 }),
                 t.isPurchasedExternally
                     ? null
-                    : (0, r.jsx)(o.Anchor, {
+                    : (0, r.jsx)(o.eee, {
                           onClick: (e) => {
                               e.preventDefault(),
                                   (0, o.ZDy)(async () => {

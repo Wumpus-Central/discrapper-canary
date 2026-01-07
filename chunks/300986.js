@@ -18,7 +18,7 @@ function m(e) {
         m = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         b = (0, i.e7)([o.default], () => o.default.locale),
         _ = (0, d.EO)(m);
-    return (0, r.jsx)(a.Anchor, {
+    return (0, r.jsx)(a.eee, {
         href: u.w,
         target: "_blank",
         tabIndex: -1,

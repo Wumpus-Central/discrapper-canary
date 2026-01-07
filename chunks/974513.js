@@ -47,7 +47,7 @@ function p(e) {
         }, [t, c]);
     return (0, r.jsx)("div", {
         className: n,
-        children: (0, r.jsx)(s.Anchor, {
+        children: (0, r.jsx)(s.eee, {
             onClick: u,
             children: (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",

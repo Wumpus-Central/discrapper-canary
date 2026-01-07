@@ -225,12 +225,12 @@ function eX() {
                     justify: U.Z.Justify.BETWEEN,
                     className: ez.__invalid_footer,
                     children: [
-                        (0, r.jsx)(E.Anchor, {
+                        (0, r.jsx)(E.eee, {
                             href: eU.EYA.KRISP,
                             onClick: (e) => eJ(e),
                             children: (0, r.jsx)("div", { className: ez.krispLogo }),
                         }),
-                        (0, r.jsx)(E.Anchor, {
+                        (0, r.jsx)(E.eee, {
                             href: ew.Z.getArticleURL(eU.BhN.NOISE_SUPPRESSION),
                             className: ez.krispLink,
                             onClick: (e) => eJ(e),

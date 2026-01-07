@@ -42,7 +42,7 @@ function h(e) {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               "\xA0",
-                              (0, r.jsx)(o.Anchor, {
+                              (0, r.jsx)(o.eee, {
                                   className: g.termsApplyAnchor,
                                   href: c.Z.getArticleURL(E.helpArticleId),
                                   children: f.intl.string(f.t["sBp+u0"]),

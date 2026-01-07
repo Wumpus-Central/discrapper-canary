@@ -127,7 +127,7 @@ function w(e) {
                           ? P.intl.format(P.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        a.Anchor,
+                                        a.eee,
                                         {
                                             href: d.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,

@@ -208,7 +208,7 @@ function P(e) {
                 (0, r.jsx)(d.Text, {
                     variant: "text-md/medium",
                     color: "text-muted",
-                    children: (0, r.jsx)(d.Anchor, {
+                    children: (0, r.jsx)(d.eee, {
                         className: C.helpdeskLink,
                         href: h.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
                         children: v.intl.string(v.t["G3EA+4"]),

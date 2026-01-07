@@ -26,7 +26,7 @@ function g(t) {
         subtitle: u.intl.format(u.t.ZtUieE, {
             openSettingsHook: (t, n) =>
                 (0, e.jsx)(
-                    o.Anchor,
+                    o.eee,
                     {
                         onClick: g,
                         children: t,

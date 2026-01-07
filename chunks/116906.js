@@ -92,7 +92,7 @@ function Z(e) {
                                 ? g.intl.format(g.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
-                                              o.Anchor,
+                                              o.eee,
                                               {
                                                   href: d.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,

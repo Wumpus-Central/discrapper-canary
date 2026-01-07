@@ -3,15 +3,15 @@ var i = n(54381),
     a = n(473749),
     r = n(793030),
     c = n(481060),
-    o = n(536442),
-    s = n(13140),
+    s = n(536442),
+    o = n(13140),
     l = n(487029),
     d = n(388032),
     u = n(362961);
 function b(e) {
-    let { guildId: t, channel: b, keybind: h, transitionState: y, onClose: k } = e,
+    let { guildId: t, channel: b, keybind: y, transitionState: h, onClose: k } = e,
         p = a.useCallback(async () => {
-            (0, o.Kw)(o.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await k();
+            (0, s.Kw)(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await k();
         }, [k]),
         f = a.useCallback(async () => {
             await p(),
@@ -66,13 +66,13 @@ function b(e) {
     return (0, i.jsxs)(r.Modal, {
         onClose: p,
         actions: j,
-        transitionState: y,
+        transitionState: h,
         title: d.intl.string(d.t.yJeV51),
         children: [
             (0, i.jsx)(c.Text, {
                 variant: "text-md/normal",
                 children: d.intl.format(d.t.fq3Swz, {
-                    keybind: (0, s.BB)(h.shortcut, !0).split(" + "),
+                    keybind: (0, o.BB)(y.shortcut, !0).split(" + "),
                     keybindHook: (e, t) =>
                         (0, i.jsx)(
                             "span",
@@ -80,14 +80,14 @@ function b(e) {
                                 className: u.keybindHintKeys,
                                 children: (0, i.jsx)(c.M2$, {
                                     className: u.keybindShortcut,
-                                    shortcut: (0, s.BB)(h.shortcut, !1),
+                                    shortcut: (0, o.BB)(y.shortcut, !1),
                                 }),
                             },
                             t,
                         ),
                     openSettingsHook: (e, t) =>
                         (0, i.jsx)(
-                            c.Anchor,
+                            c.eee,
                             {
                                 onClick: f,
                                 children: e,

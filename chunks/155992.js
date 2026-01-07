@@ -122,7 +122,7 @@ let T = (e) => {
                 }),
                 (0, r.jsx)("div", {
                     style: { marginTop: 16 },
-                    children: (0, r.jsx)(l.Anchor, {
+                    children: (0, r.jsx)(l.eee, {
                         onClick: () => e.handleStepChange(e.originStep),
                         children: "\u2190 Go Back",
                     }),

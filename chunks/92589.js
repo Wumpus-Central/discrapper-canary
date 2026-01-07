@@ -85,7 +85,7 @@ let f = (e) => {
                                       m && t.body,
                                       m && h && " ",
                                       h &&
-                                          (0, r.jsx)(a.Anchor, {
+                                          (0, r.jsx)(a.eee, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
                                               style: d({}, p),

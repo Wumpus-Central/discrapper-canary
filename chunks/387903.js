@@ -253,7 +253,7 @@ class $ extends (r = a.PureComponent) {
                       })
                     : null;
         if (_)
-            m = (0, i.jsx)(p.Anchor, {
+            m = (0, i.jsx)(p.eee, {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: m,
             });
@@ -298,7 +298,7 @@ class $ extends (r = a.PureComponent) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(p.Anchor, {
+                    (0, i.jsx)(p.eee, {
                         className: B.twitchBackgroundImage,
                         href: e.url,
                         children: m,
@@ -383,7 +383,7 @@ class $ extends (r = a.PureComponent) {
                 ((c = a),
                 (u = a),
                 (0, j.Z)(e) && null != e.sync_id && null != a
-                    ? (u = (0, i.jsx)(p.Anchor, {
+                    ? (u = (0, i.jsx)(p.eee, {
                           className: B.bodyLink,
                           onClick: this.handleOpenSpotifyTrack,
                           children: a,
@@ -526,7 +526,7 @@ class $ extends (r = a.PureComponent) {
             let t = (t, n) =>
                 null != e.sync_id && null != u
                     ? (0, i.jsx)(
-                          p.Anchor,
+                          p.eee,
                           {
                               className: B.bodyLink,
                               onClick: this.handleOpenSpotifyAlbum,

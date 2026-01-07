@@ -92,7 +92,7 @@ function h(n) {
                     e &&
                         (0, i.jsx)("div", {
                             className: p.anchorContainer,
-                            children: (0, i.jsx)(l.Anchor, {
+                            children: (0, i.jsx)(l.eee, {
                                 onClick: () => k((n) => !n),
                                 children: (0, i.jsx)(l.Heading, {
                                     variant: "heading-md/normal",

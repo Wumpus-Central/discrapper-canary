@@ -35,7 +35,7 @@ let c =
     (l = l =
         {
             react: function (e, t, n) {
-                return (0, i.jsx)(o.Anchor, {
+                return (0, i.jsx)(o.eee, {
                     href: e.target,
                     target: "_blank",
                     children: t(e.content, n),

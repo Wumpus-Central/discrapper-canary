@@ -12,7 +12,7 @@ function d() {
     return (0, r.jsxs)("div", {
         className: c.socialLinks,
         children: [
-            (0, r.jsx)(i.Anchor, {
+            (0, r.jsx)(i.eee, {
                 target: "_blank",
                 tabIndex: -1,
                 rel: "author",
@@ -27,7 +27,7 @@ function d() {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, r.jsx)(i.Anchor, {
+            (0, r.jsx)(i.eee, {
                 target: "_blank",
                 rel: "author",
                 title: "Instagram",
@@ -42,7 +42,7 @@ function d() {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, r.jsx)(i.Anchor, {
+            (0, r.jsx)(i.eee, {
                 target: "_blank",
                 rel: "author",
                 title: "Facebook",
@@ -57,7 +57,7 @@ function d() {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, r.jsx)(i.Anchor, {
+            (0, r.jsx)(i.eee, {
                 target: "_blank",
                 rel: "author",
                 title: "YouTube",
@@ -72,7 +72,7 @@ function d() {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, r.jsx)(i.Anchor, {
+            (0, r.jsx)(i.eee, {
                 target: "_blank",
                 rel: "author",
                 title: "TikTok",

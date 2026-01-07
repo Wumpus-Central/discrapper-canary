@@ -646,7 +646,7 @@ class eS extends (r = a.PureComponent) {
                             ei.intl.formatToPlainString(ei.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
                         ),
                 }),
-                (0, i.jsx)(h.Anchor, {
+                (0, i.jsx)(h.eee, {
                     href: ep(t),
                     children: ei.intl.string(ei.t.re5nOB),
                 }),

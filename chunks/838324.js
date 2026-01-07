@@ -103,7 +103,7 @@ function m(e) {
                                     children: g.intl.format(g.t["8Geut3"], {
                                         count: y,
                                         prejoinHook: (e) =>
-                                            (0, r.jsx)(a.Anchor, {
+                                            (0, r.jsx)(a.eee, {
                                                 onClick: n,
                                                 children: (0, r.jsx)(a.Text, {
                                                     tag: "span",

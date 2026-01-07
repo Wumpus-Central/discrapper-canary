@@ -238,7 +238,7 @@ let k = {
                                     direction: "vertical",
                                     gap: 8,
                                     children: [
-                                        (0, r.jsx)(d.Anchor, {
+                                        (0, r.jsx)(d.eee, {
                                             href: "https://i.dis.gd/createPromo",
                                             children: "How to create promotion",
                                         }),

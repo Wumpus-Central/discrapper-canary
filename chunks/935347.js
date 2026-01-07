@@ -125,7 +125,7 @@ class P extends i.PureComponent {
                                 }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsxs)(d.Anchor, {
+                                        (0, r.jsxs)(d.eee, {
                                             className: N.twitterLink,
                                             href: S.yXt.TWITTER_SUPPORT,
                                             target: "_blank",
@@ -138,7 +138,7 @@ class P extends i.PureComponent {
                                                 T.intl.string(T.t.KlyTbj),
                                             ],
                                         }),
-                                        (0, r.jsxs)(d.Anchor, {
+                                        (0, r.jsxs)(d.eee, {
                                             className: N.statusLink,
                                             href: S.yXt.STATUS,
                                             target: "_blank",

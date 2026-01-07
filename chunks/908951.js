@@ -188,7 +188,7 @@ function x(e) {
         $ = (e) => {
             l()(null != e.paymentGateway, "Expected payment gateway when managed externally");
             let t = (0, O.JE)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
-            return (0, r.jsx)(u.Anchor, {
+            return (0, r.jsx)(u.eee, {
                 href: t,
                 useDefaultUnderlineStyles: !1,
                 className: A.externalLink,

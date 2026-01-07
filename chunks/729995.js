@@ -228,7 +228,7 @@ function I(e) {
             (0, r.jsxs)("div", {
                 className: C.help,
                 children: [
-                    (0, r.jsx)(l.Anchor, {
+                    (0, r.jsx)(l.eee, {
                         target: "_blank",
                         href: v.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(l.Text, {
@@ -238,7 +238,7 @@ function I(e) {
                         }),
                     }),
                     (0, r.jsx)("div", { className: C.helpSeparator }),
-                    (0, r.jsx)(l.Anchor, {
+                    (0, r.jsx)(l.eee, {
                         onClick: n,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",

@@ -110,7 +110,7 @@ function v(e) {
                                     children: h.intl.format(h.t.Bk0VOi, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
-                                                o.Anchor,
+                                                o.eee,
                                                 {
                                                     onClick: _,
                                                     children: e,

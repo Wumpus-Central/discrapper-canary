@@ -1,57 +1,57 @@
-e.d(n, { default: () => p }), e(388685);
-var i = e(54381),
-    a = e(473749),
-    l = e(793030),
-    r = e(481060),
-    c = e(479531),
-    s = e(703656),
-    o = e(695346),
-    u = e(342386),
-    d = e(981631),
-    f = e(517319),
-    h = e(388032);
-function p(t) {
-    let { transitionState: n, onClose: e } = t,
-        [p, x] = a.useState(!1),
+n.d(e, { default: () => x }), n(388685);
+var i = n(54381),
+    a = n(473749),
+    l = n(793030),
+    r = n(481060),
+    c = n(479531),
+    s = n(703656),
+    o = n(695346),
+    u = n(342386),
+    d = n(981631),
+    f = n(517319),
+    p = n(388032);
+function x(t) {
+    let { transitionState: e, onClose: n } = t,
+        [x, h] = a.useState(!1),
         [k, S] = a.useState(null),
         C = async () => {
-            S(null), x(!0);
+            S(null), h(!0);
             try {
-                await o.Ex.updateSetting(!1), (0, s.uL)(d.Z5c.FRIENDS), (0, u.default)(), e();
+                await o.Ex.updateSetting(!1), (0, s.uL)(d.Z5c.FRIENDS), (0, u.default)(), n();
             } catch (t) {
                 S(new c.Z(t).getAnyErrorMessage());
             } finally {
-                x(!1);
+                h(!1);
             }
         },
         g = () => {
-            (0, s.uL)(d.Z5c.SETTINGS("family-center")), e();
+            (0, s.uL)(d.Z5c.SETTINGS("family-center")), n();
         };
     return (0, i.jsx)(l.Modal, {
-        transitionState: n,
-        onClose: e,
-        title: h.intl.string(f.default.VGB30H),
-        subtitle: h.intl.format(f.default["CrZZ+p"], {
-            openSettingsHook: (t, n) =>
+        transitionState: e,
+        onClose: n,
+        title: p.intl.string(f.default.VGB30H),
+        subtitle: p.intl.format(f.default["CrZZ+p"], {
+            openSettingsHook: (t, e) =>
                 (0, i.jsx)(
-                    r.Anchor,
+                    r.eee,
                     {
                         onClick: g,
                         children: t,
                     },
-                    n,
+                    e,
                 ),
         }),
         actions: [
             {
                 variant: "secondary",
-                text: h.intl.string(h.t["ETE/oC"]),
-                onClick: e,
+                text: p.intl.string(p.t["ETE/oC"]),
+                onClick: n,
             },
             {
-                text: h.intl.string(f.default.cSb7U0),
+                text: p.intl.string(f.default.cSb7U0),
                 onClick: C,
-                loading: p,
+                loading: x,
                 variant: "critical-primary",
             },
         ],

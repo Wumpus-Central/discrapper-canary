@@ -39,7 +39,7 @@ let c = (e) => {
                                     "\xA0",
                                     n
                                         ? s.intl.string(s.t.StGVvC)
-                                        : (0, r.jsx)(a.Anchor, {
+                                        : (0, r.jsx)(a.eee, {
                                               onClick: i,
                                               children: s.intl.string(s.t.Ex7sk9),
                                           }),

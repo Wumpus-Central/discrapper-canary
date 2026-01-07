@@ -19,9 +19,9 @@ var i = t(120356),
     p = t(275759),
     x = t(888496),
     h = t(753194),
-    v = t(749681),
-    b = t(258971),
-    j = t(598077),
+    j = t(749681),
+    v = t(258971),
+    b = t(598077),
     g = t(671533),
     I = t(49012),
     y = t(652853),
@@ -34,10 +34,10 @@ function P(e) {
     var n, t;
     let i,
         d,
-        v,
+        j,
         {
-            connectedAccount: b,
-            theme: j,
+            connectedAccount: v,
+            theme: b,
             locale: y,
             userId: T,
             className: P,
@@ -45,12 +45,12 @@ function P(e) {
             showInvisibleIcon: _,
         } = e;
     null == E && (E = !0);
-    let C = null != (t = b.metadata) ? t : {},
+    let C = null != (t = v.metadata) ? t : {},
         S = E ? (0, p.FI)(C[O.PC.CREATED_AT], y) : null,
         w = (0, s.dQu)(r.Z.unsafe_rawColors.TWITTER).hex(),
         D = N.intl.string(N.t["6H6h1r"]);
     if (E)
-        switch (b.type) {
+        switch (v.type) {
             case Z.ABu.REDDIT:
                 i = (0, x.oP)(C);
                 break;
@@ -71,24 +71,24 @@ function P(e) {
             case Z.ABu.TIKTOK:
                 i = (0, x.hf)(C);
         }
-    let L = u.Z.get((0, m.rR)(b.type)),
-        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, b);
+    let L = u.Z.get((0, m.rR)(v.type)),
+        R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, v);
     null != _ && _
-        ? (v = (0, l.jsx)(s.kZF, {
+        ? (j = (0, l.jsx)(s.kZF, {
               size: "md",
               color: "currentColor",
               className: o()(A.__invalid_connectedAccountOpenIconContainer, A.connectedAccountHideIcon),
           }))
         : null != R &&
-          (v = (0, l.jsx)(s.Anchor, {
+          (j = (0, l.jsx)(s.eee, {
               href: R,
               "aria-label":
                   (null == L ? void 0 : L.name) != null
-                      ? "".concat(L.name, ", ").concat(b.name, ", ").concat(N.intl.string(N.t.q5jLJB))
-                      : "".concat(b.name, ", ").concat(N.intl.string(N.t.q5jLJB)),
+                      ? "".concat(L.name, ", ").concat(v.name, ", ").concat(N.intl.string(N.t.q5jLJB))
+                      : "".concat(v.name, ", ").concat(N.intl.string(N.t.q5jLJB)),
               onClick: (e) => {
                   var n;
-                  (n = b.type),
+                  (n = v.type),
                       (0, f.yw)(Z.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: n,
                           other_user_id: T,
@@ -108,7 +108,7 @@ function P(e) {
           }));
     let M = (0, s.dQu)(r.Z.colors.INTERACTIVE_MUTED).hex(),
         B = (0, s.dQu)(r.Z.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-        U = b.verified
+        U = v.verified
             ? (0, l.jsx)(h.Z, {
                   className: A.connectedAccountVerifiedIcon,
                   color: null != d ? d : M,
@@ -132,7 +132,7 @@ function P(e) {
                         children: (0, l.jsx)("img", {
                             alt: N.intl.formatToPlainString(N.t.rtm15P, { name: null == L ? void 0 : L.name }),
                             className: A.connectedAccountIcon,
-                            src: (0, c.wj)(j)
+                            src: (0, c.wj)(b)
                                 ? null == L
                                     ? void 0
                                     : L.icon.darkSVG
@@ -152,18 +152,18 @@ function P(e) {
                                         children: [
                                             (0, l.jsx)(a.u, {
                                                 overflowOnly: !0,
-                                                text: b.name,
+                                                text: v.name,
                                                 children: (0, l.jsx)(s.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "interactive-text-active",
                                                     className: A.connectedAccountNameText,
-                                                    children: b.name,
+                                                    children: v.name,
                                                 }),
                                             }),
                                             U,
                                         ],
                                     }),
-                                    v,
+                                    j,
                                 ],
                             }),
                             null != S
@@ -191,11 +191,11 @@ function E(e) {
         c = (0, x.rm)(n, i),
         u = () => {
             null == r || r(),
-                (0, v.transitionToGlobalDiscovery)({
+                (0, j.transitionToGlobalDiscovery)({
                     tab: T.GlobalDiscoveryTab.APPS,
                     applicationId: n.application.id,
                     newSessionState: {
-                        entrypoint: { name: b.xF.APPLICATION_DIRECTORY_URL },
+                        entrypoint: { name: v.xF.APPLICATION_DIRECTORY_URL },
                         guildId: a,
                     },
                 });
@@ -257,7 +257,7 @@ function E(e) {
                                     children: [
                                         null != n.application.bot
                                             ? (0, l.jsx)(d.Z, {
-                                                  user: new j.Z(n.application.bot),
+                                                  user: new b.Z(n.application.bot),
                                                   size: s.EFr.SIZE_16,
                                               })
                                             : null,

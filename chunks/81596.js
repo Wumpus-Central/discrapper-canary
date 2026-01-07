@@ -1,4 +1,4 @@
-i.d(n, { default: () => O }), i(388685);
+i.d(n, { default: () => h }), i(388685);
 var e = i(54381),
     r = i(473749),
     s = i(793030),
@@ -14,9 +14,9 @@ var e = i(54381),
     C = i(365583),
     N = i(981631),
     R = i(388032),
-    h = i(616874);
-function O(t) {
-    let { user: n, entry: i, transitionState: O, onAction: p, onClose: I, onOpenGameSettings: f } = t,
+    O = i(616874);
+function h(t) {
+    let { user: n, entry: i, transitionState: h, onAction: p, onClose: I, onOpenGameSettings: f } = t,
         [x, S] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => a.Bt, []),
@@ -29,7 +29,7 @@ function O(t) {
                         onOpenGameSettings: f,
                     });
                     return (0, e.jsx)(
-                        d.Anchor,
+                        d.eee,
                         {
                             onClick: () => {
                                 null == p || p({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
@@ -65,11 +65,11 @@ function O(t) {
                 },
             ],
             onClose: I,
-            transitionState: O,
+            transitionState: h,
             children: [
                 null != S
                     ? (0, e.jsxs)("div", {
-                          className: h.error,
+                          className: O.error,
                           children: [
                               (0, e.jsx)(d.k$p, { color: d.TVs.colors.STATUS_DANGER }),
                               (0, e.jsx)(d.Text, {
@@ -82,7 +82,7 @@ function O(t) {
                 (0, e.jsx)(_.Z, {
                     user: n,
                     entry: i,
-                    className: h.card,
+                    className: O.card,
                     hideContextMenu: !0,
                 }),
             ],

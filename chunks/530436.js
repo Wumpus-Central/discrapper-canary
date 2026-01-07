@@ -14,7 +14,7 @@ function g(e) {
         m = r.useCallback(() => {
             g(), s.Z.open(x, c.pNK.INVITES);
         }, [x, g]),
-        h = r.useCallback(
+        v = r.useCallback(
             (e) =>
                 (0, l.jsx)(i.P3F, {
                     className: d.errorLink,
@@ -28,9 +28,9 @@ function g(e) {
                 }),
             [m],
         ),
-        v = r.useCallback(
+        h = r.useCallback(
             (e) =>
-                (0, l.jsx)(i.Anchor, {
+                (0, l.jsx)(i.eee, {
                     href: c.EYA.INVITES_HELP,
                     target: "_blank",
                     children: (0, l.jsx)(i.Text, {
@@ -48,8 +48,8 @@ function g(e) {
                     ? n.getAnyErrorMessage()
                     : o.Z.can(c.Plq.MANAGE_GUILD, t)
                       ? u.intl.format(u.t["H/RUY1"], {
-                            inviteListHook: h,
-                            inviteHelpHook: v,
+                            inviteListHook: v,
+                            inviteHelpHook: h,
                         })
                       : u.intl.string(u.t["/FxH6G"])
                 : "message" in n

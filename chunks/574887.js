@@ -14,15 +14,15 @@ var i = t(120356),
     p = t(768762),
     x = t(706454),
     h = t(49012),
-    v = t(981631),
-    b = t(856651),
-    j = t(388032),
+    j = t(981631),
+    v = t(856651),
+    b = t(388032),
     g = t(980120);
 function I(e) {
     var n;
     let { account: t, locale: i, userId: o } = e,
         r = null != (n = t.metadata) ? n : {},
-        x = (0, f.FI)(r[b.PC.CREATED_AT], i),
+        x = (0, f.FI)(r[v.PC.CREATED_AT], i),
         I = s.Z.get((0, u.rR)(t.type));
     return (0, l.jsxs)("li", {
         className: g.connection,
@@ -32,7 +32,7 @@ function I(e) {
                 children: (0, l.jsx)("div", {
                     className: g.platformIconContainer,
                     children: (0, l.jsx)("img", {
-                        alt: j.intl.formatToPlainString(j.t.rtm15P, { name: null == I ? void 0 : I.name }),
+                        alt: b.intl.formatToPlainString(b.t.rtm15P, { name: null == I ? void 0 : I.name }),
                         className: g.platformIcon,
                         src: null == I ? void 0 : I.icon.lightPNG,
                     }),
@@ -56,7 +56,7 @@ function I(e) {
                                               children: t.name,
                                           }),
                                       })
-                                    : (0, l.jsx)(c.Anchor, {
+                                    : (0, l.jsx)(c.eee, {
                                           href: n,
                                           className: g.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
@@ -65,17 +65,17 @@ function I(e) {
                                                   ? ""
                                                         .concat(I.name, ", ")
                                                         .concat(t.name, ", ")
-                                                        .concat(j.intl.string(j.t.q5jLJB))
-                                                  : "".concat(t.name, ", ").concat(j.intl.string(j.t.q5jLJB)),
+                                                        .concat(b.intl.string(b.t.q5jLJB))
+                                                  : "".concat(t.name, ", ").concat(b.intl.string(b.t.q5jLJB)),
                                           onClick: (e) => {
-                                              (0, d.yw)(v.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              (0, d.yw)(j.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: t.type,
                                                   other_user_id: o,
                                               }),
                                                   (0, h.q)(
                                                       {
                                                           href: n,
-                                                          trusted: (null == I ? void 0 : I.type) !== v.ABu.DOMAIN,
+                                                          trusted: (null == I ? void 0 : I.type) !== j.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -103,24 +103,24 @@ function I(e) {
                             null != x &&
                                 (0, l.jsx)(c.Text, {
                                     variant: "text-xs/normal",
-                                    children: j.intl.format(j.t["9rfonh"], { date: x }),
+                                    children: b.intl.format(b.t["9rfonh"], { date: x }),
                                 }),
                         ],
                     }),
                     (0, l.jsx)("div", {
                         className: g.metadata,
                         children:
-                            t.type === v.ABu.REDDIT
+                            t.type === j.ABu.REDDIT
                                 ? (0, m.oP)(r)
-                                : t.type === v.ABu.STEAM
+                                : t.type === j.ABu.STEAM
                                   ? (0, m.Dq)(r)
-                                  : t.type === v.ABu.BLUESKY || t.type === v.ABu.MASTODON || t.type === v.ABu.TWITTER
+                                  : t.type === j.ABu.BLUESKY || t.type === j.ABu.MASTODON || t.type === j.ABu.TWITTER
                                     ? (0, m.rJ)(r)
-                                    : t.type === v.ABu.PAYPAL
+                                    : t.type === j.ABu.PAYPAL
                                       ? (0, m.li)(r)
-                                      : t.type === v.ABu.EBAY
+                                      : t.type === j.ABu.EBAY
                                         ? (0, m.ul)(r)
-                                        : t.type === v.ABu.TIKTOK
+                                        : t.type === j.ABu.TIKTOK
                                           ? (0, m.hf)(r)
                                           : null,
                     }),

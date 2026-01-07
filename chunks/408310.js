@@ -31,7 +31,7 @@ let u = (e) => {
                 ? s.intl.format(s.t.qWFupn, {
                       addServerHook: function (e, t) {
                           return (0, r.jsx)(
-                              i.Anchor,
+                              i.eee,
                               {
                                   onClick: g,
                                   children: e,

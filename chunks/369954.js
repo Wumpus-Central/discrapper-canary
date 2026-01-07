@@ -70,7 +70,7 @@ let O = (e) => {
                             children: b.intl.format(E.default.X9rW0j, {
                                 openSettingsHook: (e, t) =>
                                     (0, r.jsx)(
-                                        o.Anchor,
+                                        o.eee,
                                         {
                                             onClick: n,
                                             children: e,

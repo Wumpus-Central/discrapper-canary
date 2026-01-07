@@ -97,7 +97,7 @@ function I() {
                                     height: 40,
                                     alt: "",
                                 }),
-                                (0, r.jsx)(o.Anchor, {
+                                (0, r.jsx)(o.eee, {
                                     href: f.Z.getArticleURL(h.BhN.NOISE_SUPPRESSION),
                                     onClick: S,
                                     children: g.intl.string(g.t.hvVgAZ),

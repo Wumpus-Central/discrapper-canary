@@ -96,7 +96,7 @@ function I(e) {
                       keybind: (0, g.BB)(P.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
-                              o.Anchor,
+                              o.eee,
                               {
                                   onClick: R,
                                   children: e,

@@ -15,7 +15,7 @@ function h() {
     return (0, c.Jm)()
         ? b.intl.format(b.t.iWGjcg, {
               hook: (e) =>
-                  (0, a.jsx)(i.Anchor, {
+                  (0, a.jsx)(i.eee, {
                       className: f.anchor,
                       onClick: (e) => {
                           e.preventDefault(),
@@ -28,7 +28,7 @@ function h() {
           })
         : b.intl.format(b.t.edpbxy, {
               hook: (e) =>
-                  (0, a.jsx)(i.Anchor, {
+                  (0, a.jsx)(i.eee, {
                       className: f.anchor,
                       onClick: (e) => {
                           e.preventDefault(),

@@ -197,7 +197,7 @@ function S(e) {
             (0, r.jsxs)("div", {
                 className: N.links,
                 children: [
-                    (0, r.jsx)(s.Anchor, {
+                    (0, r.jsx)(s.eee, {
                         target: "_blank",
                         href: O.EYA.GUILD_ONBOARDING_EXAMPLES,
                         children: (0, r.jsx)(s.Text, {
@@ -207,7 +207,7 @@ function S(e) {
                         }),
                     }),
                     (0, r.jsx)("div", { className: N.dot }),
-                    (0, r.jsx)(s.Anchor, {
+                    (0, r.jsx)(s.eee, {
                         onClick: b,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",

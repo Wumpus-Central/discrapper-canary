@@ -41,7 +41,7 @@ function f() {
                     (0, o.jsx)(r.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: (0, o.jsx)(r.Anchor, {
+                        children: (0, o.jsx)(r.eee, {
                             href: a.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
                             children: u.intl.string(u.t.hvVgAZ),
                         }),

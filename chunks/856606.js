@@ -540,7 +540,7 @@ function el() {
                                 marginBottom: 14,
                             },
                         }),
-                        (0, i.jsx)(f.Anchor, {
+                        (0, i.jsx)(f.eee, {
                             href: U.Z.getArticleURL(Y.BhN.PERMISSIONS_TUTORIAL),
                             target: "_blank",
                             children: (0, i.jsx)(f.Text, {

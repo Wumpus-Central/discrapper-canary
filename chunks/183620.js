@@ -76,7 +76,7 @@ class d extends i.PureComponent {
                         variant: "text-sm/normal",
                         children: (0, r.jsx)(o.P3F, {
                             onClick: this.handleRetry,
-                            children: (0, r.jsx)(o.Anchor, { children: l.intl.string(l.t.PZgmxv) }),
+                            children: (0, r.jsx)(o.eee, { children: l.intl.string(l.t.PZgmxv) }),
                         }),
                     }),
                 ],

@@ -21,7 +21,7 @@ function p() {
               children: (0, r.jsx)(u.Z, {
                   text: f.intl.format(f.t["TnH05/"], { count: n }),
                   children: (0, r.jsx)(
-                      a.Anchor,
+                      a.eee,
                       ((e = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},

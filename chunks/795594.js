@@ -228,7 +228,7 @@ let eu = (e) => {
                   className: et.tosPrivacy,
                   children: [
                       null != t.terms_of_service_url
-                          ? (0, r.jsxs)(E.Anchor, {
+                          ? (0, r.jsxs)(E.eee, {
                                 onClick: i,
                                 tabIndex: n ? 0 : -1,
                                 className: et.tos,
@@ -253,7 +253,7 @@ let eu = (e) => {
                                     null != t.terms_of_service_url
                                         ? (0, r.jsx)("div", { className: et.divider })
                                         : null,
-                                    (0, r.jsxs)(E.Anchor, {
+                                    (0, r.jsxs)(E.eee, {
                                         onClick: a,
                                         className: et.privacy,
                                         tabIndex: n ? 0 : -1,

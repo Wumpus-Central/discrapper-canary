@@ -144,7 +144,7 @@ let H = (e) => {
                                     color: "text-strong",
                                     children: a.guild.name,
                                 }),
-                                (0, r.jsx)(f.Anchor, {
+                                (0, r.jsx)(f.eee, {
                                     href:
                                         null == (n = g.Z.get(a.type)) || null == (t = n.getPlatformUserUrl)
                                             ? void 0

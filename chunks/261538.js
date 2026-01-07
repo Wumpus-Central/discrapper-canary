@@ -16,7 +16,7 @@ var o = n(400569),
     s = n(432850);
 let l = (e) => {
     let { href: t } = e;
-    return (0, r.jsx)(i.Anchor, {
+    return (0, r.jsx)(i.eee, {
         href: t,
         children: t,
     });

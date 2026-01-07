@@ -154,7 +154,7 @@ let T = () => {
                             !__OVERLAY__ &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    (0, l.jsxs)(s.Anchor, {
+                                    (0, l.jsxs)(s.eee, {
                                         className: a()(C.debugButton, C.textWithIcon),
                                         onClick: t,
                                         children: [
@@ -166,7 +166,7 @@ let T = () => {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsxs)(s.Anchor, {
+                                    (0, l.jsxs)(s.eee, {
                                         className: a()(C.copyStatsButton, C.textWithIcon),
                                         onClick: T,
                                         title: "Copy to clipboard",
@@ -183,7 +183,7 @@ let T = () => {
                             }),
                         !h &&
                             !__OVERLAY__ &&
-                            (0, l.jsx)(s.Anchor, {
+                            (0, l.jsx)(s.eee, {
                                 className: C.debugButton,
                                 href: p.Z.getArticleURL(N.BhN.VOICE_VIDEO_TROUBLESHOOTING),
                                 children: y.intl.string(y.t.hvVgAZ),

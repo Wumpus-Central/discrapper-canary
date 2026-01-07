@@ -55,7 +55,7 @@ function x(e) {
                             children: p.intl.format(p.t.R8jY9g, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
-                                        c.Anchor,
+                                        c.eee,
                                         {
                                             onClick: y,
                                             children: e,

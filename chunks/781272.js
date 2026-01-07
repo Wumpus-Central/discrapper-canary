@@ -72,7 +72,7 @@ function d(e) {
                 }
                 return (
                     null == i.onClick && (i.href = a().sanitizeUrl(e.target)),
-                    (0, r.jsx)(o.Anchor, u(l({ title: e.title }, i), { children: t(e.content, n) }), n.key)
+                    (0, r.jsx)(o.eee, u(l({ title: e.title }, i), { children: t(e.content, n) }), n.key)
                 );
             },
         })),

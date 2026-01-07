@@ -501,7 +501,7 @@ let eW = i.memo(function () {
                         noticeType: c.type,
                         children: eR.intl.string(eR.t.NiTd0e),
                     }),
-                    (0, r.jsx)(f.Anchor, {
+                    (0, r.jsx)(f.eee, {
                         className: ew.textLinkSmall,
                         href: ev.Z.getArticleURL(eT.BhN.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
@@ -1076,7 +1076,7 @@ let eW = i.memo(function () {
                         noticeType: c.type,
                         children: eR.intl.string(eR.t.kvHdFN),
                     }),
-                    (0, r.jsx)(f.Anchor, {
+                    (0, r.jsx)(f.eee, {
                         href: ev.Z.getArticleURL(eT.BhN.QUARANTINE),
                         target: "_blank",
                         className: ew.quarantineLearnMoreLink,

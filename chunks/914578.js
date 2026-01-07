@@ -47,7 +47,7 @@ function g() {
             (0, r.jsxs)("div", {
                 className: y.links,
                 children: [
-                    (0, r.jsx)(l.Anchor, {
+                    (0, r.jsx)(l.eee, {
                         href: d.EYA.PRIVACY,
                         children: (0, r.jsx)(l.Text, {
                             tag: "span",
@@ -61,7 +61,7 @@ function g() {
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
-                    (0, r.jsx)(l.Anchor, {
+                    (0, r.jsx)(l.eee, {
                         href: d.EYA.TERMS,
                         children: (0, r.jsx)(l.Text, {
                             tag: "span",
@@ -88,7 +88,7 @@ function g() {
                         children: (t, n) => {
                             var o, a;
                             return (0, r.jsx)(
-                                l.Anchor,
+                                l.eee,
                                 ((o = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},

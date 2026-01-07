@@ -337,7 +337,7 @@ class el extends r.PureComponent {
               ? K.intl.format(K.t.tbVWyR, {
                     forumUpsellHook: (e, t) =>
                         (0, i.jsx)(
-                            m.Anchor,
+                            m.eee,
                             {
                                 onClick: () =>
                                     (0, m.ZDy)(async () => {

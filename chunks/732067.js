@@ -35,7 +35,7 @@ function I(e) {
             username: u.nick,
             usernameHook: d,
             applicationHook: () => {
-                let e = null != c ? l.Anchor : "div";
+                let e = null != c ? l.eee : "div";
                 return (0, r.jsxs)(e, {
                     onClick: c,
                     className: v.inlineApplicationText,

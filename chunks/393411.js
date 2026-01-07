@@ -362,7 +362,7 @@ let z = function (e) {
             let { status: e } = i;
             if (i.isPurchasedExternally) {
                 let e = (0, O.JE)(i.paymentGateway, "SUBSCRIPTION_MANAGEMENT");
-                return (0, r.jsx)(c.Anchor, {
+                return (0, r.jsx)(c.eee, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
                     children: (0, r.jsx)(c.Button, {

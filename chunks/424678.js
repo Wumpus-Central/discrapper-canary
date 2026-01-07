@@ -20,7 +20,7 @@ class s extends i.PureComponent {
         let { text: e, lastItem: t, className: n } = this.props;
         return (0, r.jsxs)("span", {
             children: [
-                (0, r.jsx)(a.Anchor, {
+                (0, r.jsx)(a.eee, {
                     className: n,
                     onClick: this.handleClick,
                     children: e,

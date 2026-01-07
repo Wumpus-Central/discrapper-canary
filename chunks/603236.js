@@ -15,8 +15,8 @@ var l = n(54381),
     g = n(246946),
     x = n(626135),
     m = n(971130),
-    h = n(530436),
-    v = n(245335),
+    v = n(530436),
+    h = n(245335),
     f = n(981631),
     p = n(388032),
     j = n(444942);
@@ -50,7 +50,7 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                 application: Z,
             } = e,
             { maxAge: T, maxUses: w, networkError: k, showVanityURL: D, flags: R } = u,
-            A = r.useCallback(() => {
+            _ = r.useCallback(() => {
                 x.default.track(f.rMx.COPY_INSTANT_INVITE, {
                     server: d.Z.getGuildId(),
                     channel: null == N ? void 0 : N.id,
@@ -67,7 +67,7 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                 (0, l.jsx)(b, {
                     value: O,
                     autoFocus: s,
-                    onCopy: A,
+                    onCopy: _,
                     disabled: I,
                 }),
                 g &&
@@ -87,8 +87,8 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                               (0, m.Vg)(T, w),
                               " ",
                               s
-                                  ? (0, l.jsx)(c.Anchor, {
-                                        onClick: () => E(v.RV.SETTINGS),
+                                  ? (0, l.jsx)(c.eee, {
+                                        onClick: () => E(h.RV.SETTINGS),
                                         children: p.intl.string(p.t["VNe8P/"]),
                                     })
                                   : null,
@@ -102,7 +102,7 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                       })
                     : null,
                 null != k
-                    ? (0, l.jsx)(h.W, {
+                    ? (0, l.jsx)(v.W, {
                           guild: t,
                           error: k,
                           onClose: o,

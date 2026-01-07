@@ -136,7 +136,7 @@ class v extends (i = l.PureComponent) {
                 }),
             });
         null != a
-            ? (l = (0, r.jsx)(d.Anchor, {
+            ? (l = (0, r.jsx)(d.eee, {
                   className: g.removeButton,
                   onClick: this.handleRemove,
                   children: p.intl.string(p.t.N86XcP),

@@ -143,7 +143,7 @@ function I(e) {
     var { children: t, href: n, noticeType: i } = e,
         a = h(e, ["children", "href", "noticeType"]);
     return (0, r.jsx)(
-        s.Anchor,
+        s.eee,
         m(p({}, a), {
             className: d.button,
             href: n,

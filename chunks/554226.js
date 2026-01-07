@@ -41,7 +41,7 @@ class S extends l.PureComponent {
         return (0, r.jsxs)("div", {
             className: b.footer,
             children: [
-                (0, r.jsx)(c.Anchor, {
+                (0, r.jsx)(c.eee, {
                     "aria-label": C.intl.string(C.t["/84uiD"]),
                     className: b.socialLink,
                     href: (0, p.Z)(j.RK.TWITTER),
@@ -51,7 +51,7 @@ class S extends l.PureComponent {
                         color: "currentColor",
                     }),
                 }),
-                (0, r.jsx)(c.Anchor, {
+                (0, r.jsx)(c.eee, {
                     "aria-label": C.intl.string(C.t["h0or/l"]),
                     className: b.socialLink,
                     href: j.fK7.FACEBOOK_URL,
@@ -61,7 +61,7 @@ class S extends l.PureComponent {
                         color: "currentColor",
                     }),
                 }),
-                (0, r.jsx)(c.Anchor, {
+                (0, r.jsx)(c.eee, {
                     "aria-label": C.intl.string(C.t["5uVPyf"]),
                     className: b.socialLink,
                     href: j.fK7.INSTAGRAM_URL,
