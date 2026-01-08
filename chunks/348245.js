@@ -48,36 +48,37 @@ function w(e) {
         jumpType: o,
         skipLocalFetch: s,
         avoidInitialScroll: l,
+        fetchKey: d,
     } = e;
     if (null == n || (0, A.AB)(n)) return;
-    let d = b.Z.getChannel(n);
+    let _ = b.Z.getChannel(n);
     if (
-        (null == d ? void 0 : d.type) === C.d4z.GUILD_STORE ||
-        ((null == d ? void 0 : d.type) != null && C.TPd.GUILD_THREADS_ONLY.has(d.type))
+        (null == _ ? void 0 : _.type) === C.d4z.GUILD_STORE ||
+        ((null == _ ? void 0 : _.type) != null && C.TPd.GUILD_THREADS_ONLY.has(_.type))
     )
         return;
-    let _ = f.Z.getOrCreate(n);
-    _.some(T.k5) && (R.log("Found expired attachment link, clearing messages"), f.Z.clear(n), (_ = f.Z.getOrCreate(n))),
-        null != _.jumpTargetId &&
+    let h = f.Z.getOrCreate(n);
+    h.some(T.k5) && (R.log("Found expired attachment link, clearing messages"), f.Z.clear(n), (h = f.Z.getOrCreate(n))),
+        null != h.jumpTargetId &&
             null == r &&
-            ((_ = _.mutate({
+            ((h = h.mutate({
                 jumpTargetId: null,
                 jumped: !1,
                 jumpType: u.SR.ANIMATED,
             })),
-            f.Z.commit(_)),
-        null != _.focusTargetId && null == r && ((_ = _.mutate({ focusTargetId: null })), f.Z.commit(_));
-    let h = i;
+            f.Z.commit(h)),
+        null != h.focusTargetId && null == r && ((h = h.mutate({ focusTargetId: null })), f.Z.commit(h));
+    let g = i;
     if (
-        (!a || m.Z.isConnected() || _.loadingMore
-            ? _.loadingMore || (_.ready && !_.cached)
-                ? null != r && (h = !0)
-                : (null == t || null != y.Z.getGuild(t)) && (h = !0)
-            : (h = !0),
-        (0, p.Z)(n) && O.ZP.hasUnread(n) && (h = !0),
-        h)
+        (!a || m.Z.isConnected() || h.loadingMore
+            ? h.loadingMore || (h.ready && !h.cached)
+                ? null != r && (g = !0)
+                : (null == t || null != y.Z.getGuild(t)) && (g = !0)
+            : (g = !0),
+        (0, p.Z)(n) && O.ZP.hasUnread(n) && (g = !0),
+        g)
     )
-        if ((f.Z.commit(_.mutate({ loadingMore: !0 })), null != r))
+        if ((f.Z.commit(h.mutate({ loadingMore: !0 })), null != r))
             c.Z.jumpToMessage({
                 channelId: n,
                 messageId: r,
@@ -88,9 +89,9 @@ function w(e) {
                 avoidInitialScroll: l,
             });
         else {
-            if ((null == d ? void 0 : d.isThread()) && L(n))
+            if ((null == _ ? void 0 : _.isThread()) && L(n))
                 return (
-                    R.log("Jumping to start of thread ".concat(d.id)),
+                    R.log("Jumping to start of thread ".concat(_.id)),
                     c.Z.fetchMessages({
                         channelId: n,
                         limit: C.AQB,
@@ -101,9 +102,10 @@ function w(e) {
                         isPreload: a,
                         skipLocalFetch: s,
                         avoidInitialScroll: l,
+                        fetchKey: d,
                     })
                 );
-            if (!((null == d ? void 0 : d.isThread()) && O.ZP.hasTrackedUnread(d.id)) || _.ready)
+            if (!((null == _ ? void 0 : _.isThread()) && O.ZP.hasTrackedUnread(_.id)) || h.ready)
                 return c.Z.fetchMessages({
                     channelId: n,
                     limit: C.AQB,
@@ -111,10 +113,11 @@ function w(e) {
                     skipLocalFetch: s,
                     jump: { jumpType: u.SR.ANIMATED },
                     avoidInitialScroll: l,
+                    fetchKey: d,
                 });
-            let e = O.ZP.getTrackedAckMessageId(d.id);
+            let e = O.ZP.getTrackedAckMessageId(_.id);
             return (
-                R.log("Jumping to most recent message in thread ".concat(d.id, " - ").concat(e)),
+                R.log("Jumping to most recent message in thread ".concat(_.id, " - ").concat(e)),
                 c.Z.fetchMessages({
                     channelId: n,
                     limit: C.AQB,
@@ -126,6 +129,7 @@ function w(e) {
                     isPreload: a,
                     skipLocalFetch: s,
                     avoidInitialScroll: l,
+                    fetchKey: d,
                 })
             );
         }

@@ -11,32 +11,49 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t, n, r) {
-    return "".concat(e, ":").concat(t, ":").concat(n, ":").concat(r);
+n.d(t, {
+    Z: () => s,
+    _: () => i,
+}),
+    n(784620),
+    n(973216),
+    n(388685);
+let i = "NativeAppStartup";
+function a(e, t, n, r, i) {
+    return "".concat(e, ":").concat(t, ":").concat(n, ":").concat(r, ":").concat(i);
 }
-n.d(t, { Z: () => o }), n(388685);
-class a {
-    recordChannelFetchStart(e, t, n, r) {
+class o {
+    recordChannelFetchStart(e, t, n, r, i) {
         this.channelsFetchStarted.add(e),
-            this.fetchLogs.set(i(e, null != t ? t : null, null != n ? n : null, r), {
+            this.fetchLogs.set(a(e, t, null != n ? n : null, null != r ? r : null, i), {
                 channelId: e,
-                before: null != t ? t : null,
-                after: null != n ? n : null,
-                limit: r,
+                before: null != n ? n : null,
+                after: null != r ? r : null,
+                limit: i,
                 startTime: Date.now(),
-                hadLocalMessages: !1,
-                fetchedFromNetwork: !1,
             });
     }
-    recordChannelFetchedLocal(e, t, n, r) {
+    recordChannelFetchedLocal(e, t, n, r, i, o) {
+        var s;
         this.channelsFetchedWithLocalMessages.add(e);
-        let a = this.fetchLogs.get(i(e, null != t ? t : null, null != n ? n : null, r));
-        null != a && (a.hadLocalMessages = !0);
+        let l = this.fetchLogs.get(a(e, t, null != n ? n : null, null != r ? r : null, i));
+        null != l &&
+            (l.localMessageDetails = {
+                loadTime: Date.now(),
+                count: o.length,
+                lastMessageId: null == (s = o.at(-1)) ? void 0 : s.id,
+            });
     }
-    recordChannelFetchedNetwork(e, t, n, r) {
+    recordChannelFetchedNetwork(e, t, n, r, i, o) {
+        var s;
         this.channelsFetchedNetwork.add(e);
-        let a = this.fetchLogs.get(i(e, null != t ? t : null, null != n ? n : null, r));
-        null != a && (a.fetchedFromNetwork = !0);
+        let l = this.fetchLogs.get(a(e, t, null != n ? n : null, null != r ? r : null, i));
+        null != l &&
+            (l.networkMessageDetails = {
+                loadTime: Date.now(),
+                count: o.length,
+                lastMessageId: null == (s = o.at(-1)) ? void 0 : s.id,
+            });
     }
     constructor() {
         r(this, "channelsFetchStarted", new Set()),
@@ -45,4 +62,4 @@ class a {
             r(this, "fetchLogs", new Map());
     }
 }
-let o = new a();
+let s = new o();

@@ -629,11 +629,12 @@ let eK = {
                     forICYMI: p,
                     avoidInitialScroll: _,
                     feature: m,
+                    fetchKey: h,
                 } = e,
-                h = ed.Z.getChannel(t),
-                g = A.Z.isConnectedOrOverlay(),
-                E = Date.now();
-            if (null != h && h.type === eA.d4z.GUILD_STORE) return !1;
+                g = ed.Z.getChannel(t),
+                E = A.Z.isConnectedOrOverlay(),
+                y = Date.now();
+            if (null != g && g.type === eA.d4z.GUILD_STORE) return !1;
             if (
                 t === b.V ||
                 (ek.log(
@@ -654,15 +655,15 @@ let eK = {
                 }))
             )
                 return;
-            el.Z.fetchMessages.recordStart(), k.Z.recordChannelFetchStart(t, n, r, i);
-            let y = null != a ? a : void 0;
-            null == y && null != s && (y = ex({}, s));
-            let O = u.Z.getOrCreate(t).loadStart(y);
-            u.Z.commit(O), l.Z.dispatch({ type: "LOAD_MESSAGES" });
-            let v = null == y ? void 0 : y.messageId,
-                S = new eZ();
+            el.Z.fetchMessages.recordStart(), k.Z.recordChannelFetchStart(t, null != h ? h : y, n, r, i);
+            let O = null != a ? a : void 0;
+            null == O && null != s && (O = ex({}, s));
+            let v = u.Z.getOrCreate(t).loadStart(O);
+            u.Z.commit(v), l.Z.dispatch({ type: "LOAD_MESSAGES" });
+            let S = null == O ? void 0 : O.messageId,
+                I = new eZ();
             return (
-                d || this.fetchLocalMessages(t, n, r, i, S),
+                d || this.fetchLocalMessages(t, null != h ? h : y, n, r, i, I),
                 o.tn
                     .get({
                         url: eA.ANM.MESSAGES(t),
@@ -670,7 +671,7 @@ let eK = {
                             before: n,
                             after: r,
                             limit: i,
-                            around: v,
+                            around: S,
                             preload: c,
                             feature: m,
                         },
@@ -686,13 +687,13 @@ let eK = {
                                     s = null != n,
                                     c = null != r,
                                     u = null == n && null == r,
-                                    d = null != v || (o.length === i && (s || u)),
-                                    m = null != v || (c && o.length === i);
-                                if (null != v) {
+                                    d = null != S || (o.length === i && (s || u)),
+                                    m = null != S || (c && o.length === i);
+                                if (null != S) {
                                     let e = Math.floor(i / 2),
                                         n = e + (i % 2),
                                         r = [
-                                            v,
+                                            S,
                                             ...o.map((e) => {
                                                 let { id: t } = e;
                                                 return t;
@@ -700,7 +701,7 @@ let eK = {
                                         ]
                                             .filter((e, t, n) => n.indexOf(e) === t)
                                             .sort(eI.default.compare)
-                                            .indexOf(v);
+                                            .indexOf(S);
                                     if ((r < n - 1 && (d = !1), o.length - r < e && (m = !1), m && o.length > 0)) {
                                         let e = eh.ZP.lastMessageId(t);
                                         o[0].id === e && (m = !1);
@@ -713,7 +714,7 @@ let eK = {
                                         .concat(s, " isAfter:")
                                         .concat(c),
                                 ),
-                                    S.markComplete(),
+                                    I.markComplete(),
                                     l.Z.dispatch({
                                         type: "LOAD_MESSAGES_SUCCESS",
                                         channelId: t,
@@ -725,11 +726,11 @@ let eK = {
                                         limit: i,
                                         jump: a,
                                         forICYMI: p,
-                                        isStale: !g || A.Z.lastTimeConnectedChanged() >= E,
+                                        isStale: !E || A.Z.lastTimeConnectedChanged() >= y,
                                         truncate: f,
                                         avoidInitialScroll: _,
                                     }),
-                                    k.Z.recordChannelFetchedNetwork(t, n, r, i);
+                                    k.Z.recordChannelFetchedNetwork(t, null != h ? h : y, n, r, i, o);
                             }),
                             !0
                         ),
@@ -744,34 +745,34 @@ let eK = {
                     )
             );
         },
-        async fetchLocalMessages(e, t, n, r, i) {
-            let a = ed.Z.getBasicChannel(e),
-                o = u.Z.getOrCreate(e),
-                s = p.Z.database();
-            if (null == s || null == a || null != t || null != n) return void el.Z.addLocalMessages(e, -1);
-            if (o.ready && !o.cached) return void el.Z.addLocalMessages(e, -2);
-            let c = await (0, _.dI)(() => m.ZP.load(s, e, r));
-            if (null == c) return void el.Z.addLocalMessages(e, -3);
+        async fetchLocalMessages(e, t, n, r, i, a) {
+            let o = ed.Z.getBasicChannel(e),
+                s = u.Z.getOrCreate(e),
+                c = p.Z.database();
+            if (null == c || null == o || null != n || null != r) return void el.Z.addLocalMessages(e, -1);
+            if (s.ready && !s.cached) return void el.Z.addLocalMessages(e, -2);
+            let d = await (0, _.dI)(() => m.ZP.load(c, e, i));
+            if (null == d) return void el.Z.addLocalMessages(e, -3);
             if (
                 (ek.log(
                     "fetched "
-                        .concat(c.messages.length, " messages from local database (channel_id: ")
+                        .concat(d.messages.length, " messages from local database (channel_id: ")
                         .concat(e, ", remote_fetch_completed: ")
-                        .concat(i.completed, ")"),
+                        .concat(a.completed, ")"),
                 ),
-                el.Z.addLocalMessages(e, c.messages.length),
-                !i.completed && c.messages.length > 0)
+                el.Z.addLocalMessages(e, d.messages.length),
+                !a.completed && d.messages.length > 0)
             ) {
-                let i = c.messages.length >= r && c.connectionId === A.Z.lastTimeConnectedChanged();
-                k.Z.recordChannelFetchedLocal(e, t, n, r),
+                let a = d.messages.length >= i && d.connectionId === A.Z.lastTimeConnectedChanged();
+                k.Z.recordChannelFetchedLocal(e, t, n, r, i, d.messages),
                     l.Z.dispatch({
                         type: "LOCAL_MESSAGES_LOADED",
-                        guildId: a.guild_id,
+                        guildId: o.guild_id,
                         channelId: e,
-                        users: c.users,
-                        members: c.members,
-                        messages: c.messages,
-                        stale: !i,
+                        users: d.users,
+                        members: d.members,
+                        messages: d.messages,
+                        stale: !a,
                     });
             }
         },
