@@ -152,7 +152,11 @@ function w(e) {
     return {
         defaultWishlistId: o,
         wishlist: s,
-        popularCollectiblesProducts: d ? [] : R(),
+        popularCollectiblesProducts: r.useMemo(() => {
+            if (d) return [];
+            let e = new Set(f);
+            return R().filter((t) => e.has(t.skuId));
+        }, [d, f]),
         isFetchingWishlist: l,
         isValidatingPopularProducts: !d && p,
         isFetchingPopularProducts: !d && _,
