@@ -2861,6 +2861,7 @@
   "16eP/L": "A refund can be requested if this purchase was made in the last {dateLimit} days and the gift has not been redeemed. [Our friendly help desk will help you get your coins back.](Our friendly help desk will help you get your coins back.)",
   "owlOWc": "We're sorry, this purchase is not eligible for refunds. A refund can be requested if this purchase was made in the last {dateLimit} days and the gift has not been redeemed.",
   "18wIqp": "This gift has not been claimed yet. You can resend this gift to anyone (including yourself) by generating a new link through the gift inventory page.",
+  "Q1K9eg": "This gift was claimed by **!!{username}!!** but could not be fulfilled. This could be due to **!!{username}!!** already owning the item or the item being unavailable on their platform. A refund has been issued.",
   "acWWSQ": "Billing History",
   "5zmY3F": "[Click here](Click here) to learn about how we determine what currency and price you pay.",
   "LQLxkW": "Gift !!{planName}!!",

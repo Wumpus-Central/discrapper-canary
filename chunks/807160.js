@@ -458,7 +458,10 @@ class eS extends (r = a.PureComponent) {
                       }),
                       (0, i.jsx)("div", {
                           className: ea.paymentText,
-                          children: ei.intl.format(ei.t.IBtGwC, { applicationName: null == l ? void 0 : l.name }),
+                          children:
+                              null != r
+                                  ? ei.intl.format(ei.t.Q1K9eg, { username: $.ZP.getName(r) })
+                                  : ei.intl.format(ei.t.IBtGwC, { applicationName: null == l ? void 0 : l.name }),
                       }),
                   ],
               })
