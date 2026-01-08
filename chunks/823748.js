@@ -274,7 +274,7 @@ class tl extends i.PureComponent {
         });
     }
     renderChat() {
-        let { channel: e, guild: t, needSubscriptionToAccess: n, channelIsContentGated: i } = this.props;
+        let { channel: e, guild: t, needSubscriptionToAccess: n, channelIsContentGated: i, inCall: l } = this.props;
         if ((s()(null != e, "Missing channel in Channel.renderChat"), n))
             return (s()(null != t, "premium channels must exist within a guild"),
             null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel())
@@ -291,7 +291,7 @@ class tl extends i.PureComponent {
                 guild: t,
                 channelId: e.id,
             });
-        if (e.isGuildVocal()) return null;
+        if (e.isGuildVocal() || (l && e.isVocalThread())) return null;
         if (e.isDirectory())
             return (
                 s()(null != t, "directory channels must exist within a guild"),
