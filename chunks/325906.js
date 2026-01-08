@@ -2,8 +2,8 @@ n.d(t, { WrappedUnifiedPaymentModal: () => O });
 var r = n(54381),
     o = n(473749),
     i = n(987209),
-    a = n(563132),
-    l = n(791785),
+    l = n(563132),
+    a = n(791785),
     c = n(733579),
     s = n(467368),
     p = n(231338);
@@ -51,49 +51,53 @@ function d(e, t) {
     );
 }
 let y = (e) => {
+        var t;
         let {
-                skuId: t,
-                applicationId: n,
-                analyticsLocations: i,
-                returnRef: a,
-                onComplete: c,
-                onClose: p,
-                renderHeader: d,
-                transitionState: y,
-                modalOnClose: b,
-                paymentModalVersion: O = "v2",
+                skuId: n,
+                applicationId: i,
+                analyticsLocations: l,
+                returnRef: c,
+                onComplete: p,
+                onClose: y,
+                renderHeader: b,
+                transitionState: O,
+                modalOnClose: f,
+                paymentModalVersion: C = "v2",
             } = e,
-            { paymentModalProps: f } = (0, s.Li)(),
-            C = o.useCallback(
+            { paymentModalProps: j } = (0, s.Li)(),
+            P = o.useCallback(
                 (e, t) => {
-                    b(), null != p && p(e, t);
+                    f(), null != y && y(e, t);
                 },
-                [b, p],
-            );
+                [f, y],
+            ),
+            h = null != (t = null == j ? void 0 : j.onClose) ? t : P;
         return (0, r.jsx)(
-            l.PaymentModal,
-            u(
-                {
-                    transitionState: y,
-                    returnRef: a,
-                    applicationId: n,
-                    onComplete: c,
-                    onClose: C,
-                    hideShadow: !0,
-                    skuId: t,
-                    renderHeader: d,
-                    initialPlanId: null,
-                    analyticsLocations: i,
-                    paymentModalVersion: O,
-                },
-                f,
+            a.PaymentModal,
+            d(
+                u(
+                    {
+                        transitionState: O,
+                        returnRef: c,
+                        applicationId: i,
+                        onComplete: p,
+                        hideShadow: !0,
+                        skuId: n,
+                        renderHeader: b,
+                        initialPlanId: null,
+                        analyticsLocations: l,
+                        paymentModalVersion: C,
+                    },
+                    j,
+                ),
+                { onClose: h },
             ),
         );
     },
     b = (e) => {
         let { skuId: t } = e;
         return (0, r.jsx)(
-            a.PaymentContextProvider,
+            l.PaymentContextProvider,
             d(u({}, e), {
                 skuIDs: null != t ? [t] : [],
                 children: e.children,
@@ -105,8 +109,8 @@ let y = (e) => {
                 loadId: t,
                 skuId: n,
                 applicationId: o,
-                analyticsLocations: a,
-                analyticsSourceLocation: l,
+                analyticsLocations: l,
+                analyticsSourceLocation: a,
                 giftContextProps: s,
                 flowSpecificOptions: O,
                 onComplete: f,
@@ -115,19 +119,19 @@ let y = (e) => {
                 checkoutFlow: P,
                 checkoutFlowConfiguration: h,
                 tenantCheckoutFlowConfig: m,
-                renderHeader: w,
-                stepConfigs: S,
+                renderHeader: v,
+                stepConfigs: w,
             } = e,
-            { purchaseType: g } = h,
-            { CustomPaymentContextProvider: v = b, UnifiedCheckoutContextProvider: I } = m,
+            { purchaseType: S } = h,
+            { CustomPaymentContextProvider: g = b, UnifiedCheckoutContextProvider: I } = m,
             k = null != s ? i.KB : i.b6;
-        return (0, r.jsx)(v, {
+        return (0, r.jsx)(g, {
             applicationId: o,
             skuId: n,
             activeSubscription: null,
             loadId: t,
-            stepConfigs: S,
-            purchaseType: g,
+            stepConfigs: w,
+            purchaseType: S,
             paymentGateway: P === c.G.ORB_CHECKOUT ? p.gg.VIRTUAL_CURRENCY : void 0,
             isGift: null == s ? void 0 : s.isGift,
             excludeSubscriptionPlansBySKU: !0,
@@ -139,8 +143,8 @@ let y = (e) => {
                         applicationId: o,
                         skuId: n,
                         loadId: t,
-                        analyticsLocations: a,
-                        analyticsSourceLocation: l,
+                        analyticsLocations: l,
+                        analyticsSourceLocation: a,
                         onComplete: f,
                         onClose: C,
                         renderModalProps: j,
@@ -148,8 +152,8 @@ let y = (e) => {
                         children: (0, r.jsx)(y, {
                             applicationId: o,
                             skuId: n,
-                            renderHeader: w,
-                            analyticsLocations: a,
+                            renderHeader: v,
+                            analyticsLocations: l,
                             onComplete: f,
                             onClose: C,
                             modalOnClose: j.onClose,

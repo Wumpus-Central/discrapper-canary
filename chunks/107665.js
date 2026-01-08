@@ -89,11 +89,7 @@ let O = (0, o.Dz)(),
     S = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: a } = n,
-            {
-                renderStepBody: o,
-                disabled: s,
-                onBackClick: l,
-            } = (0, p.n3)({
+            { renderStepBody: o, disabled: s } = (0, p.n3)({
                 handleStepChange: r,
                 handleClose: a,
             });
@@ -103,10 +99,9 @@ let O = (0, o.Dz)(),
                 () => ({
                     layout: "custom-step-body",
                     renderStepBody: o,
-                    onBackClick: l,
                     primaryCTAButtonProps: { disabled: s },
                 }),
-                [o, l, s],
+                [o, s],
             ),
         });
     },
@@ -159,9 +154,16 @@ let O = (0, o.Dz)(),
                     children: f,
                 } = e,
                 { analyticsLocations: p } = (0, a.ZP)(),
-                _ = i.useMemo(
+                _ = l.onClose,
+                m = i.useCallback(
+                    (e) => {
+                        _(), null != c && c(e);
+                    },
+                    [_, c],
+                ),
+                h = i.useMemo(
                     () => ({
-                        onClose: c,
+                        onClose: m,
                         onComplete: u,
                         applicationId: o,
                         skuId: t,
@@ -169,9 +171,9 @@ let O = (0, o.Dz)(),
                         analyticsObject: s,
                         analyticsLocations: p,
                     }),
-                    [c, u, o, t, s, p],
+                    [m, u, o, t, s, p],
                 ),
-                m = i.useMemo(
+                g = i.useMemo(
                     () => ({
                         skuId: t,
                         loadId: n,
@@ -180,16 +182,16 @@ let O = (0, o.Dz)(),
                     }),
                     [t, n, d, p],
                 ),
-                h = i.useMemo(
+                E = i.useMemo(
                     () => ({
-                        sharedCheckoutContext: m,
-                        paymentModalProps: _,
+                        sharedCheckoutContext: g,
+                        paymentModalProps: h,
                         renderModalProps: l,
                     }),
-                    [m, _, l],
+                    [g, h, l],
                 );
             return (0, r.jsx)(O.Provider, {
-                value: h,
+                value: E,
                 children: f,
             });
         },

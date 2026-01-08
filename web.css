@@ -42613,7 +42613,7 @@ body .b54a5b2f01b57ad8-headerAnimation {
     margin-top: 16px
 }
 
-.d947e68f3c652858-customGiftMessage {
+.d947e68f3c652858-customGiftMessage.d947e68f3c652858-customGiftMessage {
     background-color: var(--background-base-lowest)
 }
 
@@ -44370,7 +44370,7 @@ body .b54a5b2f01b57ad8-headerAnimation {
     background: var(--opacity-white-12)
 }
 
-.a99829deaf601327-editor {
+.a99829deaf601327-editor.a99829deaf601327-editor {
     --channel-text-area-placeholder: var(--text-muted);
     font-size: 14px
 }
@@ -46870,7 +46870,7 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
     border: none !important
 }
 
-.b1f01d03ecc7d736-editor {
+.b1f01d03ecc7d736-editor.b1f01d03ecc7d736-editor {
     --channel-text-area-placeholder: var(--text-muted);
     font-size: 14px;
     min-height: 88px

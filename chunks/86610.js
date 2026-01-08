@@ -72,10 +72,17 @@ let S = (e, t) => null != t && t.implemented && t.flowType === e,
         [u.G.ORB_CHECKOUT]: {
             allowGiftCustomization: !1,
             disablePaymentAuthSteps: !0,
+            predicateStepType: "unified",
         },
-        [u.G.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0 },
+        [u.G.COLLECTIBLES_CHECKOUT]: {
+            allowGiftCustomization: !0,
+            predicateStepType: "one_time_payment",
+        },
+        [u.G.SLAYER_STOREFRONT_CHECKOUT]: {
+            allowGiftCustomization: !0,
+            predicateStepType: "one_time_payment",
+        },
         [u.G.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
-        [u.G.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0 },
     };
 class T {
     getUnifiedStepDefinition(e) {
@@ -92,9 +99,10 @@ class T {
                 });
     }
     getPredicateStepConfig() {
-        return this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
+        let { predicateStepType: e } = this.internalCheckoutFlowControls;
+        return "one_time_payment" === e
             ? l.WA
-            : this.checkoutFlow === u.G.ORB_CHECKOUT
+            : "unified" === e
               ? {
                     key: null,
                     renderStep: (e) =>
@@ -201,7 +209,8 @@ class T {
             { modalKey: h } = t,
             g = this.generateRenderHeader(),
             E = null != f ? f : this.getApplicationId(u),
-            b = !1;
+            b = !1,
+            O = null != o ? o : void 0;
         return (0, a.ZDy)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("9172").then(n.bind(n, 325906));
@@ -223,7 +232,7 @@ class T {
                         analyticsSourceLocation: p,
                         renderModalProps: t,
                         giftContextProps: s,
-                        flowSpecificOptions: o,
+                        flowSpecificOptions: O,
                     });
             },
             v(y({}, t), {
