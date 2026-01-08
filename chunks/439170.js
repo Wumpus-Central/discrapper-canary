@@ -238,6 +238,11 @@ class M {
             this.rebuildMember(n);
         }
     }
+    rebuildGroup(e) {
+        let t = this.groups.findIndex((t) => t.id === e),
+            n = this.groups[t];
+        null != n && (this.groups.splice(t, 1, D(this.guildId, e, n.count, n.index)), this.version++);
+    }
     constructor(e, t) {
         T(this, "guildId", void 0),
             T(this, "listId", void 0),
@@ -325,8 +330,10 @@ function B(e) {
     U.delete(t.id);
 }
 function V(e) {
-    let { guildId: t } = e;
-    U.forEach(t, (e) => e.rebuildMembers());
+    let { guildId: t, role: n } = e;
+    U.forEach(t, (e) => {
+        e.rebuildGroup(n.id), e.rebuildMembers();
+    });
 }
 function H(e) {
     let { guildId: t, user: n } = e;
