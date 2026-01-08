@@ -1,4 +1,5 @@
 n.d(t, {
+    C: () => O,
     TA: () => E,
     a_: () => y,
     pS: () => b,
@@ -78,36 +79,37 @@ function b(e) {
             onOpenChange: m,
             id: b,
             className: y,
-            overrideTargetRect: O,
-            placement: v = "bottom",
-            spacing: S = 8,
-            autoFlip: I = !0,
-            crossAccessFlip: T = !0,
-            autoShift: C = !0,
-            strategy: A = "fixed",
-            portal: N = !0,
-            blockPointerEvents: P = !1,
-            children: R,
-            renderLayer: w,
-            viewportPadding: D = g,
-            trigger: x = "click",
+            reference: O,
+            overrideTargetRect: v,
+            placement: S = "bottom",
+            spacing: I = 8,
+            autoFlip: T = !0,
+            crossAccessFlip: C = !0,
+            autoShift: A = !0,
+            strategy: N = "fixed",
+            portal: P = !0,
+            blockPointerEvents: R = !1,
+            children: w,
+            renderLayer: D,
+            viewportPadding: x = g,
+            trigger: L = "click",
         } = e,
-        L = i.useRef(null),
-        j = i.useMemo(() => {
-            let e = [(0, a.cv)(S)];
+        j = i.useRef(null),
+        M = i.useMemo(() => {
+            let e = [(0, a.cv)(I)];
             return (
-                I &&
+                T &&
                     e.push(
                         (0, a.RR)({
-                            crossAxis: T,
-                            padding: D,
+                            crossAxis: C,
+                            padding: x,
                             boundary: l.body,
                         }),
                     ),
-                C &&
+                A &&
                     e.push(
                         (0, a.uY)({
-                            padding: D,
+                            padding: x,
                             limiter: (0, a.dr)(),
                             boundary: l.body,
                         }),
@@ -115,43 +117,43 @@ function b(e) {
                 e.push((0, a.Cp)({ strategy: "referenceHidden" })),
                 e
             );
-        }, [S, I, C, D, T, l]);
-    null != O && (n = { reference: { getBoundingClientRect: () => O } });
+        }, [I, T, A, x, C, l]);
+    null != v ? (n = { reference: { getBoundingClientRect: () => v } }) : null != O && (n = { reference: O });
     let {
-            refs: M,
-            floatingStyles: k,
-            placement: U,
-            middlewareData: G,
-            update: Z,
-            context: F,
+            refs: k,
+            floatingStyles: U,
+            placement: G,
+            middlewareData: Z,
+            update: F,
+            context: B,
         } = (0, o.YF)({
-            placement: v,
+            placement: S,
             open: p,
             onOpenChange: m,
-            strategy: A,
-            middleware: j,
+            strategy: N,
+            middleware: M,
             whileElementsMounted: s.Me,
             elements: n,
         }),
-        B = (0, o.bQ)(F),
-        V = (0, o.XI)(F, {
-            enabled: "hover" === x,
+        V = (0, o.bQ)(B),
+        H = (0, o.XI)(B, {
+            enabled: "hover" === L,
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
-        { getReferenceProps: H, getFloatingProps: Y } = (0, o.NI)([B, V]),
-        W = (null == (t = G.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
-        K = N ? d.UU : i.Fragment;
+        { getReferenceProps: Y, getFloatingProps: W } = (0, o.NI)([V, H]),
+        K = (null == (t = Z.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
+        z = P ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            R({
-                ref: M.setReference,
-                props: H(),
+            w({
+                ref: k.setReference,
+                props: Y(),
             }),
             p &&
-                (0, r.jsxs)(K, {
+                (0, r.jsxs)(z, {
                     ownerDocument: l,
                     children: [
-                        P ? (0, r.jsx)(o.y0, {}) : null,
+                        R ? (0, r.jsx)(o.y0, {}) : null,
                         (0, r.jsx)(
                             "div",
                             h(
@@ -160,18 +162,18 @@ function b(e) {
                                         id: b,
                                         className: c()(y, f.layer),
                                         [E]: !0,
-                                        style: h(_({}, k), { visibility: W }),
-                                        ref: M.setFloating,
+                                        style: h(_({}, U), { visibility: K }),
+                                        ref: k.setFloating,
                                     },
-                                    Y(),
+                                    W(),
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: L,
-                                        children: w({
-                                            placement: U,
-                                            update: Z,
-                                            hidden: "hidden" === W,
+                                        containerRef: j,
+                                        children: D({
+                                            placement: G,
+                                            update: F,
+                                            hidden: "hidden" === K,
                                         }),
                                     }),
                                 },
@@ -198,5 +200,17 @@ function y(e, t) {
             if ("top" === t) return "".concat(e, "-start");
             if ("bottom" === t) return "".concat(e, "-end");
             return e;
+    }
+}
+function O(e) {
+    let t = e.split("-")[0];
+    switch (t) {
+        case "top":
+        case "bottom":
+        case "left":
+        case "right":
+            return t;
+        default:
+            return "top";
     }
 }

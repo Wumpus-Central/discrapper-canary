@@ -1,90 +1,110 @@
-n.d(t, { N: () => g });
+n.d(t, { N: () => b });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
-    l = n(793030),
-    c = n(481060),
-    u = n(337363),
-    d = n(725027),
-    f = n(464281),
-    p = n(847310);
-let _ = 11,
-    m = ["left", "center", "right"],
-    h = ["top", "center", "bottom"];
-function g(e) {
+    s = n(877164),
+    l = n(762328),
+    c = n(793030),
+    u = n(682973),
+    d = n(481060),
+    f = n(337363),
+    p = n(725027),
+    _ = n(464281),
+    m = n(847310);
+let h = 11,
+    g = ["left", "center", "right"],
+    E = ["top", "center", "bottom"];
+function b(e) {
     let {
             isVisible: t,
             isRendered: n = t,
             targetElementRef: a,
-            anchorRef: g,
-            id: E,
-            content: b,
-            position: y = "top",
-            align: O = "center",
-            spacing: v = _,
-            caretConfig: S,
-            layerContext: I,
-            animationStyle: T,
-            positionKey: C,
+            targetElement: b,
+            anchorRef: y,
+            id: O,
+            content: v,
+            position: S = "top",
+            align: I = "center",
+            spacing: T = h,
+            caretConfig: C,
+            layerContext: A,
+            animationStyle: N,
+            positionKey: P,
         } = e,
-        A = i.useRef(null),
-        { isRichTooltip: N } = (0, d.nr)(),
-        P = i.useMemo(() => (("left" === y || "right" === y ? h : m).includes(O) ? O : "center"), [y, O]);
+        { isRichTooltip: R } = (0, p.nr)(),
+        w = (0, u.E)("Tooltip"),
+        D = i.useMemo(() => (("left" === S || "right" === S ? E : g).includes(I) ? I : "center"), [S, I]);
     if (!n) return null;
-    let R = (0, r.jsx)(c.jRF, {
-        targetRef: null != g ? g : a,
-        position: y,
-        align: P,
-        spacing: v,
-        positionKey: C,
+    let x = (e) => {
+        var t, n, i, a;
+        let { position: l, nudge: c } = e,
+            u = null != l ? l : S,
+            p = null != (t = null == C ? void 0 : C.align) ? t : null != c && 0 !== c ? "custom" : "center",
+            h = null != (i = null != (n = null == C ? void 0 : C.customOffset) ? n : c) ? i : 0,
+            g = {
+                position: null != (a = null == C ? void 0 : C.position) ? a : (0, _.Av)(u),
+                align: p,
+                customOffset: "custom" === p ? h : void 0,
+            },
+            E = (0, r.jsxs)("div", {
+                id: O,
+                className: o()(m.tooltip, { [m.richTooltip]: R }),
+                role: "tooltip",
+                "data-position": u,
+                "data-mana-component": "tooltip",
+                children: [
+                    (0, r.jsx)(f._, { caretConfig: g }),
+                    (0, r.jsx)("div", {
+                        className: m.tooltipContent,
+                        children:
+                            "string" == typeof v
+                                ? (0, r.jsx)(d.Text, {
+                                      variant: "text-sm/medium",
+                                      children: v,
+                                  })
+                                : v,
+                    }),
+                ],
+            });
+        return N
+            ? (0, r.jsx)(s.animated.div, {
+                  style: N,
+                  children: E,
+              })
+            : E;
+    };
+    if (w) {
+        let e = (0, l.a_)(S, I);
+        return (0, r.jsx)(l.pS, {
+            open: n,
+            spacing: T,
+            placement: e,
+            reference: b,
+            renderLayer: (e) => {
+                let { placement: t } = e;
+                return x({
+                    position: (0, l.C)(t),
+                    nudge: 0,
+                });
+            },
+            children: () => null,
+        });
+    }
+    let L = (0, r.jsx)(d.jRF, {
+        targetRef: null != y ? y : a,
+        position: S,
+        align: D,
+        spacing: T,
+        positionKey: P,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
-        children: (e) => {
-            var t, n, i, a;
-            let { position: l, nudge: d } = e,
-                _ = null != l ? l : y,
-                m = null != (t = null == S ? void 0 : S.align) ? t : null != d && 0 !== d ? "custom" : "center",
-                h = null != (i = null != (n = null == S ? void 0 : S.customOffset) ? n : d) ? i : 0,
-                g = {
-                    position: null != (a = null == S ? void 0 : S.position) ? a : (0, f.Av)(_),
-                    align: m,
-                    customOffset: "custom" === m ? h : void 0,
-                },
-                O = (0, r.jsxs)("div", {
-                    ref: A,
-                    id: E,
-                    className: o()(p.tooltip, { [p.richTooltip]: N }),
-                    role: "tooltip",
-                    "data-position": _,
-                    "data-mana-component": "tooltip",
-                    children: [
-                        (0, r.jsx)(u._, { caretConfig: g }),
-                        (0, r.jsx)("div", {
-                            className: p.tooltipContent,
-                            children:
-                                "string" == typeof b
-                                    ? (0, r.jsx)(c.Text, {
-                                          variant: "text-sm/medium",
-                                          children: b,
-                                      })
-                                    : b,
-                        }),
-                    ],
-                });
-            return T
-                ? (0, r.jsx)(s.animated.div, {
-                      style: T,
-                      children: O,
-                  })
-                : O;
-        },
+        children: x,
     });
-    return null != I
-        ? (0, r.jsx)(l.mh4, {
-              layerContext: I,
-              children: R,
+    return null != A
+        ? (0, r.jsx)(c.mh4, {
+              layerContext: A,
+              children: L,
           })
-        : R;
+        : L;
 }

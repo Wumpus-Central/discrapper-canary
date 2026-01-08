@@ -94,16 +94,26 @@ function g(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let {
-            tooltipId: P,
-            isVisible: R,
-            targetElementRef: w,
-            trigger: D,
+    let [P, R] = i.useState(null);
+    i.useLayoutEffect(() => {
+        null != I && R(I.current);
+    }, [I]);
+    let w = i.useCallback(
+            (e) => {
+                null == I && R(e), (0, c.k$)(S, e);
+            },
+            [S, I],
+        ),
+        {
+            tooltipId: D,
+            isVisible: x,
+            targetElementRef: L,
+            trigger: j,
         } = (0, d.Q)(
             _(
                 {
                     children: t,
-                    targetElementRef: S,
+                    targetElementRef: w,
                     asContainer: g,
                     containerTag: E,
                     ariaHidden: A,
@@ -111,9 +121,9 @@ function g(e) {
                 N,
             ),
         ),
-        [x, L] = i.useState(!1),
-        { defaultLayerContext: j } = (0, o.ZFG)(),
-        M = i.useMemo(
+        [M, k] = i.useState(!1),
+        { defaultLayerContext: U } = (0, o.ZFG)(),
+        G = i.useMemo(
             () =>
                 null != h
                     ? h
@@ -133,50 +143,51 @@ function g(e) {
                         : n,
             [n, p, h],
         ),
-        k = null != M && ("string" != typeof M || "" !== M),
-        U = R || x;
+        Z = null != G && ("string" != typeof G || "" !== G),
+        F = x || M;
     i.useEffect(() => {
-        R && k ? L(!0) : k || L(!1);
-    }, [R, k]);
-    let G = i.useCallback(() => {
-            L(!1);
+        x && Z ? k(!0) : Z || k(!1);
+    }, [x, Z]);
+    let B = i.useCallback(() => {
+            k(!1);
         }, []),
-        Z = (0, u.Q)({
-            shouldShow: R,
-            onExitComplete: G,
+        V = (0, u.Q)({
+            shouldShow: x,
+            onExitComplete: B,
         });
-    if (!k && (R || !x)) return t;
+    if (!Z && (x || !M)) return t;
     if (null == t || (!g && !i.isValidElement(t))) return null;
-    let F = null != C ? C : (0, c.Sw)(n),
-        B = Z((e, t) =>
+    let H = null != C ? C : (0, c.Sw)(n),
+        Y = V((e, t) =>
             t
                 ? (0, r.jsx)(l.N, {
-                      isVisible: R,
-                      isRendered: U,
-                      targetElementRef: w,
+                      isVisible: x,
+                      isRendered: F,
+                      targetElementRef: L,
+                      targetElement: P,
                       anchorRef: I,
-                      id: P,
-                      content: M,
+                      id: D,
+                      content: G,
                       position: b,
                       align: y,
                       spacing: O,
                       caretConfig: T,
-                      layerContext: null != v ? v : j,
+                      layerContext: null != v ? v : U,
                       animationStyle: e,
-                      positionKey: F,
+                      positionKey: H,
                   })
                 : null,
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            D,
-            A || null == M || "" === M
+            j,
+            A || null == G || "" === G
                 ? null
                 : (0, r.jsx)(a.n, {
-                      id: P,
-                      children: M,
+                      id: D,
+                      children: G,
                   }),
-            B,
+            Y,
         ],
     });
 }
