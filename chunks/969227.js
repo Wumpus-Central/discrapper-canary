@@ -7,7 +7,7 @@ var r = n(473749),
     s = n(215023);
 function c(e) {
     var t;
-    let { quest: n, questContent: c, sourceQuestContent: u, onClick: d, shouldShowShopIfAlreadyClaimed: m } = e,
+    let { quest: n, questContent: c, sourceQuestContent: u, onCloseModal: d, shouldShowShopIfAlreadyClaimed: m } = e,
         f = (0, a.hf)({
             quest: n,
             questContent: c,
@@ -16,15 +16,15 @@ function c(e) {
     return r.useCallback(
         (e) => {
             var t;
-            null == d || d(e),
-                (0, i.xN)(n.config) && (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null && m
-                    ? (0, l.mK)({
-                          tab: s.AW.ORBS,
-                          analyticsLocations: [],
-                          analyticsSource: o.Z.QUEST_HOME_PAGE,
-                      })
-                    : f();
+            (0, i.xN)(n.config) && (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null && m
+                ? (null == d || d(e),
+                  (0, l.mK)({
+                      tab: s.AW.ORBS,
+                      analyticsLocations: [],
+                      analyticsSource: o.Z.QUEST_HOME_PAGE,
+                  }))
+                : ((0, i.Bg)(n.config) && (null == d || d(e)), f());
         },
-        [d, n.config, null == (t = n.userStatus) ? void 0 : t.claimedAt, f, m],
+        [n.config, null == (t = n.userStatus) ? void 0 : t.claimedAt, f, m, d],
     );
 }
