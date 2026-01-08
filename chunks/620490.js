@@ -1,17 +1,17 @@
-function r(e, t) {
-    if (e.score === t.score) {
-        var n, r, i, a, o, s;
-        let l =
-                null != (a = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase())
-                    ? a
+n.d(r, { Z: () => t });
+function t(e, r) {
+    if (e.score === r.score) {
+        var n, t, l, o, i, a;
+        let s =
+                null != (o = null != (l = e.sortable) ? l : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase())
+                    ? o
                     : "",
             c =
-                null != (s = null != (o = e.sortable) ? o : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase())
-                    ? s
+                null != (a = null != (i = e.sortable) ? i : null == (t = r.comparator) ? void 0 : t.toLocaleLowerCase())
+                    ? a
                     : "";
-        if (l < c) return -1;
-        if (l > c) return 1;
+        if (s < c) return -1;
+        if (s > c) return 1;
     }
-    return t.score - e.score;
+    return r.score - e.score;
 }
-n.d(t, { Z: () => r });
