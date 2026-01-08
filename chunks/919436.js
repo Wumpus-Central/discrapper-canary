@@ -1,33 +1,33 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+n.d(t, { Z: () => k }), n(415506), n(388685);
 var r,
     i = n(54381),
     l = n(473749),
-    a = n(620792),
+    a = n(877164),
     o = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
-    f = n(43267),
-    h = n(933557),
-    p = n(266076),
+    p = n(43267),
+    f = n(933557),
+    h = n(266076),
     g = n(199902),
-    b = n(19780),
-    m = n(306680),
+    m = n(19780),
+    b = n(306680),
     y = n(944486),
-    O = n(594174),
-    v = n(938475),
+    v = n(594174),
+    O = n(938475),
     j = n(451478),
-    C = n(37411),
-    x = n(276952),
+    x = n(37411),
+    C = n(276952),
     E = n(455172),
     S = n(682662),
-    I = n(662146),
-    _ = n(674552),
+    _ = n(662146),
+    I = n(674552),
     P = n(981631),
-    N = n(388032),
-    Z = n(729074);
-function w(e, t, n) {
+    Z = n(388032),
+    N = n(729074);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function T(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,12 +51,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,9 +82,9 @@ function D(e) {
     switch (e) {
         case "height":
         case "opacity":
-            return T({ duration: 150 }, R);
+            return A({ duration: 150 }, R);
         case "scale":
-            return T({}, R);
+            return A({}, R);
         default:
             throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)));
     }
@@ -146,8 +146,8 @@ class M extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === P.d4z.DM ? O.default.getUser(e.getRecipientId()) : null;
-        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.x)(e);
+            t = e.type === P.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
+        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, p.x)(e);
     }
     render() {
         let {
@@ -160,15 +160,15 @@ class M extends (r = l.PureComponent) {
                 stream: s,
                 isCurrentUserInThisDMCall: u,
                 unread: d,
-                treeItemProps: f,
-                statusIndicatorsEnabled: h,
+                treeItemProps: p,
+                statusIndicatorsEnabled: f,
             } = this.props,
-            { hovered: g, animating: b } = this.state,
-            m = e.isMultiUserDM() && null == e.icon,
+            { hovered: g, animating: m } = this.state,
+            b = e.isMultiUserDM() && null == e.icon,
             y = () =>
                 (0, i.jsx)(
                     c.LYs,
-                    T(
+                    A(
                         {
                             to: P.Z5c.CHANNEL(P.ME, e.id),
                             onMouseEnter: () => this.setState({ hovered: !0 }),
@@ -176,16 +176,16 @@ class M extends (r = l.PureComponent) {
                             selected: n || g,
                             ariaLabel:
                                 null != t
-                                    ? N.intl.formatToPlainString(N.t.hKarnZ, {
+                                    ? Z.intl.formatToPlainString(Z.t.hKarnZ, {
                                           mentions: r,
                                           name: t,
                                       })
                                     : "",
                             onContextMenu: this.handleContextMenu,
-                            icon: m ? void 0 : this.getChannelIcon(),
-                            backgroundStyle: m ? "on-hover" : "always",
-                            children: m
-                                ? (0, i.jsx)(p.Z, {
+                            icon: b ? void 0 : this.getChannelIcon(),
+                            backgroundStyle: b ? "on-hover" : "always",
+                            children: b
+                                ? (0, i.jsx)(h.Z, {
                                       channel: e,
                                       size: c.EFr.SIZE_40,
                                       facepileSizeOverride: c.EFr.SIZE_32,
@@ -193,14 +193,14 @@ class M extends (r = l.PureComponent) {
                                   })
                                 : void 0,
                         },
-                        f,
+                        p,
                     ),
                 ),
-            O = (0, i.jsx)(c.aRk, {
+            v = (0, i.jsx)(c.aRk, {
                 rounded: !0,
                 selected: !1,
-                lowerBadge: r > 0 ? (0, _.Ne)(r, void 0, !0) : null,
-                upperBadge: (0, _.Or)({
+                lowerBadge: r > 0 ? (0, I.Ne)(r, void 0, !0) : null,
+                upperBadge: (0, I.Or)({
                     audio: l,
                     video: o,
                     screenshare: s,
@@ -209,34 +209,34 @@ class M extends (r = l.PureComponent) {
                 lowerBadgeSize: { width: (0, c.OVM)(r) },
                 children: y(),
             }),
-            v = h
+            O = f
                 ? (0, i.jsx)(E.Z, {
                       channel: e,
-                      children: O,
+                      children: v,
                   })
-                : (0, i.jsx)(I.Z, {
+                : (0, i.jsx)(_.Z, {
                       text: null != t ? t : "",
                       selected: n,
-                      children: O,
+                      children: v,
                   });
         return (0, i.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(S.H, {
                 children: [
-                    (0, i.jsx)(x.Z, {
-                        hovered: !b && g,
-                        selected: !b && n,
-                        unread: !b && d,
-                        className: Z.pill,
+                    (0, i.jsx)(C.Z, {
+                        hovered: !m && g,
+                        selected: !m && n,
+                        unread: !m && d,
+                        className: N.pill,
                     }),
-                    v,
+                    O,
                 ],
             }),
         });
     }
     constructor(...e) {
         super(...e),
-            w(this, "state", {
+            T(this, "state", {
                 hovered: !1,
                 animating: !0,
                 controller: new a.Controller({
@@ -246,21 +246,21 @@ class M extends (r = l.PureComponent) {
                     config: D,
                 }),
             }),
-            w(this, "handleContextMenu", (e) => {
+            T(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === P.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === P.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([
                               n.e("79695"),
-                              n.e("66165"),
+                              n.e("4040"),
                               n.e("56826"),
                               n.e("93896"),
                           ]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  A(T({}, n), {
+                                  w(A({}, n), {
                                       channel: t,
                                       user: r,
                                   }),
@@ -271,7 +271,7 @@ class M extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  A(T({}, n), {
+                                  w(A({}, n), {
                                       channel: t,
                                       selected: !1,
                                   }),
@@ -280,43 +280,43 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-w(M, "defaultProps", {
+T(M, "defaultProps", {
     badge: 0,
     audio: !1,
     video: !1,
     isCurrentUserInThisDMCall: !1,
 });
-let L = l.forwardRef(function (e, t) {
+let k = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, h.ZP)(e.channel),
+        r = (0, f.ZP)(e.channel),
         l = (0, o.Ie)(n, 2),
-        a = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
+        a = (0, s.e7)([m.Z], () => m.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => d.Z.getMode(n), [n]),
-        f = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        p = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
-        O = (0, s.e7)([y.Z], () => y.Z.getChannelId(), []),
-        j = (0, s.e7)([m.ZP], () => m.ZP.getMentionCount(n), [n]),
-        { enabled: x } = (0, C.p)({ location: "DirectMessage" }),
+        p = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        h = (0, s.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
+        v = (0, s.e7)([y.Z], () => y.Z.getChannelId(), []),
+        j = (0, s.e7)([b.ZP], () => b.ZP.getMentionCount(n), [n]),
+        { enabled: C } = (0, x.p)({ location: "DirectMessage" }),
         E = a === n,
         S = !1,
-        I = !1;
-    (E || (x && p)) && ((S = u === P.WtW.VOICE), (I = u === P.WtW.VIDEO));
-    let _ = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+        _ = !1;
+    (E || (C && h)) && ((S = u === P.WtW.VOICE), (_ = u === P.WtW.VIDEO));
+    let I = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         M,
-        A(T({}, e), {
+        w(A({}, e), {
             ref: t,
             channelName: r,
             unread: j > 0,
-            selected: O === n,
+            selected: v === n,
             badge: j,
             audio: S,
-            video: I,
-            stream: f,
+            video: _,
+            stream: p,
             isCurrentUserInThisDMCall: E,
-            size: _,
+            size: I,
             treeItemProps: l,
-            statusIndicatorsEnabled: x,
+            statusIndicatorsEnabled: C,
         }),
     );
 });

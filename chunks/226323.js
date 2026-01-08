@@ -141,8 +141,8 @@ function Z(e) {
             ? (0, u.jW)(e, async () => {
                   let { default: e } = await Promise.all([
                       n.e("79695"),
-                      n.e("66165"),
-                      n.e("8982"),
+                      n.e("4040"),
+                      n.e("92524"),
                       n.e("7717"),
                       n.e("9393"),
                   ]).then(n.bind(n, 757387));
@@ -175,10 +175,10 @@ function Z(e) {
                       );
               });
     }
-    let q = (0, o.e7)([I.Z], () => I.Z.getVoiceVolume(Z.id)),
-        K = (0, m._)({
+    let K = (0, o.e7)([I.Z], () => I.Z.getVoiceVolume(Z.id)),
+        q = (0, m._)({
             isSpeaking: U,
-            voiceDb: q,
+            voiceDb: K,
             spreadDirection: m.h.INSET_ONLY,
             maxInnerSpreadRadius: 5,
         });
@@ -205,7 +205,7 @@ function Z(e) {
                         isShaking: U,
                         children: (0, r.jsx)("div", {
                             className: N.avatar,
-                            style: j({ backgroundImage: "url(".concat(H, ")") }, K),
+                            style: j({ backgroundImage: "url(".concat(H, ")") }, q),
                             children:
                                 null != V
                                     ? (0, r.jsx)(V, {

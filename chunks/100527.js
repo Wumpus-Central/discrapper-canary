@@ -231,7 +231,6 @@ var r = (function (e) {
         (e.GROUP_DM_CONTEXT_MENU = "group dm context menu"),
         (e.GROUP_DM_CONTEXT_MENU_CHANGE_ICON = "group dm context menu change icon"),
         (e.GROUP_DM_CONTEXT_MENU_REMOVE_ICON = "group dm context menu remove icon"),
-        (e.DM_CONDENSED_MENU = "dm condensed menu"),
         (e.GROUP_DM_EDIT_MODAL = "group dm edit modal"),
         (e.NEW_GROUP_DM_INVITE_MODAL = "new group dm invite modal"),
         (e.GROUP_DM_ICON_EDITOR = "group dm icon editor"),

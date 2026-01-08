@@ -1,20 +1,17 @@
-t.d(n, { Z: () => c });
-var i = t(54381);
-t(473749);
-var l = t(481060),
-    r = t(493683),
-    a = t(489618),
-    o = t(592125),
-    u = t(388032);
-function c(e, n) {
-    let { rearrangeContextMenu: t } = a.Z.useExperiment({ location: "useCloseDMItem" }),
-        c = o.Z.getChannel(e);
-    return null == c || c.isMultiUserDM()
+n.d(t, { Z: () => s });
+var i = n(54381);
+n(473749);
+var r = n(481060),
+    l = n(493683),
+    a = n(592125),
+    o = n(388032);
+function s(e, t) {
+    let n = a.Z.getChannel(e);
+    return null == n || n.isMultiUserDM()
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: "close-dm",
-              label: u.intl.string(t ? u.t.oI64T4 : u.t.jsvgc3),
-              subtext: t ? u.intl.string(u.t.JENR6J) : void 0,
-              action: () => r.Z.closePrivateChannel(e, n),
+              label: o.intl.string(o.t.jsvgc3),
+              action: () => l.Z.closePrivateChannel(e, t),
           });
 }
