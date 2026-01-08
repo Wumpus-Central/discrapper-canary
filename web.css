@@ -2455,12 +2455,13 @@
     --custom-modal-padding: var(--space-24);
     --custom-modal-padding-sm: var(--space-8);
     --custom-modal-padding-md: var(--space-16);
-    --custom-modal-padding-top: var(--custom-modal-padding-sm)
+    --custom-modal-padding-top: var(--custom-modal-padding-sm);
+    --custom-modal-padding-bottom: var(--custom-modal-padding-md)
 }
 
 ._8a031a135bfcb9ba-padding-size-lg,
 ._8a031a135bfcb9ba-padding-size-sm {
-    padding-bottom: var(--custom-modal-padding-md);
+    padding-bottom: var(--custom-modal-padding-bottom);
     padding-top: var(--custom-modal-padding-top)
 }
 
@@ -2468,7 +2469,8 @@
     --custom-modal-padding: var(--space-32);
     --custom-modal-padding-sm: var(--space-16);
     --custom-modal-padding-md: var(--space-16);
-    --custom-modal-padding-top: calc(var(--space-24) - var(--custom-modal-padding-md))
+    --custom-modal-padding-top: calc(var(--space-24) - var(--custom-modal-padding-md));
+    --custom-modal-padding-bottom: var(--custom-modal-padding-md)
 }
 
 ._8a031a135bfcb9ba-size-sm {
