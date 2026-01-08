@@ -6,6 +6,7 @@ e.exports = {
     marginBottom8: "fd297e0eff2da25e-marginBottom8",
     marginTop20: "fd297e0eff2da25e-marginTop20",
     marginBottom20: "fd297e0eff2da25e-marginBottom20",
+    marginBottom24: "fd297e0eff2da25e-marginBottom24",
     marginTop40: "fd297e0eff2da25e-marginTop40",
     marginBottom40: "fd297e0eff2da25e-marginBottom40",
     marginTop60: "fd297e0eff2da25e-marginTop60",

@@ -7,7 +7,6 @@ e.exports = {
     guildIcon: "fa285ee86b386220-guildIcon",
     inviteResolvingGuildName: "fa285ee86b386220-inviteResolvingGuildName",
     title: "fa285ee86b386220-title",
-    activityCount: "fa285ee86b386220-activityCount",
     directInviteSubTitle: "fa285ee86b386220-directInviteSubTitle",
     guildContainer: "fa285ee86b386220-guildContainer",
     appIn: "fa285ee86b386220-appIn",

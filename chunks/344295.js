@@ -24,8 +24,8 @@ var r = n(54381),
     y = n(108427),
     S = n(314897),
     C = n(896797),
-    T = n(701190),
-    O = n(626135),
+    O = n(701190),
+    T = n(626135),
     A = n(63063),
     Z = n(782605),
     P = n(954824),
@@ -62,7 +62,7 @@ async function K(e) {
 class z extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((O.default.track(k.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, y.e)("invite"), !B.KO)) {
+        if ((T.default.track(k.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, y.e)("invite"), !B.KO)) {
             let e = this.getInviteKey();
             P.Z.launch("discord://" + k.Z5c.INVITE(e), () => void 0);
         }
@@ -134,7 +134,7 @@ class z extends i.PureComponent {
                       invite_code: s,
                   }
                 : { invite_code: s };
-        O.default.track(
+        T.default.track(
             e,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -188,16 +188,20 @@ class z extends i.PureComponent {
     }
     renderErrorInvite() {
         var e, t;
-        return (0, r.jsxs)(x.ZP, {
-            children: [
-                (0, r.jsx)(R.Z, {
-                    invite: this.props.invite,
-                    error: null == (e = this.state.error) ? void 0 : e.message,
-                }),
-                (null == (t = this.state.error) ? void 0 : t.code) === k.evJ.INVALID_CANNOT_FRIEND_SELF
-                    ? this.renderButton(U.intl.string(U.t.fIv16B))
-                    : this.renderButton(U.intl.string(U.t.ohMvm1), this.handleAccept),
-            ],
+        return (0, r.jsx)(x.ZP, {
+            children: (0, r.jsxs)(h.Kqy, {
+                direction: "vertical",
+                gap: 24,
+                children: [
+                    (0, r.jsx)(R.Z, {
+                        invite: this.props.invite,
+                        error: null == (e = this.state.error) ? void 0 : e.message,
+                    }),
+                    (null == (t = this.state.error) ? void 0 : t.code) === k.evJ.INVALID_CANNOT_FRIEND_SELF
+                        ? this.renderButton(U.intl.string(U.t.fIv16B))
+                        : this.renderButton(U.intl.string(U.t.ohMvm1), this.handleAccept),
+                ],
+            }),
         });
     }
     renderExpiredInvite() {
@@ -226,7 +230,10 @@ class z extends i.PureComponent {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
-            : (0, r.jsx)(R.Z, { invite: e });
+            : (0, r.jsx)("div", {
+                  className: G.marginBottom24,
+                  children: (0, r.jsx)(R.Z, { invite: e }),
+              });
     }
     renderAuthenicatedFooter() {
         let { invite: e } = this.props;
@@ -371,11 +378,11 @@ class z extends i.PureComponent {
             });
     }
 }
-let q = u.ZP.connectStores([T.Z, C.Z, S.default, v.Z, m.Z], (e) => {
+let q = u.ZP.connectStores([O.Z, C.Z, S.default, v.Z, m.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = T.Z.getInvite(n)) ? t : {},
+        invite: null != (t = O.Z.getInvite(n)) ? t : {},
         nativeAppState: v.Z.getState(n),
         authenticated: S.default.isAuthenticated(),
         defaultRoute: C.Z.defaultRoute,

@@ -28,8 +28,8 @@ var r,
     y = n(124860),
     S = n(86779),
     C = n(726745),
-    T = n(913583),
-    O = n(144114),
+    O = n(913583),
+    T = n(144114),
     A = n(541692),
     Z = n(952802),
     P = n(703656),
@@ -325,7 +325,10 @@ class et extends (r = s.PureComponent) {
         return (
             (n =
                 null != r
-                    ? (0, i.jsx)(V.Z, { invite: r })
+                    ? (0, i.jsx)("div", {
+                          className: J.marginBottom24,
+                          children: (0, i.jsx)(V.Z, { invite: r }),
+                      })
                     : null != s
                       ? (0, i.jsx)(F.Z, { giftCode: s })
                       : (0, i.jsxs)("div", {
@@ -536,7 +539,7 @@ class et extends (r = s.PureComponent) {
         let e = () => {
             this.setState((e) => $(X({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(T.Z, { onDismiss: e });
+        return (0, i.jsx)(O.Z, { onDismiss: e });
     }
     render() {
         let { invite: e, guildTemplate: t, loginStatus: n, handoffAvailable: r } = this.props,
@@ -635,7 +638,7 @@ class et extends (r = s.PureComponent) {
                 let t = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    let { token: n } = await O.Z.verifyPhone(t, e, !1);
+                    let { token: n } = await T.Z.verifyPhone(t, e, !1);
                     await m.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -645,7 +648,7 @@ class et extends (r = s.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await O.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await T.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(K.Z5c.RESET, {
                         search: (0, o.stringify)({
                             token: n,
@@ -733,7 +736,7 @@ class et extends (r = s.PureComponent) {
                 }
             }),
             Q(this, "handleResendCode", () => {
-                O.Z.resendCode(this.getFullLogin());
+                T.Z.resendCode(this.getFullLogin());
             }),
             Q(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),

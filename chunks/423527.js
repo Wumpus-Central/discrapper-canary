@@ -315,9 +315,12 @@ class ec extends (r = s.PureComponent) {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
-            : (0, i.jsx)(Y.Z, {
-                  invite: e,
-                  inUnclaimedFlow: !0,
+            : (0, i.jsx)("div", {
+                  className: ei.marginBottom24,
+                  children: (0, i.jsx)(Y.Z, {
+                      invite: e,
+                      inUnclaimedFlow: !0,
+                  }),
               });
     }
     renderInviteButton() {
@@ -662,9 +665,12 @@ class ec extends (r = s.PureComponent) {
                 ? this.renderFull(() => (0, i.jsx)(q.Z, { giftCode: n }))
                 : null != r && a && r.state === Q.r2o.RESOLVED
                   ? this.renderFull(() =>
-                        (0, i.jsx)(Y.Z, {
-                            invite: r,
-                            isRegister: !0,
+                        (0, i.jsx)("div", {
+                            className: ei.marginBottom24,
+                            children: (0, i.jsx)(Y.Z, {
+                                invite: r,
+                                isRegister: !0,
+                            }),
                         }),
                     )
                   : this.renderFull();
