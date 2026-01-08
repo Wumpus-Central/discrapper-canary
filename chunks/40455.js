@@ -50,7 +50,7 @@ class T extends a.Z {
     }
     saveLimit(e) {
         let t = r.Z.getBasicChannel(e);
-        return null != t && (0, d.p)(t) ? E : null != t && v.has(e) ? b : y;
+        return null != t && (0, d.p)(t) ? E : null != t && (o.Z.getChannelId() === e || v.has(e)) ? b : y;
     }
     getSaveableChannels() {
         let e = r.Z.getChannelIds(null).map((e) => ({
