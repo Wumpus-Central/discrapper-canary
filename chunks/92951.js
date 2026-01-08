@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
-    a = n(374470),
-    o = n(531057);
+    a = n(531057),
+    o = n(374470);
 function s(e, t, n) {
     return (
         t in e
@@ -79,8 +79,8 @@ function f(e, t) {
 function p(e) {
     e.removeAttribute("src"),
         Array.from(e.children).forEach((e) => {
-            (0, a.kK)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")),
-                (0, a.kK)(e, HTMLImageElement) && e.removeAttribute("src");
+            (0, o.kK)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")),
+                (0, o.kK)(e, HTMLImageElement) && e.removeAttribute("src");
         });
     try {
         e.load();
@@ -90,47 +90,56 @@ let _ = (e) => {
         var {
                 alt: t,
                 externalRef: n,
-                autoPlay: a,
+                autoPlay: o,
                 playOnHover: s,
-                responsive: c,
-                mediaLayoutType: u,
-                useReducedMotion: f,
+                onPlayError: c,
+                responsive: u,
+                mediaLayoutType: f,
+                useReducedMotion: _,
             } = e,
-            _ = d(e, [
+            m = d(e, [
                 "alt",
                 "externalRef",
                 "autoPlay",
                 "playOnHover",
+                "onPlayError",
                 "responsive",
                 "mediaLayoutType",
                 "useReducedMotion",
             ]);
-        let m = !f && !s && a,
-            h = i.useRef(null);
-        function g() {
-            var e;
-            s && (null == h || null == (e = h.current) || e.play());
-        }
+        let h = !_ && !s && o,
+            g = i.useRef(null);
         function E() {
-            var e;
-            s && (null == h || null == (e = h.current) || e.pause());
+            var e, t;
+            s &&
+                (null == g ||
+                    null == (t = g.current) ||
+                    null == (e = t.play()) ||
+                    e.catch((e) => {
+                        if (null != c) c(e);
+                        else throw e;
+                    }));
         }
         function b() {
-            return u === o.h.MOSAIC
+            var e;
+            s && (null == g || null == (e = g.current) || e.pause());
+        }
+        function y() {
+            return f === a.h.MOSAIC
                 ? {
                       width: "100%",
                       height: "100%",
                       maxHeight: "inherit",
                       objectFit: "contain",
                   }
-                : c
-                  ? y()
+                : u
+                  ? O()
                   : {};
         }
-        function y() {
+        function O() {
             return {
-                maxWidth: _.width,
-                maxHeight: _.height,
+                maxWidth: m.width,
+                maxHeight: m.height,
                 width: "100%",
                 height: "100%",
             };
@@ -138,34 +147,34 @@ let _ = (e) => {
         return (
             i.useLayoutEffect(
                 () => () => {
-                    let { current: e } = h;
+                    let { current: e } = g;
                     null != e && p(e);
                 },
                 [],
             ),
             i.useLayoutEffect(
                 () => (
-                    "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
+                    "function" == typeof n ? (n(null), n(g.current)) : null != n && (n.current = g.current),
                     () => {
                         "function" == typeof n ? n(null) : null != n && (n.current = null);
                     }
                 ),
-                [n, h],
+                [n, g],
             ),
             (0, r.jsx)(
                 "video",
                 l(
                     {
                         "aria-label": t,
-                        ref: h,
-                        autoPlay: m,
-                        onMouseEnter: g,
-                        onMouseLeave: E,
-                        onFocus: g,
-                        onBlur: E,
-                        style: b(),
+                        ref: g,
+                        autoPlay: h,
+                        onMouseEnter: E,
+                        onMouseLeave: b,
+                        onFocus: E,
+                        onBlur: b,
+                        style: y(),
                     },
-                    _,
+                    m,
                 ),
             )
         );
