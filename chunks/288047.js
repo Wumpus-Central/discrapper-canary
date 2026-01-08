@@ -2,22 +2,19 @@ n.d(t, {
     ZQ: () => i,
     bH: () => a,
 });
-let r = (0, n(818083).B)({
+let r = (0, n(427164).le)({
     kind: "user",
-    id: "2025-10_friend_is_online_notification",
-    label: "Friend Online Notification Experiment",
+    name: "2026-01-friend-is-online-notif-rate-limits",
     defaultConfig: { showSettingsToggle: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "User can receive friend online notifications. Show settings toggle.",
-            config: { showSettingsToggle: !0 },
-        },
-    ],
+    variations: {
+        1: { showSettingsToggle: !0 },
+        2: { showSettingsToggle: !0 },
+        3: { showSettingsToggle: !0 },
+    },
 });
 function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return r.useConfig({ location: e });
 }
 function a(e) {
-    return r.getCurrentConfig({ location: e }).showSettingsToggle;
+    return r.getConfig({ location: e }).showSettingsToggle;
 }
