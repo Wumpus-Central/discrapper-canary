@@ -9,8 +9,8 @@ var n = r(54381),
     u = r(493773),
     d = r(782568),
     f = r(607070),
-    p = r(70097),
-    m = r(566697),
+    m = r(70097),
+    p = r(566697),
     b = r(518727),
     _ = r(703656),
     O = r(594174),
@@ -21,8 +21,8 @@ var n = r(54381),
     v = r(981631),
     I = r(353149),
     y = r(388032),
-    h = r(544165),
-    C = r(530641),
+    C = r(544165),
+    h = r(530641),
     j = r(491567),
     w = r(419698),
     N = r(568368);
@@ -100,70 +100,73 @@ function k(e) {
     var { onClose: t, isExistingSub: r, premiumGroupPrimaryName: a, currentUser: i } = e,
         o = U(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]);
     let u = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
-        d = (0, g.rO)() ? C.Z : j.Z;
+        d = (0, g.rO)() ? h.Z : j.Z;
     return (0, n.jsx)(
         s.IX,
         T(E({}, o), {
             onClose: t,
-            children: (0, n.jsxs)(s.fef, {
-                children: [
-                    (0, n.jsx)("div", { className: h.wumpusContainer }),
-                    (0, n.jsx)(s.X6q, {
-                        className: h.header,
-                        variant: "display-md",
-                        color: "text-strong",
-                        children: y.intl.string(y.t.QWljxE),
-                    }),
-                    (0, n.jsxs)("div", {
-                        className: h.nameplatePreviewContainer,
-                        children: [
-                            u
-                                ? (0, n.jsx)("img", {
-                                      src: w.Z,
-                                      alt: "",
-                                      className: h.nameplateGlow,
-                                  })
-                                : (0, n.jsx)(p.Z, {
-                                      playsInline: !0,
-                                      muted: !0,
-                                      autoPlay: !0,
-                                      loop: !0,
-                                      className: h.nameplateGlow,
-                                      children: (0, n.jsx)("source", { src: d }),
-                                  }),
-                            (0, n.jsx)(m.Z, {
-                                user: i,
-                                isHighlighted: !0,
-                                nameplate: null,
-                                nameplateData: i.nameplate,
-                                className: h.nameplatePreview,
-                                nameplatePreviewSize: "large",
-                            }),
-                        ],
-                    }),
-                    (0, n.jsx)("div", {
-                        className: h.textContainer,
-                        children: (0, n.jsx)(s.xvT, {
-                            variant: "text-md/medium",
-                            color: "text-muted",
-                            children: y.intl.format(r ? I.default.axh0pl : I.default["+KAArL"], {
-                                premiumGroupProductName: (0, x.sO)(),
-                                primaryName: a,
+            children: (0, n.jsx)(s.fef, {
+                children: (0, n.jsxs)("div", {
+                    className: C.contentContainer,
+                    children: [
+                        (0, n.jsx)("div", { className: C.wumpusContainer }),
+                        (0, n.jsx)(s.X6q, {
+                            className: C.header,
+                            variant: "display-md",
+                            color: "text-strong",
+                            children: y.intl.string(y.t.QWljxE),
+                        }),
+                        (0, n.jsxs)("div", {
+                            className: C.nameplatePreviewContainer,
+                            children: [
+                                u
+                                    ? (0, n.jsx)("img", {
+                                          src: w.Z,
+                                          alt: "",
+                                          className: C.nameplateGlow,
+                                      })
+                                    : (0, n.jsx)(m.Z, {
+                                          playsInline: !0,
+                                          muted: !0,
+                                          autoPlay: !0,
+                                          loop: !0,
+                                          className: C.nameplateGlow,
+                                          children: (0, n.jsx)("source", { src: d }),
+                                      }),
+                                (0, n.jsx)(p.Z, {
+                                    user: i,
+                                    isHighlighted: !0,
+                                    nameplate: null,
+                                    nameplateData: i.nameplate,
+                                    className: C.nameplatePreview,
+                                    nameplatePreviewSize: "large",
+                                }),
+                            ],
+                        }),
+                        (0, n.jsx)("div", {
+                            className: C.textContainer,
+                            children: (0, n.jsx)(s.xvT, {
+                                variant: "text-md/medium",
+                                color: "text-muted",
+                                children: y.intl.format(r ? I.default.axh0pl : I.default["+KAArL"], {
+                                    premiumGroupProductName: (0, x.sO)(),
+                                    primaryName: a,
+                                }),
                             }),
                         }),
-                    }),
-                    (0, n.jsx)("div", {
-                        className: h.footer,
-                        children: (0, n.jsx)(c.zxk, {
-                            variant: "primary",
-                            fullWidth: !0,
-                            text: y.intl.string(I.default.EL9m2H),
-                            onClick: () => {
-                                t(), (0, _.uL)(v.Z5c.APPLICATION_STORE);
-                            },
+                        (0, n.jsx)("div", {
+                            className: C.footer,
+                            children: (0, n.jsx)(c.zxk, {
+                                variant: "primary",
+                                fullWidth: !0,
+                                text: y.intl.string(I.default.EL9m2H),
+                                onClick: () => {
+                                    t(), (0, _.uL)(v.Z5c.APPLICATION_STORE);
+                                },
+                            }),
                         }),
-                    }),
-                ],
+                    ],
+                }),
             }),
         }),
     );
@@ -177,9 +180,9 @@ function R(e) {
             isExistingSub: l,
             premiumGroupPrimaryName: c,
             currentUser: f,
-            setError: p,
+            setError: m,
         } = e,
-        m = U(e, [
+        p = U(e, [
             "setModalState",
             "onClose",
             "premiumGroupSubscriptionId",
@@ -230,13 +233,13 @@ function R(e) {
                     }
                 })(s),
             }),
-                p(s),
+                m(s),
                 t(2);
         }
     };
     return (0, n.jsx)(
         s.ExpressiveModal,
-        T(E({}, m), {
+        T(E({}, p), {
             onClose: r,
             gradientColor: "nitro-pink",
             badge: {
@@ -336,9 +339,9 @@ function M(e) {
     var { premiumGroupSubscriptionId: t, premiumGroupInviteId: r, isExistingSub: i, premiumGroupPrimaryName: s } = e,
         c = U(e, ["premiumGroupSubscriptionId", "premiumGroupInviteId", "isExistingSub", "premiumGroupPrimaryName"]);
     let [u, d] = (0, a.useState)(0),
-        [f, p] = (0, a.useState)(null),
-        m = (0, l.e7)([O.default], () => O.default.getCurrentUser());
-    o()(null != m, "UserSettingsProfileCustomization: user cannot be undefined");
+        [f, m] = (0, a.useState)(null),
+        p = (0, l.e7)([O.default], () => O.default.getCurrentUser());
+    o()(null != p, "UserSettingsProfileCustomization: user cannot be undefined");
     let _ = null;
     switch (u) {
         case 0:
@@ -351,8 +354,8 @@ function M(e) {
                         premiumGroupInviteId: r,
                         isExistingSub: i,
                         premiumGroupPrimaryName: s,
-                        currentUser: m,
-                        setError: p,
+                        currentUser: p,
+                        setError: m,
                     },
                     c,
                 ),
@@ -364,7 +367,7 @@ function M(e) {
                 T(E({}, c), {
                     isExistingSub: i,
                     premiumGroupPrimaryName: s,
-                    currentUser: m,
+                    currentUser: p,
                 }),
             );
             break;

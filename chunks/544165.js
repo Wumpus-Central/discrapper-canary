@@ -1,4 +1,5 @@
 e.exports = {
+    contentContainer: "_0ffb84f5c7e3b216-contentContainer",
     wumpusContainer: "_0ffb84f5c7e3b216-wumpusContainer",
     header: "_0ffb84f5c7e3b216-header",
     textContainer: "_0ffb84f5c7e3b216-textContainer",
