@@ -424,6 +424,10 @@ let i = {
         ],
         inlineRequire: () => n(349540).Z,
     },
+    ProgramRewardsManager: {
+        actions: ["POST_CONNECTION_OPEN", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS"],
+        inlineRequire: () => n(437584).Z,
+    },
     RelationshipManager: {
         actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"],
         inlineRequire: () => n(859099).Z,
