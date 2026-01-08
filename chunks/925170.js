@@ -1,20 +1,19 @@
-r.d(t, { default: () => O }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(54381),
     o = r(473749),
     i = r(793030),
-    c = r(442837),
-    l = r(481060),
+    l = r(442837),
+    c = r(481060),
     s = r(594174),
-    a = r(810473),
-    u = r(299560),
-    p = r(247397),
+    u = r(500143),
+    a = r(299560),
     f = r(388032),
-    b = r(387083);
-function O(e) {
+    p = r(387083);
+function b(e) {
     var t,
         r,
-        { onClose: O, trackUserProfileEditAction: d } = e,
-        y = (function (e, t) {
+        { onClose: b, trackUserProfileEditAction: d } = e,
+        O = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -35,19 +34,26 @@ function O(e) {
             }
             return o;
         })(e, ["onClose", "trackUserProfileEditAction"]);
-    let g = (0, c.e7)([s.default], () => s.default.getCurrentUser()),
-        j = (0, a.Z)(),
-        h = o.useRef(new Set(j)),
-        m = p.rR.filter((e) => h.current.has(e)),
-        w = m.length > 0,
-        [P, k] = o.useState(!1),
-        v = {
-            onClick: () => O(),
+    let g = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
+        y = (function () {
+            let e = (0, u.Z)({ location: "UserProfileWidgetAddModal" }),
+                [t, r] = o.useState(e);
+            return (
+                o.useEffect(() => {
+                    e.length > t.length && r(e);
+                }, [e, t]),
+                t
+            );
+        })(),
+        j = y.length > 0,
+        [h, m] = o.useState(!1),
+        P = {
+            onClick: () => b(),
             text: f.intl.string(f.t.cpT0Cq),
         },
-        x = o.useCallback(() => {
-            k(!0), O();
-        }, [O]);
+        w = o.useCallback(() => {
+            m(!0), b();
+        }, [b]);
     return null == g
         ? null
         : (0, n.jsx)(
@@ -79,32 +85,32 @@ function O(e) {
               })(
                   {
                       title: f.intl.string(f.t["grUgR+"]),
-                      actions: w ? [] : [v],
-                      size: w ? "md" : "sm",
-                      onClose: O,
+                      actions: j ? [] : [P],
+                      size: j ? "md" : "sm",
+                      onClose: b,
                   },
-                  y,
+                  O,
               )),
               (r = r =
                   {
-                      children: w
+                      children: j
                           ? (0, n.jsx)("ul", {
                                 "aria-label": f.intl.string(f.t["+EIBSA"]),
-                                className: b.options,
-                                children: m.map((e) =>
+                                className: p.options,
+                                children: y.map((e) =>
                                     (0, n.jsx)(
-                                        u.Z,
+                                        a.Z,
                                         {
-                                            widgetType: e,
-                                            onAddWidget: x,
-                                            loading: P,
+                                            widget: e,
+                                            onAddWidget: w,
+                                            loading: h,
                                             trackUserProfileEditAction: d,
                                         },
-                                        e,
+                                        e.getUniqueKey(),
                                     ),
                                 ),
                             })
-                          : (0, n.jsx)(l.Text, {
+                          : (0, n.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "text-subtle",
                                 children: f.intl.string(f.t["1nkDOs"]),

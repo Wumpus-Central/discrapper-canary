@@ -1,21 +1,21 @@
 n.d(t, { H: () => u });
 var r = n(442837),
-    i = n(722733),
-    l = n(633289),
+    l = n(722733),
+    i = n(633289),
     a = n(751823);
-let o = (0, i.Z)({
+let o = (0, l.ZP)({
         kind: "user",
         name: "2025-10-go-live-zoom-pan",
         defaultConfig: { allowGoLiveZoomPan: !1 },
         variations: { 1: { allowGoLiveZoomPan: !0 } },
     }),
-    c = (0, i.Z)({
+    c = (0, l.ZP)({
         kind: "user",
         name: "2025-12-go-live-zoom-pan--mirror",
         defaultConfig: { allowGoLiveZoomPan: !1 },
         variations: { 1: { allowGoLiveZoomPan: !0 } },
     }),
-    s = (0, i.Z)({
+    s = (0, l.ZP)({
         kind: "user",
         name: "2025-12-go-live-zoom-pan--shadow",
         defaultConfig: { allowGoLiveZoomPan: !1 },
@@ -23,7 +23,7 @@ let o = (0, i.Z)({
     });
 function u(e) {
     let { location: t } = e;
-    return (0, r.e7)([l.Z], () =>
+    return (0, r.e7)([i.Z], () =>
         (function (e) {
             let { location: t } = e;
             !(function (e) {

@@ -1,43 +1,41 @@
 n.d(t, {
-    C: () => W,
+    C: () => F,
     Z: () => L,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
-    c = n(704215),
-    s = n(481060),
-    u = n(355467),
-    d = n(491662),
-    f = n(243778),
-    g = n(981312),
-    p = n(929677),
+    c = n(481060),
+    s = n(355467),
+    u = n(251296),
+    d = n(513417),
+    f = n(835473),
+    g = n(243778),
+    p = n(981312),
+    m = n(929677),
     b = n(314897),
-    m = n(351402),
-    h = n(931847),
-    y = n(836197),
-    v = n(880421),
+    y = n(351402),
+    j = n(931847),
+    h = n(836197),
     O = n(206599),
-    j = n(50130),
-    x = n(5136),
-    P = n(690760),
-    I = n(517157),
-    w = n(860717),
-    S = n(28671),
-    E = n(729424),
-    T = n(34335),
-    _ = n(683881),
-    C = n(190862),
-    D = n(682085),
-    k = n(996921),
+    v = n(5136),
+    x = n(517157),
+    P = n(860717),
+    I = n(28671),
+    w = n(729424),
+    S = n(34335),
+    E = n(683881),
+    T = n(190862),
+    _ = n(682085),
+    C = n(996921),
     N = n(661462),
-    A = n(795990),
-    Z = n(388032),
-    R = n(3083);
-function G(e) {
+    Z = n(795990),
+    A = n(388032),
+    D = n(3083);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +60,7 @@ function G(e) {
     }
     return e;
 }
-function M(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,132 +69,130 @@ function M(e, t) {
             var n,
                 r,
                 i = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 function L(e) {
     var { widget: t } = e,
-        n = M(e, ["widget"]);
-    return t instanceof h.q
-        ? (0, r.jsx)(w.Z, G({ widget: t }, n))
-        : t instanceof y.zy
-          ? (0, r.jsx)(C.Z, G({ widget: t }, n))
+        n = R(e, ["widget"]);
+    return t instanceof j.q
+        ? (0, r.jsx)(P.Z, k({ widget: t }, n))
+        : t instanceof h.zy
+          ? (0, r.jsx)(T.Z, k({ widget: t }, n))
           : null;
 }
-function B() {
+function G() {
     return (0, r.jsxs)("div", {
-        className: R.ukTeenDisclaimer,
+        className: D.ukTeenDisclaimer,
         children: [
-            (0, r.jsx)(s.d3s, { size: "xs" }),
-            (0, r.jsx)(s.Text, {
-                "aria-label": Z.intl.string(Z.t["7blcz6"]),
+            (0, r.jsx)(c.d3s, { size: "xs" }),
+            (0, r.jsx)(c.Text, {
+                "aria-label": A.intl.string(A.t["7blcz6"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: Z.intl.string(Z.t["7blcz6"]),
+                children: A.intl.string(A.t["7blcz6"]),
             }),
         ],
     });
 }
-function F(e) {
-    let { user: t } = e,
-        { application: n } = (0, j.G)(),
-        { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        a = (0, I.Z)(t.id),
-        l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
-        o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
-    return null == n || !l || null == i || o
+function B() {
+    let { isLoading: e, suggestions: t, currentUser: n } = (0, d.Z)({ location: "ApplicationWidgetUpsell" });
+    return e
         ? null
-        : (0, r.jsx)(f.ZP, {
-              contentTypes: [c.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
+        : (0, r.jsx)(g.ZP, {
+              contentTypes: t.map((e) => e.dismissibleContent),
+              bypassAutoDismiss: !0,
               children: (e) => {
-                  let { visibleContent: i, markAsDismissed: a } = e;
-                  return i === c.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET
-                      ? (0, r.jsx)(S.Z, {
-                            user: t,
-                            application: n,
-                            onDismiss: a,
-                        })
-                      : null;
+                  let { visibleContent: i, markAsDismissed: l } = e,
+                      a = t.find((e) => e.dismissibleContent === i);
+                  return null == a
+                      ? null
+                      : (0, r.jsx)(I.Z, {
+                            user: n,
+                            application: a.application,
+                            onDismiss: l,
+                        });
               },
           });
 }
-function U(e) {
-    let { user: t, guildId: n, channelId: a } = e,
-        l = (0, I.Z)(t.id),
+function M(e) {
+    let { user: t, guildId: n, channelId: l } = e,
+        a = (0, x.Z)(t.id),
         c = (0, o.e7)([b.default], () => b.default.getId() === t.id),
-        s = (() => {
-            let [e, t] = (0, o.Wu)([m.Z], () => [m.Z.ipCountryCode, m.Z.ipCountryCodeRequest]),
-                n = (0, g.U)();
+        d = (() => {
+            let [e, t] = (0, o.Wu)([y.Z], () => [y.Z.ipCountryCode, y.Z.ipCountryCodeRequest]),
+                n = (0, p.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && n && (0, u.GE)();
+                    null == e && null == t && n && (0, s.GE)();
                 }, [e, t, n]),
                 "GB" === e && n
             );
         })(),
-        d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
-        f = 0 === l.length && c,
-        j = i.useMemo(() => l.filter(y.Wc), [l]),
-        x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
-    (0, O.J)(c, j);
-    var w = t.id;
-    (0, P.s)(x);
-    let { data: S, refetch: _ } = (0, p.O)(w),
-        C = i.useRef(S);
-    (C.current = S),
-        i.useEffect(() => {
-            null !== C.current && _();
-        }, [_]);
-    let k = () =>
+        g = (0, u.q5)({ location: "UserProfileModalV2Widgets" }),
+        v = 0 === a.length && c,
+        P = i.useMemo(() => a.filter(h.Wc), [a]),
+        I = i.useMemo(() => a.filter((e) => e instanceof j.q), [a]);
+    (0, O.J)(c, P),
+        ((e, t) => {
+            let n = i.useMemo(() => t.map((e) => e.applicationId), [t]);
+            (0, f.Z)(n);
+            let { data: r, refetch: l } = (0, m.O)(e),
+                a = i.useRef(null !== r);
+            i.useEffect(() => {
+                a.current && ((a.current = !1), l());
+            }, [l]);
+        })(t.id, I);
+    let E = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
                 c &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(E.Z, { className: R.editingHeader }),
-                            s && (0, r.jsx)(B, {}),
-                            (0, r.jsx)(F, { user: t }),
+                            (0, r.jsx)(w.Z, { className: D.editingHeader }),
+                            d && (0, r.jsx)(G, {}),
+                            g && (0, r.jsx)(B, {}),
                         ],
                     }),
-                l.map((e, i) =>
+                a.map((e, i) =>
                     (0, r.jsx)(
                         L,
                         {
                             widget: e,
                             user: t,
                             guildId: n,
-                            channelId: a,
+                            channelId: l,
                             index: i,
                         },
-                        e instanceof h.q ? "".concat(e.type, "-").concat(e.applicationId) : "".concat(e.type),
+                        e.getUniqueKey(),
                     ),
                 ),
             ],
         });
-    if (f)
-        if (d) return (0, r.jsx)(D.Z, {});
-        else return (0, r.jsx)(A.Z, {});
-    return c ? (0, r.jsx)(T.K, { children: k() }) : k();
+    if (v)
+        if (g) return (0, r.jsx)(_.Z, {});
+        else return (0, r.jsx)(Z.Z, {});
+    return c ? (0, r.jsx)(S.K, { children: E() }) : E();
 }
-function W(e) {
+function F(e) {
     var { user: t } = e,
-        n = M(e, ["user"]);
-    let a = i.useRef(null);
-    (0, x.r)({ containerRef: a });
-    let o = (0, k.h)(t.id);
+        n = R(e, ["user"]);
+    let l = i.useRef(null);
+    (0, v.r)({ containerRef: l });
+    let o = (0, C.h)(t.id);
     return (0, r.jsxs)(N.F, {
         "data-scroller": !0,
-        scrollerRef: a,
-        className: l()(R.scroller, { [R.hasToolbar]: o }),
+        scrollerRef: l,
+        className: a()(D.scroller, { [D.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(_.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
+        children: [(0, r.jsx)(E.Z, { scrollerRef: l }), (0, r.jsx)(M, k({ user: t }, n))],
     });
 }

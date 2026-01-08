@@ -1,65 +1,65 @@
-n.d(t, { E: () => u });
-var r,
+r.d(t, { E: () => u });
+var n,
     i,
-    l = n(442837),
-    s = n(722733),
-    o = n(633289),
-    a = n(751823);
-let c = { smarterSourceOrdering: !1 },
-    d = (0, s.Z)({
+    s = r(442837),
+    l = r(722733),
+    o = r(633289),
+    c = r(751823);
+let a = { smarterSourceOrdering: !1 },
+    d = (0, l.ZP)({
         name: "2025-08-go-live-source-ordering",
         kind: "user",
-        defaultConfig: c,
+        defaultConfig: a,
         variations: {
             1:
-                ((r = (function (e) {
+                ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
-                })({}, c)),
+                })({}, a)),
                 (i = i = { smarterSourceOrdering: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
-                          var n = Object.keys(e);
+                          var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var n = Object.getOwnPropertySymbols(e);
+                              r.push.apply(r, n);
                           }
-                          return n;
+                          return r;
                       })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                r),
+                n),
         },
     });
 function u(e) {
     let { location: t } = e;
-    return (0, l.e7)([o.Z], () =>
+    return (0, s.e7)([o.Z], () =>
         (function (e) {
             let { location: t } = e,
-                { isInHoldout: n } = a.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-            return n ? d.definition.defaultConfig : d.getConfig({ location: t });
+                { isInHoldout: r } = c.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+            return r ? d.definition.defaultConfig : d.getConfig({ location: t });
         })({ location: t }),
     );
 }

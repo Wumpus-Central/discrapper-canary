@@ -1,7 +1,7 @@
 n.d(t, { C: () => o });
 var r = n(722733),
     i = n(751823);
-let a = (0, r.Z)({
+let a = (0, r.ZP)({
     kind: "user",
     name: "2025-10-vad-before-processing",
     defaultConfig: { enabled: !1 },

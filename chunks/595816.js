@@ -59,7 +59,7 @@ function u(e, t) {
     );
 }
 let d = { defaultWatchMultipleStreams: !1 },
-    f = (0, i.Z)({
+    f = (0, i.ZP)({
         name: "2025-08-go-live-default-multiwatch",
         kind: "user",
         defaultConfig: d,

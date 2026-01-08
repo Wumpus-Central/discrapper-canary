@@ -5,6 +5,7 @@ n.d(t, {
     VY: () => h,
     hR: () => _,
     hg: () => g,
+    o4: () => O,
     ym: () => m,
 }),
     n(997841),
@@ -160,4 +161,7 @@ function y(e, t, n) {
         sourceMetadata: t,
         contentType: e.contentType,
     };
+}
+function O(e) {
+    return null != e.width && e.width > 0 && null != e.height && e.height > 0;
 }

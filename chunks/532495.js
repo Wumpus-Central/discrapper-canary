@@ -131,7 +131,7 @@ function G() {
                   : [],
         ec = (0, u.w)(),
         eu = (0, P.Z)({ location: "DefaultCustomizationSections" }),
-        ed = (null == V || null == (n = V.widgets) ? void 0 : n.some((e) => C.Ki.includes(e.type))) === !0,
+        ed = (null == V || null == (n = V.widgets) ? void 0 : n.some(C.Wc)) === !0,
         ef = eu || ed,
         ep = () =>
             en

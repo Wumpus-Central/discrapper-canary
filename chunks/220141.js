@@ -35,7 +35,17 @@ function p(e) {
             return r;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
     let { trackUserProfileEditAction: x } = (0, l.KZ)(),
-        b = c.rR.filter((e) => s.Ki.includes(e)),
+        b = r.useMemo(
+            () =>
+                c.rR.filter(s.Sr).map(
+                    (e) =>
+                        new s.zy({
+                            type: e,
+                            games: [],
+                        }),
+                ),
+            [],
+        ),
         g = r.useCallback(() => {
             h(d.L.TAKE_ACTION), x({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, x]);
@@ -82,12 +92,12 @@ function p(e) {
                         (0, a.jsx)(
                             o.Z,
                             {
-                                widgetType: e,
+                                widget: e,
                                 size: "medium",
                                 onAddWidget: g,
                                 trackUserProfileEditAction: x,
                             },
-                            e,
+                            e.getUniqueKey(),
                         ),
                     ),
                 }),

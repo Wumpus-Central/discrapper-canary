@@ -1,5 +1,5 @@
 n.d(t, { $: () => i });
-let r = (0, n(722733).Z)({
+let r = (0, n(722733).ZP)({
     name: "2025-12-boosting-marketing-page-refresh",
     kind: "user",
     defaultConfig: { enabled: !1 },

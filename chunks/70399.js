@@ -18,7 +18,7 @@ var r = n(54381),
     m = n(890302);
 function b(e) {
     let { applicationId: t, size: n = "default" } = e,
-        i = (0, s.e7)([g.Z], () => g.Z.getApplicationWidgetApplicationConfig(t));
+        i = (0, s.e7)([g.Z], () => g.Z.getApplicationWidgetConfig(t));
     return (0, r.jsxs)("div", {
         className: a()(m.container, { [m.sizeSmall]: "small" === n }),
         children: [
@@ -43,9 +43,9 @@ function b(e) {
             (0, r.jsx)("div", {
                 className: m.imageContainer,
                 children:
-                    (null == i ? void 0 : i.mini_preview_image) != null
+                    (null == i ? void 0 : i.miniPreviewImage) != null
                         ? (0, r.jsx)("img", {
-                              src: i.mini_preview_image,
+                              src: i.miniPreviewImage,
                               alt: "",
                               className: m.previewImage,
                           })

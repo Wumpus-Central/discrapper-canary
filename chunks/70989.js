@@ -1,5 +1,5 @@
 n.d(t, { K: () => i });
-let r = (0, n(722733).Z)({
+let r = (0, n(722733).ZP)({
     kind: "user",
     name: "2025-10-mana-date-inputs",
     defaultConfig: { enabled: !1 },

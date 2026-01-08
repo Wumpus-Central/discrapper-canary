@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,44 +8,41 @@ var r = n(54381),
     c = n(812206),
     u = n(823379),
     d = n(804919),
-    p = n(931847),
-    f = n(836197),
-    g = n(86419),
-    h = n(50130),
-    m = n(872269),
-    b = n(248554),
-    _ = n(70399),
-    E = n(228168),
-    O = n(388032),
-    v = n(119078);
-let y = {
+    p = n(86419),
+    f = n(872269),
+    g = n(248554),
+    h = n(70399),
+    m = n(228168),
+    b = n(388032),
+    _ = n(119078);
+let E = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.LEAGUE_OF_LEGENDS,
         }),
-        getAriaLabel: () => O.intl.string(O.t.xJtdIm),
+        getAriaLabel: () => b.intl.string(b.t.xJtdIm),
     },
     [o.l.CURRENT_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.VALORANT,
         }),
-        getAriaLabel: () => O.intl.string(O.t.Ae8tRi),
+        getAriaLabel: () => b.intl.string(b.t.Ae8tRi),
     },
     [o.l.PLAYED_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.PEAK, d.L.BATTLEFIELD_6, d.L.REPO, d.L.BALDURS_GATE_3],
         }),
-        getAriaLabel: () => O.intl.string(O.t["pBR+4j"]),
+        getAriaLabel: () => b.intl.string(b.t["pBR+4j"]),
     },
     [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.RUST, d.L.SILKSONG],
         }),
-        getAriaLabel: () => O.intl.string(O.t.NtoBi1),
+        getAriaLabel: () => b.intl.string(b.t.NtoBi1),
     },
     [o.l.APPLICATION]: {
         placeholder: (e) => ({
@@ -58,43 +55,21 @@ let y = {
         },
         getAriaLabel: (e) => {
             var t, n;
-            return O.intl.formatToPlainString(O.t.KfGahB, {
+            return b.intl.formatToPlainString(b.t.KfGahB, {
                 applicationName:
                     null != (n = null == (t = c.Z.getApplication(e.applicationId)) ? void 0 : t.name) ? n : "",
             });
         },
     },
 };
-function I(e) {
-    let t,
-        { widgetType: n, onAddWidget: l, size: c = "default", loading: d = !1, trackUserProfileEditAction: O } = e,
-        { placeholder: I, getAriaLabel: C, icon: S } = y[n],
-        T = "small" === c,
-        { config: N } = (0, h.G)(),
-        j = i.useMemo(() => {
-            switch (n) {
-                case o.l.CURRENT_GAMES:
-                case o.l.FAVORITE_GAMES:
-                case o.l.PLAYED_GAMES:
-                case o.l.WANT_TO_PLAY_GAMES:
-                    return new f.zy({
-                        type: n,
-                        games: [],
-                    });
-                case o.l.APPLICATION:
-                    let e = null == N ? void 0 : N.application_id;
-                    if (null == e) return null;
-                    return new p.q({
-                        type: n,
-                        applicationId: e,
-                    });
-            }
-        }, [n, null == N ? void 0 : N.application_id]),
-        P = i.useCallback(() => {
-            d ||
-                null == j ||
-                ((0, g.qH)(n, j),
-                O(
+function O(e) {
+    let { widget: t, onAddWidget: n, size: l = "default", loading: o = !1, trackUserProfileEditAction: c } = e,
+        { placeholder: d, getAriaLabel: b, icon: O } = E[t.type],
+        v = "small" === l,
+        y = i.useCallback(() => {
+            o ||
+                ((0, p.qH)(t),
+                c(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -119,88 +94,85 @@ function I(e) {
                                 });
                         }
                         return e;
-                    })({ action: "WIDGET_ADDED" }, j.getProfileEditAnalyticsOptions()),
+                    })({ action: "WIDGET_ADDED" }, t.getProfileEditAnalyticsOptions()),
                 ),
-                (0, m.L$)(E.qb.WIDGET_ADDED),
-                null == l || l());
-        }, [d, n, j, O, l]);
-    return (null != j && null != S && (t = S(j)), null == j)
-        ? null
-        : (0, r.jsxs)("div", {
-              className: v.addButtonContainer,
-              children: [
-                  (0, r.jsxs)(s.P3F, {
-                      className: a()(v.addButtonContent, T && v.sizeSmall, d && v.loading),
-                      onClick: P,
-                      "aria-label": C(j),
-                      "aria-busy": d,
-                      children: [
-                          (() => {
-                              if (null == j) return null;
-                              let e = I(j);
-                              switch (e.variant) {
-                                  case "details":
-                                      return (0, r.jsx)(b.i, {
-                                          className: v.placeholderPadding,
-                                          applicationId: e.applicationId,
-                                          size: c,
-                                      });
-                                  case "grid":
-                                      return (0, r.jsx)(b.c, {
-                                          className: v.placeholderPadding,
-                                          applicationIds: e.applicationIds,
-                                          size: c,
-                                      });
-                                  case "application-widget":
-                                      return (0, r.jsx)(_.Z, {
-                                          applicationId: e.applicationId,
-                                          size: c,
-                                      });
-                                  default:
-                                      return (0, u.vE)(e);
-                              }
-                          })(),
-                          (0, r.jsxs)("div", {
-                              className: v.overlay,
-                              children: [
-                                  (0, r.jsx)(s.oFk, {
-                                      size: "md",
-                                      color: "currentColor",
-                                      className: v.addButton,
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: v.title,
-                                      children: [
-                                          (0, r.jsx)(s.Text, {
-                                              variant: "text-md/medium",
-                                              color: "text-strong",
-                                              children: (0, g.mR)(j),
-                                          }),
-                                          null != t
-                                              ? (0, r.jsx)("img", {
-                                                    src: t,
-                                                    alt: "",
-                                                    width: 16,
-                                                    height: 16,
-                                                    className: v.icon,
-                                                })
-                                              : null,
-                                      ],
-                                  }),
-                              ],
-                          }),
-                      ],
-                  }),
-                  (() => {
-                      if (null == j) return null;
-                      let e = I(j);
-                      return "application-widget" === e.variant
-                          ? (0, r.jsx)(_.T, {
-                                applicationId: e.applicationId,
-                                size: c,
-                            })
-                          : null;
-                  })(),
-              ],
-          });
+                (0, f.L$)(m.qb.WIDGET_ADDED),
+                null == n || n());
+        }, [o, t, c, n]),
+        I = null == O ? void 0 : O(t);
+    return (0, r.jsxs)("div", {
+        className: _.addButtonContainer,
+        children: [
+            (0, r.jsxs)(s.P3F, {
+                className: a()(_.addButtonContent, v && _.sizeSmall, o && _.loading),
+                onClick: y,
+                "aria-label": b(t),
+                "aria-busy": o,
+                children: [
+                    (() => {
+                        let e = d(t);
+                        switch (e.variant) {
+                            case "details":
+                                return (0, r.jsx)(g.i, {
+                                    className: _.placeholderPadding,
+                                    applicationId: e.applicationId,
+                                    size: l,
+                                });
+                            case "grid":
+                                return (0, r.jsx)(g.c, {
+                                    className: _.placeholderPadding,
+                                    applicationIds: e.applicationIds,
+                                    size: l,
+                                });
+                            case "application-widget":
+                                return (0, r.jsx)(h.Z, {
+                                    applicationId: e.applicationId,
+                                    size: l,
+                                });
+                            default:
+                                return (0, u.vE)(e);
+                        }
+                    })(),
+                    (0, r.jsxs)("div", {
+                        className: _.overlay,
+                        children: [
+                            (0, r.jsx)(s.oFk, {
+                                size: "md",
+                                color: "currentColor",
+                                className: _.addButton,
+                            }),
+                            (0, r.jsxs)("div", {
+                                className: _.title,
+                                children: [
+                                    (0, r.jsx)(s.Text, {
+                                        variant: "text-md/medium",
+                                        color: "text-strong",
+                                        children: (0, p.mR)(t),
+                                    }),
+                                    null != I
+                                        ? (0, r.jsx)("img", {
+                                              src: I,
+                                              alt: "",
+                                              width: 16,
+                                              height: 16,
+                                              className: _.icon,
+                                          })
+                                        : null,
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            (() => {
+                let e = d(t);
+                return "application-widget" === e.variant
+                    ? (0, r.jsx)(h.T, {
+                          applicationId: e.applicationId,
+                          size: l,
+                      })
+                    : null;
+            })(),
+        ],
+    });
 }

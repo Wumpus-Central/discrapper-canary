@@ -2,7 +2,7 @@ n.d(t, { h: () => o }), n(442837);
 var r = n(722733);
 n(633289);
 var i = n(751823);
-let a = (0, r.Z)({
+let a = (0, r.ZP)({
     kind: "user",
     name: "2025-12-proportional-vad-indicator",
     defaultConfig: { enabled: !1 },

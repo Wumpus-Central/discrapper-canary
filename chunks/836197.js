@@ -1,7 +1,7 @@
 n.d(t, {
-    Ki: () => s,
-    Wc: () => l,
-    zy: () => c,
+    Sr: () => l,
+    Wc: () => c,
+    zy: () => u,
 });
 var r = n(624238),
     i = n(296009),
@@ -21,9 +21,12 @@ function o(e, t, n) {
 }
 let s = [i.l.CURRENT_GAMES, i.l.FAVORITE_GAMES, i.l.WANT_TO_PLAY_GAMES, i.l.PLAYED_GAMES];
 function l(e) {
-    return s.includes(e.type);
+    return s.includes(e);
 }
-class c {
+function c(e) {
+    return e instanceof u;
+}
+class u {
     toSubmission() {
         let e = (e) => ({
             game_id: e.applicationId,
@@ -45,7 +48,10 @@ class c {
         return this.games.length > 0 && this.games.length <= r.kp[this.type];
     }
     isEqual(e) {
-        return e instanceof c && e.type === this.type && (0, a.ou)(this.games, e.games, this.type);
+        return e instanceof u && e.type === this.type && (0, a.ou)(this.games, e.games, this.type);
+    }
+    getUniqueKey() {
+        return this.type;
     }
     getProfileAnalyticsOptions() {
         return { widgetType: this.type };

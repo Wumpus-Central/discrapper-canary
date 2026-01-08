@@ -19,7 +19,6 @@ e.exports = {
     heroImagePlaceholder: "_0ea1a3c81197a370-heroImagePlaceholder",
     heroImageContainer: "_0ea1a3c81197a370-heroImageContainer",
     grid: "_0ea1a3c81197a370-grid",
-    socialProof: "_0ea1a3c81197a370-socialProof",
     stillSyncing: "_0ea1a3c81197a370-stillSyncing",
     footer: "_0ea1a3c81197a370-footer",
     cta: "_0ea1a3c81197a370-cta",

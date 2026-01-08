@@ -1,7 +1,7 @@
 n.d(t, { T: () => o });
 var r = n(722733),
     i = n(751823);
-let a = (0, r.Z)({
+let a = (0, r.ZP)({
     kind: "user",
     name: "2025-11-global-frame-pool-lock",
     defaultConfig: { enabled: !1 },

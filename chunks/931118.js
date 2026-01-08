@@ -13,7 +13,7 @@ var r = n(722733),
             e
         );
     })({});
-let a = (0, r.Z)({
+let a = (0, r.ZP)({
         kind: "user",
         name: "2025-10-offer-reminders-ux-experiment",
         defaultConfig: {

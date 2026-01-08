@@ -70,7 +70,7 @@ let m = {
     },
     h = "GoLiveAutoQualityMigrationVersion",
     g = 1,
-    E = (0, o.Z)({
+    E = (0, o.ZP)({
         name: "2025-10-go-live-auto-quality",
         kind: "user",
         defaultConfig: m,

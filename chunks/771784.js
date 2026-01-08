@@ -16,7 +16,7 @@ var r = n(722733),
             e
         );
     })({});
-let a = (0, r.Z)({
+let a = (0, r.ZP)({
     name: "2025-10-soundboard-xp-3",
     kind: "user",
     defaultConfig: { sortingStrategy: "oldest_creation_date" },

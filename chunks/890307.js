@@ -62,19 +62,21 @@ function p(e) {
                                         variant: "heading-sm/semibold",
                                         lineClamp: 2,
                                         children: [
-                                            t.season,
-                                            ": ",
-                                            t.currentRankName,
-                                            " ",
-                                            null != t.currentRankImage &&
-                                                (0, r.jsx)("div", {
-                                                    className: f.rankImage,
-                                                    children: (0, r.jsx)(l.ZP, {
-                                                        src: t.currentRankImage.proxyUrl,
-                                                        width: t.currentRankImage.width,
-                                                        height: t.currentRankImage.height,
-                                                        responsive: !0,
-                                                    }),
+                                            t.previewText,
+                                            null != t.previewIcon &&
+                                                (0, r.jsxs)(r.Fragment, {
+                                                    children: [
+                                                        " ",
+                                                        (0, r.jsx)("div", {
+                                                            className: f.previewIcon,
+                                                            children: (0, r.jsx)(l.ZP, {
+                                                                src: t.previewIcon.proxyUrl,
+                                                                width: t.previewIcon.width,
+                                                                height: t.previewIcon.height,
+                                                                responsive: !0,
+                                                            }),
+                                                        }),
+                                                    ],
                                                 }),
                                         ],
                                     }),
@@ -88,13 +90,13 @@ function p(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: f.featuredCharacterImageContainer,
+                        className: f.previewImageContainer,
                         children: (0, r.jsx)(l.ZP, {
-                            src: t.featuredCharacterImage.proxyUrl,
-                            width: t.featuredCharacterImage.width,
-                            height: t.featuredCharacterImage.height,
+                            src: t.previewImage.proxyUrl,
+                            width: t.previewImage.width,
+                            height: t.previewImage.height,
                             responsive: !0,
-                            className: f.featuredCharacterImage,
+                            className: f.previewImage,
                         }),
                     }),
                 ],

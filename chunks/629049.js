@@ -1,5 +1,5 @@
 n.d(t, { Z: () => l });
-let l = (0, n(722733).Z)({
+let l = (0, n(722733).ZP)({
     kind: "user",
     name: "2025-10-call-tile-popout",
     defaultConfig: { enabled: !1 },

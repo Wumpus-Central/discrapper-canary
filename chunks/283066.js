@@ -2,7 +2,7 @@ n.d(t, {
     Y: () => a,
     Z: () => i,
 });
-let r = (0, n(722733).Z)({
+let r = (0, n(722733).ZP)({
     kind: "user",
     name: "2025-10-premium-brand-refresh-ga-backtest",
     defaultConfig: { enabled: !0 },

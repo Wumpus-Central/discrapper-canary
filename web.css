@@ -49639,7 +49639,7 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
     border-radius: 2px
 }
 
-._9dfff3600436b3c3-rankImage {
+._9dfff3600436b3c3-previewIcon {
     display: inline-block;
     height: 1lh;
     vertical-align: bottom;
@@ -49650,13 +49650,13 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
     padding-block: 2px
 }
 
-._9dfff3600436b3c3-featuredCharacterImageContainer {
+._9dfff3600436b3c3-previewImageContainer {
     -webkit-mask: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .013) 4.7%, rgba(0, 0, 0, .049) 9.2%, rgba(0, 0, 0, .104) 13.6%, rgba(0, 0, 0, .175) 18%, rgba(0, 0, 0, .259) 22.6%, rgba(0, 0, 0, .352) 27.4%, rgba(0, 0, 0, .45) 32.6%, rgba(0, 0, 0, .55) 38.3%, rgba(0, 0, 0, .648) 44.5%, rgba(0, 0, 0, .741) 51.4%, rgba(0, 0, 0, .825) 59.1%, rgba(0, 0, 0, .896) 67.7%, rgba(0, 0, 0, .951) 77.3%, rgba(0, 0, 0, .987) 88%, #000);
     mask: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .013) 4.7%, rgba(0, 0, 0, .049) 9.2%, rgba(0, 0, 0, .104) 13.6%, rgba(0, 0, 0, .175) 18%, rgba(0, 0, 0, .259) 22.6%, rgba(0, 0, 0, .352) 27.4%, rgba(0, 0, 0, .45) 32.6%, rgba(0, 0, 0, .55) 38.3%, rgba(0, 0, 0, .648) 44.5%, rgba(0, 0, 0, .741) 51.4%, rgba(0, 0, 0, .825) 59.1%, rgba(0, 0, 0, .896) 67.7%, rgba(0, 0, 0, .951) 77.3%, rgba(0, 0, 0, .987) 88%, #000);
     position: relative
 }
 
-._9dfff3600436b3c3-featuredCharacterImage {
+._9dfff3600436b3c3-previewImage {
     position: absolute
 }
 

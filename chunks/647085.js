@@ -6,7 +6,7 @@ var r = n(442837),
     i = n(722733),
     a = n(633289),
     o = n(751823);
-let s = (0, i.Z)({
+let s = (0, i.ZP)({
     name: "2025-10-windows-mute-detection",
     kind: "user",
     defaultConfig: { windowsMuteAndZeroVolumeDetectionEnabled: !1 },

@@ -3,6 +3,7 @@ n.d(t, {
     Cf: () => I,
     ID: () => T,
     Ls: () => y,
+    SK: () => j,
     Xz: () => P,
     Z: () => b,
     c_: () => N,
@@ -12,7 +13,6 @@ n.d(t, {
     pG: () => O,
     rH: () => D,
     rf: () => w,
-    uV: () => j,
     x3: () => x,
     z5: () => A,
 });
@@ -202,20 +202,20 @@ function x(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(m.QP.PRESET);
 }
 async function L() {
-    if (null == f.Z.applicationWidgetApplicationConfigs || !(f.Z.applicationWidgetApplicationConfigs.length > 0)) {
-        a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
+    if (null == f.Z.applicationWidgetConfigs || !(f.Z.applicationWidgetConfigs.length > 0)) {
+        a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START" });
         try {
             let e = await i.tn.get({
                 url: _.ANM.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS,
                 rejectWithError: !0,
             });
             a.Z.dispatch({
-                type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_SUCCESS",
+                type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_SUCCESS",
                 applicationConfigs: e.body.application_configs,
             });
         } catch (e) {
             throw (
-                (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_FAILURE" }),
+                (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_FAILURE" }),
                 d.Z.captureException(e),
                 e)
             );
@@ -224,6 +224,6 @@ async function L() {
 }
 let j = (0, r.Kb)(f.Z, {
     getQueryId: _.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
-    get: () => f.Z.applicationWidgetApplicationConfigs,
+    get: () => f.Z.applicationWidgetConfigs,
     load: () => L(),
 });

@@ -1,4 +1,6 @@
-function r(e, t, n) {
+n.d(t, { q: () => a });
+var r = n(296009);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +13,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { q: () => i });
-class i {
+class a {
     toSubmission() {
         return {
             id: this.id,
@@ -29,7 +30,10 @@ class i {
         return !0;
     }
     isEqual(e) {
-        return e instanceof i && e.applicationId === this.applicationId;
+        return e instanceof a && e.applicationId === this.applicationId;
+    }
+    getUniqueKey() {
+        return "".concat(this.type, "-").concat(this.applicationId);
     }
     getProfileAnalyticsOptions() {
         return {
@@ -43,12 +47,12 @@ class i {
             applicationId: this.applicationId,
         };
     }
-    constructor({ id: e, type: t, applicationId: n }) {
-        r(this, "id", void 0),
-            r(this, "type", void 0),
-            r(this, "applicationId", void 0),
+    constructor({ id: e, applicationId: t }) {
+        i(this, "id", void 0),
+            i(this, "type", void 0),
+            i(this, "applicationId", void 0),
             (this.id = e),
-            (this.type = t),
-            (this.applicationId = n);
+            (this.type = r.l.APPLICATION),
+            (this.applicationId = t);
     }
 }
