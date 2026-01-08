@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var a = n(54381);
 n(473749);
 var r = n(913527),
@@ -9,35 +9,59 @@ var r = n(913527),
     c = n(570140),
     d = n(666086),
     u = n(441623),
-    m = n(594174),
-    p = n(246992),
-    h = n(555109),
-    f = n(663618);
-function x() {
+    m = n(752048),
+    p = n(594174),
+    h = n(246992),
+    f = n(555109),
+    x = n(663618);
+function b(e) {
+    let t = new Date(e);
+    return (
+        t.toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+        }) +
+        " " +
+        t.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: !0,
+        })
+    );
+}
+function g() {
     let e = (0, l.e7)([u.ZP], () => u.ZP.getDevToolTotalFriendAnniversaries()),
         t = (0, l.e7)([u.ZP], () => u.ZP.getDevToolCurrentDate()),
         n = (0, l.e7)([u.ZP], () => u.ZP.getGiftUnreadNotificationLastDismissedTimes()),
         r = (0, l.e7)([u.ZP], () => u.ZP.getMessageGiftIntentLastShownMap()),
-        x = (0, l.e7)([u.ZP], () => u.ZP.getHighestAffinityFriendAnniversaries()),
-        b = (0, l.e7)([u.ZP], () => u.ZP.getHighAffinityFriendAnniversaries()),
-        g = (e) => {
+        g = (0, l.e7)([u.ZP], () => u.ZP.getHighestAffinityFriendAnniversaries()),
+        v = (0, l.e7)([u.ZP], () => u.ZP.getHighAffinityFriendAnniversaries()),
+        j = (0, l.e7)([u.ZP], () => u.ZP.getProfilePopoutGiftIntentsDismissMap()),
+        y = (e) => {
             c.Z.dispatch({
                 type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT",
                 total: e,
             });
+        },
+        C = (e) => {
+            let t = m.Z.getUserAffinity(e);
+            return (null == t ? void 0 : t.dmProbability) != null
+                ? "".concat((100 * t.dmProbability).toFixed(3), "%")
+                : "N/A";
         };
     return (0, a.jsx)(o.zJl, {
-        className: f.panel,
+        className: x.panel,
         children: (0, a.jsxs)("div", {
-            className: h.panelInner,
+            className: f.panelInner,
             children: [
                 (0, a.jsx)(o.Text, {
-                    className: h.panelHeader,
+                    className: f.panelHeader,
                     variant: "text-lg/bold",
                     children: "Friend Anniversary",
                 }),
                 (0, a.jsx)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: (0, a.jsxs)(o.Kqy, {
                         gap: 8,
                         direction: "horizontal",
@@ -84,16 +108,16 @@ function x() {
                                 ],
                                 value: e,
                                 onChange: (e) => {
-                                    g(e);
+                                    y(e);
                                 },
-                                popoutLayerContext: p.O$,
+                                popoutLayerContext: h.O$,
                             }),
                             (0, a.jsx)(o.Button, {
                                 size: "sm",
                                 variant: "secondary",
                                 text: "Clear",
                                 onClick: () => {
-                                    g(null);
+                                    y(null);
                                 },
                             }),
                         ],
@@ -101,11 +125,21 @@ function x() {
                 }),
                 null != e &&
                     (0, a.jsx)("div", {
-                        className: h.panelRow,
+                        className: f.panelRow,
                         children: (0, a.jsxs)(o.Kqy, {
                             gap: 8,
                             children: [
-                                x.length > 0 &&
+                                (0, a.jsx)(o.Text, {
+                                    variant: "text-xs/normal",
+                                    children:
+                                        "Affinity is the percent chance that User A will DM or GDM User B in the next 7 days.",
+                                }),
+                                (0, a.jsx)(o.Text, {
+                                    variant: "text-xs/normal",
+                                    children:
+                                        "The devtool automatically assigns users as high affinity regardless of actual affinity for testing.",
+                                }),
+                                g.length > 0 &&
                                     (0, a.jsxs)(o.Kqy, {
                                         gap: 4,
                                         children: [
@@ -114,25 +148,25 @@ function x() {
                                                 children:
                                                     "Highest Affinity Friend Anniversaries (Eligible for Notification):",
                                             }),
-                                            x.map((e) => {
+                                            g.map((e) => {
                                                 var t;
-                                                let n = m.default.getUser(e),
+                                                let n = p.default.getUser(e),
                                                     r =
                                                         null != (t = null == n ? void 0 : n.username)
                                                             ? t
                                                             : "Unknown User (".concat(e, ")");
-                                                return (0, a.jsx)(
+                                                return (0, a.jsxs)(
                                                     o.Text,
                                                     {
                                                         variant: "text-xs/normal",
-                                                        children: r,
+                                                        children: [r, " (", C(e), ")"],
                                                     },
                                                     e,
                                                 );
                                             }),
                                         ],
                                     }),
-                                b.length > 0 &&
+                                v.length > 0 &&
                                     (0, a.jsxs)(o.Kqy, {
                                         gap: 4,
                                         children: [
@@ -140,18 +174,18 @@ function x() {
                                                 variant: "text-xs/semibold",
                                                 children: "High Affinity Friend Anniversaries:",
                                             }),
-                                            b.map((e) => {
+                                            v.map((e) => {
                                                 var t;
-                                                let n = m.default.getUser(e),
+                                                let n = p.default.getUser(e),
                                                     r =
                                                         null != (t = null == n ? void 0 : n.username)
                                                             ? t
                                                             : "Unknown User (".concat(e, ")");
-                                                return (0, a.jsx)(
+                                                return (0, a.jsxs)(
                                                     o.Text,
                                                     {
                                                         variant: "text-xs/normal",
-                                                        children: r,
+                                                        children: [r, " (", C(e), ")"],
                                                     },
                                                     e,
                                                 );
@@ -162,7 +196,7 @@ function x() {
                         }),
                     }),
                 (0, a.jsx)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: (0, a.jsxs)(o.Kqy, {
                         gap: 8,
                         direction: "horizontal",
@@ -196,7 +230,7 @@ function x() {
                     }),
                 }),
                 (0, a.jsx)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: (0, a.jsxs)(o.Kqy, {
                         gap: 8,
                         children: [
@@ -229,16 +263,16 @@ function x() {
                                         Object.entries(r).map((e) => {
                                             var t;
                                             let [n, r] = e,
-                                                l = m.default.getUser(n),
-                                                s =
-                                                    null != (t = null == l ? void 0 : l.username)
+                                                i = p.default.getUser(n),
+                                                l =
+                                                    null != (t = null == i ? void 0 : i.username)
                                                         ? t
                                                         : "Unknown User (".concat(n, ")");
                                             return (0, a.jsxs)(
                                                 o.Text,
                                                 {
                                                     variant: "text-xs/normal",
-                                                    children: [s, ": ", i()(r).format("MMM D, YYYY h:mm A")],
+                                                    children: [l, ": ", b(r)],
                                                 },
                                                 n,
                                             );
@@ -249,7 +283,7 @@ function x() {
                     }),
                 }),
                 (0, a.jsx)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: (0, a.jsxs)(o.Kqy, {
                         gap: 8,
                         children: [
@@ -284,7 +318,7 @@ function x() {
                                                 o.Text,
                                                 {
                                                     variant: "text-xs/normal",
-                                                    children: i()(e).format("MMM D, YYYY h:mm A"),
+                                                    children: b(e),
                                                 },
                                                 t,
                                             ),
@@ -295,7 +329,7 @@ function x() {
                     }),
                 }),
                 (0, a.jsxs)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: [
                         (0, a.jsx)(o.Text, {
                             variant: "text-md/normal",
@@ -312,7 +346,7 @@ function x() {
                     ],
                 }),
                 (0, a.jsxs)("div", {
-                    className: h.panelRow,
+                    className: f.panelRow,
                     children: [
                         (0, a.jsx)(o.Text, {
                             variant: "text-md/normal",
@@ -328,22 +362,60 @@ function x() {
                         }),
                     ],
                 }),
-                (0, a.jsxs)("div", {
-                    className: h.panelRow,
-                    children: [
-                        (0, a.jsx)(o.Text, {
-                            variant: "text-md/normal",
-                            children: "Reset profile popout gift intents dismiss",
-                        }),
-                        (0, a.jsx)(o.Button, {
-                            variant: "primary",
-                            size: "sm",
-                            text: "Reset",
-                            onClick: () => {
-                                c.Z.dispatch({ type: "DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET" });
-                            },
-                        }),
-                    ],
+                (0, a.jsx)("div", {
+                    className: f.panelRow,
+                    children: (0, a.jsxs)(o.Kqy, {
+                        gap: 8,
+                        children: [
+                            (0, a.jsxs)(o.Kqy, {
+                                gap: 8,
+                                direction: "horizontal",
+                                children: [
+                                    (0, a.jsx)(o.Text, {
+                                        variant: "text-md/normal",
+                                        children: "Reset profile popout gift intents dismiss",
+                                    }),
+                                    (0, a.jsx)(o.Button, {
+                                        variant: "primary",
+                                        size: "sm",
+                                        text: "Reset",
+                                        onClick: () => {
+                                            c.Z.dispatch({
+                                                type: "DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET",
+                                            });
+                                        },
+                                    }),
+                                ],
+                            }),
+                            Object.keys(j).length > 0 &&
+                                (0, a.jsxs)(o.Kqy, {
+                                    gap: 4,
+                                    children: [
+                                        (0, a.jsx)(o.Text, {
+                                            variant: "text-xs/semibold",
+                                            children: "Profile Popout Gift Intents Dismissed:",
+                                        }),
+                                        Object.entries(j).map((e) => {
+                                            var t;
+                                            let [n, r] = e,
+                                                i = p.default.getUser(n),
+                                                l =
+                                                    null != (t = null == i ? void 0 : i.username)
+                                                        ? t
+                                                        : "Unknown User (".concat(n, ")");
+                                            return (0, a.jsxs)(
+                                                o.Text,
+                                                {
+                                                    variant: "text-xs/normal",
+                                                    children: [l, ": ", b(r)],
+                                                },
+                                                n,
+                                            );
+                                        }),
+                                    ],
+                                }),
+                        ],
+                    }),
                 }),
             ],
         }),
