@@ -1,4 +1,4 @@
-n.d(t, { _: () => O }), n(388685);
+n.d(t, { _: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -84,64 +84,73 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function O(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: m, renderSubmenu: g } = e,
-        { focusIndex: y, isUsingKeyboardNavigation: O } = m,
-        v = b(m, ["focusIndex", "isUsingKeyboardNavigation"]),
-        S = i.useRef(null),
-        I = i.useRef(null),
+let O = "right-start",
+    v = i.createContext(O);
+function S(e) {
+    let t = i.useContext(v),
+        { subMenuClassName: n, parentItem: a, isFocused: m, menuSubmenuProps: g, renderSubmenu: y } = e,
+        { focusIndex: O, isUsingKeyboardNavigation: S } = g,
+        I = b(g, ["focusIndex", "isUsingKeyboardNavigation"]),
         T = i.useRef(null),
-        [C, A] = i.useState(!1);
+        C = i.useRef(null),
+        A = i.useRef(null),
+        [N, P] = i.useState(!1);
     i.useLayoutEffect(() => {
-        A(!0);
+        P(!0);
     }, []),
         i.useLayoutEffect(() => {
             var e;
-            a && ((0, u.F)(S), null == (e = T.current) || e.focus());
-        }, [a]);
-    let N = (0, r.jsx)("div", {
+            m && ((0, u.F)(T), null == (e = A.current) || e.focus());
+        }, [m]);
+    let R = (0, r.jsx)("div", {
             className: _.submenuPaddingContainer,
             children: (0, r.jsx)(
                 "div",
-                E(h({ className: o()(_.submenu, t) }, v), {
-                    ref: T,
+                E(h({ className: o()(_.submenu, n) }, I), {
+                    ref: A,
                     children: (0, r.jsx)(l.zJl, {
                         className: _.scroller,
-                        children: g(),
+                        children: y(),
                     }),
                 }),
             ),
         }),
-        P = (0, c.E)("MenuSubmenuItem"),
-        R = (0, f.c)("MenuSubmenuItem"),
-        [w, D] = i.useState(!1);
-    if (P)
+        w = (0, c.E)("MenuSubmenuItem"),
+        D = (0, f.c)("MenuSubmenuItem"),
+        [x, L] = i.useState(!1);
+    if (w)
         return (0, r.jsx)(s.pS, {
-            open: w,
+            open: x,
             viewportPadding: p.sb,
-            onOpenChange: D,
-            spacing: R ? -4 : 4,
-            placement: "right-start",
+            onOpenChange: L,
+            spacing: D ? -4 : 4,
+            placement: t,
             portal: !1,
             trigger: "hover",
-            renderLayer: () => N,
+            renderLayer: (e) => {
+                let { placement: t } = e;
+                return (0, r.jsx)(v.Provider, {
+                    value: t,
+                    children: R,
+                });
+            },
             children: (e) => {
-                let { ref: t, props: i } = e;
-                return (0, r.jsx)("div", E(h({ ref: t }, i), { children: n }));
+                let { ref: t, props: n } = e;
+                return (0, r.jsx)("div", E(h({ ref: t }, n), { children: a }));
             },
         });
-    let x = (0, r.jsx)(d.jRF, {
-        targetRef: I,
+    let j = (0, r.jsx)(d.jRF, {
+        targetRef: C,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         fixed: !0,
         spacing: 4,
         position: "right",
         align: "top",
-        children: () => N,
+        children: () => R,
     });
     return (0, r.jsxs)("div", {
-        ref: S,
-        children: [(0, r.jsx)("div", { ref: I }), n, a && C ? x : null],
+        ref: T,
+        children: [(0, r.jsx)("div", { ref: C }), a, m && N ? j : null],
     });
 }

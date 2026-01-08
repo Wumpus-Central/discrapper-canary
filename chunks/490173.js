@@ -139,6 +139,7 @@ let S = (e) => {
         R = u.ownerDocument;
     return P
         ? (0, r.jsx)(o.pS, {
+              spacing: 0,
               open: !0,
               ownerDocument: R,
               onOpenChange: (e) => {
