@@ -124,7 +124,7 @@ let A = { location: {} },
     k = 86400000,
     U = 0.001,
     G = performance.now(),
-    Z = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
+    Z = (0, s.un)() ? (0, s.Ub)((0, o.R)()) : null;
 a.extendSuperProperties({ launch_signature: Z });
 let F = [];
 function B(e) {
@@ -385,6 +385,10 @@ let V = {
     },
     [g.rMx.VIDEO_STREAM_ZOOM_CHANGED]: {
         throttlePeriod: R,
+        throttleKeys: () => [],
+    },
+    [g.rMx.CACHE_STATS_RECORDED]: {
+        throttlePeriod: j,
         throttleKeys: () => [],
     },
 };
