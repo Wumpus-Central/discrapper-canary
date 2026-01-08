@@ -1,16 +1,10 @@
-n.d(t, {
-    m: () => p,
-    q: () => c,
-}),
-    n(388685),
-    n(642613),
-    n(35282),
-    n(415506);
+n.d(t, { m: () => p }), n(388685), n(642613), n(35282), n(415506);
 var r = n(836560),
     i = n(400053),
     a = n.n(i),
-    o = n(142494);
-function s(e, t, n) {
+    o = n(788756),
+    s = n(142494);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,30 +48,19 @@ function s(e, t, n) {
     n(180583),
     delete n.g.IntlMessageFormat,
     "undefined" == typeof Intl && n(211604);
-let l = "en-US";
-function c() {
-    let e;
-    return null !=
-        (e =
-            (Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
-            navigator.language ||
-            navigator.browserLanguage ||
-            navigator.userLanguage)
-        ? e
-        : "";
-}
+let c = "en-US";
 class u {
     getMessages() {
         return this._parsedMessages;
     }
     constructor(e) {
-        s(this, "_context", {
+        l(this, "_context", {
             messages: {},
             defaultMessages: {},
-            locale: l,
+            locale: c,
         }),
-            s(this, "_parsedMessages", {}),
-            s(this, "_getParsedMessages", void 0),
+            l(this, "_parsedMessages", {}),
+            l(this, "_getParsedMessages", void 0),
             (this._getParsedMessages = e);
     }
 }
@@ -89,7 +72,7 @@ class d extends u {
         var t;
         super(...e),
             (t = this),
-            s(this, "_refresh", function (e) {
+            l(this, "_refresh", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 return (
                     Object.keys(e.defaultMessages).forEach((r) => {
@@ -114,7 +97,7 @@ class f extends u {
         var t;
         super(e),
             (t = this),
-            s(this, "_createProxy", function () {
+            l(this, "_createProxy", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t._context;
                 return new Proxy({}, { get: (n, r) => n[r] || (n[r] = t._getParsedMessages(e, r, t._createProxy)) });
             }),
@@ -139,7 +122,7 @@ class p extends r.EventEmitter {
             this.emit("locale", this._chosenLocale, t);
     }
     setUpdateRules(e) {
-        (0, o.yR)(e);
+        (0, s.yR)(e);
     }
     getLanguages() {
         return this._languages;
@@ -173,7 +156,7 @@ class p extends r.EventEmitter {
     }
     getDefaultLocale() {
         var e, t, n;
-        let r = null != (e = c()) ? e : l,
+        let r = null != (e = (0, o.q)()) ? e : c,
             i = this._languages
                 .filter((e) => {
                     let { enabled: t } = e;
@@ -190,10 +173,10 @@ class p extends r.EventEmitter {
             : "zh" === a[0] && a.length > 1 && "Hant" === a[1]
               ? null != (t = i.find((e) => "zh-TW" === e))
                   ? t
-                  : l
+                  : c
               : null != (n = i.find((e) => e.split("-")[0] === a[0]))
                 ? n
-                : l;
+                : c;
     }
     _loadMessagesForLocale(e) {
         let t = this._fetchMessages(e);
@@ -202,7 +185,7 @@ class p extends r.EventEmitter {
             : (this._applyMessagesForLocale(t, e), Promise.resolve());
     }
     _applyMessagesForLocale(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(l);
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(c);
         this._requestedLocale === t &&
             (this._provider.refresh({
                 messages: e,
@@ -218,13 +201,13 @@ class p extends r.EventEmitter {
     }
     _fetchMessages(e) {
         let t =
-            e === l
+            e === c
                 ? () => {
-                      throw Error("Error Loading ".concat(l));
+                      throw Error("Error Loading ".concat(c));
                   }
                 : () =>
                       (console.warn("Unsupported Locale", e), -1 === e.indexOf("-"))
-                          ? this._fetchMessages(l)
+                          ? this._fetchMessages(c)
                           : this._fetchMessages(e.split("-")[0]);
         try {
             let n = this._getMessages(e);
@@ -235,26 +218,26 @@ class p extends r.EventEmitter {
     }
     constructor({ initialLocale: e, getMessages: t, getLanguages: r }) {
         super(),
-            s(this, "Messages", void 0),
-            s(this, "loadPromise", Promise.resolve()),
-            s(this, "initialLanguageLoad", void 0),
-            s(this, "resolveLanguageLoaded", () => {}),
-            s(this, "_languages", []),
-            s(this, "_provider", void 0),
-            s(this, "_chosenLocale", ""),
-            s(this, "_requestedLocale", void 0),
-            s(this, "_getMessages", void 0),
-            s(this, "_getParsedMessages", (e, t, n) => {
+            l(this, "Messages", void 0),
+            l(this, "loadPromise", Promise.resolve()),
+            l(this, "initialLanguageLoad", void 0),
+            l(this, "resolveLanguageLoaded", () => {}),
+            l(this, "_languages", []),
+            l(this, "_provider", void 0),
+            l(this, "_chosenLocale", ""),
+            l(this, "_requestedLocale", void 0),
+            l(this, "_getMessages", void 0),
+            l(this, "_getParsedMessages", (e, t, n) => {
                 let { messages: r, defaultMessages: i, locale: a } = e,
-                    s = r[t] || i[t];
-                if ("object" == typeof s)
+                    o = r[t] || i[t];
+                if ("object" == typeof o)
                     return n({
-                        messages: s,
+                        messages: o,
                         defaultMessages: i[t],
                         locale: a,
                     });
                 try {
-                    return (0, o.FC)(s, a);
+                    return (0, s.FC)(o, a);
                 } catch (e) {
                     if (
                         (console.warn(
@@ -263,13 +246,13 @@ class p extends r.EventEmitter {
                                 .concat(a, "' defaulting to English"),
                             e,
                         ),
-                        "string" == typeof (s = i[t]))
+                        "string" == typeof (o = i[t]))
                     )
-                        return (0, o.FC)(s, a);
+                        return (0, s.FC)(o, a);
                 }
                 return "";
             }),
-            s(this, "_handleNewListener", (e) => {
+            l(this, "_handleNewListener", (e) => {
                 "locale" === e && this.emit(e, this._chosenLocale);
             }),
             (this.initialLanguageLoad = new Promise((e, t) => {

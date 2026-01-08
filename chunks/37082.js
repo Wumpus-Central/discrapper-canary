@@ -13,17 +13,18 @@ function i(e, t, n) {
     );
 }
 n.d(t, {
-    R: () => s,
-    y: () => l,
+    R: () => l,
+    y: () => c,
 }),
     n(49124);
+let a = "483938";
 try {
-    r = window.localStorage;
+    (r = window.localStorage), null == r && null != a && ((r = window[a]), delete window[a]);
 } catch (e) {}
 try {
-    delete window.localStorage;
+    null != window.localStorage && null != a && (window[a] = window.localStorage), delete window.localStorage;
 } catch (e) {}
-function a() {
+function o() {
     let e = "test";
     try {
         return r.setItem(e, e), r.removeItem(e), !0;
@@ -31,7 +32,7 @@ function a() {
         return !1;
     }
 }
-class o {
+class s {
     get(e, t) {
         let n = r.getItem(e);
         if (null != n)
@@ -65,7 +66,7 @@ class o {
         return Promise.resolve(this.get(e));
     }
 }
-class s {
+class l {
     get(e, t) {
         return this.storage.hasOwnProperty(e) ? this.storage[e] : t;
     }
@@ -94,4 +95,4 @@ class s {
         i(this, "storage", void 0), (this.storage = {});
     }
 }
-let l = a() ? new o() : new s();
+let c = o() ? new s() : new l();
