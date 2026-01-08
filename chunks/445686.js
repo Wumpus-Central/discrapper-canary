@@ -41,6 +41,7 @@ var r = (function (e) {
         (e.FirstFrameStats = "first-frame-stats"),
         (e.FirstFrameEncryptedStats = "first-frame-encrypted-stats"),
         (e.VideoEncoderFallback = "video-encoder-fallback"),
+        (e.VideoDecoderFallback = "video-decoder-fallback"),
         (e.RemoteStreamsReady = "remote-streams-ready"),
         (e.MLSFailure = "mls-failure"),
         (e.SecureFramesUpdate = "secure-frames-update"),

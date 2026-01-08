@@ -203,7 +203,7 @@ class x extends p.Z {
                                 ),
                             ),
                             t.getEncryptionModes((r) => {
-                                var i, l, c, u, d, f, p, _, m, g, E, b, y, O, S;
+                                var i, l, c, u, d, f, p, _, m, g, E, b, y, O, S, I;
                                 (this.onEncryptionModesCallbackAt = performance.now()),
                                     this.logger.info("Encryption modes: ".concat(r)),
                                     t.setTransportOptions(this.getConnectionTransportOptions()),
@@ -221,7 +221,9 @@ class x extends p.Z {
                                     null == (d = t.setPingTimeoutCallback) || d.call(t, this.handlePingTimeout),
                                     null == (f = t.setOnVideoEncoderFallbackCallback) ||
                                         f.call(t, this.handleVideoEncoderFallback),
-                                    null == (p = t.setOnRtcpMessageCallback) || p.call(t, this.handleRTCPMessage),
+                                    null == (p = t.setOnVideoDecoderFallbackCallback) ||
+                                        p.call(t, this.handleVideoDecoderFallback),
+                                    null == (_ = t.setOnRtcpMessageCallback) || _.call(t, this.handleRTCPMessage),
                                     n.setTransportOptions({
                                         builtInEchoCancellation: !0,
                                         echoCancellation: this.echoCancellation,
@@ -238,18 +240,18 @@ class x extends p.Z {
                                     n.setNoInputCallback(this.handleNoInput),
                                     this.videoSupported &&
                                         (t.setOnVideoCallback(this.handleVideo),
-                                        null == (m = t.setOnFirstFrameCallback) || m.call(t, this.handleFirstFrame),
-                                        null == (g = t.setOnFirstFrameDeliveredStatsCallback) ||
-                                            g.call(t, this.handleFirstFrameStats),
-                                        null == (E = t.setOnFirstFrameEncryptedStatsCallback) ||
-                                            E.call(t, this.handleFirstFrameEncryptedStats),
-                                        null == (b = t.setOnDesktopSourceEnded) ||
-                                            b.call(t, this.handleDesktopSourceEnded),
-                                        null == (y = t.setOnSoundshare) || y.call(t, this.handleSoundshare),
-                                        null == (O = t.setOnSoundshareEnded) || O.call(t, this.handleSoundshareEnded),
-                                        null == (S = t.setOnSoundshareFailed) ||
-                                            S.call(t, this.handleSoundshareFailed)),
-                                    null == (_ = t.setOnMLSFailureCallback) || _.call(t, this.handleMLSFailure),
+                                        null == (g = t.setOnFirstFrameCallback) || g.call(t, this.handleFirstFrame),
+                                        null == (E = t.setOnFirstFrameDeliveredStatsCallback) ||
+                                            E.call(t, this.handleFirstFrameStats),
+                                        null == (b = t.setOnFirstFrameEncryptedStatsCallback) ||
+                                            b.call(t, this.handleFirstFrameEncryptedStats),
+                                        null == (y = t.setOnDesktopSourceEnded) ||
+                                            y.call(t, this.handleDesktopSourceEnded),
+                                        null == (O = t.setOnSoundshare) || O.call(t, this.handleSoundshare),
+                                        null == (S = t.setOnSoundshareEnded) || S.call(t, this.handleSoundshareEnded),
+                                        null == (I = t.setOnSoundshareFailed) ||
+                                            I.call(t, this.handleSoundshareFailed)),
+                                    null == (m = t.setOnMLSFailureCallback) || m.call(t, this.handleMLSFailure),
                                     this.setConnectionState(v.$j.CONNECTED),
                                     this.emit(h.Sh.Connected, a, {
                                         address: o,
@@ -258,8 +260,8 @@ class x extends p.Z {
                                         codecs: this.codecs,
                                     }),
                                     this.on(h.Sh.Stats, this.handleStats);
-                                let I = this.getUserOptions();
-                                for (let e of (I.forEach((e) => {
+                                let T = this.getUserOptions();
+                                for (let e of (T.forEach((e) => {
                                     var t, n;
                                     return this.logger.info(
                                         "Creating user: "
@@ -270,8 +272,8 @@ class x extends p.Z {
                                             ),
                                     );
                                 }),
-                                this.mergeUsers(I),
-                                this.emit(h.Sh.RemoteStreamsReady, I.length),
+                                this.mergeUsers(T),
+                                this.emit(h.Sh.RemoteStreamsReady, T.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                             });
@@ -1135,6 +1137,7 @@ class x extends p.Z {
             S(this, "selfVideo", !1),
             S(this, "codecs", []),
             S(this, "videoEncoderFallbackPending", !1),
+            S(this, "videoDecoderFallbackSent", new Set()),
             S(this, "desktopDegradationPreference", (0, b.zS)().DegradationPreference.MAINTAIN_FRAMERATE),
             S(this, "sourceDesktopDegradationPreference", (0, b.zS)().DegradationPreference.DISABLED),
             S(this, "videoDegradationPreference", (0, b.zS)().DegradationPreference.BALANCED),
@@ -1218,6 +1221,15 @@ class x extends p.Z {
                         .filter((e) => "video" !== e.type || !1 !== e.encode || !1 !== e.decode)),
                     this.emit(h.Sh.VideoEncoderFallback, this.codecs),
                     (this.videoEncoderFallbackPending = !0));
+            }),
+            S(this, "handleVideoDecoderFallback", (e) => {
+                this.videoDecoderFallbackSent.has(e) ||
+                    (this.videoDecoderFallbackSent.add(e),
+                    this.logger.info("Falling back from current video decoder: ".concat(e)),
+                    (this.codecs = this.codecs
+                        .map((t) => ((e === t.name || ("AV1" === t.name && "AV1X" === e)) && (t.decode = !1), t))
+                        .filter((e) => "video" !== e.type || !1 !== e.encode || !1 !== e.decode)),
+                    this.emit(h.Sh.VideoDecoderFallback, this.codecs));
             }),
             S(this, "handleRTCPMessage", (e, t) => {
                 if (e === O.ym.REMB && this.context === v.Yn.STREAM) {

@@ -959,6 +959,28 @@ class eN extends f.Z {
                 ),
                     e.updateSession({ codecs: t });
             }),
+            f.on(p.Sh.VideoDecoderFallback, (t) => {
+                let n = M.Z.getChannel(this.channelId),
+                    r = (null == n ? void 0 : n.type) === es.d4z.GUILD_STAGE_VOICE;
+                if (!k.Z.isVideoDecoderFallbackEnabled() || r) {
+                    if (!this._videoDecoderFallbackSuppressed) {
+                        let e = k.Z.isVideoDecoderFallbackEnabled() ? "stage channel" : "not in fallback treatment";
+                        this.logger.info("Suppressing video decoder fallback: ".concat(e)),
+                            (this._videoDecoderFallbackSuppressed = !0);
+                    }
+                    return;
+                }
+                let i = t
+                    .filter((e) => "video" === e.type)
+                    .map((e) => e.name)
+                    .join(",");
+                this.logger.info(
+                    "The originally selected video decoder is not working, fallback to the other available decoders: ".concat(
+                        i,
+                    ),
+                ),
+                    e.updateSession({ codecs: t });
+            }),
             f.on(p.Sh.Error, (t) => {
                 if (e !== this._socket) return;
                 let n = Z.Z.shouldIncludePreferredRegion() ? Z.Z.getPreferredRegion() : null;
@@ -1820,6 +1842,7 @@ class eN extends f.Z {
             eu(this, "_voiceDuration", void 0),
             eu(this, "_videoHealthManager", void 0),
             eu(this, "_sentVideo", void 0),
+            eu(this, "_videoDecoderFallbackSuppressed", void 0),
             eu(this, "_outboundLossRate", void 0),
             eu(this, "_recordingEnabled", void 0),
             eu(this, "_selectedExperiments", void 0),
@@ -2003,6 +2026,7 @@ class eN extends f.Z {
             (this._videoQuality = null),
             (this._videoHealthManager = null),
             (this._sentVideo = !1),
+            (this._videoDecoderFallbackSuppressed = !1),
             (this._outboundLossRate = null),
             (this._createdTime = (0, _.zO)()),
             (this._connectStartTime = 0),
