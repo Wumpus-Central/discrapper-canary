@@ -126,6 +126,7 @@ function S(e) {
             spacing: D ? -4 : 4,
             placement: t,
             portal: !1,
+            crossAccessFlip: !1,
             trigger: "hover",
             renderLayer: (e) => {
                 let { placement: t } = e;
