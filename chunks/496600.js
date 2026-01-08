@@ -149,11 +149,11 @@ function L(e) {
             [g, M, d],
         );
     i.useEffect(() => {
-        if ("single" === d) {
+        if (!A && "single" === d) {
             var e, t;
             G(null != (t = null == (e = F.current) ? void 0 : e.label) ? t : "", "");
         }
-    }, [G, B, d]),
+    }, [G, B, d, A]),
         i.useEffect(() => {
             if (o && null != F.current) {
                 let e = Z.findIndex((e) => {
