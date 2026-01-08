@@ -73,101 +73,105 @@ function b(e) {
     var t;
     let n,
         {
-            open: l,
-            onOpenChange: p,
-            id: m,
-            className: b,
-            overrideTargetRect: y,
-            placement: O = "bottom",
-            spacing: v = 8,
-            autoFlip: S = !0,
-            autoShift: I = !0,
-            strategy: T = "fixed",
-            portal: C = !0,
-            blockPointerEvents: A = !1,
-            children: N,
-            renderLayer: P,
-            viewportPadding: R = g,
-            trigger: w = "click",
+            ownerDocument: l = document,
+            open: p,
+            onOpenChange: m,
+            id: b,
+            className: y,
+            overrideTargetRect: O,
+            placement: v = "bottom",
+            spacing: S = 8,
+            autoFlip: I = !0,
+            crossAccessFlip: T = !0,
+            autoShift: C = !0,
+            strategy: A = "fixed",
+            portal: N = !0,
+            blockPointerEvents: P = !1,
+            children: R,
+            renderLayer: w,
+            viewportPadding: D = g,
+            trigger: x = "click",
         } = e,
-        D = i.useRef(null),
-        x = i.useMemo(() => {
-            let e = [(0, a.cv)(v)];
+        L = i.useRef(null),
+        j = i.useMemo(() => {
+            let e = [(0, a.cv)(S)];
             return (
-                S &&
-                    e.push(
-                        (0, a.RR)({
-                            padding: R,
-                            boundary: window.document.body,
-                        }),
-                    ),
                 I &&
                     e.push(
+                        (0, a.RR)({
+                            crossAxis: T,
+                            padding: D,
+                            boundary: l.body,
+                        }),
+                    ),
+                C &&
+                    e.push(
                         (0, a.uY)({
-                            padding: R,
+                            padding: D,
                             limiter: (0, a.dr)(),
-                            boundary: window.document.body,
+                            boundary: l.body,
                         }),
                     ),
                 e.push((0, a.Cp)({ strategy: "referenceHidden" })),
                 e
             );
-        }, [v, S, I, R]);
-    null != y && (n = { reference: { getBoundingClientRect: () => y } });
+        }, [S, I, C, D, T, l]);
+    null != O && (n = { reference: { getBoundingClientRect: () => O } });
     let {
-            refs: L,
-            floatingStyles: j,
-            placement: M,
-            middlewareData: k,
-            update: U,
-            context: G,
+            refs: M,
+            floatingStyles: k,
+            placement: U,
+            middlewareData: G,
+            update: Z,
+            context: F,
         } = (0, o.YF)({
-            placement: O,
-            open: l,
-            onOpenChange: p,
-            strategy: T,
-            middleware: x,
+            placement: v,
+            open: p,
+            onOpenChange: m,
+            strategy: A,
+            middleware: j,
             whileElementsMounted: s.Me,
             elements: n,
         }),
-        Z = (0, o.bQ)(G),
-        F = (0, o.XI)(G, {
-            enabled: "hover" === w,
+        B = (0, o.bQ)(F),
+        V = (0, o.XI)(F, {
+            enabled: "hover" === x,
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
-        { getReferenceProps: B, getFloatingProps: V } = (0, o.NI)([Z, F]),
-        H = (null == (t = k.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
-        Y = C ? d.UU : i.Fragment;
+        { getReferenceProps: H, getFloatingProps: Y } = (0, o.NI)([B, V]),
+        W = (null == (t = G.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
+        K = N ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            N({
-                ref: L.setReference,
-                props: B(),
+            R({
+                ref: M.setReference,
+                props: H(),
             }),
-            l &&
-                (0, r.jsxs)(Y, {
+            p &&
+                (0, r.jsxs)(K, {
+                    ownerDocument: l,
                     children: [
-                        A ? (0, r.jsx)(o.y0, {}) : null,
+                        P ? (0, r.jsx)(o.y0, {}) : null,
                         (0, r.jsx)(
                             "div",
                             h(
                                 _(
                                     {
-                                        id: m,
-                                        className: c()(b, f.layer),
+                                        id: b,
+                                        className: c()(y, f.layer),
                                         [E]: !0,
-                                        style: h(_({}, j), { visibility: H }),
-                                        ref: L.setFloating,
+                                        style: h(_({}, k), { visibility: W }),
+                                        ref: M.setFloating,
                                     },
-                                    V(),
+                                    Y(),
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: D,
-                                        children: P({
-                                            placement: M,
-                                            update: U,
-                                            hidden: "hidden" === H,
+                                        containerRef: L,
+                                        children: w({
+                                            placement: U,
+                                            update: Z,
+                                            hidden: "hidden" === W,
                                         }),
                                     }),
                                 },

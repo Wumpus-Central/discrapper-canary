@@ -1,11 +1,12 @@
 n.d(t, {
-    NI: () => ed,
+    NI: () => em,
     XI: () => x,
-    YF: () => ec,
-    Y_: () => eE,
-    bQ: () => es,
-    xp: () => ev,
-    y0: () => er,
+    YF: () => ep,
+    Y_: () => ev,
+    bQ: () => ed,
+    ll: () => J,
+    xp: () => eC,
+    y0: () => es,
 });
 var r,
     i = n(473749),
@@ -388,17 +389,174 @@ function W(e, t, n, r) {
         }
     );
 }
-let K = null,
-    z = null,
-    q = () => React.useContext(K),
-    Q = 20,
-    X = null;
-function J() {
-    X = X.filter((e) => e.isConnected);
+let K = {
+        border: 0,
+        clip: "rect(0 0 0 0)",
+        height: "1px",
+        margin: "-1px",
+        overflow: "hidden",
+        padding: 0,
+        position: "fixed",
+        whiteSpace: "nowrap",
+        width: "1px",
+        top: 0,
+        left: 0,
+    },
+    z = i.forwardRef(function (e, t) {
+        let [n, r] = i.useState();
+        (0, a.Xj)(() => {
+            (0, a.G6)() && r("button");
+        }, []);
+        let s = {
+            ref: t,
+            tabIndex: 0,
+            role: n,
+            "aria-hidden": !n || void 0,
+            [N("focus-guard")]: "",
+            style: K,
+        };
+        return (0, o.jsx)("span", {
+            ...e,
+            ...s,
+        });
+    }),
+    q = i.createContext(null),
+    Q = N("portal");
+function X(e) {
+    void 0 === e && (e = {});
+    let { id: t, root: n } = e,
+        r = v(),
+        o = $(),
+        [l, c] = i.useState(null),
+        u = i.useRef(null);
+    return (
+        (0, a.Xj)(
+            () => () => {
+                null == l || l.remove(),
+                    queueMicrotask(() => {
+                        u.current = null;
+                    });
+            },
+            [l],
+        ),
+        (0, a.Xj)(() => {
+            if (!r || u.current) return;
+            let e = t ? document.getElementById(t) : null;
+            if (!e) return;
+            let n = document.createElement("div");
+            (n.id = r), n.setAttribute(Q, ""), e.appendChild(n), (u.current = n), c(n);
+        }, [t, r]),
+        (0, a.Xj)(() => {
+            if (null === n || !r || u.current) return;
+            let e = n || (null == o ? void 0 : o.portalNode);
+            e && !(0, s.UG)(e) && (e = e.current), (e = e || document.body);
+            let i = null;
+            t && (((i = document.createElement("div")).id = t), e.appendChild(i));
+            let a = document.createElement("div");
+            (a.id = r), a.setAttribute(Q, ""), (e = i || e).appendChild(a), (u.current = a), c(a);
+        }, [t, n, r, o]),
+        l
+    );
 }
-let $ = 0,
-    ee = "--floating-ui-scrollbar-width";
-function et() {
+function J(e) {
+    let { children: t, id: n, root: r, preserveTabOrder: s = !0 } = e,
+        c = X({
+            id: n,
+            root: r,
+        }),
+        [u, d] = i.useState(null),
+        f = i.useRef(null),
+        p = i.useRef(null),
+        _ = i.useRef(null),
+        m = i.useRef(null),
+        h = null == u ? void 0 : u.modal,
+        g = null == u ? void 0 : u.open,
+        E = !!u && !u.modal && u.open && s && !!(r || c);
+    return (
+        i.useEffect(() => {
+            if (c && s && !h)
+                return (
+                    c.addEventListener("focusin", e, !0),
+                    c.addEventListener("focusout", e, !0),
+                    () => {
+                        c.removeEventListener("focusin", e, !0), c.removeEventListener("focusout", e, !0);
+                    }
+                );
+            function e(e) {
+                c && (0, a.dE)(e) && ("focusin" === e.type ? a.NX : a.N6)(c);
+            }
+        }, [c, s, h]),
+        i.useEffect(() => {
+            c && (g || (0, a.NX)(c));
+        }, [g, c]),
+        (0, o.jsxs)(q.Provider, {
+            value: i.useMemo(
+                () => ({
+                    preserveTabOrder: s,
+                    beforeOutsideRef: f,
+                    afterOutsideRef: p,
+                    beforeInsideRef: _,
+                    afterInsideRef: m,
+                    portalNode: c,
+                    setFocusManagerState: d,
+                }),
+                [s, c],
+            ),
+            children: [
+                E &&
+                    c &&
+                    (0, o.jsx)(z, {
+                        "data-type": "outside",
+                        ref: f,
+                        onFocus: (e) => {
+                            if ((0, a.dE)(e, c)) {
+                                var t;
+                                null == (t = _.current) || t.focus();
+                            } else {
+                                let e = u ? u.domReference : null,
+                                    t = (0, a.e8)(e);
+                                null == t || t.focus();
+                            }
+                        },
+                    }),
+                E &&
+                    c &&
+                    (0, o.jsx)("span", {
+                        "aria-owns": c.id,
+                        style: K,
+                    }),
+                c && l.createPortal(t, c),
+                E &&
+                    c &&
+                    (0, o.jsx)(z, {
+                        "data-type": "outside",
+                        ref: p,
+                        onFocus: (e) => {
+                            if ((0, a.dE)(e, c)) {
+                                var t;
+                                null == (t = m.current) || t.focus();
+                            } else {
+                                let t = u ? u.domReference : null,
+                                    n = (0, a.k0)(t);
+                                null == n || n.focus(),
+                                    (null == u ? void 0 : u.closeOnFocusOut) &&
+                                        (null == u || u.onOpenChange(!1, e.nativeEvent, "focus-out"));
+                            }
+                        },
+                    }),
+            ],
+        })
+    );
+}
+let $ = () => i.useContext(q),
+    ee = 20,
+    et = null;
+function en() {
+    et = et.filter((e) => e.isConnected);
+}
+let er = 0,
+    ei = "--floating-ui-scrollbar-width";
+function ea() {
     let e = (0, a.Xf)(),
         t = /iP(hone|ad|od)|iOS/.test(e) || ("MacIntel" === e && navigator.maxTouchPoints > 1),
         n = document.body.style,
@@ -409,7 +567,7 @@ function et() {
         i = window.innerWidth - document.documentElement.clientWidth,
         o = n.left ? parseFloat(n.left) : window.scrollX,
         s = n.top ? parseFloat(n.top) : window.scrollY;
-    if (((n.overflow = "hidden"), n.setProperty(ee, i + "px"), i && (n[r] = i + "px"), t)) {
+    if (((n.overflow = "hidden"), n.setProperty(ei, i + "px"), i && (n[r] = i + "px"), t)) {
         var l, c;
         let e = (null == (l = window.visualViewport) ? void 0 : l.offsetLeft) || 0;
         Object.assign(n, {
@@ -424,7 +582,7 @@ function et() {
             overflow: "",
             [r]: "",
         }),
-            n.removeProperty(ee),
+            n.removeProperty(ei),
             t &&
                 (Object.assign(n, {
                     position: "",
@@ -435,16 +593,16 @@ function et() {
                 window.scrollTo(o, s));
     };
 }
-let en = () => {},
-    er = i.forwardRef(function (e, t) {
+let eo = () => {},
+    es = i.forwardRef(function (e, t) {
         let { lockScroll: n = !1, ...r } = e;
         return (
             (0, a.Xj)(() => {
                 if (n)
                     return (
-                        1 == ++$ && (en = et()),
+                        1 == ++er && (eo = ea()),
                         () => {
-                            0 == --$ && en();
+                            0 == --er && eo();
                         }
                     );
             }, [n]),
@@ -463,24 +621,24 @@ let en = () => {},
             })
         );
     }),
-    ei = {
+    el = {
         pointerdown: "onPointerDown",
         mousedown: "onMouseDown",
         click: "onClick",
     },
-    ea = {
+    ec = {
         pointerdown: "onPointerDownCapture",
         mousedown: "onMouseDownCapture",
         click: "onClickCapture",
     },
-    eo = (e) => {
+    eu = (e) => {
         var t, n;
         return {
             escapeKey: "boolean" == typeof e ? e : null != (t = null == e ? void 0 : e.escapeKey) && t,
             outsidePress: "boolean" == typeof e ? e : null == (n = null == e ? void 0 : e.outsidePress) || n,
         };
     };
-function es(e, t) {
+function ed(e, t) {
     void 0 === t && (t = {});
     let { open: n, onOpenChange: r, elements: o, dataRef: l } = e,
         {
@@ -498,8 +656,8 @@ function es(e, t) {
         b = (0, a.iW)("function" == typeof d ? d : () => !1),
         y = "function" == typeof d ? b : d,
         O = i.useRef(!1),
-        { escapeKey: v, outsidePress: S } = eo(h),
-        { escapeKey: I, outsidePress: T } = eo(g),
+        { escapeKey: v, outsidePress: S } = eu(h),
+        { escapeKey: I, outsidePress: T } = eu(g),
         C = i.useRef(!1),
         P = (0, a.iW)((e) => {
             var t;
@@ -658,7 +816,7 @@ function es(e, t) {
             () => ({
                 onKeyDown: P,
                 ...(p && {
-                    [ei[_]]: (e) => {
+                    [el[_]]: (e) => {
                         r(!1, e.nativeEvent, "reference-press");
                     },
                     ...("click" !== _ && {
@@ -679,7 +837,7 @@ function es(e, t) {
                 onMouseUp() {
                     O.current = !0;
                 },
-                [ea[f]]: () => {
+                [ec[f]]: () => {
                     l.current.insideReactTree = !0;
                 },
             }),
@@ -696,7 +854,7 @@ function es(e, t) {
         [c, x, L],
     );
 }
-function el(e) {
+function ef(e) {
     let { open: t = !1, onOpenChange: n, elements: r } = e,
         o = v(),
         s = i.useRef({}),
@@ -735,10 +893,10 @@ function el(e) {
         [t, f, _, l, o, p],
     );
 }
-function ec(e) {
+function ep(e) {
     void 0 === e && (e = {});
     let { nodeId: t } = e,
-        n = el({
+        n = ef({
             ...e,
             elements: {
                 reference: null,
@@ -829,7 +987,7 @@ function ec(e) {
         )
     );
 }
-function eu(e, t, n) {
+function e_(e, t, n) {
     let r = new Map(),
         i = "item" === n,
         a = e;
@@ -875,14 +1033,14 @@ function eu(e, t, n) {
             ),
     };
 }
-function ed(e) {
+function em(e) {
     void 0 === e && (e = []);
     let t = e.map((e) => (null == e ? void 0 : e.reference)),
         n = e.map((e) => (null == e ? void 0 : e.floating)),
         r = e.map((e) => (null == e ? void 0 : e.item)),
-        a = i.useCallback((t) => eu(t, e, "reference"), t),
-        o = i.useCallback((t) => eu(t, e, "floating"), n),
-        s = i.useCallback((t) => eu(t, e, "item"), r);
+        a = i.useCallback((t) => e_(t, e, "reference"), t),
+        o = i.useCallback((t) => e_(t, e, "floating"), n),
+        s = i.useCallback((t) => e_(t, e, "item"), r);
     return i.useMemo(
         () => ({
             getReferenceProps: a,
@@ -892,8 +1050,8 @@ function ed(e) {
         [a, o, s],
     );
 }
-let ef = "Escape";
-function ep(e, t, n) {
+let eh = "Escape";
+function eg(e, t, n) {
     switch (e) {
         case "vertical":
             return t;
@@ -903,11 +1061,11 @@ function ep(e, t, n) {
             return t || n;
     }
 }
-let e_ = (e) => e.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (e, t) => (t ? "-" : "") + e.toLowerCase());
-function em(e, t) {
+let eE = (e) => e.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (e, t) => (t ? "-" : "") + e.toLowerCase());
+function eb(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function eh(e, t) {
+function ey(e, t) {
     let [n, r] = i.useState(e);
     return (
         e && !n && r(!0),
@@ -920,7 +1078,7 @@ function eh(e, t) {
         n
     );
 }
-function eg(e, t) {
+function eO(e, t) {
     void 0 === t && (t = {});
     let {
             open: n,
@@ -929,7 +1087,7 @@ function eg(e, t) {
         { duration: o = 250 } = t,
         s = ("number" == typeof o ? o : o.close) || 0,
         [c, u] = i.useState("unmounted"),
-        d = eh(n, s);
+        d = ey(n, s);
     return (
         d || "close" !== c || u("unmounted"),
         (0, a.Xj)(() => {
@@ -954,7 +1112,7 @@ function eg(e, t) {
         }
     );
 }
-function eE(e, t) {
+function ev(e, t) {
     void 0 === t && (t = {});
     let { initial: n = { opacity: 0 }, open: r, close: o, common: s, duration: l = 250 } = t,
         c = e.placement,
@@ -970,20 +1128,20 @@ function eE(e, t) {
         p = (f ? l : l.open) || 0,
         _ = (f ? l : l.close) || 0,
         [m, h] = i.useState(() => ({
-            ...em(s, d),
-            ...em(n, d),
+            ...eb(s, d),
+            ...eb(n, d),
         })),
-        { isMounted: g, status: E } = eg(e, { duration: l }),
+        { isMounted: g, status: E } = eO(e, { duration: l }),
         b = (0, a.II)(n),
         y = (0, a.II)(r),
         O = (0, a.II)(o),
         v = (0, a.II)(s);
     return (
         (0, a.Xj)(() => {
-            let e = em(b.current, d),
-                t = em(O.current, d),
-                n = em(v.current, d),
-                r = em(y.current, d) || Object.keys(e).reduce((e, t) => ((e[t] = ""), e), {});
+            let e = eb(b.current, d),
+                t = eb(O.current, d),
+                n = eb(v.current, d),
+                r = eb(y.current, d) || Object.keys(e).reduce((e, t) => ((e[t] = ""), e), {});
             if (
                 ("initial" === E &&
                     h((t) => ({
@@ -993,7 +1151,7 @@ function eE(e, t) {
                     })),
                 "open" === E &&
                     h({
-                        transitionProperty: Object.keys(r).map(e_).join(","),
+                        transitionProperty: Object.keys(r).map(eE).join(","),
                         transitionDuration: p + "ms",
                         ...n,
                         ...r,
@@ -1002,7 +1160,7 @@ function eE(e, t) {
             ) {
                 let r = t || e;
                 h({
-                    transitionProperty: Object.keys(r).map(e_).join(","),
+                    transitionProperty: Object.keys(r).map(eE).join(","),
                     transitionDuration: _ + "ms",
                     ...n,
                     ...r,
@@ -1015,7 +1173,7 @@ function eE(e, t) {
         }
     );
 }
-function eb(e, t, n) {
+function eS(e, t, n) {
     return (
         void 0 === n && (n = !0),
         e
@@ -1023,10 +1181,10 @@ function eb(e, t, n) {
                 var r;
                 return e.parentId === t && (!n || (null == (r = e.context) ? void 0 : r.open));
             })
-            .flatMap((t) => [t, ...eb(e, t.id, n)])
+            .flatMap((t) => [t, ...eS(e, t.id, n)])
     );
 }
-function ey(e, t) {
+function eI(e, t) {
     let [n, r] = e,
         i = !1,
         a = t.length;
@@ -1037,10 +1195,10 @@ function ey(e, t) {
     }
     return i;
 }
-function eO(e, t) {
+function eT(e, t) {
     return e[0] >= t.x && e[0] <= t.x + t.width && e[1] >= t.y && e[1] <= t.y + t.height;
 }
-function ev(e) {
+function eC(e) {
     void 0 === e && (e = {});
     let { buffer: t = 0.5, blockPointerEvents: n = !1, requireIntent: r = !0 } = e,
         i = { current: -1 },
@@ -1075,7 +1233,7 @@ function ev(e) {
                 I = l.split("-")[0],
                 T = n > S.right - S.width / 2,
                 C = o > S.bottom - S.height / 2,
-                A = eO(g, v),
+                A = eT(g, v),
                 N = S.width > v.width,
                 R = S.height > v.height,
                 w = (N ? v : S).left,
@@ -1089,7 +1247,7 @@ function ev(e) {
             }
             if (
                 (b && (0, s.kK)(e.relatedTarget) && M(c.floating, e.relatedTarget)) ||
-                (p && eb(p.nodesRef.current, f).length)
+                (p && eS(p.nodesRef.current, f).length)
             )
                 return;
             if (
@@ -1169,14 +1327,14 @@ function ev(e) {
                         ];
                 }
             }
-            if (!ey([m, h], j)) {
+            if (!eI([m, h], j)) {
                 if (a && !A) return _();
                 if (!b && r) {
                     let t = u(e.clientX, e.clientY),
                         n = 0.1;
                     if (null !== t && t < n) return _();
                 }
-                ey([m, h], U([n, o])) ? !a && r && (i.current = window.setTimeout(_, 40)) : _();
+                eI([m, h], U([n, o])) ? !a && r && (i.current = window.setTimeout(_, 40)) : _();
             }
         };
     };

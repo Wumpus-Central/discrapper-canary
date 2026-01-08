@@ -134,16 +134,20 @@ let S = (e) => {
         }, [C]),
         N = i.useCallback(() => {
             C.dispatch(g.CkL.POPOUT_HIDE);
-        }, [C]);
-    return (0, l.E)("ContextMenu")
+        }, [C]),
+        P = (0, l.E)("ContextMenu"),
+        R = u.ownerDocument;
+    return P
         ? (0, r.jsx)(o.pS, {
               open: !0,
+              ownerDocument: R,
               onOpenChange: (e) => {
                   e ? A() : (N(), v(), I.current());
               },
               overrideTargetRect: _,
               placement: (0, o.a_)(null != m ? m : "right", null != h ? h : "top"),
               blockPointerEvents: !y,
+              crossAccessFlip: !1,
               renderLayer: (e) => {
                   let { update: n } = e;
                   return t({ position: m }, n);
