@@ -1,74 +1,51 @@
 n.d(t, {
-    A2: () => f,
-    S3: () => h,
+    X: () => p,
+    Z: () => h,
 });
-var a = n(473749),
-    r = n(442837),
-    i = n(704215),
-    l = n(570140),
-    s = n(645041),
-    o = n(271383),
-    c = n(430824),
-    d = n(594174),
-    u = n(731722),
-    m = n(864133),
-    p = n(981631);
-function h(e) {
-    let t = (function (e) {
-        let t = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : p.lds);
-        return (
-            (0, r.e7)([c.Z, d.default, o.ZP], () => {
-                var t, n;
-                if (null === e) return !1;
-                let a = c.Z.getGuild(e);
-                if (void 0 === a || !(0, u.up)(a) || null == a.profile || null === a.profile.tag) return !1;
-                let r = d.default.getCurrentUser();
-                if (
-                    void 0 === r ||
-                    ((null == (t = r.primaryGuild) ? void 0 : t.identityGuildId) === a.id &&
-                        (null == (n = r.primaryGuild) ? void 0 : n.tag) === a.profile.tag)
-                )
-                    return !1;
-                let i = o.ZP.getMember(e, r.id);
-                return null != i && !i.isPending;
-            }, [e]) && !t
-        );
-    })(e);
-    return !(function (e) {
-        let t = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : p.lds),
-            n = (0, r.e7)([m.Z], () => (null === e ? null : m.Z.getGuildLastSeenInfo(e))),
-            o = (0, r.e7)([d.default], () => {
-                var e;
-                return null == (e = d.default.getCurrentUser()) ? void 0 : e.primaryGuild;
-            }),
-            u = (0, r.e7)([c.Z], () => {
-                var t, n;
-                return null == (n = c.Z.getGuild(e)) || null == (t = n.profile) ? void 0 : t.tag;
-            });
-        if (
-            (a.useEffect(() => {
-                t &&
-                    null === n &&
-                    null != e &&
-                    null != u &&
-                    l.Z.dispatch({
-                        type: "GUILD_TAG_CHANGED_COACHMARK_SEEN",
-                        guildId: e,
-                        lastSeenInfo: { tag: u },
-                    });
-            }, [e, u, t, n]),
-            null == u || ((null == o ? void 0 : o.identityGuildId) === e && (null == o ? void 0 : o.tag) === u))
-        )
-            return !1;
-        let h = (null == o ? void 0 : o.identityGuildId) === e && (null == o ? void 0 : o.tag) === null,
-            f = null === n || (null == n ? void 0 : n.tag) === u;
-        return h && !f && t;
-    })(e)
-        ? t
-            ? "available"
-            : null
-        : "changed";
+var a = n(442837),
+    r = n(704215),
+    i = n(243778),
+    l = n(645041),
+    s = n(271383),
+    o = n(430824),
+    c = n(594174),
+    d = n(731722),
+    u = n(864133),
+    m = n(981631);
+function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { shouldShow: n = !0 } = t,
+        u = (0, l.FT)(r.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : m.lds),
+        p = (0, a.e7)([o.Z, c.default, s.ZP], () => {
+            var t, n;
+            if (null === e) return !1;
+            let a = o.Z.getGuild(e);
+            if (void 0 === a || !(0, d.up)(a) || null == a.profile || null === a.profile.tag) return !1;
+            let r = c.default.getCurrentUser();
+            if (
+                void 0 === r ||
+                ((null == (t = r.primaryGuild) ? void 0 : t.identityGuildId) === a.id &&
+                    (null == (n = r.primaryGuild) ? void 0 : n.tag) === a.profile.tag)
+            )
+                return !1;
+            let i = s.ZP.getMember(e, r.id);
+            return null != i && !i.isPending;
+        }, [e]);
+    return (0, i.ZT)(p && n && !u ? [r.z.GUILD_TAG_AVAILABLE_COACHMARK_V2] : [], null != e ? e : m.kod);
 }
-function f(e) {
-    return null !== h(e);
+function h(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { shouldShow: l = !0 } = n,
+        s = null == e ? void 0 : e.primaryGuild,
+        c = null != (t = null == s ? void 0 : s.identityGuildId) ? t : null,
+        d = (0, a.e7)([u.Z], () => (null === c ? null : u.Z.getGuildLastSeenInfo(c))),
+        m = (0, a.e7)([o.Z], () => {
+            var e, t;
+            return null == (t = o.Z.getGuild(c)) || null == (e = t.profile) ? void 0 : e.tag;
+        }),
+        p = null != m && (null == s ? void 0 : s.identityGuildId) === c && (null == s ? void 0 : s.tag) === null,
+        h = null != c && (null == d ? void 0 : d.tag) === m,
+        f = null !== c && p && !h;
+    return (0, i.bf)(f && l ? r.z.GUILD_TAG_UPDATED_COACHMARK : null, { cooldownDurationMs: 86400000 });
 }

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o }), n(388685);
-var r = n(473749),
-    i = n(321114),
-    a = n(226746);
+r.d(t, { Z: () => o }), r(388685);
+var n = r(473749),
+    i = r(321114),
+    a = r(226746);
 function o(e, t) {
-    let [n, o] = r.useState(!1),
-        l = r.useCallback(async () => {
-            o(!0), await (0, i.c)(e, !0), o(!1), null == t || t();
+    let [r, o] = n.useState(!1),
+        l = n.useCallback(async () => {
+            null != e && (o(!0), await (0, i.c)(e, !0), o(!1)), null == t || t();
         }, [e, t]),
-        c = (0, a.Z)(e);
+        s = (0, a.Z)(e);
     return {
-        isAdopting: n,
+        isAdopting: r,
         onAdoptTag: l,
-        onEditProfile: r.useCallback(() => {
-            null == t || t(), c();
-        }, [c, t]),
+        onEditProfile: n.useCallback(() => {
+            null == t || t(), s();
+        }, [s, t]),
     };
 }
