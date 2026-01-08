@@ -11,8 +11,8 @@ var r = n(54381),
     p = n(529103),
     f = n(252618),
     g = n(313201),
-    m = n(5254),
-    h = n(984370),
+    h = n(5254),
+    m = n(984370),
     b = n(518311),
     _ = n(199104),
     E = n(108427),
@@ -28,10 +28,7 @@ var r = n(54381),
 function P() {
     return (0, r.jsx)("div", {
         className: j.inviteToolbar,
-        children: (0, r.jsx)(b.Z, {
-            tooltip: N.intl.string(N.t["HfOgA/"]),
-            location: "PeoplePageHeaderToolbar-CreateDMButton",
-        }),
+        children: (0, r.jsx)(b.Z, { tooltip: N.intl.string(N.t["HfOgA/"]) }),
     });
 }
 let x = function (e) {
@@ -53,7 +50,7 @@ let x = function (e) {
     let b = (0, s.e7)([O.Z], () => O.Z.theme),
         x = (0, y.If)(),
         { section: A, rows: Z } = (0, s.cj)([v.ZP], () => v.ZP.getState()),
-        w = (0, s.e7)([m.Z], () => m.Z.getSuggestionCount()),
+        w = (0, s.e7)([h.Z], () => h.Z.getSuggestionCount()),
         L = i.useMemo(() => Z.getRelationshipCounts(), [Z]);
     i.useEffect(() => {
         null != t && p.Z.setInitialSection(t),
@@ -135,22 +132,22 @@ let x = function (e) {
                 (0, r.jsx)(c.f6W, {
                     theme: b,
                     children: (e) =>
-                        (0, r.jsxs)(h.Z, {
+                        (0, r.jsxs)(m.Z, {
                             className: e,
                             toolbar: (0, r.jsx)(P, {}),
                             role: "navigation",
                             "aria-labelledby": D,
                             scrollable: !0,
                             children: [
-                                (0, r.jsx)(h.Z.Icon, {
+                                (0, r.jsx)(m.Z.Icon, {
                                     icon: c.iFz,
                                     "aria-hidden": !0,
                                 }),
-                                (0, r.jsx)(h.Z.Title, {
+                                (0, r.jsx)(m.Z.Title, {
                                     id: D,
                                     children: N.intl.string(N.t.TdEu5X),
                                 }),
-                                (0, r.jsx)(h.Z.Divider, {}),
+                                (0, r.jsx)(m.Z.Divider, {}),
                                 (0, r.jsx)(c.njP, {
                                     "aria-label": N.intl.string(N.t.TdEu5X),
                                     selectedItem: A,

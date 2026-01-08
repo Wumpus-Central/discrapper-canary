@@ -20,8 +20,8 @@ n.d(t, {
     d5: () => y,
     m: () => w,
     os: () => A,
-    uc: () => b,
     vW: () => D,
+    ye: () => b,
 }),
     n(388685);
 var r = n(494497),
@@ -56,8 +56,9 @@ let d = "1340102344645283891",
     },
     g = "guild_powerup_modal",
     E = [[r.IN], [r.If], [r.A$], [r.MB, r.Vk]],
-    b = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]),
-    y = () => ({
+    b = new Set([r.IN, r.If, r.A$, r.MB, r.Vk]);
+r.If;
+let y = () => ({
         [l.GuildFeatures.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: a.Ro.STREAM,
             description: c.intl.string(c.t.y4ft4D),

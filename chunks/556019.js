@@ -1,7 +1,6 @@
-n.d(t, { qt: () => l });
-var r = n(203311),
-    i = n(818083);
-let a = (0, i.B)({
+n.d(t, { qt: () => s });
+var r = n(818083);
+let i = (0, r.B)({
         kind: "user",
         id: "2025-07_emoji_studio_mobile",
         label: "Emoji Studio (Mobile)",
@@ -14,7 +13,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    o = (0, i.B)({
+    a = (0, r.B)({
         kind: "user",
         id: "2025-08_emoji_studio_entrypoint",
         label: "Emoji Studio Entrypoint",
@@ -27,7 +26,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    s = (0, i.B)({
+    o = (0, r.B)({
         kind: "user",
         id: "2025-08_emoji_studio_speedrun",
         label: "Emoji Studio V2 Speedrun",
@@ -54,32 +53,31 @@ let a = (0, i.B)({
             },
         ],
     });
-function l(e) {
-    let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
-        l = (0, r.$u)(t),
-        { enabled: c } = a.useExperiment(
+function s(e) {
+    let { location: t, autoTrackExposure: n, disable: r = !1 } = e,
+        { enabled: s } = i.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: r,
             },
         ),
-        { enabled: u } = o.useExperiment(
+        { enabled: l } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: r,
             },
         ),
-        { isEmojiEditingExperimentEnabled: d, isSelectFileBeforeEmojiStudioExperimentEnabled: f } = s.useExperiment(
+        { isEmojiEditingExperimentEnabled: c, isSelectFileBeforeEmojiStudioExperimentEnabled: u } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: l || i,
+                disable: r,
             },
         );
     return {
-        enabled: u || d || f,
-        isMobileEnabled: c,
+        enabled: l || c || u,
+        isMobileEnabled: s,
     };
 }

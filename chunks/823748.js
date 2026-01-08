@@ -645,7 +645,6 @@ class tl extends i.PureComponent {
                                     {
                                         channel: e,
                                         tooltip: e9.intl.string(e9.t.Xjlbvs),
-                                        location: "ChannelHeaderToolbar-DM-AddFriendsButton",
                                     },
                                     "invite",
                                 ),
@@ -678,7 +677,6 @@ class tl extends i.PureComponent {
                                     {
                                         channel: e,
                                         tooltip: t,
-                                        location: "ChannelHeaderToolbar-GroupDM-AddFriendsButton",
                                     },
                                     "invite",
                                 ),

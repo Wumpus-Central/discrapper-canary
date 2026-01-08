@@ -1,7 +1,4 @@
 e.exports = {
-    popout: "cba5926a3ea0ad97-popout",
-    popoutContent: "cba5926a3ea0ad97-popoutContent",
-    footer: "cba5926a3ea0ad97-footer",
     searchBar: "cba5926a3ea0ad97-searchBar",
     customizationContainer: "cba5926a3ea0ad97-customizationContainer",
     iconSelector: "cba5926a3ea0ad97-iconSelector",
