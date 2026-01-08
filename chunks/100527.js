@@ -277,7 +277,6 @@ var r = (function (e) {
         (e.EDIT_NAMEPLATE_MODAL = "edit nameplate modal"),
         (e.EDIT_NAMEPLATE_SHEET = "edit nameplate sheet"),
         (e.EDIT_DISPLAY_NAME_STYLES_MODAL = "edit display name styles modal"),
-        (e.COLLECTIBLES_MOBILE_SHOP_MARKETING_SHEET = "collectibles mobile shop marketing sheet"),
         (e.CHANNEL_CALL_OVERFLOW_ACTION_SHEET = "channel_call_overflow_action_sheet"),
         (e.ACTIVITY_COACH_MARK_NITRO = "activity coach mark nitro"),
         (e.ACTIVITY_COACH_MARK_BOOSTING = "activity coach mark boosting"),
