@@ -152,7 +152,7 @@ var P = (function (e) {
         return (e[(e.AVAILABLE = 0)] = "AVAILABLE"), (e[(e.SPENT = 1)] = "SPENT"), (e[(e.TOTAL = 2)] = "TOTAL"), e;
     })({}),
     R = (function (e) {
-        return (e[(e.NONE = 0)] = "NONE"), (e[(e.LEVEL = 1)] = "LEVEL"), (e[(e.PERK = 2)] = "PERK"), e;
+        return (e[(e.LEVEL = 0)] = "LEVEL"), (e[(e.PERK = 1)] = "PERK"), e;
     })({}),
     w = (function (e) {
         return (e.START = "start"), (e.MIDDLE = "middle"), (e.END = "end"), e;

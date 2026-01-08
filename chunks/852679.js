@@ -49,7 +49,7 @@ async function _(e) {
     };
     await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 343649));
+            let { default: e } = await n.e("28793").then(n.bind(n, 343649));
             return (n) => {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {

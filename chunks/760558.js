@@ -14,9 +14,9 @@ var r = n(54381),
     m = n(267642),
     h = n(395199),
     g = n(719228),
-    E = n(343649),
-    b = n(4434),
-    y = n(981631),
+    E = n(4434),
+    b = n(981631),
+    y = n(535396),
     O = n(388032),
     v = n(965688);
 let S = (e) => {
@@ -54,8 +54,8 @@ let S = (e) => {
         }, [M]),
         Z = () => (
             T("SUCCESS" === R),
-            _.default.track(y.rMx.MODAL_DISMISSED, {
-                type: y.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+            _.default.track(b.rMx.MODAL_DISMISSED, {
+                type: b.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                 location_section: a,
             }),
             Promise.resolve()
@@ -143,7 +143,7 @@ let S = (e) => {
                                             let { id: t } = e;
                                             return t;
                                         }),
-                                        S === E.P.PERK,
+                                        S === y.P2.PERK,
                                     ),
                                     w("SUCCESS");
                             } catch (e) {
@@ -190,7 +190,7 @@ let S = (e) => {
                               guild: L,
                               blurb: O.intl.string(O.t.yTlZV0),
                               warning: O.intl.formatToPlainString(O.t.KPnDlu, {
-                                  days: y.o3l,
+                                  days: b.o3l,
                                   slotCount: t,
                               }),
                               imageClass: v.confirmImage,
@@ -208,7 +208,7 @@ let S = (e) => {
                     size: "md",
                     title: e,
                     actions: [],
-                    children: (0, r.jsx)(b.R7, {
+                    children: (0, r.jsx)(E.R7, {
                         guild: L,
                         isTransfer: G,
                         guildBoostQuantity: M.length,
@@ -219,8 +219,8 @@ let S = (e) => {
             },
         };
     i.useEffect(() => {
-        _.default.track(y.rMx.OPEN_MODAL, {
-            type: y.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
+        _.default.track(b.rMx.OPEN_MODAL, {
+            type: b.jXE.PREMIUM_GUILD_SUBSCRIBE_MODAL,
             location_section: a,
         });
     }, [a]);

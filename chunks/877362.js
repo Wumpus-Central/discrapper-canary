@@ -1,81 +1,80 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(120356),
-    l = n.n(i),
-    o = n(793030),
+    o = n.n(i),
+    l = n(793030),
     a = n(442837),
     s = n(755721),
-    c = n(481060),
-    u = n(99690),
+    u = n(481060),
+    c = n(99690),
     d = n(607070),
     f = n(623624),
     p = n(678558),
-    m = n(343649),
-    g = n(978088),
+    m = n(978088),
     v = n(518950),
-    x = n(271383),
-    b = n(485386),
-    h = n(430824),
-    j = n(594174),
-    _ = n(5192),
-    C = n(998502),
-    Z = n(981631),
+    g = n(271383),
+    x = n(485386),
+    b = n(430824),
+    h = n(594174),
+    j = n(5192),
+    Z = n(998502),
+    _ = n(981631),
     w = n(556970),
-    I = n(388032),
-    E = n(905490),
-    P = n(350618);
-let T = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
-function N(e) {
+    C = n(388032),
+    I = n(905490),
+    E = n(350618);
+let P = Z.ZP.getEnableHardwareAcceleration() ? u.Xo$ : c.Z;
+function T(e) {
     var t, n;
     let { guildId: i } = e,
-        u = (0, a.e7)([h.Z], () => h.Z.getGuild(i)),
-        C = (0, a.e7)([b.Z], () =>
-            b.Z.getSortedRoles(i).find((e) => {
+        c = (0, a.e7)([b.Z], () => b.Z.getGuild(i)),
+        Z = (0, a.e7)([x.Z], () =>
+            x.Z.getSortedRoles(i).find((e) => {
                 var t;
                 return (null == (t = e.tags) ? void 0 : t.premium_subscriber) === null;
             }),
         ),
-        N = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        y = null == N ? void 0 : N.id,
-        O = (0, a.e7)([x.ZP], () => (null != y ? x.ZP.getMember(i, y) : void 0), [y, i]),
-        S = (null == O ? void 0 : O.premiumSince) != null,
+        T = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        S = null == T ? void 0 : T.id,
+        y = (0, a.e7)([g.ZP], () => (null != S ? g.ZP.getMember(i, S) : void 0), [S, i]),
+        N = (null == y ? void 0 : y.premiumSince) != null,
         A = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         {
-            avatarDecorationSrc: L,
+            avatarDecorationSrc: O,
             avatarSrc: R,
-            eventHandlers: k,
+            eventHandlers: L,
         } = (0, v.Z)({
-            userId: null == N ? void 0 : N.id,
+            userId: null == T ? void 0 : T.id,
             guildId: i,
-            size: c.EFr.SIZE_40,
+            size: u.EFr.SIZE_40,
             animateOnHover: !A,
         });
-    return null == u || null == O || null == N
+    return null == c || null == y || null == T
         ? null
-        : (0, r.jsxs)(c.$1m, {
-              className: E.container,
+        : (0, r.jsxs)(u.$1m, {
+              className: I.container,
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
-                      className: E.image,
-                      src: P,
+                      className: I.image,
+                      src: E,
                   }),
                   (0, r.jsxs)("div", {
-                      className: E.textContainer,
+                      className: I.textContainer,
                       children: [
-                          (0, r.jsx)(o.xvT, {
+                          (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
-                              children: I.intl.string(S ? w.default.KSWK1U : w.default.XXXX5l),
+                              children: C.intl.string(N ? w.default.KSWK1U : w.default.XXXX5l),
                           }),
-                          (0, r.jsx)(o.xvT, {
+                          (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
-                              children: I.intl.format(S ? w.default["7fWTg4"] : w.default["7PXeeQ"], {
+                              children: C.intl.format(N ? w.default["7fWTg4"] : w.default["7PXeeQ"], {
                                   onClick: () => {
                                       (0, f.f)({
                                           guildId: i,
                                           location: {
-                                              section: Z.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: Z.qAy.LEARN_MORE,
+                                              section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: _.qAy.LEARN_MORE,
                                           },
                                       });
                                   },
@@ -83,11 +82,11 @@ function N(e) {
                           }),
                       ],
                   }),
-                  null != C &&
-                      !S &&
-                      (0, r.jsx)(g.l, {
+                  null != Z &&
+                      !N &&
+                      (0, r.jsx)(m.l, {
                           avatar: (0, r.jsx)(
-                              T,
+                              P,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -112,13 +111,13 @@ function N(e) {
                                           });
                                   }
                                   return e;
-                              })({}, k)),
+                              })({}, L)),
                               (n = n =
                                   {
-                                      user: N,
+                                      user: T,
                                       src: R,
-                                      avatarDecoration: L,
-                                      size: c.EFr.SIZE_40,
+                                      avatarDecoration: O,
+                                      size: u.EFr.SIZE_40,
                                       "aria-hidden": !0,
                                       animate: !0,
                                   }),
@@ -136,31 +135,30 @@ function N(e) {
                                     }),
                               t),
                           ),
-                          username: (0, r.jsx)(c.PUh, {
+                          username: (0, r.jsx)(u.PUh, {
                               variant: "text-md/semibold",
-                              name: _.ZP.getName(i, null, N),
-                              colorString: C.colorString,
-                              colorStrings: C.colorStrings,
+                              name: j.ZP.getName(i, null, T),
+                              colorString: Z.colorString,
+                              colorStrings: Z.colorStrings,
                           }),
-                          className: l()(E.content, E.exampleMessage),
-                          message: I.intl.string(I.t["6OSasb"]),
-                          decorations: (0, r.jsx)(c.Ucv, {
-                              color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: E.boostIcon,
+                          className: o()(I.content, I.exampleMessage),
+                          message: C.intl.string(C.t["6OSasb"]),
+                          decorations: (0, r.jsx)(u.Ucv, {
+                              color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                              className: I.boostIcon,
                           }),
                       }),
                   (0, r.jsx)(p.Z, {
-                      guild: u,
-                      className: E.content,
+                      guild: c,
+                      className: I.content,
                       analyticsLocation: {
-                          page: Z.ZY5.GUILD_POWERUPS_OVERVIEW,
-                          section: Z.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                          page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
+                          section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
                       color: s.Tt.BRAND,
                       size: s.Ph.MEDIUM,
-                      intent: m.P.NONE,
                       fullWidth: !0,
-                      icon: (0, r.jsx)(c.Ucv, {
+                      icon: (0, r.jsx)(u.Ucv, {
                           color: "currentColor",
                           size: "sm",
                       }),
