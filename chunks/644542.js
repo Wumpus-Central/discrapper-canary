@@ -1,38 +1,10 @@
 n.d(t, {
-    $i: () => c,
-    Xv: () => a,
-    Zo: () => o,
-    ai: () => s,
-    jJ: () => l,
+    $i: () => s,
+    ai: () => a,
+    jJ: () => o,
 });
 var r = n(818083),
     i = n(293810);
-let a = (0, r.B)({
-        kind: "guild",
-        id: "2021-06_guild_role_subscriptions",
-        label: "Guild Role Subscriptions",
-        defaultConfig: { enableRoleSubscriptionsForGuild: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enables guild to create Guild Role Subscriptions",
-                config: { enableRoleSubscriptionsForGuild: !0 },
-            },
-        ],
-    }),
-    o = (0, r.B)({
-        kind: "user",
-        id: "2021-08_guild_role_subscription_users",
-        label: "Guild Role Subscription Users",
-        defaultConfig: { enableRoleSubscriptionsForUser: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enables users to create Guild Role Subscriptions",
-                config: { enableRoleSubscriptionsForUser: !0 },
-            },
-        ],
-    });
 (0, r.B)({
     kind: "guild",
     id: "2022-01_guild_role_subscription_trials",
@@ -46,7 +18,7 @@ let a = (0, r.B)({
         },
     ],
 });
-let s = (0, r.B)({
+let a = (0, r.B)({
     kind: "guild",
     id: "2022-07_guild_role_subscriptions_variable_max_tiers",
     label: "Guild Role Subscription Max Tiers",
@@ -76,7 +48,7 @@ let s = (0, r.B)({
         },
     ],
 });
-let l = (0, r.B)({
+let o = (0, r.B)({
         kind: "guild",
         id: "2023-03_server_subscriptions_tier_templates",
         label: "Server Subscriptions Tier Templates",
@@ -111,7 +83,7 @@ let l = (0, r.B)({
             },
         ],
     }),
-    c = (0, r.B)({
+    s = (0, r.B)({
         kind: "user",
         id: "2023-04_server_subscriptions_tier_templates_user",
         label: "Server Subscriptions Tier Templates",

@@ -13,26 +13,10 @@ n.d(t, {
 var r = n(644542),
     i = n(981631);
 function a(e) {
-    let { enableRoleSubscriptionsForGuild: t } = r.Xv.useExperiment(
-            {
-                guildId: null != e ? e : i.lds,
-                location: "504714_1",
-            },
-            { autoTrackExposure: !0 },
-        ),
-        { enableRoleSubscriptionsForUser: n } = r.Zo.useExperiment({ location: "504714_2" }, { autoTrackExposure: !1 });
-    return null != e && t && n;
+    return !0;
 }
 function o(e) {
-    let { enableRoleSubscriptionsForGuild: t } = r.Xv.getCurrentConfig({
-            guildId: null != e ? e : i.lds,
-            location: "504714_3",
-        }),
-        { enableRoleSubscriptionsForUser: n } = r.Zo.getCurrentConfig(
-            { location: "504714_4" },
-            { autoTrackExposure: !1 },
-        );
-    return null != e && t && n;
+    return !0;
 }
 function s(e) {
     return r.ai.useExperiment({

@@ -1,10 +1,8 @@
 n.d(t, {
-    AC: () => o,
-    IW: () => s,
-    aC: () => l,
+    IW: () => a,
+    aC: () => o,
     bT: () => i,
-    kR: () => c,
-    z: () => a,
+    kR: () => s,
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -22,32 +20,6 @@ let i = (0, r.B)({
     }),
     a = (0, r.B)({
         kind: "guild",
-        id: "2022-09_creator_monetization_raven",
-        label: "Creator Monetization Onboarding v2",
-        defaultConfig: { enableFastMonetizationOnboardingForGuild: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enables guild to create Guild Role Subscriptions quickly",
-                config: { enableFastMonetizationOnboardingForGuild: !0 },
-            },
-        ],
-    }),
-    o = (0, r.B)({
-        kind: "user",
-        id: "2022-09_creator_monetization_raven_users",
-        label: "Creator Monetization Onboarding v2 Users",
-        defaultConfig: { enableFastMonetizationOnboardingForUser: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enables users to create Guild Role Subscriptions quickly",
-                config: { enableFastMonetizationOnboardingForUser: !0 },
-            },
-        ],
-    }),
-    s = (0, r.B)({
-        kind: "guild",
         id: "2022-11_creator_monetization_onboarding_waitlist",
         label: "Creator Monetization Onboarding Waitlist",
         defaultConfig: { enableWaitlist: !1 },
@@ -59,7 +31,7 @@ let i = (0, r.B)({
             },
         ],
     }),
-    l = (0, r.B)({
+    o = (0, r.B)({
         kind: "user",
         id: "2023-01_creator_monetization_nag_activate_users",
         label: "Creator Monetization Nag Activate Users",
@@ -72,7 +44,7 @@ let i = (0, r.B)({
             },
         ],
     }),
-    c = (0, r.B)({
+    s = (0, r.B)({
         kind: "guild",
         id: "2025-08_move_role_subscriptions_onboarding_from_server_settings_",
         label: "Move Role Subscriptions Onboarding From Server Settings",
