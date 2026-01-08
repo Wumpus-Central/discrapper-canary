@@ -1,13 +1,19 @@
-n.d(t, { P: () => o });
-var r = n(442837),
-    i = n(309761),
-    l = n(168611),
-    a = n(981631);
-function o(e) {
-    let { hasRequestedStartTimes: t, startTime: n } = (0, r.cj)([l.Z], () => ({
-            hasRequestedStartTimes: l.Z.hasRequestedStartTimes(e.guild_id),
-            startTime: l.Z.getStartTime(e),
+n.d(t, { P: () => s });
+var r = n(473749),
+    i = n(442837),
+    l = n(309761),
+    a = n(168611),
+    o = n(981631);
+function s(e) {
+    let { hasRequestedStartTimes: t, startTime: n } = (0, i.cj)([a.Z], () => ({
+            hasRequestedStartTimes: a.Z.hasRequestedStartTimes(e.guild_id),
+            startTime: a.Z.getStartTime(e),
         })),
-        o = e.type === a.d4z.GUILD_VOICE;
-    return !t && o && (0, i.i)(e.guild_id), n;
+        s = e.type === o.d4z.GUILD_VOICE;
+    return (
+        r.useEffect(() => {
+            !t && s && (0, l.i)(e.guild_id);
+        }, [s, e.guild_id, t]),
+        n
+    );
 }
