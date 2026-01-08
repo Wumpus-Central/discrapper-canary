@@ -601,10 +601,9 @@ let eK = {
                 focus: { messageId: n },
             });
         },
-        fetchMessage(e) {
-            let { channelId: t, messageId: n } = e;
-            return o.tn
-                .get({
+        async fetchMessage(e) {
+            let { channelId: t, messageId: n } = e,
+                r = await o.tn.get({
                     url: eA.ANM.MESSAGES(t),
                     query: {
                         limit: 1,
@@ -613,10 +612,8 @@ let eK = {
                     retries: 2,
                     oldFormErrors: !0,
                     rejectWithError: !1,
-                })
-                .then((e) => {
-                    if (e.body.length > 0) return (0, Z.e5)(e.body[0]);
                 });
+            if (r.body.length > 0) return (0, Z.e5)(r.body[0]);
         },
         fetchMessages(e) {
             let {
@@ -1576,28 +1573,29 @@ let eK = {
                 messageId: t,
             });
         },
-        crosspostMessage: (e, t) =>
-            o.tn
-                .post({
+        async crosspostMessage(e, t) {
+            try {
+                return await o.tn.post({
                     url: eA.ANM.MESSAGE_CROSSPOST(e, t),
                     oldFormErrors: !0,
                     failImmediatelyWhenRateLimited: !0,
                     rejectWithError: !1,
-                })
-                .catch((e) => {
-                    let t;
-                    (t =
-                        429 === e.status
-                            ? ew.intl.formatToPlainString(ew.t["77cuqz"], {
-                                  retryAfter: Math.floor(e.body.retry_after / 60),
-                              })
-                            : ew.intl.string(ew.t.z2gyNF)),
-                        eC.Z.show({
-                            title: ew.intl.string(ew.t.Vd1hs6),
-                            body: t,
-                            confirmText: ew.intl.string(ew.t.BddRzS),
-                        });
-                }),
+                });
+            } catch (t) {
+                let e;
+                (e =
+                    429 === t.status
+                        ? ew.intl.formatToPlainString(ew.t["77cuqz"], {
+                              retryAfter: Math.floor(t.body.retry_after / 60),
+                          })
+                        : ew.intl.string(ew.t.z2gyNF)),
+                    eC.Z.show({
+                        title: ew.intl.string(ew.t.Vd1hs6),
+                        body: e,
+                        confirmText: ew.intl.string(ew.t.BddRzS),
+                    });
+            }
+        },
         trackInvite: eB,
     },
     eq = ez;

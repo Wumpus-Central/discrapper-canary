@@ -126,4 +126,5 @@ let u = {
         r.ZP.unsafe_rawColors.GUILD_BOOSTING_PURPLE_FOR_GRADIENTS,
     ],
     PREMIUM_TIER_0_PERK_CARD: ["#3736BB", "#4670E8", "#8377EB", "#E782F1", "#DF90AF"],
+    PREMIUM_TIER_2_OFFER_COLOR: [r.ZP.unsafe_rawColors.BLURPLE_50, r.ZP.unsafe_rawColors.PINK_60],
 };

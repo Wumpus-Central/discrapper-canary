@@ -16,8 +16,8 @@ var r = n(54381),
     p = n(927359),
     f = n(975298),
     g = n(211644),
-    h = n(266454),
-    m = n(243778),
+    m = n(266454),
+    h = n(243778),
     b = n(172416),
     _ = n(594174),
     E = n(78839),
@@ -101,8 +101,8 @@ let X = (e) => {
             ep = (0, y.M5)(eo, q.PremiumTypes.TIER_2),
             ef = (0, l.JA)("nitro"),
             eg = (0, A.N)(),
-            eh = (0, x.N)(),
-            em = (0, P.$)(),
+            em = (0, x.N)(),
+            eh = (0, P.$)(),
             eb = (0, S.W)(),
             e_ = (0, C.Vi)(),
             eE = (0, k.HI)({ trialOffer: eg }),
@@ -114,10 +114,10 @@ let X = (e) => {
             eS = O.Z.getAlmostExpiringTrialOffers([q.Si.TIER_2]),
             eT = eu && eS.length > 0 && null != eg && null != eg.expires_at,
             eN = O.Z.getAlmostExpiringDiscountOffers([q.Si.TIER_2]),
-            ej = eu && eN.length > 0 && null != eh && null != eh.expires_at,
-            eP = null != em && null != es && es.status === K.O0b.CANCELED,
+            ej = eu && eN.length > 0 && null != em && null != em.expires_at,
+            eP = null != eh && null != es && es.status === K.O0b.CANCELED,
             { fractionalState: ex, startsAt: eA, endsAt: eZ } = (0, f.Z)({ forceFetch: !0 }),
-            [ew, eL] = (0, m.bf)(ex !== q.a$.NONE ? s.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            [ew, eL] = (0, h.bf)(ex !== q.a$.NONE ? s.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: eA.valueOf(),
                 cooldownDurationMs: 0,
             }),
@@ -133,15 +133,15 @@ let X = (e) => {
             eR && ek.push(s.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             eb && ek.push(s.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
             eM && ek.push(s.z.GAME_WIDGETS_PREMIUM_TAB_BADGE));
-        let [eG, eH] = (0, m.US)(ek, void 0, !0);
+        let [eG, eH] = (0, h.US)(ek, void 0, !0);
         eP && eU.push(s.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK), eO && eU.push(s.z.PREMIUM_GROUP_POPOVER);
-        let [eB, eV] = (0, m.US)(eU, void 0, !0),
+        let [eB, eV] = (0, h.US)(eU, void 0, !0),
             eF = (0, Z.H)(a.I.PREMIUM_TAB),
-            [ez, eY] = (0, m.TE)(
+            [ez, eY] = (0, h.TE)(
                 null != eF && "premiumTab" === eF.properties.properties.oneofKind
                     ? s.z.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
                     : null,
-                null != (et = null == eF ? void 0 : eF.id) ? et : "",
+                null != (et = null == eF ? void 0 : eF.promotionId) ? et : "",
                 void 0,
                 !0,
             );
@@ -221,12 +221,12 @@ let X = (e) => {
                             showStars: !1,
                         })),
                         (I = 1))
-                      : null != eh
+                      : null != em
                         ? ((n =
                               ec === T.tE.OFFER_COUNTDOWN && ej
-                                  ? (0, r.jsx)(B.a, { discountOffer: eh })
+                                  ? (0, r.jsx)(B.a, { discountOffer: em })
                                   : (0, r.jsx)(H.GN, {
-                                        userDiscount: eh,
+                                        userDiscount: em,
                                         isTabSelected: en,
                                         includesAmountOff: !1,
                                         shouldShowOfferReminder: ej,
@@ -237,7 +237,7 @@ let X = (e) => {
                               ? ((n = (0, r.jsx)(V.l, {
                                     isSelected: en,
                                     onSelect: () =>
-                                        (0, h.Q3)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
+                                        (0, m.Q3)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
                                             dismissAction: Q.L.TAKE_ACTION,
                                         }),
                                 })),
@@ -245,7 +245,7 @@ let X = (e) => {
                               : eP &&
                                 ((n = (0, r.jsx)(G.Z, {
                                     isSelected: en,
-                                    discountOffer: em,
+                                    discountOffer: eh,
                                 })),
                                 (I = 8))
                           : ((n =
@@ -334,7 +334,7 @@ let X = (e) => {
             : eP && eB === s.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === I
               ? (0, r.jsx)(U.Z, {
                     targetElementRef: er,
-                    discountOffer: em,
+                    discountOffer: eh,
                     premiumSubscription: es,
                     dismissCoachmark: eV,
                     children: eq,
