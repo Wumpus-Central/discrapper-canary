@@ -1,20 +1,19 @@
 n.d(t, {
-    $R: () => v,
-    G6: () => m,
-    JC: () => u,
-    PW: () => p,
-    yv: () => d,
+    $R: () => f,
+    JC: () => c,
+    PW: () => m,
+    yv: () => u,
 }),
-    n(388685);
-var r = n(473749),
-    o = n(447543),
-    l = n(960904),
-    i = n(830121),
-    a = n(701190),
-    s = n(771845),
-    c = n(591759);
-let u = (e) => null != e.text;
-function d(e) {
+    n(388685),
+    n(473749);
+var r = n(447543),
+    o = n(960904),
+    l = n(830121),
+    i = n(701190),
+    a = n(771845),
+    s = n(591759);
+let c = (e) => null != e.text;
+function u(e) {
     let t = 0 | e,
         n = Math.floor(t / 3600),
         r = Math.floor((t % 3600) / 60),
@@ -23,55 +22,32 @@ function d(e) {
         ? "".concat(n, ":").concat(String(r).padStart(2, "0"), ":").concat(String(o).padStart(2, "0"))
         : "".concat(r, ":").concat(String(o).padStart(2, "0"));
 }
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
-        [o, l] = (0, r.useState)(e),
-        i = (0, r.useRef)(null);
-    return (
-        (0, r.useEffect)(
-            () => () => {
-                null != i.current && clearTimeout(i.current);
-            },
-            [e],
-        ),
-        [
-            o,
-            () => {
-                l(t),
-                    null != i.current && clearTimeout(i.current),
-                    (i.current = setTimeout(() => {
-                        l(e);
-                    }, n));
-            },
-        ]
-    );
-}
-async function f(e) {
+async function d(e) {
     try {
         var t;
-        let n = (0, i.zO)(e);
-        if (null == n || n.type !== l.g.INVITE) return !1;
-        let r = a.Z.getInvite(n.code);
-        if (null == r) {
-            let { invite: e } = await o.ZP.resolveInvite(n.code, "Markdown Link");
-            r = e;
+        let n = (0, l.zO)(e);
+        if (null == n || n.type !== o.g.INVITE) return !1;
+        let s = i.Z.getInvite(n.code);
+        if (null == s) {
+            let { invite: e } = await r.ZP.resolveInvite(n.code, "Markdown Link");
+            s = e;
         }
-        if (null == r) return !1;
-        let c = s.ZP.getFlattenedGuildIds(),
-            u = null == r || null == (t = r.guild) ? void 0 : t.id;
+        if (null == s) return !1;
+        let c = a.ZP.getFlattenedGuildIds(),
+            u = null == s || null == (t = s.guild) ? void 0 : t.id;
         return null != u && c.includes(u);
     } catch (e) {
         return !1;
     }
 }
-async function p(e) {
+async function m(e) {
     try {
-        if (c.Z.isDiscordUrl(e)) return !0;
-        return await f(e);
+        if (s.Z.isDiscordUrl(e)) return !0;
+        return await d(e);
     } catch (e) {
         return !1;
     }
 }
-function v(e, t, n) {
+function f(e, t, n) {
     return e ? (t.timestampSec >= t.duration ? 0 : t.timestampSec) : Math.max(t.timestampSec, n.progressSeconds);
 }

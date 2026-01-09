@@ -23,54 +23,53 @@ function v(e) {
             interactionEnabled: v,
             backgroundColor: E,
             preloadedBuffers: g,
-            duration: O,
-            rounded: h,
+            duration: h,
             maxSeekableTime: C,
-            onClick: b,
-            onScrubBack: S,
-            onScrubForward: _,
+            onClick: S,
+            onScrubBack: b,
+            onScrubForward: O,
         } = e,
-        [y, x] = o.useState(null),
-        [j, D] = o.useState(null),
-        [P, T] = o.useState(null),
-        [R, N] = o.useState(!1),
-        I = o.useRef(null),
-        A = (e) => {
-            (I.current = e), x(e);
+        [_, x] = o.useState(null),
+        [y, j] = o.useState(null),
+        [P, D] = o.useState(null),
+        [T, R] = o.useState(!1),
+        N = o.useRef(null),
+        I = (e) => {
+            (N.current = e), x(e);
         };
     o.useEffect(() => {
-        null != y && (null == C ? T(null) : T(p(C, O, y)));
-    }, [y, C, O]);
-    let L = (0, c.Z)((e) => {
-            A(e.contentRect);
+        null != _ && (null == C ? D(null) : D(p(C, h, _)));
+    }, [_, C, h]);
+    let A = (0, c.Z)((e) => {
+            I(e.contentRect);
         }),
-        w = (0, s.y)(L);
+        w = (0, s.y)(A);
     o.useLayoutEffect(() => {
-        null != w.current && A(w.current.getBoundingClientRect());
+        null != w.current && I(w.current.getBoundingClientRect());
     }, [w]),
         o.useEffect(() => {
             let e = () => {
-                null != w.current && A(w.current.getBoundingClientRect());
+                null != w.current && I(w.current.getBoundingClientRect());
             };
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, [w]);
     let k = (e) => {
-            D(e.clientX);
+            j(e.clientX);
         },
-        M = o.useCallback(
+        L = o.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === d.mR.ArrowLeft && null != S
-                    ? (e.preventDefault(), e.stopPropagation(), S())
-                    : t === d.mR.ArrowRight && null != _ && (e.preventDefault(), e.stopPropagation(), _());
+                t === d.mR.ArrowLeft && null != b
+                    ? (e.preventDefault(), e.stopPropagation(), b())
+                    : t === d.mR.ArrowRight && null != O && (e.preventDefault(), e.stopPropagation(), O());
             },
-            [S, _],
+            [b, O],
         ),
-        V = null != j && null != y ? f(j, y, O) : 0,
-        Z = (0, u.yv)(V),
-        F = null != y ? y.right - p((n / 100) * O, O, y) : null,
-        B = null != j && null != y ? y.right - j : null,
-        U = null != P && null != y ? y.right - P : null;
+        M = null != y && null != _ ? f(y, _, h) : 0,
+        V = (0, u.yv)(M),
+        Z = null != _ ? _.right - p((n / 100) * h, h, _) : null,
+        F = null != y && null != _ ? _.right - y : null,
+        B = null != P && null != _ ? _.right - P : null;
     return (0, r.jsxs)("div", {
         className: m.cont,
         ref: w,
@@ -79,18 +78,18 @@ function v(e) {
                 className: i()(m.hitboxArea, { [m.interactionEnabled]: v }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    v && null != b && b(f(e.clientX, e.currentTarget.getBoundingClientRect(), O));
+                    v && null != S && S(f(e.clientX, e.currentTarget.getBoundingClientRect(), h));
                 },
                 onMouseEnter: (e) => {
-                    v && (null != w.current && A(w.current.getBoundingClientRect()), N(!0), k(e));
+                    v && (null != w.current && I(w.current.getBoundingClientRect()), R(!0), k(e));
                 },
                 onMouseLeave: (e) => {
-                    v && (N(!1), D(null));
+                    v && (R(!1), j(null));
                 },
                 onMouseMove: (e) => {
-                    v && R && k(e);
+                    v && T && k(e);
                 },
-                onKeyDown: M,
+                onKeyDown: L,
                 tabIndex: v ? void 0 : -1,
                 focusProps: {
                     offset: {
@@ -105,10 +104,7 @@ function v(e) {
                               (0, r.jsx)(
                                   "div",
                                   {
-                                      className: i()(m.buffer, {
-                                          [m.bufferHovered]: R,
-                                          [m.rounded]: h,
-                                      }),
+                                      className: i()(m.buffer, m.rounded, { [m.bufferHovered]: T }),
                                       style: {
                                           width: "".concat(100 * e.size, "%"),
                                           left: "".concat(100 * e.start, "%"),
@@ -118,41 +114,41 @@ function v(e) {
                               ),
                           ),
                     !v &&
-                        null != U &&
-                        U > 0 &&
+                        null != B &&
+                        B > 0 &&
                         (0, r.jsx)("div", {
-                            className: i()(m.seekableBar, { [m.rounded]: h }),
+                            className: i()(m.seekableBar, m.rounded),
                             style: {
-                                right: null != U ? "".concat(U, "px") : "auto",
-                                opacity: +(null != U),
+                                right: null != B ? "".concat(B, "px") : "auto",
+                                opacity: +(null != B),
                             },
                         }),
                     (0, r.jsx)(a.Exd, {
-                        className: i()(m.progress, { [m.rounded]: h }),
+                        className: i()(m.progress, m.rounded),
                         percent: n,
                         foregroundColor: "#FFFFFF",
                         backgroundColor: null != E ? E : void 0,
-                        size: R ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
+                        size: T ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
                         animate: l,
                     }),
-                    R &&
-                        null != Z &&
+                    T &&
+                        null != V &&
                         t &&
                         (0, r.jsx)(a.Text, {
                             className: m.timeDisplay,
                             variant: "text-xs/normal",
                             style: {
-                                right: null != B ? "".concat(B - 10, "px") : "auto",
+                                right: null != F ? "".concat(F - 10, "px") : "auto",
                                 color: "#FFFFFF",
                             },
-                            children: Z,
+                            children: V,
                         }),
-                    R &&
+                    T &&
                         v &&
-                        null != F &&
+                        null != Z &&
                         (0, r.jsx)("div", {
                             className: m.grabber,
-                            style: { right: "".concat(F - 6, "px") },
+                            style: { right: "".concat(Z - 6, "px") },
                         }),
                 ],
             }),

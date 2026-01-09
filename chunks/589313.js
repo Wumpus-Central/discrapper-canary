@@ -1,65 +1,62 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => p });
 var r = n(54381),
     o = n(473749),
     l = n(692547),
     i = n(28664),
     a = n(481060),
     s = n(49436),
-    c = n(937797),
-    u = n(968843),
-    d = n(115179),
-    m = n(969227),
-    f = n(215113),
-    p = n(324805),
-    v = n(388032);
-function E() {
+    c = n(968843),
+    u = n(115179),
+    d = n(969227),
+    m = n(215113),
+    f = n(388032);
+function p() {
     var e, t, n;
-    let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(f.VideoQuestModalContext),
-        { enabled: h } = c.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
-        C = (0, u.tP)(E),
-        b = null != (0, d.LM)(E.config),
-        S = (0, m.D)({
-            quest: E,
+    let { quest: p, sourceQuestContent: v, onClose: E } = o.useContext(m.VideoQuestModalContext),
+        g = (0, c.tP)(p),
+        h = null != (0, u.LM)(p.config),
+        C = (0, d.D)({
+            quest: p,
             questContent: s.jn.QUEST_HOME_DESKTOP,
-            sourceQuestContent: g,
-            onCloseModal: O,
+            sourceQuestContent: v,
+            onCloseModal: E,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
-        _ =
-            (null == (e = E.userStatus) ? void 0 : e.claimedAt) != null
-                ? b
-                    ? v.intl.string(v.t.WYchde)
-                    : v.intl.string(v.t.vTgCWx)
-                : v.intl.string(v.t.cfY4PE),
-        y =
-            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null && h
-                ? C
-                    ? v.intl.string(v.t.NJ6Bnm)
-                    : v.intl.string(v.t.USNO1K)
+        S =
+            (null == (e = p.userStatus) ? void 0 : e.claimedAt) != null
+                ? h
+                    ? f.intl.string(f.t.WYchde)
+                    : f.intl.string(f.t.vTgCWx)
+                : f.intl.string(f.t.cfY4PE),
+        b =
+            (null == (t = p.userStatus) ? void 0 : t.completedAt) == null
+                ? g
+                    ? f.intl.string(f.t.NJ6Bnm)
+                    : f.intl.string(f.t.USNO1K)
                 : void 0;
     return (0, r.jsx)(i.u, {
-        text: y,
+        text: b,
         children: (0, r.jsx)("div", {
             children: (0, r.jsx)(a.Button, {
-                variant: h ? "secondary" : "primary",
+                variant: "secondary",
                 fullWidth: !0,
-                icon: ((e, t) => {
-                    var n, r;
-                    if (t && (null == (n = e.userStatus) ? void 0 : n.claimedAt) == null)
+                icon: ((e) => {
+                    var t, n;
+                    if ((null == (t = e.userStatus) ? void 0 : t.claimedAt) == null)
                         return {
                             type: "rive",
                             asset: a.ax1,
                             riveProps: {
                                 dataBinding: {
-                                    locked: (null == (r = e.userStatus) ? void 0 : r.completedAt) === null,
+                                    locked: (null == (n = e.userStatus) ? void 0 : n.completedAt) === null,
                                     fill: l.Z.colors.ICON_STRONG,
                                 },
                             },
                         };
-                })(E, h),
-                onClick: S,
-                text: _,
-                disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,
+                })(p),
+                onClick: C,
+                text: S,
+                disabled: (null == (n = p.userStatus) ? void 0 : n.completedAt) == null,
             }),
         }),
     });

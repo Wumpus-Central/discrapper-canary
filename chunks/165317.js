@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     o = n(473749),
     l = n(442837),
@@ -6,82 +6,78 @@ var r = n(54381),
     a = n(481060),
     s = n(607070),
     c = n(49436),
-    u = n(937797),
-    d = n(968843),
-    m = n(115179),
-    f = n(836831),
-    p = n(644646),
-    v = n(969227),
-    E = n(215113),
-    g = n(324805),
-    O = n(388032),
-    h = n(969937);
-let C = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
-function b(e) {
-    var t, n, b, S;
-    let { tooltipPosition: _ } = e,
-        { quest: y, sourceQuestContent: x, onClose: j } = o.useContext(E.VideoQuestModalContext),
-        { enabled: D } = u.EO.useConfig({ location: g.dr.VIDEO_MODAL }),
-        [P, T] = o.useState(!1),
-        R = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        N = o.useRef(null == (t = y.userStatus) ? void 0 : t.completedAt),
-        [I, A] = o.useState(!1),
-        L = (0, m.w8)(y.config),
-        { completedRatio: w, completedRatioDisplay: k } = (0, d.I)(y),
-        M = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
-        V = (null == (b = y.userStatus) ? void 0 : b.claimedAt) != null,
-        Z = O.intl.formatToPlainString(M && !V && D ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: L });
+    u = n(968843),
+    d = n(115179),
+    m = n(836831),
+    f = n(644646),
+    p = n(969227),
+    v = n(215113),
+    E = n(388032),
+    g = n(969937);
+let h = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
+function C(e) {
+    var t, n, C, S;
+    let { tooltipPosition: b } = e,
+        { quest: O, sourceQuestContent: _, onClose: x } = o.useContext(v.VideoQuestModalContext),
+        [y, j] = o.useState(!1),
+        P = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        D = o.useRef(null == (t = O.userStatus) ? void 0 : t.completedAt),
+        [T, R] = o.useState(!1),
+        N = (0, d.w8)(O.config),
+        { completedRatio: I, completedRatioDisplay: A } = (0, u.I)(O),
+        w = (null == (n = O.userStatus) ? void 0 : n.completedAt) != null,
+        k = (null == (C = O.userStatus) ? void 0 : C.claimedAt) != null,
+        L = E.intl.formatToPlainString(w && !k ? E.t.NRp4K4 : E.t["12IWP2"], { rewardName: N });
     o.useEffect(() => {
         var e, t;
-        null == N.current && (null == (e = y.userStatus) ? void 0 : e.completedAt) != null && D && A(!0),
-            (N.current = null == (t = y.userStatus) ? void 0 : t.completedAt);
-    }, [null == (S = y.userStatus) ? void 0 : S.completedAt, D]);
-    let F = (0, v.D)({
-            quest: y,
-            questContent: c.jn.QUEST_HOME_DESKTOP,
-            sourceQuestContent: x,
-            onCloseModal: j,
-            shouldShowShopIfAlreadyClaimed: !1,
-        }),
-        B = M && D;
+        null == D.current && (null == (e = O.userStatus) ? void 0 : e.completedAt) != null && R(!0),
+            (D.current = null == (t = O.userStatus) ? void 0 : t.completedAt);
+    }, [null == (S = O.userStatus) ? void 0 : S.completedAt]);
+    let M = (0, p.D)({
+        quest: O,
+        questContent: c.jn.QUEST_HOME_DESKTOP,
+        sourceQuestContent: _,
+        onCloseModal: x,
+        shouldShowShopIfAlreadyClaimed: !1,
+    });
     return (0, r.jsxs)("div", {
-        className: h.progressWrapper,
+        className: g.progressWrapper,
         children: [
-            M &&
+            w &&
                 (0, r.jsx)(a.Fmz, {
-                    importData: C,
-                    className: h.confetti,
+                    importData: h,
+                    className: g.confetti,
                     loop: !1,
                     autoplay: !1,
-                    shouldAnimate: I && !R,
+                    shouldAnimate: T && !P,
                 }),
             (0, r.jsx)(i.u, {
-                position: _,
-                text: Z,
+                position: b,
+                text: L,
                 onTooltipShow: () => {
-                    T(!0);
+                    j(!0);
                 },
                 onTooltipHide: () => {
-                    T(!1);
+                    j(!1);
                 },
                 children: (0, r.jsx)(a.P3F, {
-                    className: h.progressCont,
-                    style: B ? { cursor: "pointer" } : void 0,
+                    className: g.progressCont,
+                    style: w ? { cursor: "pointer" } : void 0,
                     onClick: (e) => {
-                        B && F(e);
+                        w && M(e);
                     },
-                    children: (0, r.jsx)(f.Z, {
-                        quest: y,
+                    children: (0, r.jsx)(m.Z, {
+                        quest: O,
                         size: 48,
-                        percentComplete: w,
-                        percentCompleteText: P ? k : void 0,
+                        percentComplete: I,
+                        percentCompleteText: y ? A : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
-                        children: (0, r.jsx)(p.Z, {
-                            className: h.questProgressRewardTile,
-                            quest: y,
+                        children: (0, r.jsx)(f.Z, {
+                            className: g.questProgressRewardTile,
+                            quest: O,
                             questContent: c.jn.VIDEO_MODAL,
                             autoplay: !1,
-                            sourceQuestContent: x,
+                            sourceQuestContent: _,
                         }),
                     }),
                 }),
