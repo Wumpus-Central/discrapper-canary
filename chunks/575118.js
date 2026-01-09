@@ -203,75 +203,79 @@ function P(e) {
             titleTextVariant: s,
             subtitle: l,
             alignCenter: c = !1,
-            leading: b,
-            trailing: O,
-            stepNumber: v,
-            stepCount: S,
+            leading: h,
+            trailing: b,
+            stepNumber: O,
+            stepCount: v,
         } = e,
-        { headingId: I } = (0, g.v)(),
-        { i18n: T } = (0, _.ZF)(),
-        P = null != t,
-        D = (0, f.MW)(n),
-        x = c ? (D ? A : N) : C,
-        L =
+        { headingId: S } = (0, g.v)(),
+        { i18n: I } = (0, _.ZF)(),
+        T = null != t,
+        P = (0, f.MW)(n),
+        D = c ? (P ? A : N) : C,
+        x =
             null != n &&
             (0, r.jsx)("div", {
-                className: o()(E.headerGraphic, { [E.headerGraphicAnimated]: D }),
+                className: o()(E.headerGraphic, { [E.headerGraphicAnimated]: P }),
                 children: (0, r.jsx)("div", {
                     className: E.headerGraphicContainer,
                     children: (0, r.jsx)(d.z, y({}, n)),
                 }),
             }),
-        j = (0, r.jsx)(p.X, {
+        L = (0, r.jsx)(p.X, {
             className: E.headerTitle,
-            id: I,
+            id: S,
             variant: null != s ? s : "heading-lg/semibold",
             color: "text-strong",
             children: a,
         }),
-        M = null != n ? L : j,
-        k = (0, r.jsx)("header", {
+        j = null != n ? x : L,
+        M = (0, r.jsx)("header", {
             className: o()(E.section, E.header, { [E.headerCentered]: c }),
             children: (0, r.jsxs)(m.K, {
                 gap: 8,
                 children: [
                     (0, r.jsx)("div", {
                         className: E.headerLayout,
-                        children: (0, r.jsx)(x, {
-                            leading: b,
-                            trailing: O,
-                            hasGradient: P,
+                        children: (0, r.jsx)(D, {
+                            leading: h,
+                            trailing: b,
+                            hasGradient: T,
                             children: (0, r.jsxs)("div", {
                                 className: E.headerMain,
                                 children: [
-                                    null != v &&
-                                        null != S &&
+                                    null != O &&
+                                        null != v &&
                                         (0, r.jsx)("div", {
                                             className: E.headerStepIndicator,
-                                            children: (0, r.jsx)(h.x, {
-                                                variant: "text-xs/normal",
-                                                color: "text-subtle",
-                                                children: T.STEP_INDICATOR(v, S),
+                                            children: (0, r.jsx)("span", {
+                                                className: E.progressBar,
+                                                style: { width: "".concat((O / (v + 1)) * 100, "%") },
+                                                role: "progressbar",
+                                                "aria-valuenow": O,
+                                                "aria-valuemin": 1,
+                                                "aria-valuemax": v,
+                                                "aria-label": I.STEP_INDICATOR(O, v),
                                             }),
                                         }),
-                                    M,
+                                    j,
                                 ],
                             }),
                         }),
                     }),
                     (0, r.jsx)(R, { badge: i }),
-                    null != n && null != a && j,
+                    null != n && null != a && L,
                     null != l && (0, r.jsx)(w, { subtitle: l }),
                 ],
             }),
         });
-    return P
+    return T
         ? (0, r.jsx)(u.$, {
               color: t,
               className: E.headerGradient,
-              children: k,
+              children: M,
           })
-        : k;
+        : M;
 }
 function R(e) {
     let { badge: t } = e;
