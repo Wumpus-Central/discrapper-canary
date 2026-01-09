@@ -20158,13 +20158,6 @@ screen and (max-width:485px) {
     text-overflow: ellipsis
 }
 
-.e599633bf6c09eb3-icon {
-    margin-bottom: .2rem;
-    vertical-align: middle;
-    -webkit-margin-end: var(--space-4);
-    margin-inline-end: var(--space-4)
-}
-
 .hljs {
     border-radius: 4px;
     display: block;

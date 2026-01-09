@@ -4967,7 +4967,6 @@ var na = (function (e) {
             (e.APP_ICON_PREVIEW_VIEWED = "app_icon_preview_viewed"),
             (e.APP_ICON_AUTO_RESET = "app_icon_auto_reset"),
             (e.CHANNEL_LIST_END_REACHED = "channel_list_end_reached"),
-            (e.SHOP_LINK_MENTION_CLICKED = "shop_link_mention_clicked"),
             (e.COLLECTIBLES_SHOP_VIEWED = "collectibles_shop_viewed"),
             (e.COLLECTIBLES_SHOP_SCROLLED = "collectibles_shop_scrolled"),
             (e.COLLECTIBLES_EXPIRY_MODAL_CLOSED = "collectibles_expiry_modal_closed"),

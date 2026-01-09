@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -30,12 +30,11 @@ var r = n(54381),
     w = n(142990),
     D = n(382056),
     x = n(532901),
-    L = n(311739),
-    j = n(981631),
-    M = n(176505),
-    k = n(960324),
-    U = n(164701);
-function G(e, t, n) {
+    L = n(981631),
+    j = n(176505),
+    M = n(960324),
+    k = n(164701);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +47,7 @@ function G(e, t, n) {
         e
     );
 }
-function Z(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,12 +58,12 @@ function Z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                G(e, t, n[t]);
+                U(e, t, n[t]);
             });
     }
     return e;
 }
-function F(e, t) {
+function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,18 +75,18 @@ function F(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : Z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function V(e) {
+function B(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, a) {
@@ -108,7 +107,7 @@ function V(e) {
         },
     };
 }
-function H(e) {
+function V(e) {
     let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, a) {
@@ -116,7 +115,7 @@ function H(e) {
                 d = f.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = B(Z({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
+                e = F(G({}, e), { name: t ? ":".concat(d.name, ":") : d.name });
             }
             return (0, r.jsx)(
                 b.Y,
@@ -133,22 +132,22 @@ function H(e) {
         },
     };
 }
-function Y(e, t, n) {
+function H(e, t, n) {
     let r = I.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(j.GuildFeatures.COMMUNITY) && (0, y.uL)(j.Z5c.CHANNEL(e, t));
+        r.features.has(L.GuildFeatures.COMMUNITY) && (0, y.uL)(L.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case "home":
         case "guide":
-            i(M.oC.GUILD_HOME);
+            i(j.oC.GUILD_HOME);
             break;
         case "browse":
-            i(M.oC.CHANNEL_BROWSER);
+            i(j.oC.CHANNEL_BROWSER);
             break;
         case "customize":
-            i(M.oC.CUSTOMIZE_COMMUNITY);
+            i(j.oC.CUSTOMIZE_COMMUNITY);
             break;
         case "linked-roles":
             if (null != n) {
@@ -172,7 +171,7 @@ function Y(e, t, n) {
                 });
     }
 }
-function W(e) {
+function Y(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1),
         o = () => {
@@ -196,15 +195,15 @@ function W(e) {
     });
 }
 n(649370);
-let K = {
+let W = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
                 "div",
                 {
-                    className: k.blockquoteContainer,
+                    className: M.blockquoteContainer,
                     children: [
-                        (0, r.jsx)("div", { className: k.blockquoteDivider }),
+                        (0, r.jsx)("div", { className: M.blockquoteDivider }),
                         (0, r.jsx)("blockquote", { children: t(e.content, n) }),
                     ],
                 },
@@ -239,19 +238,19 @@ let K = {
         react(e, t, i) {
             let a = () =>
                 (0, r.jsx)("code", {
-                    className: o()(U.scrollbarGhostHairline, "hljs"),
+                    className: o()(k.scrollbarGhostHairline, "hljs"),
                     children: (0, C.S)(e, t, i),
                 });
             return (0, r.jsx)(
                 "pre",
                 {
                     children: (0, r.jsxs)("div", {
-                        className: k.codeContainer,
+                        className: M.codeContainer,
                         children: [
                             T.wS
                                 ? (0, r.jsx)("div", {
-                                      className: k.codeActions,
-                                      children: (0, r.jsx)(W, { text: e.content }),
+                                      className: M.codeActions,
+                                      children: (0, r.jsx)(Y, { text: e.content }),
                                   })
                                 : null,
                             (0, r.jsx)(d.GI, {
@@ -265,7 +264,7 @@ let K = {
                                         return null == n
                                             ? a()
                                             : (0, r.jsx)("code", {
-                                                  className: o()(U.scrollbarGhostHairline, "hljs", n.language),
+                                                  className: o()(k.scrollbarGhostHairline, "hljs", n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value },
                                               });
                                     }
@@ -311,7 +310,7 @@ let K = {
     staticRouteLink: {
         react(e, t, n) {
             let i = () => {
-                Y(e.guildId, e.id, e.itemId);
+                H(e.guildId, e.id, e.itemId);
             };
             return (0, C.k)(e.id)
                 ? (0, r.jsxs)(
@@ -339,7 +338,7 @@ let K = {
                 a = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, s.reactElement)(i, "".concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? M.inlineFormat : null,
                 style: { "--totalCharacters": a },
                 children: e.items.map((e, i) => {
                     let a = (0, s.reactElement)("span", "".concat(n.key, "-").concat(i, "-innerSpan"), {
@@ -357,7 +356,7 @@ let K = {
             let i = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
             return (0, s.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: [i, (0, r.jsx)(l.nn4, { children: "," }, "screen-reader-pause")],
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? M.inlineFormat : null,
             });
         },
     },
@@ -391,7 +390,7 @@ let K = {
             let r = (0, s.reactElement)("span", "".concat(n.key, "-innerSpan"), { children: t(e.content, n) });
             return (0, s.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? M.inlineFormat : null,
             });
         },
     },
@@ -402,16 +401,15 @@ let K = {
                 : (0, r.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function z(e) {
-    return B(Z({}, K), {
+function K(e) {
+    return F(G({}, W), {
         link: (0, x.Z)(e),
         devLink: (0, w.Z)(e),
-        emoji: V(e),
-        customEmoji: H(e),
+        emoji: B(e),
+        customEmoji: V(e),
         channelMention: (0, P.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, N.Z)(e),
-        shopLink: (0, L.Z)(e),
         gameMention: D.Z,
     });
 }

@@ -26,7 +26,6 @@ var r = (function (e) {
         (e.CHANNEL = "channel"),
         (e.GUILD = "guild"),
         (e.ATTACHMENT_LINK = "attachmentLink"),
-        (e.SHOP_LINK = "shopLink"),
         (e.SOUNDBOARD = "soundboard"),
         (e.STATIC_ROUTE_LINK = "staticRouteLink"),
         (e.ROLE_MENTION = "roleMention"),
