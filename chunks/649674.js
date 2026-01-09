@@ -8,6 +8,7 @@ e.exports = {
     avatar: "_44b0c28be7879b7b-avatar",
     avatarBorder: "_44b0c28be7879b7b-avatarBorder",
     pointerEvents: "_44b0c28be7879b7b-pointerEvents",
+    avatarDecorationContainer: "_44b0c28be7879b7b-avatarDecorationContainer",
     avatarDecoration: "_44b0c28be7879b7b-avatarDecoration",
     cutoutIcon: "_44b0c28be7879b7b-cutoutIcon",
     largeEmoji: "_44b0c28be7879b7b-largeEmoji",

@@ -10,7 +10,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(877164),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -549,7 +549,7 @@ function F(e) {
                 width: A + S,
                 height: A,
                 viewBox: "0 0 ".concat(A + S, " ").concat(A),
-                className: b.avatarDecoration,
+                className: b.avatarDecorationContainer,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("foreignObject", {
                     x: 0,
@@ -557,14 +557,11 @@ function F(e) {
                     width: A,
                     height: A,
                     mask: null != N ? "url(#".concat(N, ")") : void 0,
-                    children: (0, r.jsx)("div", {
-                        className: b.avatarStack,
-                        children: (0, r.jsx)("img", {
-                            className: b.avatar,
-                            src: v,
-                            alt: " ",
-                            "aria-hidden": !0,
-                        }),
+                    children: (0, r.jsx)("img", {
+                        className: b.avatarDecoration,
+                        src: v,
+                        alt: " ",
+                        "aria-hidden": !0,
                     }),
                 }),
             });
