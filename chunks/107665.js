@@ -112,6 +112,7 @@ let O = (0, o.Dz)(),
             let { analyticsLocations: f } = (0, u.V)(
                 h(
                     {
+                        applicationId: i,
                         skuId: s,
                         analyticsLocations: c,
                     },
