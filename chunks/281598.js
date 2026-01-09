@@ -93,6 +93,7 @@ var d = (function (e) {
         (e.LOGO = "logo.png"),
         (e.MOBILE_BANNER = "mobile_banner.jpg"),
         (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
+        (e.MOBILE_HERO = "mobile_hero.jpg"),
         e
     );
 })({});

@@ -89,6 +89,7 @@ let s = new Set([
         [r.jE.UPSELL_BANNER_POPOUT]: p,
         [r.jE.MOBILE_BANNER]: m,
         [r.jE.MOBILE_BACKGROUND]: p,
+        [r.jE.MOBILE_HERO]: m,
         [r.jE.PDP_BACKGROUND]: p,
         [r.jE.LOGO]: p,
         [r.jE.COACHTIP_AVATAR]: p,
