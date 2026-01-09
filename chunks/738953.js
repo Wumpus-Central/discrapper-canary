@@ -1,7 +1,7 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(620389),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -11,29 +11,31 @@ var r = n(54381),
     f = n(104505),
     p = n(368326),
     _ = n(429467),
-    m = n(680295),
-    h = n(430824),
-    g = n(5192),
-    E = n(785717),
-    b = n(221292),
-    y = n(687158),
-    O = n(510659),
-    v = n(892001),
-    S = n(899007),
-    I = n(867176),
-    T = n(451834),
-    C = n(502762),
-    A = n(544989),
-    N = n(481932),
-    P = n(195387),
-    R = n(664794),
-    w = n(4517),
-    D = n(978395),
-    x = n(161572),
-    L = n(671955),
-    j = n(388032),
-    M = n(155493);
-function k(e, t, n) {
+    m = n(728285),
+    h = n(680295),
+    g = n(430824),
+    E = n(5192),
+    b = n(785717),
+    y = n(221292),
+    O = n(687158),
+    v = n(510659),
+    S = n(892001),
+    I = n(899007),
+    T = n(867176),
+    C = n(451834),
+    A = n(502762),
+    N = n(544989),
+    P = n(481932),
+    R = n(195387),
+    w = n(664794),
+    D = n(4517),
+    x = n(978395),
+    L = n(161572),
+    j = n(981631),
+    M = n(671955),
+    k = n(388032),
+    U = n(155493);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +48,7 @@ function k(e, t, n) {
         e
     );
 }
-function U(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,12 +59,12 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                G(e, t, n[t]);
             });
     }
     return e;
 }
-function G(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,210 +76,212 @@ function G(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : G(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function F(e) {
+function V(e) {
     var t;
     let {
             user: n,
-            currentUser: k,
-            guildId: G,
-            channelId: F,
-            messageId: B,
-            roleId: V,
-            openedAt: H,
-            closePopout: Y,
-            setPopoutRef: W,
-            disableUserProfileLink: K = __OVERLAY__,
-            newAnalyticsLocations: z = [],
-            appContext: q,
-            disableAutoFocus: Q = !1,
-            onClickContainer: X,
+            currentUser: G,
+            guildId: F,
+            channelId: V,
+            messageId: H,
+            roleId: Y,
+            openedAt: W,
+            closePopout: K,
+            setPopoutRef: z,
+            disableUserProfileLink: q = __OVERLAY__,
+            newAnalyticsLocations: Q = [],
+            appContext: X,
+            disableAutoFocus: J = !1,
+            onClickContainer: $,
         } = e,
-        { analyticsLocations: J } = (0, u.ZP)([...z, c.Z.USER_PROFILE_POPOUT]),
-        $ = (0, E.ZB)({
+        { analyticsLocations: ee } = (0, u.ZP)([...Q, c.Z.USER_PROFILE_POPOUT]),
+        et = (0, m.Aq)(),
+        en = (0, b.ZB)({
             layout: "POPOUT",
             userId: n.id,
-            guildId: G,
-            channelId: F,
-            messageId: B,
-            roleId: V,
+            guildId: F,
+            channelId: V,
+            messageId: H,
+            roleId: Y,
         }),
-        ee = (0, o.e7)([h.Z], () => (null != G ? h.Z.getGuild(G) : null)),
-        et = i.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
-    (0, l.$)(et, "UserProfilePopout");
-    let en = i.useRef(null),
-        er = (0, y.ZP)(n.id, G),
-        { isHoveringOrFocusing: ei, isHovering: ea } = (0, f.Z)(en),
-        eo = (0, O.$m)(),
-        es = (0, s.q_F)({
-            opacity: +(null != eo.interactionType),
+        er = (0, o.e7)([g.Z], () => (null != F ? g.Z.getGuild(F) : null)),
+        ei = i.useMemo(() => (null != F ? { [F]: [n.id] } : {}), [F, n.id]);
+    (0, l.$)(ei, "UserProfilePopout");
+    let ea = i.useRef(null),
+        eo = (0, O.ZP)(n.id, F),
+        { isHoveringOrFocusing: es, isHovering: el } = (0, f.Z)(ea),
+        ec = (0, v.$m)(),
+        eu = (0, s.q_F)({
+            opacity: +(null != ec.interactionType),
             config: { duration: 150 },
         });
     i.useEffect(() => {
-        null == W || W(null == en ? void 0 : en.current);
-    }, [en, W]);
-    let el = i.useRef(null),
-        ec = n.id === k.id,
-        eu = (0, p.p)({ location: "UserProfilePopout" }),
-        ed = i.useMemo(() => (0, _.Z)(), []),
-        ef = (e) => {
-            null == Y || Y(),
-                (0, v.openUserProfileModal)(
-                    Z(
-                        U(
+        null == z || z(null == ea ? void 0 : ea.current);
+    }, [ea, z]);
+    let ed = i.useRef(null),
+        ef = n.id === G.id,
+        ep = (0, p.p)({ location: "UserProfilePopout" }),
+        e_ = i.useMemo(() => (0, _.Z)(), []),
+        em = (e) => {
+            null == K || K(),
+                et.dispatch(j.CkL.POPOUT_CLOSE),
+                (0, S.openUserProfileModal)(
+                    B(
+                        Z(
                             {
-                                sourceAnalyticsLocations: J,
+                                sourceAnalyticsLocations: ee,
                                 hideRestrictedProfile: !0,
-                                customStatusPrompt: ed,
+                                customStatusPrompt: e_,
                             },
-                            $,
+                            en,
                             e,
                         ),
-                        { appContext: q },
+                        { appContext: X },
                     ),
                 );
         },
-        ep = () =>
-            K
+        eh = () =>
+            q
                 ? null
                 : (0, r.jsx)(s.sNh, {
                       id: "view-profile",
-                      label: j.intl.string(j.t["+Xp3hq"]),
+                      label: k.intl.string(k.t["+Xp3hq"]),
                       action: () => {
-                          ef(),
-                              (0, b.pQ)(
-                                  U(
+                          em(),
+                              (0, y.pQ)(
+                                  Z(
                                       {
                                           action: "PRESS_VIEW_PROFILE",
-                                          analyticsLocations: J,
+                                          analyticsLocations: ee,
                                       },
-                                      $,
+                                      en,
                                   ),
                               );
                       },
                   }),
-        e_ = Q ? "div" : s.VqE,
-        em = (0, d.Dt)(),
-        eh = g.ZP.useName(null == ee ? void 0 : ee.id, F, n);
+        eg = J ? "div" : s.VqE,
+        eE = (0, d.Dt)(),
+        eb = E.ZP.useName(null == er ? void 0 : er.id, V, n);
     return (0, r.jsx)(u.Gt, {
-        value: J,
-        children: (0, r.jsx)(E.Mt, {
-            value: $,
-            openedAt: H,
-            fetchStartedAt: null == er ? void 0 : er.fetchStartedAt,
-            fetchEndedAt: null == er ? void 0 : er.fetchEndedAt,
-            isLoaded: null == er ? void 0 : er.isLoaded,
-            children: (0, r.jsx)(O.NJ, {
-                value: eo,
-                children: (0, r.jsxs)(e_, {
-                    ref: en,
-                    "aria-labelledby": em,
-                    onClick: X,
+        value: ee,
+        children: (0, r.jsx)(b.Mt, {
+            value: en,
+            openedAt: W,
+            fetchStartedAt: null == eo ? void 0 : eo.fetchStartedAt,
+            fetchEndedAt: null == eo ? void 0 : eo.fetchEndedAt,
+            isLoaded: null == eo ? void 0 : eo.isLoaded,
+            children: (0, r.jsx)(v.NJ, {
+                value: ec,
+                children: (0, r.jsxs)(eg, {
+                    ref: ea,
+                    "aria-labelledby": eE,
+                    onClick: $,
                     children: [
                         (0, r.jsx)(s.nn4, {
                             children: (0, r.jsx)(s.H, {
-                                id: em,
-                                children: j.intl.format(j.t.KRe1Fk, { name: eh }),
+                                id: eE,
+                                children: k.intl.format(k.t.KRe1Fk, { name: eb }),
                             }),
                         }),
-                        (0, r.jsxs)(C.Z, {
+                        (0, r.jsxs)(A.Z, {
                             user: n,
-                            displayProfile: er,
-                            themeType: L.l.POPOUT,
+                            displayProfile: eo,
+                            themeType: M.l.POPOUT,
                             children: [
-                                null != eo.interactionType &&
+                                null != ec.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
-                                        style: es,
-                                        className: M.backdrop,
+                                        style: eu,
+                                        className: U.backdrop,
                                     }),
-                                (0, r.jsxs)(A.Z, {
+                                (0, r.jsxs)(N.Z, {
                                     children: [
+                                        (0, r.jsx)(R.Z, {
+                                            shouldShowTooltip: null === ec.interactionType,
+                                            user: n,
+                                            guildId: F,
+                                            channelId: V,
+                                            onClose: K,
+                                            appContext: X,
+                                        }),
                                         (0, r.jsx)(P.Z, {
-                                            shouldShowTooltip: null === eo.interactionType,
-                                            user: n,
-                                            guildId: G,
-                                            channelId: F,
-                                            onClose: Y,
-                                            appContext: q,
-                                        }),
-                                        (0, r.jsx)(N.Z, {
-                                            themeType: L.l.POPOUT,
+                                            themeType: M.l.POPOUT,
                                             user: n,
                                         }),
-                                        !ec &&
-                                            (0, r.jsx)(R.Cn, {
+                                        !ef &&
+                                            (0, r.jsx)(w.Cn, {
                                                 user: n,
-                                                guildId: G,
-                                                viewProfileItem: ep(),
-                                                appContext: q,
+                                                guildId: F,
+                                                viewProfileItem: eh(),
+                                                appContext: X,
                                             }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: M.header,
+                                    className: U.header,
                                     children: [
+                                        (0, r.jsx)(T.Z, {
+                                            user: n,
+                                            displayProfile: eo,
+                                            guildId: F,
+                                            themeType: M.l.POPOUT,
+                                        }),
+                                        (0, r.jsx)(C.Z, {
+                                            userId: n.id,
+                                            className: U.toast,
+                                            onClose: K,
+                                        }),
                                         (0, r.jsx)(I.Z, {
                                             user: n,
-                                            displayProfile: er,
-                                            guildId: G,
-                                            themeType: L.l.POPOUT,
+                                            displayProfile: eo,
+                                            guildId: F,
+                                            channelId: V,
+                                            themeType: M.l.POPOUT,
+                                            onOpenProfile: q ? void 0 : em,
                                         }),
-                                        (0, r.jsx)(T.Z, {
-                                            userId: n.id,
-                                            className: M.toast,
-                                            onClose: Y,
-                                        }),
-                                        (0, r.jsx)(S.Z, {
+                                        (0, r.jsx)(D.Z, {
+                                            ref: ed,
                                             user: n,
-                                            displayProfile: er,
-                                            guildId: G,
-                                            channelId: F,
-                                            themeType: L.l.POPOUT,
-                                            onOpenProfile: K ? void 0 : ef,
-                                        }),
-                                        (0, r.jsx)(w.Z, {
-                                            ref: el,
-                                            user: n,
-                                            guildId: G,
-                                            channelId: F,
-                                            themeType: L.l.POPOUT,
-                                            onCloseProfile: Y,
-                                            prompt: eu ? ed : null,
+                                            guildId: F,
+                                            channelId: V,
+                                            themeType: M.l.POPOUT,
+                                            onCloseProfile: K,
+                                            prompt: ep ? e_ : null,
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(D.Z, {
-                                    user: n,
-                                    currentUser: k,
-                                    displayProfile: er,
-                                    guild: ee,
-                                    isHoveringOrFocusing: null == eo.interactionType && ei,
-                                    onOpenProfile: K ? void 0 : ef,
-                                    channelId: F,
-                                    onClose: Y,
-                                }),
                                 (0, r.jsx)(x.Z, {
                                     user: n,
-                                    guildId: G,
-                                    channelId: F,
-                                    onClose: Y,
-                                    appContext: q,
-                                    disableAutoFocus: Q,
+                                    currentUser: G,
+                                    displayProfile: eo,
+                                    guild: er,
+                                    isHoveringOrFocusing: null == ec.interactionType && es,
+                                    onOpenProfile: q ? void 0 : em,
+                                    channelId: V,
+                                    onClose: K,
                                 }),
-                                (null == er ? void 0 : er.profileEffect) != null &&
-                                    (0, r.jsx)(m.Z, {
-                                        skuId: null == er || null == (t = er.profileEffect) ? void 0 : t.skuId,
-                                        isHovering: ea,
+                                (0, r.jsx)(L.Z, {
+                                    user: n,
+                                    guildId: F,
+                                    channelId: V,
+                                    onClose: K,
+                                    appContext: X,
+                                    disableAutoFocus: J,
+                                }),
+                                (null == eo ? void 0 : eo.profileEffect) != null &&
+                                    (0, r.jsx)(h.Z, {
+                                        skuId: null == eo || null == (t = eo.profileEffect) ? void 0 : t.skuId,
+                                        isHovering: el,
                                     }),
                             ],
                         }),

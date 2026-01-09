@@ -117,7 +117,6 @@ function F(e) {
                   channelId: o,
                   roleId: s.id,
                   spacing: 14,
-                  clickTrap: !0,
                   children: (e, i) => {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
