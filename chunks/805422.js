@@ -91,6 +91,10 @@ class g extends (i = a.ZP.Store) {
     get assets() {
         return r;
     }
+    getSongs(e) {
+        var t;
+        return null == r || null == (t = r.genres[e]) ? void 0 : t.songs;
+    }
 }
 l(g, "displayName", "HavenStore");
 let E = new g(o.Z, {
