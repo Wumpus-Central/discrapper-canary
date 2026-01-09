@@ -1,6 +1,6 @@
-n.d(t, { t: () => i });
-let i = (0, n(427164).le)({
-    name: "2025-09-haven",
+n.d(t, { t: () => r });
+let r = (0, n(427164).le)({
+    name: "2026-01-haven-client",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: {
