@@ -1,4 +1,4 @@
-n.d(t, { W: () => J });
+n.d(t, { W: () => Q });
 var r = n(162685),
     i = n(162461),
     l = n(594928),
@@ -44,14 +44,8 @@ var r = n(162685),
     z = n(970071),
     Y = n(17535),
     W = n(91641),
-    K = n(598984),
-    q = n(987338);
-let Q = [
-        K.NR,
-        K.ZI,
-        K.Ob,
-        K.uc,
-        K.m1,
+    K = n(987338);
+let q = [
         I.l,
         C.y,
         S.p,
@@ -101,4 +95,4 @@ let Q = [
         O.R,
         c.tm,
     ],
-    J = new W.E(Q, q.$P.CONNECTION_OPEN, { location: "app open" });
+    Q = new W.E(q, K.$P.CONNECTION_OPEN, { location: "app open" });

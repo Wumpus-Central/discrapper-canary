@@ -290,23 +290,22 @@ function et(e) {
         (D = {}),
         (x = {}),
         (L = {});
-    let r = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
-        { experiments: i, guildExperiments: a } = e,
-        o = "CONNECTION_OPEN" === e.type ? "ready_payload" : "logged_out_api",
-        s = "sessionId" in e ? e.sessionId : null != (t = d.default.getSessionId()) ? t : "",
-        l = d.default.getFingerprint();
-    r &&
+    let n = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
+        { experiments: r, guildExperiments: i } = e,
+        a = "CONNECTION_OPEN" === e.type ? "ready_payload" : "logged_out_api",
+        o = "sessionId" in e ? e.sessionId : null != (t = d.default.getSessionId()) ? t : "",
+        s = d.default.getFingerprint();
+    n &&
         en(
             {
-                rawUserExperiments: i,
-                rawGuildExperiments: null != a ? a : [],
-                source: o,
-                sessionId: s,
-                fingerprint: l,
+                rawUserExperiments: r,
+                rawGuildExperiments: null != i ? i : [],
+                source: a,
+                sessionId: o,
+                fingerprint: s,
             },
             !1,
         ),
-        n(598984).Vx.trackExposure(),
         (A = !0);
 }
 function en(e) {
