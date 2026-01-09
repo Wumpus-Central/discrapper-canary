@@ -521,6 +521,11 @@ z(
                                 token: e.auth_token,
                                 userId: e.user.id,
                             }),
+                        null != e.ad_personalization_toggles_disabled &&
+                            X({
+                                type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
+                                disabled: e.ad_personalization_toggles_disabled,
+                            }),
                         x.RR.update(),
                         x.GC.update();
                 });
