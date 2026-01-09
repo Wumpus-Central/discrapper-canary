@@ -792,9 +792,11 @@ function e9(e) {
                     null != e.id && null != j.Z.getById(e.id)
                         ? (a.push(e), !1)
                         : ((e.isLauncher = e.isLauncher || t.has(e.exeName)),
-                          e.isLauncher && null != e.id && (i[e.id] = e),
-                          (e.windowHandle = eH(e.pid, e.windowHandle)),
-                          null == eT(e) || (n.push(e), !1)),
+                            e.isLauncher && null != e.id && (i[e.id] = e),
+                            (e.windowHandle = eH(e.pid, e.windowHandle)),
+                            null != eT(e))
+                          ? (n.push(e), !1)
+                          : !I.Z.shouldBlock(e),
                 );
                 let o = n.filter(eC).length;
                 o !== eu &&
