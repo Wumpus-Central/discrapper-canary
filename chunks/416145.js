@@ -92,6 +92,10 @@ let s = "@me",
         OAUTH2_ERROR: "/oauth2/error",
         SETTINGS: (e, t) => "/settings/".concat(e).concat(null != t ? "/".concat(t) : ""),
         SNOWSGIVING: "/snowsgiving",
+        PLAYGROUND: (e, t) => {
+            let n = "/playground";
+            return null != e && ((n += "/".concat(e)), null != t && (n += "/".concat(t))), n;
+        },
         CHANGELOGS: (e) => "/settings/changelogs".concat(null != e ? "/".concat(e) : ""),
         USERS: (e) => "/users/".concat(e),
         GUILD_CREATE: "/guilds/create",
