@@ -2,8 +2,8 @@ n.d(t, { eg: () => a });
 var r = n(818083),
     i = n(987338);
 let l = (0, r.B)({
-    kind: "guild",
-    id: "2025-11_guild_powerups_mobile",
+    kind: "user",
+    id: "2025-11-guild-powerups-mobile",
     commonTriggerPoint: i.$P.CONNECTION_OPEN,
     label: "Guild Powerups Mobile",
     defaultConfig: {
@@ -29,16 +29,13 @@ let l = (0, r.B)({
         },
     ],
 });
-function a(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+function a(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return l.useExperiment(
-        {
-            guildId: e,
-            location: t,
-        },
+        { location: e },
         {
             autoTrackExposure: !1,
-            disable: n,
+            disable: t,
         },
     ).enabled;
 }

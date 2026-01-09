@@ -36,7 +36,7 @@ function x(e) {
         R = (0, v.l)(!(0, f.r1)(e.id)),
         D = e.features.has(j.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         M = (0, m.Z)(e.id);
-    (0, g.eg)(e.id, "useGuildActionRows", !0);
+    (0, g.eg)("useGuildActionRows", !0);
     let k = (0, h.BU)(e.id, "useGuildActionRows"),
         L = e.features.has(j.GuildFeatures.GAME_SERVERS);
     return (
