@@ -1,4 +1,4 @@
-n.d(t, { i: () => O }), n(415506);
+n.d(t, { i: () => O }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -100,16 +100,26 @@ function O(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let {
-            tooltipId: x,
-            isVisible: L,
-            targetElementRef: j,
-            trigger: M,
+    let [x, L] = i.useState(null);
+    i.useLayoutEffect(() => {
+        null != P && L(P.current);
+    }, [P]);
+    let j = i.useCallback(
+            (e) => {
+                null == P && L(e), (0, p.k$)(N, e);
+            },
+            [N, P],
+        ),
+        {
+            tooltipId: M,
+            isVisible: k,
+            targetElementRef: U,
+            trigger: G,
         } = (0, m.Q)(
             E(
                 {
                     children: t,
-                    targetElementRef: N,
+                    targetElementRef: j,
                     asContainer: O,
                     containerTag: v,
                     ariaHidden: w,
@@ -117,9 +127,9 @@ function O(e) {
                 D,
             ),
         ),
-        k = null != n && ("string" != typeof n || "" !== n),
-        U = null != g && !i.isValidElement(g),
-        G = i.useMemo(
+        Z = null != n && ("string" != typeof n || "" !== n),
+        F = null != g && !i.isValidElement(g),
+        B = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: o()(h.richTooltipContent, { [h.noAsset]: null == g }),
@@ -128,48 +138,49 @@ function O(e) {
                             (0, r.jsx)("div", {
                                 className: h.assetContainer,
                                 style: { width: y },
-                                children: U ? (0, r.jsx)(l.zsu, E({}, g)) : g,
+                                children: F ? (0, r.jsx)(l.zsu, E({}, g)) : g,
                             }),
                         (0, r.jsxs)("div", {
                             className: h.textContent,
                             children: [
-                                k &&
+                                Z &&
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-sm/medium",
                                         children: n,
                                     }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
-                                    color: k ? "text-subtle" : "text-default",
+                                    color: Z ? "text-subtle" : "text-default",
                                     children: a,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [g, y, n, a, k, U],
+            [g, y, n, a, Z, F],
         ),
-        Z = null != R ? R : "".concat((0, p.Sw)(null != n ? n : ""), "|").concat((0, p.Sw)(a)),
-        F = (0, _.Q)({ shouldShow: L });
+        V = null != R ? R : "".concat((0, p.Sw)(null != n ? n : ""), "|").concat((0, p.Sw)(a)),
+        H = (0, _.Q)({ shouldShow: k });
     if (!O && !i.isValidElement(t)) return null;
-    let B = F((e, t) =>
+    let Y = H((e, t) =>
         t
             ? (0, r.jsx)(f.pn, {
                   isRichTooltip: !0,
                   children: (0, r.jsx)(d.N, {
-                      isVisible: L,
+                      isVisible: k,
                       isRendered: !0,
-                      targetElementRef: j,
+                      targetElementRef: U,
+                      targetElement: x,
                       anchorRef: P,
-                      id: x,
-                      content: G,
+                      id: M,
+                      content: B,
                       position: S,
                       align: I,
                       spacing: T,
                       caretConfig: C,
                       layerContext: null != A ? A : u.nz,
                       animationStyle: e,
-                      positionKey: Z,
+                      positionKey: V,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
@@ -177,14 +188,14 @@ function O(e) {
     );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            M,
-            w || null == G
+            G,
+            w || null == B
                 ? null
                 : (0, r.jsx)(s.n, {
-                      id: x,
-                      children: G,
+                      id: M,
+                      children: B,
                   }),
-            B,
+            Y,
         ],
     });
 }
