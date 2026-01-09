@@ -10,6 +10,7 @@ n.d(t, {
     hW: () => N,
     m9: () => k,
     nm: () => x,
+    sr: () => Z,
     w9: () => U,
 }),
     n(415506),
@@ -400,4 +401,13 @@ function G(e) {
         lastDismissedObjectId: "0",
         numTimesDismissed: 0,
     });
+}
+function Z() {
+    return N.updateAsync(
+        "userContent",
+        (e) => {
+            (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
+        },
+        b.fy.INFREQUENT_USER_ACTION,
+    );
 }

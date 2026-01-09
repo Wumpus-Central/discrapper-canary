@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(583741);
+n.d(t, { Z: () => f }), n(388685), n(583741);
 var a = n(54381),
     r = n(473749),
     i = n(442837),
@@ -9,8 +9,9 @@ var a = n(54381),
     d = n(699867),
     u = n(227157),
     m = n(775195),
-    p = n(117768);
-function h() {
+    p = n(675478),
+    h = n(117768);
+function f() {
     let {
             dailyCapReached: e,
             dailyCapOverridden: t,
@@ -20,26 +21,26 @@ function h() {
             dailyCapOverridden: c.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: c.Z.newUserMinAgeRequiredOverridden,
         })),
-        [h, f] = r.useState(""),
-        [x, b] = r.useState(20),
-        g = r.useMemo(
+        [f, x] = r.useState(""),
+        [b, g] = r.useState(20),
+        v = r.useMemo(
             () =>
                 Object.keys(l.z)
-                    .filter((e) => e.toLowerCase().includes(h.toLowerCase()))
+                    .filter((e) => e.toLowerCase().includes(f.toLowerCase()))
                     .reverse(),
-            [h],
+            [f],
         ),
-        v = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && x < g.length && b((e) => e + 100);
+                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && b < v.length && g((e) => e + 100);
             },
-            [x, g.length],
+            [b, v.length],
         );
     return (0, a.jsx)(s.h21, {
-        onScroll: v,
+        onScroll: j,
         children: (0, a.jsxs)("div", {
-            className: p.panelContainer,
+            className: h.panelContainer,
             children: [
                 (0, a.jsxs)(s.C3N, {
                     label: "Dismissible Content Overrides",
@@ -51,6 +52,11 @@ function h() {
                                     variant: "primary",
                                     text: "Reset Daily Cap",
                                     onClick: () => (0, o.EG)(),
+                                }),
+                                (0, a.jsx)(s.Button, {
+                                    variant: "primary",
+                                    text: "Clear All DCs",
+                                    onClick: p.sr,
                                 }),
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/normal",
@@ -78,11 +84,11 @@ function h() {
                     label: "All Dismissible Contents",
                     children: [
                         (0, a.jsx)(s.E1j, {
-                            query: h,
-                            onChange: f,
-                            onClear: () => f(""),
+                            query: f,
+                            onChange: x,
+                            onClear: () => x(""),
                         }),
-                        (0, a.jsx)(d.Z, { items: g.slice(0, x) }),
+                        (0, a.jsx)(d.Z, { items: v.slice(0, b) }),
                     ],
                 }),
             ],
