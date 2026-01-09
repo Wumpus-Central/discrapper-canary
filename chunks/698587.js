@@ -64,7 +64,7 @@ class c extends o.C {
                     a.cardAsset = l.F.internalBinaryRead(e, e.uint32(), n, a.cardAsset);
                     break;
                 case 12:
-                    a.mobileCardAsset = l.F.internalBinaryRead(e, e.uint32(), n, a.mobileCardAsset);
+                    a.mobileBannerAsset = l.F.internalBinaryRead(e, e.uint32(), n, a.mobileBannerAsset);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -91,8 +91,8 @@ class c extends o.C {
             e.backgroundAsset &&
                 l.F.internalBinaryWrite(e.backgroundAsset, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.cardAsset && l.F.internalBinaryWrite(e.cardAsset, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
-            e.mobileCardAsset &&
-                l.F.internalBinaryWrite(e.mobileCardAsset, t.tag(12, r.TD.LengthDelimited).fork(), n).join();
+            e.mobileBannerAsset &&
+                l.F.internalBinaryWrite(e.mobileBannerAsset, t.tag(12, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -166,7 +166,7 @@ class c extends o.C {
             },
             {
                 no: 12,
-                name: "mobile_card_asset",
+                name: "mobile_banner_asset",
                 kind: "message",
                 T: () => l.F,
             },
