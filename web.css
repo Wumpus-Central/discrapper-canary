@@ -73033,12 +73033,12 @@ screen and (max-width:485px) {
 
 .b7f4b43fe1b6e285-scroller {
     flex: 0 0 auto;
-    width: 106px;
+    width: 98px;
     -webkit-border-end: 1px solid var(--border-subtle);
     border-inline-end: 1px solid var(--border-subtle);
     margin-top: var(--custom-modal-padding-md);
-    -webkit-padding-end: var(--space-24);
-    padding-inline-end: var(--space-24)
+    -webkit-padding-end: var(--space-16);
+    padding-inline-end: var(--space-16)
 }
 
 .b7f4b43fe1b6e285-reactorsContainer {
@@ -73054,7 +73054,7 @@ screen and (max-width:485px) {
     border-radius: 8px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     overflow: hidden;
     padding: 0 4px
 }
@@ -73111,7 +73111,7 @@ screen and (max-width:485px) {
 .b7f4b43fe1b6e285-reactor {
     box-sizing: border-box;
     height: 52px;
-    margin-inline: 24px 2px;
+    margin-inline: 16px 2px;
     white-space: nowrap
 }
 
