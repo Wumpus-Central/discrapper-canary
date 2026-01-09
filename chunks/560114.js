@@ -627,7 +627,9 @@ let eh = s.forwardRef(function (e, t) {
                 t = null == e || (0, et.AB)(e) ? void 0 : w.Z.getChannel(e);
             return (
                 (null == t ? void 0 : t.isThread()) && (t = w.Z.getChannel(t.parent_id)),
-                null != t ? t : R.ZP.getDefaultChannel(a.id, !0, ee.Plq.CREATE_INSTANT_INVITE)
+                (null == t ? void 0 : t.guild_id) === a.id && null != t
+                    ? t
+                    : R.ZP.getDefaultChannel(a.id, !0, ee.Plq.CREATE_INSTANT_INVITE)
             );
         }, [r, a.id]),
         P = null;
