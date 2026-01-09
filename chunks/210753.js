@@ -55,16 +55,7 @@ function _(e) {
 }
 function m(e, t) {
     _(e);
-    let n = r.useMemo(
-        () =>
-            null != t
-                ? {
-                      width: t.coverImageWidth,
-                      height: t.coverImageHeight,
-                  }
-                : void 0,
-        [t],
-    );
+    let n = r.useMemo(() => (null != t ? { size: t.coverImageSize } : void 0), [t]);
     return (0, o.cj)([c.Z], () =>
         null == e
             ? {

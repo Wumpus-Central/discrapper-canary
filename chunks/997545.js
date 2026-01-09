@@ -166,7 +166,7 @@ class x extends p.Z {
                     (this.onConnectCallbackAt = performance.now()),
                     n.getCodecCapabilities((r) => {
                         (this.onVideoCodecsCallbackAt = performance.now()),
-                            this.logger.info("Available codecs: ".concat(JSON.stringify(r)));
+                            this.logger.info("Available engine codecs: ".concat(JSON.stringify(r)));
                         let i = (0, g.DY)(this.experimentFlags);
                         this.logger.info("Experimental codecs: ".concat(JSON.stringify(i))),
                             (this.codecs = [

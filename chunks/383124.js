@@ -10,10 +10,7 @@ var r = n(54381),
     u = n(43837);
 function g(e) {
     let { applicationId: t, selected: n, onClick: l, disabled: g } = e,
-        { isFetching: f, coverImageUrl: m } = (0, c.$)(t, {
-            coverImageHeight: 336,
-            coverImageWidth: 252,
-        }),
+        { isFetching: f, coverImageUrl: m } = (0, c.$)(t, { coverImageSize: 256 }),
         b = (0, o.e7)([d.Z], () => {
             var e, n;
             return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : "";

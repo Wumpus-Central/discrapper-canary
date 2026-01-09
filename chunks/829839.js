@@ -18,11 +18,6 @@ let o = [
         encode: !0,
         decode: !0,
     },
-    {
-        name: "VP9",
-        encode: !0,
-        decode: !0,
-    },
 ];
 function s(e, t) {
     let n = t.concat(o),
