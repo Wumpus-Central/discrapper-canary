@@ -1,14 +1,14 @@
-n.d(t, { o: () => y });
+n.d(t, { o: () => v });
 var r = n(54381),
-    i = n(473749),
-    l = n(120356),
-    a = n.n(l),
-    o = n(481060),
-    s = n(454585),
+    l = n(473749),
+    i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    o = n(454585),
     u = n(494415),
     c = n(937889),
     d = n(28005);
-function f(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,88 +33,88 @@ function f(e) {
     }
     return e;
 }
-function p(e) {
+function f(e) {
     var { icon: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ["icon"]);
     switch (t) {
         case "image":
-            return (0, r.jsx)(o.XBm, f({}, n));
+            return (0, r.jsx)(a.XBm, m({}, n));
         case "video":
-            return (0, r.jsx)(o.Odl, f({}, n));
+            return (0, r.jsx)(a.Odl, m({}, n));
         case "audio":
-            return (0, r.jsx)(o.RZG, f({}, n));
+            return (0, r.jsx)(a.RZG, m({}, n));
         case "attachment":
-            return (0, r.jsx)(o.Ujz, f({}, n));
+            return (0, r.jsx)(a.Ujz, m({}, n));
         case "link":
-            return (0, r.jsx)(o.xPt, f({}, n));
+            return (0, r.jsx)(a.xPt, m({}, n));
         case "sticker":
-            return (0, r.jsx)(o.SlE, f({}, n));
+            return (0, r.jsx)(a.SlE, m({}, n));
         case "call-active":
-            return (0, r.jsx)(o.Csw, f({}, n));
+            return (0, r.jsx)(a.Csw, m({}, n));
         case "call-ended":
-            return (0, r.jsx)(o.gkL, f({}, n));
+            return (0, r.jsx)(a.gkL, m({}, n));
     }
 }
-let m = i.memo(function (e) {
+let p = l.memo(function (e) {
         let { message: t } = e;
         return (0, c.ZP)(t, {
             formatInline: !0,
             noStyleAndInteraction: !0,
         }).content;
     }),
-    g = i.memo(function (e) {
+    g = l.memo(function (e) {
         let { markup: t, channelId: n } = e;
-        return (0, c.d6)(s.Z.parseInlineReply, {
+        return (0, c.d6)(o.Z.parseInlineReply, {
             content: t,
             channelId: n,
         });
     });
-function y(e) {
+function v(e) {
     let t,
-        { channel: n, message: i } = e,
-        l = (0, u.sY)(i, n);
-    if (null == l) return null;
-    let { authorLabel: o, color: s, trailingIcon: c } = l;
+        { channel: n, message: l } = e,
+        i = (0, u.sY)(l, n);
+    if (null == i) return null;
+    let { authorLabel: a, color: o, trailingIcon: c } = i;
     return (
-        "text" === l.type
-            ? (t = l.text)
-            : "markup" === l.type
+        "text" === i.type
+            ? (t = i.text)
+            : "markup" === i.type
               ? (t = (0, r.jsx)(g, {
-                    markup: l.markup,
-                    channelId: i.channel_id,
+                    markup: i.markup,
+                    channelId: l.channel_id,
                 }))
-              : "message" === l.type && (t = (0, r.jsx)(m, { message: l.message })),
+              : "message" === i.type && (t = (0, r.jsx)(p, { message: i.message })),
         (0, r.jsxs)("div", {
-            className: a()(d.messagePreviewLine, { [d.colorTextFeedbackPositive]: "text-feedback-positive" === s }),
+            className: s()(d.messagePreviewLine, { [d.colorTextFeedbackPositive]: "text-feedback-positive" === o }),
             children: [
                 (0, r.jsxs)("span", {
                     className: d.messageContent,
-                    children: [null != o && "".concat(o, ": "), t],
+                    children: [null != a && "".concat(a, ": "), t],
                 }),
                 null != c &&
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(f, {
                         icon: c,
-                        size: "xs",
+                        size: "xxs",
                         color: "currentColor",
                         className: d.messageContentTrailingIcon,
                     }),
