@@ -1,4 +1,4 @@
-n.d(t, { e: () => a });
+n.d(t, { eg: () => a });
 var r = n(818083),
     i = n(987338);
 let l = (0, r.B)({
@@ -6,12 +6,26 @@ let l = (0, r.B)({
     id: "2025-11_guild_powerups_mobile",
     commonTriggerPoint: i.$P.CONNECTION_OPEN,
     label: "Guild Powerups Mobile",
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+        notificationsEnabled: !1,
+    },
     treatments: [
         {
             id: 1,
             label: "Enable Guild Powerups Mobile",
-            config: { enabled: !0 },
+            config: {
+                enabled: !0,
+                notificationsEnabled: !1,
+            },
+        },
+        {
+            id: 2,
+            label: "Enable Guild Powerups Mobile with Notifications",
+            config: {
+                enabled: !0,
+                notificationsEnabled: !0,
+            },
         },
     ],
 });
