@@ -1,36 +1,34 @@
 n.d(t, {
-    U: () => f,
-    j: () => p,
+    U: () => d,
+    j: () => f,
 });
 var r = n(120356),
     i = n.n(r),
     a = n(342905),
     o = n(526167),
-    s = n(594928),
-    l = n(817330),
-    c = n(181430),
-    u = n(717360);
-let d = {
+    s = n(817330),
+    l = n(181430),
+    c = n(717360);
+let u = {
     [a.C.DEFAULT]: "",
-    [a.C.CHERRY_BOMB]: u.cherryBomb,
-    [a.C.CHICLE]: u.chicle,
-    [a.C.MUSEO_MODERNO]: u.museoModerno,
-    [a.C.NEO_CASTEL]: u.neoCastel,
-    [a.C.PIXELIFY]: u.pixelify,
-    [a.C.SINISTRE]: u.sinistre,
-    [a.C.ZILLA_SLAB]: u.zillaSlab,
+    [a.C.CHERRY_BOMB]: c.cherryBomb,
+    [a.C.CHICLE]: c.chicle,
+    [a.C.MUSEO_MODERNO]: c.museoModerno,
+    [a.C.NEO_CASTEL]: c.neoCastel,
+    [a.C.PIXELIFY]: c.pixelify,
+    [a.C.SINISTRE]: c.sinistre,
+    [a.C.ZILLA_SLAB]: c.zillaSlab,
 };
-function f(e) {
+function d(e) {
     var t;
     return {
-        name: (0, l.Z)(e),
-        className: null != (t = d[e]) ? t : "",
+        name: (0, s.Z)(e),
+        className: null != (t = u[e]) ? t : "",
     };
 }
-function p(e) {
-    let { displayNameStyles: t, inProfile: n } = e,
-        { includeNonProfile: r } = s.fN.useExperiment({ location: "useDisplayNameStylesFont" });
-    if (!(0, c.Y)({ location: "useDisplayNameStylesFont" }) || (!n && !r) || null == t) return "";
-    let a = f(t.fontId);
-    return "" === a.className ? "" : i()(u.dnsFont, a.className, { [u.safari]: (0, o.G6)() });
+function f(e) {
+    let { displayNameStyles: t } = e;
+    if (!(0, l.Y)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
+    let n = d(t.fontId);
+    return "" === n.className ? "" : i()(c.dnsFont, n.className, { [c.safari]: (0, o.G6)() });
 }

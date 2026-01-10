@@ -188,10 +188,7 @@ function O(e) {
             userId: S.user.id,
             guildId: null == C ? void 0 : C.id,
         }),
-        A = (0, u.j)({
-            displayNameStyles: x,
-            inProfile: !1,
-        });
+        A = (0, u.j)({ displayNameStyles: x });
     return (0, r.jsx)(m.Z.Header, {
         priorityUser: S,
         guildId: null == C ? void 0 : C.id,
