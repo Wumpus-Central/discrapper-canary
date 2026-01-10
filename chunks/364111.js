@@ -6,13 +6,15 @@ var r = n(473749),
     o = n(335131),
     s = n(597688),
     c = n(52030),
-    u = n(447988);
-let d = i.v.VARIANTS_GROUP;
+    u = n(952597),
+    d = n(447988);
 function p(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        p = (0, l.e7)([a.Z], () => a.Z.hasLoadedExperiments),
-        f = (0, l.e7)([s.Z], () => s.Z.skipNumCategories),
-        [g, h, m, b, _, E, O, v] = (0, l.Wu)([c.Z], () => {
+    let p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        f = (0, l.e7)([a.Z], () => a.Z.hasLoadedExperiments);
+    (0, u.a)("useMaybeFetchCollectiblesShopHome");
+    let g = i.v.VARIANTS_GROUP,
+        h = (0, l.e7)([s.Z], () => s.Z.skipNumCategories),
+        [m, b, _, E, O, v, y, I] = (0, l.Wu)([c.Z], () => {
             var t, n;
             return [
                 c.Z.getShopBlocks(e),
@@ -25,7 +27,7 @@ function p(e, t, n) {
                 c.Z.getShopHomeConfigOverride(),
             ];
         }),
-        y = (0, r.useMemo)(() => {
+        C = (0, r.useMemo)(() => {
             var e, n;
             return (
                 (e = (function (e) {
@@ -55,10 +57,10 @@ function p(e, t, n) {
                 })({}, t)),
                 (n = n =
                     {
-                        variantsReturnStyle: d,
+                        variantsReturnStyle: g,
                         includeDynamicBlocks: !0,
-                        shopHomeConfig: v,
-                        skipNumCategories: f,
+                        shopHomeConfig: I,
+                        skipNumCategories: h,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -74,23 +76,23 @@ function p(e, t, n) {
                       }),
                 e
             );
-        }, [t, v, f]),
-        I = (0, r.useMemo)(() => !(0, o.oc)(b, y), [b, y]),
-        C = (0, u.J)(g, null != E && E, i),
-        S = (0, r.useMemo)(() => !C && Date.now() - h < 600000, [h, C]);
+        }, [t, I, h, g]),
+        S = (0, r.useMemo)(() => !(0, o.oc)(E, C), [E, C]),
+        T = (0, d.J)(m, null != v && v, p),
+        N = (0, r.useMemo)(() => !T && Date.now() - b < 600000, [b, T]);
     return (
         (0, r.useEffect)(() => {
-            if (!p || E) return;
-            let t = Date.now() - m < 600000;
-            (null == _ || !t) && (I || !S || O) && (0, o.Ov)(e, y, n);
-        }, [p, E, _, m, S, O, I, y, e, n]),
+            if (!f || v) return;
+            let t = Date.now() - _ < 600000;
+            (null == O || !t) && (S || !N || y) && (0, o.Ov)(e, C, n);
+        }, [f, v, O, _, N, y, S, C, e, n]),
         {
-            isFetchingShopHome: E,
-            fetchShopHomeError: _,
-            shopBlocks: g,
+            isFetchingShopHome: v,
+            fetchShopHomeError: O,
+            shopBlocks: m,
             refreshShopHome: (0, r.useCallback)(() => {
-                (0, o.Ov)(e, y, n);
-            }, [e, y, n]),
+                (0, o.Ov)(e, C, n);
+            }, [e, C, n]),
         }
     );
 }

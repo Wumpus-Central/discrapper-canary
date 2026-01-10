@@ -4,8 +4,9 @@ var r = n(473749),
     a = n(442837),
     o = n(353926),
     s = n(335131),
-    l = n(597688);
-function c(e, t, n) {
+    l = n(597688),
+    c = n(952597);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,24 +47,25 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = 600000,
-    _ = 600000,
-    m = i.v.VARIANTS_GROUP;
+let _ = 600000,
+    m = 600000;
 function h(e, t, n) {
-    let i = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        c = null == e ? void 0 : e.includeBundles,
-        [d, h, g, E, b, y, O] = (0, a.Wu)([l.Z], () => {
+    (0, c.a)("useMaybeFetchCollectiblesCategoriesShared");
+    let u = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+        f = null == e ? void 0 : e.includeBundles,
+        h = i.v.VARIANTS_GROUP,
+        [g, E, b, y, O, v, S] = (0, a.Wu)([l.Z], () => {
             var e, t;
             return [
                 l.Z.isFetchingCategories,
@@ -77,30 +79,30 @@ function h(e, t, n) {
         });
     return (
         (0, r.useEffect)(() => {
-            if (!i || d) return;
-            let r = Date.now() - E < _;
-            if (g && r) return;
-            let a = f(u({}, e), {
-                    variantsReturnStyle: m,
-                    includeBundles: c,
-                    skipNumCategories: O,
+            if (!u || g) return;
+            let r = Date.now() - y < m;
+            if (b && r) return;
+            let i = p(d({}, e), {
+                    variantsReturnStyle: h,
+                    includeBundles: f,
+                    skipNumCategories: S,
                 }),
-                o = !(0, s.oc)(h, a),
-                l = Date.now() - b < p;
-            (o || !l) && (0, s.F$)(a, t, n);
-        }, [i, d, h, b, e, g, c, E, t, n, O]),
+                a = !(0, s.oc)(E, i),
+                o = Date.now() - O < _;
+            (a || !o) && (0, s.F$)(i, t, n);
+        }, [u, g, E, O, e, b, f, y, t, n, S, h]),
         {
-            isFetching: d,
-            categories: y,
-            fetchCategoriesError: g,
+            isFetching: g,
+            categories: v,
+            fetchCategoriesError: b,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = f(u({}, e), {
-                    variantsReturnStyle: m,
-                    includeBundles: c,
-                    skipNumCategories: O,
+                let t = p(d({}, e), {
+                    variantsReturnStyle: h,
+                    includeBundles: f,
+                    skipNumCategories: S,
                 });
                 (0, s.F$)(t, void 0, n);
-            }, [e, c, n, O]),
+            }, [e, f, n, S, h]),
         }
     );
 }

@@ -1,18 +1,20 @@
 n.d(t, {
-    QJ: () => h,
-    QN: () => m,
-    ZP: () => g,
-    c7: () => _,
-    mw: () => E,
+    QJ: () => g,
+    QN: () => h,
+    ZP: () => E,
+    c7: () => m,
+    mw: () => b,
 }),
     n(388685);
 var r = n(473749),
     i = n(311570),
     a = n(399606),
-    o = n(335131),
-    s = n(1870),
-    l = n(267097);
-function c(e, t, n) {
+    o = n(353926),
+    s = n(335131),
+    l = n(1870),
+    c = n(952597),
+    u = n(267097);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +27,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +38,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,68 +55,70 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-n(25251);
-let p = i.v.VARIANTS_GROUP;
-function _() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        [t, n, i, l, c, u] = (0, a.Wu)([s.Z], () => [
-            s.Z.isFetching,
-            s.Z.isClaiming,
-            s.Z.fetchError,
-            s.Z.claimError,
-            s.Z.purchases,
-            s.Z.hasPreviouslyFetched,
+function m() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    (0, c.a)("useFetchPurchases");
+    let t = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+        n = i.v.VARIANTS_GROUP,
+        [u, d, f, p, _, m] = (0, a.Wu)([l.Z], () => [
+            l.Z.isFetching,
+            l.Z.isClaiming,
+            l.Z.fetchError,
+            l.Z.claimError,
+            l.Z.purchases,
+            l.Z.hasPreviouslyFetched,
         ]),
-        d = (0, r.useRef)(s.Z.hasPreviouslyFetched);
+        h = (0, r.useRef)(l.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
-        d.current = u;
-    }, [u]);
-    let f = (0, r.useRef)(s.Z.fetchError);
+        h.current = m;
+    }, [m]);
+    let g = (0, r.useRef)(l.Z.fetchError);
     (0, r.useEffect)(() => {
-        f.current = i;
-    }, [i]);
-    let _ = (0, r.useRef)(s.Z.isFetching);
+        g.current = f;
+    }, [f]);
+    let E = (0, r.useRef)(l.Z.isFetching);
     return (
         (0, r.useEffect)(() => {
-            _.current = t;
-        }, [t]),
+            E.current = u;
+        }, [u]),
         (0, r.useEffect)(() => {
-            _.current || (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: p });
-        }, [e]),
+            !t || E.current || (!0 === e && h.current && null == g.current) || (0, s.qg)({ variantsReturnStyle: n });
+        }, [e, n, t]),
         {
-            isClaiming: n,
-            fetchPurchasesError: i,
-            claimError: l,
-            isFetching: t,
-            purchases: c,
-            hasPreviouslyFetched: u,
+            isClaiming: d,
+            fetchPurchasesError: f,
+            claimError: p,
+            isFetching: u,
+            purchases: _,
+            hasPreviouslyFetched: m,
         }
     );
 }
-let m = () => _(!0),
-    h = (e) => {
-        let { purchases: t } = _(!0);
+n(25251);
+let h = () => m(!0),
+    g = (e) => {
+        let { purchases: t } = m(!0);
         return null != e ? t.get(e) : void 0;
     };
-function g(e, t) {
+function E(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
             categories: i,
             fetchCategoriesError: a,
             refreshCategories: o,
-        } = (0, l.Z)(
+        } = (0, u.Z)(
             {
                 paymentGateway: n,
                 noOp: null == e ? void 0 : e.noOp,
@@ -125,12 +129,12 @@ function g(e, t) {
         ),
         {
             isClaiming: s,
-            fetchPurchasesError: c,
-            claimError: u,
+            fetchPurchasesError: l,
+            claimError: c,
             isFetching: d,
             purchases: f,
             hasPreviouslyFetched: p,
-        } = _(null == e ? void 0 : e.stalePurchasesOK);
+        } = m(null == e ? void 0 : e.stalePurchasesOK);
     return {
         isFetching: r || d,
         isFetchingCategories: r,
@@ -139,10 +143,10 @@ function g(e, t) {
         categories: i,
         purchases: f,
         fetchCategoriesError: a,
-        fetchPurchasesError: c,
-        claimError: u,
+        fetchPurchasesError: l,
+        claimError: c,
         refreshCategories: o,
         hasPreviouslyFetched: p,
     };
 }
-let E = (e) => g(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let b = (e) => E(_(f({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
