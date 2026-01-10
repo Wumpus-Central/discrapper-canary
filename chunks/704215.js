@@ -525,6 +525,8 @@ var r = (function (e) {
             (e[(e.PREMIUM_GROUP_POPOVER = 668)] = "PREMIUM_GROUP_POPOVER"),
             (e[(e.PREMIUM_ORBS_UPSELL_POPOVER = 669)] = "PREMIUM_ORBS_UPSELL_POPOVER"),
             (e[(e.PREMIUM_ORBS_REWARDS_DROP_POPOVER = 670)] = "PREMIUM_ORBS_REWARDS_DROP_POPOVER"),
+            (e[(e.GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK = 671)] =
+                "GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK"),
             e
         );
     })({}),
