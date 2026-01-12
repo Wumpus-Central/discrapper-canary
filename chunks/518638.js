@@ -127,6 +127,6 @@ function w(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
 function D(e) {
-    let { promotionPartner: t } = e;
-    return g.Ce.has(t.toLocaleLowerCase());
+    let { promotionPartner: t, promotionType: n } = e;
+    return n === g.$k.THIRD_PARTY_OUTBOUND_RECURRING || g.Ce.has(t.toLocaleLowerCase());
 }

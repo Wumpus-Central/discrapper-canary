@@ -13,6 +13,7 @@ var r = (function (e) {
         (e[(e.THIRD_PARTY_OUTBOUND = 4)] = "THIRD_PARTY_OUTBOUND"),
         (e[(e.MARKETING_MOMENT = 5)] = "MARKETING_MOMENT"),
         (e[(e.GIFT_PROMOTION = 6)] = "GIFT_PROMOTION"),
+        (e[(e.THIRD_PARTY_OUTBOUND_RECURRING = 7)] = "THIRD_PARTY_OUTBOUND_RECURRING"),
         e
     );
 })({});

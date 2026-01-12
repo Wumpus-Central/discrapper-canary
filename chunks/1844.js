@@ -39,6 +39,7 @@ let p = f(),
         [u.$k.THIRD_PARTY_INBOUND]: {},
         [u.$k.THIRD_PARTY_OUTBOUND]: {},
         [u.$k.GIFT_PROMOTION]: {},
+        [u.$k.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     },
     y = {},
     O = null,
@@ -68,11 +69,19 @@ function C(e) {
             [u.$k.THIRD_PARTY_INBOUND]: {},
             [u.$k.THIRD_PARTY_OUTBOUND]: {},
             [u.$k.GIFT_PROMOTION]: {},
+            [u.$k.THIRD_PARTY_OUTBOUND_RECURRING]: {},
         }),
         (v = new Map()),
         t.forEach((e) => {
             let t = s.Z.createFromServer(e);
-            if (!0 === (0, c.pD)({ promotionPartner: t.outboundTitle })) t.id in y || (y[t.id] = t);
+            if (
+                !0 ===
+                (0, c.pD)({
+                    promotionPartner: t.outboundTitle,
+                    promotionType: t.promotionType,
+                })
+            )
+                t.id in y || (y[t.id] = t);
             else if (e.promotion_type === u.$k.THIRD_PARTY) b[u.$k.THIRD_PARTY_OUTBOUND][e.id] = t;
             else {
                 var n;
@@ -98,6 +107,7 @@ function N() {
         [u.$k.THIRD_PARTY_INBOUND]: {},
         [u.$k.THIRD_PARTY_OUTBOUND]: {},
         [u.$k.GIFT_PROMOTION]: {},
+        [u.$k.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     }),
         (v = new Map()),
         (g = !1),
@@ -136,6 +146,7 @@ function x() {
             [u.$k.THIRD_PARTY_INBOUND]: {},
             [u.$k.THIRD_PARTY_OUTBOUND]: {},
             [u.$k.GIFT_PROMOTION]: {},
+            [u.$k.THIRD_PARTY_OUTBOUND_RECURRING]: {},
         }),
         (_ = null),
         (y = {}),
