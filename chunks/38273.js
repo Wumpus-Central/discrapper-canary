@@ -1,7 +1,8 @@
-n.d(t, { G: () => d });
+n.d(t, { G: () => f });
 var r = n(70466),
-    i = n(864218);
-function a(e, t, n) {
+    i = n(864218),
+    a = n(474936);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,12 +26,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -42,22 +43,22 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = u(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -65,7 +66,7 @@ function c(e, t) {
     }
     return i;
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -74,24 +75,30 @@ function u(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let d = (e) => {
-    var { subscriptionTier: t = null, hasActivePromotion: n = !1, useShorterCTA: a = !1, isPersistentCTA: s = !1 } = e,
-        u = c(e, ["subscriptionTier", "hasActivePromotion", "useShorterCTA", "isPersistentCTA"]);
-    let d = {
+let f = (e) => {
+    var {
+            subscriptionTier: t = null,
+            hasActivePromotion: n = !1,
+            useShorterCTA: o = !1,
+            isPersistentCTA: l = !1,
+            buttonTextOverride: d,
+        } = e,
+        f = u(e, ["subscriptionTier", "hasActivePromotion", "useShorterCTA", "isPersistentCTA", "buttonTextOverride"]);
+    let p = {
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: a,
-            isPersistentCTA: s,
+            useShorterCTA: o,
+            isPersistentCTA: l,
         },
-        { buttonText: f, marketingSubscriptionTierSkuId: p } = (0, r.G)(d),
-        { subscribeButtonProps: _ } = (0, i.F)(
-            l(o({}, u), {
-                subscriptionTier: p,
-                buttonTextOverride: f,
+        { buttonText: _, marketingSubscriptionTierSkuId: m } = (0, r.G)(p),
+        { subscribeButtonProps: h } = (0, i.F)(
+            c(s({}, f), {
+                subscriptionTier: m,
+                buttonTextOverride: null != d ? d : _,
             }),
         );
     return {
-        subscribeButtonProps: _,
-        subscriptionTier: p,
+        subscribeButtonProps: h,
+        subscriptionTier: m === a.Si.NONE ? null : m,
     };
 };
