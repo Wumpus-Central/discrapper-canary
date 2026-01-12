@@ -41,8 +41,8 @@ var p = n(392750),
     F = n(178821),
     G = n(891401),
     V = n(958328),
-    H = n(315384),
-    z = n(107606),
+    z = n(315384),
+    H = n(107606),
     W = n(514866),
     K = n(763577),
     q = n(384207),
@@ -216,7 +216,7 @@ function ed() {
                 id: "appearance_randomizer",
                 name: "Appearance Randomizer",
                 group: es.v0.UI,
-                render: () => (0, a.jsx)(z.Z, {}),
+                render: () => (0, a.jsx)(H.Z, {}),
             }),
             e.push({
                 id: "overlays",
@@ -287,13 +287,13 @@ function ed() {
             e.push({
                 id: "dcf_overrides",
                 name: "DCF Overrides",
-                group: es.v0.DISMISSIBLE_CONTENT,
+                group: es.v0.DCF,
                 render: () => (0, a.jsx)(g.Z, {}),
             }),
             e.push({
                 id: "dcf_events",
                 name: "DCF Events",
-                group: es.v0.DISMISSIBLE_CONTENT,
+                group: es.v0.DCF,
                 render: () => (0, a.jsx)(b.Z, {}),
             }),
             e.push({
@@ -315,7 +315,7 @@ function ed() {
                 name: "Potions",
                 group: es.v0.PREMIUM,
                 tags: ["consumables", "entitlements", "confetti"],
-                render: () => (0, a.jsx)(H.Z, {}),
+                render: () => (0, a.jsx)(z.Z, {}),
             }),
             window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") &&
                 (e.push({

@@ -19,7 +19,7 @@ var a,
     f = n(663618),
     x =
         (((a = {}).NONE = ""),
-        (a.DISMISSIBLE_CONTENT = "Dismissible Content"),
+        (a.DCF = "DCF"),
         (a.EXPERIMENTS = "Experiments"),
         (a.EVENTS = "Events"),
         (a.PREMIUM = "Premium"),
@@ -35,7 +35,7 @@ var a,
         a);
 let b = [
         "Experiments",
-        "Dismissible Content",
+        "DCF",
         "Events",
         "Premium",
         "Quests",
