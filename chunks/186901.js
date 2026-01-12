@@ -36,6 +36,7 @@ var c = (function (e) {
         (e.ACTIVITIES = "ACTIVITIES"),
         (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
         (e.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
+        (e.PLAYGROUND = "PLAYGROUND"),
         e
     );
 })({});
@@ -64,6 +65,8 @@ function u(e) {
             return "shop";
         case "ACTIVITIES":
             return "activities";
+        case "PLAYGROUND":
+            return "playground";
         default:
             return e;
     }

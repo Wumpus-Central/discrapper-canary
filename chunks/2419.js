@@ -1,53 +1,49 @@
 n.r(t),
     n.d(t, {
-        openPlayground: () => c,
-        openPlaygroundFromParsedUrl: () => u,
+        openPlayground: () => d,
+        openPlaygroundFromParsedUrl: () => f,
     }),
     n(388685),
     n(35282);
 var r = n(37234),
     i = n(819640),
-    l = n(594174),
-    a = n(653592),
-    o = n(156142),
-    s = n(981631);
-function c(e, t) {
-    let n = l.default.getCurrentUser();
+    a = n(594174),
+    o = n(653592),
+    s = n(156142),
+    l = n(981631);
+function c(e) {
+    for (let t of o.componentPlaygroundConfigs) {
+        let n = t.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
+        if (null != n) return n.id;
+    }
+    return null;
+}
+function u(e, t) {
+    for (let n of o.componentPlaygroundConfigs) {
+        let r = n.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
+        if (null != r)
+            for (let e of r.groups) {
+                let n = e.stories.find((e) => e.id.toLowerCase() === t.toLowerCase());
+                if (null != n) return n.id;
+            }
+    }
+    return null;
+}
+function d(e, t) {
+    let n = a.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return !1;
-    let c =
-            null != e
-                ? (function (e) {
-                      for (let t of a.componentPlaygroundConfigs) {
-                          let n = t.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
-                          if (null != n) return n.id;
-                      }
-                      return null;
-                  })(e)
-                : null,
-        u =
-            null != c && null != t
-                ? (function (e, t) {
-                      for (let n of a.componentPlaygroundConfigs) {
-                          let r = n.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
-                          if (null != r)
-                              for (let e of r.groups) {
-                                  let n = e.stories.find((e) => e.id.toLowerCase() === t.toLowerCase());
-                                  if (null != n) return n.id;
-                              }
-                      }
-                      return null;
-                  })(c, t)
-                : null;
+    let o = null != e ? c(e) : null,
+        d = null != o && null != t ? u(o, t) : null;
     return (
-        o.PlaygroundStore.setState({
-            selectedCollection: c,
-            selectedStory: u,
+        s.PlaygroundStore.setState({
+            selectedCollection: o,
+            selectedStory: d,
         }),
-        i.Z.getLayers().includes(s.S9g.COMPONENT_PLAYGROUND) || (0, r.jN)(s.S9g.COMPONENT_PLAYGROUND),
+        i.Z.getLayers().includes(l.S9g.COMPONENT_PLAYGROUND) || (0, r.jN)(l.S9g.COMPONENT_PLAYGROUND),
         !0
     );
 }
-function u(e) {
+function f(e) {
     let { match: t } = e;
-    return c(t.collection, t.story);
+    return d(t.collection, t.story);
 }
