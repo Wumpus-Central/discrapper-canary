@@ -1,4 +1,4 @@
-n.d(t, { default: () => _ }), n(388685), n(290780), n(539854), n(704826), n(35282);
+n.d(t, { default: () => w }), n(388685), n(290780), n(539854), n(704826), n(35282);
 var l = n(54381),
     i = n(473749),
     a = n(481060),
@@ -23,11 +23,11 @@ var l = n(54381),
     A = n(393431),
     N = n(69021),
     I = n(981631),
-    w = n(388032);
-let _ = (0, s.Z)(
+    _ = n(388032);
+let w = (0, s.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
-            [c, _] = i.useState(!1),
+            [c, w] = i.useState(!1),
             x = (0, v.Z)(),
             D = (0, h.Z)(),
             T = (0, f.Z)(),
@@ -41,29 +41,28 @@ let _ = (0, s.Z)(
             B = i.useMemo(() => (0, g.j)(), []);
         async function M() {
             try {
-                _(!0), await (0, d.bF)(), window.location.reload(!0);
+                w(!0), await (0, d.bF)(), window.location.reload(!0);
             } catch (e) {
-                _(!1);
+                w(!1);
             }
         }
-        let U = (0, p.wy)("UserSettingsCogContextMenu"),
-            G = (0, p.gj)("UserSettingsCogContextMenu"),
-            F = (0, E.getWebUserSettingsByUserSettingsSections)(),
-            z = (0, O.VO)(),
-            Y = i.useMemo(() => {
+        let U = (0, p.gj)("UserSettingsCogContextMenu"),
+            G = (0, E.getWebUserSettingsByUserSettingsSections)(),
+            F = (0, O.VO)(),
+            z = i.useMemo(() => {
                 let e = [];
                 if (
-                    (z.forEach((t) => {
+                    (F.forEach((t) => {
                         let { section: n, predicate: l } = t;
                         n !== o.ID.HEADER &&
                             n !== o.ID.CUSTOM &&
                             n !== o.ID.DIVIDER &&
                             "logout" !== n &&
                             (null == l || l()) &&
-                            ((U && null == F.get(n)) ||
-                                (U && n === I.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t)));
+                            null != G.get(n) &&
+                            (n === I.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t));
                     }),
-                    G)
+                    U)
                 ) {
                     let t = e.findIndex((e) => e.section === I.oAB.NOTIFICATIONS),
                         n = e.findIndex((e) => e.section === I.oAB.CONNECTIONS);
@@ -73,17 +72,17 @@ let _ = (0, s.Z)(
                     }
                 }
                 return e;
-            }, [z, U, F, G]);
+            }, [F, G, U]);
         return (0, l.jsx)(u.Gt, {
             value: V,
             children: (0, l.jsxs)(a.v2r, {
                 navId: "user-settings-cog",
                 onClose: r.Zy,
-                "aria-label": w.intl.string(w.t.opYYHn),
+                "aria-label": _.intl.string(_.t.opYYHn),
                 onSelect: n,
                 onInteraction: s,
                 children: [
-                    Y.map((e) => {
+                    z.map((e) => {
                         var t, n;
                         let { section: i, label: r, onClick: o } = e,
                             s = i.replace(/\W/gi, "_");
@@ -128,7 +127,7 @@ let _ = (0, s.Z)(
                                                           section: l,
                                                           analyticsLocations: n,
                                                       });
-                                              })(null != (e = F.get(i)) ? e : b.n.ACCOUNT_PANEL, i, V);
+                                              })(null != (e = G.get(i)) ? e : b.n.ACCOUNT_PANEL, i, V);
                                     },
                                 },
                             )),
@@ -204,7 +203,7 @@ let _ = (0, s.Z)(
                               children: (0, l.jsx)(a.sNh, {
                                   id: "clear-build-override",
                                   disabled: c,
-                                  label: w.intl.string(w.t["/Nz9rY"]),
+                                  label: _.intl.string(_.t["/Nz9rY"]),
                                   action: M,
                                   color: "danger",
                               }),

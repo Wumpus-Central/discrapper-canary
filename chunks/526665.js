@@ -1,38 +1,13 @@
 n.d(t, {
-    BK: () => d,
-    Gl: () => _,
-    KV: () => u,
-    Ml: () => f,
-    NT: () => m,
-    gN: () => p,
-    gj: () => c,
-    wy: () => l,
-    yP: () => s,
+    BK: () => l,
+    Gl: () => d,
+    KV: () => s,
+    Ml: () => c,
+    gN: () => u,
+    gj: () => o,
 });
 var r = n(427164);
 let i = (0, r.le)({
-        name: "2025-09-user-settings-redesign-1",
-        kind: "user",
-        defaultConfig: {
-            enabled: !1,
-            showLegacyOpen: !1,
-        },
-        variations: {
-            0: {
-                enabled: !1,
-                showLegacyOpen: !1,
-            },
-            1: {
-                enabled: !0,
-                showLegacyOpen: !1,
-            },
-            2: {
-                enabled: !0,
-                showLegacyOpen: !0,
-            },
-        },
-    }),
-    a = (0, r.le)({
         name: "2025-09-user-settings-redesign-2a",
         kind: "user",
         defaultConfig: {
@@ -50,7 +25,7 @@ let i = (0, r.le)({
             },
         },
     }),
-    o = (0, r.le)({
+    a = (0, r.le)({
         name: "2025-12-user-settings-redesign-3",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -59,20 +34,9 @@ let i = (0, r.le)({
             1: { enabled: !0 },
         },
     }),
-    s = (e) => i.getConfig({ location: e }).enabled,
-    l = (e) => i.useConfig({ location: e }).enabled,
-    c = (e) => {
-        let t = l(e),
-            n = a.useConfig({ location: e }).showRedesignedNotifications;
-        return t && n;
-    },
-    u = (e) => !!s(e) && a.getConfig({ location: e }).showRedesignedNotifications,
-    d = (e) => {
-        let t = l(e),
-            n = a.useConfig({ location: e }).showRedesignedVoiceAndVideo;
-        return t && n;
-    },
-    f = (e) => !!s(e) && a.getConfig({ location: e }).showRedesignedVoiceAndVideo,
-    p = (e) => o.useConfig({ location: e }).enabled,
-    _ = (e) => o.getConfig({ location: e }).enabled,
-    m = (e) => i.useConfig({ location: e }).showLegacyOpen;
+    o = (e) => i.useConfig({ location: e }).showRedesignedNotifications,
+    s = (e) => i.getConfig({ location: e }).showRedesignedNotifications,
+    l = (e) => i.useConfig({ location: e }).showRedesignedVoiceAndVideo,
+    c = (e) => i.getConfig({ location: e }).showRedesignedVoiceAndVideo,
+    u = (e) => a.useConfig({ location: e }).enabled,
+    d = (e) => a.getConfig({ location: e }).enabled;

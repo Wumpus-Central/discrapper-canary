@@ -1,6 +1,5 @@
 e.exports = {
     authedAppV2: "_50a5493e9d9cc496-authedAppV2",
-    authedAppV2UserSettingsRedesign: "_50a5493e9d9cc496-authedAppV2UserSettingsRedesign",
     headerV2: "_50a5493e9d9cc496-headerV2",
     headerText: "_50a5493e9d9cc496-headerText",
     headerTextContainerV2: "_50a5493e9d9cc496-headerTextContainerV2",

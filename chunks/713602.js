@@ -1,19 +1,17 @@
-n.d(e, { B: () => T });
+n.d(e, { B: () => o });
 var i = n(657707),
     l = n(509613),
-    s = n(906467),
-    u = n(313789),
-    r = n(956699),
-    a = n(726985);
-let o = (0, l.wf)(u.n.DEVELOPER_OPTIONS_PANEL, {
+    s = n(313789),
+    u = n(956699),
+    r = n(726985);
+let a = (0, l.wf)(s.n.DEVELOPER_OPTIONS_PANEL, {
         useTitle: () => "Developer Options",
-        StronglyDiscouragedCustomComponent: r.Z,
+        StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    T = (0, l.m7)(u.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
+    o = (0, l.m7)(s.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
         useTitle: () => "Developer Options",
-        getLegacySearchKey: () => a.s6.DEVELOPER_OPTIONS,
+        getLegacySearchKey: () => r.s6.DEVELOPER_OPTIONS,
         icon: i.Che,
-        usePredicate: () => s.Z.isDeveloper,
-        buildLayout: () => [o],
+        buildLayout: () => [a],
     });

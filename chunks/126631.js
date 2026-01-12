@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -6,37 +6,36 @@ var r = n(54381),
     s = n(752305),
     l = n(893718),
     c = n(313201),
-    u = n(526665),
-    d = n(518596),
-    f = n(131704),
-    p = n(993413),
-    _ = n(981631),
-    m = n(388032),
-    h = n(754024);
-let g = (0, c.hQ)(),
-    E = (0, f.createChannelRecord)({
+    u = n(518596),
+    d = n(131704),
+    f = n(993413),
+    p = n(981631),
+    _ = n(388032),
+    m = n(754024);
+let h = (0, c.hQ)(),
+    g = (0, d.createChannelRecord)({
         id: "1",
-        type: _.d4z.DM,
+        type: p.d4z.DM,
     }),
-    b = (0, c.hQ)();
-function y(e) {
+    E = (0, c.hQ)();
+function b(e) {
     let {
             sectionTitle: t,
             errors: n,
             onBioChange: c,
-            pendingBio: f,
-            placeholder: y,
-            currentBio: O,
-            disabled: v = !1,
+            pendingBio: d,
+            placeholder: b,
+            currentBio: y,
+            disabled: O = !1,
         } = e,
-        [S, I] = i.useState(null != f ? f : O),
-        [T, C] = i.useState((0, s.JM)(S)),
-        A = i.useRef(O),
-        N = i.useRef(!1);
-    function P(e, t, n) {
-        t !== S && (I(t), C(n), c(t));
+        [v, S] = i.useState(null != d ? d : y),
+        [I, T] = i.useState((0, s.JM)(v)),
+        C = i.useRef(y),
+        A = i.useRef(!1);
+    function N(e, t, n) {
+        t !== v && (S(t), T(n), c(t));
     }
-    function R() {
+    function P() {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
@@ -44,48 +43,49 @@ function y(e) {
             });
         });
     }
-    i.useEffect(() => {
-        if (A.current !== O) {
-            let e = (0, s.JM)(O);
-            I(O), C(e);
-        }
-        A.current = O;
-    }, [O]);
-    let w = (0, u.wy)("AboutMeSection");
-    return (0, r.jsxs)(p.Z, {
-        title: t,
-        titleId: g,
-        description: m.intl.string(m.t.Bbw6Ac),
-        errors: n,
-        disabled: v,
-        children: [
-            (0, r.jsx)(l.ZP, {
-                "aria-describedby": b,
-                "aria-labelledby": g,
-                className: h.bioTextAreaContainer,
-                innerClassName: h.bioTextArea,
-                maxCharacterCount: _.tPV,
-                onChange: P,
-                placeholder: y,
-                channel: E,
-                textValue: S,
-                richValue: T,
-                emojiPickerCloseOnModalOuterClick: w,
-                parentModalKey: w ? d.USER_SETTINGS_MODAL_KEY : void 0,
-                type: o.Ie.PROFILE_BIO_INPUT,
-                onBlur: () => {
-                    N.current = !1;
-                },
-                onFocus: () => {
-                    N.current = !0;
-                },
-                focused: N.current,
-                onSubmit: R,
-            }),
-            (0, r.jsx)(a.nn4, {
-                id: b,
-                children: m.intl.format(m.t["+DFxLc"], { maxLength: _.tPV }),
-            }),
-        ],
-    });
+    return (
+        i.useEffect(() => {
+            if (C.current !== y) {
+                let e = (0, s.JM)(y);
+                S(y), T(e);
+            }
+            C.current = y;
+        }, [y]),
+        (0, r.jsxs)(f.Z, {
+            title: t,
+            titleId: h,
+            description: _.intl.string(_.t.Bbw6Ac),
+            errors: n,
+            disabled: O,
+            children: [
+                (0, r.jsx)(l.ZP, {
+                    "aria-describedby": E,
+                    "aria-labelledby": h,
+                    className: m.bioTextAreaContainer,
+                    innerClassName: m.bioTextArea,
+                    maxCharacterCount: p.tPV,
+                    onChange: N,
+                    placeholder: b,
+                    channel: g,
+                    textValue: v,
+                    richValue: I,
+                    emojiPickerCloseOnModalOuterClick: !0,
+                    parentModalKey: u.USER_SETTINGS_MODAL_KEY,
+                    type: o.Ie.PROFILE_BIO_INPUT,
+                    onBlur: () => {
+                        A.current = !1;
+                    },
+                    onFocus: () => {
+                        A.current = !0;
+                    },
+                    focused: A.current,
+                    onSubmit: P,
+                }),
+                (0, r.jsx)(a.nn4, {
+                    id: E,
+                    children: _.intl.format(_.t["+DFxLc"], { maxLength: p.tPV }),
+                }),
+            ],
+        })
+    );
 }
