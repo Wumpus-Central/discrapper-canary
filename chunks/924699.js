@@ -8,8 +8,7 @@ e.exports = {
     heading: "_008433eb23445478-heading",
     middleBodyContentWrapper: "_008433eb23445478-middleBodyContentWrapper _008433eb23445478-content",
     lowerBody: "_008433eb23445478-lowerBody",
-    lowerBodyBackgroundImage: "_008433eb23445478-lowerBodyBackgroundImage",
     lowerBodyContentWrapper: "_008433eb23445478-lowerBodyContentWrapper _008433eb23445478-content",
     persistentCtaSpacer: "_008433eb23445478-persistentCtaSpacer",
-    tierComparisonTable: "_008433eb23445478-tierComparisonTable",
+    perksTable: "_008433eb23445478-perksTable",
 };
