@@ -26,8 +26,8 @@ function b(e) {
             canAccessMembersPage: j,
             canViewGuildAnalytics: v,
             isOwner: O,
-            isGuildAdmin: C,
-            canManageGuildExpressions: y,
+            isGuildAdmin: y,
+            canManageGuildExpressions: C,
         } = e,
         N = () =>
             (0, s.X$)({
@@ -89,7 +89,7 @@ function b(e) {
         I.push(g(d.pNK.TAG, E)),
         I.push(g(d.pNK.ENGAGEMENT, E)),
         I.push(g(d.pNK.BOOST_PERKS, E)),
-        y &&
+        C &&
             (I.push({ section: m }),
             I.push({
                 section: f,
@@ -98,7 +98,7 @@ function b(e) {
             I.push(g(d.pNK.EMOJI, E)),
             I.push(g(d.pNK.STICKERS, E)),
             I.push(g(d.pNK.SOUNDBOARD, E))),
-        (b || h || j || C) &&
+        (b || h || j || y) &&
             (I.push({ section: m }),
             I.push({
                 section: f,
@@ -141,7 +141,6 @@ function b(e) {
             I.push(g(d.pNK.GUILD_PRODUCTS, E)),
             I.push(g(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, E))),
         I.push({ section: m }),
-        I.push(g(d.pNK.GUILD_PREMIUM, E)),
         I.push(g(d.pNK.GUILD_TEMPLATES, E)),
         I.push(g(d.pNK.DELETE, E)),
         I.filter(o.lm)
