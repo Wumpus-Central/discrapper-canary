@@ -2,27 +2,19 @@ n.d(t, {
     F4: () => a,
     oW: () => i,
 });
-let r = (0, n(818083).B)({
+let r = (0, n(427164).le)({
     kind: "user",
-    id: "2025-12_profile_updates_notification",
-    label: "Profile Updates Notification Experiment",
+    name: "2026-01-profile-updates-notification",
     defaultConfig: { showSettingsToggle: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "User can receive profile updates notifications (copy treatment 1). Show settings toggle.",
-            config: { showSettingsToggle: !0 },
-        },
-        {
-            id: 2,
-            label: "User can receive profile updates notifications (copy treatment 2). Show settings toggle.",
-            config: { showSettingsToggle: !0 },
-        },
-    ],
+    variations: {
+        0: { showSettingsToggle: !1 },
+        1: { showSettingsToggle: !0 },
+        2: { showSettingsToggle: !0 },
+    },
 });
 function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return r.useConfig({ location: e });
 }
 function a(e) {
-    return r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).showSettingsToggle;
+    return r.getConfig({ location: e }).showSettingsToggle;
 }
