@@ -1,58 +1,65 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i,
     l = n(106351),
-    a = n(442837),
-    o = n(570140),
-    s = n(38618),
-    c = n(70956);
-let u = new Set(),
-    d = {};
-function f(e) {
-    return new Date(e * c.Z.Millis.SECOND).getTime();
+    a = n(818710),
+    o = n(442837),
+    s = n(570140),
+    c = n(38618),
+    u = n(70956),
+    d = n(662237);
+let p = new Set(),
+    f = {};
+function h(e) {
+    return new Date(e * u.Z.Millis.SECOND).getTime();
 }
-function h() {
-    u.clear();
+function g() {
+    p.clear();
 }
-function p(e) {
-    u.delete(e.guild.id);
+function m(e) {
+    p.delete(e.guild.id);
 }
-class g extends (r = a.ZP.Store) {
+class b extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z);
+        this.waitFor(c.Z);
     }
     getStartTime(e) {
         var t;
         if (null != e && null != e.guild_id && e.type === l.d.GUILD_VOICE)
-            return null == (t = d[e.guild_id]) ? void 0 : t[e.id];
+            return null == (t = f[e.guild_id]) ? void 0 : t[e.id];
     }
     hasRequestedStartTimes(e) {
-        return u.has(e);
+        return p.has(e);
     }
 }
-(i = "displayName") in g
-    ? Object.defineProperty(g, i, {
+(i = "displayName") in b
+    ? Object.defineProperty(b, i, {
           value: "VoiceChannelStartTimeStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (g[i] = "VoiceChannelStartTimeStore");
-let b = new g(o.Z, {
-    GUILD_CREATE: p,
-    GUILD_DELETE: p,
-    CONNECTION_RESUMED: h,
-    CONNECTION_OPEN: h,
+    : (b[i] = "VoiceChannelStartTimeStore");
+let y = new b(s.Z, {
+    GUILD_CREATE: m,
+    GUILD_DELETE: m,
+    CONNECTION_RESUMED: g,
+    CONNECTION_OPEN: g,
     VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
-        let { guildId: t, id: n, voiceStartTime: r } = e;
-        null == d[t] && (d[t] = {}), (d[t][n] = null != r ? f(r) : void 0);
+        let { guildId: t, id: n, voiceStartTime: r } = e,
+            i = d.F.getCurrentConfig({
+                guildId: t,
+                location: "VoiceChannelStartTimeStore",
+            }).enabled;
+        if (((0, a.gn)() || (0, a.Dt)()) && !i) return !1;
+        null == f[t] && (f[t] = {}), (f[t][n] = null != r ? h(r) : void 0);
     },
     CHANNEL_INFO: function (e) {
         let { guildId: t, channels: n } = e;
-        for (let { id: e, voiceStartTime: r } of ((d[t] = {}), n)) d[t][e] = null != r ? f(r) : void 0;
+        for (let { id: e, voiceStartTime: r } of ((f[t] = {}), n)) f[t][e] = null != r ? h(r) : void 0;
     },
     FETCH_CHANNEL_INFO: function (e) {
         let { guildId: t } = e;
-        u.add(t), s.Z.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]);
+        p.add(t), c.Z.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]);
     },
 });
