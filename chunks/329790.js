@@ -63,11 +63,9 @@ let H = 512,
     W = c()(D.Z.fetchMessages, 500);
 class K extends i.PureComponent {
     componentDidMount() {
-        var e, t;
         O.S.subscribe(Z.CkL.PERFORM_SEARCH, this.search),
             O.S.subscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            O.S.subscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch),
-            null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute("aria-haspopup", "listbox");
+            O.S.subscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     componentDidUpdate(e) {
         let { editorState: t, searchContext: n } = this.props;
@@ -85,9 +83,14 @@ class K extends i.PureComponent {
         }
     }
     componentWillUnmount() {
+        var e, t, n;
         O.S.unsubscribe(Z.CkL.PERFORM_SEARCH, this.search),
             O.S.unsubscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            O.S.unsubscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+            O.S.unsubscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch),
+            null == (n = this._editorRef) ||
+                null == (t = n.editor) ||
+                null == (e = t.removeEventListener) ||
+                e.call(t, "cut", this.handleCutEvent);
     }
     tokenize(e) {
         let t = (0, C.kG)(v.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
@@ -190,6 +193,19 @@ class K extends i.PureComponent {
             V(this, "_searchBarRef", i.createRef()),
             V(this, "_searchPopoutRef", i.createRef()),
             V(this, "_searchFiltersRedesignPopoutRef", i.createRef()),
+            V(this, "handleCutEvent", (e) => {
+                if ((e.preventDefault(), null == e.clipboardData)) return;
+                let { editorState: t } = this.props,
+                    n = t.getSelection();
+                if (n.isCollapsed()) return;
+                let r = v.Sq(t),
+                    i = n.getStartOffset(),
+                    a = n.getEndOffset(),
+                    o = r.substring(i, a);
+                e.clipboardData.setData("text/plain", o);
+                let s = v.yd("delete", t);
+                (s = this.tokenize(s)), this.setEditorState(s);
+            }),
             V(this, "handleSetSearchQuery", (e) => {
                 let { query: t, anchor: n, focus: r, performSearch: i, replace: a, searchQuerySource: o } = e,
                     { editorState: s } = this.props,
@@ -301,7 +317,17 @@ class K extends i.PureComponent {
                 null != e && Promise.resolve().then(() => e.blur());
             }),
             V(this, "setEditorRef", (e) => {
-                this._editorRef = e;
+                var t, n, r, i, a, o;
+                null == (n = this._editorRef) ||
+                    null == (t = n.editor) ||
+                    t.removeEventListener("cut", this.handleCutEvent),
+                    (this._editorRef = e),
+                    null == (i = this._editorRef) ||
+                        null == (r = i.editor) ||
+                        r.setAttribute("aria-haspopup", "listbox"),
+                    null == (o = this._editorRef) ||
+                        null == (a = o.editor) ||
+                        a.addEventListener("cut", this.handleCutEvent);
             }),
             V(this, "onFocus", () => {
                 let { searchContext: e } = this.props;
