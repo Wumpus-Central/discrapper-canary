@@ -1914,6 +1914,11 @@ let ed = "",
                 .concat(e)
                 .concat(null != t ? "&client_heartbeat_session_id=".concat(t) : "")
                 .concat(null != n ? "&client_ad_session_id=".concat(n) : ""),
+        QUEST_EARNED_DECISION: (e, t, n) =>
+            "/quests/earned-decision?quest_ids="
+                .concat(e, "&content=")
+                .concat(t)
+                .concat(null != n ? "&client_heartbeat_session_id=".concat(n) : ""),
         ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls",
         GAME_INVITE: (e) => "/game-invite/@me/".concat(e),
         GAME_INVITES: "/game-invite/@me",
