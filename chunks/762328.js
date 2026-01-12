@@ -174,6 +174,7 @@ function b(e) {
                                             placement: G,
                                             update: F,
                                             hidden: "hidden" === K,
+                                            shift: Z.shift,
                                         }),
                                     }),
                                 },

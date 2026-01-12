@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(877164),
+    s = n(620389),
     l = n(762328),
     c = n(793030),
     u = n(682973),
@@ -82,10 +82,12 @@ function b(e) {
             placement: e,
             reference: b,
             renderLayer: (e) => {
-                let { placement: t } = e;
+                var t;
+                let { placement: n, shift: r } = e,
+                    i = -(null != (t = null == r ? void 0 : r.x) ? t : 0);
                 return x({
-                    position: (0, l.C)(t),
-                    nudge: 0,
+                    position: (0, l.C)(n),
+                    nudge: i,
                 });
             },
             children: () => null,
