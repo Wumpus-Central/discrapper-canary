@@ -1,40 +1,46 @@
 n.d(t, {
-    no: () => d,
-    q5: () => u,
-    zw: () => c,
+    hX: () => f,
+    no: () => p,
+    q5: () => d,
+    vl: () => _,
+    zw: () => u,
 }),
     n(388685);
 var r = n(473749),
     i = n(350327),
     a = n(438379),
-    o = n(894883);
-function s(e) {
+    o = n(823379),
+    s = n(894883);
+function l(e) {
     return (0, a.J)({
         location: e.location,
         autoTrackExposure: e.autoTrackExposure,
     });
 }
-function l(e, t) {
+function c(e, t) {
     var n;
     let { data: a } = (0, i.SK)(),
-        l = (0, o.Z)(null != (n = null == a ? void 0 : a.map(t)) ? n : [], e),
-        c = s(e);
-    return r.useMemo(() => !c && [...l.values()].some((e) => e.enabled), [c, l]);
-}
-function c(e) {
-    return l(e, (e) => e.viewExperiment);
+        c = (0, s.Z)(null != (n = null == a ? void 0 : a.map(t).filter(o.lm)) ? n : [], e),
+        u = l(e);
+    return r.useMemo(() => !u && [...c.values()].some((e) => e.enabled), [u, c]);
 }
 function u(e) {
-    return l(e, (e) => e.editExperiment);
+    return c(e, (e) => e.viewExperiment);
 }
 function d(e) {
+    return c(e, (e) => e.editExperiment);
+}
+function f(e) {
+    return c(e, (e) => e.coachmarkExperiment);
+}
+function p(e) {
     var t;
     let { data: n } = (0, i.SK)(),
-        a = (0, o.Z)(null != (t = null == n ? void 0 : n.map((e) => e.editExperiment)) ? t : [], e),
-        l = s(e);
+        a = (0, s.Z)(null != (t = null == n ? void 0 : n.map((e) => e.editExperiment)) ? t : [], e),
+        o = l(e);
     return r.useMemo(
         () =>
-            l
+            o
                 ? []
                 : null == n
                   ? void 0
@@ -42,6 +48,29 @@ function d(e) {
                         var t;
                         return (null == (t = a.get(e.editExperiment)) ? void 0 : t.enabled) === !0;
                     }),
-        [n, a, l],
+        [n, a, o],
+    );
+}
+function _(e) {
+    var t, n;
+    let { data: a } = (0, i.SK)(),
+        c = (0, s.Z)(null != (t = null == a ? void 0 : a.map((e) => e.editExperiment)) ? t : [], e),
+        u = (0, s.Z)(null != (n = null == a ? void 0 : a.map((e) => e.coachmarkExperiment).filter(o.lm)) ? n : [], e),
+        d = l(e);
+    return r.useMemo(
+        () =>
+            d
+                ? []
+                : null == a
+                  ? void 0
+                  : a.filter((e) => {
+                        var t, n;
+                        return (
+                            (null == (t = c.get(e.editExperiment)) ? void 0 : t.enabled) === !0 &&
+                            null != e.coachmarkExperiment &&
+                            (null == (n = u.get(e.coachmarkExperiment)) ? void 0 : n.enabled) === !0
+                        );
+                    }),
+        [a, c, u, d],
     );
 }
