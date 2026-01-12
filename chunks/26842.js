@@ -44,10 +44,7 @@ class i {
         return null != this.ttlMs && (null == this.fetchedAt || Date.now() - this.fetchedAt >= this.ttlMs);
     }
     shouldFetch() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return (
-            "loading" !== this.fetchState && (!!["idle", "error"].includes(this.fetchState) || !!e || this.isExpired())
-        );
+        return "loading" !== this.fetchState && ("idle" === this.fetchState || this.isExpired());
     }
     isLoading() {
         return "loading" === this.fetchState;

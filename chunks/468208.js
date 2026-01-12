@@ -1,12 +1,13 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(26842),
-    s = n(375527),
-    l = n(168232),
-    c = n(594174);
-function u(e, t, n) {
+    i = n(995638),
+    a = n(442837),
+    o = n(570140),
+    s = n(26842),
+    l = n(375527),
+    c = n(168232),
+    u = n(594174);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,44 +20,57 @@ function u(e, t, n) {
         e
     );
 }
-let d = 86400000,
-    f = 30000,
-    p = 86400000,
-    _ = new o.j({ ttlMs: d });
-function m() {
-    (0, l.QI)(c.default.getCurrentUser()) ? _.setTtl(f) : _.setTtl(d);
+let f = 86400000,
+    p = 30000,
+    _ = 300000,
+    m = 1,
+    h = new s.j({ ttlMs: f });
+function g() {
+    let e = h.getValue();
+    if (null == e) return !1;
+    let t = new Date();
+    for (let n of e.values()) {
+        let e = new Date(n.next_reward_date);
+        if ((0, i.default)(e, t) <= m) return !0;
+    }
+    return !1;
 }
-function h() {
-    _.setLoading();
+function E() {
+    (0, c.QI)(u.default.getCurrentUser()) ? h.setTtl(p) : g() ? h.setTtl(_) : h.setTtl(f);
 }
-function g(e) {
+function b() {
+    h.setLoading();
+}
+function y(e) {
     let { programRewards: t } = e;
-    if (!_.isLoading()) return !1;
+    if (!h.isLoading()) return !1;
     let n = new Map();
     t.forEach((e) => {
         n.set(e.reward_program, e);
     }),
-        _.setValue(n);
+        h.setValue(n),
+        E();
 }
-function E() {
-    if (!_.isLoading()) return !1;
-    _.setError();
+function O() {
+    if (!h.isLoading()) return !1;
+    h.setError();
 }
-function b() {
-    _.clear();
+function v() {
+    h.clear();
 }
-class y extends (r = i.ZP.PersistedStore) {
+class S extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(c.default), m(), (null == e ? void 0 : e.cache) != null)) {
+        if ((this.waitFor(u.default), (null == e ? void 0 : e.cache) != null)) {
             let t = new Map(e.cache.value);
-            _.restore({
+            h.restore({
                 value: t,
                 fetchedAt: e.cache.fetchedAt,
             });
         }
+        E();
     }
     getState() {
-        let e = _.serialize();
+        let e = h.serialize();
         return {
             cache:
                 null != e
@@ -68,50 +82,43 @@ class y extends (r = i.ZP.PersistedStore) {
         };
     }
     isInProperTreatments() {
-        let { isInTreatment: e } = (0, s.f3)("ProgramRewardsStore");
+        let { isInTreatment: e } = (0, l.f3)("ProgramRewardsStore");
         return e;
     }
     isFetching() {
-        return _.isLoading();
+        return h.isLoading();
     }
     isFetched() {
-        return _.isValid();
+        return h.isValid();
+    }
+    hasCachedValue() {
+        return null != h.getValue();
     }
     isReady() {
-        return this.isFetched() || !this.isInProperTreatments();
-    }
-    isWithinRewardProximity() {
-        let e = _.getValue();
-        if (null == e) return !1;
-        let t = Date.now();
-        for (let n of e.values()) if (new Date(n.next_reward_date).getTime() - t < p) return !0;
-        return !1;
+        return !this.isFetching() && (this.hasCachedValue() || !this.isInProperTreatments() || this.isError());
     }
     shouldFetch() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!this.isInProperTreatments()) return !1;
-        let t = e || this.isWithinRewardProximity();
-        return _.shouldFetch(t);
+        return !!this.isInProperTreatments() && h.shouldFetch();
     }
     isError() {
-        return _.isError();
+        return h.isError();
     }
-    getForProgram(e) {
-        let { value: t, status: n } = _.getValueWithStatus();
-        return {
-            value: null == t ? void 0 : t.get(e),
-            status: n,
-        };
+    getStatus() {
+        return h.getStatus();
+    }
+    getRewardForProgram(e) {
+        var t;
+        return null == (t = h.getValue()) ? void 0 : t.get(e);
     }
     forceExpire() {
-        _.forceExpire();
+        h.forceExpire();
     }
 }
-u(y, "displayName", "ProgramRewardsStore"), u(y, "persistKey", "ProgramRewardsStore");
-let O = new y(a.Z, {
-    LOGOUT: b,
-    PROGRAM_REWARDS_FETCH: h,
-    PROGRAM_REWARDS_FETCH_SUCCESS: g,
-    PROGRAM_REWARDS_FETCH_FAILURE: E,
-    CURRENT_USER_UPDATE: m,
+d(S, "displayName", "ProgramRewardsStore"), d(S, "persistKey", "ProgramRewardsStore");
+let I = new S(o.Z, {
+    LOGOUT: v,
+    PROGRAM_REWARDS_FETCH: b,
+    PROGRAM_REWARDS_FETCH_SUCCESS: y,
+    PROGRAM_REWARDS_FETCH_FAILURE: O,
+    CURRENT_USER_UPDATE: E,
 });

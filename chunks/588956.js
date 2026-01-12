@@ -1,4 +1,7 @@
-n.d(t, { Z: () => l });
+n.d(t, {
+    K: () => s,
+    Z: () => l,
+});
 var r = n(544891),
     i = n(570140),
     a = n(468208),
@@ -26,6 +29,5 @@ async function s() {
     }
 }
 async function l() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    a.Z.shouldFetch(e) && (await s());
+    a.Z.shouldFetch() && (await s());
 }
