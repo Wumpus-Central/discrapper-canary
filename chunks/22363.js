@@ -26,9 +26,8 @@ let _ = (e) => {
             isBurstReaction: O,
             onBurstReactionToggle: v,
             renderHeader: S,
-            showAddEmojiButton: I = !1,
         } = e,
-        T = (0, r.jsxs)(r.Fragment, {
+        I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
                     emojiListRef: m,
@@ -52,11 +51,11 @@ let _ = (e) => {
                           className: p.diversitySelector,
                           selectedSurrogate: y,
                       }),
-                I && (0, r.jsx)(l.Z, { channel: t }),
+                (0, r.jsx)(l.Z, { channel: t }),
             ],
         });
     return (0, r.jsx)("div", {
         className: a()(p.header, _),
-        children: null != S ? S(T) : T,
+        children: null != S ? S(I) : I,
     });
 };

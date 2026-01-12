@@ -56,15 +56,8 @@ let R = (e) => {
                 };
                 break;
             case I.ld.SOUNDMOJI:
-                t = null;
-                break;
-            case I.ld.CREATE_EMOJI:
             default:
-                t = {
-                    type: "CREATE_EMOJI",
-                    guildId: null == G ? void 0 : G.guildId,
-                    allNamesString: null == G ? void 0 : G.name,
-                };
+                t = null;
         }
         let Z = (0, a.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
             F = (0, a.e7)([E.Z], () => E.Z.isFocused()),
@@ -120,14 +113,7 @@ let R = (e) => {
                           src: e,
                           className: A.emoji,
                       });
-        } else if ("CREATE_EMOJI" === t.type)
-            w = (0, r.jsx)(s.oFk, {
-                size: "md",
-                color: "currentColor",
-                className: A.icon,
-                colorClass: A.icon,
-            });
-        else if ("EXPAND_OR_COLLAPSE_EMOJI" === t.type) {
+        } else if ("EXPAND_OR_COLLAPSE_EMOJI" === t.type) {
             let e = n(187119),
                 i = n(39874),
                 a = n(853871),

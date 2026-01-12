@@ -16,7 +16,6 @@ e.exports = {
     emojiDisabled: "e7d73e5106887df1-emojiDisabled",
     uploader: "e7d73e5106887df1-uploader",
     fileInput: "e7d73e5106887df1-fileInput",
-    emojiUploadUploadRequirementsList: "e7d73e5106887df1-emojiUploadUploadRequirementsList",
     emojiSettings: "e7d73e5106887df1-emojiSettings",
     emojiUploadContainer: "e7d73e5106887df1-emojiUploadContainer",
 };

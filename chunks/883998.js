@@ -42,7 +42,6 @@ function d(e) {
                 closePopout: n,
                 onSelectEmoji: m,
                 pickerIntention: u,
-                includeCreateEmojiButton: !1,
             });
         },
         children: _,
