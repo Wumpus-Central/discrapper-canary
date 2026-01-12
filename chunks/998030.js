@@ -1,11 +1,10 @@
 n.d(t, {
-    hS: () => l,
-    yc: () => s,
+    hS: () => s,
+    yc: () => o,
 });
 var r = n(427164),
-    i = n(46841),
-    a = n(283066);
-let o = (0, r.le)({
+    i = n(283066);
+let a = (0, r.le)({
     name: "2025-09-wishlist-in-dm-gifting-flow",
     kind: "user",
     defaultConfig: {
@@ -27,16 +26,15 @@ let o = (0, r.le)({
         },
     },
 });
+function o(e) {
+    let { location: t } = e,
+        n = a.useConfig({ location: t }).enabled,
+        r = (0, i.Z)({ location: t });
+    return n && r;
+}
 function s(e) {
     let { location: t } = e,
-        n = o.useConfig({ location: t }).enabled,
-        r = (0, a.Z)({ location: t }),
-        s = (0, i.S)({ location: t });
-    return n && r && s;
-}
-function l(e) {
-    let { location: t } = e,
-        n = s({ location: t }),
-        r = o.useConfig({ location: t });
+        n = o({ location: t }),
+        r = a.useConfig({ location: t });
     return n && r.shouldShowShopBannerWhenWishlistEmpty;
 }
