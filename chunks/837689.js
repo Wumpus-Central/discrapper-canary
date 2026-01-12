@@ -55,6 +55,7 @@ class P extends c.Z {
                 let { promotions: t } = e;
                 for (let e of t)
                     if (null != e.marketing_components) {
+                        if (null != e.trial_id && null == f.Z.getUserTrialOffer(e.trial_id)) continue;
                         for (let t of e.marketing_components)
                             if (t.component_type === l.I.ANNOUNCEMENT_MODAL)
                                 return void this.maybeOpenServerDriveAnnouncementModal(
