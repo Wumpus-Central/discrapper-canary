@@ -48,20 +48,26 @@ function f() {
                         (0, a.jsxs)(s.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsx)(s.Button, {
-                                    variant: "primary",
-                                    text: "Reset Daily Cap",
-                                    onClick: () => (0, o.EG)(),
-                                }),
-                                (0, a.jsx)(s.Button, {
-                                    variant: "primary",
-                                    text: "Clear All",
-                                    onClick: () => (0, p.sr)(),
-                                }),
-                                (0, a.jsx)(s.Button, {
-                                    variant: "primary",
-                                    text: "Check All",
-                                    onClick: () => (0, p.bE)(),
+                                (0, a.jsxs)(s.Kqy, {
+                                    gap: 4,
+                                    direction: "horizontal",
+                                    children: [
+                                        (0, a.jsx)(s.Button, {
+                                            variant: "primary",
+                                            text: "Reset Daily Cap",
+                                            onClick: () => (0, o.EG)(),
+                                        }),
+                                        (0, a.jsx)(s.Button, {
+                                            variant: "primary",
+                                            text: "Clear All",
+                                            onClick: () => (0, p.sr)(),
+                                        }),
+                                        (0, a.jsx)(s.Button, {
+                                            variant: "primary",
+                                            text: "Check All",
+                                            onClick: () => (0, p.bE)(),
+                                        }),
+                                    ],
                                 }),
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/normal",
