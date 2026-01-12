@@ -76,6 +76,8 @@ function f(e) {
                         e && (null == u || u());
                     },
                 });
+        case r.Wc.OPEN_PLAN_SELECTION_MODAL:
+            return () => (0, i.Z)({ analyticsLocations: n });
         case r.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         case r.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:

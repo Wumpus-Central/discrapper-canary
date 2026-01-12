@@ -1,24 +1,24 @@
-n.d(t, { Z: () => D }), n(784620), n(973216);
+n.d(t, { Z: () => Z }), n(784620), n(973216);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(620792),
+    s = n(620389),
     o = n(399606),
     c = n(28664),
     d = n(780384),
     u = n(481060),
     m = n(393238),
     p = n(410030),
-    f = n(297700),
-    h = n(617136),
+    h = n(297700),
+    f = n(617136),
     x = n(616022),
     b = n(49436),
     g = n(968843),
     v = n(862657),
     j = n(254579),
-    C = n(283689),
-    y = n(623249),
+    y = n(283689),
+    C = n(623249),
     _ = n(477005),
     S = n(698716),
     E = n(685613),
@@ -48,11 +48,11 @@ function A(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: l, isDarkTheme: o, sourceQuestContent: c } = e,
         { ref: d, height: p = 0 } = (0, m.ZP)([i]),
-        f = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        h = (0, g.z)(n),
+        h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+        f = (0, g.z)(n),
         { type: x, hints: b } = r.useMemo(
             () =>
-                f || h
+                h || f
                     ? {
                           type: 2,
                           hints: [],
@@ -71,7 +71,7 @@ function A(e) {
                               type: 2,
                               hints: [],
                           },
-            [i, f, h, l],
+            [i, h, f, l],
         ),
         v = 2 !== x,
         j = (0, u.q_F)({
@@ -79,7 +79,7 @@ function A(e) {
             height: v ? p : 0,
             config: P.Y,
         }),
-        C = 0 === x ? u.Mgn : u.d3s,
+        y = 0 === x ? u.Mgn : u.d3s,
         _ = u.TVs.unsafe_rawColors.RED_345.css,
         S = 0 === x ? _ : o ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, a.jsx)(s.animated.div, {
@@ -91,7 +91,7 @@ function A(e) {
                 (0, a.jsxs)("div", {
                     className: k.hintsContainer,
                     children: [
-                        (0, a.jsx)(C, {
+                        (0, a.jsx)(y, {
                             size: "xs",
                             color: S,
                         }),
@@ -106,7 +106,7 @@ function A(e) {
                     (0, a.jsx)(u.Avr, {
                         text: I.intl.string(I.t["yKJi+/"]),
                         onClick: () =>
-                            (0, y.y)({
+                            (0, C.y)({
                                 quest: n,
                                 errorHints: i,
                                 sourceQuestContent: c,
@@ -118,57 +118,50 @@ function A(e) {
         }),
     });
 }
-function D(e) {
+function Z(e) {
     var t, n, i, s, m;
     let {
-            quest: y,
+            quest: C,
             isHovering: P,
-            errorHints: D,
-            warningHints: Z,
+            errorHints: Z,
+            warningHints: D,
             isVisibleInViewport: L,
             onCtxMenuClose: M,
             onCtxMenuOpen: U,
             onCtxMenuSelect: B,
             sourceQuestContent: F,
         } = e,
-        G = (0, j.PB)(y),
+        G = (0, j.PB)(C),
         V = (0, p.ZP)(),
         z = ((0, d.wj)(V) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
-        W = (0, g.tP)(y),
-        H = (null == (t = y.userStatus) ? void 0 : t.claimedAt) != null,
-        q = (0, g.B6)(y.config.expiresAt, {
+        H = (0, g.tP)(C),
+        W = (null == (t = C.userStatus) ? void 0 : t.claimedAt) != null,
+        K = (0, g.B6)(C.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
-        K = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
-        Y = (null == (i = y.userStatus) ? void 0 : i.completedAt) != null,
+        q = (null == (n = C.userStatus) ? void 0 : n.enrolledAt) != null,
+        Y = (null == (i = C.userStatus) ? void 0 : i.completedAt) != null,
         { onAssetLoadComplete: Q } = r.useContext(O.k),
         X = z ? "text-muted" : "always-white",
-        J = r.useCallback(async () => {
+        J = r.useCallback(() => {
             G &&
-                ((0, v.zi)(y) || K
-                    ? (0, T.openVideoQuestModal)({
-                          quest: y,
-                          questContent: b.jn.QUEST_HOME_DESKTOP,
-                          sourceQuestContent: F,
-                          sourceQuestContentCTA: h.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
-                      })
-                    : await (0, T.enrollAndStartVideoQuestWithErrorHandling)(y, {
-                          questContent: b.jn.QUEST_HOME_DESKTOP,
-                          questContentCTA: h.jZ.ACCEPT_QUEST,
-                          sourceQuestContent: F,
-                          sourceQuestContentCTA: h.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
-                      }));
-        }, [G, y, K, F]),
+                (0, T.openVideoQuestModal)({
+                    quest: C,
+                    questContent: b.jn.QUEST_HOME_DESKTOP,
+                    sourceQuestContent: F,
+                    sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                });
+        }, [G, C, F]),
         $ = (0, o.e7)([x.Z], () => x.Z.getQuestHomeTakeoverConfig()),
-        ee = r.useMemo(() => null != $ && (0, C.P9)($, y.id), [$, y.id]);
+        ee = r.useMemo(() => null != $ && (0, y.P9)($, C.id), [$, C.id]);
     return (0, a.jsxs)("div", {
         className: k.container,
         children: [
             (0, a.jsx)("div", {
                 className: k.heroAssetWrapper,
                 children: (0, a.jsx)(_.Z, {
-                    quest: y,
+                    quest: C,
                     isInteracting: P,
                     hideAssets: !L,
                     imageSize: {
@@ -195,7 +188,7 @@ function D(e) {
                             (0, a.jsxs)("div", {
                                 className: k.topRow,
                                 children: [
-                                    (ee || y.preview) &&
+                                    (ee || C.preview) &&
                                         (0, a.jsxs)(u.Kqy, {
                                             className: k.pills,
                                             direction: "horizontal",
@@ -203,9 +196,9 @@ function D(e) {
                                             gap: 8,
                                             children: [
                                                 ee &&
-                                                    !(0, v.zi)(y) &&
+                                                    !(0, v.zi)(C) &&
                                                     (0, a.jsx)(R, { children: I.intl.string(I.t.Jt6u7B) }),
-                                                y.preview &&
+                                                C.preview &&
                                                     (0, a.jsx)(R, {
                                                         variant: "brand",
                                                         children: I.intl.string(I.t.SKNnqq),
@@ -216,9 +209,9 @@ function D(e) {
                                         (0, a.jsx)(c.u, {
                                             text: Y
                                                 ? I.intl.string(I.t.YsCuyF)
-                                                : K
+                                                : q
                                                   ? I.intl.string(I.t["74KqrR"])
-                                                  : (0, v.zi)(y)
+                                                  : (0, v.zi)(C)
                                                     ? I.intl.string(I.t.I6JG46)
                                                     : I.intl.string(I.t.umdNin),
                                             asContainer: !0,
@@ -238,7 +231,7 @@ function D(e) {
                                         onClose: M,
                                         onSelect: B,
                                         questContent: b.jn.QUEST_HOME_DESKTOP,
-                                        quest: y,
+                                        quest: C,
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
@@ -313,7 +306,7 @@ function D(e) {
                                 children: (0, a.jsx)(E.ZP, {
                                     className: k.partnerBranding,
                                     logotypeClassName: k.partnerLogotypes,
-                                    quest: y,
+                                    quest: C,
                                     separatorSpacing: E.US.MEDIUM,
                                     withGameTile: !1,
                                     onLoadComplete: Q,
@@ -330,7 +323,7 @@ function D(e) {
                                                 color: X,
                                                 children: I.intl.string(I.t.VAbKhK),
                                             }),
-                                            (0, a.jsx)(f.Z, {
+                                            (0, a.jsx)(h.Z, {
                                                 className: k.verifiedIcon,
                                                 size: 16,
                                                 color: u.TVs.unsafe_rawColors.GREEN_360.css,
@@ -347,27 +340,27 @@ function D(e) {
                                                 color: "always-white",
                                                 children:
                                                     null !=
-                                                    (m = null == (s = y.config.cosponsorMetadata) ? void 0 : s.name)
+                                                    (m = null == (s = C.config.cosponsorMetadata) ? void 0 : s.name)
                                                         ? m
-                                                        : y.config.messages.gamePublisher,
+                                                        : C.config.messages.gamePublisher,
                                             }),
                                         ],
                                     }),
-                                    W || H
+                                    H || W
                                         ? null
                                         : (0, a.jsx)(u.Text, {
                                               variant: "text-sm/medium",
                                               color: X,
-                                              children: I.intl.format(I.t["7D8r4F"], { expiryDate: q }),
+                                              children: I.intl.format(I.t["7D8r4F"], { expiryDate: K }),
                                           }),
                                 ],
                             }),
                         ],
                     }),
                     (0, a.jsx)(A, {
-                        quest: y,
-                        errorHints: D,
-                        warningHints: Z,
+                        quest: C,
+                        errorHints: Z,
+                        warningHints: D,
                         isDarkTheme: z,
                         sourceQuestContent: F,
                     }),

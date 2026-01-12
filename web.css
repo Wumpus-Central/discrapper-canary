@@ -78922,6 +78922,8 @@ screen and (max-width:485px) {
 }
 
 ._7137c5e977587553-bannerContent {
+    align-items: flex-start;
+    display: flex;
     flex: 1;
     flex-direction: column;
     gap: 2px;
@@ -78929,13 +78931,8 @@ screen and (max-width:485px) {
     min-height: 62px
 }
 
-._7137c5e977587553-bannerContent,
 ._7137c5e977587553-bannerDescription {
     align-items: flex-start;
-    display: flex
-}
-
-._7137c5e977587553-bannerDescription {
     text-align: start
 }
 
@@ -78963,6 +78960,18 @@ screen and (max-width:485px) {
     ._7137c5e977587553-buttonContainer {
         -webkit-margin-start: 0;
         margin-inline-start: 0
+    }
+
+    ._7137c5e977587553-termsApplyAnchor {
+        -webkit-margin-start: 2px;
+        color: var(--text-link);
+        margin-inline-start: 2px;
+        text-decoration: underline;
+        text-underline-offset: 2px
+    }
+
+    ._7137c5e977587553-termsApplyAnchor:hover {
+        text-decoration: none
     }
 }
 
