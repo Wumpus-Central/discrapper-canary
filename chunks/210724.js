@@ -7,7 +7,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(620792),
+    s = n(620389),
     o = n(286379),
     c = n(442837),
     d = n(481060),
@@ -69,11 +69,11 @@ function G(e) {
         }),
         j = (0, y.Z)({ location: L.dr.QUESTS_BAR }),
         G = (0, c.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: V, reason: H } = (0, O.qN)({
+        { isQuestBarVisible: V, reason: z } = (0, O.qN)({
             quest: i,
             location: L.dr.QUESTS_BAR,
         }),
-        z = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        H = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         W = (0, c.e7)([f.Z], () => f.Z.hasLayers()),
         K = r.useRef(null),
         q = r.useMemo(() => (0, S.q8)(i), [i]),
@@ -190,9 +190,9 @@ function G(e) {
     r.useEffect(() => {
         ek({
             expansionSpring: +!!eo,
-            immediate: z,
+            immediate: H,
         });
-    }, [eo, ek, z]);
+    }, [eo, ek, H]);
     let { visibilitySpring: eR } = (0, d.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!ee },
@@ -257,13 +257,13 @@ function G(e) {
                     properties: {
                         content_id: v.jn.QUEST_BAR,
                         content_name: (0, x._b)(v.jn.QUEST_BAR),
-                        reason: H,
+                        reason: z,
                         impression_id: null == (e = K.current) ? void 0 : e.getId(),
                     },
                     sourceQuestContent: v.jn.QUEST_BAR_V2,
                 });
             }
-        }, [ee, em, $, i.id, H]),
+        }, [ee, em, $, i.id, z]),
         r.useEffect(() => {
             (!V || G) && b.Z.clearTracking(), ee && em && !$ && !J && j && b.Z.stopTracking(i.id);
         }, [V, G, ee, em, $, J, j, i.id]),
@@ -367,7 +367,7 @@ let V =
     12633 == n.j
         ? function () {
               let e = (0, O.DH)(),
-                  { enabled: t } = j.nj.getConfig({ location: L.dr.QUESTS_BAR });
+                  { enabled: t, variant: n } = j.nj.getConfig({ location: L.dr.QUESTS_BAR });
               return null == e
                   ? null
                   : (0, a.jsx)(
@@ -376,6 +376,7 @@ let V =
                             source: L.dr.QUESTS_BAR,
                             questId: e.id,
                             listenForSourceError: t,
+                            retrySourceLoadOnError: n === j.b2.LISTEN_AND_RETRY_LOADING,
                             children: (0, a.jsx)(G, { quest: e }),
                         },
                         e.id,

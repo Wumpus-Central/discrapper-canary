@@ -1,9 +1,10 @@
 n.d(t, {
     DL: () => i,
-    VG: () => c,
+    VG: () => u,
+    b2: () => l,
     eC: () => o,
     n0: () => s,
-    nj: () => l,
+    nj: () => c,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -59,14 +60,37 @@ let i = (0, r.le)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
-    }),
-    l = (0, r.le)({
+    });
+var l = (function (e) {
+    return (
+        (e[(e.LISTEN_FOR_ERROR_ONLY = 0)] = "LISTEN_FOR_ERROR_ONLY"),
+        (e[(e.LISTEN_AND_RETRY_LOADING = 1)] = "LISTEN_AND_RETRY_LOADING"),
+        e
+    );
+})({});
+let c = (0, r.le)({
         name: "2025-11-quest-bar-listen-for-source-error",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
+        defaultConfig: {
+            enabled: !1,
+            variant: null,
+        },
+        variations: {
+            0: {
+                enabled: !1,
+                variant: null,
+            },
+            1: {
+                enabled: !0,
+                variant: 0,
+            },
+            2: {
+                enabled: !0,
+                variant: 1,
+            },
+        },
     }),
-    c = (0, r.le)({
+    u = (0, r.le)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
