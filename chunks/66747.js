@@ -315,18 +315,15 @@ let $ = l.memo(function (e) {
             children: [
                 x &&
                     (0, r.jsx)("td", {
-                        children: (0, r.jsx)("div", {
-                            className: Y.xsmallCol,
-                            children: (0, r.jsx)(C.u, {
-                                shouldShow: !v,
-                                ariaHidden: v,
-                                text: z.intl.string(z.t["Se4c7+"]),
-                                children: (0, r.jsx)(m.P3F, {
-                                    onClick: O,
-                                    children: (0, r.jsx)(m.FZ5, {
-                                        checked: h.has(t.userId),
-                                        disabled: !v,
-                                    }),
+                        children: (0, r.jsx)(C.u, {
+                            shouldShow: !v,
+                            ariaHidden: v,
+                            text: z.intl.string(z.t["Se4c7+"]),
+                            children: (0, r.jsx)(m.P3F, {
+                                onClick: O,
+                                children: (0, r.jsx)(m.FZ5, {
+                                    checked: h.has(t.userId),
+                                    disabled: !v,
                                 }),
                             }),
                         }),
