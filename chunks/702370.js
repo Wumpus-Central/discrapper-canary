@@ -20,8 +20,8 @@ var r = n(54381),
     j = n(786761),
     O = n(3148),
     C = n(739566),
-    I = n(753206),
-    y = n(4242),
+    y = n(753206),
+    I = n(4242),
     T = n(566697),
     w = n(333867),
     E = n(767714),
@@ -74,8 +74,8 @@ var r = n(54381),
     ej = n(58201),
     eO = n(445794),
     eC = n(794324),
-    eI = n(694364),
-    ey = n(361110),
+    ey = n(694364),
+    eI = n(361110),
     eT = n(29121),
     ew = n(956472),
     eE = n(832149),
@@ -253,8 +253,8 @@ let eZ = (e) => {
                 rentalDuration: O,
             } = e,
             { analyticsLocations: C } = (0, x.ZP)(),
-            I = (0, m.e7)([L.default], () => L.default.locale),
-            y = G.ZP.canUseCollectibles(n),
+            y = (0, m.e7)([L.default], () => L.default.locale),
+            I = G.ZP.canUseCollectibles(n),
             { previewingVariantIndex: T, handleEntering: S, handleLeaving: N } = g,
             R = (0, eP.N)(t, T),
             k = (0, ej.W)(t, P);
@@ -275,13 +275,13 @@ let eZ = (e) => {
             ef = (0, q.ql)(k, eS.tuJ.DEFAULT),
             eb = (null == ef ? void 0 : ef.amount) === 0,
             { firstAvatarDecoration: eg } = (0, X.Rj)(null != R ? R : k),
-            ex = i.useMemo(() => (0, q.BH)(k, y), [k, y]),
-            { handleUseNow: eC, isApplying: ey } = (0, K.W)({
+            ex = i.useMemo(() => (0, q.BH)(k, I), [k, I]),
+            { handleUseNow: eC, isApplying: eI } = (0, K.W)({
                 product: k,
                 onSuccess: u,
             }),
             eL = (0, eT.To)(k),
-            eB = (0, eI.J)(k),
+            eB = (0, ey.J)(k),
             { enabled: eZ } = (0, B.W)({ location: "collectibles_shop_product_details_modal" }),
             eD = (0, Y.G)(k, !1, O),
             eF = (0, eO.Iw)(t),
@@ -292,7 +292,7 @@ let eZ = (e) => {
                 hasSufficientOrbs: ez,
             } = (0, ew.Ip)({
                 product: k,
-                isPremiumUser: y,
+                isPremiumUser: I,
                 hasDiscountOffer: eG,
                 isRental: null != O,
             }),
@@ -358,7 +358,7 @@ let eZ = (e) => {
                                             ? (0, r.jsx)(eh.a, {
                                                   prices: eH,
                                                   product: k,
-                                                  isPremiumUser: y,
+                                                  isPremiumUser: I,
                                                   discount: ex,
                                                   hasSufficientOrbs: ez,
                                                   isProductDisabled: F,
@@ -370,13 +370,13 @@ let eZ = (e) => {
                                                       (0, r.jsx)(ec.Z, {
                                                           product: k,
                                                           discount: ex,
-                                                          isPremiumUser: y,
-                                                          hideStrikethroughPrice: !y || eG,
+                                                          isPremiumUser: I,
+                                                          hideStrikethroughPrice: !I || eG,
                                                           nitroIconType: "tooltip",
                                                           nitroIconSize: "xs",
                                                           discountOfferAmount: eF,
                                                       }),
-                                                      y || eG ? null : (0, r.jsx)(eu.Z, { product: k }),
+                                                      I || eG ? null : (0, r.jsx)(eu.Z, { product: k }),
                                                   ],
                                               }),
                                 ],
@@ -408,7 +408,7 @@ let eZ = (e) => {
                                 direction: "vertical",
                                 gap: 8,
                                 children: (() => {
-                                    if (em && !y && !eb) {
+                                    if (em && !I && !eb) {
                                         let e;
                                         return (
                                             (e = ek.intl.string(ek.t.sEAnVH)),
@@ -433,13 +433,27 @@ let eZ = (e) => {
                                     let e = (0, r.jsx)(v.Button, {
                                         variant: "primary",
                                         onClick: eC,
-                                        loading: ey,
+                                        loading: eI,
                                         text: ek.intl.string(ek.t.MAS7uK),
                                         fullWidth: !0,
                                     });
                                     if (et) {
                                         if (D) return e;
-                                    } else if (D && !M) return e;
+                                    } else if (D && !M)
+                                        return eB
+                                            ? (0, r.jsxs)(v.ButtonGroup, {
+                                                  wrap: !1,
+                                                  fullWidth: !0,
+                                                  children: [
+                                                      e,
+                                                      (0, r.jsx)(es.Z, {
+                                                          primary: !0,
+                                                          product: k,
+                                                          onSuccess: u,
+                                                      }),
+                                                  ],
+                                              })
+                                            : e;
                                     return em
                                         ? (0, r.jsx)(v.Button, {
                                               loading: er,
@@ -476,7 +490,7 @@ let eZ = (e) => {
                                                                   s = null == O ? null : o.setDate(o.getDate() + O),
                                                                   c =
                                                                       null != s
-                                                                          ? new Date(s).toLocaleDateString(I, {
+                                                                          ? new Date(s).toLocaleDateString(y, {
                                                                                 minute: "numeric",
                                                                                 hour: "numeric",
                                                                                 day: "numeric",
@@ -511,7 +525,7 @@ let eZ = (e) => {
                                                                                                   ? new Date(
                                                                                                         r[0].ends_at,
                                                                                                     ).toLocaleDateString(
-                                                                                                        I,
+                                                                                                        y,
                                                                                                         {
                                                                                                             minute: "numeric",
                                                                                                             hour: "numeric",
@@ -686,7 +700,7 @@ let eZ = (e) => {
     },
     eH = (e) => {
         let { user: t, nameplate: n, avatarDecoration: i } = e,
-            a = (0, y.w$)();
+            a = (0, I.w$)();
         return (0, r.jsx)("div", {
             className: e_.nameplateRightPanePreviewContainer,
             role: "img",
@@ -872,7 +886,7 @@ let eZ = (e) => {
                     "aria-hidden": !0,
                     children: [
                         (0, r.jsx)(
-                            I.Z,
+                            y.Z,
                             {
                                 className: e_.mockMessage,
                                 author: (0, C.ZH)(n),
@@ -914,11 +928,11 @@ let eZ = (e) => {
                 rentalDuration: P,
             } = e,
             j = (0, m.e7)([U.default], () => U.default.getCurrentUser()),
-            O = (0, ey.f)(a),
+            O = (0, eI.f)(a),
             { previewingVariantIndex: C } = O,
-            I = (0, W.o)(a),
-            y = (0, eP.N)(a, C),
-            T = (0, ej.W)(a, I);
+            y = (0, W.o)(a),
+            I = (0, eP.N)(a, C),
+            T = (0, ej.W)(a, y);
         s()(null != T, "Selected product should not be null");
         let { analyticsLocations: w } = (0, x.ZP)([
             ...p,
@@ -974,7 +988,7 @@ let eZ = (e) => {
                                       category: o,
                                       onClose: n,
                                       previewingVariantIndexProps: O,
-                                      selectedVariantIndex: I,
+                                      selectedVariantIndex: y,
                                       shouldCheckoutWithOrbs: b,
                                       activeBundleSlide: F,
                                       rentalDuration: P,
@@ -1003,7 +1017,7 @@ let eZ = (e) => {
                                                       })
                                               : (0, r.jsx)(eV, {
                                                     user: j,
-                                                    product: null != y ? y : T,
+                                                    product: null != I ? I : T,
                                                     activeBundleSlide: F,
                                                     isTransitioning: G,
                                                 }),
@@ -1013,7 +1027,7 @@ let eZ = (e) => {
                                                   A &&
                                                       (0, r.jsx)(eg.a, {
                                                           product: a,
-                                                          selectedVariantIndex: I,
+                                                          selectedVariantIndex: y,
                                                           className: e_.wishlistButton,
                                                           iconSize: 16,
                                                           enableHoverEffect: !0,
