@@ -1,4 +1,4 @@
-t.d(n, { Z: () => E });
+t.d(n, { Z: () => Z });
 var l = t(54381),
     i = t(473749),
     a = t(120356),
@@ -9,20 +9,19 @@ var l = t(54381),
     c = t(100527),
     u = t(906732),
     f = t(984370),
-    g = t(567400),
-    p = t(892001),
-    I = t(594174),
-    h = t(626135),
-    x = t(63063),
-    _ = t(73346),
-    m = t(590961),
-    b = t(705338),
-    v = t(181268),
-    C = t(981631),
-    k = t(228168),
-    S = t(388032),
+    g = t(892001),
+    p = t(594174),
+    I = t(626135),
+    h = t(63063),
+    x = t(73346),
+    _ = t(590961),
+    m = t(705338),
+    b = t(181268),
+    v = t(981631),
+    C = t(228168),
+    k = t(388032),
     j = t(418993);
-function Z(e) {
+function S(e) {
     let { content: n, onClick: t, ariaLabel: i, className: a } = e;
     return (0, l.jsx)(s.P3F, {
         className: o()(j.iconButton, a),
@@ -31,53 +30,52 @@ function Z(e) {
         children: n,
     });
 }
-function E(e) {
+function Z(e) {
     let { guildId: n, storefront: t, selectedPageIndex: a } = e,
-        E = (0, s.wjy)((0, d.ZP)()),
-        L = (0, g.Y)({ location: "SocialLayerStorefrontHeader" }),
-        N = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
-        R = (0, m.oR)(),
-        { analyticsLocations: T } = (0, u.ZP)(),
-        A = i.useCallback(() => {
-            (null == N ? void 0 : N.id) != null &&
-                (0, p.openUserProfileModal)({
-                    userId: N.id,
-                    tabSection: k.oh.WISHLIST,
+        Z = (0, s.wjy)((0, d.ZP)()),
+        E = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
+        N = (0, _.oR)(),
+        { analyticsLocations: L } = (0, u.ZP)(),
+        R = i.useCallback(() => {
+            (null == E ? void 0 : E.id) != null &&
+                (0, g.openUserProfileModal)({
+                    userId: E.id,
+                    tabSection: C.oh.WISHLIST,
                     showGuildProfile: !1,
                     sourceAnalyticsLocations: [c.Z.SOCIAL_LAYER_STOREFRONT],
                 });
-        }, [N]),
-        M = i.useCallback(() => {
-            h.default.track(C.rMx.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
-                slayer_storefront_session_id: null == R ? void 0 : R.sessionId,
-                cta_type: v.US.LEARN_MORE,
-                location_stack: T,
+        }, [E]),
+        T = i.useCallback(() => {
+            I.default.track(v.rMx.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+                slayer_storefront_session_id: null == N ? void 0 : N.sessionId,
+                cta_type: b.US.LEARN_MORE,
+                location_stack: L,
             }),
-                window.open(x.Z.getArticleURL(C.BhN.SOCIAL_LAYER_STOREFRONT));
-        }, [R, T]);
+                window.open(h.Z.getArticleURL(v.BhN.SOCIAL_LAYER_STOREFRONT));
+        }, [N, L]);
     if (null == t) return null;
-    let O = null != t.logoAssetId ? (0, _._W)(t.applicationId, t.logoAssetId, 75) : null,
-        P = null != t.lightThemeLogoAssetId ? (0, _._W)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
-        y = null;
+    let A = null != t.logoAssetId ? (0, x._W)(t.applicationId, t.logoAssetId, 75) : null,
+        M = null != t.lightThemeLogoAssetId ? (0, x._W)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
+        O = null;
     return (
-        (y = E ? (null != O ? O : P) : null != P ? P : O),
+        (O = Z ? (null != A ? A : M) : null != M ? M : A),
         (0, l.jsxs)(f.Z, {
             disableDoubleClick: !0,
             className: j.headerContainer,
             children: [
                 (0, l.jsxs)(s.P3F, {
                     onClick: () => {
-                        (0, b.default)({
+                        (0, m.default)({
                             guildId: n,
                             pageIndex: 0,
                         });
                     },
                     className: j.titleContainer,
                     children: [
-                        null != y &&
+                        null != O &&
                             (0, l.jsx)("img", {
                                 className: j.logo,
-                                src: y,
+                                src: O,
                                 alt: t.title,
                             }),
                         (0, l.jsx)(f.Z.Title, { children: t.title }),
@@ -90,7 +88,7 @@ function E(e) {
                             f.Z.Title,
                             {
                                 onClick: () => {
-                                    (0, b.default)({
+                                    (0, m.default)({
                                         guildId: n,
                                         pageIndex: t,
                                     });
@@ -106,30 +104,29 @@ function E(e) {
                         ),
                     ),
                 }),
-                L &&
-                    (0, l.jsxs)("div", {
-                        className: j.alignedRightContent,
-                        children: [
-                            (0, l.jsx)(Z, {
-                                content: (0, l.jsx)(s.h_8, {
-                                    size: "xs",
-                                    color: "currentColor",
-                                }),
-                                onClick: A,
-                                ariaLabel: S.intl.string(S.t["7lZ31J"]),
-                                className: j.wishlistButton,
+                (0, l.jsxs)("div", {
+                    className: j.alignedRightContent,
+                    children: [
+                        (0, l.jsx)(S, {
+                            content: (0, l.jsx)(s.h_8, {
+                                size: "xs",
+                                color: "currentColor",
                             }),
-                            (0, l.jsx)(Z, {
-                                onClick: M,
-                                ariaLabel: S.intl.string(S.t.hvVgAZ),
-                                content: (0, l.jsx)(s.xvT, {
-                                    variant: "text-sm/medium",
-                                    children: S.intl.string(S.t.hvVgAZ),
-                                }),
-                                className: j.learnMoreButton,
+                            onClick: R,
+                            ariaLabel: k.intl.string(k.t["7lZ31J"]),
+                            className: j.wishlistButton,
+                        }),
+                        (0, l.jsx)(S, {
+                            onClick: T,
+                            ariaLabel: k.intl.string(k.t.hvVgAZ),
+                            content: (0, l.jsx)(s.xvT, {
+                                variant: "text-sm/medium",
+                                children: k.intl.string(k.t.hvVgAZ),
                             }),
-                        ],
-                    }),
+                            className: j.learnMoreButton,
+                        }),
+                    ],
+                }),
             ],
         })
     );
