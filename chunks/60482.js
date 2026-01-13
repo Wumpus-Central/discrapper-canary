@@ -129,7 +129,7 @@ function b(e) {
 function y(e) {
     let { guildId: t, gameServer: n } = e,
         r = p(t);
-    (r.instances[n.id] = (0, o.Z)(n)), (d = u(l({}, d), { [t]: l({}, r) }));
+    d = u(l({}, d), { [t]: u(l({}, r), { instances: u(l({}, r.instances), { [n.id]: (0, o.Z)(n) }) }) });
 }
 function O(e) {
     let { guildId: t, gameServerId: n } = e,
