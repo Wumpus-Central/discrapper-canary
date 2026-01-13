@@ -51,7 +51,7 @@ function x(e) {
                 title: m.intl.string(m.t["dAfGb+"]),
                 buttonText: m.intl.string(m.t["uJWIj/"]),
                 onButtonClick: v,
-                image: (0, r.jsx)(a.dQ, { alt: m.intl.string(m.t["dAfGb+"]) }),
+                image: (0, r.jsx)(a.dQ$, { alt: m.intl.string(m.t["dAfGb+"]) }),
             })
           : (0, r.jsx)(u.Z, {
                 title: m.intl.string(m.t["0c8+5n"]),

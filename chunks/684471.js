@@ -20,7 +20,7 @@ function x(t) {
     return (0, i.jsx)(u.Z, {
         header: f.intl.string(f.t.sSMgC6),
         description: f.intl.formatToPlainString(f.t.q2QrTY, { username: h }),
-        heroImage: (0, i.jsx)(r.K, { alt: f.intl.string(f.t["3QhxXJ"]) }),
+        heroImage: (0, i.jsx)(r.Kag, { alt: f.intl.string(f.t["3QhxXJ"]) }),
         children: (0, i.jsxs)("div", {
             className: p.buttonContainer,
             children: [

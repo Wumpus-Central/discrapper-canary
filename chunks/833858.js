@@ -69,11 +69,11 @@ let _ = () => ({
         },
         [a.tN.CHILLING]: {
             title: s.intl.string(s.t.vybY9c),
-            icon: r.s_,
+            icon: r.s_4,
         },
         [a.tN.GAMING]: {
             title: s.intl.string(s.t.wvWdTV),
-            icon: r.mB,
+            icon: r.mB0,
         },
         [a.tN.WATCHING]: {
             title: s.intl.string(s.t.s8xFaG),
@@ -81,7 +81,7 @@ let _ = () => ({
         },
         [a.tN.FOCUSING]: {
             title: s.intl.string(s.t.D5eCTx),
-            icon: r.FG,
+            icon: r.FGi,
         },
     }),
     m = () => ({

@@ -9,6 +9,6 @@ let a = (e) => {
         ? null
         : (0, r.jsx)("div", {
               className: i.successImg,
-              children: (0, r.jsx)(l.sm, { alt: "" }),
+              children: (0, r.jsx)(l.sm3, { alt: "" }),
           });
 };

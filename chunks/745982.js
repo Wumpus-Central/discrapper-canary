@@ -11,7 +11,7 @@ function d(t) {
     let {} = t,
         e = (0, o.Nn)();
     return (0, i.jsx)(s.Z, {
-        heroImage: (0, i.jsx)(r.pq, { alt: c.intl.string(c.t["2mJo21"]) }),
+        heroImage: (0, i.jsx)(r.pqG, { alt: c.intl.string(c.t["2mJo21"]) }),
         header: c.intl.string(c.t.eAbVfS),
         children: (0, i.jsx)("div", {
             className: l.safetyTips,
