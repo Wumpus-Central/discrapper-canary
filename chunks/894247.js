@@ -16,7 +16,6 @@ function a(e, t, n) {
 }
 let o = !1;
 class s extends r.Z {
-    maybeShowChangeLanguageToast() {}
     setVerifyTimezone() {
         o = !0;
     }
@@ -30,7 +29,7 @@ class s extends r.Z {
         super(...e),
             a(this, "actions", {
                 POST_CONNECTION_OPEN: () => {
-                    this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
+                    this.setVerifyTimezone();
                 },
                 OVERLAY_INITIALIZE: this.setVerifyTimezone,
                 USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated,
