@@ -1,7 +1,6 @@
 e.exports = {
     stepBody: "d947e68f3c652858-stepBody",
     stepBodyCustomGift: "d947e68f3c652858-stepBodyCustomGift",
-    bodyColumnMiddle: "d947e68f3c652858-bodyColumnMiddle",
     bodyColumnMiddleCentered: "d947e68f3c652858-bodyColumnMiddleCentered",
     bodyColumnRight: "d947e68f3c652858-bodyColumnRight",
     bodyText: "d947e68f3c652858-bodyText",
