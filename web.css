@@ -96212,7 +96212,6 @@ html.disable-forced-colors * {
         --icon-strong: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-subtle: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
-        --icon-voice-muted: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -96922,7 +96921,6 @@ html.disable-forced-colors * {
         --icon-strong: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-subtle: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
-        --icon-voice-muted: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-1-hsl)/0.0196078431372549) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0196078431372549) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -97632,7 +97630,6 @@ html.disable-forced-colors * {
         --icon-strong: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-subtle: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
-        --icon-voice-muted: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -98342,7 +98339,6 @@ html.disable-forced-colors * {
         --icon-strong: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-subtle: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
-        --icon-voice-muted: color-mix(in oklab, var(--red-new-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
