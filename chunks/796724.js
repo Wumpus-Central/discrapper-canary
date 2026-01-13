@@ -1,4 +1,4 @@
-t.d(n, { Z: () => R }), t(642613);
+t.d(n, { Z: () => G }), t(642613);
 var r = t(54381),
     i = t(473749),
     a = t(120356),
@@ -88,7 +88,7 @@ function w(e) {
               ],
           });
 }
-function R() {
+function G() {
     let {
         guildId: e,
         currentGame: n,
@@ -96,34 +96,32 @@ function R() {
         gameServerInstance: a,
         setRegionId: l,
         name: C,
-        setName: R,
-        planId: G,
+        setName: G,
+        planId: R,
         setPlanId: Z,
         planCost: k,
         stepLoading: M,
         error: B,
-        gameProvider: L,
+        gameProvider: z,
     } = (0, v.JL)();
     (0, b.Dk)(e, null == a ? void 0 : a.id, null == a ? "create" : "edit"),
         i.useEffect(() => {
             (0, m._k)(e);
         }, [e]);
-    let z = (0, o.e7)([x.Z], () => x.Z.getRegions()),
+    let L = (0, o.e7)([x.Z], () => x.Z.getRegions()),
         D = (0, o.e7)([x.Z], () => x.Z.getRegionState()),
         H = i.useMemo(() => {
             var e;
             return null !=
-                (e = z
-                    .sort((e, n) => (0, E.Z)(e, n, D))
-                    .map((e) => ({
-                        value: e,
-                        label: e.name,
-                        disabled: !0 !== e.enabled,
-                    })))
+                (e = L.sort((e, n) => (0, E.Z)(e, n, D)).map((e) => ({
+                    value: e,
+                    label: e.name,
+                    disabled: !0 !== e.enabled,
+                })))
                 ? e
                 : [];
-        }, [D, z]),
-        U = i.useMemo(() => z.some((e) => "" !== e.pingUrl), [z]),
+        }, [D, L]),
+        U = i.useMemo(() => L.some((e) => "" !== e.pingUrl), [L]),
         V = i.useMemo(() => {
             var e;
             return null !=
@@ -141,8 +139,8 @@ function R() {
         { isValid: A, errors: F } = (0, h.a)(C),
         K = null != a,
         J = (0, N.Z)(a),
-        Y = (0, S.Z)(L),
-        X = null != L && null != O.nd[L] ? O.nd[L] : "";
+        X = (0, S.Z)(z),
+        Y = null != z && null != O.nd[z] ? O.nd[z] : "";
     return null == n
         ? (0, r.jsx)("div", {
               className: P.spinnerContainer,
@@ -181,7 +179,7 @@ function R() {
                                           }),
                                           (0, r.jsx)(c.oil, {
                                               value: C,
-                                              onChange: R,
+                                              onChange: G,
                                               placeholder: T.intl.string(I.default.ElVYr3),
                                               maxLength: O.Sg,
                                               disabled: M || !J,
@@ -288,7 +286,7 @@ function R() {
                                           }),
                                           (0, r.jsx)(s.B6, {
                                               serialize: (e) => e.id,
-                                              isSelected: (e) => e.id === G,
+                                              isSelected: (e) => e.id === R,
                                               isDisabled: M || !J,
                                               options: V,
                                               optionClassName: P.option,
@@ -301,14 +299,14 @@ function R() {
                                                       selected:
                                                           (null == (i = e[0]) || null == (t = i.value)
                                                               ? void 0
-                                                              : t.id) === G,
+                                                              : t.id) === R,
                                                       className: P.value,
                                                   });
                                               },
                                               renderOptionLabel: (e) =>
                                                   (0, r.jsx)(_, {
                                                       plan: e.value,
-                                                      selected: e.value.id === G,
+                                                      selected: e.value.id === R,
                                                   }),
                                           }),
                                       ],
@@ -342,14 +340,24 @@ function R() {
                               children: T.intl.string(I.default["/JNPWb"]),
                           }),
                       }),
+                  (null == n ? void 0 : n.early_access) === !0 &&
+                      !K &&
+                      (0, r.jsx)(u.Z, {
+                          className: P.infoBox,
+                          look: u.z.INFO,
+                          children: (0, r.jsx)(c.Text, {
+                              variant: "text-xs/medium",
+                              children: T.intl.format(I.default.TnoBGX, { gameName: n.name }),
+                          }),
+                      }),
                   (0, r.jsx)(c.Text, {
                       variant: "text-xs/medium",
                       color: "text-muted",
                       children:
-                          null != L &&
+                          null != z &&
                           T.intl.format(K ? I.default.num0a6 : I.default.p5KZDr, {
-                              provider: Y,
-                              termsOfServiceUrl: () => (0, g.q)({ href: X }),
+                              provider: X,
+                              termsOfServiceUrl: () => (0, g.q)({ href: Y }),
                               helpCenterUrl: f.Z.getEnglishArticleURL(y.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
