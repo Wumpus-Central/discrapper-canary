@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(704826), n(35282), n(388685);
+n.d(t, { Z: () => Y }), n(704826), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r,
     i = n(442837),
     a = n(377108),
@@ -107,6 +107,13 @@ function k(e) {
     return e.replace(/^https?:/, "");
 }
 function U(e) {
+    try {
+        let t = new URL(e).pathname.toLowerCase();
+        if (t.endsWith(".mp4") || t.endsWith(".webm")) return a.EO.VIDEO;
+    } catch (e) {}
+    return a.EO.IMAGE;
+}
+function G(e) {
     if (null != e.query && N === P) return !1;
     null != e.query && (P = e.query),
         (R = e.items.map((e) => {
@@ -122,12 +129,12 @@ function U(e) {
             };
         }));
 }
-function G(e) {
+function Z(e) {
     let { query: t } = e;
     if (null == t) return !1;
     (P = t), (R = []);
 }
-function Z(e) {
+function F(e) {
     let t = e.trendingCategories;
     w = [
         ...(null != e.trendingGIFPreview
@@ -136,7 +143,7 @@ function Z(e) {
                       type: s.wI2.TRENDING_GIFS,
                       name: l.intl.string(l.t.H6zNFz),
                       src: k(e.trendingGIFPreview.src),
-                      format: C,
+                      format: U(e.trendingGIFPreview.src),
                   },
               ]
             : []),
@@ -144,20 +151,20 @@ function Z(e) {
             f(u({}, e), {
                 src: k(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
-                format: C,
+                format: U(e.src),
             }),
         ),
     ];
 }
-function F(e) {
+function B(e) {
     let { items: t } = e;
     D = t;
 }
-function B(e) {
+function V(e) {
     let { items: t } = e;
     x = t;
 }
-class V extends (r = i.ZP.Store) {
+class H extends (r = i.ZP.Store) {
     getAnalyticsID() {
         return A;
     }
@@ -183,13 +190,13 @@ class V extends (r = i.ZP.Store) {
         return x;
     }
 }
-c(V, "displayName", "GIFPickerViewStore");
-let H = new V(o.Z, {
+c(H, "displayName", "GIFPickerViewStore");
+let Y = new H(o.Z, {
     GIF_PICKER_INITIALIZE: L,
     GIF_PICKER_QUERY: j,
-    GIF_PICKER_QUERY_SUCCESS: U,
-    GIF_PICKER_QUERY_FAILURE: G,
-    GIF_PICKER_TRENDING_FETCH_SUCCESS: Z,
-    GIF_PICKER_SUGGESTIONS_SUCCESS: F,
-    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: B,
+    GIF_PICKER_QUERY_SUCCESS: G,
+    GIF_PICKER_QUERY_FAILURE: Z,
+    GIF_PICKER_TRENDING_FETCH_SUCCESS: F,
+    GIF_PICKER_SUGGESTIONS_SUCCESS: B,
+    GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: V,
 });
