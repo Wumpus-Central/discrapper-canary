@@ -1,4 +1,4 @@
-t.d(n, { Z: () => g });
+t.d(n, { Z: () => m });
 var a = t(54381);
 t(473749);
 var i = t(481060),
@@ -9,14 +9,12 @@ var i = t(481060),
     d = t(63063),
     s = t(430104),
     u = t(981631),
-    b = t(388032),
-    f = t(372881);
-function h() {
+    b = t(388032);
+function f() {
     return (0, c.Jm)()
         ? b.intl.format(b.t.iWGjcg, {
               hook: (e) =>
                   (0, a.jsx)(i.eee, {
-                      className: f.anchor,
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
@@ -29,57 +27,66 @@ function h() {
         : b.intl.format(b.t.edpbxy, {
               hook: (e) =>
                   (0, a.jsx)(i.eee, {
-                      className: f.anchor,
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
                               l.Z.showAgeVerificationGetStartedModal({ entryPoint: o.cU.START_STAGE_PROMPT });
                       },
                       useDefaultUnderlineStyles: !1,
-                      style: { textDecoration: "underline" },
                       children: e.join(""),
                   }),
           });
 }
-function p(e) {
+function h(e) {
     let { className: n } = e,
         t = (0, c.Jm)();
     return (0, a.jsx)("div", {
         className: n,
         children: (0, a.jsx)(i.M14, {
             type: t ? "info" : "warning",
-            children: (0, a.jsx)(h, {}),
+            children: (0, a.jsx)(f, {}),
         }),
     });
 }
-function m(e) {
+function p(e) {
     let { className: n } = e,
         t = (0, c.Jm)();
     return (0, a.jsx)("div", {
         className: n,
         children: (0, a.jsxs)(i.Kqy, {
             direction: "horizontal",
-            gap: 8,
+            gap: 4,
             align: "center",
             children: [
                 t
-                    ? (0, a.jsx)(i.d3s, { color: "var(--icon-feedback-info)" })
-                    : (0, a.jsx)(i.aNP, { color: "var(--icon-feedback-warning)" }),
+                    ? (0, a.jsx)(i.d3s, {
+                          size: "refresh_sm",
+                          color: "var(--icon-feedback-info)",
+                      })
+                    : (0, a.jsx)(i.aNP, {
+                          size: "refresh_sm",
+                          color: "var(--icon-feedback-warning)",
+                      }),
                 (0, a.jsx)(i.Text, {
                     color: "text-default",
                     variant: "text-sm/medium",
-                    children: (0, a.jsx)(h, {}),
+                    children: (0, a.jsx)(f, {}),
                 }),
             ],
         }),
     });
 }
-function g(e) {
-    let { className: n, noBackground: t } = e;
+function m(e) {
+    let { className: n, noBackground: t, divider: r } = e;
     return (0, s.to)()
-        ? (0, a.jsx)("div", {
-              className: n,
-              children: t ? (0, a.jsx)(m, {}) : (0, a.jsx)(p, {}),
+        ? (0, a.jsxs)(a.Fragment, {
+              children: [
+                  (0, a.jsx)("div", {
+                      className: n,
+                      children: t ? (0, a.jsx)(p, {}) : (0, a.jsx)(h, {}),
+                  }),
+                  r && (0, a.jsx)(i.izJ, { gap: 16 }),
+              ],
           })
         : null;
 }
