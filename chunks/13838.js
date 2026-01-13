@@ -36,8 +36,8 @@ function x(e) {
         throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
     if ((0, s.ft)(r)) throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
 }
-let A = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
-function Z(e) {
+let Z = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
+function A(e) {
     let {
         args: { channel_id: t },
     } = e;
@@ -191,15 +191,15 @@ let w = {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH],
         },
-        validation: A,
-        handler: Z,
+        validation: Z,
+        handler: A,
     },
     [j.zMe.SPEAKING_STOP]: {
         scope: {
             [N.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, N.lH],
         },
-        validation: A,
-        handler: Z,
+        validation: Z,
+        handler: A,
     },
     [j.zMe.GUILD_CREATE]: {
         scope: l.x.RPC,
@@ -250,6 +250,10 @@ let w = {
         handler() {},
     },
     [j.zMe.ACTIVITY_LAYOUT_MODE_UPDATE]: {
+        scope: void 0,
+        handler() {},
+    },
+    [j.zMe.FRAME_LAYOUT_MODE_UPDATE]: {
         scope: void 0,
         handler() {},
     },

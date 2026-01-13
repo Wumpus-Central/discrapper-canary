@@ -854,9 +854,9 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(851862).Z,
     },
-    FramesManager: {
+    FramesWebManager: {
         actions: ["RPC_APP_DISCONNECTED"],
-        inlineRequire: () => n(460093).Z,
+        inlineRequire: () => n(828838).Z,
     },
     NotificationsInboxAutoLoadManager: {
         inlineRequire: () => n(838611).Z,

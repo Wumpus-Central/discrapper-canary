@@ -231,11 +231,17 @@ class P {
                     C.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
                     { is_pip_mode: r },
+                );
+                let i = { layout_mode: n };
+                this.rpcServer.dispatchToSubscriptions(
+                    C.zMe.ACTIVITY_LAYOUT_MODE_UPDATE,
+                    (e) => e.socket.application.id === t,
+                    i,
                 ),
                     this.rpcServer.dispatchToSubscriptions(
-                        C.zMe.ACTIVITY_LAYOUT_MODE_UPDATE,
+                        C.zMe.FRAME_LAYOUT_MODE_UPDATE,
                         (e) => e.socket.application.id === t,
-                        { layout_mode: n },
+                        i,
                     );
             }),
             j(this, "handleFrameUpdateLayoutMode", (e) => {
@@ -247,11 +253,17 @@ class P {
                     C.zMe.ACTIVITY_PIP_MODE_UPDATE,
                     (e) => e.socket.application.id === t,
                     { is_pip_mode: i },
+                );
+                let l = { layout_mode: r };
+                this.rpcServer.dispatchToSubscriptions(
+                    C.zMe.ACTIVITY_LAYOUT_MODE_UPDATE,
+                    (e) => e.socket.application.id === t,
+                    l,
                 ),
                     this.rpcServer.dispatchToSubscriptions(
-                        C.zMe.ACTIVITY_LAYOUT_MODE_UPDATE,
+                        C.zMe.FRAME_LAYOUT_MODE_UPDATE,
                         (e) => e.socket.application.id === t,
-                        { layout_mode: r },
+                        l,
                     );
             }),
             j(this, "handleThermalStateChange", (e) => {

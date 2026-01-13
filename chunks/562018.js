@@ -30,12 +30,18 @@ let s = {
                 s = t.application.id;
             if (null != s)
                 r.Z.dispatch({
-                    type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
+                    type: "FRAME_SET_ORIENTATION_LOCK_STATE",
                     applicationId: s,
                     lockState: n,
                     pictureInPictureLockState: l,
-                    gridLockState: a,
-                });
+                }),
+                    r.Z.dispatch({
+                        type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
+                        applicationId: s,
+                        lockState: n,
+                        pictureInPictureLockState: l,
+                        gridLockState: a,
+                    });
             else throw new i.Z({ errorCode: o.lT.INVALID_COMMAND }, "No application.");
         },
     },

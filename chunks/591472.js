@@ -1,10 +1,11 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
     o = n(155268),
-    s = n(408491);
-function l(e, t, n) {
+    s = n(408491),
+    l = n(918559);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +29,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,68 +46,92 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let f = null,
-    p = new Map();
-function _(e) {
+let p = null,
+    _ = new Map(),
+    m = new Map(),
+    h = new Map();
+function g(e) {
     let { applicationId: t } = e;
-    p.set(t, !0);
+    _.set(t, !0);
 }
-function m(e) {
+function E(e) {
     let { applicationId: t, proxyTicket: n } = e,
         r = (0, o.ZP)(t);
-    if (null == r) return void p.delete(t);
-    p.delete(t),
-        (f = {
+    if (null == r) return void _.delete(t);
+    _.delete(t),
+        (p = {
             applicationId: t,
             url: r,
             connectedSince: Date.now(),
             layoutMode: s.U.FOCUSED,
+            activityPanelMode: l.Ez.PANEL,
             proxyTicket: n,
         });
 }
-function h(e) {
+function b(e) {
     let { applicationId: t } = e;
-    p.delete(t);
+    _.delete(t);
 }
-function g(e) {
+function y(e) {
     let { applicationId: t } = e;
-    (null == f ? void 0 : f.applicationId) === t && (f = null);
+    (null == p ? void 0 : p.applicationId) === t && (p = null);
 }
-function E(e) {
+function O(e) {
     let { applicationId: t, layoutMode: n } = e;
-    (null == f ? void 0 : f.applicationId) === t && (f = d(c({}, f), { layoutMode: n }));
+    (null == p ? void 0 : p.applicationId) === t && (p = f(u({}, p), { layoutMode: n }));
 }
-class b extends (r = i.ZP.Store) {
+function v(e) {
+    let { activityPanelMode: t } = e;
+    null != p && (p = f(u({}, p), { activityPanelMode: t }));
+}
+function S(e) {
+    let { applicationId: t, lockState: n, pictureInPictureLockState: r } = e;
+    null == n ? m.delete(t) : m.set(t, n), null === r ? h.delete(t) : void 0 !== r && h.set(t, r);
+}
+class I extends (r = i.ZP.Store) {
     getConnectedFrame() {
-        return f;
+        return p;
     }
     getFrameLayoutMode() {
-        return null == f ? void 0 : f.layoutMode;
+        return null == p ? void 0 : p.layoutMode;
+    }
+    getActivityPanelMode() {
+        var e;
+        return null != (e = null == p ? void 0 : p.activityPanelMode) ? e : l.Ez.DISCONNECTED;
     }
     isFrameActive() {
-        return null != f;
+        return null != p;
     }
     isLaunchingFrame(e) {
         var t;
-        return null != e ? null != (t = p.get(e)) && t : p.size > 0;
+        return null != e ? null != (t = _.get(e)) && t : _.size > 0;
+    }
+    getOrientationLockStateForApp(e) {
+        return m.get(e);
+    }
+    getPipOrientationLockStateForApp(e) {
+        var t;
+        return null != (t = h.get(e)) ? t : this.getOrientationLockStateForApp(e);
     }
 }
-l(b, "displayName", "FramesStore");
-let y = new b(a.Z, {
-    FRAME_LAUNCH_START: _,
-    FRAME_LAUNCH: m,
-    FRAME_LAUNCH_FAIL: h,
-    FRAME_STOP: g,
-    FRAME_UPDATE_LAYOUT_MODE: E,
+c(I, "displayName", "FramesStore");
+let T = new I(a.Z, {
+    FRAME_LAUNCH_START: g,
+    FRAME_LAUNCH: E,
+    FRAME_LAUNCH_FAIL: b,
+    FRAME_STOP: y,
+    FRAME_UPDATE_LAYOUT_MODE: O,
+    FRAME_SET_PANEL_MODE: v,
+    FRAME_SET_ORIENTATION_LOCK_STATE: S,
 });
