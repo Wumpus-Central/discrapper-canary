@@ -5,4 +5,6 @@ e.exports = {
     emptyStateText: "_4fbcc81dbba4d7a8-emptyStateText",
     scroller: "_4fbcc81dbba4d7a8-scroller",
     teenDisclaimer: "_4fbcc81dbba4d7a8-teenDisclaimer",
+    recommendationsContainerEmptyWishlist: "_4fbcc81dbba4d7a8-recommendationsContainerEmptyWishlist",
+    recommendationsContainerWithWishlist: "_4fbcc81dbba4d7a8-recommendationsContainerWithWishlist",
 };

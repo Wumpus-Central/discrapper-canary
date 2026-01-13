@@ -181,7 +181,7 @@ function j(e, t) {
         g = {
             title: _ ? S.intl.string(S.t.TxBQzD) : S.intl.string(S.t["4yiU7x"]),
             body: _ ? void 0 : h,
-            renderIcon: _ ? void 0 : f.Q,
+            renderIcon: _ ? void 0 : f.Qe,
             shouldShow: !0,
         },
         O = () => {

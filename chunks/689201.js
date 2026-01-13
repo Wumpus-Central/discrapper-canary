@@ -19,7 +19,7 @@ function f(e, t) {
                 return {
                     productLine: t.skuProductLine,
                     source: r,
-                    renderIcon: l.Q,
+                    renderIcon: l.Qe,
                 };
             }),
             n = a.ZP.getName(t),
@@ -84,7 +84,7 @@ function m(e, t) {
                               e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM
                                   ? d.intl.string(d.t["4yiU7x"])
                                   : d.intl.string(d.t.HFhcqh),
-                          renderIcon: e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM ? l.Q : void 0,
+                          renderIcon: e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM ? l.Qe : void 0,
                           shouldShow: !r,
                       };
                   })

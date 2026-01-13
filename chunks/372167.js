@@ -26,6 +26,7 @@ function h(e) {
             (0, a.jsx)(d.Z, {
                 analyticsLocations: o,
                 handleOpenUserProfileModal: t,
+                numWishlistItemsToRecommend: 9,
             }),
             (0, a.jsx)("div", {
                 className: m.buttonContainer,

@@ -58,7 +58,7 @@ function b(e, t) {
         C = {
             title: S ? _.intl.string(_.t.HFhcqh) : I,
             body: S ? T : void 0,
-            renderIcon: S ? s.Q : void 0,
+            renderIcon: S ? s.Qe : void 0,
             shouldShow: !0,
         },
         A = () => {

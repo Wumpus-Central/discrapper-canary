@@ -21,7 +21,14 @@ var r = n(54381),
     E = n(388032),
     b = n(889588),
     y = (function (e) {
-        return (e.SMALL = "small"), (e.SMALL_SQUARE = "small-square"), (e.MEDIUM = "medium"), (e.LARGE = "large"), e;
+        return (
+            (e.SMALL = "small"),
+            (e.SMALL_SQUARE = "small-square"),
+            (e.MEDIUM = "medium"),
+            (e.LARGE = "large"),
+            (e.FLEX = "flex"),
+            e
+        );
     })({});
 function O(e) {
     let {
@@ -112,6 +119,7 @@ function O(e) {
                         [b.smallSquareCard]: "small-square" === y,
                         [b.smallCard]: "small" === y,
                         [b.largeCard]: "large" === y,
+                        [b.flexCard]: "flex" === y,
                     }),
                     onClick: H,
                     children: [

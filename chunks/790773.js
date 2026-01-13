@@ -1,86 +1,85 @@
-n.d(t, { Z: () => C }), n(388685);
-var a = n(54381),
-    r = n(473749),
-    i = n(793030),
-    l = n(442837),
-    s = n(681715),
-    o = n(481060),
-    c = n(906732),
-    d = n(104505),
-    u = n(863886),
-    m = n(277511),
-    p = n(594174),
-    h = n(164670),
-    f = n(927613),
-    x = n(848118),
-    b = n(582113),
-    g = n(228168),
-    v = n(388032),
-    j = n(702631);
-function y(e) {
-    let { sku: t, handleOpenUserProfileModal: n, analyticsLocations: l } = e,
-        p = r.useRef(null),
-        { analyticsLocations: h } = (0, c.ZP)(null != l ? l : []),
-        { isHoveringOrFocusing: f } = (0, d.Z)(p),
-        [b, y] = r.useState(!1),
-        C = r.useCallback(
+n.d(t, { Z: () => P }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    l = n(120356),
+    a = n.n(l),
+    o = n(793030),
+    s = n(442837),
+    c = n(681715),
+    u = n(481060),
+    d = n(906732),
+    p = n(835473),
+    f = n(525302),
+    g = n(104505),
+    h = n(863886),
+    m = n(688192),
+    b = n(277511),
+    _ = n(602733),
+    E = n(594174),
+    O = n(164670),
+    v = n(927613),
+    I = n(848118),
+    y = n(851397),
+    C = n(582113),
+    S = n(228168),
+    T = n(388032),
+    N = n(702631);
+function j(e) {
+    let { application: t, sku: n, handleOpenUserProfileModal: l, analyticsLocations: a } = e,
+        s = i.useRef(null),
+        { analyticsLocations: p } = (0, d.ZP)(null != a ? a : []),
+        { isHoveringOrFocusing: m } = (0, g.Z)(s),
+        [E, O] = i.useState(!1),
+        v = i.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), !b)) {
-                    y(!0);
+                if ((e.stopPropagation(), !E)) {
+                    O(!0);
                     try {
-                        await m.Z.addSkuToWishlist(t.id, h), n({ tabSection: g.oh.WISHLIST });
+                        await b.Z.addSkuToWishlist(n.id, p), null == l || l({ tabSection: S.oh.WISHLIST });
                     } catch (e) {
-                        (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.F8FvUy), o.ToastType.FAILURE)),
-                            i.uvj.announce(v.intl.string(v.t.F8FvUy));
+                        (0, u.showToast)((0, u.createToast)(T.intl.string(T.t.F8FvUy), u.ToastType.FAILURE)),
+                            o.uvj.announce(T.intl.string(T.t.F8FvUy));
                     } finally {
-                        y(!1);
+                        O(!1);
                     }
                 }
             },
-            [t.id, h, n, b],
+            [n.id, p, l, E],
         );
-    return (0, a.jsx)(s.u, {
-        __unsupportedReactNodeAsText: (0, a.jsxs)("div", {
-            className: j.tooltipContent,
+    return (0, r.jsx)(c.i_, {
+        title: T.intl.string(T.t["8DkMEQ"]),
+        body: n.name,
+        asset: (0, r.jsx)(f.No, { application: t }),
+        assetSize: _.EU,
+        children: (0, r.jsxs)(o.kL8, {
+            className: N.card,
+            ref: s,
+            "aria-label": n.name,
+            onClick: v,
             children: [
-                (0, a.jsx)(i.xvT, {
-                    variant: "text-sm/medium",
-                    children: v.intl.string(v.t["8DkMEQ"]),
-                }),
-                (0, a.jsx)(i.xvT, {
-                    variant: "text-sm/normal",
-                    lineClamp: 1,
-                    color: "text-default",
-                    children: t.name,
-                }),
-            ],
-        }),
-        position: "top",
-        asContainer: !0,
-        children: (0, a.jsxs)(i.kL8, {
-            className: j.card,
-            ref: p,
-            "aria-label": t.name,
-            onClick: C,
-            children: [
-                (0, a.jsx)(
-                    x.A,
+                (0, r.jsx)(
+                    I.A,
                     {
                         shape: "custom",
-                        containerClassName: j.card,
-                        foregroundImageClassName: j.cardImage,
-                        backgroundImageClassName: j.cardBackgroundImage,
-                        sku: t,
+                        containerClassName: N.card,
+                        foregroundImageClassName: N.cardImage,
+                        backgroundImageClassName: N.cardBackgroundImage,
+                        sku: n,
                     },
-                    t.id,
+                    n.id,
                 ),
-                (f || b) &&
-                    (0, a.jsxs)(a.Fragment, {
+                (m || E) &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, a.jsx)("div", { className: j.highlightOverlay }),
-                            (0, a.jsx)("div", {
-                                className: j.plusIconContainer,
-                                children: b ? (0, a.jsx)(u.T, {}) : (0, a.jsx)(i.svS, { size: "lg" }),
+                            (0, r.jsx)("div", { className: N.highlightOverlay }),
+                            (0, r.jsx)("div", {
+                                className: N.plusIconContainer,
+                                children: E
+                                    ? (0, r.jsx)(h.T, {})
+                                    : (0, r.jsx)(o.svS, {
+                                          size: "lg",
+                                          color: u.TVs.unsafe_rawColors.WHITE_500,
+                                      }),
                             }),
                         ],
                     }),
@@ -88,39 +87,66 @@ function y(e) {
         }),
     });
 }
-function C(e) {
-    let { wishlist: t, handleOpenUserProfileModal: n, analyticsLocations: i } = e,
-        s = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        o = (0, f.Z)({
-            guildId: (0, h.ac)(),
-            numWishlistItems: 9,
+function P(e) {
+    let {
+            wishlist: t,
+            handleOpenUserProfileModal: n,
+            analyticsLocations: l,
+            numWishlistItemsToRecommend: o,
+            maxWishlistItemsToShow: c = o,
+            className: u,
+        } = e,
+        d = (0, p.q)(C.t9),
+        f = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+        g = (0, s.e7)([E.default], () => E.default.getUser(null == t ? void 0 : t.userId)),
+        b = null == t || (null != f && null != t && t.userId === f.id),
+        _ = i.useMemo(() => (null == t ? (null != f ? [f.id] : void 0) : [t.userId]), [t, f]),
+        I = (0, v.Z)({
+            guildId: (0, O.ac)(),
+            numWishlistItems: o,
             location: "SocialLayerAddToWishlistGrid",
-            applicationId: b.t9,
-            userIds: null != s ? [s.id] : void 0,
+            applicationId: C.t9,
+            userIds: _,
             includeWishlists: !1,
         }),
-        c = r.useMemo(() => {
+        S = i.useMemo(() => {
             var e;
             return new Set(null != (e = null == t ? void 0 : t.items.map((e) => e.skuId)) ? e : []);
         }, [t]),
-        d = o.recommendations.filter((e) => !c.has(e.skuId));
-    return "success" !== o.state
-        ? (0, a.jsx)("div", {
-              className: j.loadingContainer,
-              children: (0, a.jsx)(u.T, {}),
+        T = I.recommendations.filter((e) => !S.has(e.skuId)).slice(0, c);
+    return "success" !== I.state
+        ? (0, r.jsx)("div", {
+              className: N.loadingContainer,
+              children: (0, r.jsx)(h.T, {}),
           })
-        : (0, a.jsx)("ul", {
-              className: j.grid,
-              children: d.map((e) =>
-                  (0, a.jsx)(
-                      y,
-                      {
-                          sku: e.sku,
-                          handleOpenUserProfileModal: n,
-                          analyticsLocations: i,
-                      },
-                      e.skuId,
-                  ),
+        : (0, r.jsx)("ul", {
+              className: a()(N.grid, u),
+              children: T.map((e) =>
+                  b
+                      ? (0, r.jsx)(
+                            j,
+                            {
+                                application: d,
+                                sku: e.sku,
+                                handleOpenUserProfileModal: n,
+                                analyticsLocations: l,
+                            },
+                            e.skuId,
+                        )
+                      : (0, r.jsx)(
+                            y.Z,
+                            {
+                                item: e,
+                                wishlistId: t.id,
+                                isOwner: !1,
+                                profileOwner: g,
+                                cardSize: m.U.FLEX,
+                                showOverlayButton: !0,
+                                hideButtonIcon: !0,
+                                isDragging: !1,
+                            },
+                            e.skuId,
+                        ),
               ),
           });
 }
