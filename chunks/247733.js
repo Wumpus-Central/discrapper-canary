@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"tkIymA":["Отключить"]}');
+p.exports = JSON.parse('{"uG6teD":["Учётная запись привязана"],"tkIymA":["Отключить"]}');

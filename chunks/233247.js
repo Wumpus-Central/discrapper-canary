@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"kxF9br":["SDK 通过 RPC 关联"],"8a7IrV":["已注册关联入口 URL"],"9iLeL2":["已将 URL 配置为 ",[1,"url"]],"AGLx00":["已关联的游戏流程\uFF1A"],"w0pN4R":["链接账号"],"yKwZc2":["管理账号关联"],"aTULMB":["未检测到认证回调\u3002如果您已调用该函数但仍然看到此情况\uFF0C请检查日志以获取详细信息"],"eg0mNa":["无法关联\uFF0C因为没有可用的有效关联流程"],"OEkrCx":["此流程将被使用"],"no+FQS":["将使用第一个可用的关联流程\uFF0C从顶部开始"],"PFxxJa":["如果您的游戏正在运行\uFF0C且无法关联到 Discord\uFF0C请尝试查看您游戏的日志以进行调试"],"S94dzs":["RegisterAuthorizeRequestCallback 已调用并正常运行"],"vR0zs6":["账号关联"],"KoK4J9":["开发工具\uFF1A",[1,"appName"]],"tkIymA":["解除关联"],"K3ObrU":["网页流程\uFF1A"]}',
+e.exports = JSON.parse(
+    '{"uG6teD":["账号已成功关联"],"kxF9br":["SDK 通过 RPC 关联"],"8a7IrV":["已注册关联入口 URL"],"9iLeL2":["已将 URL 配置为 ",[1,"url"]],"AGLx00":["已关联的游戏流程\uFF1A"],"w0pN4R":["链接账号"],"yKwZc2":["管理账号关联"],"aTULMB":["未检测到认证回调\u3002如果您已调用该函数但仍然看到此情况\uFF0C请检查日志以获取详细信息"],"eg0mNa":["无法关联\uFF0C因为没有可用的有效关联流程"],"OEkrCx":["此流程将被使用"],"no+FQS":["将使用第一个可用的关联流程\uFF0C从顶部开始"],"PFxxJa":["如果您的游戏正在运行\uFF0C且无法关联到 Discord\uFF0C请尝试查看您游戏的日志以进行调试"],"S94dzs":["RegisterAuthorizeRequestCallback 已调用并正常运行"],"vR0zs6":["账号关联"],"KoK4J9":["开发工具\uFF1A",[1,"appName"]],"tkIymA":["解除关联"],"K3ObrU":["网页流程\uFF1A"]}',
 );
