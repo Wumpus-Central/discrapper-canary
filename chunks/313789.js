@@ -37,6 +37,7 @@ var r = (function (e) {
         (e.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY = "content_and_social_connected_games_category"),
         (e.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING = "content_and_social_content_filters_setting"),
         (e.CONTENT_AND_SOCIAL_DM_SPAM_SETTING = "content_and_social_dm_spam_setting"),
+        (e.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING = "content_and_social_dm_safety_alerts_setting"),
         (e.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING = "content_and_social_age_restricted_dm_setting"),
         (e.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING = "content_and_social_age_restricted_ios_setting"),
         (e.CONTENT_AND_SOCIAL_PERMISSIONS_GUILD_SELECTOR = "content_and_social_permissions_guild_selector"),

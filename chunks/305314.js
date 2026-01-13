@@ -15,6 +15,7 @@ let S = (0, u.UO)(a.n.APPEARANCE_ZOOM, {
     stickToMarkers: !0,
     minValue: o.yqN.ZOOM_SCALES["0"],
     maxValue: o.yqN.ZOOM_SCALES[o.yqN.ZOOM_SCALES.length - 1],
+    useDefaultValue: () => o.yqN.ZOOM_DEFAULT,
     getInitialValue: () => s.Z.zoom,
     onValueRender: (t) => "".concat(t.toFixed(0), "%"),
     asValueChanges: (t) => (0, l.cq)(t),

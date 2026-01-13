@@ -14,6 +14,7 @@ let T = (t) => "".concat(t.toFixed(0), "px"),
         stickToMarkers: !0,
         minValue: a.fP["0"],
         maxValue: a.fP[a.fP.length - 1],
+        useDefaultValue: () => (u.jU.useSetting() ? a.c8 : a.pq),
         getInitialValue: () => {
             let t = l.Z.messageGroupSpacing,
                 e = u.jU.getSetting();
