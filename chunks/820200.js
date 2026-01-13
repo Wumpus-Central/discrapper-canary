@@ -23,7 +23,6 @@ class a {
             i(this, "helpCenterUrl", void 0),
             i(this, "textColor", void 0),
             i(this, "endTime", void 0),
-            i(this, "bannerAsset", void 0),
             i(this, "bannerUrl", void 0),
             i(this, "bannerAnimatedUrl", void 0),
             (this.type = r.z.IMMERSIVE_BANNER),
@@ -32,7 +31,6 @@ class a {
             (this.helpCenterUrl = e.help_center_url),
             (this.textColor = e.text_color),
             (this.endTime = null != e.end_time ? new Date(e.end_time) : void 0),
-            (this.bannerAsset = e.banner_asset),
             (this.bannerUrl = e.banner_url),
             (this.bannerAnimatedUrl = e.banner_animated_url);
     }

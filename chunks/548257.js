@@ -4,8 +4,8 @@ n(473749);
 var l = n(120356),
     a = n.n(l),
     s = n(907331),
-    o = n(685816),
-    i = n(442837),
+    i = n(685816),
+    o = n(442837),
     c = n(481060),
     u = n(594174),
     d = n(884697),
@@ -18,17 +18,15 @@ let m = {
         rankedSkuIds: [],
         name: "",
         unpublishedAt: void 0,
-        logoUrl: "",
         categorySkuId: void 0,
-        bannerAsset: void 0,
         summary: "",
-        type: o.z.REWARD_HERO,
+        type: i.z.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
     h = (e) => {
         var t;
-        let { isLoading: n = !1, heroBlock: l, tab: o, onVisibilityChange: d } = e,
+        let { isLoading: n = !1, heroBlock: l, tab: i, onVisibilityChange: d } = e,
             h = (0, s.O)(
                 (e) => {
                     null == d || d(e);
@@ -36,15 +34,15 @@ let m = {
                 0.1,
                 null != d,
             ),
-            C = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+            C = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
             {
-                bannerStyleOverrides: E,
-                logoStyleOverrides: v,
+                bannerDisplayConfig: E,
+                logoDisplayConfig: v,
                 heroLogo: S,
-                heroBannerStatic: _,
-                heroBannerAnimated: x,
+                heroBannerStatic: x,
+                heroBannerAnimated: O,
             } = (0, f.hr)(l),
-            O = null != (t = null == E ? void 0 : E.responsive) && t,
+            _ = null != (t = null == E ? void 0 : E.responsive) && t,
             y = null == E ? void 0 : E.backgroundStyle;
         return null != C && (n || l !== m)
             ? (0, r.jsxs)("div", {
@@ -52,21 +50,21 @@ let m = {
                   className: p.heroBlock,
                   children: [
                       (0, r.jsx)("div", {
-                          className: a()(p.banner, { [p.responsive]: O }),
+                          className: a()(p.banner, { [p.responsive]: _ }),
                           style: null != y ? { background: y } : void 0,
                           children:
-                              null != _ &&
+                              null != x &&
                               (0, r.jsx)(g.Z, {
-                                  bannerStatic: _,
-                                  bannerAnimated: x,
-                                  isResponsive: O,
+                                  bannerStatic: x,
+                                  bannerAnimated: O,
+                                  isResponsive: _,
                               }),
                       }),
                       (0, r.jsxs)("div", {
                           className: p.heroBlockContent,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: a()(p.heroHeaderContainer, { [p.responsive]: O }),
+                                  className: a()(p.heroHeaderContainer, { [p.responsive]: _ }),
                                   children: n
                                       ? (0, r.jsx)("div", { className: p.heroHeaderBadgeLogoSummaryContainer })
                                       : (0, r.jsx)("div", {
@@ -105,7 +103,7 @@ let m = {
                               (0, r.jsx)(b.Z, {
                                   isBlockLoading: n,
                                   heroBlock: l,
-                                  tab: o,
+                                  tab: i,
                               }),
                           ],
                       }),
