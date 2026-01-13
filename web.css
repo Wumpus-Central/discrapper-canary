@@ -45728,7 +45728,7 @@ div._34eac30af6a687c5-modalOverrideBody {
 }
 
 .c0c49a3e5c8626ac-container:before {
-    background: linear-gradient(180deg, rgba(88, 101, 242, 0), #5865f2);
+    background: var(--custom-promotion-gradient);
     border-radius: 8px;
     content: "";
     inset: 0;
