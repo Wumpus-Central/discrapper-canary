@@ -99,7 +99,6 @@ function eu(e) {
         itemSrc: void 0,
         itemSafeSrc: void 0,
         itemTextContent: void 0,
-        emojiId: null,
         canReport: r,
         onHeightUpdate: l,
         onClose: i,

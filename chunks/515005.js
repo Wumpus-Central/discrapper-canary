@@ -244,6 +244,8 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                         style: q,
                                         "data-type": p.S.STICKER,
                                         "data-id": e.sticker.id,
+                                        "data-name": e.sticker.name,
+                                        "data-format-type": e.sticker.format_type,
                                         children: [
                                             (0, r.jsx)(c.nn4, { children: (0, E.C)(e.sticker) }),
                                             (0, r.jsxs)("div", {

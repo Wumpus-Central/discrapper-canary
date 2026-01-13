@@ -10,7 +10,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(620792),
+    c = n(620389),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -38,7 +38,9 @@ let v = (e) => e.preventDefault(),
 function N(e, t) {
     return i.cloneElement(e, {
         "data-type": "sticker",
-        "data-id": t,
+        "data-id": t.id,
+        "data-name": t.name,
+        "data-format-type": t.format_type,
     });
 }
 function P(e) {
@@ -154,7 +156,7 @@ let R = (e) => {
                               className: O.lottieCanvas,
                               ref: g,
                           }),
-                          o.id,
+                          o,
                       ),
                   }),
               });
@@ -226,7 +228,7 @@ let R = (e) => {
                                   onContextMenu: v,
                                   ref: T,
                               }),
-                              n.id,
+                              n,
                           ),
                       }),
                   }),
