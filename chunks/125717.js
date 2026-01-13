@@ -16,4 +16,5 @@ let c = (0, l.J9)(a.n.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
     useOptions: function () {
         return i.useMemo(() => (0, u.c7)(), []);
     },
+    useSearchTerms: () => [S.intl.string(S.t.JzaP4h), S.intl.string(S.t.H9XOl3), S.intl.string(S.t.k4W40P)],
 });
