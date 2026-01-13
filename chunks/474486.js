@@ -1,106 +1,61 @@
 n.d(t, {
-    C: () => u,
-    l: () => d,
+    C: () => d,
+    l: () => p,
 });
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    a = n(119269),
-    o = n(227140),
-    s = n(388032),
-    c = n(630942);
-let u = (e) => {
+    l = n(28664),
+    a = n(481060),
+    o = n(119269),
+    s = n(227140),
+    c = n(388032),
+    u = n(630942);
+let d = (e) => {
         let { children: t } = e,
             n = (0, r.jsxs)("div", {
-                className: c.coachTipContainer,
+                className: u.nitroTabCoachtipContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: c.iconContainer,
-                        children: (0, r.jsx)(a.ZP, {
+                        className: u.iconContainer,
+                        children: (0, r.jsx)(o.ZP, {
                             staticPercentage: 100,
-                            iconClassName: c.icon,
+                            iconClassName: u.icon,
                             showAnimations: !0,
-                            progressCircleVariation: a.Qo.NITRO_LOGO,
+                            progressCircleVariation: o.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            customAnimationClassName: c.customCircleAnimation,
+                            customAnimationClassName: u.customCircleAnimation,
                             circleColor: "url(#purple-gradient)",
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: c.coachtipContent,
+                        className: u.coachtipContent,
                         children: [
-                            (0, r.jsx)(l.Heading, {
+                            (0, r.jsx)(a.Heading, {
                                 variant: "heading-sm/bold",
-                                children: s.intl.string(s.t.USo4s7),
+                                children: c.intl.string(c.t.USo4s7),
                             }),
-                            (0, r.jsx)(l.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-xs/normal",
-                                children: s.intl.format(s.t.AGKQq6, { numReferrals: 3 }),
+                                children: c.intl.format(c.t.AGKQq6, { numReferrals: 3 }),
                             }),
                         ],
                     }),
                 ],
             });
-        return (0, r.jsx)(l.aML, {
-            text: n,
+        return (0, r.jsx)(l.u, {
+            __unsupportedReactNodeAsText: n,
             position: "right",
-            "aria-label": s.intl.string(s.t.USo4s7),
-            tooltipClassName: c.marketingBadgeTooltip,
-            allowOverflow: !0,
-            tooltipContentClassName: c.tooltipContent,
-            children: (e) => {
-                var n, i;
-                return (0, r.jsx)(
-                    "div",
-                    ((n = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = r);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (i = i = { children: t }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    n),
-                );
-            },
+            "aria-label": c.intl.string(c.t.USo4s7),
+            asContainer: !0,
+            children: (0, r.jsx)("div", { children: t }),
         });
     },
-    d = (e) => {
+    p = (e) => {
         let { isSelected: t, onSelect: n } = e;
         return (
             i.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, r.jsx)(o.Z, { copy: s.intl.string(s.t.y2b7CA) })
+            (0, r.jsx)(s.Z, { copy: c.intl.string(c.t.y2b7CA) })
         );
     };

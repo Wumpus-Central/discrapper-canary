@@ -8,7 +8,8 @@ function o(e) {
     let { searchQuery: t = "" } = e,
         n = (0, l.ZP)((e) => e.recentlyShown)
             .map((e) => r.z[e])
-            .filter((e) => e.toLowerCase().includes(t.toLowerCase()));
+            .filter((e) => e.toLowerCase().includes(t.toLowerCase()))
+            .slice(0, 3);
     return 0 === n.length
         ? null
         : (0, a.jsx)(i.C3N, {
