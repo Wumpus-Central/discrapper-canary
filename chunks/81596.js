@@ -1,88 +1,88 @@
-i.d(n, { default: () => h }), i(388685);
-var e = i(54381),
-    r = i(473749),
-    s = i(793030),
-    l = i(442837),
-    d = i(481060),
-    a = i(485267),
-    c = i(564990),
-    o = i(353647),
-    E = i(313789),
-    u = i(518596),
-    _ = i(527790),
-    T = i(540440),
-    C = i(365583),
-    N = i(981631),
-    R = i(388032),
-    O = i(616874);
+n.d(e, { default: () => h }), n(388685);
+var i = n(54381),
+    r = n(473749),
+    s = n(793030),
+    l = n(442837),
+    o = n(481060),
+    a = n(485267),
+    c = n(564990),
+    d = n(353647),
+    u = n(313789),
+    C = n(518596),
+    E = n(527790),
+    x = n(540440),
+    b = n(365583),
+    _ = n(981631),
+    p = n(388032),
+    I = n(616874);
 function h(t) {
-    let { user: n, entry: i, transitionState: h, onAction: p, onClose: I, onOpenGameSettings: f } = t,
-        [x, S] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
+    let { user: e, entry: n, transitionState: h, onAction: k, onClose: m, onOpenGameSettings: R } = t,
+        [S, T] = (0, l.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => a.Bt, []),
-        (0, e.jsxs)(s.Modal, {
-            title: (0, T.y)(i),
-            subtitle: R.intl.format(R.t.KV72oe, {
-                settingsHook: (t, n) => {
-                    let r = (0, C.C)({
-                        entry: i,
-                        onOpenGameSettings: f,
+        (0, i.jsxs)(s.Modal, {
+            title: (0, x.y)(n),
+            subtitle: p.intl.format(p.t.KV72oe, {
+                settingsHook: (t, e) => {
+                    let r = (0, b.C)({
+                        entry: n,
+                        onOpenGameSettings: R,
                     });
-                    return (0, e.jsx)(
-                        d.eee,
+                    return (0, i.jsx)(
+                        o.eee,
                         {
                             onClick: () => {
-                                null == p || p({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                null == k || k({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
                                     null != r
                                         ? r()
-                                        : (0, u.openUserSettings)(E.n.PROFILE_PANEL, {
-                                              section: N.oAB.PROFILE_CUSTOMIZATION,
+                                        : (0, C.openUserSettings)(u.n.PROFILE_PANEL, {
+                                              section: _.oAB.PROFILE_CUSTOMIZATION,
                                           }),
-                                    I();
+                                    m();
                             },
                             children: t,
                         },
-                        n,
+                        e,
                     );
                 },
             }),
             size: "sm",
             actions: [
                 {
-                    text: R.intl.string(R.t["ETE/oC"]),
-                    onClick: I,
+                    text: p.intl.string(p.t["ETE/oC"]),
+                    onClick: m,
                     variant: "secondary",
                     size: "sm",
                 },
                 {
-                    text: null != S ? R.intl.string(R.t["5911Lb"]) : R.intl.string(R.t.VkKicb),
+                    text: null != T ? p.intl.string(p.t["5911Lb"]) : p.intl.string(p.t.VkKicb),
                     onClick: () => {
-                        null == p || p({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.CV)(i, n.id, I);
+                        null == k || k({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.CV)(n, e.id, m);
                     },
-                    disabled: x,
+                    disabled: S,
                     variant: "critical-primary",
                     size: "sm",
                 },
             ],
-            onClose: I,
+            onClose: m,
             transitionState: h,
             children: [
-                null != S
-                    ? (0, e.jsxs)("div", {
-                          className: O.error,
+                null != T
+                    ? (0, i.jsxs)("div", {
+                          className: I.error,
                           children: [
-                              (0, e.jsx)(d.k$p, { color: d.TVs.colors.STATUS_DANGER }),
-                              (0, e.jsx)(d.Text, {
+                              (0, i.jsx)(o.k$p, { color: o.TVs.colors.ICON_FEEDBACK_CRITICAL }),
+                              (0, i.jsx)(o.Text, {
                                   variant: "text-sm/medium",
-                                  children: R.intl.string(R.t.FMbL3s),
+                                  children: p.intl.string(p.t.FMbL3s),
                               }),
                           ],
                       })
                     : null,
-                (0, e.jsx)(_.Z, {
-                    user: n,
-                    entry: i,
-                    className: O.card,
+                (0, i.jsx)(E.Z, {
+                    user: e,
+                    entry: n,
+                    className: I.card,
                     hideContextMenu: !0,
                 }),
             ],

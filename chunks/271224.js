@@ -103,7 +103,7 @@ function O(e) {
                                         (0, n.jsx)(u.Z, { powerup: O }),
                                         null != g &&
                                             (0, n.jsx)(s.Text, {
-                                                color: "status-danger",
+                                                color: "text-feedback-critical",
                                                 variant: "text-sm/semibold",
                                                 children: g,
                                             }),

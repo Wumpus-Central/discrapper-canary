@@ -102,7 +102,7 @@ function h(e) {
 let g = (e) => {
         var {
                 count: t,
-                color: n = o.Z.colors.STATUS_DANGER.css,
+                color: n = o.Z.colors.BADGE_NOTIFICATION_BACKGROUND.css,
                 disableColor: i = !1,
                 shape: l = _.ROUND,
                 className: u,
@@ -134,7 +134,7 @@ let g = (e) => {
         var {
                 text: t,
                 className: n,
-                color: i = o.Z.colors.STATUS_DANGER.css,
+                color: i = o.Z.colors.BADGE_NOTIFICATION_BACKGROUND.css,
                 shape: l = _.ROUND,
                 disableColor: u = !1,
                 style: p,
@@ -172,7 +172,7 @@ let g = (e) => {
         let {
             icon: t,
             className: n,
-            color: i = o.Z.colors.STATUS_DANGER.css,
+            color: i = o.Z.colors.BADGE_NOTIFICATION_BACKGROUND.css,
             shape: l = _.ROUND,
             disableColor: u = !1,
             style: d,

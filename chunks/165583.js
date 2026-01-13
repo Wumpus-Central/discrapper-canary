@@ -476,7 +476,7 @@ function B(e) {
                 children: [
                     (0, r.jsx)(m.Text, {
                         variant: "text-lg/bold",
-                        color: "status-danger",
+                        color: "text-feedback-critical",
                         children: i,
                     }),
                     (0, r.jsx)(m.Heading, {

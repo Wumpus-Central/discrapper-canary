@@ -58,7 +58,7 @@ function h(e) {
                 size: "xs",
                 color: o.Z.colors.TEXT_LINK.css,
             }),
-            danger: (0, r.jsx)(s.aNP, { color: o.Z.colors.STATUS_DANGER }),
+            danger: (0, r.jsx)(s.aNP, { color: o.Z.colors.ICON_FEEDBACK_CRITICAL }),
         };
     return null != t && t in n
         ? (0, r.jsx)("div", {

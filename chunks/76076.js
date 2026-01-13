@@ -1,9 +1,9 @@
-t.d(n, { Z: () => b }), t(388685);
+t.d(n, { Z: () => v }), t(388685);
 var l = t(54381),
     i = t(473749),
     o = t(120356),
     r = t.n(o),
-    a = t(620792),
+    a = t(620389),
     c = t(442837),
     s = t(481060),
     d = t(607070),
@@ -33,7 +33,7 @@ let h = {
             message: m.intl.string(m.t["84MExs"]),
             icon: (0, l.jsx)(s.Uz9, {
                 size: "sm",
-                color: s.TVs.colors.STATUS_DANGER.css,
+                color: s.TVs.colors.ICON_FEEDBACK_CRITICAL,
             }),
             toast_id: "user_profile_widget_save_failure",
             type: s.ToastType.FAILURE,
@@ -42,13 +42,13 @@ let h = {
             message: m.intl.string(m.t.F8FvUy),
             icon: (0, l.jsx)(s.Uz9, {
                 size: "sm",
-                color: s.TVs.colors.STATUS_DANGER.css,
+                color: s.TVs.colors.ICON_FEEDBACK_CRITICAL,
             }),
             toast_id: "user_profile_something_went_wrong",
             type: s.ToastType.FAILURE,
         },
     },
-    v = (e) => {
+    j = (e) => {
         let { message: n, icon: t, type: i } = e;
         return (0, l.jsxs)("div", {
             className: r()(x.toast, p.toast),
@@ -66,14 +66,14 @@ let h = {
             ],
         });
     },
-    b = (e) => {
+    v = (e) => {
         let { className: n, onAutoHide: t } = e,
             o = (0, u.be)(),
             f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
             [m, x] = i.useState(!1),
-            [b, j] = i.useState(null);
+            [v, b] = i.useState(null);
         i.useEffect(() => {
-            null !== o ? (x(!0), j(h[o]), s.uvj.announce(h[o].message)) : x(!1);
+            null !== o ? (x(!0), b(h[o]), s.uvj.announce(h[o].message)) : x(!1);
         }, [o]);
         let g = (0, s.Yzy)(
             m,
@@ -112,12 +112,12 @@ let h = {
                 children: g(
                     (e, t) =>
                         t &&
-                        null !== b &&
+                        null !== v &&
                         (0, l.jsx)(a.animated.div, {
                             className: r()(n, p.toastContainer),
                             style: e,
                             children: (0, l.jsx)(
-                                v,
+                                j,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -142,7 +142,7 @@ let h = {
                                             });
                                     }
                                     return e;
-                                })({}, b),
+                                })({}, v),
                             ),
                         }),
                 ),

@@ -201,7 +201,7 @@ let A = (e) => {
                             className: v.recipientError,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                color: "status-danger",
+                                color: "text-feedback-critical",
                                 children: w,
                             }),
                         }),

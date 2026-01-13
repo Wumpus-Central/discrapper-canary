@@ -293,6 +293,25 @@ let { Themes: r } = n(15202).VV,
                     opacity: 0.0784313725490196,
                 },
             },
+            BACKGROUND_FEEDBACK_NOTIFICATION: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_50",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+            },
             BACKGROUND_FEEDBACK_POSITIVE: {
                 category: "background",
                 [r.DARK]: {
@@ -687,6 +706,25 @@ let { Themes: r } = n(15202).VV,
                 },
                 [r.DARKER]: {
                     raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+            },
+            BADGE_NOTIFICATION_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_50",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_46",
                     opacity: 1,
                 },
             },
@@ -5254,6 +5292,25 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
+            ICON_FEEDBACK_NOTIFICATION: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_50",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+            },
             ICON_FEEDBACK_POSITIVE: {
                 category: "generic",
                 [r.DARK]: {
@@ -5480,6 +5537,25 @@ let { Themes: r } = n(15202).VV,
                 [r.DARKER]: {
                     raw: "TRANSPARENT",
                     opacity: 0,
+                },
+            },
+            ICON_VOICE_MUTED: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_50",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_46",
+                    opacity: 1,
                 },
             },
             INPUT_BACKGROUND_DEFAULT: {

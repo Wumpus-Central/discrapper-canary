@@ -72,7 +72,7 @@ function g() {
                 description: _.intl.string(_.t["hbH+9S"]),
                 status: _.t["7f+4Lg"],
                 Icon: l.Mgn,
-                color: s.Z.colors.STATUS_DANGER,
+                color: s.Z.colors.ICON_FEEDBACK_CRITICAL,
             },
             [u.Sn.SUSPENDED]: {
                 title: _.t.MExFkz,

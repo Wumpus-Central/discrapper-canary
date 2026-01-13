@@ -1,6 +1,6 @@
-n.d(t, { Z: () => D }), n(413496), n(433524), n(35282), n(539854), n(388685);
-var i = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => M }), n(413496), n(433524), n(35282), n(539854), n(388685);
+var r = n(54381),
+    i = n(473749),
     l = n(442837),
     a = n(704215),
     o = n(692547),
@@ -11,45 +11,45 @@ var i = n(54381),
     p = n(499254),
     f = n(827498),
     h = n(397698),
-    m = n(266454),
-    g = n(706140),
+    g = n(266454),
+    m = n(706140),
     b = n(243778),
     y = n(618857),
-    C = n(346479),
-    v = n(286934),
-    x = n(488131),
-    O = n(375954),
-    E = n(626135),
-    j = n(585483),
+    v = n(346479),
+    O = n(286934),
+    j = n(488131),
+    x = n(375954),
+    C = n(626135),
+    E = n(585483),
     S = n(403182),
     _ = n(127654),
-    P = n(752305),
-    I = n(951211),
+    I = n(752305),
+    P = n(951211),
     Z = n(981631),
-    T = n(921944),
-    N = n(489887),
+    N = n(921944),
+    T = n(489887),
     A = n(388032),
     w = n(688169);
-let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
-function R() {
-    let e = (0, l.e7)([O.Z], () => O.Z.hasCurrentUserSentMessageSinceAppStart()),
+let R = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
+function D() {
+    let e = (0, l.e7)([x.Z], () => x.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, g.cv)(t);
+    let [n] = (0, m.cv)(t);
     return (
-        r.useEffect(
+        i.useEffect(
             () => () => {
                 n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, m.Q3)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.L.TAKE_ACTION });
+                    (0, g.Q3)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: N.L.TAKE_ACTION });
             },
             [n],
         ),
-        (0, i.jsx)(b.ZP, {
+        (0, r.jsx)(b.ZP, {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
                 return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
-                    ? (0, i.jsx)(s.IGR, {
+                    ? (0, r.jsx)(s.IGR, {
                           text: A.intl.string(A.t.y2b7CA),
                           color: o.Z.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT.css,
                       })
@@ -58,87 +58,87 @@ function R() {
         })
     );
 }
-function D(e) {
+function M(e) {
     let {
             channel: t,
-            chatInputType: g,
-            options: b,
-            onFileUpload: O,
-            onClose: D,
-            onSelect: k,
-            draftType: L,
-            editorTextContent: U,
-            setValue: V,
-            openClips: H,
+            chatInputType: o,
+            options: m,
+            onFileUpload: b,
+            onClose: x,
+            onSelect: M,
+            draftType: k,
+            editorTextContent: L,
+            setValue: U,
+            openClips: G,
         } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: B } = (0, d.ZP)(),
-        G = (0, y.Dt)({ channel: t }),
-        W = (0, l.e7)([v.Z], () => v.Z.isInProgress());
+        { analyticsLocations: B, newestAnalyticsLocation: F } = (0, d.ZP)(),
+        H = (0, y.Dt)({ channel: t }),
+        V = (0, l.e7)([O.Z], () => O.Z.isInProgress());
     function z() {
-        (0, x.R6)(t, void 0, "Plus Button");
+        (0, j.R6)(t, void 0, "Plus Button");
     }
-    function q() {
-        E.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
+    function W() {
+        C.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, I.JM)("/"));
     }
     function K() {
-        H();
+        G();
     }
     function Y() {
-        (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
+        (0, g.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e("68784").then(n.bind(n, 611611));
                     return (n) => {
-                        var r, l;
-                        return (0, i.jsx)(
+                        var i, l;
+                        return (0, r.jsx)(
                             e,
-                            ((r = (function (e) {
+                            ((i = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
+                                        r = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
+                                        (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: i,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = i);
+                                                    : (e[t] = r);
                                         });
                                 }
                                 return e;
                             })({}, n)),
                             (l = l = { channel: t }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var i = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, i);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
                                       }
                                       return n;
                                   })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                   }),
-                            r),
+                            i),
                         );
                     };
                 },
-                { modalKey: N.$z },
+                { modalKey: T.$z },
             );
     }
-    function X() {
-        E.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    function q() {
+        C.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
@@ -152,104 +152,103 @@ function D(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: B,
+                analyticsLocation: F,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
-    function J() {
-        let e = U,
+    function X() {
+        let e = L,
             n = "txt",
-            i = "",
-            r = U.match(M);
-        null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, _.d)([(0, S.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, L),
-            j.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
-            "" !== i && j.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
+            r = "",
+            i = L.match(R);
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])),
+            (0, _.d)([(0, S.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            E.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
+            "" !== r && E.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
-        r.useEffect(() => {
-            E.default.track(Z.rMx.OPEN_POPOUT, {
+        i.useEffect(() => {
+            C.default.track(Z.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
-        (0, i.jsx)(s.v2r, {
-            onSelect: k,
+        (0, r.jsx)(s.v2r, {
+            onSelect: M,
             navId: "channel-attach",
-            onClose: D,
+            onClose: x,
             "aria-label": A.intl.string(A.t.Xm41aV),
             className: w.menu,
-            children: b.map(function (e) {
-                var n;
-                let r = (0, i.jsxs)("div", {
+            children: m.map(function (e) {
+                let n = (0, r.jsxs)("div", {
                     className: w.optionLabel,
                     children: [
-                        (0, i.jsx)(e.icon, {
+                        (0, r.jsx)(e.icon, {
                             className: w.optionIcon,
                             color: "currentColor",
                         }),
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                             className: w.optionName,
                             children: e.display,
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
-                            (0, i.jsx)(s.mAB, {
+                            (0, r.jsx)(s.mAB, {
                                 className: w.badge,
-                                color: null != (n = e.badgeColor) ? n : o.Z.colors.STATUS_DANGER.css,
+                                color: e.badgeColor,
                                 count: e.badgeVal,
                             }),
                     ],
                 });
                 switch (e.type) {
-                    case I.r.UPLOAD_A_FILE:
-                        return (0, i.jsx)(
+                    case P.r.UPLOAD_A_FILE:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "upload-file",
-                                label: r,
-                                action: O,
+                                label: n,
+                                action: b,
                             },
                             "upload-file",
                         );
-                    case I.r.UPLOAD_TEXT_AS_FILE:
-                        if ("" === U) return null;
-                        return (0, i.jsx)(
+                    case P.r.UPLOAD_TEXT_AS_FILE:
+                        if ("" === L) return null;
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "upload-text-as-file",
-                                label: r,
-                                action: J,
+                                label: n,
+                                action: X,
                             },
                             "upload-text-as-file",
                         );
-                    case I.r.CLIPS:
-                        return (0, i.jsx)(
+                    case P.r.CLIPS:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "clips",
-                                label: r,
+                                label: n,
                                 action: K,
                             },
                             "clips",
                         );
-                    case I.r.POLL:
-                        return (0, i.jsx)(
+                    case P.r.POLL:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "poll",
-                                label: r,
+                                label: n,
                                 action: Y,
                             },
                             "poll",
                         );
-                    case I.r.INVITE_TO_PLAY_GAME:
-                        return (0, i.jsx)(
+                    case P.r.INVITE_TO_PLAY_GAME:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "play",
-                                label: r,
+                                label: n,
                                 action: () => {
                                     var n;
                                     return (
@@ -258,19 +257,19 @@ function D(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
                             },
                             "play",
                         );
-                    case I.r.INVITE_TO_LISTEN:
-                        return (0, i.jsx)(
+                    case P.r.INVITE_TO_LISTEN:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "listen",
-                                label: r,
+                                label: n,
                                 action: () => {
                                     var n;
                                     return (
@@ -279,19 +278,19 @@ function D(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
                             },
                             "listen",
                         );
-                    case I.r.INVITE_TO_WATCH:
-                        return (0, i.jsx)(
+                    case P.r.INVITE_TO_WATCH:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "watch",
-                                label: r,
+                                label: n,
                                 action: () => {
                                     var n;
                                     return (
@@ -300,95 +299,95 @@ function D(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
                             },
                             "watch",
                         );
-                    case I.r.CREATE_THREAD:
-                        return (0, i.jsx)(
+                    case P.r.CREATE_THREAD:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "THREAD",
-                                label: r,
+                                label: n,
                                 action: z,
                             },
                             "THREAD",
                         );
-                    case I.r.SLASH_COMMAND:
-                        return (0, i.jsx)(
+                    case P.r.SLASH_COMMAND:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "SLASH_COMMAND",
-                                label: r,
-                                action: q,
+                                label: n,
+                                action: W,
                             },
                             "SLASH_COMMAND",
                         );
-                    case I.r.APP_LAUNCHER:
-                        return (0, i.jsx)(
+                    case P.r.APP_LAUNCHER:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "APP_LAUNCHER",
-                                label: r,
-                                action: () => (0, p._)(f._b.TEXT, g, void 0, t.id),
+                                label: n,
+                                action: () => (0, p._)(f._b.TEXT, o, void 0, t.id),
                             },
                             "APP_LAUNCHER",
                         );
-                    case I.r.ACTIVITY:
-                        return (0, i.jsx)(
+                    case P.r.ACTIVITY:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "activity",
-                                label: r,
-                                action: X,
-                                hint: (0, i.jsx)(R, {}),
+                                label: n,
+                                action: q,
+                                hint: (0, r.jsx)(D, {}),
                             },
                             "activity",
                         );
-                    case I.r.SCHEDULED_MESSAGE:
-                        return (0, i.jsx)(
+                    case P.r.SCHEDULED_MESSAGE:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "scheduled_message",
-                                label: r,
+                                label: n,
                                 action: () => (0, y.$f)({ channel: t }),
-                                children: G,
+                                children: H,
                             },
                             "scheduled_message",
                         );
-                    case I.r.SUMMARIZE_THREAD:
-                        return (0, i.jsx)(
+                    case P.r.SUMMARIZE_THREAD:
+                        return (0, r.jsx)(
                             s.sNh,
                             {
                                 id: "summarize_thread",
-                                label: r,
-                                action: () => C.Z.summarizeThread(t),
-                                icon: W ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: W,
-                                children: W
+                                label: n,
+                                action: () => v.Z.summarizeThread(t),
+                                icon: V ? (0, r.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: V,
+                                children: V
                                     ? null
-                                    : (0, i.jsxs)(i.Fragment, {
+                                    : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, i.jsx)(
+                                              (0, r.jsx)(
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: A.intl.string(A.t.eCzSdd),
                                                       iconLeft: s.BFJ,
-                                                      action: () => C.Z.summarizeThread(t, !1),
+                                                      action: () => v.Z.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
-                                              (0, i.jsx)(
+                                              (0, r.jsx)(
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: A.intl.string(A.t["HOe+Hq"]),
                                                       iconLeft: s.tBG,
-                                                      action: () => C.Z.summarizeThread(t),
+                                                      action: () => v.Z.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),

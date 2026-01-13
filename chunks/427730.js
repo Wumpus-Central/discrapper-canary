@@ -86,7 +86,7 @@ let u = () => {
             (0, r.jsx)(c.dv, {}),
             (0, r.jsx)(s.Text, {
                 variant: "text-lg/semibold",
-                color: "status-danger",
+                color: "text-feedback-critical",
                 children: "To use overrides, the variant must be set to UNSET",
             }),
             (0, r.jsx)(s.Text, {

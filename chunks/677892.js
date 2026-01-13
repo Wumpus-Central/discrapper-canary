@@ -1,7 +1,7 @@
 n.d(t, {
     $$: () => v,
-    P_: () => y,
-    ap: () => C,
+    P_: () => C,
+    ap: () => y,
     ih: () => N,
     ku: () => O,
 }),
@@ -70,7 +70,7 @@ function x(e) {
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/semibold",
-                        color: "status-danger",
+                        color: "text-feedback-critical",
                         className: h.statusText,
                         children: p.intl.string(p.t.EkokLy),
                     }),
@@ -96,7 +96,7 @@ function x(e) {
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-xs/normal",
-                                color: s && "required" === o ? "status-danger" : "text-default",
+                                color: s && "required" === o ? "text-feedback-critical" : "text-default",
                                 children: i,
                             }),
                         ],
@@ -150,9 +150,9 @@ function O(e) {
         [, f] = (0, o.VF)(t, g),
         v = f.length,
         O = j(t),
-        C = (0, m.O4)(t),
-        y = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        N = y
+        y = (0, m.O4)(t),
+        C = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
+        N = C
             ? p.intl.formatToPlainString(p.t.nHwnLK, {
                   numDefaultChannels: v,
                   numFromQuestions: u - v,
@@ -161,19 +161,19 @@ function O(e) {
               ? p.intl.formatToPlainString(p.t.HxEwSv, { numDefaultChannels: v })
               : p.intl.formatToPlainString(p.t.vPwmA0, { numChattableChannels: b.X });
     return (0, r.jsx)(x, {
-        title: y ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
+        title: C ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
         description: N,
         icon: (0, r.jsx)(a.VL1, {
             size: "md",
             color: "currentColor",
             className: h.channelIcon,
         }),
-        hasStarted: v > 0 || y,
-        status: O || C ? (c ? "none" : "good") : "required",
+        hasStarted: v > 0 || C,
+        status: O || y ? (c ? "none" : "good") : "required",
         onEdit: n,
     });
 }
-function C(e) {
+function y(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: i } = e,
         c = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
         d = (0, l.Wu)([s.Z], () => s.Z.getOnboardingPrompts(t)),
@@ -184,9 +184,9 @@ function C(e) {
         j = (m / b) * 100,
         v = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         O = u > 0,
-        C = "none";
+        y = "none";
     return (
-        O && (j >= 85 && !i ? (C = "good") : j < 85 && (C = "warning")),
+        O && (j >= 85 && !i ? (y = "good") : j < 85 && (y = "warning")),
         (0, r.jsx)(x, {
             title: v ? p.intl.string(p.t.AGjtFv) : p.intl.string(p.t.dqCzoT),
             description: p.intl.format(p.t.iuNisr, {
@@ -208,12 +208,12 @@ function C(e) {
                 className: h.channelIcon,
             }),
             hasStarted: O,
-            status: C,
+            status: y,
             onEdit: n,
         })
     );
 }
-function y(e) {
+function C(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         d = (0, l.e7)([g.Z], () => g.Z.getSettings()),
         f = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
@@ -225,13 +225,13 @@ function y(e) {
         v = !(0, c.av)(d),
         O = "none";
     v && (m && !o ? (O = "good") : m || (O = "required"));
-    let C = p.intl.string(p.t.GMOwOD);
-    m ? v || (C = p.intl.string(p.t.wHOoyE)) : (C = p.intl.string(p.t.wXFbgZ));
-    let y = null;
+    let y = p.intl.string(p.t.GMOwOD);
+    m ? v || (y = p.intl.string(p.t.wHOoyE)) : (y = p.intl.string(p.t.wXFbgZ));
+    let C = null;
     return (
         v &&
             f &&
-            (y = (0, r.jsx)("div", {
+            (C = (0, r.jsx)("div", {
                 className: h.inlineSwitch,
                 children: (0, r.jsx)(a.rsf, {
                     checked: b,
@@ -241,7 +241,7 @@ function y(e) {
             })),
         (0, r.jsx)(x, {
             title: p.intl.string(p.t.mRHqsj),
-            description: C,
+            description: y,
             icon: (0, r.jsx)(a.Vy8, {
                 size: "md",
                 color: "currentColor",
@@ -250,7 +250,7 @@ function y(e) {
             hasStarted: v,
             status: O,
             onEdit: n,
-            extra: y,
+            extra: C,
         })
     );
 }

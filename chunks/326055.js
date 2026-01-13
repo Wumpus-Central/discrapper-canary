@@ -134,7 +134,7 @@ function v(e) {
                                             null != O &&
                                                 (0, r.jsx)(l.Text, {
                                                     className: h.error,
-                                                    color: "status-danger",
+                                                    color: "text-feedback-critical",
                                                     variant: "text-sm/semibold",
                                                     children: O,
                                                 }),

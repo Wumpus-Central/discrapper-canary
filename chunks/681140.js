@@ -80,7 +80,7 @@ function g(e) {
                   })
                 : (0, a.jsx)(i.Mgn, {
                       size: "sm",
-                      color: i.TVs.colors.STATUS_DANGER,
+                      color: i.TVs.colors.ICON_FEEDBACK_CRITICAL,
                   });
         }, []);
     return (0, a.jsxs)("div", {

@@ -22,7 +22,7 @@ function d(e) {
             return (0, r.jsx)(s.Uz9, {
                 size: "md",
                 className: u.icon,
-                color: s.TVs.colors.STATUS_DANGER.css,
+                color: s.TVs.colors.ICON_FEEDBACK_CRITICAL.css,
             });
         case c.pC.CLIP:
             return (0, r.jsx)(s.AlX, {
