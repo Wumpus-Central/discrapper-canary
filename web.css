@@ -73208,13 +73208,14 @@ screen and (max-width:485px) {
     box-sizing: border-box;
     height: 52px;
     margin-inline: 16px 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.b7f4b43fe1b6e285-name,
-.b7f4b43fe1b6e285-reactor {
-    overflow: hidden;
-    text-overflow: ellipsis
+.b7f4b43fe1b6e285-reactorInfo {
+    margin-inline: 10px;
+    min-width: 0
 }
 
 .b7f4b43fe1b6e285-name {
@@ -73225,25 +73226,25 @@ screen and (max-width:485px) {
     user-select: text
 }
 
-.b7f4b43fe1b6e285-ellipsized {
+.b7f4b43fe1b6e285-ellipsized,
+.b7f4b43fe1b6e285-name {
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+.b7f4b43fe1b6e285-ellipsized {
     white-space: nowrap
 }
 
-.b7f4b43fe1b6e285-nickname {
-    line-height: 17px
-}
-
 .b7f4b43fe1b6e285-username {
-    font-weight: var(--font-weight-medium)
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    line-height: 14px
 }
 
 .b7f4b43fe1b6e285-tagFaded {
     flex-shrink: 10;
-    -webkit-padding-start: 6px;
-    opacity: .6;
-    padding-inline-start: 6px
+    opacity: .6
 }
 
 .b7f4b43fe1b6e285-discriminator {
