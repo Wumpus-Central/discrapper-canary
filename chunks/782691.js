@@ -382,6 +382,7 @@ let C = {
                                                               JSON.stringify(
                                                                   y(j({}, t), {
                                                                       name: D,
+                                                                      readonly: !1,
                                                                       config: y(j({}, t.config), {
                                                                           effects: I,
                                                                           stillFrames: R,
