@@ -9,4 +9,5 @@ e.exports = {
     balanceWidgetPillContainer: "_5ed150ae1491f8f7-balanceWidgetPillContainer",
     tabularNums: "_5ed150ae1491f8f7-tabularNums",
     headerWithSpacing: "_5ed150ae1491f8f7-headerWithSpacing",
+    orderSummaryContainer: "_5ed150ae1491f8f7-orderSummaryContainer",
 };

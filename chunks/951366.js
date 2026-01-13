@@ -1,6 +1,6 @@
 n.d(t, {
-    $L: () => g,
-    Oz: () => _,
+    $L: () => E,
+    Oz: () => m,
 });
 var r = n(481060),
     i = n(901297),
@@ -13,33 +13,34 @@ var r = n(481060),
     d = n(906731),
     f = n(915409),
     p = n(74432),
-    _ = (function (e) {
+    _ = n(277939),
+    m = (function (e) {
         return (e.PAYMENTS = "payments"), (e.VIRTUAL_CURRENCY = "virtual-currency"), (e.NITRO = "nitro"), e;
     })({});
-let m = ["Revenue Storybook", "Revenue Playground"],
-    h = {
+let h = ["Revenue Storybook", "Revenue Playground"],
+    g = {
         id: "payments",
         name: "Payments",
-        groups: [o.C, p.iZ, l.R, s.pl, f.W],
-        tags: m,
+        groups: [o.C, _.U, p.iZ, l.R, s.pl, f.W],
+        tags: h,
         IconComponent: r.uMN,
     },
-    g = {
+    E = {
         playgroundBaseUrl: "revenue",
         collections: [
-            h,
+            g,
             {
                 id: "virtual-currency",
                 name: "Virtual Currency",
                 groups: [a.Oi, i.vP, u.X, d.R],
-                tags: m,
+                tags: h,
                 IconComponent: r.aQr,
             },
             {
                 id: "nitro",
                 name: "Nitro",
                 groups: [c.De],
-                tags: m,
+                tags: h,
                 IconComponent: r.SrA,
             },
         ],
