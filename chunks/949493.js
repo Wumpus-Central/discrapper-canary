@@ -66,7 +66,7 @@ function D() {
         t = [
             {
                 title: A.intl.string(A.t["/7xJCF"]),
-                component: () => (0, r.jsx)(w, {}),
+                component: w,
                 setting: I.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
             {

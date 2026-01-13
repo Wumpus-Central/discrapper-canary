@@ -105,7 +105,7 @@ function y(e) {
             }),
             [P, C],
         ),
-        N = () => k(g),
+        N = o.useMemo(() => () => k(g), [k, g]),
         Z = null != x ? P.get(x) : void 0;
     return (0, r.jsx)(u.j.Provider, {
         value: E,

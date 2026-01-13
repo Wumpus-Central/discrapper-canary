@@ -17,13 +17,13 @@ function m() {
         t = [
             {
                 title: p.intl.string(p.t.GYpoAq),
-                component: () => (0, r.jsx)(s.P, {}),
+                component: s.P,
                 orientation: "vertical",
                 setting: d.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
             {
                 title: p.intl.string(p.t["16/3Bi"]),
-                component: () => (0, r.jsx)(l.I, {}),
+                component: l.I,
                 orientation: "vertical",
                 setting: d.s6.GORE_MEDIA_REDACTION,
             },
