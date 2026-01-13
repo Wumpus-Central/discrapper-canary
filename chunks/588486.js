@@ -19,6 +19,7 @@ var r = n(230367),
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.USER = 1)] = "USER"),
             (e[(e.INSTALLATION = 2)] = "INSTALLATION"),
+            (e[(e.GUILD = 3)] = "GUILD"),
             e
         );
     })({}),
