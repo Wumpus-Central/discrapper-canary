@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(475013),
     Y = n(17699),
     q = n(213956),
-    X = n(450377),
-    J = n(566084),
+    J = n(450377),
+    X = n(566084),
     Q = n(431301),
     $ = n(802005),
     ee = n(675377),
@@ -163,7 +163,6 @@ let ey = {
                         stores: [P.Z],
                         element: er.Z,
                     },
-                    newIndicatorDismissibleContentTypes: [l.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE],
                 };
             case ep.pNK.ENGAGEMENT:
                 return {
@@ -185,7 +184,7 @@ let ey = {
                     ariaLabel: ex.intl.string(ex.t.UKgg5N),
                     element: Q.I,
                     notice: {
-                        stores: [P.Z, J.Z],
+                        stores: [P.Z, X.Z],
                         element: $.C,
                     },
                 };
@@ -306,7 +305,7 @@ let ey = {
                     section: ep.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: ex.intl.string(ex.t["suhY+Y"]),
-                    element: X.ZP,
+                    element: J.ZP,
                     predicate: () => t.canManageGuild && !t.guild.features.has(ep.GuildFeatures.COMMUNITY),
                 };
             case ep.pNK.GUILD_AUTOMOD:

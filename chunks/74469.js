@@ -1,35 +1,31 @@
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
-    o = n(704215),
-    s = n(199849),
-    l = n(481060),
-    c = n(313201),
-    u = n(243778),
-    d = n(305347),
-    f = n(731722),
-    p = n(172751),
-    _ = n(993413),
-    m = n(996073),
-    h = n(594174),
-    g = n(840720),
-    E = n(921944),
-    b = n(131085),
-    y = n(526761),
-    O = n(388032),
-    v = n(149782);
-let S = (0, c.hQ)(),
-    I = i.memo(function (e) {
-        let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: c } = e,
-            [I, T] = (0, u.US)([o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            C = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            A = (0, a.e7)([h.default], () => {
+    o = n(199849),
+    s = n(481060),
+    l = n(313201),
+    c = n(305347),
+    u = n(731722),
+    d = n(172751),
+    f = n(993413),
+    p = n(996073),
+    _ = n(594174),
+    m = n(840720),
+    h = n(131085),
+    g = n(526761),
+    E = n(388032),
+    b = n(149782);
+let y = (0, l.hQ)(),
+    O = i.memo(function (e) {
+        let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: l } = e,
+            O = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            v = (0, a.e7)([_.default], () => {
                 var e;
-                return (0, f.Pb)(null == (e = h.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
+                return (0, u.Pb)(null == (e = _.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
-            N = void 0 !== n ? n : A,
-            P = i.useMemo(
+            S = void 0 !== n ? n : v,
+            I = i.useMemo(
                 () =>
                     t.reduce((e, t) => {
                         var n;
@@ -44,16 +40,16 @@ let S = (0, c.hQ)(),
                     }, []),
                 [t],
             ),
-            R = i.useCallback(
+            T = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
-                    let a = C.get(e.value);
+                    let a = O.get(e.value);
                     if (null == a) return null;
                     let o = null == (t = a.profile) ? void 0 : t.tag;
                     return null == o
                         ? null
-                        : (0, r.jsx)(g.Z, {
+                        : (0, r.jsx)(m.Z, {
                               guildTag: o,
                               guildBadge: null != (i = null == (n = a.profile) ? void 0 : n.badge) ? i : void 0,
                               guildId: a.id,
@@ -62,16 +58,16 @@ let S = (0, c.hQ)(),
                               guildIconSize: 32,
                           });
                 },
-                [C],
+                [O],
             ),
-            w = i.useCallback(
+            C = i.useCallback(
                 (e) => {
                     var t;
                     if (null == e) return null;
-                    let n = C.get(e.value);
+                    let n = O.get(e.value);
                     return null == n || null == (null == (t = n.profile) ? void 0 : t.tag)
                         ? null
-                        : (0, r.jsx)(d.Ft, {
+                        : (0, r.jsx)(c.Ft, {
                               guildId: n.id,
                               guildName: n.name,
                               guildIcon: n.icon,
@@ -79,77 +75,71 @@ let S = (0, c.hQ)(),
                               animate: !1,
                           });
                 },
-                [C],
+                [O],
             ),
-            D = i.useCallback(
+            A = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
-                    let a = C.get(e.value);
+                    let a = O.get(e.value);
                     if (null == a) return null;
                     let o = null == (t = a.profile) ? void 0 : t.tag;
                     return null == o
                         ? null
-                        : (0, r.jsx)(p.m0, {
+                        : (0, r.jsx)(d.m0, {
                               guildId: a.id,
                               guildTag: o,
                               guildBadge: null != (i = null == (n = a.profile) ? void 0 : n.badge) ? i : void 0,
-                              badgeSize: b.Gg.SIZE_16,
+                              badgeSize: h.Gg.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
                 },
-                [C],
+                [O],
             ),
-            x = i.useCallback(
+            N = i.useCallback(
                 (e) => {
                     let t = e[0];
-                    return null == t ? null : (0, r.jsx)(r.Fragment, { children: R(t) });
+                    return null == t ? null : (0, r.jsx)(r.Fragment, { children: T(t) });
                 },
-                [R],
+                [T],
             ),
-            L = i.useCallback(
+            P = i.useCallback(
                 (e) => {
-                    T(E.L.TAKE_ACTION), null == c || c(e);
+                    null == l || l(e);
                 },
-                [T, c],
+                [l],
             ),
-            j = i.useCallback((e) => e === N, [N]),
-            M = i.useCallback((e) => e, []),
-            k = i.useCallback(() => {
-                T(E.L.TAKE_ACTION), null == c || c(null);
-            }, [T, c]),
-            U = i.useRef(null);
+            R = i.useCallback((e) => e === S, [S]),
+            w = i.useCallback((e) => e, []),
+            D = i.useCallback(() => {
+                null == l || l(null);
+            }, [l]),
+            x = i.useRef(null);
         return (
-            (0, m.Z)(U, y.Y_.GUILD_TAG),
-            (0, r.jsxs)(_.Z, {
-                title: O.intl.string(O.t.Pdd1nd),
-                titleId: S,
-                ref: U,
-                titleIcon:
-                    I === o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
-                    (0, r.jsx)(l.IGR, {
-                        text: O.intl.string(O.t.y2b7CA),
-                        className: v.newBadge,
-                    }),
+            (0, p.Z)(x, g.Y_.GUILD_TAG),
+            (0, r.jsxs)(f.Z, {
+                title: E.intl.string(E.t.Pdd1nd),
+                titleId: y,
+                ref: x,
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        className: v.subtitle,
+                    (0, r.jsx)(s.Text, {
+                        className: b.subtitle,
                         variant: "text-sm/normal",
-                        children: O.intl.string(O.t.mlZ6Jx),
+                        children: E.intl.string(E.t.mlZ6Jx),
                     }),
-                    (0, r.jsx)(s.B6, {
-                        className: v.select,
-                        optionClassName: v.selectPopout,
-                        isSelected: j,
-                        options: P,
-                        select: L,
-                        renderLeading: w,
-                        renderTrailing: D,
-                        renderOptionValue: x,
-                        serialize: M,
-                        clear: k,
-                        clearable: null != N,
+                    (0, r.jsx)(o.B6, {
+                        className: b.select,
+                        optionClassName: b.selectPopout,
+                        isSelected: R,
+                        options: I,
+                        select: P,
+                        renderLeading: C,
+                        renderTrailing: A,
+                        renderOptionValue: N,
+                        serialize: w,
+                        clear: D,
+                        clearable: null != S,
                         maxVisibleItems: 8,
                     }),
                 ],
