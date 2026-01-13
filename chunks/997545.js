@@ -839,7 +839,8 @@ class x extends p.Z {
         this.localVideoSinkWants = e;
     }
     startSamplesLocalPlayback(e, t, n, r) {
-        if (t.numberOfChannels > 2) return void r(1, "Too many channels");
+        if (t.numberOfChannels > 2) return void r(2, "Too many channels");
+        if (null == this.conn.startSamplesLocalPlayback) return void r(3, "Not supported");
         for (var i = [], a = 0; a < t.numberOfChannels; a++) {
             var o = t.getChannelData(a);
             i.push(o);
@@ -858,7 +859,8 @@ class x extends p.Z {
         this.conn.stopAllSamplesLocalPlayback();
     }
     stopSamplesLocalPlayback(e) {
-        this.conn.stopSamplesLocalPlayback(e);
+        var t, n;
+        null == (t = (n = this.conn).stopSamplesLocalPlayback) || t.call(n, e);
     }
     setBandwidthEstimationExperiments(e) {
         this.conn.setTransportOptions({ bandwidthEstimationExperiments: e });
