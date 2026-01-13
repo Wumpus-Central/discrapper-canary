@@ -44,7 +44,7 @@ function f() {
         t = (0, c.ZP)((e) => e.candidates),
         n = (0, c.ZP)((e) => e.lastWinnerTime),
         r = 0 !== n ? i()(n).fromNow() : "n/a",
-        f = (0, c.ZP)((e) => e.recentlyShown[0]),
+        f = (0, c.ZP)((e) => (0 === e.lastWinnerTime ? null : e.recentlyShown[0])),
         x = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
