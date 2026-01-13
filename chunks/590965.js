@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => Z }), n(388685), n(539854);
+n.d(t, { Z: () => Z }), n(997841), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -134,8 +134,9 @@ let Z = new T(o.Z, {
                     channel: s,
                     guild: d,
                     is_nickname_changeable: a,
+                    flags: f,
                 } = e,
-                f = {
+                O = {
                     code: r,
                     state: i,
                     approximate_member_count: t,
@@ -145,13 +146,14 @@ let Z = new T(o.Z, {
                     target_application: u,
                     type: c,
                     is_nickname_changeable: a,
+                    flags: f,
                 };
             return (
-                null != s && (f.channel = A({}, s)),
-                null != d && (f.guild = (0, h.Qs)(d)),
-                null != e.inviter && (f.inviter = A({}, e.inviter)),
-                null != e.roles && (f.roles = e.roles),
-                f
+                null != s && (O.channel = A({}, s)),
+                null != d && (O.guild = (0, h.Qs)(d)),
+                null != e.inviter && (O.inviter = A({}, e.inviter)),
+                null != e.roles && (O.roles = e.roles),
+                O
             );
         })(t);
         C.push([r, e.resolve]),
