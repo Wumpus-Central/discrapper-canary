@@ -3,9 +3,10 @@ n.d(t, {
     EM: () => T,
     Tt: () => C,
     cv: () => v,
-    sx: () => N,
+    sx: () => P,
     xT: () => A,
-    zH: () => P,
+    z4: () => N,
+    zH: () => R,
 });
 var i = n(473749),
     a = n(442837),
@@ -142,7 +143,7 @@ function C(e, t, n) {
         s = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
         l = null;
     return (
-        null != e && (l = R(!(0, g.Bh)(e), r, o, t) ? e : null),
+        null != e && (l = w(!(0, g.Bh)(e), r, o, t) ? e : null),
         [
             O(l, s, n),
             i.useCallback(
@@ -187,6 +188,33 @@ function A(e, t, n) {
     ];
 }
 function N(e, t, n, r) {
+    let o = (0, a.e7)([l.Z], () => l.Z.getGuildDismissedContentState(n)),
+        s = null != e ? (null == o ? null : null == o ? void 0 : o[e]) : null,
+        c = null == s ? void 0 : s.lastDismissedObjectId,
+        u = null;
+    if (null != e) {
+        let n = !(0, g.Bh)(e);
+        l.Z.hasLoaded(b.yP.PRELOADED_USER_SETTINGS)
+            ? (u = n && (null == c || 1 === d.default.compare(t, c)) ? e : null)
+            : null != c && (u = n && 1 === d.default.compare(t, c) ? e : null);
+    }
+    return [
+        O(u, n, r),
+        i.useCallback(
+            (e, i) => {
+                null != u &&
+                    (0, m.I4)(u, t, n, {
+                        dismissAction: e,
+                        groupName: r,
+                        guildId: n,
+                        forceTrack: i,
+                    });
+            },
+            [u, r, n, t],
+        ),
+    ];
+}
+function P(e, t, n, r) {
     let o = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
         s = null;
     return (
@@ -208,7 +236,7 @@ function N(e, t, n, r) {
         ]
     );
 }
-function P(e, t, n) {
+function R(e, t, n) {
     let r = (0, a.e7)([l.Z], () => l.Z.getGuildDismissedContentState(t)),
         o = (0, g.ig)(e),
         s = null;
@@ -233,7 +261,7 @@ function P(e, t, n) {
         ]
     );
 }
-function R(e, t, n, r) {
+function w(e, t, n, r) {
     let i = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         a = void 0 === i ? 0 : i + r.cooldownDurationMs,
         o = Date.now(),

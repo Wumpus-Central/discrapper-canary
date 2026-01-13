@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,61 +8,58 @@ var r = n(54381),
     c = n(692547),
     u = n(952265),
     d = n(481060),
-    f = n(239091),
-    h = n(243778),
-    p = n(703656),
+    p = n(239091),
+    f = n(243778),
+    h = n(703656),
     g = n(164670),
-    b = n(411935),
-    m = n(210218),
+    m = n(411935),
+    b = n(210218),
     y = n(705338),
-    O = n(445606),
-    v = n(633667),
+    v = n(445606),
+    O = n(633667),
     j = n(819640),
-    C = n(73346),
-    x = n(591759),
+    x = n(73346),
+    C = n(591759),
     E = n(434479),
     S = n(981631),
-    I = n(921944),
-    _ = n(388032),
+    _ = n(921944),
+    I = n(388032),
     P = n(323453);
-let N = i.memo(function (e) {
+let Z = i.memo(function (e) {
     var t;
-    let { guild: l, selected: N } = e,
-        Z = i.useRef(null),
-        w = i.useRef(null),
-        T = (0, u.useHasAnyModalOpen)(),
-        A = (0, o.e7)([j.Z], () => j.Z.hasLayers());
+    let { guild: l, selected: Z } = e,
+        N = i.useRef(null),
+        T = i.useRef(null),
+        A = (0, u.useHasAnyModalOpen)(),
+        w = (0, o.e7)([j.Z], () => j.Z.hasLayers());
     i.useEffect(() => {
-        l.id === (0, g.ac)() && (0, b.Xp)(l.id);
+        (0, m.Xp)(l.id);
     }, [l.id]);
-    let R = (0, o.e7)([m.Z], () => m.Z.getAnnouncement(l.id)),
-        [D, M] = (0, h.TE)(
-            (null == R ? void 0 : R.id) != null ? s.z.GAME_SHOP_NEW_BADGE : null,
-            null != (t = null == R ? void 0 : R.id) ? t : "",
-        ),
-        L = D === s.z.GAME_SHOP_NEW_BADGE;
+    let R = (0, o.e7)([b.Z], () => b.Z.getAnnouncement(l.id)),
+        [D, M] = (0, f.ar)(s.z.GAME_SHOP_NEW_BADGE, l.id, null != (t = null == R ? void 0 : R.id) ? t : ""),
+        k = D === s.z.GAME_SHOP_NEW_BADGE;
     i.useEffect(() => {
-        N && L && M(I.L.INDIRECT_ACTION);
-    }, [M, N, L]);
-    let k = i.useCallback(() => {
+        Z && k && M(_.L.INDIRECT_ACTION);
+    }, [M, Z, k]);
+    let L = i.useCallback(() => {
             var e, t;
-            M(I.L.TAKE_ACTION);
-            let n = null != (t = null == (e = m.Z.getStorefrontState(l.id)) ? void 0 : e.activePage) ? t : 0;
-            (0, p.uL)(S.Z5c.CHANNELS_GAME_SHOP(l.id, n));
+            M(_.L.TAKE_ACTION);
+            let n = null != (t = null == (e = b.Z.getStorefrontState(l.id)) ? void 0 : e.activePage) ? t : 0;
+            (0, h.uL)(S.Z5c.CHANNELS_GAME_SHOP(l.id, n));
         }, [l.id, M]),
-        G = i.useCallback(() => {
+        U = i.useCallback(() => {
             (0, y.eagerNavigateToSocialLayerStorefront)({
                 guildId: l.id,
-                forceFetch: L,
+                forceFetch: k,
             });
-        }, [l.id, L]),
-        U = i.useCallback(() => {
-            M(I.L.USER_DISMISS);
+        }, [l.id, k]),
+        G = i.useCallback(() => {
+            M(_.L.USER_DISMISS);
         }, [M]),
         B = i.useCallback(
             (e) => {
                 null != l &&
-                    (0, f.jW)(e, async () => {
+                    (0, p.jW)(e, async () => {
                         let { default: e } = await n.e("73848").then(n.bind(n, 98409));
                         return (t) => {
                             var n, i;
@@ -115,13 +112,13 @@ let N = i.memo(function (e) {
         ),
         F = i.useCallback(() => {
             var e;
-            null == (e = Z.current) || e.onMouseEnter(null, 500);
-        }, [Z]),
-        V = i.useCallback(
+            null == (e = N.current) || e.onMouseEnter(null, 500);
+        }, [N]),
+        H = i.useCallback(
             (e, t, n, i) =>
                 (0, r.jsx)(E.m, {
                     innerClassName: e,
-                    ref: w,
+                    ref: T,
                     id: "game-shop-".concat(l.id),
                     renderIcon: (e) =>
                         (0, r.jsx)(d.EOn, {
@@ -136,34 +133,34 @@ let N = i.memo(function (e) {
                         className: a()(P.name, t),
                         children:
                             (null == l ? void 0 : l.id) === (0, g.ac)()
-                                ? _.intl.string(_.t.xFQAPs)
-                                : _.intl.string(_.t.vyaWs7),
+                                ? I.intl.string(I.t.xFQAPs)
+                                : I.intl.string(I.t.vyaWs7),
                     }),
-                    selected: N,
-                    onMouseDown: G,
-                    onClick: k,
+                    selected: Z,
+                    onMouseDown: U,
+                    onClick: L,
                     onContextMenu: B,
                     trailing: (0, r.jsxs)(r.Fragment, {
                         children: [
-                            L &&
+                            k &&
                                 (0, r.jsx)(d.IGR, {
-                                    text: _.intl.string(_.t.y2b7CA),
+                                    text: I.intl.string(I.t.y2b7CA),
                                     color: c.Z.colors.BACKGROUND_BRAND.css,
                                 }),
                             i,
                         ],
                     }),
                 }),
-            [l.id, N, G, k, B, L],
+            [l.id, Z, U, L, B, k],
         ),
-        H = i.useMemo(() => {
+        V = i.useMemo(() => {
             let e =
                     null != R && null != R.assetId
-                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.assetId, 128, "webp"))
+                        ? C.Z.toURLSafe((0, x._W)(R.applicationId, R.assetId, 128, "webp"))
                         : void 0,
                 t =
                     null != R && null != R.backgroundImageAssetId
-                        ? x.Z.toURLSafe((0, C._W)(R.applicationId, R.backgroundImageAssetId, 128, "webp"))
+                        ? C.Z.toURLSafe((0, x._W)(R.applicationId, R.backgroundImageAssetId, 128, "webp"))
                         : void 0;
             if (null != e)
                 return {
@@ -173,21 +170,21 @@ let N = i.memo(function (e) {
         }, [R]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(v.Z, {
-                ref: Z,
-                children: V,
+            (0, r.jsx)(O.Z, {
+                ref: N,
+                children: H,
             }),
-            T || A || (null == l ? void 0 : l.id) !== (0, g.ac)() || !L || null == R
+            A || w || !k || null == R
                 ? null
-                : (0, r.jsx)(O.Z, {
-                      onActionClick: k,
-                      onActionMouseDown: G,
+                : (0, r.jsx)(v.Z, {
+                      onActionClick: L,
+                      onActionMouseDown: U,
                       onRender: F,
-                      onRequestClose: U,
-                      targetElementRef: w,
-                      skuImageDetails: H,
-                      title: _.intl.string(_.t["7PvvS9"]),
-                      body: _.intl.formatToPlainString(_.t["9J4h1a"], { applicationName: R.applicationName }),
+                      onRequestClose: G,
+                      targetElementRef: T,
+                      skuImageDetails: V,
+                      title: I.intl.string(I.t["7PvvS9"]),
+                      body: I.intl.formatToPlainString(I.t["9J4h1a"], { applicationName: R.applicationName }),
                   }),
         ],
     });
