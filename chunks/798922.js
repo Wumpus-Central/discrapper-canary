@@ -1,47 +1,55 @@
-n.d(e, { F: () => O });
-var i = n(657707),
-    l = n(704215),
-    s = n(43015),
-    u = n(509613),
-    r = n(970013),
-    a = n(313789),
-    o = n(526665),
-    T = n(36192),
-    S = n(830031),
-    c = n(211839),
-    E = n(572161),
+n.d(e, { F: () => A });
+var i = n(473749),
+    l = n(657707),
+    s = n(704215),
+    u = n(43015),
+    r = n(509613),
+    a = n(970013),
+    o = n(313789),
+    T = n(526665),
+    S = n(36192),
+    c = n(830031),
+    E = n(211839),
     d = n(726985),
     _ = n(388032);
-let g = (0, u.k4)(a.n.SESSIONS_DESCRIPTION_CATEGORY, { buildLayout: () => [E.Z] }),
-    I = (0, u.k4)(a.n.SESSIONS_CATEGORY, {
-        buildLayout: () => [S.P, c.m],
+let g = (0, r.k4)(o.n.SESSIONS_CATEGORY, {
+        buildLayout: () => [c.P, E.m],
         initialize: () => (
-            (0, s.fw)(),
+            (0, u.fw)(),
             () => {
-                (0, s.$Z)();
+                (0, u.$Z)();
             }
         ),
+        useNotice: function () {
+            return i.useMemo(
+                () => ({
+                    type: a.v.STRONGLY_DISCOURAGED_CUSTOM,
+                    notice: S.kC,
+                }),
+                [],
+            );
+        },
     }),
-    N = (0, u.wf)(a.n.SESSIONS_PANEL, {
-        usePredicate: () => !(0, o.gN)("LegacySessionsPanel"),
+    I = (0, r.wf)(o.n.SESSIONS_PANEL, {
+        usePredicate: () => !(0, T.gN)("LegacySessionsPanel"),
         useTitle: () => _.intl.string(_.t["+1h0k/"]),
         hideInStreamerMode: !0,
-        StronglyDiscouragedCustomComponent: T.ZP,
+        StronglyDiscouragedCustomComponent: S.ZP,
         buildLayout: () => [],
     }),
-    A = (0, u.wf)(a.n.SESSIONS_PANEL, {
-        usePredicate: () => (0, o.gN)("SessionsPanel"),
+    N = (0, r.wf)(o.n.SESSIONS_PANEL, {
+        usePredicate: () => (0, T.gN)("SessionsPanel"),
         useTitle: () => _.intl.string(_.t["+1h0k/"]),
         hideInStreamerMode: !0,
-        buildLayout: () => [g, I],
+        buildLayout: () => [g],
     }),
-    O = (0, u.m7)(a.n.SESSIONS_SIDEBAR_ITEM, {
+    A = (0, r.m7)(o.n.SESSIONS_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t["+1h0k/"]),
-        getLegacySearchKey: () => ((0, o.Gl)("SessionsPanel") ? void 0 : d.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2),
-        icon: i.dW3,
+        getLegacySearchKey: () => ((0, T.Gl)("SessionsPanel") ? void 0 : d.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2),
+        icon: l.dW3,
         trailing: {
-            type: r.W.BADGE_NEW,
-            getDismissibleContentTypes: () => [l.z.AUTH_SESSIONS_NEW],
+            type: a.W.BADGE_NEW,
+            getDismissibleContentTypes: () => [s.z.AUTH_SESSIONS_NEW],
         },
-        buildLayout: () => ((0, o.Gl)("SessionsPanel") ? [A] : [N]),
+        buildLayout: () => ((0, T.Gl)("SessionsPanel") ? [N] : [I]),
     });

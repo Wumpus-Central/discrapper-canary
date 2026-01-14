@@ -53938,7 +53938,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .d285a61ed580c689-markdown {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59453,9 +59453,9 @@ screen and (max-width:485px) {
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -90580,22 +90580,27 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
     margin: 32px 0
 }
 
-._803f2f55621144fb-otherSessions {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px
-}
-
 ._803f2f55621144fb-session {
-    align-items: center;
-    border-bottom: 1px solid var(--border-subtle);
     display: flex;
-    gap: 24px;
-    padding: 16px 0
+    flex-direction: column
 }
 
-._803f2f55621144fb-session._803f2f55621144fb-currentSession {
-    border-bottom: none
+._803f2f55621144fb-session:first-child {
+    padding-top: 16px
+}
+
+._803f2f55621144fb-currentSession {
+    padding-bottom: 16px
+}
+
+._803f2f55621144fb-sessionContent {
+    align-items: center;
+    display: flex;
+    gap: 24px
+}
+
+._803f2f55621144fb-sessionSeparator {
+    margin-top: 24px
 }
 
 ._803f2f55621144fb-sessionIcon {
@@ -90667,6 +90672,10 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 
 ._803f2f55621144fb-toolsTitle {
     margin-bottom: .5rem
+}
+
+._803f2f55621144fb-logOutAllButtonRedesign {
+    margin-top: 24px
 }
 
 @media (max-width:900px) {
