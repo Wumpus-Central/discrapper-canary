@@ -45,17 +45,25 @@ class I extends l.Z {
     }
     maybeSendGiftingPromptSystemMessageDelayed(e, t, n, r) {
         new a.sW(v, () => {
-            let i = h.Z.getChannelId();
-            !b.ZP.isGiftIntentMessageInCooldown(n) &&
-                e === i &&
-                m.Z.isReady(e) &&
-                (s.Z.sendGiftingPromptSystemMessage(e, {
-                    giftIntentType: t,
-                    recipientUserId: n,
-                    giftIntentSecondaryAction: r,
-                }),
-                (0, E.PV)(n));
+            this.maybeSendGiftingPromptSystemMessage(e, t, n, r);
         }).delay();
+    }
+    maybeSendGiftingPromptSystemMessage(e, t, n, r) {
+        let i = h.Z.getChannelId(),
+            a = b.ZP.isGiftIntentMessageInCooldown(n),
+            o = m.Z.isReady(e);
+        if (!a && e === i) {
+            if (!o)
+                return void m.Z.whenReady(e, () => {
+                    h.Z.getChannelId() === e && this.maybeSendGiftingPromptSystemMessage(e, t, n, r);
+                });
+            s.Z.sendGiftingPromptSystemMessage(e, {
+                giftIntentType: t,
+                recipientUserId: n,
+                giftIntentSecondaryAction: r,
+            }),
+                (0, E.PV)(n);
+        }
     }
     sendGiftPromptMessageInSelectedChannelIfEligible(e) {
         let { enabled: t } = g.w.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
