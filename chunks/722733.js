@@ -15,6 +15,9 @@ function l(e, t) {
             return t.guildId;
         case "user":
             return i.default.getId();
+        case "installation":
+            var n;
+            return null != (n = i.default.getInstallationForTracking()) ? n : "";
         default:
             (0, a.vE)(e);
     }

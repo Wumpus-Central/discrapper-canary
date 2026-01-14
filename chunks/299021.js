@@ -99,10 +99,11 @@ function b(e) {
 }
 let y = new s.Yd("ApexExperimentStore");
 (null == window.TextEncoder || null == window.TextDecoder) && n(251171);
-let O = [c.Cm.User],
+let O = [c.Cm.User, c.Cm.Installation],
     v = {
         user: {},
         guild: {},
+        installation: {},
     },
     S = {},
     I = {},
@@ -115,7 +116,7 @@ let O = [c.Cm.User],
     w = 2,
     D = 604800000,
     x = {},
-    L = 2,
+    L = 3,
     j = {};
 function M(e) {
     let t = j[e];
@@ -220,7 +221,7 @@ class k extends (r = o.ZP.PersistedStore) {
         return T[e];
     }
     handleLogout(e) {
-        e || (this.clearAllServerAssignments(), this.clearSessionOverrides()),
+        e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
             l.K.remove(R),
             this.clearAllTrackedExposures();
     }
@@ -345,6 +346,14 @@ class k extends (r = o.ZP.PersistedStore) {
         v = {
             user: {},
             guild: {},
+            installation: {},
+        };
+    }
+    clearUserServerAssignments() {
+        v = {
+            user: {},
+            guild: {},
+            installation: v.installation,
         };
     }
     clearAllOverrides() {

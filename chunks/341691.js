@@ -4,9 +4,12 @@ n.d(t, {
     V8: () => a,
 });
 var r = (function (e) {
-    return (e[(e.User = 1)] = "User"), e;
+    return (e[(e.User = 1)] = "User"), (e[(e.Installation = 2)] = "Installation"), e;
 })({});
-let i = { 1: "user" };
+let i = {
+    1: "user",
+    2: "installation",
+};
 var a = (function (e) {
     return (
         (e[(e.IsOverride = 1)] = "IsOverride"),
