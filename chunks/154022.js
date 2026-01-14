@@ -421,30 +421,23 @@ function ep() {
     });
 }
 function e_() {
-    let e = (0, s.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme),
-        t = i.useRef(null);
-    return (
-        (0, k.Z)(t, Z.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
-        (0, r.jsx)("div", {
-            ref: t,
-            children: (0, r.jsx)(c.C3N, {
-                label: Y.intl.string(Y.t.BT8Bmp),
-                children: (0, r.jsx)(N.F, {
-                    setting: F.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
-                    children: (0, r.jsx)(c.rsf, {
-                        label: Y.intl.string(Y.t["sSY+mD"]),
-                        description: Y.intl.format(Y.t.u6UjrL, {
-                            onThemeClick() {
-                                (0, G.openUserSettings)(j.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
-                            },
-                        }),
-                        checked: e,
-                        onChange: f.Uv,
-                    }),
+    let e = (0, s.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme);
+    return (0, r.jsx)(c.C3N, {
+        label: Y.intl.string(Y.t.BT8Bmp),
+        children: (0, r.jsx)(N.F, {
+            setting: F.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
+            children: (0, r.jsx)(c.rsf, {
+                label: Y.intl.string(Y.t["sSY+mD"]),
+                description: Y.intl.format(Y.t.u6UjrL, {
+                    onThemeClick() {
+                        (0, G.openUserSettings)(j.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                    },
                 }),
+                checked: e,
+                onChange: f.Uv,
             }),
-        })
-    );
+        }),
+    });
 }
 function em() {
     let [e] = (0, s.Wu)([p.Z], () => [p.Z.syncForcedColors, p.Z.systemForcedColors]),
@@ -496,19 +489,16 @@ function eh() {
             animateEmojiOverrideReason: M.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
         d = "auto" === a,
-        _ = i.useRef(null);
-    (0, k.Z)(_, Z.rP.REDUCED_MOTION);
-    let m = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 (0, f.Zt)(e ? "auto" : o);
             },
             [o],
         ),
-        h = i.useCallback((e) => {
+        m = i.useCallback((e) => {
             (0, f.Zt)(e ? "reduce" : "no-preference");
         }, []);
     return (0, r.jsx)("div", {
-        ref: _,
         title: Y.intl.string(Y.t.e3TR1b),
         className: K.reducedMotion,
         children: (0, r.jsxs)(c.C3N, {
@@ -518,14 +508,14 @@ function eh() {
                 (0, r.jsx)(c.rsf, {
                     label: Y.intl.string(Y.t["+Dx+HD"]),
                     checked: d,
-                    onChange: m,
+                    onChange: _,
                 }),
                 (0, r.jsx)(N.F, {
                     setting: F.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                     children: (0, r.jsx)(c.rsf, {
                         label: Y.intl.string(Y.t.b3XBzg),
                         checked: n,
-                        onChange: h,
+                        onChange: m,
                     }),
                 }),
                 (0, r.jsx)(N.F, {

@@ -47,12 +47,7 @@ var p = (function (e) {
         return (e.DISABLE_ACCOUNT = "disable_account"), e;
     })({}),
     g = (function (e) {
-        return (
-            (e.REDUCED_MOTION = "reduced_motion"),
-            (e.SYNC_PROFILE_THEME_WITH_USER_THEME = "sync_profile_theme_with_user_theme"),
-            (e.LEGACY_CHAT_INPUT = "legacy_chat_input"),
-            e
-        );
+        return (e.LEGACY_CHAT_INPUT = "legacy_chat_input"), e;
     })({}),
     E = (function (e) {
         return (

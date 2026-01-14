@@ -154,9 +154,10 @@ let ey = () => {
             (0, y.Z)(Z.Z.CLIPS, { analyticsLocations: e });
         },
         ej = () => {
-            (0, O.openUserSettings)(E.n.APPEARANCE_PANEL, {
+            let e = (0, b.Gl)("openCustomAppSettings");
+            (0, O.openUserSettings)(e ? E.n.APPEARANCE_IN_APP_ICON : E.n.APPEARANCE_PANEL, {
                 section: M.oAB.APPEARANCE,
-                scrollPosition: G.h1.CUSTOM_APP_ICONS,
+                scrollPosition: e ? void 0 : G.h1.CUSTOM_APP_ICONS,
             });
         },
         eM = () => {

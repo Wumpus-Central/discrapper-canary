@@ -1,24 +1,26 @@
-i.d(n, { default: () => g });
+i.d(n, { default: () => A });
 var e = i(54381);
 i(473749);
 var a = i(793030),
     o = i(481060),
     s = i(695346),
     r = i(313789),
+    l = i(526665),
     c = i(518596),
-    l = i(626135),
-    p = i(981631),
-    d = i(526761),
+    p = i(626135),
+    d = i(981631),
+    C = i(526761),
     u = i(388032),
-    C = i(38880);
-function g(t) {
+    E = i(38880);
+function A(t) {
     let { onClose: n, transitionState: i } = t;
-    function g() {
-        n(),
-            (0, c.openUserSettings)(r.n.ACCESSIBILITY_PANEL, {
-                section: p.oAB.ACCESSIBILITY,
-                scrollPosition: d.rP.LEGACY_CHAT_INPUT,
-            });
+    function A() {
+        n();
+        let t = (0, l.Gl)("LegacyChatInputExplanationModal");
+        (0, c.openUserSettings)(t ? r.n.ENABLE_LEGACY_CHAT_INPUT : r.n.ACCESSIBILITY_PANEL, {
+            section: d.oAB.ACCESSIBILITY,
+            scrollPosition: t ? void 0 : C.rP.LEGACY_CHAT_INPUT,
+        });
     }
     return (0, e.jsx)(a.ExpressiveModal, {
         transitionState: i,
@@ -28,7 +30,7 @@ function g(t) {
                 (0, e.jsx)(
                     o.eee,
                     {
-                        onClick: g,
+                        onClick: A,
                         children: t,
                     },
                     n,
@@ -37,7 +39,7 @@ function g(t) {
         onClose: n,
         graphic: {
             type: "image",
-            src: C,
+            src: E,
         },
         actions: [
             {
@@ -49,7 +51,7 @@ function g(t) {
                 variant: "primary",
                 text: u.intl.string(u.t.VdzwlA),
                 onClick: function () {
-                    l.default.track(p.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                    p.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                         enabled: !1,
                         location: "LegacyChatInputExplanationModal",
                     }),
