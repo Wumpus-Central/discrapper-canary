@@ -14155,6 +14155,8 @@
   "hEMHnF": "Noise Suppression Off",
   "Q+fhfv": "Noise Suppression On",
   "uKdWn6": "Enable Krisp noise suppression! Make some noise—like clapping your hands—while speaking. Your friends will hear nothing but your beautiful voice.",
+  "F6lrb4": "Krisp is disabled due to system noise suppression being active. If you prefer to use Krisp, please disable system noise suppression in your [system settings](system settings).",
+  "mXZgC9": "Krisp is disabled due to system noise suppression being active.",
   "k6h1F4": "Powered by",
   "WGWHv/": "Noise Suppression",
   "JdUas1": "Mic Test",
