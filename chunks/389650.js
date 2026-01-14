@@ -360,9 +360,6 @@ class B extends i.PureComponent {
             ),
         );
     }
-    renderEmpty(e) {
-        if (0 === e.length) return null;
-    }
     renderKeybindWarning() {
         return (0, r.jsxs)("div", {
             className: x.warning,
@@ -426,9 +423,10 @@ class B extends i.PureComponent {
                                       className: x.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
-                                  (0, r.jsx)(d.izJ, {}),
-                                  this.renderKeybinds(n),
-                                  this.renderEmpty(n),
+                                  n.length > 0 &&
+                                      (0, r.jsxs)(r.Fragment, {
+                                          children: [(0, r.jsx)(d.izJ, {}), this.renderKeybinds(n)],
+                                      }),
                               ],
                           })
                         : (0, r.jsx)(d.Wn, {
