@@ -88,7 +88,6 @@ let O = (0, i.createContext)({
         setCustomConfettiVisible: () => {},
         confettiCanvas: null,
         hideConfirmStepConfetti: !1,
-        skipConfirm: !1,
         skuIDs: [],
         analyticsLocations: [],
     }),
@@ -124,17 +123,16 @@ let O = (0, i.createContext)({
                 hideConfirmStepConfetti: y,
             } = (0, u.dc)({ skuId: t }),
             { analyticsLocations: v } = (0, u.Jb)({ analyticsLocations: null != n ? n : [] }),
-            { skuIDs: S, skipConfirm: I } = (0, u.Af)({ skuId: t }),
-            T = (0, i.useMemo)(
+            S = (0, u.Af)({ skuId: t }),
+            I = (0, i.useMemo)(
                 () => ({
                     analyticsLocations: v,
                     skuIDs: S,
-                    skipConfirm: I,
                     setCustomConfettiVisible: m,
                     hideConfirmStepConfetti: y,
                     confettiCanvas: d,
                 }),
-                [v, S, I, m, y, d],
+                [v, S, m, y, d],
             );
         return (0, r.jsxs)(a.Gt, {
             value: v,
@@ -154,7 +152,7 @@ let O = (0, i.createContext)({
                         purchaseType: _.GZ.ONE_TIME,
                         excludeSubscriptionPlansBySKU: !0,
                         children: (0, r.jsx)(O.Provider, {
-                            value: T,
+                            value: I,
                             children: o,
                         }),
                     }),
@@ -215,47 +213,46 @@ let O = (0, i.createContext)({
                 _ = (e) => {
                     f(), null == s || s(e);
                 },
-                { skuIDs: m, skipConfirm: h, setCustomConfettiVisible: g, analyticsLocations: E } = v(),
+                { skuIDs: m, setCustomConfettiVisible: h, analyticsLocations: g } = v(),
                 {
-                    paymentModalSkuId: b,
-                    paymentModalOnClose: y,
-                    paymentModalOnComplete: O,
+                    paymentModalSkuId: E,
+                    paymentModalOnClose: b,
+                    paymentModalOnComplete: y,
                 } = (0, u.$g)({
                     onClose: _,
                     onComplete: l,
                     skuIDs: m,
-                    setCustomConfettiVisible: g,
+                    setCustomConfettiVisible: h,
                 }),
-                S = (0, i.useMemo)(
+                O = (0, i.useMemo)(
                     () => ({
                         loadId: n,
                         skuId: t,
-                        analyticsLocations: E,
+                        analyticsLocations: g,
                         analyticsSourceLocation: a,
                         flowSpecificOptions: c,
                     }),
-                    [n, t, E, a, c],
+                    [n, t, g, a, c],
                 ),
-                I = (0, i.useMemo)(
+                S = (0, i.useMemo)(
                     () => ({
-                        skuId: b,
-                        onClose: y,
-                        onComplete: O,
+                        skuId: E,
+                        onClose: b,
+                        onComplete: y,
                         applicationId: p.XAJ,
                         initialPlanId: null,
-                        analyticsLocations: E,
+                        analyticsLocations: g,
                         onStepChange: c.onStepChange,
-                        skipConfirm: h,
                         hideShadow: !0,
                         transitionState: o.transitionState,
                         returnRef: o.returnRef,
                     }),
-                    [b, y, O, E, c.onStepChange, h, o.transitionState, o.returnRef],
+                    [E, b, y, g, c.onStepChange, o.transitionState, o.returnRef],
                 );
             return (0, r.jsx)(A.Provider, {
                 value: {
-                    sharedCheckoutContext: S,
-                    paymentModalProps: I,
+                    sharedCheckoutContext: O,
+                    paymentModalProps: S,
                     renderModalProps: o,
                 },
                 children: d,

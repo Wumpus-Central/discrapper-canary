@@ -268,10 +268,6 @@ class h extends _ {
     isPoll() {
         return null != this.poll;
     }
-    hasPotions() {
-        var e, t;
-        return (null != (t = null == (e = this.potions) ? void 0 : e.length) ? t : 0) > 0;
-    }
     isInteractionPlaceholder() {
         return null != this.interaction && this.author.isNonUserBot();
     }
@@ -334,7 +330,6 @@ class h extends _ {
             u(this, "purchaseNotification", void 0),
             u(this, "poll", void 0),
             u(this, "sharedClientTheme", void 0),
-            u(this, "potions", void 0),
             u(this, "loggingName", void 0),
             u(this, "referralTrialOfferId", void 0),
             u(this, "premiumGroupInviteId", void 0),
@@ -383,7 +378,6 @@ class h extends _ {
             (this.purchaseNotification = e.purchaseNotification),
             (this.poll = e.poll),
             (this.sharedClientTheme = e.shared_client_theme || e.sharedClientTheme),
-            (this.potions = e.potions),
             (this.referralTrialOfferId = e.referralTrialOfferId || null),
             (this.premiumGroupInviteId = e.premiumGroupInviteId || null),
             (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo),

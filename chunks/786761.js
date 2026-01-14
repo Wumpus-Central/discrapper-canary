@@ -178,7 +178,6 @@ function P(e) {
                   purchaseNotification: e.purchase_notification,
                   poll: null == e.poll ? void 0 : (0, s.Z)(e.poll),
                   sharedClientTheme: e.shared_client_theme,
-                  potions: e.potions,
                   giftInfo: null == U ? void 0 : U,
                   giftingPrompt: G,
               }),
@@ -229,7 +228,6 @@ function w(e, t) {
         null != t.mention_games && ((n = n.set("mentionGames", t.mention_games)), (r = !0)),
         null != t.mention_everyone && ((n = n.set("mentionEveryone", t.mention_everyone)), (r = !0)),
         null != t.mention_roles && ((n = n.set("mentionRoles", t.mention_roles)), (r = !0)),
-        null != t.potions && (n = n.set("potions", t.potions)),
         r &&
             (n = n.set(
                 "mentioned",

@@ -1,9 +1,5 @@
 let r;
-n.d(t, {
-    ZP: () => c,
-    k2: () => s,
-}),
-    n(388685);
+n.d(t, { k2: () => s }), n(388685);
 var i = n(710845);
 function a(e, t, n) {
     return (
@@ -57,4 +53,3 @@ class l {
         a(this, "assets", {}), a(this, "fontManager", void 0);
     }
 }
-let c = l;

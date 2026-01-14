@@ -55,10 +55,9 @@ var u = (function (e) {
             (e[(e.AUTO_SUGGESTION = 9)] = "AUTO_SUGGESTION"),
             (e[(e.POLLS = 10)] = "POLLS"),
             (e[(e.PROFILE = 11)] = "PROFILE"),
-            (e[(e.MESSAGE_CONFETTI = 12)] = "MESSAGE_CONFETTI"),
-            (e[(e.GUILD_PROFILE = 13)] = "GUILD_PROFILE"),
-            (e[(e.CHANNEL_NAME = 14)] = "CHANNEL_NAME"),
-            (e[(e.DEFAULT_REACT_EMOJI = 15)] = "DEFAULT_REACT_EMOJI"),
+            (e[(e.GUILD_PROFILE = 12)] = "GUILD_PROFILE"),
+            (e[(e.CHANNEL_NAME = 13)] = "CHANNEL_NAME"),
+            (e[(e.DEFAULT_REACT_EMOJI = 14)] = "DEFAULT_REACT_EMOJI"),
             e
         );
     })({});

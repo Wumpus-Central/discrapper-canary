@@ -1,4 +1,4 @@
-n.d(t, { Z: () => er });
+n.d(t, { Z: () => en });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -73,11 +73,7 @@ let ee = (0, W.Un)({
         createPromise: () => n.e("67110").then(n.bind(n, 177741)),
         webpackId: 177741,
     }),
-    et = (0, W.Un)({
-        createPromise: () => n.e("13474").then(n.bind(n, 420541)),
-        webpackId: 420541,
-    }),
-    en = i.memo(function () {
+    et = i.memo(function () {
         let e = (0, u.e7)([H.Z], () => H.Z.hasLayers()),
             t = (0, p.s9z)(p.$sL),
             n = (0, u.e7)([V.default], () => V.default.isAuthenticated());
@@ -86,7 +82,7 @@ let ee = (0, W.Un)({
             show: e || t || !n,
         });
     }),
-    er = function (e) {
+    en = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             a = (0, Y.getPlatform)(),
             f = s.tq || s.Em,
@@ -122,7 +118,7 @@ let ee = (0, W.Un)({
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(L.yP, {
                                                     children: [
-                                                        null != a ? (0, r.jsx)(en, {}) : null,
+                                                        null != a ? (0, r.jsx)(et, {}) : null,
                                                         (0, r.jsxs)("div", {
                                                             className: o()(
                                                                 $.appAsidePanelWrapper,
@@ -163,7 +159,6 @@ let ee = (0, W.Un)({
                                                                                             (0, r.jsx)(v.Z, {}),
                                                                                             (0, r.jsx)(U.Z, {}),
                                                                                             (0, r.jsx)(ee, {}),
-                                                                                            (0, r.jsx)(et, {}),
                                                                                             (0, r.jsx)(Z.Z, {}),
                                                                                         ],
                                                                                     }),
