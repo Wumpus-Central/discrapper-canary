@@ -216,7 +216,7 @@ function w(e) {
 }
 function D(e) {
     let { location: t, isGift: n, giftRecipient: a } = e,
-        { isDisplayProfileSocialLayerStorefrontEligible: o } = (0, l.Q)({
+        o = (0, l.Q)({
             userId: null == a ? void 0 : a.id,
             location: t,
         }),

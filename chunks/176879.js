@@ -35,7 +35,7 @@ function m(e) {
             minNumItems: E ? n : 0,
             source: b,
         }),
-        { isDisplayProfileSocialLayerStorefrontEligible: A } = (0, a.Z)({
+        A = (0, a.Z)({
             displayProfile: m,
             location: p,
         }),

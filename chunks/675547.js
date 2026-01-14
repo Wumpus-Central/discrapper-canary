@@ -1,31 +1,28 @@
-n.d(t, { Z: () => d }), n(388685);
-var i = n(442837),
-    r = n(413523),
-    l = n(358221),
-    a = n(594190),
-    o = n(158776),
-    s = n(699955),
-    c = n(582113),
-    u = n(354459);
-function d(e) {
+n.d(t, { Z: () => f }), n(388685);
+var r = n(473749),
+    i = n(392711),
+    l = n.n(i),
+    a = n(442837),
+    o = n(413523),
+    s = n(358221),
+    c = n(699955),
+    u = n(812797),
+    d = n(582113),
+    p = n(354459);
+function f(e) {
     let { location: t, channelId: n } = e,
-        d = (0, s.cZ)({ location: t }),
-        [p] = (0, i.e7)(
-            [l.Z],
-            () => (null != n ? [l.Z.getParticipants(n), l.Z.getParticipantsVersion(n)] : [[], 0]),
+        i = (0, c.cZ)({ location: t }),
+        [f] = (0, a.e7)(
+            [s.Z],
+            () => (null != n ? [s.Z.getParticipants(n), s.Z.getParticipantsVersion(n)] : [[], 0]),
             [n],
-            r.Lc,
+            o.Lc,
         ),
-        f = (0, i.e7)([o.Z], () => {
-            for (let e of p)
-                if ((0, u.Io)(e) || (0, u._5)(e)) {
-                    for (let t of o.Z.getActivities(e.user.id))
-                        if (null != t.application_id && c.RI.has(t.application_id)) return !0;
-                }
-            return !1;
-        }, [p]),
-        h = (0, i.e7)([a.ZP], () =>
-            a.ZP.getRunningGames().some((e) => null != e.id && c.RI.has(e.id) && a.ZP.isDetectionEnabled(e)),
-        );
-    return d && (h || f);
+        h = r.useMemo(() => l().uniq(f.filter((e) => (0, p.Io)(e) || (0, p._5)(e)).map((e) => e.user.id)), [f]),
+        g = (0, u.VO)({
+            gameIds: d.RI,
+            userIds: h,
+        }),
+        m = (0, u.fR)({ gameIds: d.RI });
+    return i && (m || g);
 }
