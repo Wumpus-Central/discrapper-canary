@@ -892,8 +892,8 @@ let { Themes: r } = n(15202).VV,
                     opacity: 0.3607843137254902,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "OPACITY_20",
-                    opacity: 0.2,
+                    raw: "OPACITY_24",
+                    opacity: 0.23921568627450981,
                 },
                 [r.DARKER]: {
                     raw: "OPACITY_20",
@@ -5636,8 +5636,8 @@ let { Themes: r } = n(15202).VV,
                     opacity: 0.3607843137254902,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "OPACITY_20",
-                    opacity: 0.2,
+                    raw: "OPACITY_24",
+                    opacity: 0.23921568627450981,
                 },
                 [r.DARKER]: {
                     raw: "OPACITY_20",
@@ -5674,8 +5674,8 @@ let { Themes: r } = n(15202).VV,
                     opacity: 0.3607843137254902,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "OPACITY_20",
-                    opacity: 0.2,
+                    raw: "OPACITY_24",
+                    opacity: 0.23921568627450981,
                 },
                 [r.DARKER]: {
                     raw: "OPACITY_20",
