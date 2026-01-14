@@ -55,17 +55,19 @@ function g(e, t) {
     return null;
 }
 function E(e, t) {
-    return e.values().filter((e) => {
-        var n, r;
-        let l = (0, a.Mo)(e);
-        return (
-            null != e &&
-            (0, o.Rt)(e) &&
-            !(0, i.zi)(e) &&
-            l === t &&
-            l !== s.Ts &&
-            (null == (n = e.userStatus) ? void 0 : n.completedAt) == null &&
-            (null == (r = e.userStatus) ? void 0 : r.enrolledAt) == null
-        );
-    });
+    return null == t
+        ? [].values()
+        : e.values().filter((e) => {
+              var n, r;
+              let l = (0, a.Mo)(e);
+              return (
+                  null != e &&
+                  (0, o.Rt)(e) &&
+                  !(0, i.zi)(e) &&
+                  l === t &&
+                  l !== s.Ts &&
+                  (null == (n = e.userStatus) ? void 0 : n.completedAt) == null &&
+                  (null == (r = e.userStatus) ? void 0 : r.enrolledAt) == null
+              );
+          });
 }
