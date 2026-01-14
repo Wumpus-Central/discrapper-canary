@@ -53462,7 +53462,6 @@ screen and (max-width:485px) {
 }
 
 ._9258b50a9ae8aedb-progressContainer {
-    --custom-expressive-progress-height: 4px;
     --custom-background: var(--background-mod-normal);
     background: var(--custom-background);
     border-radius: 5px;
@@ -53471,6 +53470,16 @@ screen and (max-width:485px) {
     pointer-events: none;
     position: relative;
     width: 100%
+}
+
+._9258b50a9ae8aedb-progressContainer._9258b50a9ae8aedb-light {
+    --custom-expressive-progress-height: 4px;
+    --custom-expressive-progress-glow-offset: -6px
+}
+
+._9258b50a9ae8aedb-progressContainer._9258b50a9ae8aedb-medium {
+    --custom-expressive-progress-height: 6px;
+    --custom-expressive-progress-glow-offset: -5px
 }
 
 ._9258b50a9ae8aedb-progress {
@@ -53492,7 +53501,7 @@ screen and (max-width:485px) {
     inset-inline-end: -3px;
     max-width: min(100%, 120px);
     position: absolute;
-    top: -6px;
+    top: var(--custom-expressive-progress-glow-offset);
     transform: perspective(400px) rotateY(-30deg);
     transform-origin: left center;
     width: 100%

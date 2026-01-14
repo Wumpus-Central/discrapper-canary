@@ -10,13 +10,25 @@ let u = () => {
     let [e, t] = i.useState(0),
         [n, u] = i.useState(4),
         [d, f] = i.useState(2),
-        [p, _] = i.useState(l.y.BLUE),
-        [m, h] = i.useState("darkslategray"),
-        [g, E] = i.useState("blanchedalmond"),
-        [b, y] = i.useState("pink"),
-        O = i.useMemo(
+        [p, _] = i.useState(l.NZ.LIGHT),
+        [m, h] = i.useState(l.yB.BLUE),
+        [g, E] = i.useState("darkslategray"),
+        [b, y] = i.useState("blanchedalmond"),
+        [O, v] = i.useState("pink"),
+        S = i.useMemo(
             () =>
-                Object.entries(l.y).map((e) => {
+                Object.entries(l.NZ).map((e) => {
+                    let [t, n] = e;
+                    return {
+                        label: t,
+                        value: n,
+                    };
+                }),
+            [],
+        ),
+        I = i.useMemo(
+            () =>
+                Object.entries(l.yB).map((e) => {
                     let [t, n] = e;
                     return {
                         label: t,
@@ -27,16 +39,17 @@ let u = () => {
         );
     return (0, r.jsxs)(c.pg, {
         children: [
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(l.ZP, {
                 progress: d,
                 minimum: e,
                 maximum: n,
-                variant: p,
+                weight: p,
+                variant: m,
                 override: {
                     default: {
-                        background: m,
-                        gradientStart: g,
-                        gradientEnd: b,
+                        background: g,
+                        gradientStart: b,
+                        gradientEnd: O,
                     },
                 },
             }),
@@ -75,12 +88,24 @@ let u = () => {
                 children: (0, r.jsx)(o.B6, {
                     placeholder: "Variant",
                     select: (e) => {
+                        h(e);
+                    },
+                    isSelected: (e) => m === e,
+                    serialize: (e) => e,
+                    options: I,
+                    label: "Variant",
+                }),
+            }),
+            (0, r.jsx)(c.BZ, {
+                children: (0, r.jsx)(o.B6, {
+                    placeholder: "Weight",
+                    select: (e) => {
                         _(e);
                     },
                     isSelected: (e) => p === e,
                     serialize: (e) => e,
-                    options: O,
-                    label: "Variant",
+                    options: S,
+                    label: "Weight",
                 }),
             }),
             (0, r.jsx)(c.dv, {}),
@@ -96,20 +121,11 @@ let u = () => {
             }),
             (0, r.jsx)(c.BZ, {
                 children: (0, r.jsx)(s.oil, {
-                    value: m,
-                    onChange: (e) => {
-                        h(e);
-                    },
-                    label: "Background",
-                }),
-            }),
-            (0, r.jsx)(c.BZ, {
-                children: (0, r.jsx)(s.oil, {
                     value: g,
                     onChange: (e) => {
                         E(e);
                     },
-                    label: "Gradient Start",
+                    label: "Background",
                 }),
             }),
             (0, r.jsx)(c.BZ, {
@@ -117,6 +133,15 @@ let u = () => {
                     value: b,
                     onChange: (e) => {
                         y(e);
+                    },
+                    label: "Gradient Start",
+                }),
+            }),
+            (0, r.jsx)(c.BZ, {
+                children: (0, r.jsx)(s.oil, {
+                    value: O,
+                    onChange: (e) => {
+                        v(e);
                     },
                     label: "Gradient End",
                 }),
