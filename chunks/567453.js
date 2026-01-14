@@ -80,7 +80,7 @@ function f(e, t) {
 let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: p = i.Z.colors.STATUS_WARNING, colorClass: _ = "" } = e,
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.ICON_FEEDBACK_WARNING, colorClass: _ = "" } = e,
         m = d(e, ["size", "width", "height", "color", "colorClass"]);
     let h = (0, o.m)(s),
         g = null != (t = null == h ? void 0 : h.width) ? t : c,

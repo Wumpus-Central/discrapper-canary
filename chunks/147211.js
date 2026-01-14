@@ -84,7 +84,7 @@ let p = (e) => {
             size: s = "md",
             width: c,
             height: f,
-            secondaryColor: p = "#C12A35",
+            secondaryColor: p = i.Z.colors.ICON_FEEDBACK_NOTIFICATION,
             secondaryColorClass: _ = "",
             color: m = i.Z.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: h = "",

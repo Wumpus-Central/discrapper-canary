@@ -80,47 +80,39 @@ function f(e, t) {
 let p = (e) => {
     var t,
         n,
-        {
-            size: s = "md",
-            width: c,
-            height: f,
-            secondaryColor: p = "#323339",
-            secondaryColorClass: _ = "",
-            color: m = i.Z.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: h = "",
-        } = e,
-        g = d(e, ["size", "width", "height", "secondaryColor", "secondaryColorClass", "color", "colorClass"]);
-    let E = (0, o.m)(s),
-        b = null != (t = null == E ? void 0 : E.width) ? t : c,
-        y = null != (n = null == E ? void 0 : E.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsxs)(
         "svg",
-        u(l({}, (0, a.Z)(g)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
-            width: b,
-            height: y,
+            width: g,
+            height: E,
             fill: "none",
             viewBox: "0 0 24 24",
             children: [
                 (0, r.jsx)("path", {
                     fill: "string" == typeof p ? p : p.css,
-                    d: "M19.1 16.14v.15c-.04.36-.2.7-.46.95l-5.53 5.33-.11.1c-.6.47-1.45.44-2-.1l-2.72-2.61 1.44-1.44 1.62 1.56c.4.38 1.02.38 1.42 0l4-3.85c.2-.2.3-.46.3-.74v-4.32l2.04-2.03v7Zm-4.07-1.38c0 .21-.08.4-.23.55l-2.22 2.14a.76.76 0 0 1-1.06 0l-.37-.36 3.88-3.88v1.55ZM11 1.43c.6-.57 1.53-.57 2.12 0l2.66 2.56-1.44 1.44-1.57-1.51a1.02 1.02 0 0 0-1.42 0l-4 3.85c-.2.2-.3.46-.3.74v4.21L5 14.76v-6.9c0-.42.17-.81.47-1.1l5.52-5.33Zm.53 5.12a.76.76 0 0 1 1.06 0l.32.3-3.83 3.84V9.24c0-.21.09-.41.23-.55l2.22-2.14ZM22.7 1.3a1 1 0 0 1 0 1.4l-20 20a1 1 0 0 1-1.4-1.4l20-20a1 1 0 0 1 1.4 0Z",
+                    d: "M19.1 16.14v.15c-.04.36-.2.7-.46.95l-5.53 5.33-.11.1c-.6.47-1.45.44-2-.1l-2.72-2.61 1.44-1.44 1.62 1.56c.4.38 1.02.38 1.42 0l4-3.85c.2-.2.3-.46.3-.74v-4.32l2.04-2.03v7Zm-4.07-1.38c0 .21-.08.41-.23.55l-2.22 2.14a.76.76 0 0 1-1.06 0l-.37-.36 3.88-3.88v1.55ZM11 1.43c.6-.57 1.53-.57 2.12 0l2.66 2.56-1.44 1.44-1.57-1.51a1.02 1.02 0 0 0-1.42 0l-4 3.85c-.2.2-.3.46-.3.74v4.21L5 14.76v-6.9c0-.42.17-.81.47-1.1l5.52-5.33Zm.53 5.12a.76.76 0 0 1 1.06 0l.32.3-3.83 3.84V9.24c0-.21.09-.41.23-.55l2.22-2.14ZM22.7 1.3a1 1 0 0 1 0 1.4l-20 20a1 1 0 0 1-1.4-1.4l20-20a1 1 0 0 1 1.4 0Z",
                     className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof m ? m : m.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M19.1 16.14v.15c-.04.36-.2.7-.46.95l-5.53 5.33-.11.1c-.6.47-1.45.44-2-.1l-2.72-2.61 1.44-1.44 1.62 1.56c.4.38 1.02.38 1.42 0l4-3.85c.2-.2.3-.46.3-.74v-4.32l2.04-2.03v7Z",
-                    className: h,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof m ? m : m.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M15.03 14.76c0 .21-.08.4-.23.55l-2.22 2.14a.76.76 0 0 1-1.06 0l-.37-.36 3.88-3.88v1.55ZM11 1.43c.58-.57 1.52-.57 2.11 0l2.66 2.56-1.44 1.44-1.57-1.51a1.02 1.02 0 0 0-1.42 0l-4 3.85c-.2.2-.3.46-.3.74v4.21L5 14.76v-6.9c0-.42.17-.81.47-1.1l5.52-5.33Z",
-                    className: h,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof m ? m : m.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M11.52 6.55a.76.76 0 0 1 1.06 0l.32.3-3.83 3.84V9.24c0-.21.09-.41.23-.55l2.22-2.14ZM22.7 1.3a1 1 0 0 1 0 1.4l-20 20a1 1 0 0 1-1.4-1.4l20-20a1 1 0 0 1 1.4 0Z",
-                    className: h,
+                    className: _,
                 }),
             ],
         }),
