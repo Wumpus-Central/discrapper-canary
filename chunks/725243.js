@@ -6,33 +6,31 @@ var r = n(473749),
     s = n(752048),
     l = n(837411),
     c = n(699516),
-    u = n(594174),
-    d = n(69143);
-function f(e) {
-    let { location: t } = e,
-        { affineGiftingEnabled: n, affinityThreshold: i } = d.Z.useConfig({ location: t }),
-        f = (0, o.Wu)([c.Z], () => c.Z.getFriendIDs()),
-        p = (0, o.Wu)([s.Z], () =>
+    u = n(594174);
+let d = 0.1;
+function f() {
+    let e = (0, o.Wu)([c.Z], () => c.Z.getFriendIDs()),
+        t = (0, o.Wu)([s.Z], () =>
             s.Z.getUserAffinities()
                 .filter((e) => {
-                    let { isFriend: t, communicationProbability: n, vcProbability: r, otherUserId: a } = e,
-                        o = !t && (n >= i || r >= i),
-                        s = (0, l.n)(a);
-                    return o && s;
+                    let { isFriend: t, communicationProbability: n, vcProbability: r, otherUserId: i } = e,
+                        a = !t && (n >= d || r >= d),
+                        o = (0, l.n)(i);
+                    return a && o;
                 })
                 .map((e) => {
                     let { otherUserId: t } = e;
                     return t;
                 }),
         ),
-        _ = r.useMemo(() => a().uniq([...f, ...(n ? p : [])]), [f, n, p]);
+        n = r.useMemo(() => a().uniq([...e, ...t]), [e, t]);
     return (0, o.Wu)(
         [u.default],
         () =>
-            _.reduce((e, t) => {
+            n.reduce((e, t) => {
                 let n = u.default.getUser(t);
                 return null == n || n.bot || e.push(n), e;
             }, []),
-        [_],
+        [n],
     );
 }

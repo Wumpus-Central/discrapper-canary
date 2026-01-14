@@ -98,7 +98,7 @@ function B(e) {
     );
 }
 function V(e, t, n) {
-    let r = (0, d.Z)({ location: "Slayer Storefront Gift Customization Step" }),
+    let r = (0, d.Z)(),
         a = B(e),
         l = (0, s.Wu)([S.default], () => {
             var e;

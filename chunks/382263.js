@@ -78,7 +78,7 @@ function k(e) {
         { selectedSkuId: k } = (0, b.JL)(),
         P = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         I = (0, a.e7)([f.Z], () => (null != k ? f.Z.get(k) : null), [k]),
-        T = (0, s.Z)({}),
+        T = (0, s.Z)(),
         E = (0, a.e7)([g.Z], () => (null != k ? g.Z.getForSKU(k) : null), [k]),
         M =
             (null == E ? void 0 : E.headerBackground) != null && (null == I ? void 0 : I.applicationId) != null

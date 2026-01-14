@@ -113,7 +113,7 @@ let U = (e) => {
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
             { autoTrackExposure: !1 },
         ),
-        K = (0, p.Z)({}),
+        K = (0, p.Z)(),
         z = Y && L === R.Wt.DM_CHANNEL,
         q = W === m.u.POPULAR ? w.intl.string(w.t.Kwgrrr) : w.intl.string(w.t.r1huYR),
         Q = async (e, t) => {
