@@ -1,6 +1,6 @@
 n.d(t, {
-    N: () => d,
-    Z: () => p,
+    N: () => f,
+    Z: () => _,
 }),
     n(642613);
 var r = n(54381),
@@ -9,17 +9,18 @@ var r = n(54381),
     o = n(546791),
     s = n(594174),
     l = n(128064),
-    c = n(931461),
-    u = n(116233),
-    d = (function (e) {
+    c = n(312870),
+    u = n(931461),
+    d = n(116233),
+    f = (function (e) {
         return (e.CONTENT_AND_SOCIAL = "CONTENT_AND_SOCIAL"), (e.DATA_AND_PRIVACY = "DATA_AND_PRIVACY"), e;
     })({});
-let f = {
+let p = {
     CONTENT_AND_SOCIAL: [
         {
             order: 100,
             predicate: o.MH,
-            Component: u.Z,
+            Component: d.Z,
         },
         {
             order: 200,
@@ -27,26 +28,30 @@ let f = {
                 var e;
                 return (null == (e = s.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
             },
-            Component: c.cs,
+            Component: u.cs,
         },
         {
             order: 300,
-            predicate: () => (0, l.c_)("SensitiveContentFiltersNotice") && !(0, a.kJ)(),
-            Component: c.jF,
+            predicate: () => {
+                let e = (0, l.c_)("SensitiveContentFiltersNotice"),
+                    t = (0, c.U)("SensitiveContentFiltersNotice");
+                return (e || t) && !(0, a.kJ)();
+            },
+            Component: u.jF,
         },
     ],
     DATA_AND_PRIVACY: [
         {
             order: 100,
             predicate: o.MH,
-            Component: u.Z,
+            Component: d.Z,
         },
     ],
 };
-function p(e) {
+function _(e) {
     let { page: t } = e,
         n = i.useMemo(() => {
-            let e = f[t]
+            let e = p[t]
                 .filter((e) => e.predicate())
                 .sort((e, t) => e.order - t.order)
                 .map((e) => e.Component);
