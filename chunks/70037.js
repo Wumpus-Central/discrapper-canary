@@ -7,6 +7,6 @@ var i = n(509613),
 let a = (0, i.qs)(s.n.ACTIVITY_PRIVACY_SETTING, {
     useTitle: () => u.intl.string(r.default.WhdCGP),
     useSubtitle: () => u.intl.string(r.default.UQ9RHJ),
-    useValue: () => l.G6.useSetting(),
-    setValue: (t) => l.G6.updateSetting(t),
+    useValue: l.G6.useSetting,
+    setValue: l.G6.updateSetting,
 });

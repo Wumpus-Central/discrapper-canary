@@ -1,7 +1,7 @@
 n.d(t, {
-    EX: () => y,
-    ZL: () => g,
-    ZP: () => h,
+    EX: () => O,
+    Fj: () => h,
+    ZP: () => g,
 });
 var r = n(54381);
 n(473749);
@@ -17,29 +17,56 @@ var i = n(524437),
     p = n(388032),
     _ = n(418924),
     m = n(827186);
-function h(e) {
+function h() {
+    let e = c.G6.useSetting();
+    return (0, r.jsxs)("div", {
+        className: m.myServersContainer,
+        children: [
+            (0, r.jsxs)("div", {
+                className: m.myServersHeaderContainer,
+                children: [
+                    (0, r.jsx)(a.Heading, {
+                        className: m.myServersTitle,
+                        variant: "heading-md/medium",
+                        color: "text-strong",
+                        children: p.intl.string(p.t.TqdOvC),
+                    }),
+                    !e &&
+                        (0, r.jsx)("div", {
+                            className: m.myServersIgnoredWarning,
+                            children: (0, r.jsx)(a.M14, {
+                                type: "warning",
+                                children: p.intl.string(_.default["xxI0/W"]),
+                            }),
+                        }),
+                ],
+            }),
+            (0, r.jsx)(o.Z, {}),
+        ],
+    });
+}
+function g(e) {
     let { className: t } = e;
     return (0, r.jsxs)(u.Z, {
         className: t,
         title: p.intl.string(p.t.Cq98yL),
         children: [
-            (0, r.jsx)(b, {}),
-            (0, r.jsx)(a.izJ, { gap: 32 }),
-            (0, r.jsx)(g, {}),
+            (0, r.jsx)(y, {}),
             (0, r.jsx)(a.izJ, { gap: 32 }),
             (0, r.jsx)(E, {}),
             (0, r.jsx)(a.izJ, { gap: 32 }),
-            (0, r.jsx)(y, {}),
+            (0, r.jsx)(b, {}),
+            (0, r.jsx)(a.izJ, { gap: 32 }),
+            (0, r.jsx)(O, {}),
         ],
     });
 }
-function g() {
-    let e = c.G6.useSetting(),
-        t = c.no.useSetting(),
-        n = (e) => {
+function E() {
+    let e = c.no.useSetting(),
+        t = (e) => {
             c.no.updateSetting(e);
         },
-        s = [
+        n = [
             {
                 value: i.GI.ACTIVITY_STATUS_ON,
                 name: p.intl.string(p.t.UzGMH9),
@@ -59,39 +86,15 @@ function g() {
         children: [
             (0, r.jsx)(a.FXm, {
                 label: p.intl.string(_.default["/LHVbt"]),
-                options: s,
-                value: t,
-                onChange: (e) => n(e),
+                options: n,
+                value: e,
+                onChange: (e) => t(e),
             }),
-            (0, r.jsxs)("div", {
-                className: m.myServersContainer,
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: m.myServersHeaderContainer,
-                        children: [
-                            (0, r.jsx)(a.Heading, {
-                                className: m.myServersTitle,
-                                variant: "heading-md/medium",
-                                color: "text-strong",
-                                children: p.intl.string(p.t.TqdOvC),
-                            }),
-                            !e &&
-                                (0, r.jsx)("div", {
-                                    className: m.myServersIgnoredWarning,
-                                    children: (0, r.jsx)(a.M14, {
-                                        type: "warning",
-                                        children: p.intl.string(_.default["xxI0/W"]),
-                                    }),
-                                }),
-                        ],
-                    }),
-                    (0, r.jsx)(o.Z, {}),
-                ],
-            }),
+            (0, r.jsx)(h, {}),
         ],
     });
 }
-function E() {
+function b() {
     let e = c.cP.useSetting(),
         t = c.Ou.useSetting();
     return (0, r.jsx)(s.F, {
@@ -117,7 +120,7 @@ function E() {
         }),
     });
 }
-function b() {
+function y() {
     let e = c.G6.useSetting(),
         t = l.isPlatformEmbedded ? p.intl.string(_.default.UQ9RHJ) : p.intl.string(p.t.oKqC4t);
     return (0, r.jsx)(s.F, {
@@ -137,7 +140,7 @@ function b() {
         }),
     });
 }
-function y() {
+function O() {
     return (0, r.jsx)(s.F, {
         setting: d.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, r.jsx)(a.Zbd, {
