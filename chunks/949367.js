@@ -10,5 +10,6 @@ let o = (0, u.qs)(r.n.ENABLE_SWITCH_ICONS, {
         useSubtitle: () => a.intl.string(a.t["3QuI9+"]),
         useValue: () => (0, i.e7)([s.Z], () => s.Z.isSwitchIconsEnabled),
         setValue: (t) => (0, l.ky)(t),
+        hasIcon: !0,
     }),
     T = (0, u.k4)(r.n.INPUTS, { buildLayout: () => [o] });

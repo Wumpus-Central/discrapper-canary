@@ -9,6 +9,7 @@ let a = (0, l.ON)(s.n.TTS_PLAYBACK_RATE, {
         Component: u.N,
     }),
     o = (0, l.k4)(s.n.ACCESSIBILITY_TTS, {
+        useTitle: () => r.intl.string(r.t.VpSKeO),
         usePredicate: () => i.Zh,
         buildLayout: () => [a],
     });

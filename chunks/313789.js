@@ -212,6 +212,7 @@ var r = (function (e) {
         (e.ROLE_STYLE = "role_style"),
         (e.HIGH_DYNAMIC_RANGE = "high_dynamic_range"),
         (e.DISPLAY_NAME_STYLES = "display_name_styles"),
+        (e.PROFILE_THEMES_CATEGORY = "profile_themes_category"),
         (e.SYNC_PROFILE_THEMES = "sync_profile_themes"),
         (e.CONTRAST = "contrast"),
         (e.HIGH_CONTRAST_MODE = "high_contrast_mode"),

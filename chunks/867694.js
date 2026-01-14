@@ -13,27 +13,29 @@ function o(e) {
             useDisabled: u,
             useDisabledMessage: d,
             useBadge: f,
+            hasIcon: p,
         } = n,
-        p = l(),
-        _ = null == c ? void 0 : c(),
-        m = o(),
-        h = null != (t = null == u ? void 0 : u()) && t,
-        g = null == d ? void 0 : d(),
-        E = null == f ? void 0 : f();
+        _ = l(),
+        m = null == c ? void 0 : c(),
+        h = o(),
+        g = null != (t = null == u ? void 0 : u()) && t,
+        E = null == d ? void 0 : d(),
+        b = null == f ? void 0 : f();
     return (0, r.jsxs)(a.X, {
         children: [
             (0, r.jsx)(i.rsf, {
-                label: p,
-                description: _,
-                badge: E,
-                checked: m,
+                label: _,
+                description: m,
+                badge: b,
+                checked: h,
+                hasIcon: p,
                 onChange: (e) => s(e),
-                disabled: h,
+                disabled: g,
             }),
-            h && null != g
+            g && null != E
                 ? (0, r.jsx)(i.Wn, {
                       messageType: i.QYI.WARNING,
-                      children: g,
+                      children: E,
                   })
                 : null,
         ],
