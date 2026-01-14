@@ -132,19 +132,13 @@ let m = "__DEBUG_PROFILE_EFFECTS_STORE",
                         let t = (0, u.$j)(e);
                         return n.current.push(t), t;
                     },
-                    r = t.config.effects.map((t) => _(f({}, t), { src: e(t.base64) })),
-                    i = t.config.stillFrames,
-                    a = null != i ? f({}, i) : {};
-                for (let t in a) {
-                    let n = a[t];
-                    null != n && (a[t] = _(f({}, n), { src: e(n.base64) }));
+                    r = t.config.stillFrames,
+                    i = null != r ? f({}, r) : {};
+                for (let t in i) {
+                    let n = i[t];
+                    null != n && (i[t] = _(f({}, n), { src: e(n.base64) }));
                 }
-                return _(f({}, t), {
-                    config: _(f({}, t.config), {
-                        effects: r,
-                        stillFrames: a,
-                    }),
-                });
+                return _(f({}, t), { config: _(f({}, t.config), { stillFrames: i }) });
             }, [t])
         );
     };

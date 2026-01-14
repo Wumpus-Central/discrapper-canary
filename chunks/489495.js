@@ -66,25 +66,22 @@ function o(e) {
 let s = 22,
     l = (e) => i().decode(e),
     c = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
-    u = async (e, t, n) => {
-        let r = l(await t.arrayBuffer());
-        return {
-            src: URL.createObjectURL(t),
-            base64: e,
-            loop: !1,
-            loopDelay: 0,
-            duration: c(r),
-            start: 0,
-            position: {
-                x: 0,
-                y: 0,
-            },
-            zIndex: 100 + n,
-            height: 880,
-            width: 450,
-            name: t.name,
-        };
-    };
+    u = async (e, t, n) => ({
+        src: e,
+        base64: e,
+        loop: !1,
+        loopDelay: 0,
+        duration: c(l(await t.arrayBuffer())),
+        start: 0,
+        position: {
+            x: 0,
+            y: 0,
+        },
+        zIndex: 100 + n,
+        height: 880,
+        width: 450,
+        name: t.name,
+    });
 var d = (function (e) {
     return (e.THUMBNAIL = "Thumbnail"), (e.STATIC = "Static"), (e.REDUCED_MOTION = "Reduced Motion"), e;
 })({});

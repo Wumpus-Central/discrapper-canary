@@ -116,16 +116,7 @@ let C = {
             };
         r.useEffect(() => {
             let e = t.config.effects;
-            e.length > 0 &&
-                k(
-                    [...e].map((e) => {
-                        if (null != e.base64) {
-                            let t = (0, f.$j)(e.base64);
-                            (e.src = t), Z.current.push(t);
-                        }
-                        return e;
-                    }),
-                );
+            e.length > 0 && k(e);
         }, [t.config.effects]),
             r.useEffect(() => {
                 let e = t.config.stillFrames;
