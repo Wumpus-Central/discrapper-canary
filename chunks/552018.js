@@ -289,6 +289,24 @@ class p extends o.C {
                         ),
                     };
                     break;
+                case 22:
+                    a.filter = {
+                        oneofKind: "guildIds",
+                        guildIds: eN.internalBinaryRead(e, e.uint32(), n, a.filter.guildIds),
+                    };
+                    break;
+                case 25:
+                    a.filter = {
+                        oneofKind: "guildMemberCountRange",
+                        guildMemberCountRange: eR.internalBinaryRead(e, e.uint32(), n, a.filter.guildMemberCountRange),
+                    };
+                    break;
+                case 26:
+                    a.filter = {
+                        oneofKind: "guildHasFeature",
+                        guildHasFeature: eD.internalBinaryRead(e, e.uint32(), n, a.filter.guildHasFeature),
+                    };
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -347,7 +365,15 @@ class p extends o.C {
                         t.tag(21, r.TD.LengthDelimited).fork(),
                         n,
                     )
-                    .join();
+                    .join(),
+            "guildIds" === e.filter.oneofKind &&
+                eN.internalBinaryWrite(e.filter.guildIds, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
+            "guildMemberCountRange" === e.filter.oneofKind &&
+                eR
+                    .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, r.TD.LengthDelimited).fork(), n)
+                    .join(),
+            "guildHasFeature" === e.filter.oneofKind &&
+                eD.internalBinaryWrite(e.filter.guildHasFeature, t.tag(26, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -492,6 +518,27 @@ class p extends o.C {
                 kind: "message",
                 oneof: "filter",
                 T: () => eC,
+            },
+            {
+                no: 22,
+                name: "guild_ids",
+                kind: "message",
+                oneof: "filter",
+                T: () => eN,
+            },
+            {
+                no: 25,
+                name: "guild_member_count_range",
+                kind: "message",
+                oneof: "filter",
+                T: () => eR,
+            },
+            {
+                no: 26,
+                name: "guild_has_feature",
+                kind: "message",
+                oneof: "filter",
+                T: () => eD,
             },
         ]);
     }
@@ -2531,3 +2578,166 @@ class eT extends o.C {
     }
 }
 let eC = new eT();
+class eA extends o.C {
+    create(e) {
+        let t = { guildIds: [] };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            if (1 === t)
+                if (i === r.TD.LengthDelimited)
+                    for (let t = e.int32() + e.pos; e.pos < t; ) a.guildIds.push(e.fixed64().toString());
+                else a.guildIds.push(e.fixed64().toString());
+            else {
+                let o = n.readUnknownField;
+                if ("throw" === o)
+                    throw new globalThis.Error(
+                        "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                    );
+                let s = e.skip(i);
+                !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (e.guildIds.length) {
+            t.tag(1, r.TD.LengthDelimited).fork();
+            for (let n = 0; n < e.guildIds.length; n++) t.fixed64(e.guildIds[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.GuildIds", [
+            {
+                no: 1,
+                name: "guild_ids",
+                kind: "scalar",
+                repeat: 1,
+                T: 6,
+            },
+        ]);
+    }
+}
+let eN = new eA();
+class eP extends o.C {
+    create(e) {
+        let t = {};
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.minCount = s.yC.internalBinaryRead(e, e.uint32(), n, a.minCount);
+                    break;
+                case 2:
+                    a.maxCount = s.yC.internalBinaryRead(e, e.uint32(), n, a.maxCount);
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let l = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, l);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        e.minCount && s.yC.internalBinaryWrite(e.minCount, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
+            e.maxCount && s.yC.internalBinaryWrite(e.maxCount, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.GuildMemberCountRange", [
+            {
+                no: 1,
+                name: "min_count",
+                kind: "message",
+                T: () => s.yC,
+            },
+            {
+                no: 2,
+                name: "max_count",
+                kind: "message",
+                T: () => s.yC,
+            },
+        ]);
+    }
+}
+let eR = new eP();
+class ew extends o.C {
+    create(e) {
+        let t = { features: [] };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            if (1 === t) a.features.push(e.string());
+            else {
+                let o = n.readUnknownField;
+                if ("throw" === o)
+                    throw new globalThis.Error(
+                        "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                    );
+                let s = e.skip(i);
+                !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        for (let n = 0; n < e.features.length; n++) t.tag(1, r.TD.LengthDelimited).string(e.features[n]);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.GuildHasFeature", [
+            {
+                no: 1,
+                name: "features",
+                kind: "scalar",
+                repeat: 2,
+                T: 9,
+            },
+        ]);
+    }
+}
+let eD = new ew();
