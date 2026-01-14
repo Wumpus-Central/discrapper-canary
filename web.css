@@ -3801,18 +3801,6 @@
     width: 100%
 }
 
-.high-contrast-mode ._64e6155a0667273d-container {
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-sm)
-}
-
-.high-contrast-mode ._64e6155a0667273d-radioGroupOption {
-    border-bottom: 1px solid var(--border-subtle);
-    border-radius: 0;
-    box-sizing: border-box;
-    margin-bottom: 0
-}
-
 .enable-forced-colors ._64e6155a0667273d-outerRadioBorderStroke {
     stroke: ButtonText;
     opacity: 1
