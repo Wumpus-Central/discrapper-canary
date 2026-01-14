@@ -561,6 +561,8 @@ async function J(e, t) {
                 },
                 metadataRaw: O.metadata_raw,
                 metadataSealed: O.metadata_sealed,
+                trafficMetadataRaw: O.traffic_metadata_raw,
+                trafficMetadataSealed: O.traffic_metadata_sealed,
                 adContext: O.ad_context,
                 responseTtlSeconds: O.response_ttl_seconds,
                 placement: e,

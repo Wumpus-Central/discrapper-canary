@@ -1,7 +1,9 @@
 n.d(t, {
-    $V: () => x,
+    $V: () => j,
     E8: () => S,
     GN: () => g,
+    K8: () => D,
+    NS: () => w,
     PM: () => I,
     R_: () => R,
     UE: () => v,
@@ -11,9 +13,9 @@ n.d(t, {
     iQ: () => O,
     jY: () => P,
     qe: () => N,
-    uN: () => w,
+    uN: () => x,
     vR: () => b,
-    ys: () => D,
+    ys: () => L,
     zE: () => E,
     zi: () => y,
 }),
@@ -150,6 +152,8 @@ function A(e) {
                   adContext: t.adContext,
                   metadataRaw: t.metadataRaw,
                   metadataSealed: t.metadataSealed,
+                  trafficMetadataRaw: t.trafficMetadataRaw,
+                  trafficMetadataSealed: t.trafficMetadataSealed,
               };
     }
     {
@@ -162,6 +166,8 @@ function A(e) {
                   adContext: t.adContext,
                   metadataRaw: t.metadataRaw,
                   metadataSealed: t.metadataSealed,
+                  trafficMetadataRaw: t.trafficMetadataRaw,
+                  trafficMetadataSealed: t.trafficMetadataSealed,
               };
     }
 }
@@ -182,14 +188,36 @@ function R(e) {
     let n = T(e);
     if (null != n) return null == (t = A(n)) ? void 0 : t.metadataSealed;
 }
-function w(e) {
+function w(e, t) {
+    var n;
+    let r = T(e);
+    if (null == r) return;
+    let { trafficMetadataRaw: i, questId: a } = null != (n = A(r)) ? n : {};
+    if (null != i && a === t) return i;
+    if (null != t) {
+        let e = o.Z.getQuest(t);
+        return null == e ? void 0 : e.trafficMetadataRaw;
+    }
+}
+function D(e, t) {
+    var n;
+    let r = T(e);
+    if (null == r) return;
+    let { trafficMetadataSealed: i, questId: a } = null != (n = A(r)) ? n : {};
+    if (null != i && a === t) return i;
+    if (null != t) {
+        let e = o.Z.getQuest(t);
+        return null == e ? void 0 : e.trafficMetadataSealed;
+    }
+}
+function x(e) {
     var t;
     let n = T(e);
     if (null != n) return null == (t = A(n)) ? void 0 : t.adContext;
 }
-function D(e, t) {
+function L(e, t) {
     a.Z.captureException(e, _(f({}, t), { tags: _(f({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
 }
-function x() {
+function j() {
     return window.location.pathname.startsWith(u.Z5c.QUEST_HOME);
 }

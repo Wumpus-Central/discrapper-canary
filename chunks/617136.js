@@ -228,7 +228,9 @@ async function k(e) {
         f = m.Z.getQuest(t),
         _ = await (0, a.S)(R(n)),
         h = (0, b.jY)(n),
-        g = (0, b.R_)(n);
+        g = (0, b.R_)(n),
+        E = (0, b.NS)(n, t),
+        y = (0, b.K8)(n, t);
     j({
         questId: t,
         event: S.rMx.QUEST_CONTENT_CLICKED,
@@ -241,6 +243,8 @@ async function k(e) {
             click_id: (0, i.Z)(),
             metadata_raw: null != h ? h : null,
             metadata_sealed: null != g ? g : null,
+            traffic_metadata_raw: null != E ? E : null,
+            traffic_metadata_sealed: null != y ? y : null,
         }),
         trackGuildAndChannelMetadata: u,
         shouldExtendSession: (0, b.VB)(n),
@@ -286,7 +290,9 @@ function Z() {
                 } = t,
                 f = m.Z.getQuest(n),
                 _ = (0, b.jY)(r),
-                h = (0, b.R_)(r);
+                h = (0, b.R_)(r),
+                g = (0, b.NS)(r, n),
+                E = (0, b.K8)(r, n);
             (0, a.S)(R(r)).then((t) => {
                 e({
                     questId: n,
@@ -299,6 +305,8 @@ function Z() {
                         android_advertising_id: null != t && (0, p.isAndroid)() ? t.advertisingId : null,
                         metadata_raw: null != _ ? _ : null,
                         metadata_sealed: null != h ? h : null,
+                        traffic_metadata_raw: null != g ? g : null,
+                        traffic_metadata_sealed: null != E ? E : null,
                     }),
                     trackGuildAndChannelMetadata: u,
                     shouldExtendSession: (0, b.VB)(r),

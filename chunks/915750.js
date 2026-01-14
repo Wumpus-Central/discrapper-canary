@@ -195,7 +195,9 @@ class x {
                         (t = !w.has(r) && (0, S.VB)(this.questContent)) && w.add(r);
                     }
                     let r = (0, S.jY)(this.questContent),
-                        i = (0, S.R_)(this.questContent);
+                        i = (0, S.R_)(this.questContent),
+                        a = (0, S.NS)(this.questContent, e.id),
+                        o = (0, S.K8)(this.questContent, e.id);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
@@ -210,6 +212,8 @@ class x {
                                     android_advertising_id: null != n && (0, E.isAndroid)() ? n.advertisingId : null,
                                     metadata_raw: null != r ? r : null,
                                     metadata_sealed: null != i ? i : null,
+                                    traffic_metadata_raw: null != a ? a : null,
+                                    traffic_metadata_sealed: null != o ? o : null,
                                 },
                                 (0, d.Z)(),
                                 this.commonProperties(e),
@@ -288,6 +292,8 @@ class x {
                 let e = (0, S.jY)(this.questContent),
                     t = (0, S.R_)(this.questContent);
                 this.quests.forEach((n) => {
+                    let r = (0, S.NS)(this.questContent, n.id),
+                        i = (0, S.K8)(this.questContent, n.id);
                     (0, v.T)().info(
                         ""
                             .concat(n.config.messages.questName, " Quest became visible at ")
@@ -302,6 +308,8 @@ class x {
                                     triggered_by_status_change: this.triggeredByStatusChange,
                                     metadata_raw: null != e ? e : null,
                                     metadata_sealed: null != t ? t : null,
+                                    traffic_metadata_raw: null != r ? r : null,
+                                    traffic_metadata_sealed: null != i ? i : null,
                                 },
                                 this.commonProperties(n),
                             ),

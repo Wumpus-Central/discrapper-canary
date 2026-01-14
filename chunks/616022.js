@@ -360,20 +360,24 @@ function ez(e) {
         responseTtlSeconds: s,
         metadataRaw: l,
         metadataSealed: c,
-        fetchedAt: u,
+        trafficMetadataRaw: u,
+        trafficMetadataSealed: d,
+        fetchedAt: f,
     } = e;
     (_ = Date.now()), (i = !1), (a = new Map(a)).set(n, !1);
-    let { enableNewRequestBehavior: d } = F.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
-    if (d) {
-        var f;
+    let { enableNewRequestBehavior: p } = F.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+    if (p) {
+        var m;
         let e = {
-            questId: null != (f = null == t ? void 0 : t.id) ? f : null,
-            fetchedAt: u,
+            questId: null != (m = null == t ? void 0 : t.id) ? m : null,
+            fetchedAt: f,
             ttlMillis: eq(s),
             adDecisionData: r,
             adContext: o,
             metadataRaw: l,
             metadataSealed: c,
+            trafficMetadataRaw: u,
+            trafficMetadataSealed: d,
         };
         (R = new Map(R)).set(n, e);
     } else
@@ -385,6 +389,8 @@ function ez(e) {
                   adContext: o,
                   metadataRaw: l,
                   metadataSealed: c,
+                  trafficMetadataRaw: u,
+                  trafficMetadataSealed: d,
               });
 }
 function eq(e) {
