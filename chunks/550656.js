@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620389),
+    s = n(853590),
     l = n(762328),
     c = n(793030),
     u = n(682973),
@@ -77,6 +77,7 @@ function b(e) {
     if (w) {
         let e = (0, l.a_)(S, I);
         return (0, r.jsx)(l.pS, {
+            className: m.tooltipLayer,
             open: n,
             spacing: T,
             placement: e,

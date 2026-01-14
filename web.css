@@ -8948,6 +8948,10 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
     will-change: opacity, transform
 }
 
+._4e35b986167c457d-tooltipLayer {
+    pointer-events: none
+}
+
 ._4e35b986167c457d-richTooltip {
     max-width: none;
     padding: 0;
