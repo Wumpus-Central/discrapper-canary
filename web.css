@@ -54444,6 +54444,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .c1e9c47c23f12ca3-submenu {
+    max-height: var(--custom-floating-layer-max-height);
     max-width: 320px;
     min-width: 188px
 }

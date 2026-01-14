@@ -122,6 +122,7 @@ function S(e) {
         return (0, r.jsx)(s.pS, {
             open: x,
             viewportPadding: p.sb,
+            maxHeight: p.Ts,
             onOpenChange: L,
             spacing: D ? -4 : 4,
             placement: t,
