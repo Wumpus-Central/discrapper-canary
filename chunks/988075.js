@@ -19,7 +19,9 @@ function p(e) {
             [t.contentType],
         ),
         [m, h] = i.useState(p),
-        g = i.useMemo(
+        [g, E] = i.useState(p);
+    p !== m && (h(p), E(p));
+    let b = i.useMemo(
             () => () =>
                 (0, r.jsx)(c.mz, {
                     mimeType: _,
@@ -29,13 +31,13 @@ function p(e) {
                 }),
             [t, _],
         ),
-        E = (e) =>
+        y = (e) =>
             (0, r.jsx)(s.Z, {
                 className: o()({ [f.fileHidden]: e }),
                 url: t.url,
                 fileName: null != n ? n : d.intl.string(d.t.GnuJ5u),
                 fileSize: null != a ? a : 0,
-                renderAdjacentContent: g,
+                renderAdjacentContent: b,
             });
     return (0, r.jsx)("div", {
         className: f.fileDisplayContainer,
@@ -43,10 +45,10 @@ function p(e) {
             ? (0, r.jsx)(u.ZP, {
                   type: u.ZP.Types.ATTACHMENT,
                   reason: l.wk.SPOILER,
-                  obscured: m,
-                  onToggleObscurity: () => h((e) => !e),
-                  children: (e) => E(e),
+                  obscured: g,
+                  onToggleObscurity: () => E((e) => !e),
+                  children: (e) => y(e),
               })
-            : E(!1),
+            : y(!1),
     });
 }

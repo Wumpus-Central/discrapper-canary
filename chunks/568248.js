@@ -20,46 +20,48 @@ function E(e) {
         b = (0, s.yE)(t.flags, c.hR.IS_ANIMATED),
         { gifAutoPlay: y } = (0, d.c)(),
         [O, v] = i.useState(n),
-        S = (e) => {
-            var n, i;
-            return "IMAGE" !== E
-                ? (0, r.jsx)(_.S, {
-                      className: h.imgContainer,
-                      media: t,
-                      placeholderWidth: g,
-                      placeholderHeight: g,
-                      maxWidth: g,
-                      maxHeight: g,
-                      hiddenSpoilers: e,
-                  })
-                : (0, r.jsx)(f.Yi, {
-                      containerClassName: o()(h.imgContainer, { [h.hiddenSpoiler]: e }),
-                      imageClassName: h.img,
-                      src: t.proxyUrl,
-                      alt: a,
-                      original: t.url,
-                      placeholder: t.placeholder,
-                      placeholderVersion: t.placeholderVersion,
-                      width: null != (n = t.width) ? n : 0,
-                      height: null != (i = t.height) ? i : 0,
-                      hiddenSpoilers: e,
-                      maxWidth: 2 * g,
-                      maxHeight: 2 * g,
-                      minWidth: g,
-                      minHeight: g,
-                      autoPlay: y && !e,
-                      mediaLayoutType: m.hV.MOSAIC,
-                      reducedSizeAltTextButton: !0,
-                      srcIsAnimated: b,
-                  });
-        };
+        [S, I] = i.useState(n);
+    n !== O && (v(n), I(n));
+    let T = (e) => {
+        var n, i;
+        return "IMAGE" !== E
+            ? (0, r.jsx)(_.S, {
+                  className: h.imgContainer,
+                  media: t,
+                  placeholderWidth: g,
+                  placeholderHeight: g,
+                  maxWidth: g,
+                  maxHeight: g,
+                  hiddenSpoilers: e,
+              })
+            : (0, r.jsx)(f.Yi, {
+                  containerClassName: o()(h.imgContainer, { [h.hiddenSpoiler]: e }),
+                  imageClassName: h.img,
+                  src: t.proxyUrl,
+                  alt: a,
+                  original: t.url,
+                  placeholder: t.placeholder,
+                  placeholderVersion: t.placeholderVersion,
+                  width: null != (n = t.width) ? n : 0,
+                  height: null != (i = t.height) ? i : 0,
+                  hiddenSpoilers: e,
+                  maxWidth: 2 * g,
+                  maxHeight: 2 * g,
+                  minWidth: g,
+                  minHeight: g,
+                  autoPlay: y && !e,
+                  mediaLayoutType: m.hV.MOSAIC,
+                  reducedSizeAltTextButton: !0,
+                  srcIsAnimated: b,
+              });
+    };
     return n
         ? (0, r.jsx)(p.ZP, {
               type: p.ZP.Types.ATTACHMENT,
               reason: l.wk.SPOILER,
-              obscured: O,
-              onToggleObscurity: () => v((e) => !e),
-              children: (e) => S(e),
+              obscured: S,
+              onToggleObscurity: () => I((e) => !e),
+              children: (e) => T(e),
           })
-        : S(!1);
+        : T(!1);
 }
