@@ -27,12 +27,12 @@ let f = {
                 var e;
                 return (null == (e = s.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
             },
-            Component: c.c,
+            Component: c.cs,
         },
         {
             order: 300,
             predicate: () => (0, l.c_)("SensitiveContentFiltersNotice") && !(0, a.kJ)(),
-            Component: c.j,
+            Component: c.jF,
         },
     ],
     DATA_AND_PRIVACY: [
