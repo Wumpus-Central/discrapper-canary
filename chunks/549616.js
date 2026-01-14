@@ -91,13 +91,14 @@ class m extends s.Z {
                 hero_logo_url: p,
                 catalog_banner_url: h,
                 catalog_banner_animated_url: g,
-                featured_block_url: E,
-                logo_url: b,
-                pdp_bg_url: y,
-                mobile_banner_url: O,
-                mobile_bg_url: v,
+                catalog_banner_rive_url: E,
+                featured_block_url: b,
+                logo_url: y,
+                pdp_bg_url: O,
+                mobile_banner_url: v,
+                mobile_bg_url: S,
             } = e,
-            S = f(e, [
+            I = f(e, [
                 "products",
                 "hero_ranking",
                 "hero_logo_display_config",
@@ -108,6 +109,7 @@ class m extends s.Z {
                 "hero_logo_url",
                 "catalog_banner_url",
                 "catalog_banner_animated_url",
+                "catalog_banner_rive_url",
                 "featured_block_url",
                 "logo_url",
                 "pdp_bg_url",
@@ -115,7 +117,7 @@ class m extends s.Z {
                 "mobile_bg_url",
             ]);
         return new m(
-            d(c({}, super.fromServer(S)), {
+            d(c({}, super.fromServer(I)), {
                 products: t.reduce((e, t) => {
                     let n = o.Z.fromServer(t);
                     return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
@@ -127,11 +129,12 @@ class m extends s.Z {
                 heroLogoUrl: p,
                 catalogBannerUrl: h,
                 catalogBannerAnimatedUrl: g,
-                featuredBlockUrl: E,
-                logoUrl: b,
-                pdpBgUrl: y,
-                mobileBannerUrl: O,
-                mobileBgUrl: v,
+                catalogBannerRiveUrl: E,
+                featuredBlockUrl: b,
+                logoUrl: y,
+                pdpBgUrl: O,
+                mobileBannerUrl: v,
+                mobileBgUrl: S,
                 heroLogoDisplayConfig: (0, i.QG)(r),
                 heroBannerDisplayConfig: (0, i.QG)(a),
             }),
@@ -148,6 +151,7 @@ class m extends s.Z {
             l(this, "heroLogoUrl", void 0),
             l(this, "catalogBannerUrl", void 0),
             l(this, "catalogBannerAnimatedUrl", void 0),
+            l(this, "catalogBannerRiveUrl", void 0),
             l(this, "featuredBlockUrl", void 0),
             l(this, "logoUrl", void 0),
             l(this, "pdpBgUrl", void 0),
@@ -165,6 +169,7 @@ class m extends s.Z {
             (this.heroLogoUrl = e.heroLogoUrl),
             (this.catalogBannerUrl = e.catalogBannerUrl),
             (this.catalogBannerAnimatedUrl = e.catalogBannerAnimatedUrl),
+            (this.catalogBannerRiveUrl = e.catalogBannerRiveUrl),
             (this.featuredBlockUrl = e.featuredBlockUrl),
             (this.logoUrl = e.logoUrl),
             (this.pdpBgUrl = e.pdpBgUrl),

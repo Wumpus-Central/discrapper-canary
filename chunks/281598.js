@@ -75,6 +75,7 @@ var d = (function (e) {
     return (
         (e.CATALOG_BANNER_STATIC = "catalog_banner.jpg"),
         (e.CATALOG_BANNER_ANIMATED = "catalog_banner_animated.webm"),
+        (e.CATALOG_BANNER_RIVE = "catalog_banner_rive.riv"),
         (e.HERO_BANNER_STATIC = "hero_banner.jpg"),
         (e.HERO_BANNER_ANIMATED = "hero_banner_animated.webm"),
         (e.HERO_BANNER_RIVE = "hero_rive.riv"),
