@@ -1,29 +1,34 @@
-n.d(t, { Z: () => f }), n(314940);
+n.d(t, { Z: () => f });
 var r = n(473749),
-    i = n(278074),
-    a = n(979554),
-    o = n(399606),
-    s = n(626135),
-    l = n(597688),
-    c = n(884697),
-    u = n(981631),
-    d = n(474936);
-let f = (e) => {
-    let t = (0, o.e7)([l.Z], () => l.Z.products);
-    return (0, r.useCallback)(
-        (n) => {
-            let { type: r, skuId: o } = n,
-                l = t.get(o);
-            s.default.track(u.rMx.PREMIUM_FEATURE_TRY_OUT, {
-                feature_name: (0, i.EQ)(r)
-                    .with(a.Z.AVATAR_DECORATION, () => d.QP.AVATAR_DECORATION)
-                    .with(a.Z.PROFILE_EFFECT, () => d.QP.PROFILE_EFFECT)
-                    .otherwise(() => void 0),
-                feature_tier: (0, c.G1)(l) ? d.h1.FREE : d.h1.PREMIUM_STANDARD,
-                feature_selection: null == l ? void 0 : l.name,
-                location_stack: e,
-            });
-        },
-        [t, e],
-    );
-};
+    i = n(979554),
+    a = n(399606),
+    o = n(626135),
+    s = n(597688),
+    l = n(884697),
+    c = n(981631),
+    u = n(474936);
+let d = {
+        [i.Z.AVATAR_DECORATION]: u.QP.AVATAR_DECORATION,
+        [i.Z.PROFILE_EFFECT]: u.QP.PROFILE_EFFECT,
+        [i.Z.NAMEPLATE]: void 0,
+        [i.Z.NONE]: void 0,
+        [i.Z.BUNDLE]: void 0,
+        [i.Z.VARIANTS_GROUP]: void 0,
+        [i.Z.EXTERNAL_SKU]: void 0,
+    },
+    f = (e) => {
+        let t = (0, a.e7)([s.Z], () => s.Z.products);
+        return (0, r.useCallback)(
+            (n) => {
+                let { type: r, skuId: i } = n,
+                    a = t.get(i);
+                o.default.track(c.rMx.PREMIUM_FEATURE_TRY_OUT, {
+                    feature_name: d[r],
+                    feature_tier: (0, l.G1)(a) ? u.h1.FREE : u.h1.PREMIUM_STANDARD,
+                    feature_selection: null == a ? void 0 : a.name,
+                    location_stack: e,
+                });
+            },
+            [t, e],
+        );
+    };

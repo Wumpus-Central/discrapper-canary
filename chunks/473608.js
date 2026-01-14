@@ -1,68 +1,65 @@
-n.d(t, { O: () => R }), n(388685), n(314940);
+n.d(t, { O: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(512722),
-    o = n.n(a),
-    s = n(278074),
-    l = n(979554),
-    c = n(442837),
-    u = n(780384),
-    d = n(481060),
-    f = n(410030),
-    p = n(359135),
-    _ = n(516817),
-    m = n(731896),
-    h = n(597688),
-    g = n(328456),
-    E = n(578976),
-    b = n(579407),
-    y = n(755419),
-    O = n(616066),
-    v = n(989035),
-    S = n(63243),
-    I = n(244488),
-    T = n(223223);
-let C = (e) => {
+    a = n(979554),
+    o = n(442837),
+    s = n(780384),
+    l = n(481060),
+    c = n(410030),
+    u = n(359135),
+    d = n(516817),
+    f = n(731896),
+    p = n(597688),
+    _ = n(328456),
+    m = n(578976),
+    h = n(579407),
+    g = n(755419),
+    E = n(616066),
+    b = n(989035),
+    y = n(63243),
+    O = n(244488),
+    v = n(223223);
+let S = (e) => {
         let { avatarDecoration: t, avatarSize: n } = e,
-            i = (0, f.ZP)(),
-            a = (0, u.ap)(i) ? I : S;
-        return (0, r.jsx)(O.R, {
+            i = (0, c.ZP)(),
+            a = (0, s.ap)(i) ? O : y;
+        return (0, r.jsx)(E.R, {
             item: t,
             avatarSize: n,
             isHighlighted: !1,
             avatarPlaceholderSrc: a,
-            className: v.avatarDecoration,
+            className: b.avatarDecoration,
         });
     },
-    A = (e) => {
+    I = (e) => {
         var t;
         let { profileEffect: n, fallbackLabel: a } = e,
-            o = (0, m.V)(null == n ? void 0 : n.skuId),
+            o = (0, f.V)(null == n ? void 0 : n.skuId),
             {
                 accessibilityLabel: s,
                 thumbnailPreviewSrc: l,
                 title: c,
             } = null != (t = null == o ? void 0 : o.config) ? t : {},
-            u = i.useMemo(() => (0, E.JE)(l), [l]);
+            u = i.useMemo(() => (0, m.JE)(l), [l]);
         return null == o
             ? a
             : (0, r.jsxs)("div", {
-                  className: v.profileEffectContainer,
+                  className: b.profileEffectContainer,
                   children: [
                       (0, r.jsx)("img", {
-                          src: T,
+                          src: v,
                           alt: s,
-                          className: v.profileEffectBackground,
+                          className: b.profileEffectBackground,
                       }),
                       (0, r.jsx)("img", {
-                          className: v.profileEffect,
+                          className: b.profileEffect,
                           src: u,
                           alt: c,
                       }),
                   ],
               });
     },
-    N = (e) => {
+    T = (e) => {
         let { nameplate: t, fallbackLabel: n } = e,
             [a, o] = i.useState(!1),
             s = i.useCallback(() => o(!0), []),
@@ -70,98 +67,82 @@ let C = (e) => {
         return null == t
             ? n
             : (0, r.jsx)("div", {
-                  className: v.nameplateContainer,
+                  className: b.nameplateContainer,
                   onMouseEnter: s,
                   onMouseLeave: l,
-                  children: (0, r.jsx)(_.Z, {
-                      nameplate: (0, b.E)(t),
+                  children: (0, r.jsx)(d.Z, {
+                      nameplate: (0, h.E)(t),
                       hovered: a,
-                      placement: p.i.MINI_PREVIEW,
+                      placement: u.i.MINI_PREVIEW,
                   }),
               });
     },
-    P = (e) => {
+    C = (e) => {
         let { product: t, fallbackLabel: n } = e,
-            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: o } = (0, g.Rj)(t);
+            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: o } = (0, _.Rj)(t);
         return null == i && null == a && null == o
             ? n
             : (0, r.jsxs)("div", {
-                  className: v.bundleMiniPreview,
+                  className: b.bundleMiniPreview,
                   children: [
                       null != a &&
                           (0, r.jsx)("div", {
-                              className: v.bundleMiniProfileEffectContainer,
-                              children: (0, r.jsx)(A, {
+                              className: b.bundleMiniProfileEffectContainer,
+                              children: (0, r.jsx)(I, {
                                   profileEffect: a,
                                   fallbackLabel: null,
                               }),
                           }),
                       null != o &&
                           (0, r.jsx)("div", {
-                              className: v.bundleMiniNameplateContainer,
-                              children: (0, r.jsx)(N, {
+                              className: b.bundleMiniNameplateContainer,
+                              children: (0, r.jsx)(T, {
                                   nameplate: o,
                                   fallbackLabel: null,
                               }),
                           }),
                       null != i &&
                           (0, r.jsx)("div", {
-                              className: v.bundleMiniAvatarDecorationContainer,
-                              children: (0, r.jsx)(C, {
+                              className: b.bundleMiniAvatarDecorationContainer,
+                              children: (0, r.jsx)(S, {
                                   avatarDecoration: i,
-                                  avatarSize: d.EFr.SIZE_24,
+                                  avatarSize: l.EFr.SIZE_24,
                               }),
                           }),
                   ],
               });
     },
-    R = (e) => {
+    A = (e) => {
         var t;
-        let { product: n, sku: i, fallbackLabel: a } = e,
-            u = null == i ? void 0 : i.id,
-            f = (0, c.e7)([h.Z], () => h.Z.getProduct(null == i ? void 0 : i.id)),
-            p = null != n ? n : f;
-        if ((null == p ? void 0 : p.type) === l.Z.BUNDLE)
-            return (0, r.jsx)(P, {
-                product: p,
-                fallbackLabel: a,
+        let { product: n, sku: i, fallbackLabel: s } = e,
+            c = null == i ? void 0 : i.id,
+            u = (0, o.e7)([p.Z], () => p.Z.getProduct(null == i ? void 0 : i.id)),
+            d = null != n ? n : u;
+        if ((null == d ? void 0 : d.type) === a.Z.BUNDLE)
+            return (0, r.jsx)(C, {
+                product: d,
+                fallbackLabel: s,
             });
-        let [_] = null != (t = null == p ? void 0 : p.items) ? t : [];
-        return void 0 !== u && u in y.K
-            ? y.K[u].render({
+        let [f] = null != (t = null == d ? void 0 : d.items) ? t : [];
+        return void 0 !== c && c in g.K
+            ? g.K[c].render({
                   animationState: "on_hover",
-                  className: v.externalProductAsset,
+                  className: b.externalProductAsset,
               })
-            : (0, s.EQ)(null == _ ? void 0 : _.type)
-                  .with(
-                      l.Z.AVATAR_DECORATION,
-                      () => (
-                          o()(_.type === l.Z.AVATAR_DECORATION, "ts-match checked the type"),
-                          (0, r.jsx)(C, {
-                              avatarDecoration: _,
-                              avatarSize: d.EFr.SIZE_40,
-                          })
-                      ),
-                  )
-                  .with(
-                      l.Z.PROFILE_EFFECT,
-                      () => (
-                          o()(_.type === l.Z.PROFILE_EFFECT, "ts-match checked the type"),
-                          (0, r.jsx)(A, {
-                              profileEffect: _,
-                              fallbackLabel: a,
-                          })
-                      ),
-                  )
-                  .with(
-                      l.Z.NAMEPLATE,
-                      () => (
-                          o()(_.type === l.Z.NAMEPLATE, "ts-match checked the type"),
-                          (0, r.jsx)(N, {
-                              nameplate: _,
-                              fallbackLabel: a,
-                          })
-                      ),
-                  )
-                  .otherwise(() => a);
+            : (null == f ? void 0 : f.type) === a.Z.AVATAR_DECORATION
+              ? (0, r.jsx)(S, {
+                    avatarDecoration: f,
+                    avatarSize: l.EFr.SIZE_40,
+                })
+              : (null == f ? void 0 : f.type) === a.Z.PROFILE_EFFECT
+                ? (0, r.jsx)(I, {
+                      profileEffect: f,
+                      fallbackLabel: s,
+                  })
+                : (null == f ? void 0 : f.type) === a.Z.NAMEPLATE
+                  ? (0, r.jsx)(T, {
+                        nameplate: f,
+                        fallbackLabel: s,
+                    })
+                  : s;
     };

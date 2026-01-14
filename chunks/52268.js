@@ -1,10 +1,10 @@
-n.d(t, { Z: () => O }), n(314940);
+n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    s = n(278074),
-    c = n(481060),
+    s = n(481060),
+    c = n(212161),
     a = n(578976),
     u = n(171019),
     d = n(74538),
@@ -81,7 +81,7 @@ let y = () => 80,
         var { children: t, className: n, isSelected: i = !1 } = e,
             l = j(e, ["children", "className", "isSelected"]);
         return (0, r.jsx)(
-            c.P3F,
+            s.P3F,
             h(x({ className: o()(g.effectGridItem, n, { [g.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t,
@@ -140,7 +140,7 @@ let y = () => 80,
             b = d.ZP.canUseCollectibles(t);
         return (0, r.jsx)("section", {
             className: g.section,
-            children: (0, r.jsx)(c.GMG, {
+            children: (0, r.jsx)(s.GMG, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
@@ -153,71 +153,70 @@ let y = () => 80,
                     return t.length;
                 }),
                 renderItem: (e, t, d, h) => {
-                    let { section: j, items: y } = u[e];
-                    return (0, s.EQ)(y[t])
-                        .with(p.Tm, () =>
-                            (0, r.jsxs)(
-                                v,
-                                {
-                                    style: x({}, d),
-                                    isSelected: !f,
-                                    onSelect: () => o(null),
-                                    children: [
-                                        (0, r.jsx)(c.t6m, {
-                                            size: "md",
-                                            color: "currentColor",
-                                            className: g.notAllowedIcon,
-                                        }),
-                                        (0, r.jsx)(c.Text, {
-                                            variant: "text-xs/normal",
-                                            color: "text-strong",
-                                            children: null != n ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.PoWNfe),
-                                        }),
-                                    ],
-                                },
-                                h,
-                            ),
-                        )
-                        .with(p.oT, () =>
-                            (0, r.jsxs)(
-                                v,
-                                {
-                                    style: d,
-                                    onSelect: a,
-                                    children: [
-                                        (0, r.jsx)(c.EOn, {
-                                            size: "custom",
-                                            width: 23,
-                                            height: 23,
-                                            color: "currentColor",
-                                            className: g.shopIcon,
-                                        }),
-                                        (0, r.jsx)(c.Text, {
-                                            variant: "text-xs/normal",
-                                            color: "text-strong",
-                                            children: m.intl.string(m.t.pWG4ze),
-                                        }),
-                                    ],
-                                },
-                                h,
-                            ),
-                        )
-                        .otherwise((e) => {
-                            let t = (null == i ? void 0 : i.skuId) === e.skuId;
-                            return (0, r.jsx)(
-                                P,
-                                {
-                                    style: x({}, d),
-                                    section: j,
-                                    profileEffect: e,
-                                    innerRef: t ? l : void 0,
-                                    isSelected: t,
-                                    onSelect: () => o(e),
-                                    canUsePremiumCollectibles: b,
-                                },
-                                h,
-                            );
-                        });
+                    let { section: j, items: y } = u[e],
+                        O = y[t];
+                    if (O === p.Tm)
+                        return (0, r.jsxs)(
+                            v,
+                            {
+                                style: x({}, d),
+                                isSelected: !f,
+                                onSelect: () => o(null),
+                                children: [
+                                    (0, r.jsx)(s.t6m, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: g.notAllowedIcon,
+                                    }),
+                                    (0, r.jsx)(s.Text, {
+                                        variant: "text-xs/normal",
+                                        color: "text-strong",
+                                        children: null != n ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.PoWNfe),
+                                    }),
+                                ],
+                            },
+                            h,
+                        );
+                    if (O === p.oT)
+                        return (0, r.jsxs)(
+                            v,
+                            {
+                                style: d,
+                                onSelect: a,
+                                children: [
+                                    (0, r.jsx)(s.EOn, {
+                                        size: "custom",
+                                        width: 23,
+                                        height: 23,
+                                        color: "currentColor",
+                                        className: g.shopIcon,
+                                    }),
+                                    (0, r.jsx)(s.Text, {
+                                        variant: "text-xs/normal",
+                                        color: "text-strong",
+                                        children: m.intl.string(m.t.pWG4ze),
+                                    }),
+                                ],
+                            },
+                            h,
+                        );
+                    if ((0, c.H)(O)) {
+                        let e = (null == i ? void 0 : i.skuId) === O.skuId;
+                        return (0, r.jsx)(
+                            P,
+                            {
+                                style: x({}, d),
+                                section: j,
+                                profileEffect: O,
+                                innerRef: e ? l : void 0,
+                                isSelected: e,
+                                onSelect: () => o(O),
+                                canUsePremiumCollectibles: b,
+                            },
+                            h,
+                        );
+                    }
+                    return null;
                 },
                 renderSection: (e, t) => {
                     let { header: n } = u[e];
@@ -226,7 +225,7 @@ let y = () => 80,
                             height: "".concat(16, "px"),
                             position: "absolute",
                         }),
-                        children: (0, r.jsx)(c.Heading, {
+                        children: (0, r.jsx)(s.Heading, {
                             variant: "heading-md/medium",
                             children: n,
                         }),
