@@ -124,7 +124,11 @@ function M(e) {
 }
 class k extends (r = o.ZP.PersistedStore) {
     loadStoredState(e, t) {
-        for (let n in (null != e && e.version === L && ((I = e.clientOverrides), (v = e.evaluatedExperiments)),
+        for (let n in (null != e && e.version === L
+            ? ((I = e.clientOverrides), (v = e.evaluatedExperiments))
+            : null != e &&
+              2 === e.version &&
+              ((I = e.clientOverrides), (v = _(f({}, e.evaluatedExperiments), { installation: {} }))),
         (C = {}),
         t)) {
             let e = M(n),
