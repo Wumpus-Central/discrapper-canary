@@ -59,10 +59,6 @@ function j(e, t) {
     );
 }
 let y = {
-    CollectiblesExpiryModal: async () => {
-        let { default: e } = await n.e("77370").then(n.bind(n, 83950));
-        return (t) => (0, a.jsx)(e, v({}, t));
-    },
     EmailEnterModal: async () => {
         let { default: e } = await n.e("20670").then(n.bind(n, 993018));
         return (t) =>
@@ -1158,7 +1154,7 @@ let y = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("37193"), n.e("90688")]).then(n.bind(n, 978305));
+        let { default: e } = await Promise.all([n.e("40254"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, v({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {

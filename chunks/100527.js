@@ -359,7 +359,6 @@ var r = (function (e) {
         (e.COLLECTIBLES_PAYMENT_MODAL = "collectibles payment modal"),
         (e.COLLECTIBLES_COLLECTED_MODAL = "collectibles collected modal"),
         (e.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP = "collectibles feature education tooltip"),
-        (e.COLLECTIBLES_EXPIRY_MODAL = "collectibles expiry modal"),
         (e.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL = "collectibles gift customization modal"),
         (e.COLLECTIBLES_MOBILE_GIFT_MODAL = "collectibles mobile gift modal"),
         (e.VIEW_ALL_RENTALS_MODAL = "view all rentals modal"),
