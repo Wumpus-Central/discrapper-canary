@@ -20,6 +20,8 @@ let d = (0, u.UO)(a.n.OVERLAY_VOICE_WIDGET_MAX_USERS, {
     useTitle: () => c.intl.string(c.t["X/Uyzc"]),
     minValue: o.o3 - 1,
     maxValue: o.IM,
+    markers: o.oo,
+    onMarkerRender: (t) => (t < o.o3 ? c.intl.string(c.t.nrUzFL) : t),
     getInitialValue: () => {
         var t;
         let e = E();
