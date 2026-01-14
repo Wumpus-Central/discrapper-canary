@@ -5,7 +5,7 @@ var r = n(54381),
     i = n.n(a),
     l = n(512722),
     c = n.n(l),
-    s = n(620792),
+    s = n(853590),
     u = n(91192),
     f = n(481060),
     d = n(493773),
@@ -83,13 +83,7 @@ function O(e) {
         n = b.Z.useField("currentCategoryKey");
     (0, d.ZP)(() => {
         t.some((e) => e.key === n) || b.Z.setState({ currentCategoryKey: t[0].key });
-    }),
-        o.useEffect(
-            () => () => {
-                b.Z.setState({ currentCategoryKey: void 0 });
-            },
-            [],
-        );
+    });
     let a = o.useMemo(
             () =>
                 Math.max(
