@@ -476,7 +476,7 @@ z(
                     });
                     let o = null == e.user_settings_proto ? void 0 : (0, b.ac)(e.user_settings_proto);
                     E.Z.dispatchReady.measure(() => {
-                        var n, s, l;
+                        var n, s, l, c;
                         X({
                             type: "CONNECTION_OPEN",
                             sessionId: e.session_id,
@@ -513,6 +513,7 @@ z(
                             explicitContentScanVersion: e.explicit_content_scan_version,
                             failedStates: e.failed_states,
                             linkedUsers: null != (l = e.linked_users) ? l : void 0,
+                            regionalFeatureConfig: null != (c = e.regional_feature_config) ? c : void 0,
                         });
                     }),
                         null != e.auth_token &&
