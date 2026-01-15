@@ -61,11 +61,11 @@ function p(e) {
                 t
                     ? (0, a.jsx)(i.d3s, {
                           size: "refresh_sm",
-                          color: "var(--icon-feedback-info)",
+                          color: "var(--text-default)",
                       })
                     : (0, a.jsx)(i.aNP, {
                           size: "refresh_sm",
-                          color: "var(--icon-feedback-warning)",
+                          color: "var(--text-default)",
                       }),
                 (0, a.jsx)(i.Text, {
                     color: "text-default",
