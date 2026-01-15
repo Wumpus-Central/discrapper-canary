@@ -22,8 +22,7 @@ let o = (e, t) => {
                 null !== e.paymentGateway && (n.payment_gateway = e.paymentGateway),
                 e.variantsReturnStyle === r.v.VARIANTS_GROUP && (n.variants_return_style = r.v.VARIANTS_GROUP),
                 null != e.shopHomeConfig && (n.shop_home_config = e.shopHomeConfig),
-                null != e.skipNumCategories && (n.skip_num_categories = e.skipNumCategories),
-                !0 === e.includeNameplatesOnMobile && (n.include_nameplates_on_mobile = !0)),
+                null != e.skipNumCategories && (n.skip_num_categories = e.skipNumCategories)),
             n
         );
     },
