@@ -33,6 +33,7 @@ var r = (function (e) {
         (e[(e.PACKAGE_FAMILY_FRIENDLY = 32)] = "PACKAGE_FAMILY_FRIENDLY"),
         (e[(e.PACKAGE_HOLIDAY_SEASON = 33)] = "PACKAGE_HOLIDAY_SEASON"),
         (e[(e.PACKAGE_NEW_YEARS = 34)] = "PACKAGE_NEW_YEARS"),
+        (e[(e.FULL_EPISODE_VIDEO_QUEST = 35)] = "FULL_EPISODE_VIDEO_QUEST"),
         e
     );
 })({});
