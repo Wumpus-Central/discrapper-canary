@@ -89,11 +89,18 @@ class I extends l.Z {
                 let e = await o.Z.getOrEnsurePrivateChannel(n),
                     t = _.Z.getChannel(e);
                 if (null == t) return;
-                m.Z.isReady(t.id) ||
-                    (await d.Z.fetchMessages({
+                if (
+                    (m.Z.isReady(t.id) ||
+                        (await d.Z.fetchMessages({
+                            channelId: t.id,
+                            isPreload: !0,
+                        })),
+                    m.Z.getMessages(t.id).cached)
+                )
+                    return void S.info("Skipping gift intent notification - fetched messages marked as stale", {
                         channelId: t.id,
-                        isPreload: !0,
-                    }));
+                        recipientUserID: n,
+                    });
                 let i = b.ZP.getNextRecipientUserIDForNotification();
                 if (i !== n) return;
                 s.Z.sendGiftingPromptSystemMessage(t.id, {
