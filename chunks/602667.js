@@ -1,7 +1,7 @@
-n.d(t, { A: () => h }), n(388685);
-var r = n(54381),
-    i = n(473749),
-    a = n(907331),
+n.d(t, { A: () => m }), n(388685);
+var r = n(473749),
+    i = n(907331),
+    a = n(228577),
     o = n(442837),
     s = n(110924),
     l = n(451478),
@@ -59,16 +59,16 @@ function p(e, t) {
     );
 }
 let _ = (e) => {
-        let [t, n] = i.useState(!1),
-            r = null != e ? e : t,
-            o = r !== (0, s.Z)(r);
+        let [t, n] = r.useState(!1),
+            a = null != e ? e : t,
+            o = a !== (0, s.Z)(a);
         return {
-            visible: r,
+            visible: a,
             visibleChanged: o,
-            reference: (0, a.O)((e) => n(e), c.PI),
+            reference: (0, i.O)((e) => n(e), c.PI),
         };
     },
-    m = () => {
+    h = () => {
         let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
             t = (0, s.Z)(e),
             n = e !== t;
@@ -77,18 +77,32 @@ let _ = (e) => {
             focusedChanged: n,
         };
     },
-    h = i.memo(function (e) {
-        let { focused: t, focusedChanged: n } = m(),
-            { visible: i, visibleChanged: a, reference: o } = _(e.overrideVisibility);
-        return (0, r.jsx)(
-            c.ui,
-            p(d({}, e), {
+    m = r.memo(function (e) {
+        let { focused: t, focusedChanged: n } = h(),
+            { visible: i, visibleChanged: o, reference: s } = _(e.overrideVisibility),
+            { key: l, adContentIds: u } = (0, c.$I)(e),
+            f = p(d({}, e), {
                 focused: t,
                 focusedChanged: n,
                 visible: i,
-                visibleChanged: a,
-                reference: o,
-            }),
-            (0, c.B5)(e.questOrQuests, e.questContent),
-        );
+                visibleChanged: o,
+                reference: s,
+            });
+        return "questOrQuests" in e
+            ? (0, r.createElement)(
+                  c.ui,
+                  p(d({}, f), {
+                      key: l,
+                      adContentIds: u,
+                      adCreativeType: a.E.QUEST,
+                  }),
+              )
+            : (0, r.createElement)(
+                  c.ui,
+                  p(d({}, f), {
+                      key: l,
+                      adContentIds: u,
+                      adCreativeType: e.adCreativeType,
+                  }),
+              );
     });
