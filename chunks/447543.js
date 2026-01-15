@@ -131,15 +131,14 @@ function ef(e) {
         case ei.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             c.targetType = e.target_type;
     }
+    let u = null == B.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member;
     return (
-        (null == B.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) &&
-            null != e.channel &&
-            (0, k.zi)(e.channel.type) &&
-            (c.welcomeModalChannelId = e.channel.id),
+        u && null != e.channel && (0, k.zi)(e.channel.type) && (c.welcomeModalChannelId = e.channel.id),
         null != e.guild_scheduled_event && (c.guildScheduledEvent = e.guild_scheduled_event),
         (c.isGuestInvite = (0, s.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)),
         (c.isApplicationBypassInvite = (0, s.yE)(null != (l = e.flags) ? l : 0, o.$.IS_APPLICATION_BYPASS)),
         (c.inviterUserId = null == (n = e.inviter) ? void 0 : n.id),
+        u || (c.forceTransition = !0),
         c
     );
 }
@@ -547,7 +546,7 @@ let eS = {
                                         : null == c || null == (t = c.guild)
                                           ? void 0
                                           : t.id;
-                            if (!o && null != u && c.new_member) {
+                            if (!o && null != u && c.new_member && !c.show_verification_form) {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 17181));
                                 await e({ guildId: u });
                             }
@@ -593,7 +592,7 @@ let eS = {
         if (null != l && (null == (r = l.features) ? void 0 : r.includes(ee.GuildFeatures.HUB)))
             return void R.Z.onOpenHubInvite(e);
         let c = (0, s.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
-        if (null != l && !c && (0, P.u)(l)) return void (0, P._)(l.id);
+        if (null != l && !c && e.new_member && (0, P.u)(l)) return void (0, P._)(l.id);
         if (null == a) return;
         let u = ef(e);
         null != t && (u.transitionTo = t),
