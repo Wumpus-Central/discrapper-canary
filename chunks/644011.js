@@ -66,7 +66,7 @@ function y(e) {
             let e = w && 1 === a.length;
             return N.map((t) => {
                 var n, i;
-                let a =
+                let o =
                     null !=
                     (i =
                         null == (n = P[t.skuId])
@@ -80,9 +80,10 @@ function y(e) {
                 return (0, r.jsx)(
                     m.Z,
                     {
-                        variant: e ? m.B.NO_ICON : a.length > 0 ? m.B.WISHLIST : m.B.POPULAR,
+                        variant: e ? m.B.NO_ICON : o.length > 0 ? m.B.WISHLIST : m.B.POPULAR,
+                        userIdsForRecommendation: o,
+                        userIdsForGifting: a,
                         wishlistItem: t,
-                        userIds: a,
                         guildId: v,
                         channelId: S,
                         cardSize: y,

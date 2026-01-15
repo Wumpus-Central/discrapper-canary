@@ -1,95 +1,99 @@
 n.d(t, {
-    B: () => y,
-    Z: () => v,
+    B: () => v,
+    Z: () => I,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(793030),
-    l = n(442837),
-    c = n(902704),
-    u = n(36563),
-    d = n(681715),
-    f = n(688192),
-    p = n(594174),
-    _ = n(823379),
-    m = n(851397),
-    h = n(474936),
-    g = n(268685),
-    E = n(388032),
-    b = n(264940),
-    y = (function (e) {
+    s = n(392711),
+    l = n.n(s),
+    c = n(793030),
+    u = n(442837),
+    d = n(902704),
+    f = n(36563),
+    p = n(681715),
+    _ = n(688192),
+    m = n(594174),
+    h = n(823379),
+    g = n(851397),
+    E = n(474936),
+    b = n(268685),
+    y = n(388032),
+    O = n(264940),
+    v = (function (e) {
         return (e.POPULAR = "popular"), (e.WISHLIST = "wishlist"), (e.NO_ICON = "no_icon"), e;
     })({});
-let O = 3;
-function v(e) {
+let S = 3;
+function I(e) {
     let {
             variant: t,
             wishlistItem: n,
-            userIds: a,
-            guildId: y,
-            channelId: v,
-            cardSize: S = f.U.SMALL,
-            contextContainerClassName: I,
+            guildId: a,
+            channelId: s,
+            userIdsForGifting: v,
+            userIdsForRecommendation: I,
+            cardSize: T = _.U.SMALL,
+            contextContainerClassName: C,
         } = e,
-        [T, C] = i.useState(new Set(a));
+        [A, N] = i.useState(l().uniq(v)),
+        [P, R] = i.useState(l().uniq(I));
     i.useEffect(() => {
-        C((e) => {
-            let t = new Set(a);
-            return (0, c.E)(Array.from(e), Array.from(t)) ? e : t;
+        R((e) => {
+            let t = l().uniq(I);
+            return (0, d.E)(e, t) ? e : t;
         });
-    }, [a]);
-    let A = (0, l.Wu)(
-        [p.default],
-        () =>
-            Array.from(T)
-                .map((e) => p.default.getUser(e))
-                .filter(_.lm),
-        [T],
-    );
+    }, [I]),
+        i.useEffect(() => {
+            N((e) => {
+                let t = l().uniq(v);
+                return (0, d.E)(e, t) ? e : t;
+            });
+        }, [v]);
+    let w = (0, u.e7)([m.default], () => (1 === A.length ? m.default.getUser(A[0]) : void 0), [A]),
+        D = (0, u.Wu)([m.default], () => P.map((e) => m.default.getUser(e)).filter(h.lm), [P]);
     return (0, r.jsxs)("div", {
-        className: b.container,
+        className: O.container,
         children: [
             "no_icon" === t
                 ? null
-                : (0, r.jsx)(d.u, {
-                      text: "popular" === t ? E.intl.string(E.t["DP0o+u"]) : E.intl.string(E.t["OnWY3/"]),
+                : (0, r.jsx)(p.u, {
+                      text: "popular" === t ? y.intl.string(y.t["DP0o+u"]) : y.intl.string(y.t["OnWY3/"]),
                       position: "top",
                       children: (0, r.jsx)("div", {
-                          className: o()(b.contextContainer, I),
+                          className: o()(O.contextContainer, C),
                           children:
-                              "popular" === t || 0 === A.length
+                              "popular" === t || 0 === D.length
                                   ? (0, r.jsx)("div", {
-                                        className: b.contextIcon,
-                                        children: (0, r.jsx)(s.YqE, {
+                                        className: O.contextIcon,
+                                        children: (0, r.jsx)(c.YqE, {
                                             size: "sm",
                                             color: "currentColor",
-                                            className: b.fireIcon,
+                                            className: O.fireIcon,
                                         }),
                                     })
-                                  : (0, r.jsx)(u.g, {
-                                        users: A,
-                                        guildId: null != y ? y : void 0,
-                                        channelId: null != v ? v : void 0,
-                                        maxUsers: O,
-                                        size: g.EF.SIZE_20,
+                                  : (0, r.jsx)(f.g, {
+                                        users: D,
+                                        guildId: null != a ? a : void 0,
+                                        channelId: null != s ? s : void 0,
+                                        maxUsers: S,
+                                        size: b.EF.SIZE_20,
                                     }),
                       }),
                   }),
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(g.Z, {
                 item: n,
                 wishlistId: null,
                 isOwner: !1,
-                cardSize: S,
+                cardSize: T,
                 showOverlayButton: !0,
                 hideButtonIcon: !0,
                 showPrice: !0,
                 showIcons: !1,
-                giftingOrigin: h.Wt.SHOP_PAGE,
-                profileOwner: 1 === A.length ? A[0] : void 0,
-                additionalUserIds: A.length > 1 ? A.map((e) => e.id) : void 0,
+                giftingOrigin: E.Wt.SHOP_PAGE,
+                profileOwner: w,
+                additionalUserIds: A.length > 1 ? A : void 0,
             }),
         ],
     });
