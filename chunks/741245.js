@@ -16,8 +16,8 @@ var r,
     f = n(436774),
     p = n(302221),
     _ = n(474936),
-    m = n(60564);
-function h(e, t, n) {
+    h = n(60564);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -171,7 +171,7 @@ class I extends (r = a.PureComponent) {
         switch (e) {
             case "GUILD_BOOST_APPLIED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgBorder,
+                    className: h.svgBorder,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -188,7 +188,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgBorder,
+                    className: h.svgBorder,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -206,7 +206,7 @@ class I extends (r = a.PureComponent) {
             case "PREMIUM_ACTIVATED":
             case "PREMIUM_UPGRADED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgBorder,
+                    className: h.svgBorder,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -223,7 +223,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_UPDATED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgBorder,
+                    className: h.svgBorder,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -247,7 +247,7 @@ class I extends (r = a.PureComponent) {
         switch (e) {
             case "GUILD_BOOST_APPLIED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgCopy,
+                    className: h.svgCopy,
                     width: "304",
                     height: "48",
                     viewBox: "0 0 304 48",
@@ -301,7 +301,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_PAYMENT_STARTED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgCopy,
+                    className: h.svgCopy,
                     width: "156",
                     height: "48",
                     viewBox: "0 0 156 48",
@@ -328,7 +328,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_ACTIVATED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgCopy,
+                    className: h.svgCopy,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -339,7 +339,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_UPGRADED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgCopy,
+                    className: h.svgCopy,
                     width: "298",
                     height: "48",
                     viewBox: "0 0 298 48",
@@ -350,7 +350,7 @@ class I extends (r = a.PureComponent) {
                 });
             case "PREMIUM_UPDATED":
                 return (0, i.jsx)("svg", {
-                    className: m.svgCopy,
+                    className: h.svgCopy,
                     width: "276",
                     height: "48",
                     viewBox: "0 0 276 48",
@@ -366,15 +366,16 @@ class I extends (r = a.PureComponent) {
     render() {
         let { className: e } = this.props;
         return (0, i.jsxs)("div", {
-            className: s()(m.container, e),
+            className: s()(h.container, e),
             children: [
                 this.renderSvgBorder(),
                 (0, i.jsxs)(l.Z.div, {
-                    className: m.animationContainer,
+                    className: h.animationContainer,
                     style: this.getContainerStyle(),
                     children: [
                         (0, i.jsx)(d.ZX5, {
-                            className: m.shine,
+                            "data-migration-pending": !0,
+                            className: h.shine,
                             style: this.getShineStyle(),
                         }),
                         this.renderSvgCopy(),
@@ -384,7 +385,7 @@ class I extends (r = a.PureComponent) {
         });
     }
     constructor(...e) {
-        super(...e), h(this, "animation", new l.Z.Value(0));
+        super(...e), m(this, "animation", new l.Z.Value(0));
     }
 }
 function T(e) {
@@ -401,4 +402,4 @@ function T(e) {
         }),
     );
 }
-h(I, "Types", S), (T.Types = S);
+m(I, "Types", S), (T.Types = S);
