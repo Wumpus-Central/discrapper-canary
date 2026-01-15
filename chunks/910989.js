@@ -18,7 +18,7 @@ var r = n(54381),
     f = n(657707),
     p = n(231338),
     _ = n(293784);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -72,8 +72,8 @@ let b = {
                 type: c = "default",
                 align: u = "center",
                 onChange: f = p.dG,
-                onClick: m,
-                className: h,
+                onClick: h,
+                className: m,
                 innerClassName: g,
                 children: E,
                 reverse: O = !1,
@@ -102,7 +102,7 @@ let b = {
             N = t ? _.inputDisabled : n ? _.inputReadonly : _.inputDefault;
         return (0, r.jsxs)(A, {
             "data-toggleable-component": "checkbox",
-            className: o()(t ? _.checkboxWrapperDisabled : _.checkboxWrapper, y[u], h, {
+            className: o()(t ? _.checkboxWrapperDisabled : _.checkboxWrapper, y[u], m, {
                 [_.row]: "row" === c,
                 [_.checked]: s,
             }),
@@ -113,7 +113,7 @@ let b = {
                         children: (0, r.jsx)("input", {
                             className: o()(g, N),
                             type: "checkbox",
-                            onClick: m,
+                            onClick: h,
                             onChange: t || n ? p.dG : T,
                             checked: s,
                             style: {
@@ -138,7 +138,7 @@ function v(e) {
     let { value: n, type: r, color: i } = e,
         a = null != (t = e.style) ? t : {};
     if (!1 === n) return a;
-    if (((a = h({}, a)), null != i))
+    if (((a = m({}, a)), null != i))
         switch (r) {
             case "default":
                 a.borderColor = i;
@@ -167,7 +167,7 @@ function S(e) {
             [_.checked]: n,
             [_.checkboxDisabled]: c,
         }),
-        style: h(
+        style: m(
             {
                 width: a,
                 height: a,
@@ -175,7 +175,7 @@ function S(e) {
             },
             d,
         ),
-        children: (0, r.jsx)(f.kSu, {
+        children: (0, r.jsx)(f.CheckmarkSmallBoldIcon, {
             size: "sm",
             color: p,
             "aria-hidden": !0,

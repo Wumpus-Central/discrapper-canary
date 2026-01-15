@@ -61,7 +61,7 @@ function I(e) {
                     toolbar: (0, a.jsx)("div", {}),
                     children: [
                         (0, a.jsx)(c.ZP.Icon, {
-                            icon: i.iWm,
+                            icon: i.GameControllerIcon,
                             "aria-label": "",
                         }),
                         (0, a.jsx)(c.ZP.Title, { children: O.intl.string(y.default.vCzwM7) }),

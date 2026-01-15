@@ -30,7 +30,7 @@ let s = (e) => {
         subscribeButtonProps: {
             text: s,
             disabled: l,
-            icon: null != t ? t : r.SrA,
+            icon: null != t ? t : r.NitroWheelIcon,
             variant: null != n ? n : "expressive",
         },
     };

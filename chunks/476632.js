@@ -1,4 +1,10 @@
-function r(e, t, n) {
+n.d(t, { r: () => p });
+var r = n(54381);
+n(473749);
+var i = n(692547),
+    a = n(331595),
+    o = n(267843);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,7 +17,23 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -23,7 +45,30 @@ function i(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -32,4 +77,46 @@ function a(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54381), n(473749), n(692547), n(331595), n(267843);
+let p = (e) => {
+    var t,
+        n,
+        {
+            size: s = "md",
+            width: c,
+            height: f,
+            secondaryColor: p = "transparent",
+            secondaryColorClass: _ = "",
+            color: h = i.Z.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: m = "",
+        } = e,
+        g = d(e, ["size", "width", "height", "secondaryColor", "secondaryColorClass", "color", "colorClass"]);
+    let E = (0, o.m)(s),
+        b = null != (t = null == E ? void 0 : E.width) ? t : c,
+        y = null != (n = null == E ? void 0 : E.height) ? n : f;
+    return (0, r.jsxs)(
+        "svg",
+        u(l({}, (0, a.Z)(g)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: b,
+            height: y,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("circle", {
+                    cx: "12",
+                    cy: "12",
+                    r: "10",
+                    fill: "string" == typeof p ? p : p.css,
+                    className: _,
+                }),
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof h ? h : h.css,
+                    fillRule: "evenodd",
+                    d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22ZM7 11a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7Z",
+                    clipRule: "evenodd",
+                    className: m,
+                }),
+            ],
+        }),
+    );
+};

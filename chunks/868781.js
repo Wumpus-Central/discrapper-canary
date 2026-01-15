@@ -13,19 +13,19 @@ var i = n(657707),
 let p = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, s.dS)(e)
-        ? i.ewx
+        ? i.StageIcon
         : (0, a.Z)(e)
           ? t
-              ? i.iWm
-              : i.jje
+              ? i.GameControllerIcon
+              : i.AppsIcon
           : e.type === f.IIU.PLAYING
-            ? i.iWm
+            ? i.GameControllerIcon
             : e.type === f.IIU.LISTENING
-              ? i.RZG
+              ? i.MusicIcon
               : e.type === f.IIU.WATCHING || e.type === f.IIU.STREAMING
-                ? i.ARS
+                ? i.TvIcon
                 : e.type === f.IIU.COMPETING
-                  ? i.iWm
+                  ? i.GameControllerIcon
                   : null;
 };
 function _(e) {
@@ -37,11 +37,11 @@ function _(e) {
             hideIcon: s = !1,
             hideText: f = !1,
             hideTooltip: _ = !1,
-            canTruncate: m = !0,
+            canTruncate: h = !0,
         } = e,
-        { descriptiveTextEnabled: h } = (0, l.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { descriptiveTextEnabled: m } = (0, l.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
         { enableTopNavButton: g } = (0, o.Cq)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { text: E, tooltip: b } = (0, c.Z)(t, h || g),
+        { text: E, tooltip: b } = (0, c.Z)(t, m || g),
         y = p(t),
         O = null != y && !s;
     return (0, r.jsx)(d.Z, {
@@ -55,7 +55,7 @@ function _(e) {
         textVariant: n,
         textClassName: i,
         hideTooltip: _,
-        canTruncate: m,
+        canTruncate: h,
         "aria-label": null != b ? b : "",
         hideText: f,
     });

@@ -21,6 +21,6 @@ let S = (0, l.wf)(s.n.ADVANCED_PANEL, {
     E = (0, l.m7)(s.n.ADVANCED_SIDEBAR_ITEM, {
         useTitle: () => T.intl.string(T.t["8/udY0"]),
         getLegacySearchKey: () => ((0, u.Gl)("AdvancedPanel") ? void 0 : o.s6.SETTINGS_ADVANCED),
-        icon: i.xhG,
+        icon: i.MoreHorizontalIcon,
         buildLayout: () => ((0, u.Gl)("AdvancedPanel") ? [c] : [S]),
     });

@@ -8,7 +8,7 @@ var i = n(657707),
     o = n(388032);
 let T = (0, s.m7)(r.n.LOGOUT_SIDEBAR_ITEM, {
     useTitle: () => o.intl.string(o.t["2jxGer"]),
-    icon: i.PBZ,
+    icon: i.DoorExitIcon,
     onClick: () => {
         (0, l.Z)({
             title: o.intl.string(o.t["2jxGer"]),

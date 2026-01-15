@@ -24,6 +24,6 @@ let d = (0, l.wf)(s.n.ACTIVITY_PRIVACY_PANEL, {
     g = (0, l.m7)(s.n.ACTIVITY_PRIVACY_SIDEBAR_ITEM, {
         useTitle: () => E.intl.string(E.t.Cq98yL),
         getLegacySearchKey: () => ((0, u.Gl)("ActivityPrivacyPanel") ? void 0 : c.s6.ACTIVITY_PRIVACY),
-        icon: i.KED,
+        icon: i.UserPlatformIcon,
         buildLayout: () => ((0, u.Gl)("ActivityPrivacyPanel") ? [_] : [d]),
     });

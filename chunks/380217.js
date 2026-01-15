@@ -22,7 +22,7 @@ let c = (0, l.wf)(s.n.BILLING_PANEL, {
     }),
     d = (0, l.m7)(s.n.BILLING_SIDEBAR_ITEM, {
         useTitle: () => S.intl.string(S.t.oeUm2s),
-        icon: i.ciH,
+        icon: i.CreditCardIcon,
         getLegacySearchKey: () => ((0, u.Gl)("BillingPanel") ? void 0 : T.s6.BILLING),
         buildLayout: () => ((0, u.Gl)("BillingPanel") ? [c] : [E]),
     });

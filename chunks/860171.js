@@ -18,7 +18,7 @@ let S = (0, l.wf)(s.n.STREAMER_MODE_PANEL, {
     }),
     E = (0, l.m7)(s.n.STREAMER_MODE_SIDEBAR_ITEM, {
         useTitle: () => T.intl.string(T.t.S5GfOW),
-        icon: i.m3e,
+        icon: i.ScreenStreamIcon,
         getLegacySearchKey: () => ((0, u.Ml)("StreamerModePanel") ? void 0 : o.s6.STREAMER_MODE),
         buildLayout: () => [(0, u.Ml)("StreamerModePanel") ? c : S],
     });

@@ -26,6 +26,6 @@ let N = (0, l.wf)(s.n.ACCESSIBILITY_PANEL, {
     O = (0, l.m7)(s.n.ACCESSIBILITY_SIDEBAR_ITEM, {
         useTitle: () => I.intl.string(I.t.G0neg7),
         getLegacySearchKey: () => ((0, u.Gl)("AccessibilityPanel") ? void 0 : g.s6.ACCESSIBILITY),
-        icon: i.O0f,
+        icon: i.AccessibilityIcon,
         buildLayout: () => ((0, u.Gl)("AccessibilityPanel") ? [A] : [N]),
     });

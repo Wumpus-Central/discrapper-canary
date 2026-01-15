@@ -20,8 +20,8 @@ function h(e) {
             content: E,
             renderModalProps: O,
             analyticsLocations: v,
-            analyticsLocation: y,
-            isLightTheme: I,
+            analyticsLocation: I,
+            isLightTheme: y,
         } = e,
         C = "AnnouncementModalVariant1_".concat(b),
         { onClose: S } = O,
@@ -33,10 +33,10 @@ function h(e) {
         j = (0, d.K)({
             buttonAction: null == (h = E.button) ? void 0 : h.buttonAction,
             analyticsLocations: v,
-            analyticsLocation: y,
+            analyticsLocation: I,
             onClose: S,
         }),
-        P =
+        x =
             "" !== E.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -50,20 +50,20 @@ function h(e) {
                           ],
                       })
                 : void 0,
-        x = {
+        P = {
             type: "video",
-            src: I ? E.heroArtVideoLinkLightTheme : E.videoLink,
+            src: y ? E.heroArtVideoLinkLightTheme : E.videoLink,
         };
     null != E.heroArtVideoSubtitles &&
-        (x.subtitles = E.heroArtVideoSubtitles.map((e) => ({
+        (P.subtitles = E.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1,
         }))),
         ("" !== E.heroArtImageLinkDarkTheme || "" !== E.heroArtImageLinkLightTheme) &&
-            (x = {
+            (P = {
                 type: "image",
-                src: I ? E.heroArtImageLinkLightTheme : E.heroArtImageLinkDarkTheme,
+                src: y ? E.heroArtImageLinkLightTheme : E.heroArtImageLinkDarkTheme,
             });
     let A =
         "" !== E.modalTopPill
@@ -80,13 +80,13 @@ function h(e) {
         header: E.header,
         modalTopExtra: A,
         subHeader: E.subheader,
-        subHeaderExtra: P,
+        subHeaderExtra: x,
         body: E.body,
-        heroArt: x,
+        heroArt: P,
         featureCards: E.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: I ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: y ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
         changeLogId: C,
@@ -105,7 +105,7 @@ function h(e) {
                         j();
                 },
                 text: T,
-                icon: i.SrA,
+                icon: i.NitroWheelIcon,
             });
         },
     };

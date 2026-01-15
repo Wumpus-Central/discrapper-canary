@@ -46,7 +46,7 @@ let g = (0, r.k4)(o.n.SESSIONS_CATEGORY, {
     A = (0, r.m7)(o.n.SESSIONS_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t["+1h0k/"]),
         getLegacySearchKey: () => ((0, T.Gl)("SessionsPanel") ? void 0 : d.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2),
-        icon: l.dW3,
+        icon: l.LaptopPhoneIcon,
         trailing: {
             type: a.W.BADGE_NEW,
             getDismissibleContentTypes: () => [s.z.AUTH_SESSIONS_NEW],

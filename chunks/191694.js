@@ -23,7 +23,7 @@ let E = (0, l.wf)(s.n.REGISTERED_GAMES_PANEL, {
     _ = (0, l.m7)(s.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.AVDyEj),
         getLegacySearchKey: () => ((0, u.Gl)("RegisteredGamesPanel") ? void 0 : S.s6.REGISTERED_GAMES),
-        icon: i.iWm,
+        icon: i.GameControllerIcon,
         usePredicate: a.Jw,
         buildLayout: () => ((0, u.Gl)("RegisteredGamesPanel") ? [d] : [E]),
     });

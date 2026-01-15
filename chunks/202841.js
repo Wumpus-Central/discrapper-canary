@@ -20,7 +20,7 @@ let E = (0, l.wf)(s.n.DATA_AND_PRIVACY_PANEL, {
     }),
     _ = (0, l.m7)(s.n.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.OAuOHD),
-        icon: i.tQf,
+        icon: i.ShieldLockIcon,
         getLegacySearchKey: () => ((0, u.Gl)("DataAndPrivacyPanel") ? void 0 : S.s6.DATA_PRIVACY),
         buildLayout: () => [(0, u.Gl)("DataAndPrivacyPanel") ? d : E],
     });

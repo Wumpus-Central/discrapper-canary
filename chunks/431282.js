@@ -154,7 +154,7 @@ function p(e) {
                                       {
                                           onClick: O,
                                           focusProps: T,
-                                          children: (0, a.jsx)(i.Fbu, {
+                                          children: (0, a.jsx)(i.ChevronSmallRightIcon, {
                                               size: "xs",
                                               color: "currentColor",
                                           }),
@@ -173,7 +173,7 @@ function p(e) {
                                     P(),
                                     (0, a.jsx)("div", {
                                         className: c.submenuIconWrapper,
-                                        children: (0, a.jsx)(i.Fbu, {
+                                        children: (0, a.jsx)(i.ChevronSmallRightIcon, {
                                             size: "xs",
                                             color: "currentColor",
                                         }),

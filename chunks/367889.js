@@ -24,7 +24,7 @@ let g = (0, o.wf)(S.n.SUBSCRIPTIONS_PANEL, {
     N = (0, o.m7)(S.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t.trSpHX),
         getLegacySearchKey: () => ((0, c.Gl)("SubscriptionsPanel") ? void 0 : d.s6.SUBSCRIPTIONS),
-        icon: l.XOf,
+        icon: l.SubscriptionIcon,
         trailing: {
             type: T.W.STRONGLY_DISCOURAGED_CUSTOM,
             useCustomDecoration: () =>

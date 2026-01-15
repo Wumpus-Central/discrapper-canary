@@ -25,7 +25,7 @@ let g = (0, l.wf)(s.n.OVERLAY_PANEL, {
     }),
     N = (0, l.m7)(s.n.OVERLAY_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t["9cb1Uz"]),
-        icon: i.epB,
+        icon: i.WindowTopOutlineIcon,
         usePredicate: a.bC,
         getLegacySearchKey: () => ((0, u.Gl)("OverlayPanel") ? void 0 : d.s6.OVERLAY),
         buildLayout: () => ((0, u.Gl)("OverlayPanel") ? [g] : [I]),

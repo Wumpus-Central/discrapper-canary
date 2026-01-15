@@ -59,13 +59,13 @@ function g(e) {
         })(e, ["platform"]);
     switch (t) {
         case o.z.DESKTOP:
-            return (0, a.jsx)(s.pzj, m({ size: "xs" }, n));
+            return (0, a.jsx)(s.ScreenIcon, m({ size: "xs" }, n));
         case o.z.XBOX:
-            return (0, a.jsx)(s.Mko, m({ size: "xs" }, n));
+            return (0, a.jsx)(s.XboxNeutralIcon, m({ size: "xs" }, n));
         case o.z.PLAYSTATION:
-            return (0, a.jsx)(s.Tsp, m({ size: "xs" }, n));
+            return (0, a.jsx)(s.PlaystationNeutralIcon, m({ size: "xs" }, n));
         case o.z.NINTENDO:
-            return (0, a.jsx)(s.aPH, m({ size: "xs" }, n));
+            return (0, a.jsx)(s.NintendoSwitchNeutralIcon, m({ size: "xs" }, n));
         default:
             return null;
     }

@@ -22,6 +22,6 @@ let S = (0, l.k4)(s.n.KEYBINDS_CATEGORY, { buildLayout: () => [a.A] }),
     d = (0, l.m7)(s.n.KEYBINDS_SIDEBAR_ITEM, {
         useTitle: () => T.intl.string(T.t.T9DA2K),
         getLegacySearchKey: () => ((0, u.Gl)("KeybindsPanel") ? void 0 : o.s6.KEYBINDS),
-        icon: i.YiA,
+        icon: i.KeyboardIcon,
         buildLayout: () => ((0, u.Gl)("KeybindsPanel") ? [E] : [c]),
     });

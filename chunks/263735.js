@@ -27,6 +27,6 @@ let A = (0, l.wf)(s.n.CHAT_PANEL, {
     C = (0, l.m7)(s.n.CHAT_SIDEBAR_ITEM, {
         useTitle: () => N.intl.string(N.t["/VQax8"]),
         getLegacySearchKey: () => ((0, u.Gl)("ChatPanel") ? void 0 : I.s6.CHAT),
-        icon: i.kBi,
+        icon: i.ChatIcon,
         buildLayout: () => [(0, u.Gl)("ChatPanel") ? A : O],
     });

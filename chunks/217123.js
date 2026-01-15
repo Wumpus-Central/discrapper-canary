@@ -37,6 +37,6 @@ let g = (0, s.wf)(u.n.CONTENT_AND_SOCIAL_PANEL, {
     O = (0, s.m7)(u.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t["+o1pDZ"]),
         getLegacySearchKey: () => ((0, r.Gl)("ContentAndSocialPanel") ? void 0 : d.s6.CONTENT_SOCIAL),
-        icon: i.lZ8,
+        icon: i.ShieldUserIcon,
         buildLayout: () => ((0, r.Gl)("ContentAndSocialPanel") ? [A] : [g]),
     });

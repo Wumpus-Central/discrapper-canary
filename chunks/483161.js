@@ -1,4 +1,4 @@
-n.d(e, { z: () => b });
+n.d(e, { z: () => D });
 var i = n(54381),
     l = n(657707),
     s = n(442837),
@@ -19,13 +19,13 @@ var i = n(54381),
     O = n(526665),
     C = n(620163),
     f = n(97551),
-    P = n(726985),
+    L = n(726985),
     R = n(981631),
-    L = n(388032),
+    P = n(388032),
     p = n(897192);
 let m = (0, d.wf)(A.n.PROFILE_PANEL, {
         usePredicate: () => !(0, O.gN)("LegacyProfilePanel"),
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
+        useTitle: () => P.intl.string(P.t["vi7f+q"]),
         notice: {
             stores: [S.Z, I.Z],
             element: c.Z,
@@ -37,9 +37,9 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
         StronglyDiscouragedCustomComponent: E.Z,
         buildLayout: () => [],
     }),
-    D = (0, d.wf)(A.n.PROFILE_PANEL, {
+    b = (0, d.wf)(A.n.PROFILE_PANEL, {
         usePredicate: () => (0, O.gN)("ProfilePanel"),
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
+        useTitle: () => P.intl.string(P.t["vi7f+q"]),
         notice: {
             stores: [S.Z, I.Z],
             element: c.Z,
@@ -50,10 +50,10 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
             }),
         buildLayout: () => [f.i],
     }),
-    b = (0, d.m7)(A.n.PROFILE_SIDEBAR_ITEM, {
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
-        getLegacySearchKey: () => ((0, O.Gl)("ProfilePanel") ? void 0 : P.s6.PROFILE_CUSTOMIZATION),
-        icon: l.tBG,
+    D = (0, d.m7)(A.n.PROFILE_SIDEBAR_ITEM, {
+        useTitle: () => P.intl.string(P.t["vi7f+q"]),
+        getLegacySearchKey: () => ((0, O.Gl)("ProfilePanel") ? void 0 : L.s6.PROFILE_CUSTOMIZATION),
+        icon: l.UserIcon,
         stronglyDiscouragedCustomComponent: () => {
             var t;
             let e = (0, s.e7)([N.default], () => N.default.getCurrentUser()),
@@ -70,7 +70,7 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
                               src: n,
                               avatarDecoration: r,
                               size: u.EFr.SIZE_48,
-                              "aria-label": L.intl.string(L.t.lqaIxI),
+                              "aria-label": P.intl.string(P.t.lqaIxI),
                           }),
                           (0, i.jsxs)("div", {
                               className: p.textContainer,
@@ -88,9 +88,9 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,
-                                              children: L.intl.string(L.t.Ip9nBS),
+                                              children: P.intl.string(P.t.Ip9nBS),
                                           }),
-                                          (0, i.jsx)(l.vdY, {
+                                          (0, i.jsx)(l.PencilIcon, {
                                               size: "xxs",
                                               color: "currentColor",
                                           }),
@@ -105,5 +105,5 @@ let m = (0, d.wf)(A.n.PROFILE_PANEL, {
             type: _.W.BADGE_NEW,
             getDismissibleContentTypes: C.OF,
         },
-        buildLayout: () => ((0, O.Gl)("ProfilePanel") ? [D] : [m]),
+        buildLayout: () => ((0, O.Gl)("ProfilePanel") ? [b] : [m]),
     });

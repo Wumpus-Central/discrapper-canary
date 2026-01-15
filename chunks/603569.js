@@ -27,7 +27,7 @@ let I = (0, o.wf)(S.n.FAMILY_CENTER_PANEL, {
     A = (0, o.m7)(S.n.FAMILY_CENTER_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(g.default.RZqaJn),
         getLegacySearchKey: () => ((0, c.Gl)("FamilyCenterPanel") ? void 0 : d.s6.PRIVACY_FAMILY_CENTER),
-        icon: l.BFJ,
+        icon: l.GroupIcon,
         trailing: {
             type: T.W.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [s.z.FAMILY_CENTER_NEW_BADGE],

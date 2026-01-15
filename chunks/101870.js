@@ -20,7 +20,7 @@ let c = (0, l.wf)(u.n.LINUX_PANEL, {
     d = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
         useTitle: () => S.intl.string(S.t["7pPjTW"]),
         getLegacySearchKey: () => ((0, r.Gl)("LinuxPanel") ? void 0 : T.s6.LINUX_SETTINGS),
-        icon: i.pzj,
+        icon: i.ScreenIcon,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isLinux)(),
         buildLayout: () => [(0, r.Gl)("LinuxPanel") ? c : E],
     });

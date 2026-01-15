@@ -30,7 +30,7 @@ let A = (0, s.wf)(r.n.APPEARANCE_PANEL, {
     C = (0, s.m7)(r.n.APPEARANCE_SIDEBAR_ITEM, {
         useTitle: () => N.intl.string(N.t["iHH+ky"]),
         getLegacySearchKey: () => ((0, a.Gl)("AppearanceSidebarItem") ? void 0 : I.s6.APPEARANCE),
-        icon: i.V3v,
+        icon: i.PaintPaletteIcon,
         trailing: {
             type: u.W.BADGE_NEW,
             getDismissibleContentTypes: o.$Z,

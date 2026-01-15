@@ -21,6 +21,6 @@ let S = (0, l.wf)(s.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
     E = (0, l.m7)(s.n.PREMIUM_GUILD_SUBSCRIPTIONS_SIDEBAR_ITEM, {
         useTitle: () => T.intl.string(T.t["+CbP2v"]),
         getLegacySearchKey: () => ((0, u.Gl)("PremiumGuildSubscriptionsPanel") ? void 0 : o.s6.GUILD_BOOSTING),
-        icon: i.Ucv,
+        icon: i.BoostGemIcon,
         buildLayout: () => ((0, u.Gl)("PremiumGuildSubscriptionsPanel") ? [c] : [S]),
     });

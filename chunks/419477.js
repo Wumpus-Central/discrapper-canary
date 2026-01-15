@@ -29,7 +29,7 @@ let g = (0, s.k4)(r.n.GIFT_INVENTORY_CATEGORY, {
     A = (0, s.m7)(r.n.GIFT_SIDEBAR_ITEM, {
         useTitle: () => _.intl.string(_.t["jcSP+g"]),
         getLegacySearchKey: () => ((0, a.Gl)("GiftPanel") ? void 0 : d.s6.GIFT_INVENTORY),
-        icon: i.OgN,
+        icon: i.GiftIcon,
         trailing: {
             type: u.W.BADGE_COUNT,
             useCount: () => (0, l.YO)().length,

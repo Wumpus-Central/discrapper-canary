@@ -1,4 +1,10 @@
-function r(e, t, n) {
+n.d(t, { l: () => p });
+var r = n(54381);
+n(473749);
+var i = n(692547),
+    a = n(331595),
+    o = n(267843);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,7 +17,23 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -23,7 +45,30 @@ function i(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -32,4 +77,34 @@ function a(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54381), n(473749), n(692547), n(331595), n(267843);
+let p = (e) => {
+    var t,
+        n,
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
+        h = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let m = (0, o.m)(s),
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+    return (0, r.jsxs)(
+        "svg",
+        u(l({}, (0, a.Z)(h)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: g,
+            height: E,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M9.97 2.65c0-.76.4-1.56 1.16-1.62a11.15 11.15 0 0 1 1.74 0c.76.06 1.16.86 1.16 1.62 0 .92.37 1.68 1.03 1.96.66.27 1.46 0 2.11-.66.54-.53 1.4-.81 1.97-.32.44.38.85.79 1.23 1.23.5.58.21 1.43-.32 1.97-.65.65-.93 1.45-.66 2.1.28.67 1.04 1.03 1.96 1.04.76 0 1.56.4 1.62 1.16a11.17 11.17 0 0 1 0 1.74c-.03.38-.25.67-.55.86-.17.11-.38.06-.53-.08l-.77-.77a3 3 0 0 0-4.24 0l-.86.86a.2.2 0 0 1-.28 0 .2.2 0 0 1-.04-.22A3.99 3.99 0 0 0 12 8a4 4 0 1 0 1.52 7.7.2.2 0 0 1 .22.04.2.2 0 0 1 0 .28l-.86.86a3 3 0 0 0 .7 4.76c.22.12.37.37.26.6-.2.4-.52.7-.97.73a11.12 11.12 0 0 1-1.74 0c-.76-.06-1.16-.86-1.16-1.62 0-.92-.37-1.68-1.03-1.96-.66-.27-1.46 0-2.11.66-.54.53-1.4.81-1.97.32-.44-.38-.85-.79-1.23-1.23-.5-.58-.21-1.43.32-1.97.65-.65.93-1.45.66-2.1-.28-.67-1.04-1.03-1.96-1.04-.76 0-1.56-.4-1.62-1.16a11.15 11.15 0 0 1 0-1.74c.06-.76.86-1.16 1.62-1.16.92 0 1.68-.37 1.96-1.03.27-.66 0-1.46-.66-2.11-.53-.54-.81-1.4-.32-1.97.38-.44.79-.85 1.23-1.23.58-.5 1.43-.21 1.97.32.65.65 1.45.93 2.1.66.67-.28 1.03-1.04 1.04-1.96Z",
+                    className: _,
+                }),
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M18.3 14.3a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L20 17.42V23a1 1 0 0 1-2 0v-5.59l-2.3 2.3a1 1 0 0 1-1.4-1.42l4-4Z",
+                    className: _,
+                }),
+            ],
+        }),
+    );
+};

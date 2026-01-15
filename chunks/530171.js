@@ -1,4 +1,4 @@
-n.d(t, { I: () => h }), n(388685);
+n.d(t, { I: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -11,13 +11,13 @@ var r = n(54381),
     f = n(481060),
     p = n(393903),
     _ = n(206403),
-    m = n(623357);
-function h(e) {
+    h = n(623357);
+function m(e) {
     let {
             title: t,
             collapsedSubtitle: n,
             isExpanded: a,
-            onExpandedChange: h,
+            onExpandedChange: m,
             onExpandedChangeComplete: g,
             children: E,
             animate: b = !0,
@@ -45,7 +45,7 @@ function h(e) {
         (0, r.jsxs)(l.pJ, {
             ref: A,
             isExpanded: a,
-            onExpandedChange: h,
+            onExpandedChange: m,
             children: [
                 (0, r.jsx)(_.x, {
                     ref: y,
@@ -55,18 +55,18 @@ function h(e) {
                     secondaryTrailingElement: (0, r.jsx)(f.tEY, {
                         children: (0, r.jsx)(c.z, {
                             slot: "trigger",
-                            className: m.triggerButton,
-                            children: (0, r.jsx)(u.sXD, {
-                                className: o()(m.icon, { [m.iconClosed]: !a }),
+                            className: h.triggerButton,
+                            children: (0, r.jsx)(u.ChevronLargeUpIcon, {
+                                className: o()(h.icon, { [h.iconClosed]: !a }),
                                 color: d.Z.colors.ICON_LINK,
                             }),
                         }),
                     }),
-                    onClick: () => h(!a),
+                    onClick: () => m(!a),
                     headingColor: "text-link",
                 }),
                 (0, r.jsx)(l.V2, {
-                    className: o()(m.panel, { [m.disablePanelAnimation]: !b }),
+                    className: o()(h.panel, { [h.disablePanelAnimation]: !b }),
                     children: (0, r.jsx)(f.Kqy, {
                         gap: 16,
                         padding: { top: 16 },

@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(213609),
     p = n(312871),
     _ = n(550385),
-    m = n(739566),
-    h = n(781391),
+    h = n(739566),
+    m = n(781391),
     g = n(626135),
     E = n(233398),
     b = n(47760),
@@ -44,7 +44,7 @@ let T = (e) => e.map((e) => "#".concat(e)),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, h.y)((0, b.e)(n.base_theme));
+                                  (0, m.y)((0, b.e)(n.base_theme));
                           },
                       }),
                   ],
@@ -81,7 +81,7 @@ let T = (e) => e.map((e) => "#".concat(e)),
     N = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            c = (0, m.ZP)(t),
+            c = (0, h.ZP)(t),
             u = i.useMemo(
                 () =>
                     (0, a.once)(() => {
@@ -100,7 +100,7 @@ let T = (e) => e.map((e) => "#".concat(e)),
                 threshold: 1,
                 minTimeVisibleMs: 200,
             }),
-            h = i.useMemo(() => {
+            m = i.useMemo(() => {
                 var e;
                 return void 0 === n ? "" : (0, y.yz)(T(n.colors), null != (e = n.gradient_angle) ? e : 0);
             }, [n]);
@@ -112,7 +112,7 @@ let T = (e) => e.map((e) => "#".concat(e)),
                   children: [
                       (0, r.jsx)("div", {
                           className: I.colorPreview,
-                          style: { background: "".concat(h) },
+                          style: { background: "".concat(m) },
                       }),
                       (0, r.jsxs)("div", {
                           className: I.sharedByContainer,
@@ -120,7 +120,7 @@ let T = (e) => e.map((e) => "#".concat(e)),
                               (0, r.jsxs)(d.Heading, {
                                   variant: "heading-md/semibold",
                                   className: I.sharedTitle,
-                                  children: [S.intl.string(v.default.KSBBpC), " ", (0, r.jsx)(l.SrA, {})],
+                                  children: [S.intl.string(v.default.KSBBpC), " ", (0, r.jsx)(l.NitroWheelIcon, {})],
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",

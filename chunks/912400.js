@@ -33,6 +33,6 @@ let c = (0, s.k4)(u.n.AUTHORIZED_APPS_CATEGORY, {
     _ = (0, s.m7)(u.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
         useTitle: () => S.intl.string(S.t["f6kk+r"]),
         getLegacySearchKey: () => ((0, r.Gl)("AuthorizedAppsPanel") ? void 0 : T.s6.AUTHORIZED_APPS),
-        icon: i.jje,
+        icon: i.AppsIcon,
         buildLayout: () => ((0, r.Gl)("AuthorizedAppsPanel") ? [d] : [E]),
     });

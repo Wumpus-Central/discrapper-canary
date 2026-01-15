@@ -19,6 +19,6 @@ let o = (0, l.k4)(s.n.EXPERIMENTS_CATEGORY, { buildLayout: () => [a.z] }),
     }),
     c = (0, l.m7)(s.n.EXPERIMENTS_SIDEBAR_ITEM, {
         useTitle: () => "Experiments",
-        icon: i.uOV,
+        icon: i.BeakerIcon,
         buildLayout: () => ((0, u.Gl)("ExperimentsPanel") ? [S] : [T]),
     });

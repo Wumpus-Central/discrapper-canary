@@ -1,4 +1,4 @@
-n.d(t, { o: () => m });
+n.d(t, { o: () => h });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -12,14 +12,14 @@ var i = n(657707),
     f = n(388032),
     p = n(346722);
 let _ = (e, t) => (e === t ? p.themePillItemSelected : void 0);
-function m() {
+function h() {
     let e = (0, a.e7)([s.Z], () => s.Z.theme),
         t = (0, o.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
         n = [
             {
                 name: "",
                 value: u.BR.DARK,
-                icon: i.Z6G,
+                icon: i.ThemeDarkIcon,
                 className: _(t, u.BR.DARK),
                 tooltip: f.intl.string(d.default["Dk+OWY"]),
                 tooltipAriaLabel: f.intl.string(d.default["Dk+OWY"]),
@@ -27,7 +27,7 @@ function m() {
             {
                 name: "",
                 value: u.BR.LIGHT,
-                icon: i.chG,
+                icon: i.ThemeLightIcon,
                 className: _(t, u.BR.LIGHT),
                 tooltip: f.intl.string(d.default["5vlJkY"]),
                 tooltipAriaLabel: f.intl.string(d.default["5vlJkY"]),

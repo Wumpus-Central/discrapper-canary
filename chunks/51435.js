@@ -28,7 +28,7 @@ let d = (0, s.k4)(r.n.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () =>
     N = (0, s.m7)(r.n.CONNECTIONS_SIDEBAR_ITEM, {
         useTitle: () => E.intl.string(E.t["3fe7U5"]),
         getLegacySearchKey: () => ((0, a.Gl)("ConnectionsPanel") ? void 0 : c.s6.CONNECTIONS),
-        icon: i.xPt,
+        icon: i.LinkIcon,
         trailing: {
             type: u.W.BADGE_NEW,
             getDismissibleContentTypes: () => [l.z.NEW_CRUNCHYROLL_CONNECTION],

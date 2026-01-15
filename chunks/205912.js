@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(787304),
     p = n(483566),
     _ = n(657707),
-    m = n(454389),
-    h = n(402453),
+    h = n(454389),
+    m = n(402453),
     g = n(836605);
 function E(e, t, n) {
     return (
@@ -108,10 +108,10 @@ function I(e) {
             "hourCycle",
             "hideTimeZone",
         ]);
-    let { i18n: A } = (0, h.ZF)(),
+    let { i18n: A } = (0, m.ZF)(),
         { fieldProps: N } = (0, p.X)(C),
-        { disabled: P, errorMessage: R, required: w = !1 } = N,
-        D = { hasError: null != R && "" !== R },
+        { disabled: P, errorMessage: w, required: R = !1 } = N,
+        D = { hasError: null != w && "" !== w },
         {
             refs: x,
             floatingStyles: L,
@@ -143,7 +143,7 @@ function I(e) {
         O(b({}, N), {
             children: (e) =>
                 (0, r.jsx)(
-                    m.U,
+                    h.U,
                     O(
                         b(
                             {
@@ -163,7 +163,7 @@ function I(e) {
                                 value: t,
                                 onChange: B,
                                 isDisabled: P,
-                                isRequired: w,
+                                isRequired: R,
                                 minValue: i,
                                 maxValue: E,
                                 placeholderValue: y,
@@ -187,7 +187,7 @@ function I(e) {
                                                 className: g.calendarButton,
                                                 onClick: () => M(!j),
                                                 "aria-label": A.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                                children: (0, r.jsx)(_.Que, {
+                                                children: (0, r.jsx)(_.CalendarIcon, {
                                                     size: "sm",
                                                     color: "currentColor",
                                                 }),

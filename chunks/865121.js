@@ -6,7 +6,7 @@ var i = n(657707),
     r = n(342386);
 let a = (0, s.m7)(u.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
     useTitle: () => "Open Legacy Settings",
-    icon: i.ewm,
+    icon: i.SettingsIcon,
     onClick: () => {
         (0, r.default)(), l.Z.open();
     },

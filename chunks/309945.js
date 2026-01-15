@@ -13,7 +13,7 @@ function u(e) {
         ? (0, r.jsxs)("div", {
               className: s.container,
               children: [
-                  (0, r.jsx)(i.Mgn, {
+                  (0, r.jsx)(i.CircleErrorIcon, {
                       color: l.Z.colors.TEXT_FEEDBACK_WARNING,
                       className: s.icon,
                   }),

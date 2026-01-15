@@ -44,8 +44,8 @@ let p = (e) => {
             a = (0, l.o)(u.intl.string(c.default["0QDVFN"]), u.intl.string(c.default["1xBHHV"])),
             f = u.intl.string(c.default["JvJ3P/"]),
             _ = (0, l.o)(u.intl.string(c.default.l0ChgF), u.intl.string(c.default.S2ss5X)),
-            m = (0, l.o)(u.intl.string(c.default.LDu4Uk), u.intl.string(c.default.fEgtLV)),
-            h = u.intl.string(c.default["4SCALu"]),
+            h = (0, l.o)(u.intl.string(c.default.LDu4Uk), u.intl.string(c.default.fEgtLV)),
+            m = u.intl.string(c.default["4SCALu"]),
             g = u.intl.string(c.default.oYf9P7),
             E = (0, l.o)(u.intl.string(c.default["dES/2r"]), u.intl.string(c.default.ep6mdN)),
             b = (0, l.o)(u.intl.string(c.default["30+sih"]), u.intl.string(c.default["0cuLn1"])),
@@ -66,7 +66,7 @@ let p = (e) => {
                 }),
                 (0, r.jsx)(p, {
                     header: u.intl.string(c.default["44NEx6"]),
-                    description: m,
+                    description: h,
                     icon: (0, r.jsx)(s.dRF, {
                         size: "custom",
                         width: 20,
@@ -76,9 +76,9 @@ let p = (e) => {
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
-                    header: h,
+                    header: m,
                     description: g,
-                    icon: (0, r.jsx)(o.kBi, { size: "md" }),
+                    icon: (0, r.jsx)(o.ChatIcon, { size: "md" }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
@@ -96,13 +96,13 @@ let p = (e) => {
                 (0, r.jsx)(p, {
                     header: b,
                     description: y,
-                    icon: (0, r.jsx)(o.U65, { size: "md" }),
+                    icon: (0, r.jsx)(o.FlagIcon, { size: "md" }),
                     inModal: t,
                 }),
                 (0, r.jsx)(p, {
                     header: u.intl.string(c.default.UCuHM8),
                     description: O,
-                    icon: (0, r.jsx)(o.ewm, { size: "md" }),
+                    icon: (0, r.jsx)(o.SettingsIcon, { size: "md" }),
                     inModal: t,
                 }),
                 (0, r.jsx)(s.Text, {

@@ -24,15 +24,15 @@ function d(e, t) {
     if (null != t) return t;
     switch (e) {
         case "warn":
-            return s.aNP;
+            return s.WarningIcon;
         case "info":
-            return s.d3s;
+            return s.CircleInformationIcon;
         case "danger":
-            return s.Mgn;
+            return s.CircleErrorIcon;
         case "positive":
-            return s.dz2;
+            return s.CheckmarkLargeIcon;
         case "preview":
-            return s.Che;
+            return s.ScienceIcon;
     }
 }
 function f(e) {
@@ -67,9 +67,9 @@ function _(e) {
             icon: d,
             hidden: _ = !1,
         } = e,
-        m = f(n);
+        h = f(n);
     return (0, r.jsx)("div", {
-        className: o()(c.container, m, a, { [c.hidden]: _ }),
+        className: o()(c.container, h, a, { [c.hidden]: _ }),
         children: (0, r.jsxs)("div", {
             className: c.innerContainer,
             children: [

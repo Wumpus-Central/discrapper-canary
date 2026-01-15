@@ -15,7 +15,7 @@ let E = (0, l.wf)(s.n.NOTIFICATIONS_PANEL, {
     }),
     d = (0, l.m7)(s.n.NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.HcoRu0),
-        icon: i.Dkj,
+        icon: i.BellIcon,
         usePredicate: () => (0, u.gj)("NotificationsPanel"),
         buildLayout: () => [E],
     });

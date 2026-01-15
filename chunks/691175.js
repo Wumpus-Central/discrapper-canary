@@ -12,25 +12,25 @@ var a = n(54381),
     p = n(314897),
     h = n(158570);
 let f = [
-        s.tBG,
-        s.b7C,
-        s.OgN,
-        s.e5I,
-        s.Ffc,
-        s.WXD,
-        s.EmW,
-        s.Jmo,
-        s.Vy8,
-        s.yxC,
-        s.RJm,
-        s.y3H,
-        s.vqy,
-        s.ED8,
-        s.ZRV,
-        s.GsA,
-        s.GuY,
-        s.aXf,
-        s.ewm,
+        s.UserIcon,
+        s.ShieldIcon,
+        s.GiftIcon,
+        s.AchievementsIcon,
+        s.PiggyBankIcon,
+        s.TreehouseIcon,
+        s.SpeedometerIcon,
+        s.CompassIcon,
+        s.SignPostIcon,
+        s.CarIcon,
+        s.TrainIcon,
+        s.TeacupIcon,
+        s.InventoryIcon,
+        s.FoodIcon,
+        s.BurgerIcon,
+        s.MagicDoorIcon,
+        s.PawPrintIcon,
+        s.RecordPlayerIcon,
+        s.SettingsIcon,
     ],
     x = [
         "text-default",
@@ -185,7 +185,7 @@ let f = [
                                                                 fullWidth: !1,
                                                                 className: l()({ [h.userInfoDisabled]: g === e.id }),
                                                                 children: [
-                                                                    (0, a.jsx)(s.tBG, {
+                                                                    (0, a.jsx)(s.UserIcon, {
                                                                         size: "custom",
                                                                         width: 20,
                                                                         height: 20,
@@ -212,7 +212,7 @@ let f = [
                                                                 ? (0, a.jsx)(c.Text, {
                                                                       variant: "text-sm/normal",
                                                                       color: "text-feedback-positive",
-                                                                      children: (0, a.jsx)(s.owK, {
+                                                                      children: (0, a.jsx)(s.CircleCheckIcon, {
                                                                           size: "sm",
                                                                           color: "currentColor",
                                                                       }),
@@ -236,7 +236,7 @@ let f = [
                         (0, a.jsx)("div", {
                             className: h.buttonContainer,
                             children: (0, a.jsx)(c.Button, {
-                                icon: s.XHJ,
+                                icon: s.TrashIcon,
                                 text: "",
                                 size: "sm",
                                 variant: "secondary",

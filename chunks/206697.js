@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(74538),
     p = n(175006),
     _ = n(981631),
-    m = n(474936),
-    h = n(388032),
+    h = n(474936),
+    m = n(388032),
     g = n(867814),
     E = n(492764),
     b = n(235810);
@@ -61,12 +61,12 @@ function v() {
                           className: g.header,
                           variant: "heading-xl/semibold",
                           color: "text-default",
-                          children: h.intl.string(h.t.erEf2g),
+                          children: m.intl.string(m.t.erEf2g),
                       }),
                       (0, r.jsx)(o.xvT, {
                           variant: "text-md/medium",
                           color: "text-muted",
-                          children: h.intl.string(h.t.NaRCXT),
+                          children: m.intl.string(m.t.NaRCXT),
                       }),
                   ],
               }),
@@ -86,12 +86,12 @@ function v() {
                               className: g.header,
                               variant: "heading-xl/semibold",
                               color: "text-default",
-                              children: h.intl.string(h.t.w4DRbZ),
+                              children: m.intl.string(m.t.w4DRbZ),
                           }),
                           (0, r.jsx)(o.xvT, {
                               variant: "text-md/medium",
                               color: "text-muted",
-                              children: h.intl.string(h.t.F6u3E3),
+                              children: m.intl.string(m.t.F6u3E3),
                           }),
                       ],
                   }),
@@ -100,7 +100,7 @@ function v() {
           });
 }
 function S() {
-    let e = (0, f.Px)(m.PremiumTypes.TIER_2),
+    let e = (0, f.Px)(h.PremiumTypes.TIER_2),
         t = i.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
@@ -109,14 +109,14 @@ function S() {
                 }),
             [],
         ),
-        p = h.intl.format(h.t.qXh3fo, {
+        p = m.intl.format(m.t.qXh3fo, {
             nitroTierName: e,
             onClick: t,
         });
     return (0, r.jsxs)("div", {
         className: g.upsellContainer,
         children: [
-            (0, r.jsx)(a.SrA, {
+            (0, r.jsx)(a.NitroWheelIcon, {
                 size: "md",
                 color: u.JX.PREMIUM_TIER_2,
             }),
@@ -130,7 +130,7 @@ function S() {
                 className: g.upsellButton,
                 size: s.Ph.TINY,
                 shinyButtonClassName: g.upsellButton,
-                subscriptionTier: m.Si.TIER_2,
+                subscriptionTier: h.Si.TIER_2,
                 premiumModalAnalyticsLocation: { section: _.jXE.FOR_LATER_POPOUT_UPSELL },
             }),
         ],

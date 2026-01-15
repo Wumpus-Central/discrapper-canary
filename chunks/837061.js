@@ -44,7 +44,7 @@ let O = (0, u.ZH)(T.n.ACCOUNT_STANDING_TAB, {
         hideInStreamerMode: !0,
         buildLayout: () => [C, O],
     }),
-    P = (0, u.wf)(T.n.ACCOUNT_PANEL, {
+    L = (0, u.wf)(T.n.ACCOUNT_PANEL, {
         useTitle: () => A.intl.string(A.t["JAIM/m"]),
         StronglyDiscouragedCustomComponent: c.Z,
         buildLayout: () => [],
@@ -52,6 +52,6 @@ let O = (0, u.ZH)(T.n.ACCOUNT_STANDING_TAB, {
     R = (0, u.m7)(T.n.ACCOUNT_SIDEBAR_ITEM, {
         useTitle: () => A.intl.string(A.t["JAIM/m"]),
         getLegacySearchKey: () => ((0, S.Gl)("AccountPanel") ? void 0 : I.s6.ACCOUNT),
-        icon: i.tBG,
-        buildLayout: () => ((0, S.Gl)("AccountPanel") ? [f] : [P]),
+        icon: i.UserIcon,
+        buildLayout: () => ((0, S.Gl)("AccountPanel") ? [f] : [L]),
     });

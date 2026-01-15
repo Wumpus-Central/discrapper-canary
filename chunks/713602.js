@@ -12,6 +12,6 @@ let a = (0, l.wf)(s.n.DEVELOPER_OPTIONS_PANEL, {
     o = (0, l.m7)(s.n.DEVELOPER_OPTIONS_SIDEBAR_ITEM, {
         useTitle: () => "Developer Options",
         getLegacySearchKey: () => r.s6.DEVELOPER_OPTIONS,
-        icon: i.Che,
+        icon: i.ScienceIcon,
         buildLayout: () => [a],
     });

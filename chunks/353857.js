@@ -1,4 +1,4 @@
-n.d(t, { g: () => y }), n(388685);
+n.d(t, { g: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -64,14 +64,14 @@ function O(e) {
             isSelected: n,
             label: (0, u.Z)(t.kind),
         });
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(y, {
         badge: t,
         selected: n,
         onClick: i,
         radioProps: l,
     });
 }
-function C(e) {
+function y(e) {
     let { badge: t, locked: n = !1, preview: i = !1, selected: l = !1, onClick: c, radioProps: u } = e,
         f = a()(x.pickerItem, {
             [x.pickerItemSelected]: l,
@@ -90,7 +90,7 @@ function C(e) {
                     !i &&
                     (0, r.jsx)("div", {
                         className: h.lockIconOverlay,
-                        children: (0, r.jsx)(s.mBM, { size: "md" }),
+                        children: (0, r.jsx)(s.LockIcon, { size: "md" }),
                     }),
             ],
         });
@@ -123,10 +123,10 @@ function C(e) {
         }),
     );
 }
-function y(e) {
+function C(e) {
     let { badgeCollection: t, handleBoostUpsellClick: n, selectedBadge: l, onBadgeClicked: o, headingId: u } = e,
         [g, m] = i.useState(!1),
-        y = i.useId(),
+        C = i.useId(),
         N = (0, c.Jb)({
             orientation: "horizontal",
             isDisabled: !1,
@@ -136,13 +136,13 @@ function y(e) {
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(d.nn4, {
-                id: y,
+                id: C,
                 children: p.intl.string(p.t["5AQGuZ"]),
             }),
             (0, r.jsx)(
                 "div",
                 v(j({}, N), {
-                    "aria-describedby": y,
+                    "aria-describedby": C,
                     className: x.pickerGrid,
                     children: t.unlockedBadges.map((e) =>
                         (0, r.jsx)(
@@ -164,7 +164,7 @@ function y(e) {
                         (0, r.jsx)(
                             "li",
                             {
-                                children: (0, r.jsx)(C, {
+                                children: (0, r.jsx)(y, {
                                     locked: !0,
                                     badge: e,
                                     onClick: () => (null == n ? void 0 : n()),
@@ -182,7 +182,7 @@ function y(e) {
                             className: x.pickerGrid,
                             children: t.lockedBadges.slice(0, 5).map((e) =>
                                 (0, r.jsx)(
-                                    C,
+                                    y,
                                     {
                                         locked: !0,
                                         preview: !0,
@@ -201,7 +201,7 @@ function y(e) {
                                     color: "text-subtle",
                                     children: p.intl.string(b.default["2tkPDy"]),
                                 }),
-                                (0, r.jsx)(s.CJ0, { size: "sm" }),
+                                (0, r.jsx)(s.ChevronSmallDownIcon, { size: "sm" }),
                             ],
                         }),
                     ],
@@ -234,7 +234,7 @@ function y(e) {
                                     color: "text-subtle",
                                     children: p.intl.string(b.default.idxnf7),
                                 }),
-                                (0, r.jsx)(s.u04, { size: "sm" }),
+                                (0, r.jsx)(s.ChevronSmallUpIcon, { size: "sm" }),
                             ],
                         }),
                     ],

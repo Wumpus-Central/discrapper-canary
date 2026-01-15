@@ -1,4 +1,10 @@
-function r(e, t, n) {
+n.d(t, { K: () => p });
+var r = n(54381);
+n(473749);
+var i = n(692547),
+    a = n(331595),
+    o = n(267843);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,7 +17,23 @@ function r(e, t, n) {
         e
     );
 }
-function i(e, t) {
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -23,7 +45,30 @@ function i(e, t) {
     }
     return n;
 }
-function a(e, t) {
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -32,4 +77,41 @@ function a(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54381), n(473749), n(692547), n(331595), n(267843);
+let p = (e) => {
+    var t,
+        n,
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_ICON_DEFAULT, colorClass: _ = "" } = e,
+        h = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let m = (0, o.m)(s),
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+    return (0, r.jsxs)(
+        "svg",
+        u(l({}, (0, a.Z)(h)), {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: g,
+            height: E,
+            fill: "none",
+            viewBox: "0 0 24 24",
+            children: [
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    fillRule: "evenodd",
+                    d: "M1 6a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6Zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm4-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm2 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
+                    clipRule: "evenodd",
+                    className: _,
+                }),
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M1 12a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v.56c0 .46-.61.7-1 .45-.92-.65-2.04-1.01-3.19-1.01-1.83 0-3.53.89-4.54 2.36a3 3 0 0 0 1.18 4.4c.23.1.38.35.37.6a3 3 0 0 0 .04.7l.07.35a.5.5 0 0 1-.5.59H4a3 3 0 0 1-3-3v-6Z",
+                    className: _,
+                }),
+                (0, r.jsx)("path", {
+                    fill: "string" == typeof p ? p : p.css,
+                    d: "M18.81 16c-.54 0-1 .26-1.23.61a1 1 0 0 1-1.66-1.12 3.49 3.49 0 0 1 2.9-1.49c1.81 0 3.43 1.38 3.43 3.25 0 1.45-.98 2.61-2.27 3.06a1 1 0 0 1-1.96.37l-.19-1a1 1 0 0 1 .98-1.18c.87 0 1.44-.63 1.44-1.25S19.68 16 18.81 16ZM20 23a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z",
+                    className: _,
+                }),
+            ],
+        }),
+    );
+};

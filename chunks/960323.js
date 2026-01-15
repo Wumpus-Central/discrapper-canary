@@ -26,7 +26,7 @@ let N = (0, l.wf)(u.n.VOICE_AND_VIDEO_PANEL, {
     O = (0, l.m7)(u.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         useTitle: () => I.intl.string(I.t.B1fFpf),
         usePredicate: () => s.Z.isSupported(),
-        icon: i.S6n,
+        icon: i.MicrophoneIcon,
         getLegacySearchKey: () => ((0, r.Ml)("VoiceAndVideoPanel") ? void 0 : g.s6.VOICE_AND_VIDEO),
         buildLayout: () => [(0, r.Ml)("VoiceAndVideoPanel") ? A : N],
     });

@@ -16,8 +16,8 @@ var r = n(54381),
     f = n(590956),
     p = n(834129),
     _ = n(222677),
-    m = n(768581),
-    h = n(585483),
+    h = n(768581),
+    m = n(585483),
     g = n(139688),
     E = n(981631),
     b = n(388032),
@@ -105,7 +105,7 @@ function S(e) {
         v = (0, g.xE)(o),
         S = i.useCallback(() => {
             null != v &&
-                h.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
+                m.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
                     plainText: ":".concat(v.name, ":"),
                     rawText: o,
                     addSpace: !0,
@@ -116,7 +116,7 @@ function S(e) {
                 null == v
                     ? null
                     : {
-                          src: m.ZP.getEmojiURL({
+                          src: h.ZP.getEmojiURL({
                               id: v.id,
                               animated: v.animated,
                               size: 48,
@@ -128,7 +128,7 @@ function S(e) {
             [v],
         );
     return (0, r.jsx)(p.Z, {
-        iconNode: (0, r.jsx)(s.EO4, {
+        iconNode: (0, r.jsx)(s.ReactionIcon, {
             size: "refresh_sm",
             color: "currentColor",
         }),

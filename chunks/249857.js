@@ -20,7 +20,7 @@ let c = (0, l.wf)(u.n.WINDOWS_PANEL, {
     d = (0, l.m7)(u.n.WINDOWS_SIDEBAR_ITEM, {
         useTitle: () => S.intl.string(S.t.ZkDZov),
         getLegacySearchKey: () => ((0, r.Gl)("WindowsPanel") ? void 0 : T.s6.WINDOW_SETTINGS),
-        icon: i.pzj,
+        icon: i.ScreenIcon,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isWindows)(),
         buildLayout: () => [(0, r.Gl)("WindowsPanel") ? c : E],
     });

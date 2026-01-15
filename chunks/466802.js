@@ -23,7 +23,7 @@ let E = (0, l.wf)(u.n.NITRO_PANEL, {
     _ = (0, l.m7)(u.n.NITRO_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.Ipxkog),
         getLegacySearchKey: () => ((0, r.Gl)("NitroPanel") ? void 0 : S.s6.PREMIUM),
-        icon: i.SrA,
+        icon: i.NitroWheelIcon,
         trailing: {
             type: s.W.STRONGLY_DISCOURAGED_CUSTOM,
             useCustomDecoration: (t, e) => (0, o.x)(e),

@@ -3,30 +3,30 @@ var r = n(54381),
     i = n(473749),
     l = n(657707),
     a = n(481060),
-    s = n(315322),
-    o = n(531578),
+    o = n(315322),
+    s = n(531578),
     c = n(388032),
-    d = n(992733);
-function u(e) {
+    u = n(992733);
+function d(e) {
     let { rating: t, onClick: n } = e,
-        s = t === o.aZ.BAD ? l.kZ9 : l.lbB,
+        o = t === s.aZ.BAD ? l.ThumbsDownIcon : l.ThumbsUpIcon,
         c = i.useCallback(() => {
             n(t);
         }, [n, t]);
     return (0, r.jsx)(a.P3F, {
         onClick: c,
-        className: d.iconContainer,
-        children: (0, r.jsx)(s, {
+        className: u.iconContainer,
+        children: (0, r.jsx)(o, {
             size: "md",
             color: "currentColor",
-            className: d.icon,
+            className: u.icon,
         }),
     });
 }
 let p = function (e) {
     let { searchContext: t, dismissFeedbackEntrypoint: l } = e;
     i.useEffect(() => {
-        (0, s.bo)({ searchContext: t });
+        (0, o.bo)({ searchContext: t });
     }, [t]);
     let p = i.useCallback(
         (e) => {
@@ -87,7 +87,7 @@ let p = function (e) {
         [l, t],
     );
     return (0, r.jsxs)("div", {
-        className: d.container,
+        className: u.container,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
@@ -95,14 +95,14 @@ let p = function (e) {
                 children: c.intl.string(c.t["I+4OJC"]),
             }),
             (0, r.jsxs)("div", {
-                className: d.icons,
+                className: u.icons,
                 children: [
-                    (0, r.jsx)(u, {
-                        rating: o.aZ.GOOD,
+                    (0, r.jsx)(d, {
+                        rating: s.aZ.GOOD,
                         onClick: p,
                     }),
-                    (0, r.jsx)(u, {
-                        rating: o.aZ.BAD,
+                    (0, r.jsx)(d, {
+                        rating: s.aZ.BAD,
                         onClick: p,
                     }),
                 ],

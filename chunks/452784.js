@@ -9,7 +9,7 @@ let a = (0, l.wf)(s.n.LANGUAGE_AND_TIME_PANEL, {
         buildLayout: () => [u.L],
     }),
     o = (0, l.m7)(s.n.LANGUAGE_AND_TIME_SIDEBAR_ITEM, {
-        icon: i.os0,
+        icon: i.LanguageIcon,
         useTitle: () => r.intl.string(r.t.KyFVyi),
         buildLayout: () => [a],
     });

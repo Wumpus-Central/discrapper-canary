@@ -12,8 +12,8 @@ var i = n(657707),
     f = n(388032),
     p = n(169592);
 function _(e) {
-    let { message: t, channel: n, author: _, compact: m } = e,
-        { nick: h } = (0, l.Sw)(_, n),
+    let { message: t, channel: n, author: _, compact: h } = e,
+        { nick: m } = (0, l.Sw)(_, n),
         g = (0, c.l)({
             user: _,
             channelId: n.id,
@@ -23,7 +23,7 @@ function _(e) {
         E = (0, a.q)(t.applicationId);
     if (null == E) return null;
     let b = f.intl.format(f.t.m7Lwas, {
-        username: h,
+        username: m,
         usernameHook: g,
         gameName: E.name,
         gameIconHook: (e) =>
@@ -42,8 +42,8 @@ function _(e) {
         helpdeskArticle: s.Z.getArticleURL(d.BhN.SOCIAL_LAYER_CONNECTIONS),
     });
     return (0, r.jsx)(u.Z, {
-        iconNode: (0, r.jsx)(i.iWm, { size: "sm" }),
-        compact: m,
+        iconNode: (0, r.jsx)(i.GameControllerIcon, { size: "sm" }),
+        compact: h,
         contentClassName: p.content,
         children: (0, r.jsx)("div", { children: b }),
     });

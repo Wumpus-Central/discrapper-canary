@@ -59,6 +59,8 @@ class l {
                 assetDark: e.asset_dark,
                 assetLight: e.asset_light,
                 refTargetBackground: e.ref_target_background,
+                badgeIcon: e.badge_icon,
+                badgeText: e.badge_text,
             }),
         );
     }
@@ -69,12 +71,16 @@ class l {
             i(this, "assetLight", void 0),
             i(this, "version", void 0),
             i(this, "refTargetBackground", void 0),
+            i(this, "badgeIcon", void 0),
+            i(this, "badgeText", void 0),
             (this.type = r.Z.COACHMARK),
             (this.title = e.title),
             (this.body = e.body),
             (this.assetDark = e.assetDark),
             (this.assetLight = e.assetLight),
             (this.version = e.version),
-            (this.refTargetBackground = e.refTargetBackground);
+            (this.refTargetBackground = e.refTargetBackground),
+            (this.badgeIcon = e.badgeIcon),
+            (this.badgeText = e.badgeText);
     }
 }

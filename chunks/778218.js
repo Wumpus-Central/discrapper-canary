@@ -17,10 +17,10 @@ let c = {
                     _ = i.useCallback(() => {
                         p(!0);
                     }, []),
-                    m = i.useCallback(() => {
+                    h = i.useCallback(() => {
                         p(!1);
                     }, []),
-                    h = i.useCallback(() => {
+                    m = i.useCallback(() => {
                         p((e) => !e);
                     }, []);
                 return (0, r.jsxs)(o.Kqy, {
@@ -35,7 +35,7 @@ let c = {
                             description: null != n || "" === n ? n : void 0,
                             value: "checkbox-value",
                             labelType: u,
-                            leadingIcon: d ? a.d3s : void 0,
+                            leadingIcon: d ? a.CircleInformationIcon : void 0,
                         }),
                         (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
@@ -56,14 +56,14 @@ let c = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
-                                    onClick: m,
+                                    onClick: h,
                                     disabled: c,
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: h,
+                                    onClick: m,
                                     disabled: c,
                                 }),
                             ],

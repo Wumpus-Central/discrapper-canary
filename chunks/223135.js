@@ -7,7 +7,7 @@ var i = n(657707),
     s = n(833858),
     l = n(797156),
     c = n(505905);
-let u = new Set([i.GsA.name, i.iWm.name, i.FLu.name, i.Xbz.name]),
+let u = new Set([i.MagicDoorIcon.name, i.GameControllerIcon.name, i.EmbedIcon.name, i.ObjectIcon.name]),
     d = Object.fromEntries(
         Object.entries(a.Z).map((e) => {
             let [t, n] = e;
@@ -22,11 +22,11 @@ let u = new Set([i.GsA.name, i.iWm.name, i.FLu.name, i.Xbz.name]),
                 size: f,
                 animate: p = !0,
                 fallbackVariant: _ = "twemoji",
-                userId: m,
+                userId: h,
             } = e,
-            h = (0, l.F)(m, null == a ? void 0 : a.state),
-            g = (0, s.tV)(m, a, _);
-        if ((h[0] === c.tN.CUSTOM || (null == g ? void 0 : g.emoji) != null) && null != a) {
+            m = (0, l.F)(h, null == a ? void 0 : a.state),
+            g = (0, s.tV)(h, a, _);
+        if ((m[0] === c.tN.CUSTOM || (null == g ? void 0 : g.emoji) != null) && null != a) {
             let e = null != (t = null == g ? void 0 : g.emoji) ? t : a.emoji;
             return null != e
                 ? (0, r.jsx)(o.Z, {

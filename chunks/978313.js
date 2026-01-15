@@ -18,12 +18,12 @@ function v(e) {
         [r, v] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
         [h, j] = i.useState(!0),
         [b, I] = i.useState(!1),
-        O = i.useRef(null),
-        { width: y, height: P } = (0, u.Z)();
+        y = i.useRef(null),
+        { width: O, height: w } = (0, u.Z)();
     return (i.useEffect(() => {
-        let e = O.current;
+        let e = y.current;
         null != e && I(e.scrollHeight - e.clientHeight > 1 || !h);
-    }, [O, y, P, h]),
+    }, [y, O, w, h]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -33,7 +33,7 @@ function v(e) {
                       (0, a.jsxs)("div", {
                           className: l()(p.row, p.gapSm),
                           children: [
-                              (0, a.jsx)(o.SxY, {
+                              (0, a.jsx)(o.PencilSparkleIcon, {
                                   color: c.Z.colors.TEXT_DEFAULT,
                                   size: "xs",
                               }),
@@ -47,7 +47,7 @@ function v(e) {
                           ],
                       }),
                   (0, a.jsx)(s.xvT, {
-                      ref: O,
+                      ref: y,
                       lineClamp: h ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: r ? t.summaryLocalized : t.summary,

@@ -20,7 +20,7 @@ let g = (0, o.wf)(S.n.PRIVATE_BROWSING_PANEL, {
     }),
     I = (0, o.m7)(S.n.PRIVATE_BROWSING_SIDEBAR_ITEM, {
         useTitle: () => d.intl.string(_.default.bU5ANm),
-        icon: l.enf,
+        icon: l.GlobeEarthIcon,
         usePredicate: () => {
             let t = (0, u.m)(),
                 { isSupportedPrivateBrowsingPerkPlatform: e, isWeb: n, perkAvailableToUser: i } = (0, a.xf)(),

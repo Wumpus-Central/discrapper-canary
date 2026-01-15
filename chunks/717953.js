@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(410030),
     p = n(266454),
     _ = n(581883),
-    m = n(36982),
-    h = n(583901),
+    h = n(36982),
+    m = n(583901),
     g = n(576157),
     E = n(831989),
     b = n(388032),
@@ -68,10 +68,10 @@ function v(e) {
         T = (0, f.ZP)(),
         C = (0, d.wjy)(T) ? y.darkOverlay : y.lightOverlay,
         A = null != a && null != a.colors && a.colors.length > 0,
-        N = (0, l.e7)([m.Z], () => m.Z.getSavedCustomTheme()),
+        N = (0, l.e7)([h.Z], () => h.Z.getSavedCustomTheme()),
         P = A,
-        R = A || null != N,
-        w = i.useMemo(() => {
+        w = A || null != N,
+        R = i.useMemo(() => {
             let e, t;
             if (A) (e = a.colors), (t = a.gradientAngle);
             else {
@@ -84,26 +84,26 @@ function v(e) {
                 { background: "var(--background-gradient), ".concat(n) }
             );
         }, [A, a, N]),
-        D = R ? u.Z.unsafe_rawColors.WHITE.css : void 0,
+        D = w ? u.Z.unsafe_rawColors.WHITE.css : void 0,
         x = i.useCallback(() => {
             v && S(), null == n || n();
         }, [v, S, n]);
     return (0, r.jsxs)("div", {
         className: y.badgeContainer,
         children: [
-            (0, r.jsxs)(h.S4, {
+            (0, r.jsxs)(m.S4, {
                 onSelect: t ? void 0 : x,
                 isSelected: !1,
                 showSelectionCircle: P,
                 name: b.intl.string(E.default.KSBBpC),
-                className: o()(y.container, R && C, t && y.disabled),
+                className: o()(y.container, w && C, t && y.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: w,
+                style: R,
                 children: [
-                    !I && !R && (0, r.jsx)(O, {}),
+                    !I && !w && (0, r.jsx)(O, {}),
                     (0, r.jsx)("div", { className: y.borderOverlay }),
-                    (0, r.jsx)(s.V3v, {
+                    (0, r.jsx)(s.PaintPaletteIcon, {
                         color: D,
                         className: y.paletteIcon,
                     }),

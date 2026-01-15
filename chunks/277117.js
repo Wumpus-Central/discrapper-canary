@@ -1,85 +1,85 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var r = n(54381);
 n(473749);
 var i = n(657707),
     l = n(442837),
     a = n(692547),
-    s = n(320582),
-    o = n(246016),
+    o = n(320582),
+    s = n(246016),
     c = n(189156),
-    d = n(699516),
-    u = n(246946),
+    u = n(699516),
+    d = n(246946),
     p = n(5192),
-    h = n(621853),
-    f = n(172351),
+    f = n(621853),
+    h = n(172351),
     g = n(648052),
     m = n(280885),
     b = n(407699),
     y = n(78806),
-    O = n(91433),
-    x = n(900927),
+    v = n(91433),
+    O = n(900927),
     j = n(944043),
-    v = n(678738),
+    x = n(678738),
     C = n(638970),
-    I = n(502762),
-    _ = n(530),
-    S = n(827313),
-    E = n(981631),
-    Z = n(671955),
-    P = n(388032),
-    T = n(82600);
-function N(e) {
-    let { user: t, currentUser: n, displayProfile: N, channel: R, isHoveringOrFocusing: w, onOpenProfile: A } = e,
-        { relationshipType: D, originApplicationId: L } = (0, l.cj)([d.Z], () => ({
-            relationshipType: d.Z.getRelationshipType(t.id),
-            originApplicationId: d.Z.getOriginApplicationId(t.id),
+    E = n(502762),
+    S = n(530),
+    _ = n(827313),
+    I = n(981631),
+    P = n(671955),
+    Z = n(388032),
+    N = n(82600);
+function T(e) {
+    let { user: t, currentUser: n, displayProfile: T, channel: A, isHoveringOrFocusing: w, onOpenProfile: R } = e,
+        { relationshipType: D, originApplicationId: M } = (0, l.cj)([u.Z], () => ({
+            relationshipType: u.Z.getRelationshipType(t.id),
+            originApplicationId: u.Z.getOriginApplicationId(t.id),
         })),
-        M = (0, s.vh)(t.id),
-        k = (0, o.Y)({ userId: t.id }),
-        U = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        G = (0, l.e7)([h.Z], () => {
+        k = (0, o.vh)(t.id),
+        L = (0, s.Y)({ userId: t.id }),
+        U = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        G = (0, l.e7)([f.Z], () => {
             var e;
-            return null == (e = h.Z.getUserProfile(t.id)) ? void 0 : e.application;
+            return null == (e = f.Z.getUserProfile(t.id)) ? void 0 : e.application;
         });
     return (0, r.jsxs)("div", {
-        className: T.body,
+        className: N.body,
         children: [
             (0, r.jsx)(b.Z, { userId: t.id }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(S.Z, {
                 user: t,
-                guildId: R.guild_id,
-                nickname: p.ZP.getName(null, R.id, t),
-                pronouns: null == N ? void 0 : N.pronouns,
-                onOpenProfile: A,
+                guildId: A.guild_id,
+                nickname: p.ZP.getName(null, A.id, t),
+                pronouns: null == T ? void 0 : T.pronouns,
+                onOpenProfile: R,
                 tags: (0, r.jsx)(g.Z, {
-                    displayProfile: N,
-                    themeType: Z.l.SIDEBAR,
+                    displayProfile: T,
+                    themeType: P.l.SIDEBAR,
                 }),
                 nicknameIcons: U
                     ? null
-                    : (0, r.jsx)(S.Z, {
+                    : (0, r.jsx)(_.Z, {
                           userId: t.id,
                           isVisible: w,
-                          onOpenProfile: A,
+                          onOpenProfile: R,
                       }),
             }),
-            D === E.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(I.Z.Overlay, {
-                    children: (0, r.jsx)(O.Z, {
+            D === I.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(E.Z.Overlay, {
+                    children: (0, r.jsx)(v.Z, {
                         user: t,
-                        channelId: R.id,
-                        applicationId: L,
+                        channelId: A.id,
+                        applicationId: M,
                     }),
                 }),
-            M.map((e) =>
+            k.map((e) =>
                 (0, r.jsx)(
-                    I.Z.Overlay,
+                    E.Z.Overlay,
                     {
-                        children: (0, r.jsx)(O.Z, {
+                        children: (0, r.jsx)(v.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: R.id,
+                            channelId: A.id,
                         }),
                     },
                     e.applicationId,
@@ -87,10 +87,10 @@ function N(e) {
             ),
             (0, r.jsx)(j.Z, { user: t }),
             t.isProvisional &&
-                (0, r.jsx)(I.Z.Overlay, {
-                    children: (0, r.jsx)(v.Z, {
-                        heading: P.intl.string(P.t.Iyka0U),
-                        headingIcon: (0, r.jsx)(i.Mgn, {
+                (0, r.jsx)(E.Z.Overlay, {
+                    children: (0, r.jsx)(x.Z, {
+                        heading: Z.intl.string(Z.t.Iyka0U),
+                        headingIcon: (0, r.jsx)(i.CircleErrorIcon, {
                             size: "xxs",
                             color: a.Z.colors.TEXT_STRONG,
                         }),
@@ -101,40 +101,40 @@ function N(e) {
             (0, r.jsx)(C.Z, {
                 user: t,
                 currentUser: n,
-                onOpenUserProfileModal: A,
+                onOpenUserProfileModal: R,
             }),
-            (0, r.jsxs)(I.Z.Overlay, {
-                className: T.overlay,
+            (0, r.jsxs)(E.Z.Overlay, {
+                className: N.overlay,
                 children: [
                     !U &&
-                        (null == N ? void 0 : N.bio) != null &&
-                        (null == N ? void 0 : N.bio) !== "" &&
-                        (0, r.jsx)(v.Z, {
-                            heading: P.intl.string(P.t["61W33d"]),
+                        (null == T ? void 0 : T.bio) != null &&
+                        (null == T ? void 0 : T.bio) !== "" &&
+                        (0, r.jsx)(x.Z, {
+                            heading: Z.intl.string(Z.t["61W33d"]),
                             headingColor: "text-strong",
                             children: (0, r.jsx)(m.Z, {
                                 userId: t.id,
-                                userBio: N.bio,
+                                userBio: T.bio,
                                 isHoveringOrFocusing: w,
                                 animateOnHoverOrFocusOnly: !0,
                             }),
                         }),
                     (null == G ? void 0 : G.popularApplicationCommandIds) != null &&
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(h.Z, {
                             applicationId: G.id,
                             commandIds: G.popularApplicationCommandIds,
-                            channel: R,
+                            channel: A,
                         }),
-                    k.length > 0 &&
-                        (0, r.jsx)(v.Z, {
-                            heading: P.intl.string(P.t["Uv/eTx"]),
+                    L.length > 0 &&
+                        (0, r.jsx)(x.Z, {
+                            heading: Z.intl.string(Z.t["Uv/eTx"]),
                             headingColor: "text-strong",
-                            children: (0, r.jsx)(y.Z, { applicationIds: k }),
+                            children: (0, r.jsx)(y.Z, { applicationIds: L }),
                         }),
-                    (0, r.jsx)(v.Z, {
-                        heading: t.bot ? P.intl.string(P.t["A//N4k"]) : P.intl.string(P.t.a6XYD9),
+                    (0, r.jsx)(x.Z, {
+                        heading: t.bot ? Z.intl.string(Z.t["A//N4k"]) : Z.intl.string(Z.t.a6XYD9),
                         headingColor: "text-strong",
-                        children: (0, r.jsx)(x.Z, { userId: t.id }),
+                        children: (0, r.jsx)(O.Z, { userId: t.id }),
                     }),
                 ],
             }),

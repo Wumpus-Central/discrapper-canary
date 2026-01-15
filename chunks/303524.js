@@ -8,7 +8,7 @@ var r = n(54381),
 let c = 14;
 function u(e) {
     let { className: t } = e;
-    return (0, r.jsx)(o.qDn, {
+    return (0, r.jsx)(o.QuestsIcon, {
         className: a()(l.questsIcon, t),
         size: "custom",
         height: c,

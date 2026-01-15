@@ -68,6 +68,8 @@ let g = () => {
                               (u = u =
                                   {
                                       imageSrc: null != (r = e.coachtipAvatar) ? r : "",
+                                      badgeIcon: null == t ? void 0 : t.badgeIcon,
+                                      badgeText: null == t ? void 0 : t.badgeText,
                                       entryPointBackgroundAssets: {
                                           srcDark: e.buttonBGRestingDark,
                                           srcLight: e.buttonBGRestingLight,
@@ -98,6 +100,8 @@ let g = () => {
                               body: () => t.body,
                               assetDark: t.assetDark,
                               assetLight: t.assetLight,
+                              badgeIcon: t.badgeIcon,
+                              badgeText: t.badgeText,
                               entrypointBackgroundStyle: null == e ? void 0 : e.style,
                               entryPointBackgroundAssets: {
                                   srcDarkHovered:

@@ -18,8 +18,8 @@ var r = n(54381),
     f = n(235874),
     p = n(417153),
     _ = n(28664),
-    m = n(159691),
-    h = n(972959),
+    h = n(159691),
+    m = n(972959),
     g = n(665149),
     E = n(606669),
     b = n(53432),
@@ -60,7 +60,7 @@ function P(e) {
     }
     return e;
 }
-function R(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,18 +72,18 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let D = (0, h.H)(() => ({
+let D = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
@@ -162,12 +162,12 @@ function L() {
         onRequestClose: () => {},
         children: (t) =>
             (0, r.jsx)(
-                m.hU,
-                w(
+                h.hU,
+                R(
                     P(
                         {
                             size: "sm",
-                            icon: a.ewm,
+                            icon: a.SettingsIcon,
                             "aria-label": "Settings",
                             variant: "icon-only",
                         },
@@ -184,14 +184,14 @@ function j(e) {
         c = D.useField("selectedCollection"),
         u = D.useField("selectedStory"),
         f = D.useField("controlsLayout"),
-        h = i.useMemo(() => n.flatMap((e) => e.collections), [n]),
+        m = i.useMemo(() => n.flatMap((e) => e.collections), [n]),
         {
             collection: E,
             group: b,
             story: y,
         } = i.useMemo(() => {
             var e;
-            let t = null != c ? h.find((e) => e.id === c) : h[0];
+            let t = null != c ? m.find((e) => e.id === c) : m[0];
             if (null == t)
                 return {
                     collection: null,
@@ -205,7 +205,7 @@ function j(e) {
                 group: n,
                 story: r,
             };
-        }, [c, u, h]),
+        }, [c, u, m]),
         T = (e) => {
             D.setState({
                 selectedCollection: e,
@@ -217,7 +217,7 @@ function j(e) {
         },
         N = null != (t = null == E ? void 0 : E.name) ? t : "Design System",
         P = null == y ? void 0 : y.name,
-        R = () => {
+        w = () => {
             if (null == E) return;
             let e = null != y ? "dev://playground/".concat(E.id, "/").concat(y.id) : "dev://playground/".concat(E.id);
             (0, O.JG)(e, () =>
@@ -233,7 +233,7 @@ function j(e) {
         children: [
             (0, r.jsx)("div", {
                 className: A.group,
-                children: h.map((e) => {
+                children: m.map((e) => {
                     var t;
                     return (0, r.jsx)(
                         l.a,
@@ -243,7 +243,7 @@ function j(e) {
                                 text: "".concat(e.name, " Design System"),
                                 children: (0, r.jsx)(d.L, {
                                     name: e.name,
-                                    selected: (null != c ? c : null == (t = h[0]) ? void 0 : t.id) === e.id,
+                                    selected: (null != c ? c : null == (t = m[0]) ? void 0 : t.id) === e.id,
                                     onClick: () => T(e.id),
                                 }),
                             }),
@@ -281,12 +281,12 @@ function j(e) {
                                   })
                                 : null,
                             null != E
-                                ? (0, r.jsx)(m.hU, {
+                                ? (0, r.jsx)(h.hU, {
                                       size: "sm",
                                       "aria-label": "Copy Link",
                                       variant: "icon-only",
-                                      icon: a.TIy,
-                                      onClick: R,
+                                      icon: a.CopyIcon,
+                                      onClick: w,
                                   })
                                 : null,
                             (0, r.jsx)("div", {

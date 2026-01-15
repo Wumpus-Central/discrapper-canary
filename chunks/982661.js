@@ -1,7 +1,7 @@
 n.r(e), n.d(e, { PlaygroundEmbed: () => S }), n(388685), n(35282);
 var t = n(54381),
-    u = n(473749),
-    o = n(657707),
+    o = n(473749),
+    u = n(657707),
     r = n(793030),
     i = n(442837),
     a = n(756715),
@@ -17,17 +17,17 @@ var t = n(54381),
 let v = {
         mana: {
             name: "Mana",
-            icon: o.hh5,
+            icon: u.PotionIcon,
             defaultSubtitle: "Explore the Mana Design System",
         },
         revenue: {
             name: "Revenue",
-            icon: o.uMN,
+            icon: u.BillIcon,
             defaultSubtitle: "Explore Revenue Components",
         },
         void: {
             name: "Void",
-            icon: o.hh5,
+            icon: u.PotionIcon,
             defaultSubtitle: "Explore the Void Design System",
         },
     },
@@ -38,7 +38,7 @@ function S(l) {
             let l = f.default.getCurrentUser();
             return (null == l ? void 0 : l.isStaff()) || (null == l ? void 0 : l.isStaffPersonal());
         }),
-        C = u.useMemo(
+        C = o.useMemo(
             () =>
                 (function (l) {
                     let e = l.match(p.u);
@@ -46,7 +46,7 @@ function S(l) {
                 })(l.url),
             [l.url],
         ),
-        b =
+        P =
             null != C
                 ? (function () {
                       if (null == y)
@@ -55,53 +55,53 @@ function S(l) {
                       return y;
                   })().get(C)
                 : null,
-        j = null != C ? v[C] : null,
-        P = u.useMemo(() => {
-            if (null == b) return;
+        b = null != C ? v[C] : null,
+        j = o.useMemo(() => {
+            if (null == P) return;
             let e = (function (l) {
                 var e;
                 let n = l.match(p.u);
                 return null == n ? null : null != (e = n[3]) ? e : null;
             })(l.url);
             if (null != e)
-                for (let l of b.groups) {
+                for (let l of P.groups) {
                     let n = l.stories.find((l) => l.id === e);
                     if (null != n) return n;
                 }
-        }, [l.url, b]),
-        k = null != (e = null == P ? void 0 : P.name) ? e : null != b ? "".concat(b.name, " Playground") : "Playground",
-        M =
-            null != P && null != P.docs
+        }, [l.url, P]),
+        k = null != (e = null == j ? void 0 : j.name) ? e : null != P ? "".concat(P.name, " Playground") : "Playground",
+        w =
+            null != j && null != j.docs
                 ? (0, t.jsx)(a.Anchor, {
-                      href: P.docs,
+                      href: j.docs,
                       children: "Documentation",
                   })
-                : null != j
-                  ? j.defaultSubtitle
+                : null != b
+                  ? b.defaultSubtitle
                   : "Explore Components",
-        N = u.useCallback(() => {
-            null != b &&
-                (null != P
+        E = o.useCallback(() => {
+            null != P &&
+                (null != j
                     ? m.PlaygroundStore.setState({
-                          selectedCollection: b.id,
-                          selectedStory: P.id,
+                          selectedCollection: P.id,
+                          selectedStory: j.id,
                       })
                     : m.PlaygroundStore.setState({
-                          selectedCollection: b.id,
+                          selectedCollection: P.id,
                           selectedStory: null,
                       }),
                 (0, c.jN)(x.S9g.COMPONENT_PLAYGROUND));
-        }, [P, b]);
-    if (!S || null == b) return null;
-    let w = null != (n = null == j ? void 0 : j.icon) ? n : o.hh5;
+        }, [j, P]);
+    if (!S || null == P) return null;
+    let M = null != (n = null == b ? void 0 : b.icon) ? n : u.PotionIcon;
     return (0, t.jsx)("div", {
         className: g.root,
-        "data-has-story": null != P,
+        "data-has-story": null != j,
         children: (0, t.jsxs)(r.Kqy, {
-            direction: null == P ? "vertical" : "horizontal",
-            align: null == P ? "start" : "center",
+            direction: null == j ? "vertical" : "horizontal",
+            align: null == j ? "start" : "center",
             gap: 12,
-            justify: null == P ? "end" : "space-between",
+            justify: null == j ? "end" : "space-between",
             children: [
                 (0, t.jsx)("div", {
                     className: g.header,
@@ -110,7 +110,7 @@ function S(l) {
                         align: "start",
                         gap: 8,
                         children: [
-                            (0, t.jsx)(w, { size: "lg" }),
+                            (0, t.jsx)(M, { size: "lg" }),
                             (0, t.jsxs)(r.Kqy, {
                                 direction: "vertical",
                                 gap: 0,
@@ -121,7 +121,7 @@ function S(l) {
                                     }),
                                     (0, t.jsx)(s.x, {
                                         variant: "text-sm/normal",
-                                        children: M,
+                                        children: w,
                                     }),
                                 ],
                             }),
@@ -130,9 +130,9 @@ function S(l) {
                 }),
                 (0, t.jsx)(d.zxk, {
                     size: "sm",
-                    onClick: N,
+                    onClick: E,
                     text: "Open Playground",
-                    fullWidth: null == P,
+                    fullWidth: null == j,
                 }),
             ],
         }),

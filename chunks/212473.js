@@ -30,7 +30,7 @@ let _ = (0, a.wf)(o.n.CLIPS_PANEL, {
     }),
     I = (0, a.m7)(o.n.CLIPS_SIDEBAR_ITEM, {
         useTitle: () => d.intl.string(d.t.z2jK6X),
-        icon: l.AlX,
+        icon: l.ClipsIcon,
         getLegacySearchKey: () => ((0, T.Ml)("ClipsPanel") ? void 0 : E.s6.CLIPS),
         buildLayout: () => ((0, T.Ml)("ClipsPanel") ? [g] : [_]),
     });

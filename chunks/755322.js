@@ -14,7 +14,7 @@ let T = (0, l.wf)(s.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
     S = (0, l.m7)(s.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.HcoRu0),
         getLegacySearchKey: () => a.s6.NOTIFICATIONS,
-        icon: i.Dkj,
+        icon: i.BellIcon,
         usePredicate: () => !(0, u.gj)("LegacyNotificationsPanel"),
         buildLayout: () => [T],
     });
