@@ -92447,8 +92447,8 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 .c38106a3f0c3ca76-winButtonClose {}
 
 .c38106a3f0c3ca76-winButtonClose:hover {
-    background-color: var(--background-feedback-critical);
-    color: var(--white)
+    background-color: var(--control-critical-primary-background-default);
+    color: var(--control-critical-primary-icon-default)
 }
 
 ._51c0191a08f8908d-clouds {
