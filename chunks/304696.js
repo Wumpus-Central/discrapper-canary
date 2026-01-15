@@ -32,18 +32,20 @@ function s(e) {
     return o.intl.formatToPlainString(o.t.EQa7os, { questName: r.config.messages.questName });
 }
 function l(e) {
-    let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, cosponsorName: i } = e;
+    let { isTargetedDisclosure: t, isVideoQuest: n, gamePublisher: r, gameTitle: i, cosponsorName: a } = e;
     return t
-        ? null == i
-            ? o.intl.formatToPlainString(o.t.Piihy1, { gamePublisher: n })
+        ? null == a
+            ? o.intl.formatToPlainString(o.t.Piihy1, { gamePublisher: r })
             : o.intl.formatToPlainString(o.t.DV47Gy, {
-                  gamePublisher: n,
-                  cosponsorName: i,
+                  gamePublisher: r,
+                  cosponsorName: a,
               })
-        : o.intl.formatToPlainString(o.t.euizJY, {
-              gamePublisher: n,
-              gameTitle: r,
-          });
+        : n && "en-US" === o.intl.currentLocale
+          ? o.intl.formatToPlainString(o.t.zDHY3s, { gamePublisher: r })
+          : o.intl.formatToPlainString(o.t.euizJY, {
+                gamePublisher: r,
+                gameTitle: i,
+            });
 }
 function c(e) {
     return e.config.ctaConfig.buttonLabel;
