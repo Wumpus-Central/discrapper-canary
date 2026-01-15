@@ -73799,33 +73799,17 @@ screen and (max-width:485px) {
     overflow: hidden
 }
 
-._75e8ee170883da62-contentCoachmark {
-    background: var(--background-surface-high);
-    border: 1.4px solid hsl(var(--background-surface-high-hsl)/.25)
-}
-
 ._75e8ee170883da62-innerContent {
-    align-items: center;
-    display: flex;
     flex-direction: row
 }
 
-._75e8ee170883da62-innerGlow {
-    box-shadow: inset 0 0 10px rgba(255, 186, 219, .2)
-}
-
-._75e8ee170883da62-outerGlow {
-    box-shadow: 0 0 20px var(--background-surface-high)
-}
-
-._75e8ee170883da62-innerContentCoachmark {
-    display: flex;
-    flex-direction: column
+._75e8ee170883da62-innerContent,
+._75e8ee170883da62-subContent {
+    align-items: center;
+    display: flex
 }
 
 ._75e8ee170883da62-subContent {
-    align-items: center;
-    display: flex;
     flex: 1;
     margin: 16px;
     min-width: 0
@@ -73836,14 +73820,12 @@ screen and (max-width:485px) {
     position: relative
 }
 
-._75e8ee170883da62-recipientUserAvatar,
-._75e8ee170883da62-recipientUserAvatarCoachmark {
+._75e8ee170883da62-currentUserAvatar,
+._75e8ee170883da62-recipientUserAvatar {
     background-color: var(--background-surface-high)
 }
 
-._75e8ee170883da62-currentUserAvatar,
-._75e8ee170883da62-currentUserAvatarCoachmark {
-    background-color: var(--background-surface-high);
+._75e8ee170883da62-currentUserAvatar {
     border: 2px solid var(--background-surface-high);
     bottom: -3px;
     inset-inline-end: -2px;
@@ -73869,50 +73851,6 @@ screen and (max-width:485px) {
     opacity: .8
 }
 
-._75e8ee170883da62-subHeaderTextCoachmark {
-    color: #000;
-    opacity: .8
-}
-
-._75e8ee170883da62-button {
-    flex: 1
-}
-
-._75e8ee170883da62-buttonSecondary {
-    color: hsla(0, 0%, 100%, .5)
-}
-
-._75e8ee170883da62-buttonSecondaryCoachmark {
-    color: var(--control-secondary-border-default)
-}
-
-._75e8ee170883da62-buttonContentContainer {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-._75e8ee170883da62-buttonText {
-    -webkit-margin-start: 4px;
-    margin-inline-start: 4px
-}
-
-._75e8ee170883da62-buttonTextPrimary {
-    color: var(--white)
-}
-
-._75e8ee170883da62-buttonTextPrimaryCoachmark {
-    color: #fff
-}
-
-._75e8ee170883da62-buttonTextSecondary {
-    color: var(--white)
-}
-
-._75e8ee170883da62-buttonTextSecondaryCoachmark {
-    color: var(--button-outline-primary-text)
-}
-
 ._75e8ee170883da62-buttonContainer {
     display: flex;
     -webkit-padding-end: 16px;
@@ -73920,29 +73858,6 @@ screen and (max-width:485px) {
     flex-shrink: 0;
     gap: 16px;
     padding-inline-end: 16px
-}
-
-._75e8ee170883da62-connector {
-    background-color: var(--background-surface-high);
-    height: 2px;
-    pointer-events: none;
-    position: absolute;
-    width: 9px
-}
-
-._75e8ee170883da62-rightPopoutConnector {
-    inset-inline-start: -9px;
-    top: 12%
-}
-
-._75e8ee170883da62-leftPopoutConnector {
-    inset-inline-start: 100%;
-    top: 12%
-}
-
-.theme-dark ._75e8ee170883da62-subHeaderTextCoachmark {
-    color: #fff;
-    opacity: .8
 }
 
 ._4ea495c7880c982f-messageContentContainer {
