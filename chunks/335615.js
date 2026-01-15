@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(442837),
     p = n(481060),
     _ = n(239091),
-    m = n(941028),
-    h = n(144144),
+    h = n(941028),
+    m = n(144144),
     g = n(276264),
     E = n(607070),
     b = n(100527),
@@ -30,8 +30,8 @@ var r = n(54381),
     A = n(82295),
     N = n(313201),
     P = n(623624),
-    R = n(518738),
-    w = n(850020),
+    w = n(518738),
+    R = n(850020),
     D = n(48950),
     x = n(155409),
     L = n(670188),
@@ -148,7 +148,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 user: u,
                 currentUser: f,
                 activities: p,
-                applicationStream: m,
+                applicationStream: h,
                 status: E,
                 channel: b,
                 guildId: y,
@@ -178,8 +178,8 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             ]),
             C = i.useRef(null),
             [A, N] = i.useState(!1),
-            R = null != S ? new Date(S) : null,
-            w = i.useCallback(
+            w = null != S ? new Date(S) : null,
+            R = i.useCallback(
                 (e) => {
                     (0, _.jW)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -213,7 +213,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                         plainText: e,
                         rawText: t,
                     }),
-                    h.Z.startTyping(b.id);
+                    m.Z.startTyping(b.id);
             }, [u, b.id]),
             x = i.useCallback(
                 (e) => {
@@ -251,16 +251,16 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                         {
                             ref: C,
                             className: z.member,
-                            onContextMenu: w,
+                            onContextMenu: R,
                             shouldAnimateStatus: et,
                             user: u,
                             currentUser: f,
                             nick: c,
                             status: E,
                             activities: p,
-                            applicationStream: m,
+                            applicationStream: h,
                             isOwner: l,
-                            premiumSince: R,
+                            premiumSince: w,
                             colorString: t,
                             colorStrings: a,
                             colorRoleName: o,
@@ -296,7 +296,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 var e;
                 return null != t ? (null == (e = k.Z.getRole(i.guild_id, t)) ? void 0 : e.name) : void 0;
             }, [i, t]),
-            p = (0, w.K)({
+            p = (0, R.K)({
                 user: a,
                 guildId: i.guild_id,
             });
@@ -311,45 +311,60 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
         );
     }),
     es = i.memo(function (e) {
-        let { id: t, title: n, count: i, guildId: a, className: o } = e,
-            s = (0, R.p9)({
+        let { id: t, title: a, count: o, guildId: s, className: l } = e,
+            c = (0, w.p9)({
                 roleId: t,
-                guildId: a,
+                guildId: s,
                 size: 16,
             }),
-            l = (0, f.e7)([j.default], () => (null == i ? null : new Intl.NumberFormat(j.default.locale).format(i)), [
-                i,
-            ]);
+            u = (0, f.e7)([j.default], () => (null == o ? null : new Intl.NumberFormat(j.default.locale).format(o)), [
+                o,
+            ]),
+            d = i.useCallback(
+                (e) => {
+                    (null == c ? void 0 : c.src) != null &&
+                        (0, _.jW)(e, async () => {
+                            let { default: e } = await n.e("99351").then(n.bind(n, 549866));
+                            return (t) => (0, r.jsx)(e, J(Q({}, t), { imageUrl: c.src }));
+                        });
+                },
+                [null == c ? void 0 : c.src],
+            );
         return t === W.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
-                  className: o,
+                  className: l,
                   children: (0, r.jsx)("div", { className: z.memberGroupsPlaceholder }),
               })
             : (0, r.jsxs)(A.Z, {
-                  className: o,
+                  className: l,
                   children: [
                       (0, r.jsx)(p.nn4, {
                           children:
-                              null == i
-                                  ? n
+                              null == o
+                                  ? a
                                   : K.intl.format(K.t.Uaqbke, {
-                                        title: n,
-                                        count: i,
+                                        title: a,
+                                        count: o,
                                     }),
                       }),
                       (0, r.jsxs)("div", {
                           className: z.membersGroupHeader,
                           "aria-hidden": !0,
                           children: [
-                              null != s ? (0, r.jsx)(D.Z, Q({ className: z.roleIcon }, s)) : null,
+                              null != c
+                                  ? (0, r.jsx)("span", {
+                                        onContextMenu: d,
+                                        children: (0, r.jsx)(D.Z, Q({ className: z.roleIcon }, c)),
+                                    })
+                                  : null,
                               (0, r.jsx)("span", {
                                   className: z.membersGroupName,
-                                  children: n,
+                                  children: a,
                               }),
-                              null == l
+                              null == u
                                   ? null
                                   : (0, r.jsxs)("span", {
-                                        children: ["\xA0\u2014 ", l],
+                                        children: ["\xA0\u2014 ", u],
                                     }),
                           ],
                       }),
@@ -638,7 +653,7 @@ class ec extends i.Component {
                     if (null == this._list) return;
                     let { channel: e } = this.props,
                         { rowHeight: t, y: n, height: r } = this.getDimensions();
-                    (0, m.TV)({
+                    (0, h.TV)({
                         guildId: e.guild_id,
                         channelId: e.id,
                         y: n,
@@ -699,8 +714,8 @@ function eu(e) {
         {
             rows: d,
             groups: _,
-            version: m,
-            updateMaxRowSeen: h,
+            version: h,
+            updateMaxRowSeen: m,
         } = (0, C.H)({
             memberStoreProps: l,
             channelId: t.id,
@@ -768,11 +783,11 @@ function eu(e) {
                 children: (0, r.jsx)(
                     ec,
                     J(Q({}, e, l), {
-                        version: m,
+                        version: h,
                         groups: _,
                         rows: d,
                         listRef: g,
-                        updateMaxContentFeedRowSeen: h,
+                        updateMaxContentFeedRowSeen: m,
                         sectionHeight: y,
                         rowHeight: v,
                     }),
