@@ -322,6 +322,25 @@ let { Themes: r } = n(15202).VV,
                     },
                 },
             },
+            BACKGROUND_MOD_NORMAL: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "PRIMARY_500",
+                    opacity: 0.16,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_400",
+                    opacity: 0.16,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_11",
+                    opacity: 0.2,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_11",
+                    opacity: 0.16,
+                },
+            },
             BACKGROUND_MOD_STRONG: {
                 category: "background",
                 [r.DARK]: {

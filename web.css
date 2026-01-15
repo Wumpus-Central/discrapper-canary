@@ -11798,14 +11798,14 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
 }
 
 .d27f17593b8064c5-calendarPicker .react-datepicker {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border: none;
     font-family: var(--font-primary);
     padding: 20px
 }
 
 .d27f17593b8064c5-calendarPicker .react-datepicker__header {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-bottom: 0;
     padding-top: 0
 }
@@ -15481,7 +15481,7 @@ screen and (max-width:485px) {
 }
 
 ._299eb87491f4b6d1-obscureHoverButton:active {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     transition: background-color .2s ease-in-out
 }
 
@@ -17484,7 +17484,7 @@ screen and (max-width:485px) {
 }
 
 .e97453749c8b22b3-thumbIcon {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: 16px;
     color: var(--interactive-text-default);
     cursor: pointer;
@@ -18163,7 +18163,7 @@ screen and (max-width:485px) {
 }
 
 ._0f481cbbd7530492-mediaMosaicAltText:active {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     transition: background-color .2s ease-in-out
 }
 
@@ -19181,7 +19181,7 @@ screen and (max-width:485px) {
 
 ._14ad3407b4b8a3bc-infoExpandedGuildContainer {
     align-items: start;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
@@ -21866,7 +21866,8 @@ screen and (max-width:485px) {
 }
 
 ._3add81a1a1ae9da9-topPerksCard {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-sizing: border-box;
     flex: 1 1 auto;
@@ -21898,7 +21899,7 @@ screen and (max-width:485px) {
 }
 
 ._3add81a1a1ae9da9-imageGradientOverlay {
-    background: linear-gradient(to bottom, transparent 0, var(--background-secondary-alt) 60%, var(--background-secondary-alt) 100%);
+    background: linear-gradient(to bottom, transparent 0, var(--card-background-default) 60%, var(--card-background-default) 100%);
     border-radius: var(--radius-lg);
     bottom: 0;
     height: 300px;
@@ -22284,7 +22285,7 @@ screen and (max-width:485px) {
 }
 
 ._5b98ee5ec86ed598-wrapper {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 8px;
     padding: 60px 50px
 }
@@ -22356,7 +22357,7 @@ screen and (max-width:485px) {
 
 .b4589bedc187b0eb-innerWrapper {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 50px;
     box-shadow: var(--shadow-border), var(--shadow-high);
     box-sizing: border-box;
@@ -22996,7 +22997,7 @@ screen and (max-width:485px) {
 }
 
 ._686cf09df72934da-perkPreviewImage {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 8px;
     box-shadow: var(--shadow-border), var(--shadow-high);
     display: block;
@@ -23031,7 +23032,7 @@ screen and (max-width:485px) {
 }
 
 ._1dfaec293e55bc43-bodyWaveGradientStop2 {
-    stop-color: var(--background-secondary-alt)
+    stop-color: var(--background-mod-normal)
 }
 
 ._1dfaec293e55bc43-bodyWaveGradientStop3 {
@@ -26162,7 +26163,7 @@ span._5d473ecff348c314-clanTag {
 
 .c8ffbb79449f399c-addMembersIcon {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 50%;
     display: flex;
     height: 32px;
@@ -26182,7 +26183,7 @@ span._5d473ecff348c314-clanTag {
 
 .c8ffbb79449f399c-appIconWrapper {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 16px;
     display: flex;
     height: 32px;
@@ -27908,7 +27909,7 @@ input[type=checkbox]:focus-visible+._0d242e583d6053f6-label {
 }
 
 .a45a2a5d0f4caddc-diversitySelectorOptions {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border: 1px solid var(--background-base-lowest);
     border-radius: 4px;
     display: flex;
@@ -32920,7 +32921,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .theme-dark ._1464f16f3e3c14a9-optionPill {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-color: var(--background-base-lowest)
 }
 
@@ -34293,7 +34294,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .c6367b0f171ba6d7-createInspected {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 .c6367b0f171ba6d7-uploadCard {
@@ -34350,7 +34351,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 
 .c6367b0f171ba6d7-viewAllButton {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     box-sizing: border-box;
     color: var(--interactive-text-default);
     display: grid;
@@ -38234,7 +38235,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .theme-dark .bba88350df28dff1-staticToolbar {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 .theme-light .bba88350df28dff1-staticToolbar {
@@ -41204,7 +41205,7 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
 }
 
 ._7970d1797fecf47f-avatarIconContainer {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-round);
     bottom: -8px;
     inset-inline-end: -8px;
@@ -41410,7 +41411,7 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
 
 .b52e4f70d11a5ca2-gameIconLoading {
     animation: b52e4f70d11a5ca2-placeholderPulse 1.3s ease-in-out infinite;
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 .beaa9339d3ffa74d-subtext {
@@ -51705,7 +51706,7 @@ h3._1689b6e8323d95c2-improved:after {
     overflow: hidden;
     -webkit-margin-start: .25rem;
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 12px;
     color: var(--interactive-text-active);
     cursor: pointer;
@@ -52737,7 +52738,7 @@ h3._1689b6e8323d95c2-improved:after {
     }
 
     ._3efc4041416bf6dc-subscriptionPerks {
-        background-color: var(--background-secondary-alt)
+        background-color: var(--background-mod-normal)
     }
 }
 
@@ -56447,7 +56448,7 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 .c1521037ef09de7e-pageButton:hover {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     color: var(--interactive-text-hover)
 }
 
@@ -56576,7 +56577,7 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 ._92efc8f0d8abb645-popoutList {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: 5px;
     padding: 10px 10px 0
 }
@@ -56608,7 +56609,7 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 ._4f569b8941af22d1-background {
-    fill: var(--background-secondary-alt)
+    fill: var(--background-mod-normal)
 }
 
 ._4f569b8941af22d1-dot,
@@ -58275,7 +58276,7 @@ screen and (max-width:485px) {
 
 ._00943886e1cf89d1-multipleIconWrapper {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 50%;
     display: flex;
     justify-content: center
@@ -58388,7 +58389,7 @@ screen and (max-width:485px) {
 ._00943886e1cf89d1-applicationStreamingPreviewWrapper {
     align-items: center;
     aspect-ratio: 16/9;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 4px;
     cursor: pointer;
     display: flex;
@@ -59188,7 +59189,7 @@ screen and (max-width:485px) {
 }
 
 ._8a969186fc6052b2-container {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     flex-direction: row;
     justify-content: flex-start;
@@ -59260,7 +59261,7 @@ screen and (max-width:485px) {
 }
 
 ._8e75f9d969241b38-container:hover {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 ._8e75f9d969241b38-actionable {
@@ -59944,7 +59945,7 @@ screen and (max-width:485px) {
 }
 
 ._95e2d948d14427ed-button {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     cursor: pointer
 }
 
@@ -60146,7 +60147,7 @@ screen and (max-width:485px) {
 }
 
 ._0ab43688537c1d7f-changePlanNotice {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     margin-bottom: 16px
 }
 
@@ -60161,12 +60162,13 @@ screen and (max-width:485px) {
 }
 
 ._0ab43688537c1d7f-container ._0ab43688537c1d7f-paymentSourceDropdown,
-._0ab43688537c1d7f-infoCard,
 ._0ab43688537c1d7f-paymentSourceDropdownOption {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 ._0ab43688537c1d7f-infoCard {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
     border-radius: 8px;
     flex: 1;
     padding: 16px
@@ -60197,7 +60199,7 @@ screen and (max-width:485px) {
 }
 
 ._0ab43688537c1d7f-rowButton {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     cursor: pointer
 }
 
@@ -60303,7 +60305,7 @@ screen and (max-width:485px) {
 
 .be018f868fa303cc-header {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     display: flex;
     justify-content: space-between
 }
@@ -60314,7 +60316,7 @@ screen and (max-width:485px) {
 }
 
 .bb8774b01419b2c6-container {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--card-background-default);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     flex-direction: column;
@@ -60355,7 +60357,7 @@ screen and (max-width:485px) {
 }
 
 .bb8774b01419b2c6-card {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--card-background-default);
     gap: 10px;
     padding: 16px
 }
@@ -62397,7 +62399,7 @@ screen and (max-width:485px) {
 }
 
 ._9d295a6cf67970b4-floatingUpsell {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     margin: 0;
     margin-top: var(--space-24)
 }
@@ -63392,7 +63394,8 @@ screen and (max-width:485px) {
 }
 
 .a61c561e7be40d05-expandedProgressBarContainerSettingsPage {
-    background: var(--background-secondary-alt);
+    background: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     margin-bottom: -40px;
     min-height: 292px
@@ -63698,7 +63701,9 @@ screen and (max-width:485px) {
 }
 
 .a45ed3bc8a11b547-giftCard {
-    background: var(--background-secondary-alt);
+    background: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
     margin: 25px 0;
     padding: 40px
 }
@@ -63706,7 +63711,6 @@ screen and (max-width:485px) {
 .a45ed3bc8a11b547-giftCard,
 .a45ed3bc8a11b547-giftCardPromotion {
     align-items: center;
-    border-radius: var(--radius-lg);
     color: var(--white);
     display: flex;
     flex-direction: row;
@@ -63717,6 +63721,7 @@ screen and (max-width:485px) {
 }
 
 .a45ed3bc8a11b547-giftCardPromotion {
+    border-radius: var(--radius-lg);
     height: 200px;
     margin-bottom: 25px;
     padding: 0 30px
@@ -66377,7 +66382,7 @@ screen and (max-width:485px) {
 }
 
 .theme-light ._86fa62aafa304c71-guildShopEmbed {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 ._86fa62aafa304c71-spinnerContainer {
@@ -67314,7 +67319,7 @@ screen and (max-width:485px) {
 }
 
 .da5e8d057abd4424-clickable:hover {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 .da5e8d057abd4424-guildChannelInfoContainer {
@@ -70332,7 +70337,7 @@ screen and (max-width:485px) {
 }
 
 .theme-light ._5301bbcb03374615-imgContainer {
-    background: var(--background-secondary-alt)
+    background: var(--background-mod-normal)
 }
 
 .theme-dark ._5301bbcb03374615-contentContainer {
@@ -70961,7 +70966,7 @@ screen and (max-width:485px) {
 
 ._86361b88a8a258e6-defaultFooterContainer {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     color: var(--white);
     display: flex;
@@ -71943,7 +71948,7 @@ screen and (max-width:485px) {
 
 ._48c1c0768f2a2421-role {
     align-items: center;
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 12px;
@@ -72028,7 +72033,7 @@ screen and (max-width:485px) {
 }
 
 ._48c1c0768f2a2421-overflowRolesPopout {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 3px;
     box-shadow: var(--legacy-elevation-high), var(--legacy-elevation-border);
     padding: 8px;
@@ -72044,7 +72049,7 @@ screen and (max-width:485px) {
 }
 
 ._48c1c0768f2a2421-overflowRolesPopoutArrow {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     box-shadow: var(--legacy-elevation-high), var(--legacy-elevation-border);
     height: 8px;
     transform: rotate(45deg);
@@ -73712,7 +73717,7 @@ screen and (max-width:485px) {
 
 ._076c1e9e7f8f918a-tile {
     align-items: stretch;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 5px;
     box-shadow: 0 0 0 hsl(var(--primary-700-hsl)/.15);
     display: flex;
@@ -73884,7 +73889,7 @@ screen and (max-width:485px) {
 }
 
 ._850153d91b1c1883-container {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: var(--space-8);
     color: var(--text-strong);
     display: flex;
@@ -74009,7 +74014,7 @@ screen and (max-width:485px) {
 }
 
 ._444920e965051ae6-embedCard._444920e965051ae6-selected {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 ._444920e965051ae6-embedCard._444920e965051ae6-isClickable {
@@ -74178,7 +74183,7 @@ screen and (max-width:485px) {
 }
 
 ._444920e965051ae6-annotationRow {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 4px;
     line-height: 20px;
     margin-top: 4px;
@@ -75028,7 +75033,7 @@ screen and (max-width:485px) {
 }
 
 .b99f57e338f8c028-cardFooter {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     padding: 4px
 }
 
@@ -77285,7 +77290,7 @@ screen and (max-width:485px) {
 }
 
 ._62eb1df151d8bf49-settingsBanner {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     box-sizing: border-box;
     flex: 1;
     height: 171px;
@@ -78116,8 +78121,8 @@ screen and (max-width:485px) {
 
 ._70f7f6541f6f031e-innerWrapperBase {
     align-items: center;
-    background-color: var(--background-secondary-alt);
-    border-radius: 8px;
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-border), var(--shadow-high);
     box-sizing: border-box;
     display: flex;
@@ -79783,8 +79788,9 @@ screen and (max-width:485px) {
 
 .b62c4e4ee0e62730-perkCard {
     align-items: center;
-    background-color: var(--background-secondary-alt);
-    border-radius: 16px;
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -80310,7 +80316,7 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 }
 
 ._1f0692e2665d8dcd-cardDescriptionTenureReward {
-    background-image: linear-gradient(to bottom, var(--background-secondary-alt) 20%, hsl(var(--primary-660-hsl)/.3) 80%, hsl(var(--primary-660-hsl)/0) 95%);
+    background-image: linear-gradient(to bottom, var(--background-mod-normal) 20%, hsl(var(--primary-660-hsl)/.3) 80%, hsl(var(--primary-660-hsl)/0) 95%);
     pointer-events: none
 }
 
@@ -80326,11 +80332,7 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 }
 
 ._1f0692e2665d8dcd-cardDescription {
-    background-image: linear-gradient(to bottom, var(--background-secondary-alt) 50%, hsl(var(--primary-660-hsl)/.75) 80%)
-}
-
-.theme-light ._1f0692e2665d8dcd-cardDescription {
-    background-image: linear-gradient(to bottom, var(--background-secondary-alt) 50%, hsl(var(--primary-160-hsl)/.5) 80%)
+    background-image: linear-gradient(to bottom, var(--card-background-default) 50%, transparent 100%)
 }
 
 @keyframes _1f0692e2665d8dcd-glowEffect {
@@ -80598,9 +80600,10 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 .b5493bb5330ab072-card {
     --custom-card-border-radius: 20px;
     align-items: flex-start;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--card-background-default);
     background-repeat: no-repeat;
     background-size: cover;
+    border: 1px solid var(--border-muted);
     border-radius: var(--custom-card-border-radius);
     display: flex;
     flex-direction: column;
@@ -80845,7 +80848,7 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 }
 
 .b5493bb5330ab072-nitroGradientBackground {
-    background: radial-gradient(100% 100% at 50% 0, var(--background-secondary-alt) 60%, var(--transparent) 100%), linear-gradient(90deg, var(--expressive-gradient-green-end) 0, var(--expressive-gradient-green-start) 100%)
+    background: radial-gradient(100% 100% at 50% 0, var(--card-background-default) 60%, var(--transparent) 100%), linear-gradient(90deg, var(--expressive-gradient-green-end) 0, var(--expressive-gradient-green-start) 100%)
 }
 
 .efc71f4458cc9969-section {
@@ -80970,7 +80973,7 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 
 .da4aee5b24d1a407-container {
     align-items: flex-start;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     display: flex;
     filter: saturate(var(--saturation-factor, 1));
@@ -81003,7 +81006,7 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 }
 
 .da4aee5b24d1a407-giftCardButton {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     height: 40px;
     margin-top: 14px;
     width: 100%
@@ -81025,16 +81028,18 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 }
 
 .images-light .da4aee5b24d1a407-textContainer {
-    background-image: linear-gradient(to right, var(--background-secondary-alt), hsl(var(--primary-160-hsl)/40%) 90%, transparent)
+    background-image: linear-gradient(to right, var(--background-mod-normal), hsl(var(--primary-160-hsl)/40%) 90%, transparent)
 }
 
 .images-dark .da4aee5b24d1a407-textContainer {
-    background-image: linear-gradient(to right, var(--background-secondary-alt), hsl(var(--primary-660-hsl)/40%) 90%, transparent)
+    background-image: linear-gradient(to right, var(--background-mod-normal), hsl(var(--primary-660-hsl)/40%) 90%, transparent)
 }
 
 ._99d5f15a6ff29a05-container {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-muted);
     border-radius: var(--radius-lg);
+    box-sizing: border-box;
     display: flex;
     filter: saturate(var(--saturation-factor, 1));
     justify-content: space-between;
@@ -84227,7 +84232,7 @@ div.d74ef86df6475678-nagbar {
 
 ._0d7935199308d4a9-container {
     align-items: center;
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: row;
@@ -84376,7 +84381,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 .c7f964e7e0fc8b47-integrationWrapper {
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     margin-top: 8px;
     padding: 16px
@@ -84660,7 +84665,7 @@ div.d74ef86df6475678-nagbar {
 
 ._5cea9da4c2ca012f-header {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     display: flex;
     gap: var(--space-8);
     height: 72px;
@@ -84797,7 +84802,7 @@ div.d74ef86df6475678-nagbar {
 
 ._89d8032fe92992ee-section {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     display: flex;
     height: 72px;
     padding: 16px
@@ -86282,7 +86287,7 @@ div.d74ef86df6475678-nagbar {
 
 .cc46f0f859f26200-gameNameInput:focus,
 .cc46f0f859f26200-gameNameInput:hover {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-color: hsl(var(--primary-500-hsl)/.3)
 }
 
@@ -86328,7 +86333,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 .cc46f0f859f26200-addGamePopout {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 3px;
     padding: 10px;
     width: 300px
@@ -86637,7 +86642,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 .fedaccd022fb5126-body {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 .fedaccd022fb5126-header {
@@ -86931,7 +86936,7 @@ div.d74ef86df6475678-nagbar {
 
 .d4883c8125f433a3-dropCriteria {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     padding: 16px 16px 8px
 }
 
@@ -88169,7 +88174,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._6da2d8abf659f945-previewContainer {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     box-sizing: border-box;
     height: 142px;
     position: relative;
@@ -89347,7 +89352,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 
 ._5dba5003598d9c70-guildContainer {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     display: flex;
     flex-direction: row;
     padding: 30px 18px;
@@ -89441,7 +89446,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 .ceb06aa49ba836f9-appliedBoostContainer {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
@@ -89602,7 +89607,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 
 ._834f55a43c168c27-wrapper {
     align-items: center;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: row;
@@ -89625,7 +89630,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 ._37ae554d51e1c7d1-wrapper {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: var(--radius-sm);
     padding: 16px 18px
 }
@@ -89705,7 +89710,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 .d970dab3554a9582-tierPill {
     align-items: center;
     align-self: flex-start;
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 11px;
     display: inline-flex;
     font-size: 12px;
@@ -89871,7 +89876,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 ._39466562bae551de-selectGuild:hover {
-    background-color: var(--background-secondary-alt)
+    background-color: var(--background-mod-normal)
 }
 
 ._39466562bae551de-selectGuildIcon {
@@ -90237,7 +90242,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 ._0f8ce48f594c7284-tierPill {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     color: var(--text-default)
 }
 
@@ -90451,7 +90456,7 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 }
 
 ._9902028ffbba1d6c-unappliedBoostSlots {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--background-mod-normal);
     border-radius: 0 0 8px 8px;
     padding: 0 18px
 }
@@ -90946,7 +90951,7 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 
 .c3d9481c21f6c807-pill {
     align-items: center;
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     border-radius: 8px;
     display: inline-flex;
     gap: 4px;
@@ -93639,7 +93644,7 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 
 ._2dbe1dc734ff26a5-previewRoot {
     align-items: center;
-    background: var(--background-secondary-alt);
+    background: var(--background-mod-normal);
     display: flex;
     justify-content: center
 }
