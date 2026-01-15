@@ -107,9 +107,10 @@ function m() {
 }
 n(25251);
 let h = () => m(!0),
-    g = (e) => {
-        let { purchases: t } = m(!0);
-        return null != e ? t.get(e) : void 0;
+    g = function (e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            { purchases: n } = m(t);
+        return null != e ? n.get(e) : void 0;
     };
 function E(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,

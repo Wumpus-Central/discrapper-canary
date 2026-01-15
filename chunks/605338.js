@@ -18,7 +18,7 @@ function s(e, t, n) {
 }
 class l extends i.Z {
     static createFromServer(e) {
-        var t, n, r, i, a, o, s, c, u, d;
+        var t, n, r, i, a, o, s, c, u, d, f, p, _;
         return new l({
             id: e.id,
             trialId: e.trial_id,
@@ -26,20 +26,24 @@ class l extends i.Z {
             endDate: new Date(e.end_date),
             outboundRedemptionEndDate:
                 null != e.outbound_redemption_end_date ? new Date(e.outbound_redemption_end_date) : null,
-            inboundHeaderText: null != (t = e.inbound_header_text) ? t : "",
-            inboundBodyText: null != (n = e.inbound_body_text) ? n : "",
-            inboundHelpCenterLink: null != (r = e.inbound_help_center_link) ? r : "",
-            outboundTitle: null != (i = e.outbound_title) ? i : "",
-            outboundRedemptionModalBody: null != (a = e.outbound_redemption_modal_body) ? a : "",
-            outboundTermsAndConditions: null != (o = e.outbound_terms_and_conditions) ? o : "",
-            outboundRedemptionPageLink: null != (s = e.outbound_redemption_page_link) ? s : "",
-            outboundRedemptionUrlFormat: null != (c = e.outbound_redemption_url_format) ? c : "",
+            inboundHeaderText: null != (r = e.inbound_header_text) ? r : "",
+            inboundBodyText: null != (i = e.inbound_body_text) ? i : "",
+            inboundHelpCenterLink: null != (a = e.inbound_help_center_link) ? a : "",
+            outboundTitle: null != (o = e.outbound_title) ? o : "",
+            outboundRedemptionModalBody: null != (s = e.outbound_redemption_modal_body) ? s : "",
+            outboundTermsAndConditions: null != (c = e.outbound_terms_and_conditions) ? c : "",
+            outboundRedemptionPageLink: null != (u = e.outbound_redemption_page_link) ? u : "",
+            outboundRedemptionUrlFormat: null != (d = e.outbound_redemption_url_format) ? d : "",
             flags: e.flags,
             inboundRestrictedCountries: e.inbound_restricted_countries,
             outboundRestrictedCountries: e.outbound_restricted_countries,
             promotionType: e.promotion_type,
-            partnerId: null != (u = e.partner_id) ? u : null,
-            marketingComponents: null != (d = e.marketing_components) ? d : [],
+            partnerId: null != (f = e.partner_id) ? f : null,
+            marketingComponents: null != (p = e.marketing_components) ? p : [],
+            rewardSkuIds:
+                null != (_ = null == (n = e.metadata) || null == (t = n.gift_promotion) ? void 0 : t.reward_sku_ids)
+                    ? _
+                    : [],
         });
     }
     get isThirdPartyOutbound() {
@@ -89,6 +93,7 @@ class l extends i.Z {
             s(this, "promotionType", void 0),
             s(this, "partnerId", void 0),
             s(this, "marketingComponents", void 0),
+            s(this, "rewardSkuIds", void 0),
             (this.id = e.id),
             (this.trialId = e.trialId),
             (this.startDate = e.startDate),
@@ -107,6 +112,7 @@ class l extends i.Z {
             (this.outboundRestrictedCountries = null != (r = e.outboundRestrictedCountries) ? r : []),
             (this.promotionType = e.promotionType),
             (this.partnerId = e.partnerId),
-            (this.marketingComponents = e.marketingComponents);
+            (this.marketingComponents = e.marketingComponents),
+            (this.rewardSkuIds = e.rewardSkuIds);
     }
 }

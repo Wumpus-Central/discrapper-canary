@@ -214,6 +214,11 @@ class j extends (r = i.ZP.PersistedStore) {
         var t;
         return null != (t = v.get(e)) ? t : null;
     }
+    getGiftPromotionRewardSkuIds() {
+        let e = b[u.$k.GIFT_PROMOTION],
+            t = Object.keys(e);
+        return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
+    }
 }
 d(j, "displayName", "PromotionsStore"),
     d(j, "persistKey", "PromotionsPersistedStore"),
