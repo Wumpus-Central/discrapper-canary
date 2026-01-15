@@ -48,6 +48,16 @@ let m = i.memo(function (e) {
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
+                case l.z.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
+                    return (0, r.jsx)(h, {
+                        renderPopout: (e) =>
+                            (0, r.jsx)(p.r0, {
+                                guildId: n.id,
+                                markAsDismissed: m,
+                                channelRowRef: e,
+                            }),
+                        renderGuildHeaderDropdownButton: i,
+                    });
                 case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, r.jsx)(h, {
                         renderPopout: (e) =>

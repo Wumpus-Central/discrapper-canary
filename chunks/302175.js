@@ -1,9 +1,9 @@
-n.d(t, { Z: () => W }), n(953529), n(388685);
+n.d(t, { Z: () => W }), n(953529), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(853590),
     l = n(907331),
     c = n(793030),
     u = n(442837),
@@ -253,7 +253,9 @@ let B = 3,
                 O.Z.shouldFetchPowerupsForGuild(n.id) && (0, y.BN)(n.id);
         }, [n.id]);
         let o = (0, I.Z)(n.id),
-            s = (null != o ? o : []).slice(0, B);
+            s = Array.from(null != o ? o : [])
+                .reverse()
+                .slice(0, B);
         return 0 === s.length
             ? null
             : (0, r.jsxs)("div", {
@@ -266,7 +268,7 @@ let B = 3,
                       }),
                       (0, r.jsx)(c.xvT, {
                           variant: "text-lg/medium",
-                          children: x.intl.format(D.default.S562fn, {
+                          children: x.intl.format(D.default.OdCzjA, {
                               helpDeskArticle: b.Z.getArticleURL(R.BhN.GUILD_BOOSTING_FAQ),
                           }),
                       }),
