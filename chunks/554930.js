@@ -12,7 +12,7 @@ let d = (e) => {
         n = new Date(),
         d = new Date(n.getFullYear(), n.getMonth() + 1, 0).getDate(),
         f = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
-        p = null == f ? void 0 : f.isFractionalPremiumWithNoSubscription();
+        p = null == f ? void 0 : f.isFractionalPremiumWithNoStandardSub();
     return (0, r.jsxs)("div", {
         className: u.container,
         children: [
