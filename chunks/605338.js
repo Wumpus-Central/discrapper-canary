@@ -46,9 +46,6 @@ class l extends i.Z {
                     : [],
         });
     }
-    get isThirdPartyOutbound() {
-        return this.promotionType === a.$k.THIRD_PARTY_OUTBOUND;
-    }
     get isBogo() {
         return this.promotionType === a.$k.BOGO;
     }
@@ -63,6 +60,7 @@ class l extends i.Z {
             case a.$k.THIRD_PARTY_INBOUND:
                 return this.inboundRestrictedCountries.includes(e);
             case a.$k.THIRD_PARTY_OUTBOUND:
+            case a.$k.THIRD_PARTY_OUTBOUND_RECURRING:
                 return this.outboundRestrictedCountries.includes(e);
             default:
                 return !1;
