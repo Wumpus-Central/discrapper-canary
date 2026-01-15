@@ -698,6 +698,7 @@ function H(e) {
                             animate: !0 !== e$.current && !eO,
                             interactionEnabled: eJ && eV,
                             backgroundColor: tw ? void 0 : "rgba(0, 0, 0, 0.0)",
+                            playerState: em,
                             preloadedBuffers: tw ? eD : void 0,
                             duration: null != (H = null == (u = ez.current) ? void 0 : u.duration) ? H : 1,
                             isFullyVisible: tw && eV,
