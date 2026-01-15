@@ -1,6 +1,6 @@
 n.d(t, {
-    _: () => g,
-    h: () => h,
+    _: () => E,
+    h: () => g,
 });
 var r = n(473749),
     i = n(442837),
@@ -9,24 +9,25 @@ var r = n(473749),
 let s = 0,
     l = 2,
     c = 3,
-    u = 0.06,
-    d = -50,
+    u = 0.03,
+    d = -45,
     f = 3,
-    p = 2,
-    _ = "inset 0 0 0 2px var(--yellow-360), inset 0 0 0 3px var(--background-base-lower)";
+    p = 1,
+    _ = 0.5,
+    h = "inset 0 0 0 2px var(--yellow-360), inset 0 0 0 3px var(--background-base-lower)";
 function m(e, t) {
-    return t / (1 + Math.exp(-u * (e - d)));
+    return _ + (t - _) / (1 + Math.exp(-u * (e - d)));
 }
-var h = (function (e) {
+var g = (function (e) {
     return (e.BOTH = "BOTH"), (e.INSET_ONLY = "INSET_ONLY"), (e.OUTSET_ONLY = "OUTSET_ONLY"), e;
 })({});
-function g(e) {
+function E(e) {
     let {
             isSpeaking: t,
             isLatched: n,
             voiceDb: u,
             spreadDirection: d = "BOTH",
-            maxOuterSpreadRadius: h = f,
+            maxOuterSpreadRadius: _ = f,
             maxInnerSpreadRadius: g = p,
             hideIfVolumeMissing: E = !1,
         } = e,
@@ -44,15 +45,15 @@ function g(e) {
             u !== -1 / 0 &&
                 !b &&
                 y &&
-                ((t = m(u, "INSET_ONLY" === d ? 0 : h)),
-                (n = m(u, "OUTSET_ONLY" === d ? 0 : g)),
+                ((t = "INSET_ONLY" === d ? 0 : m(u, _)),
+                (n = "OUTSET_ONLY" === d ? 0 : m(u, g)),
                 (r = "OUTSET_ONLY" === d ? 0 : n + 1)),
                 (e.boxShadow = [
                     "0 0 0 ".concat(t, "px var(--status-speaking)"),
                     "inset 0 0 0 ".concat(n, "px var(--status-speaking)"),
                     "inset 0 0 0 ".concat(r, "px var(--background-base-lower)"),
                 ].join(", "));
-        } else n && (e.boxShadow = _);
+        } else n && (e.boxShadow = h);
         return y && (e.transition = "box-shadow 50ms ease-out"), e;
-    }, [t, n, y, b, u, d, h, g, E]);
+    }, [t, n, y, b, u, d, _, g, E]);
 }
