@@ -1,6 +1,6 @@
 n.d(t, {
     dR: () => d,
-    qK: () => m,
+    qK: () => h,
 }),
     n(980754),
     n(388685),
@@ -49,7 +49,7 @@ var r = n(230367),
     _ = (function (e) {
         return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.HOLDOUT = 1)] = "HOLDOUT"), e;
     })({}),
-    m = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.CONTROL = 1)] = "CONTROL"),
@@ -58,12 +58,13 @@ var r = n(230367),
             e
         );
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.ACTIVE = 1)] = "ACTIVE"),
             (e[(e.UNUSED = 2)] = "UNUSED"),
             (e[(e.BURNED = 3)] = "BURNED"),
+            (e[(e.PRESERVED = 4)] = "PRESERVED"),
             e
         );
     })({}),
@@ -595,7 +596,7 @@ class b extends o.C {
                 no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", m],
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", h],
             },
             {
                 no: 6,
@@ -675,7 +676,7 @@ class O extends o.C {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", h],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", m],
             },
         ]);
     }
