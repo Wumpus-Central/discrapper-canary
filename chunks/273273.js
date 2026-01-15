@@ -23,8 +23,8 @@ function d(e, t, n) {
 let f = c.Z.Millis.DAY,
     p = new s.Z(),
     _ = "",
-    m = null,
-    h = !1;
+    h = null,
+    m = !1;
 function g(e) {
     var t, n, r, i;
     return {
@@ -40,12 +40,12 @@ function E() {
     r = !0;
 }
 function b() {
-    (r = !1), (h = !0);
+    (r = !1), (m = !0);
 }
 function y(e) {
     let { nonGames: t, etag: n } = e;
     for (let e of (null != n && _ !== n && (p.clear(), (_ = n)), t)) p.set(e.id, g(e));
-    (r = void 0), (m = Date.now()), (h = !0);
+    (r = void 0), (h = Date.now()), (m = !0);
 }
 class O extends (i = a.ZP.PersistedStore) {
     initialize(e) {
@@ -73,10 +73,10 @@ class O extends (i = a.ZP.PersistedStore) {
         return _;
     }
     get lastFetched() {
-        return m;
+        return h;
     }
     get hasAttemptedFetch() {
-        return h;
+        return m;
     }
     get ttl() {
         return f;
@@ -85,7 +85,7 @@ class O extends (i = a.ZP.PersistedStore) {
         return p.get(e);
     }
     canFetch() {
-        return !r && (null == m || Date.now() >= m + f);
+        return !r && (null == h || Date.now() >= h + f);
     }
 }
 d(O, "displayName", "NonGameStore"), d(O, "persistKey", "NonGameStore");
