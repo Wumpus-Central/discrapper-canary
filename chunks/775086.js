@@ -1,4 +1,4 @@
-n.d(t, { Modal: () => h });
+n.d(t, { Modal: () => m });
 var r = n(54381);
 n(473749);
 var i = n(987153),
@@ -63,7 +63,7 @@ function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function _(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,21 +80,23 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var {
             size: t,
             title: n,
             subtitle: u,
             input: f,
-            preview: m,
-            actions: h,
+            preview: h,
+            actions: m,
             actionBarInput: g,
             actionBarInputLayout: E = "default",
             listProps: b,
             notice: y,
-            children: O,
+            onScroll: O,
+            scrollerRef: v,
+            children: S,
         } = e,
-        v = _(e, [
+        I = _(e, [
             "size",
             "title",
             "subtitle",
@@ -105,13 +107,15 @@ function h(e) {
             "actionBarInputLayout",
             "listProps",
             "notice",
+            "onScroll",
+            "scrollerRef",
             "children",
         ]);
-    let S = null != t ? t : null != f || null != g || (0, o.G)(O) || null != b ? "md" : "sm";
+    let T = null != t ? t : null != f || null != g || (0, o.G)(S) || null != b ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
-        p(d({}, v), {
-            size: S,
+        p(d({}, I), {
+            size: T,
             children: [
                 (0, r.jsx)(l.xB, {
                     title: n,
@@ -124,13 +128,15 @@ function h(e) {
                 (0, r.jsx)(o.f, {
                     controls: f,
                     listProps: b,
-                    children: O,
+                    onScroll: O,
+                    scrollerRef: v,
+                    children: S,
                 }),
-                (0, r.jsx)(s.m, { children: m }),
+                (0, r.jsx)(s.m, { children: h }),
                 (0, r.jsx)(a.G, {
                     leading: g,
                     leadingLayout: E,
-                    actions: h,
+                    actions: m,
                     actionsFullWidth: null == g,
                 }),
             ],

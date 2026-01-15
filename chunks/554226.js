@@ -1,79 +1,76 @@
-n.d(t, { Z: () => L }), n(388685);
-var r = n(54381),
-    l = n(473749),
-    o = n(120356),
-    a = n.n(o),
-    i = n(913527),
-    s = n.n(i),
-    c = n(481060),
-    d = n(446411),
-    h = n(468846),
-    u = n(600164),
-    g = n(70097),
-    p = n(299379),
-    m = n(454585),
-    f = n(524444),
-    x = n(55406),
-    j = n(981631),
-    C = n(388032),
-    b = n(653198),
-    O = n(348955);
-function k(e, t, n) {
+r.d(t, { Z: () => C }), r(388685);
+var n = r(54381),
+    l = r(473749),
+    o = r(913527),
+    i = r.n(o),
+    c = r(793030),
+    a = r(481060),
+    s = r(446411),
+    u = r(468846),
+    h = r(70097),
+    d = r(299379),
+    g = r(454585),
+    p = r(524444),
+    f = r(55406),
+    O = r(981631),
+    b = r(388032),
+    m = r(653198);
+function y(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-let y = m.Z.reactParserFor(x.default.getDefaultRules(b)),
-    E = {};
-class S extends l.PureComponent {
-    track(e, t, n) {
-        this.props.track(e, t, n);
+let j = g.Z.reactParserFor(f.default.getDefaultRules(m)),
+    x = {};
+class k extends l.PureComponent {
+    track(e, t, r) {
+        this.props.track(e, t, r);
     }
     renderFooter() {
-        return (0, r.jsxs)("div", {
-            className: b.footer,
+        return (0, n.jsxs)("div", {
+            className: m.footer,
             children: [
-                (0, r.jsx)(c.eee, {
-                    "aria-label": C.intl.string(C.t["/84uiD"]),
-                    className: b.socialLink,
-                    href: (0, p.Z)(j.RK.TWITTER),
+                (0, n.jsx)(a.eee, {
+                    "aria-label": b.intl.string(b.t["/84uiD"]),
+                    className: m.socialLink,
+                    href: (0, d.Z)(O.RK.TWITTER),
                     target: "blank",
-                    children: (0, r.jsx)(c.TAi, {
+                    children: (0, n.jsx)(a.TAi, {
                         size: "xs",
                         color: "currentColor",
                     }),
                 }),
-                (0, r.jsx)(c.eee, {
-                    "aria-label": C.intl.string(C.t["h0or/l"]),
-                    className: b.socialLink,
-                    href: j.fK7.FACEBOOK_URL,
+                (0, n.jsx)(a.eee, {
+                    "aria-label": b.intl.string(b.t["h0or/l"]),
+                    className: m.socialLink,
+                    href: O.fK7.FACEBOOK_URL,
                     target: "blank",
-                    children: (0, r.jsx)(c.tdR, {
+                    children: (0, n.jsx)(a.tdR, {
                         size: "xs",
                         color: "currentColor",
                     }),
                 }),
-                (0, r.jsx)(c.eee, {
-                    "aria-label": C.intl.string(C.t["5uVPyf"]),
-                    className: b.socialLink,
-                    href: j.fK7.INSTAGRAM_URL,
+                (0, n.jsx)(a.eee, {
+                    "aria-label": b.intl.string(b.t["5uVPyf"]),
+                    className: m.socialLink,
+                    href: O.fK7.INSTAGRAM_URL,
                     target: "blank",
-                    children: (0, r.jsx)(c.gST, {
+                    children: (0, n.jsx)(a.gST, {
                         size: "xs",
                         color: "currentColor",
                     }),
                 }),
-                (0, r.jsx)(c.Text, {
+                (0, n.jsx)(a.Text, {
                     variant: "text-xs/normal",
-                    children: C.intl.string(C.t.EjVVI7),
+                    children: b.intl.string(b.t.EjVVI7),
                 }),
             ],
         });
@@ -84,141 +81,161 @@ class S extends l.PureComponent {
             l = e.video,
             o = e.image;
         if (null != t && "" !== t)
-            return (0, r.jsx)(d.BC, {
-                className: b.video,
+            return (0, n.jsx)(s.BC, {
+                className: m.video,
                 allowFullScreen: !1,
                 href: "https://youtu.be/".concat(t),
                 thumbnail: {
                     url: "https://i.ytimg.com/vi/".concat(t, "/hqdefault.jpg"),
-                    width: 451,
-                    height: 254,
+                    width: 432,
+                    height: 240,
                 },
                 video: {
                     url: "https://www.youtube.com/embed/".concat(t, "?vq=large&rel=0&controls=0&showinfo=0"),
-                    width: 451,
-                    height: 254,
+                    width: 432,
+                    height: 240,
                 },
-                provider: h.pn.YOUTUBE,
-                maxWidth: 451,
-                maxHeight: 254,
-                renderVideoComponent: f.lV,
-                renderImageComponent: f.Yi,
-                renderLinkComponent: f.iT,
+                provider: u.pn.YOUTUBE,
+                maxWidth: 432,
+                maxHeight: 240,
+                renderVideoComponent: p.lV,
+                renderImageComponent: p.Yi,
+                renderLinkComponent: p.iT,
                 onPlay: () => {
-                    this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
         if (null != l && "" !== l) {
-            let e = l.startsWith("https://") ? l : n(595173)("./".concat(l));
-            return (0, r.jsx)(g.Z, {
+            let e = l.startsWith("https://") ? l : r(595173)("./".concat(l));
+            return (0, n.jsx)(h.Z, {
                 src: e,
                 poster: o,
-                width: 451,
-                height: 254,
+                width: 432,
+                height: 240,
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                className: b.video,
+                className: m.video,
                 onPlay: () => {
-                    this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
         }
         if (null == o || "" === o) return null;
         {
-            let e = o.startsWith("https://") ? o : n(595173)("./".concat(o));
-            return (0, r.jsx)("img", {
-                className: b.image,
+            let e = o.startsWith("https://") ? o : r(595173)("./".concat(o));
+            return (0, n.jsx)("img", {
+                className: m.image,
                 alt: "",
                 src: e,
-                width: 451,
-                height: 254,
+                width: 432,
+                height: 240,
             });
         }
     }
     render() {
-        let { changeLog: e } = this.props;
-        return (0, r.jsxs)(c.Y0X, {
-            transitionState: c.Dvm.ENTERED,
-            className: O.modal,
-            parentComponent: "ChangeLogStandardTemplate",
-            children: [
-                (0, r.jsxs)(c.xBx, {
-                    align: u.Z.Justify.BETWEEN,
-                    separator: !1,
-                    children: [
-                        this.renderHeader(),
-                        (0, r.jsx)(u.Z.Child, {
-                            grow: 0,
-                            children: (0, r.jsx)(c.olH, { onClick: this.props.onClose }),
-                        }),
-                    ],
-                }),
-                (0, r.jsx)(c.hzk, {
-                    className: a()(O.content, b.container, {}),
+        var e, t;
+        let r = this.props,
+            { changeLog: l, onScroll: o, track: a } = r,
+            s = (function (e, t) {
+                if (null == e) return {};
+                var r,
+                    n,
+                    l = (function (e, t) {
+                        if (null == e) return {};
+                        var r,
+                            n,
+                            l = {},
+                            o = Object.keys(e);
+                        for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                        return l;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var o = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < o.length; n++)
+                        (r = o[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                }
+                return l;
+            })(r, ["changeLog", "onScroll", "track"]);
+        return (0, n.jsx)(
+            c.Modal,
+            ((e = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            }),
+                        )),
+                        n.forEach(function (t) {
+                            y(e, t, r[t]);
+                        });
+                }
+                return e;
+            })({}, s)),
+            (t = t =
+                {
+                    title: b.intl.string(b.t.LRmNAl),
+                    subtitle: b.intl.format(b.t.Fb8xx2, {
+                        date: null != l.date && "" !== l.date ? i()(l.date).toDate() : new Date(),
+                    }),
+                    actions: [],
+                    actionBarInput: this.renderFooter(),
+                    onClose: () => Promise.resolve(this.props.onClose()),
                     scrollerRef: this.scrollerRef,
                     onScroll: this.handleScroll,
-                    children: (0, r.jsxs)("div", {
+                    children: (0, n.jsxs)("div", {
                         tabIndex: 0,
                         role: "region",
-                        "aria-label": C.intl.string(C.t.HzBchE),
+                        "aria-label": b.intl.string(b.t.HzBchE),
                         children: [
                             this.renderVideo(),
-                            y(e.body, !1, {
+                            j(l.body, !1, {
                                 changeLog: this,
-                                interpolations: E,
+                                interpolations: x,
                                 onLinkClick: this.trackLinkClick,
                             }),
                         ],
                     }),
                 }),
-                (0, r.jsx)(c.mzw, {
-                    direction: u.Z.Direction.HORIZONTAL,
-                    children: this.renderFooter(),
-                }),
-            ],
-        });
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(t)).forEach(function (r) {
+                      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  }),
+            e),
+        );
     }
     constructor(...e) {
         super(...e),
-            k(this, "scrollerRef", l.createRef()),
-            k(this, "handleScroll", () => {
+            y(this, "scrollerRef", l.createRef()),
+            y(this, "handleScroll", () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {
-                    var t, n;
-                    null == (t = (n = this.props).onScroll) || t.call(n, e);
+                    var t, r;
+                    null == (t = (r = this.props).onScroll) || t.call(r, e);
                 }
             }),
-            k(this, "trackLinkClick", (e) => {
+            y(this, "trackLinkClick", (e) => {
                 this.props.track(
-                    j.rMx.CHANGE_LOG_CTA_CLICKED,
+                    O.rMx.CHANGE_LOG_CTA_CLICKED,
                     {
                         cta_type: "inline_link",
                         target: e,
                     },
                     !1,
                 );
-            }),
-            k(this, "renderHeader", () => {
-                let { changeLog: e } = this.props;
-                return (0, r.jsxs)(u.Z.Child, {
-                    grow: 1,
-                    shrink: 1,
-                    children: [
-                        (0, r.jsx)(c.Heading, {
-                            variant: "heading-lg/semibold",
-                            children: C.intl.string(C.t.LRmNAl),
-                        }),
-                        (0, r.jsx)(c.Text, {
-                            variant: "text-xs/normal",
-                            className: b.date,
-                            children: C.intl.format(C.t.Fb8xx2, {
-                                date: null != e.date && "" !== e.date ? s()(e.date).toDate() : new Date(),
-                            }),
-                        }),
-                    ],
-                });
             });
     }
 }
-let L = S;
+let C = k;

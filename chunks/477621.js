@@ -1,152 +1,150 @@
-n.d(t, { default: () => x }), n(388685);
-var r = n(54381),
-    l = n(473749),
-    o = n(481060),
-    a = n(661111),
-    i = n(626135),
-    s = n(766411),
-    c = n(554226),
-    d = n(596401),
-    h = n(981631),
-    u = n(388032),
-    g = n(784890);
-function p(e, t, n) {
+r.d(t, { default: () => y }), r(388685);
+var n = r(54381),
+    l = r(473749),
+    o = r(793030),
+    i = r(338305),
+    c = r(481060),
+    a = r(661111),
+    s = r(626135),
+    u = r(766411),
+    h = r(554226),
+    d = r(596401),
+    g = r(981631),
+    p = r(388032);
+function f(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-function m(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
+            n.forEach(function (t) {
+                f(e, t, r[t]);
             });
     }
     return e;
 }
-class f extends l.PureComponent {
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+              }),
+        e
+    );
+}
+class m extends l.PureComponent {
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(h.rMx.CHANGE_LOG_OPENED, {}, !0);
+        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(g.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
     componentWillUnmount() {
-        this.track(h.rMx.CHANGE_LOG_CLOSED);
+        this.track(g.rMx.CHANGE_LOG_CLOSED);
     }
     render() {
-        var e, t;
-        return (0, r.jsx)(
-            c.Z,
-            ((e = m({}, this.props)),
-            (t = t =
-                {
-                    onClose: this.close,
-                    onScroll: this.handleScroll,
-                    track: this.track,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(t)).forEach(function (n) {
-                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                  }),
-            e),
+        return (0, n.jsx)(
+            h.Z,
+            b(O({}, this.props), {
+                changeLog: this.props.changeLog,
+                onClose: this.close,
+                onScroll: this.handleScroll,
+                track: this.track,
+            }),
         );
     }
     constructor(...e) {
         var t;
         super(...e),
             (t = this),
-            p(this, "maxScrolledPercentage", 0),
-            p(this, "mountedAt", 0),
-            p(this, "close", () => {
-                (0, o.Mr3)(d.Xd);
+            f(this, "maxScrolledPercentage", 0),
+            f(this, "mountedAt", 0),
+            f(this, "close", () => ((0, c.Mr3)(d.Xd), Promise.resolve())),
+            f(this, "handleScroll", (e) => {
+                let { offsetHeight: t, scrollHeight: r, scrollTop: n } = e.getScrollerState();
+                this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, n / (r - t)), 1);
             }),
-            p(this, "handleScroll", (e) => {
-                let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
-                this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
-            }),
-            p(this, "track", function (e) {
-                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            f(this, "track", function (e) {
+                let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: l } = t.props,
-                    { date: o, revision: a } = l,
-                    s = m({ change_log_id: "".concat(o, ":").concat(a) }, n);
-                r ||
-                    (s = m(
+                    { date: o, revision: i } = l,
+                    c = O({ change_log_id: "".concat(o, ":").concat(i) }, r);
+                n ||
+                    (c = O(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
                         },
-                        s,
+                        c,
                     )),
-                    i.default.track(e, s);
+                    s.default.track(e, c);
             });
     }
 }
-function x(e) {
-    let { changelog: t, loaded: n, clientTooOld: i } = (0, s.E)();
+function y(e) {
+    let { changelog: t, loaded: r, clientTooOld: c } = (0, u.E)();
     if (
         (l.useEffect(() => {
-            if (n && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
-        }, [n, t]),
-        i)
+            if (r && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
+        }, [r, t]),
+        c)
     )
-        return (0, r.jsx)(o.Y0X, {
-            transitionState: e.transitionState,
-            parentComponent: "ChangeLog",
-            children: (0, r.jsx)("div", {
-                className: g.empty,
-                children: (0, r.jsx)(o.Heading, {
-                    variant: "heading-lg/medium",
-                    children: u.intl.string(u.t.V9ospk),
-                }),
-            }),
-        });
+        return (0, n.jsx)(
+            o.Modal,
+            O(
+                {
+                    title: p.intl.string(p.t.V9ospk),
+                    actions: [
+                        {
+                            text: p.intl.string(p.t.BddRzS),
+                            onClick: e.onClose,
+                        },
+                    ],
+                },
+                e,
+            ),
+        );
     if (null == t)
-        if (n)
-            return (0, r.jsx)(o.Y0X, {
-                transitionState: e.transitionState,
-                parentComponent: "ChangeLog",
-                children: (0, r.jsx)("div", {
-                    className: g.empty,
-                    children: (0, r.jsx)(o.Text, {
-                        variant: "text-md/semibold",
-                        children: u.intl.string(u.t.O1iRT8),
-                    }),
-                }),
-            });
-        else
-            return (0, r.jsx)(o.Y0X, {
-                transitionState: e.transitionState,
-                parentComponent: "ChangeLog",
-                children: (0, r.jsx)("div", {
-                    className: g.empty,
-                    children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES }),
-                }),
-            });
-    return (0, r.jsx)(o.Y0X, {
-        transitionState: e.transitionState,
-        parentComponent: "ChangeLog",
-        children: (0, r.jsx)(f, { changeLog: t }),
-    });
+        if (r)
+            return (0, n.jsx)(
+                o.Modal,
+                O(
+                    {
+                        title: p.intl.string(p.t.O1iRT8),
+                        actions: [
+                            {
+                                text: p.intl.string(p.t.BddRzS),
+                                onClick: e.onClose,
+                            },
+                        ],
+                    },
+                    e,
+                ),
+            );
+        else return (0, i.Z)(e);
+    return (0, n.jsx)(m, b(O({}, e), { changeLog: t }));
 }
