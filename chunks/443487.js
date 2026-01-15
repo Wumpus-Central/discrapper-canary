@@ -20,8 +20,8 @@ var i = n(120356),
     f = n(485386),
     p = n(594174),
     _ = n(5192),
-    m = n(192918),
-    h = n(388032),
+    h = n(192918),
+    m = n(388032),
     g = n(925002);
 function E() {
     return (0, r.jsx)("div", {
@@ -90,7 +90,7 @@ function v(e) {
     let { guildId: n, channelId: i, entry: a, maxAvatars: l = 3 } = e,
         E = a.author_id,
         b = (0, o.e7)([p.default], () => p.default.getUser(E)),
-        { displayParticipants: y, participant1: v, participant2: S, numOtherParticipants: I } = (0, m.Z)(a, l),
+        { displayParticipants: y, participant1: v, participant2: S, numOtherParticipants: I } = (0, h.Z)(a, l),
         T = (0, o.e7)([d.ZP], () => d.ZP.getMember(n, E)),
         C = (0, c.j)({ displayNameStyles: null == b ? void 0 : b.displayNameStyles }),
         A = (0, o.e7)([f.Z], () => {
@@ -104,7 +104,7 @@ function v(e) {
         N = (0, u.X7)(n, E, null != (t = null == T ? void 0 : T.colorStrings) ? t : null);
     if (null == b) return null;
     let P = null == T ? void 0 : T.colorString,
-        R = _.ZP.getName(n, i, b);
+        w = _.ZP.getName(n, i, b);
     return (0, r.jsxs)("div", {
         className: g.userSection,
         children: [
@@ -117,7 +117,7 @@ function v(e) {
                 colorString: null != P ? P : null,
                 roleName: A,
                 colorStrings: N,
-                name: R,
+                name: w,
                 className: g.userName,
                 displayNameStylesFont: C,
                 "aria-hidden": !0,
@@ -135,7 +135,7 @@ function v(e) {
                   })
                 : null,
             (0, r.jsx)(s.nn4, {
-                children: h.intl.format(h.t.rH95Gu, {
+                children: m.intl.format(m.t.rH95Gu, {
                     user0: _.ZP.getName(n, i, v),
                     user1: _.ZP.getName(n, i, S),
                     countOthers: I,
@@ -158,9 +158,10 @@ function S(e) {
     });
 }
 function I(e) {
-    let { children: t, className: n } = e;
+    let { children: t, className: n, ref: i } = e;
     return (0, r.jsx)("div", {
         className: a()(g.cardRow, n),
+        ref: i,
         children: t,
     });
 }
