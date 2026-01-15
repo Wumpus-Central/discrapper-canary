@@ -11,5 +11,6 @@ function s(e) {
         : (0, r.jsx)("div", {
               className: a()(o.container, n),
               style: { backgroundImage: "url(".concat(t, ")") },
+              "data-type": "event-image",
           });
 }
