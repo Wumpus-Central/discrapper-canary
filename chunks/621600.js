@@ -1,14 +1,13 @@
 n.d(t, {
     $R: () => b,
     GA: () => I,
-    I: () => C,
+    I: () => T,
     UE: () => E,
     Wq: () => y,
     ZB: () => g,
     jz: () => S,
-    rU: () => T,
     sK: () => v,
-    wK: () => A,
+    wK: () => C,
 }),
     n(997841),
     n(388685);
@@ -213,7 +212,7 @@ function S(e) {
             change: y,
             previous: S,
             label: I,
-            location: T,
+            location: C,
         } = e,
         A = function (e) {
             var t, n;
@@ -235,7 +234,7 @@ function S(e) {
             };
         },
         N = A(S),
-        P = A(C(m, g), y),
+        P = A(T(m, g), y),
         R = O(N, P, "RETURN_PREVIOUS_WHEN_CHANGED"),
         w = o.Z.getChannel(g),
         D = null != (n = R("channel_flags")) ? n : 0,
@@ -245,7 +244,7 @@ function S(e) {
     i.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
         h(_({}, P, a.Z.getStats(m)), {
-            location: T,
+            location: C,
             guild_id: m,
             channel_id: g,
             update_type: p,
@@ -277,11 +276,7 @@ function I(e) {
         guild_flags: l.ZP.getGuildFlags(e),
     };
 }
-function T(e) {
-    let t = new Map();
-    return e.forEach((e) => t.set(e, I(e))), t;
-}
-function C(e, t) {
+function T(e, t) {
     let n = l.ZP.isChannelMuted(e, t),
         r = l.ZP.getChannelMuteConfig(e, t);
     return {
@@ -291,7 +286,7 @@ function C(e, t) {
         channel_flags: l.ZP.getChannelIdFlags(e, t),
     };
 }
-function A(e, t) {
+function C(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, C(e, t))), n;
+    return t.forEach((t) => n.set(t, T(e, t))), n;
 }

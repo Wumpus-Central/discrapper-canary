@@ -54,21 +54,6 @@ let m = {
                 });
             });
     },
-    updateGuildNotificationSettingsBulk(e, t, n) {
-        let r = u.default.keys(e),
-            i = (0, c.rU)(r);
-        s.Z.saveUserGuildSettingsBulk(e),
-            u.default.entries(e).forEach((e) => {
-                let [r, a] = e,
-                    s = i.get(r);
-                o.Z.dispatch({
-                    type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-                    guildId: r,
-                    settings: a,
-                }),
-                    (0, c.Wq)(r, a, s, t, n);
-            });
-    },
     updateChannelOverrideSettings(e, t, n, r, i) {
         let l = (0, c.I)(e, t),
             u = { channel_overrides: { [t]: n } };
