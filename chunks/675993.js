@@ -140,7 +140,7 @@ function L(e) {
                             children: [
                                 (0, r.jsx)(l.EOn, {
                                     size: "sm",
-                                    color: l.TVs.colors.INTERACTIVE_MUTED,
+                                    color: l.TVs.colors.ICON_MUTED,
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
@@ -156,7 +156,7 @@ function L(e) {
                             children: [
                                 (0, r.jsx)(l.uMN, {
                                     size: "sm",
-                                    color: l.TVs.colors.INTERACTIVE_MUTED,
+                                    color: l.TVs.colors.ICON_MUTED,
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",

@@ -251,7 +251,7 @@ let M = (e) => {
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(u.IGR, {
                                   text: L.intl.string(L.t["sBl3X/"]),
-                                  color: l.Z.colors.INTERACTIVE_MUTED.css,
+                                  color: l.Z.colors.BACKGROUND_MOD_MUTED.css,
                               }),
                           }),
                       })

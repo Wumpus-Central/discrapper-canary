@@ -94,7 +94,7 @@ function M(e, t, n) {
     );
 }
 function k(e, t) {
-    let n = (0, l.dQu)(s.Z.colors.INTERACTIVE_MUTED).hex(),
+    let n = (0, l.dQu)(s.Z.colors.BACKGROUND_MOD_MUTED).hex(),
         r = (0, l.dQu)(s.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
         i = (0, l.dQu)(s.Z.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
         a = (0, l.dQu)(s.Z.unsafe_rawColors.BRAND_430).hex(),

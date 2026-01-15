@@ -81,7 +81,7 @@ let A = (e) => {
                     className: v.headerIconWrapper,
                     children: (0, r.jsx)(l.aNP, {
                         size: "md",
-                        color: "active" === t ? l.TVs.colors.INTERACTIVE_TEXT_ACTIVE : l.TVs.colors.INTERACTIVE_MUTED,
+                        color: "active" === t ? l.TVs.colors.INTERACTIVE_TEXT_ACTIVE : l.TVs.colors.ICON_MUTED,
                     }),
                 }),
                 (0, r.jsxs)("div", {

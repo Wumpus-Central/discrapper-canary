@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(358820),
     v = n(990525),
     y = n(388032),
-    j = n(890373);
-let O = [51],
+    O = n(890373);
+let j = [51],
     h = [y.t.OpqAok];
 function x(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: o = !1, query: l } = e,
@@ -35,13 +35,13 @@ function x(e) {
         }));
     return l && 0 === E.length
         ? (0, r.jsxs)("div", {
-              className: j.iconMessage,
+              className: O.iconMessage,
               children: [
                   (0, r.jsx)(u._Ve, {
                       width: 40,
                       height: 40,
                       size: "custom",
-                      color: c.Z.colors.INTERACTIVE_MUTED,
+                      color: c.Z.colors.ICON_MUTED,
                   }),
                   (0, r.jsx)(u.Heading, {
                       variant: "heading-sm/medium",
@@ -52,13 +52,13 @@ function x(e) {
           })
         : a
           ? (0, r.jsxs)("div", {
-                className: j.iconMessage,
+                className: O.iconMessage,
                 children: [
                     (0, r.jsx)(u.aNP, {
                         width: 40,
                         height: 40,
                         size: "custom",
-                        color: c.Z.colors.INTERACTIVE_MUTED,
+                        color: c.Z.colors.ICON_MUTED,
                     }),
                     (0, r.jsx)(u.Heading, {
                         variant: "heading-md/normal",
@@ -74,7 +74,7 @@ function x(e) {
             })
           : T || null == S
             ? (0, r.jsx)("div", {
-                  className: j.loading,
+                  className: O.loading,
                   children: (0, r.jsx)(u.$jN, {
                       type: u.$jN.Type.CHASING_DOTS,
                       animated: !0,
@@ -82,7 +82,7 @@ function x(e) {
               })
             : (0, r.jsx)(d.Z, {
                   fade: !0,
-                  className: j.container,
+                  className: O.container,
                   renderRow: (e) => {
                       let n = e * t,
                           i = E.slice(n, n + t);
@@ -117,10 +117,10 @@ function x(e) {
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    className: j.header,
+                                    className: O.header,
                                     children: y.intl.string(h[e]),
                                 }),
-                  sectionHeaderHeight: !1 === o ? void 0 : (e) => O[e],
+                  sectionHeaderHeight: !1 === o ? void 0 : (e) => j[e],
                   rowCount: w,
                   rowHeight: 130,
                   onScroll: n,
@@ -133,7 +133,7 @@ function _(e) {
         n = i.useRef(null);
     return (0, r.jsx)("div", {
         ref: n,
-        className: j.row,
+        className: O.row,
         children: (0, r.jsx)(u.JcV, {
             containerRef: n,
             children: t,

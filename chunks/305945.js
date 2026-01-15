@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(853590),
     l = n(692547),
     c = n(251052),
     u = n(673824),
@@ -127,7 +127,7 @@ function P(e) {
         { reducedMotion: v } = i.useContext(d.S),
         S = i.useRef(null),
         [I, T] = i.useState(!1),
-        C = (0, u.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
+        C = (0, u.d)(l.Z.colors.SLIDER_TRACK_BACKGROUND).spring(),
         A = (0, u.d)(l.Z.colors.BACKGROUND_BRAND).spring(),
         { state: P } = (0, c.q)(
             {

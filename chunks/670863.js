@@ -186,7 +186,7 @@ function R(e) {
                             size: "custom",
                             width: 20,
                             height: 20,
-                            color: u.TVs.colors.INTERACTIVE_MUTED,
+                            color: u.TVs.colors.ICON_MUTED,
                         }),
                     }),
                 (0, r.jsx)(u.Text, {

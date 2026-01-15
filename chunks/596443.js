@@ -5,45 +5,45 @@ var r = n(54381),
     a = n.n(i),
     s = n(954955),
     o = n.n(s),
-    u = n(399606),
-    c = n(28664),
-    E = n(481060),
-    d = n(79712),
+    c = n(399606),
+    u = n(28664),
+    d = n(481060),
+    E = n(79712),
     _ = n(285173),
     A = n(434404),
-    T = n(422559),
-    I = n(345162),
-    m = n(271383),
-    f = n(485386),
-    g = n(430824),
-    N = n(496675),
-    h = n(594174),
+    f = n(422559),
+    T = n(345162),
+    g = n(271383),
+    I = n(485386),
+    m = n(430824),
+    h = n(496675),
+    N = n(594174),
     O = n(233608),
-    R = n(370595),
-    S = n(351127),
-    p = n(981631),
+    p = n(370595),
+    R = n(351127),
+    S = n(981631),
     C = n(388032),
     b = n(280533),
     D = n(103186);
-function U(e) {
+function L(e) {
     var t, n, i, s;
-    let { permission: o, roleIds: m, guild: g, specMap: h, categoryTitle: O, userId: R } = e,
-        b = (0, u.Wu)([f.Z], () => f.Z.getManyRoles(g.id, m)),
-        U = p.Plq[o],
-        L = null != (i = null == (t = h[U.toString()]) ? void 0 : t.title) ? i : (0, T.wt)(U),
-        M = null != (s = null == (n = h[U.toString()]) ? void 0 : n.description) ? s : "",
-        x = S._o.has(U),
-        v = S.Qn.includes(o),
-        P = m.length,
-        j = (0, u.e7)([N.Z], () => N.Z.can(p.Plq.MANAGE_ROLES, g), [g]),
+    let { permission: o, roleIds: g, guild: m, specMap: N, categoryTitle: O, userId: p } = e,
+        b = (0, c.Wu)([I.Z], () => I.Z.getManyRoles(m.id, g)),
+        L = S.Plq[o],
+        U = null != (i = null == (t = N[L.toString()]) ? void 0 : t.title) ? i : (0, f.wt)(L),
+        M = null != (s = null == (n = N[L.toString()]) ? void 0 : n.description) ? s : "",
+        v = R._o.has(L),
+        x = R.Qn.includes(o),
+        P = g.length,
+        j = (0, c.e7)([h.Z], () => h.Z.can(S.Plq.MANAGE_ROLES, m), [m]),
         y = l.useCallback(
             async (e) => {
-                j && (await A.Z.open(g.id, p.pNK.ROLES), await A.Z.selectRole(e));
+                j && (await A.Z.open(m.id, S.pNK.ROLES), await A.Z.selectRole(e));
             },
-            [j, g.id],
+            [j, m.id],
         );
     return (0, r.jsxs)("div", {
-        className: a()(D.permissionItemContainer, { [D.elevatedPermission]: x }),
+        className: a()(D.permissionItemContainer, { [D.elevatedPermission]: v }),
         children: [
             (0, r.jsxs)("div", {
                 className: D.permissionItemHeader,
@@ -51,41 +51,41 @@ function U(e) {
                     (0, r.jsxs)("div", {
                         className: D.permissionTitle,
                         children: [
-                            (0, r.jsx)(E.Text, {
+                            (0, r.jsx)(d.Text, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: L,
+                                children: U,
                             }),
                             null != O &&
                                 (0, r.jsxs)("div", {
                                     className: D.permissionItemSubheader,
                                     children: [
-                                        (0, r.jsx)(E.Text, {
+                                        (0, r.jsx)(d.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
                                             children: O,
                                         }),
-                                        x &&
+                                        v &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(d.Z, {
+                                                    (0, r.jsx)(E.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: E.TVs.colors.INTERACTIVE_MUTED.css,
+                                                        color: d.TVs.colors.ICON_MUTED.css,
                                                     }),
-                                                    (0, r.jsx)(c.u, {
+                                                    (0, r.jsx)(u.u, {
                                                         text: C.intl.string(C.t.GZvXuP),
-                                                        children: (0, r.jsxs)(E.P3F, {
+                                                        children: (0, r.jsxs)(d.P3F, {
                                                             className: D.elevatedPermissionContainer,
                                                             children: [
-                                                                (0, r.jsx)(E.tQf, {
+                                                                (0, r.jsx)(d.tQf, {
                                                                     size: "custom",
                                                                     width: 12,
                                                                     height: 12,
-                                                                    color: E.TVs.colors.TEXT_BRAND,
+                                                                    color: d.TVs.colors.TEXT_BRAND,
                                                                 }),
-                                                                (0, r.jsx)(E.Text, {
+                                                                (0, r.jsx)(d.Text, {
                                                                     variant: "text-xs/normal",
                                                                     color: "text-brand",
                                                                     children: C.intl.string(C.t.k7Kqj7),
@@ -95,19 +95,19 @@ function U(e) {
                                                     }),
                                                 ],
                                             }),
-                                        !x &&
-                                            v &&
+                                        !v &&
+                                            x &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsx)(d.Z, {
+                                                    (0, r.jsx)(E.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: E.TVs.colors.INTERACTIVE_MUTED.css,
+                                                        color: d.TVs.colors.ICON_MUTED.css,
                                                     }),
                                                     (0, r.jsx)("div", {
                                                         className: D.elevatedPermissionContainer,
-                                                        children: (0, r.jsx)(E.Text, {
+                                                        children: (0, r.jsx)(d.Text, {
                                                             variant: "text-xs/normal",
                                                             color: "text-muted",
                                                             children: C.intl.string(C.t.IfqUEM),
@@ -119,7 +119,7 @@ function U(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(E.Text, {
+                    (0, r.jsx)(d.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
                         children: C.intl.format(C.t.KmJI4A, { roleCount: P }),
@@ -129,7 +129,7 @@ function U(e) {
             null != M &&
                 (0, r.jsx)("div", {
                     className: D.permissionItemDescription,
-                    children: (0, r.jsx)(E.Text, {
+                    children: (0, r.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: M,
@@ -138,14 +138,14 @@ function U(e) {
             (0, r.jsx)("div", {
                 className: D.permissionItemRoleContainer,
                 children: b.map((e) =>
-                    (0, S.Ov)(e.id, R)
+                    (0, R.Ov)(e.id, p)
                         ? (0, r.jsx)(
                               "div",
                               {
                                   className: D.roleTooltipItem,
                                   children: (0, r.jsx)("div", {
                                       className: D.roleChiplet,
-                                      children: (0, r.jsx)(E.Text, {
+                                      children: (0, r.jsx)(d.Text, {
                                           variant: "text-xs/medium",
                                           color: "text-default",
                                           children: C.intl.string(C.t.pclUFJ),
@@ -155,13 +155,13 @@ function U(e) {
                               e.id,
                           )
                         : (0, r.jsx)(
-                              E.P3F,
+                              d.P3F,
                               {
-                                  className: a()(D.roleTooltipItem, { [D.editable]: j && !(0, I.fI)(e) }),
+                                  className: a()(D.roleTooltipItem, { [D.editable]: j && !(0, T.fI)(e) }),
                                   onClick: () => y(e.id),
                                   children: (0, r.jsx)(_.Z, {
                                       role: e,
-                                      guildId: g.id,
+                                      guildId: m.id,
                                       className: D.roleChiplet,
                                   }),
                               },
@@ -172,34 +172,34 @@ function U(e) {
         ],
     });
 }
-function L(e, t) {
+function U(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
 function M(e) {
-    let { userId: t, guildId: n, location: i, className: s, onNavigate: c } = e,
-        d = (0, u.e7)([h.default], () => h.default.getUser(t), [t]),
-        _ = (0, u.e7)([g.Z], () => g.Z.getGuild(n), [n]),
-        A = (0, u.e7)([m.ZP], () => m.ZP.getMember(n, t), [n, t]),
-        I = (0, S.B2)(t, n, S.pd),
-        f = Object.keys(I).length,
-        N = l.useMemo(() => (null != _ ? O.Z.getGuildPermissionSpecMap(_) : null), [_]),
+    let { userId: t, guildId: n, location: i, className: s, onNavigate: u } = e,
+        E = (0, c.e7)([N.default], () => N.default.getUser(t), [t]),
+        _ = (0, c.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        A = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
+        T = (0, R.B2)(t, n, R.pd),
+        I = Object.keys(T).length,
+        h = l.useMemo(() => (null != _ ? O.Z.getGuildPermissionSpecMap(_) : null), [_]),
         M = l.useMemo(() => (null != _ ? O.Z.generateGuildPermissionSpec(_) : null), [_]),
-        [x, v] = l.useState(""),
+        [v, x] = l.useState(""),
         [P, j] = l.useState(""),
         y = l.useMemo(() => o()(j, 300), []),
         G = l.useCallback(
             (e) => {
-                v(e), y(e);
+                x(e), y(e);
             },
             [y],
         ),
         k = l.useCallback(() => {
-            v(""), j("");
+            x(""), j("");
         }, []),
-        F = l.useMemo(() => {
-            if (null == _ || null == N || null == A) return null;
-            if (0 === f)
-                return (0, r.jsx)(E.Text, {
+        w = l.useMemo(() => {
+            if (null == _ || null == h || null == A) return null;
+            if (0 === I)
+                return (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     children: C.intl.string(C.t.DEBGqA),
                 });
@@ -209,42 +209,42 @@ function M(e) {
                     M.forEach((n) => {
                         n.permissions.forEach((l) => {
                             let i = l.flag,
-                                a = S.pd.find((e) => p.Plq[e] === i);
+                                a = R.pd.find((e) => S.Plq[e] === i);
                             if (null == a) return;
-                            let s = I[a];
+                            let s = T[a];
                             if (null != s) {
                                 if (P.length > 0) {
-                                    var o, u, c, E, d;
+                                    var o, c, u, d, E;
                                     let e =
-                                            null != (E = null == (o = N[i.toString()]) ? void 0 : o.title)
-                                                ? E
-                                                : (0, T.wt)(i),
+                                            null != (d = null == (o = h[i.toString()]) ? void 0 : o.title)
+                                                ? d
+                                                : (0, f.wt)(i),
                                         t =
                                             null !=
-                                            (d =
-                                                null == (c = N[i.toString()]) || null == (u = c.description)
+                                            (E =
+                                                null == (u = h[i.toString()]) || null == (c = u.description)
                                                     ? void 0
-                                                    : u.toString())
-                                                ? d
+                                                    : c.toString())
+                                                ? E
                                                 : "",
                                         r = n.title,
-                                        l = S._o.has(i),
-                                        s = S.Qn.includes(a),
+                                        l = R._o.has(i),
+                                        s = R.Qn.includes(a),
                                         _ = l ? C.intl.string(C.t.k7Kqj7) : s ? C.intl.string(C.t.IfqUEM) : null,
-                                        A = L(P, e),
-                                        I = L(P, t),
-                                        m = L(P, r),
-                                        f = null != _ && L(P, _);
-                                    if (!A && !I && !m && !f) return;
+                                        A = U(P, e),
+                                        T = U(P, t),
+                                        g = U(P, r),
+                                        I = null != _ && U(P, _);
+                                    if (!A && !T && !g && !I) return;
                                 }
                                 e.push(
                                     (0, r.jsx)(
-                                        U,
+                                        L,
                                         {
                                             permission: a,
                                             roleIds: s,
                                             guild: _,
-                                            specMap: N,
+                                            specMap: h,
                                             categoryTitle: n.title,
                                             userId: t,
                                         },
@@ -256,27 +256,27 @@ function M(e) {
                     }),
                 e
             );
-        }, [_, N, A, f, M, I, P, t]);
-    return null == d || null == A
+        }, [_, h, A, I, M, T, P, t]);
+    return null == E || null == A
         ? null
         : (0, r.jsxs)("div", {
               className: a()(b.container, s),
               children: [
-                  (0, r.jsx)(R.Z, {
+                  (0, r.jsx)(p.Z, {
                       guildId: n,
                       userId: t,
-                      onNavigate: c,
+                      onNavigate: u,
                   }),
-                  (0, r.jsx)(E.Ttm, {
+                  (0, r.jsx)(d.Ttm, {
                       className: D.permissionsGroupContainer,
-                      children: (0, r.jsx)(E.C3N, {
+                      children: (0, r.jsx)(d.C3N, {
                           label: C.intl.string(C.t.BBWnpr),
                           children: (0, r.jsxs)("div", {
                               className: D.permissionsItemContainer,
                               children: [
-                                  (0, r.jsx)(E.E1j, {
+                                  (0, r.jsx)(d.E1j, {
                                       size: "sm",
-                                      query: x,
+                                      query: v,
                                       placeholder: C.intl.string(C.t["yD9+dN"]),
                                       onChange: G,
                                       onClear: k,
@@ -287,7 +287,7 @@ function M(e) {
                                           spellCheck: "false",
                                       },
                                   }),
-                                  F,
+                                  w,
                               ],
                           }),
                       }),

@@ -39,7 +39,7 @@ function C(e) {
             children: [
                 (0, n.jsx)(s.ZKT, {
                     size: "xs",
-                    color: i.Z.colors.INTERACTIVE_MUTED.css,
+                    color: i.Z.colors.ICON_MUTED.css,
                 }),
                 (0, n.jsx)(s.LZC, {
                     size: 10,
