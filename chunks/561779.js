@@ -6,10 +6,10 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(554916),
+    u = n(853590),
     d = n(374470),
     f = n(793030),
-    p = n(506802),
+    p = n(28664),
     _ = n(607070),
     m = n(440326);
 function h(e, t, n) {
@@ -273,22 +273,15 @@ class S extends (r = a.PureComponent) {
                                         v,
                                         (0, i.jsx)("div", {
                                             className: m.track,
-                                            children: (0, i.jsx)(p.aM, {
-                                                "data-migration-pending": !0,
-                                                color: p.aM.Colors.GREY,
-                                                hideOnClick: !1,
-                                                text: A || y ? null : Y,
+                                            children: (0, i.jsx)(p.u, {
+                                                __unsupportedReactNodeAsText: A || y ? null : Y,
                                                 forceOpen: n || (r && _.Z.keyboardModeEnabled),
-                                                children: (e) =>
-                                                    (0, i.jsx)(
-                                                        "div",
-                                                        b(g({}, e), {
-                                                            className: s()(m.grabber, L),
-                                                            style: b(g({}, j), { left: V }),
-                                                            onMouseDown: this.handleMouseDown,
-                                                            ref: this.grabberRef,
-                                                        }),
-                                                    ),
+                                                children: (0, i.jsx)("div", {
+                                                    className: s()(m.grabber, L),
+                                                    style: b(g({}, j), { left: V }),
+                                                    onMouseDown: this.handleMouseDown,
+                                                    ref: this.grabberRef,
+                                                }),
                                             }),
                                         }),
                                     ],
