@@ -27,7 +27,8 @@ n.d(t, {
     wF: () => U,
     xw: () => j,
 }),
-    n(415506);
+    n(415506),
+    n(388685);
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -624,18 +625,19 @@ async function ee(e, t) {
                 url: T.ANM.QUEST_EARNED_DECISION(r, t, null == n ? void 0 : n.uuid),
                 rejectWithError: !1,
             }),
-            s = o.body.quest,
-            c = null != s && (0, S.Qe)(s) ? (0, S.WP)(s) : null,
-            u = o.body.metadata_raw;
+            s = o.body.quests,
+            c = new Map();
+        if (null != s) for (let [e, t] of Object.entries(s)) (0, S.Qe)(t) && c.set(e, (0, S.WP)(t));
+        let u = o.body.metadata_raw;
         return (
             a.Z.dispatch({
                 type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS",
-                quest: c,
+                quests: c,
                 metadataRaw: u,
                 content: t,
             }),
             {
-                quest: c,
+                quests: c,
                 metadataRaw: u,
             }
         );

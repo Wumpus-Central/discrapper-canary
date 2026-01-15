@@ -407,13 +407,13 @@ function eX(e) {
     (s = !0), (l = new Map(l)).set(t, !0);
 }
 function eJ(e) {
-    let { quest: t, metadataRaw: n, content: r } = e;
+    let { quests: t, metadataRaw: n, content: r } = e;
     (s = !1),
         (l = new Map(l)).set(r, !1),
-        null == t
+        0 === t.size
             ? A.delete(r)
             : A.set(r, {
-                  quest: t,
+                  quests: t,
                   metadataRaw: n,
               });
 }
