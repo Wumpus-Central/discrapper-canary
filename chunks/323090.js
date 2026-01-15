@@ -1,4 +1,4 @@
-t.d(n, { Z: () => b });
+t.d(n, { Z: () => v });
 var l = t(54381);
 t(473749);
 var i = t(442837),
@@ -14,44 +14,43 @@ var i = t(442837),
     p = t(878566),
     x = t(228168),
     h = t(388032),
-    v = t(199912);
-function b(e) {
-    let { user: n, currentUser: t, displayProfile: b, guildId: j, onClose: g } = e,
-        I = (0, i.e7)([c.Z], () => {
+    j = t(199912);
+function v(e) {
+    let { user: n, displayProfile: t, guildId: v, onClose: b } = e,
+        g = (0, i.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        y = (0, i.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
+        I = (0, i.e7)([r.Z, a.Z], () => r.Z.getChannel(a.Z.getChannelId()));
     return (0, l.jsxs)(o.zJl, {
         fade: !0,
-        className: v.scroller,
+        className: j.scroller,
         children: [
-            (null == b ? void 0 : b.bio) != null &&
-                (null == b ? void 0 : b.bio) !== "" &&
+            (null == t ? void 0 : t.bio) != null &&
+                (null == t ? void 0 : t.bio) !== "" &&
                 (0, l.jsx)(d.Z, {
-                    userBio: b.bio,
+                    userBio: t.bio,
                     setLineClamp: !1,
                 }),
-            (null == I ? void 0 : I.popularApplicationCommandIds) != null &&
-                null != y &&
+            (null == g ? void 0 : g.popularApplicationCommandIds) != null &&
+                null != I &&
                 (0, l.jsx)(s.Z, {
-                    applicationId: I.id,
-                    commandIds: I.popularApplicationCommandIds,
-                    channel: y,
-                    guildId: j,
-                    onClick: g,
+                    applicationId: g.id,
+                    commandIds: g.popularApplicationCommandIds,
+                    channel: I,
+                    guildId: v,
+                    onClick: b,
                 }),
-            (null == b ? void 0 : b.guildId) != null &&
+            (null == t ? void 0 : t.guildId) != null &&
                 (0, l.jsx)(m.Z, {
-                    user: n,
-                    currentUser: t,
-                    guildId: b.guildId,
+                    userId: n.id,
+                    guildId: t.guildId,
                 }),
             (0, l.jsx)(f.Z, {
                 heading: h.intl.string(h.t["A//N4k"]),
                 children: (0, l.jsx)(u.Z, {
                     userId: n.id,
-                    guildId: j,
+                    guildId: v,
                     tooltipDelay: x.vB,
                 }),
             }),

@@ -13,9 +13,9 @@ var l = t(54381),
     p = t(428927),
     x = t(228168),
     h = t(388032),
-    v = t(940640),
-    b = t(9113);
-function j(e) {
+    j = t(940640),
+    v = t(9113);
+function b(e) {
     let { section: n, user: t, currentUser: i, displayProfile: o, guildId: r, channelId: a, onClose: c } = e;
     return n === x.oh.ACTIVITY
         ? (0, l.jsx)(u.Z, {
@@ -41,14 +41,12 @@ function j(e) {
               : n === x.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: t,
-                      currentUser: i,
                       displayProfile: o,
                       guildId: r,
                       onClose: c,
                   })
                 : (0, l.jsx)(f.Z, {
                       user: t,
-                      currentUser: i,
                       displayProfile: o,
                       onClose: c,
                   });
@@ -96,23 +94,23 @@ function g(e) {
     );
     return g
         ? (0, l.jsx)("div", {
-              className: b.container,
+              className: v.container,
               children: (0, l.jsxs)("div", {
-                  className: v.empty,
+                  className: j.empty,
                   children: [
-                      (0, l.jsx)("div", { className: v.emptyIconStreamerMode }),
+                      (0, l.jsx)("div", { className: j.emptyIconStreamerMode }),
                       (0, l.jsx)("div", {
-                          className: v.emptyText,
+                          className: j.emptyText,
                           children: h.intl.string(h.t.Br1ls3),
                       }),
                   ],
               }),
           })
         : (0, l.jsxs)("div", {
-              className: b.container,
+              className: v.container,
               children: [
                   (0, l.jsx)(r.njP, {
-                      className: b.tabBar,
+                      className: v.tabBar,
                       type: "top",
                       selectedItem: I,
                       onItemSelect: Z,
@@ -121,7 +119,7 @@ function g(e) {
                           return (0, l.jsx)(
                               r.njP.Item,
                               {
-                                  className: b.tabBarItem,
+                                  className: v.tabBarItem,
                                   id: n,
                                   "aria-label": t,
                                   children: (0, l.jsx)(r.Text, {
@@ -133,7 +131,7 @@ function g(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(j, {
+                  (0, l.jsx)(b, {
                       items: u,
                       section: I,
                       user: n,

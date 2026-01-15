@@ -14,41 +14,40 @@ var i = t(442837),
     p = t(280885),
     x = t(819602),
     h = t(78806),
-    v = t(900927),
-    b = t(678738),
-    j = t(179828),
+    j = t(900927),
+    v = t(678738),
+    b = t(179828),
     g = t(878566),
     I = t(228168),
     y = t(388032),
     Z = t(199912);
 function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, onClose: T } = e,
+    let { user: n, displayProfile: t, onClose: O } = e,
         { trackUserProfileAction: N } = (0, u.KZ)(),
-        A = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
-        P = (0, r.Y)({ userId: n.id }),
-        E = (0, i.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        _ = (0, i.e7)([c.default], () => c.default.locale),
-        C = (0, m.Z)(n.id),
-        S = (0, f.Z)(n.id);
+        T = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
+        A = (0, r.Y)({ userId: n.id }),
+        P = (0, i.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        E = (0, i.e7)([c.default], () => c.default.locale),
+        _ = (0, m.Z)(n.id),
+        C = (0, f.Z)(n.id);
     return (0, l.jsxs)(o.zJl, {
         fade: !0,
         className: Z.scroller,
         children: [
-            (null == O ? void 0 : O.bio) != null &&
-                (null == O ? void 0 : O.bio) !== "" &&
-                !E &&
+            (null == t ? void 0 : t.bio) != null &&
+                (null == t ? void 0 : t.bio) !== "" &&
+                !P &&
                 (0, l.jsx)(p.Z, {
-                    userBio: O.bio,
+                    userBio: t.bio,
                     setLineClamp: !1,
                 }),
-            (null == O ? void 0 : O.guildId) != null &&
-                (0, l.jsx)(j.Z, {
-                    user: n,
-                    currentUser: t,
-                    guildId: O.guildId,
+            (null == t ? void 0 : t.guildId) != null &&
+                (0, l.jsx)(b.Z, {
+                    userId: n.id,
+                    guildId: t.guildId,
                 }),
             n.isProvisional &&
-                (0, l.jsx)(b.Z, {
+                (0, l.jsx)(v.Z, {
                     heading: y.intl.string(y.t.Iyka0U),
                     headingIcon: (0, l.jsx)(o.Mgn, {
                         size: "xxs",
@@ -57,44 +56,44 @@ function O(e) {
                     headingColor: "text-default",
                     children: (0, l.jsx)(a.n, { userId: n.id }),
                 }),
-            P.length > 0 &&
-                (0, l.jsx)(b.Z, {
+            A.length > 0 &&
+                (0, l.jsx)(v.Z, {
                     heading: y.intl.string(y.t["Uv/eTx"]),
-                    children: (0, l.jsx)(h.Z, { applicationIds: P }),
+                    children: (0, l.jsx)(h.Z, { applicationIds: A }),
                 }),
-            (0, l.jsx)(b.Z, {
+            (0, l.jsx)(v.Z, {
                 heading: y.intl.string(y.t.a6XYD9),
-                children: (0, l.jsx)(v.Z, {
+                children: (0, l.jsx)(j.Z, {
                     userId: n.id,
-                    guildId: null == O ? void 0 : O.guildId,
+                    guildId: null == t ? void 0 : t.guildId,
                     tooltipDelay: I.vB,
                 }),
             }),
-            C.length > 0 &&
-                (0, l.jsx)(b.Z, {
+            _.length > 0 &&
+                (0, l.jsx)(v.Z, {
                     heading: y.intl.string(y.t["3fe7U5"]),
                     scrollTargetId: I.Tb.CONNECTIONS,
                     children: (0, l.jsx)(x.ZP, {
-                        connectedAccounts: C,
+                        connectedAccounts: _,
                         className: Z.connections,
                         userId: n.id,
-                        locale: _,
+                        locale: E,
                     }),
                 }),
-            S.length > 0 &&
-                (0, l.jsx)(b.Z, {
+            C.length > 0 &&
+                (0, l.jsx)(v.Z, {
                     heading: y.intl.string(y.t.PHjkRE),
-                    children: S.map((e) =>
+                    children: C.map((e) =>
                         (0, l.jsx)(
                             x.tH,
                             {
                                 className: Z.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: _,
+                                locale: E,
                                 onApplicationClicked: () => {
-                                    N({ action: "PRESS_APP_CONNECTION" }), T();
+                                    N({ action: "PRESS_APP_CONNECTION" }), O();
                                 },
-                                selectedGuildId: null != A ? A : void 0,
+                                selectedGuildId: null != T ? T : void 0,
                             },
                             e.application.id,
                         ),

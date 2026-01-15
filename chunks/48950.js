@@ -22,8 +22,7 @@ let d = i.forwardRef(function (e, t) {
     let h = () => {
         let e = (0, r.jsx)("img", {
             ref: t,
-            alt: "",
-            "aria-label": c.intl.formatToPlainString(c.t["9+YWrE"], { name: d }),
+            alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: d }),
             className: o()(u.roleIcon, n, { [u.clickable]: null != m }),
             height: _ ? f : void 0,
             src: i,
@@ -32,8 +31,7 @@ let d = i.forwardRef(function (e, t) {
         return (null != a &&
             (e = (0, r.jsx)("img", {
                 ref: t,
-                alt: "",
-                "aria-label": a.allNamesString,
+                alt: a.allNamesString,
                 className: o()(u.roleIcon, n, { [u.clickable]: null != m }),
                 height: _ ? f : void 0,
                 src: a.url,
