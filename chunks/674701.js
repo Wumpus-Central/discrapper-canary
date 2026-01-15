@@ -3,27 +3,26 @@ var r = n(54381),
     i = n(473749),
     a = n(990547),
     o = n(442837),
-    s = n(114101),
-    l = n(481060),
-    c = n(700582),
-    u = n(100527),
-    d = n(906732),
-    f = n(213609),
-    p = n(963249),
-    _ = n(752048),
-    m = n(602733),
+    s = n(481060),
+    l = n(700582),
+    c = n(100527),
+    u = n(906732),
+    d = n(213609),
+    f = n(963249),
+    p = n(752048),
+    _ = n(602733),
     h = n(594174),
-    g = n(626135),
-    E = n(479446),
-    b = n(909917),
-    y = n(441623),
-    O = n(317271),
-    v = n(474936),
-    S = n(981631),
-    I = n(268685),
-    T = n(388032),
-    C = n(558741);
-function A(e, t, n) {
+    m = n(626135),
+    g = n(479446),
+    E = n(909917),
+    b = n(441623),
+    y = n(317271),
+    O = n(474936),
+    v = n(981631),
+    S = n(268685),
+    I = n(388032),
+    T = n(558741);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +46,12 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
 }
-function P(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,123 +63,122 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function w(e) {
-    let { giftIntentType: t, recipientUser: A, analyticsPage: P, analyticsSection: w, innerRef: D } = e,
-        x = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-        { analyticsLocations: L } = (0, d.ZP)(u.Z.PREMIUM_GIFT_INTENT_CARD),
-        j = (0, o.e7)([y.ZP], () => y.ZP.getFriendAnniversaryYears(A.id)),
-        { Component: M } = (0, s.V)(),
-        k = (0, m.ao)({
+    let { giftIntentType: t, recipientUser: C, analyticsPage: N, analyticsSection: w, innerRef: R } = e,
+        D = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        { analyticsLocations: x } = (0, u.ZP)(c.Z.PREMIUM_GIFT_INTENT_CARD),
+        L = (0, o.e7)([b.ZP], () => b.ZP.getFriendAnniversaryYears(C.id)),
+        j = (0, _.ao)({
             location: "gift-intent-card",
             isGift: !0,
-            giftRecipient: A,
+            giftRecipient: C,
         });
     i.useEffect(() => {
-        (0, f.h)({
+        (0, d.h)({
             name: a.ImpressionNames.GIFT_INTENT_CARD,
             type: a.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: t,
-                num_friend_anniversaries: y.ZP.getFriendAnniversaries().length,
+                num_friend_anniversaries: b.ZP.getFriendAnniversaries().length,
             },
         });
     }, [t]);
-    let U = () => (t === v.hX.FRIEND_ANNIVERSARY ? T.intl.string(T.t.CeQIwZ) : (0, E.Ou)(t)),
-        G = () =>
-            t === v.hX.FRIEND_ANNIVERSARY ? T.intl.formatToPlainString(T.t.PpG27s, { numberOfYears: j }) : (0, E.Ou)(t),
-        Z = () => (t === v.hX.FRIEND_ANNIVERSARY ? T.intl.string(T.t.PEjaCx) : (0, E.Ou)(t)),
-        F = (e) => {
+    let M = () => (t === O.hX.FRIEND_ANNIVERSARY ? I.intl.string(I.t.CeQIwZ) : (0, g.Ou)(t)),
+        k = () =>
+            t === O.hX.FRIEND_ANNIVERSARY ? I.intl.formatToPlainString(I.t.PpG27s, { numberOfYears: L }) : (0, g.Ou)(t),
+        U = () => (t === O.hX.FRIEND_ANNIVERSARY ? I.intl.string(I.t.ilhtIa) : (0, g.Ou)(t)),
+        G = (e) => {
             e.stopPropagation();
-            let n = _.Z.getUserAffinity(A.id);
-            g.default.track(S.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            let n = p.Z.getUserAffinity(C.id);
+            m.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: t,
                 affinity: null == n ? void 0 : n.dmProbability,
-                location_stack: L,
+                location_stack: x,
             });
-            let r = (0, O.F)(t);
-            k
-                ? (0, b.Z)({
-                      giftRecipient: A,
-                      analyticsLocations: L,
+            let r = (0, y.F)(t);
+            j
+                ? (0, E.Z)({
+                      giftRecipient: C,
+                      analyticsLocations: x,
                       analyticsLocation: r.chat,
                       analyticsObject: {
-                          page: P,
+                          page: N,
                           section: w,
-                          object: S.qAy.BUTTON_CTA,
-                          objectType: S.AnalyticsObjectTypes.GIFT,
+                          object: v.qAy.BUTTON_CTA,
+                          objectType: v.AnalyticsObjectTypes.GIFT,
                       },
                   })
-                : (0, p.Z)({
+                : (0, f.Z)({
                       isGift: !0,
                       initialPlanId: null,
-                      giftRecipient: A,
+                      giftRecipient: C,
                       analyticsLocation: r.chat,
-                      analyticsLocations: L,
+                      analyticsLocations: x,
                       analyticsObject: {
-                          page: P,
+                          page: N,
                           section: w,
-                          object: S.qAy.BUTTON_CTA,
-                          objectType: S.AnalyticsObjectTypes.GIFT,
+                          object: v.qAy.BUTTON_CTA,
+                          objectType: v.AnalyticsObjectTypes.GIFT,
                       },
                   });
         };
     return (0, r.jsx)("div", {
-        ref: D,
-        className: C.content,
+        ref: R,
+        className: T.content,
         children: (0, r.jsxs)("div", {
-            className: C.innerContent,
+            className: T.innerContent,
             children: [
                 (0, r.jsxs)("div", {
-                    className: C.subContent,
+                    className: T.subContent,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: C.avatars,
+                            className: T.avatars,
                             children: [
-                                (0, r.jsx)(c.Z, {
-                                    className: C.recipientUserAvatar,
-                                    user: A,
-                                    "aria-label": A.username,
-                                    size: I.EF.SIZE_56,
+                                (0, r.jsx)(l.Z, {
+                                    className: T.recipientUserAvatar,
+                                    user: C,
+                                    "aria-label": C.username,
+                                    size: S.EF.SIZE_56,
                                 }),
-                                null != x &&
-                                    (0, r.jsx)(c.Z, {
-                                        className: C.currentUserAvatar,
-                                        user: x,
-                                        "aria-label": A.username,
-                                        size: I.EF.SIZE_24,
+                                null != D &&
+                                    (0, r.jsx)(l.Z, {
+                                        className: T.currentUserAvatar,
+                                        user: D,
+                                        "aria-label": C.username,
+                                        size: S.EF.SIZE_24,
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: C.textContainer,
+                            className: T.textContainer,
                             children: [
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     lineClamp: 3,
-                                    children: U(),
+                                    children: M(),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: C.subHeaderContainer,
+                                    className: T.subHeaderContainer,
                                     children: [
-                                        (0, r.jsx)(l.iFz, { size: "xxs" }),
-                                        (0, r.jsx)(l.Text, {
-                                            className: C.subHeaderText,
-                                            variant: "text-xs/normal",
+                                        (0, r.jsx)(s.iFz, { size: "xs" }),
+                                        (0, r.jsx)(s.Text, {
+                                            className: T.subHeaderText,
+                                            variant: "text-md/normal",
                                             color: "text-subtle",
                                             lineClamp: 1,
-                                            children: G(),
+                                            children: k(),
                                         }),
                                     ],
                                 }),
@@ -189,40 +187,40 @@ function w(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: C.buttonContainer,
+                    className: T.buttonContainer,
                     children: [
-                        (0, r.jsx)(l.hU, {
+                        (0, r.jsx)(s.Button, {
                             size: "sm",
                             variant: "secondary",
-                            icon: M,
-                            "aria-label": T.intl.string(T.t.I61IsE),
+                            text: I.intl.string(I.t.nffuyb),
+                            "aria-label": I.intl.string(I.t.nffuyb),
                             onClick: (e) => {
                                 e.stopPropagation(),
-                                    g.default.track(S.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                    m.default.track(v.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                         gift_intent_type: t,
                                         cta_type: "send_message",
-                                        location_stack: L,
+                                        location_stack: x,
                                     }),
-                                    (0, l.ZDy)(async () => {
+                                    (0, s.ZDy)(async () => {
                                         let { default: e } = await n.e("5890").then(n.bind(n, 171793));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 e,
-                                                R(N({}, n), {
+                                                P(A({}, n), {
                                                     giftIntentType: t,
-                                                    analyticsLocationHistory: L,
+                                                    analyticsLocationHistory: x,
                                                 }),
                                             );
                                     });
                             },
                         }),
-                        (0, r.jsx)(l.Button, {
+                        (0, r.jsx)(s.Button, {
                             size: "sm",
                             variant: "expressive",
-                            text: Z(),
-                            icon: l.OgN,
-                            "aria-label": Z(),
-                            onClick: F,
+                            text: U(),
+                            icon: s.OgN,
+                            "aria-label": U(),
+                            onClick: G,
                         }),
                     ],
                 }),

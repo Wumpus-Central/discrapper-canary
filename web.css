@@ -73828,13 +73828,13 @@ screen and (max-width:485px) {
     position: relative
 }
 
-._75e8ee170883da62-currentUserAvatar,
 ._75e8ee170883da62-recipientUserAvatar {
     background-color: var(--background-surface-high)
 }
 
 ._75e8ee170883da62-currentUserAvatar {
-    border: 2px solid var(--background-surface-high);
+    background-color: var(--background-mod-muted);
+    border: 2px solid var(--background-mod-muted);
     bottom: -3px;
     inset-inline-end: -2px;
     position: absolute
@@ -73844,7 +73844,8 @@ screen and (max-width:485px) {
     display: flex;
     flex-direction: column;
     -webkit-margin-start: 12px;
-    margin-inline-start: 12px
+    margin-inline-start: 12px;
+    padding-top: var(--space-6)
 }
 
 ._75e8ee170883da62-subHeaderContainer {
@@ -73870,7 +73871,8 @@ screen and (max-width:485px) {
 
 ._4ea495c7880c982f-messageContentContainer {
     padding-bottom: 8px;
-    padding-top: 16px
+    padding-top: 16px;
+    width: 100%
 }
 
 ._4ea495c7880c982f-iconContainer {
