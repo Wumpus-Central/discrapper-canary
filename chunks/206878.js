@@ -78,6 +78,7 @@ let s = new Set([
         [r.aB.AVATAR_DECORATION]: d,
         [r.jE.HERO_BANNER_ANIMATED]: c,
         [r.jE.HERO_BANNER_RIVE]: c,
+        [r.jE.CATALOG_BANNER_RIVE]: c,
         [r.jE.SHOP_BUTTON_BG_HOVER]: d,
         [r.jE.SHOP_BUTTON_BG_HOVER_DARK]: d,
         [r.jE.SHOP_BUTTON_BG_HOVER_LIGHT]: d,
