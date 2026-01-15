@@ -19,6 +19,8 @@ e.exports = {
     icon: "_9b71827bc8e9fb8d-icon",
     discount: "_9b71827bc8e9fb8d-discount",
     noMargin: "_9b71827bc8e9fb8d-noMargin",
+    deleteRow: "_9b71827bc8e9fb8d-deleteRow",
+    deleteIcon: "_9b71827bc8e9fb8d-deleteIcon",
     gradientWrapperTier0: "_9b71827bc8e9fb8d-gradientWrapperTier0",
     gradientWrapperTier2: "_9b71827bc8e9fb8d-gradientWrapperTier2",
     loadingContainer: "_9b71827bc8e9fb8d-loadingContainer",

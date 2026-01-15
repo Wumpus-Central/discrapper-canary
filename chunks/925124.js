@@ -407,25 +407,13 @@ function k(e) {
         (0, a.jsxs)("div", {
             className: l()(_.card, _.discount),
             children: [
-                (0, a.jsxs)("div", {
+                (0, a.jsx)("div", {
                     className: l()(_.row, _.nameRow),
-                    children: [
-                        (0, a.jsx)(d.Heading, {
-                            variant: "heading-lg/semibold",
-                            color: "text-default",
-                            children: I,
-                        }),
-                        (0, a.jsx)(d.P3F, {
-                            onClick: async () => {
-                                j(!0), await O(E, "discount"), c(), j(!1);
-                            },
-                            children: (0, a.jsx)(d.XHJ, {
-                                size: "md",
-                                color: "currentColor",
-                                className: l()(_.icon, _.trashIcon),
-                            }),
-                        }),
-                    ],
+                    children: (0, a.jsx)(d.Heading, {
+                        variant: "heading-lg/semibold",
+                        color: "text-default",
+                        children: I,
+                    }),
                 }),
                 (0, a.jsxs)(d.P3F, {
                     className: l()(_.row, _.idRow),
@@ -525,6 +513,17 @@ function k(e) {
                             }),
                     ],
                 }),
+                (0, a.jsx)(d.P3F, {
+                    className: _.deleteRow,
+                    onClick: async () => {
+                        j(!0), await O(E, "discount"), c(), j(!1);
+                    },
+                    children: (0, a.jsx)(d.XHJ, {
+                        size: "md",
+                        color: "currentColor",
+                        className: l()(_.icon, _.deleteIcon),
+                    }),
+                }),
                 (0, a.jsx)("div", {
                     className: l()(_.loadingContainer, { [_.isLoading]: v || C }),
                     children: (0, a.jsx)(d.$jN, {}),
@@ -580,10 +579,10 @@ function R() {
         V = async () => {
             null != u && (await T(u, "discount"), A(!0));
         },
-        H = async () => {
+        z = async () => {
             await P(), A(!0);
         },
-        z = async () => {
+        H = async () => {
             let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
             await w(e), F();
         };
@@ -606,7 +605,7 @@ function R() {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear all User Offers",
-                                    onClick: H,
+                                    onClick: z,
                                 }),
                                 (0, a.jsx)(d.Button, {
                                     variant: "primary",
@@ -767,7 +766,7 @@ function R() {
                                 (0, a.jsx)(d.Button, {
                                     variant: "primary",
                                     text: "Create",
-                                    onClick: z,
+                                    onClick: H,
                                 }),
                             ],
                         }),
