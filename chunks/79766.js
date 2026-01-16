@@ -13,6 +13,7 @@ var r = (function (e) {
         (e[(e.BILLING_SETTINGS_NITRO_GIFT_BANNER = 9)] = "BILLING_SETTINGS_NITRO_GIFT_BANNER"),
         (e[(e.GIFT_REMINDER_NAGBAR = 10)] = "GIFT_REMINDER_NAGBAR"),
         (e[(e.GIFT_REMINDER_COACHMARK = 11)] = "GIFT_REMINDER_COACHMARK"),
+        (e[(e.PREMIUM_TAB_TOOLTIP = 12)] = "PREMIUM_TAB_TOOLTIP"),
         e
     );
 })({});

@@ -7,4 +7,7 @@ e.exports = {
     coachtipContent: "_83ef9b19c678150d-coachtipContent",
     nitroTabCoachtipContainer: "_83ef9b19c678150d-nitroTabCoachtipContainer",
     icon: "_83ef9b19c678150d-icon",
+    premiumTabTooltipContainer: "_83ef9b19c678150d-premiumTabTooltipContainer",
+    premiumTabTooltipImage: "_83ef9b19c678150d-premiumTabTooltipImage",
+    premiumTabTooltipContent: "_83ef9b19c678150d-premiumTabTooltipContent",
 };
