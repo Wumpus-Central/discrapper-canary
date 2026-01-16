@@ -1,4 +1,5 @@
 n.d(t, {
+    Cx: () => d,
     DL: () => i,
     VG: () => u,
     b2: () => l,
@@ -92,6 +93,12 @@ let c = (0, r.le)({
     }),
     u = (0, r.le)({
         name: "2025-11-video-end-card-v2",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    d = (0, r.le)({
+        name: "2025-12-quest-cta-refactor-rollout",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
