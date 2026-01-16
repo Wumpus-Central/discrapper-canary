@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -14,11 +14,11 @@ var r = n(54381),
     h = n(863886),
     m = n(688192),
     b = n(277511),
-    _ = n(602733),
-    E = n(594174),
+    E = n(602733),
+    _ = n(594174),
     O = n(164670),
-    v = n(927613),
-    I = n(848118),
+    I = n(927613),
+    v = n(848118),
     y = n(851397),
     C = n(582113),
     S = n(228168),
@@ -29,10 +29,10 @@ function j(e) {
         s = i.useRef(null),
         { analyticsLocations: p } = (0, d.ZP)(null != a ? a : []),
         { isHoveringOrFocusing: m } = (0, g.Z)(s),
-        [E, O] = i.useState(!1),
-        v = i.useCallback(
+        [_, O] = i.useState(!1),
+        I = i.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), !E)) {
+                if ((e.stopPropagation(), !_)) {
                     O(!0);
                     try {
                         await b.Z.addSkuToWishlist(n.id, p), null == l || l({ tabSection: S.oh.WISHLIST });
@@ -44,21 +44,21 @@ function j(e) {
                     }
                 }
             },
-            [n.id, p, l, E],
+            [n.id, p, l, _],
         );
     return (0, r.jsx)(c.i_, {
         title: T.intl.string(T.t["8DkMEQ"]),
         body: n.name,
         asset: (0, r.jsx)(f.No, { application: t }),
-        assetSize: _.EU,
+        assetSize: E.EU,
         children: (0, r.jsxs)(o.kL8, {
             className: N.card,
             ref: s,
             "aria-label": n.name,
-            onClick: v,
+            onClick: I,
             children: [
                 (0, r.jsx)(
-                    I.A,
+                    v.A,
                     {
                         shape: "custom",
                         containerClassName: N.card,
@@ -68,13 +68,13 @@ function j(e) {
                     },
                     n.id,
                 ),
-                (m || E) &&
+                (m || _) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", { className: N.highlightOverlay }),
                             (0, r.jsx)("div", {
                                 className: N.plusIconContainer,
-                                children: E
+                                children: _
                                     ? (0, r.jsx)(h.T, {})
                                     : (0, r.jsx)(o.svS, {
                                           size: "lg",
@@ -87,7 +87,7 @@ function j(e) {
         }),
     });
 }
-function P(e) {
+function x(e) {
     let {
             wishlist: t,
             handleOpenUserProfileModal: n,
@@ -97,56 +97,58 @@ function P(e) {
             className: u,
         } = e,
         d = (0, p.q)(C.t9),
-        f = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-        g = (0, s.e7)([E.default], () => E.default.getUser(null == t ? void 0 : t.userId)),
+        f = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        g = (0, s.e7)([_.default], () => _.default.getUser(null == t ? void 0 : t.userId)),
         b = null == t || (null != f && null != t && t.userId === f.id),
-        _ = i.useMemo(() => (null == t ? (null != f ? [f.id] : void 0) : [t.userId]), [t, f]),
-        I = (0, v.Z)({
+        E = i.useMemo(() => (null == t ? (null != f ? [f.id] : void 0) : [t.userId]), [t, f]),
+        v = (0, I.Z)({
             guildId: (0, O.ac)(),
             numWishlistItems: o,
             location: "SocialLayerAddToWishlistGrid",
             applicationId: C.t9,
-            userIds: _,
+            userIds: E,
             includeWishlists: !1,
         }),
         S = i.useMemo(() => {
             var e;
             return new Set(null != (e = null == t ? void 0 : t.items.map((e) => e.skuId)) ? e : []);
         }, [t]),
-        T = I.recommendations.filter((e) => !S.has(e.skuId)).slice(0, c);
-    return "success" !== I.state
+        T = v.recommendations.filter((e) => !S.has(e.skuId)).slice(0, c);
+    return "success" !== v.state
         ? (0, r.jsx)("div", {
               className: N.loadingContainer,
               children: (0, r.jsx)(h.T, {}),
           })
-        : (0, r.jsx)("ul", {
-              className: a()(N.grid, u),
-              children: T.map((e) =>
-                  b
-                      ? (0, r.jsx)(
-                            j,
-                            {
-                                application: d,
-                                sku: e.sku,
-                                handleOpenUserProfileModal: n,
-                                analyticsLocations: l,
-                            },
-                            e.skuId,
-                        )
-                      : (0, r.jsx)(
-                            y.Z,
-                            {
-                                item: e,
-                                wishlistId: t.id,
-                                isOwner: !1,
-                                profileOwner: g,
-                                cardSize: m.U.FLEX,
-                                showOverlayButton: !0,
-                                hideButtonIcon: !0,
-                                isDragging: !1,
-                            },
-                            e.skuId,
-                        ),
-              ),
-          });
+        : 0 === T.length
+          ? null
+          : (0, r.jsx)("ul", {
+                className: a()(N.grid, u),
+                children: T.map((e) =>
+                    b
+                        ? (0, r.jsx)(
+                              j,
+                              {
+                                  application: d,
+                                  sku: e.sku,
+                                  handleOpenUserProfileModal: n,
+                                  analyticsLocations: l,
+                              },
+                              e.skuId,
+                          )
+                        : (0, r.jsx)(
+                              y.Z,
+                              {
+                                  item: e,
+                                  wishlistId: t.id,
+                                  isOwner: !1,
+                                  profileOwner: g,
+                                  cardSize: m.U.FLEX,
+                                  showOverlayButton: !0,
+                                  hideButtonIcon: !0,
+                                  isDragging: !1,
+                              },
+                              e.skuId,
+                          ),
+                ),
+            });
 }
