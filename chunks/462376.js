@@ -1,5 +1,5 @@
 n.d(t, {
-    d: () => x,
+    d: () => S,
     k: () => f,
 }),
     n(388685);
@@ -18,7 +18,7 @@ var l = n(54381),
     v = n(51144),
     I = n(388032),
     m = n(444942);
-function S(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,8 +31,8 @@ function S(e, t, n) {
         e
     );
 }
-let f = 44;
-class x extends i.Component {
+let f = 48;
+class S extends i.Component {
     shouldComponentUpdate(e, t) {
         return (
             this.state.sending !== t.sending ||
@@ -79,16 +79,24 @@ class x extends i.Component {
         });
     }
     render() {
-        let { user: e, channel: t } = this.props,
-            { sending: n, invited: i } = this.state,
-            r = (0, l.jsx)(s.Button, {
-                variant: "secondary",
-                text: i ? I.intl.string(I.t.dVT149) : I.intl.string(I.t.jYnGPG),
-                size: "sm",
-                loading: n,
-                onClick: this.handleClickInvite,
-                disabled: i,
-            });
+        let e,
+            t,
+            { user: n, channel: i } = this.props,
+            { sending: r, invited: a } = this.state;
+        if (null != n) {
+            let l = v.ZP.getName(n),
+                i = c.Z.getNickname(n.id),
+                s = v.ZP.getUserTag(n, { decoration: "never" });
+            (e = null != i ? i : l), (t = s);
+        }
+        let u = (0, l.jsx)(s.Button, {
+            variant: "secondary",
+            text: a ? I.intl.string(I.t.dVT149) : I.intl.string(I.t.jYnGPG),
+            size: "sm",
+            loading: r,
+            onClick: this.handleClickInvite,
+            disabled: a,
+        });
         return (0, l.jsxs)("div", {
             className: m.inviteRow,
             onMouseEnter: this.handleMouseEnter,
@@ -99,29 +107,43 @@ class x extends i.Component {
                     children: [
                         this.renderUserOrChannel(),
                         (0, l.jsxs)("div", {
-                            className: m.inviteRowName,
-                            children: [v.ZP.getName(e), null != t ? (0, o.F6)(t, g.default, c.Z, !0) : null],
+                            className: m.inviteRowLabels,
+                            children: [
+                                (0, l.jsxs)(s.Text, {
+                                    tag: "strong",
+                                    variant: "text-md/semibold",
+                                    lineClamp: 1,
+                                    children: [e, null != i ? (0, o.F6)(i, g.default, c.Z, !0) : null],
+                                }),
+                                null != t &&
+                                    (0, l.jsx)(s.Text, {
+                                        variant: "text-xs/normal",
+                                        color: "text-muted",
+                                        lineClamp: 1,
+                                        children: t,
+                                    }),
+                            ],
                         }),
                     ],
                 }),
-                r,
+                u,
             ],
         });
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", {
+            x(this, "state", {
                 sending: !1,
                 invited: !1,
                 hovered: !1,
             }),
-            S(this, "handleMouseEnter", () => {
+            x(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            S(this, "handleMouseLeave", () => {
+            x(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            S(this, "getInviteAnalyticsMetadata", () => {
+            x(this, "getInviteAnalyticsMetadata", () => {
                 let { row: e, source: t } = this.props;
                 if (null != e)
                     return {
@@ -129,7 +151,7 @@ class x extends i.Component {
                         source: t,
                     };
             }),
-            S(this, "handleClickInvite", () => {
+            x(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 null != n &&
                     (null != t

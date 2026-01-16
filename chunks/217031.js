@@ -8,15 +8,15 @@ var r = n(54381),
     c = n(91192),
     o = n(442837),
     d = n(481060),
-    b = n(700582),
-    f = n(212819),
+    f = n(700582),
+    b = n(212819),
     h = n(933557),
     m = n(266076),
     p = n(810123),
     g = n(448486),
     j = n(987509),
-    y = n(592125),
-    x = n(430824),
+    x = n(592125),
+    y = n(430824),
     v = n(158776),
     O = n(306680),
     P = n(699516),
@@ -98,15 +98,15 @@ function M(e) {
             subLabel: a,
             selected: u,
             disabled: o,
-            onPressDestination: b,
-            "aria-setsize": f,
+            onPressDestination: f,
+            "aria-setsize": b,
             "aria-posinset": h,
             className: m,
         } = e,
         p = (0, c.JA)(t.id),
         g = l.useCallback(() => {
-            null == b || b(t);
-        }, [b, t]);
+            null == f || f(t);
+        }, [f, t]);
     return (0, r.jsxs)(
         d.P3F,
         C(
@@ -115,7 +115,7 @@ function M(e) {
                     className: i()(T.destinationRow, m, { [T.disabled]: o }),
                     onClick: o ? void 0 : g,
                     "aria-selected": u,
-                    "aria-setsize": f,
+                    "aria-setsize": b,
                     "aria-posinset": h,
                 },
                 p,
@@ -134,13 +134,12 @@ function M(e) {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         tag: "strong",
-                                        className: T.label,
+                                        color: o ? "text-muted" : void 0,
                                         variant: "text-md/semibold",
                                         lineClamp: 1,
                                         children: s,
                                     }),
                                     (0, r.jsx)(d.Text, {
-                                        className: T.subLabel,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: a,
@@ -171,7 +170,7 @@ function F(e) {
     return (0, r.jsx)(
         M,
         C(_({}, l), {
-            icon: (0, r.jsx)(b.Z, {
+            icon: (0, r.jsx)(f.Z, {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 user: t,
@@ -203,17 +202,17 @@ function I(e) {
 function A(e) {
     var { channel: t, subLabel: n } = e,
         l = k(e, ["channel", "subLabel"]);
-    let s = (0, o.e7)([x.Z], () => x.Z.getGuild(null == t ? void 0 : t.guild_id)),
+    let s = (0, o.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, h.ZP)(t),
-        a = (0, o.e7)([y.Z, L.default, P.Z], () => {
-            let e = y.Z.getChannel(t.parent_id);
+        a = (0, o.e7)([x.Z, L.default, P.Z], () => {
+            let e = x.Z.getChannel(t.parent_id);
             return null == e ? null : (0, h.F6)(e, L.default, P.Z, !1);
         }),
         c = (0, o.e7)([O.ZP], () => O.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
-        b = null == s ? void 0 : s.name;
+        f = null == s ? void 0 : s.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
-        b = (0, r.jsxs)("div", {
+        f = (0, r.jsxs)("div", {
             className: T.threadSubLabel,
             children: [
                 (0, r.jsx)(e, {
@@ -255,7 +254,7 @@ function A(e) {
                 channel: t,
             }),
             label: i,
-            subLabel: null != n ? n : b,
+            subLabel: null != n ? n : f,
         }),
     );
 }
@@ -274,14 +273,14 @@ function D(e) {
             var e;
             return null != (e = null == i ? void 0 : i.map(j.hC)) ? e : [];
         }, [i]),
-        b = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 let { section: l, row: i } = e;
                 if (l > 0) return;
-                let { type: b, record: h } = t[i];
-                if (b === f.h8.HEADER) return;
+                let { type: f, record: h } = t[i];
+                if (f === b.h8.HEADER) return;
                 let m =
-                        b === f.h8.USER
+                        f === b.h8.USER
                             ? {
                                   type: "user",
                                   id: h.id,
@@ -292,26 +291,26 @@ function D(e) {
                               },
                     p = (0, j.hC)(m),
                     g = (0, N.HY)(n, s, h, o),
-                    y = d.includes(p),
-                    x = {
+                    x = d.includes(p),
+                    y = {
                         key: p,
                         message: n,
                         destination: m,
                         subLabel: null != g ? g.label : void 0,
-                        disabled: (u && !y) || null != g,
-                        selected: y,
+                        disabled: (u && !x) || null != g,
+                        selected: x,
                         onPressDestination: a,
                         "aria-posinset": i + 1,
                         "aria-setsize": t.length,
                         className: c,
                     };
-                return b === f.h8.USER
-                    ? (0, r.jsx)(F, _({ user: h }, x))
-                    : b === f.h8.GROUP_DM
-                      ? (0, r.jsx)(I, _({ channel: h }, x))
-                      : b === f.h8.TEXT_CHANNEL || b === f.h8.VOICE_CHANNEL
-                        ? (0, r.jsx)(A, _({ channel: h }, x))
-                        : void (0, S.vE)(b);
+                return f === b.h8.USER
+                    ? (0, r.jsx)(F, _({ user: h }, y))
+                    : f === b.h8.GROUP_DM
+                      ? (0, r.jsx)(I, _({ channel: h }, y))
+                      : f === b.h8.TEXT_CHANNEL || f === b.h8.VOICE_CHANNEL
+                        ? (0, r.jsx)(A, _({ channel: h }, y))
+                        : void (0, S.vE)(f);
             },
             [u, a, n, s, t, d, c, o],
         );
@@ -319,6 +318,6 @@ function D(e) {
         sections: [t.length],
         sectionHeight: 0,
         rowHeight: 48,
-        renderRow: b,
+        renderRow: f,
     };
 }

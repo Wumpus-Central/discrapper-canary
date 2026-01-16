@@ -7,7 +7,7 @@ e.exports = {
     inviteRow: "_67dba15a1ae9a3e9-inviteRow",
     inviteRowAvatar: "_67dba15a1ae9a3e9-inviteRowAvatar",
     inviteRowInfo: "_67dba15a1ae9a3e9-inviteRowInfo",
-    inviteRowName: "_67dba15a1ae9a3e9-inviteRowName",
+    inviteRowLabels: "_67dba15a1ae9a3e9-inviteRowLabels",
     inviteRowEmptyState: "_67dba15a1ae9a3e9-inviteRowEmptyState",
     warningContainer: "_67dba15a1ae9a3e9-warningContainer",
     warningIcon: "_67dba15a1ae9a3e9-warningIcon",
