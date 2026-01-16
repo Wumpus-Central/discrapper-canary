@@ -1,19 +1,24 @@
 t.d(n, { Z: () => s });
 var a = t(54381),
     o = t(473749),
-    r = t(442837),
-    c = t(781780),
-    i = t(701011),
+    i = t(442837),
+    r = t(781780),
+    c = t(701011),
     l = t(591472),
     d = t(80963),
     u = t(701488);
 function s() {
-    let e = (0, r.e7)([l.Z], () => l.Z.getConnectedFrame()),
-        n = o.useCallback((e) => {
+    let e = (0, i.e7)([l.Z], () => l.Z.getConnectedFrame()),
+        n = (0, i.e7)(
+            [l.Z],
+            () => (null == e ? void 0 : e.applicationId) != null && l.Z.isProxyTicketRefreshing(e.applicationId),
+            [e],
+        ),
+        t = o.useCallback((e) => {
             let { application: n } = e;
             return (0, a.jsx)(d.Z, { applicationId: n.id });
         }, []),
-        t = o.useCallback(
+        s = o.useCallback(
             (n) => {
                 let { application: t } = n,
                     o = {};
@@ -21,18 +26,19 @@ function s() {
                     ((o.instance_id = "example-cl-instance"),
                     (o.platform = u.S4.DESKTOP),
                     null != e.proxyTicket && (o.discord_proxy_ticket = e.proxyTicket));
-                let r = null == e ? void 0 : e.url;
-                return (0, a.jsx)(c.Z, {
+                let i = null == e ? void 0 : e.url;
+                return (0, a.jsx)(r.Z, {
                     application: t,
                     queryParams: o,
-                    url: r,
+                    url: i,
                 });
             },
             [e],
         );
-    return (0, a.jsx)(i.S, {
+    return (0, a.jsx)(c.S, {
         activity: e,
-        renderHeader: n,
-        renderActivityIFrameWithLoadedData: t,
+        isLoading: n,
+        renderHeader: t,
+        renderActivityIFrameWithLoadedData: s,
     });
 }

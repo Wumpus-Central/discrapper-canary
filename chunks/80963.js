@@ -1,21 +1,22 @@
-t.d(n, { Z: () => d });
+t.d(n, { Z: () => u });
 var a = t(54381),
     o = t(473749),
-    r = t(442837),
-    c = t(325749),
-    i = t(591472),
-    l = t(828838);
-function d(e) {
+    i = t(442837),
+    r = t(325749),
+    c = t(48131),
+    l = t(591472),
+    d = t(828838);
+function u(e) {
     let { applicationId: n } = e,
-        t = (0, r.e7)([i.Z], () => i.Z.getConnectedFrame()),
-        d = o.useCallback(() => {
-            l.Z.popInFrame();
-        }, []);
-    return (0, a.jsx)(c.d, {
+        t = (0, i.e7)([l.Z], () => l.Z.getConnectedFrame()),
+        u = o.useCallback(async () => {
+            await c.Z.refreshProxyTicket({ applicationId: n }), d.Z.popInFrame();
+        }, [n]);
+    return (0, a.jsx)(r.d, {
         hasActivity: null != t,
         applicationId: n,
         isRichPresenceInvite: !0,
-        onConfirmClosePopout: d,
+        onConfirmClosePopout: u,
         channelId: void 0,
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -59,13 +59,14 @@ function f(e, t) {
 }
 let p = null,
     _ = new Map(),
+    h = new Map(),
     m = new Map(),
-    h = new Map();
-function g(e) {
+    g = new Map();
+function E(e) {
     let { applicationId: t } = e;
     _.set(t, !0);
 }
-function E(e) {
+function b(e) {
     let { applicationId: t, proxyTicket: n } = e,
         r = (0, o.ZP)(t);
     if (null == r) return void _.delete(t);
@@ -79,27 +80,35 @@ function E(e) {
             proxyTicket: n,
         });
 }
-function b(e) {
+function y(e) {
     let { applicationId: t } = e;
     _.delete(t);
 }
-function y(e) {
+function O(e) {
     let { applicationId: t } = e;
     (null == p ? void 0 : p.applicationId) === t && (p = null);
 }
-function O(e) {
+function v(e) {
     let { applicationId: t, layoutMode: n } = e;
     (null == p ? void 0 : p.applicationId) === t && (p = f(u({}, p), { layoutMode: n }));
 }
-function v(e) {
+function S(e) {
     let { activityPanelMode: t } = e;
     null != p && (p = f(u({}, p), { activityPanelMode: t }));
 }
-function S(e) {
+function I(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r } = e;
-    null == n ? m.delete(t) : m.set(t, n), null === r ? h.delete(t) : void 0 !== r && h.set(t, r);
+    null == n ? m.delete(t) : m.set(t, n), null === r ? g.delete(t) : void 0 !== r && g.set(t, r);
 }
-class I extends (r = i.ZP.Store) {
+function T(e) {
+    let { applicationId: t, refreshing: n } = e;
+    n ? h.set(t, !0) : h.delete(t);
+}
+function C(e) {
+    let { applicationId: t, proxyTicket: n } = e;
+    (null == p ? void 0 : p.applicationId) === t && (p = f(u({}, p), { proxyTicket: n }));
+}
+class A extends (r = i.ZP.Store) {
     getConnectedFrame() {
         return p;
     }
@@ -117,21 +126,26 @@ class I extends (r = i.ZP.Store) {
         var t;
         return null != e ? null != (t = _.get(e)) && t : _.size > 0;
     }
+    isProxyTicketRefreshing(e) {
+        return h.has(e);
+    }
     getOrientationLockStateForApp(e) {
         return m.get(e);
     }
     getPipOrientationLockStateForApp(e) {
         var t;
-        return null != (t = h.get(e)) ? t : this.getOrientationLockStateForApp(e);
+        return null != (t = g.get(e)) ? t : this.getOrientationLockStateForApp(e);
     }
 }
-c(I, "displayName", "FramesStore");
-let T = new I(a.Z, {
-    FRAME_LAUNCH_START: g,
-    FRAME_LAUNCH: E,
-    FRAME_LAUNCH_FAIL: b,
-    FRAME_STOP: y,
-    FRAME_UPDATE_LAYOUT_MODE: O,
-    FRAME_SET_PANEL_MODE: v,
-    FRAME_SET_ORIENTATION_LOCK_STATE: S,
+c(A, "displayName", "FramesStore");
+let N = new A(a.Z, {
+    FRAME_LAUNCH_START: E,
+    FRAME_LAUNCH: b,
+    FRAME_LAUNCH_FAIL: y,
+    FRAME_STOP: O,
+    FRAME_UPDATE_LAYOUT_MODE: v,
+    FRAME_SET_PANEL_MODE: S,
+    FRAME_SET_ORIENTATION_LOCK_STATE: I,
+    FRAME_SET_PROXY_TICKET_REFRESHING: T,
+    FRAME_UPDATE_PROXY_TICKET: C,
 });

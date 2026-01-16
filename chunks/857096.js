@@ -28,18 +28,19 @@ function C(e) {
         n = (0, o.e7)([E.Z], () => E.Z.getConnectedFrame()),
         i = (0, o.e7)([E.Z], () => E.Z.getFrameLayoutMode()),
         u = (0, f.q)(null == n ? void 0 : n.applicationId),
-        d = (0, o.e7)([p.Z], () => p.Z.getWindowOpen(O.KJ3.ACTIVITY_POPOUT)),
-        C = (0, o.e7)([m.Z], () => m.Z.isFrameHidden()),
-        A = i === y.U.PIP && !C && !d,
-        N = A && null != m.Z.pipVideoWindow && null != m.Z.pipFrameWindow;
-    if (null == n || null == u || d) return null;
-    let P = {
+        d = (0, o.e7)([E.Z], () => null != u && E.Z.isProxyTicketRefreshing(u.id), [u]),
+        C = (0, o.e7)([p.Z], () => p.Z.getWindowOpen(O.KJ3.ACTIVITY_POPOUT)),
+        A = (0, o.e7)([m.Z], () => m.Z.isFrameHidden()),
+        N = i === y.U.PIP && !A && !C,
+        P = N && null != m.Z.pipVideoWindow && null != m.Z.pipFrameWindow;
+    if (null == n || null == u || C) return null;
+    let w = {
         instance_id: "example-cl-instance",
         platform: v.S4.DESKTOP,
     };
-    function w(e) {
+    function R(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
-        return A && null != n
+        return N && null != n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("div", {
@@ -66,42 +67,42 @@ function C(e) {
             : null;
     }
     return (
-        null != n.proxyTicket && (P.discord_proxy_ticket = n.proxyTicket),
+        null != n.proxyTicket && (w.discord_proxy_ticket = n.proxyTicket),
         (0, r.jsx)(h.ZP, {
             timeout: 2000,
             children: (e) => {
-                let { idle: i, onActive: o, onForceIdle: d } = e;
+                let { idle: i, onActive: o, onForceIdle: f } = e;
                 return (0, r.jsxs)(_.Z, {
                     className: a()(S.root, {
-                        [S.pipMode]: A,
-                        [T.elevationHigh]: A,
+                        [S.pipMode]: N,
+                        [T.elevationHigh]: N,
                         [I.idle]: i,
-                        [S.pipModeShort]: A,
-                        [S.hidden]: C,
-                        [S.multiPIPMode]: N,
+                        [S.pipModeShort]: N,
+                        [S.hidden]: A,
+                        [S.multiPIPMode]: P,
                     }),
-                    noBorder: !A,
+                    noBorder: !N,
                     children: [
                         (0, r.jsx)("div", {
                             className: "theme-dark",
-                            children: w({
+                            children: R({
                                 onActive: o,
-                                onForceIdle: d,
+                                onForceIdle: f,
                                 idle: i,
                             }),
                         }),
-                        t
-                            ? (0, r.jsx)(s.$jN, { className: a()(S.iframe, { [S.pipModeShort]: A }) })
+                        t || d
+                            ? (0, r.jsx)(s.$jN, { className: a()(S.iframe, { [S.pipModeShort]: N }) })
                             : (0, r.jsx)(c.J, {
                                   allowPopups: (0, l.h)(u),
                                   referrerPolicy: "origin",
                                   url: n.url,
-                                  queryParams: P,
+                                  queryParams: w,
                                   className: a()(S.iframe, {
-                                      [S.pipModeShort]: A,
-                                      [S.pipNonInteractive]: A,
+                                      [S.pipModeShort]: N,
+                                      [S.pipNonInteractive]: N,
                                   }),
-                                  shouldRefocus: !A,
+                                  shouldRefocus: !N,
                               }),
                     ],
                 });

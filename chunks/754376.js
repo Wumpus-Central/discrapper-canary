@@ -1,4 +1,4 @@
-n.d(t, { F: () => b });
+n.d(t, { F: () => y });
 var r = n(54381);
 n(473749);
 var i = n(636449),
@@ -12,58 +12,59 @@ var i = n(636449),
     f = n(618158),
     p = n(922745),
     _ = n(800965),
-    h = n(611500),
-    m = n(981631),
-    g = n(322785),
-    E = n(290953);
-function b(e) {
+    h = n(48131),
+    m = n(611500),
+    g = n(981631),
+    E = n(322785),
+    b = n(290953);
+function y(e) {
     var t;
-    let { applicationId: n, onMouseDown: b, onMouseMove: y, onMouseLeave: O, onFocus: v, idle: S } = e,
-        I = (0, l.q)(n),
-        T = (0, d.bp)() === m.IlC.POPOUT,
-        { parentAnalyticsLocation: C } = (0, s.ZP)(),
-        A = () => {
-            (0, c.v)(C, c.d.POPOUT, !0),
+    let { applicationId: n, onMouseDown: y, onMouseMove: O, onMouseLeave: v, onFocus: S, idle: I } = e,
+        T = (0, l.q)(n),
+        C = (0, d.bp)() === g.IlC.POPOUT,
+        { parentAnalyticsLocation: A } = (0, s.ZP)(),
+        N = () => {
+            (0, c.v)(A, c.d.POPOUT, !0),
                 (0, o.Z)({
                     onConfirm: async () => {
-                        null != I && (await (0, a.nJ)(I.id, null)), (0, a.Gj)();
+                        await h.Z.refreshProxyTicket({ applicationId: n }), (0, a.Gj)();
                     },
                 });
         };
     return (0, r.jsxs)("div", {
-        className: E.videoControls,
-        onMouseMove: y,
-        onMouseDown: b,
-        onMouseLeave: O,
+        className: b.videoControls,
+        onMouseMove: O,
+        onMouseDown: y,
+        onMouseLeave: v,
         children: [
             (0, r.jsx)("div", {
-                className: E.topControls,
+                className: b.topControls,
                 children: (0, r.jsx)(p.r, {
-                    idle: S,
-                    title: null != (t = null == I ? void 0 : I.name) ? t : "",
-                    onJumpToChannel: v,
+                    idle: I,
+                    title: null != (t = null == T ? void 0 : T.name) ? t : "",
+                    onJumpToChannel: S,
                     preventIdleComponent: f.Z,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: E.bottomControls,
+                className: b.bottomControls,
                 children: (0, r.jsxs)(u.Z, {
                     grow: 1,
                     shrink: 1,
                     justify: u.Z.Justify.END,
                     align: u.Z.Align.CENTER,
                     children: [
-                        T || (0, i.R)()
+                        C || (0, i.R)()
                             ? null
                             : (0, r.jsx)(_.Z, {
-                                  className: g.rightPipIcon,
+                                  className: E.rightPipIcon,
                                   popoutOpen: !1,
-                                  onOpenPopout: A,
-                                  onClosePopout: m.VqG,
+                                  onOpenPopout: N,
+                                  onClosePopout: g.VqG,
                               }),
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(m.Z, {
                             applicationId: n,
-                            className: g.rightPipIcon,
+                            className: E.rightPipIcon,
                         }),
                     ],
                 }),

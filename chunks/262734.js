@@ -172,7 +172,7 @@ function w(e) {
                                               (0, g.Z)({
                                                   onConfirm: async () => {
                                                       (null == n ? void 0 : n.id) != null &&
-                                                          (await (0, p.nJ)(n.id, null)),
+                                                          (await C.Z.refreshProxyTicket({ applicationId: n.id })),
                                                           (0, p.Gj)();
                                                   },
                                               });
