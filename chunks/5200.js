@@ -1,132 +1,140 @@
-n.d(t, { Y: () => O }), n(388685);
+n.d(t, { Y: () => x }), n(388685);
 var r,
     i = n(54381),
     l = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(81239),
-    c = n(481060),
-    u = n(542094),
-    d = n(182906),
-    p = n(556505),
-    f = n(513202),
-    h = n(981631),
-    g = n(388032),
-    m = n(218877);
-let b = ["embedded_cover"],
-    y = {
+    c = n(636977),
+    u = n(481060),
+    d = n(633181),
+    p = n(542094),
+    f = n(182906),
+    h = n(556505),
+    g = n(513202),
+    m = n(981631),
+    b = n(388032),
+    y = n(218877);
+let v = ["embedded_cover"],
+    O = {
         tension: 800,
         friction: 24,
     };
-var v =
-    (((r = v || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+var j =
+    (((r = j || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (r[(r.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     r);
-function O(e) {
+function x(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: v = 0, animatedDivClass: O, commandOrigin: j } = e,
+    let { context: n, activityItem: r, onClick: a, aspectRatio: j = 0, animatedDivClass: x, commandOrigin: C } = e,
         {
-            onActivityItemSelected: x,
-            imageBackground: C,
-            activityAction: E,
-            labelType: S,
-        } = (0, u.ZP)({
+            onActivityItemSelected: E,
+            imageBackground: S,
+            activityAction: _,
+            labelType: I,
+        } = (0, p.ZP)({
             context: n,
             activityItem: r,
             guildId: null != (t = n.channel.getGuildId()) ? t : void 0,
             locationObject: {},
             onActivityItemSelected: a,
-            embeddedActivitiesManager: f.Z,
-            assetNames: b,
-            commandOrigin: j,
+            embeddedActivitiesManager: g.Z,
+            assetNames: v,
+            commandOrigin: C,
         }),
-        [_, I] = l.useState(!1),
-        P = l.useCallback(() => {
-            I(!0);
-        }, [I]),
-        Z = l.useCallback(() => {
-            I(!1);
-        }, [I]),
-        N = l.useMemo(
+        [P, Z] = l.useState(!1),
+        N = l.useCallback(() => {
+            Z(!0);
+        }, [Z]),
+        T = l.useCallback(() => {
+            Z(!1);
+        }, [Z]),
+        A = l.useMemo(
             () =>
                 (0, i.jsx)("div", {
-                    className: m.overlayBadge,
+                    className: y.overlayBadge,
                     children: (0, i.jsx)("div", {
-                        className: m.badgeContainer,
-                        children: (0, i.jsx)(p.Z, { labelType: S }),
+                        className: y.badgeContainer,
+                        children: (0, i.jsx)(h.Z, { labelType: I }),
                     }),
                 }),
-            [S],
+            [I],
         ),
-        T = l.useMemo(() => {
-            switch (E) {
-                case u.JS.JOIN:
+        w = l.useMemo(() => {
+            switch (_) {
+                case p.JS.JOIN:
                     return (0, i.jsx)("div", {
-                        className: m.activityAction,
+                        className: y.activityAction,
                         children: (0, i.jsx)("div", {
-                            className: m.activityActionButton,
-                            children: (0, i.jsx)(c.Text, {
+                            className: y.activityActionButton,
+                            children: (0, i.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: g.intl.string(g.t.VJlc0S),
+                                children: b.intl.string(b.t.VJlc0S),
                             }),
                         }),
                     });
-                case u.JS.LEAVE:
+                case p.JS.LEAVE:
                     return (0, i.jsx)("div", {
-                        className: m.activityAction,
+                        className: y.activityAction,
                         children: (0, i.jsx)("div", {
-                            className: o()(m.activityActionButton, m.activityActionButtonDanger),
-                            children: (0, i.jsx)(c.Text, {
+                            className: o()(y.activityActionButton, y.activityActionButtonDanger),
+                            children: (0, i.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: g.intl.string(g.t["wH/wDO"]),
+                                children: b.intl.string(b.t["wH/wDO"]),
                             }),
                         }),
                     });
-                case u.JS.START:
+                case p.JS.START:
                 default:
                     return null;
             }
-        }, [E]);
-    return (0, i.jsx)(c.P3F, {
-        onClick: x,
-        onFocus: P,
-        onBlur: Z,
-        onMouseEnter: P,
-        onMouseLeave: Z,
-        className: m.activityItemButtonInnerClass,
-        children: (0, i.jsx)(c.AMe, {
-            config: y,
+        }, [_]);
+    return (0, i.jsx)(u.P3F, {
+        onClick: E,
+        onFocus: N,
+        onBlur: T,
+        onMouseEnter: N,
+        onMouseLeave: T,
+        className: y.activityItemButtonInnerClass,
+        children: (0, i.jsx)(u.AMe, {
+            config: O,
             from: { value: 0 },
-            to: { value: +!!_ },
+            to: { value: +!!P },
             children: (e) => {
                 let { value: t } = e;
-                return (0, i.jsx)(c.f6W, {
-                    theme: h.BRd.DARK,
+                return (0, i.jsx)(u.f6W, {
+                    theme: m.BRd.DARK,
                     children: (e) =>
-                        (0, i.jsxs)(s.animated.div, {
-                            className: o()(e, m.activityItem, O, {
-                                [m.activityItem_13_11]: 0 === v,
-                                [m.activityItem_16_9]: 1 === v,
-                            }),
-                            style: {
-                                transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
-                            },
-                            children: [
-                                (0, i.jsx)(d.Z, {
-                                    imageBackground: C,
-                                    applicationName: r.application.name,
-                                    imageClassName: m.activitySuggestionImage,
-                                    imageNotFoundClassName: m.brokenImageIconWrapper,
+                        (0, i.jsx)(d.Z, {
+                            applicationId: r.application.id,
+                            questContent: c.j.ACTIVITY_SUGGESTION,
+                            children: (n) =>
+                                (0, i.jsxs)(s.animated.div, {
+                                    ref: n,
+                                    className: o()(e, y.activityItem, x, {
+                                        [y.activityItem_13_11]: 0 === j,
+                                        [y.activityItem_16_9]: 1 === j,
+                                    }),
+                                    style: {
+                                        transform: t.to([0, 1], [1, 1.05]).to((e) => "scale(".concat(e, ")")),
+                                    },
+                                    children: [
+                                        (0, i.jsx)(f.Z, {
+                                            imageBackground: S,
+                                            applicationName: r.application.name,
+                                            imageClassName: y.activitySuggestionImage,
+                                            imageNotFoundClassName: y.brokenImageIconWrapper,
+                                        }),
+                                        A,
+                                        w,
+                                    ],
                                 }),
-                                N,
-                                T,
-                            ],
                         }),
                 });
             },
         }),
     });
 }
-O.AspectRatio = v;
+x.AspectRatio = j;
