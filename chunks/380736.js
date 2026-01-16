@@ -1,13 +1,13 @@
 n.d(t, {
     Y: () => C,
-    Z: () => w,
+    Z: () => R,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(481060),
     u = n(13245),
@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(333031),
     p = n(610394),
     _ = n(322155),
-    m = n(693091),
-    h = n(981631),
+    h = n(693091),
+    m = n(981631),
     g = n(388032),
     E = n(199757);
 function b(e, t, n) {
@@ -102,7 +102,7 @@ let C = i.memo(function (e) {
             onNotificationShow: a,
             onDismissClick: u,
             onConfirmClick: f,
-            onCancelClick: m,
+            onCancelClick: h,
             onNotificationClick: b,
             hint: y,
             cancelText: O,
@@ -113,12 +113,12 @@ let C = i.memo(function (e) {
             renderFooter: A,
             contentOpacity: N,
             status: P,
-            containerRef: R,
-            className: w,
+            containerRef: w,
+            className: R,
             wrapperClassName: D,
         } = e,
         [x, L] = i.useState(!1),
-        j = n || x || P === h._1z.FOCUSED,
+        j = n || x || P === m._1z.FOCUSED,
         M = (0, l.e7)([_.Z, p.Z], () => _.Z.isInputLocked(p.Z.getTargetPID()));
     i.useEffect(() => {
         null == a || a();
@@ -137,9 +137,9 @@ let C = i.memo(function (e) {
         ),
         G = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == m || m(e);
+                e.stopPropagation(), null == h || h(e);
             },
-            [m],
+            [h],
         ),
         Z = i.useCallback(() => {
             L(!0);
@@ -166,7 +166,7 @@ let C = i.memo(function (e) {
             : null;
     }
     function H() {
-        return null == f && null == m
+        return null == f && null == h
             ? null
             : (0, r.jsxs)("div", {
                   className: E.buttonContainer,
@@ -182,7 +182,7 @@ let C = i.memo(function (e) {
                                 }),
                             })
                           : null,
-                      null != m
+                      null != h
                           ? (0, r.jsx)("div", {
                                 className: E.button,
                                 children: (0, r.jsx)(c.Button, {
@@ -259,12 +259,12 @@ let C = i.memo(function (e) {
                 className: o()(E.overflowWrapper, D),
                 onScroll: T,
                 children: (0, r.jsx)(c.P3F, {
-                    innerRef: R,
+                    innerRef: w,
                     ignoreKeyPress: !0,
                     onMouseOver: Z,
                     onMouseLeave: F,
                     onClick: b,
-                    className: o()(E.container, { [E.clickable]: null != b }, w),
+                    className: o()(E.container, { [E.clickable]: null != b }, R),
                     children: W(),
                 }),
             }),
@@ -309,7 +309,7 @@ let P = {
     friction: 8,
     tension: 300,
 };
-function R() {
+function w() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState(!1),
         a = (0, c.q_F)({
@@ -329,7 +329,7 @@ function R() {
         }, []),
     };
 }
-function w(e) {
+function R(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -338,7 +338,7 @@ function w(e) {
                 onDismissClick: f,
                 onNotificationClick: p,
                 onConfirmClick: _,
-                onCancelClick: h,
+                onCancelClick: m,
                 renderFooter: g,
                 animationWrapperClassName: E,
             },
@@ -352,14 +352,14 @@ function w(e) {
             },
             [c, f],
         ),
-        { clickSpring: I, handleMouseClick: T } = R(),
+        { clickSpring: I, handleMouseClick: T } = w(),
         P = i.useCallback(
             (e) => {
                 null == p || p(e, c), T();
             },
             [p, c, T],
         ),
-        w = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 null == _ || _(e, c);
             },
@@ -367,9 +367,9 @@ function w(e) {
         ),
         D = i.useCallback(
             (e) => {
-                null == h || h(e, c);
+                null == m || m(e, c);
             },
-            [h, c],
+            [m, c],
         ),
         x = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
@@ -395,7 +395,7 @@ function w(e) {
         ]),
         V = !o && a,
         H = 0 === n && !Z && !V,
-        { ref: Y, springs: W } = (0, m.X4)(t.id, s, l);
+        { ref: Y, springs: W } = (0, h.X4)(t.id, s, l);
     return (0, r.jsx)(A, {
         transitionState: s,
         springs: W,
@@ -414,8 +414,8 @@ function w(e) {
                     onNotificationShow: 0 === n ? b : void 0,
                     onDismissClick: O,
                     onNotificationClick: P,
-                    onConfirmClick: null != _ ? w : void 0,
-                    onCancelClick: null != h ? D : void 0,
+                    onConfirmClick: null != _ ? R : void 0,
+                    onCancelClick: null != m ? D : void 0,
                     renderFooter: x,
                     expand: !1,
                     index: n,

@@ -3,24 +3,24 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(554916),
+    s = n(81239),
     o = n(442837),
     c = n(481060),
     d = n(607070),
     u = n(49436),
     m = n(644646),
     p = n(444134),
-    f = n(526188),
-    h = n(617889),
+    h = n(526188),
+    f = n(617889),
     x = n(388032),
     b = n(964907);
 let g = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
-        i = (0, h.qe)().label,
+        i = (0, f.qe)().label,
         g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        { quest: v } = r.useContext(f.A),
+        { quest: v } = r.useContext(h.A),
         { expansionSpring: j } = r.useContext(p.xo),
-        C = i ? -4 : 6;
+        y = i ? -4 : 6;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(s.animated.div, {
@@ -70,7 +70,7 @@ let g = (e) => {
                             }),
                             j.to({
                                 range: [0, 1],
-                                output: [0, C],
+                                output: [0, y],
                             }),
                         ],
                         (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),

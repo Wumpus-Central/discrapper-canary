@@ -10,14 +10,14 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(24156),
-    c = n(620389),
+    c = n(81239),
     u = n(873546),
     d = n(374470),
     f = n(793030),
     p = n(846519),
     _ = n(377527),
-    m = n(481060),
-    h = n(607070),
+    h = n(481060),
+    m = n(607070),
     g = n(314910),
     E = n(343978);
 function b(e, t, n) {
@@ -102,7 +102,7 @@ let T = 16,
         green: E.tooltipGreen,
         red: E.tooltipRed,
     });
-function R(e, t, n) {
+function w(e, t, n) {
     let r = "left" === e || "right" === e,
         i = r ? "top" : "left",
         a = r ? "top" : "left",
@@ -114,7 +114,7 @@ function R(e, t, n) {
         { [i]: "calc(".concat(s, " + ").concat(l, "px)") }
     );
 }
-let w = (e) => {
+let R = (e) => {
         let {
                 targetElementRef: t,
                 align: n = "center",
@@ -127,15 +127,15 @@ let w = (e) => {
                 tooltipContentClassName: f,
                 spacing: p = A,
                 animationStyle: _,
-                disableTooltipPointerEvents: m = !1,
-                allowOverflow: h = !1,
+                disableTooltipPointerEvents: h = !1,
+                allowOverflow: m = !1,
                 tooltipPointerClassName: b,
                 positionKeyStemOverride: O,
                 dataMeticulousIgnore: v,
             } = e,
             S = "".concat(null != O ? O : "string" == typeof o ? o : "", ":").concat(r);
         return (0, i.jsx)(g.W5, {
-            disablePointerEvents: m,
+            disablePointerEvents: h,
             targetRef: t,
             position: r,
             autoInvert: !0,
@@ -147,20 +147,20 @@ let w = (e) => {
                 let { position: t, nudge: p } = e;
                 return (0, i.jsxs)(c.animated.div, {
                     onClick: l,
-                    className: s()(E.tooltip, P[null != t ? t : r], P[a], { [E.tooltipDisablePointerEvents]: m }, u),
+                    className: s()(E.tooltip, P[null != t ? t : r], P[a], { [E.tooltipDisablePointerEvents]: h }, u),
                     style: y({}, _, d),
                     "data-mtctest-ignore": v,
                     children: [
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, E.tooltipPointerBg, b),
-                            style: R(null != t ? t : r, n, p),
+                            style: w(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, b),
-                            style: R(null != t ? t : r, n, p),
+                            style: w(null != t ? t : r, n, p),
                         }),
                         (0, i.jsx)("div", {
-                            className: s()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: h }, f),
+                            className: s()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: m }, f),
                             children: o,
                         }),
                     ],
@@ -184,7 +184,7 @@ let w = (e) => {
         var { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
             o = v(e, ["isVisible", "onAnimationRest", "targetElementRef"]);
         let { reducedMotion: s } = a.useContext(f.Sfi);
-        return (0, m.Yzy)(
+        return (0, h.Yzy)(
             t,
             {
                 keys: (e) => (e ? "tooltip" : "empty"),
@@ -198,7 +198,7 @@ let w = (e) => {
         )((e, t) =>
             t
                 ? (0, i.jsx)(
-                      w,
+                      R,
                       y(
                           {
                               "data-migration-pending": !0,
@@ -285,8 +285,8 @@ class M extends (r = a.Component) {
                 allowOverflow: f,
                 clickableOnMobile: p,
                 hideOnClick: _,
-                tooltipPointerClassName: m,
-                dataMeticulousIgnore: h,
+                tooltipPointerClassName: h,
+                dataMeticulousIgnore: m,
             } = this.props,
             g = (u.tq || u.Em) && !0 === p && _,
             E = (!1 !== c && !g) || !0 === c,
@@ -300,7 +300,7 @@ class M extends (r = a.Component) {
                 tooltipStyle: s,
                 tooltipClassName: o,
                 tooltipContentClassName: l,
-                tooltipPointerClassName: m,
+                tooltipPointerClassName: h,
                 align: t,
                 position: n,
                 color: r,
@@ -310,7 +310,7 @@ class M extends (r = a.Component) {
                 onNonAccessibleClick: g ? this.handleClick : void 0,
                 allowOverflow: f,
                 positionKeyStemOverride: this.props.positionKeyStemOverride,
-                dataMeticulousIgnore: h,
+                dataMeticulousIgnore: m,
                 children: y,
             })
         );
@@ -351,7 +351,7 @@ class M extends (r = a.Component) {
                 ((u.tq || u.Em) && !0 === this.props.clickableOnMobile) || this.hide();
             }),
             b(this, "handleFocus", () => {
-                h.Z.keyboardModeEnabled && this.show();
+                m.Z.keyboardModeEnabled && this.show();
             }),
             b(this, "handleBlur", () => {
                 this.hide();

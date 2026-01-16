@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(704215),
     u = n(454399),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(607070),
     p = n(243778),
     _ = n(594174),
-    m = n(74538),
-    h = n(921944),
+    h = n(74538),
+    m = n(921944),
     g = n(388032),
     E = n(538497);
 let b = {
@@ -25,12 +25,12 @@ function O(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
         O = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         v = _.default.getCurrentUser(),
-        S = null == v || (0, m.I5)(v) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        S = null == v || (0, h.I5)(v) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [I, T] = (0, p.US)(S),
         [C, A] = i.useState(!1),
         [N, P] = (0, d.q_F)(() => ({})),
-        R = (0, s.animated)(d.Pt5);
-    function w() {
+        w = (0, s.animated)(d.Pt5);
+    function R() {
         P({
             from: { rotate: t ? "360deg" : "0deg" },
             to: { rotate: t ? "0deg" : "360deg" },
@@ -41,7 +41,7 @@ function O(e) {
     }
     i.useEffect(() => {
         let e = I === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (T(h.L.DISMISS), setTimeout(() => A(e), 200));
+        e && (T(m.L.DISMISS), setTimeout(() => A(e), 200));
     }, [I, T]);
     let D = C ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
         x = C ? g.intl.string(g.t.ORK94p) : void 0;
@@ -61,7 +61,7 @@ function O(e) {
                 (0, r.jsx)("input", {
                     className: E.visuallyHidden,
                     checked: t,
-                    onChange: w,
+                    onChange: R,
                     id: a,
                     type: "checkbox",
                 }),
@@ -69,7 +69,7 @@ function O(e) {
                     htmlFor: a,
                     className: o()(E.label, { [E.labelChecked]: t }),
                     children: [
-                        (0, r.jsx)(R, {
+                        (0, r.jsx)(w, {
                             style: O ? void 0 : N,
                             size: "custom",
                             width: y,

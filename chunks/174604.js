@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(793030),
     c = n(481060),
     u = n(70300),
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -74,7 +74,7 @@ function E(e) {
 function b(e) {
     let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
         _ = (0, u.Z)(t.id),
-        [h, b] = i.useState(!1),
+        [m, b] = i.useState(!1),
         [y, O] = (0, c.q_F)(() => ({
             scale: 0.8,
             config: {
@@ -110,7 +110,7 @@ function b(e) {
         ? null
         : (0, r.jsxs)(s.animated.div, {
               className: o()(p.container, { [p.themeResponsiveContainer]: n }),
-              style: g(m({}, y), { opacity: +!!h }),
+              style: g(h({}, y), { opacity: +!!m }),
               children: [
                   (0, r.jsx)(l.xvT, {
                       tag: "span",

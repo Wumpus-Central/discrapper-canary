@@ -1,7 +1,7 @@
 n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
-    a = n(55160),
+    a = n(782425),
     o = n(260866),
     s = n(481060),
     l = n(806966),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(388032),
     p = n(201632);
 let _ = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: _, channel: m } = e,
-        h = (0, u.fQ)(m),
+    let { onKeyDown: n, stickersListRef: _, channel: h } = e,
+        m = (0, u.fQ)(h),
         g = i.useRef(null),
         { searchQuery: E, isSearchSuggestion: b } = (0, c.Iu)(
             (e) => ({
@@ -53,11 +53,11 @@ let _ = i.forwardRef(function (e, t) {
         (0, r.jsx)("div", {
             className: p.wrapper,
             children: (0, r.jsx)(s.E1j, {
-                autoFocus: h,
-                disabled: !h,
+                autoFocus: m,
+                disabled: !m,
                 query: E,
                 ref: g,
-                placeholder: null != y ? y : h ? f.intl.string(f.t.dt5h1C) : f.intl.string(f.t["Pck/4U"]),
+                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1C) : f.intl.string(f.t["Pck/4U"]),
                 onClear: S,
                 onKeyDown: n,
                 onChange: v,

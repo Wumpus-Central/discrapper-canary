@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(620792),
+    s = n(81239),
     o = n(481060),
     c = n(393238),
     d = n(388032),
@@ -21,12 +21,12 @@ let g = i.memo(function (e) {
         } = e,
         [x, j] = i.useState(!0),
         [v, O] = i.useState(!1),
-        { ref: C, height: y = 0 } = (0, c.ZP)(),
+        { ref: y, height: C = 0 } = (0, c.ZP)(),
         { ref: N, height: E = 0 } = (0, c.ZP)(),
         [I, S] = i.useState(f),
         _ = (0, o.q_F)(
             {
-                height: I ? E + y : y,
+                height: I ? E + C : C,
                 config:
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -96,7 +96,7 @@ let g = i.memo(function (e) {
                 style: _,
                 children: [
                     (0, r.jsx)(o.P3F, {
-                        innerRef: C,
+                        innerRef: y,
                         onClick: m ? void 0 : b,
                         className: a()(u.innerHeader, { [u.toggled]: f && m }),
                         "aria-label": d.intl.string(d.t.dcl9MQ),

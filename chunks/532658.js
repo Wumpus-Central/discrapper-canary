@@ -8,7 +8,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -16,8 +16,8 @@ var r = n(54381),
     f = n(13245),
     p = n(872810),
     _ = n(393238),
-    m = n(586902),
-    h = n(493773),
+    h = n(586902),
+    m = n(493773),
     g = n(607070),
     E = n(538870),
     b = n(415635),
@@ -31,8 +31,8 @@ var r = n(54381),
     A = n(131951),
     N = n(606304),
     P = n(979651),
-    R = n(136015),
-    w = n(51144),
+    w = n(136015),
+    R = n(51144),
     D = n(444295),
     x = n(981631),
     L = n(388032),
@@ -153,7 +153,7 @@ function z(e, t) {
         [a, o] = i.useState(!1),
         [s, l] = i.useState(!0);
     return (
-        (0, h.ZP)(() => {
+        (0, m.ZP)(() => {
             n &&
                 !t &&
                 (l(!1),
@@ -161,7 +161,7 @@ function z(e, t) {
                     o(!0);
                 }, Y));
         }),
-        (0, h.ZP)(() => {
+        (0, m.ZP)(() => {
             let e = setTimeout(() => {
                 r(!1),
                     setTimeout(() => {
@@ -186,8 +186,8 @@ let q = i.memo(function (e) {
             {
                 showConnectedAnimation: f,
                 recentlyConnected: p,
-                hideConnectedAnimation: m,
-                setHideConnectedAnimation: h,
+                hideConnectedAnimation: h,
+                setHideConnectedAnimation: m,
             } = z(n, a),
             { ref: E, width: b } = (0, _.ZP)(),
             y = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
@@ -197,11 +197,11 @@ let q = i.memo(function (e) {
                 G(k({}, K[O]), {
                     opacity: +!!f,
                     onRest: () => {
-                        f || h(!0);
+                        f || m(!0);
                     },
                 }),
             ),
-            I = i.useMemo(() => (m || y ? "none" : "block"), [m, y]);
+            I = i.useMemo(() => (h || y ? "none" : "block"), [h, y]);
         return (0, r.jsx)(s.animated.div, {
             className: o()(j.connectedAnimationContainer, { [j.right]: d }),
             style: {
@@ -274,12 +274,12 @@ let q = i.memo(function (e) {
                 nick: u,
                 displayNameMode: d,
                 displayUserMode: f,
-                size: h = x.ipw.LARGE,
+                size: m = x.ipw.LARGE,
                 onClick: g,
                 onContextMenu: b,
                 context: v,
                 guildId: C,
-                isSettingsPreview: w = !1,
+                isSettingsPreview: R = !1,
                 voiceState: L,
                 showStreamPreview: M,
                 onShowStreamPreview: k,
@@ -289,7 +289,7 @@ let q = i.memo(function (e) {
             } = e,
             V = (0, l.e7)([T.default], () => T.default.getId() === s.id, [s.id]),
             { ref: H, width: Y } = (0, _.ZP)(),
-            { showConnectedAnimation: W } = z(G, w),
+            { showConnectedAnimation: W } = z(G, R),
             K = null == L ? void 0 : L.sessionId,
             J = t.id,
             $ = s.id,
@@ -303,9 +303,9 @@ let q = i.memo(function (e) {
                     ];
                 },
                 [J, $, K],
-                R.Q,
+                w.Q,
             ),
-            et = w ? L : null != ee ? ee : L,
+            et = R ? L : null != ee ? ee : L,
             [en, er, ei] = (0, l.Wu)(
                 [A.Z],
                 () =>
@@ -318,9 +318,9 @@ let q = i.memo(function (e) {
                 let e = I.Z.getCurrentUserActiveStream();
                 return null != e && e.ownerId !== s.id && I.Z.getViewerIds(e).filter((e) => e === s.id).length > 0;
             }, [s.id]),
-            eo = w && (null == L ? void 0 : L.discoverable),
+            eo = R && (null == L ? void 0 : L.discoverable),
             es =
-                (0, m.Z)({
+                (0, h.Z)({
                     userId: s.id,
                     context: v,
                 }) || eo,
@@ -359,10 +359,10 @@ let q = i.memo(function (e) {
             ep = i.useCallback(() => {
                 a || (null != ec && k(s.id));
             }, [a, k, ec, s]),
-            e_ = a || w,
-            em = i.useMemo(() => Z(h), [h]),
-            eh = i.useMemo(() => F(em), [em]),
-            eg = i.useMemo(() => s.getAvatarURL(C, eh), [s, C, eh]),
+            e_ = a || R,
+            eh = i.useMemo(() => Z(m), [m]),
+            em = i.useMemo(() => F(eh), [eh]),
+            eg = i.useMemo(() => s.getAvatarURL(C, em), [s, C, em]),
             eE = (0, l.e7)([N.Z], () => N.Z.getVoiceVolume($));
         return (f === x.OYC.ONLY_WHILE_SPEAKING && e_ && !es) || null == et
             ? null
@@ -410,7 +410,7 @@ let q = i.memo(function (e) {
                                                   serverDeaf: et.deaf,
                                                   disabled: !1,
                                               }),
-                                              !w &&
+                                              !R &&
                                                   (0, r.jsx)(O.ZP, {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
@@ -437,13 +437,13 @@ let q = i.memo(function (e) {
                             (0, r.jsx)(q, {
                                 nick: u,
                                 connectedOn: G,
-                                isSettingsPreview: w,
+                                isSettingsPreview: R,
                                 voiceBackgroundWidth: Y,
                                 rightAlign: !0,
                             }),
                         (0, r.jsx)(X, {
                             className: o()(j.avatar, { [j.avatarSpeakingOutline]: eE === -1 / 0 }),
-                            size: em,
+                            size: eh,
                             src: eg,
                             isSpeaking: es,
                             voiceDb: eE,
@@ -455,7 +455,7 @@ let q = i.memo(function (e) {
                             "aria-hidden": !0,
                         }),
                         (0, r.jsx)(Q, {
-                            avatarSize: eh,
+                            avatarSize: em,
                             userId: s.id,
                             channelId: t.id,
                             guildId: t.getGuildId(),
@@ -477,7 +477,7 @@ let q = i.memo(function (e) {
                     children: [
                         (0, r.jsx)(X, {
                             className: o()(j.avatar, { [j.avatarSpeakingOutline]: eE === -1 / 0 }),
-                            size: em,
+                            size: eh,
                             src: eg,
                             isSpeaking: es,
                             voiceDb: eE,
@@ -492,7 +492,7 @@ let q = i.memo(function (e) {
                             (0, r.jsx)(q, {
                                 nick: u,
                                 connectedOn: G,
-                                isSettingsPreview: w,
+                                isSettingsPreview: R,
                                 voiceBackgroundWidth: Y,
                             }),
                         e_ && (d === x.wC$.NEVER || (!es && d === x.wC$.ONLY_WHILE_SPEAKING))
@@ -514,7 +514,7 @@ let q = i.memo(function (e) {
                                                   color: "text-default",
                                                   children: u,
                                               }),
-                                              !w &&
+                                              !R &&
                                                   (0, r.jsx)(O.ZP, {
                                                       primaryGuild: s.primaryGuild,
                                                       userId: s.id,
@@ -561,8 +561,8 @@ let q = i.memo(function (e) {
                 locked: c,
                 flipped: p,
                 size: _,
-                isPreviewingInGame: m,
-                isSettingsPreview: h,
+                isPreviewingInGame: h,
+                isSettingsPreview: m,
                 context: g,
             } = e,
             E = i.useRef(null),
@@ -582,8 +582,8 @@ let q = i.memo(function (e) {
         let P = (e) => {
                 T(e);
             },
-            R = (e, t) => {
-                h ||
+            w = (e, t) => {
+                m ||
                     (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
                         return (
@@ -645,7 +645,7 @@ let q = i.memo(function (e) {
                 [a, t],
             );
         if (null == b || null == a || null == O) return null;
-        let j = c || m;
+        let j = c || h;
         return (0, r.jsx)(
             v.Z,
             {
@@ -664,21 +664,21 @@ let q = i.memo(function (e) {
                         guildId: null == a ? void 0 : a.guild_id,
                         user: b,
                         connectedOn: S,
-                        nick: null != (e = null == y ? void 0 : y.nick) ? e : w.ZP.getName(b),
+                        nick: null != (e = null == y ? void 0 : y.nick) ? e : R.ZP.getName(b),
                         flipped: p,
                         voiceState: O,
                         displayNameMode: s,
                         displayUserMode: l,
                         size: _,
                         locked: j,
-                        onContextMenu: R,
-                        onClick: R,
+                        onContextMenu: w,
+                        onClick: w,
                         context: g,
                         channel: a,
                         showStreamPreview: b.id === I,
                         onShowStreamPreview: P,
                         onWatchStream: L,
-                        isSettingsPreview: h,
+                        isSettingsPreview: m,
                     });
                 },
             },

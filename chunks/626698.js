@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(92951),
     c = n(442837),
     u = n(481060),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(607070),
     p = n(63063),
     _ = n(324060),
-    m = n(5888),
-    h = n(639949),
+    h = n(5888),
+    m = n(639949),
     g = n(829468),
     E = n(909397),
     b = n(198358),
@@ -26,21 +26,21 @@ var r = n(54381),
     A = n(221943),
     N = n(653506),
     P = n(900268);
-let R = 2.8,
-    w = 2,
+let w = 2.8,
+    R = 2,
     D = 1000,
     x = 500,
     L = 1000 + v.t;
 function j(e) {
     let { onNextStep: t } = e,
-        n = (0, c.e7)([m.Z], () => m.Z.getFetchState() === m.p.ERROR || null == m.Z.getCheckpointData().messages),
+        n = (0, c.e7)([h.Z], () => h.Z.getFetchState() === h.p.ERROR || null == h.Z.getCheckpointData().messages),
         [a, j] = i.useState(!0),
         M = i.useRef(null),
         k = i.useContext(_.Q),
         U = (0, u.dQu)(k.primaryColor).hex(),
         G = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         Z = i.useCallback((e) => {
-            e.currentTarget.currentTime >= R && j(!1);
+            e.currentTarget.currentTime >= w && j(!1);
         }, []),
         F = (0, u.q_F)({
             from: { opacity: 0 },
@@ -54,7 +54,7 @@ function j(e) {
             pause: a,
         });
     i.useEffect(() => {
-        null != M.current && (M.current.playbackRate = w);
+        null != M.current && (M.current.playbackRate = R);
     }, []),
         i.useEffect(() => {
             if (G) {
@@ -208,7 +208,7 @@ function j(e) {
                                             className: A.knickKnacks,
                                             slide: S.yD.WELCOME,
                                         }),
-                                        (0, r.jsxs)(h.Z, {
+                                        (0, r.jsxs)(m.Z, {
                                             contentClassName: A.startButtonContent,
                                             onClick: t,
                                             "aria-label": C.intl.string(C.t.I0v0Qv),

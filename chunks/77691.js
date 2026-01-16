@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(81239),
     o = n(748780),
     s = n(481060),
     l = n(324060),
@@ -11,9 +11,9 @@ let u = 400,
     f = 500;
 function p(e) {
     let { playEntryAnimation: t, children: n, isLeaving: o, onRest: p } = e,
-        [_, m] = i.useState(!1),
-        h = i.useContext(l.Q),
-        g = (0, s.dQu)(h.primaryColor).hex(),
+        [_, h] = i.useState(!1),
+        m = i.useContext(l.Q),
+        g = (0, s.dQu)(m.primaryColor).hex(),
         E = (0, s.q_F)({
             from: o
                 ? {
@@ -52,7 +52,7 @@ function p(e) {
         i.useEffect(() => {
             if (t) return;
             let e = setTimeout(() => {
-                m(!0);
+                h(!0);
             }, f);
             return () => clearTimeout(e);
         }, [t]),

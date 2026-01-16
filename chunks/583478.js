@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(481060),
     c = n(110924),
     u = n(710845),
@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(490093),
     p = n(48541),
     _ = n(484847);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -69,26 +69,26 @@ let b = new u.Z("BalanceCounter"),
         var t, n;
         let { value: a, onSetDigitCount: o, onValueChange: c, onValueReached: u, targetTotalCounterTime: d = 3000 } = e,
             [p, _] = (0, i.useState)(0),
-            m = (0, i.useRef)(null),
-            h = (0, i.useRef)(null);
+            h = (0, i.useRef)(null),
+            m = (0, i.useRef)(null);
         (0, i.useEffect)(() => {
             if (null === a) return;
-            if (null === m.current) {
-                m.current = a;
+            if (null === h.current) {
+                h.current = a;
                 return;
             }
-            let e = null !== m.current ? a - m.current : a;
-            0 !== e && null !== m.current && c(e),
-                (h.current = {
+            let e = null !== h.current ? a - h.current : a;
+            0 !== e && null !== h.current && c(e),
+                (m.current = {
                     lastChangedAt: Date.now(),
                     totalDelta: Math.abs(e),
                 });
         }, [a, c]);
         let g = null != a ? a : 0,
-            E = null != (t = m.current) ? t : g,
+            E = null != (t = h.current) ? t : g,
             { duration: v, delay: S } = (0, f.nL)(g - E, d),
             { number: I } = (0, l.q_F)({
-                from: { number: null != (n = m.current) ? n : g },
+                from: { number: null != (n = h.current) ? n : g },
                 number: g,
                 config: {
                     mass: 1,
@@ -101,14 +101,14 @@ let b = new u.Z("BalanceCounter"),
                     o(O(E));
                 },
                 onRest: () => {
-                    if ((_(p + 1), u(), !y && null !== h.current && null !== m.current)) {
+                    if ((_(p + 1), u(), !y && null !== m.current && null !== h.current)) {
                         let e = Date.now();
                         b.log("Balance Counter finished updating: ", {
-                            time: e - h.current.lastChangedAt,
-                            delta: g - m.current,
+                            time: e - m.current.lastChangedAt,
+                            delta: g - h.current,
                         });
                     }
-                    o(O(g)), (m.current = g);
+                    o(O(g)), (h.current = g);
                 },
             }),
             T = O(Math.max(null != a ? a : 0, I.get()));
@@ -124,8 +124,8 @@ let b = new u.Z("BalanceCounter"),
         let u = null === n,
             [d, f] = (0, i.useState)(null),
             p = (0, i.useMemo)(() => O(n), [n]),
-            m = null != (t = (0, c.Z)(p)) ? t : 0,
-            E = (0, i.useMemo)(() => v(m, p, d), [m, p, d]),
+            h = null != (t = (0, c.Z)(p)) ? t : 0,
+            E = (0, i.useMemo)(() => v(h, p, d), [h, p, d]),
             b = "".concat(u ? 0 : E, "ch");
         return (0, r.jsx)(l.Text, {
             variant: "text-md/semibold",
@@ -138,7 +138,7 @@ let b = new u.Z("BalanceCounter"),
                 ? null
                 : (0, r.jsx)(
                       S,
-                      h(
+                      m(
                           {
                               onSetDigitCount: (e) => {
                                   e !== d && f(e);

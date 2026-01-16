@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(81239),
     o = n(442837),
     s = n(481060),
     l = n(607070),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(981631),
     p = n(388032),
     _ = n(993346);
-let m = 200,
-    h = 250,
+let h = 200,
+    m = 250,
     g = 36,
     E = 660,
     b = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
@@ -20,7 +20,7 @@ function y(e) {
     let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: o } = e,
         [l, c] = i.useState(o ? r : -1),
         [u, p] = i.useState(0 === n),
-        [_, h] = i.useState(!1),
+        [_, m] = i.useState(!1),
         b = i.useRef(!0);
     function y(e) {
         let { widthFactor: t } = e;
@@ -45,10 +45,10 @@ function y(e) {
         onRest: () => {
             p(!0),
                 r === f.Eu4.TIER_3 &&
-                    (h(!0),
+                    (m(!0),
                     window.setTimeout(() => {
-                        b.current && h(!1);
-                    }, m));
+                        b.current && m(!1);
+                    }, h));
         },
     });
     return (
@@ -61,7 +61,7 @@ function y(e) {
         {
             isProgressBarAnimationComplete: u,
             progressBarFillWidthFactor: O,
-            setShouldFireConfetti: h,
+            setShouldFireConfetti: m,
             shouldFireConfetti: _,
             tierMarkerAnimationPosition: l,
         }
@@ -70,7 +70,7 @@ function y(e) {
 function O(e) {
     let { guild: t } = e,
         n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        [s, m] = i.useState(!1),
+        [s, h] = i.useState(!1),
         [g, E] = i.useState(0),
         O = i.useRef(null),
         v = s || n,
@@ -91,8 +91,8 @@ function O(e) {
     return (
         i.useEffect(() => {
             let e = window.setTimeout(() => {
-                m(!0);
-            }, h);
+                h(!0);
+            }, m);
             return () => {
                 window.clearTimeout(e);
             };

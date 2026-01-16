@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(620792),
+    o = n(81239),
     s = n(755721),
     l = n(481060),
     c = n(410030),
@@ -13,7 +13,7 @@ var i = n(120356),
     p = n(861245);
 let _ = function (e) {
     let { isVisible: t, subscriptionTier: n, isApplicationHome: i, isEligibleForBogoPromotion: _ } = e,
-        m = (0, l.q_F)({
+        h = (0, l.q_F)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
@@ -21,7 +21,7 @@ let _ = function (e) {
                 friction: 12,
             },
         }),
-        h = { section: f.jXE.MARKETING_FLOATING_CTA },
+        m = { section: f.jXE.MARKETING_FLOATING_CTA },
         g = (0, c.ZP)(),
         E = (0, l.wjy)(g);
     return (0, r.jsx)(o.animated.div, {
@@ -29,7 +29,7 @@ let _ = function (e) {
             [p.fullscreenWrapper]: i,
             [p.invisible]: !t,
         }),
-        style: m,
+        style: h,
         children: (0, r.jsxs)("div", {
             className: i ? p.innerWrapperApplicationHome : p.innerWrapper,
             children: [
@@ -37,14 +37,14 @@ let _ = function (e) {
                     color: E ? s.Tt.BRAND_INVERTED : void 0,
                     className: a()(p.button, { [p.subButton]: E }),
                     subscriptionTier: n,
-                    premiumModalAnalyticsLocation: h,
+                    premiumModalAnalyticsLocation: m,
                     isPersistentCTA: !0,
                     hasActivePromotion: _,
                     shinyButtonClassName: E ? void 0 : p.tier2Gradient,
                 }),
                 (0, r.jsx)(u.Z, {
                     className: p.button,
-                    premiumModalAnalyticsLocation: h,
+                    premiumModalAnalyticsLocation: m,
                 }),
             ],
         }),

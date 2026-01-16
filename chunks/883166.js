@@ -1,14 +1,14 @@
 n.d(t, {
-    QR: () => m,
+    QR: () => h,
     Qr: () => f,
-    Sg: () => h,
+    Sg: () => m,
     gl: () => _,
 }),
     n(388685),
     n(358797);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(81239),
     o = n(481060);
 function s(e, t, n) {
     return (
@@ -81,7 +81,7 @@ function _() {
         t
     );
 }
-function m(e) {
+function h(e) {
     let { children: t, spring: n, className: i, style: o } = e;
     return (0, r.jsx)(a.animated.div, {
         className: i,
@@ -89,7 +89,7 @@ function m(e) {
         children: t,
     });
 }
-function h() {
+function m() {
     let e = (0, i.useRef)(new Set()),
         [t, n] = (0, i.useState)([]),
         r = t.map((e, n) => (t.length <= 1 ? -c : Math.max(0, p((n / (t.length - 1)) * d, u) - c)));

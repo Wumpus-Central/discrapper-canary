@@ -1,5 +1,5 @@
 n.d(t, {
-    FT: () => J,
+    FT: () => X,
     L3: () => q,
     ZP: () => Q,
 }),
@@ -13,7 +13,7 @@ var r = n(54381),
     o = n.n(s),
     c = n(392711),
     d = n.n(c),
-    u = n(620389),
+    u = n(81239),
     g = n(772848),
     f = n(442837),
     m = n(28664),
@@ -258,7 +258,7 @@ let V = d().throttle(h.OQ, 1000),
                             title: F.intl.string(F.t.sMOuuS),
                             maxSlots: (0, D.y4)(s),
                             emojiCount: i.length,
-                            children: (0, r.jsx)(J, {
+                            children: (0, r.jsx)(X, {
                                 emojis: i,
                                 guild: s,
                                 onEdit: o,
@@ -269,7 +269,7 @@ let V = d().throttle(h.OQ, 1000),
                             title: F.intl.string(F.t.wWjQye),
                             maxSlots: (0, D.y4)(s),
                             emojiCount: l.length,
-                            children: (0, r.jsx)(J, {
+                            children: (0, r.jsx)(X, {
                                 emojis: l,
                                 guild: s,
                                 onEdit: o,
@@ -288,7 +288,7 @@ let V = d().throttle(h.OQ, 1000),
             children: l,
         });
     },
-    J = (e) => {
+    X = (e) => {
         let { emojis: t, guild: n, onEdit: l, editingDisabled: a = !1, newlyAddedEmojiIds: s } = e,
             o = i.useMemo(() => [...t].reverse(), [t]),
             { canManageGuildExpression: c } = (0, T.Gw)(n),
@@ -359,7 +359,7 @@ let V = d().throttle(h.OQ, 1000),
                   ],
               });
     },
-    X = (e) => {
+    J = (e) => {
         let t,
             n,
             i,
@@ -425,7 +425,7 @@ let V = d().throttle(h.OQ, 1000),
             i.useEffect(() => {
                 if (null != m && null == K) return void q(m);
             }, [m, K]);
-        let J = i.useMemo(
+        let X = i.useMemo(
                 () =>
                     null == K
                         ? new Set()
@@ -534,7 +534,7 @@ let V = d().throttle(h.OQ, 1000),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(X, {
+                        (0, r.jsx)(J, {
                             guild: l,
                             staticEmojiCount: A,
                             animatedEmojiCount: W,
@@ -590,7 +590,7 @@ let V = d().throttle(h.OQ, 1000),
                             guild: l,
                             theme: c,
                             onEdit: (e) => Q({ emoji: e }),
-                            newlyAddedEmojiIds: J,
+                            newlyAddedEmojiIds: X,
                         }),
                     ],
                 }),

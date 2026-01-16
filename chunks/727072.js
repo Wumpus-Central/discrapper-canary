@@ -1,14 +1,14 @@
 n.d(t, {
-    I2: () => j,
+    I2: () => d,
     RD: () => p,
-    mY: () => d,
+    mY: () => j,
     pH: () => A,
 }),
     n(539854),
     n(388685);
 var r = n(473749),
-    l = n(55160),
-    i = n(748521),
+    l = n(782425),
+    i = n(524550),
     a = n(731965),
     u = n(881052),
     o = n(36459),
@@ -70,11 +70,11 @@ let S = {},
                 f = null != (r = c[i]) ? r : {},
                 S = null != (l = f[o]) ? l : [],
                 O = S.some((e) => e.id === u),
-                d = S.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
-                j = O ? d.map((e) => (e.id === u ? n : e)) : [...d, n];
+                j = S.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
+                d = O ? j.map((e) => (e.id === u ? n : e)) : [...j, n];
             (0, a.j)(() => {
                 e({
-                    rules: g(E({}, c), { [i]: g(E({}, f), { [o]: j }) }),
+                    rules: g(E({}, c), { [i]: g(E({}, f), { [o]: d }) }),
                     error: null,
                 });
             });
@@ -140,11 +140,11 @@ let S = {},
             }
         },
     })),
-    d = (e, t) => {
+    j = (e, t) => {
         var n, r;
         return (null != (r = null == (n = O.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
     };
-function j(e) {
+function d(e) {
     let [t, n] = r.useState(!1),
         [i, a] = O((e) => [e.syncRules, e.fetching], l.X);
     return [
@@ -160,7 +160,7 @@ function j(e) {
     ];
 }
 function p(e) {
-    let [t, n] = j(e);
+    let [t, n] = d(e);
     return (
         r.useEffect(() => {
             (async () => {

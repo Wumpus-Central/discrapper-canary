@@ -10,14 +10,14 @@ var r = n(54381),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(620389),
+    c = n(81239),
     u = n(442837),
     d = n(622535),
     f = n(481060),
     p = n(607070),
     _ = n(134432),
-    m = n(314910),
-    h = n(506071),
+    h = n(314910),
+    m = n(506071),
     g = n(453070),
     E = n(373228),
     b = n(378233),
@@ -47,7 +47,7 @@ function P(e) {
     let t = "description" in e && null != e.description ? "".concat(e.name, ", ").concat(e.description) : e.name;
     return y.intl.formatToPlainString(y.t.rk6pOw, { stickerName: t });
 }
-let R = (e) => {
+let w = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: s, withLoadingIndicator: l = !0 } = e,
             c = s >= I;
         return (0, r.jsxs)("div", {
@@ -82,7 +82,7 @@ let R = (e) => {
             ],
         });
     },
-    w = (e) => {
+    R = (e) => {
         let {
                 shouldAnimate: t,
                 size: a,
@@ -93,8 +93,8 @@ let R = (e) => {
                 className: d,
                 maskAsset: f,
                 positionRef: p,
-                withLoadingIndicator: m,
-                onError: h,
+                withLoadingIndicator: h,
+                onError: m,
             } = e,
             g = i.useRef(null),
             E = i.useRef(null),
@@ -122,7 +122,7 @@ let R = (e) => {
                                 t || S(!1);
                             },
                             onError: () => {
-                                t || (S(!1), T(!0), null == h || h());
+                                t || (S(!1), T(!0), null == m || m());
                             },
                         })),
                         C.current && E.current.setState(!0));
@@ -132,7 +132,7 @@ let R = (e) => {
                     null == (e = E.current) || e.drop(), (E.current = null), (t = !0);
                 }
             );
-        }, [A, a, o.id, c, h]),
+        }, [A, a, o.id, c, m]),
         i.useEffect(() => {
             var e;
             let n;
@@ -145,12 +145,12 @@ let R = (e) => {
                   className: d,
                   "aria-label": I ? y.intl.string(y.t.yEvsK9) : P(o),
                   ref: p,
-                  children: (0, r.jsx)(R, {
+                  children: (0, r.jsx)(w, {
                       hasError: I,
                       isLoading: v,
                       maskAsset: f,
                       size: a,
-                      withLoadingIndicator: m,
+                      withLoadingIndicator: h,
                       children: N(
                           (0, r.jsx)("canvas", {
                               className: O.lottieCanvas,
@@ -173,8 +173,8 @@ let R = (e) => {
                 withLoadingIndicator: f,
                 fileUri: p,
             } = e,
-            [_, m] = i.useState(!1),
-            [h, g] = i.useState(!0),
+            [_, h] = i.useState(!1),
+            [m, g] = i.useState(!0),
             [E, y] = i.useState(!1),
             I = i.useRef(null),
             T = i.useRef(null),
@@ -188,13 +188,13 @@ let R = (e) => {
             A = i.useCallback(() => {
                 g(!1);
             }, []),
-            w = i.useCallback(() => {
+            R = i.useCallback(() => {
                 y(!0);
             }, []);
         return (i.useEffect(() => {
             if (null != I.current) {
                 let { isVisible: e } = I.current;
-                m(e);
+                h(e);
             }
         }, []),
         i.useLayoutEffect(() => {
@@ -206,14 +206,14 @@ let R = (e) => {
             : (0, r.jsx)(d.$, {
                   innerRef: u,
                   ref: I,
-                  onChange: m,
+                  onChange: h,
                   threshold: S,
                   children: (0, r.jsx)("div", {
                       className: o()(l, O.__invalid_pngImageWrapper),
                       ref: u,
-                      children: (0, r.jsx)(R, {
+                      children: (0, r.jsx)(w, {
                           hasError: E,
-                          isLoading: h,
+                          isLoading: m,
                           maskAsset: c,
                           size: s,
                           withLoadingIndicator: f,
@@ -223,7 +223,7 @@ let R = (e) => {
                                   alt: P(n),
                                   src: C,
                                   draggable: !1,
-                                  onError: w,
+                                  onError: R,
                                   onLoad: A,
                                   onContextMenu: v,
                                   ref: T,
@@ -245,13 +245,13 @@ let R = (e) => {
                 sticker: d,
             } = e,
             _ = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
-            h = i.useRef(null),
+            m = i.useRef(null),
             g = {
                 transform: "scale(".concat(_ ? 1 : 1 / n, ")"),
                 opacity: 0,
             },
             E = (0, f.Yzy)(o, {
-                ref: h,
+                ref: m,
                 from: g,
                 enter: {
                     transform: "scale(1)",
@@ -271,11 +271,11 @@ let R = (e) => {
                 "animate-always",
             );
         return (
-            (0, c.useChain)(o ? [h, b] : [b, h], o ? [0, 0.0625] : [0, 0]),
+            (0, c.useChain)(o ? [m, b] : [b, m], o ? [0, 0.0625] : [0, 0]),
             E(
                 (e, i) =>
                     i &&
-                    (0, r.jsx)(m.W5, {
+                    (0, r.jsx)(h.W5, {
                         className: O.positionedLayer,
                         fixed: !0,
                         align: "center",
@@ -329,13 +329,13 @@ let R = (e) => {
                 withLoadingIndicator: f,
                 assetData: p,
                 fileUri: _,
-                onError: m,
+                onError: h,
             } = e,
-            b = (0, h.n)(),
+            b = (0, m.n)(),
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
         if (null == u) return null;
-        let v = u.format_type === E.u3.LOTTIE ? w : D;
+        let v = u.format_type === E.u3.LOTTIE ? R : D;
         return (0, r.jsxs)(
             i.Fragment,
             {
@@ -351,7 +351,7 @@ let R = (e) => {
                         withLoadingIndicator: f,
                         assetData: p,
                         fileUri: _,
-                        onError: m,
+                        onError: h,
                     }),
                     a &&
                         (0, r.jsx)(x, {

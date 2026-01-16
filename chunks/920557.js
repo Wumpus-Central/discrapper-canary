@@ -4,15 +4,15 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(485853),
-    l = n(620792),
+    l = n(81239),
     c = n(278074),
     u = n(748780),
     d = n(28664),
     f = n(481060),
     p = n(313201),
     _ = n(542578),
-    m = n(203143),
-    h = n(79390),
+    h = n(203143),
+    m = n(79390),
     g = n(839963),
     E = n(139256),
     b = n(294608),
@@ -79,7 +79,7 @@ function P(e) {
         [y, v] = i.useState(!1),
         S = "" !== g && y,
         I = i.useCallback(() => {
-            E((0, h.e1)(u, c, o));
+            E((0, m.e1)(u, c, o));
         }, [u, c, o]),
         T = i.useCallback(() => {
             I(), v(!0);
@@ -88,7 +88,7 @@ function P(e) {
             v(!1);
         }, []),
         A = i.useCallback(() => {
-            (0, m.n)({
+            (0, h.n)({
                 channelId: c,
                 messageId: u,
                 answerId: o,
@@ -165,7 +165,7 @@ function P(e) {
         })
     );
 }
-function R(e) {
+function w(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, f.q_F)(
             {
@@ -184,7 +184,7 @@ function R(e) {
         "aria-hidden": !0,
     });
 }
-function w(e) {
+function R(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: o, className: s } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -232,7 +232,7 @@ function D(e) {
         }),
         children: [
             a
-                ? (0, r.jsx)(R, {
+                ? (0, r.jsx)(w, {
                       percentage: t.votesPercentage,
                       shouldAnimate: p,
                   })
@@ -257,7 +257,7 @@ function D(e) {
                     canShowVoterDetails: l,
                     answerId: t.answerId,
                 }),
-            (0, r.jsx)(w, {
+            (0, r.jsx)(R, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,

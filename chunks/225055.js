@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => m,
+    ZP: () => h,
     sc: () => p,
     xS: () => _,
 }),
@@ -8,7 +8,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(748780),
     c = n(481060),
     u = n(110924),
@@ -19,10 +19,10 @@ let p = {
         easing: l.Z.Easing.bezier(0.4, 0, 0, 1),
     },
     _ = i.createContext(null);
-function m(e) {
+function h(e) {
     let { activeSlide: t, children: n, className: a, slideClassName: l } = e,
-        m = (0, u.Z)(t),
-        h = i.useMemo(() => {
+        h = (0, u.Z)(t),
+        m = i.useMemo(() => {
             let e = {};
             return (
                 i.Children.forEach(n, (t) => {
@@ -31,7 +31,7 @@ function m(e) {
                 e
             );
         }, [...n]),
-        g = t === d.yD.WELCOME && (null == m || m === d.yD.WELCOME),
+        g = t === d.yD.WELCOME && (null == h || h === d.yD.WELCOME),
         E = (0, c.Yzy)(t, {
             from: g
                 ? {
@@ -71,7 +71,7 @@ function m(e) {
                     {
                         className: o()(f.slide, l),
                         style: e,
-                        children: h[t],
+                        children: m[t],
                     },
                     i,
                 );

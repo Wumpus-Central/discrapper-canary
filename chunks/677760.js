@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(54381),
     i = n(473749),
-    s = n(620792),
+    s = n(81239),
     a = n(442837),
     l = n(481060),
     o = n(447543),
@@ -70,7 +70,7 @@ function C() {
         children: (0, r.jsx)(l.$jN, {}),
     });
 }
-let T = (e) => {
+let O = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -92,7 +92,7 @@ let T = (e) => {
             (0, x.vE)(n);
     }
 };
-function O(e) {
+function T(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === j.r2o.BANNED
         ? (0, r.jsx)(c.u, {
@@ -129,7 +129,7 @@ function A(e) {
             }
             return i;
         })(e, ["children", "cardChildren", "startAnimHeightPx", "innerStyle"]),
-        [d, h] = i.useState(T(c)),
+        [d, h] = i.useState(O(c)),
         { ref: f, height: g } = (0, u.ZP)(),
         m = (0, l.q_F)({
             height: null != g && 0 !== g ? "".concat(g, "px") : "".concat(a, "px"),
@@ -137,7 +137,7 @@ function A(e) {
         });
     return (
         i.useEffect(() => {
-            let e = T(c);
+            let e = O(c);
             e !== d && h(e);
         }, [c, d]),
         (0, r.jsxs)(s.animated.div, {
@@ -201,7 +201,7 @@ function P(e) {
                             case 1:
                                 return (0, r.jsx)(v.Z, S(y({}, e), { invite: t }));
                             case 2:
-                                return (0, r.jsx)(O, S(y({}, e), { invite: t }));
+                                return (0, r.jsx)(T, S(y({}, e), { invite: t }));
                             default:
                                 return (0, r.jsx)(C, {});
                         }

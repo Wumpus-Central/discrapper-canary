@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     a = n(120356),
     s = n.n(a),
-    o = n(620792),
-    i = n(873546),
+    i = n(81239),
+    o = n(873546),
     c = n(435935),
     u = n(481060),
     d = n(168020),
@@ -19,8 +19,8 @@ let g = l.memo(function (e) {
                 friction: 12,
             },
         });
-    return (0, r.jsxs)(o.animated.div, {
-        className: s()([f.countDownWrapper, i.tq && f.mobileWrapper]),
+    return (0, r.jsxs)(i.animated.div, {
+        className: s()([f.countDownWrapper, o.tq && f.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {

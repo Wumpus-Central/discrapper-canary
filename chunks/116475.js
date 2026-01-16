@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(81239),
     o = n(393238),
     s = n(254109),
     l = n(212459);
@@ -32,8 +32,8 @@ function u(e) {
 }
 function d(e) {
     let { children: t } = e,
-        { scale: n, x: d, y: f, setOffset: p, zoomed: _, setZoomed: m } = (0, l.Y)(),
-        { ref: h, width: g, height: E } = (0, o.ZP)(),
+        { scale: n, x: d, y: f, setOffset: p, zoomed: _, setZoomed: h } = (0, l.Y)(),
+        { ref: m, width: g, height: E } = (0, o.ZP)(),
         [b, y] = [null != g ? g : 0, null != E ? E : 0],
         O = i.useRef(!1),
         [v, S] = i.useState({
@@ -68,7 +68,7 @@ function d(e) {
         C = (e) => {
             if (!_) {
                 if (0 === e.button) {
-                    (0, s.yg)(s.uG.ZOOM_IN_IMAGE_PRESSED), m(!0);
+                    (0, s.yg)(s.uG.ZOOM_IN_IMAGE_PRESSED), h(!0);
                     let t = e.clientX - window.innerWidth / 2,
                         r = e.clientY - window.innerHeight / 2,
                         i = u({
@@ -87,11 +87,11 @@ function d(e) {
                 }
                 return;
             }
-            (e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < c && ((0, s.yg)(s.uG.ZOOM_OUT_IMAGE_PRESSED), m(!1)),
+            (e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < c && ((0, s.yg)(s.uG.ZOOM_OUT_IMAGE_PRESSED), h(!1)),
                 (O.current = !1);
         };
     return (0, r.jsx)(a.animated.div, {
-        ref: h,
+        ref: m,
         onMouseDown: T,
         onMouseUp: C,
         onMouseMove: (e) => O.current && I(e.movementX, e.movementY),

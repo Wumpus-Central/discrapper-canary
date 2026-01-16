@@ -1,11 +1,11 @@
 n.d(t, {
-    Z: () => m,
+    Z: () => h,
     m: () => _,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792),
+    a = n(81239),
     o = n(442837),
     s = n(481060),
     l = n(607070),
@@ -16,13 +16,13 @@ let d = 200,
     p = 200;
 function _(e) {
     let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: _ } = e,
-        [m, h] = i.useState(0),
+        [h, m] = i.useState(0),
         g = i.useRef(-1),
         E = i.useRef(!0),
         b = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         { scaleFactor: y } = (0, s.q_F)({
             from: { scaleFactor: 1 },
-            to: { scaleFactor: 1 === m ? 0.9 : 2 === m ? 1.2 : 1 },
+            to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
             config: {
                 tension: 380,
                 friction: 7,
@@ -42,7 +42,7 @@ function _(e) {
               children: (0, r.jsx)(s.P3F, {
                   className: u.confettiTrigger,
                   onMouseDown: () => {
-                      h(1),
+                      m(1),
                           f(!0),
                           c((e) => Math.min(e + 2, p)),
                           window.clearTimeout(g.current),
@@ -51,22 +51,22 @@ function _(e) {
                           }, d));
                   },
                   onMouseUp: () => {
-                      h(0), f(!1);
+                      m(0), f(!1);
                   },
                   onMouseEnter: () => {
                       var e;
-                      h(2), null == _ || null == (e = _.onMouseEnter) || e.call(_);
+                      m(2), null == _ || null == (e = _.onMouseEnter) || e.call(_);
                   },
                   onMouseLeave: () => {
                       var e;
-                      h(0), null == _ || null == (e = _.onMouseLeave) || e.call(_);
+                      m(0), null == _ || null == (e = _.onMouseLeave) || e.call(_);
                   },
                   innerRef: n,
                   children: t,
               }),
           });
 }
-let m = function (e) {
+let h = function (e) {
     let { confettiCount: t, confettiTriggerRef: n, isFiring: r } = e,
         { cannon: a, createMultipleConfettiAt: s } = i.useContext(c.h),
         u = (0, o.e7)([l.Z], () => l.Z.useReducedMotion);

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     o = n(120356),
     l = n.n(o),
-    a = n(620792),
+    a = n(81239),
     s = n(442837),
     c = n(481060),
     u = n(493773),
@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(728285),
     v = n(670863),
     y = n(53691),
-    j = n(457165),
-    O = n(131951),
+    O = n(457165),
+    j = n(131951),
     h = n(594174),
     x = n(626135),
     _ = n(111361),
@@ -34,8 +34,8 @@ var r = n(54381),
     M = n(981631),
     A = n(354459),
     R = n(474936),
-    V = n(65154),
-    L = n(713314),
+    L = n(65154),
+    V = n(713314),
     F = n(388032),
     U = n(650749);
 function Y(e) {
@@ -94,7 +94,7 @@ function z(e) {
             onElementResizeEnd: (e) => {},
             orientation: d.y.VERTICAL_TOP,
         });
-    (0, F.useSyncMessages)(L.messagesLoader);
+    (0, F.useSyncMessages)(V.messagesLoader);
     let Q = (0, s.e7)([h.default], () => (0, _.I5)(h.default.getCurrentUser())),
         J = (0, s.e7)([w.Z], () => w.Z.getCatalogUpdateTime()),
         [$, ee] = i.useState(!1),
@@ -201,7 +201,7 @@ function z(e) {
                                         showUpsell: !0,
                                         text: F.intl.format(F.t.XMDm8z, {
                                             nitroTierName: (0, P.Px)(R.PremiumTypes.TIER_2),
-                                            onClick: () => (0, j.i)(),
+                                            onClick: () => (0, O.i)(),
                                         }),
                                         button: F.intl.string(F.t.cRCCJ3),
                                         buttonAnalyticsObject: { section: M.jXE.VOICE_FILTERS_FLOATING_UPSELL },
@@ -219,19 +219,19 @@ function z(e) {
                     className: l()(U.voiceFiltersFooter, { [U.hasActiveVoice]: null != er }),
                     children: [
                         (0, r.jsx)(v.j, {
-                            deviceType: V.h7.AUDIO_INPUT,
+                            deviceType: L.h7.AUDIO_INPUT,
                             location: "VoiceFiltersPopout",
                             onOpen: () => {
                                 var e;
                                 x.default.track(M.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, {
-                                    active_voice_filter_id: null != (e = O.Z.getActiveVoiceFilter()) ? e : null,
+                                    active_voice_filter_id: null != (e = j.Z.getActiveVoiceFilter()) ? e : null,
                                 });
                             },
                             popoutPosition: "top",
                         }),
                         o &&
                             (0, r.jsx)(v.j, {
-                                deviceType: V.h7.AUDIO_OUTPUT,
+                                deviceType: L.h7.AUDIO_OUTPUT,
                                 location: "VoiceFiltersPopout",
                                 popoutPosition: "top",
                             }),

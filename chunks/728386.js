@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(55160),
+    s = n(782425),
     l = n(532772),
     c = n(681715),
     u = n(400332),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(713913),
     p = n(443603),
     _ = n(957825),
-    m = n(388032),
-    h = n(72775);
+    h = n(388032),
+    m = n(72775);
 function g(e, t, n) {
     return (
         t in e
@@ -74,25 +74,25 @@ function O(e, t) {
         A = i.useCallback(() => {
             (0, d.RO)(_.X1.STICKER, a, g.id);
         }, [a, g.id]),
-        { Component: N, events: P, play: R } = (0, l.z)(),
-        w = (0, f.v)(u.U);
+        { Component: N, events: P, play: w } = (0, l.z)(),
+        R = (0, f.v)(u.U);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(_.CT, h.buttonContainer),
+              className: o()(_.CT, m.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.u, {
-                  shouldShow: null != w,
-                  text: m.intl.string(m.t.oOJ7KU),
-                  keyboardShortcut: w,
+                  shouldShow: null != R,
+                  text: h.intl.string(h.t.oOJ7KU),
+                  keyboardShortcut: R,
                   children: (0, r.jsx)(
                       p.Z,
-                      y(E({ className: o()(h.button, h.stickerButton) }, P), {
+                      y(E({ className: o()(m.button, m.stickerButton) }, P), {
                           onClick: () => {
-                              A(), R();
+                              A(), w();
                           },
                           isActive: T,
-                          "aria-label": m.intl.string(m.t.rZpidU),
+                          "aria-label": h.intl.string(h.t.rZpidU),
                           "aria-expanded": T,
                           "aria-haspopup": "dialog",
                           "aria-controls": O,

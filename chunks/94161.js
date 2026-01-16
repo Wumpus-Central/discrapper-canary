@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(55160),
+    s = n(782425),
     l = n(679080),
     c = n(318766),
     u = n(28546),
@@ -11,9 +11,9 @@ var r = n(54381),
     f = n(541716),
     p = n(957825),
     _ = n(388032),
-    m = n(72775);
-function h(e, t) {
-    let { disabled: n, type: a, channelId: h, pickerView: g = p.X1.EMOJI } = e,
+    h = n(72775);
+function m(e, t) {
+    let { disabled: n, type: a, channelId: m, pickerView: g = p.X1.EMOJI } = e,
         [E, b, y, O] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
         v = (0, d.v)(l.S),
         S = a === f.Ie.NORMAL,
@@ -21,19 +21,19 @@ function h(e, t) {
         C = T ? void 0 : S ? v : void 0,
         A = I && T && S ? _.intl.string(_.t.DSBQ6F) : void 0,
         N = i.useCallback(() => {
-            (0, u.RO)(g, a, h);
-        }, [a, g, h]);
+            (0, u.RO)(g, a, m);
+        }, [a, g, m]);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(p.CT, m.buttonContainer),
+              className: o()(p.CT, h.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.Z, {
                   "aria-label": A,
                   tooltipText: A,
-                  className: m.emojiButton,
+                  className: h.emojiButton,
                   onClick: N,
-                  active: E === g && b === a && O === h,
+                  active: E === g && b === a && O === m,
                   "aria-controls": y,
                   tabIndex: 0,
                   focusProps: {
@@ -49,4 +49,4 @@ function h(e, t) {
               }),
           });
 }
-let g = i.memo(i.forwardRef(h));
+let g = i.memo(i.forwardRef(m));

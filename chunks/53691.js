@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(620792),
+    o = n(81239),
     s = n(481060),
     l = n(9551),
     c = n(740594),
@@ -45,7 +45,7 @@ function _(e) {
             textVariant: i,
             button: f,
             buttonAnalyticsObject: _,
-            className: h,
+            className: m,
             onSubscribeModalClose: g,
             position: E = "floating",
         } = e,
@@ -67,9 +67,9 @@ function _(e) {
                 [d.upsellContainerFloating]: "floating" === E,
                 [d.upsellContainerInline]: "inline" === E,
             },
-            h,
+            m,
         ),
-        children: (0, r.jsxs)(m, {
+        children: (0, r.jsxs)(h, {
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: null != i ? i : "text-sm/medium",
@@ -91,7 +91,7 @@ function _(e) {
         }),
     });
 }
-function m(e) {
+function h(e) {
     let { children: t } = e;
     return l.V.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled
         ? (0, r.jsx)(s.$1m, {

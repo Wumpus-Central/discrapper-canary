@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(748780),
     c = n(481060),
     u = n(442837),
@@ -11,11 +11,11 @@ var r = n(54381),
     f = n(663389),
     p = n(7822);
 let _ = 200,
-    m = 200;
-function h(e) {
+    h = 200;
+function m(e) {
     let { children: t, className: n, onFlashEnd: a, animationDelay: u = 500 } = e,
         f = c.TVs.colors.TEXT_LINK,
-        h = (0, c.dQu)(f).spring({ opacity: 0 }),
+        m = (0, c.dQu)(f).spring({ opacity: 0 }),
         g = (0, c.dQu)(f).spring({ opacity: 0.1 }),
         E = (0, c.dQu)(f).spring({ opacity: 0 }),
         b = (0, c.dQu)(f).spring({ opacity: 1 }),
@@ -25,14 +25,14 @@ function h(e) {
         [O, v] = (0, c.q_F)(
             () => ({
                 from: {
-                    backgroundColor: h,
-                    borderColor: h,
+                    backgroundColor: m,
+                    borderColor: m,
                 },
             }),
             "animate-never",
         ),
         S = {
-            startColor: h,
+            startColor: m,
             handleRest: y,
             endColor: E,
             targetBorderColor: b,
@@ -55,7 +55,7 @@ function h(e) {
                 } = I.current,
                 { useReducedMotion: o } = d.Z,
                 s = o ? 0 : _,
-                c = a + _ + m;
+                c = a + _ + h;
             v({
                 reset: !0,
                 immediate: !1,
@@ -113,7 +113,7 @@ function g(e) {
         o && l(!0);
     }, [o]),
     s)
-        ? (0, r.jsx)(h, {
+        ? (0, r.jsx)(m, {
               animationDelay: a,
               onFlashEnd: () => l(!1),
               children: t,

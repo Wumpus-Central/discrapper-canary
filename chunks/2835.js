@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(481060),
     u = n(515970),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(12532),
     p = n(564756),
     _ = n(612776),
-    m = n(921872);
-function h(e, t, n) {
+    h = n(921872);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -69,11 +69,11 @@ function y(e) {
         style: g({}, d),
         children: (0, r.jsx)(c.P3F, {
             onClick: o,
-            className: m.clickable,
+            className: h.clickable,
             onMouseEnter: () => u(!0),
             onMouseLeave: () => u(!1),
             children: (0, r.jsx)(f, {
-                colorClass: m.stepColor,
+                colorClass: h.stepColor,
                 color: a,
                 style: { opacity: t || l ? 1 : 0.5 },
             }),
@@ -97,7 +97,7 @@ function v(e) {
             c > f && (0, u.f7)("".concat(c));
         }, [c, f]),
         (0, r.jsx)("div", {
-            className: o()(m.container, s),
+            className: o()(h.container, s),
             children: p.map((e, t) => {
                 let { icon: i, slide: o } = e,
                     s = Number.parseInt(o, 10);
@@ -115,7 +115,7 @@ function v(e) {
                     : (0, r.jsx)(
                           "div",
                           {
-                              className: m.unknownIcon,
+                              className: h.unknownIcon,
                               style: {
                                   borderColor: a,
                                   opacity: 0.5,

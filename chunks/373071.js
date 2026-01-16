@@ -13,8 +13,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(473749),
-    a = n(55160),
-    o = n(748521),
+    a = n(782425),
+    o = n(524550),
     s = n(731965),
     l = n(433517),
     c = n(481060),
@@ -71,11 +71,11 @@ function _(e, t) {
         e
     );
 }
-let m = "__DEBUG_PROFILE_EFFECTS_STORE",
-    h = { profileEffects: null != (r = l.K.get(m)) ? r : {} },
+let h = "__DEBUG_PROFILE_EFFECTS_STORE",
+    m = { profileEffects: null != (r = l.K.get(h)) ? r : {} },
     g = (e) => {
         try {
-            l.K.set(m, e.profileEffects);
+            l.K.set(h, e.profileEffects);
         } catch (e) {
             console.error(e),
                 (0, c.showToast)(
@@ -87,7 +87,7 @@ let m = "__DEBUG_PROFILE_EFFECTS_STORE",
         }
     },
     E = (0, o.F)((e) =>
-        _(f({}, h), {
+        _(f({}, m), {
             upsertConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
@@ -104,7 +104,7 @@ let m = "__DEBUG_PROFILE_EFFECTS_STORE",
                 }),
             clearAll: () =>
                 (0, s.j)(() => {
-                    e(() => (l.K.remove(m), { profileEffects: {} }));
+                    e(() => (l.K.remove(h), { profileEffects: {} }));
                 }),
         }),
     ),

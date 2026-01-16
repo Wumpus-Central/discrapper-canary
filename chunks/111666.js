@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(620792),
+    l = n(81239),
     a = n(442837),
     o = n(481060),
     s = n(570140),
@@ -18,8 +18,8 @@ var r = n(54381),
     E = n(151459),
     O = n(981631),
     v = n(388032),
-    y = n(172421);
-function I(e) {
+    I = n(172421);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -88,7 +88,7 @@ function S(e) {
                             let E = m.default.getUser(n);
                             if (null == E) return !1;
                             let v = !1,
-                                y = null;
+                                I = null;
                             if (null != i) {
                                 let t = i.type;
                                 if (
@@ -113,7 +113,7 @@ function S(e) {
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
                                         ((v = !0),
                                         e(n, "presence", l),
-                                        (y = {
+                                        (I = {
                                             user: E,
                                             activity: i,
                                         }));
@@ -128,7 +128,7 @@ function S(e) {
                                     (null == (b = r.current[n]) ? void 0 : b.voice) !== i &&
                                         ((v = !0),
                                         e(n, "voice", i),
-                                        (y = {
+                                        (I = {
                                             user: E,
                                             voiceChannel: t,
                                         }));
@@ -138,8 +138,8 @@ function S(e) {
                                     ((v = !0), e(n, "voice", null));
                             return (
                                 v &&
-                                    null != y &&
-                                    ((_ = y),
+                                    null != I &&
+                                    ((_ = I),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                                     t(_),
                                     (l.current = window.setTimeout(() => {
@@ -205,7 +205,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: y.container,
+                className: I.container,
                 children: N((e, t) =>
                     null == t
                         ? null
@@ -219,10 +219,10 @@ function S(e) {
                                   return (0, r.jsxs)(
                                       l.animated.div,
                                       C(
-                                          I(
+                                          y(
                                               {
                                                   ref: T,
-                                                  className: y.activityWrapper,
+                                                  className: I.activityWrapper,
                                                   style: e,
                                               },
                                               n,
@@ -237,12 +237,12 @@ function S(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: I.statusText,
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: I.statusText,
                                                         }),
                                               ],
                                           },
@@ -258,7 +258,7 @@ function S(e) {
                 children: (e, i, l, a) =>
                     (0, r.jsx)(
                         d.JO,
-                        C(I({}, l), {
+                        C(y({}, l), {
                             ref: a,
                             className: t,
                             onClick: e,

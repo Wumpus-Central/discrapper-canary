@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(481060),
     c = n(393238),
     u = n(823519);
@@ -11,7 +11,7 @@ let d = 100;
 function f(e) {
     let { children: t, className: n, collapsibleContent: a, isExpanded: f } = e,
         [p, _] = i.useState(!1),
-        [m, h] = i.useState(!0),
+        [h, m] = i.useState(!0),
         [g, E] = i.useState(!1),
         b = null != f ? f : p,
         { ref: y, height: O = 0 } = (0, c.ZP)(),
@@ -22,7 +22,7 @@ function f(e) {
                 config: s.config.stiff,
                 onRest: () => E(!0),
             },
-            m ? "animate-never" : "respect-motion-settings",
+            h ? "animate-never" : "respect-motion-settings",
         ),
         T = i.useCallback(() => {
             _(!p);
@@ -30,7 +30,7 @@ function f(e) {
     return (
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                h(!1);
+                m(!1);
             }, d);
             return () => clearTimeout(e);
         }, []),

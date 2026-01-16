@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(584973),
     p = n(100527),
     _ = n(906732),
-    m = n(313201),
-    h = n(368326),
+    h = n(313201),
+    m = n(368326),
     g = n(8454),
     E = n(633302),
     b = n(314897),
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,7 +71,7 @@ function D(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,7 +113,7 @@ function j(e) {
 }
 let M = i.forwardRef(function (e, t) {
         let { onCloseProfile: i, prompt: a } = e,
-            s = (0, m.Dt)(),
+            s = (0, h.Dt)(),
             { analyticsLocations: l } = (0, _.ZP)(),
             { trackUserProfileAction: c } = (0, y.KZ)(),
             d = () => {
@@ -124,7 +124,7 @@ let M = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                D(R({}, t), {
+                                D(w({}, t), {
                                     sourceAnalyticsLocations: l,
                                     prompt: a,
                                 }),
@@ -189,7 +189,7 @@ let M = i.forwardRef(function (e, t) {
         let {
                 emoji: p,
                 text: _,
-                animate: m,
+                animate: h,
                 className: g,
                 renderToolbar: E,
                 onShowToolbar: b,
@@ -198,10 +198,10 @@ let M = i.forwardRef(function (e, t) {
             } = e,
             I = (0, O.yi)(),
             { trackUserProfileAction: P } = (0, y.KZ)(),
-            R = (0, h.p)({ location: "CustomStatusBubble" }),
-            w = null != p ? C.Hp : 0,
-            D = C.hT + w,
-            x = C.YF + w,
+            w = (0, m.p)({ location: "CustomStatusBubble" }),
+            R = null != p ? C.Hp : 0,
+            D = C.hT + R,
+            x = C.YF + R,
             L = i.useRef(null),
             M = i.useRef(null),
             k = i.useRef(null),
@@ -255,7 +255,7 @@ let M = i.forwardRef(function (e, t) {
                 null != p
                     ? (0, r.jsx)(f.Z, {
                           emoji: p,
-                          animate: m,
+                          animate: h,
                           hideTooltip: !1,
                           tooltipDelay: T.vB,
                           className: N.statusEmoji,
@@ -270,13 +270,13 @@ let M = i.forwardRef(function (e, t) {
                       })
                     : null,
             et =
-                void 0 === v || (null != p && R)
+                void 0 === v || (null != p && w)
                     ? null
                     : (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           "aria-label": "".concat(A.intl.string(A.t.EVV6uZ), ": ").concat(v),
-                          className: o()(N.statusText, R && N.italicPrompt),
+                          className: o()(N.statusText, w && N.italicPrompt),
                           children: null != v ? v : "",
                       }),
             en = null == ee || "" === _ ? et : ee,
@@ -382,7 +382,7 @@ let M = i.forwardRef(function (e, t) {
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
             k,
-            D(R({}, s), {
+            D(w({}, s), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -403,8 +403,8 @@ function G(e) {
     let { trackUserProfileAction: u } = (0, y.KZ)(),
         { interactionType: d, interactionSource: f, resetInteraction: p } = (0, O.Xo)(),
         _ = f === T.n_.STATUS && d === T.P.REACT,
-        m = f === T.n_.STATUS && d === T.P.REPLY,
-        h = _ || m,
+        h = f === T.n_.STATUS && d === T.P.REPLY,
+        m = _ || h,
         g = i.useRef(null),
         b = i.useRef(t),
         I = i.useRef(n);
@@ -414,11 +414,11 @@ function G(e) {
     let [C, A] = i.useState(!1),
         P = i.useCallback(
             (e) => {
-                (e || !h) && A(e);
+                (e || !m) && A(e);
             },
-            [h],
+            [m],
         ),
-        w = (e) =>
+        R = (e) =>
             null == e
                 ? null
                 : null != e.id
@@ -426,7 +426,7 @@ function G(e) {
                   : E.ZP.translateSurrogatesToInlineEmoji(e.name),
         L = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
         j = () => {
-            let e = w(t);
+            let e = R(t);
             return null == n ? e : L(e, n);
         };
     return (0, r.jsx)(v.Z, {
@@ -441,19 +441,19 @@ function G(e) {
         children: () =>
             (0, r.jsx)(
                 k,
-                D(R({}, c), {
+                D(w({}, c), {
                     ref: g,
                     emoji: t,
                     text: n,
                     themeType: l,
-                    className: h ? N.hoisted : void 0,
+                    className: m ? N.hoisted : void 0,
                     onShowToolbar: P,
                     renderToolbar: (e) =>
                         (0, r.jsx)(S.ZP, {
                             targetRef: g,
                             user: a,
                             sourceType: T.n_.STATUS,
-                            isVisible: C && !h,
+                            isVisible: C && !m,
                             isExpandable: e,
                             onAction: u,
                         }),
@@ -472,7 +472,7 @@ let Z = i.forwardRef(function (e, t) {
             prompt: d,
             disableToolbar: f = !1,
         } = e,
-        m = x(e, [
+        h = x(e, [
             "user",
             "onCloseProfile",
             "previewText",
@@ -481,7 +481,7 @@ let Z = i.forwardRef(function (e, t) {
             "prompt",
             "disableToolbar",
         ]),
-        h = (0, g.Z)(a.id),
+        m = (0, g.Z)(a.id),
         { analyticsLocations: E } = (0, _.ZP)(p.Z.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
         y = (0, l.e7)([b.default], () => b.default.getId() === a.id),
         O = y && !f,
@@ -493,20 +493,20 @@ let Z = i.forwardRef(function (e, t) {
             value: E,
             children: (0, r.jsx)(
                 k,
-                R(
+                w(
                     {
                         emoji: e,
                         text: n,
                         placeholderText: u,
                         ref: t,
                     },
-                    m,
+                    h,
                 ),
             ),
         });
     }
-    let S = null != (n = null == h ? void 0 : h.emoji) ? n : null,
-        I = null != (i = null == h ? void 0 : h.state) ? i : null,
+    let S = null != (n = null == m ? void 0 : m.emoji) ? n : null,
+        I = null != (i = null == m ? void 0 : m.state) ? i : null,
         T = null != I && "" !== I ? I : null;
     return null != S || null != T || O
         ? null == S && null == T
@@ -514,13 +514,13 @@ let Z = i.forwardRef(function (e, t) {
                   value: E,
                   children: (0, r.jsx)(
                       M,
-                      R(
+                      w(
                           {
                               onCloseProfile: o,
                               prompt: d,
                               ref: t,
                           },
-                          m,
+                          h,
                       ),
                   ),
               })
@@ -529,13 +529,13 @@ let Z = i.forwardRef(function (e, t) {
                     value: E,
                     children: (0, r.jsx)(
                         G,
-                        R(
+                        w(
                             {
                                 user: a,
                                 emoji: S,
                                 text: T,
                             },
-                            m,
+                            h,
                         ),
                     ),
                 })
@@ -544,14 +544,14 @@ let Z = i.forwardRef(function (e, t) {
                       value: E,
                       children: (0, r.jsx)(
                           U,
-                          R(
+                          w(
                               {
                                   emoji: S,
                                   text: T,
                                   onCloseProfile: o,
                                   ref: t,
                               },
-                              m,
+                              h,
                           ),
                       ),
                   })
@@ -559,13 +559,13 @@ let Z = i.forwardRef(function (e, t) {
                       value: E,
                       children: (0, r.jsx)(
                           k,
-                          R(
+                          w(
                               {
                                   emoji: S,
                                   text: T,
                                   ref: t,
                               },
-                              m,
+                              h,
                           ),
                       ),
                   })

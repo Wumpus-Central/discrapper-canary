@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(442837),
     c = n(481060),
     u = n(26151),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(287734),
     p = n(249000),
     _ = n(100527),
-    m = n(367907),
-    h = n(906732),
+    h = n(367907),
+    m = n(906732),
     g = n(43267),
     E = n(933557),
     b = n(686546),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(88479),
     N = n(136995),
     P = n(25827),
-    R = n(163612),
-    w = n(601964),
+    w = n(163612),
+    R = n(601964),
     D = n(430824),
     x = n(131951),
     L = n(594174),
@@ -146,7 +146,7 @@ function eo(e) {
 }
 function es(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
-        { parentAnalyticsLocation: s } = (0, h.ZP)(),
+        { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, I.Z)(),
         p = (0, T.Z)(n),
         _ = i.useRef(null),
@@ -167,7 +167,7 @@ function es(e) {
                                     location: s,
                                     guild_id: n.guild_id,
                                 },
-                                (0, m.v_)(n),
+                                (0, h.v_)(n),
                             ),
                         ),
                         u.Z.stopRinging(n.id);
@@ -212,7 +212,7 @@ function es(e) {
                                                 location: s,
                                                 guild_id: n.guild_id,
                                             },
-                                            (0, m.v_)(n),
+                                            (0, h.v_)(n),
                                         ),
                                     ),
                                     f.default.selectVoiceChannel(n.id, !0),
@@ -233,7 +233,7 @@ function es(e) {
                                 location: s,
                                 guild_id: n.guild_id,
                             },
-                            (0, m.v_)(n),
+                            (0, h.v_)(n),
                         ),
                     ),
                 className: q.actionButton,
@@ -243,10 +243,10 @@ function es(e) {
 }
 function el(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: m } = e,
-        { analyticsLocations: y } = (0, h.ZP)(_.Z.INCOMING_CALL_MODAL),
+    let { animatedStyle: n, y: a, x: f, channel: h } = e,
+        { analyticsLocations: y } = (0, m.ZP)(_.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
-        S = (0, l.e7)([D.Z], () => D.Z.getGuild(m.guild_id)),
+        S = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
         I =
             null != S
                 ? k.ZP.getGuildIconURL({
@@ -255,12 +255,12 @@ function el(e) {
                       size: ea,
                   })
                 : null,
-        T = null != (t = (0, g.x)(m, ea, !0)) ? t : I,
-        C = (0, E.ZP)(m),
+        T = null != (t = (0, g.x)(h, ea, !0)) ? t : I,
+        C = (0, E.ZP)(h),
         [A, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         P = null != S ? "".concat(C, ", ").concat(S.name) : C,
         L = (0, l.e7)([j.Z], () => j.Z.isFocused()),
-        M = (0, l.e7)([U.Z], () => U.Z.getMode(m.id)),
+        M = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
         Z = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -273,17 +273,17 @@ function el(e) {
         );
     i.useEffect(() => {
         let e = (e) => {
-            e.key === Y.vn.ESCAPE && u.Z.stopRinging(m.id);
+            e.key === Y.vn.ESCAPE && u.Z.stopRinging(h.id);
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
-    }, [m]);
+    }, [h]);
     let B = M === H.WtW.VIDEO && A && N > 0,
-        { enabled: V } = R.Z.useExperiment({
-            guildId: null == m ? void 0 : m.guild_id,
+        { enabled: V } = w.Z.useExperiment({
+            guildId: null == h ? void 0 : h.guild_id,
             location: "IncomingCallModal",
         }),
         X =
-            M === H.WtW.VOICE || (V && m.type === H.d4z.GUILD_VOICE)
+            M === H.WtW.VOICE || (V && h.type === H.d4z.GUILD_VOICE)
                 ? K.intl.string(K.t.Js8cK3)
                 : K.intl.string(K.t.KcnWCO),
         $ = (0, r.jsxs)(r.Fragment, {
@@ -300,7 +300,7 @@ function el(e) {
                                   className: o()(q.guildIcon, q.guildIconWithoutImage),
                                   children: (0, r.jsx)("div", {
                                       className: q.guildAcronym,
-                                      children: (0, w.gM)(S),
+                                      children: (0, R.gM)(S),
                                   }),
                               }),
                           }),
@@ -333,7 +333,7 @@ function el(e) {
         }),
         el = B ? et : en,
         ec = (0, l.e7)([j.Z], () => j.Z.windowSize());
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(m.Gt, {
         value: y,
         children: (0, r.jsx)(p.Z, {
             className: q.wrapper,
@@ -365,7 +365,7 @@ function el(e) {
                                   }),
                             (0, r.jsx)(es, {
                                 canVideo: B,
-                                channel: m,
+                                channel: h,
                                 numVideoDevices: N,
                             }),
                             B && !O

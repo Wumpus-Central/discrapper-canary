@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(620792),
+    o = n(81239),
     s = n(91192),
     c = n(704215),
     u = n(952265),
@@ -18,9 +18,9 @@ var r = n(54381),
     E = n(981631),
     O = n(921944),
     v = n(388032),
-    y = n(435673);
-let I = Math.ceil(Math.sqrt(115200)),
-    C = (I - 240) / 2,
+    I = n(435673);
+let y = Math.ceil(Math.sqrt(115200)),
+    C = (y - 240) / 2,
     S = function (e) {
         var t, n;
         let { selected: l } = e,
@@ -29,7 +29,7 @@ let I = Math.ceil(Math.sqrt(115200)),
             {
                 shouldShowPopover: N,
                 shouldShowGradientAndBadge: j,
-                dismissContent: P,
+                dismissContent: x,
             } = (function () {
                 let e = (0, u.useHasAnyModalOpen)(),
                     [t, n] = (0, h.US)(e ? [] : [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING], O.R.PRIVATE_CHANNELS_LIST, !0),
@@ -42,7 +42,7 @@ let I = Math.ceil(Math.sqrt(115200)),
                     dismissContent: r,
                 };
             })(),
-            x = i.useCallback(() => {
+            P = i.useCallback(() => {
                 _.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
             }, []),
             [{ glowSpring: A }, Z] = (0, d.q_F)(() => ({
@@ -99,7 +99,7 @@ let I = Math.ceil(Math.sqrt(115200)),
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: y.wrapper,
+                    className: I.wrapper,
                     onMouseEnter: R,
                     onMouseLeave: D,
                     onFocus: R,
@@ -137,10 +137,10 @@ let I = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [y.withGradientAndBadge]: j }),
+                                className: a()({ [I.withGradientAndBadge]: j }),
                                 icon: d.qDn,
                                 listItemRef: T,
-                                onClick: x,
+                                onClick: P,
                                 route: E.Z5c.QUEST_HOME_V2,
                                 selected: l,
                                 text: v.intl.string(v.t.JALI2K),
@@ -154,17 +154,17 @@ let I = Math.ceil(Math.sqrt(115200)),
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(o.animated.div, {
-                                                className: y.shine,
+                                                className: I.shine,
                                                 style: {
                                                     transform: w.to((e) =>
                                                         "translateX(calc("
                                                             .concat(e * k, "px + ")
-                                                            .concat(e * I, "px)) translateY(-50%) rotate(45deg)"),
+                                                            .concat(e * y, "px)) translateY(-50%) rotate(45deg)"),
                                                     ),
                                                 },
                                             }),
                                             (0, r.jsx)(o.animated.div, {
-                                                className: y.glow,
+                                                className: I.glow,
                                                 style: {
                                                     opacity: A.to({
                                                         range: [0, 1],
@@ -173,7 +173,7 @@ let I = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(d.IGR, {
-                                                className: y.badge,
+                                                className: I.badge,
                                                 text: v.intl.string(v.t.y2b7CA),
                                                 color: d.TVs.colors.BACKGROUND_BRAND.css,
                                             }),
@@ -198,9 +198,9 @@ let I = Math.ceil(Math.sqrt(115200)),
                 N &&
                     (0, r.jsx)(b.Z, {
                         targetElementRef: T,
-                        onNavigateToQuestHome: x,
+                        onNavigateToQuestHome: P,
                         onRender: M,
-                        onRequestClose: P,
+                        onRequestClose: x,
                     }),
             ],
         });

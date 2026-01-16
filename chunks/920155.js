@@ -1,13 +1,13 @@
 n.d(t, {
     I: () => S,
-    m: () => w,
+    m: () => R,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(554916),
+    s = n(81239),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(819640),
     p = n(945909),
     _ = n(866577),
-    m = n(231338),
-    h = n(770966);
+    h = n(231338),
+    m = n(770966);
 function g(e, t, n) {
     return (
         t in e
@@ -96,8 +96,8 @@ let S = i.createContext(null),
     C = 240,
     A = 10,
     N = 4,
-    P = m.Vq;
-function R() {
+    P = h.Vq;
+function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -117,16 +117,16 @@ function R() {
             return 0;
     }
 }
-function w(e) {
+function R(e) {
     var t;
     let {
             children: n,
             targetElementRef: a,
-            shouldShow: m = !0,
+            shouldShow: h = !0,
             onRequestClose: g,
             position: b = "top",
             align: v,
-            alignmentStrategy: w = "trigger-center",
+            alignmentStrategy: R = "trigger-center",
             caretConfig: D,
             hasVideo: x = !1,
             gradientColor: L,
@@ -139,7 +139,7 @@ function w(e) {
             experimental_ignoreModalClicks: F = !0,
             closeOnClickOutside: B = !1,
         } = e,
-        [V, H] = i.useState(m),
+        [V, H] = i.useState(h),
         [Y, W] = i.useState(b),
         K = i.useRef(b),
         z = i.useRef(0),
@@ -164,8 +164,8 @@ function w(e) {
             );
         }, [a, $]);
     i.useEffect(() => {
-        en && m ? H(!0) : en || H(!1);
-    }, [en, m]),
+        en && h ? H(!0) : en || H(!1);
+    }, [en, h]),
         i.useEffect(() => {
             et(b);
         }, [b, et]);
@@ -173,12 +173,12 @@ function w(e) {
             H(!1);
         },
         ei = (0, _.i)({
-            shouldShow: m,
+            shouldShow: h,
             caretPosition: (0, p.z)(Y),
             onExitComplete: er,
         }),
         ea = i.useMemo(() => {
-            if ("edge" === w && null != v) {
+            if ("edge" === R && null != v) {
                 let e = "top" === Y || "bottom" === Y,
                     t = "left" === Y || "right" === Y;
                 if (e) {
@@ -186,11 +186,11 @@ function w(e) {
                 } else if (t && ("top" === v || "center" === v || "bottom" === v)) return v;
             }
             return "center";
-        }, [w, v, Y]),
+        }, [R, v, Y]),
         eo = i.useMemo(() => {
             var e;
-            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", Y, Q, X);
-        }, [w, D, Y, Q, X]),
+            if ("edge" !== R) return w(null != (e = null == D ? void 0 : D.align) ? e : "center", Y, Q, X);
+        }, [R, D, Y, Q, X]),
         es = i.useMemo(
             () => ({
                 position: Y,
@@ -211,8 +211,8 @@ function w(e) {
                         y(E({}, c), {
                             setDialogRef: t,
                             modal: G,
-                            className: o()(null != L ? h.popoverContentWithGradient : h.popover, {
-                                [h["popover--video"]]: x,
+                            className: o()(null != L ? m.popoverContentWithGradient : m.popover, {
+                                [m["popover--video"]]: x,
                             }),
                             returnRef: Z,
                             children: (0, r.jsx)(S.Provider, {
@@ -235,7 +235,7 @@ function w(e) {
                                 ? (0, r.jsx)(l.$1m, {
                                       offsetBottom: j,
                                       color: L,
-                                      className: h.popoverGradientWrapper,
+                                      className: m.popoverGradientWrapper,
                                       children: u,
                                   })
                                 : u,

@@ -7,8 +7,8 @@ n.d(t, {
 }),
     n(388685);
 var r = n(473749),
-    i = n(55160),
-    a = n(748521),
+    i = n(782425),
+    a = n(524550),
     o = n(731965);
 function s(e, t, n) {
     return (
@@ -74,7 +74,7 @@ let d = { base: n(358085).isPlatformEmbedded ? void 0 : "Discord" },
         notificationCount: void 0,
         flashQueue: [],
     }));
-function m(e) {
+function h(e) {
     let t, n, r;
     for (let i of e.titles) {
         if (null != t && null != n) break;
@@ -82,7 +82,7 @@ function m(e) {
     }
     return [t, r, n];
 }
-function h(e) {
+function m(e) {
     let { notificationCount: t } = e;
     return null == t || 0 === t ? "" : t < 0 ? "\u2022 " : "(".concat(t, ") ");
 }
@@ -126,10 +126,10 @@ function S(e) {
 function I() {
     let [e, t] = _((e) => {
             let { flashQueue: t } = e,
-                n = m(e)
+                n = h(e)
                     .filter((e) => null != e)
                     .join(" | "),
-                r = h(e);
+                r = m(e);
             return ["".concat(r).concat(n), t[0]];
         }, i.X),
         [n, a] = r.useState(!1),

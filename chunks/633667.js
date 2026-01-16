@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(620792),
+    l = n(81239),
     a = n(481060),
     o = n(393903),
     s = n(595523);
@@ -9,12 +9,12 @@ let c = Math.ceil(Math.sqrt(115200)),
     u = (c - 240) / 2,
     d = i.forwardRef(function (e, t) {
         let { children: n } = e,
-            [d, f] = i.useState(-1),
-            h = i.useCallback((e) => {
-                f(e.contentRect.width);
+            [d, p] = i.useState(-1),
+            f = i.useCallback((e) => {
+                p(e.contentRect.width);
             }, []),
-            p = (0, o.y)(h, [], { fireOnMount: !0 }),
-            [{ shineSpring: g }, b] = (0, a.q_F)(() => ({
+            h = (0, o.y)(f, [], { fireOnMount: !0 }),
+            [{ shineSpring: g }, m] = (0, a.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
                     clamp: !0,
@@ -23,22 +23,22 @@ let c = Math.ceil(Math.sqrt(115200)),
                     friction: 38,
                 },
             })),
-            m = i.useCallback(
+            b = i.useCallback(
                 (e, t) => {
-                    b({
+                    m({
                         shineSpring: 1,
                         delay: t,
                     });
                 },
-                [b],
+                [m],
             ),
             y = i.useCallback(() => {
-                b({
+                m({
                     shineSpring: 0,
                     immediate: !0,
                 });
-            }, [b]),
-            O = i.useMemo(() => {
+            }, [m]),
+            v = i.useMemo(() => {
                 let e = (0, r.jsx)(l.animated.div, {
                     className: s.shine,
                     style: {
@@ -55,23 +55,23 @@ let c = Math.ceil(Math.sqrt(115200)),
             i.useImperativeHandle(
                 t,
                 () => ({
-                    onMouseEnter: m,
+                    onMouseEnter: b,
                     onMouseLeave: y,
                 }),
-                [m, y],
+                [b, y],
             ),
             (0, r.jsx)("div", {
                 className: s.wrapper,
-                onMouseEnter: m,
+                onMouseEnter: b,
                 onMouseLeave: y,
-                onFocus: m,
+                onFocus: b,
                 onBlur: y,
-                ref: p,
+                ref: h,
                 style: {
                     "--custom-shine-dimensions": "".concat(240, "px"),
                     "--custom-shine-rotated-dimensions-delta": "".concat(u, "px"),
                 },
-                children: O,
+                children: v,
             })
         );
     });

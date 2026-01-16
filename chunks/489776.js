@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(620792),
+    l = n(81239),
     a = n(692547),
     s = n(481060),
     o = n(236413),
@@ -59,29 +59,29 @@ function p(e) {
         [h] = i.useState(p),
         [x, j] = i.useState(!1),
         { editingRule: v, createNewEditingRule: O } = (0, d.V)(),
-        { getDefaultRuleName: C } = c.I6[n],
-        y = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [N, E] = i.useState(y ? v : h),
+        { getDefaultRuleName: y } = c.I6[n],
+        C = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
+        [N, E] = i.useState(C ? v : h),
         I = (0, s.q_F)({
-            opacity: +!y,
-            pointerEvents: y ? "none" : "all",
+            opacity: +!C,
+            pointerEvents: C ? "none" : "all",
             config: b(m({}, l.config.stiff), { clamp: !0 }),
         }),
         S = (0, s.q_F)({
-            opacity: +!!y,
-            pointerEvents: y ? "all" : "none",
+            opacity: +!!C,
+            pointerEvents: C ? "all" : "none",
             config: b(m({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                E(y ? v : h);
+                E(C ? v : h);
             },
             onRest: () => {
-                E(y ? v : h), j(y);
+                E(C ? v : h), j(C);
             },
         });
-    return null == v || y
+    return null == v || C
         ? (0, r.jsxs)("div", {
               className: f.mainRuleContainer,
-              style: { height: y ? "auto" : "60px" },
+              style: { height: C ? "auto" : "60px" },
               children: [
                   (0, r.jsx)(l.animated.div, {
                       className: f.animatedRuleCardContainer,
@@ -110,7 +110,7 @@ function p(e) {
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: g.intl.format(g.t.dNjRAf, { ruleName: C() }),
+                                  children: g.intl.format(g.t.dNjRAf, { ruleName: y() }),
                               }),
                           ],
                       }),

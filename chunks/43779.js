@@ -3,22 +3,22 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(554916),
+    s = n(81239),
     o = n(442837),
     c = n(481060),
     d = n(393238),
     u = n(607070),
     m = n(960919),
     p = n(373370),
-    f = n(968843),
-    h = n(862657),
+    h = n(968843),
+    f = n(862657),
     x = n(115179),
     b = n(836831),
     g = n(644646),
     v = n(251360),
     j = n(19148),
-    C = n(69439),
-    y = n(642145),
+    y = n(69439),
+    C = n(642145),
     _ = n(388032),
     S = n(710294);
 let E = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
@@ -31,8 +31,8 @@ function T(e) {
             contentPosition: k,
             rowIndex: R,
             isVisibleInViewport: A,
-            onReceiveErrorHints: D,
-            sourceQuestContent: Z,
+            onReceiveErrorHints: Z,
+            sourceQuestContent: D,
         } = e,
         L = r.useRef(null),
         M = (0, x.w8)(P.config),
@@ -41,7 +41,7 @@ function T(e) {
         { ref: F, scrollHeight: G } = (0, d.kE)(),
         V = 104 !== G,
         { onAssetLoadComplete: z } = r.useContext(v.k),
-        { expansionSpring: W } = (0, c.q_F)({
+        { expansionSpring: H } = (0, c.q_F)({
             expansionSpring: +!!I,
             config:
                 ((T = (function (e) {
@@ -68,7 +68,7 @@ function T(e) {
                             });
                     }
                     return e;
-                })({}, y.Y)),
+                })({}, C.Y)),
                 (N = N = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(T, Object.getOwnPropertyDescriptors(N))
@@ -84,15 +84,15 @@ function T(e) {
                       }),
                 T),
         }),
-        H = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
-        q = (null == (i = P.userStatus) ? void 0 : i.claimedAt) != null,
-        K = (0, x.xN)(P.config),
-        Y = (0, x.LM)(P.config),
-        { completedRatio: Q, completedRatioDisplay: X } = (0, f.I)(P),
-        J = (0, p.Bd)(P, Z, L),
+        W = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
+        K = (null == (i = P.userStatus) ? void 0 : i.claimedAt) != null,
+        q = (0, x.xN)(P.config),
+        Q = (0, x.LM)(P.config),
+        { completedRatio: Y, completedRatioDisplay: X } = (0, h.I)(P),
+        J = (0, p.Bd)(P, D, L),
         $ = r.useMemo(
             () =>
-                q && K
+                K && q
                     ? _.intl.format(_.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, a.jsxs)(
@@ -105,18 +105,18 @@ function T(e) {
                                               className: S.orbsBalanceIcon,
                                               customSize: 14,
                                           }),
-                                          Y,
+                                          Q,
                                       ],
                                   },
                                   P.id,
                               ),
                       })
-                    : q
+                    : K
                       ? (0, a.jsx)(O, {
                             questId: P.id,
                             children: M,
                         })
-                      : K
+                      : q
                         ? _.intl.format(_.t.ro1sze, {
                               balanceHook: () =>
                                   (0, a.jsxs)(
@@ -129,7 +129,7 @@ function T(e) {
                                                   className: S.orbsBalanceIcon,
                                                   customSize: 14,
                                               }),
-                                              Y,
+                                              Q,
                                           ],
                                       },
                                       P.id,
@@ -146,7 +146,7 @@ function T(e) {
                                       P.id,
                                   ),
                           }),
-            [M, q, U, P.id, Y, K],
+            [M, K, U, P.id, Q, q],
         ),
         ee = r.useMemo(() => {
             if (null != J)
@@ -164,7 +164,7 @@ function T(e) {
         children: [
             (0, a.jsxs)(s.animated.div, {
                 style: {
-                    maxHeight: W.to([0, 1], [104, (null != G ? G : 0) + 12]),
+                    maxHeight: H.to([0, 1], [104, (null != G ? G : 0) + 12]),
                 },
                 className: S.rewardDescriptionContainer,
                 children: [
@@ -175,12 +175,12 @@ function T(e) {
                         children: (0, a.jsxs)("div", {
                             className: S.assetWrapper,
                             children: [
-                                !q && H && (0, a.jsx)("div", { className: S.completionAnimation }),
+                                !K && W && (0, a.jsx)("div", { className: S.completionAnimation }),
                                 B
                                     ? (0, a.jsxs)("div", {
                                           className: S.progressWrapper,
                                           children: [
-                                              H &&
+                                              W &&
                                                   (0, a.jsx)(c.Fmz, {
                                                       importData: E,
                                                       className: S.confetti,
@@ -191,8 +191,8 @@ function T(e) {
                                               (0, a.jsx)(b.Z, {
                                                   quest: P,
                                                   size: 76,
-                                                  percentComplete: Q,
-                                                  percentCompleteText: I && !(0, h.zi)(P) ? X : void 0,
+                                                  percentComplete: Y,
+                                                  percentCompleteText: I && !(0, f.zi)(P) ? X : void 0,
                                                   children: (0, a.jsx)("div", {
                                                       className: S.circularRewardTileWrapper,
                                                       children: (0, a.jsx)(g.Z, {
@@ -202,7 +202,7 @@ function T(e) {
                                                           autoplay: I,
                                                           onLoadComplete: z,
                                                           lazyLoad: !0,
-                                                          sourceQuestContent: Z,
+                                                          sourceQuestContent: D,
                                                       }),
                                                   }),
                                               }),
@@ -215,7 +215,7 @@ function T(e) {
                                           className: S.questRewardTileAsset,
                                           onLoadComplete: z,
                                           lazyLoad: !0,
-                                          sourceQuestContent: Z,
+                                          sourceQuestContent: D,
                                       }),
                             ],
                         }),
@@ -242,19 +242,19 @@ function T(e) {
                     V &&
                         (0, a.jsx)(s.animated.div, {
                             style: {
-                                opacity: W.to([0, 1], [1, 0]),
+                                opacity: H.to([0, 1], [1, 0]),
                             },
                             className: S.textOverflowBlur,
                         }),
                 ],
             }),
-            (0, a.jsx)(C.Z, {
+            (0, a.jsx)(y.Z, {
                 quest: P,
                 questContent: w,
                 contentPosition: k,
                 rowIndex: R,
-                onReceiveErrorHints: D,
-                sourceQuestContent: Z,
+                onReceiveErrorHints: Z,
+                sourceQuestContent: D,
             }),
         ],
     });

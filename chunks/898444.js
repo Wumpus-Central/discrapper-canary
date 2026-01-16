@@ -1,7 +1,7 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(554916),
+    a = n(81239),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(872810),
     p = n(393238),
     _ = n(607070),
-    m = n(728285),
-    h = n(210887),
+    h = n(728285),
+    m = n(210887),
     g = n(592125),
     E = n(617136),
     b = n(49436),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(110560),
     N = n(324805),
     P = n(981631),
-    R = n(231338),
-    w = n(388032),
+    w = n(231338),
+    R = n(388032),
     D = n(154236);
 function x(e, t, n) {
     return (
@@ -85,12 +85,12 @@ function U(e) {
         Q = (null == Z || null == (t = Z.userStatus) ? void 0 : t.claimedAt) != null,
         X = (null == Z || null == (I = Z.userStatus) ? void 0 : I.enrolledAt) != null,
         J = (null == Z || null == (x = Z.userStatus) ? void 0 : x.completedAt) != null,
-        $ = (0, s.e7)([h.Z], () => h.Z.getState().theme),
-        ee = (0, c.wj)($) ? R.BR.DARK : R.BR.LIGHT,
+        $ = (0, s.e7)([m.Z], () => m.Z.getState().theme),
+        ee = (0, c.wj)($) ? w.BR.DARK : w.BR.LIGHT,
         et = (0, s.e7)([_.Z], () => _.Z.useReducedMotion),
         { ref: en, height: er } = (0, p.ZP)(),
         [ei, ea] = i.useState(et),
-        eo = (0, m.Aq)(),
+        eo = (0, h.Aq)(),
         es = (0, o.eg)();
     i.useEffect(() => {
         let e = es.current;
@@ -169,7 +169,7 @@ function U(e) {
         e_ = (e) => {
             e.stopPropagation(), ef();
         },
-        em = () => {
+        eh = () => {
             (0, S.Rc)(B, z) && null != z
                 ? ((0, E._3)({
                       questId: Z.id,
@@ -204,35 +204,35 @@ function U(e) {
                   }))
                 : ep();
         },
-        eh = (0, y.CR)({ quest: Z }),
+        em = (0, y.CR)({ quest: Z }),
         eg = (() => {
             if (J && !Q)
                 return {
-                    headerText: w.intl.string(w.t.gHerLS),
-                    ctaText: w.intl.string(w.t.cfY4PE),
+                    headerText: R.intl.string(R.t.gHerLS),
+                    ctaText: R.intl.string(R.t.cfY4PE),
                     handleClickCta: q,
                     tileAssetType: "reward",
                 };
             if (X && !Q)
                 return {
-                    headerText: w.intl.string(w.t.uH2sf2),
-                    ctaText: w.intl.string(w.t.VN1Ajl),
+                    headerText: R.intl.string(R.t.uH2sf2),
+                    ctaText: R.intl.string(R.t.VN1Ajl),
                     handleClickCta: ep,
                     tileAssetType: "reward",
                 };
             if ((0, S.Rc)(B, z))
                 return {
-                    headerText: w.intl.string(w.t.Bz6SkH),
-                    ctaText: w.intl.string(w.t.BXFP30),
-                    handleClickCta: em,
+                    headerText: R.intl.string(R.t.Bz6SkH),
+                    ctaText: R.intl.string(R.t.BXFP30),
+                    handleClickCta: eh,
                     tileAssetType: "game",
                 };
-            let e = (0, S.Rt)(Z) ? eh : w.intl.string(w.t["BSXPZ+"]);
+            let e = (0, S.Rt)(Z) ? em : R.intl.string(R.t["BSXPZ+"]);
             return {
                 headerText:
                     (0, S.Rt)(Z) && (0, v.pO)(Z) && !Z.config.features.includes(N.S7.CLOUD_GAMING_ACTIVITY)
                         ? e
-                        : w.intl.string(w.t.Bz6SkH),
+                        : R.intl.string(R.t.Bz6SkH),
                 ctaText: e,
                 handleClickCta: ep,
                 tileAssetType: "game",
@@ -277,7 +277,7 @@ function U(e) {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
                                             className: D.helpText,
-                                            children: w.intl.format(w.t["Lm8/mH"], {
+                                            children: R.intl.format(R.t["Lm8/mH"], {
                                                 gamePublisher: Z.config.messages.gamePublisher,
                                             }),
                                         }),
@@ -307,7 +307,7 @@ function U(e) {
                                     ),
                                     "game" === eg.tileAssetType &&
                                         (0, r.jsx)("img", {
-                                            alt: w.intl.formatToPlainString(w.t.IskzPg, {
+                                            alt: R.intl.formatToPlainString(R.t.IskzPg, {
                                                 gameTitle: Z.config.messages.gameTitle,
                                                 gamePublisher: Z.config.messages.gamePublisher,
                                             }),

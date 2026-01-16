@@ -3,7 +3,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(620389),
+    s = n(81239),
     o = n(399606),
     c = n(28664),
     d = n(780384),
@@ -141,8 +141,8 @@ function Z(e) {
             day: "numeric",
         }),
         q = (null == (n = C.userStatus) ? void 0 : n.enrolledAt) != null,
-        Y = (null == (i = C.userStatus) ? void 0 : i.completedAt) != null,
-        { onAssetLoadComplete: Q } = r.useContext(O.k),
+        Q = (null == (i = C.userStatus) ? void 0 : i.completedAt) != null,
+        { onAssetLoadComplete: Y } = r.useContext(O.k),
         X = z ? "text-muted" : "always-white",
         J = r.useCallback(() => {
             G &&
@@ -207,7 +207,7 @@ function Z(e) {
                                         }),
                                     G &&
                                         (0, a.jsx)(c.u, {
-                                            text: Y
+                                            text: Q
                                                 ? I.intl.string(I.t.YsCuyF)
                                                 : q
                                                   ? I.intl.string(I.t["74KqrR"])
@@ -309,7 +309,7 @@ function Z(e) {
                                     quest: C,
                                     separatorSpacing: E.US.MEDIUM,
                                     withGameTile: !1,
-                                    onLoadComplete: Q,
+                                    onLoadComplete: Y,
                                 }),
                             }),
                             (0, a.jsxs)("div", {

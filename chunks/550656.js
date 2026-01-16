@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(853590),
+    s = n(81239),
     l = n(762328),
     c = n(793030),
     u = n(682973),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(337363),
     p = n(725027),
     _ = n(464281),
-    m = n(847310);
-let h = 11,
+    h = n(847310);
+let m = 11,
     g = ["left", "center", "right"],
     E = ["top", "center", "bottom"];
 function b(e) {
@@ -26,14 +26,14 @@ function b(e) {
             content: v,
             position: S = "top",
             align: I = "center",
-            spacing: T = h,
+            spacing: T = m,
             caretConfig: C,
             layerContext: A,
             animationStyle: N,
             positionKey: P,
         } = e,
-        { isRichTooltip: R } = (0, p.nr)(),
-        w = (0, u.E)("Tooltip"),
+        { isRichTooltip: w } = (0, p.nr)(),
+        R = (0, u.E)("Tooltip"),
         D = i.useMemo(() => (("left" === S || "right" === S ? E : g).includes(I) ? I : "center"), [S, I]);
     if (!n) return null;
     let x = (e) => {
@@ -41,22 +41,22 @@ function b(e) {
         let { position: l, nudge: c } = e,
             u = null != l ? l : S,
             p = null != (t = null == C ? void 0 : C.align) ? t : null != c && 0 !== c ? "custom" : "center",
-            h = null != (i = null != (n = null == C ? void 0 : C.customOffset) ? n : c) ? i : 0,
+            m = null != (i = null != (n = null == C ? void 0 : C.customOffset) ? n : c) ? i : 0,
             g = {
                 position: null != (a = null == C ? void 0 : C.position) ? a : (0, _.Av)(u),
                 align: p,
-                customOffset: "custom" === p ? h : void 0,
+                customOffset: "custom" === p ? m : void 0,
             },
             E = (0, r.jsxs)("div", {
                 id: O,
-                className: o()(m.tooltip, { [m.richTooltip]: R }),
+                className: o()(h.tooltip, { [h.richTooltip]: w }),
                 role: "tooltip",
                 "data-position": u,
                 "data-mana-component": "tooltip",
                 children: [
                     (0, r.jsx)(f._, { caretConfig: g }),
                     (0, r.jsx)("div", {
-                        className: m.tooltipContent,
+                        className: h.tooltipContent,
                         children:
                             "string" == typeof v
                                 ? (0, r.jsx)(d.Text, {
@@ -74,10 +74,10 @@ function b(e) {
               })
             : E;
     };
-    if (w) {
+    if (R) {
         let e = (0, l.a_)(S, I);
         return (0, r.jsx)(l.pS, {
-            className: m.tooltipLayer,
+            className: h.tooltipLayer,
             open: n,
             spacing: T,
             placement: e,

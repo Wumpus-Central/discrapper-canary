@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     o = n(120356),
     l = n.n(o),
-    a = n(620792),
+    a = n(81239),
     s = n(442837),
     c = n(681715),
     u = n(481060),
@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(56848),
     v = n(378441),
     y = n(388032),
-    j = n(62530);
-let O = (e) => 1 - Math.pow(1 - e, 4),
+    O = n(62530);
+let j = (e) => 1 - Math.pow(1 - e, 4),
     h = {
         mass: 1,
         friction: 64,
@@ -83,7 +83,7 @@ function P(e) {
                 config: (e) =>
                     "backgroundColor" === e
                         ? {
-                              easing: O,
+                              easing: j,
                               duration: 200,
                           }
                         : h,
@@ -91,7 +91,7 @@ function P(e) {
             },
             "respect-motion-settings",
         ),
-        V = (0, u.Yzy)(
+        L = (0, u.Yzy)(
             null == P ? void 0 : P.id,
             {
                 key: Z,
@@ -108,13 +108,13 @@ function P(e) {
                     delay: M ? 100 : 150,
                 },
                 config: {
-                    easing: O,
+                    easing: j,
                     duration: M ? 250 : 200,
                 },
             },
             "respect-motion-settings",
         ),
-        [L] = (0, u.bYB)(
+        [V] = (0, u.bYB)(
             2,
             (e) => ({
                 from: M
@@ -141,7 +141,7 @@ function P(e) {
                 config: (e) =>
                     "opacity" === e
                         ? {
-                              easing: O,
+                              easing: j,
                               duration: 200,
                           }
                         : x,
@@ -174,7 +174,7 @@ function P(e) {
                 config: (e) =>
                     "opacity" === e
                         ? {
-                              easing: O,
+                              easing: j,
                               duration: 200,
                           }
                         : k
@@ -201,7 +201,7 @@ function P(e) {
                     config: (e) =>
                         "opacity" === e
                             ? {
-                                  easing: O,
+                                  easing: j,
                                   duration: 200,
                               }
                             : M
@@ -216,7 +216,7 @@ function P(e) {
                     config: (e) =>
                         "opacity" === e
                             ? {
-                                  easing: O,
+                                  easing: j,
                                   duration: 200,
                               }
                             : M
@@ -228,26 +228,26 @@ function P(e) {
         ),
         Y = y.intl.string(E ? y.t.esVyo6 : y.t.UQqFCF);
     return (0, r.jsxs)(a.animated.div, {
-        className: j.voiceFilterHero,
+        className: O.voiceFilterHero,
         "aria-hidden": D,
         style: R,
         children: [
             (0, r.jsx)("div", {
-                className: l()([j.bgGradient, j.bgGradientHighlight]),
+                className: l()([O.bgGradient, O.bgGradientHighlight]),
             }),
-            V((e) =>
+            L((e) =>
                 (0, r.jsx)(a.animated.div, {
-                    className: j.bgGradient,
+                    className: O.bgGradient,
                     style: e,
                 }),
             ),
             (0, r.jsx)("div", {
-                className: j.iconWrapper,
+                className: O.iconWrapper,
                 children: F((e, t) =>
                     (0, r.jsx)(
                         a.animated.img,
                         {
-                            className: j.activeVoiceIcon,
+                            className: O.activeVoiceIcon,
                             style: e,
                             alt: "",
                             src: t,
@@ -257,16 +257,16 @@ function P(e) {
                 ),
             }),
             (0, r.jsx)("div", {
-                className: j.descriptionWrapper,
+                className: O.descriptionWrapper,
                 children: U((e, t) =>
                     (0, r.jsxs)(a.animated.div, {
-                        className: j.description,
+                        className: O.description,
                         style: e,
                         children: [
                             (0, r.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                className: j.offWhiteText,
+                                className: O.offWhiteText,
                                 children: y.intl.string(y.t.WW5DAC),
                             }),
                             (0, r.jsx)(u.Text, {
@@ -279,7 +279,7 @@ function P(e) {
                 ),
             }),
             (0, r.jsxs)("div", {
-                className: j.buttonWrapper,
+                className: O.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.u, {
                         __unsupportedReactNodeAsText: (0, r.jsxs)(r.Fragment, {
@@ -287,7 +287,7 @@ function P(e) {
                                 (0, r.jsx)(u.Heading, {
                                     variant: "heading-sm/normal",
                                     color: "text-strong",
-                                    className: j.tooltipHeader,
+                                    className: O.tooltipHeader,
                                     children: Y,
                                 }),
                                 (0, r.jsx)(u.Text, {
@@ -300,10 +300,10 @@ function P(e) {
                         shouldShow: k,
                         ariaHidden: !0,
                         children: (0, r.jsx)(a.animated.div, {
-                            className: j.buttonWrapper,
-                            style: L[0],
+                            className: O.buttonWrapper,
+                            style: V[0],
                             children: (0, r.jsx)(u.P3F, {
-                                className: l()(j.button, { [j.loopbackEnabled]: E }),
+                                className: l()(O.button, { [O.loopbackEnabled]: E }),
                                 "aria-label": Y,
                                 "aria-hidden": D,
                                 focusProps: { enabled: k },
@@ -322,10 +322,10 @@ function P(e) {
                         shouldShow: k,
                         text: y.intl.string(y.t.UvMx7F),
                         children: (0, r.jsx)(a.animated.div, {
-                            className: j.buttonWrapper,
-                            style: L[1],
+                            className: O.buttonWrapper,
+                            style: V[1],
                             children: (0, r.jsx)(u.P3F, {
-                                className: j.button,
+                                className: O.button,
                                 "aria-hidden": D,
                                 focusProps: { enabled: k },
                                 tabIndex: k ? 0 : -1,

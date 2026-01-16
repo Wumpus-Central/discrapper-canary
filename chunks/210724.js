@@ -7,7 +7,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(853590),
+    s = n(81239),
     o = n(286379),
     c = n(442837),
     d = n(110924),
@@ -77,8 +77,8 @@ function F(e) {
         W = r.useMemo(() => (0, C.q8)(i), [i]),
         K = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
         q = (0, d.Z)(K),
-        Y = (null == (n = i.userStatus) ? void 0 : n.completedAt) != null,
-        { hasError: Q, isLoading: X } = (0, _.kC)(),
+        Q = (null == (n = i.userStatus) ? void 0 : n.completedAt) != null,
+        { hasError: Y, isLoading: X } = (0, _.kC)(),
         J = r.useContext(R.T) || (g && G && !X && !F),
         {
             isExpanded: $,
@@ -91,7 +91,7 @@ function F(e) {
             springConfig: el,
         } = (0, Z.a)({
             isQuestAccepted: K,
-            isQuestCompleted: Y,
+            isQuestCompleted: Q,
             isQuestBarVisible: J,
         }),
         es = r.useRef(-1),
@@ -106,11 +106,11 @@ function F(e) {
             ed(!0);
         }, []),
         eg = r.useCallback(() => {
-            ed(!1), eo.current || Y || ee(!1);
-        }, [Y, ee]),
+            ed(!1), eo.current || Q || ee(!1);
+        }, [Q, ee]),
         ev = r.useCallback(() => {
-            ed(!1), Y || ee(!1), (eo.current = !1);
-        }, [Y, ee]),
+            ed(!1), Q || ee(!1), (eo.current = !1);
+        }, [Q, ee]),
         ej = r.useCallback(() => {
             em(!0);
         }, []),
@@ -171,13 +171,13 @@ function F(e) {
             K && !q && eo.current && et();
         }, [et, K, q]),
         r.useLayoutEffect(() => {
-            Y || !K || q || eo.current || ee(!1);
-        }, [K, Y, q, ee]),
+            Q || !K || q || eo.current || ee(!1);
+        }, [K, Q, q, ee]),
         r.useEffect(() => {
             W && (0, T.loadVideoQuestModal)();
         }, [W]),
         r.useEffect(() => {
-            if (Q) {
+            if (Y) {
                 var e;
                 (0, h.dA)({
                     questId: i.id,
@@ -195,7 +195,7 @@ function F(e) {
                         tags: ["quest_id:".concat(i.id), "reason:asset_loading_error"],
                     });
             }
-        }, [Q, i.id]),
+        }, [Y, i.id]),
         r.useEffect(() => {
             if (!g) {
                 var e;
@@ -229,12 +229,12 @@ function F(e) {
             }
         }, [J, ea, X, i.id, V]),
         r.useEffect(() => {
-            (!G || F) && f.Z.clearTracking(), J && ea && !X && !Q && g && f.Z.stopTracking(i.id);
-        }, [G, F, J, ea, X, Q, g, i.id]),
-        !g || (!J && ea && !X) || Q)
+            (!G || F) && f.Z.clearTracking(), J && ea && !X && !Y && g && f.Z.stopTracking(i.id);
+        }, [G, F, J, ea, X, Y, g, i.id]),
+        !g || (!J && ea && !X) || Y)
     )
-        return Q ? u.log("Not rendered due to asset error") : g || u.log("Not rendered due to ineligibility"), null;
-    let eO = 70 + 78 * !!Y;
+        return Y ? u.log("Not rendered due to asset error") : g || u.log("Not rendered due to ineligibility"), null;
+    let eO = 70 + 78 * !!Q;
     return (0, a.jsx)(S.A, {
         questOrQuests: i,
         questContent: b.jn.QUEST_BAR_V2,
@@ -302,7 +302,7 @@ function F(e) {
                                                     className: M.content,
                                                     overlayRef: ef,
                                                 },
-                                                Y ? "collapsed-with-rewards" : "collapsed-without-rewards",
+                                                Q ? "collapsed-with-rewards" : "collapsed-without-rewards",
                                             ),
                                             (0, a.jsx)(w.Z, {
                                                 className: M.content,

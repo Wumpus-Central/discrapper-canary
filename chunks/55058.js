@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(620792),
+    o = n(81239),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(388032),
     p = n(992164),
     _ = n(947866);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function E(e, t) {
     );
 }
 let b = function (e) {
-    let { isVisible: t, premiumSubscription: i, churnDiscountOffer: m, discountedPrice: g } = e,
+    let { isVisible: t, premiumSubscription: i, churnDiscountOffer: h, discountedPrice: g } = e,
         { analyticsLocations: b } = (0, c.ZP)(l.Z.CHURN_DISCOUNT_PERSISTENT_CTA),
         y = (0, s.q_F)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
@@ -81,7 +81,7 @@ let b = function (e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        E(h({}, t), {
+                        E(m({}, t), {
                             premiumSubscription: i,
                             analyticsLocations: b,
                             initialStep: d.R.CONFIRM_DISCOUNT,
@@ -106,15 +106,15 @@ let b = function (e) {
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: f.intl.format(f.t["3yZP0G"], { percent: m.discount.amount }),
+                            children: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }),
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
                             children: f.intl.format(f.t["3Q4wCy"], {
-                                numMonths: m.discount.user_usage_limit,
+                                numMonths: h.discount.user_usage_limit,
                                 discountedPrice: g,
-                                billingPeriod: (0, u.JP)(m.discount.user_usage_limit_interval),
+                                billingPeriod: (0, u.JP)(h.discount.user_usage_limit_interval),
                             }),
                         }),
                     ],

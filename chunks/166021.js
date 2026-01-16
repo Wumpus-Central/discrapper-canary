@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(481060),
     c = n(51636),
     u = n(801762);
@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-let m = 910,
-    h = 1400,
+let h = 910,
+    m = 1400,
     g = (e) => {
         let { cards: t, className: n, cardType: a } = e,
-            d = () => (window.innerWidth < m ? 1 : window.innerWidth < h ? 2 : 3),
+            d = () => (window.innerWidth < h ? 1 : window.innerWidth < m ? 2 : 3),
             [p, g] = i.useState(0),
             [E, b] = i.useState(d()),
             y = t.length;

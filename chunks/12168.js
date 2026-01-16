@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => x,
-    u: () => w,
+    u: () => R,
 }),
     n(388685);
 var r = n(54381),
@@ -8,15 +8,15 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(620792),
+    l = n(81239),
     c = n(681715),
     u = n(481060),
     d = n(596454),
     f = n(313201),
     p = n(104505),
     _ = n(543241),
-    m = n(318766),
-    h = n(907040),
+    h = n(318766),
+    m = n(907040),
     g = n(633302),
     E = n(806966),
     b = n(176354),
@@ -78,7 +78,7 @@ function N(e, t) {
     );
 }
 let P = v.Hz.CHAT,
-    R = [
+    w = [
         g.ZP.getByName("thumbsup"),
         g.ZP.getByName("eyes"),
         g.ZP.getByName("laughing"),
@@ -86,7 +86,7 @@ let P = v.Hz.CHAT,
         g.ZP.getByName("fork_and_knife"),
         g.ZP.getByName("yum"),
     ].filter(y.lm);
-function w(e) {
+function R(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
         c = i.useRef(null),
         f = (0, p.X)(c);
@@ -96,7 +96,7 @@ function w(e) {
             onClick: a,
             focusProps: { enabled: !n },
             children: (0, r.jsx)(u.AMe, {
-                config: m.u,
+                config: h.u,
                 from: { value: 0 },
                 to: { value: +!!f },
                 children: (e) => {
@@ -144,7 +144,7 @@ function x(e) {
             onFocus: l,
             onSelectEmoji: d,
             onSelectDisabledEmoji: p,
-            onExpandedToggle: m,
+            onExpandedToggle: h,
             emojiSearchProps: g,
             recentlyUsedEmojis: y,
             analyticsOverride: T,
@@ -153,7 +153,7 @@ function x(e) {
         x = (0, f.Dt)(),
         [L, j] = i.useState(!1),
         M = (0, _.wC)(t.guild_id),
-        k = (0, s.uniqBy)([...M, ...R], "name")
+        k = (0, s.uniqBy)([...M, ...w], "name")
             .filter(
                 (e) =>
                     !b.ZP.isEmojiFilteredOrLocked({
@@ -165,7 +165,7 @@ function x(e) {
             .slice(0, O.e5);
     null != y && y.length > 0 && k.splice(k.length - 1, 1, y[0]);
     let U = (e) => {
-            j(e), null == m || m(e);
+            j(e), null == h || h(e);
         },
         G = (e) => {
             let { emoji: t, willClose: n } = e;
@@ -191,7 +191,7 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: I.container,
                 children: [
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(m.Z, {
                         analyticsOverride: T,
                         channel: t,
                         className: o()(I.animatedPicker, { [I.animatedPickerTall]: L }),
@@ -229,7 +229,7 @@ function x(e) {
                                             text: e.name,
                                             position: "top",
                                             asContainer: !0,
-                                            children: (0, r.jsx)(w, {
+                                            children: (0, r.jsx)(R, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

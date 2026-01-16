@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(55160),
+    s = n(782425),
     l = n(442837),
     c = n(114101),
     u = n(28664),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(28546),
     p = n(581883),
     _ = n(459273),
-    m = n(713913),
-    h = n(541716),
+    h = n(713913),
+    m = n(541716),
     g = n(443603),
     E = n(981631),
     b = n(957825),
@@ -33,24 +33,24 @@ function v(e, t) {
             );
         }),
         [C, A, N, P] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
-        R = i.useRef(0),
-        w = i.useCallback(() => {
+        w = i.useRef(0),
+        R = i.useCallback(() => {
             I(!0),
-                clearTimeout(R.current),
-                (R.current = setTimeout(() => {
-                    I(!1), (R.current = 0);
+                clearTimeout(w.current),
+                (w.current = setTimeout(() => {
+                    I(!1), (w.current = 0);
                 }, 2000));
         }, []);
     (0, _.yp)({
         event: E.CkL.FAVORITE_GIF,
-        handler: w,
+        handler: R,
     });
     let D = i.useCallback(() => {
             (0, f.RO)(b.X1.GIF, a, v.id);
         }, [a, v.id]),
         { Component: x, events: L, play: j } = (0, c.V)(),
-        M = (0, m.v)(d.O),
-        k = a === h.Ie.NORMAL ? M : void 0;
+        M = (0, h.v)(d.O),
+        k = a === m.Ie.NORMAL ? M : void 0;
     if (n) return null;
     let U = C === b.X1.GIF && A === a && P === v.id;
     return (0, r.jsx)(u.u, {

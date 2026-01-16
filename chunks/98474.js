@@ -2,7 +2,7 @@ n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(921254),
-    o = n(620792),
+    o = n(81239),
     s = n(748780),
     l = n(481060),
     c = n(596454),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(912893),
     p = n(768581),
     _ = n(176354),
-    m = n(675654),
-    h = n(700700);
+    h = n(675654),
+    m = n(700700);
 function g(e, t, n) {
     return (
         t in e
@@ -73,8 +73,8 @@ function I(e) {
         [I, T] = i.useState(0),
         [C, A] = i.useState(0),
         [N, P] = i.useState(null),
-        { confettiCanvas: R } = i.useContext(u.h),
-        w = (0, a.uR)(R, N),
+        { confettiCanvas: w } = i.useContext(u.h),
+        R = (0, a.uR)(w, N),
         D = i.useMemo(
             () => [
                 {
@@ -132,8 +132,8 @@ function I(e) {
         i.useEffect(() => {
             I > 0 &&
                 C > 0 &&
-                w.createConfetti(
-                    y(E({}, m.We), {
+                R.createConfetti(
+                    y(E({}, h.We), {
                         position: {
                             type: "static",
                             value: {
@@ -143,24 +143,24 @@ function I(e) {
                         },
                     }),
                 );
-        }, [w, I, C]),
+        }, [R, I, C]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {
                     ref: P,
                     sprites: D,
                     colors: S,
-                    spriteWidth: m.Ko,
-                    spriteHeight: m.Ko,
+                    spriteWidth: h.Ko,
+                    spriteHeight: h.Ko,
                 }),
                 (0, r.jsx)(d.ZP, {
                     children: (0, r.jsx)(o.animated.div, {
                         style: E({}, j),
-                        className: h.emojiContainer,
+                        className: m.emojiContainer,
                         children: (0, r.jsx)(o.animated.div, {
                             style: y(E({}, M), { opacity: M.opacity }),
                             children: (0, r.jsx)(c.Z, {
-                                className: h.emoji,
+                                className: m.emoji,
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,

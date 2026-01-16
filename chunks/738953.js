@@ -1,7 +1,7 @@
 n.d(t, { Z: () => V }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620389),
+    a = n(81239),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(104505),
     p = n(368326),
     _ = n(429467),
-    m = n(728285),
-    h = n(680295),
+    h = n(728285),
+    m = n(680295),
     g = n(430824),
     E = n(5192),
     b = n(785717),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(502762),
     N = n(544989),
     P = n(481932),
-    R = n(195387),
-    w = n(664794),
+    w = n(195387),
+    R = n(664794),
     D = n(4517),
     x = n(978395),
     L = n(161572),
@@ -106,7 +106,7 @@ function V(e) {
             onClickContainer: $,
         } = e,
         { analyticsLocations: ee } = (0, u.ZP)([...Q, c.Z.USER_PROFILE_POPOUT]),
-        et = (0, m.Aq)(),
+        et = (0, h.Aq)(),
         en = (0, b.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -133,7 +133,7 @@ function V(e) {
         ef = n.id === G.id,
         ep = (0, p.p)({ location: "UserProfilePopout" }),
         e_ = i.useMemo(() => (0, _.Z)(), []),
-        em = (e) => {
+        eh = (e) => {
             null == K || K(),
                 et.dispatch(j.CkL.POPOUT_CLOSE),
                 (0, S.openUserProfileModal)(
@@ -151,14 +151,14 @@ function V(e) {
                     ),
                 );
         },
-        eh = () =>
+        em = () =>
             q
                 ? null
                 : (0, r.jsx)(s.sNh, {
                       id: "view-profile",
                       label: k.intl.string(k.t["+Xp3hq"]),
                       action: () => {
-                          em(),
+                          eh(),
                               (0, y.pQ)(
                                   Z(
                                       {
@@ -206,7 +206,7 @@ function V(e) {
                                     }),
                                 (0, r.jsxs)(N.Z, {
                                     children: [
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(w.Z, {
                                             shouldShowTooltip: null === ec.interactionType,
                                             user: n,
                                             guildId: F,
@@ -219,10 +219,10 @@ function V(e) {
                                             user: n,
                                         }),
                                         !ef &&
-                                            (0, r.jsx)(w.Cn, {
+                                            (0, r.jsx)(R.Cn, {
                                                 user: n,
                                                 guildId: F,
-                                                viewProfileItem: eh(),
+                                                viewProfileItem: em(),
                                                 appContext: X,
                                             }),
                                     ],
@@ -247,7 +247,7 @@ function V(e) {
                                             guildId: F,
                                             channelId: V,
                                             themeType: M.l.POPOUT,
-                                            onOpenProfile: q ? void 0 : em,
+                                            onOpenProfile: q ? void 0 : eh,
                                         }),
                                         (0, r.jsx)(D.Z, {
                                             ref: ed,
@@ -266,7 +266,7 @@ function V(e) {
                                     displayProfile: eo,
                                     guild: er,
                                     isHoveringOrFocusing: null == ec.interactionType && es,
-                                    onOpenProfile: q ? void 0 : em,
+                                    onOpenProfile: q ? void 0 : eh,
                                     channelId: V,
                                     onClose: K,
                                 }),
@@ -279,7 +279,7 @@ function V(e) {
                                     disableAutoFocus: J,
                                 }),
                                 (null == eo ? void 0 : eo.profileEffect) != null &&
-                                    (0, r.jsx)(h.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         skuId: null == eo || null == (t = eo.profileEffect) ? void 0 : t.skuId,
                                         isHovering: el,
                                     }),

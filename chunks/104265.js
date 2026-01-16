@@ -3,7 +3,7 @@ var l = n(54381),
     i = n(473749),
     r = n(120356),
     o = n.n(r),
-    a = n(620792),
+    a = n(81239),
     c = n(399606),
     s = n(692547),
     u = n(780384),
@@ -34,8 +34,8 @@ function x(e) {
             );
         }),
         P = (0, f.Z)(t, 1000),
-        k = null == P || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => P[e])),
-        E = y && !r && n.isUnseen,
+        E = null == P || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => P[e])),
+        k = y && !r && n.isUnseen,
         I = (0, d.q_F)(
             {
                 transform: r || _.enabled ? "scale(1)" : "scale(0.7)",
@@ -44,12 +44,12 @@ function x(e) {
             },
             "animate-always",
         ),
-        D = (0, d.dQu)(s.Z.colors.BORDER_SUBTLE),
-        M = (0, d.dQu)(s.Z.unsafe_rawColors.BRAND_500),
-        A = (0, d.q_F)(
+        A = (0, d.dQu)(s.Z.colors.BORDER_SUBTLE),
+        D = (0, d.dQu)(s.Z.unsafe_rawColors.BRAND_500),
+        M = (0, d.q_F)(
             {
-                from: { color: M.spring() },
-                color: D.spring({ opacity: b ? 0.5 : 0.25 }),
+                from: { color: D.spring() },
+                color: A.spring({ opacity: b ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500,
             },
@@ -88,7 +88,7 @@ function x(e) {
             [j.selected]: r,
             [j.pressed]: T,
         }),
-        z = E ? { borderColor: A.color } : {};
+        z = k ? { borderColor: M.color } : {};
     return (0, l.jsx)(a.animated.div, {
         style: z,
         className: B,
@@ -137,7 +137,7 @@ function x(e) {
                 }),
                 R(
                     (e, t) =>
-                        k > 0 &&
+                        E > 0 &&
                         t &&
                         (0, l.jsx)(a.animated.div, {
                             className: j.memberCount,
@@ -145,11 +145,11 @@ function x(e) {
                             children: (0, l.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                children: g.intl.format(g.t.EgKsZA, { memberCount: k }),
+                                children: g.intl.format(g.t.EgKsZA, { memberCount: E }),
                             }),
                         }),
                 ),
-                E &&
+                k &&
                     (0, l.jsx)(d.IGR, {
                         color: s.Z.unsafe_rawColors.BRAND_260.css,
                         text: g.intl.string(g.t.y2b7CA),

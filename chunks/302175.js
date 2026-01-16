@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(853590),
+    s = n(81239),
     l = n(907331),
     c = n(793030),
     u = n(442837),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(481060),
     p = n(100527),
     _ = n(906732),
-    m = n(879892),
-    h = n(245004),
+    h = n(879892),
+    m = n(245004),
     g = n(430824),
     E = n(594174),
     b = n(63063),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(619733),
     N = n(282793),
     P = n(535396),
-    R = n(981631),
-    w = n(353149),
+    w = n(981631),
+    R = n(353149),
     D = n(556970),
     x = n(388032),
     L = n(887143),
@@ -108,10 +108,10 @@ function Z(e) {
         K = i.useCallback(() => {
             let e = g.Z.getGuild(t);
             null != e &&
-                (0, m.u)({
+                (0, h.u)({
                     analyticsLocation: {
-                        page: R.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: R.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                        page: w.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: w.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: M,
@@ -172,7 +172,7 @@ function Z(e) {
                 style: G(k({}, X), { transform: X.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(j.contentContainer, L.contentContainer),
                 children: [
-                    (0, r.jsx)(h.xm, {
+                    (0, r.jsx)(m.xm, {
                         heading: a,
                         description: c,
                         label: x.intl.formatToPlainString(D.default.QOacIS, {
@@ -186,7 +186,7 @@ function Z(e) {
                         className: j.buttonsContainer,
                         children: [
                             (0, r.jsx)(d.u, {
-                                text: x.intl.formatToPlainString(w.default["5xN/C1"], {
+                                text: x.intl.formatToPlainString(R.default["5xN/C1"], {
                                     premiumGroupProductName: (0, N.sO)(),
                                 }),
                                 shouldShow: (null == F ? void 0 : F.isPremiumGroupMember()) === !0,
@@ -269,7 +269,7 @@ let B = 3,
                       (0, r.jsx)(c.xvT, {
                           variant: "text-lg/medium",
                           children: x.intl.format(D.default.OdCzjA, {
-                              helpDeskArticle: b.Z.getArticleURL(R.BhN.GUILD_BOOSTING_FAQ),
+                              helpDeskArticle: b.Z.getArticleURL(w.BhN.GUILD_BOOSTING_FAQ),
                           }),
                       }),
                       (0, r.jsx)("div", {

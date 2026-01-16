@@ -1,7 +1,7 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(620389),
+    l = n(81239),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -131,7 +131,7 @@ function L(e) {
         else if ((A === C.PG.LANDING || A === C.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(T.Z, {});
     }
     let q = A === C.xh[C.xh.length - 1],
-        J = async () => {
+        X = async () => {
             let e = O.Z.advancedMode;
             if (k)
                 try {
@@ -149,7 +149,7 @@ function L(e) {
                 }
             return !0;
         },
-        X = async () => {
+        J = async () => {
             f.default.track(
                 P.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 D(R({}, (0, g.hH)(b)), {
@@ -159,7 +159,7 @@ function L(e) {
                 }),
             ),
                 (0, h.Nb)((0, C.lg)(A)),
-                (await J()) && (0, h.IG)(b, A);
+                (await X()) && (0, h.IG)(b, A);
         },
         Q = async () => {
             f.default.track(
@@ -170,7 +170,7 @@ function L(e) {
                     skip: !1,
                 }),
             ),
-                (await J()) && (0, h.Wy)(b, A);
+                (await X()) && (0, h.Wy)(b, A);
         },
         $ = null;
     U &&
@@ -199,7 +199,7 @@ function L(e) {
             text: G ? w.intl.string(w.t.PDTjLN) : w.intl.string(w.t["5Wxrcd"]),
             icon: d.ZSh,
             iconPosition: "end",
-            onClick: X,
+            onClick: J,
             disabled: U || M,
         });
     return (0, r.jsx)(o.W, {

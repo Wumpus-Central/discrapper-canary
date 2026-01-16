@@ -1,13 +1,13 @@
 n.d(t, {
-    US: () => h,
+    US: () => m,
     ZP: () => E,
-    fF: () => m,
+    fF: () => h,
 });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(620792),
+    o = n(81239),
     s = n(692547),
     l = n(780384),
     c = n(481060),
@@ -16,10 +16,10 @@ var i = n(120356),
     f = n(455357),
     p = n(981631),
     _ = n(479470),
-    m = (function (e) {
+    h = (function (e) {
         return (e[(e.SMALL = 24)] = "SMALL"), (e[(e.MEDIUM = 32)] = "MEDIUM"), e;
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (e[(e.SMALL = 2)] = "SMALL"), (e[(e.MEDIUM = 8)] = "MEDIUM"), e;
     })({});
 function g(e) {
@@ -35,8 +35,8 @@ let E = function (e) {
             className: t,
             logotypeClassName: n,
             gameTileSize: i = 24,
-            quest: m,
-            separatorSpacing: h = 2,
+            quest: h,
+            separatorSpacing: m = 2,
             theme: E = p.BRd.DARK,
             withCosponsor: b = !0,
             withGameTile: y = !0,
@@ -44,8 +44,8 @@ let E = function (e) {
             onLoadComplete: v,
         } = e,
         S = (0, l.wj)(E) ? p.BRd.DARK : p.BRd.LIGHT,
-        I = (0, u.Gd)(m.id, S),
-        T = b && null != m.config.cosponsorMetadata && null != I;
+        I = (0, u.Gd)(h.id, S),
+        T = b && null != h.config.cosponsorMetadata && null != I;
     return (0, r.jsxs)("div", {
         className: a()(_.partnerBranding, t),
         children: [
@@ -57,7 +57,7 @@ let E = function (e) {
                             ref: e,
                             className: _.partnerBrandingGameTile,
                             alt: "",
-                            src: (0, d.fh)(m, d.eC.GAME_TILE, S).url,
+                            src: (0, d.fh)(h, d.eC.GAME_TILE, S).url,
                             style: {
                                 borderRadius: g(i),
                                 width: i,
@@ -73,8 +73,8 @@ let E = function (e) {
                         ref: e,
                         className: a()(_.partnerBrandingLogotype, n, { [_.partnerBrandingLogotypeWithCosponsor]: T }),
                         style: O,
-                        alt: m.config.messages.gameTitle,
-                        src: (0, d.fh)(m, d.eC.LOGO_TYPE, S).url,
+                        alt: h.config.messages.gameTitle,
+                        src: (0, d.fh)(h, d.eC.LOGO_TYPE, S).url,
                         onLoad: v,
                     }),
             }),
@@ -83,7 +83,7 @@ let E = function (e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: _.cosponsorBrandSeparatorWrapper,
-                            style: { margin: "0 ".concat(h, "px") },
+                            style: { margin: "0 ".concat(m, "px") },
                             children: (0, r.jsx)(c.P$X, {
                                 className: _.cosponsorBrandSeparator,
                                 color: s.Z.colors.WHITE,
@@ -102,7 +102,7 @@ let E = function (e) {
                                     ),
                                     style: O,
                                     alt:
-                                        null != (i = null == (t = m.config.cosponsorMetadata) ? void 0 : t.name)
+                                        null != (i = null == (t = h.config.cosponsorMetadata) ? void 0 : t.name)
                                             ? i
                                             : "",
                                     src: I.url,

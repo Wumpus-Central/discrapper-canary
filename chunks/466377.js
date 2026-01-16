@@ -1,18 +1,18 @@
 n.d(t, {
     Cg: () => A,
-    Y0: () => R,
+    Y0: () => w,
     YA: () => M,
     fM: () => P,
     hz: () => x,
     mz: () => L,
     ol: () => j,
-    xB: () => w,
+    xB: () => R,
 });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(990547),
     c = n(748780),
     u = n(197723),
@@ -20,8 +20,8 @@ var r = n(54381),
     f = n(693789),
     p = n(507274),
     _ = n(481060),
-    m = n(793903),
-    h = n(600164),
+    h = n(793903),
+    m = n(600164),
     g = n(602091),
     E = n(231338),
     b = n(388032),
@@ -111,7 +111,7 @@ let N = Object.freeze({
 var P = (function (e) {
     return (e.DEFAULT = "default"), (e.SUBTLE = "subtle"), e;
 })({});
-function R(e) {
+function w(e) {
     var t,
         {
             transitionState: n,
@@ -119,7 +119,7 @@ function R(e) {
             size: u = "small",
             role: f = "dialog",
             className: _,
-            fullscreenOnMobile: h = !0,
+            fullscreenOnMobile: m = !0,
             hideShadow: b = !1,
             onAnimationEnd: O = E.dG,
             returnRef: S,
@@ -139,17 +139,17 @@ function R(e) {
             "animation",
             "parentComponent",
         ]);
-    let R = n === g.Dv.ENTERING || n === g.Dv.ENTERED;
-    i.useContext(m.Z)({
+    let w = n === g.Dv.ENTERING || n === g.Dv.ENTERED;
+    i.useContext(h.Z)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: A },
     });
-    let { reducedMotion: w } = i.useContext(d.Sfi),
+    let { reducedMotion: R } = i.useContext(d.Sfi),
         D = (0, d.q_F)(
             {
-                opacity: +!!R,
-                transform: R || w.enabled || "subtle" === C ? "scale(1)" : "scale(0.7)",
+                opacity: +!!w,
+                transform: w || R.enabled || "subtle" === C ? "scale(1)" : "scale(0.7)",
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -189,7 +189,7 @@ function R(e) {
                 {
                     children: (0, r.jsx)(s.animated.div, {
                         className: o()(_, y.root, N[u], {
-                            [y.fullscreenOnMobile]: h,
+                            [y.fullscreenOnMobile]: m,
                             [y.rootWithShadow]: !b,
                         }),
                         ref: x,
@@ -204,16 +204,16 @@ function R(e) {
         ),
     });
 }
-function w(e) {
+function R(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(g.zM);
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(m.Z, {
         grow: 0,
         shrink: 0,
-        direction: null != (t = e.direction) ? t : h.Z.Direction.HORIZONTAL,
-        justify: null != (n = e.justify) ? n : h.Z.Justify.START,
-        align: null != (a = e.align) ? a : h.Z.Align.CENTER,
-        wrap: null != (s = e.wrap) ? s : h.Z.Wrap.NO_WRAP,
+        direction: null != (t = e.direction) ? t : m.Z.Direction.HORIZONTAL,
+        justify: null != (n = e.justify) ? n : m.Z.Justify.START,
+        align: null != (a = e.align) ? a : m.Z.Align.CENTER,
+        wrap: null != (s = e.wrap) ? s : m.Z.Wrap.NO_WRAP,
         className: o()(y.header, e.className, { [y.separator]: null == (l = e.separator) || l }),
         id: u ? void 0 : c,
         children: e.children,
@@ -250,13 +250,13 @@ function x(e) {
 }
 function L(e) {
     var t, n, i, a, s;
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(m.Z, {
         grow: 0,
         shrink: 0,
-        direction: null != (t = e.direction) ? t : h.Z.Direction.HORIZONTAL_REVERSE,
-        justify: null != (n = e.justify) ? n : h.Z.Justify.START,
-        align: null != (i = e.align) ? i : h.Z.Align.STRETCH,
-        wrap: null != (a = e.wrap) ? a : h.Z.Wrap.NO_WRAP,
+        direction: null != (t = e.direction) ? t : m.Z.Direction.HORIZONTAL_REVERSE,
+        justify: null != (n = e.justify) ? n : m.Z.Justify.START,
+        align: null != (i = e.align) ? i : m.Z.Align.STRETCH,
+        wrap: null != (a = e.wrap) ? a : m.Z.Wrap.NO_WRAP,
         className: o()(y.footer, e.className, { [y.footerSeparator]: null == (s = e.separator) || s }),
         children: (0, r.jsx)(_.y5t, { children: e.children }),
     });

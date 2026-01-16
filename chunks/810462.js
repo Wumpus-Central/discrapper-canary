@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(55160),
+    a = n(782425),
     o = n(260866),
     s = n(481060),
     l = n(806966),
@@ -14,8 +14,8 @@ let d = i.forwardRef(function (e, t) {
             onKeyDown: f,
             gridNavigatorId: p,
             expressionsListRef: _,
-            defaultSearchPlaceholder: m,
-            emptySearchPlaceholder: h,
+            defaultSearchPlaceholder: h,
+            emptySearchPlaceholder: m,
         } = e,
         g = i.useRef(null),
         [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
@@ -47,7 +47,7 @@ let d = i.forwardRef(function (e, t) {
                 null == (e = g.current) || e.focus();
             }
         }, [b]);
-    let I = () => (null != y ? y : d || null == h ? m : h);
+    let I = () => (null != y ? y : d || null == m ? h : m);
     return (0, r.jsx)("div", {
         className: u.wrapper,
         children: (0, r.jsx)(s.E1j, {

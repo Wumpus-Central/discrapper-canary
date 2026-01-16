@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(990547),
     c = n(793030),
     u = n(481060),
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -68,7 +68,7 @@ function E(e) {
             transitionState: n,
             animationVariant: a = "default",
             returnRef: _,
-            "aria-label": h,
+            "aria-label": m,
             onClose: E,
             trackingProps: b,
             children: y,
@@ -91,12 +91,12 @@ function E(e) {
         children: (0, r.jsx)(
             u.VqE,
             g(
-                m(
+                h(
                     {
                         id: O,
                         role: "dialog",
-                        "aria-label": h,
-                        "aria-labelledby": null != h ? void 0 : v.headingId,
+                        "aria-label": m,
+                        "aria-labelledby": null != m ? void 0 : v.headingId,
                         returnRef: _,
                     },
                     b,

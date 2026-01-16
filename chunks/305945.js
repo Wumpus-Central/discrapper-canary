@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(853590),
+    s = n(81239),
     l = n(692547),
     c = n(251052),
     u = n(673824),
@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(155127),
     p = n(483566),
     _ = n(117325);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -122,7 +122,7 @@ function N(e, t, n, i) {
     });
 }
 function P(e) {
-    let { onChange: t, checked: n, disabled: a, focusProps: m, innerRef: g } = e,
+    let { onChange: t, checked: n, disabled: a, focusProps: h, innerRef: g } = e,
         y = b(e, ["onChange", "checked", "disabled", "focusProps", "innerRef"]),
         { reducedMotion: v } = i.useContext(d.S),
         S = i.useRef(null),
@@ -136,10 +136,10 @@ function P(e) {
             },
             "animate-always",
         );
-    function R(e) {
+    function w(e) {
         T(!1), e.stopPropagation(), null == t || t(e.currentTarget.checked);
     }
-    function w(e) {
+    function R(e) {
         a || e.repeat || ((" " === e.key || "Enter" === e.key) && T(!0));
     }
     function D(e) {
@@ -148,7 +148,7 @@ function P(e) {
     }
     return (0, r.jsx)(
         p.g,
-        E(h({}, y), {
+        E(m({}, y), {
             disabled: a,
             layout: "horizontal",
             layoutConfig: { horizontalControlColumnWidth: "auto" },
@@ -156,7 +156,7 @@ function P(e) {
             children: (e) =>
                 (0, r.jsx)(
                     f.tE,
-                    E(h({}, m), {
+                    E(m({}, h), {
                         within: !0,
                         offset: -2,
                         children: (0, r.jsxs)(s.animated.div, {
@@ -220,9 +220,9 @@ function P(e) {
                                     },
                                     className: _.input,
                                     tabIndex: a ? -1 : 0,
-                                    onKeyDown: w,
+                                    onKeyDown: R,
                                     onKeyUp: D,
-                                    onChange: R,
+                                    onChange: w,
                                     checked: n,
                                     disabled: a,
                                 }),

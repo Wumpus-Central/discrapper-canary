@@ -8,13 +8,13 @@ var r,
     l = n(473749),
     a = n(120356),
     s = n.n(a),
-    o = n(620389),
+    o = n(81239),
     c = n(772848),
     d = n(681715),
     u = n(477690),
     g = n(481060),
-    m = n(624138),
-    f = n(981631),
+    f = n(624138),
+    m = n(981631),
     b = n(556970),
     p = n(388032),
     h = n(788555);
@@ -32,8 +32,8 @@ function x(e, t, n) {
     );
 }
 let j = -1,
-    v = (0, m.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    O = (0, m.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    v = (0, f.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    O = (0, f.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     y = {
         tension: 140,
         friction: 30,
@@ -75,7 +75,7 @@ class N extends (r = l.Component) {
     }
     getTierMarkerTooltipText(e) {
         let { progress: t } = this.props;
-        if (null == e.name || e.key === f.Eu4.NONE) return null;
+        if (null == e.name || e.key === m.Eu4.NONE) return null;
         let n = Math.min(t, e.numRequired);
         return this.getTierDisabled(e)
             ? {
@@ -96,12 +96,12 @@ class N extends (r = l.Component) {
             s = a[n],
             c = l >= e.numRequired,
             u = null != s && e.key === s.key,
-            m = e.key === a[0].key,
-            f = this.getTierDisabled(e);
-        r = m ? h.tierFirst : f ? h.tierInProgress : u ? h.tierCurrent : c ? h.tierAccomplished : h.tierInProgress;
-        let b = e.y - (m ? 0 : O / 2),
+            f = e.key === a[0].key,
+            m = this.getTierDisabled(e);
+        r = f ? h.tierFirst : m ? h.tierInProgress : u ? h.tierCurrent : c ? h.tierAccomplished : h.tierInProgress;
+        let b = e.y - (f ? 0 : O / 2),
             p = this.state.tierMarkerActive >= t,
-            x = !m && u && p,
+            x = !f && u && p,
             j = this.getTierMarkerTooltipText(e);
         return (0, i.jsx)(
             g.AMe,

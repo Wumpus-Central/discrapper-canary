@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(554916),
+    s = n(81239),
     l = n(692547),
     c = n(28664),
     u = n(481060),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(393903),
     p = n(448986),
     _ = n(617136),
-    m = n(49436),
-    h = n(373370),
+    h = n(49436),
+    m = n(373370),
     g = n(968843),
     E = n(477005),
     b = n(698716),
@@ -53,7 +53,7 @@ function P(e) {
     }
     return e;
 }
-function R(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,12 +65,12 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,7 +83,7 @@ let D = (0, s.animated)(u.CJ0),
                 isQuestExpired: n,
                 quest: a,
                 location: N,
-                size: R,
+                size: w,
                 expansionSpring: x,
                 isAnimating: L,
                 isExpanded: j,
@@ -101,8 +101,8 @@ let D = (0, s.animated)(u.CJ0),
             }),
             K = (0, f.y)(W),
             z = (0, S.uq)(N),
-            q = N === m.jn.QUESTS_EMBED,
-            Q = (0, h.t5)(a, I.dr.QUESTS_CARD, N, G),
+            q = N === h.jn.QUESTS_EMBED,
+            Q = (0, m.t5)(a, I.dr.QUESTS_CARD, N, G),
             X = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
             J = (0, _.O5)(),
             $ = (0, g.B6)(a.config.expiresAt),
@@ -134,7 +134,7 @@ let D = (0, s.animated)(u.CJ0),
             className: o()(A.outerContainer, {
                 [A.outerContainerGiftInventory]: z,
                 [A.outerContainerEmbed]: q,
-                [A.outerContainerXs]: "xs" === R,
+                [A.outerContainerXs]: "xs" === w,
             }),
             "aria-label": C.intl.string(C.t.dcl9MQ),
             style: { height: z ? F : void 0 },
@@ -237,9 +237,9 @@ let D = (0, s.animated)(u.CJ0),
                                                         children: (0, r.jsx)(u.Heading, {
                                                             ref: K,
                                                             variant:
-                                                                "lg" === R
+                                                                "lg" === w
                                                                     ? "heading-xxl/bold"
-                                                                    : "sm" === R
+                                                                    : "sm" === w
                                                                       ? "heading-xl/bold"
                                                                       : "heading-lg/bold",
                                                             className: A.heading,
@@ -299,7 +299,7 @@ let D = (0, s.animated)(u.CJ0),
                                             "aria-hidden": !L && !j,
                                             children: (0, r.jsx)(
                                                 u.P3F,
-                                                w(P({}, e), {
+                                                R(P({}, e), {
                                                     className: A.iconWrapper,
                                                     "aria-label": C.intl.string(C.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {

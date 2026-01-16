@@ -1,7 +1,7 @@
-n.d(t, { X: () => h }), n(388685);
+n.d(t, { X: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(620792);
+    a = n(81239);
 n(442837), n(616022);
 var o = n(49436),
     s = n(968843),
@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -33,8 +33,8 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
-    let { quest: t, location: n, initiallyExpanded: _, contentPosition: m, sourceQuestContent: h } = e,
+function m(e) {
+    let { quest: t, location: n, initiallyExpanded: _, contentPosition: h, sourceQuestContent: m } = e,
         g = (0, s.tP)(t),
         { containerRef: E, size: b, height: y } = (0, d.h)(),
         {
@@ -57,9 +57,9 @@ function h(e) {
     return (0, r.jsx)(l.A, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: m,
+        questContentPosition: h,
         trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
-        sourceQuestContent: h,
+        sourceQuestContent: m,
         children: (e) =>
             (0, r.jsx)(a.animated.div, {
                 style: {
@@ -90,9 +90,9 @@ function h(e) {
                             isInteracting: T,
                             isAnimating: v,
                             isExpanded: S,
-                            contentPosition: m,
+                            contentPosition: h,
                             toggleExpanded: I,
-                            sourceQuestContent: h,
+                            sourceQuestContent: m,
                         }),
                         (0, r.jsx)(c.Z, {
                             quest: t,
@@ -102,8 +102,8 @@ function h(e) {
                             isFocused: T,
                             isExpanded: S,
                             isAnimating: v,
-                            contentPosition: m,
-                            sourceQuestContent: h,
+                            contentPosition: h,
+                            sourceQuestContent: m,
                         }),
                     ],
                 }),

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(392711),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(818405),
     c = n(587158),
     u = n(286379),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(481060),
     p = n(224706),
     _ = n(13245),
-    m = n(493773),
-    h = n(797614),
+    h = n(493773),
+    m = n(797614),
     g = n(703656),
     E = n(594174),
     b = n(254761),
@@ -26,7 +26,7 @@ var r = n(54381),
     A = n(981631),
     N = n(388032),
     P = n(249993);
-function R(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,9 +39,9 @@ function R(e, t, n) {
         e
     );
 }
-let w = o().throttle(
+let R = o().throttle(
         () => {
-            h.Z.increment(
+            m.Z.increment(
                 {
                     name: u.V.APP_CRASHED,
                     tags: ["reason:".concat(l.v.UNHANDLED_JS_ERROR), "level:".concat(c.c.FATAL)],
@@ -57,27 +57,27 @@ function x(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         p = i.useMemo(() => new s.SpringValue(1), []),
-        h = i.useRef(null),
+        m = i.useRef(null),
         [g, y] = i.useState(!1),
         [O, v] = i.useState(!1),
         S = (0, d.e7)([E.default], () => E.default.getCurrentUser());
-    (0, m.ZP)(
+    (0, h.ZP)(
         () => (
-            (h.current = setTimeout(R, D)),
+            (m.current = setTimeout(w, D)),
             _.Z.track(A.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed }),
             () => {
-                null != h.current && clearTimeout(h.current);
+                null != m.current && clearTimeout(m.current);
             }
         ),
     );
-    let R = i.useCallback(() => {
+    let w = i.useCallback(() => {
             p.set(0),
-                null != h.current && clearTimeout(h.current),
-                (h.current = null),
+                null != m.current && clearTimeout(m.current),
+                (m.current = null),
                 null == o || o(),
                 null == u || u();
         }, [p, o, u]),
-        w = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 O ||
                     (v(!0),
@@ -97,7 +97,7 @@ function x(e) {
         ),
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (y(!0), null != h.current && clearTimeout(h.current)) : y(!1);
+                e.stopPropagation(), e.shiftKey ? (y(!0), null != m.current && clearTimeout(m.current)) : y(!1);
             },
             [y],
         ),
@@ -153,7 +153,7 @@ function x(e) {
             className: P.notificationIcon,
         }),
         onNotificationClick: x,
-        onConfirmClick: w,
+        onConfirmClick: R,
         onCancelClick: null != j ? L : void 0,
         onDismissClick: o,
         expand: !0,
@@ -190,7 +190,7 @@ class L extends i.PureComponent {
             sentry_issue_id: i,
             error_level: "fatal",
         }),
-            w(),
+            R(),
             (this.pid = r);
     }
     render() {
@@ -230,12 +230,12 @@ class L extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            R(this, "state", {
+            w(this, "state", {
                 error: null,
                 showError: !0,
                 info: null,
             }),
-            R(this, "pid", null);
+            w(this, "pid", null);
     }
 }
 let j = L;

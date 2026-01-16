@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(55160),
+    s = n(782425),
     l = n(996435),
     c = n(36361),
     u = n(530171),
@@ -38,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function m(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -64,7 +64,7 @@ function h(e, t) {
 function g(e) {
     let { node: t } = e,
         { useTitle: n, layout: a, useCollapsedSubtitle: p } = t,
-        [m, g] = i.useState(!1),
+        [h, g] = i.useState(!1),
         [E, b] = i.useState(!0);
     i.useEffect(
         () =>
@@ -76,17 +76,17 @@ function g(e) {
                 (e) => {
                     if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    n && !m && (g(!0), b(!1)),
-                        n && m && (l.Z.setState({ navTransition: h(_({}, e), { targetAccordionKey: void 0 }) }), b(!0));
+                    n && !h && (g(!0), b(!1)),
+                        n && h && (l.Z.setState({ navTransition: m(_({}, e), { targetAccordionKey: void 0 }) }), b(!0));
                 },
                 {
                     equalityFn: s.X,
                     fireImmediately: !0,
                 },
             ),
-        [m, t.key],
+        [h, t.key],
     );
-    let y = null == n ? void 0 : n(m),
+    let y = null == n ? void 0 : n(h),
         O = null == p ? void 0 : p(),
         v = i.useCallback(
             (e) => {
@@ -107,11 +107,11 @@ function g(e) {
             "--custom-base-setting-wrapper-horizontal-padding": "".concat(d.q, "px"),
             "--custom-base-setting-wrapper-vertical-padding": "".concat(d.G, "px"),
         },
-        className: o()({ [f.open]: m }),
+        className: o()({ [f.open]: h }),
         children: (0, r.jsx)(u.I, {
             title: y,
             collapsedSubtitle: O,
-            isExpanded: m,
+            isExpanded: h,
             onExpandedChange: g,
             onExpandedChangeComplete: v,
             animate: E,

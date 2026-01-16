@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(620792),
+    s = n(81239),
     l = n(481060),
     c = n(892071),
     u = n(84527);
@@ -63,10 +63,10 @@ function _(e, t) {
         e
     );
 }
-function m() {
+function h() {
     return new Promise((e) => setTimeout(e, 1000));
 }
-let h = 0.25,
+let m = 0.25,
     g = 4,
     E = 1,
     b = 2.8,
@@ -114,7 +114,7 @@ let S = i.memo(function (e) {
                                             dotCycle: t,
                                             immediate: !0,
                                         }))
-                                      : await m();
+                                      : await h();
                         },
                     }),
                 "animate-always",
@@ -123,7 +123,7 @@ let S = i.memo(function (e) {
             y = (2 * t * 3 + (t / 4) * 2) / 2;
         return (0, r.jsx)(r.Fragment, {
             children: [0, 1, 2].map((e) => {
-                let i = h * e,
+                let i = m * e,
                     l = t + t * o * e;
                 return (0, r.jsx)(
                     s.animated.circle,
@@ -148,12 +148,12 @@ let S = i.memo(function (e) {
         });
     }),
     I = i.memo(function (e) {
-        let { dotRadius: t, x: n, y: i, hide: a = !1, themed: d = !1, className: p, ref: m } = e,
-            { focused: h } = (0, c.vP)();
+        let { dotRadius: t, x: n, y: i, hide: a = !1, themed: d = !1, className: p, ref: h } = e,
+            { focused: m } = (0, c.vP)();
         return (0, l.Yzy)(
             a,
             _(f({}, y), { key: (e) => (e ? "true" : "false") }),
-            h ? "animate-always" : "animate-never",
+            m ? "animate-always" : "animate-never",
         )((e, a, l) => {
             let { dotPosition: c } = e,
                 { key: f } = l;
@@ -162,7 +162,7 @@ let S = i.memo(function (e) {
                 : (0, r.jsx)(
                       "svg",
                       {
-                          ref: m,
+                          ref: h,
                           x: n,
                           y: i,
                           width: 2 * t * 3 + (t / 2) * 2,

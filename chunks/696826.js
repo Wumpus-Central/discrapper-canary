@@ -4,7 +4,7 @@ n.d(t, {
     Sk: () => d.Skl,
     W5: () => P,
     lm: () => O,
-    qb: () => R,
+    qb: () => w,
     rs: () => N,
     vP: () => A,
     vj: () => y,
@@ -14,7 +14,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(620792),
+    o = n(81239),
     s = n(692547),
     l = n(780384);
 n(481060);
@@ -36,7 +36,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,7 +69,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -270,8 +270,8 @@ function A(e, t, n) {
         cutoutWidth: f,
         cutoutHeight: p,
         cutoutRadius: _,
-        polygonScale: m,
-        polygonOrigin: h,
+        polygonScale: h,
+        polygonOrigin: m,
         dotY: g,
         dotX: E,
         dotRadius: b,
@@ -300,8 +300,8 @@ function A(e, t, n) {
             (0, r.jsx)(o.animated.polygon, {
                 points: C(t),
                 fill: "black",
-                transform: m,
-                style: { transformOrigin: h },
+                transform: h,
+                style: { transformOrigin: m },
             }),
             (0, r.jsx)(o.animated.circle, {
                 fill: "black",
@@ -344,14 +344,14 @@ function P(e, t, n) {
               height: e,
           };
 }
-function R(e) {
+function w(e) {
     let { status: t, isMobile: n = !1, size: i = E, className: o, style: s, color: l } = e,
         c = t === d.Skl.ONLINE && n,
         f = y(t, l);
     return (0, r.jsx)(
         u.ZP,
         g(
-            m(
+            h(
                 {
                     mask: N(t, c),
                     className: a()(p.mask, o),

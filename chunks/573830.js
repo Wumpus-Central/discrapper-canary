@@ -1,9 +1,9 @@
-n.d(t, { J: () => w }), n(388685), n(583741);
+n.d(t, { J: () => R }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
     a = n(74361),
     o = n(69771),
-    s = n(620792),
+    s = n(81239),
     l = n(698369),
     c = n(692547),
     u = n(251052),
@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(213305),
     p = n(155127),
     _ = n(635041),
-    m = n(816811);
-function h(e, t, n) {
+    h = n(816811);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -74,7 +74,7 @@ let y = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     A = [0, 0.1, 0.9, 1],
     N = [0, 0.1, 0.2, 0.5, 0.7, 1],
     P = [0, 0.3, 0.5, 0.8, 0.9, 1];
-function R(e, t, n) {
+function w(e, t, n) {
     let i = e.to({
         range: A,
         output: [t, t, n, n],
@@ -106,11 +106,11 @@ function R(e, t, n) {
         }),
     });
 }
-function w(e) {
+function R(e) {
     let {
             checked: t,
             disabled: n,
-            id: h,
+            id: m,
             onChange: E,
             focusProps: y,
             hasIcon: O = !1,
@@ -119,7 +119,7 @@ function w(e) {
             innerRef: I,
         } = e,
         { reducedMotion: T } = i.useContext(f.S),
-        w = i.useRef(null),
+        R = i.useRef(null),
         D = i.useRef(null),
         x = null != I ? I : D,
         L = (0, l.l)({
@@ -133,7 +133,7 @@ function w(e) {
             isPressed: k,
         } = (0, a.h)(
             {
-                id: h,
+                id: m,
                 isDisabled: n,
                 "aria-describedby": v,
                 "aria-labelledby": S,
@@ -179,21 +179,21 @@ function w(e) {
     return (0, r.jsx)(
         p.tE,
         b(g({}, y), {
-            ringTarget: w,
+            ringTarget: R,
             focusTarget: x,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(
                 "label",
                 b(g({}, M), {
-                    className: m.container,
+                    className: h.container,
                     "data-disabled": n || void 0,
                     children: [
                         (0, r.jsx)(
                             s.animated.div,
                             b(g({}, U), {
-                                ref: w,
-                                className: m.switchIndicator,
+                                ref: R,
+                                className: h.switchIndicator,
                                 "data-size": "md",
                                 "data-mana-component": "switch",
                                 style: {
@@ -211,7 +211,7 @@ function w(e) {
                                     }),
                                 },
                                 children: (0, r.jsxs)(s.animated.svg, {
-                                    className: m.thumb,
+                                    className: h.thumb,
                                     viewBox: "0 0 24 24",
                                     preserveAspectRatio: "xMidYMin meet",
                                     style: {
@@ -240,7 +240,7 @@ function w(e) {
                                             height: T.enabled ? 16 : en([16, 10, 19, 10, 19, 16]),
                                             rx: T.enabled ? 8 : en([8, 5, 9.5, 5, 9.5, 8]),
                                         }),
-                                        O && R(ee, Q, X),
+                                        O && w(ee, Q, X),
                                     ],
                                 }),
                             }),

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => S }), n(388685);
-var a = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => N }), n(388685);
+var r = n(54381),
+    a = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(620792),
+    s = n(81239),
     o = n(442837),
     c = n(481060),
     d = n(918222),
     u = n(404616),
     m = n(434404),
-    f = n(690221),
-    h = n(496675),
+    h = n(690221),
+    f = n(496675),
     g = n(63063),
     x = n(981631),
     b = n(792389),
@@ -25,85 +25,85 @@ let T = {
         friction: 18,
         clamp: !0,
     },
-    w = (e) => {
+    S = (e) => {
         let { guild: t } = e,
-            n = (0, o.e7)([h.Z], () => h.Z.can(x.Plq.MANAGE_GUILD, t));
-        return (0, a.jsxs)(c.Kqy, {
+            n = (0, o.e7)([f.Z], () => f.Z.can(x.Plq.MANAGE_GUILD, t));
+        return (0, r.jsxs)(c.Kqy, {
             direction: "horizontal",
             gap: 8,
             children: [
-                (0, a.jsxs)(c.Kqy, {
+                (0, r.jsxs)(c.Kqy, {
                     direction: "vertical",
                     gap: 16,
                     children: [
-                        (0, a.jsx)(c.Kqy, {
+                        (0, r.jsx)(c.Kqy, {
                             direction: "vertical",
                             gap: 4,
-                            children: (0, a.jsx)(c.Text, {
+                            children: (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
                                 children: p.intl.string(b.default.fP8DVx),
                             }),
                         }),
-                        (0, a.jsxs)(c.Kqy, {
+                        (0, r.jsxs)(c.Kqy, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, a.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
                                     children: p.intl.string(b.default["i7CH/I"]),
                                 }),
-                                (0, a.jsxs)("ol", {
+                                (0, r.jsxs)("ol", {
                                     className: l()(j.list, j.orderedList, j.topLevelList),
                                     children: [
-                                        (0, a.jsx)("li", {
-                                            children: (0, a.jsx)(c.Text, {
+                                        (0, r.jsx)("li", {
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children: p.intl.string(b.default["+Izoz7"]),
                                             }),
                                         }),
-                                        (0, a.jsxs)("li", {
+                                        (0, r.jsxs)("li", {
                                             children: [
-                                                (0, a.jsx)(c.Text, {
+                                                (0, r.jsx)(c.Text, {
                                                     variant: "text-md/normal",
                                                     color: "text-default",
                                                     children: p.intl.string(b.default["iu/RkU"]),
                                                 }),
-                                                (0, a.jsxs)("ul", {
+                                                (0, r.jsxs)("ul", {
                                                     className: l()(j.list, j.innerList, j.unorderedList),
                                                     children: [
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)(c.Text, {
+                                                        (0, r.jsx)("li", {
+                                                            children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
                                                                 children: p.intl.string(b.default.QogKbP),
                                                             }),
                                                         }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)(c.Text, {
+                                                        (0, r.jsx)("li", {
+                                                            children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
                                                                 children: p.intl.string(b.default.V4orHT),
                                                             }),
                                                         }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)(c.Text, {
+                                                        (0, r.jsx)("li", {
+                                                            children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
                                                                 children: p.intl.string(b.default.VrrQXe),
                                                             }),
                                                         }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)(c.Text, {
+                                                        (0, r.jsx)("li", {
+                                                            children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
                                                                 children: p.intl.string(b.default.pSuM5e),
                                                             }),
                                                         }),
-                                                        (0, a.jsx)("li", {
-                                                            children: (0, a.jsx)(c.Text, {
+                                                        (0, r.jsx)("li", {
+                                                            children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
                                                                 children: p.intl.string(b.default["/RLXlI"]),
@@ -113,15 +113,15 @@ let T = {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)("li", {
-                                            children: (0, a.jsx)(c.Text, {
+                                        (0, r.jsx)("li", {
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children: p.intl.string(b.default.j4AmYy),
                                             }),
                                         }),
-                                        (0, a.jsx)("li", {
-                                            children: (0, a.jsx)(c.Text, {
+                                        (0, r.jsx)("li", {
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children: p.intl.format(b.default["/g+PvX"], {
@@ -135,20 +135,20 @@ let T = {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(c.Kqy, {
+                        (0, r.jsxs)(c.Kqy, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, a.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
                                     children: p.intl.string(b.default.qJWXsz),
                                 }),
-                                (0, a.jsxs)("ul", {
+                                (0, r.jsxs)("ul", {
                                     className: l()(j.list, j.unorderedList, j.topLevelList),
                                     children: [
-                                        (0, a.jsx)("li", {
-                                            children: (0, a.jsx)(c.Text, {
+                                        (0, r.jsx)("li", {
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children: p.intl.format(b.default.FUBV1P, {
@@ -156,8 +156,8 @@ let T = {
                                                 }),
                                             }),
                                         }),
-                                        (0, a.jsx)("li", {
-                                            children: (0, a.jsx)(c.Text, {
+                                        (0, r.jsx)("li", {
+                                            children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 children: p.intl.format(b.default.W4MIAG, {
@@ -169,29 +169,29 @@ let T = {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(c.Kqy, {
+                        (0, r.jsxs)(c.Kqy, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, a.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
                                     color: "text-default",
                                     children: p.intl.string(b.default.J3HKmx),
                                 }),
                                 n &&
-                                    (0, a.jsx)(c.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         children: p.intl.format(b.default["9x2vbP"], {
                                             optOutHook: (e) =>
-                                                (0, a.jsx)(f.Z, {
+                                                (0, r.jsx)(h.Z, {
                                                     onClick: () =>
                                                         m.Z.open(t.id, x.pNK.MODERATION, null, x.KsC.SAFETY_OVERVIEW),
                                                     children: e,
                                                 }),
                                         }),
                                     }),
-                                (0, a.jsx)(c.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
                                     color: "text-default",
                                     children: p.intl.string(b.default.KcCY25),
@@ -200,7 +200,7 @@ let T = {
                         }),
                     ],
                 }),
-                (0, a.jsx)("img", {
+                (0, r.jsx)("img", {
                     src: y,
                     alt: p.intl.string(p.t.gAlJzV),
                     width: u.TJ,
@@ -209,13 +209,13 @@ let T = {
             ],
         });
     };
-function S(e) {
+function N(e) {
     let t,
         { guild: n } = e,
         [i, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
         [u, m] = (0, d.R)("report-to-mod-education-expanded", !1),
-        { transitions: f, setVisible: h } = (() => {
-            let [e, t] = r.useState(!0);
+        { transitions: h, setVisible: f } = (() => {
+            let [e, t] = a.useState(!0);
             return {
                 transitions: (0, c.Yzy)(e, {
                     keys: (e) => (e ? "shown" : "hidden"),
@@ -236,51 +236,51 @@ function S(e) {
                 leave: { maxHeight: 0 },
                 config: { duration: 200 },
             }));
-    return (r.useEffect(() => {
-        i && h(!1);
-    }, [i, h]),
+    return (a.useEffect(() => {
+        i && f(!1);
+    }, [i, f]),
     i)
         ? null
-        : f((e, t) =>
+        : h((e, t) =>
               t
-                  ? (0, a.jsxs)(s.animated.div, {
+                  ? (0, r.jsxs)(s.animated.div, {
                         style: e,
                         onClick: () => m(!u),
                         className: l()(C.container, j.container, v.mainCard),
                         children: [
-                            (0, a.jsxs)("div", {
+                            (0, r.jsxs)("div", {
                                 className: j.inline,
                                 children: [
-                                    (0, a.jsxs)("div", {
+                                    (0, r.jsxs)("div", {
                                         className: j.author,
                                         children: [
-                                            (0, a.jsx)(c.gw7, {
+                                            (0, r.jsx)(c.gw7, {
                                                 size: "custom",
                                                 width: 28,
                                                 height: 28,
                                                 color: "currentColor",
                                                 className: j.discordIcon,
                                             }),
-                                            (0, a.jsx)(c.Text, {
+                                            (0, r.jsx)(c.Text, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
                                                 children: p.intl.string(p.t.uvGmCx),
                                             }),
-                                            (0, a.jsx)(c.Text, {
+                                            (0, r.jsx)(c.Text, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
                                                 children: "\u2014",
                                             }),
-                                            (0, a.jsx)(c.Heading, {
+                                            (0, r.jsx)(c.Heading, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
                                                 children: p.intl.string(b.default["95qQRB"]),
                                             }),
                                         ],
                                     }),
-                                    (0, a.jsx)(c.P3F, {
+                                    (0, r.jsx)(c.P3F, {
                                         onClick: () => o(!0),
-                                        children: (0, a.jsx)(c.Dio, {
+                                        children: (0, r.jsx)(c.Dio, {
                                             size: "xs",
                                             color: "currentColor",
                                             className: j.closeIcon,
@@ -290,11 +290,11 @@ function S(e) {
                             }),
                             g((e, t) =>
                                 t
-                                    ? (0, a.jsxs)(s.animated.div, {
+                                    ? (0, r.jsxs)(s.animated.div, {
                                           style: e,
                                           children: [
-                                              (0, a.jsx)("hr", { className: j.separator }),
-                                              (0, a.jsx)(w, { guild: n }),
+                                              (0, r.jsx)("hr", { className: j.separator }),
+                                              (0, r.jsx)(S, { guild: n }),
                                           ],
                                       })
                                     : null,

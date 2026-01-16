@@ -8,9 +8,9 @@ n.d(t, {
     bL: () => eS,
     hJ: () => eN,
     iV: () => eL,
-    jx: () => eR,
+    jx: () => ew,
     oR: () => eD,
-    qz: () => ew,
+    qz: () => eR,
     vB: () => eU,
     x2: () => eP,
 }),
@@ -24,13 +24,13 @@ var r = n(54381),
     s = n(836560),
     l = n(512722),
     c = n.n(l),
-    u = n(55160),
+    u = n(782425),
     d = n(873546),
     f = n(149765),
     p = n(442837),
     _ = n(481060),
-    m = n(430742),
-    h = n(393238),
+    h = n(430742),
+    m = n(393238),
     g = n(607070),
     E = n(100527),
     b = n(906732),
@@ -44,8 +44,8 @@ var r = n(54381),
     A = n(106824),
     N = n(570220),
     P = n(28546),
-    R = n(805680),
-    w = n(368844),
+    w = n(805680),
+    R = n(368844),
     D = n(41776),
     x = n(657871),
     L = n(849522),
@@ -83,7 +83,7 @@ var r = n(54381),
     ef = n(761652),
     ep = n(957825),
     e_ = n(72775);
-function em(e, t, n) {
+function eh(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -96,7 +96,7 @@ function em(e, t, n) {
         e
     );
 }
-function eh(e) {
+function em(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -107,7 +107,7 @@ function eh(e) {
                 }),
             )),
             r.forEach(function (t) {
-                em(e, t, n[t]);
+                eh(e, t, n[t]);
             });
     }
     return e;
@@ -147,7 +147,7 @@ function ev(e, t) {
 function eS(e, t, a, o, s) {
     let [l, c] = i.useState(!1),
         u = i.useCallback(
-            (i, d, f, p, h) => {
+            (i, d, f, p, m) => {
                 var g, E, b;
                 if (l) return;
                 c(!0);
@@ -157,7 +157,7 @@ function eS(e, t, a, o, s) {
                             ? E
                             : [],
                     O = null != (b = Y.Z.getUploads(s, t.drafts.type)) ? b : [];
-                if (null == d && !p && !h && (0, w.CB)(O, s)) {
+                if (null == d && !p && !m && (0, R.CB)(O, s)) {
                     c(!1),
                         (0, _.ZDy)(async () => {
                             let { default: e } = await Promise.all([
@@ -169,7 +169,7 @@ function eS(e, t, a, o, s) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    eE(eh({}, t), {
+                                    eE(em({}, t), {
                                         threadId: s,
                                         attachments: O,
                                         sendMessage: () => u(i, void 0, void 0, void 0, !0),
@@ -192,7 +192,7 @@ function eS(e, t, a, o, s) {
                         f = null != a.current;
                     d &&
                         (eO(s)
-                            ? m.Z.saveDraft(s, "", t.drafts.type)
+                            ? h.Z.saveDraft(s, "", t.drafts.type)
                             : f && (null == (r = a.current) || r.clearValue(), null == (i = o.current) || i.hide())),
                         f && (c(!1), (0, P._Q)(), u && (null == (n = a.current) || n.focus()));
                 });
@@ -325,7 +325,7 @@ function eP(e, t, n) {
         handleEditorSelectionChanged: a,
     };
 }
-function eR() {
+function ew() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
             var t;
@@ -341,7 +341,7 @@ function eR() {
         handleHideAutocomplete: n,
     };
 }
-function ew(e) {
+function eR(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
@@ -392,7 +392,7 @@ function ex(e, t, n, r) {
                 canEveryoneSendMessages: q.Uu(ed.Plq.SEND_MESSAGES, e),
             };
         }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, r, o]);
-    return eh(
+    return em(
         {
             isLurking: a,
             isPendingMember: o,
@@ -516,11 +516,11 @@ function eG(e, t) {
     var n, a, s, l, u;
     let {
         textValue: f,
-        richValue: m,
+        richValue: h,
         className: O,
         innerClassName: A,
         editorClassName: P,
-        id: w,
+        id: R,
         required: D,
         disabled: x,
         placeholder: M,
@@ -538,8 +538,8 @@ function eG(e, t) {
         onBlur: en,
         onFocus: ec,
         onKeyDown: ep,
-        onSubmit: em,
-        promptToUpload: eh,
+        onSubmit: eh,
+        promptToUpload: em,
         highlighted: eg,
         canMentionRoles: eE,
         canMentionChannels: ey,
@@ -560,7 +560,7 @@ function eG(e, t) {
     } = e;
     c()(null != G, "chat input type must be set");
     let { analyticsLocations: eX } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eJ = ew(t),
+        eJ = eR(t),
         e$ = i.useRef(null),
         e0 = i.useRef(null),
         e1 = i.useRef(null),
@@ -569,7 +569,7 @@ function eG(e, t) {
     null == eV || eV(e1.current);
     let e4 = (0, y.Z)(U),
         [e5, e8] = i.useState(!e4);
-    (0, h.PM)(eJ, (e) => {
+    (0, m.PM)(eJ, (e) => {
         let { width: t } = e;
         return e8(!e4 && (null == t || t > eb));
     });
@@ -597,7 +597,7 @@ function eG(e, t) {
         { fontSize: tc } = (0, p.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
         tu = (0, p.e7)([H.Z], () => H.Z.isEnabled());
     eN(G, tt, U.id);
-    let { eventEmitter: td, handleEditorSelectionChanged: tf } = eP(e1, f, m),
+    let { eventEmitter: td, handleEditorSelectionChanged: tf } = eP(e1, f, h),
         tp = i.useRef(f);
     tp.current = f;
     let t_ = i.useCallback(
@@ -611,9 +611,9 @@ function eG(e, t) {
             },
             [z, null == (a = G.commands) ? void 0 : a.enabled, td],
         ),
-        { submitting: tm, submit: th, handleSubmit: tg } = eS(em, G, e1, e2, U.id),
-        { autocompleteRef: tE, handleMaybeShowAutocomplete: tb, handleHideAutocomplete: ty } = eR(),
-        tO = eI(th, G, e1),
+        { submitting: th, submit: tm, handleSubmit: tg } = eS(eh, G, e1, e2, U.id),
+        { autocompleteRef: tE, handleMaybeShowAutocomplete: tb, handleHideAutocomplete: ty } = ew(),
+        tO = eI(tm, G, e1),
         tv = eT(e1),
         tS = eC({
             editorRef: e1,
@@ -621,7 +621,7 @@ function eG(e, t) {
             textValue: f,
             channelId: U.id,
             chatInputType: G,
-            submit: em,
+            submit: eh,
         }),
         tI = eA(e1, U),
         tT = i.useCallback(() => {
@@ -629,8 +629,8 @@ function eG(e, t) {
             return null == e2 || null == (e = e2.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tC, handleResize: tA } = eD(q),
-        { handleTab: tN, handleEnter: tP, handleMoveSelection: tR } = ej(tE, e$, ts),
-        { expressionPickerView: tw, shouldHideExpressionPicker: tD, handleOuterClick: tx } = eL(G, e1, U.id),
+        { handleTab: tN, handleEnter: tP, handleMoveSelection: tw } = ej(tE, e$, ts),
+        { expressionPickerView: tR, shouldHideExpressionPicker: tD, handleOuterClick: tx } = eL(G, e1, U.id),
         { selectedAutocompleteInputType: tL, selectedAutocompleteInputError: tj } = eM(td, e1),
         tM = ek(f),
         { currentAutocompleteType: tk, handleAutocompleteVisibilityChange: tU } = eU(G, U.id),
@@ -644,13 +644,13 @@ function eG(e, t) {
         }, [td]);
     (0, X.S)(td, U.guild_id, U.id);
     let tB = null != K,
-        tV = (tt && !((e9 || te) && ti)) || (tm && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
+        tV = (tt && !((e9 || te) && ti)) || (th && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tH = null;
     null != e6
         ? (tH = null == Y ? void 0 : Y(e6, e7, e_.attachButton))
         : (!tt || tr) && (tH = null == V ? void 0 : V(tB, e_.attachButton));
-    let tY = to && null != m && !tt && G.showCharacterCount && null == e6,
-        tW = to && !__OVERLAY__ && null != m && null == e6 && G.toolbarType !== $.OW.NONE && !tt,
+    let tY = to && null != h && !tt && G.showCharacterCount && null == e6,
+        tW = to && !__OVERLAY__ && null != h && null == e6 && G.toolbarType !== $.OW.NONE && !tt,
         tK = (0, er.c)({
             channel: U,
             type: G,
@@ -766,11 +766,11 @@ function eG(e, t) {
                                             ringClassName: e_.focusRing,
                                             children: (0, r.jsx)(ee.Z, {
                                                 ref: e1,
-                                                id: w,
+                                                id: R,
                                                 focused: F,
                                                 useSlate: to,
                                                 textValue: f,
-                                                richValue: m,
+                                                richValue: h,
                                                 disabled: tt,
                                                 placeholder: M,
                                                 required: D,
@@ -788,15 +788,15 @@ function eG(e, t) {
                                                 onBlur: en,
                                                 onFocus: ec,
                                                 onKeyDown: ep,
-                                                onSubmit: th,
+                                                onSubmit: tm,
                                                 onSubmitFailure: tF,
                                                 onTab: tN,
                                                 onEnter: tP,
-                                                onMoveSelection: tR,
+                                                onMoveSelection: tw,
                                                 onSelectionChanged: tf,
                                                 onMaybeShowAutocomplete: tb,
                                                 onHideAutocomplete: ty,
-                                                promptToUpload: eh,
+                                                promptToUpload: em,
                                                 fontSize: tc,
                                                 spellcheckEnabled: tu,
                                                 canOnlyUseTextCommands: tB,
@@ -844,11 +844,11 @@ function eG(e, t) {
                             textValue: f,
                             focused: F,
                             isEditorIdle: tM,
-                            expressionPickerView: tw,
+                            expressionPickerView: tR,
                             type: G,
                             targetRef: eJ,
                             editorRef: e1,
-                            onSendMessage: th,
+                            onSendMessage: tm,
                             onSendSticker: tS,
                             onVisibilityChange: tU,
                             editorScrollerRef: e3,
@@ -869,7 +869,7 @@ function eG(e, t) {
                 (0, r.jsx)(_.pdY, { error: B }),
                 tD
                     ? null
-                    : (0, r.jsx)(R.Z, {
+                    : (0, r.jsx)(w.Z, {
                           positionTargetRef: eJ,
                           type: G,
                           onSelectGIF: tO,
