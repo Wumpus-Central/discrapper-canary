@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(439293),
     p = n(152242),
     _ = n(231338);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -85,7 +85,7 @@ function y(e, t) {
     return i;
 }
 let O = (0, o.Dz)(),
-    v = { renderStep: (e) => (0, r.jsx)(d.d, h({}, e)) },
+    v = { renderStep: (e) => (0, r.jsx)(d.d, m({}, e)) },
     S = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: a } = n,
@@ -110,7 +110,7 @@ let O = (0, o.Dz)(),
             var { children: t, loadId: n, applicationId: i, isGift: o, skuId: s, analyticsLocations: c = [] } = e,
                 d = b(e, ["children", "loadId", "applicationId", "isGift", "skuId", "analyticsLocations"]);
             let { analyticsLocations: f } = (0, u.V)(
-                h(
+                m(
                     {
                         applicationId: i,
                         skuId: s,
@@ -124,7 +124,7 @@ let O = (0, o.Dz)(),
                 children: (0, r.jsx)(
                     l.PaymentContextProvider,
                     E(
-                        h(
+                        m(
                             {
                                 loadId: n,
                                 applicationId: i,
@@ -148,52 +148,53 @@ let O = (0, o.Dz)(),
                     loadId: n,
                     applicationId: o,
                     analyticsSourceLocation: s,
-                    renderModalProps: l,
-                    onClose: c,
-                    onComplete: u,
-                    flowSpecificOptions: d,
-                    children: f,
+                    analyticsLocations: l,
+                    renderModalProps: c,
+                    onClose: u,
+                    onComplete: d,
+                    flowSpecificOptions: f,
+                    children: p,
                 } = e,
-                { analyticsLocations: p } = (0, a.ZP)(),
-                _ = l.onClose,
+                { analyticsLocations: _ } = (0, a.ZP)(l),
+                h = c.onClose,
                 m = i.useCallback(
                     (e) => {
-                        _(), null != c && c(e);
+                        h(), null != u && u(e);
                     },
-                    [_, c],
+                    [h, u],
                 ),
-                h = i.useMemo(
+                g = i.useMemo(
                     () => ({
                         onClose: m,
-                        onComplete: u,
+                        onComplete: d,
                         applicationId: o,
                         skuId: t,
                         initialPlanId: null,
                         analyticsObject: s,
-                        analyticsLocations: p,
+                        analyticsLocations: _,
                     }),
-                    [m, u, o, t, s, p],
-                ),
-                g = i.useMemo(
-                    () => ({
-                        skuId: t,
-                        loadId: n,
-                        flowSpecificOptions: d,
-                        analyticsLocations: p,
-                    }),
-                    [t, n, d, p],
+                    [m, d, o, t, s, _],
                 ),
                 E = i.useMemo(
                     () => ({
-                        sharedCheckoutContext: g,
-                        paymentModalProps: h,
-                        renderModalProps: l,
+                        skuId: t,
+                        loadId: n,
+                        flowSpecificOptions: f,
+                        analyticsLocations: _,
                     }),
-                    [g, h, l],
+                    [t, n, f, _],
+                ),
+                b = i.useMemo(
+                    () => ({
+                        sharedCheckoutContext: E,
+                        paymentModalProps: g,
+                        renderModalProps: c,
+                    }),
+                    [E, g, c],
                 );
             return (0, r.jsx)(O.Provider, {
-                value: E,
-                children: f,
+                value: b,
+                children: p,
             });
         },
         UnifiedCheckoutCustomHeader: (e) => {
