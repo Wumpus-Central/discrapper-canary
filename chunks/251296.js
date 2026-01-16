@@ -1,9 +1,8 @@
 n.d(t, {
-    hX: () => f,
-    no: () => p,
-    q5: () => d,
-    vl: () => _,
-    zw: () => u,
+    hX: () => d,
+    no: () => f,
+    q5: () => u,
+    vl: () => p,
 }),
     n(388685);
 var r = n(473749),
@@ -25,15 +24,12 @@ function c(e, t) {
     return r.useMemo(() => !u && [...c.values()].some((e) => e.enabled), [u, c]);
 }
 function u(e) {
-    return c(e, (e) => e.viewExperiment);
-}
-function d(e) {
     return c(e, (e) => e.editExperiment);
 }
-function f(e) {
+function d(e) {
     return c(e, (e) => e.coachmarkExperiment);
 }
-function p(e) {
+function f(e) {
     var t;
     let { data: n } = (0, i.SK)(),
         a = (0, s.Z)(null != (t = null == n ? void 0 : n.map((e) => e.editExperiment)) ? t : [], e),
@@ -51,7 +47,7 @@ function p(e) {
         [n, a, o],
     );
 }
-function _(e) {
+function p(e) {
     var t, n;
     let { data: a } = (0, i.SK)(),
         c = (0, s.Z)(null != (t = null == a ? void 0 : a.map((e) => e.editExperiment)) ? t : [], e),
