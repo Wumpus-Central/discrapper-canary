@@ -11,7 +11,7 @@ let u = () => {
         [n, u] = i.useState(4),
         [d, f] = i.useState(2),
         [p, _] = i.useState(l.NZ.LIGHT),
-        [m, h] = i.useState(l.yB.BLUE),
+        [h, m] = i.useState(l.yB.BLUE),
         [g, E] = i.useState("darkslategray"),
         [b, y] = i.useState("blanchedalmond"),
         [O, v] = i.useState("pink"),
@@ -44,7 +44,7 @@ let u = () => {
                 minimum: e,
                 maximum: n,
                 weight: p,
-                variant: m,
+                variant: h,
                 override: {
                     default: {
                         background: g,
@@ -88,9 +88,9 @@ let u = () => {
                 children: (0, r.jsx)(o.B6, {
                     placeholder: "Variant",
                     select: (e) => {
-                        h(e);
+                        m(e);
                     },
-                    isSelected: (e) => m === e,
+                    isSelected: (e) => h === e,
                     serialize: (e) => e,
                     options: I,
                     label: "Variant",
@@ -125,7 +125,7 @@ let u = () => {
                     onChange: (e) => {
                         E(e);
                     },
-                    label: "Background",
+                    label: "Background (optional)",
                 }),
             }),
             (0, r.jsx)(c.BZ, {
