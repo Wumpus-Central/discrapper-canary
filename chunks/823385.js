@@ -11,8 +11,8 @@ var i,
     f = n(220444),
     p = n(601070),
     _ = n(210887),
-    m = n(314897),
-    h = n(592125),
+    h = n(314897),
+    m = n(592125),
     g = n(703558),
     E = n(984933),
     b = n(271383),
@@ -26,7 +26,7 @@ var i,
     A = n(823379),
     N = n(981631),
     P = n(388032);
-function R(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-let w = "seenQSTutorial",
+let R = "seenQSTutorial",
     D = 5,
     x = 7,
     L = 3,
@@ -56,7 +56,7 @@ let w = "seenQSTutorial",
     Y = [],
     W = null;
 function K() {
-    (G = y.Z.getGuildCount() >= 3 || o().size(h.Z.getMutablePrivateChannels()) >= 20), (H = []);
+    (G = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (H = []);
 }
 function z(e) {
     let t = [];
@@ -86,7 +86,7 @@ function Q() {
         r = null != (t = S.Z.getChannelId()) ? t : void 0;
     switch (Z) {
         case u.h8.USER: {
-            let e = m.default.getId();
+            let e = h.default.getId();
             return C.ZP.getRecentlyTalked(r, 100).filter((t) => {
                 let { record: n } = t;
                 return n.id !== e;
@@ -137,7 +137,7 @@ function Q() {
     if (null != n) {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
-                let t = h.Z.getChannel(e);
+                let t = m.Z.getChannel(e);
                 return (
                     !(
                         null == t ||
@@ -168,7 +168,11 @@ function Q() {
                 O.Z.can(N.Plq.VIEW_CHANNEL, t.record)) &&
             (c.push(t), a.add(t.record.id));
     }
-    return c.length > 0 && (i = [(0, u.o6)(P.intl.string(P.t["80lOZ1"])), ...c, ...i]), i;
+    if (c.length > 0) {
+        let e = [(0, u.o6)(P.intl.string(P.t["80lOZ1"])), ...c];
+        i.push(...e);
+    }
+    return i;
 }
 function X(e, t) {
     switch (Z) {
@@ -209,7 +213,7 @@ function J(e) {
     let { query: n, queryMode: i } = e,
         a = n.trim(),
         o = null != (t = I.Z.getGuildId()) ? t : void 0,
-        s = new Set(["user:".concat(m.default.getId())]);
+        s = new Set(["user:".concat(h.default.getId())]);
     null != o && s.add("guild:".concat(o)),
         (W = Date.now()),
         (r =
@@ -289,14 +293,14 @@ function ei(e) {
 }
 function ea() {
     if (U) return !1;
-    (U = !0), l.K.set(w, !0);
+    (U = !0), l.K.set(R, !0);
 }
 class eo extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(p.Z, m.default, h.Z, g.Z, E.ZP, b.ZP, y.Z, O.Z, v.ZP, S.Z, I.Z, _.Z, T.ZP),
+        this.waitFor(p.Z, h.default, m.Z, g.Z, E.ZP, b.ZP, y.Z, O.Z, v.ZP, S.Z, I.Z, _.Z, T.ZP),
             this.syncWith([_.Z], () => !0),
-            (U = l.K.get(w) || !1),
+            (U = l.K.get(R) || !1),
             (Y = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
@@ -340,7 +344,7 @@ class eo extends (i = s.ZP.PersistedStore) {
         };
     }
 }
-R(eo, "displayName", "QuickSwitcherStore"), R(eo, "persistKey", "QuickSwitcherStore");
+w(eo, "displayName", "QuickSwitcherStore"), w(eo, "persistKey", "QuickSwitcherStore");
 let es = new eo(c.Z, {
         CONNECTION_OPEN: K,
         CONNECTION_OPEN_SUPPLEMENTAL: K,
