@@ -1,12 +1,13 @@
-n.d(t, { U: () => u }), n(539854), n(388685);
+n.d(t, { U: () => d }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    o = n(902820),
-    s = n(981631),
-    l = n(474936),
-    c = n(570810);
-let u = {
+    a = n(793030),
+    o = n(481060),
+    s = n(902820),
+    l = n(981631),
+    c = n(474936),
+    u = n(570810);
+let d = {
     title: "Unified Checkout",
     stories: [
         {
@@ -37,11 +38,11 @@ let u = {
                             amount: -100,
                         }),
                     (0, r.jsx)("div", {
-                        className: c.orderSummaryContainer,
-                        children: (0, r.jsx)(o.Q, {
+                        className: u.orderSummaryContainer,
+                        children: (0, r.jsx)(s.Q, {
                             label: t,
                             lineItems: a,
-                            currency: s.pKx.USD,
+                            currency: l.pKx.USD,
                         }),
                     })
                 );
@@ -71,35 +72,35 @@ let u = {
                 let {
                         variant: t,
                         leftTitleDescriber: n,
-                        leftPrimaryText: s,
+                        leftPrimaryText: a,
                         leftSubtext: l,
-                        leftShowSubtext: u,
+                        leftShowSubtext: c,
                         leftSubtextStrikethrough: d,
                         rightTitleDescriber: f,
                         rightPrimaryText: p,
                         rightSubtext: _,
-                        rightShowSubtext: m,
-                        rightSubtextStrikethrough: h,
+                        rightShowSubtext: h,
+                        rightSubtextStrikethrough: m,
                     } = e,
                     [g, E] = i.useState(0);
                 return (0, r.jsxs)("div", {
-                    className: c.verticalContainerCentered,
+                    className: u.verticalContainerCentered,
                     children: [
-                        (0, r.jsx)(o.z, {
+                        (0, r.jsx)(s.z, {
                             selection: g,
                             onChange: E,
                             planOptions: [
                                 {
                                     id: 0,
-                                    title: (0, r.jsx)(o.u2, {
+                                    title: (0, r.jsx)(s.u2, {
                                         size: "sm",
                                         color: "text-strong",
                                         premiumType: t,
                                     }),
                                     titleDescriber: n,
-                                    primaryText: s,
-                                    subtext: u
-                                        ? (0, r.jsx)(o.zl, {
+                                    primaryText: a,
+                                    subtext: c
+                                        ? (0, r.jsx)(s.zl, {
                                               strikethrough: d,
                                               price: l,
                                           })
@@ -107,23 +108,23 @@ let u = {
                                 },
                                 {
                                     id: 1,
-                                    title: (0, r.jsx)(o.u2, {
+                                    title: (0, r.jsx)(s.u2, {
                                         size: "sm",
                                         color: "text-strong",
                                         premiumType: t,
                                     }),
                                     titleDescriber: f,
                                     primaryText: p,
-                                    subtext: m
-                                        ? (0, r.jsx)(o.zl, {
-                                              strikethrough: h,
+                                    subtext: h
+                                        ? (0, r.jsx)(s.zl, {
+                                              strikethrough: m,
                                               price: _,
                                           })
                                         : void 0,
                                 },
                             ],
                         }),
-                        (0, r.jsxs)(a.Text, {
+                        (0, r.jsxs)(o.Text, {
                             variant: "text-sm/normal",
                             children: ["Selected plan index: ", g],
                         }),
@@ -134,15 +135,15 @@ let u = {
                 variant: {
                     label: "Nitro Variant",
                     type: "select",
-                    defaultValue: l.PremiumTypes.TIER_2,
+                    defaultValue: c.PremiumTypes.TIER_2,
                     options: [
                         {
                             label: "Nitro",
-                            value: l.PremiumTypes.TIER_2,
+                            value: c.PremiumTypes.TIER_2,
                         },
                         {
                             label: "Nitro Basic",
-                            value: l.PremiumTypes.TIER_0,
+                            value: c.PremiumTypes.TIER_0,
                         },
                     ],
                 },
@@ -195,6 +196,52 @@ let u = {
                     label: "Right Card - Subtext Strikethrough",
                     type: "boolean",
                     defaultValue: !1,
+                },
+            },
+        },
+        {
+            name: "Primitive: Subscription Details Accordion",
+            id: "unified-checkout-subscription-details",
+            component: (e) => {
+                let { label: t, hasLineItems: n } = e,
+                    i = n
+                        ? [
+                              {
+                                  id: 1,
+                                  label: "Nitro Basic",
+                                  amount: 299,
+                                  tooltip:
+                                      "You are purchasing a plan change. Your server boosts are being updated accordingly.",
+                              },
+                              {
+                                  id: 2,
+                                  label: "Server Boost",
+                                  amount: 499,
+                                  icon: (0, r.jsx)(a.SrA, { size: "xs" }),
+                              },
+                          ]
+                        : [];
+                return (0, r.jsx)("div", {
+                    className: u.orderSummaryContainer,
+                    children: (0, r.jsx)(s.Hg, {
+                        label: t,
+                        lineItems: i,
+                        intervalType: c.rV.MONTH,
+                        intervalCount: 1,
+                        currency: l.pKx.USD,
+                    }),
+                });
+            },
+            controls: {
+                label: {
+                    label: "Label",
+                    type: "text",
+                    defaultValue: "Subscription Details",
+                },
+                hasLineItems: {
+                    label: "Has Line Items",
+                    type: "boolean",
+                    defaultValue: !0,
                 },
             },
         },
