@@ -8,14 +8,14 @@ var r = n(473749),
     c = n(442552);
 function u(e) {
     let { user: t, guildId: n, size: u, showPending: d = !1, animateOnHover: f = !1, avatarOverride: p } = e,
-        { onMouseEnter: _, onMouseLeave: m, shouldAnimate: h } = (0, c.Z)(f),
-        { pendingAvatar: g } = (0, l.Z)({}),
+        { onMouseEnter: _, onMouseLeave: h, shouldAnimate: m } = (0, c.Z)(f),
+        { pendingAvatar: g } = (0, l.Z)({ guildId: null === n ? void 0 : n }),
         E =
             d && null != t
                 ? (0, o.SD)({
                       userId: t.id,
                       image: g,
-                      canAnimate: h,
+                      canAnimate: m,
                       size: u,
                   })
                 : void 0,
@@ -26,16 +26,16 @@ function u(e) {
             () =>
                 null != t
                     ? (0, a.SG)(b, y, t, {
-                          canAnimate: h,
+                          canAnimate: m,
                           size: u,
                       })
                     : void 0,
-            [b, y, t, h, u],
+            [b, y, t, m, u],
         ),
-        isAvatarAnimating: h,
+        isAvatarAnimating: m,
         eventHandlers: {
             onMouseEnter: _,
-            onMouseLeave: m,
+            onMouseLeave: h,
         },
     };
 }
