@@ -50560,16 +50560,9 @@ div._34eac30af6a687c5-modalOverrideBody {
     margin-inline-end: -4px
 }
 
-.b2d72f296411131a-avatarSize {
-    height: 20px !important;
-    width: 20px !important
-}
-
 .b2d72f296411131a-emptyUser {
     background: var(--primary-500);
-    border-radius: 50%;
-    height: 20px;
-    width: 20px
+    border-radius: 50%
 }
 
 .b2d72f296411131a-avatarMasked {
