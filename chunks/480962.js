@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(720312),
     p = n(939350),
     _ = n(564546);
-function m(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -88,7 +88,7 @@ let O = "right-start",
     v = i.createContext(O);
 function S(e) {
     let t = i.useContext(v),
-        { subMenuClassName: n, parentItem: a, isFocused: m, menuSubmenuProps: g, renderSubmenu: y } = e,
+        { subMenuClassName: n, parentItem: a, isFocused: h, menuSubmenuProps: g, renderSubmenu: y } = e,
         { focusIndex: O, isUsingKeyboardNavigation: S } = g,
         I = b(g, ["focusIndex", "isUsingKeyboardNavigation"]),
         T = i.useRef(null),
@@ -99,14 +99,13 @@ function S(e) {
         P(!0);
     }, []),
         i.useLayoutEffect(() => {
-            var e;
-            m && ((0, u.F)(T), null == (e = A.current) || e.focus());
-        }, [m]);
-    let R = (0, r.jsx)("div", {
+            h && (0, u.F)(T);
+        }, [h]);
+    let w = (0, r.jsx)("div", {
             className: _.submenuPaddingContainer,
             children: (0, r.jsx)(
                 "div",
-                E(h({ className: o()(_.submenu, n) }, I), {
+                E(m({ className: o()(_.submenu, n) }, I), {
                     ref: A,
                     children: (0, r.jsx)(l.zJl, {
                         className: _.scroller,
@@ -115,12 +114,12 @@ function S(e) {
                 }),
             ),
         }),
-        w = (0, c.E)("MenuSubmenuItem"),
+        R = (0, c.E)("MenuSubmenuItem"),
         D = (0, f.c)("MenuSubmenuItem"),
         [x, L] = i.useState(!1);
-    if (w)
+    if (R)
         return (0, r.jsx)(s.pS, {
-            open: x,
+            open: x || h,
             viewportPadding: p.sb,
             maxHeight: p.Ts,
             onOpenChange: L,
@@ -133,12 +132,12 @@ function S(e) {
                 let { placement: t } = e;
                 return (0, r.jsx)(v.Provider, {
                     value: t,
-                    children: R,
+                    children: w,
                 });
             },
             children: (e) => {
                 let { ref: t, props: n } = e;
-                return (0, r.jsx)("div", E(h({ ref: t }, n), { children: a }));
+                return (0, r.jsx)("div", E(m({ ref: t }, n), { children: a }));
             },
         });
     let j = (0, r.jsx)(d.jRF, {
@@ -149,10 +148,10 @@ function S(e) {
         spacing: 4,
         position: "right",
         align: "top",
-        children: () => R,
+        children: () => w,
     });
     return (0, r.jsxs)("div", {
         ref: T,
-        children: [(0, r.jsx)("div", { ref: C }), a, m && N ? j : null],
+        children: [(0, r.jsx)("div", { ref: C }), a, h && N ? j : null],
     });
 }
