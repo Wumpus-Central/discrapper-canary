@@ -79,6 +79,7 @@ function f(e, t) {
 }
 let p = {
     "Icon Unlock": {
+        reducedMotion: "boolean",
         locked: "boolean",
         fill: "color",
     },
