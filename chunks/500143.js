@@ -14,7 +14,7 @@ function p(e) {
     let t = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         n = (0, f.Z)(null == t ? void 0 : t.id),
         p = (0, a.no)(e),
-        m = (0, d.Un)(e);
+        m = (0, d.U)(e);
     return r.useMemo(() => {
         let e = new Set(n.filter((e) => e instanceof s.q).map((e) => e.applicationId)),
             t = new Set(n.map((e) => e.type));

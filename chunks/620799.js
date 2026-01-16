@@ -1,37 +1,29 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var a = n(54381),
     r = n(442837),
     i = n(907862),
     l = n(607070),
     s = n(100527),
     o = n(314897),
-    c = n(172416),
-    d = n(892001),
-    u = n(228168),
-    m = n(921944),
-    p = n(388032);
-function h(e) {
-    let { targetElementRef: t, markAsDismissed: n, children: h } = e,
-        f = (0, r.e7)([o.default], () => o.default.getId()),
-        x = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-        b = (0, c.bg)({ location: "GameWidgetsPopover" });
+    c = n(892001),
+    d = n(228168),
+    u = n(921944),
+    m = n(388032);
+function p(e) {
+    let { targetElementRef: t, markAsDismissed: n, children: p } = e,
+        h = (0, r.e7)([o.default], () => o.default.getId()),
+        f = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            h,
+            p,
             (0, a.jsx)(i.J2, {
                 targetElementRef: t,
-                badge: b
-                    ? {
-                          type: "early_access",
-                          variant: "expressive",
-                      }
-                    : void 0,
-                title: p.intl.string(p.t.gxcsSq),
-                body: p.intl.string(p.t["8L7E5l"]),
+                title: m.intl.string(m.t.gxcsSq),
+                body: m.intl.string(m.t["8L7E5l"]),
                 caretConfig: { align: "start" },
                 graphic: {
                     type: "image",
-                    src: x
+                    src: f
                         ? "https://cdn.discordapp.com/assets/content/1b55390a202dcca3843b6c9205af0379cfa072f34d8b9217bce04aba4d373e5b.png"
                         : "https://cdn.discordapp.com/assets/content/fdb6d4e8a2f01f917d2025a8ca58ebd55e4eada92df1d5386f73d91d6acad1f9.png",
                 },
@@ -40,19 +32,19 @@ function h(e) {
                 gradientColor: "blue",
                 size: "md",
                 onRequestClose: () => {
-                    n(m.L.USER_DISMISS);
+                    n(u.L.USER_DISMISS);
                 },
                 actions: [
                     {
-                        text: p.intl.string(p.t.RzWDqY),
+                        text: m.intl.string(m.t.RzWDqY),
                         variant: "primary",
                         onClick: () => {
-                            n(m.L.TAKE_ACTION),
-                                (0, d.openUserProfileModal)({
-                                    userId: f,
+                            n(u.L.TAKE_ACTION),
+                                (0, c.openUserProfileModal)({
+                                    userId: h,
                                     sourceAnalyticsLocations: [s.Z.ACCOUNT],
                                     hideRestrictedProfile: !0,
-                                    tabSection: u.oh.WIDGETS,
+                                    tabSection: d.oh.WIDGETS,
                                 });
                         },
                     },

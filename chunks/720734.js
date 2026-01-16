@@ -50,8 +50,8 @@ var a = n(54381),
     W = n(821795),
     K = n(892567),
     q = n(258609),
-    Y = n(427347),
-    Q = n(72897),
+    Q = n(427347),
+    Y = n(72897),
     X = n(78933),
     J = n(850020),
     $ = n(379839),
@@ -104,8 +104,8 @@ var a = n(54381),
     eW = n(823379),
     eK = n(5192),
     eq = n(374023),
-    eY = n(51144),
-    eQ = n(998502),
+    eQ = n(51144),
+    eY = n(998502),
     eX = n(660230),
     eJ = n(853170),
     e$ = n(422202),
@@ -166,7 +166,7 @@ function tn(e, t) {
         e
     );
 }
-let ta = eQ.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
+let ta = eY.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
     tr = 2 * eH.Z.Millis.MINUTE,
     ti = 3 * eH.Z.Millis.SECOND,
     tl = 5 * eH.Z.Millis.SECOND;
@@ -400,7 +400,7 @@ class to extends r.PureComponent {
               ? (0, a.jsx)(T.Z, {
                     hoverText: l,
                     forceHover: e,
-                    children: (0, a.jsx)(E.Z, { text: eY.ZP.humanizeStatus(i) }),
+                    children: (0, a.jsx)(E.Z, { text: eQ.ZP.humanizeStatus(i) }),
                 })
               : l;
     }
@@ -476,7 +476,7 @@ class to extends r.PureComponent {
                                   ],
                               }),
                       }),
-                      (0, a.jsx)(Y.Z, {}),
+                      (0, a.jsx)(Q.Z, {}),
                   ],
               });
     }
@@ -596,7 +596,7 @@ class to extends r.PureComponent {
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
                 (0, eG.JG)(
-                    eY.ZP.getUserTag(e, {
+                    eQ.ZP.getUserTag(e, {
                         decoration: "never",
                         identifiable: "always",
                     }),
@@ -758,7 +758,7 @@ function td(e) {
             autoTrackExposure: !1,
         }),
         n = (0, d.e7)([eR.Z], () => null != eR.Z.getChannelId()),
-        a = (0, Q.Fh)(e),
+        a = (0, Y.Fh)(e),
         i = r.useRef(new m.V7()),
         [l, s] = r.useState(!1);
     r.useEffect(() => {
@@ -813,7 +813,7 @@ function tu() {
         m = (0, v.Z)({ userId: n }),
         p = (0, d.e7)([eD.Z], () => eD.Z.isCurrentUserPTTLatched()),
         h = (0, d.e7)([eD.Z], () => eD.Z.getVoiceVolume(n)),
-        f = eY.ZP.useUserTag(t, { decoration: "never" }),
+        f = eQ.ZP.useUserTag(t, { decoration: "never" }),
         b = (0, d.e7)([eL.Z], () => eL.Z.hidePersonalInformation),
         g = (0, d.e7)([eR.Z, eP.Z], () => {
             let e = eR.Z.getChannelId();
@@ -841,10 +841,10 @@ function tu() {
         V = (0, P.R)(t, null != F ? F : void 0),
         z = (0, w.Z)(r ? V : G),
         H = eK.ZP.useName(null != F ? F : void 0, null, t),
-        W = null != (e = eY.ZP.useName(t)) ? e : "",
+        W = null != (e = eQ.ZP.useName(t)) ? e : "",
         { voiceActivityStatusEnabled: K } = (0, C.U)({ location: "Account" }),
-        Y = (0, er.c)(t, "Account"),
-        Q = ei.H.useConfig({ location: "Account" }).enabled,
+        Q = (0, er.c)(t, "Account"),
+        Y = ei.H.useConfig({ location: "Account" }).enabled,
         { analyticsLocations: X } = (0, N.ZP)(O.Z.ACCOUNT),
         $ = (0, J.K)({
             user: t,
@@ -868,16 +868,16 @@ function tu() {
             }
             return a.length > 1;
         }),
-        el = (0, ec.Un)({ location: "AccountConnected" }),
+        el = (0, ec.U)({ location: "AccountConnected" }),
         ed = {
             avatar: [],
             settings: [],
         };
     !M &&
         (ed.avatar.push(u.z.DISPLAY_NAME_STYLES_COACHMARK),
-        Y && ed.avatar.push(u.z.TENURE_BADGE_CHURN_REMINDER),
+        Q && ed.avatar.push(u.z.TENURE_BADGE_CHURN_REMINDER),
         el && ed.avatar.push(u.z.WIDGETS_RTC_UPSELL_COACHMARK),
-        Q && ed.settings.push(u.z.NITRO_PRIVACY_PERK_BETA_COACHMARK));
+        Y && ed.settings.push(u.z.NITRO_PRIVACY_PERK_BETA_COACHMARK));
     let { shouldShowTooltip: eu, dismissTooltip: em } = td(e6.h7.AUDIO_INPUT),
         { shouldShowTooltip: ep, dismissTooltip: eh } = td(e6.h7.AUDIO_OUTPUT);
     return (0, a.jsx)(N.Gt, {
@@ -940,8 +940,8 @@ function tm(e) {
         g = r.useRef(null),
         { showRefreshedAudioContextMenu: v } = (0, eJ.e)({ location: "SettingsCogButton" }),
         j = !v && (f || b),
-        { name: y } = (0, Q.p6)(e6.h7.AUDIO_INPUT),
-        { name: C } = (0, Q.p6)(e6.h7.AUDIO_OUTPUT);
+        { name: y } = (0, Y.p6)(e6.h7.AUDIO_INPUT),
+        { name: C } = (0, Y.p6)(e6.h7.AUDIO_OUTPUT);
     !v && f
         ? ((t = e2.intl.format(e2.t["18wnuD"], { inputDeviceName: y })),
           (n = e2.intl.formatToPlainString(e2.t["18wnuD"], { inputDeviceName: y })),
@@ -1049,7 +1049,7 @@ function tp(e) {
             },
             [b, V],
         ),
-        [q, Y] = r.useState(!1),
+        [q, Q] = r.useState(!1),
         X = r.useCallback((e) => {
             var t;
             if (
@@ -1057,12 +1057,12 @@ function tp(e) {
                 (null == (t = S.current) ? void 0 : t.contains(e.target))
             )
                 return f.F;
-            Y(!1);
+            Q(!1);
         }, []);
     (0, eV.yp)({
         event: e8.CkL.OPEN_VOICE_FILTER_POPOUT,
         handler: () => {
-            Y(!0);
+            Q(!0);
         },
     });
     let [J, $] = r.useState(!1);
@@ -1084,7 +1084,7 @@ function tp(e) {
         }, [I]),
         et = _ ? x.TVs.colors.ICON_VOICE_MUTED : "currentColor",
         en = (0, ea.Z)({ location: "Account" }),
-        { name: er } = (0, Q.p6)(e6.h7.AUDIO_INPUT),
+        { name: er } = (0, Y.p6)(e6.h7.AUDIO_INPUT),
         { showRefreshedAudioContextMenu: ei } = (0, eJ.e)({ location: "MicrophoneButton" }),
         { enabledInputProfiles: el } = (0, ep.G)({ location: "MicrophoneButton" });
     return ei
@@ -1295,17 +1295,17 @@ function tp(e) {
                                                   t === u.z.VOICE_FILTER_EARLY_ACCESS_COACHMARK
                                                       ? (o = (0, a.jsx)(e_.U, {
                                                             markAsDismissed: i,
-                                                            onCTA: () => Y(!0),
+                                                            onCTA: () => Q(!0),
                                                         }))
                                                       : t === u.z.VOICE_FILTER_LAUNCH_COACHMARK
                                                         ? (o = (0, a.jsx)(eC.n, {
                                                               markAsDismissed: i,
-                                                              onCTA: () => Y(!0),
+                                                              onCTA: () => Q(!0),
                                                           }))
                                                         : t === u.z.VOICE_FILTER_FIRST_USE_COACHMARK &&
                                                           (o = (0, a.jsx)(ey.v, {
                                                               markAsDismissed: i,
-                                                              onCTA: () => Y(!0),
+                                                              onCTA: () => Q(!0),
                                                           }));
                                                   let c = () =>
                                                       (0, a.jsx)(
@@ -1334,8 +1334,8 @@ function tp(e) {
                                                                       i(e7.L.INDIRECT_ACTION),
                                                                           n(e),
                                                                           null != w && !q && I
-                                                                              ? (0, eE.$)(() => Y(!0))
-                                                                              : Y(!q);
+                                                                              ? (0, eE.$)(() => Q(!0))
+                                                                              : Q(!q);
                                                                   },
                                                               },
                                                               r,
@@ -1382,7 +1382,7 @@ function th(e) {
             events: { onMouseEnter: g, onMouseLeave: v },
         } = (0, p.l)(h ? "undeafen" : "deafen"),
         j = n ? x.Vm4 : f,
-        { name: y } = (0, Q.p6)(e6.h7.AUDIO_OUTPUT),
+        { name: y } = (0, Y.p6)(e6.h7.AUDIO_OUTPUT),
         { showRefreshedAudioContextMenu: C } = (0, eJ.e)({ location: "HeadphonesButton" }),
         _ = (0, Z.Z)(t, n, i),
         { analyticsLocations: S } = (0, N.ZP)(O.Z.AUDIO_OUTPUT_BUTTON),

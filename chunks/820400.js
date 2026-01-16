@@ -7,7 +7,7 @@ var a = n(54381),
     o = n(172416),
     c = n(87489);
 function d() {
-    let e = (0, o.Un)({
+    let e = (0, o.U)({
             location: "DevToolsWidgetsPanel",
             autoTrackExposure: !1,
         }),

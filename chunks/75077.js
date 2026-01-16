@@ -1,8 +1,8 @@
 n.d(t, {
     ZM: () => _,
     gx: () => d,
-    mN: () => h,
-    re: () => m,
+    mN: () => m,
+    re: () => h,
 }),
     n(539854),
     n(388685);
@@ -17,28 +17,21 @@ var r = n(442837),
 let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     f = 3,
     p = (e) => {
-        let {
-                cards: t,
-                perksCards: n,
-                showProfileWidgets: r,
-                recurring3PPromotionExperiment: i,
-                showPremiumGroup: a,
-            } = e,
-            o = null != n.tenureBadge ? [n.tenureBadge] : [],
-            s = f - o.length,
-            l = (e) => {
+        let { cards: t, perksCards: n, recurring3PPromotionExperiment: r, showPremiumGroup: i } = e,
+            a = null != n.tenureBadge ? [n.tenureBadge] : [],
+            o = f - a.length,
+            s = (e) => {
                 let { card: n } = e;
-                t.length < s && t.push(n);
+                t.length < o && t.push(n);
             };
         return (
-            a && l({ card: n.premiumGroup }),
-            i && l({ card: n.recurring3PPromotions }),
-            r && l({ card: n.profileWidgets }),
-            l({ card: n.displayNameStyles }),
-            l({ card: n.customThemes }),
-            l({ card: n.permadecos }),
-            l({ card: n.newAppStylesUpdateJune2024 }),
-            t.push(...o),
+            i && s({ card: n.premiumGroup }),
+            r && s({ card: n.recurring3PPromotions }),
+            s({ card: n.displayNameStyles }),
+            s({ card: n.customThemes }),
+            s({ card: n.permadecos }),
+            s({ card: n.newAppStylesUpdateJune2024 }),
+            t.push(...a),
             t
         );
     },
@@ -50,38 +43,36 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 isPremiumSubscriber: i,
                 fractionalState: a,
                 isInReverseTrial: o,
-                showProfileWidgets: s,
-                recurring3PPromotionExperiment: u,
-                showPremiumGroup: d,
-                isPremiumGroupMember: f,
+                recurring3PPromotionExperiment: s,
+                showPremiumGroup: u,
+                isPremiumGroupMember: d,
             } = e,
-            _ = [];
+            f = [];
         switch (n) {
             case l.gM.PERKS_DISCOVERABILITY:
-                _ =
+                f =
                     !1 === i
                         ? [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
-                        : a === c.a$.FP_ONLY || f
+                        : a === c.a$.FP_ONLY || d
                           ? [t.profiles, t.clientThemes, t.hdVideo]
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case l.gM.WHATS_NEW:
-                _ = p({
-                    cards: _,
+                f = p({
+                    cards: f,
                     perksCards: t,
-                    showProfileWidgets: s,
-                    recurring3PPromotionExperiment: u,
-                    showPremiumGroup: d,
+                    recurring3PPromotionExperiment: s,
+                    showPremiumGroup: u,
                 });
                 break;
             case l.gM.CARD_CAROUSEL_FIRST_ROW:
-                _ =
+                f =
                     !1 === i
                         ? [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                         : [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess];
                 break;
             case l.gM.CARD_CAROUSEL_SECOND_ROW:
-                _ =
+                f =
                     !1 === i
                         ? [t.customSoundsEverywhere, t.specialStickerAccess]
                         : a === c.a$.FP_ONLY
@@ -110,16 +101,16 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                             ];
                 break;
             case l.gM.CARD_CAROUSEL_THIRD_ROW:
-                _ =
+                f =
                     a === c.a$.FP_ONLY
                         ? o
                             ? [t.entranceSoundsSeeAllVariation]
                             : [t.entranceSoundsSeeAllVariation, t.greyBadge]
                         : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return r && (_ = _.filter((e) => !e.hideOnNarrowScreen)), _;
+        return r && (f = f.filter((e) => !e.hideOnNarrowScreen)), f;
     },
-    m = (e) => {
+    h = (e) => {
         let t = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
             n = null != t ? s.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? s.ZP.getSkuIdForPlan(n.planId) : null) === c.Si.TIER_2;
@@ -138,7 +129,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                   subtitle: u.intl.string(u.t["5TFEXv"]),
               };
     },
-    h = () => {
+    m = () => {
         let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
         return (0, s.I5)(e);
     };

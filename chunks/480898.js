@@ -10,7 +10,7 @@ var a = n(54381),
     u = n(220141);
 function m(e) {
     let { displayProfile: t, handleOpenUserProfileModal: n, height: m } = e,
-        p = (0, d.Un)({ location: "AccountProfilePopoutUpsell" }),
+        p = (0, d.U)({ location: "AccountProfilePopoutUpsell" }),
         h = (0, c.ww)(t),
         f = (0, s.Z)({ location: "AccountProfilePopoutUpsell" }),
         x = r.useMemo(() => {
