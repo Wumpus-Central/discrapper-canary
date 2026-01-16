@@ -1,2 +1,2 @@
-t.r(s), t.d(s, { default: () => p });
-let p = JSON.parse('{"Zxav97":["Total Due"],"pDVleg":["Total savings ",[1,"amount"]]}');
+s.r(e), s.d(e, { default: () => t });
+let t = JSON.parse('{"Zxav97":["Total Due"],"pDVleg":["Total savings ",[1,"amount"]],"eoXh7B":["Order Summary"]}');
