@@ -46,7 +46,7 @@ function u(e) {
                     : null,
                 (0, r.jsx)(a.Kqy, {
                     direction: "vertical",
-                    gap: 16,
+                    gap: 8,
                     children: f.map((e, t) =>
                         (0, r.jsxs)(
                             i.Fragment,
