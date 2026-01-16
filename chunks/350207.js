@@ -7,12 +7,12 @@ var r = n(54381),
     l = n(481060),
     c = n(224706),
     u = n(835473),
-    d = n(77498),
+    d = n(404577),
     f = n(768581),
     p = n(823379),
     _ = n(785717),
-    m = n(931847),
-    h = n(836197),
+    h = n(931847),
+    m = n(836197),
     g = n(502762),
     E = n(652853),
     b = n(671955),
@@ -36,14 +36,14 @@ function S(e) {
 function I(e) {
     let { widgets: t = [], onClick: n, className: a } = e,
         { trackUserProfileAction: u } = (0, _.KZ)(),
-        I = S(t.filter((e) => e instanceof m.q)),
+        I = S(t.filter((e) => e instanceof h.q)),
         C = (0, i.useMemo)(
             () => [
                 ...new Set(
                     t
                         .map((e) => {
-                            if (e instanceof h.zy) return e.games.map((e) => e.applicationId);
-                            if (e instanceof m.q) {
+                            if (e instanceof m.zy) return e.games.map((e) => e.applicationId);
+                            if (e instanceof h.q) {
                                 var t;
                                 return null == (t = I[e.applicationId]) ? void 0 : t.id;
                             }
@@ -56,8 +56,8 @@ function I(e) {
         ),
         A = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
         [N, P] = (0, i.useState)([]),
-        { themeType: R } = (0, E.z)(),
-        w = R === b.l.SIDEBAR,
+        { themeType: w } = (0, E.z)(),
+        R = w === b.l.SIDEBAR,
         D = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
@@ -96,7 +96,7 @@ function I(e) {
                 className: o()(O.innerContainer, a),
                 children: [
                     (0, r.jsx)(l.Text, {
-                        variant: w ? "text-sm/medium" : "text-xs/medium",
+                        variant: R ? "text-sm/medium" : "text-xs/medium",
                         children: y.intl.string(y.t.JjiwFx),
                     }),
                     (0, r.jsx)("div", {

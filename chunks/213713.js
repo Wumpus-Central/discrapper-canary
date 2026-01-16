@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -18,7 +18,7 @@ var a = n(54381),
     v = n(681619),
     j = n(810568),
     y = n(168524),
-    C = n(77498),
+    C = n(404577),
     _ = n(823379),
     S = n(550532),
     E = n(71585),
@@ -83,7 +83,7 @@ function A(e) {
         },
     });
 }
-function Z() {
+function D() {
     var e, t;
     let n = (0, u.e7)([T.Z], () => T.Z.getFeed(w.YN.GLOBAL_FEED)),
         i = (0, u.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
@@ -103,7 +103,7 @@ function Z() {
             var e;
             return (null == (e = T.Z.getFeedState(w.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [A, Z] = r.useState(""),
+        [A, D] = r.useState(""),
         L = (0, u.e7)([C.Z, x.Z], () => {
             var e, t, n;
             return parseInt(A) > 0
@@ -215,10 +215,10 @@ function Z() {
                         }),
                         (0, a.jsx)(h.oil, {
                             placeholder: "App ID or full name",
-                            onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && D(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (A === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
+                                    (A === e.currentTarget.value ? null == M || M(e) : D(e.currentTarget.value));
                             },
                             error:
                                 A.length > 0 && null == M
@@ -230,7 +230,7 @@ function Z() {
                             children: B.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    { children: (0, a.jsx)(D, { application: e }) },
+                                    { children: (0, a.jsx)(Z, { application: e }) },
                                     "follow-game-".concat(e.id),
                                 ),
                             ),
@@ -269,7 +269,7 @@ function Z() {
         }),
     });
 }
-let D = (e) => {
+let Z = (e) => {
     let { application: t } = e,
         n = (0, y.Z)({
             applicationId: t.id,

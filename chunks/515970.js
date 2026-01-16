@@ -7,7 +7,7 @@ n.d(t, {
     f7: () => k,
     gq: () => x,
     jA: () => j,
-    pg: () => w,
+    pg: () => R,
 }),
     n(388685),
     n(415506),
@@ -24,8 +24,8 @@ var r = n(512722),
     f = n(987509),
     p = n(752048),
     _ = n(598077),
-    m = n(592125),
-    h = n(77498),
+    h = n(592125),
+    m = n(404577),
     g = n(165630),
     E = n(430824),
     b = n(594174),
@@ -87,7 +87,7 @@ function P(e, t) {
         e
     );
 }
-function R() {
+function w() {
     let e = p.Z.getUserAffinities()
             .slice(0, 4)
             .map((e) => b.default.getUser(e.otherUserId))
@@ -163,7 +163,7 @@ function R() {
         },
     };
 }
-async function w() {
+async function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if ((o.Z.dispatch({ type: "CHECKPOINT_FETCH_START" }), e)) {
         let {
@@ -178,7 +178,7 @@ async function w() {
             voice: c,
             sidekick: u,
             quests: d,
-        } = R();
+        } = w();
         o.Z.dispatch({
             type: "CHECKPOINT_FETCH_SUCCESS",
             data: {
@@ -207,7 +207,7 @@ async function w() {
                 card_id: d,
                 power_level: f,
                 power_level_percentile: p,
-                messages: m,
+                messages: h,
                 emojis: g,
                 voice: b,
                 guilds: y,
@@ -224,14 +224,14 @@ async function w() {
                 powerLevel: f,
                 powerLevelPercentile: p,
                 messages:
-                    null != m
+                    null != h
                         ? {
-                              numMessagesSent: m.num_messages_sent,
-                              numMessagesSentPercentile: m.num_messages_sent_percentile,
+                              numMessagesSent: h.num_messages_sent,
+                              numMessagesSentPercentile: h.num_messages_sent_percentile,
                               topMonth: {
-                                  month: null != (s = null == (t = m.top_month) ? void 0 : t.month) ? s : 1,
+                                  month: null != (s = null == (t = h.top_month) ? void 0 : t.month) ? s : 1,
                                   numMessagesSent:
-                                      null != (l = null == (n = m.top_month) ? void 0 : n.num_messages_sent) ? l : 0,
+                                      null != (l = null == (n = h.top_month) ? void 0 : n.num_messages_sent) ? l : 0,
                               },
                           }
                         : void 0,
@@ -278,7 +278,7 @@ async function w() {
                     null != T
                         ? {
                               applications: T.applications.map((e) => ({
-                                  game: P(A({}, (0, h.m)(e.game)), { coverImageHash: e.game.cover_image_hash }),
+                                  game: P(A({}, (0, m.m)(e.game)), { coverImageHash: e.game.cover_image_hash }),
                                   numDaysPlayed: e.num_sessions,
                               })),
                               totalGamesPlayed: T.total_games_played,
@@ -317,7 +317,7 @@ async function w() {
 let D = async (e, t, n) => {
     let { withMessage: r } = t;
     (await Promise.all(e.map(f.qx))).filter(O.lm).forEach((e) => {
-        let t = m.Z.getChannel(e);
+        let t = h.Z.getChannel(e);
         if (null == t) return;
         let n = d.ZP.parse(t, null != r ? r : "");
         (n.components = []),
@@ -333,7 +333,7 @@ async function x(e, t) {
             location: "checkpoint-sidekick",
             navigateToChannel: !1,
         }),
-        r = m.Z.getChannel(n);
+        r = h.Z.getChannel(n);
     if (null == r) throw Error("Failed to open private channel");
     let i = (0, I._3)().findIndex((t) => t.trim() === e);
     y.default.track(T.rMx.CHECKPOINT_SIDEKICK_MESSAGE_SENT, {

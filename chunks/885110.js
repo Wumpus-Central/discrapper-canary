@@ -11,8 +11,8 @@ var r,
     f = n(768419),
     p = n(695346),
     _ = n(581883),
-    m = n(780570),
-    h = n(77498),
+    h = n(780570),
+    m = n(404577),
     g = n(517100),
     E = n(283595),
     b = n(293273),
@@ -38,8 +38,8 @@ let I = !1,
     A = 0,
     N = [],
     P = [],
-    R = !1,
-    w = !0,
+    w = !1,
+    R = !0,
     D = Object.freeze([]),
     x = Object.freeze([]),
     L = [],
@@ -52,10 +52,10 @@ function M(e) {
     return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(y.f)[0]].sort(y.f);
 }
 function k(e) {
-    return (0, m.OT)(e, E.Z);
+    return (0, h.OT)(e, E.Z);
 }
 function U(e) {
-    let t = h.Z.getGameByName(e);
+    let t = m.Z.getGameByName(e);
     return null != t ? k(t.id) : p.G6.getSetting();
 }
 function G(e) {
@@ -75,11 +75,11 @@ function G(e) {
     }
 }
 function Z() {
-    (w = !0), (C = T), F();
+    (R = !0), (C = T), F();
 }
 function F() {
     var e;
-    if (((A = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), w)) T = C;
+    if (((A = null != (e = g.Z.getIdleSince()) ? e : 0), (w = g.Z.isAFK()), R)) T = C;
     else if (I) T = v.Skl.INVISIBLE;
     else {
         let e = p.co.getSetting();
@@ -87,7 +87,7 @@ function F() {
     }
     T === v.Skl.ONLINE && A > 0 && (T = v.Skl.IDLE);
     let t = !1,
-        n = w || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
+        n = R || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
     a()(N, n) || ((N = n), (P = M(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
     D !== r && ((D = r), (t = !0));
@@ -107,21 +107,21 @@ function V() {
     return (I = !1), F();
 }
 function H() {
-    (w = !1), (C = v.Skl.UNKNOWN), F(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+    (R = !1), (C = v.Skl.UNKNOWN), F(), y.Z.setCurrentUserOnConnectionOpen(T, L);
 }
 function Y() {
     H();
 }
 class W extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, g.Z, E.Z, b.Z, y.Z, O.Z, f.Z, _.Z), this.syncWith([b.Z], F);
+        this.waitFor(m.Z, g.Z, E.Z, b.Z, y.Z, O.Z, f.Z, _.Z), this.syncWith([b.Z], F);
     }
     getLocalPresence() {
         return {
             status: T,
             since: A,
             activities: P,
-            afk: R,
+            afk: w,
         };
     }
     getStatus() {

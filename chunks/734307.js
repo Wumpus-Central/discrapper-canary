@@ -11,11 +11,11 @@ var r,
     f = n(601070),
     p = n(569471),
     _ = n(581883),
-    m = n(314897),
-    h = n(680089),
+    h = n(314897),
+    m = n(680089),
     g = n(592125),
     E = n(58468),
-    b = n(77498),
+    b = n(404577),
     y = n(496675),
     O = n(306680),
     v = n(944486),
@@ -38,24 +38,24 @@ function N(e, t, n) {
     );
 }
 let P = null,
-    R = null,
-    w = new C.ZP();
+    w = null,
+    R = new C.ZP();
 function D() {
     let e = v.Z.getChannelId(),
         t = v.Z.getVoiceChannelId();
-    return (P = e), (R = t), w.clear();
+    return (P = e), (w = t), R.clear();
 }
 function x(e) {
     let {
         guild: { id: t },
     } = e;
-    return w.clearGuildId(t);
+    return R.clearGuildId(t);
 }
 function L(e) {
     let {
         channel: { guild_id: t },
     } = e;
-    return w.clearGuildId(t);
+    return R.clearGuildId(t);
 }
 function j(e) {
     let { channels: t } = e,
@@ -65,57 +65,57 @@ function j(e) {
             .map((e) => e.guild_id)
             .uniq()
             .forEach((e) => {
-                w.clearGuildId(e) && (n = !0);
+                R.clearGuildId(e) && (n = !0);
             }),
         n
     );
 }
 function M(e) {
-    return w.nonPositionalChannelIdUpdate(e.id);
+    return R.nonPositionalChannelIdUpdate(e.id);
 }
 function k(e) {
-    return w.clearGuildId(e.guildId);
+    return R.clearGuildId(e.guildId);
 }
 function U(e) {
     let { guildId: t, user: n } = e;
-    return m.default.getId() === n.id && w.clearGuildId(t);
+    return h.default.getId() === n.id && R.clearGuildId(t);
 }
 function G(e) {
     let { userGuildSettings: t } = e;
     t.forEach((e) => {
         let { guild_id: t } = e;
-        return w.clearGuildId(t);
+        return R.clearGuildId(t);
     });
 }
 function Z(e) {
     let { guildId: t } = e;
-    return w.clearGuildId(t);
+    return R.clearGuildId(t);
 }
 function F(e) {
     e.channels.forEach((e) => {
         let { guildId: t } = e;
-        return w.clearGuildId(t);
+        return R.clearGuildId(t);
     });
 }
 function B(e) {
     var t;
     let { channelId: n } = e;
-    return w.clearGuildId(null == (t = g.Z.getChannel(n)) ? void 0 : t.guild_id);
+    return R.clearGuildId(null == (t = g.Z.getChannel(n)) ? void 0 : t.guild_id);
 }
 function V(e) {
     let { channelId: t } = e;
-    return w.nonPositionalChannelIdUpdate(t);
+    return R.nonPositionalChannelIdUpdate(t);
 }
 function H(e) {
     let { channelId: t } = e;
-    return w.nonPositionalChannelIdUpdate(t);
+    return R.nonPositionalChannelIdUpdate(t);
 }
 function Y(e) {
     let { channelId: t } = e;
-    return w.nonPositionalChannelIdUpdate(t);
+    return R.nonPositionalChannelIdUpdate(t);
 }
 function W() {
-    return null != P && w.nonPositionalChannelIdUpdate(P);
+    return null != P && R.nonPositionalChannelIdUpdate(P);
 }
 function K(e) {
     let { channels: t } = e,
@@ -129,39 +129,39 @@ function K(e) {
             .filter(I.lm)
             .uniq()
             .forEach((e) => {
-                w.clearGuildId(e) && (n = !0);
+                R.clearGuildId(e) && (n = !0);
             }),
         n
     );
 }
 function z(e) {
-    return w.clearGuildId(e.guildId);
+    return R.clearGuildId(e.guildId);
 }
 function q(e) {
     let { channel: t } = e;
-    return w.nonPositionalChannelIdUpdate(t.id);
+    return R.nonPositionalChannelIdUpdate(t.id);
 }
 function Q(e) {
     let { channel: t } = e;
-    return w.nonPositionalChannelUpdate(t);
+    return R.nonPositionalChannelUpdate(t);
 }
 function X(e) {
     let { id: t } = e;
-    return w.nonPositionalChannelIdUpdate(t);
+    return R.nonPositionalChannelIdUpdate(t);
 }
 function J() {
     let e = v.Z.getChannelId(),
         t = v.Z.getVoiceChannelId(),
-        n = P !== e || R !== t;
+        n = P !== e || w !== t;
     return (
         !!n &&
-        (a()([P, R, e, t])
+        (a()([P, w, e, t])
             .uniq()
             .forEach((e) => {
-                null != e && w.nonPositionalChannelIdUpdate(e) && (n = !0);
+                null != e && R.nonPositionalChannelIdUpdate(e) && (n = !0);
             }),
         (P = e),
-        (R = t),
+        (w = t),
         !0)
     );
 }
@@ -170,40 +170,40 @@ function $(e) {
         n = J(),
         r = new Set();
     for (let { channelId: e, oldChannelId: i } of t)
-        null == i || r.has(i) || (w.nonPositionalChannelIdUpdate(i) && (n = !0), r.add(i)),
-            null == e || r.has(e) || (w.nonPositionalChannelIdUpdate(e) && (n = !0), r.add(e));
+        null == i || r.has(i) || (R.nonPositionalChannelIdUpdate(i) && (n = !0), r.add(i)),
+            null == e || r.has(e) || (R.nonPositionalChannelIdUpdate(e) && (n = !0), r.add(e));
     return n;
 }
 function ee(e) {
     let { id: t } = e,
         n = g.Z.getChannel(t);
-    return null == n ? w.clearGuildId(t) : w.clearGuildId(n.guild_id);
+    return null == n ? R.clearGuildId(t) : R.clearGuildId(n.guild_id);
 }
 function et(e) {
     let { guildId: t } = e;
-    return w.clearGuildId(t);
+    return R.clearGuildId(t);
 }
 function en(e) {
     let { location: t } = e;
-    return w.updateSubtitles((0, c.j)(t), (0, c.p)(t));
+    return R.updateSubtitles((0, c.j)(t), (0, c.p)(t));
 }
 function er(e) {
     ei();
 }
 function ei() {
-    return w.updateSubtitles();
+    return R.updateSubtitles();
 }
 function ea(e) {
     let { guildId: t } = e;
-    return w.updateSubtitles(t);
+    return R.updateSubtitles(t);
 }
 function eo(e) {
     let { guildScheduledEvent: t } = e;
-    return w.updateSubtitles(t.guild_id);
+    return R.updateSubtitles(t.guild_id);
 }
 function es(e) {
     let { guildId: t } = e;
-    w.updateSubtitles(t);
+    R.updateSubtitles(t);
 }
 function el(e) {
     var t;
@@ -214,18 +214,18 @@ function el(e) {
     return (
         null != r &&
             T.default.keys(r).forEach((e) => {
-                null != r[e].guildRecentsDismissedAt && (i = w.updateRecentsCategory(e) || i);
+                null != r[e].guildRecentsDismissedAt && (i = R.updateRecentsCategory(e) || i);
             }),
         i
     );
 }
 class ec extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, m.default, h.Z, g.Z, E.Z, l.ZP, b.Z, u.Z, d.ZP, p.Z, y.Z, O.ZP, v.Z, S.ZP, _.Z);
+        this.waitFor(f.Z, h.default, m.Z, g.Z, E.Z, l.ZP, b.Z, u.Z, d.ZP, p.Z, y.Z, O.ZP, v.Z, S.ZP, _.Z);
     }
     getGuild(e, t) {
         var n, r;
-        let i = w.getGuild(
+        let i = R.getGuild(
             e,
             null != (n = null == t ? void 0 : t.guildActionRows) ? n : [],
             null != (r = null == t ? void 0 : t.channelNoticeRows) ? r : [],
@@ -236,7 +236,7 @@ class ec extends (r = o.ZP.Store) {
         };
     }
     getGuildWithoutChangingGuildActionRows(e) {
-        let t = w.getGuildChannelRowsOnly(e);
+        let t = R.getGuildChannelRowsOnly(e);
         return {
             guildChannelsVersion: t.version,
             guildChannels: t,
@@ -244,7 +244,7 @@ class ec extends (r = o.ZP.Store) {
     }
     recentsChannelCount(e) {
         if (null == e) return 0;
-        let t = w.getGuildChannelRowsOnly(e);
+        let t = R.getGuildChannelRowsOnly(e);
         return t.getCategoryFromSection(t.recentsSectionNumber).getShownChannelIds().length;
     }
 }

@@ -14,18 +14,18 @@ var r = n(54381),
     m = n(330003),
     b = n(297146),
     y = n(835473),
-    j = n(810568),
-    h = n(168524),
+    h = n(810568),
+    j = n(168524),
     O = n(970184),
-    v = n(197653),
-    x = n(979372),
-    P = n(676149),
-    I = n(861529),
+    x = n(197653),
+    v = n(979372),
+    I = n(676149),
+    P = n(861529),
     w = n(768494),
-    S = n(124347),
-    E = n(380221),
+    E = n(124347),
+    S = n(380221),
     T = n(314897),
-    _ = n(77498),
+    _ = n(404577),
     C = n(823379),
     N = n(785717),
     Z = n(621853),
@@ -75,8 +75,8 @@ function L(e, t) {
         e
     );
 }
-let G = /{{(.*?)}}/g,
-    B = {
+let B = /{{(.*?)}}/g,
+    G = {
         [o.J.MARVEL_RIVALS]: [
             {
                 type: "HERO",
@@ -364,7 +364,7 @@ function W(e) {
                         className: k.heroTitle,
                         children: null != t ? t : (0, r.jsx)("div", { className: k.textPlaceholder }),
                     }),
-                    (0, r.jsx)(x.U, {
+                    (0, r.jsx)(v.U, {
                         color: "muted",
                         children: n,
                     }),
@@ -373,7 +373,7 @@ function W(e) {
             (0, b.d)(i)
                 ? (0, r.jsx)("div", {
                       className: k.heroImageContainer,
-                      children: (0, r.jsx)(S.ZP, {
+                      children: (0, r.jsx)(E.ZP, {
                           src: i.proxyUrl,
                           alt: "",
                           width: i.width,
@@ -411,9 +411,9 @@ function z(e) {
 function K(e) {
     let { content: t } = e,
         n = i.useId(),
-        l = (0, x._)();
+        l = (0, v._)();
     return null != t
-        ? (0, r.jsx)(I.Z, {
+        ? (0, r.jsx)(P.Z, {
               type: d.re.TEXT_DISPLAY,
               id: n,
               content: t,
@@ -423,12 +423,12 @@ function K(e) {
 }
 function q(e) {
     let { content: t, image: n, imagePosition: i } = e,
-        l = (0, x._)(),
+        l = (0, v._)(),
         o = (0, b.d)(n)
             ? (0, r.jsx)("div", {
                   className: a()(k.image, l.className),
                   "data-position": i,
-                  children: (0, r.jsx)(S.ZP, {
+                  children: (0, r.jsx)(E.ZP, {
                       src: n.proxyUrl,
                       alt: "",
                       width: n.width,
@@ -459,7 +459,7 @@ function q(e) {
 function V(e) {
     let { size: t = "small", divider: n = !1 } = e,
         l = i.useId();
-    return (0, r.jsx)(P.Z, {
+    return (0, r.jsx)(I.Z, {
         type: d.re.SEPARATOR,
         id: l,
         divider: n,
@@ -468,7 +468,7 @@ function V(e) {
 }
 function X(e, t) {
     if (null == e) return null;
-    let n = e.split(G);
+    let n = e.split(B);
     if (1 === n.length) return n[0];
     if ("skeleton" === t.mode) return null;
     let r = "";
@@ -492,18 +492,18 @@ function X(e, t) {
 function Y(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
-    let i = null == (r = e.match(G)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
+    let i = null == (r = e.match(B)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
     if (null == i) return null;
     let l = t.variables[i];
     return null == l || "unfurled_media" !== l.type ? null : l.media;
 }
-function Q(e) {
+function J(e) {
     let { children: t, widget: n } = e;
-    return (0, r.jsx)(v.am.Root, {
+    return (0, r.jsx)(x.am.Root, {
         containerInnerWidth: 396,
         children: (0, r.jsx)(O.Il, {
             applicationWidget: n,
-            children: (0, r.jsx)(x.U, {
+            children: (0, r.jsx)(v.U, {
                 size: "reduced",
                 weight: "reduced",
                 children: (0, r.jsx)("div", {
@@ -514,7 +514,7 @@ function Q(e) {
         }),
     });
 }
-function J(e) {
+function Q(e) {
     return (0, r.jsxs)(u.Kqy, {
         direction: "horizontal",
         gap: 24,
@@ -560,32 +560,32 @@ let $ = Object.assign(
             { user: n, widget: l, cta: o, subtle: d = !1 } = e,
             b = (0, s.e7)([T.default], () => T.default.getId()) === n.id,
             O = (0, y.q)(l.applicationId),
-            v = null == O ? void 0 : O.getIconURL(16),
-            x = (0, s.e7)([_.Z], () => (null != O ? _.Z.getGameByApplication(O) : null)),
-            P = (0, h.Z)({
+            x = null == O ? void 0 : O.getIconURL(16),
+            v = (0, s.e7)([_.Z], () => (null != O ? _.Z.getGameByApplication(O) : null)),
+            I = (0, j.Z)({
                 location: "UserProfileApplicationWidget",
-                applicationId: null == x ? void 0 : x.id,
-                source: j.m1.UserProfile,
+                applicationId: null == v ? void 0 : v.id,
+                source: h.m1.UserProfile,
                 sourceUserId: n.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: I, hasAlreadyLinked: S, canStartAuthorization: G, startAuthorization: F } = (0, p.FG)(O),
+            { fetched: P, hasAlreadyLinked: E, canStartAuthorization: B, startAuthorization: F } = (0, p.FG)(O),
             { analyticsLocations: U } = (0, g.ZP)(f.Z.USER_PROFILE_APPLICATION_WIDGET),
             W = i.useCallback(() => {
-                G &&
+                B &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: l.applicationId,
                     }),
                     F({ analyticsLocations: U }));
-            }, [G, F, t, l.applicationId, U]),
-            H = null == o && I && !S && G,
+            }, [B, F, t, l.applicationId, U]),
+            H = null == o && P && !E && B,
             z = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != v
+                    null != x
                         ? (0, r.jsx)("img", {
                               className: k.appIcon,
-                              src: v,
+                              src: x,
                               width: 16,
                               height: 16,
                               alt: "",
@@ -601,14 +601,14 @@ let $ = Object.assign(
                 ],
             }),
             K =
-                null == x
+                null == v
                     ? (0, r.jsx)("div", {
                           className: k.headerTitle,
                           children: z,
                       })
                     : (0, r.jsx)(u.P3F, {
                           className: a()(k.headerTitle, k.clickable),
-                          onClick: P,
+                          onClick: I,
                           children: z,
                       }),
             {
@@ -617,16 +617,16 @@ let $ = Object.assign(
                 components: $,
             } = (function (e, t) {
                 let n = (0, m.Z)(),
-                    r = (0, s.e7)([E.Z], () => E.Z.getUserIdentityByApplication(e, t)),
+                    r = (0, s.e7)([S.Z], () => S.Z.getUserIdentityByApplication(e, t)),
                     l = (0, s.e7)([Z.Z], () => Z.Z.getApplicationWidgetConfig(t)),
                     a = (0, s.e7)(
-                        [E.Z, Z.Z],
-                        () => null == E.Z.getUserIdentities(e) || null == Z.Z.applicationWidgetConfigs,
+                        [S.Z, Z.Z],
+                        () => null == S.Z.getUserIdentities(e) || null == Z.Z.applicationWidgetConfigs,
                     ),
                     o = i.useMemo(() => {
                         var e, t, i, a, o, s, u, d, f;
                         if (null == l) return null;
-                        let g = B[l.widgetTemplateId];
+                        let g = G[l.widgetTemplateId];
                         if (null == g) return null;
                         let p =
                             ((e = null != r ? r : null),
@@ -770,16 +770,16 @@ let $ = Object.assign(
                       headerTitle: K,
                       headerClassName: k.header,
                       additionalManageWidgetMenuItems:
-                          null != x
+                          null != v
                               ? (0, r.jsx)(u.sNh, {
                                     id: "view-game-profile",
                                     label: "View Game Profile",
                                     icon: u.iWm,
-                                    action: P,
+                                    action: I,
                                 })
                               : null,
                       children: [
-                          (0, r.jsx)(Q, {
+                          (0, r.jsx)(J, {
                               widget: l,
                               children: (0, r.jsx)(M, { component: $ }),
                           }),
@@ -801,7 +801,7 @@ let $ = Object.assign(
                                                 ],
                                             }),
                                       H
-                                          ? (0, r.jsx)(J, {
+                                          ? (0, r.jsx)(Q, {
                                                 heading: D.intl.string(D.t.UDPRLO),
                                                 content: D.intl.string(D.t["OW/2al"]),
                                                 buttons: (0, r.jsx)(u.Button, {
@@ -816,5 +816,5 @@ let $ = Object.assign(
                   }),
               );
     },
-    { Cta: J },
+    { Cta: Q },
 );

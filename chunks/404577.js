@@ -18,8 +18,8 @@ var i,
     f = n(189451),
     p = n(695346),
     _ = n(973616),
-    m = n(626135),
-    h = n(70956),
+    h = n(626135),
+    m = n(70956),
     g = n(358085),
     E = n(709054),
     b = n(981631),
@@ -39,20 +39,20 @@ function O(e, t, n) {
 }
 let v = "GameStoreReportedGames",
     S = 2147483648,
-    I = h.Z.Millis.DAY,
+    I = m.Z.Millis.DAY,
     T = new u.Z(),
     C = {},
     A = {},
     N = null != (i = s.K.get(v)) ? i : {},
     P = "",
-    R = null,
-    w = !1,
+    w = null,
+    R = !1,
     D = null,
     x = !1,
     L = [],
     j = [],
     M = new Map(),
-    k = h.Z.Millis.HOUR;
+    k = m.Z.Millis.HOUR;
 function U(e) {
     var t, n, r, i, a, o, s, l, c, u;
     return {
@@ -102,12 +102,12 @@ function B() {
     r = !0;
 }
 function V() {
-    (r = !1), (w = !0);
+    (r = !1), (R = !0);
 }
 function H(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && P !== n && (T.clear(), (C = {}), (A = {}), (P = n)), t)) Z(U(e));
-    (r = void 0), (R = Date.now()), (w = !0);
+    (r = void 0), (w = Date.now()), (R = !0);
 }
 function Y() {
     x = !0;
@@ -179,16 +179,16 @@ class z extends (a = o.ZP.PersistedStore) {
         return P;
     }
     get lastFetched() {
-        return R;
+        return w;
     }
     get hasAttemptedFetch() {
-        return w;
+        return R;
     }
     get detectableGamesTtl() {
         return I;
     }
     canFetchDetectableGames() {
-        return !0 !== r && (null == R || Date.now() >= R + I);
+        return !0 !== r && (null == w || Date.now() >= w + I);
     }
     canFetchExecutableBlocklist() {
         return (
@@ -228,7 +228,7 @@ class z extends (a = o.ZP.PersistedStore) {
             s = Date.now();
         (null == o || s - o >= k) &&
             (M.set(a, s),
-            m.default.track(b.rMx.GAME_BLOCKLIST_TRIGGERED, {
+            h.default.track(b.rMx.GAME_BLOCKLIST_TRIGGERED, {
                 block_type: t,
                 matched_entry: n,
                 game_name: null != (i = e.gameName) ? i : e.origGameName,

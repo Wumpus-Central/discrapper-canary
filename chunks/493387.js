@@ -11,12 +11,12 @@ var r = n(54381),
     f = n(524995),
     p = n(812206),
     _ = n(914498),
-    m = n(515344),
-    h = n(243778),
+    h = n(515344),
+    m = n(243778),
     g = n(810568),
     E = n(168524),
     b = n(171516),
-    y = n(77498),
+    y = n(404577),
     O = n(375954),
     v = n(81063),
     S = n(768581),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(206074),
     N = n(77603),
     P = n(732067),
-    R = n(328886),
-    w = n(921944),
+    w = n(328886),
+    R = n(921944),
     D = n(388032);
 function x(e, t) {
     var n;
@@ -105,7 +105,7 @@ function j(e) {
                     onClick: H,
                 };
         }, [H]),
-        W = (0, m.G)(g),
+        W = (0, h.G)(g),
         K = i.useMemo(() => (null != B ? B : null != W && U ? W : void 0), [U, B, W]),
         z = u.Z.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
         { canStartAuthorization: q, hasAlreadyLinked: Q, startAuthorization: X } = (0, f.FG)(g),
@@ -118,7 +118,7 @@ function j(e) {
             let e = [];
             return (
                 (0, C.c)(S.id, en) && q && !Q && z.enabled && e.push(o.z.GAME_INVITE_ACCOUNT_LINK_UPSELL),
-                (0, r.jsx)(h.ZP, {
+                (0, r.jsx)(m.ZP, {
                     contentTypes: e,
                     children: (e) => {
                         let { visibleContent: t, markAsDismissed: n } = e;
@@ -135,7 +135,7 @@ function j(e) {
                                 caretConfig: { align: "start" },
                                 shouldShow: !0,
                                 gradientColor: "purple",
-                                onRequestClose: () => n(w.L.USER_DISMISS),
+                                onRequestClose: () => n(R.L.USER_DISMISS),
                             });
                     },
                 })
@@ -163,7 +163,7 @@ function j(e) {
               accountLinkButtonRef: et,
               renderAccountLinkUpsell: er,
           })
-        : (0, r.jsx)(R.Z, {
+        : (0, r.jsx)(w.Z, {
               message: S,
               application: g,
               applicationName: Z,

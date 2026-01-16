@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(296009),
@@ -9,11 +9,11 @@ var r = n(54381),
     u = n(892001),
     d = n(475413),
     f = n(314897),
-    p = n(77498),
+    p = n(404577),
     _ = n(228168),
-    m = n(388032);
-function h(e) {
-    let { applicationId: t, onAction: n, onClose: h } = e,
+    h = n(388032);
+function m(e) {
+    let { applicationId: t, onAction: n, onClose: m } = e,
         g = (0, o.e7)([f.default], () => f.default.getId()),
         E = (0, c.ZP)(g, null),
         b = (0, o.e7)([p.Z], () => p.Z.getDetectableGame(t)),
@@ -49,13 +49,13 @@ function h(e) {
                         tabSection: _.oh.WIDGETS,
                         scrollTarget: a.l.CURRENT_GAMES,
                     }),
-                    null == h || h();
+                    null == m || m();
             },
-            [t, g, n, h],
+            [t, g, n, m],
         );
     return y
         ? (0, r.jsx)(d.i6, {
-              text: m.intl.string(m.t.BjYzmC),
+              text: h.intl.string(h.t.BjYzmC),
               onClick: O,
               fullWidth: !0,
           })

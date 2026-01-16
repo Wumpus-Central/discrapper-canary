@@ -11,9 +11,9 @@ var r,
     f = n(812206),
     p = n(594190),
     _ = n(592745),
-    m = n(706454),
-    h = n(757266),
-    g = n(77498),
+    h = n(706454),
+    m = n(757266),
+    g = n(404577),
     E = n(283595),
     b = n(246946),
     y = n(230307),
@@ -26,8 +26,8 @@ var r,
     A = n(780570),
     N = n(358085),
     P = n(998502),
-    R = n(804739),
-    w = n(7956),
+    w = n(804739),
+    R = n(7956),
     D = n(981631);
 function x(e, t, n) {
     return (
@@ -48,7 +48,7 @@ let L = 5,
     k = "",
     U = !1;
 function G(e, t) {
-    return e.application.name.localeCompare(t.application.name, m.default.locale, { sensitivity: "base" });
+    return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: "base" });
 }
 function Z(e, t) {
     return null != e && c()(e.createdAt).isAfter(j) && 0 === t;
@@ -119,17 +119,17 @@ function q(e, t, n, r, i) {
               isNew: Z(e, o),
               isLaunching: _.Z.launchingGames.has(e.id),
               isRunning: r.has(e.id),
-              isLaunchable: (0, R.t)({
+              isLaunchable: (0, w.t)({
                   LibraryApplicationStore: E.Z,
                   LaunchableGameStore: _.Z,
                   DispatchApplicationStore: v.Z,
-                  ConnectedAppsStore: h.Z,
+                  ConnectedAppsStore: m.Z,
                   applicationId: e.id,
                   branchId: e.branchId,
               }),
               isUpdatingFlags: E.Z.isUpdatingFlags(e.id, e.branchId),
               shouldShowInLibrary: (0, A.d0)(a, e, b.Z),
-              defaultAction: (0, w.i)(e, v.Z, S.Z),
+              defaultAction: (0, R.i)(e, v.Z, S.Z),
           }
         : null;
 }
@@ -147,11 +147,11 @@ function Q(e, t, n, r) {
             isNew: !1,
             isLaunching: _.Z.launchingGames.has(e),
             isRunning: r.has(e),
-            isLaunchable: (0, R.t)({
+            isLaunchable: (0, w.t)({
                 LibraryApplicationStore: E.Z,
                 LaunchableGameStore: _.Z,
                 DispatchApplicationStore: v.Z,
-                ConnectedAppsStore: h.Z,
+                ConnectedAppsStore: m.Z,
                 applicationId: e,
                 branchId: null,
             }),
@@ -191,8 +191,8 @@ function X() {
 }
 class J extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, g.Z, _.Z, p.ZP, v.Z, S.Z, E.Z, y.Z, b.Z, h.Z], X, 200),
-            this.syncWith([O.Z, m.default], () => !0);
+        this.syncWith([f.Z, g.Z, _.Z, p.ZP, v.Z, S.Z, E.Z, y.Z, b.Z, m.Z], X, 200),
+            this.syncWith([O.Z, h.default], () => !0);
     }
     get applicationFilterQuery() {
         return k;
@@ -210,7 +210,7 @@ class J extends (r = u.ZP.Store) {
         return H(this.libraryApplicationViewItems, k);
     }
     get sortedFilteredLibraryApplicationViewItems() {
-        return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, m.default.locale);
+        return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, h.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
         return W(M);

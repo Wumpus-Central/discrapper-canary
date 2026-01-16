@@ -11,13 +11,13 @@ var r = n(664751),
     f = n(439849),
     p = n(710845),
     _ = n(48131),
-    m = n(686440),
-    h = n(346951),
-    g = n(569675),
+    h = n(686440),
+    m = n(742347),
+    g = n(273273),
     E = n(594190),
     b = n(706454),
     y = n(757266),
-    O = n(77498),
+    O = n(404577),
     v = n(283595),
     S = n(417363),
     I = n(626135),
@@ -26,8 +26,8 @@ var r = n(664751),
     A = n(573261),
     N = n(278323),
     P = n(58642),
-    R = n(254854),
-    w = n(981631),
+    w = n(254854),
+    R = n(981631),
     D = n(701488),
     x = n(388032);
 let L = 3,
@@ -47,7 +47,7 @@ function M(e) {
     if (u) {
         let e = d.Z.getApplication(t);
         if ((null == e ? void 0 : e.deepLinkUri) != null) {
-            let r = "".concat(e.deepLinkUri).concat(w.UWR.GAME_INVITE_FRAGMENT).concat(n);
+            let r = "".concat(e.deepLinkUri).concat(R.UWR.GAME_INVITE_FRAGMENT).concat(n);
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
@@ -75,7 +75,7 @@ function M(e) {
         .then((e) =>
             0 === e
                 ? null
-                : T.Z.waitConnected(t).then(() => Promise.race([T.Z.waitSubscribed(t, w.zMe.ACTIVITY_JOIN)])),
+                : T.Z.waitConnected(t).then(() => Promise.race([T.Z.waitSubscribed(t, R.zMe.ACTIVITY_JOIN)])),
         )
         .then(() => {
             c.Z.dispatch({
@@ -104,7 +104,7 @@ function k(e, t) {
 function U(e) {
     return s.tn
         .post({
-            url: w.ANM.OAUTH2_AUTHORIZE,
+            url: R.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: e,
                 response_type: "token",
@@ -148,7 +148,7 @@ async function G(e) {
     } = e;
     if (i) {
         let e = d.Z.getApplication(t);
-        return null != e && (0, m.g)(e)
+        return null != e && (0, h.g)(e)
             ? (await _.Z.launchFrame({ applicationId: t }), 0)
             : (await (0, u.Z)({
                     applicationId: t,
@@ -197,7 +197,7 @@ async function G(e) {
                   });
               })
               .catch((e) => {
-                  R.Z.show(w.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
+                  w.Z.show(R.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
                       c.Z.dispatch({
                           type: "GAME_LAUNCH_FAIL",
                           applicationId: t,
@@ -217,7 +217,7 @@ let Z = {
             type: "RUNNING_GAME_ADD_OVERRIDE",
             pid: e,
         }),
-            I.default.track(w.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            I.default.track(R.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
         let r = (0, E.ow)(e),
@@ -226,10 +226,10 @@ let Z = {
             let e = v.Z.getActiveLibraryApplication(i.id);
             if (null != e) {
                 let r = e.getFlags(),
-                    i = o.yE(r, w.eHb.OVERLAY_DISABLED);
-                t && i !== t && (r = o.x9(r, w.eHb.OVERLAY_DISABLED));
-                let a = o.yE(r, w.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (r = o.x9(r, w.eHb.OVERLAY_V3_DISABLED)), P.h(e.id, e.branchId, r);
+                    i = o.yE(r, R.eHb.OVERLAY_DISABLED);
+                t && i !== t && (r = o.x9(r, R.eHb.OVERLAY_DISABLED));
+                let a = o.yE(r, R.eHb.OVERLAY_V3_DISABLED);
+                null != n && n !== a && (r = o.x9(r, R.eHb.OVERLAY_V3_DISABLED)), P.h(e.id, e.branchId, r);
                 return;
             }
         }
@@ -283,7 +283,7 @@ let Z = {
         ),
     getDetectableGamesSupplemental(e) {
         let { forceFetch: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { forceFetch: !1 };
-        (0, h.R)(e, { forceFetch: t });
+        (0, m.R)(e, { forceFetch: t });
     },
     getDetectableGames() {
         if (!O.Z.canFetchDetectableGames()) return;
@@ -291,7 +291,7 @@ let Z = {
         c.Z.wait(() => {
             c.Z.dispatch({ type: "GAMES_DATABASE_FETCH" }),
                 A.Z.get({
-                    url: w.ANM.GAMES_DETECTABLE,
+                    url: R.ANM.GAMES_DETECTABLE,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     oldFormErrors: !0,
@@ -336,7 +336,7 @@ let Z = {
             (c.Z.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             s.tn
                 .get({
-                    url: w.ANM.GAMES_BLOCKLIST,
+                    url: R.ANM.GAMES_BLOCKLIST,
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 })
@@ -363,7 +363,7 @@ let Z = {
             c.Z.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
                 s.tn
                     .get({
-                        url: w.ANM.NON_GAMES_DETECTABLE,
+                        url: R.ANM.NON_GAMES_DETECTABLE,
                         headers: { "If-None-Match": e },
                         retries: 1,
                         rejectWithError: !1,
@@ -408,7 +408,7 @@ let Z = {
             null != l &&
                 s.tn
                     .post({
-                        url: w.ANM.UNVERIFIED_APPLICATIONS,
+                        url: R.ANM.UNVERIFIED_APPLICATIONS,
                         body: {
                             name: t,
                             os: (0, C.getPlatformName)(),
@@ -436,7 +436,7 @@ let Z = {
     },
     uploadIcon(e, t, n) {
         s.tn.post({
-            url: w.ANM.UNVERIFIED_APPLICATIONS_ICONS,
+            url: R.ANM.UNVERIFIED_APPLICATIONS_ICONS,
             body: {
                 application_name: e,
                 application_hash: t,

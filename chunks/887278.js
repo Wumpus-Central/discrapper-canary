@@ -9,7 +9,7 @@ var r = n(570140),
     i = n(923928),
     a = n(593472),
     o = n(594190),
-    s = n(77498),
+    s = n(404577),
     l = n(594174),
     c = n(626135),
     u = n(358085),
@@ -29,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,7 +62,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -110,7 +110,7 @@ function I(e, t) {
             let l = (e, n) => {
                     c.default.track(
                         p.rMx.HOOK_RESULT,
-                        m(
+                        h(
                             {
                                 game_name: u,
                                 game_id: null == d ? null : d.id,
@@ -124,12 +124,12 @@ function I(e, t) {
                         n ? s() : s((e = null != e ? e : "Unknown hook error"));
                 },
                 _ = o.ZP.getOverlayOptionsForPID(e),
-                h = g(m({}, a.r, _), { elevate: o.ZP.shouldElevateProcessForPID(e) });
-            null == h.allowHook || h.allowHook
+                m = g(h({}, a.r, _), { elevate: o.ZP.shouldElevateProcessForPID(e) });
+            null == m.allowHook || m.allowHook
                 ? ((f = setTimeout(() => {
                       n.cancelAttachToProcess(e), l("Timed out waiting for hook response", !1);
                   }, 120000)),
-                  n.attachToProcess(e, h, l),
+                  n.attachToProcess(e, m, l),
                   r.Z.wait(() => i.Z.clearElevatedProcess()))
                 : s("Hook is disabled for this game");
         });

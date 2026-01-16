@@ -12,8 +12,8 @@ var i = n(442837),
     f = n(594190),
     p = n(562224),
     _ = n(199902),
-    m = n(77498),
-    h = n(19780),
+    h = n(404577),
+    m = n(19780),
     g = n(768581),
     E = n(358085),
     b = n(709054),
@@ -74,22 +74,22 @@ function A(e, t) {
     );
 }
 function N(e) {
-    let { currentUserId: t, message: I, application: C, channel: N, analyticsLocations: P, onView: R } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(C),
+    let { currentUserId: t, message: I, application: C, channel: N, analyticsLocations: P, onView: w } = e,
+        { staticBannerSrc: R, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(C),
         L = g.ZP.getApplicationIconURL({
             id: C.id,
             icon: C.icon,
         }),
-        j = (0, i.e7)([f.ZP, m.Z], () =>
+        j = (0, i.e7)([f.ZP, h.Z], () =>
             f.ZP.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === C.id) return !0;
-                let n = m.Z.getGameByApplication(C);
+                let n = h.Z.getGameByApplication(C);
                 return null != n && t === n.id;
             }),
         ),
         M = (0, i.e7)([_.Z], () => _.Z.getCurrentUserActiveStream()),
-        k = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
+        k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         U = b.default.extractTimestamp(I.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(I, N, t) }),
         { analyticsLocations: Z } = (0, l.ZP)(P, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
@@ -106,7 +106,7 @@ function N(e) {
         (0, r.jsx)(c.W, {
             header: S.intl.string(v.default.nAyuPp),
             title: C.name,
-            staticBannerSrc: w,
+            staticBannerSrc: R,
             videoBannerSrc: D,
             bannerAspectRatio: x,
             iconSrc: null != L ? L : void 0,
@@ -139,7 +139,7 @@ function N(e) {
                 guildId: N.guild_id,
                 channelId: N.id,
                 messageId: I.id,
-                onView: R,
+                onView: w,
                 isDeadEnd: U,
             },
         })

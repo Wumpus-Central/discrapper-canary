@@ -1,14 +1,14 @@
 n.d(t, { Z: () => s });
 var r = n(399606),
     i = n(669764),
-    a = n(210753),
-    l = n(77498),
+    l = n(210753),
+    a = n(404577),
     o = n(768581),
     c = n(388032);
 function s(e) {
     var t;
-    let { coverImageUrl: n, localizedName: s, isFetching: u } = (0, a.$)(e),
-        d = (0, r.e7)([l.Z], () => l.Z.getDetectableGame(e)),
+    let { coverImageUrl: n, localizedName: s, isFetching: u } = (0, l.$)(e),
+        d = (0, r.e7)([a.Z], () => a.Z.getDetectableGame(e)),
         f = (0, r.e7)([i.Z], () => i.Z.canFetch(e));
     return {
         coverImageUrl:

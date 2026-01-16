@@ -1,7 +1,7 @@
 n.d(t, {
-    JS: () => m,
+    JS: () => h,
     OverlayToggledClientSettingType: () => u,
-    Qu: () => h,
+    Qu: () => m,
     Ws: () => E,
     bk: () => g,
     ee: () => p,
@@ -11,7 +11,7 @@ n.d(t, {
     n(388685);
 var r = n(473749),
     i = n(579806),
-    a = n(77498),
+    a = n(404577),
     o = n(19780),
     s = n(626135),
     l = n(837268),
@@ -31,8 +31,8 @@ function d(e) {
     }
 }
 async function f(e, t, r) {
-    var o, u, f, p, _, m;
-    let h = null != r ? a.Z.getDetectableGame(r) : null,
+    var o, u, f, p, _, h;
+    let m = null != r ? a.Z.getDetectableGame(r) : null,
         { default: g } = n(371651),
         E = null != (f = null == g ? void 0 : g.getMostRecentOverlayRenderMethod()) ? f : void 0,
         b = null != E ? l.gl[E] : void 0;
@@ -41,18 +41,18 @@ async function f(e, t, r) {
             enabled: e,
             setting_type: d(t),
             client_setting_type: t,
-            application_id: null != (p = null == h ? void 0 : h.id) ? p : void 0,
-            application_name: null != (_ = null == h ? void 0 : h.name) ? _ : void 0,
+            application_id: null != (p = null == m ? void 0 : m.id) ? p : void 0,
+            application_name: null != (_ = null == m ? void 0 : m.name) ? _ : void 0,
             most_recent_overlay_render_method: b,
             hardware_display_count:
                 null !=
-                (m = await (null === i.Z ||
+                (h = await (null === i.Z ||
                 void 0 === i.Z ||
                 null == (u = i.Z.hardware) ||
                 null == (o = u.getDisplayCount)
                     ? void 0
                     : o.call(u)))
-                    ? m
+                    ? h
                     : null,
         });
 }
@@ -90,7 +90,7 @@ function _(e, t) {
             media_session_id: o.Z.getMediaSessionId(),
         });
 }
-function m(e, t) {
+function h(e, t) {
     let { pinned: n, opacity: r } = t;
     s.default.track(c.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
@@ -98,7 +98,7 @@ function m(e, t) {
         opacity: r,
     });
 }
-var h = (function (e) {
+var m = (function (e) {
         return (
             (e.SCREEN_SHARE = "screen share"),
             (e.CAMERA = "camera"),

@@ -5,7 +5,7 @@ var i,
     o = n(570140),
     s = n(706454),
     l = n(659181),
-    c = n(77498);
+    c = n(404577);
 function u(e, t, n) {
     return (
         t in e
@@ -23,8 +23,8 @@ let d = new Map(),
     f = new Set(),
     p = new Set(),
     _ = new Map(),
-    m = new Map(),
-    h = new Map();
+    h = new Map(),
+    m = new Map();
 function g(e) {
     var t;
     _.set(e.id, l.Z.createFromServer(e)),
@@ -34,8 +34,8 @@ function g(e) {
             t.forEach((t) => {
                 d.set(t, e.id);
             }),
-        m.has(e.application_id) || m.set(e.application_id, new Set()),
-        m.get(e.application_id).add(e.id);
+        h.has(e.application_id) || h.set(e.application_id, new Set()),
+        h.get(e.application_id).add(e.id);
 }
 function E(e) {
     g(e);
@@ -68,7 +68,7 @@ function I(e) {
 function T(e) {
     let { guildId: t, skus: n } = e;
     for (let e of n) E(e);
-    null != t && h.set(t, new Set(n.map((e) => e.id)));
+    null != t && m.set(t, new Set(n.map((e) => e.id)));
 }
 function C(e) {
     g(e.sku),
@@ -87,22 +87,22 @@ function P(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && g(e.sku);
 }
-function R() {
-    (d = new Map()), (f = new Set()), (p = new Set()), (_ = new Map()), (m = new Map()), (h = new Map());
-}
 function w() {
+    (d = new Map()), (f = new Set()), (p = new Set()), (_ = new Map()), (h = new Map()), (m = new Map());
+}
+function R() {
     if (r === s.default.locale) return !1;
-    (r = s.default.locale), R();
+    (r = s.default.locale), w();
 }
 class D extends (i = a.yh) {
     initialize() {
-        this.waitFor(s.default, c.Z), this.syncWith([s.default], w), (r = s.default.locale);
+        this.waitFor(s.default, c.Z), this.syncWith([s.default], R), (r = s.default.locale);
     }
     get(e) {
         return _.get(e);
     }
     getForApplication(e) {
-        let t = m.get(e);
+        let t = h.get(e);
         return null == t ? [] : Array.from(t).map((e) => _.get(e));
     }
     isFetching(e) {
@@ -131,7 +131,7 @@ let x = new D(o.Z, {
     SKU_FETCH_FAIL: v,
     SKUS_FETCH_SUCCESS: T,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: P,
-    APPLICATION_STORE_CLEAR_DATA: R,
+    APPLICATION_STORE_CLEAR_DATA: w,
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: P,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: P,
 });

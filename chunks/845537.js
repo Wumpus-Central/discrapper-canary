@@ -3,10 +3,10 @@ n.d(t, {
     Io: () => x,
     N1: () => k,
     NY: () => L,
-    Ox: () => R,
+    Ox: () => w,
     Vq: () => D,
     Wf: () => j,
-    cB: () => w,
+    cB: () => R,
     dy: () => N,
     wP: () => P,
 });
@@ -23,11 +23,11 @@ var i = n(442837),
     f = n(303694),
     p = n(285063),
     _ = n(124072),
-    m = n(891984),
-    h = n(884902);
+    h = n(891984),
+    m = n(884902);
 n(763296);
 var g = n(592125),
-    E = n(77498),
+    E = n(404577),
     b = n(485386),
     y = n(246946),
     O = n(594174),
@@ -64,11 +64,11 @@ function P(e) {
         }),
     });
 }
-function R(e) {
+function w(e) {
     let { text: t } = e;
     return (0, r.jsx)(_.Z, { children: t });
 }
-function w(e) {
+function R(e) {
     let { id: t, guildId: n, channelId: s } = e,
         c = (0, i.e7)([O.default], () => O.default.getUser(t)),
         u = (0, i.e7)([y.Z], () => y.Z.hidePersonalInformation),
@@ -112,7 +112,7 @@ function D(e) {
     let { id: t, guildId: n } = e,
         a = (0, i.e7)([b.Z], () => (null != n ? b.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([c.Z], () => c.Z.roleStyle),
-        l = (0, h._f)(n, a, null == a ? void 0 : a.colorStrings);
+        l = (0, m._f)(n, a, null == a ? void 0 : a.colorStrings);
     if (null == a)
         return (0, r.jsxs)("span", {
             children: ["@", C.intl.string(C.t["YV4F/n"])],
@@ -161,7 +161,7 @@ function L(e) {
         o = (0, f.W)(t, n, i);
     return (0, r.jsxs)(_.Z, {
         iconType: t,
-        children: [a, null != o && (0, r.jsx)(m.Z, {}), o],
+        children: [a, null != o && (0, r.jsx)(h.Z, {}), o],
     });
 }
 function j(e) {

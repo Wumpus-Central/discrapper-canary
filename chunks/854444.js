@@ -16,9 +16,9 @@ var r = n(473749),
     f = n(569471),
     p = n(131704),
     _ = n(680089),
-    m = n(592125),
-    h = n(58468),
-    g = n(77498),
+    h = n(592125),
+    m = n(58468),
+    g = n(404577),
     E = n(496675),
     b = n(306680),
     y = n(944486),
@@ -27,7 +27,7 @@ var r = n(473749),
     S = n(540126),
     I = n(647086),
     T = n(231338);
-let C = [s.ZP, l.Z, u.ZP, d.Z, f.Z, _.Z, m.Z, g.Z, E.Z, b.ZP, y.Z, O.ZP];
+let C = [s.ZP, l.Z, u.ZP, d.Z, f.Z, _.Z, h.Z, g.Z, E.Z, b.ZP, y.Z, O.ZP];
 function A() {
     let [e, t] = r.useState(() => N());
     return (
@@ -42,13 +42,13 @@ function N() {
     let e = l.Z.getFavoriteChannels(),
         t = O.ZP.isGuildCollapsed(I._),
         n = y.Z.getChannelId(),
-        r = m.Z.getChannel(n),
+        r = h.Z.getChannel(n),
         i = y.Z.getVoiceChannelId(),
         s = [],
         u = {};
     for (let t in e) {
         let n = e[t],
-            r = m.Z.getChannel(n.id);
+            r = h.Z.getChannel(n.id);
         if (null == r || n.type === o.Dd.CATEGORY) continue;
         let i = (0, c.r)(e, n, r);
         if (null == n.parentId || !(n.parentId in e)) {
@@ -73,16 +73,16 @@ function N() {
                                 : d.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id))
                             ? c
                             : {},
-                    m = (0, S.zR)(n, _, r, i, t),
-                    g = h.Z.isCollapsed(n.id),
+                    h = (0, S.zR)(n, _, r, i, t),
+                    g = m.Z.isCollapsed(n.id),
                     y = O.ZP.isChannelMuted(n.guild_id, n.id),
                     v = {
                         id: n.id,
                         record: n,
                         category: o,
                         position: e[n.id].order,
-                        threadIds: m,
-                        threadCount: a().size(m),
+                        threadIds: h,
+                        threadCount: a().size(h),
                         isCollapsed: g,
                         isMuted: y,
                         isFirstVoiceChannel: !1,
@@ -197,7 +197,7 @@ function N() {
             for (let t of [C, ...A])
                 for (let n of t.channelList)
                     for (let t of (e(n.record), n.threadIds)) {
-                        let n = m.Z.getChannel(t);
+                        let n = h.Z.getChannel(t);
                         null != n && e(n);
                     }
         },
