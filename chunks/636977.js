@@ -46,6 +46,7 @@ var r = (function (e) {
         (e[(e.QUEST_HOME_TAKEOVER = 42)] = "QUEST_HOME_TAKEOVER"),
         (e[(e.USER_PROFILE_ACTIVITY = 43)] = "USER_PROFILE_ACTIVITY"),
         (e[(e.MEMBERS_LIST_CARD = 44)] = "MEMBERS_LIST_CARD"),
+        (e[(e.APP_LAUNCHER = 45)] = "APP_LAUNCHER"),
         e
     );
 })({});
