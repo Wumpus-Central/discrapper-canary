@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(481060),
     p = n(100527),
     _ = n(906732),
-    m = n(644916),
-    h = n(243778),
+    h = n(644916),
+    m = n(243778),
     g = n(963249),
     E = n(717401),
     b = n(802408),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(624138),
     N = n(51144),
     P = n(713913),
-    R = n(897291),
-    w = n(443603),
+    w = n(897291),
+    R = n(443603),
     D = n(981631),
     x = n(921944),
     L = n(388032),
@@ -91,7 +91,7 @@ function F(e) {
     return (0, r.jsx)(d.u, {
         shouldShow: t,
         text: L.intl.string(L.t.Ve9Ge6),
-        children: (0, r.jsx)(w.Z, {
+        children: (0, r.jsx)(R.Z, {
             className: M.button,
             "aria-label": L.intl.string(L.t.Z1RnTk),
             isActive: !1,
@@ -122,7 +122,7 @@ function B(e) {
         shouldShow: o,
         text: L.intl.string(L.t.Ve9Ge6),
         children: (0, r.jsx)(
-            w.Z,
+            R.Z,
             Z(
                 U(
                     {
@@ -167,20 +167,26 @@ function B(e) {
 let V = T.Z.Millis.DAYS_30;
 function H(e) {
     var t, n;
-    let { giftingPromotionConfig: a, disabled: u, channel: d } = e,
-        { analyticsLocations: f } = (0, _.ZP)(p.Z.GIFT_BUTTON),
-        [T, P] = i.useState(!1),
-        w = (0, l.e7)([S.Z], () => !(null === S.Z || void 0 === S.Z ? void 0 : S.Z.hasLayers())),
-        L = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        M = null != L ? C.default.age(L.id) : 0,
-        k = (0, l.e7)([y.Z], () => {
+    let { disabled: a, channel: u } = e,
+        { analyticsLocations: d } = (0, _.ZP)(p.Z.GIFT_BUTTON),
+        [f, T] = i.useState(!1),
+        P = (0, l.e7)([S.Z], () => !(null === S.Z || void 0 === S.Z ? void 0 : S.Z.hasLayers())),
+        R = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        L = null != R ? C.default.age(R.id) : 0,
+        M = (0, l.e7)([y.Z], () => {
             let e = y.Z.getMarketingComponentByType(s.I.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIcon;
         }),
+        k = (0, l.e7)([y.Z], () => {
+            let e = y.Z.getMarketingComponentByType(s.I.GIFT_ICON_COACHMARK);
+            return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
+                ? null
+                : e.properties.properties.giftIconCoachmark;
+        }),
         U = i.useMemo(() => {
-            let e = null == k ? void 0 : k.gradient;
+            let e = null == M ? void 0 : M.gradient;
             if (null == e || null == e.colors || e.colors.length < 2) return;
             let t = (0, E.Tl)(
                 {
@@ -190,34 +196,34 @@ function H(e) {
                 { defaultAngle: 180 },
             );
             if ((null == t ? void 0 : t.background) != null) return { "--custom-promotion-gradient": t.background };
-        }, [null == k ? void 0 : k.gradient]),
-        G = !(0, A.Ew)(null == k ? void 0 : k.boxAnimationUrl),
+        }, [null == M ? void 0 : M.gradient]),
+        G = !(0, A.Ew)(null == M ? void 0 : M.boxAnimationUrl),
         Z =
-            (!(0, A.Ew)(null == k ? void 0 : k.trinketAnimationUrl) ||
-                !(0, A.Ew)(null == k ? void 0 : k.trinketGlowAnimationUrl)) &&
+            (!(0, A.Ew)(null == M ? void 0 : M.trinketAnimationUrl) ||
+                !(0, A.Ew)(null == M ? void 0 : M.trinketGlowAnimationUrl)) &&
             !G,
-        H = null != a.firstTimeNotice && !u && w && M >= V,
-        [Y, W] = (0, h.XR)(
+        H = null != k && !a && P && L >= V,
+        [Y, W] = (0, m.XR)(
             H ? c.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
-            (0, m.t)(c.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
+            (0, h.t)(c.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
         K = null != Y,
-        z = T || K,
-        q = (0, N.Ft)(d),
-        Q = d.type === D.d4z.DM,
+        z = f || K,
+        q = (0, N.Ft)(u),
+        Q = u.type === D.d4z.DM,
         X = (0, v.ao)({
             location: "gift-promotion-button",
             isGift: !0,
             giftRecipient: q,
         });
-    if (u) return null;
+    if (a) return null;
     let J = () => {
             X && Q && null != q
                 ? (0, O.Z)({
                       giftRecipient: q,
-                      analyticsLocations: f,
+                      analyticsLocations: d,
                       analyticsObject: {
-                          page: d.isPrivate() ? D.ZY5.DM_CHANNEL : D.ZY5.GUILD_CHANNEL,
+                          page: u.isPrivate() ? D.ZY5.DM_CHANNEL : D.ZY5.GUILD_CHANNEL,
                           section: D.jXE.CHANNEL_TEXT_AREA,
                           object: D.qAy.BUTTON_ICON,
                           objectType: D.AnalyticsObjectTypes.GIFT,
@@ -227,9 +233,9 @@ function H(e) {
                       isGift: !0,
                       giftRecipient: null == q ? void 0 : q,
                       initialPlanId: null,
-                      analyticsLocations: f,
+                      analyticsLocations: d,
                       analyticsObject: {
-                          page: d.isPrivate() ? D.ZY5.DM_CHANNEL : D.ZY5.GUILD_CHANNEL,
+                          page: u.isPrivate() ? D.ZY5.DM_CHANNEL : D.ZY5.GUILD_CHANNEL,
                           section: D.jXE.CHANNEL_TEXT_AREA,
                           object: D.qAy.GIFTING_PROMOTION_BUTTON,
                           objectType: D.AnalyticsObjectTypes.GIFT,
@@ -237,46 +243,45 @@ function H(e) {
                   });
         },
         $ = () => {
-            P(!1), W(x.L.TAKE_ACTION), J();
+            T(!1), W(x.L.TAKE_ACTION), J();
         },
         ee =
-            G && (null == k ? void 0 : k.boxAnimationUrl) != null
+            G && (null == M ? void 0 : M.boxAnimationUrl) != null
                 ? (0, r.jsx)(F, {
-                      boxAnimationUrl: k.boxAnimationUrl,
+                      boxAnimationUrl: M.boxAnimationUrl,
                       hovered: z,
                       onClick: $,
                   })
                 : Z
                   ? (0, r.jsx)(B, {
-                        trinketAnimationUrl: null != (t = null == k ? void 0 : k.trinketAnimationUrl) ? t : null,
+                        trinketAnimationUrl: null != (t = null == M ? void 0 : M.trinketAnimationUrl) ? t : null,
                         trinketGlowAnimationUrl:
-                            null != (n = null == k ? void 0 : k.trinketGlowAnimationUrl) ? n : null,
+                            null != (n = null == M ? void 0 : M.trinketGlowAnimationUrl) ? n : null,
                         hovered: z,
                         onClick: $,
                     })
-                  : (0, r.jsx)(R.Z, {
-                        disabled: u,
-                        channel: d,
+                  : (0, r.jsx)(w.Z, {
+                        disabled: a,
+                        channel: u,
                     });
     return (0, r.jsx)("div", {
         className: o()(j.container, { [j.containerHovered]: z }),
         style: U,
         onMouseEnter: () => {
-            T || P(!0);
+            f || T(!0);
         },
         onMouseLeave: () => {
-            P(!1);
+            T(!1);
         },
-        children:
-            void 0 !== a.firstTimeNotice && K
-                ? (0, r.jsx)(b.Z, {
-                      onComplete: () => P(!1),
-                      onCheckItOutClick: J,
-                      markAsDismissed: W,
-                      config: a.firstTimeNotice,
-                      children: ee,
-                  })
-                : ee,
+        children: K
+            ? (0, r.jsx)(b.Z, {
+                  onComplete: () => T(!1),
+                  onCheckItOutClick: J,
+                  markAsDismissed: W,
+                  coachmarkConfig: k,
+                  children: ee,
+              })
+            : ee,
     });
 }
 let Y = i.memo(H);

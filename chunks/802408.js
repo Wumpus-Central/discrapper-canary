@@ -1,41 +1,39 @@
-n.d(t, { Z: () => d }), n(388685), n(953529);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(907862),
-    s = n(780384),
-    l = n(410030),
-    c = n(607070),
-    u = n(921944);
-function d(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: d, config: f, children: p } = e,
-        _ = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        m = (0, l.ZP)(),
+    a = n(907862),
+    o = n(688766),
+    s = n(921944),
+    l = n(388032);
+function c(e) {
+    var t, n;
+    let { onComplete: c, onCheckItOutClick: u, markAsDismissed: d, coachmarkConfig: f, children: p } = e,
+        _ = (0, o.Y)(null == f ? void 0 : f.asset),
         h = i.useRef(null),
-        g = i.useRef(null),
-        [E, b] = i.useState(0);
+        m = i.useRef(null),
+        [g, E] = i.useState(0);
     i.useEffect(() => {
         let e = () => {
                 let e = h.current,
-                    t = g.current;
+                    t = m.current;
                 if (null == e || null == t) return;
                 let n = e.getBoundingClientRect(),
                     r = t.getBoundingClientRect();
-                b(n.left + n.width / 2 - (r.left + r.width / 2));
+                E(n.left + n.width / 2 - (r.left + r.width / 2));
             },
             t = new ResizeObserver(e),
             n = h.current,
-            r = g.current;
+            r = m.current;
         return null != n && t.observe(n), null != r && (t.observe(r), e()), () => t.disconnect();
     }, []);
-    let y = {
-            text: f.cta(),
+    let b = {
+            text: l.intl.string(l.t.RzWDqY),
             onClick: () => {
-                n(), t(), d(u.L.TAKE_ACTION);
+                u(), c(), d(s.L.TAKE_ACTION);
             },
         },
-        O = () => {
-            t(), d(u.L.USER_DISMISS);
+        y = () => {
+            c(), d(s.L.USER_DISMISS);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -43,21 +41,21 @@ function d(e) {
                 ref: h,
                 children: p,
             }),
-            (0, r.jsx)(o.Mb, {
+            (0, r.jsx)(a.Mb, {
                 targetElementRef: h,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                title: f.title(),
-                body: f.description(),
-                assetUrl: f.getImageUrl((0, s.wj)(m), _),
-                action: y,
+                title: null != (t = null == f ? void 0 : f.header) ? t : "",
+                body: null != (n = null == f ? void 0 : f.body) ? n : "",
+                assetUrl: null != _ ? _ : "",
+                action: b,
                 caretConfig: {
                     align: "custom",
-                    customOffset: E,
+                    customOffset: g,
                 },
-                onRequestClose: O,
-                popoverRef: g,
+                onRequestClose: y,
+                popoverRef: m,
             }),
         ],
     });
