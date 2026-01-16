@@ -48,6 +48,17 @@ function s(e, t) {
                     now_playing_num_cards: n.now_playing_num_cards,
                 }
             );
+        case a.rMx.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM:
+            return (
+                (n = t),
+                {
+                    timestamp: new Date(),
+                    rtc_state: i.Z.getState(),
+                    load_duration_ms: n.load_duration_ms,
+                    were_messages_cached: n.were_messages_cached,
+                    is_first_load: n.is_first_load,
+                }
+            );
         default:
             throw Error("getClickstreamTrackEvent: Unknown event: ".concat(e));
     }
