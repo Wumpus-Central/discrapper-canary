@@ -10,14 +10,14 @@ function u(e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: u, variant: d = "default", layout: f, initialize: p } = t,
         _ = null == n ? void 0 : n(),
-        m = null == u ? void 0 : u(),
-        h = i.useId(),
+        h = null == u ? void 0 : u(),
+        m = i.useId(),
         g = null != _ && "" !== _,
-        E = null != m && "" !== m;
+        E = null != h && "" !== h;
     return (
         (0, l.D)(p),
         (0, r.jsxs)("fieldset", {
-            "aria-describedby": E ? h : void 0,
+            "aria-describedby": E ? m : void 0,
             children: [
                 g || E
                     ? (0, r.jsxs)("div", {
@@ -36,9 +36,9 @@ function u(e) {
                                   ? (0, r.jsx)(a.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-default",
-                                        id: h,
+                                        id: m,
                                         className: c.subtitle,
-                                        children: m,
+                                        children: h,
                                     })
                                   : null,
                           ],
@@ -46,7 +46,7 @@ function u(e) {
                     : null,
                 (0, r.jsx)(a.Kqy, {
                     direction: "vertical",
-                    gap: 8,
+                    gap: 16,
                     children: f.map((e, t) =>
                         (0, r.jsxs)(
                             i.Fragment,
