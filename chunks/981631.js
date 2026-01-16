@@ -433,6 +433,7 @@ var r = n(106351),
             (e.OPEN_APP_DIRECTORY = "OPEN_APP_DIRECTORY"),
             (e.BROWSER_DEVTOOLS = "BROWSER_DEVTOOLS"),
             (e.VIBE_WITH_WUMPUS = "VIBE_WITH_WUMPUS"),
+            (e.OPEN_CONTEXT_MENU = "OPEN_CONTEXT_MENU"),
             e
         );
     })({}),
