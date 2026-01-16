@@ -121,7 +121,7 @@ function m(e) {
             !a && u > 0
                 ? (0, d.Ne)(
                       u,
-                      h ? s.TVs.colors.BACKGROUND_ACCENT.css : s.TVs.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                      h ? s.TVs.colors.BACKGROUND_MOD_STRONG.css : s.TVs.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                   )
                 : null;
     return (0, r.jsx)(s.tEY, {

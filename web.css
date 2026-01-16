@@ -1144,7 +1144,7 @@
 }
 
 ._28edcc5e79963875-circleBackground {
-    fill: var(--background-accent)
+    fill: var(--background-mod-muted)
 }
 
 ._28edcc5e79963875-circleProgress {
@@ -8076,9 +8076,9 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
 }
 
 ._6e2b9359c6f84cfd-colorNeutral {
-    --custom-notice-background: var(--background-accent);
-    --custom-notice-text: var(--white);
-    --custom-notice-button-hover: #222
+    --custom-notice-background: var(--background-surface-high);
+    --custom-notice-text: var(--text-strong);
+    --custom-notice-button-hover: var(--control-secondary-background-hover)
 }
 
 ._6e2b9359c6f84cfd-colorPremium {
@@ -14446,7 +14446,7 @@ screen and (max-width:485px) {
 }
 
 .c19a557985eb7793-compact.c19a557985eb7793-hasThread .c19a557985eb7793-contents:before {
-    background-color: var(--background-accent);
+    background-color: var(--spine-default);
     bottom: 0;
     content: "";
     inset-inline-start: 2.5rem;
@@ -14691,7 +14691,7 @@ screen and (max-width:485px) {
 ._09691b0a8e9f4365-hub {}
 
 ._09691b0a8e9f4365-hub>._09691b0a8e9f4365-icon>circle {
-    fill: var(--background-accent)
+    fill: var(--background-mod-strong)
 }
 
 ._09691b0a8e9f4365-verifiedHub {}
@@ -23520,17 +23520,10 @@ screen and (max-width:485px) {
     height: 10px
 }
 
-.theme-light ._976771df75452ce0-iconBackgroundTierNone,
-.theme-light ._976771df75452ce0-iconBackgroundTierOne,
-.theme-light ._976771df75452ce0-iconBackgroundTierThree,
-.theme-light ._976771df75452ce0-iconBackgroundTierTwo {
-    color: var(--background-accent)
-}
-
-.theme-dark ._976771df75452ce0-iconBackgroundTierNone,
-.theme-dark ._976771df75452ce0-iconBackgroundTierOne,
-.theme-dark ._976771df75452ce0-iconBackgroundTierThree,
-.theme-dark ._976771df75452ce0-iconBackgroundTierTwo {
+._976771df75452ce0-iconBackgroundTierNone,
+._976771df75452ce0-iconBackgroundTierOne,
+._976771df75452ce0-iconBackgroundTierThree,
+._976771df75452ce0-iconBackgroundTierTwo {
     color: var(--icon-muted)
 }
 
@@ -23559,7 +23552,7 @@ screen and (max-width:485px) {
 }
 
 :where(._85d1663d6a9fc7f6-disableColor) {
-    color: var(--background-accent)
+    color: var(--background-mod-muted)
 }
 
 ._85d1663d6a9fc7f6-tierTooltipTitle {
@@ -26316,7 +26309,7 @@ span._5d473ecff348c314-clanTag {
 }
 
 ._0f2e83213c878a13-container:hover ._0f2e83213c878a13-additionalParticipantBadge {
-    background: var(--background-gradient-high, var(--background-accent))
+    background: var(--background-gradient-high, var(--background-mod-muted))
 }
 
 ._0f2e83213c878a13-usesCardRows {
@@ -28717,7 +28710,7 @@ input[type=checkbox]:focus-visible+._0d242e583d6053f6-label {
 
 .fc7141859aaa98b7-emojiItem.fc7141859aaa98b7-emojiItemSelected,
 .fc7141859aaa98b7-emojiItem.fc7141859aaa98b7-expandCollapseButtonSelected {
-    background-color: var(--background-accent)
+    background-color: var(--interactive-background-selected)
 }
 
 .fc7141859aaa98b7-emojiItem.fc7141859aaa98b7-expandCollapseButtonSelected {
@@ -30776,7 +30769,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .f68fcb39346403ed-brokenImageIcon {
-    color: var(--background-accent);
+    color: var(--background-mod-muted);
     height: auto;
     object-fit: contain;
     width: 48px
@@ -32644,7 +32637,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 
 ._78aa303169d3d592-usageWrapper {
     align-items: center;
-    background: var(--background-accent);
+    background: var(--background-mod-strong);
     border-radius: 16px;
     display: flex;
     flex-direction: row;
@@ -34216,7 +34209,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 
 .ced2834b60370b00-unownedStickerLockContainer {
     align-items: center;
-    background-color: var(--background-accent);
+    background-color: var(--background-mod-muted);
     border: 1px solid var(--border-subtle);
     border-radius: 100%;
     bottom: 0;
@@ -34330,7 +34323,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .c6367b0f171ba6d7-stickerInspected .c6367b0f171ba6d7-inspectedIndicator {
-    background-color: var(--background-accent)
+    background-color: var(--interactive-background-selected)
 }
 
 .c6367b0f171ba6d7-stickerPlaceholder {
@@ -61603,7 +61596,7 @@ screen and (max-width:485px) {
 }
 
 ._4c1e4c295670eb1a-premiumOfferWithTimerAcknowledgedBadge {
-    background-color: var(--background-accent)
+    background-color: var(--background-mod-strong)
 }
 
 ._4c1e4c295670eb1a-premiumTrialBadgeSelected {
@@ -65055,7 +65048,7 @@ screen and (max-width:485px) {
 }
 
 ._183c2cc3c55377b0-emptyUser {
-    background: var(--background-accent);
+    background: var(--background-mod-muted);
     border-radius: 50%
 }
 
@@ -69379,7 +69372,7 @@ screen and (max-width:485px) {
 }
 
 .a3c1e13b2bbf49f1-brokenImageIcon {
-    color: var(--background-accent);
+    color: var(--background-mod-strong);
     height: auto;
     object-fit: contain;
     width: 32px
@@ -71682,11 +71675,11 @@ screen and (max-width:485px) {
 @use postcss-pxtorem;
 
 ._9271d23503a01b50-spine {
-    border-bottom: 2px solid var(--background-accent);
+    border-bottom: 2px solid var(--spine-default);
     border-end-start-radius: 8px;
-    -webkit-border-start: 2px solid var(--background-accent);
+    -webkit-border-start: 2px solid var(--spine-default);
     align-self: auto !important;
-    border-inline-start: 2px solid var(--background-accent);
+    border-inline-start: 2px solid var(--spine-default);
     border-color: var(--border-subtle);
     bottom: 29px;
     inset-inline-start: -2.5rem;
@@ -83790,7 +83783,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 .e9cb00d6250845ad-guildDescriptionIcon {
-    background-color: var(--background-accent)
+    background-color: var(--background-mod-muted)
 }
 
 .e9cb00d6250845ad-shopIcon {
@@ -84783,7 +84776,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._89d8032fe92992ee-item {
-    background-color: var(--background-accent);
+    background-color: var(--background-mod-muted);
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden
@@ -84847,7 +84840,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._52575e25551a413e-item {
-    background-color: var(--background-accent);
+    background-color: var(--background-mod-muted);
     border-radius: var(--radius-sm);
     margin-bottom: 20px;
     overflow: hidden
@@ -84979,7 +84972,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._6be08733343237f7-key {
-    background-color: var(--background-accent);
+    background-color: var(--background-mod-muted);
     border: 1px solid var(--background-base-low);
     border-radius: var(--radius-xs);
     box-shadow: inset 0 -4px 0 var(--background-base-lowest);
@@ -87043,7 +87036,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._8b9fcfa7b9f4eb18-lowImportance {
-    background-color: var(--background-accent)
+    background-color: var(--background-mod-strong)
 }
 
 ._71961da99d37ac57-result {
@@ -88564,7 +88557,7 @@ span._07f9193042954787-clanTag._07f9193042954787-isOverlay {
 }
 
 ._07f9193042954787-listDefault ._07f9193042954787-clickable:hover ._07f9193042954787-clanTag {
-    background: var(--background-accent)
+    background: var(--interactive-background-hover)
 }
 
 .theme-light ._07f9193042954787-listDefault ._07f9193042954787-clickable:hover ._07f9193042954787-clanTag {
@@ -90541,7 +90534,7 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 }
 
 ._744fffb886c6f25b-FPPill {
-    background-color: var(--background-accent)
+    background-color: var(--background-mod-muted)
 }
 
 ._744fffb886c6f25b-guildBoostingSettings {
@@ -95570,6 +95563,7 @@ html.disable-forced-colors * {
     --expressive-gradient-tenure-badge-silver-end: hsl(var(--neutral-58-hsl)/0.3);
     --expressive-gradient-tenure-badge-silver-start: hsl(var(--neutral-12-hsl)/0.3);
     --gradient-progress-pill-background: var(--neutral-46);
+    --guild-profile-banner-background-default: var(--neutral-73);
     --home-background: var(--primary-645);
     --icon-default: var(--neutral-10);
     --icon-feedback-critical: var(--red-new-22);
@@ -95580,6 +95574,8 @@ html.disable-forced-colors * {
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-27);
     --icon-muted: var(--neutral-23);
+    --icon-overlay-dark: var(--neutral-71);
+    --icon-overlay-light: var(--neutral-1);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
     --icon-status-offline: var(--neutral-27);
@@ -95860,6 +95856,7 @@ html.disable-forced-colors * {
         --expressive-gradient-tenure-badge-silver-end: color-mix(in oklab, hsl(var(--neutral-58-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --expressive-gradient-tenure-badge-silver-start: color-mix(in oklab, hsl(var(--neutral-12-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--primary-645) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -95869,6 +95866,8 @@ html.disable-forced-colors * {
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -96281,6 +96280,7 @@ html.disable-forced-colors * {
     --expressive-gradient-tenure-badge-silver-end: hsl(var(--neutral-58-hsl)/0.3);
     --expressive-gradient-tenure-badge-silver-start: hsl(var(--neutral-12-hsl)/0.3);
     --gradient-progress-pill-background: var(--neutral-18);
+    --guild-profile-banner-background-default: var(--neutral-40);
     --home-background: var(--primary-100);
     --icon-default: var(--neutral-69);
     --icon-feedback-critical: var(--red-new-53);
@@ -96291,6 +96291,8 @@ html.disable-forced-colors * {
     --icon-invert: var(--neutral-1);
     --icon-link: var(--blue-new-50);
     --icon-muted: var(--neutral-41);
+    --icon-overlay-dark: var(--neutral-71);
+    --icon-overlay-light: var(--neutral-2);
     --icon-status-dnd: var(--red-new-50);
     --icon-status-idle: var(--yellow-new-45);
     --icon-status-offline: var(--neutral-45);
@@ -96571,6 +96573,7 @@ html.disable-forced-colors * {
         --expressive-gradient-tenure-badge-silver-end: color-mix(in oklab, hsl(var(--neutral-58-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --expressive-gradient-tenure-badge-silver-start: color-mix(in oklab, hsl(var(--neutral-12-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--primary-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -96580,6 +96583,8 @@ html.disable-forced-colors * {
         --icon-invert: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-41) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -96992,6 +96997,7 @@ html.disable-forced-colors * {
     --expressive-gradient-tenure-badge-silver-end: hsl(var(--neutral-58-hsl)/0.3);
     --expressive-gradient-tenure-badge-silver-start: hsl(var(--neutral-12-hsl)/0.3);
     --gradient-progress-pill-background: var(--neutral-63);
+    --guild-profile-banner-background-default: var(--neutral-100);
     --home-background: var(--plum-18);
     --icon-default: var(--neutral-10);
     --icon-feedback-critical: var(--red-new-38);
@@ -97002,6 +97008,8 @@ html.disable-forced-colors * {
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-42);
     --icon-muted: var(--neutral-33);
+    --icon-overlay-dark: var(--neutral-71);
+    --icon-overlay-light: var(--neutral-8);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
     --icon-status-offline: var(--neutral-27);
@@ -97282,6 +97290,7 @@ html.disable-forced-colors * {
         --expressive-gradient-tenure-badge-silver-end: color-mix(in oklab, hsl(var(--neutral-58-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --expressive-gradient-tenure-badge-silver-start: color-mix(in oklab, hsl(var(--neutral-12-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-38) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -97291,6 +97300,8 @@ html.disable-forced-colors * {
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-33) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -97703,6 +97714,7 @@ html.disable-forced-colors * {
     --expressive-gradient-tenure-badge-silver-end: hsl(var(--neutral-58-hsl)/0.3);
     --expressive-gradient-tenure-badge-silver-start: hsl(var(--neutral-12-hsl)/0.3);
     --gradient-progress-pill-background: var(--neutral-56);
+    --guild-profile-banner-background-default: var(--neutral-92);
     --home-background: var(--plum-18);
     --icon-default: var(--neutral-5);
     --icon-feedback-critical: var(--red-new-32);
@@ -97713,6 +97725,8 @@ html.disable-forced-colors * {
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-37);
     --icon-muted: var(--neutral-29);
+    --icon-overlay-dark: var(--neutral-71);
+    --icon-overlay-light: var(--neutral-2);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
     --icon-status-offline: var(--neutral-27);
@@ -97993,6 +98007,7 @@ html.disable-forced-colors * {
         --expressive-gradient-tenure-badge-silver-end: color-mix(in oklab, hsl(var(--neutral-58-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --expressive-gradient-tenure-badge-silver-start: color-mix(in oklab, hsl(var(--neutral-12-hsl)/0.3) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3) var(--custom-theme-base-color-amount, 0%));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-56) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-92) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -98002,6 +98017,8 @@ html.disable-forced-colors * {
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));

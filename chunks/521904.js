@@ -5216,6 +5216,25 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
+            GUILD_PROFILE_BANNER_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_73",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_40",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_100",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_92",
+                    opacity: 1,
+                },
+            },
             HOME_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -5403,6 +5422,44 @@ let { Themes: r } = n(15202).VV,
                 },
                 [r.DARKER]: {
                     raw: "NEUTRAL_29",
+                    opacity: 1,
+                },
+            },
+            ICON_OVERLAY_DARK: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_71",
+                    opacity: 1,
+                },
+            },
+            ICON_OVERLAY_LIGHT: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_1",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_2",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_8",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_2",
                     opacity: 1,
                 },
             },

@@ -135,7 +135,7 @@ let k = i.memo(function (e) {
               null !=
               (l = (0, Z.Ne)(
                   q,
-                  X ? p.TVs.colors.BACKGROUND_ACCENT.css : p.TVs.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                  X ? p.TVs.colors.BACKGROUND_MOD_STRONG.css : p.TVs.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
               ))
                   ? l
                   : void 0)

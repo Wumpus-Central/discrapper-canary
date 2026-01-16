@@ -241,7 +241,7 @@ function k(e) {
                                   children: (0, r.jsx)(u.mAB, {
                                       count: i,
                                       color: d
-                                          ? s.Z.colors.BACKGROUND_ACCENT.css
+                                          ? s.Z.colors.BACKGROUND_MOD_STRONG.css
                                           : s.Z.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
                                   }),
                               })

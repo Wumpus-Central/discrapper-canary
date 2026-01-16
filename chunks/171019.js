@@ -46,7 +46,7 @@ let f = (e) => {
                               size: "xxs",
                               color: "currentColor",
                           }),
-                color: l.Z.colors.BACKGROUND_ACCENT.css,
+                color: l.Z.colors.BACKGROUND_MOD_STRONG.css,
                 className: d.iconBadge,
             });
 };

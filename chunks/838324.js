@@ -19,8 +19,8 @@ function m(e) {
         [x, j] = (0, d.OA)(t, [...b]),
         v = m ? j.length : h.length,
         O = m ? x.length : p.length,
-        C = O >= u.X,
-        y = j.length - h.length,
+        y = O >= u.X,
+        C = j.length - h.length,
         N = (0, r.jsx)(a.owK, {
             size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
@@ -31,10 +31,10 @@ function m(e) {
             size: "sm",
             className: f.icon,
             color: l.Z.colors.WHITE.css,
-            secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
+            secondaryColor: l.Z.colors.BACKGROUND_MOD_MUTED.css,
         }),
         I = [(Math.min(u.X, O) / u.X) * 100],
-        S = C ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css];
+        S = y ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css];
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -61,7 +61,7 @@ function m(e) {
             (0, r.jsxs)("div", {
                 className: f.requiredItem,
                 children: [
-                    C ? N : E,
+                    y ? N : E,
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -78,7 +78,7 @@ function m(e) {
                                 (0, r.jsx)(a.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
-                                    secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
+                                    secondaryColor: l.Z.colors.BACKGROUND_MOD_MUTED.css,
                                     className: f.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
@@ -94,14 +94,14 @@ function m(e) {
                                 (0, r.jsx)(a.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
-                                    secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
+                                    secondaryColor: l.Z.colors.BACKGROUND_MOD_MUTED.css,
                                     className: f.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: g.intl.format(g.t["8Geut3"], {
-                                        count: y,
+                                        count: C,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(a.eee, {
                                                 onClick: n,

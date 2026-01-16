@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(654904),
     p = n(981631),
     _ = n(388032),
-    m = n(317238);
-function h(e, t, n) {
+    h = n(317238);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -90,7 +90,7 @@ function v(e) {
             onChange: t,
             onClose: n,
             color: a,
-            suggestedColors: h,
+            suggestedColors: m,
             disabled: E,
             label: O,
             colorPickerMiddle: v,
@@ -99,11 +99,11 @@ function v(e) {
         } = e,
         T = i.useRef(null),
         C = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
-        A = c.Z.colors.BACKGROUND_ACCENT.css,
+        A = c.Z.colors.BACKGROUND_MOD_MUTED.css,
         N = (0, f.DP)(a),
         P = (0, l.Rf)(a),
-        R = P === C ? A : P,
-        w = N ? c.Z.unsafe_rawColors.WHITE.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
+        w = P === C ? A : P,
+        R = N ? c.Z.unsafe_rawColors.WHITE.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
         D = (0, d.Z)(v),
         x = (0, d.Z)(S),
         [L, j] = i.useState((0, s.Z)());
@@ -120,7 +120,7 @@ function v(e) {
                     b(g({}, e), {
                         value: a,
                         onChange: t,
-                        suggestedColors: h,
+                        suggestedColors: m,
                         middle: v,
                         footer: S,
                         showEyeDropper: I,
@@ -132,7 +132,7 @@ function v(e) {
                     n = y(e, ["onClick"]);
                 return (0, r.jsxs)("div", {
                     ref: T,
-                    className: o()(m.colorSwatch, { [m.disabled]: E }),
+                    className: o()(h.colorSwatch, { [h.disabled]: E }),
                     children: [
                         (0, r.jsx)(
                             u.P3F,
@@ -141,17 +141,17 @@ function v(e) {
                                 onClick: E ? p.dG4 : t,
                                 style: {
                                     backgroundColor: P,
-                                    borderColor: R,
+                                    borderColor: w,
                                 },
-                                className: m.swatch,
+                                className: h.swatch,
                                 "aria-label": _.intl.string(_.t.Qp04hK),
                                 focusProps: { ringTarget: T },
                                 children: (0, r.jsx)(u.vdY, {
                                     size: "custom",
-                                    className: m.editPencilIcon,
+                                    className: h.editPencilIcon,
                                     width: 14,
                                     height: 14,
-                                    color: w,
+                                    color: R,
                                 }),
                             }),
                         ),

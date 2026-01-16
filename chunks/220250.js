@@ -1,63 +1,59 @@
 n.d(t, {
-    TK: () => _,
-    dG: () => m,
-    nv: () => p,
-    qw: () => g,
+    TK: () => p,
+    dG: () => _,
+    nv: () => f,
+    qw: () => m,
 }),
     n(35282);
 var r = n(473749),
     i = n(950104),
     a = n(481060),
     o = n(990169),
-    s = n(410030),
-    l = n(220082),
-    c = n(768581),
-    u = n(921948),
-    d = n(981631);
-let f = 512;
-function p() {
-    let e = (0, s.ZP)(),
-        t = (0, a.dQu)(a.TVs.colors.BACKGROUND_BASE_LOWEST),
-        n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
-    return (0, a.wjy)(e) ? t : n;
+    s = n(220082),
+    l = n(768581),
+    c = n(921948),
+    u = n(981631);
+let d = 512;
+function f() {
+    return (0, a.dQu)(a.TVs.colors.GUILD_PROFILE_BANNER_BACKGROUND_DEFAULT);
 }
-function _(e) {
+function p(e) {
     var t;
     let n = e.customBanner;
-    if (null != n && (null == (t = e.features) ? void 0 : t.includes(d.GuildFeatures.DISCOVERABLE))) {
-        if (c.ff.test(n)) return "url(".concat(n, ") center / cover");
-        let t = c.ZP.getGuildDiscoverySplashURL({
+    if (null != n && (null == (t = e.features) ? void 0 : t.includes(u.GuildFeatures.DISCOVERABLE))) {
+        if (l.ff.test(n)) return "url(".concat(n, ") center / cover");
+        let t = l.ZP.getGuildDiscoverySplashURL({
             id: e.id,
             splash: n,
-            size: f * (0, u.Z)(),
+            size: d * (0, c.Z)(),
         });
         if (null != t) return "url(".concat(t, ") center / cover");
     }
     return null;
 }
-function m(e) {
+function _(e) {
     let t = (0, i.DT)(e, 1.75);
     return "radial-gradient(105.43% 127.05% at 50.1% 127.05%, ".concat(t, " 20.65%, ").concat(e, " 85.16%)");
 }
 function h(e) {
     return null == e.icon
         ? null
-        : c.ff.test(e.icon)
+        : l.ff.test(e.icon)
           ? e.icon
-          : c.ZP.getGuildIconURL({
+          : l.ZP.getGuildIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 64,
             });
 }
-function g(e) {
+function m(e) {
     let { profile: t, defaultColor: n, forceDefaultColor: i } = e,
         a = i ? null : h(t),
-        s = r.useRef(n),
-        c = (0, o.Z)(s),
-        u = (0, l.ZP)(a, c);
+        l = r.useRef(n),
+        c = (0, o.Z)(l),
+        u = (0, s.ZP)(a, c);
     return (r.useEffect(() => {
-        s.current = u;
+        l.current = u;
     }, [u]),
     null == t.icon)
         ? n

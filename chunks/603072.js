@@ -106,7 +106,7 @@ function I(e) {
                                                               text: I ? N.intl.string(N.t.psHMa6) : P,
                                                               color: I
                                                                   ? d.Z.unsafe_rawColors.BRAND_260.css
-                                                                  : d.Z.colors.BACKGROUND_ACCENT.css,
+                                                                  : d.Z.colors.BACKGROUND_MOD_STRONG.css,
                                                               className: i()({ [_.newBadge]: I }),
                                                           }),
                                                       ],
