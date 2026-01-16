@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(731722),
     p = n(131085),
     _ = n(388032),
-    m = n(551199),
-    h = n(261905);
+    h = n(551199),
+    m = n(261905);
 function g(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ let b = i.memo(function (e) {
             : (0, r.jsx)("img", {
                   src: t,
                   alt: "",
-                  className: o()(h.badge, n),
+                  className: o()(m.badge, n),
                   width: i,
                   height: i,
               });
@@ -74,18 +74,18 @@ let b = i.memo(function (e) {
             inline: O = !0,
         } = e;
         return (0, r.jsx)(l.P3F, {
-            "aria-label": _.intl.formatToPlainString(m.default["fw2p/x"], { tag: n }),
+            "aria-label": _.intl.formatToPlainString(h.default["fw2p/x"], { tag: n }),
             tag: "span",
             tabIndex: null == u ? -1 : void 0,
             onClick: u,
             onMouseEnter: d,
-            className: o()(h.chipletContainerInner, O && h.chipletContainerInline, null != u && h.clickable, a),
+            className: o()(m.chipletContainerInner, O && m.chipletContainerInline, null != u && m.clickable, a),
             children: (0, r.jsxs)(l.Text, {
                 variant: g,
                 lineClamp: 1,
                 color: E,
                 tag: "span",
-                className: o()(h.text, s),
+                className: o()(m.text, s),
                 children: [
                     null != i && "string" == typeof i
                         ? (0, r.jsx)(b, {
@@ -95,7 +95,7 @@ let b = i.memo(function (e) {
                           })
                         : i,
                     (0, r.jsx)("span", {
-                        className: h.tagText,
+                        className: m.tagText,
                         children: n,
                     }),
                 ],
@@ -103,61 +103,60 @@ let b = i.memo(function (e) {
         });
     }),
     O = i.memo(function (e) {
-        var t;
         let {
-                primaryGuild: n,
-                userId: a,
-                contextGuildId: p,
-                className: _,
-                containerClassName: m,
-                textVariant: g,
-                textColor: b,
-                badgeSize: O,
-                disableGuildProfile: v = !1,
-                inline: S = !0,
-                onShowProfile: I,
-                onClose: T,
+                primaryGuild: t,
+                userId: n,
+                contextGuildId: a,
+                className: p,
+                containerClassName: _,
+                textVariant: h,
+                textColor: g,
+                badgeSize: b,
+                disableGuildProfile: O = !1,
+                inline: v = !0,
+                onShowProfile: S,
+                onClose: I,
             } = e,
-            C = i.useRef(null),
-            A = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
-            N = (0, s.e7)([u.Z], () => u.Z.theme),
-            P = null != (t = null == A ? void 0 : A.primaryGuild) ? t : n,
-            { tag: R, badge: w, guildId: D } = (0, f.Pb)(P);
-        return (0, f.yF)(a, p) && null != D
-            ? v
+            T = i.useRef(null),
+            C = (0, s.e7)([d.default], () => d.default.getUser(n), [n]),
+            A = (0, s.e7)([u.Z], () => u.Z.theme),
+            N = void 0 !== t ? t : null == C ? void 0 : C.primaryGuild,
+            { tag: P, badge: w, guildId: R } = (0, f.Pb)(N);
+        return (0, f.yF)(n, a, N) && null != R
+            ? O
                 ? (0, r.jsx)(y, {
-                      guildId: D,
-                      guildTag: R,
+                      guildId: R,
+                      guildTag: P,
                       guildBadge: w,
-                      className: o()(h.noTooltip, _),
-                      textVariant: g,
-                      textColor: b,
-                      badgeSize: O,
-                      inline: S,
+                      className: o()(m.noTooltip, p),
+                      textVariant: h,
+                      textColor: g,
+                      badgeSize: b,
+                      inline: v,
                   })
                 : (0, r.jsx)(l.ze6, {
-                      theme: N,
+                      theme: A,
                       children: (0, r.jsx)(c.Z, {
-                          guildId: D,
-                          onRequestOpen: I,
-                          onClose: T,
-                          targetElementRef: C,
+                          guildId: R,
+                          onRequestOpen: S,
+                          onClose: I,
+                          targetElementRef: T,
                           children: (e) =>
                               (0, r.jsx)("span", {
-                                  className: m,
-                                  ref: C,
+                                  className: _,
+                                  ref: T,
                                   children: (0, r.jsx)(
                                       y,
                                       E(
                                           {
-                                              guildId: D,
-                                              guildTag: R,
+                                              guildId: R,
+                                              guildTag: P,
                                               guildBadge: w,
-                                              className: _,
-                                              textVariant: g,
-                                              textColor: b,
-                                              badgeSize: O,
-                                              inline: S,
+                                              className: p,
+                                              textVariant: h,
+                                              textColor: g,
+                                              badgeSize: b,
+                                              inline: v,
                                           },
                                           e,
                                       ),
