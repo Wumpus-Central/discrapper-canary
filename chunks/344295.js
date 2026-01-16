@@ -120,7 +120,7 @@ class z extends i.PureComponent {
     }
     getMode() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-        return w.a ? W : e.login ? H : W;
+        return w.aA ? W : e.login ? H : W;
     }
     track(e, t, n) {
         let { invite: r } = this.props,
@@ -277,7 +277,7 @@ class z extends i.PureComponent {
             case k.r2o.APP_NOT_OPENED:
                 return this.renderContinue();
             case k.r2o.RESOLVING:
-                return w.a
+                return w.aA
                     ? this.renderSpinner(U.intl.string(U.t.MKDeyL))
                     : this.renderSpinner(U.intl.string(U.t["Z+hCVU"]));
             case k.r2o.APP_OPENING:

@@ -16,8 +16,8 @@ var r = n(54381),
     f = n(433517),
     p = n(799656),
     _ = n(765717),
-    m = n(663993),
-    h = n(329816),
+    h = n(663993),
+    m = n(329816),
     g = n(554608),
     E = n(83949),
     b = n(137412),
@@ -31,8 +31,8 @@ var r = n(54381),
     A = n(998502),
     N = n(981631),
     P = n(188785),
-    R = n(436620);
-function w(e, t, n) {
+    w = n(436620);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -85,52 +85,52 @@ function L(e, t) {
     );
 }
 n(928518), n(972830), n(704806);
-let j = (0, m.Un)({
+let j = (0, h.Un)({
         createPromise: () => n.e("47620").then(n.bind(n, 576184)),
         webpackId: 576184,
         name: "UnsupportedBrowser",
     }),
-    M = (0, m.Un)({
+    M = (0, h.Un)({
         createPromise: () => Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583)),
         webpackId: 431583,
         name: "DownloadApps",
     }),
-    k = (0, m.Un)({
+    k = (0, h.Un)({
         createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
     }),
-    U = (0, m.Un)({
+    U = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("30556")]).then(n.bind(n, 675207)),
         webpackId: 675207,
         name: "VerifyConnectedAccount",
     }),
-    G = (0, m.Un)({
+    G = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("3809")]).then(n.bind(n, 301001)),
         webpackId: 301001,
         name: "VerifyConnectedAccountSuccess",
     }),
-    Z = (0, m.Un)({
+    Z = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("1544")]).then(n.bind(n, 926665)),
         webpackId: 926665,
         name: "VerifyConnectedAccountError",
     }),
-    F = (0, m.Un)({
+    F = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("67127")]).then(n.bind(n, 832462)),
         webpackId: 832462,
         name: "LinkConnectedAccount",
     }),
-    B = (0, m.Un)({
+    B = (0, h.Un)({
         createPromise: () => n.e("46455").then(n.bind(n, 924339)),
         webpackId: 924339,
         name: "LinkAuthorize",
     }),
-    V = (0, m.Un)({
-        createPromise: () => Promise.all([n.e("37193"), n.e("69773")]).then(n.bind(n, 197528)),
+    V = (0, h.Un)({
+        createPromise: () => Promise.all([n.e("86980"), n.e("69773")]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: "ActivateDevice",
     }),
-    H = (0, m.Un)({
+    H = (0, h.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("53870"),
@@ -169,7 +169,7 @@ let j = (0, m.Un)({
                 n.e("77803"),
                 n.e("89929"),
                 n.e("81985"),
-                n.e("84249"),
+                n.e("22979"),
                 n.e("92504"),
                 n.e("29709"),
                 n.e("74969"),
@@ -182,10 +182,10 @@ let j = (0, m.Un)({
         memo: !0,
         id: 457094,
     }),
-    Y = (0, m.Un)({
+    Y = (0, h.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("37193"),
+                n.e("86980"),
                 n.e("52030"),
                 n.e("13873"),
                 n.e("10778"),
@@ -197,22 +197,22 @@ let j = (0, m.Un)({
         webpackId: 822699,
         name: "ViewsWithAuth",
     }),
-    W = (0, m.Un)({
+    W = (0, h.Un)({
         createPromise: () => Promise.all([n.e("12581"), n.e("96858")]).then(n.bind(n, 285773)),
         webpackId: 285773,
         name: "ViewsWithOAuth2",
     }),
-    K = (0, m.Un)({
+    K = (0, h.Un)({
         createPromise: () => n.e("57047").then(n.bind(n, 549652)),
         webpackId: 549652,
         name: "BrowserHandoff",
     }),
-    z = (0, m.Un)({
+    z = (0, h.Un)({
         createPromise: () => n.e("71747").then(n.bind(n, 573276)),
         webpackId: 573276,
         name: "MobileWebHandoffFallback",
     }),
-    q = (0, m.Un)({
+    q = (0, h.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("53870"),
@@ -245,32 +245,32 @@ let j = (0, m.Un)({
         webpackId: 290161,
         name: "Overlay",
     }),
-    Q = (0, m.Un)({
+    Q = (0, h.Un)({
         createPromise: () => n.e("75347").then(n.bind(n, 430075)),
         webpackId: 430075,
         name: "SuspendedUserSafetyHubPage",
     }),
-    X = (0, m.Un)({
+    X = (0, h.Un)({
         createPromise: () => Promise.all([n.e("78374"), n.e("10125")]).then(n.bind(n, 630107)),
         webpackId: 630107,
         name: "QuestsLandingPage",
     }),
-    J = (0, m.Un)({
+    J = (0, h.Un)({
         createPromise: () => Promise.all([n.e("78374"), n.e("41734")]).then(n.bind(n, 792459)),
         webpackId: 792459,
         name: "QuestPreviewLandingPage",
     }),
-    $ = (0, m.Un)({
+    $ = (0, h.Un)({
         createPromise: () => Promise.all([n.e("800"), n.e("58131")]).then(n.bind(n, 531338)),
         webpackId: 531338,
         name: "ConnectionsAuthorizeContinue",
     }),
-    ee = (0, m.Un)({
+    ee = (0, h.Un)({
         createPromise: () => n.e("78449").then(n.bind(n, 684572)),
         webpackId: 684572,
         name: "ApplicationDirectoryRoutes",
     }),
-    et = (0, m.Un)({
+    et = (0, h.Un)({
         createPromise: () => n.e("20501").then(n.bind(n, 332116)),
         webpackId: 332116,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
@@ -301,7 +301,7 @@ class ea extends i.Component {
             (e =
                 n === g.P.IN_PROGRESS
                     ? null
-                    : R.KO
+                    : w.KO
                       ? C.isPlatformEmbedded
                           ? (0, r.jsxs)(o.rs, {
                                 children: [
@@ -332,7 +332,7 @@ class ea extends i.Component {
                                                 N.Z5c.GIFT_CODE_LOGIN(":giftCode"),
                                                 N.Z5c.RESET,
                                             ],
-                                            P.a,
+                                            P.aA,
                                         ),
                                         component: Y,
                                     }),
@@ -380,7 +380,7 @@ class ea extends i.Component {
                                                 N.Z5c.REPORT_SECOND_LOOK,
                                                 N.Z5c.ACCOUNT_REVERT(":token"),
                                             ],
-                                            P.a,
+                                            P.aA,
                                         ),
                                         component: Y,
                                     }),
@@ -558,7 +558,7 @@ class ea extends i.Component {
                                 ],
                             })
                       : (0, r.jsx)(o.rs, { children: (0, r.jsx)(_.Z, { component: j }) })),
-            (0, r.jsxs)(h.Z, {
+            (0, r.jsxs)(m.Z, {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,

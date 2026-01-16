@@ -15,18 +15,18 @@ var l = n(481060),
     h = n(995532),
     m = n(486472),
     b = n(430824),
-    _ = n(914010),
-    E = n(594174),
+    E = n(914010),
+    _ = n(594174),
     O = n(823379),
-    v = n(358085),
-    y = n(929809),
-    I = n(179645),
+    I = n(358085),
+    v = n(929809),
+    y = n(179645),
     C = n(701476),
     S = n(785997),
     T = n(981631),
     N = n(188785),
     j = n(630724);
-function P(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function P(e) {
     }
     return e;
 }
-function x(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ class Z extends o.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = I.Z.getType();
+            a = y.Z.getType();
         if (null == a) return;
         switch (a) {
             case C.M5.INVITE_UNCLAIMED:
@@ -95,12 +95,12 @@ class Z extends o.Z {
                 f.Z.flowStart(j.MK.ORGANIC_MARKETING, j.EW.NUF_STARTED);
         }
         let o = !1,
-            A = _.Z.getGuildId();
+            A = E.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
             let e = b.Z.getGuild(A);
             null != e && (0, d.Dc)(e) && ((o = !0), (0, g.RM)(e.id));
         }
-        let Z = () => 0 === m.Z.totalGuilds && !v.isPlatformEmbedded,
+        let Z = () => 0 === m.Z.totalGuilds && !I.isPlatformEmbedded,
             w = s.bN();
         (e = [
             {
@@ -140,7 +140,7 @@ class Z extends o.Z {
                             let { default: e } = await Promise.all([n.e("42483"), n.e("24028")]).then(
                                 n.bind(n, 599219),
                             );
-                            return (n) => (0, i.jsx)(e, x(P({}, n), { onSlideChange: t }));
+                            return (n) => (0, i.jsx)(e, P(x({}, n), { onSlideChange: t }));
                         },
                         {
                             onCloseRequest: T.dG4,
@@ -149,23 +149,23 @@ class Z extends o.Z {
                         },
                     );
                 },
-                predicate: () => Z() && !N.a,
+                predicate: () => Z() && !N.aA,
             },
             {
                 key: "New User Age Gate",
                 open: c.i,
-                predicate: () => w && !Z() && !N.a,
+                predicate: () => w && !Z() && !N.aA,
             },
             {
                 key: "Claim Account Modal",
-                open: (e) => c.j(v.isPlatformEmbedded, e),
+                open: (e) => c.j(I.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return (
                         !o &&
-                        null != E.default.getCurrentUser() &&
-                        !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) &&
-                        !N.a &&
+                        null != _.default.getCurrentUser() &&
+                        !(null == (e = _.default.getCurrentUser()) ? void 0 : e.isClaimed()) &&
+                        !N.aA &&
                         !(0, p.g)()
                     );
                 },
@@ -175,7 +175,7 @@ class Z extends o.Z {
                 open: (e) => (0, u.hk)(A, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !N.a;
+                    return o && !(null == (e = _.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !N.aA;
                 },
             },
             {
@@ -184,7 +184,7 @@ class Z extends o.Z {
                     (0, l.ZDy)(
                         async () => {
                             let { default: e } = await n.e("90542").then(n.bind(n, 184782));
-                            return (t) => (0, i.jsx)(e, x(P({}, t), { guildId: A }));
+                            return (t) => (0, i.jsx)(e, P(x({}, t), { guildId: A }));
                         },
                         { onCloseCallback: e },
                     ),
@@ -192,7 +192,7 @@ class Z extends o.Z {
             },
         ]),
             (t = () => {
-                y.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
+                v.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

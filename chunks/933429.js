@@ -19,8 +19,8 @@ var r,
     f = n(726542),
     p = n(812206),
     _ = n(223892),
-    m = n(674525),
-    h = n(266454),
+    h = n(674525),
+    m = n(266454),
     g = n(605236),
     E = n(458725),
     b = n(915525),
@@ -34,8 +34,8 @@ var r,
     A = n(223606),
     N = n(160404),
     P = n(41776),
-    R = n(332473),
-    w = n(30684),
+    w = n(332473),
+    R = n(30684),
     D = n(616106),
     x = n(2109),
     L = n(518638),
@@ -73,8 +73,8 @@ var r,
     ef = n(594174),
     ep = n(979651),
     e_ = n(853872),
-    em = n(78839),
-    eh = n(431),
+    eh = n(78839),
+    em = n(431),
     eg = n(580130),
     eE = n(695103),
     eb = n(358085),
@@ -88,7 +88,7 @@ var r,
     eA = n(324805),
     eN = n(231338),
     eP = n(65154);
-function eR(e, t, n) {
+function ew(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -101,7 +101,7 @@ function eR(e, t, n) {
         e
     );
 }
-function ew(e) {
+function eR(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -112,7 +112,7 @@ function ew(e) {
                 }),
             )),
             r.forEach(function (t) {
-                eR(e, t, n[t]);
+                ew(e, t, n[t]);
             });
     }
     return e;
@@ -220,7 +220,7 @@ function eq(e) {
     let t = ej[e];
     if (null != t) return (0, g.H4)(t).isDismissed;
     let n = eL[e];
-    if (null != n) return (0, h.zu)(n);
+    if (null != n) return (0, m.zu)(n);
     let r = eU[e];
     if (null != r) {
         let t = eY(e);
@@ -515,15 +515,15 @@ let eQ = [
         },
         [eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_2]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING),
+                em.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_2]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING),
         },
         [eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_0]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING),
+                em.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_0]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING),
         },
         [eI.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringDiscountOffers([eC.Si.TIER_2]).length > 0 &&
+                em.Z.getAlmostExpiringDiscountOffers([eC.Si.TIER_2]).length > 0 &&
                 !eq(eI.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING),
         },
         [eI.kVF.PREMIUM_UNCANCEL]: {
@@ -687,7 +687,7 @@ let eQ = [
                       };
             },
         },
-        [eI.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, R.e)() && !eq(eI.kVF.POMELO_ELIGIBLE) },
+        [eI.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, w.e)() && !eq(eI.kVF.POMELO_ELIGIBLE) },
         [eI.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
@@ -713,7 +713,7 @@ let eQ = [
         [eI.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: {
             predicate: () =>
                 !eq(eI.kVF.ACTIVATE_SERVER_SUBSCRIPTION) &&
-                0 !== m.Z.getEligibleGuildsForNagActivate().length &&
+                0 !== h.Z.getEligibleGuildsForNagActivate().length &&
                 (0, _.Lm)(),
         },
         [eI.kVF.SAFETY_USER_SENTIMENT_NAGBAR]: {
@@ -740,7 +740,7 @@ let eQ = [
                 var t;
                 let { currentUser: n } = e,
                     r = null != (t = e_.Z.paymentSources) ? t : {};
-                return w.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
+                return R.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
             },
         },
         [eI.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -775,11 +775,11 @@ function e$() {
     eV = null;
     let r = ef.default.getCurrentUser();
     if (null == r) return !1;
-    let i = em.Z.getPremiumSubscription(),
+    let i = eh.Z.getPremiumSubscription(),
         a = es.Z.getGuildId(),
         o = eo.Z.getVoiceChannelId(),
         s = null != o ? ep.Z.getVoiceStateForChannel(o) : null;
-    for (let n of eT.a ? eX : eQ)
+    for (let n of eT.aA ? eX : eQ)
         if (
             null != eJ[n] &&
             eJ[n].predicate({
@@ -798,7 +798,7 @@ function e$() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eV = ex(ew({}, eB), {
+            eV = ex(eR({}, eB), {
                 type: n,
                 metadata: o,
             });
@@ -856,7 +856,7 @@ function te() {
 }
 class tt extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([eu.ZP, ei.Z, J.Z, es.Z, j.Z, eh.Z, z.default, X.Z, H.Z, T.Z, U.Z, W.Z, O.ZP, Y.Z], e$),
+        this.syncWith([eu.ZP, ei.Z, J.Z, es.Z, j.Z, em.Z, z.default, X.Z, H.Z, T.Z, U.Z, W.Z, O.ZP, Y.Z], e$),
             this.waitFor(
                 b.Z,
                 p.Z,
@@ -865,9 +865,9 @@ class tt extends (r = o.ZP.Store) {
                 z.default,
                 q.Z,
                 Q.Z,
-                w.Z,
+                R.Z,
                 X.Z,
-                m.Z,
+                h.Z,
                 J.Z,
                 eO.Z,
                 ev.Z,
@@ -897,10 +897,10 @@ class tt extends (r = o.ZP.Store) {
                 el.Z,
                 ec.Z,
                 D.Z,
-                em.Z,
+                eh.Z,
                 eu.ZP,
                 eE.Z,
-                eh.Z,
+                em.Z,
                 ed.Z,
                 H.Z,
                 ef.default,
@@ -918,7 +918,7 @@ class tt extends (r = o.ZP.Store) {
         return eq(e);
     }
 }
-eR(tt, "displayName", "NoticeStore");
+ew(tt, "displayName", "NoticeStore");
 let tn = new tt(u.Z, {
     CURRENT_USER_UPDATE: e$,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: e$,

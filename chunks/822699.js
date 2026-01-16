@@ -24,8 +24,8 @@ var r = n(54381),
     y = n(264229),
     S = n(677760),
     C = n(360887),
-    T = n(893607),
-    O = n(108427),
+    O = n(893607),
+    T = n(108427),
     A = n(594961),
     Z = n(314897),
     P = n(82142),
@@ -123,8 +123,8 @@ let ec = (0, B.Z)(Y.Z),
     ey = (0, B.Z)(W.Z),
     eS = (0, B.Z)(Q.Z),
     eC = (0, B.Z)($.Z),
-    eT = (0, B.Z)(m.Z),
-    eO = (0, B.Z)(C.Z);
+    eO = (0, B.Z)(m.Z),
+    eT = (0, B.Z)(C.Z);
 class eA extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
@@ -162,15 +162,15 @@ class eA extends i.PureComponent {
                 },
                 { flush: !0 },
             )),
-            (t || ei.a) && this.resolveInvite(),
+            (t || ei.aA) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
             g.Z.initialize(),
-            (0, O.t)();
+            (0, T.t)();
     }
     componentDidUpdate(e) {
         var t, n;
-        e.hasLoadedExperiments || !this.props.hasLoadedExperiments || ei.a || this.resolveInvite(),
+        e.hasLoadedExperiments || !this.props.hasLoadedExperiments || ei.aA || this.resolveInvite(),
             (null == (t = e.invite) ? void 0 : t.state) !== (null == (n = this.props.invite) ? void 0 : n.state) &&
                 this.maybeFetchApplicationSplash();
     }
@@ -227,7 +227,7 @@ class eA extends i.PureComponent {
                 }),
                 (0, r.jsx)(p.Z, {
                     path: er.Z5c.LOGIN_ONE_TIME,
-                    render: (e) => (0, r.jsx)(eO, el({}, e)),
+                    render: (e) => (0, r.jsx)(eT, el({}, e)),
                 }),
                 (0, r.jsx)(p.Z, {
                     impressionName: a.ImpressionNames.USER_LOGIN,
@@ -238,7 +238,7 @@ class eA extends i.PureComponent {
                     impressionName: a.ImpressionNames.USER_REGISTRATION,
                     path: er.Z5c.REGISTER,
                     render: (e) =>
-                        ei.a
+                        ei.aA
                             ? (0, r.jsx)(
                                   ed,
                                   eo(el({}, e), {
@@ -354,11 +354,11 @@ class eA extends i.PureComponent {
                     render: (e) => (0, r.jsx)(eS, el({}, e)),
                 }),
                 (0, r.jsx)(p.Z, {
-                    path: er.Z5c.CHANNELS_GAME_SHOP(T.Hw.guildId(), ":pageIndex", ":skuId", ":slug?"),
+                    path: er.Z5c.CHANNELS_GAME_SHOP(O.Hw.guildId(), ":pageIndex", ":skuId", ":slug?"),
                     render: (e) => (0, r.jsx)(ey, el({}, e)),
                 }),
                 (0, r.jsx)(p.Z, {
-                    path: er.Z5c.CHANNEL(T.Hw.guildId(), T.Hw.channelId({ optional: !0 }), ":messageId?"),
+                    path: er.Z5c.CHANNEL(O.Hw.guildId(), O.Hw.channelId({ optional: !0 }), ":messageId?"),
                     render: (e) => (0, r.jsx)(eN, el({}, e)),
                 }),
                 (0, r.jsx)(p.Z, {
@@ -371,7 +371,7 @@ class eA extends i.PureComponent {
                 }),
                 (0, r.jsx)(p.Z, {
                     path: er.Z5c.ACCOUNT_REVERT(":token"),
-                    render: (e) => (0, r.jsx)(eT, el({}, e)),
+                    render: (e) => (0, r.jsx)(eO, el({}, e)),
                 }),
             ],
         });
@@ -389,7 +389,7 @@ let eZ = c.ZP.connectStores([Z.default, R.Z, P.Z, b.Z, j.Z], (e) => {
     var t, n, r;
     let { match: i, location: s } = e,
         a = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
-        l = ei.a ? ei.Y : void 0,
+        l = ei.aA ? ei.YJ : void 0,
         o = null != a ? (0, y.mb)(a, s.search) : l,
         c = null == i || null == (n = i.params) ? void 0 : n.giftCode,
         u = null == i || null == (r = i.params) ? void 0 : r.guildTemplateCode;

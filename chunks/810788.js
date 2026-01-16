@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -37,7 +37,7 @@ function _(e) {
     let { hiddenHotspots: t } = e;
     c = new Set(t);
 }
-class m extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             (Array.isArray(e.hiddenHotspots) && (c = new Set(e.hiddenHotspots)),
@@ -46,7 +46,7 @@ class m extends (r = i.ZP.PersistedStore) {
     hasHotspot(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = !t && u[e];
-        return !(s.a || o.s.isDisallowPopupsSet()) && (n || !c.has(e));
+        return !(s.aA || o.s.isDisallowPopupsSet()) && (n || !c.has(e));
     }
     hasHiddenHotspot(e) {
         return c.has(e);
@@ -61,15 +61,15 @@ class m extends (r = i.ZP.PersistedStore) {
         };
     }
 }
-l(m, "displayName", "HotspotStore"),
-    l(m, "persistKey", "hotspots"),
-    l(m, "migrations", [
+l(h, "displayName", "HotspotStore"),
+    l(h, "persistKey", "hotspots"),
+    l(h, "migrations", [
         (e) => ({
             hiddenHotspots: null != e ? e : [],
             hotspotOverrides: {},
         }),
     ]);
-let h = new m(a.Z, {
+let m = new h(a.Z, {
     OVERLAY_INITIALIZE: _,
     HOTSPOT_HIDE: d,
     HOTSPOT_OVERRIDE_SET: f,

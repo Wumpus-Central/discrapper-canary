@@ -59,38 +59,38 @@ function p(e, t) {
     );
 }
 let _ = {},
-    m = {},
-    h = !0,
+    h = {},
+    m = !0,
     g = {},
     E = !1;
 function b() {
     return l.Z;
 }
 function y() {
-    if (((g = {}), !h))
+    if (((g = {}), !m))
         for (let [e, t] of Object.entries(b())) {
             let n = !1 !== _[e];
             if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== _[n] && (g[e] = !1);
         }
 }
 function O(e) {
-    (_ = p(d({}, _), { [e.tutorialId]: !1 })), (m = d({}, m)), delete m[e.tutorialId], y();
+    (_ = p(d({}, _), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], y();
 }
 function v(e) {
-    m = p(d({}, m), { [e.tutorialId]: e.renderData });
+    h = p(d({}, h), { [e.tutorialId]: e.renderData });
 }
 function S(e) {
-    (m = d({}, m)), delete m[e.tutorialId];
+    (h = d({}, h)), delete h[e.tutorialId];
 }
 function I() {
-    h = !0;
+    m = !0;
 }
 function T(e) {
     let { tutorial: t } = e;
     (E = !0),
-        (h = !0),
+        (m = !0),
         (_ = {}),
-        null != t && ((h = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (_[e] = !1))),
+        null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (_[e] = !1))),
         y();
 }
 function C() {
@@ -104,13 +104,13 @@ class N extends (r = a.ZP.Store) {
         y(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(s.Z);
     }
     shouldShow(e) {
-        return !(!E || h || c.a || A(e)) && (g[e] || !1);
+        return !(!E || m || c.aA || A(e)) && (g[e] || !1);
     }
     shouldShowAnyIndicators() {
-        return !h;
+        return !m;
     }
     getIndicators() {
-        return m;
+        return h;
     }
     getData() {
         return b();

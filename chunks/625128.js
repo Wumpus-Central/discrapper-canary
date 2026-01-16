@@ -33,7 +33,7 @@ function o(e) {
 let s = {
     openNativeAppModal(e, t) {
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        i.a ||
+        i.aA ||
             (r.Z.dispatch({
                 type: "NATIVE_APP_MODAL_OPENING",
                 code: e,

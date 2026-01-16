@@ -11,7 +11,7 @@ var r = n(828700),
     s = n(188785);
 function c() {
     let e = location.pathname + location.search;
-    return s.a ? i.Z5c.REGISTER : (0, o.Ui)(e, !1);
+    return s.aA ? i.Z5c.REGISTER : (0, o.Ui)(e, !1);
 }
 let l = function () {
     return (0, a.jsx)(r.l_, { to: c() });
