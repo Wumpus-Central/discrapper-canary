@@ -11,8 +11,8 @@ var r,
     f = n(481060),
     p = n(570140),
     _ = n(355467),
-    m = n(827837),
-    h = n(821849),
+    h = n(827837),
+    m = n(821849),
     g = n(724757),
     E = n(600164),
     b = n(239827),
@@ -26,8 +26,8 @@ var r,
     A = n(231338),
     N = n(388032),
     P = n(144923),
-    R = n(354351);
-function w(e, t, n) {
+    w = n(354351);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -105,8 +105,8 @@ function U(e) {
     let { payments: t, locale: n, compactMode: r, numPages: o } = e,
         l = a.useRef(null),
         [c, d] = a.useState(0),
-        [p, m] = a.useState(null),
-        h = t.slice(c * k, (c + 1) * k);
+        [p, h] = a.useState(null),
+        m = t.slice(c * k, (c + 1) * k);
     a.useEffect(() => {
         var e;
         null == (e = l.current) || e.scrollTo({ to: 0 });
@@ -115,7 +115,7 @@ function U(e) {
             (e) => {
                 d(e);
                 let n = t[t.length - 1].id;
-                e >= o - 2 && p !== n && ((0, _.cQ)(k, n), m(n));
+                e >= o - 2 && p !== n && ((0, _.cQ)(k, n), h(n));
             },
             [t, o, p],
         ),
@@ -144,7 +144,8 @@ function U(e) {
                             children: (0, i.jsx)(f.Den, {
                                 className: P.bottomDivider,
                                 ref: l,
-                                children: h.map((e, t) =>
+                                overflow: "auto",
+                                children: m.map((e, t) =>
                                     (0, i.jsx)(
                                         I.Z,
                                         {
@@ -170,7 +171,7 @@ class G extends (r = a.PureComponent) {
     }
     componentDidMount() {
         p.Z.wait(() => {
-            (0, m.N)(), (0, _.cQ)(3 * k);
+            (0, h.N)(), (0, _.cQ)(3 * k);
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -214,7 +215,7 @@ class G extends (r = a.PureComponent) {
                                                   className: P.paymentRowHeader,
                                                   children: [
                                                       (0, i.jsx)("div", {
-                                                          className: R.date,
+                                                          className: w.date,
                                                           children: N.intl.string(N.t["5t11BV"]),
                                                       }),
                                                       (0, i.jsx)("div", {
@@ -222,7 +223,7 @@ class G extends (r = a.PureComponent) {
                                                           children: N.intl.string(N.t.yAAPb2),
                                                       }),
                                                       (0, i.jsx)("div", {
-                                                          className: R.amount,
+                                                          className: w.amount,
                                                           children: N.intl.string(N.t["6MqHXV"]),
                                                       }),
                                                   ],
@@ -242,7 +243,7 @@ class G extends (r = a.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), w(this, "scrollerRef", a.createRef());
+        super(...e), R(this, "scrollerRef", a.createRef());
     }
 }
 function Z(e) {
@@ -281,7 +282,7 @@ function F(e) {
         a.useEffect(() => {
             l() ||
                 p.Z.wait(() => {
-                    o.forEach((e) => (0, h.GZ)(e, void 0, void 0, !0, void 0));
+                    o.forEach((e) => (0, m.GZ)(e, void 0, void 0, !0, void 0));
                 });
         }, [l, o]),
         (0, i.jsx)(
@@ -293,4 +294,4 @@ function F(e) {
         )
     );
 }
-w(G, "defaultProps", { compactMode: !1 });
+R(G, "defaultProps", { compactMode: !1 });
