@@ -8,7 +8,6 @@ e.exports = {
     tileChild: "_2f4f7eb58b61c328-tileChild",
     border: "_2f4f7eb58b61c328-border",
     voiceChannelEffect: "_2f4f7eb58b61c328-voiceChannelEffect",
-    speaking: "_2f4f7eb58b61c328-speaking",
     latchedNotSpeaking: "_2f4f7eb58b61c328-latchedNotSpeaking",
     noBorder: "_2f4f7eb58b61c328-noBorder",
     overlayContainer: "_2f4f7eb58b61c328-overlayContainer",
