@@ -1,37 +1,45 @@
 n.d(t, {
-    CY: () => c,
-    Cq: () => m,
-    Y1: () => u,
-    _H: () => d,
-    rq: () => s,
+    CY: () => i,
+    Cq: () => s,
+    Y1: () => a,
+    _H: () => o,
+    rq: () => r,
 });
-var r,
-    o,
-    l,
-    i,
-    a,
-    s = (((r = {}).PLAYING = "playing"), (r.PAUSED = "paused"), (r.ENDED = "ended"), r),
-    c =
-        (((o = {}).ERROR = "ERROR"),
-        (o.SOURCE_ERROR = "SOURCE_ERROR"),
-        (o.ABORT = "ABORT"),
-        (o.EMPTIED = "EMPTIED"),
-        (o.STALLED = "STALLED"),
-        (o.SUSPEND = "SUSPEND"),
-        (o.HLS_NETWORK_ERROR = "HLS_NETWORK_ERROR"),
-        (o.HLS_MEDIA_ERROR = "HLS_MEDIA_ERROR"),
-        (o.HLS_MUX_ERROR = "HLS_MUX_ERROR"),
-        (o.HLS_KEY_SYSTEM_ERROR = "HLS_KEY_SYSTEM_ERROR"),
-        (o.HLS_OTHER_ERROR = "HLS_OTHER_ERROR"),
-        o),
-    u =
-        (((l = {}).PLAYBACK = "k"),
-        (l.SPACE = " "),
-        (l.SEEK_BACK = "j"),
-        (l.SEEK_FORWARD = "l"),
-        (l.CAPTION = "c"),
-        (l.FULLSCREEN = "f"),
-        (l.MUTE = "m"),
-        l),
-    d = (((i = {}).MD = "md"), (i.LG = "lg"), i),
-    m = (((a = {}).MD = "md"), (a.LG = "lg"), a);
+var r = (function (e) {
+        return (e.PLAYING = "playing"), (e.PAUSED = "paused"), (e.ENDED = "ended"), e;
+    })({}),
+    i = (function (e) {
+        return (
+            (e.ERROR = "ERROR"),
+            (e.SOURCE_ERROR = "SOURCE_ERROR"),
+            (e.ABORT = "ABORT"),
+            (e.EMPTIED = "EMPTIED"),
+            (e.STALLED = "STALLED"),
+            (e.SUSPEND = "SUSPEND"),
+            (e.NO_VALID_SOURCE = "NO_VALID_SOURCE"),
+            (e.HLS_NETWORK_ERROR = "HLS_NETWORK_ERROR"),
+            (e.HLS_MEDIA_ERROR = "HLS_MEDIA_ERROR"),
+            (e.HLS_MUX_ERROR = "HLS_MUX_ERROR"),
+            (e.HLS_KEY_SYSTEM_ERROR = "HLS_KEY_SYSTEM_ERROR"),
+            (e.HLS_OTHER_ERROR = "HLS_OTHER_ERROR"),
+            e
+        );
+    })({}),
+    a = (function (e) {
+        return (
+            (e.PLAYBACK = "k"),
+            (e.SPACE = " "),
+            (e.SEEK_BACK = "j"),
+            (e.SEEK_FORWARD = "l"),
+            (e.CAPTION = "c"),
+            (e.FULLSCREEN = "f"),
+            (e.MUTE = "m"),
+            e
+        );
+    })({}),
+    o = (function (e) {
+        return (e.MD = "md"), (e.LG = "lg"), e;
+    })({}),
+    s = (function (e) {
+        return (e.MD = "md"), (e.LG = "lg"), e;
+    })({});

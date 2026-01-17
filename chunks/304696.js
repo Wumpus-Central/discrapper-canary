@@ -1,95 +1,99 @@
 n.d(t, {
-    AV: () => s,
-    Fs: () => l,
-    M1: () => h,
-    NL: () => u,
-    Nt: () => d,
-    T2: () => f,
-    V_: () => c,
-    f2: () => m,
-    zo: () => _,
+    AV: () => u,
+    Fs: () => d,
+    M1: () => b,
+    NL: () => p,
+    Nt: () => _,
+    T2: () => h,
+    UH: () => y,
+    V_: () => f,
+    f2: () => E,
+    zo: () => g,
 }),
     n(415506);
 var r = n(572004),
-    i = n(617136),
-    a = n(324805),
-    o = n(388032);
-function s(e) {
+    i = n(358085),
+    a = n(617136),
+    o = n(49436),
+    s = n(325916),
+    l = n(324805),
+    c = n(388032);
+function u(e) {
     var t, n;
     let { quest: r, taskDetails: i, thirdPartyTaskDetails: a } = e;
-    if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return o.intl.string(o.t.BzFeTF);
+    if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return c.intl.string(c.t.BzFeTF);
     if ((null == (n = r.userStatus) ? void 0 : n.enrolledAt) != null) {
         let { percentComplete: e } = i,
             t = null != a ? a.percentComplete : e;
         return t >= 0.75
-            ? o.intl.string(o.t.gvCR4H)
+            ? c.intl.string(c.t.gvCR4H)
             : t >= 0.45 && t <= 0.55
-              ? o.intl.string(o.t.JNx8sG)
+              ? c.intl.string(c.t.JNx8sG)
               : t > 0
-                ? o.intl.string(o.t.JMbfnc)
-                : o.intl.string(o.t["7e5k7L"]);
+                ? c.intl.string(c.t.JMbfnc)
+                : c.intl.string(c.t["7e5k7L"]);
     }
-    return o.intl.formatToPlainString(o.t.EQa7os, { questName: r.config.messages.questName });
+    return c.intl.formatToPlainString(c.t.EQa7os, { questName: r.config.messages.questName });
 }
-function l(e) {
+function d(e) {
     let { isTargetedDisclosure: t, isVideoQuest: n, gamePublisher: r, gameTitle: i, cosponsorName: a } = e;
     return t
         ? null == a
-            ? o.intl.formatToPlainString(o.t.Piihy1, { gamePublisher: r })
-            : o.intl.formatToPlainString(o.t.DV47Gy, {
+            ? c.intl.formatToPlainString(c.t.Piihy1, { gamePublisher: r })
+            : c.intl.formatToPlainString(c.t.DV47Gy, {
                   gamePublisher: r,
                   cosponsorName: a,
               })
-        : n && "en-US" === o.intl.currentLocale
-          ? o.intl.formatToPlainString(o.t.zDHY3s, { gamePublisher: r })
-          : o.intl.formatToPlainString(o.t.euizJY, {
+        : n && "en-US" === c.intl.currentLocale
+          ? c.intl.formatToPlainString(c.t.zDHY3s, { gamePublisher: r })
+          : c.intl.formatToPlainString(c.t.euizJY, {
                 gamePublisher: r,
                 gameTitle: i,
             });
 }
-function c(e) {
+function f(e) {
     return e.config.ctaConfig.buttonLabel;
 }
-function u(e) {
+function p(e) {
     switch (e) {
-        case a.yq.SUGGESTED:
-            return o.intl.string(o.t.gBfXPZ);
-        case a.yq.MOST_RECENT:
-            return o.intl.string(o.t.K6oEu2);
-        case a.yq.EXPIRING_SOON:
-            return o.intl.string(o.t.IB22n3);
-        case a.yq.RECENTLY_ENROLLED:
-            return o.intl.string(o.t["BB+2tX"]);
+        case l.yq.SUGGESTED:
+            return c.intl.string(c.t.gBfXPZ);
+        case l.yq.MOST_RECENT:
+            return c.intl.string(c.t.K6oEu2);
+        case l.yq.EXPIRING_SOON:
+            return c.intl.string(c.t.IB22n3);
+        case l.yq.RECENTLY_ENROLLED:
+            return c.intl.string(c.t["BB+2tX"]);
     }
 }
-function d(e) {
+function _(e) {
     switch (e) {
-        case a.UP.VIRTUAL_CURRENCY:
-            return o.intl.string(o.t.ElYQFS);
-        case a.UP.COLLECTIBLE:
-            return o.intl.string(o.t.Jg17Ut);
-        case a.UP.IN_GAME:
-            return o.intl.string(o.t["O/J2kr"]);
-        case a.oH.VIDEO:
-            return o.intl.string(o.t.e0iISA);
-        case a.oH.PLAY:
-            return o.intl.string(o.t["1nJR4p"]);
+        case l.UP.VIRTUAL_CURRENCY:
+            return c.intl.string(c.t.ElYQFS);
+        case l.UP.COLLECTIBLE:
+            return c.intl.string(c.t.Jg17Ut);
+        case l.UP.IN_GAME:
+            return c.intl.string(c.t["O/J2kr"]);
+        case l.oH.VIDEO:
+            return c.intl.string(c.t.e0iISA);
+        case l.oH.PLAY:
+            return c.intl.string(c.t["1nJR4p"]);
     }
 }
-function f(e) {
+function h(e) {
     switch (e) {
         case "reward":
-            return o.intl.string(o.t.vjLqAU);
+            return c.intl.string(c.t.vjLqAU);
         case "task":
-            return o.intl.string(o.t.Hufmss);
+            return c.intl.string(c.t.Hufmss);
     }
 }
-let p = (e) => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
-function _(e) {
+let m = (e) => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+function g(e) {
     return e.ctaConfig.link;
 }
-let m = (e, t) => {
-    (0, i._3)({
+let E = (e, t) => {
+    (0, a._3)({
         questId: e,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -97,9 +101,19 @@ let m = (e, t) => {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, r.JG)(p(e));
+        (0, r.JG)(m(e));
 };
-function h(e) {
+function b(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error("Quest ".concat(e.id, " has no rewards configured"));
     return e.rewardsConfig.rewards[0];
 }
+let y = (e) => {
+    let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
+    return t
+        ? n === s.rq.PAUSED && r === o.yE.LOST_FOCUS
+            ? c.intl.string(c.t["U7Xrb+"])
+            : null
+        : (0, i.isWeb)()
+          ? c.intl.string(c.t["E1du/q"])
+          : c.intl.string(c.t["rStN/7"]);
+};

@@ -17207,6 +17207,8 @@
   "enQ3jU": "Use !!{gameTitle}!! for {streamingDurationRequirement} minutes with your Discord client open to unlock !!{rewardNameWithArticle}!! for !!{duration}!!.",
   "9jWWm+": "Use !!{gameTitle}!! for {streamingDurationRequirement} minutes with your Discord client open to unlock !!{rewardNameWithArticle}!! for !!{duration}!!. Use it for even longer with Nitro!",
   "fe7Xec": "Use !!{gameTitle}!! for !!{minutes}!! minutes",
+  "E1du/q": "Your browser doesn't support video playback for this quest. Please try a different browser or update to the latest version.",
+  "rStN/7": "Your client doesn't support video playback for this quest. Please update to the latest version.",
   "74KqrR": "Continue watching",
   "eIl+AK": "Change volume",
   "r9s3Uv": "Rewind 10 seconds",
