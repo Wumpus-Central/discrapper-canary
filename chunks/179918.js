@@ -1,81 +1,81 @@
-n.d(t, { u: () => O });
-var r = n(54381),
-    i = n(473749),
-    a = n(990547),
-    o = n(79766),
-    s = n(657707),
-    l = n(793030),
-    c = n(740111),
-    u = n(159691),
-    d = n(481060),
-    f = n(2052),
-    p = n(906732),
-    _ = n(213609),
-    h = n(63063),
-    m = n(671728),
-    g = n(115324),
-    E = n(45509),
-    b = n(388032),
-    y = n(407367);
-let O = (e) => {
+n.d(t, { u: () => y });
+var r = n(54381);
+n(473749);
+var i = n(990547),
+    a = n(79766),
+    o = n(657707),
+    s = n(793030),
+    l = n(740111),
+    c = n(159691),
+    u = n(481060),
+    d = n(2052),
+    f = n(906732),
+    p = n(213609),
+    _ = n(63063),
+    h = n(671728),
+    m = n(115324),
+    g = n(45509),
+    E = n(388032),
+    b = n(407367);
+let y = (e) => {
     var t, n;
-    let { componentId: O, promotionBannerMarketingComponentFields: v } = e,
-        { analyticsLocations: S } = (0, p.ZP)(),
-        I = (0, f.O)();
-    (0, _.Z)({
-        type: a.ImpressionTypes.VIEW,
-        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+    let { componentId: y, promotionBannerMarketingComponentFields: O } = e,
+        { analyticsLocations: v } = (0, f.ZP)(),
+        S = (0, d.O)();
+    (0, p.Z)({
+        type: i.ImpressionTypes.VIEW,
+        name: i.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: {
-            component_type: o.I.MARKETING_PAGE_BANNER,
-            component_id: O,
+            component_type: a.I.MARKETING_PAGE_BANNER,
+            component_id: y,
         },
     });
-    let T = v,
-        C = (0, E.$C)("marketing_page_banner"),
-        A = (0, m.K)({
+    let I = O,
+        T = (0, g.$C)("marketing_page_banner"),
+        C = (0, h.K)({
             buttonAction:
-                C.treatment === E.IA.PLAN_SELECTION
-                    ? c.Wc.OPEN_PLAN_SELECTION_MODAL
-                    : null != (n = null == (t = T.button) ? void 0 : t.buttonAction)
+                T.treatment === g.IA.PLAN_SELECTION
+                    ? l.Wc.OPEN_PLAN_SELECTION_MODAL
+                    : null != (n = null == (t = I.button) ? void 0 : t.buttonAction)
                       ? n
-                      : c.Wc.OPEN_TIER_2_PAYMENT_MODAL,
-            analyticsLocations: S,
-            analyticsLocation: I.location,
+                      : l.Wc.OPEN_TIER_2_PAYMENT_MODAL,
+            analyticsLocations: v,
+            analyticsLocation: S.location,
         }),
-        N = i.useMemo(() => (0, g.h)(T.body), [T.body]);
+        A = (0, m.$)(I.body);
     return (0, r.jsxs)("div", {
-        className: y.container,
+        className: b.container,
         children: [
             (0, r.jsx)("div", {
-                className: y.asset,
-                children: (0, r.jsx)(d.Eep, {
-                    src: T.assetUrl,
+                className: b.asset,
+                children: (0, r.jsx)(u.Eep, {
+                    src: I.assetUrl,
                     width: 96,
                     height: 96,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: y.bannerContent,
+                className: b.bannerContent,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        children: T.header,
+                        children: I.header,
                     }),
-                    (0, r.jsxs)(l.xvT, {
+                    (0, r.jsxs)(s.xvT, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: y.bannerDescription,
+                        className: b.bannerDescription,
                         children: [
-                            N,
-                            "" !== T.helpArticleId &&
+                            A,
+                            "" !== I.helpArticleId &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         "\xA0",
-                                        (0, r.jsx)(d.eee, {
-                                            className: y.termsApplyAnchor,
-                                            href: h.Z.getArticleURL(T.helpArticleId),
-                                            children: b.intl.string(b.t["sBp+u0"]),
+                                        (0, r.jsx)(u.eee, {
+                                            className: b.termsApplyAnchor,
+                                            href: _.Z.getArticleURL(I.helpArticleId),
+                                            children: E.intl.string(E.t["sBp+u0"]),
                                         }),
                                     ],
                                 }),
@@ -83,15 +83,15 @@ let O = (e) => {
                     }),
                 ],
             }),
-            null != T.button &&
+            null != I.button &&
                 (0, r.jsx)("div", {
-                    className: y.buttonContainer,
-                    children: (0, r.jsx)(u.zxk, {
+                    className: b.buttonContainer,
+                    children: (0, r.jsx)(c.zxk, {
                         variant: "expressive",
                         size: "md",
-                        onClick: A,
-                        text: T.button.copy,
-                        icon: s.NitroWheelIcon,
+                        onClick: C,
+                        text: I.button.copy,
+                        icon: o.NitroWheelIcon,
                     }),
                 }),
         ],
