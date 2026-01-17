@@ -1,8 +1,8 @@
 n.d(e, { default: () => f });
 var r = n(54381),
     i = n(468194),
-    l = n(793030),
-    o = n(63063),
+    o = n(793030),
+    l = n(63063),
     a = n(49012),
     s = n(905551),
     u = n(619733),
@@ -20,24 +20,24 @@ function f(t) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(t);
-                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                        o = Object.keys(t);
+                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var o = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
                         !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
         })(t, ["provider", "onAccept"]);
-    return (0, r.jsx)(l.Modal, {
+    return (0, r.jsx)(o.Modal, {
         title: p.intl.string(d.default.ny8Szd),
         subtitle: p.intl.format(d.default.D3STVx, {
             provider: (0, i.De)(e),
             providerUrl: () => (0, a.q)({ href: u.nd[e] }),
-            helpCenterUrl: o.Z.getEnglishArticleURL(c.BhN.GAME_SERVER_HOSTING),
+            helpCenterUrl: l.Z.getArticleURL(c.BhN.GAME_SERVER_HOSTING),
         }),
         size: "md",
         actions: [

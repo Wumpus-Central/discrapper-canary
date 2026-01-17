@@ -19,7 +19,6 @@ function f() {
 }
 let p = {
     getArticleURL: (e) => d("/hc/".concat(f(), "/articles/").concat(e)),
-    getEnglishArticleURL: (e) => d("/hc/en-us/articles/".concat(e)),
     getDevArticleURL: (e) => d("/hc/".concat(f(), "/articles/").concat(e), l),
     getCreatorSupportArticleURL: (e) => d("/hc/".concat(f(), "/articles/").concat(e), c),
     getTwitterURL: () => (0, r.Z)(o.RK.TWITTER),

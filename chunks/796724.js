@@ -358,7 +358,7 @@ function G() {
                           T.intl.format(K ? I.default.num0a6 : I.default.p5KZDr, {
                               provider: X,
                               termsOfServiceUrl: () => (0, g.q)({ href: Y }),
-                              helpCenterUrl: f.Z.getEnglishArticleURL(y.BhN.GAME_SERVER_HOSTING),
+                              helpCenterUrl: f.Z.getArticleURL(y.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
                   null != B &&
