@@ -11,20 +11,21 @@ var u = n(960048),
     d = n(591759),
     f = n(303850),
     p = n(105713),
-    _ = n(981631);
+    _ = n(505858),
+    h = n(981631);
 let m = [
         "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
-    h = new f.R();
-function g(e) {
+    g = new f.R();
+function E(e) {
     let t = new URLSearchParams();
     t.append("query", '@http.x_client_trace_id:"'.concat(e, '"')), t.append("showAllSpans", "true");
     let n = d.Z.toURLSafe("traces?".concat(t.toString()), "https://datadog.discord.tools/apm/");
     return null == n ? null : n.toString();
 }
-let E = /\/api(\/v\d+)?\/science/;
-function b(e) {
+let b = /\/api(\/v\d+)?\/science/;
+function y(e) {
     let t = 10;
     return e
         .reduce(
@@ -32,6 +33,17 @@ function b(e) {
             [],
         )
         .join(",");
+}
+function O(e) {
+    try {
+        let t = new URL(e).pathname;
+        return b.test(t);
+    } catch (t) {
+        return b.test(e);
+    }
+}
+function v(e, t) {
+    return !1;
 }
 (0, r.lg)({
     prepareRequest(e) {
@@ -42,7 +54,7 @@ function b(e) {
             { default: c } = n(626135),
             { isPlatformEmbedded: d } = n(358085);
         if ("/" === e.url[0]) {
-            var f, _;
+            var f, h;
             (e.url = (0, r.K0)() + e.url),
                 "Authorization" in e.header || "authorization" in e.header || e.set("Authorization", t.getToken()),
                 (0, i.c)();
@@ -54,21 +66,21 @@ function b(e) {
             if ((null != u && "" !== u && e.set("X-Installation-ID", u), d)) {
                 let t = [];
                 null != navigator && (t = ((f = [...navigator.languages]), f));
-                let n = b(t);
+                let n = y(t);
                 e.set("Accept-Language", n);
             }
             e.set("X-Discord-Locale", s.locale);
-            let m = (0, p.Z)();
-            null != m && e.set("X-Discord-Timezone", m);
-            let y = o.getDebugOptionsHeaderValue();
-            if ((null != y && "" !== y && e.set("X-Debug-Options", y), o.isTracingRequests)) {
+            let _ = (0, p.Z)();
+            null != _ && e.set("X-Discord-Timezone", _);
+            let m = o.getDebugOptionsHeaderValue();
+            if ((null != m && "" !== m && e.set("X-Debug-Options", m), o.isTracingRequests)) {
                 let t = l.getCurrentUser(),
-                    n = h.generate(null != (_ = null == t ? void 0 : t.id) ? _ : "0");
+                    n = g.generate(null != (h = null == t ? void 0 : t.id) ? h : "0");
                 e.set("x-client-trace-id", n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!E.test(t)) {
-                        let r = g(n);
+                    if (!O(t)) {
+                        let r = E(n);
                         null !== r && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, r);
                     }
                 } catch (e) {
@@ -76,7 +88,10 @@ function b(e) {
                 }
             }
         }
-        a.Hj("Network", "Sending ".concat(e.method, " to ").concat(e.url)),
+        let b = e.url,
+            S = e.method;
+        v(b, S) && (0, _._)(b, S),
+            a.Hj("Network", "Sending ".concat(e.method, " to ").concat(e.url)),
             e.on("response", (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
                     r = null == n ? "" : "and body: ".concat(n);
@@ -135,7 +150,7 @@ function b(e) {
                   .catch(r),
               !0)
             : 401 === e.statusCode &&
-                (null == (a = e.body) ? void 0 : a.code) === _.evJ.MFA_REQUIRED &&
+                (null == (a = e.body) ? void 0 : a.code) === h.evJ.MFA_REQUIRED &&
                 (null == (c = e.body) ? void 0 : c.mfa)
               ? (Promise.all([n.e("52030"), n.e("36002")])
                     .then(n.bind(n, 24031))
