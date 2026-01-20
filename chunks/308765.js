@@ -425,7 +425,7 @@ let i = {
         inlineRequire: () => n(349540).Z,
     },
     ProgramRewardsManager: {
-        actions: ["POST_CONNECTION_OPEN", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS"],
+        actions: ["POST_CONNECTION_OPEN", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", "CURRENT_USER_UPDATE"],
         inlineRequire: () => n(437584).Z,
     },
     RelationshipManager: {

@@ -1,4 +1,7 @@
-n.d(t, { f3: () => o });
+n.d(t, {
+    er: () => o,
+    f3: () => s,
+});
 var r = n(722733);
 let i = {
         control: 0,
@@ -16,6 +19,16 @@ let i = {
         },
     });
 function o(e) {
+    var t;
+    let n = null != (t = a.useConfig({ location: e }).treatment) ? t : "control",
+        r = "control" !== n;
+    return {
+        treatment: n,
+        isInTreatment: r,
+        orbsRewardAmount: i[n],
+    };
+}
+function s(e) {
     var t;
     let n = null != (t = a.getConfig({ location: e }).treatment) ? t : "control",
         r = "control" !== n;

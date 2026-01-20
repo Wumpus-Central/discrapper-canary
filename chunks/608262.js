@@ -1,0 +1,15 @@
+e.exports = {
+    baseContainer: "_670133a2134d7eae-baseContainer",
+    card: "_670133a2134d7eae-card",
+    video: "_670133a2134d7eae-video",
+    betaBadge: "_670133a2134d7eae-betaBadge",
+    progressContainer: "_670133a2134d7eae-progressContainer",
+    bannerImageContainer: "_670133a2134d7eae-bannerImageContainer",
+    bannerImage: "_670133a2134d7eae-bannerImage",
+    textContainer: "_670133a2134d7eae-textContainer",
+    heading: "_670133a2134d7eae-heading",
+    actionButtonContainer: "_670133a2134d7eae-actionButtonContainer",
+    totalLifetimeRewardsContainer: "_670133a2134d7eae-totalLifetimeRewardsContainer",
+    stackedGradientOverlay: "_670133a2134d7eae-stackedGradientOverlay",
+    bodyText: "_670133a2134d7eae-bodyText",
+};
