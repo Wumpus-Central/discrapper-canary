@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(846519),
@@ -80,7 +80,7 @@ let p = 13;
 function _(e) {
     return "".concat(e).length < p ? 1000 * e : e;
 }
-function m(e) {
+function h(e) {
     return class extends i.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
@@ -128,29 +128,9 @@ function m(e) {
                 c = this.renderTime(this.state.seconds),
                 f = -1 === a ? "".concat(s, ":").concat(c) : "".concat(a, ":").concat(s, ":").concat(c);
             return null != n.end
-                ? (0, r.jsx)(
-                      e,
-                      u(l({}, i), {
-                          message: o.intl.formatToPlainString(o.t["I/J7vI"], {
-                              duration: f,
-                              hours: a,
-                              minutes: s,
-                              seconds: c,
-                          }),
-                      }),
-                  )
+                ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t["I/J7vI"], { duration: f }) }))
                 : null != n.start
-                  ? (0, r.jsx)(
-                        e,
-                        u(l({}, i), {
-                            message: o.intl.formatToPlainString(o.t.M9Fexd, {
-                                duration: f,
-                                hours: a,
-                                minutes: s,
-                                seconds: c,
-                            }),
-                        }),
-                    )
+                  ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexd, { duration: f }) }))
                   : null;
         }
         constructor(e) {
