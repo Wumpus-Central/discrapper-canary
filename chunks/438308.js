@@ -1,10 +1,12 @@
-n.d(t, { b: () => r });
-let r = {
+n.d(t, { b: () => a });
+var r = n(108542),
+    i = n(39584);
+let a = {
     collections: [
         {
             id: "cms",
             name: "CMS",
-            groups: [n(39584).V],
+            groups: [r.B, i.V],
         },
     ],
 };
