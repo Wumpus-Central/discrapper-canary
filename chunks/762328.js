@@ -45,7 +45,7 @@ function _(e) {
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,12 +57,12 @@ function m(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,7 +77,7 @@ function y(e) {
         {
             ownerDocument: l = document,
             open: p,
-            onOpenChange: m,
+            onOpenChange: h,
             id: y,
             className: O,
             reference: v,
@@ -88,8 +88,8 @@ function y(e) {
             crossAccessFlip: A = !0,
             autoShift: N = !0,
             strategy: P = "fixed",
-            portal: R = !0,
-            blockPointerEvents: w = !1,
+            portal: w = !0,
+            blockPointerEvents: R = !1,
             children: D,
             renderLayer: x,
             viewportPadding: L = g,
@@ -122,6 +122,7 @@ function y(e) {
                     e.push(
                         (0, a.dp)({
                             padding: L,
+                            boundary: l.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
                                     r = Math.min(j, t);
@@ -143,7 +144,7 @@ function y(e) {
         } = (0, o.YF)({
             placement: I,
             open: p,
-            onOpenChange: m,
+            onOpenChange: h,
             strategy: P,
             middleware: G,
             whileElementsMounted: s.Me,
@@ -161,7 +162,7 @@ function y(e) {
         }),
         { getReferenceProps: z, getFloatingProps: q } = (0, o.NI)([W, K]),
         Q = (null == (t = V.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
-        X = R ? d.UU : i.Fragment;
+        X = w ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             D({
@@ -172,16 +173,16 @@ function y(e) {
                 (0, r.jsxs)(X, {
                     ownerDocument: l,
                     children: [
-                        w ? (0, r.jsx)(o.y0, {}) : null,
+                        R ? (0, r.jsx)(o.y0, {}) : null,
                         (0, r.jsx)(
                             "div",
-                            h(
+                            m(
                                 _(
                                     {
                                         id: y,
                                         className: c()(O, f.layer),
                                         [b]: !0,
-                                        style: h(_({}, F), { visibility: Q }),
+                                        style: m(_({}, F), { visibility: Q }),
                                         ref: Z.setFloating,
                                     },
                                     q(),
