@@ -13,9 +13,9 @@ n.d(t, {
     eR: () => s,
     eW: () => y,
     ee: () => c,
-    f: () => m,
+    f: () => h,
     jw: () => f,
-    re: () => h,
+    re: () => m,
     tE: () => l,
     ww: () => o,
     yU: () => p,
@@ -96,7 +96,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    m = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.LOADING = 1)] = "LOADING"),
@@ -105,7 +105,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e[(e.UNKNOWN = -1)] = "UNKNOWN"),
             (e[(e.ACTION_ROW = 1)] = "ACTION_ROW"),
@@ -127,6 +127,9 @@ var r = (function (e) {
             (e[(e.LABEL = 18)] = "LABEL"),
             (e[(e.FILE_UPLOAD = 19)] = "FILE_UPLOAD"),
             (e[(e.CHECKPOINT_CARD = 20)] = "CHECKPOINT_CARD"),
+            (e[(e.RADIO_GROUP = 21)] = "RADIO_GROUP"),
+            (e[(e.CHECKBOX_GROUP = 22)] = "CHECKBOX_GROUP"),
+            (e[(e.CHECKBOX = 23)] = "CHECKBOX"),
             e
         );
     })({}),

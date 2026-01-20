@@ -67980,6 +67980,25 @@ screen and (max-width:485px) {
     display: none
 }
 
+._6d62c75cec2c6d85-clearButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    max-height: 100px;
+    opacity: 1;
+    overflow: hidden
+}
+
+.full-motion ._6d62c75cec2c6d85-clearButtonContainer {
+    transition: all .2s ease-in-out
+}
+
+._6d62c75cec2c6d85-clearButtonContainerHidden {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0
+}
+
 ._1b11bd49fe2d59c9-formItem {
     width: 100%
 }

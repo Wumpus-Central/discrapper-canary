@@ -22,8 +22,8 @@ var r = n(473749),
     f = n(81897),
     p = n(237992),
     _ = n(155268),
-    m = n(603721),
-    h = n(314897),
+    h = n(603721),
+    m = n(314897),
     g = n(592125),
     E = n(703558),
     b = n(271383),
@@ -37,8 +37,8 @@ var r = n(473749),
     A = n(292419),
     N = n(471073),
     P = n(892902),
-    R = n(981631),
-    w = n(388032);
+    w = n(981631),
+    R = n(388032);
 let D = (e) => {
     let t = !0;
     return (
@@ -76,14 +76,14 @@ function j(e, t) {
     let { application: n, customId: i, components: a } = e,
         s = (0, f.Z)(),
         [u, p] = r.useState(null),
-        [_, m] = r.useState(null),
-        [h, g] = r.useState({}),
+        [_, h] = r.useState(null),
+        [m, g] = r.useState({}),
         b = (0, o.e7)([N.Z], () => N.Z.getModalState(_), [_]),
         y = (0, d.Z)(() => new Set()),
         O = r.useCallback(async () => {
-            if ((p(null), m(null), D(y))) {
+            if ((p(null), h(null), D(y))) {
                 let t = I.default.fromTimestamp(Date.now());
-                m(t), await G(e, s, t);
+                h(t), await G(e, s, t);
             }
         }, [s, e, y]);
     r.useEffect(() => {
@@ -98,7 +98,7 @@ function j(e, t) {
                 E.d.InteractionModal,
             ),
             t()),
-            b === N.i.ERRORED && p(w.intl.string(w.t.uJgdEu));
+            b === N.i.ERRORED && p(R.intl.string(R.t.uJgdEu));
     }, [_, b, t, i, e.channelId]);
     let { applicationIconURL: v, applicationName: S } = L(n);
     return {
@@ -108,7 +108,7 @@ function j(e, t) {
         submissionState: b,
         error: u,
         validators: y,
-        validationErrors: h,
+        validationErrors: m,
         setValidationErrors: g,
         onSubmit: O,
     };
@@ -191,6 +191,30 @@ let k = (e, t, n) =>
                     type: t.type,
                     component: k(e, [t.component], n)[0],
                 };
+            case u.re.RADIO_GROUP: {
+                let n = P.Z.getInteractionComponentState(e, t.id);
+                return {
+                    type: t.type,
+                    custom_id: t.customId,
+                    value: (null == n ? void 0 : n.type) === t.type ? n.value : null,
+                };
+            }
+            case u.re.CHECKBOX_GROUP: {
+                let n = P.Z.getInteractionComponentState(e, t.id);
+                return {
+                    type: t.type,
+                    custom_id: t.customId,
+                    values: (null == n ? void 0 : n.type) === t.type ? n.values : null,
+                };
+            }
+            case u.re.CHECKBOX: {
+                let n = P.Z.getInteractionComponentState(e, t.id);
+                return {
+                    type: t.type,
+                    custom_id: t.customId,
+                    value: (null == n ? void 0 : n.type) === t.type ? n.value : null,
+                };
+            }
             default:
                 a()(!1, "unreachable");
         }
@@ -207,7 +231,7 @@ async function G(e, t, n) {
     a()(null != i, "expected channel");
     let o = U(r, e.customId),
         l = o.length > 0 ? (0, p.Z)(o) : void 0;
-    (0, m.kz)(n, {
+    (0, h.kz)(n, {
         data: {
             interactionType: u.B8.MODAL_SUBMIT,
             applicationId: e.application.id,
@@ -221,7 +245,7 @@ async function G(e, t, n) {
             (null != t && t.aborted) ||
                 s.tn
                     .post({
-                        url: R.ANM.INTERACTIONS,
+                        url: w.ANM.INTERACTIONS,
                         body: {
                             type: u.B8.MODAL_SUBMIT,
                             application_id: e.application.id,
@@ -233,14 +257,14 @@ async function G(e, t, n) {
                                 components: d,
                                 attachments: c.length > 0 ? c : void 0,
                             },
-                            session_id: h.default.getSessionId(),
+                            session_id: m.default.getSessionId(),
                             nonce: n,
                         },
                         signal: t,
                         rejectWithError: !1,
                     })
                     .catch((e) => {
-                        429 === e.status ? setTimeout(f, e.body.retry_after * S.Z.Millis.SECOND) : (0, m.yr)(n);
+                        429 === e.status ? setTimeout(f, e.body.retry_after * S.Z.Millis.SECOND) : (0, h.yr)(n);
                     });
         };
     f();
