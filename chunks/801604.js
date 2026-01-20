@@ -395,32 +395,32 @@ function K(e) {
                       })(f, d, g.Z),
             [f, d, u, e.previewQuest],
         ),
-        [y, h] = l.useState(null);
+        y = l.useMemo(() => {
+            var e;
+            return a && null != (e = null == v ? void 0 : v.id) ? e : null;
+        }, [v, a]);
     l.useEffect(() => {
-        if (null == e.previewQuest && a) {
-            if (null == v) return void h(null);
-            h(v.id), (0, x._)([v.id], j.jn.QUEST_LIVE_STREAM);
-        }
-    }, [v, e.previewQuest, a]);
-    let E = (0, s.e7)([b.Z], () => {
+        null == e.previewQuest && null != y && (0, x._)([y], j.jn.QUEST_LIVE_STREAM);
+    }, [y, e.previewQuest]);
+    let h = (0, s.e7)([b.Z], () => {
             var e;
             let t = b.Z.earnedQuestForPlacement.get(j.jn.QUEST_LIVE_STREAM);
             return null == t || null == y ? null : null != (e = t.quests.get(y)) ? e : null;
         }, [y]),
-        [O, N] = l.useState(null);
+        [E, O] = l.useState(null);
     l.useEffect(() => {
-        null != E ? N(E) : null === y && N(null);
-    }, [E, y]);
-    let P = null != E ? E : O,
-        C = null != (t = e.previewQuest) ? t : a ? P : v;
-    return null == C || i
+        null != h ? O(h) : null === y && O(null);
+    }, [h, y]);
+    let N = null != h ? h : null !== y ? E : null,
+        P = null != (t = e.previewQuest) ? t : a ? N : v;
+    return null == P || i
         ? null
         : (0, r.jsx)(w.A, {
-              questOrQuests: C,
+              questOrQuests: P,
               overrideVisibility: !n,
               questContent: j.jn.QUEST_LIVE_STREAM,
               sourceQuestContent: j.jn.QUEST_LIVE_STREAM,
-              children: () => (0, r.jsx)(W, z(V({}, e), { quest: C })),
+              children: () => (0, r.jsx)(W, z(V({}, e), { quest: P })),
           });
 }
 let Y = function (e) {
