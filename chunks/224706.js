@@ -332,29 +332,43 @@ let Z = {
         });
     },
     getDetectableBlocklist() {
-        O.Z.canFetchExecutableBlocklist() &&
-            (c.Z.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
+        if (!O.Z.canFetchExecutableBlocklist()) return;
+        let e = O.Z.blocklistEtag;
+        c.Z.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             s.tn
                 .get({
                     url: R.ANM.GAMES_BLOCKLIST,
+                    headers: { "If-None-Match": e },
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 })
                 .then(
                     (e) => {
                         var t, n;
-                        let { body: r } = e;
+                        let {
+                            body: r,
+                            headers: { etag: i },
+                        } = e;
                         c.Z.dispatch({
                             type: "GAMES_BLOCKLIST_UPDATE",
                             executables: null != (t = r.executables) ? t : [],
                             patterns: null != (n = r.patterns) ? n : [],
+                            etag: i,
                         });
                     },
                     (e) => {
-                        j.error("Failed to fetch games blocklist", e),
-                            c.Z.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" });
+                        let { status: t } = e;
+                        304 === t
+                            ? c.Z.dispatch({
+                                  type: "GAMES_BLOCKLIST_UPDATE",
+                                  executables: [],
+                                  patterns: [],
+                                  etag: O.Z.blocklistEtag,
+                              })
+                            : (j.error("Failed to fetch games blocklist"),
+                              c.Z.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
                     },
-                ));
+                );
     },
     getDetectableNonGames() {
         if (!g.Z.canFetch()) return;
