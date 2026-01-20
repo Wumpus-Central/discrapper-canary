@@ -2,8 +2,9 @@ n.d(t, {
     cE: () => f,
     eu: () => p,
     fU: () => _,
-});
-var r = n(748521),
+}),
+    n(388685);
+var r = n(524550),
     i = n(731965),
     a = n(902704);
 function o(e, t, n) {
@@ -58,17 +59,21 @@ function c(e, t) {
         e
     );
 }
+n(709054);
 let u = {},
     d = (0, r.F)((e) => ({
-        polls: {},
+        pollsByChannelId: {},
+        pollsByMessageId: {},
         updatePollState(t, n, r) {
             (0, i.j)(() => {
                 e((e) => {
                     var i;
+                    let a = r(null == (i = e.pollsByChannelId[t]) ? void 0 : i[n]);
                     return {
-                        polls: c(s({}, e.polls), {
-                            [t]: c(s({}, e.polls[t]), { [n]: r(null == (i = e.polls[t]) ? void 0 : i[n]) }),
+                        pollsByChannelId: c(s({}, e.pollsByChannelId), {
+                            [t]: c(s({}, e.pollsByChannelId[t]), { [n]: a }),
                         }),
+                        pollsByMessageId: c(s({}, e.pollsByMessageId), { [n]: a }),
                     };
                 });
             });
@@ -77,7 +82,7 @@ let u = {},
 function f(e) {
     return d((t) => {
         var n;
-        return null != (n = t.polls[e]) ? n : u;
+        return null != (n = t.pollsByChannelId[e]) ? n : u;
     }, a.Z);
 }
 function p(e, t, n) {
@@ -85,5 +90,5 @@ function p(e, t, n) {
 }
 function _(e, t) {
     var n;
-    return null == (n = d.getState().polls[e]) ? void 0 : n[t];
+    return null == (n = d.getState().pollsByChannelId[e]) ? void 0 : n[t];
 }
