@@ -61698,6 +61698,70 @@ screen and (max-width:485px) {
     margin-bottom: var(--space-12)
 }
 
+._44061dfca5514945-profileCustomizationSection {
+    position: relative
+}
+
+._44061dfca5514945-profileCustomizationSection p {
+    margin-top: 0
+}
+
+._44061dfca5514945-baseLayout {
+    align-items: start;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+    position: relative
+}
+
+._44061dfca5514945-previewsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 300px
+}
+
+._44061dfca5514945-previewTitle {
+    margin-bottom: 8px
+}
+
+@media (min-width:1024px) {
+    ._44061dfca5514945-baseLayout {
+        gap: 36px;
+        grid-template-areas: "form preview";
+        grid-template-columns: minmax(0, 1fr) 300px
+    }
+
+    ._44061dfca5514945-formContent {
+        grid-area: form
+    }
+
+    ._44061dfca5514945-previewsContainer {
+        grid-area: preview;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 24px
+    }
+}
+
+._5273bfb3444331e4-topSpacing {
+    margin-top: 24px
+}
+
+._5273bfb3444331e4-emptyState {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+._5273bfb3444331e4-emptyState,
+._5273bfb3444331e4-image {}
+
+._5273bfb3444331e4-image {
+    height: 162px;
+    width: 186px
+}
+
 ._65c15724a894a2e0-featureBorder {
     border-radius: 8px
 }
@@ -61783,56 +61847,6 @@ screen and (max-width:485px) {
     margin: -12px -12px 0
 }
 
-._44061dfca5514945-profileCustomizationSection {
-    position: relative
-}
-
-._44061dfca5514945-profileCustomizationSection p {
-    margin-top: 0
-}
-
-._44061dfca5514945-baseLayout {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 35px;
-    position: relative
-}
-
-._44061dfca5514945-previewsContainer {
-    align-self: flex-end
-}
-
-@media (min-width:937px) {
-    ._44061dfca5514945-previewsContainer {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 24px
-    }
-}
-
-._44061dfca5514945-preview,
-._44061dfca5514945-previewItem {
-    max-width: 348px
-}
-
-._5273bfb3444331e4-topSpacing {
-    margin-top: 24px
-}
-
-._5273bfb3444331e4-emptyState {
-    align-items: center;
-    display: flex;
-    flex-direction: column
-}
-
-._5273bfb3444331e4-emptyState,
-._5273bfb3444331e4-image {}
-
-._5273bfb3444331e4-image {
-    height: 162px;
-    width: 186px
-}
-
 ._6a919231d4bdfd4f-bioTextArea {
     --channel-text-area-placeholder: var(--input-placeholder-text-default);
     border-radius: 3px;
@@ -61868,7 +61882,8 @@ screen and (max-width:485px) {
 }
 
 ._89253581b3e6feb0-buttonsContainer {
-    display: flex
+    display: flex;
+    flex-wrap: wrap
 }
 
 ._89253581b3e6feb0-removeButton {
@@ -61888,7 +61903,8 @@ screen and (max-width:485px) {
 }
 
 ._28d5e0a2d38ee49c-buttonsContainer {
-    display: flex
+    display: flex;
+    flex-wrap: wrap
 }
 
 ._28d5e0a2d38ee49c-removeButton {
@@ -61907,6 +61923,7 @@ screen and (max-width:485px) {
 
 ._4962e7dd7cd2297c-buttonsContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px
 }
 
@@ -61940,7 +61957,8 @@ screen and (max-width:485px) {
 }
 
 .fd47aefbb9db0fe5-buttonsContainer {
-    display: flex
+    display: flex;
+    flex-wrap: wrap
 }
 
 .fd47aefbb9db0fe5-removeButton {

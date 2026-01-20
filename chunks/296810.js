@@ -1,56 +1,62 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(993413),
+    o = n(481060),
     s = n(388032),
     l = n(77752);
 function c(e) {
+    let { title: t, children: n } = e;
+    return (0, r.jsxs)("div", {
+        children: [
+            (0, r.jsx)(o.Heading, {
+                variant: "text-md/medium",
+                className: l.previewTitle,
+                children: t,
+            }),
+            n,
+        ],
+    });
+}
+function u(e) {
     let {
             children: t,
             className: n,
             layoutClassName: i,
-            profilePreview: c,
+            profilePreview: o,
             profilePreviewTitle: u,
             nameplatePreview: d,
         } = e,
         f = () =>
-            null != d
-                ? (0, r.jsxs)("div", {
-                      className: l.previewsContainer,
-                      children: [
-                          (0, r.jsx)(o.Z, {
-                              title: null != u ? u : s.intl.string(s.t.Zb06yP),
-                              hideDivider: !0,
-                              className: l.previewItem,
-                              children: c,
-                          }),
-                          (0, r.jsx)(o.Z, {
+            (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)(c, {
+                        title: null != u ? u : s.intl.string(s.t.Zb06yP),
+                        children: o,
+                    }),
+                    null != d
+                        ? (0, r.jsx)(c, {
                               title: s.intl.string(s.t["7KRt6R"]),
-                              className: l.previewItem,
-                              hideDivider: !0,
                               children: d,
-                          }),
-                      ],
-                  })
-                : (0, r.jsx)("div", {
-                      className: l.previewsContainer,
-                      children: (0, r.jsx)(o.Z, {
-                          title: null != u ? u : s.intl.string(s.t.Zb06yP),
-                          hideDivider: !0,
-                          className: l.previewItem,
-                          children: c,
-                      }),
-                  });
+                          })
+                        : null,
+                ],
+            });
     return (0, r.jsx)("div", {
-        className: n,
-        children: (0, r.jsx)("div", {
-            className: l.profileCustomizationSection,
-            children: (0, r.jsxs)("div", {
-                className: a()(l.baseLayout, i),
-                children: [t, f()],
-            }),
+        className: a()(l.profileCustomizationSection, n),
+        children: (0, r.jsxs)("div", {
+            className: a()(l.baseLayout, i),
+            children: [
+                (0, r.jsx)("div", {
+                    className: l.previewsContainer,
+                    children: f(),
+                }),
+                (0, r.jsx)("div", {
+                    className: l.formContent,
+                    children: t,
+                }),
+            ],
         }),
     });
 }
