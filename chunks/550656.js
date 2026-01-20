@@ -75,13 +75,14 @@ function b(e) {
             : E;
     };
     if (R) {
-        let e = (0, l.a_)(S, I);
+        let e = (0, l.a_)(S, I),
+            t = null != b ? b : a.current;
         return (0, r.jsx)(l.pS, {
             className: h.tooltipLayer,
             open: n,
             spacing: T,
             placement: e,
-            reference: b,
+            reference: t,
             renderLayer: (e) => {
                 var t;
                 let { placement: n, shift: r } = e,
