@@ -1,75 +1,65 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => E });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
     o = n(607802),
-    s = n(28964),
-    l = n(247902),
-    c = n(532428),
-    u = n(637879),
-    d = n(794137),
-    f = n(628221),
-    p = n(611004),
-    _ = n(817190),
-    m = n(315322),
+    s = n(247902),
+    l = n(532428),
+    c = n(611004),
+    u = n(774322),
+    d = n(398944),
+    f = n(142243),
+    p = n(817190),
+    _ = n(315322),
     h = n(981631),
-    g = n(388032),
-    E = n(409735);
-function b(e) {
-    let { setSearchQuery: t, searchContext: n, mode: b } = e,
-        y = (0, l.N)(n),
-        O = (0, s.g_)({ location: "usePopularAutocompleteFilters" }),
-        v = i.useMemo(
-            () => ({
-                type: h.dCx.FILTER_MENTIONS,
-                isEligible: y.has(h.dCx.FILTER_MENTIONS),
-                icon: a.lOy,
-                label: g.intl.string(g.t.fpKv9Y),
-            }),
-            [y],
-        ),
-        S = i.useMemo(
-            () => ({
-                type: h.dCx.FILTER_HAS,
-                isEligible: y.has(h.dCx.FILTER_HAS),
-                icon: a.Ujz,
-                label: g.intl.string(g.t.IhIpc7),
-            }),
-            [y],
-        );
+    m = n(388032),
+    g = n(467611);
+function E(e) {
+    let { setSearchQuery: t, searchContext: n, mode: E } = e,
+        b = (0, s.N)(n);
     return i.useMemo(() => {
         let e = [
             {
                 type: h.dCx.FILTER_FROM,
-                isEligible: y.has(h.dCx.FILTER_FROM),
+                isEligible: b.has(h.dCx.FILTER_FROM),
                 icon: a.tBG,
-                label: g.intl.string(g.t.ktr6z5),
+                label: m.intl.string(m.t.ktr6z5),
             },
             {
                 type: h.dCx.FILTER_IN,
-                isEligible: y.has(h.dCx.FILTER_IN),
+                isEligible: b.has(h.dCx.FILTER_IN),
                 icon: a.VL1,
-                label: g.intl.string(g.t.VMjDvS),
+                label: m.intl.string(m.t.VMjDvS),
             },
-            O ? S : v,
-            O ? v : S,
+            {
+                type: h.dCx.FILTER_HAS,
+                isEligible: b.has(h.dCx.FILTER_HAS),
+                icon: a.Ujz,
+                label: m.intl.string(m.t.IhIpc7),
+            },
+            {
+                type: h.dCx.FILTER_MENTIONS,
+                isEligible: b.has(h.dCx.FILTER_MENTIONS),
+                icon: a.lOy,
+                label: m.intl.string(m.t.fpKv9Y),
+            },
         ];
         return e
             .filter((e) => e.isEligible)
             .map((i) => {
-                let { icon: a, label: s, type: l } = i,
-                    h = (r) => {
+                let { icon: a, label: s, type: h } = i,
+                    m = (r) => {
                         var i, a;
                         let { selectedIndex: s, searchAutocompleteSelectAction: u } = r,
-                            d = null != (a = null == (i = c.ZP[l]) ? void 0 : i.key) ? a : "",
+                            d = null != (a = null == (i = l.ZP[h]) ? void 0 : i.key) ? a : "",
                             f = (0, o.Tm)(n);
-                        (0, m.bh)({
+                        (0, _.bh)({
                             searchContext: n,
-                            searchQuery: _.Z.getSearchResultsQuery(f),
-                            searchQueryString: p.Z.getSearchInputText(n),
-                            searchTokenType: l,
-                            searchAutocompleteGroup: l,
-                            searchAutocompleteMode: b,
+                            searchQuery: p.Z.getSearchResultsQuery(f),
+                            searchQueryString: c.Z.getSearchInputText(n),
+                            searchTokenType: h,
+                            searchAutocompleteGroup: h,
+                            searchAutocompleteMode: E,
                             searchAutocompleteResultIndex: s - 1,
                             searchAutocompleteTotalResults: e.length,
                             isSearchFilterPrefix: !0,
@@ -88,12 +78,12 @@ function b(e) {
                     icon: (0, r.jsx)(a, {
                         size: "sm",
                         color: "currentColor",
-                        className: E.itemIcon,
+                        className: g.itemIcon,
                     }),
                     label: (0, r.jsx)(u.Q0, { label: s }),
-                    sublabel: (0, r.jsx)(u.mW, { searchTokenType: l }),
-                    onSelect: h,
+                    sublabel: (0, r.jsx)(u.mW, { searchTokenType: h }),
+                    onSelect: m,
                 });
             });
-    }, [y, n, b, t, S, v, O]);
+    }, [b, n, E, t]);
 }

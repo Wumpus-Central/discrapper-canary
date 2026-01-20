@@ -1,29 +1,28 @@
 n.d(t, {
     $G: () => L,
     AH: () => A,
-    BU: () => F,
+    BU: () => Z,
     BX: () => I,
-    EX: () => ee,
-    Fr: () => z,
-    Fz: () => K,
+    EX: () => $,
+    Fr: () => K,
+    Fz: () => W,
     Jl: () => G,
-    Ko: () => R,
-    Pe: () => q,
-    R6: () => Q,
+    Ko: () => w,
+    Pe: () => z,
+    R6: () => q,
     Tm: () => S,
     UP: () => j,
     Vj: () => P,
-    WU: () => W,
-    X$: () => $,
-    X3: () => X,
+    WU: () => Y,
+    X$: () => J,
+    X3: () => Q,
     b7: () => C,
-    cl: () => B,
+    cl: () => F,
     g9: () => k,
-    i3: () => Z,
     jW: () => x,
-    kG: () => Y,
+    kG: () => H,
     nI: () => M,
-    nl: () => J,
+    nl: () => X,
     qc: () => U,
     s5: () => T,
     zH: () => N,
@@ -49,8 +48,8 @@ var a = n(349033),
     f = n(246946),
     p = n(594174),
     _ = n(709054),
-    m = n(51144),
-    h = n(748610),
+    h = n(51144),
+    m = n(748610),
     g = n(731267),
     E = n(532428);
 n(723642);
@@ -164,7 +163,7 @@ function P(e) {
             ? b.QIO.OLDEST
             : b.QIO.NEWEST;
 }
-function R(e) {
+function w(e) {
     switch (e) {
         case b.dCx.FILTER_FROM:
             return y.intl.string(y.t.E466pL);
@@ -188,7 +187,7 @@ function R(e) {
             return y.intl.string(y.t.qCQzBl);
     }
 }
-let w = {
+let R = {
     [b.dCx.FILTER_BEFORE]: !0,
     [b.dCx.FILTER_AFTER]: !0,
     [b.dCx.FILTER_ON]: !0,
@@ -358,74 +357,43 @@ function G(e) {
         return '"'.concat(t, '"');
     }
 }
-function Z(e, t) {
-    let n = [];
-    return (
-        i()(e).forEach((e) => {
-            if (null == e || 0 === e.results.length) return;
-            let r = e.group;
-            n = n.concat(
-                e.results.map((n) => {
-                    let i = n.text;
-                    if ((null != n.channel && (i = G(i)), t.type === b.Sap.FILTER_ALL)) {
-                        var a;
-                        r = null != (a = n.group) ? a : r;
-                        let e = E.ZP[r];
-                        (null == e ? void 0 : e.key) != null &&
-                            (null == e ? void 0 : e.key) !== "" &&
-                            (i = "".concat(e.key, " ").concat(i));
-                    }
-                    return {
-                        result: n,
-                        group: e.group,
-                        resultText: i,
-                    };
-                }),
-            );
-        }),
-        n.filter((e) => {
-            let { resultText: t } = e;
-            return t;
-        })
-    );
-}
-function F(e) {
+function Z(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function B(e) {
+function F(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let V = new a.ZP(),
-    H = new a.ZP();
-function Y(e) {
-    return V.tokenize(e);
+let B = new a.ZP(),
+    V = new a.ZP();
+function H(e) {
+    return B.tokenize(e);
 }
-function W() {
-    V.clearCache(), H.clearCache();
+function Y() {
+    B.clearCache(), V.clearCache();
 }
-function K(e) {
-    return null != e ? w[e] : null;
+function W(e) {
+    return null != e ? R[e] : null;
 }
-function z(e, t) {
+function K(e, t) {
     let n = b.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!b.KA4.test(t.type));
 }
-function q() {
-    (0, E.WK)(), V.reset(), i()(E.ZP).forOwn((e, t) => V.addRule(v({ type: t }, e))), H.reset();
+function z() {
+    (0, E.WK)(), B.reset(), i()(E.ZP).forOwn((e, t) => B.addRule(v({ type: t }, e))), V.reset();
     let e = (0, E.mh)();
-    i()(e).forOwn((e, t) => H.addRule(v({ type: t }, e))), h.Z.markSearchTokensRefreshed();
+    i()(e).forOwn((e, t) => V.addRule(v({ type: t }, e))), m.Z.markSearchTokensRefreshed();
 }
-function Q(e) {
+function q(e) {
     return !!C(e) || (e.type === b.aib.DMS && !f.Z.hidePersonalInformation);
 }
-function X(e) {
+function Q(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, o.F6)(e, p.default, u.Z);
     else if (e.isDM()) {
         let n = e.getRecipientId(),
             r = p.default.getUser(n),
-            i = m.ZP.getUserTag(r);
+            i = h.ZP.getUserTag(r);
         if (null == i) return null;
         t = i;
     } else {
@@ -435,23 +403,23 @@ function X(e) {
     }
     return ((t = G(t)), n) ? "#".concat(t) : t;
 }
-function J(e) {
+function X(e) {
     var t;
     if (e.isGroupDM()) return (0, o.F6)(e, p.default, u.Z);
     if (e.isDM()) {
         let t = e.getRecipientId(),
             n = p.default.getUser(t);
-        return m.ZP.getUserTag(n);
+        return h.ZP.getUserTag(n);
     }
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function $() {
+function J() {
     var e, t;
     return null != (t = null == (e = p.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }
-function ee(e) {
-    let t = H.tokenize(e),
+function $(e) {
+    let t = V.tokenize(e),
         n = [];
     t.forEach((e) => {
         e.type !== b.dCx.FILTER_IN && e.type !== b.dCx.ANSWER_IN && n.push(e);
