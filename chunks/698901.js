@@ -1,51 +1,54 @@
-n.d(t, { Z: () => u }), n(388685), n(642613);
+n.d(t, { Z: () => d }), n(388685), n(642613);
 var a = n(54381);
 n(473749);
 var r = n(442837),
-    i = n(199849),
-    l = n(481060),
-    s = n(536442),
-    o = n(2968),
-    c = n(663618);
-function d(e) {
+    i = n(481060),
+    l = n(536442),
+    s = n(2968),
+    o = n(663618);
+function c(e) {
     let { hotspotLocation: t } = e,
-        [n, l] = (0, r.Wu)([s.qc], () => [s.qc.hasHotspot(t, !0), s.qc.getHotspotOverride(t)]);
-    return (0, a.jsx)(i.y6, {
+        [n, s] = (0, r.Wu)([l.qc], () => [l.qc.hasHotspot(t, !0), l.qc.getHotspotOverride(t)]);
+    return (0, a.jsx)(i.PhF, {
         label: t,
-        helperText: n ? "Active" : void 0,
         errorMessage: n ? "Inactive" : void 0,
-        className: o.overrideSelect,
-        value: l,
+        successMessage: n ? "Active" : void 0,
+        value: s,
         options: [
             {
+                id: "none",
                 value: void 0,
                 label: "No Override",
             },
             {
+                id: "active",
                 value: !0,
                 label: "Force Active",
             },
             {
+                id: "inactive",
                 value: !1,
                 label: "Force Inactive",
             },
         ],
-        onChange: (e) => (null != e ? (0, s.hv)(t, e) : (0, s.Po)(t)),
+        onSelectionChange: (e) => (null != e ? (0, l.hv)(t, e) : (0, l.Po)(t)),
+        selectionMode: "single",
+        fullWidth: !0,
     });
 }
-function u() {
-    return (0, a.jsx)(l.zJl, {
-        className: c.panel,
-        children: (0, a.jsx)(l.C3N, {
+function d() {
+    return (0, a.jsx)(i.zJl, {
+        className: o.panel,
+        children: (0, a.jsx)(i.C3N, {
             label: "Hotspots",
             description:
                 "All the 'hotspots' in app, and their current status. Use the select menu to override them on or off.",
-            className: o.hotspotsSection,
-            children: (0, a.jsx)(l.Kqy, {
+            className: s.hotspotsSection,
+            children: (0, a.jsx)(i.Kqy, {
                 gap: 20,
-                children: Object.keys(s.v6)
+                children: Object.keys(l.v6)
                     .sort((e, t) => e.localeCompare(t))
-                    .map((e) => (0, a.jsx)(d, { hotspotLocation: e }, e)),
+                    .map((e) => (0, a.jsx)(c, { hotspotLocation: e }, e)),
             }),
         }),
     });

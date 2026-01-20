@@ -123,5 +123,6 @@ function S(e) {
         renderOptionSuffix: E,
         renderOptionLabel: k,
         placeholder: 0 === Z.length ? N.intl.string(N.t.O3i2gV) : N.intl.string(N.t.CunCMN),
+        "data-migration-pending": !0,
     });
 }

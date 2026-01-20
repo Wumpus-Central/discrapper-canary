@@ -1,17 +1,16 @@
-n.d(t, { Z: () => O }), n(290780);
+n.d(t, { Z: () => y }), n(290780);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
-    o = n(668339),
-    s = n(481060),
-    l = n(565138),
-    c = n(430824),
-    u = n(771845),
-    d = n(823379),
-    f = n(997950),
-    p = n(816108),
-    _ = n(388032),
-    m = n(913498);
+    o = n(481060),
+    s = n(565138),
+    l = n(430824),
+    c = n(771845),
+    u = n(823379),
+    d = n(997950),
+    f = n(816108),
+    p = n(388032),
+    _ = n(913498);
 function h(e, t, n) {
     return (
         t in e
@@ -25,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +40,7 @@ function g(e) {
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,76 +52,78 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = {
-    label: () => _.intl.string(_.t["32u1Dx"]),
-    value: f.Th,
+let b = {
+    label: () => p.intl.string(p.t["32u1Dx"]),
+    value: d.Th,
 };
-function O() {
-    let { selectedGuildId: e, setSelectedGuildId: t } = (0, f.xu)(),
-        n = (0, a.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-        _ = (0, a.e7)([c.Z], () => c.Z.getGuilds()),
-        { hideGuildOptions: h, hideGlobalOption: E } = (0, p.b)(),
-        O = n[0];
+function y() {
+    let { selectedGuildId: e, setSelectedGuildId: t } = (0, d.xu)(),
+        n = (0, a.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+        p = (0, a.e7)([l.Z], () => l.Z.getGuilds()),
+        { hideGuildOptions: h, hideGlobalOption: g } = (0, f.b)(),
+        y = n[0];
     i.useEffect(() => {
-        (E && h) || (e === f.Th && e !== O && E && t(O), e !== f.Th && h && t(f.Th));
-    }, [e, t, E, h, O]);
-    let v = (e) => {
+        (g && h) || (e === d.Th && e !== y && g && t(y), e !== d.Th && h && t(d.Th));
+    }, [e, t, g, h, y]);
+    let O = (e) => {
             t(e);
         },
-        S = i.useMemo(() => {
+        v = i.useMemo(() => {
             let e = h
                 ? []
                 : n
                       .map((e) => {
-                          let t = _[e];
+                          let t = p[e];
                           return null == t
                               ? null
                               : {
+                                    id: t.id,
                                     label: t.name,
                                     value: t.id,
+                                    leading: (0, r.jsx)(s.Z, {
+                                        className: _.guildSelectOptionIcon,
+                                        guild: t,
+                                        size: s.Z.Sizes.SMALLER,
+                                        active: !0,
+                                    }),
                                 };
                       })
-                      .filter(d.lm);
-            return E || e.unshift(b(g({}, y), { label: y.label() })), e;
-        }, [h, n, E, _]),
-        I = i.useCallback(
-            (e) => {
-                let t = (null == e ? void 0 : e.label) === y.label() && (null == e ? void 0 : e.value) === y.value;
-                return null == e || "" === e.value || t
-                    ? (0, r.jsx)("div", {
-                          className: m.clydeIconContainer,
-                          children: (0, r.jsx)(s.gw7, {
-                              size: "sm",
-                              color: "white",
-                              "aria-hidden": !0,
-                              className: m.guildSelectOptionIcon,
-                          }),
-                      })
-                    : (0, r.jsx)(l.Z, {
-                          className: m.guildSelectOptionIcon,
-                          guild: _[e.value],
-                          size: l.Z.Sizes.SMALLER,
-                          active: !0,
-                      });
-            },
-            [_],
-        );
-    return (0, r.jsx)(o.d, {
-        wrapperClassName: m.searchableSelect,
-        onChange: v,
+                      .filter(u.lm);
+            return (
+                g ||
+                    e.unshift(
+                        E(m({}, b), {
+                            id: b.value,
+                            label: b.label(),
+                            leading: (0, r.jsx)("div", {
+                                className: _.clydeIconContainer,
+                                children: (0, r.jsx)(o.gw7, {
+                                    size: "sm",
+                                    color: "white",
+                                    "aria-hidden": !0,
+                                    className: _.guildSelectOptionIcon,
+                                }),
+                            }),
+                        }),
+                    ),
+                e
+            );
+        }, [h, n, g, p]);
+    return (0, r.jsx)(o.VcW, {
+        selectionMode: "single",
+        onSelectionChange: O,
         value: e,
-        options: S,
-        renderOptionPrefix: I,
+        options: v,
     });
 }

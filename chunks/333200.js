@@ -1,7 +1,6 @@
-n.d(t, { V: () => m });
-var r = n(54381);
-n(473749);
-var i = n(793030),
+n.d(t, { V: () => h });
+var r = n(54381),
+    i = n(793030),
     a = n(496600),
     o = n(713072),
     s = n(345729),
@@ -79,13 +78,13 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var { hideTags: t, wrapTags: n, maxOptionsVisible: c = 5 } = e,
         d = p(e, ["hideTags", "wrapTags", "maxOptionsVisible"]);
     let { fieldProps: _ } = (0, i.XF_)(d),
         {
-            disabled: m,
-            required: h,
+            disabled: h,
+            required: m,
             onQueryChange: g,
             onKeyDown: E,
             onFocus: b,
@@ -101,7 +100,7 @@ function m(e) {
             floatingStyles: A,
             getFloatingProps: N,
             getReferenceProps: P,
-            transitionStyles: R,
+            transitionStyles: w,
         } = (0, s.C)();
     return (0, r.jsxs)(
         a.uz,
@@ -113,22 +112,26 @@ function m(e) {
             children: [
                 (0, r.jsx)(
                     a.Ct,
-                    u(
+                    f(
+                        u(
+                            {
+                                hideTags: t,
+                                required: m,
+                                disabled: h,
+                                wrapTags: n,
+                                showChevronButton: !0,
+                                ref: C.setReference,
+                                placeholder: O,
+                            },
+                            _,
+                            P(),
+                        ),
                         {
-                            hideTags: t,
-                            required: h,
-                            disabled: m,
-                            wrapTags: n,
+                            onKeyDown: E,
                             onBlur: y,
                             onQueryChange: g,
                             onFocus: b,
-                            onKeyDown: E,
-                            showChevronButton: !0,
-                            ref: C.setReference,
-                            placeholder: O,
                         },
-                        _,
-                        P(),
                     ),
                 ),
                 I &&
@@ -139,7 +142,7 @@ function m(e) {
                                 {
                                     ref: C.setFloating,
                                     className: l.selectDropdown,
-                                    style: u({}, A, R),
+                                    style: u({}, A, w),
                                 },
                                 N(),
                             ),

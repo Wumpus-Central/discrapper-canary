@@ -13,21 +13,21 @@ var r = n(120356),
     p = n(423932),
     h = n(695346),
     f = n(306052),
-    x = n(944486),
-    b = n(594174),
+    b = n(944486),
+    x = n(594174),
     g = n(134612),
     v = n(407383),
     j = n(293717),
     y = n(478411);
 function C() {
-    let e = b.default.getCurrentUser(),
+    let e = x.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         r = h.Rt.useSetting();
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
                 className: i()(j.buttonsContainer, y.marginBottom20),
-                children: (0, a.jsx)(f.g, { isDevTools: !0 }),
+                children: (0, a.jsx)(f.g, {}),
             }),
             (0, a.jsx)("div", {
                 className: i()(j.buttonsContainer, y.marginBottom8),
@@ -46,14 +46,14 @@ function C() {
                     text: "Launch Safety Tools Modal",
                     onClick: () =>
                         (() => {
-                            let e = x.Z.getChannelId(),
+                            let e = b.Z.getChannelId(),
                                 t = null != e ? e : "21154681615024128";
                             (0, s.ZDy)(
                                 async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("37031"),
                                         n.e("89650"),
-                                        n.e("30332"),
+                                        n.e("98932"),
                                     ]).then(n.bind(n, 611446));
                                     return (n) =>
                                         (0, a.jsx)(

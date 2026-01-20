@@ -4,7 +4,6 @@ e.exports = {
     section: "_9b71827bc8e9fb8d-section",
     buttons: "_9b71827bc8e9fb8d-buttons",
     inputRow: "_9b71827bc8e9fb8d-inputRow",
-    input: "_9b71827bc8e9fb8d-input",
     card: "_9b71827bc8e9fb8d-card",
     badgeContainer: "_9b71827bc8e9fb8d-badgeContainer",
     badge: "_9b71827bc8e9fb8d-badge",

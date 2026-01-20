@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(366939),
     p = n(623573),
     _ = n(190947),
-    m = n(275850),
-    h = n(906732),
+    h = n(275850),
+    m = n(906732),
     g = n(15640),
     E = n(246946),
     b = n(853872),
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function w(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,7 +71,7 @@ function D(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,13 +84,13 @@ function x(e) {
             highlightAddPaymentMethodButton: a,
             dropdownClassName: s,
             analyticsLocation: P,
-            currentInvoicePreview: w,
+            currentInvoicePreview: R,
             disabled: x = !1,
         } = e,
         j = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
         [M, k] = (0, c.Wu)([b.Z], () => [b.Z.paymentSources, b.Z.hasFetchedPaymentSources]),
         U = (0, g.V)((0, S.yb)(t)),
-        { analyticsLocations: G } = (0, h.ZP)(),
+        { analyticsLocations: G } = (0, m.ZP)(),
         Z = i.useMemo(() => Object.values(M).filter((e) => !e.invalid), [M]),
         [F, B] = i.useState(!1),
         [V, H] = i.useState(t.currency),
@@ -112,7 +112,7 @@ function x(e) {
                     amount: i.subtotal,
                     currency: i.currency,
                 };
-            w.currency !== i.currency || (w.currency === i.currency && w.total !== i.total)
+            R.currency !== i.currency || (R.currency === i.currency && R.total !== i.total)
                 ? await L(
                       i,
                       () => {
@@ -144,7 +144,7 @@ function x(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         p.default,
-                        D(R({}, e), {
+                        D(w({}, e), {
                             onAddPaymentSource: q,
                             analyticsLocation: P,
                         }),
@@ -159,7 +159,7 @@ function x(e) {
         },
         X = () => {
             let e = t.paymentSourceId;
-            return (0, r.jsx)(m.ZP, {
+            return (0, r.jsx)(h.ZP, {
                 prependOption:
                     null == e
                         ? {
@@ -212,19 +212,16 @@ function x(e) {
                 null != t.paymentSourceId
                     ? (0, r.jsx)(_.b, {
                           currencies: n,
-                          children: (0, r.jsxs)("div", {
+                          children: (0, r.jsx)("div", {
                               className: o()(A.currency, N.flex, N.alignCenter),
-                              children: [
-                                  (0, r.jsx)("div", { children: C.intl.string(C.t["0YjaXf"]) }),
-                                  (0, r.jsx)(_.Z, {
-                                      className: A.currencyDropdown,
-                                      selectedCurrency: V,
-                                      currencies: n,
-                                      onChange: (e) => {
-                                          W(void 0, e, Y);
-                                      },
-                                  }),
-                              ],
+                              children: (0, r.jsx)(_.Z, {
+                                  label: C.intl.string(C.t["0YjaXf"]),
+                                  selectedCurrency: V,
+                                  currencies: n,
+                                  onChange: (e) => {
+                                      W(void 0, e, Y);
+                                  },
+                              }),
                           }),
                       })
                     : null,

@@ -2,7 +2,7 @@ e.d(n, { default: () => A }), e(388685);
 var l = e(54381),
     r = e(473749),
     i = e(793030),
-    a = e(668339),
+    a = e(481060),
     u = e(556012),
     s = e(590433),
     c = e(388032);
@@ -11,15 +11,16 @@ let o = (t) => {
     let { duration: e, onSelectDuration: r } = t,
         i = (0, s.tr)(),
         u = i.find((t) => t.value === e);
-    return (0, l.jsx)(a.d, {
+    return (0, l.jsx)(a.VcW, {
         required: !0,
         value: null != (n = null == u ? void 0 : u.value) ? n : s.DisableCommunicationDuration.DURATION_60_SEC,
         options: i,
-        onChange: (t) => {
+        onSelectionChange: (t) => {
             let n = i.find((n) => n.value === t);
             null != n && r(n.value);
         },
         placeholder: c.intl.string(c.t.k7yo6p),
+        selectionMode: "single",
     });
 };
 function A(t) {

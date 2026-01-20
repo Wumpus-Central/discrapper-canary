@@ -1,67 +1,74 @@
-a.d(t, { default: () => C }), a(388685);
-var n = a(54381),
-    l = a(473749),
-    i = a(199849),
-    s = a(159691),
-    A = a(481060),
-    u = a(238675),
-    r = a(37291);
-let C = function (e) {
-    let { onClose: t, transitionState: a } = e,
-        [C, c] = l.useState(null),
-        [T, o] = l.useState(null),
-        [p, d] = l.useState(null),
-        [f, h] = l.useState(""),
-        R = l.useCallback(async () => {
-            if (C) {
-                h("");
+l.d(t, { default: () => o }), l(388685);
+var a = l(54381),
+    i = l(473749),
+    n = l(159691),
+    s = l(481060),
+    c = l(238675),
+    A = l(37291);
+let o = function (e) {
+    let { onClose: t, transitionState: l } = e,
+        [o, u] = i.useState(null),
+        [r, C] = i.useState(null),
+        [T, d] = i.useState(null),
+        [h, f] = i.useState(""),
+        p = i.useCallback(async () => {
+            if (o) {
+                f("");
                 try {
-                    await (0, u.qy)(C, {
-                        difficulty: null != T ? T : void 0,
-                        should_serve_invisible: null != p ? p : void 0,
+                    await (0, c.qy)(o, {
+                        difficulty: null != r ? r : void 0,
+                        should_serve_invisible: null != T ? T : void 0,
                     });
                 } catch (e) {
-                    h(e.message);
+                    f(e.message);
                 }
             }
-        }, [C, T, p]);
-    return (0, n.jsxs)(s.u_l, {
+        }, [o, r, T]);
+    return (0, a.jsxs)(n.u_l, {
         title: "Captcha Test Tool",
         actions: [
             {
                 text: "Trigger Captcha",
-                onClick: R,
-                disabled: !C,
+                onClick: p,
+                disabled: !o,
             },
         ],
         onClose: t,
-        transitionState: a,
+        transitionState: l,
         children: [
-            (0, n.jsx)(i.y6, {
-                value: C,
-                options: r.p,
-                onChange: (e) => {
-                    e !== u.fw.HCAPTCHA_RQDATA && e !== u.fw.SMITE_RQDATA && d(null),
-                        e !== u.fw.HCAPTCHA_RQDATA && o(null),
-                        c(e),
-                        h("");
+            (0, a.jsx)(s.PhF, {
+                label: "Captcha Decider Type",
+                hideLabel: !0,
+                value: o,
+                options: A.p,
+                onSelectionChange: (e) => {
+                    e !== c.fw.HCAPTCHA_RQDATA && e !== c.fw.SMITE_RQDATA && d(null),
+                        e !== c.fw.HCAPTCHA_RQDATA && C(null),
+                        u(e),
+                        f("");
                 },
+                selectionMode: "single",
+                fullWidth: !0,
             }),
-            C === u.fw.HCAPTCHA_RQDATA &&
-                (0, n.jsx)(i.y6, {
-                    value: T,
-                    options: r.Z,
-                    onChange: (e) => {
-                        C === u.fw.HCAPTCHA_RQDATA && o(e);
+            o === c.fw.HCAPTCHA_RQDATA &&
+                (0, a.jsx)(s.PhF, {
+                    label: "HCaptcha Difficulty",
+                    hideLabel: !0,
+                    value: r,
+                    options: A.Z,
+                    onSelectionChange: (e) => {
+                        o === c.fw.HCAPTCHA_RQDATA && C(e);
                     },
+                    selectionMode: "single",
+                    fullWidth: !0,
                 }),
-            (C === u.fw.HCAPTCHA_RQDATA || C === u.fw.SMITE_RQDATA) &&
-                (0, n.jsx)(A.Checkbox, {
-                    checked: null != p && p,
+            (o === c.fw.HCAPTCHA_RQDATA || o === c.fw.SMITE_RQDATA) &&
+                (0, a.jsx)(s.Checkbox, {
+                    checked: null != T && T,
                     onChange: (e) => d(e),
                     label: "Should serve invisible?",
                 }),
-            "" !== f && (0, n.jsx)(A.pdY, { error: f }),
+            "" !== h && (0, a.jsx)(s.pdY, { error: h }),
         ],
     });
 };

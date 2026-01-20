@@ -1,7 +1,7 @@
 n.d(t, { M: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(668339),
+    a = n(481060),
     o = n(563040);
 function s(e, t, n) {
     return (
@@ -79,31 +79,27 @@ function f(e, t) {
 function p(e) {
     var { value: t, onChange: n, hideValue: s, disabled: c = !1 } = e,
         f = d(e, ["value", "onChange", "hideValue", "disabled"]);
-    let p = i.useRef(null),
-        _ = i.useMemo(() => new o.tR(), []),
-        [m, h] = i.useState("");
-    function g(e) {
-        null != t && n((0, o.rK)(t, _.selectValue(e)));
+    let p = i.useMemo(() => new o.tR(), []),
+        [_, h] = i.useState("");
+    function m(e) {
+        null != t && n((0, o.rK)(t, p.selectValue(e)));
     }
-    function E(e) {
+    function g(e) {
         if ("Enter" === e.key) {
-            let e = (0, o.tj)(t, m);
-            if (null != e) {
-                var n;
-                g(e), null == (n = p.current) || n.close();
-            }
+            let e = (0, o.tj)(t, _);
+            null != e && m(e);
         }
     }
     return (0, r.jsx)(
-        a.d,
+        a.VcW,
         u(l({}, f), {
-            ref: p,
-            options: _.getOptions(m),
-            value: s ? void 0 : _.lookupByValue(t),
-            onChange: g,
-            isDisabled: c,
-            onSearchChange: h,
-            onKeyDown: E,
+            selectionMode: "single",
+            options: p.getOptions(_),
+            value: s ? void 0 : p.lookupByValue(t),
+            onSelectionChange: m,
+            disabled: c,
+            onQueryChange: (e) => h(e.target.value),
+            onKeyDown: g,
         }),
     );
 }

@@ -4,7 +4,7 @@ n(473749);
 var i = n(512722),
     a = n.n(i),
     o = n(442837),
-    s = n(199849),
+    s = n(481060),
     l = n(716364),
     c = n(474873),
     u = n(197344),
@@ -16,19 +16,22 @@ function p() {
     a()(null != t, "should not render this without a holiday soundpack");
     let n = [
         {
+            id: "default",
             value: d.Y.CLASSIC,
             label: f.intl.string(f.t.p3Hg5W),
         },
         {
+            id: "holiday",
             value: t.soundpack,
             label: f.intl.string(t.soundpackLabel),
         },
     ];
-    return (0, r.jsx)(s.y6, {
+    return (0, r.jsx)(s.PhF, {
+        selectionMode: "single",
         label: f.intl.string(f.t.fgSHf8),
-        onChange: l.c,
+        onSelectionChange: l.c,
         value: e,
         options: n,
-        maxVisibleItems: n.length,
+        maxOptionsVisible: n.length,
     });
 }

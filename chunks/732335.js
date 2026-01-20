@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(388685), n(290780), n(539854);
 var i = n(54381),
     l = n(473749),
-    r = n(668339),
+    r = n(481060),
     a = n(70956),
     s = n(129724),
     o = n(981631),
@@ -16,6 +16,7 @@ function u(e) {
             return (
                 e.includes(p) || e.unshift(p),
                 e.map((e) => ({
+                    id: e.toString(),
                     label: (0, s.A)(e, !1),
                     value: e,
                 }))
@@ -41,16 +42,19 @@ function u(e) {
         v = l.useCallback(() => {
             f(null);
         }, []);
-    return (0, i.jsx)(r.d, {
-        label: t,
-        hideLabel: u,
-        helperText: n,
+    return (0, i.jsx)("div", {
         className: d.marginBottom8,
-        value: p,
-        onChange: x,
-        onSearchChange: j,
-        options: b,
-        onBlur: v,
-        placeholder: c.intl.string(c.t.dBqQu4),
+        children: (0, i.jsx)(r.VcW, {
+            selectionMode: "single",
+            label: t,
+            hideLabel: u,
+            helperText: n,
+            value: p,
+            onSelectionChange: x,
+            onQueryChange: (e) => j(e.target.value),
+            options: b,
+            onBlur: v,
+            placeholder: c.intl.string(c.t.dBqQu4),
+        }),
     });
 }

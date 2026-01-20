@@ -1,20 +1,19 @@
 n.d(t, {
-    Z: () => m,
-    z: () => _,
+    Z: () => _,
+    z: () => p,
 }),
     n(539854);
 var r = n(54381),
     i = n(442837),
-    a = n(199849),
+    a = n(481060),
     o = n(846027),
     s = n(921801),
     l = n(131951),
     c = n(680924),
     u = n(726985),
     d = n(65154),
-    f = n(388032),
-    p = n(478411);
-function _(e, t, n) {
+    f = n(388032);
+function p(e, t, n) {
     let r = [
         {
             id: d.iA.STANDARD,
@@ -44,12 +43,12 @@ function _(e, t, n) {
         r
     );
 }
-function m() {
+function _() {
     let {
         audioSubsystem: e,
         legacyAudioSubsystemSupported: t,
         experimentalAudioSubsystemSupported: n,
-        automaticAudioSubsystemSupported: m,
+        automaticAudioSubsystemSupported: _,
     } = (0, i.cj)([l.Z], () => ({
         audioSubsystem: l.Z.getAudioSubsystem(),
         legacyAudioSubsystemSupported: l.Z.supports(d.AN.LEGACY_AUDIO_SUBSYSTEM),
@@ -58,15 +57,16 @@ function m() {
     }));
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
-        children: (0, r.jsx)(a.y6, {
+        children: (0, r.jsx)(a.PhF, {
             label: f.intl.string(f.t.wVBHr0),
-            className: p.marginBottom20,
             value: e,
-            options: _(t, n, m),
-            onChange: (e) => {
+            options: p(t, n, _),
+            onSelectionChange: (e) => {
                 let t = () => o.Z.setAudioSubsystem(e);
                 (0, c.Z)(f.intl.string(f.t.uY7AcQ), f.intl.string(f.t.gBqik6), t);
             },
+            selectionMode: "single",
+            fullWidth: !0,
         }),
     });
 }

@@ -1,35 +1,37 @@
-i.d(t, { default: () => v }), i(953529), i(388685);
+i.d(t, { default: () => h }), i(953529), i(388685);
 var n = i(54381),
     l = i(473749),
     r = i(512722),
     a = i.n(r),
-    o = i(668339),
-    s = i(755721),
-    u = i(481060),
+    o = i(755721),
+    s = i(481060),
     d = i(313201),
-    c = i(560067),
-    p = i(17079),
-    g = i(709246),
-    G = i(434404),
-    S = i(430824),
-    b = i(313741),
-    C = i(526079),
-    m = i(388032),
-    f = i(10805);
-function h(e) {
+    u = i(560067),
+    c = i(17079),
+    p = i(709246),
+    g = i(434404),
+    G = i(430824),
+    S = i(313741),
+    b = i(526079),
+    C = i(388032),
+    m = i(10805);
+function f(e) {
     let { className: t, guildId: i, onChange: l, isGuildIncluded: r } = e,
-        { options: a } = (0, C.Z)({ isGuildIncluded: r });
-    return (0, n.jsx)(o.d, {
+        { options: a } = (0, b.Z)({ isGuildIncluded: r });
+    return (0, n.jsx)("div", {
         className: t,
-        onChange: l,
-        value: i,
-        options: a,
-        placeholder: m.intl.string(m.t.etZ9tX),
+        children: (0, n.jsx)(s.VcW, {
+            onSelectionChange: l,
+            value: i,
+            options: a,
+            placeholder: C.intl.string(C.t.etZ9tX),
+            selectionMode: "single",
+        }),
     });
 }
-function v(e) {
-    let { transitionState: t, onClose: i, feature: r, section: o, subsection: C } = e,
-        m = (0, d.Dt)(),
+function h(e) {
+    let { transitionState: t, onClose: i, feature: r, section: b, subsection: C } = e,
+        h = (0, d.Dt)(),
         {
             canCreateGuild: v,
             createGuildCta: Z,
@@ -38,68 +40,68 @@ function v(e) {
             title: O,
             description: F,
             isGuildSupported: I,
-        } = (0, b.K)(r),
+        } = (0, S.K)(r),
         [M, j] = l.useState(),
         [_, w] = l.useState(!1),
         y = async () => {
             w(!0);
             let e = await new Promise((e) => {
-                c.Z.openCreateGuildModal({ onSuccess: e });
+                u.Z.openCreateGuildModal({ onSuccess: e });
             });
             await new Promise((t) => {
-                S.Z.addChangeListener(function i() {
-                    null != S.Z.getGuild(e) && (S.Z.removeChangeListener(i), t());
+                G.Z.addChangeListener(function i() {
+                    null != G.Z.getGuild(e) && (G.Z.removeChangeListener(i), t());
                 });
             }),
-                G.Z.open(e, o, void 0, C),
+                g.Z.open(e, b, void 0, C),
                 null == i || i();
         };
-    return (0, n.jsxs)(u.Y0X, {
+    return (0, n.jsxs)(s.Y0X, {
         transitionState: t,
-        "aria-labelledby": m,
+        "aria-labelledby": h,
         parentComponent: "GuildSettingsPickerModal",
         children: [
-            (0, n.jsxs)(u.xBx, {
-                className: f.modalHeader,
+            (0, n.jsxs)(s.xBx, {
+                className: m.modalHeader,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(u.Heading, {
-                        id: m,
+                    (0, n.jsx)(s.Heading, {
+                        id: h,
                         variant: "heading-lg/medium",
                         children: O,
                     }),
-                    (0, n.jsx)(u.olH, { onClick: i }),
+                    (0, n.jsx)(s.olH, { onClick: i }),
                 ],
             }),
-            (0, n.jsxs)(u.hzk, {
-                className: f.modalContent,
+            (0, n.jsxs)(s.hzk, {
+                className: m.modalContent,
                 children: [
-                    (0, n.jsxs)(u.Kqy, {
+                    (0, n.jsxs)(s.Kqy, {
                         direction: "vertical",
                         gap: 8,
                         children: [
-                            (0, n.jsx)(u.Text, {
+                            (0, n.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 children: F,
                             }),
                             (0, n.jsxs)("div", {
-                                className: f.guildSelection,
+                                className: m.guildSelection,
                                 children: [
                                     (0, n.jsx)("div", {
-                                        className: f.guildSelectorContainer,
-                                        children: (0, n.jsx)(h, {
+                                        className: m.guildSelectorContainer,
+                                        children: (0, n.jsx)(f, {
                                             guildId: M,
                                             onChange: j,
                                             isGuildIncluded: I,
                                         }),
                                     }),
-                                    (0, n.jsx)(u.Button, {
+                                    (0, n.jsx)(s.Button, {
                                         variant: "primary",
                                         text: E,
                                         onClick: () => {
                                             a()(null != M, "Guild ID must not be null on click"),
-                                                g.Z.hasSeenCreatorOnboardingForGuild(M) || (0, p.k)(M),
-                                                G.Z.open(M, o, void 0, C),
+                                                p.Z.hasSeenCreatorOnboardingForGuild(M) || (0, c.k)(M),
+                                                g.Z.open(M, b, void 0, C),
                                                 null == i || i();
                                         },
                                         disabled: null == M,
@@ -109,18 +111,18 @@ function v(e) {
                         ],
                     }),
                     v &&
-                        (0, n.jsxs)(u.Kqy, {
+                        (0, n.jsxs)(s.Kqy, {
                             direction: "vertical",
                             gap: 8,
                             children: [
-                                (0, n.jsx)(u.Text, {
+                                (0, n.jsx)(s.Text, {
                                     variant: "text-md/medium",
                                     children: x,
                                 }),
-                                (0, n.jsx)(s.zx, {
+                                (0, n.jsx)(o.zx, {
                                     onClick: y,
                                     submitting: _,
-                                    className: f.createGuildButton,
+                                    className: m.createGuildButton,
                                     children: Z,
                                 }),
                             ],

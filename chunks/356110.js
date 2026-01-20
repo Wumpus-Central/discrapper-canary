@@ -1,60 +1,46 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(54381),
     l = n(473749),
-    i = n(199849),
-    a = n(481060),
-    s = n(984019),
-    o = n(478411);
-let c = (e) => {
-        let { element: t, onChange: n, initialOption: c } = e,
-            [d, u] = l.useState("");
+    i = n(481060),
+    a = n(478411);
+let s = (e) => {
+        let { element: t, onChange: n, initialOption: s } = e,
+            [o, c] = l.useState("");
         l.useEffect(() => {
-            u(null != c ? c : "");
-        }, [c]);
-        let m = t.name,
-            { title: b, options: p } = t.data,
-            g = l.useCallback(
+            c(null != s ? s : "");
+        }, [s]);
+        let d = t.name,
+            { title: u, options: m } = t.data,
+            b = l.useCallback(
                 (e) => {
-                    null != e && (u(e), n(e));
+                    null != e && (c(e), n(e));
                 },
                 [n],
             );
-        return (0, r.jsxs)(
+        return (0, r.jsx)(
             "div",
             {
-                children: [
-                    null != b &&
-                        (0, r.jsx)("div", {
-                            className: o.marginBottom8,
-                            children: (0, r.jsxs)(a.Text, {
-                                variant: "text-sm/bold",
-                                children: [
-                                    b,
-                                    t.should_submit_data &&
-                                        (0, r.jsx)("span", {
-                                            className: s.required,
-                                            children: "*",
-                                        }),
-                                ],
-                            }),
-                        }),
-                    (0, r.jsx)(i.y6, {
-                        value: d,
-                        onChange: g,
-                        options: p,
-                    }),
-                ],
+                className: a.marginBottom8,
+                children: (0, r.jsx)(i.PhF, {
+                    label: u,
+                    value: o,
+                    required: t.should_submit_data,
+                    onSelectionChange: b,
+                    options: m,
+                    selectionMode: "single",
+                    fullWidth: !0,
+                }),
             },
-            m,
+            d,
         );
     },
-    d = (e) => {
+    o = (e) => {
         let { elements: t, onChange: n, state: l } = e,
             i = t.map((e) => {
                 var t, i;
                 let a = e.name;
                 return (0, r.jsx)(
-                    c,
+                    s,
                     {
                         element: e,
                         initialOption: null != (i = null == l || null == (t = l[a]) ? void 0 : t.value) ? i : void 0,

@@ -1,11 +1,10 @@
-n.d(t, { a: () => p }), n(388685);
+n.d(t, { a: () => f }), n(388685);
 var r = n(54381),
     i = n(793030),
     a = n(463208),
-    o = n(199849),
-    s = n(481060),
-    l = n(629709);
-function c(e, t, n) {
+    o = n(481060),
+    s = n(629709);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +28,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,67 +45,75 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e) {
-    let { controls: t, props: n, onPropsChange: c } = e,
-        d = (e, t) => {
-            c(f(u({}, n), { [e]: t }));
+function f(e) {
+    let { controls: t, props: n, onPropsChange: l } = e,
+        u = (e, t) => {
+            l(d(c({}, n), { [e]: t }));
         },
-        p = Object.entries(t);
-    return 0 === p.length
+        f = Object.entries(t);
+    return 0 === f.length
         ? null
         : (0, r.jsx)("div", {
-              className: l.controlsSection,
+              className: s.controlsSection,
               children: (0, r.jsx)(i.Kqy, {
                   gap: 16,
-                  children: p.map((e) => {
+                  children: f.map((e) => {
                       var t;
-                      let [l, c] = e,
-                          u = null != (t = n[l]) ? t : c.defaultValue;
-                      return (0, r.jsxs)(
-                          i.gNt,
-                          {
-                              label: "boolean" === c.type ? void 0 : c.label,
-                              children: [
-                                  "select" === c.type &&
-                                      null != c.options &&
-                                      (0, r.jsx)(o.y6, {
-                                          value: u,
-                                          onChange: (e) => d(l, e),
-                                          options: c.options,
-                                      }),
-                                  "boolean" === c.type &&
-                                      (0, r.jsx)(s.Checkbox, {
-                                          checked: u,
-                                          onChange: (e) => d(l, e),
-                                          label: c.label,
-                                      }),
-                                  "text" === c.type &&
-                                      (0, r.jsx)(a.o, {
-                                          value: u,
-                                          onChange: (e) => d(l, e),
-                                      }),
-                                  "number" === c.type &&
-                                      (0, r.jsx)(a.o, {
-                                          type: "number",
-                                          value: String(u),
-                                          min: c.minValue,
-                                          onChange: (e) => d(l, Number(e)),
-                                      }),
-                              ],
-                          },
-                          l,
-                      );
+                      let [i, s] = e,
+                          l = null != (t = n[i]) ? t : s.defaultValue;
+                      return (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              "select" === s.type &&
+                                  null != s.options &&
+                                  (0, r.jsx)(o.PhF, {
+                                      label: s.label,
+                                      value: l,
+                                      onSelectionChange: (e) => u(i, e),
+                                      options: s.options,
+                                      formatOption: (e) => {
+                                          let { label: t, value: n } = e;
+                                          return {
+                                              id: n,
+                                              value: n,
+                                              label: t,
+                                          };
+                                      },
+                                      selectionMode: "single",
+                                      fullWidth: !0,
+                                  }),
+                              "boolean" === s.type &&
+                                  (0, r.jsx)(o.Checkbox, {
+                                      checked: l,
+                                      onChange: (e) => u(i, e),
+                                      label: s.label,
+                                  }),
+                              "text" === s.type &&
+                                  (0, r.jsx)(a.o, {
+                                      value: l,
+                                      onChange: (e) => u(i, e),
+                                      label: s.label,
+                                  }),
+                              "number" === s.type &&
+                                  (0, r.jsx)(a.o, {
+                                      type: "number",
+                                      value: String(l),
+                                      min: s.minValue,
+                                      onChange: (e) => u(i, Number(e)),
+                                      label: s.label,
+                                  }),
+                          ],
+                      });
                   }),
               }),
           });

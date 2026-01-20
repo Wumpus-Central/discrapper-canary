@@ -1,145 +1,145 @@
-n.d(t, { Z: () => b }), n(388685), n(35282);
+n.d(t, { Z: () => E }), n(388685), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
     o = n(442837),
-    s = n(199849),
-    l = n(481060),
-    c = n(570140),
-    u = n(401430),
-    d = n(155268),
-    f = n(600164),
-    p = n(695103),
-    _ = n(388032),
-    m = n(289253),
+    s = n(481060),
+    l = n(570140),
+    c = n(401430),
+    u = n(155268),
+    d = n(600164),
+    f = n(695103),
+    p = n(388032),
+    _ = n(289253),
     h = n(478411);
-let g = /^\d+$|^$/;
-function E(e, t, n) {
+let m = /^\d+$|^$/;
+function g(e, t, n) {
     if (null == e) return null;
     switch (e) {
         case "localhost":
             return "https://localhost:".concat(t);
         case "proxy":
-            return (0, d.ZP)(n);
+            return (0, u.ZP)(n);
     }
 }
-function b(e) {
+function E(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: d,
-            authorizationError: b,
-            authorizing: y,
-        } = (0, o.cj)([p.Z], () => ({
-            authorizedApplicationId: p.Z.testModeApplicationId,
-            authorizationError: p.Z.error,
-            authorizing: p.Z.isFetchingAuthorization,
+            authorizedApplicationId: u,
+            authorizationError: E,
+            authorizing: b,
+        } = (0, o.cj)([f.Z], () => ({
+            authorizedApplicationId: f.Z.testModeApplicationId,
+            authorizationError: f.Z.error,
+            authorizing: f.Z.isFetchingAuthorization,
         })),
-        [O, v] = i.useState(null != d ? d : ""),
-        [S, I] = i.useState("8080"),
-        [T, C] = i.useState("localhost"),
-        A = g.test(O);
-    async function N() {
-        u.q$();
-        let e = E(T, S, O);
-        null != (await u.Wt(O, e)) && t();
+        [y, O] = i.useState(null != u ? u : ""),
+        [v, S] = i.useState("8080"),
+        [I, T] = i.useState("localhost"),
+        C = m.test(y);
+    async function A() {
+        c.q$();
+        let e = g(I, v, y);
+        null != (await c.Wt(y, e)) && t();
     }
-    function P() {
-        u.mc(), v(""), C(null);
+    function N() {
+        c.mc(), O(""), T(null);
     }
-    function R(e) {
-        v(e);
+    function P(e) {
+        O(e);
     }
     function w(e) {
-        C(e);
+        T(e);
     }
-    function D() {
-        return null == b
+    function R() {
+        return null == E
             ? null
             : (0, r.jsx)("div", {
                   className: h.marginBottom20,
-                  children: (0, r.jsx)(l.M14, {
+                  children: (0, r.jsx)(s.M14, {
                       type: "critical",
-                      children: b,
+                      children: E,
                   }),
               });
     }
-    function x() {
-        return "localhost" !== T
+    function D() {
+        return "localhost" !== I
             ? null
             : (0, r.jsx)("div", {
-                  className: m.inputWrapper,
-                  children: (0, r.jsx)(l.oil, {
+                  className: _.inputWrapper,
+                  children: (0, r.jsx)(s.oil, {
                       required: !0,
-                      label: _.intl.string(_.t.fF4zxq),
-                      value: S,
+                      label: p.intl.string(p.t.fF4zxq),
+                      value: v,
                       maxLength: 5,
-                      onChange: (e) => I(e),
-                      disabled: y,
+                      onChange: (e) => S(e),
+                      disabled: b,
                   }),
               });
     }
-    i.useEffect(() => () => c.Z.wait(() => u.q$()), []);
-    let L = null != d && d === O,
-        j = L ? P : N,
-        M = i.useMemo(
+    i.useEffect(() => () => l.Z.wait(() => c.q$()), []);
+    let x = null != u && u === y,
+        L = x ? N : A,
+        j = i.useMemo(
             () => [
                 {
-                    loading: y,
-                    disabled: !A || 0 === O.length || ("localhost" === T && 0 === S.length),
-                    variant: L ? "critical-primary" : "active",
-                    text: L ? _.intl.string(_.t.d6TR3I) : _.intl.string(_.t.qwuK5I),
-                    onClick: j,
+                    loading: b,
+                    disabled: !C || 0 === y.length || ("localhost" === I && 0 === v.length),
+                    variant: x ? "critical-primary" : "active",
+                    text: x ? p.intl.string(p.t.d6TR3I) : p.intl.string(p.t.qwuK5I),
+                    onClick: L,
                 },
             ],
-            [O.length, y, L, A, S.length, j, T],
+            [y.length, b, x, C, v.length, L, I],
         );
     return (0, r.jsxs)(a.Modal, {
-        title: _.intl.string(_.t.f8fzky),
-        subtitle: _.intl.string(_.t.a6Vill),
-        actions: M,
+        title: p.intl.string(p.t.f8fzky),
+        subtitle: p.intl.string(p.t.a6Vill),
+        actions: j,
         onClose: t,
         transitionState: n,
         children: [
-            D(),
-            (0, r.jsxs)(f.Z, {
-                direction: f.Z.Direction.VERTICAL,
-                align: f.Z.Align.START,
+            R(),
+            (0, r.jsxs)(d.Z, {
+                direction: d.Z.Direction.VERTICAL,
+                align: d.Z.Align.START,
                 children: [
                     (0, r.jsx)("div", {
-                        className: m.inputWrapper,
-                        children: (0, r.jsx)(l.oil, {
-                            label: _.intl.string(_.t.P6TzgI),
+                        className: _.inputWrapper,
+                        children: (0, r.jsx)(s.oil, {
+                            label: p.intl.string(p.t.P6TzgI),
                             required: !0,
-                            value: O,
+                            value: y,
                             maxLength: 19,
-                            error: A ? null : _.intl.string(_.t.gPNgKO),
-                            onChange: R,
-                            disabled: y,
+                            error: C ? null : p.intl.string(p.t.gPNgKO),
+                            onChange: P,
+                            disabled: b,
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: m.inputWrapper,
-                        children: (0, r.jsx)(s.y6, {
-                            label: _.intl.string(_.t["/GTqXG"]),
-                            isDisabled: !A || "" === O,
-                            value: T,
+                        className: _.inputWrapper,
+                        children: (0, r.jsx)(s.PhF, {
+                            selectionMode: "single",
+                            label: p.intl.string(p.t["/GTqXG"]),
+                            disabled: !C || "" === y,
+                            value: I,
                             options: [
                                 {
                                     value: "localhost",
-                                    label: _.intl.string(_.t["+Y9Y6r"]),
-                                    key: "localhost",
+                                    label: p.intl.string(p.t["+Y9Y6r"]),
+                                    id: "localhost",
                                 },
                                 {
                                     value: "proxy",
-                                    label: _.intl.string(_.t.uaksyW),
-                                    key: "proxy",
+                                    label: p.intl.string(p.t.uaksyW),
+                                    id: "proxy",
                                 },
                             ],
-                            onChange: w,
+                            onSelectionChange: w,
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    x(),
+                    D(),
                 ],
             }),
         ],

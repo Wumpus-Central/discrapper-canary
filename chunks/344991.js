@@ -15,8 +15,8 @@ var r = n(54381),
     f = n(970184),
     p = n(280501),
     _ = n(292419),
-    m = n(240370),
-    h = n(543098);
+    h = n(240370),
+    m = n(543098);
 function g(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ function y(e, t) {
 function O(e) {
     let { icon: t, iconSize: n } = e;
     return (0, r.jsx)("div", {
-        className: m.iconContainer,
+        className: h.iconContainer,
         style: {
             height: n,
             width: n,
@@ -89,8 +89,8 @@ function S(e) {
         I = (0, _.Wo)(t),
         [T, C] = i.useState(!1),
         [A, N] = i.useState(!1),
-        [P, R] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
-        [w, D] = i.useState(new Set(P.keys())),
+        [P, w] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
+        [R, D] = i.useState(new Set(P.keys())),
         [x, L] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
         [j, M] = i.useState(0);
     i.useEffect(() => {
@@ -98,7 +98,7 @@ function S(e) {
         if (e.every((e) => x.includes(e)) && x.every((t) => e.includes(t))) return;
         L(e);
         let t = new Map(null == g ? void 0 : g.map((e) => [e.value, e]));
-        R(t), D(new Set(t.keys())), M((e) => e + 1);
+        w(t), D(new Set(t.keys())), M((e) => e + 1);
     }, [g, x]);
     let k = (0, f.CJ)();
     l()(null != k, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
@@ -128,7 +128,7 @@ function S(e) {
             (null == U ? void 0 : U.type) === u.re.CHANNEL_SELECT
         ) {
             let e = new Map(U.selectedOptions.map((e) => [e.value, e]));
-            R(e), D(new Set(e.keys()));
+            w(e), D(new Set(e.keys()));
         }
     }, [U]);
     let W = i.useCallback(() => {
@@ -138,12 +138,12 @@ function S(e) {
         }) && D(new Set(P.keys()));
     }, [G, b, P]);
     i.useEffect(() => {
-        !T && !A && ((P.size === w.size && Array.from(P.keys()).every((e) => w.has(e))) || W());
-    }, [T, A, w, P, W]);
+        !T && !A && ((P.size === R.size && Array.from(P.keys()).every((e) => R.has(e))) || W());
+    }, [T, A, R, P, W]);
     let K = (e) => {
-            T || N(!0), R(new Map(e.map((e) => [e.value, e])));
+            T || N(!0), w(new Map(e.map((e) => [e.value, e])));
         },
-        z = (e) => R(null != e ? new Map([[e.value, e]]) : new Map()),
+        z = (e) => w(null != e ? new Map([[e.value, e]]) : new Map()),
         q = (e) =>
             new Promise((t) => {
                 t(n(e));
@@ -163,7 +163,7 @@ function S(e) {
         J = {
             isProcessing: Y,
             isDisabled: S || Z === p.gH.DISABLED || F,
-            wrapperClassName: o()(m.select, { [m.inModal]: V }),
+            wrapperClassName: o()(h.select, { [h.inModal]: V }),
             options: q,
             placeholder: X ? I : void 0,
             onClose: () => C(!1),
@@ -176,36 +176,42 @@ function S(e) {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: m.container,
+                className: h.container,
                 children: H
                     ? (0, r.jsx)(
                           c.d,
-                          E(
-                              {
-                                  value: Array.from(P.values()),
-                                  onChange: K,
-                                  multi: !0,
-                                  inputClassNames: o()({ [m.hidden]: !X }),
-                                  closeOnSelect: !1,
-                              },
-                              J,
+                          y(
+                              E(
+                                  {
+                                      value: Array.from(P.values()),
+                                      onChange: K,
+                                      multi: !0,
+                                      inputClassNames: o()({ [h.hidden]: !X }),
+                                      closeOnSelect: !1,
+                                  },
+                                  J,
+                              ),
+                              { "data-migration-pending": !0 },
                           ),
                           j,
                       )
                     : (0, r.jsx)(
                           c.d,
-                          E(
-                              {
-                                  value: [...P.values()][0],
-                                  onChange: z,
-                                  clearable: !0,
-                              },
-                              J,
+                          y(
+                              E(
+                                  {
+                                      value: [...P.values()][0],
+                                      onChange: z,
+                                      clearable: !0,
+                                  },
+                                  J,
+                              ),
+                              { "data-migration-pending": !0 },
                           ),
                           j,
                       ),
             }),
-            null == B || V ? null : (0, r.jsx)(d.st, y(E({}, (0, d.c4)(B)), { className: h.error })),
+            null == B || V ? null : (0, r.jsx)(d.st, y(E({}, (0, d.c4)(B)), { className: m.error })),
         ],
     });
 }

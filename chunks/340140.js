@@ -1,13 +1,12 @@
-e.d(n, { default: () => f }), e(388685);
-var l = e(54381),
-    r = e(473749),
-    i = e(199849),
-    a = e(159691),
-    s = e(481060),
-    o = e(538211),
-    u = e(698066),
-    c = e(648159),
-    b = e(388032);
+e.d(n, { default: () => g }), e(388685);
+var i = e(54381),
+    l = e(473749),
+    r = e(159691),
+    a = e(481060),
+    s = e(538211),
+    o = e(698066),
+    u = e(111810),
+    c = e(388032);
 function d(t, n, e) {
     return (
         n in t
@@ -21,40 +20,41 @@ function d(t, n, e) {
         t
     );
 }
-class g extends r.PureComponent {
+class b extends l.PureComponent {
     render() {
         let { isStreamer: t, transitionState: n, onClose: e } = this.props,
-            { problem: r } = this.state;
-        return (0, l.jsxs)(a.u_l, {
-            title: b.intl.string(b.t.qnJ9W3),
-            subtitle: b.intl.string(b.t["7vw0h+"]),
+            { problem: l } = this.state;
+        return (0, i.jsxs)(r.u_l, {
+            title: c.intl.string(c.t.qnJ9W3),
+            subtitle: c.intl.string(c.t["7vw0h+"]),
             actions: [
                 {
-                    text: b.intl.string(b.t["ETE/oC"]),
+                    text: c.intl.string(c.t["ETE/oC"]),
                     variant: "secondary",
                     onClick: e,
                 },
                 {
-                    text: b.intl.string(b.t.E48BIc),
+                    text: c.intl.string(c.t.E48BIc),
                     variant: "primary",
                     onClick: this.handleSubmit,
-                    disabled: null == r,
+                    disabled: null == l,
                 },
             ],
             onClose: e,
             transitionState: n,
             children: [
-                (0, l.jsx)(c.Z, {}),
-                (0, l.jsx)(i.y6, {
-                    label: b.intl.string(b.t["6Y1t5P"]),
-                    placeholder: b.intl.string(b.t.U0kGk6),
-                    options: (0, o.Z)({
+                (0, i.jsx)(u.Z, {}),
+                (0, i.jsx)(a.PhF, {
+                    selectionMode: "single",
+                    label: c.intl.string(c.t["6Y1t5P"]),
+                    placeholder: c.intl.string(c.t.U0kGk6),
+                    options: (0, s.Z)({
                         isStreamer: t,
                         isEndStream: !1,
                     }),
-                    onChange: this.handleChanged,
-                    value: r,
-                    maxVisibleItems: 4,
+                    onSelectionChange: this.handleChanged,
+                    value: l,
+                    maxOptionsVisible: 4,
                 }),
             ],
         });
@@ -66,41 +66,41 @@ class g extends r.PureComponent {
                 this.setState({ problem: null != t ? t : null });
             }),
             d(this, "handleSubmit", () => {
-                let { stream: t, streamApplication: n, analyticsData: r, onClose: i } = this.props,
-                    { problem: a } = this.state;
-                (0, u.Z)({
-                    problem: a,
+                let { stream: t, streamApplication: n, analyticsData: l, onClose: r } = this.props,
+                    { problem: s } = this.state;
+                (0, o.Z)({
+                    problem: s,
                     stream: t,
                     feedback: "",
                     streamApplication: n,
-                    analyticsData: r,
+                    analyticsData: l,
                     location: "Stream",
                 }),
-                    i(),
-                    (0, s.ZDy)(async () => {
+                    r(),
+                    (0, a.ZDy)(async () => {
                         let { default: t } = await e.e("14466").then(e.bind(e, 729328));
                         return (n) =>
-                            (0, l.jsx)(
+                            (0, i.jsx)(
                                 t,
                                 (function (t) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var e = null != arguments[n] ? arguments[n] : {},
-                                            l = Object.keys(e);
+                                            i = Object.keys(e);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (l = l.concat(
+                                            (i = i.concat(
                                                 Object.getOwnPropertySymbols(e).filter(function (t) {
                                                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
                                                 }),
                                             )),
-                                            l.forEach(function (n) {
+                                            i.forEach(function (n) {
                                                 d(t, n, e[n]);
                                             });
                                     }
                                     return t;
-                                })({ body: b.intl.string(b.t.mMTVnv) }, n),
+                                })({ body: c.intl.string(c.t.mMTVnv) }, n),
                             );
                     });
             });
     }
 }
-let f = g;
+let g = b;

@@ -1,4 +1,4 @@
-n.d(t, { default: () => z }), n(415506), n(388685), n(539854), n(642613), n(49124);
+n.d(t, { default: () => K }), n(415506), n(388685), n(539854), n(642613), n(49124);
 var l = n(54381),
     r = n(473749),
     a = n(348327),
@@ -6,54 +6,53 @@ var l = n(54381),
     u = n(793030),
     o = n(442837),
     d = n(379649),
-    s = n(199849),
-    c = n(481060),
-    m = n(13245),
-    g = n(593472),
-    f = n(493773),
-    v = n(579806),
-    p = n(353926),
-    y = n(594190),
-    h = n(953848),
-    x = n(404577),
-    _ = n(19780),
-    b = n(808506),
-    N = n(626135),
-    S = n(499533),
-    E = n(709054),
+    s = n(481060),
+    c = n(13245),
+    m = n(593472),
+    g = n(493773),
+    f = n(579806),
+    v = n(353926),
+    p = n(594190),
+    y = n(953848),
+    h = n(404577),
+    b = n(19780),
+    x = n(808506),
+    _ = n(626135),
+    N = n(499533),
+    S = n(709054),
     I = n(145597),
     P = n(837268),
-    O = n(307149),
-    Z = n(475866),
-    G = n(371651),
-    w = n(610394),
-    k = n(338949),
-    j = n(509140),
-    T = n(388627),
-    D = n(981631),
-    C = n(388032),
-    M = n(714367);
-function R(e, t) {
+    E = n(307149),
+    O = n(475866),
+    Z = n(371651),
+    G = n(610394),
+    w = n(338949),
+    k = n(509140),
+    j = n(388627),
+    T = n(981631),
+    D = n(388032),
+    C = n(714367);
+function M(e, t) {
     return i()(e, t);
 }
-let J = new E.SnowflakeSequence(),
-    L = {},
-    F = new Set([
-        g.Jx.BORDERLESS_FULLSCREEN,
-        g.Jx.FULLSCREEN,
-        g.Jx.WINDOWED,
-        g.Jx.MAXIMIZED,
-        g.Jx.MINIMIZED,
-        g.Jx.UNKNOWN,
+let R = new S.SnowflakeSequence(),
+    F = {},
+    J = new Set([
+        m.Jx.BORDERLESS_FULLSCREEN,
+        m.Jx.FULLSCREEN,
+        m.Jx.WINDOWED,
+        m.Jx.MAXIMIZED,
+        m.Jx.MINIMIZED,
+        m.Jx.UNKNOWN,
     ]);
-function U(e) {
-    for (let t of Object.values(G.default.getClosedTrackedGamesHistory()))
+function L(e) {
+    for (let t of Object.values(Z.default.getClosedTrackedGamesHistory()))
         if (t.applicationId === e.id || t.gameName === e.name) return t;
     return null;
 }
 function W(e) {
     var t, n, l;
-    let r = U(e);
+    let r = L(e);
     return {
         gameId: e.id,
         gameName: e.name,
@@ -61,12 +60,12 @@ function W(e) {
         fullscreenType: null != (n = null == r ? void 0 : r.fullscreenType) ? n : void 0,
         trackedGame: null != r ? r : void 0,
         persistentGame: e,
-        runningGame: null != e.name && null != (l = y.ZP.getGameForName(e.name)) ? l : void 0,
+        runningGame: null != e.name && null != (l = p.ZP.getGameForName(e.name)) ? l : void 0,
     };
 }
-function B(e) {
+function U(e) {
     var t, n;
-    let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [x.Z];
+    let [l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [h.Z];
     if (null == e) return null;
     if (null != e.gameId) {
         let t = l.getDetectableGame(e.gameId);
@@ -86,19 +85,19 @@ function B(e) {
         null != (n = e.gameId)
             ? n
             : (function (e) {
-                  if (null != L[e]) return L[e];
+                  if (null != F[e]) return F[e];
                   let t = Date.now(),
                       n = null;
                   try {
-                      J.willOverflowNext() && J.reset(), (n = E.default.fromTimestampWithSequence(t, J));
+                      R.willOverflowNext() && R.reset(), (n = S.default.fromTimestampWithSequence(t, R));
                   } catch (e) {
-                      J.reset(), (n = E.default.fromTimestampWithSequence(t, J));
+                      R.reset(), (n = S.default.fromTimestampWithSequence(t, R));
                   }
                   if (null == n) throw Error("Failed to generate snowflake id");
-                  return (L[e] = n), n;
+                  return (F[e] = n), n;
               })(e.gameName);
     return {
-        id: E.default.cast(a),
+        id: S.default.cast(a),
         name: e.gameName,
         description: void 0,
         icon: void 0,
@@ -118,15 +117,15 @@ function B(e) {
 }
 function A(e) {
     let { selectedGame: t, setSelectedGame: n } = e,
-        r = (0, o.Wu)([x.Z, y.ZP], () => {
-            let e = x.Z.games,
+        r = (0, o.Wu)([h.Z, p.ZP], () => {
+            let e = h.Z.games,
                 t = e.reduce((e, t) => ((e[t.id] = t), e), {});
             return [
                 ...e,
-                ...y.ZP.getGamesSeen(!1).reduce((e, n) => {
+                ...p.ZP.getGamesSeen(!1).reduce((e, n) => {
                     let l = n.id;
                     if (null != l && null != t[l]) return e;
-                    let r = B(W(n), void 0);
+                    let r = U(W(n), void 0);
                     if (null != r) {
                         if (null != t[r.id]) return e;
                         e.push(r);
@@ -135,8 +134,8 @@ function A(e) {
                 }, []),
             ];
         }, []),
-        a = (0, o.e7)([x.Z], () => B(t, [x.Z]), [t]);
-    return (0, l.jsx)(h.g, {
+        a = (0, o.e7)([h.Z], () => U(t, [h.Z]), [t]);
+    return (0, l.jsx)(y.g, {
         games: r,
         selectedGame: null != a ? a : null,
         onGameSelected: (e) => {
@@ -144,34 +143,34 @@ function A(e) {
                 ? n(
                       (function (e) {
                           var t, n, l;
-                          let r = U(e);
+                          let r = L(e);
                           return {
                               gameId: e.id,
                               gameName: e.name,
                               gamePid: null != (t = null == r ? void 0 : r.pid) ? t : void 0,
                               fullscreenType: null != (n = null == r ? void 0 : r.fullscreenType) ? n : void 0,
                               trackedGame: null != r ? r : void 0,
-                              runningGame: null != e.name && null != (l = y.ZP.getGameForName(e.name)) ? l : void 0,
+                              runningGame: null != e.name && null != (l = p.ZP.getGameForName(e.name)) ? l : void 0,
                           };
                       })(e),
                   )
                 : n(null);
         },
-        placeholder: C.intl.string(C.t.b1IW2e),
+        placeholder: D.intl.string(D.t.b1IW2e),
     });
 }
-let K = {
+let B = {
     HandleFocusChanged: (e, t) => {
         var n;
-        if (!(0, O._R)(e, "HandleFocusChanged")) return !0;
-        let l = null != t && null != (n = w.Z.getKnownWindowHandlesForPID(t)) ? n : new Set(),
+        if (!(0, E._R)(e, "HandleFocusChanged")) return !0;
+        let l = null != t && null != (n = G.Z.getKnownWindowHandlesForPID(t)) ? n : new Set(),
             { focusedPid: r, focusedWindowHandle: a } = e.data;
         return null != a && null != r && r !== I.UNSET_PID && !!l.has(a) && r === t;
     },
     EventHook: (e, t) => {
         var n;
-        if (!(0, O._R)(e, "EventHook")) return !0;
-        let l = null != t && null != (n = w.Z.getKnownWindowHandlesForPID(t)) ? n : new Set();
+        if (!(0, E._R)(e, "EventHook")) return !0;
+        let l = null != t && null != (n = G.Z.getKnownWindowHandlesForPID(t)) ? n : new Set();
         try {
             let { receivedWindow: n, targetPid: r } = e.data;
             if (null != n && l.has(n)) return null != r && r === t;
@@ -180,21 +179,21 @@ let K = {
         }
     },
 };
-function z(e) {
+function K(e) {
     var t, a;
-    let { onClose: i, transitionState: h, location: x, appContext: E } = e,
-        J = (0, o.e7)([b.default], () => b.default.getFocusedPID()),
-        L = null != J ? J : (0, I.getPID)(),
-        B = (0, o.e7)([G.default], () => G.default.getTrackedGameByPid(L), [L]),
-        [z, H] = r.useState(null),
-        [q, X] = r.useState(""),
-        V = (function () {
-            let e = (0, T.II)(),
-                t = (0, o.e7)([b.default], () => b.default.getFocusedPID()),
+    let { onClose: i, transitionState: y, location: h, appContext: S } = e,
+        R = (0, o.e7)([x.default], () => x.default.getFocusedPID()),
+        F = null != R ? R : (0, I.getPID)(),
+        U = (0, o.e7)([Z.default], () => Z.default.getTrackedGameByPid(F), [F]),
+        [K, q] = r.useState(null),
+        [z, H] = r.useState(""),
+        X = (function () {
+            let e = (0, j.II)(),
+                t = (0, o.e7)([x.default], () => x.default.getFocusedPID()),
                 n = null != t ? t : (0, I.getPID)(),
-                l = (0, o.e7)([G.default], () => G.default.getTrackedGameByPid(n), [n]),
-                r = (0, o.e7)([y.ZP], () => y.ZP.getVisibleGame()),
-                a = (0, o.e7)([y.ZP], () => y.ZP.getGamesSeen(!1)[0]);
+                l = (0, o.e7)([Z.default], () => Z.default.getTrackedGameByPid(n), [n]),
+                r = (0, o.e7)([p.ZP], () => p.ZP.getVisibleGame()),
+                a = (0, o.e7)([p.ZP], () => p.ZP.getGamesSeen(!1)[0]);
             switch (!0) {
                 case null != l:
                     return {
@@ -203,11 +202,11 @@ function z(e) {
                         gamePid: l.pid,
                         fullscreenType: l.fullscreenType,
                         trackedGame: l,
-                        runningGame: null != l.gameName && null != (s = y.ZP.getGameForName(l.gameName)) ? s : void 0,
+                        runningGame: null != l.gameName && null != (s = p.ZP.getGameForName(l.gameName)) ? s : void 0,
                     };
                 case null != e:
                     var i, u, d, s, c, m;
-                    let g = y.ZP.getGameForName(e.name),
+                    let g = p.ZP.getGameForName(e.name),
                         f = null == g ? void 0 : g.pid;
                     return {
                         gameId: e.id,
@@ -215,7 +214,7 @@ function z(e) {
                         gamePid: null == g ? void 0 : g.pid,
                         fullscreenType: null != (c = null == g ? void 0 : g.fullscreenType) ? c : void 0,
                         runningGame: null != g ? g : void 0,
-                        trackedGame: null != f && null != (m = G.default.getTrackedGameByPid(f)) ? m : void 0,
+                        trackedGame: null != f && null != (m = Z.default.getTrackedGameByPid(f)) ? m : void 0,
                     };
                 case null != r:
                     return {
@@ -223,92 +222,94 @@ function z(e) {
                         gameName: r.name,
                         gamePid: r.pid,
                         fullscreenType: r.fullscreenType,
-                        trackedGame: null != (i = U(r)) ? i : void 0,
+                        trackedGame: null != (i = L(r)) ? i : void 0,
                         runningGame: r,
                     };
                 default:
                     return null != a ? W(a) : null;
             }
         })(),
-        [Y, Q] = r.useState(
+        [V, Y] = r.useState(
             null !=
-                (a = null != (t = null == V ? void 0 : V.fullscreenType) ? t : null == B ? void 0 : B.fullscreenType)
+                (a = null != (t = null == X ? void 0 : X.fullscreenType) ? t : null == U ? void 0 : U.fullscreenType)
                 ? a
                 : null,
         ),
-        [$, ee] = r.useState(V),
-        [et, en] = r.useState(!1),
-        [el, er] = r.useState(!1),
-        [ea, ei] = r.useState(!1),
+        [Q, $] = r.useState(X),
+        [ee, et] = r.useState(!1),
+        [en, el] = r.useState(!1),
+        [er, ea] = r.useState(!1),
         {
-            nativeState: eu,
-            breadcrumbs: [eo],
+            nativeState: ei,
+            breadcrumbs: [eu],
         } =
-            ((0, f.ZP)(
+            ((0, g.ZP)(
                 () => (
-                    m.Z.setModuleLogging(!0),
-                    m.Z.setStateDebugging(!0),
+                    c.Z.setModuleLogging(!0),
+                    c.Z.setStateDebugging(!0),
                     () => {
-                        m.Z.setModuleLogging(!1), m.Z.setStateDebugging(!1);
+                        c.Z.setModuleLogging(!1), c.Z.setStateDebugging(!1);
                     }
                 ),
             ),
             (0, o.e7)(
-                [k.Z],
+                [w.Z],
                 () => ({
-                    nativeState: k.Z.getDebuggingState(),
-                    breadcrumbs: k.Z.getOverlayLoggingBreadcrumbs(),
+                    nativeState: w.Z.getDebuggingState(),
+                    breadcrumbs: w.Z.getOverlayLoggingBreadcrumbs(),
                 }),
                 [],
-                R,
+                M,
             )),
-        ed = r.useMemo(() => {
+        eo = r.useMemo(() => {
             let e = {
-                game_crashes_occurred: C.t["1UWmCV"],
-                poor_performance: C.t["4owu+4"],
-                overlay_unresponsive: C.t.Q8Z0xo,
-                keybindings_not_working: C.t.UnzaZs,
-                alt_tabbing_issues: C.t["/sG9Sf"],
-                game_not_interactable: C.t["+18gq6"],
-                game_forced_minimized: C.t.dabM8C,
-                other: C.t["UhbPA+"],
+                game_crashes_occurred: D.t["1UWmCV"],
+                poor_performance: D.t["4owu+4"],
+                overlay_unresponsive: D.t.Q8Z0xo,
+                keybindings_not_working: D.t.UnzaZs,
+                alt_tabbing_issues: D.t["/sG9Sf"],
+                game_not_interactable: D.t["+18gq6"],
+                game_forced_minimized: D.t.dabM8C,
+                other: D.t["UhbPA+"],
             };
             return Object.keys(e).map((t) => ({
-                label: C.intl.string(e[t]),
+                id: t,
+                label: D.intl.string(e[t]),
                 value: t,
             }));
         }, []),
-        es = r.useMemo(() => {
+        ed = r.useMemo(() => {
             let e = {
-                [g.Jx.FULLSCREEN]: C.t.AjBsPe,
-                [g.Jx.WINDOWED]: C.t["0oYq2i"],
-                [g.Jx.BORDERLESS_FULLSCREEN]: C.t.NwNvjf,
-                [g.Jx.MINIMIZED]: C.t.Wypflu,
-                [g.Jx.MAXIMIZED]: C.t["MUX2+G"],
-                [g.Jx.UNKNOWN]: C.t.QPOep8,
+                [m.Jx.FULLSCREEN]: D.t.AjBsPe,
+                [m.Jx.WINDOWED]: D.t["0oYq2i"],
+                [m.Jx.BORDERLESS_FULLSCREEN]: D.t.NwNvjf,
+                [m.Jx.MINIMIZED]: D.t.Wypflu,
+                [m.Jx.MAXIMIZED]: D.t["MUX2+G"],
+                [m.Jx.UNKNOWN]: D.t.QPOep8,
             };
-            return [...F].map((t) => ({
-                label: C.intl.string(e[t]),
+            return [...J].map((t) => ({
+                id: t.toString(),
+                label: D.intl.string(e[t]),
                 value: t,
             }));
         }, []),
-        ec = async () => {
-            er(!0), await (0, d._v)(500), er(!1);
+        es = async () => {
+            el(!0), await (0, d._v)(500), el(!1);
         },
-        em = async () => {
+        ec = async () => {
             var e, t, r, a, u;
-            if (null === z && 0 === q.length) {
-                ei(!0), ec();
+            if (null === K && 0 === z.length) {
+                ea(!0), es();
                 return;
             }
-            en(!0);
-            let o = null != (r = b.default.getFocusedPID()) ? r : (0, I.getPID)(),
-                s = G.default.getTrackedGameByPid(o),
-                m = w.Z.getPopoutInitializationStages(),
-                f = (null == s ? void 0 : s.overlayMethod) != null ? P.gl[s.overlayMethod] : null,
-                y = null != (a = null == s ? void 0 : s.fullscreenType) ? a : g.Jx.UNKNOWN,
-                h = (0, O.y2)(eo, (e) => {
-                    for (let t of Object.values(K))
+            et(!0);
+            let o = null != (r = x.default.getFocusedPID()) ? r : (0, I.getPID)(),
+                c = Z.default.getTrackedGameByPid(o),
+                g = G.Z.getPopoutInitializationStages(),
+                p = (null == c ? void 0 : c.overlayMethod) != null ? P.gl[c.overlayMethod] : null,
+                y = null != (a = null == c ? void 0 : c.fullscreenType) ? a : m.Jx.UNKNOWN,
+                w = (0, E.y2)(eu, (e) => {
+                    for (let t of Object.values(B))
                         try {
                             if (!t(e, o)) return !1;
                         } catch (e) {
@@ -316,15 +317,15 @@ function z(e) {
                         }
                     return !0;
                 }),
-                k = Z.Z.getRecentActions(10),
-                T = S.Z.getRecentExperimentBuckets(
-                    p.Z.getAllExperimentAssignments(),
+                j = O.Z.getRecentActions(10),
+                D = N.Z.getRecentExperimentBuckets(
+                    v.Z.getAllExperimentAssignments(),
                     new Date(Date.now() - 7776000000),
                 ),
                 C =
-                    (null == s ? void 0 : s.fullscreenHistory) == null
+                    (null == c ? void 0 : c.fullscreenHistory) == null
                         ? null
-                        : Object.entries(s.fullscreenHistory)
+                        : Object.entries(c.fullscreenHistory)
                               .sort((e, t) => {
                                   let [n] = e,
                                       [l] = t;
@@ -332,42 +333,42 @@ function z(e) {
                               })
                               .map((e) => {
                                   let [t, n] = e;
-                                  return "".concat(t, ":").concat(g.Jx[n]);
+                                  return "".concat(t, ":").concat(m.Jx[n]);
                               }),
                 M = {
-                    issue_category: z,
-                    details: q,
-                    overlay_render_method: f,
+                    issue_category: K,
+                    details: z,
+                    overlay_render_method: p,
                     hardware_display_count:
                         null !=
-                        (u = await (null === v.Z ||
-                        void 0 === v.Z ||
-                        null == (t = v.Z.hardware) ||
+                        (u = await (null === f.Z ||
+                        void 0 === f.Z ||
+                        null == (t = f.Z.hardware) ||
                         null == (e = t.getDisplayCount)
                             ? void 0
                             : e.call(t)))
                             ? u
                             : null,
-                    detected_fullscreen_type: g.Jx[y],
-                    application_id: null == s ? void 0 : s.applicationId,
-                    application_name: null == s ? void 0 : s.gameName,
-                    game_pid: null == s ? void 0 : s.pid,
-                    recent_overlay_flux_actions: k,
-                    overlay_module_state: null == s ? void 0 : s.state,
-                    overlay_native_state: JSON.stringify(eu),
-                    overlay_module_oop_initialization_state: JSON.stringify(m),
-                    overlay_module_error_message: j.Z.errorMessage,
-                    overlay_module_breadcrumbs: JSON.stringify(h),
+                    detected_fullscreen_type: m.Jx[y],
+                    application_id: null == c ? void 0 : c.applicationId,
+                    application_name: null == c ? void 0 : c.gameName,
+                    game_pid: null == c ? void 0 : c.pid,
+                    recent_overlay_flux_actions: j,
+                    overlay_module_state: null == c ? void 0 : c.state,
+                    overlay_native_state: JSON.stringify(ei),
+                    overlay_module_oop_initialization_state: JSON.stringify(g),
+                    overlay_module_error_message: k.Z.errorMessage,
+                    overlay_module_breadcrumbs: JSON.stringify(w),
                     fullscreen_history_for_pid: C,
-                    media_session_id: _.Z.getMediaSessionId(),
-                    recent_experiment_buckets: JSON.stringify(T),
-                    location: x,
+                    media_session_id: b.Z.getMediaSessionId(),
+                    recent_experiment_buckets: JSON.stringify(D),
+                    location: h,
                 };
-            await N.default.track(D.rMx.OVERLAY_BUG_REPORT, M),
+            await _.default.track(T.rMx.OVERLAY_BUG_REPORT, M),
                 await (0, d._v)(1000),
-                en(!1),
+                et(!1),
                 null == i || i(),
-                (0, c.ZDy)(
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await n.e("86974").then(n.bind(n, 251889));
                         return (t) =>
@@ -400,108 +401,114 @@ function z(e) {
                                 })({}, t),
                             );
                     },
-                    { contextKey: (0, c.VnL)(E) },
+                    { contextKey: (0, s.VnL)(S) },
                 );
         };
     return (
-        (0, f.ZP)(() => {
-            N.default.track(D.rMx.OPEN_MODAL, {
+        (0, g.ZP)(() => {
+            _.default.track(T.rMx.OPEN_MODAL, {
                 type: "overlay_bug_reporter_modal",
-                location: x,
+                location: h,
             });
         }),
         (0, l.jsx)(u.Modal, {
-            transitionState: h,
-            title: C.intl.string(C.t.OKmenM),
+            transitionState: y,
+            title: D.intl.string(D.t.OKmenM),
             actions: [
                 {
-                    text: C.intl.string(C.t["ETE/oC"]),
+                    text: D.intl.string(D.t["ETE/oC"]),
                     onClick: i,
                     variant: "secondary",
-                    disabled: et,
+                    disabled: ee,
                 },
                 {
-                    text: C.intl.string(C.t.geKm7t),
-                    onClick: em,
+                    text: D.intl.string(D.t.geKm7t),
+                    onClick: ec,
                     variant: "primary",
-                    loading: et,
+                    loading: ee,
                 },
             ],
             onClose: i,
             children: (0, l.jsxs)("div", {
-                className: M.modalContent,
+                className: C.modalContent,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: M.itemContainer,
+                        className: C.itemContainer,
                         children: [
-                            (0, l.jsx)(c.UkV, {
-                                isShaking: el,
+                            (0, l.jsx)(s.UkV, {
+                                isShaking: en,
                                 intensity: 1.5,
-                                children: (0, l.jsx)(c.Text, {
+                                children: (0, l.jsx)(s.Text, {
                                     variant: "text-md/medium",
-                                    color: ea ? "text-feedback-critical" : "text-strong",
-                                    children: C.intl.string(C.t.Trx7eJ),
+                                    color: er ? "text-feedback-critical" : "text-strong",
+                                    children: D.intl.string(D.t.Trx7eJ),
                                 }),
                             }),
-                            (0, l.jsx)(s.B6, {
-                                placeholder: C.intl.string(C.t.mKTzjI),
-                                options: ed,
-                                isSelected: (e) => e === z,
-                                select: (e) => {
-                                    H(e), ei(!1), er(!1);
+                            (0, l.jsx)(s.PhF, {
+                                label: D.intl.string(D.t.mKTzjI),
+                                hideLabel: !0,
+                                placeholder: D.intl.string(D.t.mKTzjI),
+                                options: eo,
+                                value: K,
+                                onSelectionChange: (e) => {
+                                    q(e), ea(!1), el(!1);
                                 },
-                                serialize: (e) => e,
+                                selectionMode: "single",
+                                fullWidth: !0,
                             }),
-                            ea &&
-                                (0, l.jsx)(c.Text, {
+                            er &&
+                                (0, l.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
-                                    children: C.intl.string(C.t["5cqa9J"]),
+                                    children: D.intl.string(D.t["5cqa9J"]),
                                 }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
-                        className: M.itemContainer,
+                        className: C.itemContainer,
                         children: [
-                            (0, l.jsx)(c.Text, {
+                            (0, l.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: C.intl.string(C.t.iZufAY),
+                                children: D.intl.string(D.t.iZufAY),
                             }),
-                            (0, l.jsx)(c.Kx8, {
+                            (0, l.jsx)(s.Kx8, {
                                 autosize: !0,
-                                value: q,
+                                value: z,
                                 maxLength: 1000,
                                 showCharacterCount: !1,
-                                placeholder: C.intl.string(C.t["68mJXW"]),
-                                onChange: X,
+                                placeholder: D.intl.string(D.t["68mJXW"]),
+                                onChange: H,
                             }),
-                            (0, l.jsx)(c.Text, {
+                            (0, l.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: C.intl.string(C.t.TzkM2a),
+                                children: D.intl.string(D.t.TzkM2a),
                             }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: M.hr }),
+                    (0, l.jsx)("div", { className: C.hr }),
                     (0, l.jsxs)("div", {
-                        className: M.itemContainer,
+                        className: C.itemContainer,
                         children: [
-                            (0, l.jsx)(c.Text, {
+                            (0, l.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: C.intl.string(C.t["8+SU+a"]),
+                                children: D.intl.string(D.t["8+SU+a"]),
                             }),
                             (0, l.jsx)(A, {
-                                selectedGame: $,
-                                setSelectedGame: ee,
+                                selectedGame: Q,
+                                setSelectedGame: $,
                             }),
-                            (0, l.jsx)(s.B6, {
-                                placeholder: C.intl.string(C.t.IjlqrF),
-                                options: es,
-                                isSelected: (e) => e === Y,
-                                select: Q,
-                                serialize: (e) => "".concat(e),
+                            (0, l.jsx)(s.PhF, {
+                                label: D.intl.string(D.t.IjlqrF),
+                                hideLabel: !0,
+                                placeholder: D.intl.string(D.t.IjlqrF),
+                                options: ed,
+                                value: V,
+                                onSelectionChange: Y,
+                                selectionMode: "single",
+                                fullWidth: !0,
                             }),
                         ],
                     }),

@@ -1,24 +1,26 @@
-a.d(t, {
-    Z: () => l,
-    p: () => i,
+l.d(t, {
+    Z: () => i,
+    p: () => n,
 }),
-    a(388685);
-var n = a(238675);
-let l = Object.entries(n.sJ)
+    l(388685);
+var a = l(238675);
+let i = Object.entries(a.sJ)
         .map((e) => {
-            let [t, a] = e;
+            let [t, l] = e;
             return {
+                id: l.toString(),
                 label: t,
-                value: a,
+                value: l,
             };
         })
         .filter(function (e) {
             return "string" != typeof e.value;
         }),
-    i = Object.entries(n.fw).map((e) => {
-        let [t, a] = e;
+    n = Object.entries(a.fw).map((e) => {
+        let [t, l] = e;
         return {
+            id: l,
             label: t,
-            value: a,
+            value: l,
         };
     });

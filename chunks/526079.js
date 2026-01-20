@@ -1,16 +1,16 @@
-i.d(t, { Z: () => d });
+i.d(t, { Z: () => u });
 var n = i(473749),
     l = i(512722),
     r = i.n(l),
     a = i(442837),
     o = i(430824),
     s = i(771845),
-    u = i(594174);
-function d(e) {
+    d = i(594174);
+function u(e) {
     let { isGuildIncluded: t, selectedGuildId: i } = e,
         l = (0, a.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        d = (0, a.e7)([o.Z], () => o.Z.getGuilds()),
-        c = (0, a.e7)([u.default], () => u.default.getCurrentUser());
+        u = (0, a.e7)([o.Z], () => o.Z.getGuilds()),
+        c = (0, a.e7)([d.default], () => d.default.getCurrentUser());
     return {
         options: n.useMemo(
             () =>
@@ -19,21 +19,22 @@ function d(e) {
                     : (null == t
                           ? l
                           : l.filter((e) => {
-                                let i = d[e];
+                                let i = u[e];
                                 return r()(null != i, "guild should not be null"), t(i, c);
                             })
                       ).map((e) => {
-                          let t = d[e];
+                          let t = u[e];
                           return (
                               r()(null != t, "guild should not be null"),
                               {
+                                  id: e,
                                   label: t.name,
                                   value: t.id,
                               }
                           );
                       }),
-            [l, d, c, t],
+            [l, u, c, t],
         ),
-        selectedGuild: null == i ? void 0 : d[i],
+        selectedGuild: null == i ? void 0 : u[i],
     };
 }

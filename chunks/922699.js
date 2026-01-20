@@ -38,6 +38,7 @@ function d(e, t) {
 }
 function f(e) {
     return (0, a.v)(e).map((e) => ({
+        id: e.id,
         label: e.label,
         value: e.id,
     }));

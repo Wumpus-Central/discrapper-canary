@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(631885),
     p = n(87792),
     _ = n(292352),
-    m = n(517319),
-    h = n(388032),
+    h = n(517319),
+    m = n(388032),
     g = n(883381);
 let E = () => {
         let e = (0, f.ZM)(),
@@ -50,6 +50,7 @@ let E = () => {
                                 select: a,
                                 isSelected: (e) => e === (null == t ? void 0 : t.id),
                                 options: u,
+                                "data-migration-pending": !0,
                             })
                           : (0, r.jsx)(p.I, {
                                 userId: e[0],
@@ -69,7 +70,7 @@ let E = () => {
                 (0, r.jsxs)(l.P3F, {
                     className: g.backButton,
                     onClick: n,
-                    "aria-label": h.intl.string(h.t.ybUZql),
+                    "aria-label": m.intl.string(m.t.ybUZql),
                     children: [
                         (0, r.jsx)(l.j9r, {
                             size: "sm",
@@ -78,7 +79,7 @@ let E = () => {
                         (0, r.jsx)(l.Text, {
                             variant: "eyebrow",
                             color: "text-default",
-                            children: h.intl.string(h.t["13/7kX"]),
+                            children: m.intl.string(m.t["13/7kX"]),
                         }),
                     ],
                 }),
@@ -94,12 +95,12 @@ let E = () => {
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: h.intl.string(m.default.RZqaJn),
+                                    children: m.intl.string(h.default.RZqaJn),
                                 }),
                                 (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",
-                                    children: h.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? h.t["+o1pDZ"] : h.t.OAuOHD),
+                                    children: m.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? m.t["+o1pDZ"] : m.t.OAuOHD),
                                 }),
                             ],
                         }),

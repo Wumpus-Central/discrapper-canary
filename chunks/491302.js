@@ -1,64 +1,63 @@
-n.d(t, { Z: () => x }), n(35282), n(539854);
+n.d(t, { Z: () => h }), n(35282), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(793030),
-    a = n(199849),
-    o = n(248514),
-    s = n(481060),
-    c = n(668781),
-    d = n(139387),
-    u = n(308063),
-    m = n(259580),
-    b = n(768581),
-    p = n(486199),
-    g = n(981631),
-    f = n(388032),
-    h = n(546151);
-function x(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: x, isExpanded: j, errors: v, onToggleExpand: O } = e,
-        y = r.useMemo(() => {
+    a = n(248514),
+    o = n(481060),
+    s = n(668781),
+    c = n(139387),
+    d = n(308063),
+    u = n(259580),
+    m = n(768581),
+    b = n(486199),
+    p = n(981631),
+    g = n(388032),
+    f = n(546151);
+function h(e) {
+    let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
+        O = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
-                : (0, b.ov)({
+                : (0, m.ov)({
                       id: t.id,
                       avatar: e,
-                      discriminator: g.fo$,
+                      discriminator: p.fo$,
                   });
         }, [t]),
-        C = r.useCallback(() => {
-            (0, o.Z)({
-                title: f.intl.formatToPlainString(f.t.gBKqZ0, { name: t.name }),
-                subtitle: f.intl.string(f.t.zO9jrD),
-                confirmText: f.intl.string(f.t.CMy0Cj),
+        y = r.useCallback(() => {
+            (0, a.Z)({
+                title: g.intl.formatToPlainString(g.t.gBKqZ0, { name: t.name }),
+                subtitle: g.intl.string(g.t.zO9jrD),
+                confirmText: g.intl.string(g.t.CMy0Cj),
                 onConfirm: () => {
-                    u.Z.delete(t.guild_id, t.id).catch(() => {
-                        c.Z.show({
-                            title: f.intl.string(f.t.LpbaFV),
-                            body: f.intl.string(f.t["/4TwKf"]),
+                    d.Z.delete(t.guild_id, t.id).catch(() => {
+                        s.Z.show({
+                            title: g.intl.string(g.t.LpbaFV),
+                            body: g.intl.string(g.t["/4TwKf"]),
                         });
                     });
                 },
             });
         }, [t.guild_id, t.id, t.name]),
-        N = [];
+        C = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (N.push({
-            icon: s.MqZ,
+        (C.push({
+            icon: o.MqZ,
             text: t.source_channel.name,
         }),
-        N.push({
+        C.push({
             text: (0, i.jsx)(
                 "span",
                 {
-                    className: h.guildSource,
-                    children: f.intl.format(f.t["H/jJ6R"], {
+                    className: f.guildSource,
+                    children: g.intl.format(g.t["H/jJ6R"], {
                         guildHook: () =>
                             (0, i.jsx)(
                                 "span",
                                 {
-                                    className: h.sourceName,
+                                    className: f.sourceName,
                                     children: t.source_guild.name,
                                 },
                                 t.id,
@@ -68,79 +67,81 @@ function x(e) {
                 "guild-source",
             ),
         }));
-    let S = null;
+    let N = null;
     return (
-        j &&
+        x &&
             null != n &&
-            (S = (0, i.jsxs)("div", {
-                className: h.body,
+            (N = (0, i.jsxs)("div", {
+                className: f.body,
                 children: [
-                    (0, i.jsx)(s.izJ, { className: h.topDivider }),
-                    (0, i.jsxs)(s.Kqy, {
+                    (0, i.jsx)(o.izJ, { className: f.topDivider }),
+                    (0, i.jsxs)(o.Kqy, {
                         gap: 24,
                         children: [
-                            (0, i.jsxs)(s.Kqy, {
+                            (0, i.jsxs)(o.Kqy, {
                                 direction: "horizontal",
                                 gap: 16,
                                 children: [
-                                    (0, i.jsx)(s.oil, {
-                                        label: f.intl.string(f.t.I1o5gV),
+                                    (0, i.jsx)(o.oil, {
+                                        label: g.intl.string(g.t.I1o5gV),
                                         value: n.name,
                                         onChange: (e) => {
-                                            d.Z.updateWebhook({ name: e });
+                                            c.Z.updateWebhook({ name: e });
                                         },
                                         maxLength: 80,
-                                        error: v.name,
+                                        error: j.name,
                                     }),
-                                    (0, i.jsx)(a.y6, {
-                                        label: f.intl.string(f.t["4TuWfc"]),
+                                    (0, i.jsx)(o.PhF, {
+                                        label: g.intl.string(g.t["4TuWfc"]),
                                         value: n.channel_id,
-                                        options: x,
-                                        onChange: (e) => {
-                                            d.Z.updateWebhook({ channelId: e });
+                                        options: h,
+                                        onSelectionChange: (e) => {
+                                            c.Z.updateWebhook({ channelId: e });
                                         },
+                                        selectionMode: "single",
+                                        fullWidth: !0,
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(s.izJ, { className: h.bottomDivider }),
+                            (0, i.jsx)(o.izJ, { className: f.bottomDivider }),
                             (0, i.jsx)(l.Avr, {
-                                onClick: C,
+                                onClick: y,
                                 size: "sm",
                                 variant: "critical",
-                                text: f.intl.string(f.t.CMy0Cj),
+                                text: g.intl.string(g.t.CMy0Cj),
                             }),
                         ],
                     }),
                 ],
             })),
-        (0, i.jsx)(s.Zbd, {
+        (0, i.jsx)(o.Zbd, {
             editable: !0,
-            className: h.card,
-            children: (0, i.jsxs)(s.Kqy, {
+            className: f.card,
+            children: (0, i.jsxs)(o.Kqy, {
                 children: [
-                    (0, i.jsx)(s.P3F, {
-                        className: h.header,
-                        "aria-expanded": j,
-                        onClick: O,
-                        children: (0, i.jsxs)(s.Kqy, {
+                    (0, i.jsx)(o.P3F, {
+                        className: f.header,
+                        "aria-expanded": x,
+                        onClick: v,
+                        children: (0, i.jsxs)(o.Kqy, {
                             direction: "horizontal",
                             justify: "space-between",
                             align: "center",
                             children: [
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(b.Z, {
                                     name: t.name,
-                                    imageSrc: y,
-                                    details: N,
+                                    imageSrc: O,
+                                    details: C,
                                 }),
-                                (0, i.jsx)(m.Z, {
-                                    className: h.expandIcon,
-                                    expanded: j,
+                                (0, i.jsx)(u.Z, {
+                                    className: f.expandIcon,
+                                    expanded: x,
                                     "aria-hidden": !0,
                                 }),
                             ],
                         }),
                     }),
-                    S,
+                    N,
                 ],
             }),
         })

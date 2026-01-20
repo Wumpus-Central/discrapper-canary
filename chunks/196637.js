@@ -8,7 +8,6 @@ e.exports = {
     editableSection: "_17efad71dc9e46a7-editableSection",
     divider: "_17efad71dc9e46a7-divider",
     error: "_17efad71dc9e46a7-error",
-    localeSelect: "_17efad71dc9e46a7-localeSelect",
     required: "_17efad71dc9e46a7-required",
     buttonList: "_17efad71dc9e46a7-buttonList",
 };

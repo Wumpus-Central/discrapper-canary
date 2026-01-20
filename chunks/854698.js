@@ -3,7 +3,7 @@ n.d(t, {
     DK: () => H,
     G3: () => _,
     Ho: () => F,
-    Ib: () => m,
+    Ib: () => h,
     P8: () => N,
     PJ: () => B,
     Rp: () => Y,
@@ -33,8 +33,8 @@ var r = n(392711),
     f = n(765305),
     p = n(388032);
 let _ = 365,
-    m = 366,
-    h = "ddd MMM Do \xB7 LT",
+    h = 366,
+    m = "ddd MMM Do \xB7 LT",
     g = "ddd MMM Do, YYYY \xB7 LT",
     E = "LT",
     b = 4,
@@ -61,18 +61,22 @@ function N(e) {
         i = e.format("dddd"),
         a = [
             {
+                id: "none",
                 value: d.z.NONE,
                 label: p.intl.string(p.t["0bK0B1"]),
             },
             {
+                id: "weekly",
                 value: d.z.WEEKLY,
                 label: p.intl.formatToPlainString(p.t["B8/yfp"], { weekday: i }),
             },
             {
+                id: "biweekly",
                 value: d.z.BIWEEKLY,
                 label: p.intl.formatToPlainString(p.t["z+aIuX"], { weekday: i }),
             },
             {
+                id: "monthly",
                 value: d.z.MONTHLY,
                 label: p.intl.formatToPlainString(p.t.mjOEBk, {
                     nth: r,
@@ -80,6 +84,7 @@ function N(e) {
                 }),
             },
             {
+                id: "yearly",
                 value: d.z.YEARLY,
                 label: p.intl.formatToPlainString(p.t["5DFcVl"], {
                     date: n.toLocaleString(p.intl.currentLocale, {
@@ -93,10 +98,12 @@ function N(e) {
         A.has(n.getDay())
             ? (null == (t = s.default.getCurrentUser()) ? void 0 : t.isStaff()) &&
               a.push({
+                  id: "weekendOnly",
                   value: d.z.WEEKEND_ONLY,
                   label: p.intl.string(p.t.hRpynV),
               })
             : a.push({
+                  id: "weekdayOnly",
                   value: d.z.WEEKDAY_ONLY,
                   label: p.intl.string(p.t["jYR/MY"]),
               }),
@@ -108,10 +115,10 @@ let P = () => {
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
-    R = (e, t) => (0, l.vc)(e, e.get("years") === t.get("years") ? h : g),
-    w = (e, t) => {
+    w = (e, t) => (0, l.vc)(e, e.get("years") === t.get("years") ? m : g),
+    R = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
-        return n > 1 || n < 0 ? R(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? "sameDay" : "nextDay", e, t));
+        return n > 1 || n < 0 ? w(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? "sameDay" : "nextDay", e, t));
     };
 function D(e, t, n) {
     null == n && (n = a()());
@@ -119,8 +126,8 @@ function D(e, t, n) {
         i = null != t && "" !== t ? a()(t) : void 0,
         o = null != t && r.isSame(i, "day");
     return {
-        startDateTimeString: w(r, n),
-        endDateTimeString: null != i ? (o ? i.format(E) : R(i, n)) : void 0,
+        startDateTimeString: R(r, n),
+        endDateTimeString: null != i ? (o ? i.format(E) : w(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, "hour"),
         withinStartWindow: r <= a()().add(15, "minute"),

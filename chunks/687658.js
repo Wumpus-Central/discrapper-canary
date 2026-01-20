@@ -1,40 +1,40 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var a = n(54381),
     r = n(473749),
     i = n(793030),
-    l = n(668339),
-    s = n(481060),
-    o = n(972959),
-    c = n(313789),
-    d = n(518596),
-    u = n(246992),
-    m = n(981631);
-let p = (0, o.H)(() => ({
-    setting: c.n.ACCOUNT_PANEL,
-    section: m.oAB.ACCOUNT,
+    l = n(481060),
+    s = n(972959),
+    o = n(313789),
+    c = n(518596),
+    d = n(981631);
+let u = (0, s.H)(() => ({
+    setting: o.n.ACCOUNT_PANEL,
+    section: d.oAB.ACCOUNT,
     subsection: void 0,
 }));
-function h() {
-    let e = p.useField("setting"),
-        t = p.useField("section"),
-        n = p.useField("subsection"),
-        o = r.useCallback(() => {
-            (0, d.openUserSettings)(e, {
+function m() {
+    let e = u.useField("setting"),
+        t = u.useField("section"),
+        n = u.useField("subsection"),
+        s = r.useCallback(() => {
+            (0, c.openUserSettings)(e, {
                 section: t,
                 subsection: n,
             });
         }, [e, t, n]),
-        h = r.useMemo(
+        m = r.useMemo(
             () =>
-                Object.values(c.n).map((e) => ({
+                Object.values(o.n).map((e) => ({
+                    id: e,
                     label: e,
                     value: e,
                 })),
             [],
         ),
-        f = r.useMemo(
+        p = r.useMemo(
             () =>
-                Object.values(m.oAB).map((e) => ({
+                Object.values(d.oAB).map((e) => ({
+                    id: e,
                     label: e,
                     value: e,
                 })),
@@ -43,29 +43,29 @@ function h() {
     return (0, a.jsxs)(i.C3N, {
         label: "Settings Navigation Tool",
         children: [
-            (0, a.jsx)(l.d, {
+            (0, a.jsx)(l.VcW, {
                 label: "Setting (Redesign)",
                 placeholder: "Select a setting",
                 value: e,
-                onChange: (e) => p.setState({ setting: e }),
-                options: h,
-                popoutLayerContext: u.O$,
+                onSelectionChange: (e) => u.setState({ setting: e }),
+                options: m,
+                selectionMode: "single",
             }),
-            (0, a.jsx)(l.d, {
+            (0, a.jsx)(l.VcW, {
                 label: "Setting Section (Legacy)",
                 value: t,
-                onChange: (e) => p.setState({ section: e }),
-                options: f,
-                popoutLayerContext: u.O$,
+                onSelectionChange: (e) => u.setState({ section: e }),
+                options: p,
+                selectionMode: "single",
             }),
-            (0, a.jsx)(s.oil, {
+            (0, a.jsx)(l.oil, {
                 label: "Setting Subsection (Legacy)",
                 placeholder: "Type a subsection...",
-                onChange: (e) => p.setState({ subsection: e }),
+                onChange: (e) => u.setState({ subsection: e }),
             }),
             (0, a.jsx)(i.zxk, {
                 variant: "primary",
-                onClick: o,
+                onClick: s,
                 text: "Open User Settings",
             }),
         ],

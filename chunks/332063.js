@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p }), n(388685);
 var i,
-    r = n(54381),
-    l = n(473749),
+    l = n(54381),
+    r = n(473749),
     s = n(442837),
-    a = n(199849),
+    a = n(481060),
     o = n(274616),
     u = n(560587),
     c = n(388032);
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class h extends (i = l.Component) {
+class h extends (i = r.Component) {
     componentDidMount() {
         let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
         (0, o.Z)(e), null == n || n(t.length > 0);
@@ -31,27 +31,21 @@ class h extends (i = l.Component) {
         null != t && i !== e.branches.length > 0 && t(i);
     }
     render() {
-        let {
-            branches: e,
-            selectedBranchId: t,
-            applicationId: n,
-            includeMaster: i,
-            hide: l,
-            className: s,
-            label: o,
-        } = this.props;
-        if (0 === e.length || l) return null;
-        let u = i ? e : e.filter((e) => e.id !== n);
-        return (0, r.jsx)(a.y6, {
-            label: o,
-            options: u.map((e) => ({
+        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: i, hide: r, label: s } = this.props;
+        if (0 === e.length || r) return null;
+        let o = i ? e : e.filter((e) => e.id !== n);
+        return (0, l.jsx)(a.PhF, {
+            label: s,
+            options: o.map((e) => ({
+                id: e.id,
                 label: e.getName(n),
                 value: e.id,
             })),
             placeholder: c.intl.string(c.t.Sw7pHF),
             value: t,
-            onChange: this.handleChange,
-            className: s,
+            onSelectionChange: this.handleChange,
+            selectionMode: "single",
+            fullWidth: !0,
         });
     }
     constructor(...e) {

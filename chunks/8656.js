@@ -214,6 +214,7 @@ function S(e) {
                                     placeholder: x.intl.string(x.t.Wq1LfI),
                                     renderOptionLabel: R,
                                     renderOptionValue: U,
+                                    "data-migration-pending": !0,
                                 }),
                             }),
                             P.length > 0 &&

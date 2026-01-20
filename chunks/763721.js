@@ -3,9 +3,8 @@ var r = n(54381),
     i = n(473749),
     a = n(793030),
     o = n(481060),
-    s = n(377089),
-    l = n(231338);
-function c(e, t, n) {
+    s = n(231338);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +28,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,22 +45,22 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +68,7 @@ function p(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +77,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = [
+let _ = [
         {
             id: "strength",
             label: "Strength",
@@ -116,58 +115,55 @@ let m = [
                 name: "TextInput",
                 component: function (e) {
                     var { leading: t, trailing: n } = e,
-                        a = p(e, ["leading", "trailing"]);
-                    let [c, d] = i.useState(""),
-                        _ = (0, s.U)("UserSettingsDesignSystems"),
-                        [h, g] = i.useState(m),
-                        E = i.useCallback(
+                        a = f(e, ["leading", "trailing"]);
+                    let [l, u] = i.useState(""),
+                        [p, h] = i.useState(_),
+                        m = i.useCallback(
                             (e) => {
-                                g(h.filter((t) => !e.has(t.id)));
+                                h(p.filter((t) => !e.has(t.id)));
                             },
-                            [h],
+                            [p],
                         );
-                    function b(e) {
-                        if (_)
-                            switch (e) {
-                                case "tags":
-                                    return {
-                                        type: "tags",
-                                        label: "Tags",
-                                        items: h,
-                                        onRemove: E,
-                                    };
-                                case "icon":
-                                    return {
-                                        icon: o.lOy,
-                                        onClick: l.dG,
-                                        "aria-label": "At",
-                                    };
-                                case "text":
-                                    return "https://discord.gg/";
-                                default:
-                                    return;
-                            }
-                    }
-                    function y(e) {
-                        if (_)
-                            if ("icon" === e)
+                    function g(e) {
+                        switch (e) {
+                            case "tags":
                                 return {
-                                    icon: o.qJs,
-                                    onClick: l.dG,
+                                    type: "tags",
+                                    label: "Tags",
+                                    items: p,
+                                    onRemove: m,
+                                };
+                            case "icon":
+                                return {
+                                    icon: o.lOy,
+                                    onClick: s.dG,
                                     "aria-label": "At",
                                 };
-                            else return;
+                            case "text":
+                                return "https://discord.gg/";
+                            default:
+                                return;
+                        }
+                    }
+                    function E(e) {
+                        return "icon" === e
+                            ? {
+                                  icon: o.qJs,
+                                  onClick: s.dG,
+                                  "aria-label": "At",
+                              }
+                            : void 0;
                     }
                     return (0, r.jsxs)(o.Kqy, {
                         gap: 16,
                         children: [
                             (0, r.jsx)(
                                 o.oil,
-                                f(u({}, a), {
-                                    value: c,
-                                    onChange: d,
-                                    leading: b(t),
-                                    trailing: y(n),
+                                d(c({}, a), {
+                                    value: l,
+                                    onChange: u,
+                                    leading: g(t),
+                                    trailing: E(n),
                                     maxLength: 500,
                                 }),
                             ),
@@ -176,7 +172,7 @@ let m = [
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
-                                      onClick: () => g(m),
+                                      onClick: () => h(_),
                                   })
                                 : null,
                         ],
@@ -313,7 +309,7 @@ let m = [
                     let [t, n] = i.useState("");
                     return (0, r.jsx)(
                         o.E1j,
-                        f(u({}, e), {
+                        d(c({}, e), {
                             query: t,
                             onChange: n,
                             onClear: e.clearable ? () => n("") : void 0,
@@ -361,7 +357,7 @@ let m = [
                     let [t, n] = i.useState("");
                     return (0, r.jsx)(
                         o.Kx8,
-                        f(u({}, e), {
+                        d(c({}, e), {
                             value: t,
                             onChange: n,
                         }),
@@ -438,12 +434,12 @@ let m = [
                             label: t,
                             hideLabel: n,
                             description: i,
-                            required: s,
-                            error: c,
-                            disabled: d,
+                            required: l,
+                            error: u,
+                            disabled: f,
                             placeholder: p,
-                            value: _ = "",
-                            readOnly: h,
+                            value: h = "",
+                            readOnly: m,
                             helperText: g,
                             successMessage: E,
                             showCharacterCount: b,
@@ -452,12 +448,12 @@ let m = [
                             label: t,
                             hideLabel: n,
                             description: i,
-                            required: s,
-                            value: _,
-                            error: c,
-                            disabled: d,
+                            required: l,
+                            value: h,
+                            error: u,
+                            disabled: f,
                             placeholder: p,
-                            readOnly: h,
+                            readOnly: m,
                             helperText: g,
                             showCharacterCount: b,
                             successMessage: E,
@@ -468,38 +464,38 @@ let m = [
                             (0, r.jsxs)(a.C3N, {
                                 label: "Text Input",
                                 children: [
-                                    (0, r.jsx)(o.oil, u({}, y)),
-                                    (0, r.jsx)(o.oil, f(u({}, y), { clearable: !0 })),
+                                    (0, r.jsx)(o.oil, c({}, y)),
+                                    (0, r.jsx)(o.oil, d(c({}, y), { clearable: !0 })),
                                     (0, r.jsx)(
                                         o.oil,
-                                        f(u({}, y), {
+                                        d(c({}, y), {
                                             leading: {
                                                 icon: o.lOy,
-                                                onClick: l.dG,
+                                                onClick: s.dG,
                                                 "aria-label": "At",
                                             },
                                         }),
                                     ),
-                                    (0, r.jsx)(o.oil, f(u({}, y), { leading: o.lOy })),
-                                    (0, r.jsx)(o.oil, f(u({}, y), { leading: "https://discord.gg/" })),
+                                    (0, r.jsx)(o.oil, d(c({}, y), { leading: o.lOy })),
+                                    (0, r.jsx)(o.oil, d(c({}, y), { leading: "https://discord.gg/" })),
                                     (0, r.jsx)(
                                         o.oil,
-                                        f(u({}, y), {
+                                        d(c({}, y), {
                                             trailing: {
                                                 icon: o.lOy,
-                                                onClick: l.dG,
+                                                onClick: s.dG,
                                                 "aria-label": "At",
                                             },
                                         }),
                                     ),
-                                    (0, r.jsx)(o.oil, f(u({}, y), { trailing: o.lOy })),
+                                    (0, r.jsx)(o.oil, d(c({}, y), { trailing: o.lOy })),
                                     (0, r.jsx)(
                                         o.oil,
-                                        f(u({}, y), {
+                                        d(c({}, y), {
                                             leading: {
                                                 type: "tags",
                                                 label: "Tags",
-                                                items: m.slice(0, 3),
+                                                items: _.slice(0, 3),
                                             },
                                         }),
                                     ),
@@ -510,16 +506,16 @@ let m = [
                                 label: "Search Bar",
                                 children: [
                                     (0, r.jsx)(o.E1j, {
-                                        query: _,
-                                        onChange: l.dG,
-                                        disabled: d,
+                                        query: h,
+                                        onChange: s.dG,
+                                        disabled: f,
                                         placeholder: p,
                                     }),
                                     (0, r.jsx)(o.E1j, {
-                                        query: _,
-                                        onChange: l.dG,
+                                        query: h,
+                                        onChange: s.dG,
                                         size: "sm",
-                                        disabled: d,
+                                        disabled: f,
                                         placeholder: p,
                                     }),
                                 ],
@@ -527,7 +523,7 @@ let m = [
                             (0, r.jsx)(a.izJ, {}),
                             (0, r.jsx)(a.C3N, {
                                 label: "Text Area",
-                                children: (0, r.jsx)(o.Kx8, u({}, y)),
+                                children: (0, r.jsx)(o.Kx8, c({}, y)),
                             }),
                         ],
                     });

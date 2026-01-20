@@ -60,5 +60,6 @@ function b(e) {
             });
         },
         placeholder: f.intl.string(f.t["Z+oF8h"]),
+        "data-migration-pending": !0,
     });
 }

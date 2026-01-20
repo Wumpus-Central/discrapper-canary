@@ -8,8 +8,8 @@ var r = t(54381),
     d = t(681715),
     c = t(481060),
     u = t(494620),
-    f = t(63063),
-    g = t(49012),
+    g = t(63063),
+    f = t(49012),
     m = t(905551),
     b = t(578756),
     x = t(802659),
@@ -259,6 +259,7 @@ function G() {
                                                                   className: P.value,
                                                               });
                                                     },
+                                                    "data-migration-pending": !0,
                                                 }),
                                       ],
                                   }),
@@ -308,6 +309,7 @@ function G() {
                                                       plan: e.value,
                                                       selected: e.value.id === R,
                                                   }),
+                                              "data-migration-pending": !0,
                                           }),
                                       ],
                                   }),
@@ -357,8 +359,8 @@ function G() {
                           null != z &&
                           T.intl.format(K ? I.default.num0a6 : I.default.p5KZDr, {
                               provider: X,
-                              termsOfServiceUrl: () => (0, g.q)({ href: Y }),
-                              helpCenterUrl: f.Z.getArticleURL(y.BhN.GAME_SERVER_HOSTING),
+                              termsOfServiceUrl: () => (0, f.q)({ href: Y }),
+                              helpCenterUrl: g.Z.getArticleURL(y.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
                   null != B &&

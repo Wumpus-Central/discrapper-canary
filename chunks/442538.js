@@ -12,7 +12,6 @@ e.exports = {
     giftPreviewImageContainer: "_7b8d0ed55756837a-giftPreviewImageContainer",
     giftPreviewCardContainer: "_7b8d0ed55756837a-giftPreviewCardContainer",
     giftPreviewTextContainer: "_7b8d0ed55756837a-giftPreviewTextContainer",
-    recipientPickerSelectWrapper: "_7b8d0ed55756837a-recipientPickerSelectWrapper",
     footer: "_7b8d0ed55756837a-footer",
     viewItemButton: "_7b8d0ed55756837a-viewItemButton",
 };

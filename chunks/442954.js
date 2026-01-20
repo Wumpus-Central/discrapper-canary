@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(585483),
     h = n(981631),
     f = n(723359),
-    x = n(388032),
-    b = n(68428),
+    b = n(388032),
+    x = n(68428),
     g = n(663618);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,8 +65,8 @@ let y = {
             (0, a.jsx)(
                 e,
                 j(v({}, t), {
-                    headerText: x.intl.string(x.t.ZLRYGU),
-                    confirmButtonText: x.intl.string(x.t.PDTjLN),
+                    headerText: b.intl.string(b.t.ZLRYGU),
+                    confirmButtonText: b.intl.string(b.t.PDTjLN),
                     confirmButtonVariant: "primary",
                 }),
             );
@@ -77,11 +77,11 @@ let y = {
             (0, a.jsx)(
                 e,
                 j(v({}, t), {
-                    headerText: x.intl.string(x.t.H3Q7U8),
+                    headerText: b.intl.string(b.t.H3Q7U8),
                     onFormSubmit: () => {},
                     onResend: () => {},
                     onSuccess: () => {},
-                    confirmButtonText: x.intl.string(x.t["13ofGu"]),
+                    confirmButtonText: b.intl.string(b.t["13ofGu"]),
                     impression: { impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                 }),
             );
@@ -476,8 +476,8 @@ let y = {
         function u(n) {
             let [u, m] = c.useState(s.DURATION_60_SEC),
                 [p, h] = c.useState(""),
-                [f, x] = c.useState(!1),
-                [b, g] = c.useState(!1),
+                [f, b] = c.useState(!1),
+                [x, g] = c.useState(!1),
                 v = [
                     {
                         value: s.DURATION_60_SEC,
@@ -505,17 +505,17 @@ let y = {
                     },
                 ],
                 j = c.useCallback(async () => {
-                    x(!0),
+                    b(!0),
                         console.log("GuildDisableCommunicationModal: Timing out user", {
                             user: d,
                             duration: o(u),
                             reason: null != p ? p : "No reason provided",
-                            resolveFlag: b,
+                            resolveFlag: x,
                         }),
                         await new Promise((e) => setTimeout(e, 1000)),
-                        x(!1),
+                        b(!1),
                         n.onClose();
-                }, [u, p, b, n]);
+                }, [u, p, x, n]);
             return (0, a.jsxs)("div", {
                 style: {
                     padding: "20px",
@@ -585,7 +585,7 @@ let y = {
                     (0, a.jsx)("div", {
                         className: "mb-4",
                         children: (0, a.jsx)(i, {
-                            checked: b,
+                            checked: x,
                             onChange: g,
                             label: "Resolve associated mod report",
                         }),
@@ -1154,7 +1154,7 @@ let y = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("40254"), n.e("90688")]).then(n.bind(n, 978305));
+        let { default: e } = await Promise.all([n.e("86980"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, v({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {
@@ -1257,10 +1257,10 @@ function C() {
     return (0, a.jsx)(s.zJl, {
         className: g.panel,
         children: (0, a.jsxs)("div", {
-            className: b.panelInner,
+            className: x.panelInner,
             children: [
                 (0, a.jsx)("section", {
-                    className: b.section,
+                    className: x.section,
                     children: (0, a.jsxs)(s.Kqy, {
                         direction: "horizontal",
                         gap: 8,
@@ -1271,8 +1271,8 @@ function C() {
                                 placeholder: "Select a modal",
                                 options: e,
                                 value: t,
+                                onSelectionChange: n,
                                 selectionMode: "single",
-                                onSelectionChange: (e) => n(e),
                             }),
                             (0, a.jsx)(s.Button, {
                                 variant: "primary",
@@ -1284,14 +1284,14 @@ function C() {
                     }),
                 }),
                 (0, a.jsxs)("section", {
-                    className: b.section,
+                    className: x.section,
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: "Wow moment",
                         }),
                         (0, a.jsx)("div", {
-                            className: b.inputRow,
+                            className: x.inputRow,
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 text: "Open",

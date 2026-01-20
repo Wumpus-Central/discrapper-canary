@@ -1,78 +1,77 @@
-n.d(t, { Z: () => f }), n(953529), n(388685);
+n.d(t, { Z: () => u }), n(953529), n(388685);
 var i = n(54381),
     a = n(473749),
     l = n(793030),
-    r = n(199849),
-    s = n(481060),
-    o = n(479531),
-    c = n(486527),
-    d = n(388032),
-    u = n(69737);
-function f(e) {
+    r = n(481060),
+    s = n(479531),
+    o = n(486527),
+    c = n(388032),
+    d = n(69737);
+function u(e) {
     let {
             directoryChannelId: t,
             description: n,
-            onDescriptionChange: f,
-            categoryId: m,
-            onCategoryIdChange: x,
-            onSubmit: g,
-            onBack: C,
+            onDescriptionChange: u,
+            categoryId: f,
+            onCategoryIdChange: m,
+            onSubmit: x,
+            onBack: g,
         } = e,
-        [j, p] = a.useState(!1),
-        [b, h] = a.useState(null),
-        L = async () => {
-            p(!0);
+        [C, j] = a.useState(!1),
+        [p, b] = a.useState(null),
+        h = async () => {
+            j(!0);
             try {
-                await g();
+                await x();
             } catch (e) {
-                h(new o.Z(e));
+                b(new s.Z(e));
             }
-            p(!1);
+            j(!1);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.xBx, {
-                title: d.intl.string(d.t["5bQcoa"]),
-                subtitle: d.intl.string(d.t.Ie60Wc),
+                title: c.intl.string(c.t["5bQcoa"]),
+                subtitle: c.intl.string(c.t.Ie60Wc),
             }),
             (0, i.jsx)(l.fef, {
                 children: (0, i.jsxs)("div", {
-                    className: u.modalBody,
+                    className: d.modalBody,
                     children: [
-                        (0, i.jsx)(s.Kx8, {
-                            label: d.intl.string(d.t.FFFAGt),
+                        (0, i.jsx)(r.Kx8, {
+                            label: c.intl.string(c.t.FFFAGt),
                             value: n,
                             maxLength: 200,
-                            placeholder: d.intl.string(d.t.VzuITC),
-                            onChange: f,
-                            error: null == b ? void 0 : b.getAnyErrorMessage(),
+                            placeholder: c.intl.string(c.t.VzuITC),
+                            onChange: u,
+                            error: null == p ? void 0 : p.getAnyErrorMessage(),
                         }),
-                        (0, i.jsx)(r.y6, {
-                            label: d.intl.string(d.t.Olo8FB),
-                            placeholder: d.intl.string(d.t.XqMe3N),
-                            options: (0, c.b7)(t),
-                            clearable: !1,
-                            value: m,
-                            onChange: x,
-                            maxVisibleItems: 4,
+                        (0, i.jsx)(r.PhF, {
+                            selectionMode: "single",
+                            label: c.intl.string(c.t.Olo8FB),
+                            placeholder: c.intl.string(c.t.XqMe3N),
+                            options: (0, o.b7)(t),
+                            value: f,
+                            onSelectionChange: m,
+                            maxOptionsVisible: 4,
                         }),
                     ],
                 }),
             }),
             (0, i.jsx)(l.Go$, {
-                leading: (0, i.jsx)(s.Avr, {
+                leading: (0, i.jsx)(r.Avr, {
                     size: "sm",
                     variant: "secondary",
-                    text: d.intl.string(d.t["13/7kX"]),
-                    onClick: C,
+                    text: c.intl.string(c.t["13/7kX"]),
+                    onClick: g,
                 }),
                 actions: [
                     {
                         variant: "primary",
-                        text: d.intl.string(d.t.H9jxS1),
-                        onClick: L,
-                        loading: j,
-                        disabled: "" === n || m === c.AR.UNCATEGORIZED,
+                        text: c.intl.string(c.t.H9jxS1),
+                        onClick: h,
+                        loading: C,
+                        disabled: "" === n || f === o.AR.UNCATEGORIZED,
                     },
                 ],
             }),

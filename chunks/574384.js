@@ -1,84 +1,56 @@
-n.d(t, { Z: () => f }), n(388685), n(642613);
+n.d(t, { Z: () => u }), n(388685), n(642613);
 var r = n(54381),
     i = n(473749),
-    a = n(793030),
-    o = n(993365),
-    s = n(668339),
-    l = n(489863),
-    c = n(388032),
-    u = n(829478);
-let d = 5;
-function f(e) {
+    a = n(481060),
+    o = n(489863),
+    s = n(388032),
+    l = n(829478);
+let c = 5;
+function u(e) {
     var t;
-    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: p, error: _ } = e,
-        [m, h] = i.useState(null),
-        g = i.useRef(!1);
+    let { selectedGuildId: n, selectedChannelId: u, onChannelChange: d, error: f } = e,
+        [p, _] = i.useState(null),
+        h = i.useRef(!1);
     if (
         (i.useEffect(() => {
             async function e(e) {
-                let t = await (0, l.UR)(e);
+                let t = await (0, o.UR)(e);
                 n === e &&
                     (t.sort((e, t) => e.name.localeCompare(t.name)),
-                    h({
+                    _({
                         guildId: e,
                         channels: t,
                     }),
-                    (g.current = !0));
+                    (h.current = !0));
             }
-            h(null), null == n ? p(null) : e(n);
-        }, [p, n]),
+            _(null), null == n ? d(null) : e(n);
+        }, [d, n]),
         i.useEffect(() => {
-            g.current && (null == m ? null != f && p(null) : m.channels.some((e) => e.id === f) || p(null));
-        }, [m, p, f, n]),
+            h.current && (null == p ? null != u && d(null) : p.channels.some((e) => e.id === u) || d(null));
+        }, [p, d, u, n]),
         null == n)
     )
         return null;
-    let E =
-        null == m || m.guildId !== n
+    let m =
+        null == p || p.guildId !== n
             ? []
-            : (null != (t = null == m ? void 0 : m.channels) ? t : []).map((e) => ({
+            : (null != (t = null == p ? void 0 : p.channels) ? t : []).map((e) => ({
+                  id: e.id,
                   value: e.id,
                   label: e.name,
               }));
-    return (0, r.jsxs)("div", {
-        className: u.selectorGroup,
-        children: [
-            (0, r.jsx)(a.X6q, {
-                variant: "heading-deprecated-12/semibold",
-                className: u.sectionLabel,
-                children: c.intl.string(c.t["8qKd+J"]),
-            }),
-            null != _ && "" !== _
-                ? (0, r.jsx)(o.x, {
-                      variant: "text-xs/normal",
-                      color: "text-feedback-critical",
-                      children: _,
-                  })
-                : null,
-            (0, r.jsx)(s.d, {
-                wrapperClassName: u.select,
-                maxVisibleItems: d,
-                onChange: p,
-                placeholder: c.intl.string(c.t["Re/64R"]),
-                options: E,
-                value: f,
-                renderOptionLabel: (e) =>
-                    (0, r.jsx)(o.x, {
-                        variant: "text-md/normal",
-                        children: e.label,
-                    }),
-                renderOptionValue: (e) =>
-                    (0, r.jsx)(o.x, {
-                        variant: "text-md/normal",
-                        children: e[0].label,
-                    }),
-            }),
-            (0, r.jsx)(o.x, {
-                variant: "text-xs/normal",
-                color: "text-default",
-                className: u.label,
-                children: c.intl.string(c.t.kQXMfN),
-            }),
-        ],
+    return (0, r.jsx)("div", {
+        className: l.selector,
+        children: (0, r.jsx)(a.VcW, {
+            label: s.intl.string(s.t["8qKd+J"]),
+            helperText: s.intl.string(s.t.kQXMfN),
+            selectionMode: "single",
+            maxOptionsVisible: c,
+            errorMessage: f,
+            onSelectionChange: d,
+            placeholder: s.intl.string(s.t["Re/64R"]),
+            options: m,
+            value: null != u ? u : void 0,
+        }),
     });
 }

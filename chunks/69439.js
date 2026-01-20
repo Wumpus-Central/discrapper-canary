@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(616022),
     h = n(49436),
     f = n(937797),
-    x = n(373370),
-    b = n(968843),
+    b = n(373370),
+    x = n(968843),
     g = n(862657),
     v = n(254579),
     j = n(283689),
@@ -81,38 +81,38 @@ function w(e) {
             onReceiveErrorHints: A,
             contentPosition: Z,
             rowIndex: D,
-            sourceQuestContent: L,
+            sourceQuestContent: M,
         } = e,
-        M = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
-        U = (0, y.g2)({ useReducedMotion: M }),
+        L = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        U = (0, y.g2)({ useReducedMotion: L }),
         B = (0, m.O5)(),
-        F = (0, b._s)({ quest: k }),
-        G = (0, b.z)(k),
-        V = (0, b.B6)(k.config.expiresAt, {
+        F = (0, x._s)({ quest: k }),
+        G = (0, x.z)(k),
+        V = (0, x.B6)(k.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
         {
-            isClaiming: z,
-            isEnrolling: H,
-            isQuestEnrollmentBlocked: W,
+            isClaiming: W,
+            isEnrolling: z,
+            isQuestEnrollmentBlocked: H,
         } = (0, i.cj)([p.Z], () => ({
             isClaiming: p.Z.isClaimingReward(k.id) || p.Z.isFetchingRewardCode(k.id),
             isEnrolling: p.Z.isEnrolling(k.id),
             isQuestEnrollmentBlocked: null != p.Z.questEnrollmentBlockedUntil,
         })),
-        K = (null == (t = k.userStatus) ? void 0 : t.enrolledAt) != null,
-        q = (null == (n = k.userStatus) ? void 0 : n.completedAt) != null,
-        Q = q && (null == (w = k.userStatus) ? void 0 : w.claimedAt) == null,
+        q = (null == (t = k.userStatus) ? void 0 : t.enrolledAt) != null,
+        K = (null == (n = k.userStatus) ? void 0 : n.completedAt) != null,
+        Q = K && (null == (w = k.userStatus) ? void 0 : w.claimedAt) == null,
         Y = (0, g.iQ)(k),
         X = !(0, g.zi)(k),
-        J = (0, b._Q)(k),
+        J = (0, x._Q)(k),
         $ = (0, v.PB)(k),
         ee = (0, v.HJ)(k),
         et = (0, v.Vl)(k),
-        en = (0, b.Rf)(k),
-        [ea, er, ei] = (0, b.me)(k, en),
-        el = X && J === b.OH.ACCEPTED,
+        en = (0, x.Rf)(k),
+        [ea, er, ei] = (0, x.me)(k, en),
+        el = X && J === x.OH.ACCEPTED,
         es = el && ea === h.LI.SELECT,
         eo = el && !es && er.length > 1,
         ec = f.Cx.useConfig({ location: S.dr.QUEST_HOME_DESKTOP }).enabled,
@@ -131,9 +131,9 @@ function w(e) {
             inGiftInventory: !0,
             isVideoQuest: $,
             inGameQuest: et,
-            sourceQuestContent: L,
+            sourceQuestContent: M,
         }),
-        { startingConsoleQuest: ep, startConsoleQuest: eh } = (0, b.GI)({
+        { startingConsoleQuest: ep, startConsoleQuest: eh } = (0, x.GI)({
             questId: k.id,
             beforeRequest: () => {
                 U.startAnimation(),
@@ -143,7 +143,7 @@ function w(e) {
                         questContentCTA: m.jZ.DEFIBRILLATOR,
                         questContentPosition: Z,
                         questContentRowIndex: D,
-                        sourceQuestContent: L,
+                        sourceQuestContent: M,
                     });
             },
             afterRequest: (e) => {
@@ -151,8 +151,8 @@ function w(e) {
             },
         }),
         ef = (null == (I = k.userStatus) ? void 0 : I.claimedAt) != null,
-        { launchInGameActivity: ex } = (0, b.zB)(k),
-        eb = (0, x.CR)({
+        { launchInGameActivity: eb } = (0, x.zB)(k),
+        ex = (0, b.CR)({
             quest: k,
             shortText: !0,
         }),
@@ -162,13 +162,13 @@ function w(e) {
               className: T.button,
               children: (0, a.jsx)(s.zxk, {
                   variant: "primary",
-                  loading: z,
+                  loading: W,
                   onClick: null != em ? em : void 0,
                   text: eu,
                   fullWidth: !0,
               }),
           }))
-        : q
+        : K
           ? (eg = $
                 ? (0, a.jsxs)(s.hE2, {
                       direction: "horizontal",
@@ -182,7 +182,7 @@ function w(e) {
                                   (0, _.openVideoQuestModal)({
                                       quest: k,
                                       questContent: R,
-                                      sourceQuestContent: L,
+                                      sourceQuestContent: M,
                                       sourceQuestContentCTA: m.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0,
                                   });
@@ -203,9 +203,9 @@ function w(e) {
                             (0, a.jsx)(s.zxk, {
                                 variant: "secondary",
                                 icon: k.config.features.includes(S.S7.CLOUD_GAMING_ACTIVITY) ? c.v3n : c.iWm,
-                                text: eb,
+                                text: ex,
                                 onClick: () => {
-                                    ex();
+                                    eb();
                                 },
                             }),
                             (0, a.jsx)(s.zxk, {
@@ -230,7 +230,7 @@ function w(e) {
                       className: T.button,
                       children: (0, a.jsx)(s.zxk, {
                           variant: "primary",
-                          loading: z,
+                          loading: W,
                           onClick: null != em ? em : void 0,
                           text: eu,
                           fullWidth: !0,
@@ -238,13 +238,13 @@ function w(e) {
                   }))
                 : ee
                   ? (eg =
-                        ec && !K
+                        ec && !q
                             ? (0, a.jsx)("div", {
                                   className: T.button,
                                   children: (0, a.jsx)(C.Z, {
                                       quest: k,
                                       analyticsCtxQuestContent: R,
-                                      analyticsCtxSourceQuestContent: L,
+                                      analyticsCtxSourceQuestContent: M,
                                       analyticsCtxQuestContentPosition: Z,
                                   }),
                               })
@@ -252,13 +252,13 @@ function w(e) {
                                   className: T.button,
                                   children: (0, a.jsx)(s.zxk, {
                                       variant: "primary",
-                                      loading: H,
+                                      loading: z,
                                       onClick: null != em ? em : void 0,
                                       text: eu,
                                       fullWidth: !0,
                                   }),
                               }))
-                  : X && K && !ef
+                  : X && q && !ef
                     ? (eg = es
                           ? (0, a.jsx)(l.B6, {
                                 className: T.platformSelectorPrimary,
@@ -279,6 +279,7 @@ function w(e) {
                                     }
                                 },
                                 size: "sm",
+                                "data-migration-pending": !0,
                             })
                           : (0, v.$J)(k) && !G && ea !== h.LI.DESKTOP
                             ? F
@@ -333,8 +334,8 @@ function w(e) {
                                       }),
                                   }))
                     : X &&
-                      !K &&
-                      (eg = W
+                      !q &&
+                      (eg = H
                           ? (0, a.jsxs)(s.hE2, {
                                 direction: "horizontal",
                                 fullWidth: !0,
@@ -346,7 +347,7 @@ function w(e) {
                                     }),
                                     (0, a.jsx)(s.zxk, {
                                         variant: "primary",
-                                        onClick: () => (0, _.openQuestMinorEnrollmentBlockModal)(k, R, L),
+                                        onClick: () => (0, _.openQuestMinorEnrollmentBlockModal)(k, R, M),
                                         text: E.intl.string(E.t.vY9GgG),
                                     }),
                                 ],
@@ -357,11 +358,11 @@ function w(e) {
                                     ? (0, a.jsx)(C.Z, {
                                           quest: k,
                                           analyticsCtxQuestContent: R,
-                                          analyticsCtxSourceQuestContent: L,
+                                          analyticsCtxSourceQuestContent: M,
                                           analyticsCtxQuestContentPosition: Z,
                                       })
                                     : (0, a.jsx)(s.zxk, {
-                                          loading: H,
+                                          loading: z,
                                           variant: "primary",
                                           onClick: null != em ? em : void 0,
                                           text: eu,
@@ -416,6 +417,7 @@ function w(e) {
                                   }
                               },
                               size: "sm",
+                              "data-migration-pending": !0,
                           }),
                       }),
               ],

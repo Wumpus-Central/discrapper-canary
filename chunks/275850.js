@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(219929),
     p = n(46141),
     _ = n(63063),
-    m = n(981631),
-    h = n(231338),
+    h = n(981631),
+    m = n(231338),
     g = n(388032),
     E = n(517891);
 let b = "***@***.***",
@@ -22,7 +22,7 @@ let b = "***@***.***",
     S = new p.dm({
         id: v,
         brand: f.ZP.Types.UNKNOWN,
-        type: m.HeQ.CARD,
+        type: h.HeQ.CARD,
     });
 function I(e, t) {
     if (e instanceof p.dm)
@@ -144,9 +144,9 @@ function C(e, t) {
             ? (n = g.intl.string(g.t.SvheW9))
             : e &&
               null != t &&
-              t.hasFlag(h.Cw.NEW) &&
+              t.hasFlag(m.Cw.NEW) &&
               (n = g.intl.format(g.t.d7ZLKA, {
-                  helpDeskArticle: _.Z.getArticleURL(m.BhN.PAYMENT_AUTHORIZATION_CHARGE),
+                  helpDeskArticle: _.Z.getArticleURL(h.BhN.PAYMENT_AUTHORIZATION_CHARGE),
               })),
         n
     );
@@ -159,8 +159,8 @@ function A(e) {
             prependOption: d,
             hidePersonalInformation: f,
             onChange: _,
-            onPaymentSourceAdd: m,
-            isTrial: h = !1,
+            onPaymentSourceAdd: h,
+            isTrial: m = !1,
             disabled: b = !1,
             className: y,
             optionClassName: O,
@@ -168,14 +168,14 @@ function A(e) {
             paymentGatewayRestrictions: N,
         } = e,
         P = 0 === a.length,
-        R = (e) => {
-            if (e === v) null != m && m();
+        w = (e) => {
+            if (e === v) null != h && h();
             else {
                 let t = a.find((t) => t.id === e);
                 null != _ && _(t);
             }
         },
-        w = [...(null != d ? [d] : []), ...a, S].map((e, t) => {
+        R = [...(null != d ? [d] : []), ...a, S].map((e, t) => {
             if (e instanceof p.ZP) {
                 let { label: t } = I(e, f),
                     n = e === S || null == N || (null == N ? void 0 : N.includes(e.paymentGateway));
@@ -193,7 +193,7 @@ function A(e) {
         }),
         D = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
         x = C(
-            h,
+            m,
             i.useMemo(() => a.find((e) => e.id === n), [a, n]),
         );
     if (null == n && null != N && N.length > 0) {
@@ -206,14 +206,14 @@ function A(e) {
                 ? (0, r.jsx)(c.zxk, {
                       variant: "primary",
                       fullWidth: !0,
-                      onClick: m,
+                      onClick: h,
                       text: g.intl.string(g.t.eQ2bLp),
                   })
                 : (0, r.jsx)(l.y6, {
-                      options: w,
+                      options: R,
                       value: n,
                       label: t,
-                      onChange: R,
+                      onChange: w,
                       isDisabled: b,
                       className: o()({ [E.paymentSourceHasWarning]: null != x }, y),
                       optionClassName: O,
@@ -225,6 +225,7 @@ function A(e) {
                               : T(null == t.value ? void 0 : D.get(t.value), t, f);
                       },
                       renderOptionLabel: (e) => T(null == e.value ? void 0 : D.get(e.value), e, f),
+                      "data-migration-pending": !0,
                   }),
             null != x
                 ? (0, r.jsxs)("div", {

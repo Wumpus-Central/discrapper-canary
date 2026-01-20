@@ -40,15 +40,15 @@ let s = /^[0]+/,
             if (f(t.format("LT")) === f(n)) return t;
         }
     },
-    m = i()("2021-04-12T00:00:00"),
-    h = 15,
+    h = i()("2021-04-12T00:00:00"),
+    m = 15,
     g = "LT",
     E = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
     b = (e, t) => e.value.unix() - t.value.unix();
 class y {
     lookupByValue(e) {
         if (null == e) return;
-        let t = E(m, e);
+        let t = E(h, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
@@ -56,7 +56,7 @@ class y {
     }
     _generateTimeOptions() {
         (this.options = []), (this._index = {});
-        let e = i()(m),
+        let e = i()(h),
             t = i()(e).add(1, "day"),
             n = i()(e);
         for (; n < t; ) {
@@ -65,18 +65,21 @@ class y {
         }
     }
     _createNewOption(e) {
-        let t = E(m, e);
+        let t = E(h, e),
+            n = this._createLabel(t);
         return {
-            label: this._createLabel(t),
+            id: t.toISOString(),
+            label: n,
             value: t,
         };
     }
     _addNewOption(e) {
-        let t = E(m, e),
+        let t = E(h, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
             this.options.push({
+                id: t.toISOString(),
                 label: n,
                 value: t,
             }),
@@ -87,11 +90,11 @@ class y {
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = _(m, e);
+            let n = _(h, e);
             if (null != n) {
                 t.push(n.clone());
                 let r = n.add({ hours: 12 });
-                r.isBefore(m.clone().add({ hours: 24 })) && p(r.format("LT")) === p(e) && t.push(r);
+                r.isBefore(h.clone().add({ hours: 24 })) && p(r.format("LT")) === p(e) && t.push(r);
             }
         }
         return t;
@@ -114,7 +117,7 @@ class y {
         let t = this.lookupByValue(e);
         return null == t ? this._addNewOption(e) : t;
     }
-    constructor({ intervalInMinutes: e = h, labelFormat: t = g } = {}) {
+    constructor({ intervalInMinutes: e = m, labelFormat: t = g } = {}) {
         if (
             (o(this, "intervalInMinutes", void 0),
             o(this, "labelFormat", void 0),

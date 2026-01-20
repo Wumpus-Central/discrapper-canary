@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }),
+n.d(t, { Z: () => d }),
     n(410992),
     n(227481),
     n(730884),
@@ -24,9 +24,8 @@ var a = n(54381),
     r = n(473749),
     i = n(108514),
     l = n(793030),
-    s = n(668339),
-    o = n(481060);
-let c = {
+    s = n(481060);
+let o = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => n.e("49190").then(n.t.bind(n, 871413, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
@@ -309,7 +308,7 @@ let c = {
     "discord_common/js/shared/animations/app/xbox/xbox_connecting.lottiejson": () =>
         n.e("4882").then(n.t.bind(n, 107192, 19)),
 };
-function d(e) {
+function c(e) {
     let { default: t } = e;
     return fetch(t)
         .then((e) => e.arrayBuffer())
@@ -369,46 +368,48 @@ function d(e) {
                 }),
         );
 }
-function u() {
+function d() {
     let [e, t] = r.useState(void 0),
         [n, i] = r.useState(400),
-        [u, m] = r.useState(400);
+        [d, u] = r.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
         children: (0, a.jsxs)(l.Kqy, {
             gap: 24,
             children: [
-                (0, a.jsx)(s.d, {
-                    options: Object.keys(c).map((e) => ({
+                (0, a.jsx)(s.VcW, {
+                    options: Object.keys(o).map((e) => ({
+                        id: e,
                         label: e,
                         value: e,
                     })),
                     value: e,
-                    onChange: t,
+                    onSelectionChange: t,
+                    selectionMode: "single",
                 }),
                 (0, a.jsxs)(l.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
-                        (0, a.jsx)(o.oil, {
+                        (0, a.jsx)(s.oil, {
                             value: n.toString(),
                             onChange: (e) => i(Number(e)),
                             label: "Width",
                         }),
-                        (0, a.jsx)(o.oil, {
-                            value: u.toString(),
-                            onChange: (e) => m(Number(e)),
+                        (0, a.jsx)(s.oil, {
+                            value: d.toString(),
+                            onChange: (e) => u(Number(e)),
                             label: "Height",
                         }),
                     ],
                 }),
-                (0, a.jsx)(o.Button, {
+                (0, a.jsx)(s.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = c[e],
-                            n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(d) : await t())], {
+                        let t = o[e],
+                            n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(c) : await t())], {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
@@ -426,14 +427,14 @@ function u() {
                     (0, a.jsx)("div", {
                         style: {
                             width: n,
-                            height: u,
+                            height: d,
                         },
                         children: (0, a.jsx)(
-                            o.Fmz,
+                            s.Fmz,
                             {
                                 importData: () => {
-                                    let t = c[e];
-                                    return e.endsWith(".lottie") ? t().then(d) : t();
+                                    let t = o[e];
+                                    return e.endsWith(".lottie") ? t().then(c) : t();
                                 },
                             },
                             e,

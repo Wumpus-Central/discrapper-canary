@@ -15,13 +15,13 @@ var r = n(54381),
     f = n(771845),
     p = n(823379),
     _ = n(778825),
-    m = n(388032),
-    h = n(733070);
+    h = n(388032),
+    m = n(733070);
 function g(e) {
     let { guildId: t, className: n, globalOption: i, hideDivider: a = !1, onChange: s, renderOptionSuffix: l } = e;
     return (0, r.jsx)(u.Z, {
-        className: o()(h.section, n),
-        title: m.intl.string(m.t.ref7Ki),
+        className: o()(m.section, n),
+        title: h.intl.string(h.t.ref7Ki),
         hideDivider: a,
         forcedDivider: !0,
         children: (0, r.jsx)(E, {
@@ -59,7 +59,7 @@ function E(e) {
                 return null == e || "" === e.value || t
                     ? null
                     : (0, r.jsx)(c.Z, {
-                          className: h.guildSelectOptionIcon,
+                          className: m.guildSelectOptionIcon,
                           guild: E[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0,
@@ -79,6 +79,7 @@ function E(e) {
         options: b,
         renderOptionPrefix: y,
         renderOptionSuffix: o,
-        placeholder: m.intl.string(m.t["kMgj+e"]),
+        placeholder: h.intl.string(h.t["kMgj+e"]),
+        "data-migration-pending": !0,
     });
 }

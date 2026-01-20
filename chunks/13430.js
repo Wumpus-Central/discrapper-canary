@@ -84,8 +84,8 @@ let E = i.forwardRef(function (e, t) {
             setDay: y,
             month: S,
             setMonth: C,
-            year: T,
-            setYear: O,
+            year: O,
+            setYear: T,
         } = (function (e) {
             let t = null,
                 n = null,
@@ -105,10 +105,10 @@ let E = i.forwardRef(function (e, t) {
         })(n),
         A = i.useMemo(
             () =>
-                null != N && null != S && null != T
-                    ? o()("".concat(N, "/").concat(S, "/").concat(T), "DD/MM/YYYY")
+                null != N && null != S && null != O
+                    ? o()("".concat(N, "/").concat(S, "/").concat(O), "DD/MM/YYYY")
                     : null,
-            [N, S, T],
+            [N, S, O],
         );
     i.useEffect(() => {
         l((null == A ? void 0 : A.isValid()) ? A : null);
@@ -173,6 +173,7 @@ let E = i.forwardRef(function (e, t) {
                             autoFocus: R === e,
                             onOpen: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                             onClose: () => (null == j ? void 0 : j("".concat(I, "_").concat(t))),
+                            "data-migration-pending": !0,
                         }),
                     }),
                 });
@@ -196,6 +197,7 @@ let E = i.forwardRef(function (e, t) {
                             autoFocus: R === e,
                             onOpen: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                             onClose: () => (null == j ? void 0 : j("".concat(I, "_").concat(t))),
+                            "data-migration-pending": !0,
                         }),
                     }),
                 });
@@ -205,20 +207,21 @@ let E = i.forwardRef(function (e, t) {
                     key: "year",
                     input: (0, r.jsx)(x, {
                         options: P,
-                        selectOption: O,
+                        selectOption: T,
                         children: (0, r.jsx)(c.y6, {
                             "aria-label": d.intl.string(d.t.ZWr5WA),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.ZWr5WA),
                             options: P,
-                            value: T,
+                            value: O,
                             onChange: (t) => {
-                                O(t), L(e + 1);
+                                T(t), L(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: R === e,
                             onOpen: () => (null == b ? void 0 : b("".concat(I, "_").concat(t))),
                             onClose: () => (null == j ? void 0 : j("".concat(I, "_").concat(t))),
+                            "data-migration-pending": !0,
                         }),
                     }),
                 });

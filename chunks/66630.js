@@ -125,6 +125,7 @@ function M(e) {
                 variant: "text-only",
                 popoutWidth: "auto",
                 popoutPosition: "right",
+                "data-migration-pending": !0,
             }),
         }),
         onClose: async () => {

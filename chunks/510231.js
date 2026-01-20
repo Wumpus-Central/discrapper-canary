@@ -17,6 +17,7 @@ function u() {
                 l()(e)
                     .filter((e) => (0, s.pZ)(e))
                     .map((e) => ({
+                        id: e.id,
                         value: e.id,
                         label: e.name,
                     }))

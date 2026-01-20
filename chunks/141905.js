@@ -13,8 +13,6 @@ e.exports = {
     betaTag: "bbb935a1dbde326f-betaTag",
     checklist: "bbb935a1dbde326f-checklist",
     socialLinksContainer: "bbb935a1dbde326f-socialLinksContainer",
-    socialLinksDropdownMin: "bbb935a1dbde326f-socialLinksDropdownMin",
-    socialLinksDropdownMax: "bbb935a1dbde326f-socialLinksDropdownMax",
     tabMainDescription: "bbb935a1dbde326f-tabMainDescription",
     imageUploaderInnerSquare: "bbb935a1dbde326f-imageUploaderInnerSquare",
     error: "bbb935a1dbde326f-error",

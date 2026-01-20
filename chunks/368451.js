@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(739754),
     p = n(970184),
     _ = n(280501),
-    m = n(292419),
-    h = n(543098);
+    h = n(292419),
+    m = n(543098);
 function g(e, t, n) {
     return (
         t in e
@@ -67,16 +67,16 @@ function y(e, t) {
 }
 function O(e) {
     let { emoji: t, label: n, description: i, isDisabled: a, isOffset: s } = e,
-        l = o()(h.labelContainer, {
-            [h.disabled]: a,
-            [h.offset]: null == t && s,
+        l = o()(m.labelContainer, {
+            [m.disabled]: a,
+            [m.offset]: null == t && s,
         });
     return (0, r.jsxs)("div", {
-        className: h.option,
+        className: m.option,
         children: [
             null != t
                 ? (0, r.jsx)(u.Z, {
-                      className: h.emoji,
+                      className: m.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
                       animated: t.animated,
@@ -86,12 +86,12 @@ function O(e) {
                 className: l,
                 children: [
                     (0, r.jsx)("strong", {
-                        className: h.label,
+                        className: m.label,
                         children: n,
                     }),
                     null != i
                         ? (0, r.jsx)("span", {
-                              className: h.description,
+                              className: m.description,
                               children: i,
                           })
                         : null,
@@ -103,13 +103,13 @@ function O(e) {
 function v(e) {
     let { emoji: t, label: n } = e;
     return (0, r.jsx)("div", {
-        className: h.option,
+        className: m.option,
         children: (0, r.jsxs)("div", {
-            className: o()(h.value, h.singleValue),
+            className: o()(m.value, m.singleValue),
             children: [
                 null != t
                     ? (0, r.jsx)(u.Z, {
-                          className: h.emoji,
+                          className: m.emoji,
                           src: t.src,
                           emojiId: t.id,
                           emojiName: t.name,
@@ -117,7 +117,7 @@ function v(e) {
                       })
                     : null,
                 (0, r.jsx)("span", {
-                    className: h.singleValueLabel,
+                    className: m.singleValueLabel,
                     children: n,
                 }),
             ],
@@ -127,18 +127,18 @@ function v(e) {
 function S(e) {
     let { options: t } = e;
     return (0, r.jsx)("div", {
-        className: h.option,
+        className: m.option,
         children: (0, r.jsx)("div", {
-            className: h.value,
+            className: m.value,
             children: t.map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: h.optionTag,
+                        className: m.optionTag,
                         children: [
                             null != e.emoji
                                 ? (0, r.jsx)(u.Z, {
-                                      className: h.smallEmoji,
+                                      className: m.smallEmoji,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
                                       emojiName: e.emoji.name,
@@ -148,7 +148,7 @@ function S(e) {
                             (0, r.jsx)(
                                 "span",
                                 {
-                                    className: h.tag,
+                                    className: m.tag,
                                     children: e.label,
                                 },
                                 e.value,
@@ -163,7 +163,7 @@ function S(e) {
 }
 function I(e) {
     let { type: t, options: n, id: a, maxValues: s, minValues: u, disabled: g } = e,
-        b = (0, m.Wo)(e),
+        b = (0, h.Wo)(e),
         I = i.useMemo(() => n.filter((e) => e.default).map((e) => e.value), [n]),
         T = (0, p.CJ)();
     l()(null != T, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
@@ -172,7 +172,7 @@ function I(e) {
             executeStateUpdate: A,
             visualState: N,
             isDisabled: P,
-            error: R,
+            error: w,
         } = T.useComponentState(
             e,
             I.length > 0
@@ -182,7 +182,7 @@ function I(e) {
                   }
                 : void 0,
         ),
-        w = null != T.modal,
+        R = null != T.modal,
         D = s > 1,
         x = N === _.gH.LOADING,
         [L, j] = i.useState(!1),
@@ -219,36 +219,40 @@ function I(e) {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: h.container,
+                className: m.container,
                 children: (0, r.jsx)(
                     c.B6,
-                    E(
-                        {
-                            isProcessing: x,
-                            isDisabled: g || N === _.gH.DISABLED || P,
-                            className: o()(h.select, { [h.inModal]: w }),
-                            options: n.map((e) => y(E({}, e), { disabled: D && !M.has(e.value) && M.size === s })),
-                            placeholder: b,
-                            onClose: () => j(!1),
-                            onOpen: () => j(!0),
-                            maxVisibleItems: 5,
-                            closeOnSelect: !D,
-                            optionClassName: h.selectOption,
-                            renderOptionLabel: (e) =>
-                                (0, r.jsx)(
-                                    O,
-                                    y(E({}, e), {
-                                        isDisabled: D && !M.has(e.value) && M.size === s,
-                                        isOffset: Z,
-                                    }),
-                                ),
-                            renderOptionValue: (e) => (D ? (0, r.jsx)(S, { options: e }) : (0, r.jsx)(v, E({}, e[0]))),
-                        },
-                        V,
+                    y(
+                        E(
+                            {
+                                isProcessing: x,
+                                isDisabled: g || N === _.gH.DISABLED || P,
+                                className: o()(m.select, { [m.inModal]: R }),
+                                options: n.map((e) => y(E({}, e), { disabled: D && !M.has(e.value) && M.size === s })),
+                                placeholder: b,
+                                onClose: () => j(!1),
+                                onOpen: () => j(!0),
+                                maxVisibleItems: 5,
+                                closeOnSelect: !D,
+                                optionClassName: m.selectOption,
+                                renderOptionLabel: (e) =>
+                                    (0, r.jsx)(
+                                        O,
+                                        y(E({}, e), {
+                                            isDisabled: D && !M.has(e.value) && M.size === s,
+                                            isOffset: Z,
+                                        }),
+                                    ),
+                                renderOptionValue: (e) =>
+                                    D ? (0, r.jsx)(S, { options: e }) : (0, r.jsx)(v, E({}, e[0])),
+                            },
+                            V,
+                        ),
+                        { "data-migration-pending": !0 },
                     ),
                 ),
             }),
-            null == R || w ? null : (0, r.jsx)(f.st, y(E({}, (0, f.c4)(R)), { className: h.error })),
+            null == w || R ? null : (0, r.jsx)(f.st, y(E({}, (0, f.c4)(w)), { className: m.error })),
         ],
     });
 }

@@ -99,5 +99,6 @@ function m(e) {
         closeOnSelect: !1,
         renderOptionSuffix: x,
         renderOptionPrefix: j,
+        "data-migration-pending": !0,
     });
 }

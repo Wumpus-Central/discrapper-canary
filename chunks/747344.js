@@ -8,7 +8,7 @@ function a() {
     return r.useContext(o);
 }
 let o = r.createContext({
-    value: null,
+    value: void 0,
     options: [],
     selectedOptions: [],
     filteredOptions: [],

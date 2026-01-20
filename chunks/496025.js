@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(35282);
+n.d(t, { Z: () => T }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -6,119 +6,107 @@ var a = n(54381),
     s = n(602715),
     o = n(95015),
     c = n(442837),
-    d = n(668339),
-    u = n(481060),
-    m = n(493683),
-    p = n(43267),
-    h = n(933557),
-    f = n(258732),
-    x = n(592125),
+    d = n(481060),
+    u = n(493683),
+    m = n(43267),
+    p = n(933557),
+    h = n(258732),
+    f = n(592125),
     b = n(699516),
-    g = n(594174),
-    v = n(55589),
-    j = n(98357),
-    y = n(432877),
-    C = n(246992),
-    _ = n(37812),
-    S = n(769633),
-    E = n(663618);
-function T() {
+    x = n(594174),
+    g = n(55589),
+    v = n(98357),
+    j = n(432877),
+    y = n(37812),
+    C = n(769633),
+    _ = n(663618);
+function S() {
     var e;
-    let t = (0, c.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
+    let t = (0, c.Wu)([g.Z], () => g.Z.getSortedChannels()[1]),
         [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: l, options: m } = (0, c.cj)([x.Z, g.default, b.Z], () => ({
-            selectedChannel: x.Z.getChannel(n),
+        { selectedChannel: l, options: u } = (0, c.cj)([f.Z, x.default, b.Z], () => ({
+            selectedChannel: f.Z.getChannel(n),
             options: t.map((e) => {
-                let t = x.Z.getChannel(e.channelId);
+                let t = f.Z.getChannel(e.channelId);
                 return {
+                    id: e.channelId,
                     value: e.channelId,
-                    label: null != t ? (0, h.F6)(t, g.default, b.Z) : e.channelId,
+                    label: null != t ? (0, p.F6)(t, x.default, b.Z) : e.channelId,
+                    leading:
+                        null != t
+                            ? (0, a.jsx)(d.qEK, {
+                                  src: (0, m.x)(t),
+                                  "aria-hidden": !0,
+                                  size: d.EFr.SIZE_16,
+                              })
+                            : void 0,
                 };
             }),
         })),
-        j = r.useCallback(() => {
+        v = r.useCallback(() => {
             var e;
             if (null == l || !l.isPrivate()) return;
             let t = (0, o.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            f.Z.updatePrivateChannelRecipientFlags(l.id, t);
+            h.Z.updatePrivateChannelRecipientFlags(l.id, t);
         }, [l]),
-        y =
+        j =
             null != l &&
             !!l.isPrivate() &&
             (0, o.yE)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, a.jsxs)("div", {
+        className: C.inGameNuxContainer,
         children: [
-            (0, a.jsx)(u.Text, {
-                variant: "text-md/semibold",
-                children: "In-Game NUX Message for DMs",
+            (0, a.jsx)(d.VcW, {
+                label: "In-Game NUX Message for DMs",
+                selectionMode: "single",
+                options: u,
+                placeholder: "Select DM",
+                value: n,
+                onSelectionChange: i,
             }),
-            (0, a.jsxs)("div", {
-                className: S.inGameNuxContainer,
-                children: [
-                    (0, a.jsx)(d.d, {
-                        wrapperClassName: S.search,
-                        options: m,
-                        placeholder: "Select DM",
-                        value: n,
-                        onChange: i,
-                        renderOptionPrefix: (e) => {
-                            if (null == e) return null;
-                            let t = x.Z.getChannel(e.value);
-                            return null == t
-                                ? null
-                                : (0, a.jsx)(u.qEK, {
-                                      src: (0, p.x)(t),
-                                      "aria-hidden": !0,
-                                      size: u.EFr.SIZE_16,
-                                  });
-                        },
-                        popoutLayerContext: C.O$,
-                    }),
-                    (0, a.jsx)(u.Button, {
-                        variant: "primary",
-                        size: "sm",
-                        text: y ? "Clear NUX Flag" : "Set NUX Flag",
-                        onClick: j,
-                        disabled: null == n,
-                    }),
-                ],
+            (0, a.jsx)(d.Button, {
+                variant: "primary",
+                size: "sm",
+                text: j ? "Clear NUX Flag" : "Set NUX Flag",
+                onClick: v,
+                disabled: null == n,
             }),
         ],
     });
 }
-function O() {
+function E() {
     let e = r.useCallback(() => {
-        m.Z.openPrivateChannel({ recipientIds: [_.I] });
+        u.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
-    return (0, a.jsx)(u.Button, {
+    return (0, a.jsx)(d.Button, {
         variant: "primary",
         size: "sm",
         text: "Open System DM",
         onClick: e,
     });
 }
-function N() {
-    let e = (0, c.e7)([y.ZP], () => y.ZP.allByCategory(y.zU.MESSAGING), [], c.pF).map((e) => {
+function T() {
+    let e = (0, c.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], c.pF).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
-            u.rsf,
+            d.rsf,
             {
                 label: r,
                 description: t,
                 checked: n,
-                onChange: (e) => (0, j.Z)(t, e),
+                onChange: (e) => (0, v.Z)(t, e),
             },
             t,
         );
     });
     return (0, a.jsxs)("div", {
-        className: l()(E.panel, S.panel),
+        className: l()(_.panel, C.panel),
         children: [
             e,
-            (0, a.jsx)("div", { className: S.divider }),
-            (0, a.jsx)(T, {}),
-            (0, a.jsx)("div", { className: S.divider }),
-            (0, a.jsx)(O, {}),
+            (0, a.jsx)("div", { className: C.divider }),
+            (0, a.jsx)(S, {}),
+            (0, a.jsx)("div", { className: C.divider }),
+            (0, a.jsx)(E, {}),
         ],
     });
 }

@@ -47,7 +47,7 @@ function O(e) {
         ],
     });
 }
-function C() {
+function y() {
     return (0, r.jsx)(O, {
         icon: (0, r.jsx)(c.qJs, {
             size: "md",
@@ -58,7 +58,7 @@ function C() {
         className: j.createLabel,
     });
 }
-function y(e) {
+function C(e) {
     var t;
     let { channelId: n } = e,
         i = (0, p.m7)(n),
@@ -75,7 +75,7 @@ function y(e) {
 }
 function N(e) {
     let { value: t } = e;
-    return null != t ? (0, r.jsx)(y, { channelId: t }) : (0, r.jsx)(C, {});
+    return null != t ? (0, r.jsx)(C, { channelId: t }) : (0, r.jsx)(y, {});
 }
 function E(e) {
     let {
@@ -85,16 +85,16 @@ function E(e) {
             initialChannelId: u,
             omitChannelIds: j,
             "aria-labelledby": O,
-            onChange: C,
+            onChange: y,
         } = e,
-        y = x.intl.string(x.t.d7YJMK),
+        C = x.intl.string(x.t.d7YJMK),
         E = (0, s.e7)([f.Z], () => f.Z.getCategories(l), [l]),
         I = (0, p.m7)(null != a ? a : h.lds),
         S = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: y,
+                        label: C,
                     },
                 ],
                 t = !1;
@@ -117,7 +117,7 @@ function E(e) {
                     }),
                 e
             );
-        }, [y, a, I, E, j, u]);
+        }, [C, a, I, E, j, u]);
     return (0, r.jsx)(o.B6, {
         label: t,
         placeholder: x.intl.string(x.t.r2ptsz),
@@ -160,7 +160,7 @@ function E(e) {
                               (i = i =
                                   {
                                       guildId: l,
-                                      onSubmit: C,
+                                      onSubmit: y,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -178,7 +178,7 @@ function E(e) {
                           );
                       };
                   })
-                : C(e);
+                : y(e);
         },
         isSelected: (e) => null != a && v(e) === v(a),
         serialize: v,
@@ -188,5 +188,6 @@ function E(e) {
             return N(t);
         },
         "aria-labelledby": O,
+        "data-migration-pending": !0,
     });
 }

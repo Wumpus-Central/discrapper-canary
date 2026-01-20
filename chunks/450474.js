@@ -1,42 +1,42 @@
-n.d(t, { Z: () => u }), n(953529);
+n.d(t, { Z: () => d }), n(953529);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    a = n(668339),
-    s = n(481060),
-    o = n(456268),
-    c = n(526429),
-    d = n(203377);
-let u = (e) => {
-    let { label: t, description: n, guild: u, guildMetadata: g, disabled: f } = e,
-        m = (0, l.Wu)([c.Z], () => c.Z.getAllCategories()),
-        b = i.useMemo(
+    a = n(481060),
+    s = n(456268),
+    o = n(526429),
+    c = n(203377);
+let d = (e) => {
+    let { label: t, description: n, guild: d, guildMetadata: u, disabled: g } = e,
+        f = (0, l.Wu)([o.Z], () => o.Z.getAllCategories()),
+        m = i.useMemo(
             () =>
-                m.map((e) => {
+                f.map((e) => {
                     let { categoryId: t, name: n } = e;
                     return {
+                        id: t.toString(),
                         value: t,
                         label: n,
                     };
                 }),
-            [m],
+            [f],
         );
-    return 0 === b.length
-        ? (0, r.jsx)(s.$jN, {})
-        : (0, r.jsx)(a.d, {
+    return 0 === m.length
+        ? (0, r.jsx)(a.$jN, {})
+        : (0, r.jsx)(a.VcW, {
+              selectionMode: "multiple",
               label: t,
               description: n,
-              value: g.secondaryCategoryIds,
-              options: b,
-              onChange: (e) => {
-                  let { secondaryCategoryIds: t } = g;
-                  if (e.length < t.length) t.filter((t) => !e.includes(t)).forEach((e) => (0, o.K0)(u.id, e));
+              value: u.secondaryCategoryIds,
+              options: m,
+              onSelectionChange: (e) => {
+                  let { secondaryCategoryIds: t } = u;
+                  if (e.length < t.length) t.filter((t) => !e.includes(t)).forEach((e) => (0, s.K0)(d.id, e));
                   else {
-                      if (t.length >= d.Pg) return;
-                      e.filter((e) => !t.includes(e)).forEach((e) => (0, o.Kq)(u.id, e));
+                      if (t.length >= c.Pg) return;
+                      e.filter((e) => !t.includes(e)).forEach((e) => (0, s.Kq)(d.id, e));
                   }
               },
-              isDisabled: f,
-              multi: !0,
+              disabled: g,
           });
 };

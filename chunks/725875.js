@@ -23,6 +23,7 @@ function g(e) {
         j = r.useMemo(
             () =>
                 Object.values(n).map((e) => ({
+                    id: e.id,
                     value: e.id,
                     label: (0, o.F6)(e, c.default, s.Z, !0),
                 })),

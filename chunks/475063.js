@@ -1,4 +1,4 @@
-n.d(t, { K: () => S });
+n.d(t, { K: () => v });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -7,11 +7,10 @@ var r = n(54381),
     l = n(15127),
     c = n(841878),
     u = n(897037),
-    d = n(377089),
-    f = n(680874),
-    p = n(55042),
-    _ = n(164701);
-function m(e, t, n) {
+    d = n(680874),
+    f = n(55042),
+    p = n(164701);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +51,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -75,7 +74,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,25 +83,25 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = 10,
-    v = 7.23;
-function S(e) {
+let y = 10,
+    O = 7.23;
+function v(e) {
     var t,
         {
             value: n,
             placeholder: a = "",
             autoFocus: l = !1,
-            autosize: f = !1,
-            minLength: m,
-            maxLength: g,
-            error: y,
-            defaultDirty: S,
-            showCharacterCount: A,
-            showRemainingCharacterCount: N = !0,
-            rows: P = 3,
-            inputRef: R,
+            autosize: d = !1,
+            minLength: _,
+            maxLength: m,
+            error: b,
+            defaultDirty: v,
+            showCharacterCount: I,
+            showRemainingCharacterCount: T = !0,
+            rows: C = 3,
+            inputRef: A,
         } = e,
-        w = b(e, [
+        N = E(e, [
             "value",
             "placeholder",
             "autoFocus",
@@ -116,103 +115,79 @@ function S(e) {
             "rows",
             "inputRef",
         ]);
-    let { fieldProps: D, props: x } = (0, s.XF_)(w),
-        { disabled: L } = D,
-        j = (0, d.U)("UserSettingsDesignSystems"),
-        M = (0, u.m)({
+    let { fieldProps: P, props: w } = (0, s.XF_)(N),
+        { disabled: R } = P,
+        D = (0, u.m)({
             validateOn: "change",
-            error: y,
+            error: b,
             value: n,
-            minLength: m,
-            maxLength: g,
-            defaultDirty: S,
+            minLength: _,
+            maxLength: m,
+            defaultDirty: v,
         }),
-        k = i.useMemo(() => {
-            if (j) return;
-            if (null == g) return O;
-            let e = "".concat(g).length;
-            return v * (e += "".concat(g, " / ").length) + O;
-        }, [j, g]),
-        U = (e) => {
-            let { onChange: t } = x;
-            null == t || t(e.currentTarget.value), M.setShouldValidate(!0);
+        x = i.useMemo(() => {
+            if (null == m) return y;
+            let e = "".concat(m).length;
+            return O * (e += "".concat(m, " / ").length) + y;
+        }, [m]),
+        L = (e) => {
+            let { onChange: t } = w;
+            null == t || t(e.currentTarget.value), D.setShouldValidate(!0);
         },
-        G =
-            j && A
-                ? (0, r.jsx)(c.H, {
-                      value: n,
-                      maxLength: N && null != g ? g : void 0,
-                  })
-                : null;
+        j = I
+            ? (0, r.jsx)(c.H, {
+                  value: n,
+                  maxLength: T && null != m ? m : void 0,
+              })
+            : null;
     return (0, r.jsx)(
         s.gNt,
-        E(h({}, D), {
-            trailingAuxiliaryContent: G,
-            errorMessage: M.hasError && null != (t = M.errorMessage) ? t : void 0,
-            children: (0, r.jsxs)(s.UPk, {
-                validation: M,
-                disabled: L,
-                children: [
-                    (0, r.jsx)(s.tEY, {
-                        children: (0, r.jsx)(
-                            I,
-                            E(
-                                h(
-                                    {
-                                        autosize: f,
-                                        className: o()(p.textArea, _.scrollbarDefault),
-                                        style: { paddingRight: k },
-                                        placeholder: a,
-                                        value: n,
-                                        autoFocus: l,
-                                        minLength: m,
-                                        maxLength: g,
-                                        rows: P,
-                                        disabled: L,
-                                        "data-mana-component": "text-area",
-                                    },
-                                    x,
-                                ),
+        g(h({}, P), {
+            trailingAuxiliaryContent: j,
+            errorMessage: D.hasError && null != (t = D.errorMessage) ? t : void 0,
+            children: (0, r.jsx)(s.UPk, {
+                validation: D,
+                disabled: R,
+                children: (0, r.jsx)(s.tEY, {
+                    children: (0, r.jsx)(
+                        S,
+                        g(
+                            h(
                                 {
-                                    onChange: U,
-                                    ref: R,
+                                    autosize: d,
+                                    className: o()(f.textArea, p.scrollbarDefault),
+                                    style: { paddingRight: x },
+                                    placeholder: a,
+                                    value: n,
+                                    autoFocus: l,
+                                    minLength: _,
+                                    maxLength: m,
+                                    rows: C,
+                                    disabled: R,
+                                    "data-mana-component": "text-area",
                                 },
+                                w,
                             ),
+                            {
+                                onChange: L,
+                                ref: A,
+                            },
                         ),
-                    }),
-                    j
-                        ? null
-                        : (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  A
-                                      ? (0, r.jsx)(T, {
-                                            value: n,
-                                            maxLength: g,
-                                            hasError: M.hasError,
-                                        })
-                                      : null,
-                                  A || !1 === N
-                                      ? null
-                                      : (0, r.jsx)(C, {
-                                            value: n,
-                                            maxLength: g,
-                                        }),
-                              ],
-                          }),
-                ],
+                    ),
+                }),
             }),
         }),
     );
 }
-function I(e) {
+function S(e) {
     var { "aria-labelledby": t, autosize: n } = e,
-        a = b(e, ["aria-labelledby", "autosize"]);
+        a = E(e, ["aria-labelledby", "autosize"]);
     let o = (0, l.Gc)(),
         c = i.useContext(s.zbb),
-        u = n ? f.l : "textarea";
+        u = n ? d.l : "textarea";
     return (0, r.jsx)(
         u,
-        E(h({}, a), {
+        g(h({}, a), {
             id: null == c ? void 0 : c.controlId,
             "aria-labelledby": null != t ? t : o.titleId,
             "aria-describedby": null == c ? void 0 : c.describedById,
@@ -220,24 +195,4 @@ function I(e) {
             "aria-invalid": (null == c ? void 0 : c.errorMessageId) != null,
         }),
     );
-}
-function T(e) {
-    var t;
-    let { value: n, maxLength: i, hasError: a } = e;
-    return (0, r.jsxs)("div", {
-        className: o()(p.maxLength, { [p.errorOverflow]: a }),
-        "aria-hidden": "true",
-        children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
-    });
-}
-function C(e) {
-    let { value: t, maxLength: n } = e,
-        a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
-    return null == a
-        ? null
-        : (0, r.jsx)("div", {
-              className: o()(p.maxLength, { [p.errorOverflow]: a < 0 }),
-              "aria-hidden": "true",
-              children: a,
-          });
 }

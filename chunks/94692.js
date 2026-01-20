@@ -1,8 +1,8 @@
 s.d(e, { Z: () => m }), s(539854), s(388685);
 var l = s(54381),
     n = s(473749),
-    a = s(442837),
-    i = s(199849),
+    i = s(442837),
+    a = s(481060),
     r = s(325432),
     h = s(391690),
     o = s(424218),
@@ -52,6 +52,7 @@ class f extends n.PureComponent {
             s = t.map((t) => {
                 let { path: e, label: s } = t;
                 return {
+                    id: e,
                     value: e,
                     label: this.renderLabel(e, s),
                 };
@@ -59,10 +60,12 @@ class f extends n.PureComponent {
         return (
             null != e &&
                 s.push({
+                    id: e,
                     value: e,
                     label: this.renderLabel(e),
                 }),
             s.push({
+                id: I,
                 value: I,
                 label: u.intl.string(u.t["cL/rrq"]),
             }),
@@ -108,12 +111,14 @@ class f extends n.PureComponent {
         return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(i.y6, {
+                (0, l.jsx)(a.PhF, {
                     label: u.intl.string(u.t.WTJuNr),
                     autoFocus: s,
                     options: this.getOptions(),
                     value: t,
-                    onChange: this.handleChange,
+                    onSelectionChange: this.handleChange,
+                    selectionMode: "single",
+                    fullWidth: !0,
                 }),
                 this.renderError(),
             ],
@@ -145,7 +150,7 @@ class f extends n.PureComponent {
             });
     }
 }
-let m = a.ZP.connectStores([h.Z], () => ({
+let m = i.ZP.connectStores([h.Z], () => ({
     installationPaths: h.Z.installationPaths,
     installationPathsMetadata: h.Z.installationPathsMetadata,
 }))(f);

@@ -19,10 +19,11 @@ function o() {
                 }),
             ),
             t = Array.from(e.entries()).map((e) => {
-                let [t, { name: n }] = e;
+                let [t, { name: n, alpha2: r }] = e;
                 return {
                     value: t,
                     label: n,
+                    alpha2: r,
                 };
             });
         return {

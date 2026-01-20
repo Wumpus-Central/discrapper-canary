@@ -45,8 +45,10 @@ let l = () =>
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
                 var t;
+                let n = null != (t = s(o[e])) ? t : "";
                 return {
-                    label: null != (t = s(o[e])) ? t : "",
+                    id: e,
+                    label: n,
                     value: o[e],
                 };
             }),

@@ -17,8 +17,8 @@ var r = n(54381),
     f = n(600164),
     p = n(987209),
     _ = n(563132),
-    m = n(409813),
-    h = n(614277),
+    h = n(409813),
+    m = n(614277),
     g = n(927699),
     E = n(96848),
     b = n(311821),
@@ -32,8 +32,8 @@ var r = n(54381),
     A = n(164670),
     N = n(210218),
     P = n(705338),
-    R = n(703400),
-    w = n(242723),
+    w = n(703400),
+    R = n(242723),
     D = n(848118),
     x = n(981631),
     L = n(354459),
@@ -71,7 +71,7 @@ function Z(e) {
     return e;
 }
 let F = {
-    key: m.h8.GIFT_CUSTOMIZATION,
+    key: h.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, r.jsx)(W, Z({}, e)),
     options: {
         isLargeModal: !0,
@@ -112,7 +112,7 @@ function V(e, t, n) {
 function H(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: a = !1, loading: o = !1 } = e,
         { hasPaymentSources: s } = (0, _.JL)(),
-        c = s ? m.h8.REVIEW : m.h8.ADD_PAYMENT_STEPS;
+        c = s ? h.h8.REVIEW : h.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Button, {
@@ -134,8 +134,8 @@ let Y = (e) => {
             emojiConfetti: c,
             soundEffect: d,
             setEmojiConfetti: f,
-            setSoundEffect: m,
-            giftingOrigin: h,
+            setSoundEffect: h,
+            giftingOrigin: m,
             additionalUserIds: b,
         } = (0, p.wD)(),
         { selectedSkuId: v, application: T } = (0, _.JL)(),
@@ -144,7 +144,7 @@ let Y = (e) => {
         x = (0, s.e7)([I.Z], () => (null != v ? I.Z.get(v) : null), [v]),
         L = (0, A.Do)(x),
         G = (0, A.a7)(x),
-        Z = (0, w.K)(x, { shouldFetchIfMissing: !0 }),
+        Z = (0, R.K)(x, { shouldFetchIfMissing: !0 }),
         F = async (e, t) => {},
         B = () =>
             (0, r.jsx)(g.Z, {
@@ -156,16 +156,15 @@ let Y = (e) => {
                 innerClassName: U.customGiftMessage,
             }),
         H = () =>
-            null != o && (h === j.Wt.USER_PROFILE_WISHLIST || h === j.Wt.DM_CHANNEL_WISHLIST)
+            null != o && (m === j.Wt.USER_PROFILE_WISHLIST || m === j.Wt.DM_CHANNEL_WISHLIST)
                 ? (0, r.jsx)(y.s, { giftRecipient: o })
                 : (0, r.jsx)(u.Z, {
                       selectedSkuId: v,
                       validateSelectedGift: F,
-                      searchableSelectWrapperClassName: U.recipientPickerSelectWrapper,
                       recipients: P,
                   }),
         Y = (e) => {
-            null != m && m(null == e ? void 0 : e);
+            null != h && h(null == e ? void 0 : e);
         },
         W = () => {
             var e;
@@ -229,7 +228,7 @@ let Y = (e) => {
                             (0, r.jsxs)("div", {
                                 className: U.giftPreviewTextContainer,
                                 children: [
-                                    null != T && (0, r.jsx)(R.e, { application: T }),
+                                    null != T && (0, r.jsx)(w.e, { application: T }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-sm/semibold",
                                         children: x.name,
@@ -287,8 +286,8 @@ function W(e) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(h.C3, { children: i() }),
-            (0, r.jsx)(h.O3, {
+            (0, r.jsx)(m.C3, { children: i() }),
+            (0, r.jsx)(m.O3, {
                 children: (0, r.jsx)(l.mzw, {
                     "data-migration-pending": !0,
                     justify: f.Z.Justify.BETWEEN,

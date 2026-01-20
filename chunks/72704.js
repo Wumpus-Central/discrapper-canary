@@ -9,19 +9,18 @@ function o(e) {
         f = o(),
         p = null == s ? void 0 : s(),
         _ = n(),
-        m = l();
+        h = l();
     return (0, r.jsx)(a.X, {
         children: (0, r.jsx)(i.PhF, {
             selectionMode: "single",
             label: f,
             description: p,
-            options: m,
+            options: h,
             value: _,
             clearable: u,
-            onSelectionChange: (e) => {
-                d(e);
-            },
+            onSelectionChange: d,
             layout: c,
+            fullWidth: !0,
         }),
     });
 }

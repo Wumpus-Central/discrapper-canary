@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(54381);
 n(473749);
-var i = n(199849),
+var i = n(481060),
     a = n(991862);
 function o(e) {
     let { currencies: t, className: n, children: i } = e;
@@ -16,22 +16,22 @@ function o(e) {
           });
 }
 let s = function (e) {
-    let { label: t, currencies: n, onChange: o, selectedCurrency: s, className: l, disabled: c = !1 } = e;
+    let { label: t, currencies: n, onChange: o, selectedCurrency: s, disabled: l = !1 } = e;
     if (n.length < 2) return null;
-    let u = n.map((e, t) => ({
-            key: t,
+    let c = n.map((e, t) => ({
+            id: t.toString(),
             value: e,
             label: "".concat(e.toUpperCase(), " - ").concat((0, a.T)(e)),
         })),
-        d = (e) => {
+        u = (e) => {
             null != e && o(e);
         };
-    return (0, r.jsx)(i.y6, {
+    return (0, r.jsx)(i.PhF, {
+        selectionMode: "single",
         label: t,
         value: s,
-        options: u,
-        onChange: d,
-        className: l,
-        isDisabled: c,
+        options: c,
+        onSelectionChange: u,
+        disabled: l,
     });
 };

@@ -32,7 +32,6 @@ e.exports = {
     voiceWidgetContainer: "_9d98d3a9398a6f7d-voiceWidgetContainer",
     widgetSettingsContainer: "_9d98d3a9398a6f7d-widgetSettingsContainer",
     widgetContainer: "_9d98d3a9398a6f7d-widgetContainer",
-    select: "_9d98d3a9398a6f7d-select",
     widgetHeaderContainer: "_9d98d3a9398a6f7d-widgetHeaderContainer",
     sliderContainer: "_9d98d3a9398a6f7d-sliderContainer",
     overlaySettingsNux: "_9d98d3a9398a6f7d-overlaySettingsNux",

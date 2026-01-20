@@ -1,146 +1,154 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     l = n(473749),
     a = n(120356),
     s = n.n(a),
-    o = n(442837),
-    i = n(199849),
-    c = n(28664),
-    u = n(481060),
-    d = n(782568),
-    f = n(607070),
-    g = n(594174),
-    b = n(451478),
-    p = n(626135),
-    m = n(63063),
+    i = n(442837),
+    o = n(28664),
+    c = n(481060),
+    u = n(782568),
+    d = n(607070),
+    f = n(594174),
+    g = n(451478),
+    b = n(626135),
+    p = n(63063),
     h = n(74538),
-    C = n(381585),
-    E = n(597688),
-    v = n(653126),
-    S = n(786040),
-    _ = n(401975),
-    x = n(328626),
+    m = n(381585),
+    C = n(597688),
+    E = n(653126),
+    v = n(786040),
+    x = n(401975),
+    S = n(328626),
     O = n(849275),
-    y = n(619899),
-    k = n(811847),
-    T = n(215023),
-    j = n(981631),
-    L = n(388032),
+    _ = n(619899),
+    y = n(811847),
+    j = n(215023),
+    k = n(981631),
+    T = n(388032),
     I = n(868090),
-    A = n(222194);
-let B = (e) => {
+    L = n(222194);
+let A = (e) => {
     var t;
     let {
             isLoading: n,
             title: a,
-            sortedSkuIds: B,
-            numVisibleItems: N,
-            prioritizeUserDiscounts: R,
-            tab: P,
-            buttonContainerClassName: Z,
+            sortedSkuIds: A,
+            numVisibleItems: B,
+            prioritizeUserDiscounts: N,
+            tab: R,
+            buttonContainerClassName: P,
             orbsSupportedOnly: w,
         } = e,
-        D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        H = h.ZP.canUseCollectibles(D),
-        M = (0, k.B)("FeedBlock"),
+        Z = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        D = h.ZP.canUseCollectibles(Z),
+        M = (0, y.B)("FeedBlock"),
         {
-            sortType: F,
-            setSortType: W,
-            sortedItems: U,
-            sortOptions: z,
-            shuffleProducts: V,
-            showRecommendationOption: G,
+            sortType: H,
+            setSortType: F,
+            sortedItems: W,
+            sortOptions: U,
+            shuffleProducts: z,
+            showRecommendationOption: V,
         } = (0, O.Z)({
-            sortedSkuIds: B,
-            isPremiumUser: H,
-            prioritizeUserDiscounts: R,
+            sortedSkuIds: A,
+            isPremiumUser: D,
+            prioritizeUserDiscounts: N,
             orbsSupportedOnly: w,
         }),
-        K = (0, y.St)(U),
-        Y = (0, o.e7)([f.Z], () => f.Z.useReducedMotion),
-        q = (0, o.e7)([b.Z], () => b.Z.isFocused()),
-        Q = !Y && q,
-        { animationPhase: J, startAnimation: X } = (0, x.y)(),
-        $ = (0, C.sp)(),
-        ee = null != (t = null == $ ? void 0 : $.sessionId) ? t : "",
-        et = l.useRef(null),
-        en = l.useCallback(
+        G = (0, _.St)(W),
+        K = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        Y = (0, i.e7)([g.Z], () => g.Z.isFocused()),
+        q = !K && Y,
+        { animationPhase: Q, startAnimation: X } = (0, S.y)(),
+        J = (0, m.sp)(),
+        $ = null != (t = null == J ? void 0 : J.sessionId) ? t : "",
+        ee = l.useRef(null),
+        et = l.useCallback(
             (e) => {
                 X({
                     isShuffling: !1,
-                    onOutroComplete: () => W(e),
+                    onOutroComplete: () => F(e),
                 }),
-                    p.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
-                        page_session_id: ee,
+                    b.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                        page_session_id: $,
                         sort_type: e,
                     });
             },
-            [X, W, ee],
+            [X, F, $],
         );
-    return null == D
+    return null == Z
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(A.popularPicksSection, A.centeredSection),
+              className: s()(L.popularPicksSection, L.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: A.blockHeader,
+                      className: L.blockHeader,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: A.headerLeft,
+                              className: L.headerLeft,
                               children: [
-                                  (0, r.jsx)(u.Heading, {
+                                  (0, r.jsx)(c.Heading, {
                                       variant: "heading-lg/semibold",
                                       children: a,
                                   }),
-                                  G &&
-                                      (0, r.jsx)(c.u, {
-                                          text: L.intl.string(L.t["3taPdj"]),
+                                  V &&
+                                      (0, r.jsx)(o.u, {
+                                          text: T.intl.string(T.t["3taPdj"]),
                                           position: "top",
-                                          "aria-label": L.intl.string(L.t["3taPdj"]),
-                                          children: (0, r.jsx)(u.P3F, {
+                                          "aria-label": T.intl.string(T.t["3taPdj"]),
+                                          children: (0, r.jsx)(c.P3F, {
                                               onClick: () =>
-                                                  (0, d.Z)(m.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                              className: A.informationIcon,
-                                              children: (0, r.jsx)(u.d3s, { size: "sm" }),
+                                                  (0, u.Z)(p.Z.getArticleURL(k.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                              className: L.informationIcon,
+                                              children: (0, r.jsx)(c.d3s, { size: "sm" }),
                                           }),
                                       }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: s()(A.headerRight, { [I.customCursors]: M }),
+                              className: s()(L.headerRight, { [I.customCursors]: M }),
                               children: [
-                                  (0, r.jsx)(u.Text, {
+                                  (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
-                                      children: L.intl.string(L.t.uaX705),
+                                      children: T.intl.string(T.t.uaX705),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: Z,
-                                      children: (0, r.jsx)(i.B6, {
-                                          options: z,
-                                          select: en,
-                                          className: A.sortSelect,
-                                          popoutClassName: s()({ [I.customCursors]: M }),
-                                          isSelected: (e) => e === F,
-                                          serialize: (e) => e,
+                                      className: s()(P, L.sortSelect),
+                                      children: (0, r.jsx)(c.PhF, {
+                                          label: T.intl.string(T.t.uaX705),
+                                          hideLabel: !0,
+                                          options: U,
+                                          onSelectionChange: et,
+                                          formatOption: (e) => {
+                                              let { label: t, value: n } = e;
+                                              return {
+                                                  id: n,
+                                                  label: t,
+                                                  value: n,
+                                              };
+                                          },
+                                          value: H,
+                                          selectionMode: "single",
+                                          fullWidth: !0,
                                       }),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: Z,
-                                      children: (0, r.jsx)(u.Button, {
+                                      className: P,
+                                      children: (0, r.jsx)(c.Button, {
                                           variant: "secondary",
-                                          text: L.intl.string(L.t.X3tnc4),
-                                          buttonRef: et,
+                                          text: T.intl.string(T.t.X3tnc4),
+                                          buttonRef: ee,
                                           onClick: () => {
                                               X({
                                                   isShuffling: !0,
-                                                  onOutroComplete: V,
-                                                  returnRef: et,
+                                                  onOutroComplete: z,
+                                                  returnRef: ee,
                                               }),
-                                                  p.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                      page_session_id: ee,
+                                                  b.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                      page_session_id: $,
                                                   });
                                           },
-                                          disabled: J !== x.g.MOUNTED && J !== x.g.FINISHED,
+                                          disabled: Q !== S.g.MOUNTED && Q !== S.g.FINISHED,
                                       }),
                                   }),
                               ],
@@ -148,33 +156,33 @@ let B = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: A.feed,
+                      className: L.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
-                                children: [...Array(12)].map((e, t) => (0, r.jsx)(_.Z, {}, t + 1)),
+                                children: [...Array(12)].map((e, t) => (0, r.jsx)(x.Z, {}, t + 1)),
                             })
-                          : K.slice(0, N).map((e, t) => {
+                          : G.slice(0, B).map((e, t) => {
                                 let n,
-                                    l = E.Z.getCategoryForProduct(e.skuId);
+                                    l = C.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
-                                if (Q)
-                                    if (J === x.g.SHUFFLE_OUT)
+                                if (q)
+                                    if (Q === S.g.SHUFFLE_OUT)
                                         return (0, r.jsx)(
                                             "div",
                                             {
-                                                className: A.shuffleOutro,
-                                                children: (0, r.jsx)(_.Z, { skipPulseAnimation: !0 }),
+                                                className: L.shuffleOutro,
+                                                children: (0, r.jsx)(x.Z, { skipPulseAnimation: !0 }),
                                             },
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        J === x.g.SORT_OUT
-                                            ? (n = A.sortChangedOutro)
-                                            : J === x.g.SHUFFLE_IN
-                                              ? (n = A.shuffleIntro)
-                                              : J === x.g.SORT_IN && (n = A.sortChangedIntro);
+                                        Q === S.g.SORT_OUT
+                                            ? (n = L.sortChangedOutro)
+                                            : Q === S.g.SHUFFLE_IN
+                                              ? (n = L.shuffleIntro)
+                                              : Q === S.g.SORT_IN && (n = L.sortChangedIntro);
                                 return (0, r.jsx)(
-                                    C.k0,
+                                    m.k0,
                                     {
                                         newValue: {
                                             tilePosition: t,
@@ -183,10 +191,10 @@ let B = (e) => {
                                         },
                                         children: (0, r.jsx)("div", {
                                             className: n,
-                                            children: (0, r.jsx)(v.Z, {
+                                            children: (0, r.jsx)(E.Z, {
                                                 skuId: e.skuId,
-                                                prioritizedCurrency: P === T.AW.ORBS ? S.tA.ORBS : void 0,
-                                                onClickAnalytics: (0, S.wO)(e, P, $),
+                                                prioritizedCurrency: R === j.AW.ORBS ? v.tA.ORBS : void 0,
+                                                onClickAnalytics: (0, v.wO)(e, R, J),
                                             }),
                                         }),
                                     },

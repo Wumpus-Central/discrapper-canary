@@ -52,14 +52,7 @@ let r = {
             RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
         },
         control: {
-            INPUT_HEIGHT_MD: {
-                resolve(e) {
-                    let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 44;
-                    for (let e of t) if ("mana-text-inputs" === e) return 40;
-                    return 44;
-                },
-            },
+            INPUT_HEIGHT_MD: { resolve: () => 40 },
             INPUT_HEIGHT_SM: { resolve: () => 32 },
             ITEM_HEIGHT_MD: { resolve: () => 40 },
             ITEM_HEIGHT_SM: { resolve: () => 32 },

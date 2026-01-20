@@ -1,94 +1,110 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
-    o = n(199849),
-    s = n(481060),
-    l = n(624968),
-    c = n(261538),
-    u = n(222065);
-let d = [
+    o = n(481060),
+    s = n(624968),
+    l = n(261538),
+    c = n(222065);
+let u = [
         {
+            id: "xxs",
             label: "xxs",
             value: "xxs",
         },
         {
+            id: "xs",
             label: "xs",
             value: "xs",
         },
         {
+            id: "sm",
             label: "sm",
             value: "sm",
         },
         {
+            id: "md",
             label: "md",
             value: "md",
         },
         {
+            id: "lg",
             label: "lg",
             value: "lg",
         },
         {
+            id: "xl",
             label: "xl",
             value: "xl",
         },
         {
+            id: "xxl",
             label: "xxl",
             value: "xxl",
         },
         {
+            id: "none",
             label: "0px",
             value: 0,
         },
         {
+            id: "4px",
             label: "4px",
             value: 4,
         },
         {
+            id: "6px",
             label: "6px",
             value: 6,
         },
         {
+            id: "8px",
             label: "8px",
             value: 8,
         },
         {
+            id: "12px",
             label: "12px",
             value: 12,
         },
         {
+            id: "16px",
             label: "16px",
             value: 16,
         },
         {
+            id: "20px",
             label: "20px",
             value: 20,
         },
         {
+            id: "24px",
             label: "24px",
             value: 24,
         },
         {
+            id: "32px",
             label: "32px",
             value: 32,
         },
         {
+            id: "40px",
             label: "40px",
             value: 40,
         },
     ],
-    f = () => {
+    d = () => {
         let [e, t] = i.useState(15),
-            [n, f] = i.useState(8),
-            [p, _] = i.useState("xl"),
-            [m, h] = i.useState(!0),
-            g = i.useMemo(
+            [n, d] = i.useState(8),
+            [f, p] = i.useState("xl"),
+            [_, h] = i.useState(!0),
+            m = i.useMemo(
                 () =>
                     [...Array(e)].map((e, t) =>
                         (0, r.jsx)(
-                            s.P3F,
+                            o.P3F,
                             {
-                                className: u.child,
+                                className: c.child,
                                 onClick: () => console.log(t),
                                 children: t,
                             },
@@ -99,21 +115,21 @@ let d = [
             );
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(l.Z, {
+                (0, r.jsx)(s.Z, {
                     gap: n,
-                    edgeFade: p,
-                    hideActionsWhenDisabled: m,
-                    children: g,
+                    edgeFade: f,
+                    hideActionsWhenDisabled: _,
+                    children: m,
                 }),
-                (0, r.jsx)(c.dv, {}),
-                (0, r.jsxs)(c.BZ, {
+                (0, r.jsx)(l.dv, {}),
+                (0, r.jsxs)(l.BZ, {
                     children: [
-                        (0, r.jsx)(s.Checkbox, {
-                            checked: m,
-                            onChange: () => h(!m),
+                        (0, r.jsx)(o.Checkbox, {
+                            checked: _,
+                            onChange: () => h(!_),
                             label: "Hide Actions When Disabled",
                         }),
-                        (0, r.jsx)(s.oil, {
+                        (0, r.jsx)(o.oil, {
                             type: "number",
                             min: 0,
                             value: e.toString(),
@@ -124,20 +140,24 @@ let d = [
                         }),
                     ],
                 }),
-                (0, r.jsx)(c.BZ, {
-                    children: (0, r.jsx)(o.y6, {
+                (0, r.jsx)(l.BZ, {
+                    children: (0, r.jsx)(o.PhF, {
                         value: n,
-                        options: d,
-                        onChange: (e) => f(e),
+                        options: u,
+                        onSelectionChange: d,
                         label: "Children Gap",
+                        selectionMode: "single",
+                        fullWidth: !0,
                     }),
                 }),
-                (0, r.jsx)(c.BZ, {
-                    children: (0, r.jsx)(o.y6, {
-                        value: p,
-                        options: d,
-                        onChange: (e) => _(e),
+                (0, r.jsx)(l.BZ, {
+                    children: (0, r.jsx)(o.PhF, {
+                        value: f,
+                        options: u,
+                        onSelectionChange: p,
                         label: "Edge Fade Space",
+                        selectionMode: "single",
+                        fullWidth: !0,
                     }),
                 }),
             ],

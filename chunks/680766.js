@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function m(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -171,8 +171,8 @@ let g = [
                 name: "Select",
                 component: function (e) {
                     var { selectionMode: t, withLeadingAndTrailing: n } = e,
-                        a = m(e, ["selectionMode", "withLeadingAndTrailing"]);
-                    let [o, s] = i.useState(null),
+                        a = h(e, ["selectionMode", "withLeadingAndTrailing"]);
+                    let [o, s] = i.useState(void 0),
                         [l, u] = i.useState([]),
                         d = y(n, a.asyncOptions);
                     return "single" === t
@@ -322,8 +322,8 @@ let g = [
                 name: "SearchableSelect",
                 component: function (e) {
                     var { selectionMode: t, withLeadingAndTrailing: n, asyncOptions: a } = e,
-                        o = m(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
-                    let [s, c] = i.useState(null),
+                        o = h(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
+                    let [s, c] = i.useState(void 0),
                         [u, d] = i.useState([]),
                         p = y(n, a);
                     return "single" === t
@@ -459,9 +459,9 @@ let g = [
                             successMessage: u,
                             wrapTags: d,
                             withLeadingAndTrailing: p,
-                            placeholder: h,
+                            placeholder: m,
                         } = e,
-                        g = m(e, [
+                        g = h(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -493,7 +493,7 @@ let g = [
                                     (0, r.jsx)(s.Ct, {
                                         label: n,
                                         hideLabel: a,
-                                        placeholder: h,
+                                        placeholder: m,
                                         required: E,
                                         disabled: b,
                                         description: o,

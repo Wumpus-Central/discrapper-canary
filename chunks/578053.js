@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => O,
-    u: () => C,
+    u: () => y,
 }),
     n(290780),
     n(953529);
@@ -64,7 +64,7 @@ function O(e) {
             let t = e === x ? null : e;
             p.Z.updateGuild({ afkChannelId: t });
         }, []);
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(C, {
         label: o,
         value: null != s ? s : x,
         options: u,
@@ -72,7 +72,7 @@ function O(e) {
         onChange: g,
     });
 }
-function C(e) {
+function y(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: s, label: o, description: d, layout: u } = e,
         g = (0, a.e7)([f.Z], () => f.Z.getCategories(n)),
         m = i.useMemo(() => {
@@ -97,7 +97,7 @@ function C(e) {
             let t = e === x ? null : e;
             p.Z.updateGuild({ systemChannelId: t });
         }, []);
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(C, {
         label: o,
         description: d,
         layout: u,
@@ -107,7 +107,7 @@ function C(e) {
         onChange: b,
     });
 }
-function y(e) {
+function C(e) {
     let { value: t, options: n, canManageGuild: l, onChange: a, label: s, description: c, layout: d } = e,
         u = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(v, { option: e });
@@ -123,5 +123,6 @@ function y(e) {
         renderOptionLabel: u,
         renderOptionValue: g,
         layout: d,
+        "data-migration-pending": !0,
     });
 }

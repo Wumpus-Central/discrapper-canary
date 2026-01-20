@@ -170,6 +170,7 @@ let w = a.memo(function (e) {
                 onKeyDown: C,
                 renderOptionPrefix: j,
                 renderOptionLabel: _,
+                "data-migration-pending": !0,
             })
         );
     });

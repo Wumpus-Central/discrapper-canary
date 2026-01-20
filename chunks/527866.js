@@ -12,8 +12,6 @@ e.exports = {
     giftRecipientSection: "cd2ff7fa467efa57-giftRecipientSection",
     giftRecipient: "cd2ff7fa467efa57-giftRecipient",
     giftRecipientButton: "cd2ff7fa467efa57-giftRecipientButton",
-    giftRecipientInputWrapper: "cd2ff7fa467efa57-giftRecipientInputWrapper",
-    giftRecipientInputError: "cd2ff7fa467efa57-giftRecipientInputError",
     confirmation: "cd2ff7fa467efa57-confirmation",
     seasonalConfirmationPadding: "cd2ff7fa467efa57-seasonalConfirmationPadding",
     giftCodeSection: "cd2ff7fa467efa57-giftCodeSection",
