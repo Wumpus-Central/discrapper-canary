@@ -1,7 +1,7 @@
 n.d(t, {
     Bd: () => F,
-    C1: () => K,
-    CR: () => W,
+    C1: () => q,
+    CR: () => z,
     DD: () => Z,
     eQ: () => V,
     t5: () => N,
@@ -10,8 +10,9 @@ n.d(t, {
     n(953529),
     n(388685);
 var r = n(473749),
-    i = n(442837),
-    a = n(706454),
+    i = n(442837);
+n(983695);
+var a = n(706454),
     o = n(594174),
     s = n(63063),
     l = n(930153),
@@ -21,8 +22,8 @@ var r = n(473749),
     f = n(304696),
     p = n(115179),
     _ = n(254579),
-    m = n(283689),
-    h = n(542347),
+    h = n(283689),
+    m = n(542347),
     g = n(968843),
     E = n(324805),
     b = n(981631),
@@ -92,7 +93,7 @@ function N(e, t, n, r) {
             questContent: n,
             sourceQuestContent: r,
         }),
-        s = (0, m.Pb)(e);
+        s = (0, h.Pb)(e);
     if ((0, _.$J)(e) && !(0, _.Nj)({ quest: e }))
         return O.intl.format(O.t["l4S+cQ"], {
             minutes: i,
@@ -112,13 +113,13 @@ function N(e, t, n, r) {
               });
     if (s) return O.intl.format(O.t.Hu8SKW, { targetMinutes: i });
     if ((0, _.q8)(e)) {
-        let t = (0, h.z1)(e.config),
+        let t = (0, m.z1)(e.config),
             n = null == t ? void 0 : t.messages.videoTitle;
         return null == n ? O.intl.string(O.t["o+e9yh"]) : O.intl.formatToPlainString(O.t["9m9Mna"], { videoTitle: n });
     }
     if (null != a) return a.title;
     if ((0, _.pO)(e))
-        if ((0, m.KM)(e)) return O.intl.format(O.t["1NaRSs"], { minutes: i });
+        if ((0, h.KM)(e)) return O.intl.format(O.t["1NaRSs"], { minutes: i });
         else
             return O.intl.format(O.t.xHXCyf, {
                 minutes: i,
@@ -170,7 +171,7 @@ function P(e) {
         i,
     );
 }
-function R(e) {
+function w(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = (0, p.B3)(n.config),
@@ -190,7 +191,7 @@ function R(e) {
         i,
     );
 }
-function w(e) {
+function R(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = (0, p.B3)(n.config),
@@ -242,7 +243,7 @@ function D(e) {
 function x(e, t, n, r) {
     var i;
     let a,
-        o = (0, h.z1)(e.config),
+        o = (0, m.z1)(e.config),
         s = null != (i = null == o ? void 0 : o.messages.videoTitle) ? i : "video",
         l = (0, p.B3)(e.config),
         c = (0, p.f$)(e.config),
@@ -270,7 +271,7 @@ function L(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r, questContent: i } = e,
         a = n.targetMinutes,
         o = (0, p.B3)(t.config);
-    return (0, m.KM)(t)
+    return (0, h.KM)(t)
         ? A(
               O.t.VYwSSu,
               {
@@ -397,9 +398,9 @@ function U(e) {
             onGameSheetClosed: d,
         } = e,
         f = (0, c.I5)(s, y.PremiumTypes.TIER_2),
-        h = (0, p.Kr)(t.config),
+        m = (0, p.Kr)(t.config),
         g = (0, _.$J)(t) && (0, _.$H)(t);
-    if ((0, m.Pb)(t))
+    if ((0, h.Pb)(t))
         return k({
             quest: t,
             taskDetails: n,
@@ -415,23 +416,23 @@ function U(e) {
             taskDetails: n,
             withoutMarkdown: o,
             hasNitro: f,
-            collectibleRewardDuration: h,
+            collectibleRewardDuration: m,
         });
     if ((0, _.$J)(t))
-        return R({
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: o,
-            hasNitro: f,
-            collectibleRewardDuration: h,
-        });
-    if ((0, _.$H)(t))
         return w({
             quest: t,
             taskDetails: n,
             withoutMarkdown: o,
             hasNitro: f,
-            collectibleRewardDuration: h,
+            collectibleRewardDuration: m,
+        });
+    if ((0, _.$H)(t))
+        return R({
+            quest: t,
+            taskDetails: n,
+            withoutMarkdown: o,
+            hasNitro: f,
+            collectibleRewardDuration: m,
         });
     if ((0, p.oo)({ quest: t }))
         return D({
@@ -439,7 +440,7 @@ function U(e) {
             taskDetails: n,
             withoutMarkdown: o,
         });
-    else if ((0, _.q8)(t)) return x(t, h, f, o);
+    else if ((0, _.q8)(t)) return x(t, m, f, o);
     else if ((0, _.pO)(t))
         return L({
             quest: t,
@@ -454,7 +455,7 @@ function U(e) {
               taskDetails: n,
               withoutMarkdown: o,
               hasNitro: f,
-              collectibleRewardDuration: h,
+              collectibleRewardDuration: m,
           });
 }
 function G(e) {
@@ -520,7 +521,7 @@ function B(e) {
             onGameSheetClosed: c,
         } = e,
         d = r.config.rewardsConfig.rewardsExpireAt,
-        h = (0, g.B6)(d),
+        m = (0, g.B6)(d),
         b = (0, g.Rf)(r),
         y = (0, g.Jf)(r),
         v = (null == (t = r.userStatus) ? void 0 : t.completedAt) != null,
@@ -538,11 +539,11 @@ function B(e) {
             onGameSheetClosed: c,
         }),
         A = null != y ? y.percentComplete : b.percentComplete;
-    if (v) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: h });
+    if (v) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: m });
     if (i)
         if (o === u.LI.SELECT) return O.intl.string(O.t.sWUpN8);
         else {
-            if (!(0, m.Pb)(r) || !S || I) return C;
+            if (!(0, h.Pb)(r) || !S || I) return C;
             let e = (0, p.B3)(r.config);
             return O.intl.format(O.t["1votF6"], {
                 rewardNameWithArticle: e,
@@ -580,29 +581,38 @@ function V(e) {
           : O.intl.string(O.t["7e5k7L"]);
 }
 function H(e) {
-    return (0, _.$J)(e) || (0, _.pO)(e) ? 0 : (0, _.Dr)({ quest: e }) ? 1 : (0, _.q8)(e) ? 2 : 3 * !!(0, _.Vl)(e);
+    return (0, _.PB)(e);
 }
 function Y(e) {
-    return r.useMemo(() => H(e), [e]);
+    return (0, _.$J)(e) || (0, _.pO)(e) ? 0 : (0, _.Dr)({ quest: e }) ? 1 : H(e) ? 2 : 3 * !!(0, _.Vl)(e);
 }
 function W(e) {
-    let { quest: t, shortText: n = !1 } = e;
-    switch (Y(t)) {
+    return r.useMemo(() => Y(e), [e]);
+}
+function K(e, t) {
+    return !0;
+}
+function z(e) {
+    let { quest: t, application: n, shortText: r = !1 } = e;
+    switch (W(t)) {
         case 0:
-            if (t.config.features.includes(E.S7.CLOUD_GAMING_ACTIVITY)) return O.intl.string(O.t["+qoymD"]);
-            if (t.config.features.includes(E.S7.START_QUEST_CTA)) return O.intl.string(n ? O.t.E4kW5O : O.t["Ie9++s"]);
+            if (K(t, n)) {
+                if (t.config.features.includes(E.S7.CLOUD_GAMING_ACTIVITY)) return O.intl.string(O.t["+qoymD"]);
+                if (t.config.features.includes(E.S7.START_QUEST_CTA))
+                    return O.intl.string(r ? O.t.E4kW5O : O.t["Ie9++s"]);
+            }
             return O.intl.string(O.t.l7E81v);
         case 1:
             return O.intl.string(O.t.l7E81v);
         case 2:
             return O.intl.string(O.t.umdNin);
         case 3:
-            return t.config.features.includes(E.S7.START_QUEST_CTA)
-                ? O.intl.string(n ? O.t.CkUzLd : O.t["hRIVy+"])
+            return t.config.features.includes(E.S7.START_QUEST_CTA) && K(t, n)
+                ? O.intl.string(r ? O.t.CkUzLd : O.t["hRIVy+"])
                 : O.intl.string(O.t.l7E81v);
     }
 }
-function K(e) {
+function q(e) {
     var t, n, r, i, a;
     let { quest: o, rewardCode: s } = e,
         l = (0, p.oo)({ quest: o }),
@@ -619,9 +629,9 @@ function K(e) {
               })
             : null,
         _ = (0, f.M1)(o.config),
-        m =
+        h =
             null != (a = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform)
                 ? a
                 : _.messages.redemptionInstructionsByPlatform;
-    return null != c ? m[c] : void 0;
+    return null != c ? h[c] : void 0;
 }
