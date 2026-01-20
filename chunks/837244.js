@@ -4,8 +4,8 @@ var n = r(54381),
     o = r(782568),
     c = r(63063),
     a = r(648613),
-    s = r(864218),
-    l = r(474936),
+    l = r(864218),
+    s = r(474936),
     u = r(282793),
     p = r(981631),
     b = r(353149),
@@ -55,13 +55,13 @@ function d(t, e) {
     );
 }
 let y = (t) => {
-    let { subscribeButtonProps: e } = (0, s.F)({
-        subscriptionTier: l.Si.TIER_2,
-        subscriptionPlanId: l.Xh.PREMIUM_GROUP_MONTH,
+    let { subscribeButtonProps: e } = (0, l.F)({
+        subscriptionTier: s.Si.TIER_2,
+        subscriptionPlanId: s.Xh.PREMIUM_GROUP_MONTH,
     });
     return (0, n.jsx)(a.Z, {
-        subscriptionTier: l.Si.TIER_2,
-        initialPlanId: l.Xh.PREMIUM_GROUP_MONTH,
+        subscriptionTier: s.Si.TIER_2,
+        initialPlanId: s.Xh.PREMIUM_GROUP_MONTH,
         children: (r) => {
             let { onClick: a } = r;
             return (0, n.jsx)(
@@ -85,14 +85,14 @@ let y = (t) => {
                         {
                             text: O.intl.string(b.default.z8re5H),
                             variant: "secondary",
-                            onClick: () => {
-                                var e;
-                                return (
-                                    (e = t.onClose), void ((0, o.Z)(c.Z.getArticleURL(p.BhN.PREMIUM_GROUP_ABOUT)), e())
-                                );
-                            },
+                            onClick: () => void (0, o.Z)(c.Z.getArticleURL(p.BhN.PREMIUM_GROUP_ABOUT)),
                         },
-                        d(P({}, e), { onClick: a }),
+                        d(P({}, e), {
+                            onClick: (e) => {
+                                var r;
+                                null == a || a(e), null == (r = t.onClose) || r.call(t);
+                            },
+                        }),
                     ],
                 }),
             );
