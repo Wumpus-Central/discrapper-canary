@@ -17,8 +17,8 @@ var r = n(990547),
     f = n(280837),
     p = n(895886),
     _ = n(35225),
-    m = n(703656),
-    h = n(314897),
+    h = n(703656),
+    m = n(314897),
     g = n(664915),
     E = n(984933),
     b = n(430824),
@@ -32,8 +32,8 @@ var r = n(990547),
     A = n(668781),
     N = n(981631),
     P = n(723359),
-    R = n(388032);
-function w(e, t, n) {
+    w = n(388032);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -108,8 +108,8 @@ function M(e, t) {
 }
 let k = (e) => {
         A.Z.show({
-            title: R.intl.string(R.t.cTaRxF),
-            body: R.intl.formatToPlainString(R.t["VSd+Aj"], { quantity: e }),
+            title: w.intl.string(w.t.cTaRxF),
+            body: w.intl.formatToPlainString(w.t["VSd+Aj"], { quantity: e }),
         });
     },
     U = (e) => {
@@ -120,8 +120,8 @@ let k = (e) => {
     },
     G = () => {
         A.Z.show({
-            title: R.intl.string(R.t.ZZlox4),
-            body: R.intl.string(R.t.ZUEGFn),
+            title: w.intl.string(w.t.ZZlox4),
+            body: w.intl.string(w.t.ZUEGFn),
         });
     };
 function Z(e) {
@@ -137,21 +137,20 @@ function F(e, t) {
 }
 let B = {
     joinGuild: async function (e) {
-        var t, r, i, s, u, d;
-        let f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: _, loadId: g, lurkLocation: E } = f,
-            S = null != (t = f.lurker) && t,
-            I = v.default.getCurrentUser();
-        if (null != (r = null == I ? void 0 : I.hasFlag(N.xW$.QUARANTINED)) && r)
+        var t, r, i, s, c, u;
+        let d = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { source: f, loadId: _, lurkLocation: g } = d,
+            E = null != (t = d.lurker) && t,
+            S = v.default.getCurrentUser();
+        if (null != (r = null == S ? void 0 : S.hasFlag(N.xW$.QUARANTINED)) && r)
             return (0, p.default)(), new Promise((e, t) => t(Error()));
-        if ((0, c.hO)(e)) return (0, l.mN)(P.L0.JOIN_LARGE_GUILD_UNDERAGE), new Promise((e, t) => t(Error()));
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: "GUILD_JOIN",
                 guildId: e,
-                lurker: S,
-                source: _,
-                loadId: g,
+                lurker: E,
+                source: f,
+                loadId: _,
             }),
         );
         try {
@@ -160,12 +159,12 @@ let B = {
                 i = await a.tn.put({
                     url: N.ANM.GUILD_JOIN(e),
                     query: {
-                        lurker: S,
-                        session_id: S ? h.default.getSessionId() : null,
-                        recommendation_load_id: g,
-                        location: S && null != E ? E : null,
+                        lurker: E,
+                        session_id: E ? m.default.getSessionId() : null,
+                        recommendation_load_id: _,
+                        location: E && null != g ? g : null,
                     },
-                    context: { source: _ },
+                    context: { source: f },
                     oldFormErrors: !0,
                     body: {},
                     rejectWithError: !1,
@@ -179,7 +178,7 @@ let B = {
                     }),
                 null == b.Z.getGuild(e) && i.body.show_verification_form)
             )
-                return (0, m.uL)(N.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
+                return (0, h.uL)(N.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
             if (
                 (null != i.body.welcome_screen &&
                     o.Z.dispatch({
@@ -193,7 +192,7 @@ let B = {
                         guildId: i.body.id,
                         count: i.body.approximate_presence_count,
                     }),
-                !S)
+                !E)
             ) {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 17181));
                 await t({
@@ -212,8 +211,8 @@ let B = {
                 T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? k(N.tHP) : k(N.DZw);
             }
             throw (
-                ((null == (u = t.body) ? void 0 : u.code) === N.evJ.GUILD_AT_CAPACITY && G(),
-                S && (null == (d = t.body) ? void 0 : d.code) === N.evJ.UNKNOWN_GUILD && U(e),
+                ((null == (c = t.body) ? void 0 : c.code) === N.evJ.GUILD_AT_CAPACITY && G(),
+                E && (null == (u = t.body) ? void 0 : u.code) === N.evJ.UNKNOWN_GUILD && U(e),
                 t)
             );
         }
@@ -348,7 +347,7 @@ let B = {
         }),
     async createRole(e, t, n, r) {
         let l = {
-            name: null != t && "" !== t ? t : R.intl.string(R.t.QBMHvB),
+            name: null != t && "" !== t ? t : w.intl.string(w.t.QBMHvB),
             color: null != n ? n : 0,
             colors:
                 null != r
@@ -535,23 +534,22 @@ let B = {
         });
     },
     nsfwReturnToSafety(e) {
-        let t = (0, c._I)(e);
-        if (null == e || t)
-            return void (0, m.uL)(N.Z5c.FRIENDS, {
+        if (null == e)
+            return void (0, h.uL)(N.Z5c.FRIENDS, {
                 navigationReplace: !1,
                 openChannel: !0,
             });
-        let n = E.ZP.getDefaultChannel(e);
-        null == n || (0, c.Y3)(n)
-            ? (0, m.uL)(N.Z5c.FRIENDS, {
+        let t = E.ZP.getDefaultChannel(e);
+        null == t || (0, c.Y3)(t)
+            ? (0, h.uL)(N.Z5c.FRIENDS, {
                   navigationReplace: !1,
                   openChannel: !0,
               })
-            : (0, m.uL)(N.Z5c.CHANNEL(e, n.id));
+            : (0, h.uL)(N.Z5c.CHANNEL(e, t.id));
     },
     escapeToDefaultChannel(e) {
         let t = E.ZP.getDefaultChannel(e);
-        null != t ? (0, m.uL)(N.Z5c.CHANNEL(e, t.id)) : (0, m.uL)(N.Z5c.FRIENDS);
+        null != t ? (0, h.uL)(N.Z5c.CHANNEL(e, t.id)) : (0, h.uL)(N.Z5c.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = {

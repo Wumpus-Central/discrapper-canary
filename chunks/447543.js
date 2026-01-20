@@ -18,8 +18,8 @@ var r = n(525654),
     f = n(46973),
     p = n(283693),
     _ = n(570140),
-    m = n(479531),
-    h = n(34756),
+    h = n(479531),
+    m = n(34756),
     g = n(595519),
     E = n(839426),
     b = n(758119),
@@ -33,8 +33,8 @@ var r = n(525654),
     A = n(15274),
     N = n(924301),
     P = n(461014),
-    R = n(82085),
-    w = n(264229),
+    w = n(82085),
+    R = n(264229),
     D = n(652898),
     x = n(895886),
     L = n(143816),
@@ -156,7 +156,7 @@ function e_(e, t, n) {
           ? i
           : t.id;
 }
-function em(e, t) {
+function eh(e, t) {
     let { type: n } = e,
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
         o = n === ee.d4z.GUILD_STAGE_VOICE,
@@ -171,7 +171,7 @@ function em(e, t) {
         (e) => (null != r ? r(e, s) : (0, j.uL)(e, s))
     );
 }
-function eh(e) {
+function em(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
         o = B.Z.getGuild(t),
         s = null == o ? void 0 : o.features.has(ee.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
@@ -184,10 +184,10 @@ function eh(e) {
         } = null != i ? i : {};
     if (!d && !p && !(null == i ? void 0 : i.forceTransition) && s && Y.Z.getGuildId() !== t) return;
     let { type: _ } = r,
-        m = G.Z.getChannel(r.id),
-        h = e_(t, r, i),
+        h = G.Z.getChannel(r.id),
+        m = e_(t, r, i),
         b = _ === ee.d4z.GUILD_STAGE_VOICE,
-        y = ee.Z5c.CHANNEL(t, h);
+        y = ee.Z5c.CHANNEL(t, m);
     (0, k.tW)(_)
         ? (0, S.h)(() => {
               Promise.resolve()
@@ -200,20 +200,20 @@ function eh(e) {
                                   return;
                               }
                               (null == i ? void 0 : i.muteOnJoinVoiceChannel) && X.Z.setSelfMute(f.Yn.DEFAULT, !0),
-                                  n.selectVoiceChannel(h),
+                                  n.selectVoiceChannel(m),
                                   c === ei.Iq.STREAM &&
                                       null != l &&
                                       $.iV({
                                           streamType: er.lo.GUILD,
                                           ownerId: l,
                                           guildId: t,
-                                          channelId: h,
+                                          channelId: m,
                                       }),
                                   c === ei.Iq.EMBEDDED_APPLICATION &&
                                       null != u &&
-                                      ((0, j.uL)(ee.Z5c.CHANNEL(null != t ? t : ee.ME, h)),
+                                      ((0, j.uL)(ee.Z5c.CHANNEL(null != t ? t : ee.ME, m)),
                                       (0, E.Z)({
-                                          channelId: h,
+                                          channelId: m,
                                           applicationId: u,
                                           intent: null == i ? void 0 : i.intent,
                                           inviterUserId: null == i ? void 0 : i.inviterUserId,
@@ -224,19 +224,19 @@ function eh(e) {
                       !d && (0, T.n)(t, [B.Z, W.default, F.ZP]) ? (0, I.hk)(t, o) : o();
                   });
           })
-        : (0, g.l5)(m) &&
+        : (0, g.l5)(h) &&
           c === ei.Iq.EMBEDDED_APPLICATION &&
           null != u &&
-          ((0, j.uL)(ee.Z5c.CHANNEL(null != t ? t : ee.ME, h)),
+          ((0, j.uL)(ee.Z5c.CHANNEL(null != t ? t : ee.ME, m)),
           (0, E.Z)({
-              channelId: h,
+              channelId: m,
               applicationId: u,
               intent: null == i ? void 0 : i.intent,
               inviterUserId: null == i ? void 0 : i.inviterUserId,
               analyticsLocations: a,
               commandOrigin: O.bB.CHAT,
           })),
-        em(r, i)(y);
+        eh(r, i)(y);
 }
 function eg(e) {
     let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
@@ -286,7 +286,7 @@ let eb = function (e, t) {
                 (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocalOrThread() && (0, y.RW)(e))) &&
                     ((null == t ? void 0 : t.guildScheduledEvent) != null
                         ? eg(t)
-                        : eh({
+                        : em({
                               guildId: null != (r = i.getGuildId()) ? r : ee.ME,
                               channel: i,
                               options: t,
@@ -354,7 +354,7 @@ let eS = {
                     type: "INSTANT_INVITE_CREATE_FAILURE",
                     channelId: e,
                 }),
-                new m.Z(t))
+                new h.Z(t))
             );
         }
     },
@@ -509,67 +509,65 @@ let eS = {
     acceptInvite(e) {
         var t;
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
-            s = (0, w.fU)(r),
+            s = (0, R.fU)(r),
             l = s.baseCode,
             c = U.default.getSessionId(),
             u = ep(i, s),
             f = W.default.getCurrentUser();
         return null != (t = null == f ? void 0 : f.hasFlag(ee.xW$.QUARANTINED)) && t
             ? ((0, x.default)(), new Promise((e, t) => t(Error())))
-            : (0, y.hO)(i.location_guild_id)
-              ? ((0, b.mN)(et.L0.JOIN_LARGE_GUILD_UNDERAGE), new Promise((e, t) => t(Error())))
-              : (_.Z.dispatch({
-                    type: "INVITE_ACCEPT",
-                    code: l,
-                }),
-                d.tn
-                    .post({
-                        url: ee.ANM.INVITE(l),
-                        context: u,
-                        oldFormErrors: !0,
-                        body: { session_id: c },
-                        rejectWithError: !1,
-                    })
-                    .then(
-                        async (e) => {
-                            var t, r;
-                            _.Z.dispatch({
-                                type: "INVITE_ACCEPT_SUCCESS",
-                                invite: e.body,
-                                code: l,
-                            });
-                            let i = N.ZP.getGuildScheduledEvent(s.guildScheduledEventId),
-                                c = ec(es({}, e.body), { guild_scheduled_event: i }),
-                                u =
-                                    null != (r = null == c ? void 0 : c.guild_id)
-                                        ? r
-                                        : null == c || null == (t = c.guild)
-                                          ? void 0
-                                          : t.id;
-                            if (!o && null != u && c.new_member && !c.show_verification_form) {
-                                let { default: e } = await Promise.resolve().then(n.bind(n, 17181));
-                                await e({ guildId: u });
-                            }
-                            return null == a || a(c), e.body;
-                        },
-                        (e) => {
-                            var t, n, r;
-                            throw (
-                                ((null == (t = e.body) ? void 0 : t.code) ===
-                                    ee.evJ.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                                    (0, b.mN)(et.L0.JOIN_LARGE_GUILD_UNDERAGE),
-                                _.Z.dispatch({
-                                    type: "INVITE_ACCEPT_FAILURE",
-                                    code: l,
-                                    error: {
-                                        message: null == (n = e.body) ? void 0 : n.message,
-                                        code: null == (r = e.body) ? void 0 : r.code,
-                                    },
-                                }),
-                                new h.Z(e))
-                            );
-                        },
-                    ));
+            : (_.Z.dispatch({
+                  type: "INVITE_ACCEPT",
+                  code: l,
+              }),
+              d.tn
+                  .post({
+                      url: ee.ANM.INVITE(l),
+                      context: u,
+                      oldFormErrors: !0,
+                      body: { session_id: c },
+                      rejectWithError: !1,
+                  })
+                  .then(
+                      async (e) => {
+                          var t, r;
+                          _.Z.dispatch({
+                              type: "INVITE_ACCEPT_SUCCESS",
+                              invite: e.body,
+                              code: l,
+                          });
+                          let i = N.ZP.getGuildScheduledEvent(s.guildScheduledEventId),
+                              c = ec(es({}, e.body), { guild_scheduled_event: i }),
+                              u =
+                                  null != (r = null == c ? void 0 : c.guild_id)
+                                      ? r
+                                      : null == c || null == (t = c.guild)
+                                        ? void 0
+                                        : t.id;
+                          if (!o && null != u && c.new_member && !c.show_verification_form) {
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 17181));
+                              await e({ guildId: u });
+                          }
+                          return null == a || a(c), e.body;
+                      },
+                      (e) => {
+                          var t, n, r;
+                          throw (
+                              ((null == (t = e.body) ? void 0 : t.code) ===
+                                  ee.evJ.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
+                                  (0, b.mN)(et.L0.JOIN_LARGE_GUILD_UNDERAGE),
+                              _.Z.dispatch({
+                                  type: "INVITE_ACCEPT_FAILURE",
+                                  code: l,
+                                  error: {
+                                      message: null == (n = e.body) ? void 0 : n.message,
+                                      code: null == (r = e.body) ? void 0 : r.code,
+                                  },
+                              }),
+                              new m.Z(e))
+                          );
+                      },
+                  ));
     },
     acceptInviteAndTransitionToInviteChannel(e) {
         let { inviteKey: t, context: n, analyticsLocations: r, callback: i, skipOnboarding: a } = e;
@@ -590,14 +588,14 @@ let eS = {
         var r, i;
         let { channel: a, guild: l } = e;
         if (null != l && (null == (r = l.features) ? void 0 : r.includes(ee.GuildFeatures.HUB)))
-            return void R.Z.onOpenHubInvite(e);
+            return void w.Z.onOpenHubInvite(e);
         let c = (0, s.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
         if (null != l && !c && e.new_member && (0, P.u)(l)) return void (0, P._)(l.id);
         if (null == a) return;
         let u = ef(e);
         null != t && (u.transitionTo = t),
             null != n && (u.muteOnJoinVoiceChannel = n),
-            eh({
+            em({
                 guildId: null != l ? l.id : ee.ME,
                 channel: a,
                 options: u,
@@ -622,7 +620,7 @@ let eS = {
     openApp(e, t, n, r, a) {
         var o, s;
         let d,
-            f = null != e ? (0, w.fU)(e) : null,
+            f = null != e ? (0, R.fU)(e) : null,
             p = null == f ? void 0 : f.baseCode;
         if (
             (_.Z.dispatch({
