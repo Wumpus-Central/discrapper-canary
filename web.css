@@ -16952,7 +16952,7 @@ screen and (max-width:485px) {
 
 .aec7abc73c126bc0-button {
     background-color: var(--background-surface-highest);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     cursor: pointer;
     display: grid;
     height: 40px;
