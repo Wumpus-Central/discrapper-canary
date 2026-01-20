@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g }), n(388685);
-var i = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => m }), n(388685);
+var r = n(54381),
+    i = n(473749),
     l = n(911969),
     a = n(925975),
     o = n(957730),
@@ -39,21 +39,21 @@ function h() {
         rangeStartOffset: t.startOffset,
     };
 }
-function m(e, t, n) {
-    let i = document.createRange();
-    i.setStart(t, n), i.collapse(!0), e.removeAllRanges(), e.addRange(i);
+function g(e, t, n) {
+    let r = document.createRange();
+    r.setStart(t, n), r.collapse(!0), e.removeAllRanges(), e.addRange(r);
 }
-class g extends r.PureComponent {
+class m extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
-            s = (0, i.jsx)("div", {
+        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o } = this.props,
+            s = (0, r.jsx)("div", {
                 className: d.operations,
                 children: u.intl.format(u.t.wDsPXs, {
                     onCancel: () => a(l.id),
                     onSave: this.onClickSave,
                 }),
             });
-        return (0, i.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             className: e,
             ref: this.node,
             onContextMenu: f,
@@ -61,7 +61,7 @@ class g extends r.PureComponent {
                 o({
                     textValue: t,
                     richValue: n,
-                    message: r,
+                    message: i,
                     channel: l,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
@@ -74,7 +74,7 @@ class g extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, "node", r.createRef()),
+            p(this, "node", i.createRef()),
             p(this, "onClickSave", () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
@@ -83,14 +83,14 @@ class g extends r.PureComponent {
                 let {
                     message: t,
                     channel: n,
-                    onConfirmDelete: i,
-                    onCancel: r,
+                    onConfirmDelete: r,
+                    onCancel: i,
                     saveMessage: c,
                     validateEdit: u,
                 } = this.props;
                 return 0 === e.length
-                    ? (i(n, t),
-                      r(n.id),
+                    ? (r(n, t),
+                      i(n.id),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !1,
@@ -98,8 +98,8 @@ class g extends r.PureComponent {
                     : u({
                           value: e,
                           channel: n,
-                      }).then((i) => {
-                          let { valid: u } = i;
+                      }).then((r) => {
+                          let { valid: u } = r;
                           if (!u)
                               return Promise.resolve({
                                   shouldClear: !1,
@@ -116,8 +116,8 @@ class g extends r.PureComponent {
                               let t = o.ZP.parse(this.props.channel, e),
                                   n = this.props.message.components.filter((e) => e.type === l.re.TEXT_DISPLAY);
                               if (1 === n.length) {
-                                  let i = n[0];
-                                  e !== i.content && c(this.props.channel.id, this.props.message.id, t);
+                                  let r = n[0];
+                                  e !== r.content && c(this.props.channel.id, this.props.message.id, t);
                               }
                           } else {
                               let t = o.ZP.parse(this.props.channel, e);
@@ -125,7 +125,7 @@ class g extends r.PureComponent {
                                   c(this.props.channel.id, this.props.message.id, t);
                           }
                           return (
-                              r(n.id),
+                              i(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
                                   shouldRefocus: !0,
@@ -134,27 +134,27 @@ class g extends r.PureComponent {
                       });
             }),
             p(this, "onChange", (e, t, n) => {
-                let { channel: i, onChange: r } = this.props;
-                r(i.id, t, n);
+                let { channel: r, onChange: i } = this.props;
+                i(r.id, t, n);
             }),
             p(this, "onKeyDown", (e) => {
                 if (e.key === c.vn.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }
-                if (e.key === c.vn.HOME && !e.shiftKey) {
+                if (e.key === c.vn.HOME && !(e.shiftKey || e.ctrlKey)) {
                     e.preventDefault();
-                    let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = h();
-                    if (null == t || null == n || null == i) return;
-                    m(t, n, 0);
+                    let { selection: t, rangeStartContainer: n, rangeStartOffset: r } = h();
+                    if (null == t || null == n || null == r) return;
+                    g(t, n, 0);
                 }
-                if (e.key === c.vn.END && !e.shiftKey) {
+                if (e.key === c.vn.END && !(e.shiftKey || e.ctrlKey)) {
                     e.preventDefault();
-                    let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = h();
-                    if (null == t || null == n || null == i) return;
-                    let r = n.textContent;
-                    if (null == r) return;
-                    m(t, n, r.length);
+                    let { selection: t, rangeStartContainer: n, rangeStartOffset: r } = h();
+                    if (null == t || null == n || null == r) return;
+                    let i = n.textContent;
+                    if (null == i) return;
+                    g(t, n, i.length);
                 }
             });
     }

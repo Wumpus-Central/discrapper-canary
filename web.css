@@ -53962,7 +53962,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .d285a61ed580c689-markdown {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -61524,9 +61524,9 @@ screen and (max-width:485px) {
 
 ._9a9f981d3524e20f-message {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
