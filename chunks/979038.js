@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => w });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -16,99 +16,97 @@ var i = n(442837),
     m = n(314897),
     g = n(374129),
     E = n(639351),
-    b = n(172416),
-    y = n(652853),
-    O = n(103479),
-    v = n(191764),
-    S = n(238607),
-    I = n(414402),
-    T = n(934393),
-    C = n(803663),
-    A = n(715547),
-    N = n(994102),
-    P = n(981631),
-    w = n(671955);
-function R(e) {
+    b = n(652853),
+    y = n(103479),
+    O = n(191764),
+    v = n(238607),
+    S = n(414402),
+    I = n(934393),
+    T = n(803663),
+    C = n(715547),
+    A = n(994102),
+    N = n(981631),
+    P = n(671955);
+function w(e) {
     var t;
-    let { user: n, activity: R, onAction: D, onClose: x, application: L, containerClassName: j } = e,
-        { themeType: M } = (0, y.z)(),
-        k = (0, i.e7)([m.default], () => m.default.getId() === n.id),
-        U = (0, u.q)(L),
-        G = (0, _.L)(null != (t = null == R ? void 0 : R.application_id) ? t : null == L ? void 0 : L.id),
-        { analyticsLocations: Z } = (0, p.ZP)(f.Z.USER_PROFILE_ACTIVITY_BUTTONS),
-        F = (0, b.U)({ location: "UserProfileActivityButtons" }),
-        B = M === w.l.MODAL || M === w.l.MODAL_V2,
-        V = M === w.l.POPOUT,
-        H = (() =>
-            k
-                ? V && (null == R ? void 0 : R.type) === P.IIU.PLAYING && (null == L ? void 0 : L.id) != null && F
+    let { user: n, activity: w, onAction: R, onClose: D, application: x, containerClassName: L } = e,
+        { themeType: j } = (0, b.z)(),
+        M = (0, i.e7)([m.default], () => m.default.getId() === n.id),
+        k = (0, u.q)(x),
+        U = (0, _.L)(null != (t = null == w ? void 0 : w.application_id) ? t : null == x ? void 0 : x.id),
+        { analyticsLocations: G } = (0, p.ZP)(f.Z.USER_PROFILE_ACTIVITY_BUTTONS),
+        Z = j === P.l.MODAL || j === P.l.MODAL_V2,
+        F = j === P.l.POPOUT,
+        B = (() =>
+            M
+                ? F && (null == w ? void 0 : w.type) === N.IIU.PLAYING && (null == x ? void 0 : x.id) != null
                     ? (0, r.jsx)(d.Z, {
-                          applicationId: L.id,
-                          onAction: D,
-                          onClose: x,
+                          applicationId: x.id,
+                          onAction: R,
+                          onClose: D,
                       })
                     : null
-                : G || !U || null == L || B
-                  ? (0, l.Z)(R)
-                      ? (0, r.jsx)(T.Z, {
-                            platformType: P.ABu.XBOX,
+                : U || !k || null == x || Z
+                  ? (0, l.Z)(w)
+                      ? (0, r.jsx)(I.Z, {
+                            platformType: N.ABu.XBOX,
                             icon: () => (0, r.jsx)(E.Z, {}),
-                            onAction: D,
+                            onAction: R,
                         })
-                      : (0, s.Z)(R)
-                        ? (0, r.jsx)(T.Z, {
-                              platformType: P.ABu.PLAYSTATION,
+                      : (0, s.Z)(w)
+                        ? (0, r.jsx)(I.Z, {
+                              platformType: N.ABu.PLAYSTATION,
                               icon: () => (0, r.jsx)(g.Z, {}),
-                              onAction: D,
+                              onAction: R,
                           })
-                        : (0, c.Z)(R)
-                          ? (0, r.jsx)(A.Z, {
-                                activity: R,
-                                onAction: D,
+                        : (0, c.Z)(w)
+                          ? (0, r.jsx)(C.Z, {
+                                activity: w,
+                                onAction: R,
                             })
-                          : (0, a.Z)(R, P.xjy.JOIN) || (0, o.Z)(R)
-                            ? (0, r.jsx)(S.Z, {
+                          : (0, a.Z)(w, N.xjy.JOIN) || (0, o.Z)(w)
+                            ? (0, r.jsx)(v.Z, {
                                   user: n,
-                                  activity: R,
-                                  onAction: D,
-                                  onClose: x,
+                                  activity: w,
+                                  onAction: R,
+                                  onClose: D,
                               })
-                            : (null == R ? void 0 : R.type) === P.IIU.HANG_STATUS
-                              ? (0, r.jsx)(v.Z, {
+                            : (null == w ? void 0 : w.type) === N.IIU.HANG_STATUS
+                              ? (0, r.jsx)(O.Z, {
                                     user: n,
-                                    activity: R,
-                                    onAction: D,
-                                    onClose: x,
+                                    activity: w,
+                                    onAction: R,
+                                    onClose: D,
                                 })
-                              : (null == R ? void 0 : R.buttons) != null && (null == R ? void 0 : R.buttons.length) >= 1
-                                ? (0, r.jsx)(O.Z, {
+                              : (null == w ? void 0 : w.buttons) != null && (null == w ? void 0 : w.buttons.length) >= 1
+                                ? (0, r.jsx)(y.Z, {
                                       user: n,
-                                      activity: R,
-                                      onAction: D,
+                                      activity: w,
+                                      onAction: R,
                                   })
-                                : (0, a.Z)(R, P.xjy.INSTANCE)
-                                  ? (0, r.jsx)(I.Z, {
+                                : (0, a.Z)(w, N.xjy.INSTANCE)
+                                  ? (0, r.jsx)(S.Z, {
                                         user: n,
-                                        activity: R,
-                                        onAction: D,
+                                        activity: w,
+                                        onAction: R,
                                     })
-                                  : (0, h.dS)(R)
-                                    ? (0, r.jsx)(C.Z, {
-                                          activity: R,
-                                          onAction: D,
-                                          onClose: x,
+                                  : (0, h.dS)(w)
+                                    ? (0, r.jsx)(T.Z, {
+                                          activity: w,
+                                          onAction: R,
+                                          onClose: D,
                                       })
                                     : null
-                  : (0, r.jsx)(N.Z, {
-                        application: L,
-                        onAction: D,
-                        onClose: x,
-                        analyticsLocations: Z,
+                  : (0, r.jsx)(A.Z, {
+                        application: x,
+                        onAction: R,
+                        onClose: D,
+                        analyticsLocations: G,
                     }))();
-    return null == H
+    return null == B
         ? null
         : (0, r.jsx)("div", {
-              className: j,
-              children: H,
+              className: L,
+              children: B,
           });
 }

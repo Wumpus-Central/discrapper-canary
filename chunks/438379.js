@@ -1,7 +1,4 @@
-n.d(t, {
-    J: () => i,
-    m: () => r,
-});
+n.d(t, { J: () => i });
 let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-07_user_profile_holdout_h2",
