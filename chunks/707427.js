@@ -614,35 +614,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            BG_SURFACE_OVERLAY_TMP: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_800",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_130",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_21",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_17",
-                    opacity: 1,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0.5,
-                    },
-                    dark: {
-                        color: "BLACK_500",
-                        opacity: 0.5,
-                    },
-                },
-            },
             BG_SURFACE_RAISED: {
                 category: "background",
                 [r.DARK]: {
@@ -1387,7 +1358,7 @@ let { Themes: r } = n(15202).VV,
             CONTROL_SECONDARY_BACKGROUND_DEFAULT: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "PRIMARY_500",
+                    raw: "PRIMARY_460",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
@@ -1395,11 +1366,11 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "PLUM_13",
+                    raw: "PLUM_17",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "PLUM_13",
+                    raw: "PLUM_15",
                     opacity: 1,
                 },
             },
@@ -4445,19 +4416,19 @@ let { Themes: r } = n(15202).VV,
             SPINE_DEFAULT: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "PRIMARY_500",
+                    raw: "PRIMARY_530",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "PRIMARY_300",
+                    raw: "PRIMARY_430",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "PLUM_13",
+                    raw: "PLUM_17",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "PLUM_13",
+                    raw: "PLUM_15",
                     opacity: 1,
                 },
             },
