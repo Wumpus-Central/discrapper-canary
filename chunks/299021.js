@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function m(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,8 +112,8 @@ let O = [c.Cm.User, c.Cm.Installation],
     A = {},
     N = new Set(),
     P = new Set(),
-    R = "apexTrackedExposures",
-    w = 2,
+    w = "apexTrackedExposures",
+    R = 2,
     D = 604800000,
     x = {},
     L = 3,
@@ -190,7 +190,7 @@ class k extends (r = o.ZP.PersistedStore) {
     }
     deleteOverride(e) {
         let { [e]: t } = I;
-        I = m(I, [e].map(E));
+        I = h(I, [e].map(E));
     }
     createSessionOverride(e, t) {
         T = _(f({}, T), {
@@ -204,7 +204,7 @@ class k extends (r = o.ZP.PersistedStore) {
     }
     deleteSessionOverride(e) {
         let { [e]: t } = T;
-        T = m(T, [e].map(E));
+        T = h(T, [e].map(E));
     }
     setExperimentsMetadata(e) {
         A = f({}, A, Object.fromEntries(e.map((e) => [e.name, e])));
@@ -226,7 +226,7 @@ class k extends (r = o.ZP.PersistedStore) {
     }
     handleLogout(e) {
         e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
-            l.K.remove(R),
+            l.K.remove(w),
             this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
@@ -254,67 +254,121 @@ class k extends (r = o.ZP.PersistedStore) {
         let i = v[e][t];
         return null == i ? [void 0, void 0] : [i.evaluationId, i.assignments[M(n)]];
     }
-    trackExperimentExposure(e, t, n, r, i, a) {
-        let o = M("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
-        this.shouldTrackExposure(o) &&
-            "user" === r &&
-            (this.track(
-                u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
-                {
-                    evaluation_id: e,
-                    experiment: t,
-                    exposure_location: n,
-                    unit_type: r,
-                    tracked_variation_id: a,
-                },
-                { flush: !0 },
-            ),
-            (x[o] = Date.now()),
+    trackExperimentExposure(e, t, n, r, i, a, o) {
+        let s = M("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
+        this.shouldTrackExposure(s) &&
+            ("user" === r
+                ? this.track(
+                      u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
+                      {
+                          evaluation_id: e,
+                          experiment: t,
+                          exposure_location: n,
+                          unit_type: r,
+                          tracked_variation_id: a,
+                      },
+                      { flush: !0 },
+                  )
+                : "installation" === r &&
+                  this.track(
+                      u.j_.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
+                      {
+                          evaluation_id: e,
+                          installation_id: o,
+                          experiment: t,
+                          exposure_location: n,
+                          unit_type: r,
+                          tracked_variation_id: a,
+                      },
+                      { flush: !0 },
+                  ),
+            (x[s] = Date.now()),
             this.saveTrackedExposures(x));
     }
     trackCommonTriggerPointExposures(e) {
-        for (let t of this.evaluationIds("user")) {
-            let n = M("".concat(t, "|").concat(e));
-            this.shouldTrackExposure(n) &&
-                (this.track(
-                    u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
-                    {
-                        evaluation_id: t,
-                        exposure_location: e,
-                        unit_type: "user",
-                    },
-                    { flush: !0 },
-                ),
-                (x[n] = Date.now()),
-                this.saveTrackedExposures(x));
-        }
+        for (let t of ["user", "installation"])
+            for (let { evaluationId: n, unitId: r } of this.evaluationsWithUnitIds(t)) {
+                let i = M("".concat(n, "|").concat(e));
+                this.shouldTrackExposure(i) &&
+                    ("user" === t
+                        ? this.track(
+                              u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
+                              {
+                                  evaluation_id: n,
+                                  exposure_location: e,
+                                  unit_type: t,
+                              },
+                              { flush: !0 },
+                          )
+                        : this.track(
+                              u.j_.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
+                              {
+                                  evaluation_id: n,
+                                  exposure_location: e,
+                                  unit_type: t,
+                                  installation_id: r,
+                              },
+                              { flush: !0 },
+                          ),
+                    (x[i] = Date.now()),
+                    this.saveTrackedExposures(x));
+            }
     }
     trackExposureSuppression(e, t) {
         let n = S[e];
-        null != n &&
-            "user" === n.kind &&
-            this.track(
-                u.j_.EXPERIMENT_USER_EXPOSURE_SUPPRESSED,
-                {
-                    experiment: e,
-                    unit_type: "user",
-                    suppression_source: t,
-                },
-                { flush: !0 },
-            );
+        if (null != n) {
+            if ("user" === n.kind)
+                this.track(
+                    u.j_.EXPERIMENT_USER_EXPOSURE_SUPPRESSED,
+                    {
+                        experiment: e,
+                        unit_type: n.kind,
+                        suppression_source: t,
+                    },
+                    { flush: !0 },
+                );
+            else if ("installation" === n.kind) {
+                let r = Object.keys(v.installation)[0];
+                null != r &&
+                    this.track(
+                        u.j_.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED,
+                        {
+                            experiment: e,
+                            unit_type: n.kind,
+                            suppression_source: t,
+                            installation_id: r,
+                        },
+                        { flush: !0 },
+                    );
+            }
+        }
     }
     evaluationIds(e) {
         return Object.values(v[e])
             .map((e) => e.evaluationId)
             .filter((e) => null != e);
     }
+    evaluationsWithUnitIds(e) {
+        return Object.entries(v[e])
+            .filter((e) => {
+                let [t, n] = e;
+                return null != n.evaluationId;
+            })
+            .map((e) => {
+                let [t, n] = e;
+                return {
+                    evaluationId: n.evaluationId,
+                    unitId: t,
+                };
+            });
+    }
     shouldTrackExposure(e) {
         let t = x[e];
         return null == t || Date.now() - t > D;
     }
     loadTrackedExposures() {
-        let e = l.K.get(R);
-        if (null == e || e.version !== w) return {};
+        let e = l.K.get(w);
+        if (null == e || e.version !== R) return {};
         let t = e.exposures,
             n = Date.now(),
             r = !1;
@@ -323,8 +377,8 @@ class k extends (r = o.ZP.PersistedStore) {
     }
     saveTrackedExposures(e) {
         try {
-            l.K.set(R, {
-                version: w,
+            l.K.set(w, {
+                version: R,
                 exposures: e,
             });
         } catch (e) {

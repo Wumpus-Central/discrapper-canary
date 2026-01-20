@@ -14,18 +14,18 @@ function a(e, t, n) {
                     [d, f] = (0, i.Wu)([t], () => t.getEvaluationAndAssignment(s, u, o), [u]),
                     p = null == f ? void 0 : f.variantId,
                     _ = null != (a = null == f ? void 0 : f.trackedVariantId) ? a : p,
-                    m = null == f ? void 0 : f.revision,
-                    h = null == f ? void 0 : f.isOverride,
+                    h = null == f ? void 0 : f.revision,
+                    m = null == f ? void 0 : f.isOverride,
                     g = null == f ? void 0 : f.exposureTrackingEnabled;
                 if (
                     ((0, r.useEffect)(() => {
                         null != d &&
                             null != _ &&
-                            null != m &&
-                            !1 === h &&
+                            null != h &&
+                            !1 === m &&
                             !0 === g &&
-                            t.trackExperimentExposure(d, o, e.location, s, m, _);
-                    }, [u, d, _, m, e.location, h, g]),
+                            t.trackExperimentExposure(d, o, e.location, s, h, _, u);
+                    }, [u, d, _, h, e.location, m, g]),
                     null == p)
                 )
                     return c;
@@ -42,14 +42,14 @@ function a(e, t, n) {
                     f = null != (r = null == u ? void 0 : u.trackedVariantId) ? r : d,
                     p = null == u ? void 0 : u.revision,
                     _ = null == u ? void 0 : u.isOverride,
-                    m = null == u ? void 0 : u.exposureTrackingEnabled;
+                    h = null == u ? void 0 : u.exposureTrackingEnabled;
                 if (
                     (null != a &&
                         null != f &&
                         null != p &&
                         !1 === _ &&
-                        !0 === m &&
-                        t.trackExperimentExposure(a, o, e.location, s, p, f),
+                        !0 === h &&
+                        t.trackExperimentExposure(a, o, e.location, s, p, f, i),
                     null == d)
                 )
                     return c;

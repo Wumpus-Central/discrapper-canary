@@ -9,7 +9,7 @@ n.d(t, {
     BZ: () => W,
     Cw: () => P,
     Cy: () => Z,
-    EK: () => em,
+    EK: () => eh,
     ET: () => eg,
     Et: () => K,
     GZ: () => L,
@@ -17,14 +17,14 @@ n.d(t, {
     He: () => O,
     Jj: () => x,
     MA: () => eE,
-    NY: () => w,
-    OL: () => m,
+    NY: () => R,
+    OL: () => h,
     OM: () => ep,
     Pl: () => k,
-    Py: () => R,
+    Py: () => w,
     Q: () => e_,
     QL: () => v,
-    RG: () => eh,
+    RG: () => em,
     RK: () => er,
     S7: () => M,
     Sk: () => p,
@@ -46,7 +46,7 @@ n.d(t, {
     dG: () => U,
     fK: () => el,
     fr: () => Y,
-    gg: () => h,
+    gg: () => m,
     ht: () => g,
     i$: () => y,
     j8: () => A,
@@ -115,8 +115,8 @@ var p = (function (e) {
             (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.VR = "vr"), (e.UNKNOWN = "unknown"), e
         );
     })({});
-let m = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
-var h = (function (e) {
+let h = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
+var m = (function (e) {
         return (
             (e[(e.STRIPE = 1)] = "STRIPE"),
             (e[(e.BRAINTREE = 2)] = "BRAINTREE"),
@@ -206,7 +206,7 @@ let v = new Map([
 var P = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
     })({}),
-    R = (function (e) {
+    w = (function (e) {
         return (
             (e[(e.PENDING = 0)] = "PENDING"),
             (e[(e.COMPLETED = 1)] = "COMPLETED"),
@@ -217,7 +217,7 @@ var P = (function (e) {
             e
         );
     })({}),
-    w = (function (e) {
+    R = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
@@ -695,6 +695,8 @@ var ec = (function (e) {
             (e.EXPERIMENT_SAVE_EXPOSURE_FAILED = "experiment_save_exposure_failed"),
             (e.EXPERIMENT_USER_EVALUATION_EXPOSED = "experiment_user_evaluation_exposed"),
             (e.EXPERIMENT_USER_EXPOSURE_SUPPRESSED = "experiment_user_exposure_suppressed"),
+            (e.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED = "experiment_installation_evaluation_exposed"),
+            (e.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED = "experiment_installation_exposure_suppressed"),
             (e.MKTG_PAGE_VIEWED = "mktg_page_viewed"),
             (e.CLICK_LANDING_CTA = "click_landing_cta"),
             (e.DOWNLOAD_APP = "download_app"),
@@ -931,7 +933,7 @@ var e_ = (function (e) {
             e
         );
     })({}),
-    em = (function (e) {
+    eh = (function (e) {
         return (
             (e[(e.ACTION = 1)] = "ACTION"),
             (e[(e.ACTION_RPG = 2)] = "ACTION_RPG"),
@@ -1005,7 +1007,7 @@ var e_ = (function (e) {
             e
         );
     })({}),
-    eh = (function (e) {
+    em = (function (e) {
         return (
             (e[(e.GUILD_ROLE_SUBSCRIPTIONS = 1)] = "GUILD_ROLE_SUBSCRIPTIONS"),
             (e[(e.GUILD_PRODUCTS = 2)] = "GUILD_PRODUCTS"),
