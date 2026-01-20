@@ -1,4 +1,4 @@
-n.d(t, { f: () => m }), n(388685), n(415506);
+n.d(t, { f: () => h }), n(388685), n(415506);
 var r = n(473749),
     i = n(442837),
     a = n(544891),
@@ -11,9 +11,9 @@ var r = n(473749),
     f = n(85721),
     p = n(981631),
     _ = n(388032);
-function m(e) {
+function h(e) {
     let [t, n] = (0, r.useState)(""),
-        [m, h] = (0, r.useState)([]),
+        [h, m] = (0, r.useState)([]),
         [g, E] = (0, r.useState)(null),
         [b, y] = (0, r.useState)(!1),
         O = (0, r.useRef)(null),
@@ -25,7 +25,7 @@ function m(e) {
         v && null != I && (null == (e = O.current) ? void 0 : e.id) !== I.id && (O.current = I);
     }, [I, v]);
     let T = (0, r.useCallback)(async (e, t) => {
-            let n = null != t ? t : (0, d.Nb)(e);
+            let n = null != t ? t : (0, d.N)(e);
             try {
                 var r;
                 return null !=
@@ -73,14 +73,14 @@ function m(e) {
                         if (i.status === s.iF.DRAFT) throw Error("Order could not be signed.");
                         throw Error("Unexpected order status: ".concat(i.status));
                     }
-                    let a = (0, d.Nb)(e),
+                    let a = (0, d.N)(e),
                         c = await T(e, a);
                     if (0 === c.length) {
                         await new Promise((e) => setTimeout(e, 500));
                         let t = await T(e, a);
                         if (0 === t.length) throw Error("No entitlements found after order signing");
-                        h(t), y(!1), null == n || n(t);
-                    } else h(c), y(!1), null == n || n(c);
+                        m(t), y(!1), null == n || n(t);
+                    } else m(c), y(!1), null == n || n(c);
                 } catch (e) {
                     E(e instanceof o.ZP ? e : new o.ZP(e)), y(!1);
                 }
@@ -93,7 +93,7 @@ function m(e) {
                     y(!0), E(null);
                 },
                 a = (e) => {
-                    h(e), y(!1), null == n || n(e);
+                    m(e), y(!1), null == n || n(e);
                 },
                 o = (e) => {
                     E(e), y(!1);
@@ -129,8 +129,8 @@ function m(e) {
                         errorMessage: g.message,
                     }),
                 );
-            if (null != m && m.length > 0) {
-                let e = m.map((e) => {
+            if (null != h && h.length > 0) {
+                let e = h.map((e) => {
                     var t;
                     return null == (t = e.sku) ? void 0 : t.name;
                 });
@@ -140,16 +140,16 @@ function m(e) {
                         redeemedItemDescription: ""
                             .concat(1 === e.length ? "SKU" : "SKUs", ": ")
                             .concat(e.join(", "), ". Entitlement ")
-                            .concat(1 === m.length ? "ID" : "IDs", ": ")
-                            .concat(m.map((e) => e.id).join(", ")),
+                            .concat(1 === h.length ? "ID" : "IDs", ": ")
+                            .concat(h.map((e) => e.id).join(", ")),
                     }),
                 );
                 return;
             }
             n("");
-        }, [m, g]),
+        }, [h, g]),
         {
-            entitlements: m,
+            entitlements: h,
             error: g,
             isSubmitting: b || (v && S),
             responseMessage: t,

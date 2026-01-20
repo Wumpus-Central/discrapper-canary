@@ -41,8 +41,8 @@ var r = n(990547),
     f = n(626135),
     p = n(70956),
     _ = n(573261),
-    m = n(617136),
-    h = n(823289),
+    h = n(617136),
+    m = n(823289),
     g = n(705006),
     E = n(616022),
     b = n(49436),
@@ -94,7 +94,7 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -105,7 +105,7 @@ function R(e, t) {
         e
     );
 }
-let w = 5;
+let R = 5;
 async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
@@ -123,7 +123,7 @@ async function D(e) {
                 user_status: n.quest_user_status,
             });
         else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-            return { errorHints: n.error_hints_v2.slice(0, w) };
+            return { errorHints: n.error_hints_v2.slice(0, R) };
     } catch (r) {
         var n;
         let e = new o.Z(r);
@@ -259,7 +259,7 @@ var U = (function (e) {
 async function G(e, t) {
     if (
         (null != t.questContentCTA &&
-            (0, m._3)({
+            (0, h._3)({
                 questId: e,
                 questContent: t.questContent,
                 questContentCTA: t.questContentCTA,
@@ -267,8 +267,7 @@ async function G(e, t) {
                 questContentRowIndex: t.questContentRowIndex,
                 sourceQuestContent: t.sourceQuestContent,
             }),
-        e === I.V6 && (0, d.m4)(),
-        e === I.wF && (0, d._r)(),
+        e === I.V6 && (0, d.m)(),
         E.Z.isEnrolling(e))
     )
         return { type: "previous_in_flight_request" };
@@ -281,7 +280,7 @@ async function G(e, t) {
             r = (0, v.R_)(t.questContent),
             o = await i.tn.post({
                 url: T.ANM.QUESTS_ENROLL(e),
-                body: R(N({ location: t.questContent }, (0, v.qe)(e, t.questContent)), {
+                body: w(N({ location: t.questContent }, (0, v.qe)(e, t.questContent)), {
                     metadata_raw: null != n ? n : null,
                     metadata_sealed: null != r ? r : null,
                 }),
@@ -315,7 +314,7 @@ async function Z(e, t, n) {
                 o = (0, v.R_)(n),
                 s = await i.tn.post({
                     url: T.ANM.QUESTS_CLAIM_REWARD(e),
-                    body: R(
+                    body: w(
                         N(
                             {
                                 platform: t,
@@ -528,7 +527,7 @@ function X(e) {
     });
 }
 async function J(e, t) {
-    var n, r, c, d, p, _, m, E;
+    var n, r, c, d, p, _, h, E;
     let y = Date.now();
     g.Z.recordQuestRequestAttempt("/quests/decision", t, e),
         a.Z.dispatch({
@@ -572,16 +571,16 @@ async function J(e, t) {
             g.Z.recordQuestRequestApiResponse("/quests/decision", {
                 wasSuccessful: !0,
                 adRequestId: String(O.request_id),
-                currentQuestId: null != (m = null == I ? void 0 : I.id) ? m : null,
+                currentQuestId: null != (h = null == I ? void 0 : I.id) ? h : null,
                 currentFetchedAt: y,
             }),
             null == I)
         )
             return;
-        e === b.Ok.DESKTOP_ACCOUNT_PANEL_AREA && h.Z.startTracking(I.id),
+        e === b.Ok.DESKTOP_ACCOUNT_PANEL_AREA && m.Z.startTracking(I.id),
             f.default.track(
                 T.rMx.QUEST_DECISION_RECEIVED,
-                R(N({}, (0, u.Z)()), {
+                w(N({}, (0, u.Z)()), {
                     quest_id: I.id,
                     caller_source: t,
                     ad_request_id: String(O.request_id),
@@ -591,7 +590,7 @@ async function J(e, t) {
         g.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1 }),
             f.default.track(
                 T.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
-                R(N({}, (0, u.Z)()), {
+                w(N({}, (0, u.Z)()), {
                     reason: null != (E = null == n ? void 0 : n.message) ? E : null,
                     api_error: new o.Z(n).getAnyErrorMessage(),
                     caller_source: t,

@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(108135),
     p = n(899560),
     _ = n(147332),
-    m = n(333133),
-    h = n(100788),
+    h = n(333133),
+    m = n(100788),
     g = n(981631),
     E = n(388032);
 function b(e, t, n) {
@@ -106,7 +106,7 @@ class T {
               ? {
                     key: null,
                     renderStep: (e) =>
-                        (0, r.jsx)(m.I, {
+                        (0, r.jsx)(h.I, {
                             paymentModalStepProps: e,
                             defaultStep: o.h8.REVIEW,
                         }),
@@ -156,7 +156,7 @@ class T {
             : {
                   key: o.h8.REVIEW,
                   renderStep: (t) =>
-                      (0, r.jsx)(h.z, {
+                      (0, r.jsx)(m.z, {
                           paymentModalStepProps: t,
                           unifiedStepDefinition: e,
                       }),
@@ -187,7 +187,7 @@ class T {
     }
     getApplicationId(e) {
         return this.checkoutFlow === u.G.ORB_CHECKOUT
-            ? (0, c.Nb)(e)
+            ? (0, c.N)(e)
             : this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
               ? g.XAJ
               : void 0;
@@ -205,8 +205,8 @@ class T {
                 analyticsSourceLocation: p,
                 analyticsLocations: _,
             } = e,
-            m = null != d ? d : (0, i.Z)(),
-            { modalKey: h } = t,
+            h = null != d ? d : (0, i.Z)(),
+            { modalKey: m } = t,
             g = this.generateRenderHeader(),
             E = null != f ? f : this.getApplicationId(u),
             b = !1,
@@ -226,7 +226,7 @@ class T {
                         onClose: c,
                         renderHeader: g,
                         skuId: u,
-                        loadId: m,
+                        loadId: h,
                         applicationId: E,
                         analyticsLocations: _,
                         analyticsSourceLocation: p,
@@ -237,9 +237,9 @@ class T {
             },
             v(y({}, t), {
                 onCloseRequest() {
-                    null != t.onCloseRequest && t.onCloseRequest(b, m), (0, a.Mr3)(h);
+                    null != t.onCloseRequest && t.onCloseRequest(b, h), (0, a.Mr3)(m);
                 },
-                modalKey: h,
+                modalKey: m,
             }),
         );
     }

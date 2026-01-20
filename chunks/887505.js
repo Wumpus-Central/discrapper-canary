@@ -52,7 +52,7 @@ function _(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function m(e, t) {
         e
     );
 }
-let h = () => {
+let m = () => {
         let { enabled: e } = (0, i.VL)({ location: "getBaseAnalyticsEventData" });
         return {
             payment_type: c.Zuq[c.GZQ.ONE_TIME],
@@ -80,7 +80,7 @@ let h = () => {
                 p(
                     {
                         load_id: n,
-                        application_id: (0, l.Nb)(r),
+                        application_id: (0, l.N)(r),
                         location: i,
                         location_stack: i,
                         payment_gateway: d.ht.VIRTUAL_CURRENCY,
@@ -88,7 +88,7 @@ let h = () => {
                         currency: c.pKx.DISCORD_ORB,
                     },
                     null != a && { source: a },
-                    h(),
+                    m(),
                 ),
             );
     },
@@ -99,11 +99,11 @@ let h = () => {
             y = (0, r.useMemo)(() => {
                 var e, r;
                 return p(
-                    m(
+                    h(
                         p(
                             {
                                 load_id: E,
-                                application_id: (0, l.Nb)(t),
+                                application_id: (0, l.N)(t),
                                 location: i,
                                 location_stack: i,
                                 sku_id: t,
@@ -118,7 +118,7 @@ let h = () => {
                         { currency: c.pKx.DISCORD_ORB },
                     ),
                     null != u && { source: u },
-                    h(),
+                    m(),
                 );
             }, [E, f, t, i, u, n]);
         return {
@@ -128,7 +128,7 @@ let h = () => {
                     e === c.rMx.PAYMENT_FLOW_STARTED
                         ? s.default.track(
                               c.rMx.PAYMENT_FLOW_STARTED,
-                              m(p({}, y), {
+                              h(p({}, y), {
                                   has_saved_payment_source: _,
                                   payment_gateway: d.ht.VIRTUAL_CURRENCY,
                                   continue_session_initial_step: null,
@@ -137,23 +137,23 @@ let h = () => {
                         : e === c.rMx.PAYMENT_FLOW_LOADED
                           ? s.default.track(
                                 c.rMx.PAYMENT_FLOW_LOADED,
-                                m(p({}, y), {
+                                h(p({}, y), {
                                     has_saved_payment_source: _,
                                     initial_step: o.h8.REVIEW,
                                     duration_ms: n,
                                 }),
                             )
                           : e === c.rMx.PAYMENT_FLOW_CANCELED
-                            ? s.default.track(c.rMx.PAYMENT_FLOW_CANCELED, m(p({}, y), { duration_ms: n }))
+                            ? s.default.track(c.rMx.PAYMENT_FLOW_CANCELED, h(p({}, y), { duration_ms: n }))
                             : e === c.rMx.PAYMENT_FLOW_COMPLETED
-                              ? s.default.track(c.rMx.PAYMENT_FLOW_COMPLETED, m(p({}, y), { duration_ms: n }))
+                              ? s.default.track(c.rMx.PAYMENT_FLOW_COMPLETED, h(p({}, y), { duration_ms: n }))
                               : e === c.rMx.PAYMENT_FLOW_SUCCEEDED
-                                ? s.default.track(c.rMx.PAYMENT_FLOW_SUCCEEDED, m(p({}, y), { duration_ms: n }))
+                                ? s.default.track(c.rMx.PAYMENT_FLOW_SUCCEEDED, h(p({}, y), { duration_ms: n }))
                                 : e === c.rMx.PAYMENT_FLOW_FAILED &&
                                   s.default.track(
                                       c.rMx.PAYMENT_FLOW_FAILED,
                                       p(
-                                          m(p({}, y), { duration_ms: n }),
+                                          h(p({}, y), { duration_ms: n }),
                                           null != t
                                               ? {
                                                     payment_error_code: t.code,
