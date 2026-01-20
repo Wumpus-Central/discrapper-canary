@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(496929),
     p = n(410030),
     _ = n(454585),
-    m = n(163684),
-    h = n(178100),
+    h = n(163684),
+    m = n(178100),
     g = n(518638),
     E = n(725727),
     b = n(454982),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(313789),
     N = n(317941),
     P = n(342386),
-    R = n(518596),
-    w = n(981631),
+    w = n(518596),
+    R = n(981631),
     D = n(474936),
     x = n(388032),
     L = n(785911);
@@ -87,12 +87,12 @@ function G(e) {
     let t,
         { outboundPromotion: n, code: a, addClaimedOutboundPromotionCode: s, disabled: l } = e,
         [c, d] = i.useState(!1),
-        [f, m] = i.useState(!1),
+        [f, h] = i.useState(!1),
         E = () => d((e) => !e),
         y = (0, p.ZP)(),
         O = (0, g.Pz)(n.id, y),
         v = null != a,
-        S = (0, h.Z)(n, v);
+        S = (0, m.Z)(n, v);
     v && c
         ? (t = x.intl.format(x.t.pkxVx6, {
               endDate: S,
@@ -115,7 +115,7 @@ function G(e) {
                   onClickDetails: E,
               }));
     let I = v ? x.intl.string(x.t["2cHUti"]) : x.intl.string(x.t.O13yhz),
-        T = i.useCallback(() => m(!1), []),
+        T = i.useCallback(() => h(!1), []),
         { outboundTitle: C, outboundTermsAndConditions: A } = n;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -155,7 +155,7 @@ function G(e) {
                             !l &&
                                 (0, r.jsx)(u.Button, {
                                     text: I,
-                                    onClick: () => m(!0),
+                                    onClick: () => h(!0),
                                     disabled: l,
                                     size: "sm",
                                 }),
@@ -196,7 +196,7 @@ let Z = function (e) {
         }),
         p = (0, c.e7)([S.default], () => C.ZP.isPremiumExactly(S.default.getCurrentUser(), D.PremiumTypes.TIER_2)),
         _ = l().groupBy(a, (e) => (0, T.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [h, g] = i.useState(!1);
+        [m, g] = i.useState(!1);
     i.useEffect(() => {
         d.Z.wait(() => {
             (0, f.Qv)().then(() => g(!0));
@@ -211,7 +211,7 @@ let Z = function (e) {
         } = (0, E.lG)(),
         Z = j.length + M.length > 0,
         F =
-            m.g.useExperiment(
+            h.g.useExperiment(
                 { location: "EntitlementGifts" },
                 {
                     autoTrackExposure: !1,
@@ -219,7 +219,7 @@ let Z = function (e) {
                 },
             ).enabled && Z;
     function B() {
-        (0, R.openUserSettings)(A.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
+        (0, w.openUserSettings)(A.n.NITRO_PANEL, { section: R.oAB.PREMIUM });
     }
     function V() {
         var e;
@@ -247,7 +247,7 @@ let Z = function (e) {
                               className: L.promoDescription,
                               children: x.intl.format(x.t.G4fwxK, {
                                   onClick: () => {
-                                      (0, P.default)(), (0, v.uL)(w.Z5c.APPLICATION_STORE);
+                                      (0, P.default)(), (0, v.uL)(R.Z5c.APPLICATION_STORE);
                                   },
                               }),
                           }),
@@ -271,7 +271,7 @@ let Z = function (e) {
                     type: O.Y.PREMIUM,
                     hasBackground: !0,
                     children: (0, r.jsxs)("div", {
-                        className: o()({ [L.marginContainer]: !F && t }),
+                        className: o()({ [L.marginContainer]: !F }),
                         children: [
                             f,
                             M.map((e) => {
@@ -360,12 +360,12 @@ let Z = function (e) {
             ],
         });
     }
-    return h && b
+    return m && b
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   V(),
                   (0, r.jsx)("div", {
-                      className: t ? L.marginContainer : void 0,
+                      className: L.marginContainer,
                       children: (0, r.jsxs)(u.y5t, {
                           component: (0, r.jsx)(u.Heading, {
                               variant: "heading-md/semibold",
