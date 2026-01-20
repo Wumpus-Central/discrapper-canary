@@ -1,8 +1,8 @@
 n.d(t, {
-    Fh: () => C,
-    Ls: () => T,
-    p6: () => I,
-    rX: () => v,
+    Fh: () => T,
+    Ls: () => I,
+    p6: () => S,
+    rX: () => O,
 }),
     n(704826),
     n(35282),
@@ -17,10 +17,9 @@ var r = n(473749),
     c = n(823379),
     u = n(358085),
     d = n(145016),
-    f = n(568001),
-    p = n(65154),
-    _ = n(388032);
-function m(e, t, n) {
+    f = n(65154),
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,12 +43,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,96 +60,92 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
+function E(e) {
     return {
-        [p.h7.AUDIO_INPUT]: {
+        [f.h7.AUDIO_INPUT]: {
             getRawDevices: (e) => e.getInputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.h7.AUDIO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.h7.AUDIO_INPUT),
             getCurrentDeviceId: (e) => e.getInputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().inputDeviceId,
-            getNoDevicesMessage: () => _.intl.string(_.t["/QIjDA"]),
+            getNoDevicesMessage: () => p.intl.string(p.t["/QIjDA"]),
         },
-        [p.h7.AUDIO_OUTPUT]: {
+        [f.h7.AUDIO_OUTPUT]: {
             getRawDevices: (e) => e.getOutputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.h7.AUDIO_OUTPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.h7.AUDIO_OUTPUT),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().outputDeviceId,
-            getNoDevicesMessage: () => _.intl.string(_.t.xlUg0v),
+            getNoDevicesMessage: () => p.intl.string(p.t.xlUg0v),
         },
-        [p.h7.VIDEO_INPUT]: {
+        [f.h7.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.h7.VIDEO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.h7.VIDEO_INPUT),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().videoDeviceId,
-            getNoDevicesMessage: () => _.intl.string(_.t.WKWARY),
+            getNoDevicesMessage: () => p.intl.string(p.t.WKWARY),
         },
     }[e];
 }
-function y() {
-    let { showDeviceSelectionImprovements: e } = (0, f.M)({ location: "getDefaultDevicePrefix" });
-    return e
-        ? (0, u.isWindows)()
-            ? _.intl.string(_.t.n4dQ2c)
-            : (0, u.isMac)()
-              ? _.intl.string(_.t.aYrsiB)
-              : _.intl.string(_.t.Q3YKwS)
-        : _.intl.string(_.t.bBvAEH);
+function b() {
+    return (0, u.isWindows)()
+        ? p.intl.string(p.t.n4dQ2c)
+        : (0, u.isMac)()
+          ? p.intl.string(p.t.aYrsiB)
+          : p.intl.string(p.t.Q3YKwS);
 }
-function O(e, t) {
-    let { getNoDevicesMessage: n } = b(e);
-    return t.disabled ? n() : t.name.replace(p.fU, y());
+function y(e, t) {
+    let { getNoDevicesMessage: n } = E(e);
+    return t.disabled ? n() : t.name.replace(f.fU, b());
+}
+function O(e) {
+    var t;
+    return null == (t = new RegExp("^(?<prefix>".concat(b(), ") \\((?<subName>.+)\\)$")).exec(e)) ? void 0 : t.groups;
 }
 function v(e) {
-    var t;
-    return null == (t = new RegExp("^(?<prefix>".concat(y(), ") \\((?<subName>.+)\\)$")).exec(e)) ? void 0 : t.groups;
-}
-function S(e) {
-    let { getRawDevices: t } = b(e),
+    let { getRawDevices: t } = E(e),
         n = (0, a.e7)([l.Z], () => t(l.Z));
     return (0, r.useMemo)(() => {
         let t = h({}, n),
-            r = t[p.w5];
-        return null != r && (t[p.w5] = E(h({}, r), { name: O(e, r) })), t;
+            r = t[f.w5];
+        return null != r && (t[f.w5] = g(h({}, r), { name: y(e, r) })), t;
     }, [e, n]);
 }
-function I(e) {
-    let t = S(e),
-        { getCurrentDeviceId: n } = b(e);
+function S(e) {
+    let t = v(e),
+        { getCurrentDeviceId: n } = E(e);
     return t[(0, a.e7)([l.Z], () => n(l.Z))];
 }
-function T(e, t) {
-    let { location: n } = t,
-        { showDeviceSelectionImprovements: s } = (0, f.V)({ location: n }),
-        l = S(e),
-        { getAllDeviceIdsSortedByFrecency: u } = b(e),
-        _ = (0, o.Z)((0, a.Wu)([d.Z], () => u(d.Z))),
-        { id: m } = I(e);
+function I(e, t) {
+    let {} = t,
+        n = v(e),
+        { getAllDeviceIdsSortedByFrecency: s } = E(e),
+        l = (0, o.Z)((0, a.Wu)([d.Z], () => s(d.Z))),
+        { id: u } = S(e);
     return (0, r.useMemo)(() => {
-        let t = (e) => e.map((e) => l[e]).filter(c.lm),
-            n = Object.keys(l),
-            r = s && e !== p.h7.VIDEO_INPUT ? [p.w5] : [],
-            a = (0, i.intersection)(_, n),
-            o = (0, i.difference)(n, _),
-            u = (0, i.difference)(o, r, [m]);
-        return (null == a ? void 0 : a.length) === 0 || u.length <= 1
-            ? [(0, i.union)(r, [m], a, o), []].map(t)
-            : [(0, i.union)(r, [m], a), u].map(t);
-    }, [l, e, _, m, s]);
+        let t = (e) => e.map((e) => n[e]).filter(c.lm),
+            r = Object.keys(n),
+            a = e !== f.h7.VIDEO_INPUT ? [f.w5] : [],
+            o = (0, i.intersection)(l, r),
+            s = (0, i.difference)(r, l),
+            d = (0, i.difference)(s, a, [u]);
+        return (null == o ? void 0 : o.length) === 0 || d.length <= 1
+            ? [(0, i.union)(a, [u], o, s), []].map(t)
+            : [(0, i.union)(a, [u], o), d].map(t);
+    }, [n, e, l, u]);
 }
-function C(e) {
+function T(e) {
     var t, n;
-    let { getCurrentDeviceId: r, getSelectedDeviceId: i } = b(e),
+    let { getCurrentDeviceId: r, getSelectedDeviceId: i } = E(e),
         { resolvedId: o, selectedId: c } = (0, a.cj)([l.Z], () => ({
             resolvedId: r(l.Z),
             selectedId: i(l.Z),

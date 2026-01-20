@@ -1,71 +1,69 @@
 n.d(t, {
-    L: () => eb,
-    N3: () => ed,
-    Ox: () => ec,
-    SE: () => eu,
-    aG: () => eh,
-    c_: () => ep,
-    sm: () => ef,
+    L: () => em,
+    N3: () => eu,
+    Ox: () => ea,
+    SE: () => es,
+    aG: () => ed,
+    c_: () => eh,
+    sm: () => ec,
 }),
     n(388685);
 var i = n(54381),
     r = n(473749),
-    a = n(442837),
-    l = n(685072),
-    o = n(400354),
+    l = n(442837),
+    o = n(685072),
+    a = n(400354),
     s = n(864094),
-    c = n(582019),
-    u = n(75735),
+    u = n(582019),
+    c = n(75735),
     d = n(481060),
-    f = n(846027),
-    h = n(239091),
-    p = n(287734),
+    h = n(846027),
+    p = n(239091),
+    f = n(287734),
     m = n(100527),
     g = n(906732),
-    b = n(571250),
-    y = n(628581),
-    O = n(659580),
-    v = n(855844),
-    E = n(793865),
-    S = n(55311),
-    x = n(575175),
-    I = n(933557),
-    C = n(471445),
-    j = n(74299),
-    _ = n(803647),
-    Z = n(565138),
-    N = n(853170),
-    w = n(917405),
-    T = n(763296),
-    P = n(603074),
-    A = n(879815),
-    k = n(189771),
-    D = n(294629),
-    R = n(67844),
-    L = n(544384),
-    M = n(890828),
-    z = n(560688),
-    V = n(871499),
-    U = n(875527),
-    W = n(306609),
-    G = n(8404),
-    F = n(199902),
-    H = n(314897),
-    B = n(430824),
-    Y = n(131951),
-    Q = n(19780),
-    K = n(944486),
-    X = n(594174),
-    J = n(979651),
-    q = n(444295),
-    $ = n(371053),
-    ee = n(624864),
-    et = n(610394),
-    en = n(388627),
-    ei = n(981631),
-    er = n(388032),
-    ea = n(936046);
-function el(e) {
+    y = n(571250),
+    O = n(628581),
+    E = n(855844),
+    v = n(793865),
+    b = n(55311),
+    S = n(575175),
+    x = n(933557),
+    j = n(471445),
+    I = n(74299),
+    Z = n(803647),
+    C = n(565138),
+    N = n(917405),
+    w = n(763296),
+    T = n(603074),
+    _ = n(879815),
+    P = n(189771),
+    A = n(294629),
+    D = n(67844),
+    R = n(544384),
+    k = n(890828),
+    L = n(560688),
+    M = n(871499),
+    V = n(875527),
+    z = n(306609),
+    U = n(8404),
+    W = n(199902),
+    G = n(314897),
+    F = n(430824),
+    H = n(131951),
+    Y = n(19780),
+    B = n(944486),
+    Q = n(594174),
+    K = n(979651),
+    X = n(444295),
+    J = n(371053),
+    q = n(624864),
+    $ = n(610394),
+    ee = n(388627),
+    et = n(981631),
+    en = n(388032),
+    ei = n(936046);
+function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -90,7 +88,7 @@ function el(e) {
     }
     return e;
 }
-function eo(e) {
+function el(e) {
     let t = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -102,27 +100,27 @@ function eo(e) {
         (e) => ((t.current = e), e)
     );
 }
-function es(e) {
+function eo(e) {
     var {
             ref: t,
             isActive: n,
             disabled: r,
-            iconComponent: a,
-            iconColor: l,
-            tooltip: o,
+            iconComponent: l,
+            iconColor: o,
+            tooltip: a,
             defaultColor: s = "primaryDark",
-            highlightedColor: c = "primaryDark",
-            caretColor: u,
+            highlightedColor: u = "primaryDark",
+            caretColor: c,
             popoutOpen: d,
-            onClick: f,
-            popoutDisabled: h,
-            onPopoutClick: p,
+            onClick: h,
+            popoutDisabled: p,
+            onPopoutClick: f,
             onMouseEnter: m,
             onMouseLeave: g,
-            onContextMenu: b,
-            isTrayButton: y,
+            onContextMenu: y,
+            isTrayButton: O,
         } = e,
-        O = (function (e, t) {
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -131,14 +129,14 @@ function es(e) {
                     var n,
                         i,
                         r = {},
-                        a = Object.keys(e);
-                    for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        l = Object.keys(e);
+                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < a.length; i++)
-                    (n = a[i]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (i = 0; i < l.length; i++)
+                    (n = l[i]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
@@ -161,173 +159,76 @@ function es(e) {
             "onContextMenu",
             "isTrayButton",
         ]);
-    return (0, i.jsx)(V.d, {
+    return (0, i.jsx)(M.d, {
         ref: t,
-        onClick: null != f ? f : () => {},
-        color: n ? c : s,
-        className: ea.button,
+        onClick: null != h ? h : () => {},
+        color: n ? u : s,
+        className: ei.button,
         disabled: r,
         popoutOpen: d,
-        popoutDisabled: h,
-        label: o,
-        isTrayButton: y,
+        popoutDisabled: p,
+        label: a,
+        isTrayButton: O,
         onMouseEnter: (e) => {
             null == m || m(e);
         },
         onMouseLeave: (e) => {
             null == g || g(e);
         },
-        iconComponent: a,
-        iconColor: l,
-        caretColor: u,
+        iconComponent: l,
+        iconColor: o,
+        caretColor: c,
         isActive: n,
-        onContextMenu: b,
-        onPopoutClick: p,
-        "aria-label": O["aria-label"],
+        onContextMenu: y,
+        onPopoutClick: f,
+        "aria-label": E["aria-label"],
     });
 }
-function ec(e) {
+function ea(e) {
     var t;
-    let { voiceChannel: n, locked: l } = e,
-        o = r.useRef(null),
-        { suppress: s, selfMute: c, mute: u } = (0, D.Z)(n),
-        f = c || u || s,
-        h = (0, y.Z)(c, u, s, !1),
-        { Component: p, play: g, events: b } = (0, G.b)(f);
-    r.useEffect(() => () => g(), [g, f]);
-    let E = eo(l),
-        S = (e) => (t) => {
+    let { voiceChannel: n, locked: o } = e,
+        a = r.useRef(null),
+        { suppress: s, selfMute: u, mute: c } = (0, A.Z)(n),
+        h = u || c || s,
+        p = (0, O.Z)(u, c, s, !1),
+        { Component: f, play: g, events: y } = (0, U.b)(h);
+    r.useEffect(() => () => g(), [g, h]);
+    let v = el(o),
+        b = (e) => (t) => {
             e(t),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.MICROPHONE,
-                    value: q.bk.SETTINGS_OPENED,
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.MICROPHONE,
+                    value: X.bk.SETTINGS_OPENED,
                 });
         },
-        I = null == (t = (0, en.II)()) ? void 0 : t.id,
-        C = (0, a.e7)([ee.Z], () => ee.Z.isLimitedInteractionOverrideEnabled(I)),
-        j = (0, U.Hu)({
+        x = null == (t = (0, ee.II)()) ? void 0 : t.id,
+        j = (0, l.e7)([q.Z], () => q.Z.isLimitedInteractionOverrideEnabled(x)),
+        I = (0, V.Hu)({
             location: m.Z.OVERLAY,
             autoTrackExposure: !0,
-        }),
-        { showRefreshedAudioContextMenu: _ } = (0, N.e)({ location: "MicrophoneActionButton" });
-    return (0, i.jsx)(d.yRy, {
-        targetElementRef: o,
-        clickTrap: !0,
-        renderPopout: (e) => {
-            let { closePopout: t } = e,
-                n = E(t);
-            return j
-                ? (0, i.jsx)(W.l, {
-                      wide: !0,
-                      showOutputDevices: !0,
-                      onSettingsButtonClick: n,
-                      showSearchBar: !C,
-                  })
-                : _
-                  ? (0, i.jsx)(v.Z, {
-                        onClose: n,
-                        maybeRenderPTTCheckbox: !0,
-                        renderInputProfiles: !0,
-                        renderInputDevices: !0,
-                        renderInputVolume: !0,
-                        maybeRenderInputMeter: !0,
-                        renderSettingsButton: !0,
-                        appContext: ei.IlC.OVERLAY,
-                    })
-                  : (0, i.jsx)(O.default, {
-                        onClose: n,
-                        renderInputDevices: !0,
-                        renderOutputDevices: !0,
-                        renderInputModes: !0,
-                        renderInputVolume: !0,
-                        renderOutputVolume: !0,
-                        renderDeafen: !0,
-                        minimal: !0,
-                        appContext: ei.IlC.OVERLAY,
-                    });
-        },
-        align: "center",
-        position: "top",
-        animation: d.yRy.Animation.FADE,
-        children: (e, t) => {
-            let { onClick: n } = e,
-                { isShown: r } = t;
-            return (0, i.jsx)(es, {
-                ref: o,
-                iconComponent: p,
-                isActive: f,
-                highlightedColor: "red",
-                tooltip: h,
-                onClick: () => {
-                    (0, x.Z)(u, s, ei.jXE.OVERLAY),
-                        (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                            type: q.Qu.MICROPHONE,
-                            value: f ? q.bk.ENABLED : q.bk.DISABLED,
-                            userId: H.default.getId(),
-                        });
-                },
-                onPopoutClick: S(n),
-                onContextMenu: S(n),
-                popoutOpen: r,
-                onMouseEnter: () => {
-                    b.onMouseEnter();
-                },
-                onMouseLeave: () => {
-                    b.onMouseLeave();
-                },
-                isTrayButton: !0,
-            });
-        },
-    });
-}
-function eu(e) {
-    let { voiceChannel: t, locked: n } = e,
-        a = r.useRef(null),
-        { selfDeaf: l, deaf: s } = (0, A.Z)(t),
-        c = l || s,
-        {
-            Component: u,
-            play: f,
-            events: { onMouseEnter: h, onMouseLeave: p },
-        } = (0, o.l)(c ? "undeafen" : "deafen"),
-        m = s ? d.Vm4 : u;
-    r.useEffect(() => () => f(), [c, f]);
-    let g = () => {
-            (0, S.Z)(s, ei.jXE.OVERLAY),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.AUDIO,
-                    value: s ? q.bk.ENABLED : q.bk.DISABLED,
-                    userId: H.default.getId(),
-                });
-        },
-        y = (e) => (t) => {
-            e(t),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.AUDIO,
-                    value: q.bk.SETTINGS_OPENED,
-                });
-        },
-        E = eo(n),
-        { showRefreshedAudioContextMenu: x } = (0, N.e)({ location: "HeadphonesActionButton" });
+        });
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
         clickTrap: !0,
         renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return x
-                ? (0, i.jsx)(v.Z, {
-                      onClose: E(t),
-                      renderDeafenCheckbox: !0,
-                      renderOutputDevices: !0,
-                      renderOutputVolume: !0,
-                      renderSettingsButton: !0,
-                      appContext: ei.IlC.OVERLAY,
+            let { closePopout: t } = e,
+                n = v(t);
+            return I
+                ? (0, i.jsx)(z.l, {
+                      wide: !0,
+                      showOutputDevices: !0,
+                      onSettingsButtonClick: n,
+                      showSearchBar: !j,
                   })
-                : (0, i.jsx)(O.default, {
-                      onClose: E(t),
-                      renderOutputDevices: !0,
-                      renderOutputVolume: !0,
-                      appContext: ei.IlC.OVERLAY,
+                : (0, i.jsx)(E.Z, {
+                      onClose: n,
+                      maybeRenderPTTCheckbox: !0,
+                      renderInputProfiles: !0,
+                      renderInputDevices: !0,
+                      renderInputVolume: !0,
+                      maybeRenderInputMeter: !0,
+                      renderSettingsButton: !0,
+                      appContext: et.IlC.OVERLAY,
                   });
         },
         align: "center",
@@ -336,75 +237,74 @@ function eu(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: r } = t;
-            return (0, i.jsx)(es, {
+            return (0, i.jsx)(eo, {
                 ref: a,
-                iconComponent: m,
-                tooltip: (0, b.Z)(l, s, !1),
-                isActive: c,
+                iconComponent: f,
+                isActive: h,
                 highlightedColor: "red",
-                onClick: g,
-                onContextMenu: y(n),
-                onMouseEnter: h,
-                onMouseLeave: p,
-                onPopoutClick: y(n),
+                tooltip: p,
+                onClick: () => {
+                    (0, S.Z)(c, s, et.jXE.OVERLAY),
+                        (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                            type: X.Qu.MICROPHONE,
+                            value: h ? X.bk.ENABLED : X.bk.DISABLED,
+                            userId: G.default.getId(),
+                        });
+                },
+                onPopoutClick: b(n),
+                onContextMenu: b(n),
                 popoutOpen: r,
+                onMouseEnter: () => {
+                    y.onMouseEnter();
+                },
+                onMouseLeave: () => {
+                    y.onMouseLeave();
+                },
                 isTrayButton: !0,
             });
         },
     });
 }
-function ed(e) {
-    var t;
-    let { voiceChannel: n, locked: l } = e,
-        o = r.useRef(null),
-        s = (0, a.e7)([Y.Z], () => Y.Z.isVideoEnabled()),
-        c = (0, a.e7)([Y.Z], () => Object.values(Y.Z.getVideoDevices())[0]),
-        h = null == (t = null == c ? void 0 : c.disabled) || t,
-        p = !1 === h,
-        m = (0, k.Z)(n),
-        g = (e) => {
-            f.Z.setVideoEnabled(e);
-        },
-        b = (e) => (t) => {
-            e(t),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.CAMERA,
-                    value: q.bk.SETTINGS_OPENED,
-                });
-        },
-        y = () => {
-            h ? (p ? g(!0) : (0, z.Z)()) : g(!s),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.CAMERA,
-                    value: s ? q.bk.DISABLED : q.bk.ENABLED,
-                    userId: H.default.getId(),
-                });
-        },
+function es(e) {
+    let { voiceChannel: t, locked: n } = e,
+        l = r.useRef(null),
+        { selfDeaf: o, deaf: s } = (0, _.Z)(t),
+        u = o || s,
         {
-            Component: O,
-            play: v,
-            events: { onMouseEnter: S, onMouseLeave: x },
-        } = (0, u.o)(s ? "disable" : "enable"),
-        I =
-            null != n
-                ? (0, R.X)({
-                      enabled: s,
-                      cameraUnavailable: h,
-                      hasPermission: m,
-                      channel: n,
-                  })
-                : void 0;
-    r.useEffect(() => () => v(), [s, v]);
-    let C = eo(l),
-        j = null == n || !m;
+            Component: c,
+            play: h,
+            events: { onMouseEnter: p, onMouseLeave: f },
+        } = (0, a.l)(u ? "undeafen" : "deafen"),
+        m = s ? d.Vm4 : c;
+    r.useEffect(() => () => h(), [u, h]);
+    let g = () => {
+            (0, b.Z)(s, et.jXE.OVERLAY),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.AUDIO,
+                    value: s ? X.bk.ENABLED : X.bk.DISABLED,
+                    userId: G.default.getId(),
+                });
+        },
+        O = (e) => (t) => {
+            e(t),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.AUDIO,
+                    value: X.bk.SETTINGS_OPENED,
+                });
+        },
+        v = el(n);
     return (0, i.jsx)(d.yRy, {
-        targetElementRef: o,
+        targetElementRef: l,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(E.Z, {
-                onClose: C(t),
-                appContext: ei.IlC.OVERLAY,
+                onClose: v(t),
+                renderDeafenCheckbox: !0,
+                renderOutputDevices: !0,
+                renderOutputVolume: !0,
+                renderSettingsButton: !0,
+                appContext: et.IlC.OVERLAY,
             });
         },
         align: "center",
@@ -413,94 +313,171 @@ function ed(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: r } = t;
-            return (0, i.jsx)(es, {
-                ref: o,
-                iconComponent: O,
-                tooltip: I,
-                onClick: y,
-                isActive: s,
-                highlightedColor: "green",
-                onPopoutClick: b(n),
+            return (0, i.jsx)(eo, {
+                ref: l,
+                iconComponent: m,
+                tooltip: (0, y.Z)(o, s, !1),
+                isActive: u,
+                highlightedColor: "red",
+                onClick: g,
+                onContextMenu: O(n),
+                onMouseEnter: p,
+                onMouseLeave: f,
+                onPopoutClick: O(n),
                 popoutOpen: r,
-                onContextMenu: b(n),
-                onMouseEnter: S,
-                onMouseLeave: x,
-                disabled: j,
                 isTrayButton: !0,
             });
         },
     });
 }
-function ef(e) {
+function eu(e) {
+    var t;
+    let { voiceChannel: n, locked: o } = e,
+        a = r.useRef(null),
+        s = (0, l.e7)([H.Z], () => H.Z.isVideoEnabled()),
+        u = (0, l.e7)([H.Z], () => Object.values(H.Z.getVideoDevices())[0]),
+        p = null == (t = null == u ? void 0 : u.disabled) || t,
+        f = !1 === p,
+        m = (0, P.Z)(n),
+        g = (e) => {
+            h.Z.setVideoEnabled(e);
+        },
+        y = (e) => (t) => {
+            e(t),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.CAMERA,
+                    value: X.bk.SETTINGS_OPENED,
+                });
+        },
+        O = () => {
+            p ? (f ? g(!0) : (0, L.Z)()) : g(!s),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.CAMERA,
+                    value: s ? X.bk.DISABLED : X.bk.ENABLED,
+                    userId: G.default.getId(),
+                });
+        },
+        {
+            Component: E,
+            play: b,
+            events: { onMouseEnter: S, onMouseLeave: x },
+        } = (0, c.o)(s ? "disable" : "enable"),
+        j =
+            null != n
+                ? (0, D.X)({
+                      enabled: s,
+                      cameraUnavailable: p,
+                      hasPermission: m,
+                      channel: n,
+                  })
+                : void 0;
+    r.useEffect(() => () => b(), [s, b]);
+    let I = el(o),
+        Z = null == n || !m;
+    return (0, i.jsx)(d.yRy, {
+        targetElementRef: a,
+        clickTrap: !0,
+        renderPopout: (e) => {
+            let { closePopout: t } = e;
+            return (0, i.jsx)(v.Z, {
+                onClose: I(t),
+                appContext: et.IlC.OVERLAY,
+            });
+        },
+        align: "center",
+        position: "top",
+        animation: d.yRy.Animation.FADE,
+        children: (e, t) => {
+            let { onClick: n } = e,
+                { isShown: r } = t;
+            return (0, i.jsx)(eo, {
+                ref: a,
+                iconComponent: E,
+                tooltip: j,
+                onClick: O,
+                isActive: s,
+                highlightedColor: "green",
+                onPopoutClick: y(n),
+                popoutOpen: r,
+                onContextMenu: y(n),
+                onMouseEnter: S,
+                onMouseLeave: x,
+                disabled: Z,
+                isTrayButton: !0,
+            });
+        },
+    });
+}
+function ec(e) {
     let t,
-        { voiceChannel: n, locked: l } = e,
-        o = r.useRef(null),
-        c = (0, a.e7)([X.default], () => X.default.getCurrentUser()),
-        u = (0, k.Z)(n),
-        f = (0, a.cj)([Y.Z], () => (0, j.Z)(Y.Z)),
-        h = (0, a.e7)([F.Z], () => F.Z.getCurrentUserActiveStream()),
-        p = (0, a.e7)([et.Z], () => et.Z.getTargetPID()),
-        m = (0, $.P)({
-            pid: p,
+        { voiceChannel: n, locked: o } = e,
+        a = r.useRef(null),
+        u = (0, l.e7)([Q.default], () => Q.default.getCurrentUser()),
+        c = (0, P.Z)(n),
+        h = (0, l.cj)([H.Z], () => (0, I.Z)(H.Z)),
+        p = (0, l.e7)([W.Z], () => W.Z.getCurrentUserActiveStream()),
+        f = (0, l.e7)([$.Z], () => $.Z.getTargetPID()),
+        m = (0, J.P)({
+            pid: f,
             allowOneClickGoLive: !0,
-            analyticsLocation: ei.Sbl.UNLOCKED_OVERLAY,
+            analyticsLocation: et.Sbl.UNLOCKED_OVERLAY,
         }),
         g = () => {
             m(),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.GO_LIVE,
-                    value: q.bk.ENABLED,
-                    userId: H.default.getId(),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.GO_LIVE,
+                    value: X.bk.ENABLED,
+                    userId: G.default.getId(),
                 });
         },
-        b = null != h;
-    if (b) t = er.intl.string(er.t.S5anIc);
+        y = null != p;
+    if (y) t = en.intl.string(en.t.S5anIc);
     else if (null != n) {
-        let e = (0, en.pL)();
-        t = u
+        let e = (0, ee.pL)();
+        t = c
             ? null != e
-                ? er.intl.format(er.t.AB5gTy, { game: e.name })
-                : er.intl.string(er.t.FeUKeA)
-            : er.intl.string(er.t.uQn9B8);
+                ? en.intl.format(en.t.AB5gTy, { game: e.name })
+                : en.intl.string(en.t.FeUKeA)
+            : en.intl.string(en.t.uQn9B8);
     }
-    let y = () => {
-            if (b)
+    let O = () => {
+            if (y)
                 return (
-                    (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                        type: q.Qu.GO_LIVE,
-                        value: q.bk.DISABLED,
-                        userId: H.default.getId(),
+                    (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                        type: X.Qu.GO_LIVE,
+                        value: X.bk.DISABLED,
+                        userId: G.default.getId(),
                     }),
-                    (0, _.Z)(h, !1)
+                    (0, Z.Z)(p, !1)
                 );
             g();
         },
-        O = (e) => (t) => {
+        E = (e) => (t) => {
             e(t),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.SCREEN_SHARE,
-                    value: q.bk.SETTINGS_OPENED,
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.SCREEN_SHARE,
+                    value: X.bk.SETTINGS_OPENED,
                 });
         },
         {
             Component: v,
-            events: { onMouseEnter: E, onMouseLeave: S },
+            events: { onMouseEnter: b, onMouseLeave: S },
             play: x,
-        } = (0, s.P)(b ? "disable" : "enable");
-    r.useEffect(() => () => x(), [b, x]);
-    let I = eo(l);
+        } = (0, s.P)(y ? "disable" : "enable");
+    r.useEffect(() => () => x(), [y, x]);
+    let j = el(o);
     return (0, i.jsx)(d.yRy, {
-        targetElementRef: o,
+        targetElementRef: a,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(L.Z, {
+            return (0, i.jsx)(R.Z, {
                 channel: n,
-                currentUser: c,
-                activeStreams: b ? [h] : [],
+                currentUser: u,
+                activeStreams: y ? [p] : [],
                 handleGoLive: g,
-                onClose: I(t),
-                appContext: ei.IlC.OVERLAY,
+                onClose: j(t),
+                appContext: et.IlC.OVERLAY,
                 disableChangeWindows: !0,
             });
         },
@@ -509,51 +486,51 @@ function ef(e) {
         animation: d.yRy.Animation.FADE,
         children: (e, n) => {
             let { onClick: r } = e,
-                { isShown: a } = n;
-            return (0, i.jsx)(es, {
-                ref: o,
+                { isShown: l } = n;
+            return (0, i.jsx)(eo, {
+                ref: a,
                 iconComponent: v,
                 tooltip: t,
-                "aria-label": er.intl.string(er.t.FeUKeA),
-                isActive: b,
+                "aria-label": en.intl.string(en.t.FeUKeA),
+                isActive: y,
                 highlightedColor: "green",
-                onClick: y,
-                popoutOpen: a,
-                popoutDisabled: !b,
-                onPopoutClick: O(r),
-                onContextMenu: O(r),
-                onMouseEnter: E,
+                onClick: O,
+                popoutOpen: l,
+                popoutDisabled: !y,
+                onPopoutClick: E(r),
+                onContextMenu: E(r),
+                onMouseEnter: b,
                 onMouseLeave: S,
-                disabled: !f || !u,
+                disabled: !h || !c,
                 isTrayButton: !0,
             });
         },
     });
 }
-function eh(e) {
+function ed(e) {
     var t;
-    let { voiceChannel: l, locked: o } = e,
+    let { voiceChannel: o, locked: a } = e,
         s = r.useRef(null),
-        u = null != (t = null == l ? void 0 : l.getGuildId()) ? t : null,
-        { mute: f, suppress: p } = (0, D.Z)(l),
-        m = (0, a.e7)([Y.Z], () => Y.Z.isDeaf()),
-        b = null == l || f || p || m,
-        { analyticsLocations: y } = (0, g.ZP)();
-    function O(e) {
-        null != u &&
-            ((0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                type: q.Qu.SOUNDBOARD,
-                value: q.bk.SETTINGS_OPENED,
+        c = null != (t = null == o ? void 0 : o.getGuildId()) ? t : null,
+        { mute: h, suppress: f } = (0, A.Z)(o),
+        m = (0, l.e7)([H.Z], () => H.Z.isDeaf()),
+        y = null == o || h || f || m,
+        { analyticsLocations: O } = (0, g.ZP)();
+    function E(e) {
+        null != c &&
+            ((0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                type: X.Qu.SOUNDBOARD,
+                value: X.bk.SETTINGS_OPENED,
             }),
-            (0, h.jW)(e, async () => {
+            (0, p.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        el(
+                        er(
                             {
-                                sourceAnalyticsLocations: y,
-                                guildId: u,
+                                sourceAnalyticsLocations: O,
+                                guildId: c,
                             },
                             t,
                         ),
@@ -562,21 +539,21 @@ function eh(e) {
     }
     let {
             Component: v,
-            events: { onClick: E, onMouseEnter: S, onMouseLeave: x },
-        } = (0, c.j)(),
-        I = eo(o),
-        C = (0, a.e7)([T.Z, H.default], () => T.Z.isUserPlayingSounds(H.default.getId()), []) ? "green" : void 0;
+            events: { onClick: b, onMouseEnter: S, onMouseLeave: x },
+        } = (0, u.j)(),
+        j = el(a),
+        I = (0, l.e7)([w.Z, G.default], () => w.Z.isUserPlayingSounds(G.default.getId()), []) ? "green" : void 0;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: s,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return b || null == l
+            return y || null == o
                 ? (0, i.jsx)(i.Fragment, {})
-                : (0, i.jsx)(P.Z, {
-                      guildId: u,
-                      channel: l,
-                      onClose: I(t),
+                : (0, i.jsx)(T.Z, {
+                      guildId: c,
+                      channel: o,
+                      onClose: j(t),
                       analyticsSource: "action bar button",
                   });
         },
@@ -586,84 +563,84 @@ function eh(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: r } = t;
-            return (0, i.jsx)(es, {
+            return (0, i.jsx)(eo, {
                 ref: s,
                 iconComponent: v,
-                tooltip: f
-                    ? er.intl.string(er.t["Ox4/zU"])
-                    : p
-                      ? er.intl.string(er.t["+YBKYI"])
+                tooltip: h
+                    ? en.intl.string(en.t["Ox4/zU"])
+                    : f
+                      ? en.intl.string(en.t["+YBKYI"])
                       : m
-                        ? er.intl.string(er.t.X1lQli)
+                        ? en.intl.string(en.t.X1lQli)
                         : void 0,
                 onClick: (e) => {
-                    E(),
-                        (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                            type: q.Qu.SOUNDBOARD,
-                            value: q.bk.PANEL_OPENED,
-                            userId: H.default.getId(),
+                    b(),
+                        (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                            type: X.Qu.SOUNDBOARD,
+                            value: X.bk.PANEL_OPENED,
+                            userId: G.default.getId(),
                         }),
                         n(e);
                 },
-                highlightedColor: C,
-                defaultColor: C,
-                onContextMenu: O,
+                highlightedColor: I,
+                defaultColor: I,
+                onContextMenu: E,
                 onMouseEnter: S,
                 onMouseLeave: x,
                 isActive: r,
                 popoutOpen: r,
-                disabled: b,
+                disabled: y,
                 isTrayButton: !0,
             });
         },
     });
 }
-function ep(e) {
+function eh(e) {
     let { voiceChannel: t, locked: n } = e,
-        o = r.useRef(null),
-        s = (0, a.e7)([K.Z], () => K.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
-        c = () => {
-            (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                type: q.Qu.CALL_BUTTON,
-                value: q.bk.DISABLED,
-                userId: H.default.getId(),
+        a = r.useRef(null),
+        s = (0, l.e7)([B.Z], () => B.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
+        u = () => {
+            (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                type: X.Qu.CALL_BUTTON,
+                value: X.bk.DISABLED,
+                userId: G.default.getId(),
             }),
-                s && p.default.disconnect();
+                s && f.default.disconnect();
         },
-        u = (e, t) => {
-            p.default.selectVoiceChannel(e),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.CALL_BUTTON,
-                    value: q.bk.ENABLED,
-                    userId: H.default.getId(),
+        c = (e, t) => {
+            f.default.selectVoiceChannel(e),
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.CALL_BUTTON,
+                    value: X.bk.ENABLED,
+                    userId: G.default.getId(),
                     secondaryValue: t,
                 });
         },
-        [f, h] = r.useTransition(),
+        [h, p] = r.useTransition(),
         m = (e) => (t) => {
-            h(() => {
+            p(() => {
                 e(t);
             }),
-                (0, q.Ws)(ei.Odu.QUICK_ACTIONS, {
-                    type: q.Qu.CALL_BUTTON,
-                    value: q.bk.SETTINGS_OPENED,
+                (0, X.Ws)(et.Odu.QUICK_ACTIONS, {
+                    type: X.Qu.CALL_BUTTON,
+                    value: X.bk.SETTINGS_OPENED,
                 });
         },
         {
             Component: g,
-            events: { onMouseEnter: b, onMouseLeave: y },
-        } = (0, l.K)(),
-        O = eo(n),
+            events: { onMouseEnter: y, onMouseLeave: O },
+        } = (0, o.K)(),
+        E = el(n),
         v = s ? g : d.Csw;
     return (0, i.jsx)(d.yRy, {
-        targetElementRef: o,
+        targetElementRef: a,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(M.Z, {
+            return (0, i.jsx)(k.Z, {
                 currentVoiceChannel: t,
-                onClose: O(n),
-                onSelect: u,
+                onClose: E(n),
+                onSelect: c,
             });
         },
         align: "center",
@@ -672,14 +649,14 @@ function ep(e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: r } = t;
-            return (0, i.jsx)(es, {
-                ref: o,
+            return (0, i.jsx)(eo, {
+                ref: a,
                 iconComponent: v,
-                tooltip: s ? er.intl.string(er.t["6vrfgt"]) : er.intl.string(er.t.S0W8Z5),
-                onClick: s ? c : m(n),
+                tooltip: s ? en.intl.string(en.t["6vrfgt"]) : en.intl.string(en.t.S0W8Z5),
+                onClick: s ? u : m(n),
                 defaultColor: s ? "disconnect" : void 0,
-                onMouseEnter: b,
-                onMouseLeave: y,
+                onMouseEnter: y,
+                onMouseLeave: O,
                 onContextMenu: m(n),
                 isActive: r,
                 onPopoutClick: s ? m(n) : void 0,
@@ -689,9 +666,9 @@ function ep(e) {
         },
     });
 }
-function em(e) {
+function ep(e) {
     let { voiceChannel: t } = e,
-        n = (0, a.e7)([B.Z], () => B.Z.getGuild(t.getGuildId()), [t]);
+        n = (0, l.e7)([F.Z], () => F.Z.getGuild(t.getGuildId()), [t]);
     switch (!0) {
         case t.isGroupDM() || t.isDM():
         case t.isDM():
@@ -699,20 +676,20 @@ function em(e) {
         case null != n:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { className: ea.separatorDot }),
+                    (0, i.jsx)("div", { className: ei.separatorDot }),
                     (0, i.jsxs)("div", {
-                        className: ea.guildIconContainer,
+                        className: ei.guildIconContainer,
                         children: [
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(C.Z, {
                                 guild: n,
-                                size: Z.Z.Sizes.SMOL,
-                                className: ea.guildIcon,
+                                size: C.Z.Sizes.SMOL,
+                                className: ei.guildIcon,
                             }),
                             (0, i.jsx)(d.Text, {
                                 tag: "div",
                                 variant: "text-sm/medium",
                                 color: "text-strong",
-                                className: ea.guildName,
+                                className: ei.guildName,
                                 children: n.name,
                             }),
                         ],
@@ -723,19 +700,19 @@ function em(e) {
             return null;
     }
 }
-function eg(e) {
+function ef(e) {
     let { voiceChannel: t } = e,
-        n = (0, C.KS)(t),
-        r = (0, I.ZP)(t);
+        n = (0, j.KS)(t),
+        r = (0, x.ZP)(t);
     return (0, i.jsxs)("div", {
-        className: ea.voiceChannelNameContainer,
+        className: ei.voiceChannelNameContainer,
         children: [
             null != n &&
                 (0, i.jsx)(d.Text, {
                     tag: "div",
                     color: "text-muted",
                     variant: "text-xs/normal",
-                    className: ea.channelIcon,
+                    className: ei.channelIcon,
                     children: (0, i.jsx)(n, {
                         size: "sm",
                         color: "currentColor",
@@ -745,33 +722,33 @@ function eg(e) {
                 (0, i.jsx)(d.Text, {
                     variant: "text-sm/medium",
                     color: "text-muted",
-                    className: ea.channelName,
+                    className: ei.channelName,
                     children: r,
                 }),
         ],
     });
 }
-function eb(e) {
+function em(e) {
     var t, n;
     let { voiceChannel: r } = e,
-        l = null == r ? void 0 : r.id,
-        o = (0, a.cj)([Q.Z], () => ({
-            quality: Q.Z.getQuality(),
-            state: Q.Z.getState(),
-            lastPing: Q.Z.getLastPing(),
+        o = null == r ? void 0 : r.id,
+        a = (0, l.cj)([Y.Z], () => ({
+            quality: Y.Z.getQuality(),
+            state: Y.Z.getState(),
+            lastPing: Y.Z.getLastPing(),
         })),
-        s = (0, a.e7)([J.Z], () => null != l && J.Z.hasVideo(l), [l]);
+        s = (0, l.e7)([K.Z], () => null != o && K.Z.hasVideo(o), [o]);
     return (
-        null != l &&
+        null != o &&
         null != r &&
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(
-                    w.Z,
-                    ((t = el({}, o)),
+                    N.Z,
+                    ((t = er({}, a)),
                     (n = n =
                         {
-                            channelId: l,
+                            channelId: o,
                             hasVideo: s,
                             connectionStatusTextVariant: "text-sm/medium",
                         }),
@@ -789,9 +766,9 @@ function eb(e) {
                           }),
                     t),
                 ),
-                (0, i.jsx)(em, { voiceChannel: r }),
-                (0, i.jsx)("div", { className: ea.separatorDot }),
-                (0, i.jsx)(eg, { voiceChannel: r }),
+                (0, i.jsx)(ep, { voiceChannel: r }),
+                (0, i.jsx)("div", { className: ei.separatorDot }),
+                (0, i.jsx)(ef, { voiceChannel: r }),
             ],
         })
     );

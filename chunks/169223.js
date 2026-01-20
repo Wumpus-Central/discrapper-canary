@@ -12,8 +12,8 @@ var i = n(392711),
     f = n(592125),
     p = n(158776),
     _ = n(19780),
-    m = n(959457),
-    h = n(178635),
+    h = n(959457),
+    m = n(178635),
     g = n(531578),
     E = n(981631);
 function b(e, t, n) {
@@ -68,7 +68,7 @@ function v(e, t) {
         e
     );
 }
-class S extends h.Z {
+class S extends m.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
@@ -95,7 +95,7 @@ class S extends h.Z {
                     }),
                     this.possiblyShowFeedbackModal(g.nw.VOICE, () => {
                         (0, a.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e("26860"), n.e("96888")]).then(
+                            let { default: e } = await Promise.all([n.e("26860"), n.e("97116"), n.e("66788")]).then(
                                 n.bind(n, 988645),
                             );
                             return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
@@ -107,22 +107,22 @@ class S extends h.Z {
                 let { streamKey: o, canShowFeedback: s } = e,
                     u = (0, l.my)(o),
                     f = (0, c.L2)(u, p.Z),
-                    _ = null != (i = m.Z.getVideoStats(o)) ? i : {},
-                    h = y(
+                    _ = null != (i = h.Z.getVideoStats(o)) ? i : {},
+                    m = y(
                         {
-                            media_session_id: m.Z.getMediaSessionId(o),
-                            rtc_connection_id: m.Z.getRtcConnectionId(o),
-                            stream_region: m.Z.getRegion(o),
-                            max_viewers: m.Z.getMaxViewers(o),
+                            media_session_id: h.Z.getMediaSessionId(o),
+                            rtc_connection_id: h.Z.getRtcConnectionId(o),
+                            stream_region: h.Z.getRegion(o),
+                            max_viewers: h.Z.getMaxViewers(o),
                             parent_media_session_id:
-                                null == (t = m.Z.getRTCConnection(o)) ? void 0 : t.parentMediaSessionId,
+                                null == (t = h.Z.getRTCConnection(o)) ? void 0 : t.parentMediaSessionId,
                         },
                         _,
                     );
                 s &&
                     this.possiblyShowFeedbackModal(g.nw.STREAM, () => {
                         (0, a.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e("26860"), n.e("47672"), n.e("74783")]).then(
+                            let { default: e } = await Promise.all([n.e("26860"), n.e("97116"), n.e("16582")]).then(
                                 n.bind(n, 142402),
                             );
                             return (t) =>
@@ -137,7 +137,7 @@ class S extends h.Z {
                                             },
                                             t,
                                         ),
-                                        { analyticsData: h },
+                                        { analyticsData: m },
                                     ),
                                 );
                         });
@@ -159,11 +159,11 @@ class S extends h.Z {
                     c = s.Z.getApplication(t),
                     d = (0, o.p)(i),
                     p = f.Z.getChannel(d),
-                    m = {
+                    h = {
                         rtc_connection_id: _.Z.getRTCConnectionId(),
                         media_session_id: _.Z.getMediaSessionId(),
                     },
-                    h = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? a.u1M : a.z1l;
+                    m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? a.u1M : a.z1l;
                 null != c &&
                     l &&
                     this.possiblyShowFeedbackModal(g.nw.ACTIVITY, () => {
@@ -179,11 +179,11 @@ class S extends h.Z {
                                             activityApplication: c,
                                             channel: p,
                                             embeddedActivityLocation: i,
-                                            analyticsData: m,
+                                            analyticsData: h,
                                         }),
                                     );
                             },
-                            { contextKey: h },
+                            { contextKey: m },
                         );
                     });
             }),

@@ -1,4 +1,4 @@
-n.d(t, { j: () => R }), n(388685);
+n.d(t, { j: () => P }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -11,16 +11,15 @@ var r = n(54381),
     f = n(906732),
     p = n(210887),
     _ = n(962100),
-    m = n(463395),
-    h = n(131951),
+    h = n(463395),
+    m = n(131951),
     g = n(626135),
-    E = n(568001),
-    b = n(72897),
-    y = n(981631),
-    O = n(65154),
-    v = n(388032),
-    S = n(927431);
-function I(e, t, n) {
+    E = n(72897),
+    b = n(981631),
+    y = n(65154),
+    O = n(388032),
+    v = n(927431);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,16 +43,16 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -61,7 +60,7 @@ function C(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -70,46 +69,46 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = "SHOW_MORE";
-function P(e) {
+let A = "SHOW_MORE";
+function N(e) {
     return {
-        [O.h7.AUDIO_INPUT]: {
+        [y.h7.AUDIO_INPUT]: {
             setDevice: d.Z.setInputDevice,
             Icon: u.S6n,
-            getCanSetDevice: (e) => e.supports(O.AN.AUDIO_INPUT_DEVICE),
+            getCanSetDevice: (e) => e.supports(y.AN.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                v.intl.format(v.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
-        [O.h7.AUDIO_OUTPUT]: {
+        [y.h7.AUDIO_OUTPUT]: {
             setDevice: d.Z.setOutputDevice,
             Icon: u.VWR,
-            getCanSetDevice: (e) => e.supports(O.AN.AUDIO_OUTPUT_DEVICE),
+            getCanSetDevice: (e) => e.supports(y.AN.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                v.intl.format(v.t.Ow0dbF, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
+                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
-        [O.h7.VIDEO_INPUT]: {
+        [y.h7.VIDEO_INPUT]: {
             setDevice: d.Z.setVideoDevice,
             Icon: u.xmR,
             getCanSetDevice: (e) => e.isVideoAvailable(),
             getWarningMessage: () =>
-                v.intl.format(v.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
         },
     }[e];
 }
-function R(e) {
+function P(e) {
     var {
             deviceType: t,
             location: a,
             showAllDevices: d = !1,
             selectedDeviceId: _,
-            onSelectDevice: O,
-            hideDeviceTypeIcon: I = !1,
-            label: A,
+            onSelectDevice: y,
+            hideDeviceTypeIcon: S = !1,
+            label: C,
         } = e,
-        R = C(e, [
+        P = T(e, [
             "deviceType",
             "location",
             "showAllDevices",
@@ -118,71 +117,67 @@ function R(e) {
             "hideDeviceTypeIcon",
             "label",
         ]);
-    let { setDevice: w, Icon: D, getCanSetDevice: x, getWarningMessage: L, getLocation: j } = P(t),
-        { analyticsLocations: M } = (0, f.ZP)(),
-        k = (0, s.e7)([p.Z], () => p.Z.theme),
-        [U, G] = i.useState(d),
-        Z = j(a),
-        [F, B] = (0, b.Ls)(t, { location: Z }),
-        { id: V } = (0, b.p6)(t),
-        H = null != _ ? _ : V,
-        Y = (0, s.e7)([h.Z], () => x(h.Z)),
-        { showDeviceSelectionImprovements: W } = (0, E.V)({ location: "".concat(Z, "/SingleSelectDevices") }),
-        K = (0, r.jsx)(u.Wn, {
+    let { setDevice: w, Icon: R, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = N(t),
+        { analyticsLocations: j } = (0, f.ZP)(),
+        M = (0, s.e7)([p.Z], () => p.Z.theme),
+        [k, U] = i.useState(d),
+        G = L(a),
+        [Z, F] = (0, E.Ls)(t, { location: G }),
+        { id: B } = (0, E.p6)(t),
+        V = null != _ ? _ : B,
+        H = (0, s.e7)([m.Z], () => D(m.Z)),
+        Y = (0, r.jsx)(u.Wn, {
             messageType: u.QYI.WARNING,
-            children: L(),
+            children: x(),
         }),
-        z = i.useCallback(
+        W = i.useCallback(
             (e) => {
-                if (e === N)
-                    G(!0),
-                        g.default.track(y.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                if (e === A)
+                    U(!0),
+                        g.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: t,
-                            location: Z,
-                            location_stack: M,
-                            shown_device_count: F.length,
-                            hidden_device_count: B.length,
+                            location: G,
+                            location_stack: j,
+                            shown_device_count: Z.length,
+                            hidden_device_count: F.length,
                         });
                 else {
                     var n;
-                    (null == (n = null == O ? void 0 : O(e)) || n) &&
+                    (null == (n = null == y ? void 0 : y(e)) || n) &&
                         w(e, {
-                            location: Z,
-                            analyticsLocations: M,
+                            location: G,
+                            analyticsLocations: j,
                         });
                 }
             },
-            [t, Z, F.length, B.length, M, O, w],
+            [t, G, Z.length, F.length, j, y, w],
         );
-    function q(e) {
+    function K(e) {
         let t,
             i,
             { label: a, value: s } = e,
             l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             d = a,
-            f = (0, b.rX)(a);
-        null != f &&
-            ((0, E.M)({ location: "".concat(Z, "/SingleSelectDevices.defaultRenderOptionLabel") }),
-            (d = f.prefix),
-            (t = f.subName));
-        let p = m.Z.getCertifiedDeviceName(s, d);
-        if (m.Z.isCertified(s)) {
-            let e = (0, c.ap)(k) ? n(561259) : n(887695);
+            f = (0, E.rX)(a);
+        null != f && ((d = f.prefix), (t = f.subName));
+        let p = h.Z.getCertifiedDeviceName(s, d);
+        if (h.Z.isCertified(s)) {
+            let e = (0, c.ap)(M) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
-                alt: v.intl.string(v.t.smSKsj),
+                alt: O.intl.string(O.t.smSKsj),
             });
         }
         return (0, r.jsxs)("div", {
-            className: o()(S.deviceContainer, {
-                [S.multiLine]: l && null != t,
-                [S.withIcon]: !I,
+            className: o()(v.deviceContainer, {
+                [v.multiLine]: l && null != t,
+                [v.withIcon]: !S,
             }),
             children: [
-                !I &&
+                !S &&
                     (0, r.jsx)("div", {
-                        className: S.deviceIcon,
-                        children: (0, r.jsx)(D, {
+                        className: v.deviceIcon,
+                        children: (0, r.jsx)(R, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -193,7 +188,7 @@ function R(e) {
                     lineClamp: 2,
                     variant: "text-md/medium",
                     color: l ? "text-subtle" : "text-default",
-                    className: S.deviceLabel,
+                    className: v.deviceLabel,
                     children: p,
                 }),
                 null != t &&
@@ -201,18 +196,18 @@ function R(e) {
                         lineClamp: 2,
                         variant: l ? "text-xs/medium" : "text-md/medium",
                         color: "text-muted",
-                        className: S.deviceSubLabel,
+                        className: v.deviceSubLabel,
                         children: t,
                     }),
                 null != i &&
                     (0, r.jsx)("div", {
-                        className: S.deviceCertifiedPill,
+                        className: v.deviceCertifiedPill,
                         children: i,
                     }),
             ],
         });
     }
-    function Q() {
+    function z() {
         let e = (e) => {
                 let { id: t, name: n } = e;
                 return {
@@ -220,15 +215,15 @@ function R(e) {
                     label: n,
                 };
             },
-            t = F.map(e);
-        if (U || 0 === B.length) {
-            let n = B.map(e);
+            t = Z.map(e);
+        if (k || 0 === F.length) {
+            let n = F.map(e);
             return t.concat(n);
         }
         {
             let e = {
-                value: N,
-                label: v.intl.string(v.t.E99UMh),
+                value: A,
+                label: O.intl.string(O.t.E99UMh),
                 preventCloseOnSelect: !0,
             };
             return t.concat(e);
@@ -238,25 +233,25 @@ function R(e) {
         children: [
             (0, r.jsx)(
                 l.y6,
-                T(
+                I(
                     {
-                        label: A,
-                        value: H,
-                        onChange: z,
-                        options: Q(),
-                        isDisabled: !Y,
+                        label: C,
+                        value: V,
+                        onChange: W,
+                        options: z(),
+                        isDisabled: !H,
                         popoutPosition: "bottom",
-                        renderOptionLabel: (e) => q(e, W),
+                        renderOptionLabel: (e) => K(e, !0),
                         renderOptionValue: (e) => {
                             let [t] = e;
-                            return q(t);
+                            return K(t);
                         },
-                        optionClassName: S.singleSelectOption,
+                        optionClassName: v.singleSelectOption,
                     },
-                    R,
+                    P,
                 ),
             ),
-            !Y && K,
+            !H && Y,
         ],
     });
 }
