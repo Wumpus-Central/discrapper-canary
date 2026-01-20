@@ -9,7 +9,6 @@ var r = (function (e) {
         (e.CUSTOM_DISCRIMINATOR = "customDiscriminator"),
         (e.PREMIUM_GUILD_MEMBER_PROFILE = "premiumGuildMemberProfile"),
         (e.PROFILE_PREMIUM_FEATURES = "profilePremiumFeatures"),
-        (e.INCREASED_RECENT_AVATARS_LIMIT = "increasedRecentAvatarsLimit"),
         (e.STREAM_MID_QUALITY = "streamMidQuality"),
         (e.STREAM_HIGH_QUALITY = "streamHighQuality"),
         (e.VIDEO_FILTER_ASSETS = "videoFilterAssets"),

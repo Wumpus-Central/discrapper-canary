@@ -107,10 +107,10 @@ function x(e) {
         O = a.useRef(t.length),
         N = a.useRef(null),
         [S, T] = a.useState(!1),
-        [R, w] = a.useState(!1),
-        P = t.length,
-        _ = Math.max(A.iZ - P, 0),
-        F = (0, c.vRw)(),
+        [R, P] = a.useState(!1),
+        w = t.length,
+        F = Math.max(A.i - w, 0),
+        _ = (0, c.vRw)(),
         Z = a.useCallback(
             async (e) => {
                 if (null == m || S) return;
@@ -149,7 +149,7 @@ function x(e) {
                                     ),
                                 );
                         },
-                        { contextKey: F },
+                        { contextKey: _ },
                     );
                 } catch (e) {
                     o(y.intl.string(y.t.fZRH9P));
@@ -157,7 +157,7 @@ function x(e) {
                     T(!1);
                 }
             },
-            [F, S, l, o, m],
+            [_, S, l, o, m],
         ),
         I = a.useCallback(
             (e, a, l, i, s) => {
@@ -165,7 +165,7 @@ function x(e) {
                 (N.current = o >= 0 ? x.current[o] : E.current),
                     e.shiftKey
                         ? (0, f.B)(l)
-                        : (w(!0),
+                        : (P(!0),
                           (0, c.ZDy)(async () => {
                               let { default: e } = await n.e("70871").then(n.bind(n, 225525));
                               return (t) => {
@@ -205,7 +205,7 @@ function x(e) {
                                               onClose: async () => {
                                                   await n(),
                                                       requestAnimationFrame(() => {
-                                                          w(!1);
+                                                          P(!1);
                                                       });
                                               },
                                           },
@@ -233,7 +233,7 @@ function x(e) {
             children: (0, r.jsxs)("div", {
                 className: j.recentAvatarSlots,
                 children: [
-                    P > 0 &&
+                    w > 0 &&
                         (0, r.jsx)("ul", {
                             "aria-label": y.intl.string(y.t.lsU63N),
                             className: j.recentAvatarList,
@@ -255,7 +255,7 @@ function x(e) {
                                 ),
                             ),
                         }),
-                    _ > 0 &&
+                    F > 0 &&
                         (0, r.jsxs)("div", {
                             className: j.emptyAvatarSlots,
                             tabIndex: -1,
@@ -263,14 +263,14 @@ function x(e) {
                             children: [
                                 (0, r.jsxs)(c.nn4, {
                                     children: [
-                                        0 === P &&
+                                        0 === w &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [y.intl.string(y.t.x0DsRS), " "],
                                             }),
-                                        y.intl.format(y.t["8W2HO3"], { numberOfEmptyAvatarSlots: _ }),
+                                        y.intl.format(y.t["8W2HO3"], { numberOfEmptyAvatarSlots: F }),
                                     ],
                                 }),
-                                [...Array(_)].map((e, t) => (0, r.jsx)(g.Z, { className: j.avatarPlaceholder }, t)),
+                                [...Array(F)].map((e, t) => (0, r.jsx)(g.Z, { className: j.avatarPlaceholder }, t)),
                             ],
                         }),
                 ],
@@ -291,7 +291,7 @@ function E(e) {
             className: i()(j.container, t),
             children: (0, r.jsx)(c.gNt, {
                 label: y.intl.string(y.t.Bnq9zK),
-                description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: A.iZ }),
+                description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: A.i }),
                 errorMessage: g,
                 children: s
                     ? (0, r.jsx)(c.$jN, { className: j.spinner })

@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(906732),
     p = n(688465),
     _ = n(678558),
-    m = n(626135),
-    h = n(74538),
+    h = n(626135),
+    m = n(74538),
     g = n(357355),
     E = n(622909),
     b = n(639119),
@@ -29,7 +29,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -37,7 +37,7 @@ function P(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -46,7 +46,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function w(e) {
+function R(e) {
     switch (e) {
         case I.cd.ANIMATED_AVATAR_MODAL_UPSELL:
         case I.cd.ANIMATED_BANNER_MODAL_UPSELL:
@@ -54,7 +54,6 @@ function w(e) {
         case I.cd.AVATAR_DECORATION_MODAL_UPSELL:
         case I.cd.FOR_LATER_MODAL_UPSELL:
         case I.cd.VOICE_FILTERS_UPSELL:
-        case I.cd.RECENT_AVATARS_ROADBLOCK_UPSELL:
             return !0;
         default:
             return !1;
@@ -65,7 +64,7 @@ function D(e) {
         n,
         a,
         {
-            title: R,
+            title: w,
             type: D,
             guildBoostProps: x,
             analyticsSource: L,
@@ -104,7 +103,7 @@ function D(e) {
             smallText: ep = !1,
             footerClassName: e_,
         } = e,
-        em = P(e, [
+        eh = P(e, [
             "title",
             "type",
             "guildBoostProps",
@@ -144,13 +143,13 @@ function D(e) {
             "smallText",
             "footerClassName",
         ]);
-    let eh = null != x,
+    let em = null != x,
         eg = (0, b.N)(),
         eE = (0, E.N)(),
         eb =
             !ec &&
             ((null == eg || null == (t = eg.subscription_trial) ? void 0 : t.sku_id) === en || (0, O.Wp)(eE, en)) &&
-            !eh,
+            !em,
         { analyticsLocations: ey } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         eO = {
             analyticsLocation: j,
@@ -172,30 +171,30 @@ function D(e) {
                 guildBoostProps: r,
                 type: i,
             } = ev.current;
-            eh
-                ? m.default.track(T.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+            em
+                ? h.default.track(T.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: "".concat(i, " - Tier ").concat(null == r ? void 0 : r.boostedGuildTier),
                       guild_id: null == r ? void 0 : r.guild.id,
                       channel_id: null == r ? void 0 : r.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : m.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                : h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: i,
                       source: n,
                       location: e,
                       location_stack: t,
-                      sku_id: (0, h.Wz)(en),
+                      sku_id: (0, m.Wz)(en),
                   });
-        }, [eh, en, er]);
+        }, [em, en, er]);
     let eS = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eI = eS.length > 1 && w(D),
+        eI = eS.length > 1 && R(D),
         eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         eT || u.MH();
     }, [eT]);
     let eC = () => {
-            if (eh)
+            if (em)
                 return (0, r.jsx)(_.Z, {
                     analyticsLocation: j,
                     guild: x.guild,
@@ -205,7 +204,7 @@ function D(e) {
             if (eb)
                 if (null != eg) {
                     var t, n;
-                    e = (0, h.Rt)({
+                    e = (0, m.Rt)({
                         intervalType: null == eg || null == (t = eg.subscription_trial) ? void 0 : t.interval,
                         intervalCount: null == eg || null == (n = eg.subscription_trial) ? void 0 : n.interval_count,
                     });
@@ -227,17 +226,17 @@ function D(e) {
         eA = et ? o()(A.artContainer, A.artContainerBoxShadow, F) : o()(A.artContainer, F),
         eN = null;
     return (
-        null != em.artURL
+        null != eh.artURL
             ? (eN = (0, r.jsx)("img", {
                   className: o()(B, A.art),
                   alt: "",
-                  src: em.artURL,
+                  src: eh.artURL,
               }))
-            : null != em.artElement && (eN = em.artElement),
+            : null != eh.artElement && (eN = eh.artElement),
         (0, r.jsxs)(c.Y0X, {
             "data-migration-pending": !0,
             className: o()(A.root, !eb && G),
-            "aria-label": R,
+            "aria-label": w,
             transitionState: Y,
             parentComponent: "PremiumUpsellModal",
             children: [
@@ -269,7 +268,7 @@ function D(e) {
                                     null != (a = null == eg || null == (n = eg.subscription_trial) ? void 0 : n.sku_id)
                                         ? a
                                         : I.Si.TIER_2,
-                                headingText: R,
+                                headingText: w,
                                 context: k,
                                 analyticsLocationObject: j,
                                 discountOffer: eE,
@@ -286,7 +285,7 @@ function D(e) {
                                             (0, r.jsxs)(c.Heading, {
                                                 className: o()(A.header, { [A.enhancedHeader]: eo }, V),
                                                 variant: "heading-xl/bold",
-                                                children: [R, ee ? (0, r.jsx)(p.Z, { className: A.betaTag }) : null],
+                                                children: [w, ee ? (0, r.jsx)(p.Z, { className: A.betaTag }) : null],
                                             }),
                                             eI ? (0, r.jsx)(S.Z, { affinities: eS }) : void 0,
                                             eu,

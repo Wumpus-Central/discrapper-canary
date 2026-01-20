@@ -591,6 +591,11 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(703767).Z,
     },
+    H264MFExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(75626).Z,
+        hasStoreChangeListeners: !0,
+    },
     NativeCrashManager: {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
         inlineRequire: () => n(902558).Z,
