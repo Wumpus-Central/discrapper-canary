@@ -6,4 +6,6 @@ e.exports = {
     iconFractionalDark: "_0687d3d14ec42cbc-iconFractionalDark",
     premiumBrandRefreshContainer: "_0687d3d14ec42cbc-premiumBrandRefreshContainer",
     premiumBrandRefreshIcon: "_0687d3d14ec42cbc-premiumBrandRefreshIcon",
+    trialForAllHeader: "_0687d3d14ec42cbc-trialForAllHeader",
+    trialForAllSeparator: "_0687d3d14ec42cbc-trialForAllSeparator",
 };

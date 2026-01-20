@@ -47541,6 +47541,18 @@ body .b54a5b2f01b57ad8-headerAnimation {
     margin-inline-end: var(--space-12)
 }
 
+._0687d3d14ec42cbc-trialForAllHeader {
+    padding-bottom: 12px
+}
+
+._0687d3d14ec42cbc-trialForAllSeparator {
+    background: var(--border-subtle);
+    border: 0;
+    height: 1px;
+    margin: 0 0 4px;
+    width: 100%
+}
+
 .c93be2b49ef88d42-body {
     margin-bottom: 40px;
     margin-top: 40px
