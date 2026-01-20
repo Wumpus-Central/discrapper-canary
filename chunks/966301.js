@@ -22,8 +22,8 @@ var r = n(54381),
     j = n(38703),
     v = n(716130),
     O = n(981631),
-    C = n(290511),
-    y = n(388032),
+    y = n(290511),
+    C = n(388032),
     N = n(23550);
 function E(e) {
     let { guildId: t, prompts: n } = e,
@@ -55,7 +55,7 @@ function E(e) {
                                 className: N.coverageTitle,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: y.intl.format(y.t.nMVKCX, { numChannelsMissing: m - f }),
+                                children: C.intl.format(C.t.nMVKCX, { numChannelsMissing: m - f }),
                             }),
                         ],
                     }),
@@ -83,7 +83,7 @@ function E(e) {
                           (0, r.jsx)(s.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: y.intl.string(y.t["0FM4i+"]),
+                              children: C.intl.string(C.t["0FM4i+"]),
                           }),
                           (0, r.jsx)("div", {
                               className: N.channels,
@@ -124,14 +124,14 @@ function E(e) {
                                                 (0, r.jsx)(s.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: y.intl.format(y.t.sX8890, { numChannels: p }),
+                                                    children: C.intl.format(C.t.sX8890, { numChannels: p }),
                                                 }),
                                             ],
                                         })
                                       : (0, r.jsx)(s.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
-                                            children: y.intl.string(y.t.o4s29v),
+                                            children: C.intl.string(C.t.o4s29v),
                                         }),
                           }),
                       ],
@@ -157,7 +157,7 @@ function S(e) {
         d = (0, l.e7)([h.Z], () => h.Z.advancedMode),
         u = i.useRef(!1);
     i.useEffect(() => {
-        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, p.tS)(t, [(0, C.ae)()], !1));
+        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, p.tS)(t, [(0, y.ae)()], !1));
     });
     let g = i.useRef(t);
     if (
@@ -187,12 +187,12 @@ function S(e) {
             (0, r.jsx)(s.Heading, {
                 className: N.header,
                 variant: "heading-lg/extrabold",
-                children: d ? y.intl.string(y.t.AGjtFv) : y.intl.string(y.t.dqCzoT),
+                children: d ? C.intl.string(C.t.AGjtFv) : C.intl.string(C.t.dqCzoT),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: y.intl.string(y.t["q/6MLL"]),
+                children: C.intl.string(C.t["q/6MLL"]),
             }),
             (0, r.jsxs)("div", {
                 className: N.links,
@@ -203,7 +203,7 @@ function S(e) {
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: y.intl.string(y.t.Ok55Kh),
+                            children: C.intl.string(C.t.Ok55Kh),
                         }),
                     }),
                     (0, r.jsx)("div", { className: N.dot }),
@@ -212,7 +212,7 @@ function S(e) {
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: y.intl.string(y.t["6gsjdM"]),
+                            children: C.intl.string(C.t["6gsjdM"]),
                         }),
                     }),
                     (0, r.jsx)("div", { className: N.dot }),
@@ -223,7 +223,7 @@ function S(e) {
                 guildId: t.id,
                 prompts: o,
             }),
-            n && (0, r.jsx)(j.Z, {}),
+            n && (0, r.jsx)(j.Z, { guildId: t.id }),
             (0, r.jsx)("div", {
                 className: N.prompts,
                 children: a
@@ -253,6 +253,6 @@ function _() {
                   (0, p.NB)(), i && (0, m.Pk)();
               },
               submitting: t || (i && n),
-              onSaveText: y.intl.string(y.t["R3BPH+"]),
+              onSaveText: C.intl.string(C.t["R3BPH+"]),
           });
 }

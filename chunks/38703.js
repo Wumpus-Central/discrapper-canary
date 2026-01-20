@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -7,12 +7,13 @@ var r = n(54381),
     o = n(63063),
     c = n(190007),
     d = n(926958),
-    u = n(964821),
-    g = n(981631),
-    f = n(290511),
-    m = n(388032),
-    b = n(163022);
-function p(e) {
+    u = n(641938),
+    g = n(964821),
+    f = n(981631),
+    m = n(290511),
+    b = n(388032),
+    p = n(163022);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,22 +38,23 @@ function p(e) {
     }
     return e;
 }
-function h() {
-    let e = (0, l.e7)([d.Z], () => d.Z.getEditedConnections()),
-        t = (0, l.e7)([d.Z], () => d.Z.isSubmitting()),
-        h = i.useCallback(() => {
+function x(e) {
+    let { guildId: t } = e,
+        x = (0, l.e7)([d.Z], () => d.Z.getEditedConnections()),
+        j = (0, l.e7)([d.Z], () => d.Z.isSubmitting()),
+        v = i.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e("11798").then(n.bind(n, 8656));
-                return (t) => (0, r.jsx)(e, p({}, t));
+                return (t) => (0, r.jsx)(e, h({}, t));
             });
         }, []),
-        x = i.useMemo(
+        O = i.useMemo(
             () =>
-                e.map((e) => {
+                x.map((e) => {
                     var t, n;
                     return (
-                        (t = p({}, e)),
-                        (n = n = { id: (0, f.a4)(e) }),
+                        (t = h({}, e)),
+                        (n = n = { id: (0, m.a4)(e) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
@@ -68,9 +70,9 @@ function h() {
                         t
                     );
                 }),
-            [e],
+            [x],
         ),
-        j = i.useCallback((e) => {
+        y = i.useCallback((e) => {
             let t = e.map((e) => {
                 var { id: t } = e;
                 return (function (e, t) {
@@ -99,55 +101,63 @@ function h() {
             });
             (0, c.l_)(t);
         }, []),
-        { handleDragStart: v, handleDragReset: O, handleDragComplete: C, draggingId: y } = (0, s.Z)(x, j),
-        N = e.length < f.yx;
+        { handleDragStart: C, handleDragReset: N, handleDragComplete: E, draggingId: I } = (0, s.Z)(O, y),
+        { enabled: S } = u.Z.useExperiment(
+            {
+                guildId: t,
+                location: "guild_settings",
+            },
+            { autoTrackExposure: !0 },
+        );
+    if (!S) return null;
+    let _ = x.length < m.yx;
     return (0, r.jsxs)("div", {
-        className: b.connectionsSection,
+        className: p.connectionsSection,
         children: [
             (0, r.jsxs)("div", {
-                className: b.connectionsSectionHeader,
+                className: p.connectionsSectionHeader,
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/bold",
-                        children: m.intl.string(m.t.Cl8F8H),
+                        children: b.intl.string(b.t.Cl8F8H),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-strong",
-                        children: m.intl.format(m.t.vqgyJR, {
-                            linkedRolesUrl: o.Z.getArticleURL(g.BhN.CONNECTION_DETAILS_ADMIN),
+                        children: b.intl.format(b.t.vqgyJR, {
+                            linkedRolesUrl: o.Z.getArticleURL(f.BhN.CONNECTION_DETAILS_ADMIN),
                         }),
                     }),
-                    !N &&
+                    !_ &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: m.intl.format(m.t.Nc7guW, { max: f.yx }),
+                            children: b.intl.format(b.t.Nc7guW, { max: m.yx }),
                         }),
                 ],
             }),
-            e.length > 0 &&
+            x.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: b.connectionsList,
-                    children: x.map((e, t) =>
+                    className: p.connectionsList,
+                    children: O.map((e, t) =>
                         (0, r.jsx)(
-                            u.Z,
+                            g.Z,
                             {
                                 connection: e,
                                 index: t,
-                                onDragStart: v,
-                                onDragReset: O,
-                                onDragComplete: C,
-                                draggingId: y,
+                                onDragStart: C,
+                                onDragReset: N,
+                                onDragComplete: E,
+                                draggingId: I,
                             },
                             e.id,
                         ),
                     ),
                 }),
             (0, r.jsxs)("button", {
-                className: b.addConnectionButton,
-                onClick: h,
-                disabled: !N || t,
+                className: p.addConnectionButton,
+                onClick: v,
+                disabled: !_ || j,
                 type: "button",
                 children: [
                     (0, r.jsx)(a.oFk, {
@@ -159,7 +169,7 @@ function h() {
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "text-brand",
-                        children: m.intl.string(m.t["03EqaC"]),
+                        children: b.intl.string(b.t["03EqaC"]),
                     }),
                 ],
             }),
