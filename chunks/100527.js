@@ -107,6 +107,7 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE = "guild powerups - coachmark - new perk available"),
         (e.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE =
             "guild powerups - coachmark - game server hosting available"),
+        (e.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES = "guild powerups - coachmark - game server new games"),
         (e.GUILD_POWERUPS_MARKETING = "guild powerups - marketing"),
         (e.GUILD_BOOSTING_PREMIUM_UPSELL = "guild boosting premium upsell"),
         (e.RPC = "rpc"),

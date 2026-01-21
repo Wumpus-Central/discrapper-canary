@@ -128,8 +128,11 @@ function I(e) {
                 })(e, t),
                 [_, I] = (0, O.Se)(null != t && !h, C),
                 P = _ === a.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK,
-                Z = r.useMemo(() => {
-                    if (null == t || h || P) return;
+                Z = (0, p.v$)(e, "useGuildPowerupsChannelListPopout"),
+                [N, T] = (0, O.F7)(null != t && !h && !P && Z),
+                A = N === a.z.GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK,
+                w = r.useMemo(() => {
+                    if (null == t || h || P || A) return;
                     let n = (function (e, t) {
                         let n = d.Oe.find((e) => {
                             let n = E.Cp[e],
@@ -209,8 +212,8 @@ function I(e) {
                             };
                     })(e, m, g, v);
                     if (null != i) return i;
-                }, [e, t, h, P, g, m, v]),
-                [N, T] = (0, O.X$)(null != Z);
+                }, [e, t, h, P, A, g, m, v]),
+                [R, D] = (0, O.X$)(null != w);
             return r.useMemo(() => {
                 if (null != t) {
                     if (h)
@@ -233,7 +236,12 @@ function I(e) {
                             markAsDismissed: I,
                         };
                     }
-                    if (N === a.z.GUILD_POWERUP_NOTIFICATION && null != Z) {
+                    if (A)
+                        return {
+                            type: b.Jk.GAME_SERVER_NEW_GAMES,
+                            markAsDismissed: T,
+                        };
+                    if (R === a.z.GUILD_POWERUP_NOTIFICATION && null != w) {
                         var e, n;
                         return (
                             (e = (function (e) {
@@ -260,11 +268,11 @@ function I(e) {
                                         });
                                 }
                                 return e;
-                            })({}, Z)),
+                            })({}, w)),
                             (n = n =
                                 {
                                     markAsDismissed: (e) => {
-                                        T(e), Z.markAsDismissed(e);
+                                        D(e), w.markAsDismissed(e);
                                     },
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -283,7 +291,7 @@ function I(e) {
                         );
                     }
                 }
-            }, [t, h, o, Z, N, T, P, I, C]);
+            }, [t, h, o, w, R, D, P, I, C, A, T]);
         })(e, null != n ? n : void 0);
     if (null !== n && (null != h || _ || null != I))
         return {

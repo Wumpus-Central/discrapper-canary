@@ -14,8 +14,8 @@ var r = n(54381),
     h = n(110924),
     m = n(100527),
     b = n(906732),
-    _ = n(536687),
-    E = n(211644),
+    E = n(536687),
+    _ = n(211644),
     O = n(266454),
     v = n(492162),
     I = n(43740),
@@ -440,22 +440,24 @@ class ed extends i.PureComponent {
                     showTierTemplatesUpsell: a,
                     shouldRenderGuildPowerupPerkCoachmark: o,
                     shouldRenderGameServerHostingPerkAvailableCoachmark: c,
-                    guild: u,
+                    shouldRenderGameServerNewGamesCoachmark: u,
+                    guild: d,
                 } = this.props;
-                if (null == u) return this.renderGuildHeaderDropdownButton(e);
-                let d = [];
-                return (i && d.push(s.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-                t && d.push(s.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-                n && d.push(s.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-                o && d.push(s.z.GUILD_POWERUP_PERKS_COACHMARK),
-                c && d.push(s.z.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-                0 === d.length)
+                if (null == d) return this.renderGuildHeaderDropdownButton(e);
+                let p = [];
+                return (i && p.push(s.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                t && p.push(s.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+                n && p.push(s.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+                o && p.push(s.z.GUILD_POWERUP_PERKS_COACHMARK),
+                c && p.push(s.z.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+                u && p.push(s.z.GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK),
+                0 === p.length)
                     ? this.renderGuildHeaderDropdownButton(e)
-                    : (l && d.push(s.z.MEDIA_CHANNEL_UPSELL),
-                      a && d.push(s.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL),
+                    : (l && p.push(s.z.MEDIA_CHANNEL_UPSELL),
+                      a && p.push(s.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL),
                       (0, r.jsx)(Q.Z, {
-                          contentTypes: d,
-                          guild: u,
+                          contentTypes: p,
+                          guild: d,
                           renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e),
                       }));
             }),
@@ -514,21 +516,21 @@ function ep(e) {
         w = (0, o.e7)([k.Z], () => k.Z.isUnavailable(n)),
         L = (0, o.e7)([z.default], () => z.default.getCurrentUser()),
         { enableStudyGroup: U } = (0, j.s)(u),
-        W = (0, E.ZP)((e) => e.currentlyShown.has(s.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        W = (0, _.ZP)((e) => e.currentlyShown.has(s.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [K, q] = i.useState(!W),
         Q = (0, h.Z)(n),
         { analyticsLocations: J } = (0, b.ZP)(m.Z.GUILD_HEADER);
     i.useEffect(() => {
         n !== Q && q(!W);
     }, [n, Q, W]);
-    let [X, en] = (0, E.ZP)(
+    let [X, en] = (0, _.ZP)(
             (e) => [
                 ee.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(et.R.GUILD_HEADER_TOOLTIPS),
             ],
             a.X,
         ),
-        er = (0, _.Z)(u),
+        er = (0, E.Z)(u),
         ei = (0, d.s9z)(d.JQI),
         el = (0, o.e7)([H.Z], () => H.Z.hasLayers()),
         ea = (0, o.e7)([R.Z], () => R.Z.shouldShow(ec)),
@@ -545,19 +547,21 @@ function ep(e) {
         em = Y.ZP.isNewUser(L),
         eb = K && !em;
     (0, y.Z)(u);
-    let e_ = (0, O.Nj)(s.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        eE = (0, P.Z)(n),
+    let eE = (0, O.Nj)(s.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+        e_ = (0, P.Z)(n),
         eO = (0, C.Z)(n),
         ev = (0, o.e7)([F.Z], () => F.Z.getChannelId()),
         eI = (0, o.e7)([V.Z], () => V.Z.desyncedVoiceStatesCount),
         ey = (0, Z.Z)(n),
         eC = (0, A.BU)(n, "GuildSidebar"),
-        eS = (0, o.e7)([G.Z], () => {
+        eS = eC && !1 === ey,
+        eT = (0, o.e7)([G.Z], () => {
             var e, t;
             return (
                 null != (t = null == (e = G.Z.getGuild(n)) ? void 0 : e.features.has($.GuildFeatures.GAME_SERVERS)) && t
             );
-        }, [n]);
+        }, [n]),
+        eN = eC && !eT && !1 === ey;
     return (0, r.jsx)(ed, {
         guildId: n,
         hideSelectedChannel: l,
@@ -579,16 +583,17 @@ function ep(e) {
         showRoleSubscriptionUpsell: eo,
         showHubPrivacySettingsTooltip: es,
         showNewUnreadsBar: eh,
-        showMediaChannelUpsell: eE,
+        showMediaChannelUpsell: e_,
         showTierTemplatesUpsell: eO,
         isHeaderPopoutOpen: eg,
         enableStudyGroup: U,
         isGuildHeaderDismissibleTooltipShown: en,
         canShowCoachMarkAtBottom: K,
         headerAnalyticsLocations: J,
-        isTutorialHighlightDismissed: e_,
+        isTutorialHighlightDismissed: eE,
         shouldRenderBurstCoachmark: eb,
         shouldRenderGuildPowerupPerkCoachmark: !1 === ey,
-        shouldRenderGameServerHostingPerkAvailableCoachmark: eC && !eS && !1 === ey,
+        shouldRenderGameServerHostingPerkAvailableCoachmark: eN,
+        shouldRenderGameServerNewGamesCoachmark: eS,
     });
 }
