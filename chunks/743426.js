@@ -393,6 +393,10 @@ class S extends a.Z {
         var t, n;
         null == (t = (n = (0, d.zS)()).setClipBufferLength) || t.call(n, e);
     }
+    setClipsBufferSize(e) {
+        var t, n;
+        null == (t = (n = (0, d.zS)()).setClipsBufferSize) || t.call(n, e);
+    }
     setClipsMLPipelineEnabled(e) {
         var t, n;
         null == (t = (n = (0, d.zS)()).setClipsMLPipelineEnabled) || t.call(n, e);

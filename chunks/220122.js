@@ -1,36 +1,38 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(481060),
     i = n(570140),
     a = n(594190),
     o = n(199902),
     s = n(131951),
-    l = n(474639),
-    c = n(725547),
-    u = n(435064),
-    d = n(779618),
-    f = n(341569),
-    p = n(39604);
+    l = n(822742),
+    c = n(474639),
+    u = n(725547),
+    d = n(435064),
+    f = n(779618),
+    p = n(341569),
+    _ = n(39604);
 n(600349);
-var _ = n(356659),
-    h = n(388032);
-let m = "CLIPS_IN_CALL_WARNING";
-class g extends l.Z {
+var h = n(356659),
+    m = n(388032);
+let g = "CLIPS_IN_CALL_WARNING";
+class E extends c.Z {
     showClipsToast() {
         (0, r.showToast)({
-            id: m,
-            message: h.intl.string(h.t["d+41qJ"]),
+            id: g,
+            message: m.intl.string(m.t["d+41qJ"]),
             type: r.ToastType.CLIP,
-            options: { duration: _.G$ },
+            options: { duration: h.G$ },
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, d.Z)(s.Z)) return;
-        let t = u.Z.getSettings(),
-            n = (0, f.LI)(),
+        if (!(0, f.Z)(s.Z)) return;
+        let t = d.Z.getSettings(),
+            n = (0, p.LI)(),
             r = s.Z.getMediaEngine();
         if (
             (r.setClipBufferLength(n ? t.clipsLength / 1000 : 0),
-            r.setClipsMaxPendingTasks(c.Z.getConfig({ location: "applyNativeClipsSettings" }).count),
+            r.setClipsMaxPendingTasks(u.Z.getConfig({ location: "applyNativeClipsSettings" }).count),
+            r.setClipsBufferSize(l.Z.getConfig({ location: "applyNativeClipsSettings" }).size),
             (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(),
             null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
         ) {
@@ -48,11 +50,11 @@ class g extends l.Z {
         let t = a.ZP.getVisibleGame();
         null != t &&
             (e.added.find((e) => e.pid === t.pid)
-                ? setTimeout(() => this.fireClipsInitEvent(), _.jp)
+                ? setTimeout(() => this.fireClipsInitEvent(), h.jp)
                 : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
-        if (!(0, f.LI)() || null != o.Z.getCurrentUserActiveStream()) return;
+        if (!(0, p.LI)() || null != o.Z.getCurrentUserActiveStream()) return;
         let e = a.ZP.getVisibleGame();
         if (
             (null == e ? void 0 : e.pid) == null ||
@@ -61,7 +63,7 @@ class g extends l.Z {
             "" === e.name
         )
             return;
-        let t = u.Z.getSettings();
+        let t = d.Z.getSettings();
         i.Z.dispatch({
             type: "CLIPS_INIT",
             sourceId: "window:".concat(null == e ? void 0 : e.windowHandle),
@@ -70,11 +72,11 @@ class g extends l.Z {
         });
     }
     loadClipsFromStorage() {
-        let e = u.Z.getSettings().storageLocation;
+        let e = d.Z.getSettings().storageLocation;
         "" !== e &&
-            p.jv(e).catch((e) => {
-                _.jF.error("Failed to load clips directory on connection open", e);
+            _.jv(e).catch((e) => {
+                h.jF.error("Failed to load clips directory on connection open", e);
             });
     }
 }
-let E = new g();
+let b = new E();

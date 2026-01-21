@@ -93,6 +93,7 @@ class c extends r.Z {
     }
     setClipBufferLength(e) {}
     setClipsMaxPendingTasks(e) {}
+    setClipsBufferSize(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
     saveClip(e, t) {

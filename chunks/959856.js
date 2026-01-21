@@ -228,6 +228,7 @@ class N extends s.Z {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipBufferLength(e) {}
+    setClipsBufferSize(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
     setClipsMaxPendingTasks(e) {}
