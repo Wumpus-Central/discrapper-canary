@@ -5251,6 +5251,7 @@ var na = (function (e) {
             (e.CONNECTION_INDICATOR_SHOWN = "connection_indicator_shown"),
             (e.CACHE_STATS_RECORDED = "cache_stats_recorded"),
             (e.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM = "channel_latest_messages_loaded_clickstream"),
+            (e.CHANNEL_WITH_UNREAD_MENTIONS_LOADED = "channel_with_unread_mentions_loaded"),
             e
         );
     })({}),
