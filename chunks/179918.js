@@ -52,6 +52,7 @@ let y = (e) => {
                     src: I.assetUrl,
                     width: 96,
                     height: 96,
+                    className: b.assetImage,
                 }),
             }),
             (0, r.jsxs)("div", {

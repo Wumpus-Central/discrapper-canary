@@ -78166,6 +78166,10 @@ screen and (max-width:485px) {
     justify-content: center
 }
 
+._7137c5e977587553-assetImage {
+    border-radius: var(--radius-sm)
+}
+
 ._7137c5e977587553-bannerContent {
     align-items: flex-start;
     display: flex;
