@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
+n.d(t, { Z: () => y }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -12,21 +12,22 @@ var a = n(54381),
     p = n(281598),
     h = n(25251),
     f = n(373071),
+    b = n(489495),
     x = n(782691),
-    b = n(75266);
-let g = "Make sure you're only uploading text files!",
-    v = (e) => {
+    g = n(75266);
+let v = "Make sure you're only uploading text files!",
+    j = (e) => {
         var t, n, r;
         let { effect: i, onClick: l } = e,
             { deleteConfig: s } = (0, f.n6)();
         return (0, a.jsxs)(c.P3F, {
-            className: b.previewCard,
+            className: g.previewCard,
             onClick: () => {
                 l(i);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: b.previewCardImage,
+                    className: g.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
                             null == (r = i.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64,
@@ -35,7 +36,7 @@ let g = "Make sure you're only uploading text files!",
                     },
                 }),
                 (0, a.jsxs)("div", {
-                    className: b.previewCardFooter,
+                    className: g.previewCardFooter,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
@@ -53,56 +54,56 @@ let g = "Make sure you're only uploading text files!",
             ],
         });
     };
-function j() {
+function y() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, f.n6)(),
-        [i, j] = r.useState(),
-        y = r.useRef(null),
-        C = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
+        [i, y] = r.useState(),
+        C = r.useRef(null),
+        _ = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
     (0, m.Z)();
-    let [_, S] = r.useState(""),
-        E = r.useMemo(
+    let [S, E] = r.useState(""),
+        T = r.useMemo(
             () =>
-                "" === _
-                    ? C
-                    : C.filter((e) => {
+                "" === S
+                    ? _
+                    : _.filter((e) => {
                           var t, n, a, r;
-                          let i = _.toLowerCase(),
+                          let i = S.toLowerCase(),
                               l = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
                               s = null != (r = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? r : "";
                           return l.includes(i) || s.includes(i);
                       }),
-            [_, C],
+            [S, _],
         ),
-        T = r.useCallback(
+        O = r.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(g);
+                if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(v);
                 let [a, r] = n.split(",");
-                if (!a.includes("text/plain")) return (0, p.Eo)(g);
+                if (!a.includes("text/plain")) return (0, p.Eo)(v);
                 let i = JSON.parse(atob(r));
                 (i.skuId = (0, s.Z)()), t(i), (0, p.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        O = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, p.Eo)("Error uploading file. Try again!");
-                (0, p.Kr)(e.currentTarget.files, T, p.Eo);
+                (0, p.Kr)(e.currentTarget.files, O, p.Eo);
             },
-            [T],
+            [O],
         );
     return (0, a.jsxs)("div", {
-        className: b.root,
+        className: g.root,
         children: [
             null == i &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: b.col,
+                            className: g.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: l()(b.section, b.row),
+                                    className: l()(g.section, g.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -123,14 +124,14 @@ function j() {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: b.customEffectsGrid,
+                                    className: g.customEffectsGrid,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
-                                            v,
+                                            j,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    j(e);
+                                                    y(e);
                                                 },
                                             },
                                             e.skuId,
@@ -140,10 +141,10 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(b.row, b.end, b.section),
+                            className: l()(g.row, g.end, g.section),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: b.uploadButton,
+                                    className: g.uploadButton,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: "text-md/normal",
@@ -151,8 +152,8 @@ function j() {
                                             children: "Import Shared Config",
                                         }),
                                         (0, a.jsx)(u.Z, {
-                                            ref: y,
-                                            onChange: O,
+                                            ref: C,
+                                            onChange: N,
                                             multiple: !1,
                                         }),
                                     ],
@@ -172,38 +173,70 @@ function j() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: b.section,
+                            className: g.section,
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: "heading-xl/bold",
                                     children: "All Effects",
                                 }),
                                 (0, a.jsx)(c.oil, {
-                                    value: _,
+                                    value: S,
                                     onChange: (e) => {
-                                        S(e);
+                                        E(e);
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: b.pfxGrid,
-                                    children: E.map((e) =>
+                                    className: g.pfxGrid,
+                                    children: T.map((e) =>
                                         (0, a.jsx)(
                                             c.P3F,
                                             {
-                                                className: b.pfxListItem,
+                                                className: g.pfxListItem,
                                                 style: {
                                                     backgroundImage: "url(".concat(e.config.thumbnailPreviewSrc, ")"),
                                                 },
                                                 onClick: () => {
-                                                    j({
+                                                    let t = {
+                                                        [b.cq.THUMBNAIL]:
+                                                            null != e.config.thumbnailPreviewSrc &&
+                                                            "" !== e.config.thumbnailPreviewSrc
+                                                                ? {
+                                                                      src: e.config.thumbnailPreviewSrc,
+                                                                      name: "thumbnail.png",
+                                                                      base64: "",
+                                                                  }
+                                                                : null,
+                                                        [b.cq.STATIC]:
+                                                            null != e.config.staticFrameSrc &&
+                                                            "" !== e.config.staticFrameSrc
+                                                                ? {
+                                                                      src: e.config.staticFrameSrc,
+                                                                      name: "static.png",
+                                                                      base64: "",
+                                                                  }
+                                                                : null,
+                                                        [b.cq.REDUCED_MOTION]:
+                                                            null != e.config.reducedMotionSrc &&
+                                                            "" !== e.config.reducedMotionSrc
+                                                                ? {
+                                                                      src: e.config.reducedMotionSrc,
+                                                                      name: "reduced_motion.png",
+                                                                      base64: "",
+                                                                  }
+                                                                : null,
+                                                    };
+                                                    y({
                                                         skuId: e.skuId,
                                                         name: e.config.title,
                                                         readonly: !0,
-                                                        config: { effects: e.config.effects },
+                                                        config: {
+                                                            effects: e.config.effects,
+                                                            stillFrames: t,
+                                                        },
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: b.pfxListItemFooter,
+                                                    className: g.pfxListItemFooter,
                                                     children: (0, a.jsx)(c.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",

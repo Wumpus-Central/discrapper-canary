@@ -23,8 +23,8 @@ var a = n(54381),
     p = n(594174),
     h = n(373071),
     f = n(489495),
-    x = n(189),
-    b = n(75266),
+    b = n(189),
+    x = n(75266),
     g = n(346537),
     v = n(830318);
 function j(e) {
@@ -87,8 +87,8 @@ let C = {
             [I, k] = r.useState([]),
             [R, A] = r.useState(C),
             Z = r.useRef([]),
-            [D, L] = r.useState(t.name),
-            M = D.toLowerCase().replace(/\s+/g, "_"),
+            [D, M] = r.useState(t.name),
+            L = D.toLowerCase().replace(/\s+/g, "_"),
             U = r.useMemo(
                 () => ({
                     id: _,
@@ -124,8 +124,12 @@ let C = {
                     Object.entries(e).forEach((e) => {
                         let [t, n] = e;
                         if (null != n) {
-                            let e = (0, f.$j)(n.base64);
-                            (n.src = e), Z.current.push(e), A((e) => y(j({}, e), { [t]: n }));
+                            if ("" !== n.src && null != n.src && ("" === n.base64 || null == n.base64))
+                                A((e) => y(j({}, e), { [t]: n }));
+                            else if ("" !== n.base64 && null != n.base64) {
+                                let e = (0, f.$j)(n.base64);
+                                (n.src = e), Z.current.push(e), A((e) => y(j({}, e), { [t]: n }));
+                            }
                         }
                     });
             }, [t.config.stillFrames]);
@@ -161,7 +165,7 @@ let C = {
         null == i)
             ? (0, a.jsx)("div", {})
             : (0, a.jsxs)("div", {
-                  className: b.root,
+                  className: x.root,
                   children: [
                       (0, a.jsxs)("div", {
                           style: { display: "none" },
@@ -204,24 +208,28 @@ let C = {
                           ],
                       }),
                       (0, a.jsxs)("div", {
-                          className: b.grid,
+                          className: x.grid,
                           children: [
                               (0, a.jsxs)("div", {
-                                  className: l()(b.col, b.preview),
+                                  className: l()(x.col, x.preview),
                                   children: [
                                       (0, a.jsx)("img", {
                                           src: O ? g : v,
                                           alt: "",
                                           width: 450,
                                       }),
-                                      S && (0, a.jsx)(x.Z, { config: U }),
+                                      S &&
+                                          (0, a.jsx)("div", {
+                                              className: x.profileEffectPreviewContent,
+                                              children: (0, a.jsx)(b.Z, { config: U }),
+                                          }),
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: b.col,
+                                  className: x.col,
                                   children: [
                                       (0, a.jsxs)("div", {
-                                          className: l()(b.col, b.section),
+                                          className: l()(x.col, x.section),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-md/normal",
@@ -230,18 +238,18 @@ let C = {
                                               (0, a.jsx)("input", {
                                                   type: "text",
                                                   value: D,
-                                                  className: b.input,
+                                                  className: x.input,
                                                   onChange: (e) => {
-                                                      L(e.target.value);
+                                                      M(e.target.value);
                                                   },
                                               }),
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: b.grid,
+                                          className: x.grid,
                                           children: [
                                               (0, a.jsxs)("div", {
-                                                  className: b.row,
+                                                  className: x.row,
                                                   children: [
                                                       (0, a.jsx)(c.Text, {
                                                           variant: "text-md/normal",
@@ -250,7 +258,7 @@ let C = {
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
                                                           checked: O,
-                                                          className: b.checkBox,
+                                                          className: x.checkBox,
                                                           onChange: () => {
                                                               N(!O);
                                                           },
@@ -258,7 +266,7 @@ let C = {
                                                   ],
                                               }),
                                               (0, a.jsxs)("div", {
-                                                  className: b.row,
+                                                  className: x.row,
                                                   children: [
                                                       (0, a.jsx)(c.Text, {
                                                           variant: "text-md/normal",
@@ -267,7 +275,7 @@ let C = {
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
                                                           checked: P,
-                                                          className: b.checkBox,
+                                                          className: x.checkBox,
                                                           onChange: () => {
                                                               w(!P);
                                                           },
@@ -277,7 +285,7 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: b.row,
+                                          className: x.row,
                                           children: [
                                               (0, a.jsx)(c.Button, {
                                                   variant: "active",
@@ -296,7 +304,7 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: b.row,
+                                          className: x.row,
                                           children: [
                                               (0, a.jsx)(c.Button, {
                                                   variant: "active",
@@ -331,9 +339,9 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsx)("div", {
-                                          className: b.bottomControls,
+                                          className: x.bottomControls,
                                           children: (0, a.jsx)("div", {
-                                              className: b.row,
+                                              className: x.row,
                                               children: (0, a.jsx)(c.Button, {
                                                   variant: "primary",
                                                   text: "Replay Animation",
@@ -344,7 +352,7 @@ let C = {
                                           }),
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: l()(b.bottomControls, b.shareSection),
+                                          className: l()(x.bottomControls, x.shareSection),
                                           children: [
                                               (0, a.jsx)(c.Text, {
                                                   variant: "text-sm/semibold",
@@ -356,12 +364,12 @@ let C = {
                                                   children: "WARNING: The full config is really big :0",
                                               }),
                                               (0, a.jsxs)("div", {
-                                                  className: b.row,
+                                                  className: x.row,
                                                   children: [
                                                       (0, a.jsx)(d.Z, {
                                                           fileContents: () => (0, f.yR)(t.name, I),
                                                           contentType: "text/plain",
-                                                          fileName: "".concat(M, "_timing_config.txt"),
+                                                          fileName: "".concat(L, "_timing_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
                                                               variant: "primary",
                                                               size: "sm",
@@ -381,7 +389,7 @@ let C = {
                                                                   }),
                                                               ),
                                                           contentType: "text/plain",
-                                                          fileName: "".concat(M, "_config.txt"),
+                                                          fileName: "".concat(L, "_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
                                                               variant: "primary",
                                                               size: "sm",
@@ -393,29 +401,42 @@ let C = {
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: b.section,
+                                          className: x.section,
                                           children: [
                                               (0, a.jsx)(c.Heading, {
                                                   variant: "heading-lg/bold",
                                                   children: "Still Frames",
                                               }),
                                               (0, a.jsx)("div", {
-                                                  className: b.stillFramesContainer,
+                                                  className: x.stillFramesContainer,
                                                   children: Object.entries(R).map((e) => {
                                                       let [t, n] = e;
                                                       return (0, a.jsxs)(
                                                           "div",
                                                           {
-                                                              className: b.stillFramePreviewContainer,
+                                                              className: x.stillFramePreviewContainer,
                                                               children: [
                                                                   (0, a.jsx)(c.Heading, {
                                                                       variant: "heading-sm/bold",
                                                                       children: t,
                                                                   }),
-                                                                  (0, a.jsx)("img", {
-                                                                      src: null == n ? void 0 : n.src,
-                                                                      className: b.stillFramePreview,
-                                                                      alt: "",
+                                                                  (0, a.jsxs)("div", {
+                                                                      className: x.stillFramePreviewWrapper,
+                                                                      children: [
+                                                                          (0, a.jsx)("img", {
+                                                                              src: O ? g : v,
+                                                                              alt: "",
+                                                                              className: x.stillFramePlaceholder,
+                                                                              "aria-hidden": !0,
+                                                                          }),
+                                                                          (null == n ? void 0 : n.src) != null &&
+                                                                              "" !== n.src &&
+                                                                              (0, a.jsx)("img", {
+                                                                                  src: n.src,
+                                                                                  className: x.stillFramePreview,
+                                                                                  alt: "",
+                                                                              }),
+                                                                      ],
                                                                   }),
                                                                   null != n &&
                                                                       (0, a.jsx)(c.Button, {
@@ -439,7 +460,7 @@ let C = {
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
                                           (0, a.jsxs)("div", {
-                                              className: l()(b.section, b.randomizedRules),
+                                              className: l()(x.section, x.randomizedRules),
                                               children: [
                                                   (0, a.jsx)(c.Text, {
                                                       variant: "text-md/bold",
@@ -471,7 +492,7 @@ let C = {
                                           children:
                                               P &&
                                               (0, a.jsxs)("div", {
-                                                  className: l()(b.userProfilePreview, b.preview),
+                                                  className: l()(x.userProfilePreview, x.preview),
                                                   children: [
                                                       (0, a.jsx)(m.Z, {
                                                           user: i,
@@ -480,17 +501,17 @@ let C = {
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOut: !0,
                                                       }),
-                                                      (0, a.jsx)(x.Z, { config: U }),
+                                                      (0, a.jsx)(b.Z, { config: U }),
                                                   ],
                                               }),
                                       }),
                                   ],
                               }),
                               (0, a.jsxs)("div", {
-                                  className: l()(b.grid, b.layers),
+                                  className: l()(x.grid, x.layers),
                                   children: [
                                       (0, a.jsx)("div", {
-                                          className: b.dangerControls,
+                                          className: x.dangerControls,
                                           children: (0, a.jsx)(c.Button, {
                                               variant: "critical-secondary",
                                               text: "Clear Assets",
@@ -503,10 +524,10 @@ let C = {
                                           (0, a.jsxs)(
                                               "div",
                                               {
-                                                  className: b.layerForm,
+                                                  className: x.layerForm,
                                                   children: [
                                                       (0, a.jsxs)("div", {
-                                                          className: b.layerPreviewContainer,
+                                                          className: x.layerPreviewContainer,
                                                           children: [
                                                               (0, a.jsx)(c.Heading, {
                                                                   variant: "heading-md/bold",
@@ -514,7 +535,7 @@ let C = {
                                                               }),
                                                               (0, a.jsx)("img", {
                                                                   src: e.src,
-                                                                  className: b.layerPreview,
+                                                                  className: x.layerPreview,
                                                                   alt: "",
                                                               }),
                                                               null != e.randomizedSources &&
@@ -538,7 +559,7 @@ let C = {
                                                                                               }),
                                                                                           (0, a.jsx)("img", {
                                                                                               src: e.src,
-                                                                                              className: b.layerPreview,
+                                                                                              className: x.layerPreview,
                                                                                               alt: "",
                                                                                           }),
                                                                                       ],
@@ -553,10 +574,10 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: l()(b.grid, b.section),
+                                                          className: l()(x.grid, x.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
-                                                                  className: b.col,
+                                                                  className: x.col,
                                                                   children: [
                                                                       (0, a.jsx)(c.Text, {
                                                                           variant: "text-md/bold",
@@ -565,7 +586,7 @@ let C = {
                                                                       (0, a.jsx)("input", {
                                                                           type: "number",
                                                                           value: e.start,
-                                                                          className: b.input,
+                                                                          className: x.input,
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
@@ -582,7 +603,7 @@ let C = {
                                                                   ],
                                                               }),
                                                               (0, a.jsxs)("div", {
-                                                                  className: b.col,
+                                                                  className: x.col,
                                                                   children: [
                                                                       (0, a.jsx)(c.Text, {
                                                                           variant: "text-md/bold",
@@ -591,7 +612,7 @@ let C = {
                                                                       (0, a.jsx)("input", {
                                                                           type: "number",
                                                                           value: e.duration,
-                                                                          className: b.input,
+                                                                          className: x.input,
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
@@ -610,10 +631,10 @@ let C = {
                                                           ],
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: l()(b.grid, b.section),
+                                                          className: l()(x.grid, x.section),
                                                           children: [
                                                               (0, a.jsxs)("div", {
-                                                                  className: b.col,
+                                                                  className: x.col,
                                                                   children: [
                                                                       (0, a.jsx)(c.Text, {
                                                                           variant: "text-md/bold",
@@ -622,7 +643,7 @@ let C = {
                                                                       (0, a.jsx)("input", {
                                                                           type: "checkbox",
                                                                           checked: e.loop,
-                                                                          className: b.checkBox,
+                                                                          className: x.checkBox,
                                                                           onChange: (e) => {
                                                                               k((n) => {
                                                                                   let a = [...n],
@@ -638,7 +659,7 @@ let C = {
                                                                   ],
                                                               }),
                                                               (0, a.jsx)("div", {
-                                                                  className: b.col,
+                                                                  className: x.col,
                                                                   children:
                                                                       e.loop &&
                                                                       (0, a.jsxs)(a.Fragment, {
@@ -650,7 +671,7 @@ let C = {
                                                                               (0, a.jsx)("input", {
                                                                                   type: "number",
                                                                                   value: e.loopDelay,
-                                                                                  className: b.input,
+                                                                                  className: x.input,
                                                                                   onChange: (e) => {
                                                                                       k((n) => {
                                                                                           let a = [...n],
@@ -703,7 +724,7 @@ let C = {
                                                           }),
                                                       }),
                                                       (0, a.jsxs)("div", {
-                                                          className: l()(b.row, b.end),
+                                                          className: l()(x.row, x.end),
                                                           children: [
                                                               (0, a.jsx)(c.Button, {
                                                                   variant: "secondary",
