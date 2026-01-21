@@ -448,8 +448,8 @@ let q = i.memo(function (e) {
                             isSpeaking: es,
                             voiceDb: eE,
                             speakingStylesConfig: {
-                                spreadDirection: E.h.OUTSET_ONLY,
-                                maxOuterSpreadRadius: 4,
+                                spreadDirection: E.h.INSET_ONLY,
+                                maxInnerSpreadRadius: 4,
                                 hideIfVolumeMissing: !0,
                             },
                             "aria-hidden": !0,
@@ -482,8 +482,8 @@ let q = i.memo(function (e) {
                             isSpeaking: es,
                             voiceDb: eE,
                             speakingStylesConfig: {
-                                spreadDirection: E.h.OUTSET_ONLY,
-                                maxOuterSpreadRadius: 4,
+                                spreadDirection: E.h.INSET_ONLY,
+                                maxInnerSpreadRadius: 4,
                                 hideIfVolumeMissing: !0,
                             },
                             "aria-hidden": !0,

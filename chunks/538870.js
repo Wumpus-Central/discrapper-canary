@@ -24,42 +24,43 @@ var g = (function (e) {
 function E(e) {
     let {
             isSpeaking: t,
-            isLatched: n,
-            voiceDb: u,
-            spreadDirection: d = "BOTH",
-            maxOuterSpreadRadius: _ = f,
-            maxInnerSpreadRadius: g = p,
-            hideIfVolumeMissing: E = !1,
+            isLatched: u,
+            voiceDb: d,
+            spreadDirection: _ = "BOTH",
+            maxOuterSpreadRadius: g = f,
+            maxInnerSpreadRadius: E = p,
+            hideIfVolumeMissing: b = !1,
         } = e,
+        y = n(808506).default,
         {
-            shouldReduceMotion: b,
-            useForcedColors: y,
-            isAppFocused: O,
-        } = (0, i.cj)([a.Z, o.Z], () => ({
+            shouldReduceMotion: O,
+            useForcedColors: v,
+            isAppFocusedOrOverlayVisible: S,
+        } = (0, i.cj)([a.Z, o.Z, y], () => ({
             shouldReduceMotion: a.Z.useReducedMotion,
             useForcedColors: a.Z.useForcedColors,
-            isAppFocused: o.Z.isAppFocused(),
+            isAppFocusedOrOverlayVisible: o.Z.isAppFocused() || null != y.getFocusedPID(),
         }));
     return r.useMemo(() => {
         let e = {};
-        if (u === -1 / 0 && E) return e;
+        if (d === -1 / 0 && b) return e;
         if (t) {
             let t = s,
                 n = l,
                 r = c;
-            u !== -1 / 0 &&
-                !b &&
-                O &&
-                ((t = "INSET_ONLY" === d ? 0 : m(u, _)),
-                (n = "OUTSET_ONLY" === d ? 0 : m(u, g)),
-                (r = "OUTSET_ONLY" === d ? 0 : n + 1));
-            let i = y ? "Highlight" : "var(--status-speaking)";
+            d !== -1 / 0 &&
+                !O &&
+                S &&
+                ((t = "INSET_ONLY" === _ ? 0 : m(d, g)),
+                (n = "OUTSET_ONLY" === _ ? 0 : m(d, E)),
+                (r = "OUTSET_ONLY" === _ ? 0 : n + 1));
+            let i = v ? "Highlight" : "var(--status-speaking)";
             e.boxShadow = [
                 "0 0 0 ".concat(t, "px ").concat(i),
                 "inset 0 0 0 ".concat(n, "px ").concat(i),
                 "inset 0 0 0 ".concat(r, "px var(--background-base-lower)"),
             ].join(", ");
-        } else n && (e.boxShadow = h);
-        return O && (e.transition = "box-shadow 50ms ease-out"), e;
-    }, [t, n, O, b, y, u, d, _, g, E]);
+        } else u && (e.boxShadow = h);
+        return S && (e.transition = "box-shadow 50ms ease-out"), e;
+    }, [t, u, S, O, v, d, _, g, E, b]);
 }

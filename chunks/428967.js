@@ -3,11 +3,11 @@ n.d(t, {
     O2: () => _,
     OQ: () => u,
     V_: () => b,
-    Vc: () => m,
+    Vc: () => h,
     cn: () => E,
     cz: () => g,
     lg: () => d,
-    ms: () => h,
+    ms: () => m,
     qh: () => p,
 });
 var r = n(704215);
@@ -46,6 +46,7 @@ let i = [
         r.z.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
         r.z.DISCOUNT_OFFER_ACTION_SHEET,
         r.z.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
+        r.z.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
     ],
     s = [r.z.GAME_SHOP_NEW_BADGE],
     l = [
@@ -72,17 +73,17 @@ function p(e) {
 function _(e) {
     return !p(e);
 }
-function m(e) {
+function h(e) {
     return l.includes(e);
 }
-function h(e) {
+function m(e) {
     return c.includes(e);
 }
 function g(e) {
     return s.includes(e);
 }
 function E(e) {
-    return m(e) || h(e) || g(e);
+    return h(e) || m(e) || g(e);
 }
 let b = Object.keys(r.z)
     .map((e) => parseInt(e))
