@@ -528,6 +528,7 @@ var r = (function (e) {
                 "GAME_SERVER_HOSTING_BATCH_RELEASE_V1_COACHMARK"),
             (e[(e.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK = 672)] =
                 "GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK"),
+            (e[(e.PREMIUM_ORBS_REWARDS_INTRO_POPOVER = 673)] = "PREMIUM_ORBS_REWARDS_INTRO_POPOVER"),
             e
         );
     })({}),
