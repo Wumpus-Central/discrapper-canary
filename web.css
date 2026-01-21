@@ -87123,8 +87123,18 @@ div.d74ef86df6475678-nagbar {
 }
 
 ._75920c6a1d5deff1-container {
+    background: transparent;
+    border-radius: var(--radius-md);
+    margin: calc(var(--space-12)*-1) 0;
+    padding: var(--space-12) 0;
     scroll-margin-bottom: var(--space-16);
-    scroll-margin-top: var(--space-16)
+    scroll-margin-top: var(--space-16);
+    transition: background .4s ease-out .75s
+}
+
+._75920c6a1d5deff1-flash {
+    background: var(--message-highlight-background-default);
+    transition: background 0s ease-in-out
 }
 
 .dbfbe01105eb2897-baseControlItem {
