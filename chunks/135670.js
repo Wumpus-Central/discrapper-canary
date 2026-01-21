@@ -92,6 +92,7 @@ class c extends r.Z {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipBufferLength(e) {}
+    setClipsMaxPendingTasks(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
     saveClip(e, t) {

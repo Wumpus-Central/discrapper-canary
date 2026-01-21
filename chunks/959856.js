@@ -11,8 +11,8 @@ var r = n(512722),
     f = n(46973),
     p = n(734298),
     _ = n(970838),
-    m = n(68721),
-    h = n(997653),
+    h = n(68721),
+    m = n(997653),
     g = n(740197),
     E = n(340217),
     b = n(586021),
@@ -116,7 +116,7 @@ class N extends s.Z {
                 dave: this.dave,
                 transientKeys: this.transientKeys,
             },
-            u = (0, h.Q)(c);
+            u = (0, m.Q)(c);
         return (
             (u.streamUserId = s),
             u.setOutputVolume(this.outputVolume),
@@ -153,7 +153,7 @@ class N extends s.Z {
     async _enable() {
         if (this.enabled) return;
         await this.getAudioContext().audioWorklet.addModule(E);
-        let e = new m.Z(this.getAudioContext());
+        let e = new h.Z(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
             var t;
@@ -230,6 +230,7 @@ class N extends s.Z {
     setClipBufferLength(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
+    setClipsMaxPendingTasks(e) {}
     saveClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
@@ -401,7 +402,7 @@ class N extends s.Z {
                         break;
                     case f.aB.VoiceActivity:
                         null == this.voiceActivityInput &&
-                            ((this.voiceActivityInput = new m.Z(this.getAudioContext())),
+                            ((this.voiceActivityInput = new h.Z(this.getAudioContext())),
                             this.voiceActivityInput.setSource(this.sourceId),
                             this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity),
                             this.enabled && this.voiceActivityInput.enable());

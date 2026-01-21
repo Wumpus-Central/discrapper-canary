@@ -11,8 +11,8 @@ var r = n(264344),
     f = n(656795),
     p = n(650886),
     _ = n(65154),
-    m = n(149396),
-    h = n(413135).Buffer;
+    h = n(149396),
+    m = n(413135).Buffer;
 function g(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function y(e, t) {
     );
 }
 function O(e) {
-    return (null != e ? e : m.Qx) / m.Qx;
+    return (null != e ? e : h.Qx) / h.Qx;
 }
 function v(e, t, n) {
     return t + ((n - t) * e) / 100;
@@ -84,117 +84,117 @@ class S extends a.Z {
     }
     supports(e) {
         switch (e) {
-            case m.AN.LEGACY_AUDIO_SUBSYSTEM:
-                return (0, d.eJ)(m.eR.VOICE_LEGACY_SUBSYSTEM);
-            case m.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
-                return (0, d.eJ)(m.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
-            case m.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
-                return (0, d.eJ)(m.eR.VOICE_AUTOMATIC_SUBSYSTEM);
-            case m.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
-                return (0, d.eJ)(m.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
-            case m.AN.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING:
-                return (0, d.eJ)(m.eR.VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING);
-            case m.AN.DEBUG_LOGGING:
-                return (0, d.eJ)(m.eR.DEBUG_LOGGING);
-            case m.AN.SOUNDSHARE:
-                return (0, d.eJ)(m.eR.SOUNDSHARE);
-            case m.AN.SCREEN_SOUNDSHARE:
-                return (0, d.eJ)(m.eR.SCREEN_SOUNDSHARE);
-            case m.AN.ELEVATED_HOOK:
-                return (0, d.eJ)(m.eR.ELEVATED_HOOK);
-            case m.AN.LOOPBACK:
-                return (0, d.eJ)(m.eR.LOOPBACK);
-            case m.AN.WUMPUS_VIDEO:
-                return (0, d.eJ)(m.eR.WUMPUS_VIDEO);
-            case m.AN.HYBRID_VIDEO:
-                return (0, d.eJ)(m.eR.HYBRID_VIDEO);
-            case m.AN.ATTENUATION:
-            case m.AN.VIDEO_HOOK:
+            case h.AN.LEGACY_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_LEGACY_SUBSYSTEM);
+            case h.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
+            case h.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_AUTOMATIC_SUBSYSTEM);
+            case h.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
+                return (0, d.eJ)(h.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
+            case h.AN.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING:
+                return (0, d.eJ)(h.eR.VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING);
+            case h.AN.DEBUG_LOGGING:
+                return (0, d.eJ)(h.eR.DEBUG_LOGGING);
+            case h.AN.SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SOUNDSHARE);
+            case h.AN.SCREEN_SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SCREEN_SOUNDSHARE);
+            case h.AN.ELEVATED_HOOK:
+                return (0, d.eJ)(h.eR.ELEVATED_HOOK);
+            case h.AN.LOOPBACK:
+                return (0, d.eJ)(h.eR.LOOPBACK);
+            case h.AN.WUMPUS_VIDEO:
+                return (0, d.eJ)(h.eR.WUMPUS_VIDEO);
+            case h.AN.HYBRID_VIDEO:
+                return (0, d.eJ)(h.eR.HYBRID_VIDEO);
+            case h.AN.ATTENUATION:
+            case h.AN.VIDEO_HOOK:
                 var t;
                 return (
                     (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) != null &&
                     /^win/i.test(i().os.family)
                 );
-            case m.AN.EXPERIMENTAL_SOUNDSHARE:
-                return (0, d.eJ)(m.eR.SOUNDSHARE_LOOPBACK);
-            case m.AN.REMOTE_LOCUS_NETWORK_CONTROL:
-                return (0, d.eJ)(m.eR.REMOTE_LOCUS_NETWORK_CONTROL);
-            case m.AN.SCREEN_PREVIEWS:
-                return (0, d.eJ)(m.eR.SCREEN_PREVIEWS);
-            case m.AN.CLIPS:
-                return (0, d.eJ)(m.eR.CLIPS);
-            case m.AN.WINDOW_PREVIEWS:
-                return (0, d.eJ)(m.eR.WINDOW_PREVIEWS);
-            case m.AN.AUDIO_DEBUG_STATE:
-                return (0, d.eJ)(m.eR.AUDIO_DEBUG_STATE);
-            case m.AN.CONNECTION_REPLAY:
-                return (0, d.eJ)(m.eR.CONNECTION_REPLAY);
-            case m.AN.SIMULCAST:
-                return (0, d.eJ)(m.eR.SIMULCAST) && (0, d.eJ)(m.eR.SIMULCAST_BUGFIX);
-            case m.AN.RTC_REGION_RANKING:
-                return (0, d.eJ)(m.eR.RTC_REGION_RANKING);
-            case m.AN.ELECTRON_VIDEO:
-                return (0, d.eJ)(m.eR.ELECTRON_VIDEO);
-            case m.AN.MEDIAPIPE:
-                return (0, d.eJ)(m.eR.MEDIAPIPE);
-            case m.AN.FIXED_KEYFRAME_INTERVAL:
-                return (0, d.eJ)(m.eR.FIXED_KEYFRAME_INTERVAL);
-            case m.AN.FIRST_FRAME_CALLBACK:
-                return (0, d.eJ)(m.eR.FIRST_FRAME_CALLBACK);
-            case m.AN.REMOTE_USER_MULTI_STREAM:
-                return (0, d.eJ)(m.eR.REMOTE_USER_MULTI_STREAM);
-            case m.AN.IMAGE_QUALITY_MEASUREMENT:
-                return (0, d.eJ)(m.eR.IMAGE_QUALITY_MEASUREMENT);
-            case m.AN.GO_LIVE_HARDWARE:
-                return (0, d.eJ)(m.eR.GO_LIVE_HARDWARE);
-            case m.AN.SCREEN_CAPTURE_KIT:
-                return (0, d.eJ)(m.eR.SCREEN_CAPTURE_KIT);
-            case m.AN.NATIVE_SCREENSHARE_PICKER:
-                return (0, d.eJ)(m.eR.NATIVE_SCREENSHARE_PICKER);
-            case m.AN.MLS_PAIRWISE_FINGERPRINTS:
-                return (0, d.eJ)(m.eR.MLS_PAIRWISE_FINGERPRINTS);
-            case m.AN.OFFLOAD_ADM_CONTROLS:
-                return (0, d.eJ)(m.eR.OFFLOAD_ADM_CONTROLS);
-            case m.AN.VAAPI:
-                return (0, d.eJ)(m.eR.VAAPI);
-            case m.AN.GAMESCOPE_CAPTURE:
-                return (0, d.eJ)(m.eR.GAMESCOPE_CAPTURE);
-            case m.AN.ASYNC_VIDEO_INPUT_DEVICE_INIT:
-                return (0, d.eJ)(m.eR.ASYNC_VIDEO_INPUT_DEVICE_INIT);
-            case m.AN.ASYNC_CLIPS_SOURCE_DEINIT:
-                return (0, d.eJ)(m.eR.ASYNC_CLIPS_SOURCE_DEINIT);
-            case m.AN.PORT_AWARE_LATENCY_TESTING:
-                return (0, d.eJ)(m.eR.PORT_AWARE_LATENCY_TESTING);
-            case m.AN.DIAGNOSTICS:
-            case m.AN.NATIVE_PING:
-            case m.AN.AUTOMATIC_VAD:
-            case m.AN.AUDIO_INPUT_DEVICE:
-            case m.AN.AUDIO_OUTPUT_DEVICE:
-            case m.AN.QOS:
-            case m.AN.VOICE_PROCESSING:
-            case m.AN.AUTO_ENABLE:
-            case m.AN.VIDEO:
-            case m.AN.DESKTOP_CAPTURE:
-            case m.AN.DESKTOP_CAPTURE_FORMAT:
-            case m.AN.DESKTOP_CAPTURE_APPLICATIONS:
-            case m.AN.VOICE_PANNING:
-            case m.AN.AEC_DUMP:
-            case m.AN.DISABLE_VIDEO:
-            case m.AN.SAMPLE_PLAYBACK:
-            case m.AN.NOISE_SUPPRESSION:
-            case m.AN.AUTOMATIC_GAIN_CONTROL:
-            case m.AN.SIDECHAIN_COMPRESSION:
+            case h.AN.EXPERIMENTAL_SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SOUNDSHARE_LOOPBACK);
+            case h.AN.REMOTE_LOCUS_NETWORK_CONTROL:
+                return (0, d.eJ)(h.eR.REMOTE_LOCUS_NETWORK_CONTROL);
+            case h.AN.SCREEN_PREVIEWS:
+                return (0, d.eJ)(h.eR.SCREEN_PREVIEWS);
+            case h.AN.CLIPS:
+                return (0, d.eJ)(h.eR.CLIPS);
+            case h.AN.WINDOW_PREVIEWS:
+                return (0, d.eJ)(h.eR.WINDOW_PREVIEWS);
+            case h.AN.AUDIO_DEBUG_STATE:
+                return (0, d.eJ)(h.eR.AUDIO_DEBUG_STATE);
+            case h.AN.CONNECTION_REPLAY:
+                return (0, d.eJ)(h.eR.CONNECTION_REPLAY);
+            case h.AN.SIMULCAST:
+                return (0, d.eJ)(h.eR.SIMULCAST) && (0, d.eJ)(h.eR.SIMULCAST_BUGFIX);
+            case h.AN.RTC_REGION_RANKING:
+                return (0, d.eJ)(h.eR.RTC_REGION_RANKING);
+            case h.AN.ELECTRON_VIDEO:
+                return (0, d.eJ)(h.eR.ELECTRON_VIDEO);
+            case h.AN.MEDIAPIPE:
+                return (0, d.eJ)(h.eR.MEDIAPIPE);
+            case h.AN.FIXED_KEYFRAME_INTERVAL:
+                return (0, d.eJ)(h.eR.FIXED_KEYFRAME_INTERVAL);
+            case h.AN.FIRST_FRAME_CALLBACK:
+                return (0, d.eJ)(h.eR.FIRST_FRAME_CALLBACK);
+            case h.AN.REMOTE_USER_MULTI_STREAM:
+                return (0, d.eJ)(h.eR.REMOTE_USER_MULTI_STREAM);
+            case h.AN.IMAGE_QUALITY_MEASUREMENT:
+                return (0, d.eJ)(h.eR.IMAGE_QUALITY_MEASUREMENT);
+            case h.AN.GO_LIVE_HARDWARE:
+                return (0, d.eJ)(h.eR.GO_LIVE_HARDWARE);
+            case h.AN.SCREEN_CAPTURE_KIT:
+                return (0, d.eJ)(h.eR.SCREEN_CAPTURE_KIT);
+            case h.AN.NATIVE_SCREENSHARE_PICKER:
+                return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
+            case h.AN.MLS_PAIRWISE_FINGERPRINTS:
+                return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
+            case h.AN.OFFLOAD_ADM_CONTROLS:
+                return (0, d.eJ)(h.eR.OFFLOAD_ADM_CONTROLS);
+            case h.AN.VAAPI:
+                return (0, d.eJ)(h.eR.VAAPI);
+            case h.AN.GAMESCOPE_CAPTURE:
+                return (0, d.eJ)(h.eR.GAMESCOPE_CAPTURE);
+            case h.AN.ASYNC_VIDEO_INPUT_DEVICE_INIT:
+                return (0, d.eJ)(h.eR.ASYNC_VIDEO_INPUT_DEVICE_INIT);
+            case h.AN.ASYNC_CLIPS_SOURCE_DEINIT:
+                return (0, d.eJ)(h.eR.ASYNC_CLIPS_SOURCE_DEINIT);
+            case h.AN.PORT_AWARE_LATENCY_TESTING:
+                return (0, d.eJ)(h.eR.PORT_AWARE_LATENCY_TESTING);
+            case h.AN.DIAGNOSTICS:
+            case h.AN.NATIVE_PING:
+            case h.AN.AUTOMATIC_VAD:
+            case h.AN.AUDIO_INPUT_DEVICE:
+            case h.AN.AUDIO_OUTPUT_DEVICE:
+            case h.AN.QOS:
+            case h.AN.VOICE_PROCESSING:
+            case h.AN.AUTO_ENABLE:
+            case h.AN.VIDEO:
+            case h.AN.DESKTOP_CAPTURE:
+            case h.AN.DESKTOP_CAPTURE_FORMAT:
+            case h.AN.DESKTOP_CAPTURE_APPLICATIONS:
+            case h.AN.VOICE_PANNING:
+            case h.AN.AEC_DUMP:
+            case h.AN.DISABLE_VIDEO:
+            case h.AN.SAMPLE_PLAYBACK:
+            case h.AN.NOISE_SUPPRESSION:
+            case h.AN.AUTOMATIC_GAIN_CONTROL:
+            case h.AN.SIDECHAIN_COMPRESSION:
                 return !0;
             default:
                 return !1;
         }
     }
     connect(e, t, n) {
-        (0, d.eJ)(m.eR.EXPERIMENT_CONFIG) || (n.experiments = void 0);
+        (0, d.eJ)(h.eR.EXPERIMENT_CONFIG) || (n.experiments = void 0);
         let r = c.Z.create(e, t, n);
         return (
             r.on(s.Sh.Destroy, (e) => {
-                this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(m.uJ.NORMAL);
+                this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(h.uJ.NORMAL);
             }),
             r.on(s.Sh.Connected, () => {
                 r.setVideoBroadcast(this.shouldConnectionBroadcastVideo(r));
@@ -203,13 +203,13 @@ class S extends a.Z {
                 this.emit(s.aB.Silence, e);
             }),
             this.connections.add(r),
-            (0, d.p8)(m.uJ.HIGH),
+            (0, d.p8)(h.uJ.HIGH),
             this.emit(s.aB.Connection, r),
             r
         );
     }
     shouldConnectionBroadcastVideo(e) {
-        return (e.context === m.Yn.DEFAULT && this.videoInputDeviceId !== m.Av) || e.hasDesktopSource();
+        return (e.context === h.Yn.DEFAULT && this.videoInputDeviceId !== h.Av) || e.hasDesktopSource();
     }
     eachConnection(e, t) {
         this.connections.forEach((n) => {
@@ -245,14 +245,14 @@ class S extends a.Z {
     setAudioInputDevice(e) {
         let t = this.audioInputDeviceId;
         (this.audioInputDeviceId = e),
-            (0, d.eJ)(m.eR.SET_AUDIO_DEVICE_BY_ID)
+            (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
                 ? (0, d.zS)().setInputDevice(e)
                 : (0, u.Hg)().then((t) => {
                       var n;
                       let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
                       null != r && (0, d.zS)().setInputDevice(r.index);
                   }),
-            this.emit(s.aB.SelectedDeviceChange, m.h7.AUDIO_INPUT, t, e);
+            this.emit(s.aB.SelectedDeviceChange, h.h7.AUDIO_INPUT, t, e);
     }
     getAudioOutputDevices() {
         return (0, u.HS)();
@@ -260,24 +260,24 @@ class S extends a.Z {
     setAudioOutputDevice(e) {
         let t = this.audioOutputDeviceId;
         (this.audioOutputDeviceId = e),
-            (0, d.eJ)(m.eR.SET_AUDIO_DEVICE_BY_ID)
+            (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
                 ? (0, d.zS)().setOutputDevice(e)
                 : (0, u.HS)().then((t) => {
                       var n;
                       let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
                       null != r && (0, d.zS)().setOutputDevice(r.index);
                   }),
-            this.emit(s.aB.SelectedDeviceChange, m.h7.AUDIO_OUTPUT, t, e);
+            this.emit(s.aB.SelectedDeviceChange, h.h7.AUDIO_OUTPUT, t, e);
     }
     getVideoInputDevices() {
         return (0, u.l0)();
     }
     async setVideoInputDevice(e) {
         let t = (await this.getVideoInputDevices()).find((t) => t.id === e),
-            n = null != t ? t.id : m.Av;
+            n = null != t ? t.id : h.Av;
         if (n !== this.videoInputDeviceId) {
-            if (((this.videoInputDeviceId = n), (0, d.eJ)(m.eR.SET_VIDEO_DEVICE_BY_ID))) {
-                let e = null != t ? (null != t.originalId && "" !== t.originalId ? t.originalId : t.id) : m.Av;
+            if (((this.videoInputDeviceId = n), (0, d.eJ)(h.eR.SET_VIDEO_DEVICE_BY_ID))) {
+                let e = null != t ? (null != t.originalId && "" !== t.originalId ? t.originalId : t.id) : h.Av;
                 (0, d.zS)().setVideoInputDevice(e);
             } else (0, d.zS)().setVideoInputDevice(null != t ? t.index : -1);
             this.connections.forEach((e) => e.setVideoBroadcast(this.shouldConnectionBroadcastVideo(e)));
@@ -307,7 +307,7 @@ class S extends a.Z {
                     e.setVideoBroadcast(this.shouldConnectionBroadcastVideo(e));
             }, t);
         this.eachConnection((n) => {
-            (t !== m.Yn.STREAM || n.streamUserId === n.userId) &&
+            (t !== h.Yn.STREAM || n.streamUserId === n.userId) &&
                 (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)));
         }, t);
     }
@@ -330,32 +330,32 @@ class S extends a.Z {
                 useVideoHook: f,
                 useGraphicsCapture: p,
                 useQuartzCapturer: _,
-                allowScreenCaptureKit: h,
+                allowScreenCaptureKit: m,
                 hdrCaptureMode: g,
             } = e.desktopDescription;
         n.setOnClipsRecordingEvent((t) => {
             this.logger.info(
                 "Clips recording event: "
-                    .concat(m.Pf[t], " received for stream ")
+                    .concat(h.Pf[t], " received for stream ")
                     .concat(l, " and sound ")
                     .concat(c, "."),
             ),
-                t === m.Pf.GoLiveEnded
+                t === h.Pf.GoLiveEnded
                     ? this.emit(s.aB.ClipsRecordingRestartNeeded)
-                    : t === m.Pf.Error
+                    : t === h.Pf.Error
                       ? this.emit(
                             s.aB.ClipsInitFailure,
                             "Failed to set clips source in media engine",
                             e.applicationName,
                         )
-                      : (t === m.Pf.Ended || t === m.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, l, c);
+                      : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, l, c);
         }),
             null == (t = n.applyClipsSettings) ||
                 t.call(n, {
                     useVideoHook: f,
                     useGraphicsCapture: p,
                     useQuartzCapturer: _,
-                    allowScreenCaptureKit: h,
+                    allowScreenCaptureKit: m,
                     hdrCaptureMode: g,
                     soundshareLoopback: u,
                     frameRate: r,
@@ -374,7 +374,7 @@ class S extends a.Z {
     }
     setSoundshareSource(e, t, n) {
         this.eachConnection((r) => {
-            (n !== m.Yn.STREAM || r.streamUserId === r.userId) && r.setSoundshareSource(e, t);
+            (n !== h.Yn.STREAM || r.streamUserId === r.userId) && r.setSoundshareSource(e, t);
         }, n);
     }
     getDesktopSource() {
@@ -400,6 +400,10 @@ class S extends a.Z {
     setClipsMLPipelineTypeEnabled(e, t) {
         var n, r;
         null == (n = (r = (0, d.zS)()).setClipsMLPipelineTypeEnabled) || n.call(r, e, t);
+    }
+    setClipsMaxPendingTasks(e) {
+        var t, n;
+        null == (t = (n = (0, d.zS)()).setClipsMaxPendingTasks) || t.call(n, e);
     }
     saveClip(e, t) {
         let n = (0, d.zS)();
@@ -456,7 +460,7 @@ class S extends a.Z {
                       n,
                       null != i ? i : 0,
                       (e) => {
-                          o(h.from(e));
+                          o(m.from(e));
                       },
                       s,
                   );
@@ -489,7 +493,7 @@ class S extends a.Z {
     setAudioSubsystem(e) {
         null != (0, d.zS)().setAudioSubsystem
             ? (0, d.zS)().setAudioSubsystem(e)
-            : (0, d.zS)().setUseLegacyAudioDevice(e === m.iA.LEGACY);
+            : (0, d.zS)().setUseLegacyAudioDevice(e === h.iA.LEGACY);
     }
     setOffloadAdmControls(e) {
         let t = (0, d.zS)();
@@ -506,10 +510,10 @@ class S extends a.Z {
         return this.audioLayer;
     }
     getDebugLogging() {
-        return !!this.supports(m.AN.DEBUG_LOGGING) && (0, d.zS)().getDebugLogging();
+        return !!this.supports(h.AN.DEBUG_LOGGING) && (0, d.zS)().getDebugLogging();
     }
     setDebugLogging(e) {
-        this.supports(m.AN.DEBUG_LOGGING) && (0, d.zS)().setDebugLogging(e);
+        this.supports(h.AN.DEBUG_LOGGING) && (0, d.zS)().setDebugLogging(e);
     }
     setLoopback(e, t) {
         var n, r;
@@ -584,10 +588,10 @@ class S extends a.Z {
         return null == n
             ? null
             : (n.on(s.Sh.Destroy, (e) => {
-                  this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(m.uJ.NORMAL);
+                  this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(h.uJ.NORMAL);
               }),
               this.connections.add(n),
-              (0, d.p8)(m.uJ.HIGH),
+              (0, d.p8)(h.uJ.HIGH),
               this.emit(s.aB.Connection, n),
               n);
     }
@@ -698,20 +702,20 @@ class S extends a.Z {
         }),
             setTimeout(() => {
                 !e && ++this.consecutiveWatchdogFailures > 1 ? this.emit(s.aB.WatchdogTimeout) : this.watchdogTick();
-            }, m.H0);
+            }, h.H0);
     }
     connectionsEmpty() {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, a, c, _, h;
+        var e, t, n, r, i, a, c, _, m;
         super(),
             (e = this),
             g(this, "Video", p.Z),
             g(this, "Camera", f.Z),
-            g(this, "audioInputDeviceId", m.Av),
-            g(this, "audioOutputDeviceId", m.Av),
-            g(this, "videoInputDeviceId", m.Av),
+            g(this, "audioInputDeviceId", h.Av),
+            g(this, "audioOutputDeviceId", h.Av),
+            g(this, "videoInputDeviceId", h.Av),
             g(this, "connections", new Set()),
             g(this, "lastVoiceActivity", -1),
             g(this, "audioSubsystem", "standard"),
@@ -727,13 +731,13 @@ class S extends a.Z {
                 e.deviceChangeGeneration++,
                     e.emit(
                         s.aB.DeviceChange,
-                        (0, u.C1)(m.h7.AUDIO_INPUT, t),
-                        (0, u.C1)(m.h7.AUDIO_OUTPUT, n),
-                        (0, u.C1)(m.h7.VIDEO_INPUT, r),
+                        (0, u.C1)(h.h7.AUDIO_INPUT, t),
+                        (0, u.C1)(h.h7.AUDIO_OUTPUT, n),
+                        (0, u.C1)(h.h7.VIDEO_INPUT, r),
                     );
             }),
             g(this, "handleVolumeChange", (e, t) => {
-                this.emit(s.aB.VolumeChange, e * m.Qx, t * m.Qx);
+                this.emit(s.aB.VolumeChange, e * h.Qx, t * h.Qx);
             }),
             g(this, "handleVoiceActivity", (e, t) => {
                 let n = Date.now();
@@ -823,14 +827,14 @@ class S extends a.Z {
                       (this.audioSubsystem = e), (this.audioLayer = t);
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice &&
-                  (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? m.iA.LEGACY : m.iA.STANDARD),
+                  (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
             null != E.pingVoiceThread &&
                 "undefined" != typeof window &&
                 "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL &&
                 this.watchdogTick(),
             null != E.setActiveSinksChangeCallback && E.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            null == (_ = E.setLoopbackPlaybackGainMultiplier) || _.call(E, m.Jk),
-            null == (h = E.setVoiceFiltersFailedCallback) || h.call(E, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
+            null == (_ = E.setLoopbackPlaybackGainMultiplier) || _.call(E, h.Jk),
+            null == (m = E.setVoiceFiltersFailedCallback) || m.call(E, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
             (0, l.Z)(this),
             I(this);
     }
