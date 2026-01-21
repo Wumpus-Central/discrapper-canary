@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(353926),
     p = n(667344),
     _ = n(453032),
-    m = n(493075),
-    h = n(314897),
+    h = n(493075),
+    m = n(314897),
     g = n(430824),
     E = n(572004),
     b = n(878209),
@@ -49,12 +49,13 @@ function S(e) {
 }
 function I() {
     let { experiments: e, overridesInfo: t } = (0, p.Qb)(),
-        { experiments: n, overridesInfo: a } = (0, m.sI)(),
+        { experiments: n, overridesInfo: a } = (0, h.sI)(),
         o = i.useMemo(() => S({}, n, e), [n, e]),
         s = i.useMemo(() => S({}, a, t), [a, t]),
         [c, u] = i.useState(""),
         d = (0, b.Ro)((0, b.Tc)((0, b.Cg)(o), s), c);
     return (0, r.jsxs)("div", {
+        "data-mtctest-ignore": "true",
         children: [
             (0, r.jsx)(l.E1j, {
                 placeholder: "Search experiments",
@@ -88,12 +89,12 @@ function I() {
 }
 function T(e) {
     let { experiment: t, experimentId: n, overrideInfo: a, defaultOpen: p } = e,
-        [m, g] = i.useState(p),
+        [h, g] = i.useState(p),
         [b, v] = i.useState(!1),
         S = i.useCallback(() => {
             g((e) => !e);
         }, []),
-        I = (0, s.e7)([h.default], () => h.default.getId()),
+        I = (0, s.e7)([m.default], () => m.default.getId()),
         T = (0, _.qD)(t, I),
         C = (0, _.aN)(t, I),
         A = (0, s.Wu)([f.Z], () =>
@@ -158,14 +159,14 @@ function T(e) {
                 ],
             }),
         });
-    if (!m)
+    if (!h)
         return (0, r.jsx)("div", {
             className: O.group,
             children: P,
         });
-    let R = "";
+    let w = "";
     return (
-        (R =
+        (w =
             t.system === u.I.LEGACY
                 ? "Currently assigned to bucket ".concat(null != T ? T : y.NZ.NOT_ELIGIBLE)
                 : null != T
@@ -178,7 +179,7 @@ function T(e) {
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(d.y, {
                         label: t.system === u.I.LEGACY ? "Bucket Override" : "Variant Override",
-                        description: R,
+                        description: w,
                         experiment: t,
                         experimentId: n,
                         overrideInfo: a,
@@ -251,10 +252,10 @@ function C(e) {
     let { experiment: t, experimentId: n, overrideInfo: a } = e,
         [c, u] = i.useState(null != a),
         [p, _] = i.useState(!1),
-        m = i.useCallback(() => {
+        h = i.useCallback(() => {
             u((e) => !e);
         }, []),
-        h = (0, s.e7)([f.Z], () => f.Z.getLoadedGuildExperiment(n)),
+        m = (0, s.e7)([f.Z], () => f.Z.getLoadedGuildExperiment(n)),
         E = (0, s.Wu)([f.Z], () =>
             o()
                 .sortBy(f.Z.getRecentExposures(y.xY.GUILD, n), (e) => {
@@ -285,7 +286,7 @@ function C(e) {
             return [r.join("\n"), a];
         }),
         S = (0, r.jsx)(l.P3F, {
-            onClick: m,
+            onClick: h,
             children: (0, r.jsxs)(l.Text, {
                 variant: "text-md/medium",
                 className: O.title,
@@ -322,7 +323,7 @@ function C(e) {
                   (0, r.jsx)("div", {
                       className: O.description,
                       children:
-                          null == h
+                          null == m
                               ? (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -352,7 +353,7 @@ function C(e) {
                                 (0, r.jsx)(l.Text, {
                                     variant: "code",
                                     className: O.pre,
-                                    children: null == h ? "None" : JSON.stringify(h, void 0, 2),
+                                    children: null == m ? "None" : JSON.stringify(m, void 0, 2),
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-lg/medium",
