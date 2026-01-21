@@ -11,8 +11,8 @@ var r = n(654861),
     f = n(47770),
     p = n(46973),
     _ = n(379649),
-    m = n(570140),
-    h = n(668781),
+    h = n(570140),
+    m = n(668781),
     g = n(846027),
     E = n(304680),
     b = n(547727),
@@ -26,8 +26,8 @@ var r = n(654861),
     A = n(148807),
     N = n(145016),
     P = n(166884),
-    R = n(450109),
-    w = n(118445),
+    w = n(450109),
+    R = n(118445),
     D = n(449187),
     x = n(412412),
     L = n(311473),
@@ -113,8 +113,8 @@ function e_(e, t) {
         e
     );
 }
-let em = /^https/.test("https:") ? "wss:" : "ws:",
-    eh = 200,
+let eh = /^https/.test("https:") ? "wss:" : "ws:",
+    em = 200,
     eg = 20,
     eE = 500,
     eb = 250,
@@ -171,10 +171,10 @@ class eP extends f.Z {
             (this._endpoint = null), (this.hostname = null);
         else {
             var t;
-            e = "".concat(em, "//").concat(e);
+            e = "".concat(eh, "//").concat(e);
             let { hostname: n, port: r } = null != (t = z.Z.toURLSafe(e)) ? t : {},
                 i = null != r ? parseInt(r) : NaN;
-            null != n && (80 === i || 443 === i) && (e = "".concat(em, "//").concat(n)),
+            null != n && (80 === i || 443 === i) && (e = "".concat(eh, "//").concat(n)),
                 (this._endpoint = e + "/"),
                 (this.hostname = n);
         }
@@ -196,7 +196,7 @@ class eP extends f.Z {
                 (this._mediaSessionId = null),
                 null != n &&
                     ((this._rtcConnectionId = (0, c.Z)()),
-                    m.Z.dispatch({
+                    h.Z.dispatch({
                         type: "RTC_CONNECTION_UPDATE_ID",
                         connection: this,
                     }))),
@@ -206,37 +206,37 @@ class eP extends f.Z {
         let i = this._socket;
         null != i && this._cleanupSocket(),
             null != this._nextChannelId && ((this._channelId = this._nextChannelId), (this._nextChannelId = void 0)),
-            (i = this._socket = new $.Z(this.endpoint, this.context)).on(
-                $.V.Connecting,
+            (i = this._socket = new $.ZP(this.endpoint, this.context)).on(
+                $.VG.Connecting,
                 this._handleConnecting.bind(this, i),
             ),
-            i.on($.V.Connect, this._handleConnect.bind(this, i)),
-            i.on($.V.Disconnect, this._handleDisconnect.bind(this, i)),
-            i.on($.V.Resuming, this._handleResuming.bind(this, i)),
-            i.on($.V.Ready, this._handleReady.bind(this, i)),
-            i.on($.V.Speaking, this._handleSpeaking.bind(this, i)),
-            i.on($.V.Video, this._handleVideo.bind(this, i)),
-            i.on($.V.Ping, this._handleControlPing.bind(this)),
-            i.on($.V.ClientDisconnect, this._handleClientDisconnect.bind(this)),
-            i.on($.V.ClientConnect, this._handleClientConnect.bind(this)),
-            i.on($.V.Codecs, this._handleCodecs.bind(this)),
-            i.on($.V.MediaSessionId, this._handleMediaSessionId.bind(this)),
-            i.on($.V.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
-            i.on($.V.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
-            i.on($.V.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
-            i.on($.V.Flags, this.handleFlags.bind(this)),
-            i.on($.V.Platform, this.handlePlatform.bind(this)),
-            i.on($.V.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
-            i.on($.V.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
-            i.on($.V.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
-            i.on($.V.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
-            i.on($.V.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
-            i.on($.V.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
-            i.on($.V.MLSProposals, this._handleMLSProposals.bind(this, i)),
-            i.on($.V.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
-            i.on($.V.MLSWelcome, this._handleMLSWelcome.bind(this)),
-            i.on($.V.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
-            i.on($.V.SendMessage, this._recordMessageEvent.bind(this, 5)),
+            i.on($.VG.Connect, this._handleConnect.bind(this, i)),
+            i.on($.VG.Disconnect, this._handleDisconnect.bind(this, i)),
+            i.on($.VG.Resuming, this._handleResuming.bind(this, i)),
+            i.on($.VG.Ready, this._handleReady.bind(this, i)),
+            i.on($.VG.Speaking, this._handleSpeaking.bind(this, i)),
+            i.on($.VG.Video, this._handleVideo.bind(this, i)),
+            i.on($.VG.Ping, this._handleControlPing.bind(this)),
+            i.on($.VG.ClientDisconnect, this._handleClientDisconnect.bind(this)),
+            i.on($.VG.ClientConnect, this._handleClientConnect.bind(this)),
+            i.on($.VG.Codecs, this._handleCodecs.bind(this)),
+            i.on($.VG.MediaSessionId, this._handleMediaSessionId.bind(this)),
+            i.on($.VG.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
+            i.on($.VG.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
+            i.on($.VG.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
+            i.on($.VG.Flags, this.handleFlags.bind(this)),
+            i.on($.VG.Platform, this.handlePlatform.bind(this)),
+            i.on($.VG.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
+            i.on($.VG.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
+            i.on($.VG.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
+            i.on($.VG.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
+            i.on($.VG.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
+            i.on($.VG.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
+            i.on($.VG.MLSProposals, this._handleMLSProposals.bind(this, i)),
+            i.on($.VG.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
+            i.on($.VG.MLSWelcome, this._handleMLSWelcome.bind(this)),
+            i.on($.VG.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
+            i.on($.VG.SendMessage, this._recordMessageEvent.bind(this, 5)),
             (this._connectStartTime = (0, _.zO)()),
             this._connectCount++,
             (this._connecting = !0),
@@ -502,7 +502,7 @@ class eP extends f.Z {
         let { enabled: n } = (0, y.h)({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
             t.push("keyframe_on_join"),
-            w.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
+            R.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
                 t.push("network_aware_socket");
         let r = A.Z.getCurrentConfig(
             { location: "_chooseExperiments" },
@@ -548,7 +548,7 @@ class eP extends f.Z {
             });
     }
     _handleDisconnect(e, t, n, r) {
-        var i, a, o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, I, T, C;
+        var i, a, o, s, l, c, u, d, f, p, _, h, m, g, E, b, y, O, v, I, T, C;
         this.logger.info(
             "Disconnected from RTC server, clean: "
                 .concat(t, ", code: ")
@@ -667,7 +667,7 @@ class eP extends f.Z {
                 i = U.Z.getSettings(),
                 a = k.Z.getChannel(this.channelId),
                 o =
-                    null == (u = R.Z.getConnectionStats(this.getMediaEngineConnectionId())) ||
+                    null == (u = w.Z.getConnectionStats(this.getMediaEngineConnectionId())) ||
                     null == (c = u.stats.rtp.outbound.find((e) => "audio" === e.type))
                         ? void 0
                         : c.sampleRateMismatchPercent,
@@ -686,8 +686,8 @@ class eP extends f.Z {
                         null == (f = this._voiceQuality) ? void 0 : f.getPacketStats(),
                         null == (p = this._voiceQuality) ? void 0 : p.getBytesStats(),
                         null == (_ = this._voiceQuality) ? void 0 : _.getBufferStats(),
-                        null == (m = this._voiceQuality) ? void 0 : m.getNetworkStats(),
-                        null == (h = this._voiceQuality) ? void 0 : h.getSystemResourceStats(),
+                        null == (h = this._voiceQuality) ? void 0 : h.getNetworkStats(),
+                        null == (m = this._voiceQuality) ? void 0 : m.getSystemResourceStats(),
                         null == (g = this._voiceQuality) ? void 0 : g.getFrameOpStats(),
                         null == (E = this._voiceQuality) ? void 0 : E.getDurationStats(),
                         null == (b = this._voiceQuality) ? void 0 : b.getTransportStats(),
@@ -846,7 +846,7 @@ class eP extends f.Z {
                     this.getExtraConnectionOptions(),
                 ),
             ),
-            h = (0, _.zO)() - d;
+            m = (0, _.zO)() - d;
         f.setUseElectronVideo(l.supports(ec.AN.ELECTRON_VIDEO)),
             U.Z.supports(ec.AN.IMAGE_QUALITY_MEASUREMENT) &&
                 f.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
@@ -914,7 +914,7 @@ class eP extends f.Z {
                     ((this._voiceQuality = new eo.Z(f)),
                     this._voiceQuality.start(),
                     this._voiceQuality.on(eo.B.InputDeviceSampleRateChanged, (e) => {
-                        m.Z.dispatch({
+                        h.Z.dispatch({
                             type: "AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED",
                             sampleRate: e,
                         });
@@ -936,14 +936,14 @@ class eP extends f.Z {
                 ) {
                     case "udp":
                         this.logger.info("Sending UDP info to RTC server.", i, this._selectedExperiments),
-                            e.once($.V.Encryption, (e, t) => {
+                            e.once($.VG.Encryption, (e, t) => {
                                 f === this._connection && (f.setEncryption(e, t), (this._encryptionMode = e));
                             }),
                             e.selectProtocol(r, this.getRTCConnectionId(), i, this._selectedExperiments);
                         break;
                     case "webrtc":
                         this.logger.info("Sending local SDP to RTC server."),
-                            e.once($.V.SDP, this._handleSDP.bind(this)),
+                            e.once($.VG.SDP, this._handleSDP.bind(this)),
                             e.selectProtocol(r, this.getRTCConnectionId(), i);
                         break;
                     default:
@@ -1036,7 +1036,7 @@ class eP extends f.Z {
                           (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)),
                     this.state === el.hes.RTC_CONNECTED)
                 ) {
-                    var r, i, a, o, s, l, c, u, d, p, m, g, E, b;
+                    var r, i, a, o, s, l, c, u, d, p, h, g, E, b;
                     let e = F.Z.shouldIncludePreferredRegion() ? F.Z.getPreferredRegion() : null;
                     if (this._connecting) {
                         let t = U.Z.getSettings(),
@@ -1070,7 +1070,7 @@ class eP extends f.Z {
                         V.default.track(el.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
                             rtc_connection_id: n.rtc_connection_id,
                             time_1_creation_to_connect: this._connectStartTime - this._createdTime,
-                            time_2_media_engine_connect: h,
+                            time_2_media_engine_connect: m,
                             time_3_media_engine_create_native_connection:
                                 null == (a = f.transportInfo) ? void 0 : a.createConnectionTime,
                             time_4_media_engine_connect_to_socket:
@@ -1091,7 +1091,7 @@ class eP extends f.Z {
                                 null == (p = this._connection) ? void 0 : p.beginInitializeAt,
                             ),
                             rtc_connecting_native_codecs: i(
-                                null == (m = this._connection) ? void 0 : m.onVideoCodecsCallbackAt,
+                                null == (h = this._connection) ? void 0 : h.onVideoCodecsCallbackAt,
                                 null == (g = this._connection) ? void 0 : g.onConnectCallbackAt,
                             ),
                             rtc_connecting_native_crypto_modes: i(
@@ -1281,7 +1281,7 @@ class eP extends f.Z {
                     time: Date.now(),
                     value: e,
                 });
-                this._pings.length >= eh;
+                this._pings.length >= em;
             )
                 this._pings.shift();
             e > eE && this._pingBadCount++, this.emit(X.z.Ping, this._pings, this.quality);
@@ -1387,7 +1387,7 @@ class eP extends f.Z {
                 raw_thermal_state: t,
             }),
         ),
-            m.Z.dispatch({
+            h.Z.dispatch({
                 type: "MEDIA_SESSION_JOINED",
                 mediaSessionId: this.getMediaSessionId(),
                 context: this.context,
@@ -1397,7 +1397,7 @@ class eP extends f.Z {
         let t = this._connection;
         this.logger.info("Remote media sink wants: ".concat(JSON.stringify(e))),
             (this._remoteVideoSinkWants = e),
-            m.Z.dispatch({
+            h.Z.dispatch({
                 type: "RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS",
                 context: this.context,
                 wants: e,
@@ -1714,7 +1714,7 @@ class eP extends f.Z {
                 eventLog: eN(),
             }),
             e.includes("GetPersistedKeyPair")
-                ? h.Z.show({
+                ? m.Z.show({
                       title: eu.intl.string(eu.t.fJUioH),
                       body: eu.intl.string(eu.t.CQLWvo),
                   })
@@ -1760,7 +1760,7 @@ class eP extends f.Z {
     _alertMLSFailure(e, t) {
         let n = B.default.getCurrentUser();
         ((null == n ? void 0 : n.isStaff()) || (null == n ? void 0 : n.isStaffPersonal())) &&
-            h.Z.show({
+            m.Z.show({
                 title: "MLS Error in ".concat(e),
                 body: "Error: ".concat(
                     t,
