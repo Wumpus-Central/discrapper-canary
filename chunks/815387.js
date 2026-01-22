@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(376484),
     p = n(362604),
     _ = n(710845),
-    m = n(387188),
-    h = n(825829),
+    h = n(387188),
+    m = n(825829),
     g = n(623624),
     E = n(29887),
     b = n(533694),
@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(504733),
     N = n(563959),
     P = n(917318),
-    R = n(703656),
-    w = n(471253),
+    w = n(703656),
+    R = n(471253),
     D = n(565799),
     x = n(590415),
     L = n(911560),
@@ -65,8 +65,8 @@ var r = n(54381),
     ef = n(522860),
     ep = n(600397),
     e_ = n(73352),
-    em = n(507962),
-    eh = n(857640),
+    eh = n(507962),
+    em = n(857640),
     eg = n(614972),
     eE = n(701181),
     eb = n(29338),
@@ -80,8 +80,8 @@ var r = n(54381),
     eA = n(910548),
     eN = n(981631),
     eP = n(70722),
-    eR = n(388032);
-function ew(e, t, n) {
+    ew = n(388032);
+function eR(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -105,7 +105,7 @@ function eD(e) {
                 }),
             )),
             r.forEach(function (t) {
-                ew(e, t, n[t]);
+                eR(e, t, n[t]);
             });
     }
     return e;
@@ -144,8 +144,8 @@ function eM(e) {
         f = (0, a.e7)([U.Z], () => U.Z.isCallActive(d, s), [d, s]),
         p = (0, a.e7)([Y.Z], () => Y.Z.getVoiceState(eN.ME, u)),
         _ = !f && null != t.call && !t.call.participants.includes(u),
-        m = f && (null == p || p.channelId !== d),
-        h = i.useCallback(() => c.default.selectVoiceChannel(d), [d]),
+        h = f && (null == p || p.channelId !== d),
+        m = i.useCallback(() => c.default.selectVoiceChannel(d), [d]),
         g = (0, ee.l)({
             user: l,
             channelId: d,
@@ -157,9 +157,9 @@ function eM(e) {
         compact: n,
         message: t,
         missed: _,
-        joinable: m,
+        joinable: h,
         usernameHook: g,
-        onClickJoinCall: h,
+        onClickJoinCall: m,
     });
 }
 function ek(e) {
@@ -202,7 +202,7 @@ function eG(e) {
         l = i.useCallback(() => {
             if (V.Z.getChannelId() !== s) {
                 let e = G.Z.getChannel(s);
-                null != e && (0, R.XU)(e.guild_id, e.id);
+                null != e && (0, w.XU)(e.guild_id, e.id);
             }
             setTimeout(() => W.S.dispatch(eN.CkL.TOGGLE_CHANNEL_PINS), 0);
         }, [s]),
@@ -330,7 +330,7 @@ function eB(e) {
               targetUsernameHook: u,
           })
         : null != l && l.id !== o.id
-          ? (0, r.jsx)(em.Z, {
+          ? (0, r.jsx)(eh.Z, {
                 message: t,
                 channel: n,
                 compact: i,
@@ -338,7 +338,7 @@ function eB(e) {
                 otherUser: l,
                 otherUsernameHook: u,
             })
-          : (0, r.jsx)(em.Z, {
+          : (0, r.jsx)(eh.Z, {
                 message: t,
                 channel: n,
                 usernameHook: c,
@@ -426,13 +426,13 @@ function eW(e) {
         f = (0, a.e7)([B.Z], () => B.Z.findActivity(l, (e) => e.type === eN.IIU.PLAYING), [l]),
         p = (0, a.e7)([G.Z], () => (null != c ? G.Z.getChannel(c.channel_id) : null), [c]),
         _ = null == c ? void 0 : c.guild_id,
-        m = (0, ee.l)({
+        h = (0, ee.l)({
             user: s,
             channelId: d,
             guildId: o.guild_id,
             messageId: t.id,
         }),
-        h = i.useCallback(() => {
+        m = i.useCallback(() => {
             null != p &&
                 null != _ &&
                 (0, u.iV)({
@@ -448,8 +448,8 @@ function eW(e) {
               compact: n,
               channel: p,
               playingActivity: f,
-              onJoinStream: h,
-              usernameHook: m,
+              onJoinStream: m,
+              usernameHook: h,
           })
         : null;
 }
@@ -469,7 +469,7 @@ function eK(e) {
 }
 function ez(e) {
     let { message: t, compact: n, channel: i } = e;
-    return (0, h.nY)(t)
+    return (0, m.nY)(t)
         ? (0, r.jsx)(et.Z, {
               message: t,
               compact: n,
@@ -551,7 +551,7 @@ function e$(e) {
             guildId: n.guild_id,
             messageId: t.id,
         });
-    return (0, r.jsx)(eh.Z, {
+    return (0, r.jsx)(em.Z, {
         message: t,
         compact: i,
         usernameHook: a,
@@ -596,7 +596,7 @@ function e3(e) {
         }),
         d = (0, a.e7)([F.Z], () => F.Z.can(eN.Plq.MUTE_MEMBERS, s)),
         f = () => {
-            (0, w.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
+            (0, R.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
         },
         p = (0, a.e7)([D.Z], () => D.Z.getParticipant(s.id, i.author.id)),
         _ =
@@ -604,7 +604,7 @@ function e3(e) {
             new Date(
                 null != (n = null == p || null == (t = p.voiceState) ? void 0 : t.requestToSpeakTimestamp) ? n : 0,
             ).toISOString(),
-        m = d && (null == p ? void 0 : p.rtsState) === x.xO.REQUESTED_TO_SPEAK && _;
+        h = d && (null == p ? void 0 : p.rtsState) === x.xO.REQUESTED_TO_SPEAK && _;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(eg.Z, {
@@ -612,11 +612,11 @@ function e3(e) {
                 compact: c,
                 usernameHook: u,
             }),
-            m
+            h
                 ? (0, r.jsx)(o.Button, {
                       variant: "secondary",
                       onClick: f,
-                      text: eR.intl.string(eR.t.f0T7hI),
+                      text: ew.intl.string(ew.t.f0T7hI),
                       icon: o.Lrb,
                   })
                 : null,
@@ -702,7 +702,7 @@ function tt(e) {
             guildId: n.guild_id,
             messageId: t.id,
         });
-    return (0, r.jsx)(m.iq, {
+    return (0, r.jsx)(h.iq, {
         message: t,
         channel: n,
         compact: i,
@@ -789,7 +789,8 @@ let ti = Object.freeze({
     [eN.uaV.REPORT_TO_MOD_DELETED_MESSAGE]: P.Z,
     [eN.uaV.REPORT_TO_MOD_CLOSED_REPORT]: P.Z,
     [eN.uaV.PREMIUM_GROUP_INVITE]: tr,
-    65: tn,
+    [eN.uaV.VOICE_SESSION]: void 0,
+    66: tn,
 });
 function ta(e) {
     let { message: t, channel: n, compact: i, disableInteraction: a } = e,
