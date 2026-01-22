@@ -102,17 +102,20 @@ function U() {
             [c, o, n, l, u, h, b, f],
         ),
         A = (0, m.J$)(a.paymentSourceId),
-        v = (0, _.R)({
-            purchaseType: c,
-            plan: s,
-            premiumSubscription: e,
-            isGift: h,
-            planGroup: y,
-            isPrepaidPaymentSource: A,
-            inReverseTrial: d,
-            paymentSourceId: n,
-            hasPaymentSources: t,
-        });
+        v =
+            c === D.VV.SUBSCRIPTION && null == s
+                ? x.intl.string(x.t.YScQSF)
+                : (0, _.R)({
+                      purchaseType: c,
+                      plan: s,
+                      premiumSubscription: e,
+                      isGift: h,
+                      planGroup: y,
+                      isPrepaidPaymentSource: A,
+                      inReverseTrial: d,
+                      paymentSourceId: n,
+                      hasPaymentSources: t,
+                  });
     return {
         paymentSource: b,
         isEligibleForTrial: f,
