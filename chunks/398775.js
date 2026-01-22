@@ -1,6 +1,6 @@
 n.d(e, {
-    PremiumSubscriptionPauseModalSelect: () => C,
-    Sz: () => P,
+    PremiumSubscriptionPauseModalSelect: () => S,
+    Sz: () => C,
 }),
     n(539854),
     n(388685),
@@ -12,17 +12,16 @@ var a = n(54381),
     o = n(99945),
     s = n(793030),
     c = n(755721),
-    u = n(481060),
-    d = n(355467),
-    m = n(493773),
-    O = n(74538),
+    u = n(355467),
+    d = n(493773),
+    m = n(74538),
     f = n(296848),
-    _ = n(45474),
-    E = n(594135),
-    p = n(981631),
-    b = n(388032),
-    y = n(278900);
-async function S(t) {
+    O = n(45474),
+    _ = n(594135),
+    E = n(981631),
+    p = n(388032),
+    b = n(278900);
+async function y(t) {
     let {
         premiumSubscription: e,
         pauseDuration: n,
@@ -35,14 +34,14 @@ async function S(t) {
     try {
         i(!0),
             r(!1),
-            await (0, d.Mg)(
+            await (0, u.Mg)(
                 e,
                 { pauseDuration: n },
                 {
                     amount: 0,
                     currency: e.currency,
                 },
-                (0, O.UX)(e.items, e.currency, e.paymentSourceId),
+                (0, m.UX)(e.items, e.currency, e.paymentSourceId),
                 l,
                 o,
             ),
@@ -51,7 +50,7 @@ async function S(t) {
         r(!0), i(!1);
     }
 }
-function C() {
+function S() {
     let {
             transitionState: t,
             onClose: e,
@@ -59,73 +58,74 @@ function C() {
             setPauseDuration: i,
             pauseDuration: l,
             premiumSubscription: u,
-        } = (0, E.a)(),
-        d = r.useCallback(
+        } = (0, _.a)(),
+        m = r.useCallback(
             (t) => {
                 let { value: e } = t;
                 i(e);
             },
             [i],
         ),
-        O = u.status === p.O0b.PAUSED ? b.intl.string(b.t.Lp9WoG) : b.intl.string(b.t.eSR83U),
+        y = u.status === E.O0b.PAUSED ? p.intl.string(p.t.Lp9WoG) : p.intl.string(p.t.eSR83U),
         S = (function (t) {
-            let e = t.status === p.O0b.PAUSED ? b.t.o3upfT : b.t.dBXZEm,
+            let e = t.status === E.O0b.PAUSED ? p.t.o3upfT : p.t.dBXZEm,
                 { durations: n, currentDaysPaused: a } = (0, f.AT)(t),
                 r = [];
             for (let t of n) {
                 let n = o.T[t];
                 r.push({
-                    name: b.intl.formatToPlainString(e, { days: n - a }),
+                    name: p.intl.formatToPlainString(e, { days: n - a }),
                     value: n,
-                    radioItemIconClassName: y.radioOption,
+                    radioItemIconClassName: b.radioOption,
                 });
             }
             return (
                 r.sort((t, e) => t.value - e.value),
                 r.push({
-                    name: b.intl.string(b.t.OCPUM6),
+                    name: p.intl.string(p.t.OCPUM6),
                     value: 0,
-                    radioBarClassName: y.cancelText,
-                    radioItemIconClassName: y.cancelText,
+                    radioBarClassName: b.cancelText,
+                    radioItemIconClassName: b.cancelText,
                 }),
                 r
             );
         })(u);
     return (
-        (0, m.ZP)(() => {
+        (0, d.ZP)(() => {
             S.length < 1 || i(S[0].value);
         }),
         (0, a.jsx)(s.Modal, {
             transitionState: t,
-            title: b.intl.string(b.t["f3nnB/"]),
-            subtitle: O,
+            title: p.intl.string(p.t["f3nnB/"]),
+            subtitle: y,
             onClose: async () => {
                 await e();
             },
             actions: [
                 {
                     variant: "secondary",
-                    text: b.intl.string(b.t.h9tkAK),
+                    text: p.intl.string(p.t.h9tkAK),
                     onClick: e,
                 },
                 {
                     variant: "primary",
                     disabled: null === l,
-                    text: b.intl.string(b.t["3PatSz"]),
+                    text: p.intl.string(p.t["3PatSz"]),
                     onClick: () => {
-                        0 === l ? n(_.R.WHAT_YOU_LOSE) : n(_.R.PAUSE_CONFIRM);
+                        0 === l ? n(O.R.WHAT_YOU_LOSE) : n(O.R.PAUSE_CONFIRM);
                     },
                 },
             ],
             children: (0, a.jsx)(c.Gu, {
+                "data-migration-pending": !0,
                 options: S,
-                onChange: d,
+                onChange: m,
                 value: l,
             }),
         })
     );
 }
-function P() {
+function C() {
     let {
             transitionState: t,
             onClose: e,
@@ -133,52 +133,52 @@ function P() {
             premiumSubscription: i,
             analyticsLocation: o,
             setStep: c,
-            analyticsLocations: d,
-        } = (0, E.a)(),
-        [m, O] = r.useState(!1),
-        [f, C] = r.useState(!1);
-    if (null == n) return void c(_.R.PAUSE_SELECT);
-    let P = null,
-        T = [p.O0b.PAST_DUE, p.O0b.PAUSED].includes(i.status) ? i.currentPeriodStart : i.currentPeriodEnd,
-        v = l()(T).add(n, "days").toDate();
+            analyticsLocations: u,
+        } = (0, _.a)(),
+        [d, m] = r.useState(!1),
+        [f, S] = r.useState(!1);
+    if (null == n) return void c(O.R.PAUSE_SELECT);
+    let C = null,
+        P = [E.O0b.PAST_DUE, E.O0b.PAUSED].includes(i.status) ? i.currentPeriodStart : i.currentPeriodEnd,
+        v = l()(P).add(n, "days").toDate();
     switch (i.status) {
-        case p.O0b.PAST_DUE:
-            P = b.intl.format(b.t["xaS18/"], {
+        case E.O0b.PAST_DUE:
+            C = p.intl.format(p.t["xaS18/"], {
                 pauseDuration: n,
                 resumeDate: v,
             });
             break;
-        case p.O0b.PAUSED:
-            P = b.intl.format(b.t.Vur3Fc, { resumeDate: v });
+        case E.O0b.PAUSED:
+            C = p.intl.format(p.t.Vur3Fc, { resumeDate: v });
             break;
         default:
-            P = b.intl.format(b.t.W85vFA, {
-                pauseDate: T,
+            C = p.intl.format(p.t.W85vFA, {
+                pauseDate: P,
                 resumeDate: v,
                 pauseDuration: n,
             });
     }
     return (0, a.jsxs)(s.Modal, {
-        title: b.intl.string(b.t.AnMG5x),
+        title: p.intl.string(p.t.AnMG5x),
         transitionState: t,
         actions: [
             {
-                text: b.intl.string(b.t.h9tkAK),
+                text: p.intl.string(p.t.h9tkAK),
                 variant: "primary",
                 onClick: e,
             },
             {
-                text: b.intl.string(b.t["cY+Oob"]),
+                text: p.intl.string(p.t["cY+Oob"]),
                 variant: "critical-primary",
                 disabled: f || null == n,
                 onClick: async () => {
-                    await S({
+                    await y({
                         premiumSubscription: i,
                         pauseDuration: n,
-                        setIsCancelling: C,
-                        setHasError: O,
+                        setIsCancelling: S,
+                        setHasError: m,
                         onClose: e,
-                        analyticsLocations: d,
+                        analyticsLocations: u,
                         analyticsLocation: o,
                     });
                 },
@@ -188,16 +188,18 @@ function P() {
             await e();
         },
         children: [
-            m
-                ? (0, a.jsx)(u.Wn, {
-                      messageType: u.QYI.ERROR,
-                      className: y.errorBlock,
-                      children: b.intl.string(b.t["5mlOCW"]),
+            d
+                ? (0, a.jsx)("div", {
+                      className: b.errorBlock,
+                      children: (0, a.jsx)(s.M14, {
+                          type: "critical",
+                          children: p.intl.string(p.t["5mlOCW"]),
+                      }),
                   })
                 : null,
             (0, a.jsx)("div", {
-                className: y.body,
-                children: P,
+                className: b.body,
+                children: C,
             }),
         ],
     });
