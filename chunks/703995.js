@@ -59,19 +59,19 @@ function _(e, t) {
         e
     );
 }
-let m = new Map(),
-    h = !1,
+let h = new Map(),
+    m = !1,
     g = !1;
 function E() {
-    (m = new Map()), (h = !1), (g = !1);
+    (h = new Map()), (m = !1), (g = !1);
 }
 function b() {
     g = !0;
 }
 function y(e) {
     let { invites: t } = e;
-    for (let e of ((g = !1), (h = !0), t))
-        m.set(e.id, {
+    for (let e of ((g = !1), (m = !0), t))
+        h.set(e.id, {
             state: S(e),
             invite: e,
             errorStatus: null,
@@ -82,7 +82,7 @@ function O() {
 }
 function v(e) {
     let { subscriptionGroupMemberId: t } = e;
-    m.set(t, {
+    h.set(t, {
         state: c.bZ.FETCHING,
         invite: null,
         errorStatus: null,
@@ -93,7 +93,7 @@ function S(e) {
 }
 function I(e) {
     let { subscriptionGroupMemberId: t, invite: n } = e;
-    m.set(t, {
+    h.set(t, {
         state: S(n),
         invite: n,
         errorStatus: null,
@@ -102,7 +102,7 @@ function I(e) {
 function T(e) {
     let { subscriptionGroupMemberId: t, status: n } = e,
         r = 404 === n ? c.bZ.NOT_FOUND : c.bZ.ERROR;
-    m.set(t, {
+    h.set(t, {
         state: r,
         invite: null,
         errorStatus: n,
@@ -110,9 +110,9 @@ function T(e) {
 }
 function C(e) {
     let { subscriptionGroupMemberId: t } = e,
-        n = m.get(t);
+        n = h.get(t);
     if ((null == n ? void 0 : n.invite) == null) return !1;
-    m.set(t, {
+    h.set(t, {
         state: c.bZ.ACCEPTED,
         invite: _(f({}, n.invite), { accepted_at: new Date().toISOString() }),
         errorStatus: null,
@@ -120,9 +120,9 @@ function C(e) {
 }
 function A(e) {
     let { subscriptionGroupMemberId: t } = e,
-        n = m.get(t);
+        n = h.get(t);
     if ((null == n ? void 0 : n.invite) == null) return !1;
-    m.set(t, {
+    h.set(t, {
         state: c.bZ.PENDING,
         invite: _(f({}, n.invite), { accepted_at: null }),
         errorStatus: null,
@@ -131,9 +131,9 @@ function A(e) {
 function N(e) {
     let { subscriptionGroupMemberId: t } = e;
     if (null == t) return !1;
-    let n = m.get(t);
+    let n = h.get(t);
     if ((null == n ? void 0 : n.invite) == null) return !1;
-    m.set(t, {
+    h.set(t, {
         state: c.bZ.REMOVED,
         invite: _(f({}, n.invite), { removed_at: new Date().toISOString() }),
         errorStatus: null,
@@ -142,28 +142,28 @@ function N(e) {
 function P(e) {
     let { subscriptionGroupMemberId: t, errorCode: n } = e;
     if (null == t) return !1;
-    let r = m.get(t);
+    let r = h.get(t);
     return (
         (null == r ? void 0 : r.invite) != null &&
         (n === c.YW.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED
-            ? (m.set(t, {
+            ? (h.set(t, {
                   state: c.bZ.ACCEPTED,
                   invite: _(f({}, r.invite), { accepted_at: new Date().toISOString() }),
                   errorStatus: null,
               }),
               !0)
-            : void m.set(t, {
+            : void h.set(t, {
                   state: c.bZ.PENDING,
                   invite: _(f({}, r.invite), { removed_at: null }),
                   errorStatus: null,
               }))
     );
 }
-function R(e) {
+function w(e) {
     let { message: t } = e;
     return D(t);
 }
-function w(e) {
+function R(e) {
     let { messages: t } = e;
     return t.map((e) => D(e)).some(Boolean);
 }
@@ -171,10 +171,10 @@ function D(e) {
     if (e.type !== i.u.PREMIUM_GROUP_INVITE) return !1;
     let t = e.content;
     if (null == t || "" === t || !s.default.isProbablyAValidSnowflake(t)) return !1;
-    let n = m.get(t);
+    let n = h.get(t);
     return (
         (null == n || n.state === c.bZ.UNKNOWN) &&
-        (m.set(t, {
+        (h.set(t, {
             state: c.bZ.FETCHING,
             invite: null,
             errorStatus: null,
@@ -186,22 +186,32 @@ function D(e) {
 class x extends (r = a.ZP.Store) {
     getInvite(e) {
         var t;
-        return null != (t = m.get(e)) ? t : null;
+        return null != (t = h.get(e)) ? t : null;
+    }
+    getInviteByUserId(e) {
+        var t;
+        return null !=
+            (t = Array.from(h.values()).find((t) => {
+                var n;
+                return (null == (n = t.invite) ? void 0 : n.user_id) === e;
+            }))
+            ? t
+            : null;
     }
     getInviteState(e) {
         var t, n;
-        return null != (n = null == (t = m.get(e)) ? void 0 : t.state) ? n : c.bZ.UNKNOWN;
+        return null != (n = null == (t = h.get(e)) ? void 0 : t.state) ? n : c.bZ.UNKNOWN;
     }
     shouldFetch(e) {
-        let t = m.get(e);
+        let t = h.get(e);
         return null == t || t.state === c.bZ.UNKNOWN;
     }
     isFetching(e) {
         var t;
-        return (null == (t = m.get(e)) ? void 0 : t.state) === c.bZ.FETCHING;
+        return (null == (t = h.get(e)) ? void 0 : t.state) === c.bZ.FETCHING;
     }
     hasFetchedAllInvites() {
-        return h;
+        return m;
     }
     isFetchingAllInvites() {
         return g;
@@ -219,9 +229,9 @@ let L = new x(o.Z, {
     PREMIUM_GROUP_ACCEPT_INVITE_FAIL: A,
     PREMIUM_GROUP_REMOVE_INVITE_START: N,
     PREMIUM_GROUP_REMOVE_INVITE_FAILURE: P,
-    MESSAGE_CREATE: R,
-    LOCAL_MESSAGES_LOADED: w,
-    LOAD_MESSAGES_SUCCESS: w,
-    LOAD_MESSAGES_AROUND_SUCCESS: w,
+    MESSAGE_CREATE: w,
+    LOCAL_MESSAGES_LOADED: R,
+    LOAD_MESSAGES_SUCCESS: R,
+    LOAD_MESSAGES_AROUND_SUCCESS: R,
     LOGOUT: E,
 });
