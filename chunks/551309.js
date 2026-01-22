@@ -1,34 +1,41 @@
-e.d(l, {
-    default: () => a,
+l.d(e, {
+    default: () => d,
 });
-var o = e(627968);
-e(64700);
-var s = e(397927),
-    n = e(442433),
-    i = e(142448),
-    t = e(985018);
+var t = l(627968);
+l(64700);
+var i = l(311907),
+    n = l(397927),
+    o = l(442433),
+    a = l(775602),
+    c = l(652215),
+    s = l(985018);
 
-function a(r) {
-    let { roles: l } = r;
-    return (0, o.jsx)(s.W1t, {
+function d(r) {
+    let { roles: e } = r,
+        l = (0, i.bG)([a.A], () => a.A.roleStyle);
+    return (0, t.jsx)(n.W1t, {
         navId: "invite-roles-menu",
-        onClose: n.Z_,
+        onClose: o.Z_,
         onSelect: () => {},
-        "aria-label": t.intl.string(t.t["LPJmL/"]),
-        children: (0, o.jsx)(s.rXV, {
-            children: l.map((r) =>
-                (0, o.jsx)(
-                    s.Drp,
+        "aria-label": s.intl.string(s.t["LPJmL/"]),
+        children: (0, t.jsx)(n.rXV, {
+            children: e.map((r) => {
+                var e;
+                return (0, t.jsx)(
+                    n.Drp,
                     {
                         id: r.id,
-                        label: () =>
-                            (0, o.jsx)(i.A, {
-                                role: r,
-                            }),
+                        leadingAccessory: {
+                            type: "roleDot",
+                            variant: "dot" === l ? "dot" : "circle",
+                            color: null != (e = r.colorString) ? e : c.TpD,
+                            colors: r.colorStrings,
+                        },
+                        label: r.name,
                     },
                     r.id,
-                ),
-            ),
+                );
+            }),
         }),
     });
 }

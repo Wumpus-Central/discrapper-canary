@@ -1,5 +1,5 @@
 n.d(t, {
-    D: () => S,
+    D: () => y,
 });
 var r = n(627968),
     i = n(64700),
@@ -10,8 +10,8 @@ var r = n(627968),
     c = n(900283),
     u = n(563014),
     d = n(745396),
-    f = n(486020),
-    p = n(112378),
+    f = n(112378),
+    p = n(52738),
     _ = n(885621),
     h = n(658122);
 
@@ -71,109 +71,17 @@ function b(e, t) {
     );
 }
 
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i,
-        a = {};
-    if ("u" > typeof Reflect && Reflect.ownKeys) {
-        for (i = 0, n = Reflect.ownKeys(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-        return a;
-    }
-    if (((a = O(e, t)), Object.getOwnPropertySymbols))
-        for (i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-            (r = n[i]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-    return a;
-}
-
-function O(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.getOwnPropertyNames(e);
-    for (r = 0; r < a.length; r++)
-        (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    return i;
-}
-
-function A(e, t, n) {
-    let { emojiId: r, src: i, animated: a = !1 } = e;
-    return null != r
-        ? f.Ay.getEmojiURL({
-              id: r,
-              animated: a && (!n || t),
-              size: 18,
-          })
-        : i;
-}
-
-function v(e, t, n) {
-    switch (e.type) {
-        case "icon": {
-            let { type: t, icon: n, color: i = "currentColor", className: a } = e,
-                o = y(e, ["type", "icon", "color", "className"]);
-            return (0, r.jsx)("div", {
-                className: h.iconContainerLeft,
-                children: (0, r.jsx)(
-                    n,
-                    b(
-                        g(
-                            {
-                                "aria-hidden": !0,
-                                color: i,
-                            },
-                            o,
-                        ),
-                        {
-                            className: s()(h.icon, a),
-                        },
-                    ),
-                ),
-            });
-        }
-        case "emoji": {
-            let i = A(e, t, n);
-            return (0, r.jsx)("div", {
-                className: h.iconContainerLeft,
-                children: (0, r.jsx)("img", {
-                    "aria-hidden": !0,
-                    alt: "",
-                    src: i,
-                    className: h.icon,
-                }),
-            });
-        }
-        case "image":
-            return (0, r.jsx)("img", {
-                "aria-hidden": !0,
-                alt: "",
-                src: e.src,
-                className: h.imageAccessory,
-            });
-        case "avatar":
-            return (0, r.jsx)("img", {
-                "aria-hidden": !0,
-                alt: "",
-                src: e.src,
-                className: h.avatarAccessory,
-            });
-    }
-}
-
-function S(e) {
+function y(e) {
     let {
             color: t = "default",
             label: n,
             icon: a,
-            iconLeft: f,
-            leadingAccessory: m,
-            hint: E,
-            subtext: y,
-            subtextLineClamp: O,
-            hasSubmenu: A,
+            iconLeft: m,
+            leadingAccessory: E,
+            hint: y,
+            subtext: O,
+            subtextLineClamp: A,
+            hasSubmenu: v,
             disabled: S,
             isFocused: I,
             menuItemProps: T,
@@ -187,9 +95,8 @@ function S(e) {
             iconProps: L,
         } = e,
         { onSelect: j, onInteraction: M } = i.useContext(c.x),
-        { reducedMotion: k } = i.useContext(o.CZY),
-        U = i.useRef(null),
-        G = i.useCallback(
+        k = i.useRef(null),
+        U = i.useCallback(
             (e) => {
                 var t;
                 if (
@@ -209,20 +116,20 @@ function S(e) {
         );
     return (
         i.useEffect(() => {
-            I && ((0, u.Y)(U), null == R || R());
+            I && ((0, u.Y)(k), null == R || R());
         }, [I, R]),
         (0, r.jsxs)(
             o.DUT,
             b(
                 g(
                     {
-                        innerRef: U,
+                        innerRef: k,
                         className: s()(h.item, h.labelContainer, _.jV[t], w, {
                             [h.disabled]: S,
                             [h.focused]: I,
                             [null != P ? P : ""]: I,
                         }),
-                        onClick: S ? void 0 : G,
+                        onClick: S ? void 0 : U,
                         "aria-disabled": S,
                     },
                     T,
@@ -230,11 +137,11 @@ function S(e) {
                 {
                     "data-menu-item": "true",
                     children: [
-                        null != f &&
+                        null != m &&
                             (0, r.jsx)("div", {
                                 className: h.iconContainerLeft,
                                 children: (0, r.jsx)(
-                                    f,
+                                    m,
                                     b(
                                         g(
                                             {
@@ -248,28 +155,32 @@ function S(e) {
                                     ),
                                 ),
                             }),
-                        null != m && v(m, I, k.enabled),
+                        null != E &&
+                            (0, r.jsx)(p.B, {
+                                accessory: E,
+                                isFocused: I,
+                            }),
                         (0, r.jsxs)("div", {
                             className: h.label,
                             children: [
-                                (0, r.jsx)(p.V, {
+                                (0, r.jsx)(f.V, {
                                     children: (0, l.J)(n, e),
                                 }),
-                                null != y &&
+                                null != O &&
                                     (0, r.jsx)(o.EYj, {
                                         variant: "text-xs/normal",
                                         className: s()(h.subtext, {
-                                            [h.subtextLineClamp]: null != O,
+                                            [h.subtextLineClamp]: null != A,
                                         }),
-                                        lineClamp: O,
-                                        children: y,
+                                        lineClamp: A,
+                                        children: O,
                                     }),
                             ],
                         }),
-                        null != E &&
+                        null != y &&
                             (0, r.jsx)("div", {
                                 className: h.hintContainer,
-                                children: (0, l.J)(E, e),
+                                children: (0, l.J)(y, e),
                             }),
                         (0, d.O)(a)
                             ? a
@@ -291,7 +202,7 @@ function S(e) {
                                       ),
                                   ),
                               }),
-                        A &&
+                        v &&
                             (0, r.jsx)("div", {
                                 className: h.iconContainer,
                                 children: (0, r.jsx)(o._BQ, {

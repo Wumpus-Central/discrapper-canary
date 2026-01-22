@@ -1,5 +1,5 @@
 n.d(t, {
-    A: () => j,
+    A: () => E,
 });
 var r = n(627968);
 n(64700);
@@ -16,43 +16,27 @@ var l = n(311907),
     f = n(576705),
     O = n(403362),
     g = n(652215),
-    y = n(985018),
-    p = n(721779);
+    y = n(985018);
 
-function E(e, t, n) {
-    var l, a;
-    return (0, r.jsxs)("div", {
-        className: p.x,
-        children: [
-            "dot" === t
-                ? (0, r.jsx)(i.WYI, {
-                      className: p.m,
-                      color: null != (l = e.colorString) ? l : g.TpD,
-                      colors: n ? e.colorStrings : null,
-                      background: !1,
-                      tooltip: !1,
-                  })
-                : (0, r.jsx)(i.RYH, {
-                      className: p.m,
-                      color: null != (a = e.colorString) ? a : g.TpD,
-                      colors: n ? e.colorStrings : null,
-                  }),
-            (0, r.jsx)("div", {
-                children: e.name,
-            }),
-        ],
-    });
+function p(e, t, n) {
+    var r;
+    return {
+        type: "roleDot",
+        variant: "dot" === t ? "dot" : "circle",
+        color: null != (r = e.colorString) ? r : g.TpD,
+        colors: n ? e.colorStrings : null,
+    };
 }
 
-function j(e, t) {
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         j = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         m = (0, l.bG)([b.A], () => b.A.getGuild(t)),
         v = (0, l.bG)([A.A], () => A.A.getSortedRoles(t)),
         _ = (0, l.bG)([a.A], () => a.A.roleStyle),
         h = (0, o.$9)(t, {
-            location: p,
+            location: E,
             targetUserId: e,
         }),
         {
@@ -82,7 +66,8 @@ function j(e, t) {
                                 i.sLh,
                                 {
                                     id: n.id,
-                                    label: () => E(n, _, C),
+                                    leadingAccessory: p(n, _, C),
+                                    label: n.name,
                                     disabled: l,
                                     action: () => {
                                         S.includes(n.id)
@@ -109,7 +94,8 @@ function j(e, t) {
                                 i.Drp,
                                 {
                                     id: e.id,
-                                    label: () => E(e, _, C),
+                                    leadingAccessory: p(e, _, C),
+                                    label: e.name,
                                 },
                                 e.id,
                             ),

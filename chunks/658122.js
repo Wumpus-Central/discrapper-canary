@@ -21,6 +21,7 @@ var r = {
     icon: "_2a1642109622c220",
     avatarAccessory: "_00bd80b4b8d7a586",
     imageAccessory: "_6a24532382a6cda9",
+    roleDotAccessory: "_979c33118367c4d2",
     hintContainer: "ce89cd5cea4172e5",
     caret: "_62645245395c65c9",
     disabled: "_03343d8d0995e19a",
