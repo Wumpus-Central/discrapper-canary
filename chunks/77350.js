@@ -36,9 +36,9 @@ let s = (e, t) => {
     g = (0, r.isIOS)() ? _ : (0, r.isAndroid)() ? h : m,
     E = (e) => null != e && g.test(e),
     b = /\.(webm)$/i,
-    y = /\.(mp4|mov)$/i,
-    O = /\.(mp4|webm|mov)$/i,
-    A = /\.(mp4|webm|mov)$/i,
+    y = /\.(mp4|mov|qt)$/i,
+    O = /\.(mp4|webm|mov|qt)$/i,
+    A = /\.(mp4|webm|mov|qt)$/i,
     v = /\.(riv)$/i,
     S = (0, r.isIOS)() ? y : (0, r.isAndroid)() ? O : A,
     I = (e) =>

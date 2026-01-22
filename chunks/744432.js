@@ -93,6 +93,7 @@ function N(e, t, n) {
                         "webp",
                         "mov",
                         "mp4",
+                        "qt",
                         "gif",
                         "mp3",
                         "wav",

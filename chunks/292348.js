@@ -62,6 +62,11 @@ let s = [
             type: "video/quicktime",
         },
         {
+            reName: /\.qt$/i,
+            name: (e) => "video".concat(e, ".qt"),
+            type: "video/quicktime",
+        },
+        {
             reName: /\.avi$/i,
             name: (e) => "video".concat(e, ".avi"),
             type: "video/x-msvideo",
