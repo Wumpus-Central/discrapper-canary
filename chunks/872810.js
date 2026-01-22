@@ -1,7 +1,7 @@
 n.d(t, {
     L6: () => B,
     Rc: () => Z,
-    WH: () => R,
+    WH: () => w,
     aP: () => k,
     dV: () => F,
     g: () => M,
@@ -9,7 +9,7 @@ n.d(t, {
     n9: () => U,
     pR: () => L,
     rn: () => x,
-    tK: () => w,
+    tK: () => R,
     xc: () => G,
 });
 var r = n(512722),
@@ -24,8 +24,8 @@ var r = n(512722),
     f = n(522474),
     p = n(543882),
     _ = n(199902),
-    m = n(314897),
-    h = n(592125),
+    h = n(314897),
+    m = n(592125),
     g = n(430824),
     E = n(944486),
     b = n(979651),
@@ -68,7 +68,7 @@ function N(e) {
     return e;
 }
 let P = 2;
-function R(e, t, n) {
+function w(e, t, n) {
     s.Z.dispatch(
         N(
             {
@@ -82,7 +82,7 @@ function R(e, t, n) {
         ),
     );
 }
-function w(e, t) {
+function R(e, t) {
     let n = (0, u.V9)(e);
     s.Z.dispatch({
         type: "STREAM_SET_PAUSED",
@@ -91,7 +91,7 @@ function w(e, t) {
     });
 }
 function D(e, t) {
-    let n = h.Z.getChannel(t);
+    let n = m.Z.getChannel(t);
     return i()(null != n, "Cannot join a null voice channel"), !b.Z.isInChannel(t) && (0, y.rY)(n, b.Z, g.Z);
 }
 function x(e, t) {
@@ -104,14 +104,15 @@ function x(e, t) {
             (null == t ? void 0 : t.forceMultiple) ||
             _.Z.getAllActiveStreamsForChannel(i).filter((e) => {
                 let { ownerId: t } = e;
-                return t !== m.default.getId();
+                return t !== h.default.getId();
             }).length >= P;
     s.Z.dispatch({
         type: "STREAM_WATCH",
         streamKey: a,
         allowMultiple: o || n,
     }),
-        o || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, a);
+        ((null == t ? void 0 : t.forceFocus) !== !0 && (o || (null != t && t.noFocus))) ||
+            I.Z.selectParticipant(e.channelId, a);
 }
 function L(e, t) {
     s.Z.dispatch({
