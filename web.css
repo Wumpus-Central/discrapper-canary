@@ -60603,12 +60603,21 @@ screen and (max-width:485px) {
 }
 
 ._4909b209943734bd-headerWrapper {
+    gap: 8px;
     height: 72px
 }
 
 ._4909b209943734bd-headerContent {
     display: flex;
-    gap: 16px
+    gap: 16px;
+    min-width: 0
+}
+
+._4909b209943734bd-headerContentText {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
 }
 
 ._4909b209943734bd-appIcon {
@@ -73622,6 +73631,7 @@ screen and (max-width:485px) {
     border-inline-start: 2px solid #fff;
     padding: 12px 16px;
     -webkit-margin-end: 40px;
+    display: block;
     margin-inline-end: 40px
 }
 
@@ -73629,8 +73639,9 @@ screen and (max-width:485px) {
     background: var(--background-mod-subtle);
     border-radius: 16px;
     margin-top: 16px;
+    max-width: 800px;
     padding: 28px 24px !important;
-    width: 532px
+    width: 100%
 }
 
 .c0ec5e504d1e3f46-image {
@@ -91304,6 +91315,10 @@ html ._968a4b9cecf98b8c-invoiceCancelRow {
 
 .theme-dark .ac7648c9bd968881-sliderBar {
     background-color: var(--primary-400)
+}
+
+.ac7648c9bd968881-sliderBar.ac7648c9bd968881-disabled {
+    opacity: .6
 }
 
 .ac7648c9bd968881-sliderBar.ac7648c9bd968881-speaking {
