@@ -50,6 +50,9 @@ class h extends (r = i.Ay.Store) {
     getUserDiscounts() {
         return l;
     }
+    getUserDiscount(e) {
+        return l.find((t) => t.discountId === e);
+    }
 }
 s(h, "displayName", "CollectiblesUserDiscountStore");
 let m = new h(a.h, {

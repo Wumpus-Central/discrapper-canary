@@ -19,8 +19,8 @@ var r = n(627968),
     x = n(736653),
     h = n(775602),
     g = n(793574),
-    j = n(688810),
-    v = n(262295),
+    v = n(688810),
+    j = n(262295),
     O = n(141468),
     A = n(963852),
     y = n(763754),
@@ -73,8 +73,8 @@ var r = n(627968),
     ex = n(293477),
     eh = n(139146),
     eg = n(929283),
-    ej = n(827066),
-    ev = n(767503),
+    ev = n(827066),
+    ej = n(767503),
     eO = n(525723),
     eA = n(212407),
     ey = n(347722),
@@ -253,16 +253,16 @@ let eD = (e) => {
                 onClose: d,
                 returnRef: h,
                 previewingVariantIndexProps: g,
-                selectedVariantIndex: v,
+                selectedVariantIndex: j,
                 activeBundleSlide: O,
                 rentalDuration: A,
             } = e,
-            { analyticsLocations: y } = (0, j.Ay)(),
+            { analyticsLocations: y } = (0, v.Ay)(),
             N = (0, m.bG)([w.default], () => w.default.locale),
             _ = V.Ay.canUseCollectibles(n),
             { previewingVariantIndex: R, handleEntering: S, handleLeaving: T } = g,
-            C = (0, ej.q)(t, R),
-            k = (0, ev.r)(t, v);
+            C = (0, ev.q)(t, R),
+            k = (0, ej.r)(t, j);
         c()(null != k, "Selected product should not be null");
         let B = (0, J.h)(t),
             { isPurchased: U, isPartiallyOwnedBundle: M, isRented: G } = (0, J.h)(k),
@@ -713,7 +713,7 @@ let eD = (e) => {
         let { user: t, innerClassName: n } = e;
         return (0, r.jsx)("div", {
             className: ek.mV,
-            children: (0, r.jsx)(v.A, {
+            children: (0, r.jsx)(j.A, {
                 avatar: (0, r.jsx)(p.euF, {
                     src: t.avatarSrc,
                     size: p._3J.SIZE_32,
@@ -826,8 +826,8 @@ let eD = (e) => {
             }),
             p = t.type === o.R.AVATAR_DECORATION,
             [x] = t.items,
-            { firstAvatarDecoration: g, firstProfileEffect: j, firstNameplate: v } = (0, Y.f5)(t),
-            O = null != j,
+            { firstAvatarDecoration: g, firstProfileEffect: v, firstNameplate: j } = (0, Y.f5)(t),
+            O = null != v,
             A = () =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -838,7 +838,7 @@ let eD = (e) => {
                                 user: n,
                                 canUsePremiumCustomization: c,
                                 pendingAvatarDecoration: g,
-                                pendingProfileEffect: j,
+                                pendingProfileEffect: v,
                                 disabledInputs: !0,
                                 hideMessageInput: !O,
                                 hideCustomStatus: !0,
@@ -884,10 +884,10 @@ let eD = (e) => {
                       });
             }
         }
-        return null != v
+        return null != j
             ? (0, r.jsx)("div", {
                   className: ek.Zj,
-                  children: y(v),
+                  children: y(j),
               })
             : (0, r.jsx)("div", {
                   className: (null == x ? void 0 : x.type) === o.R.AVATAR_DECORATION ? ek.RA : ek.Ak,
@@ -966,19 +966,19 @@ let eD = (e) => {
                 analyticsLocations: b,
                 shouldCheckoutWithOrbs: x,
                 tab: h,
-                rentalDuration: v,
+                rentalDuration: j,
             } = e,
             O = (0, m.bG)([U.default], () => U.default.getCurrentUser()),
             A = (0, eN.f)(a),
             { previewingVariantIndex: y } = A,
             N = (0, q.Q)(a),
-            _ = (0, ej.q)(a, y),
-            R = (0, ev.r)(a, N);
+            _ = (0, ev.q)(a, y),
+            R = (0, ej.r)(a, N);
         c()(null != R, "Selected product should not be null");
-        let { analyticsLocations: E } = (0, j.Ay)([
+        let { analyticsLocations: E } = (0, v.Ay)([
             ...b,
             g.A.COLLECTIBLES_SHOP_DETAILS_MODAL,
-            ...(null != v ? [g.A.COLLECTIBLES_SHOP_DETAILS_RENTAL_MODAL] : []),
+            ...(null != j ? [g.A.COLLECTIBLES_SHOP_DETAILS_RENTAL_MODAL] : []),
         ]);
         (0, er.Yr)(R.skuId);
         let P = (0, eA.U1)(s);
@@ -1000,14 +1000,17 @@ let eD = (e) => {
             T = t === p.ip4.EXITING,
             C = (0, eO.$R)(a),
             w = null == C ? void 0 : C.amount,
-            L = l.useMemo(() => ((0, K.aw)(R) ? R.items.length : 0), [R]),
-            { activeSlide: B, isTransitioning: G } = (0, $.X)({
-                slideCount: L,
+            L =
+                null != w &&
+                ((null == C ? void 0 : C.discountId) === eS.eR || (null == C ? void 0 : C.discountId) === eS.Qz),
+            B = l.useMemo(() => ((0, K.aw)(R) ? R.items.length : 0), [R]),
+            { activeSlide: G, isTransitioning: V } = (0, $.X)({
+                slideCount: B,
                 intervalMs: 5e3,
             });
         return null == O
             ? null
-            : (0, r.jsx)(j.f5, {
+            : (0, r.jsx)(v.f5, {
                   value: E,
                   children: (0, r.jsxs)(p.EOs, {
                       "data-migration-pending": !0,
@@ -1030,8 +1033,8 @@ let eD = (e) => {
                                       previewingVariantIndexProps: A,
                                       selectedVariantIndex: N,
                                       shouldCheckoutWithOrbs: x,
-                                      activeBundleSlide: B,
-                                      rentalDuration: v,
+                                      activeBundleSlide: G,
+                                      rentalDuration: j,
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: i()(
@@ -1062,8 +1065,8 @@ let eD = (e) => {
                                               : (0, r.jsx)(eF, {
                                                     user: O,
                                                     product: null != _ ? _ : R,
-                                                    activeBundleSlide: B,
-                                                    isTransitioning: G,
+                                                    activeBundleSlide: G,
+                                                    isTransitioning: V,
                                                 }),
                                           (0, r.jsxs)("div", {
                                               className: ek.VG,
@@ -1092,7 +1095,7 @@ let eD = (e) => {
                                   }),
                               ],
                           }),
-                          null != w &&
+                          L &&
                               (0, r.jsx)(r.Fragment, {
                                   children: (0, r.jsxs)(p.jlY, {
                                       "data-migration-pending": !0,

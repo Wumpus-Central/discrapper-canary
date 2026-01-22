@@ -21,13 +21,16 @@ function i() {
                 let t = e.expiresAt.getTime() - n;
                 if (t <= 0) r.push(e.discountId);
                 else {
-                    let n = setTimeout(() => {
-                        s.h.dispatch({
-                            type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED",
-                            discountIds: [e.discountId],
-                        }),
-                            l.delete(e.discountId);
-                    }, t);
+                    let n = setTimeout(
+                        () => {
+                            s.h.dispatch({
+                                type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED",
+                                discountIds: [e.discountId],
+                            }),
+                                l.delete(e.discountId);
+                        },
+                        Math.min(0x7fffffff, t),
+                    );
                     l.set(e.discountId, n);
                 }
             }),

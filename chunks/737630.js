@@ -1,6 +1,6 @@
 l.r(t),
     l.d(t, {
-        default: () => H,
+        default: () => U,
     }),
     l(896048);
 var n = l(627968),
@@ -15,127 +15,138 @@ var n = l(627968),
     f = l(444927),
     b = l(688810),
     g = l(697454),
-    p = l(611924),
-    m = l(594832),
+    m = l(611924),
+    p = l(594832),
     h = l(287809),
     E = l(440938),
     v = l(590180),
     A = l(161918),
     x = l(790297),
-    S = l(841702),
-    C = l(716633),
-    O = l(621653),
-    _ = l(983545),
-    y = l(365491),
-    j = l(530971),
-    L = l(177366),
-    T = l(155486),
-    I = l(278576),
-    N = l(870308),
-    k = l(938191),
-    R = l(758836),
-    P = l(652215),
-    D = l(650583),
-    w = l(157884),
-    B = l(816917);
-let M = (e) => {
+    S = l(338769),
+    C = l(841702),
+    O = l(716633),
+    _ = l(621653),
+    y = l(983545),
+    j = l(365491),
+    L = l(530971),
+    T = l(177366),
+    I = l(155486),
+    N = l(278576),
+    k = l(120286),
+    R = l(870308),
+    P = l(938191),
+    D = l(758836),
+    w = l(652215),
+    B = l(650583),
+    M = l(157884),
+    H = l(816917);
+let G = (e) => {
         let { children: t, shouldAddEventListener: l, onClose: n } = e,
             s = (0, c.useHasAnyModalOpen)();
         return (
             r.useEffect(() => {
                 if (!l || s) return;
                 let e = (e) => {
-                    e.key === D.N$.Escape && n();
+                    e.key === B.N$.Escape && n();
                 };
                 return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
             }, [l, s, n]),
             t
         );
     },
-    H = function (e) {
-        let { tab: t = R.G2.HOME } = e;
-        (0, p.P)(g.a), (0, O.g)();
+    U = function (e) {
+        let { tab: t = D.G2.HOME } = e;
+        (0, m.P)(g.a), (0, _.g)();
         let l = (0, f.A)((0, i.A)()),
             s = (0, o.bG)([h.default], () => h.default.getCurrentUser());
-        (0, m.pE)();
-        let c = (0, k.y)("CollectiblesShop"),
-            { onClose: D } = (0, I.tR)(),
-            { currentTab: H, hasFilters: G } = (0, y.v)(),
-            F = r.useMemo(() => (t === R.G2.HOME && H && G() ? H : t), [t, H, G]),
-            { categories: U, refreshCategories: z } = (0, S.Ay)(
+        (0, p.pE)();
+        let c = (0, P.y)("CollectiblesShop"),
+            { onClose: B } = (0, N.tR)(),
+            { currentTab: U, hasFilters: F } = (0, j.v)(),
+            z = r.useMemo(() => (t === D.G2.HOME && U && F() ? U : t), [t, U, F]),
+            { categories: V, refreshCategories: K } = (0, C.Ay)(
                 {
                     logPerf: !0,
                 },
                 {
                     sessionId: l,
-                    tab: F,
+                    tab: z,
                 },
             ),
-            V = (0, C.x)(U),
-            [K, W] = r.useState(),
-            Y = (0, o.bG)([v.A], () => {
+            W = (0, O.x)(V),
+            [Y, q] = r.useState(),
+            Z = (0, o.bG)([v.A], () => {
                 var e;
-                return null == (e = v.A.getCategory(K)) ? void 0 : e.name;
+                return null == (e = v.A.getCategory(Y)) ? void 0 : e.name;
             }),
-            [q, Z] = r.useState();
-        (0, L.XU)();
-        let X = r.useCallback((e, t) => {
-                Z(e), W(t);
+            [X, J] = r.useState();
+        (0, T.XU)();
+        let Q = r.useCallback((e, t) => {
+                J(e), q(t);
             }, []),
-            { selectedTab: J, transitionState: Q, transitionToTab: $ } = (0, _.o)(F);
-        (0, x.uS)(l, J, Y, Q, q), (0, x.N0)(J, s);
-        let { dismissShopButtonDC: ee } = (0, N.A)();
+            { selectedTab: $, transitionState: ee, transitionToTab: et } = (0, y.o)(z);
+        (0, x.uS)(l, $, Z, ee, X), (0, x.N0)($, s);
+        let { dismissShopButtonDC: el } = (0, R.A)();
         r.useEffect(() => {
-            ee();
-        }, [ee]),
+            el();
+        }, [el]),
             r.useEffect(() => {
-                (0, d.I)(P.BVt.COLLECTIBLES_SHOP);
+                (0, d.I)(w.BVt.COLLECTIBLES_SHOP);
             }, []);
-        let et = r.useRef(null),
-            el = r.useRef(null);
-        (0, u.tjt)(et),
+        let en = r.useRef(null),
+            er = r.useRef(null);
+        (0, u.tjt)(en),
             r.useEffect(() => {
                 var e;
-                null == (e = el.current) || e.focus();
+                null == (e = er.current) || e.focus();
             }, []);
-        let { analyticsLocations: en } = (0, x.lC)(J);
+        let { analyticsLocations: es } = (0, x.lC)($),
+            ea = (0, S.V)($, "collectibles_shop");
         return (0, n.jsx)(b.f5, {
-            value: en,
+            value: es,
             children: (0, n.jsx)(E.R9, {
                 newValue: {
                     sessionId: l,
-                    pageCategory: Y,
-                    pageSize: R.l5,
+                    pageCategory: Z,
+                    pageSize: D.l5,
                 },
                 children: (0, n.jsx)(A.iM, {
-                    tab: J,
-                    children: (0, n.jsx)(M, {
-                        onClose: D,
+                    tab: $,
+                    children: (0, n.jsx)(G, {
+                        onClose: B,
                         shouldAddEventListener: !1,
                         children: (0, n.jsxs)("div", {
-                            className: a()(w.bx, {
-                                [B.T3]: c,
+                            className: a()(M.bx, {
+                                [H.T3]: c,
                             }),
-                            ref: el,
+                            ref: er,
                             tabIndex: -1,
                             children: [
-                                (0, n.jsx)(T.G, {
-                                    handleTransition: $,
-                                    selectedTab: J,
+                                (0, n.jsx)(I.G, {
+                                    handleTransition: et,
+                                    selectedTab: $,
                                 }),
-                                (0, n.jsx)("div", {
-                                    className: a()(w.td, {
-                                        [w.RK]: Q === R.Pf.VISIBLE,
-                                        [w.in]: Q === R.Pf.IN,
-                                        [w.FD]: Q === R.Pf.OUT,
+                                null != ea &&
+                                    ea.type === S.Z.COUNTDOWN &&
+                                    (0, n.jsx)(k.k, {
+                                        message: ea.message,
+                                        onClick: () => et(D.G2.HOME),
+                                        variant: "pink",
+                                        countdownEndDate: ea.countdownEndDate,
                                     }),
-                                    children: (0, n.jsx)(j.A, {
-                                        tab: J,
-                                        refreshCategories: z,
-                                        transitionToTab: $,
-                                        transitionState: Q,
-                                        sortedCategories: V,
-                                        updateAnalyticsState: X,
+                                (0, n.jsx)("div", {
+                                    className: a()(M.td, {
+                                        [M.RK]: ee === D.Pf.VISIBLE,
+                                        [M.in]: ee === D.Pf.IN,
+                                        [M.FD]: ee === D.Pf.OUT,
+                                    }),
+                                    children: (0, n.jsx)(L.A, {
+                                        tab: $,
+                                        refreshCategories: K,
+                                        transitionToTab: et,
+                                        transitionState: ee,
+                                        sortedCategories: W,
+                                        updateAnalyticsState: Q,
                                     }),
                                 }),
                             ],

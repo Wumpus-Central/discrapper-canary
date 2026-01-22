@@ -51,7 +51,9 @@ let u = [],
     },
     O = (e) => {
         null != e.appliedUserDiscounts &&
-            e.appliedUserDiscounts.some((e) => e.discount.id === l.eR || e.discount.id === l.Qz) &&
+            e.appliedUserDiscounts.some(
+                (e) => e.discount.id === l.eR || e.discount.id === l.Qz || e.discount.id === l.tU,
+            ) &&
             m.set(o.G2.HOME, !0);
     },
     A = () => {
