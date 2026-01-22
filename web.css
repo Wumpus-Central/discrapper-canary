@@ -54907,7 +54907,7 @@ h2.ef8c3f0a5d2b8eb4 {
 }
 
 ._1f8a48306eb95bf3 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -62519,9 +62519,9 @@ screen and (max-width:485px) {
 
 .c8a139be8105677a {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

@@ -1,64 +1,65 @@
 n.d(t, {
-    $: () => u,
+    $: () => d,
 });
-var r = n(734057),
-    i = n(287809),
-    a = n(562153),
-    s = n(427262),
-    o = n(835002),
-    l = n(985018),
-    c = n(641131);
+var r = n(870383),
+    i = n(734057),
+    a = n(287809),
+    s = n(562153),
+    o = n(427262),
+    l = n(835002),
+    c = n(985018),
+    u = n(641131);
 
-function u(e, t, n) {
-    var u;
-    let d = i.default.getUser(t),
-        f = r.A.getChannel(n),
-        p =
-            null != (u = a.Ay.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, d))
-                ? u
-                : s.Ay.getGlobalName(d);
+function d(e, t, n) {
+    var d;
+    let f = a.default.getUser(t),
+        p = i.A.getChannel(n),
+        _ =
+            null != (d = s.Ay.getName(null == p ? void 0 : p.guild_id, null == p ? void 0 : p.id, f))
+                ? d
+                : o.Ay.getGlobalName(f);
     switch (e) {
-        case o.OB.IGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t["+joqrP"], {
-                username: p,
+        case l.OB.IGNORE_SUCCESS:
+            return c.intl.formatToPlainString(c.t["+joqrP"], {
+                username: _,
             });
-        case o.OB.UNIGNORE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.THExKa, {
-                username: p,
+        case l.OB.UNIGNORE_SUCCESS:
+            return c.intl.formatToPlainString(c.t.THExKa, {
+                username: _,
             });
-        case o.OB.BLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.XXPrIs, {
-                username: p,
+        case l.OB.BLOCK_SUCCESS:
+            return c.intl.formatToPlainString(c.t.XXPrIs, {
+                username: _,
             });
-        case o.OB.UNBLOCK_SUCCESS:
-            return l.intl.formatToPlainString(l.t.uExcGX, {
-                username: p,
+        case l.OB.UNBLOCK_SUCCESS:
+            return c.intl.formatToPlainString(c.t.uExcGX, {
+                username: _,
             });
-        case o.OB.MUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.X4NtYb, {
-                username: p,
+        case l.OB.MUTE_SUCCESS:
+            return c.intl.formatToPlainString(c.t.X4NtYb, {
+                username: _,
             });
-        case o.OB.UNMUTE_SUCCESS:
-            return l.intl.formatToPlainString(l.t.tRaBfY, {
-                username: p,
+        case l.OB.UNMUTE_SUCCESS:
+            return c.intl.formatToPlainString(c.t.tRaBfY, {
+                username: _,
             });
-        case o.OB.REPORT_SUCCESS:
-            return l.intl.formatToPlainString(l.t.FOptFU, {
-                username: p,
+        case l.OB.REPORT_SUCCESS:
+            return c.intl.formatToPlainString(c.t.FOptFU, {
+                username: _,
             });
-        case o.OB.TIGGER_PAWTECT_ERROR:
-            return l.intl.string(l.t.c6kn6F);
-        case o.OB.TIGGER_PAWTECT_VERIFIED:
-            return l.intl.string(l.t.XwKo1k);
-        case o.OB.GENERIC_ERROR:
-            return l.intl.string(l.t.zBpoc7);
-        case o.OB.REPORT_TO_MOD_SUCCESS:
-            return l.intl.string(c.default.iBypeZ);
-        case o.OB.SAFETY_FEEDBACK_SUCCESS:
-            return l.intl.string(l.t.TcFR5k);
-        case o.OB.EXISTING_USER_AGE_GATE_SUCCESS:
-            return l.intl.string(l.t["susqq/"]);
+        case l.OB.TIGGER_PAWTECT_ERROR:
+            return c.intl.string(c.t.c6kn6F);
+        case l.OB.TIGGER_PAWTECT_VERIFIED:
+            return (0, r.H)(c.intl.string(c.t.XwKo1k), c.intl.string(c.t["7nKAXx"]));
+        case l.OB.GENERIC_ERROR:
+            return c.intl.string(c.t.zBpoc7);
+        case l.OB.REPORT_TO_MOD_SUCCESS:
+            return c.intl.string(u.default.iBypeZ);
+        case l.OB.SAFETY_FEEDBACK_SUCCESS:
+            return c.intl.string(c.t.TcFR5k);
+        case l.OB.EXISTING_USER_AGE_GATE_SUCCESS:
+            return c.intl.string(c.t["susqq/"]);
         default:
-            return l.intl.string(l.t["+c5xtT"]);
+            return c.intl.string(c.t["+c5xtT"]);
     }
 }

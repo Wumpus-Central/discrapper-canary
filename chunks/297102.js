@@ -1,87 +1,91 @@
 n.d(e, {
-    default: () => x,
+    default: () => O,
 }),
     n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(835245),
     o = n(158954),
-    a = n(397927),
-    s = n(632738),
+    s = n(397927),
+    a = n(632738),
     c = n(975571),
     u = n(935649),
     d = n(847599),
+    g = n(870383),
     p = n(81091),
-    g = n(36149),
-    b = n(737567),
+    b = n(36149),
+    m = n(737567),
     f = n(652215),
-    m = n(239093),
-    E = n(985018),
-    R = n(935568),
-    _ = n(700129);
-let x = function (t) {
-    let { transitionState: e, entryPoint: n, onClose: x } = t,
-        { loading: O, initiateAgeVerification: T } = (0, g.nn)({
-            onComplete: x,
+    E = n(239093),
+    R = n(985018),
+    _ = n(935568),
+    x = n(700129);
+let O = function (t) {
+    let { transitionState: e, entryPoint: n, onClose: O } = t,
+        { loading: T, initiateAgeVerification: h } = (0, b.nn)({
+            onComplete: O,
             entryPoint: d.q1.RETRY_MODAL,
             isRetry: !0,
         }),
-        h = r.useMemo(() => (0, l.A)(), []),
-        A = (0, b.I)("age_verification_retry_modal"),
-        y = (0, p.t)("age_verification_retry_modal");
+        A = r.useMemo(() => (0, l.A)(), []),
+        v = (0, m.I)("age_verification_retry_modal"),
+        y = (0, p.t)("age_verification_retry_modal"),
+        k = (0, g.W)(R.intl.string(R.t["5l3R/m"]), R.intl.string(R.t.JSdbBe)),
+        L = (0, g.W)(R.intl.string(R.t.O7SO0D), R.intl.string(R.t.JNK1ue)),
+        j = (0, g.W)(R.intl.string(R.t.RtOE1v), R.intl.string(R.t.mFvt9M));
     r.useEffect(() => {
-        (0, d.Bs)(h, d.WU.RETRY, n);
-    }, [h, n]);
-    let v = r.useMemo(() => {
+        (0, d.Bs)(A, d.WU.RETRY, n);
+    }, [A, n]);
+    let P = r.useMemo(() => {
         let t = [
             {
-                title: E.intl.string(E.t.FYkioq),
-                description: y ? null : E.intl.string(E.t.xMfbRz),
-                buttonText: E.intl.string(E.t.RtOE1v),
-                buttonLoading: O,
+                title: R.intl.string(R.t.FYkioq),
+                description: y ? null : R.intl.string(R.t.xMfbRz),
+                buttonText: j,
+                buttonLoading: T,
                 onButtonPress: () => {
-                    T(), (0, d.St)(h, d.WU.RETRY, d._7.GET_STARTED);
+                    h(), (0, d.St)(A, d.WU.RETRY, d._7.GET_STARTED);
                 },
             },
         ];
         return (
-            A ||
+            v ||
                 t.push({
-                    title: E.intl.string(E.t["LZO+Hd"]),
-                    description: E.intl.string(E.t.N2mHaK),
-                    buttonText: E.intl.string(E.t["LZO+Hd"]),
-                    buttonLoading: O,
+                    title: R.intl.string(R.t["LZO+Hd"]),
+                    description: R.intl.string(R.t.N2mHaK),
+                    buttonText: R.intl.string(R.t["LZO+Hd"]),
+                    buttonLoading: T,
                     onButtonPress: () => {
-                        u.A.openUrl(m.d$.APPEALS_LINK), (0, d.St)(h, d.WU.RETRY, d._7.MANUAL_REVIEW_REQUEST);
+                        u.A.openUrl(E.d$.APPEALS_LINK), (0, d.St)(A, d.WU.RETRY, d._7.MANUAL_REVIEW_REQUEST);
                     },
                 }),
             t
         );
-    }, [T, h, O, A, y]);
+    }, [h, A, T, v, y, j]);
     return (0, i.jsx)(o.ExpressiveModal, {
         transitionState: e,
-        onClose: x,
+        onClose: O,
         gradientColor: "blue",
         graphic: {
-            src: _.A,
+            src: x.A,
             type: "image",
         },
-        title: E.intl.string(E.t["5l3R/m"]),
-        subtitle: E.intl.string(E.t.O7SO0D),
-        children: (0, i.jsxs)(a.BJc, {
+        title: k,
+        subtitle: L,
+        children: (0, i.jsxs)(s.BJc, {
             direction: "vertical",
             gap: 16,
             children: [
-                (0, i.jsx)(a.po8, {
-                    messageType: a.YCn.INFO,
-                    className: R.e,
+                (0, i.jsx)(s.po8, {
+                    messageType: s.YCn.INFO,
+                    className: _.e,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: E.intl.string(E.t.El4aXl),
+                    children: R.intl.string(R.t.El4aXl),
                 }),
-                v.map((t, e) =>
+                P.map((t, e) =>
                     (0, i.jsx)(
-                        s.PQ,
+                        a.PQ,
                         (function (t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var n = null != arguments[e] ? arguments[e] : {},
@@ -115,14 +119,14 @@ let x = function (t) {
                         e,
                     ),
                 ),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: R.Z,
-                    children: E.intl.format(E.t["L+FgkZ"], {
+                    className: _.Z,
+                    children: R.intl.format(R.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
                             u.A.openUrl(c.A.getArticleURL(f.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, d.St)(h, d.WU.RETRY, d._7.LEARN_MORE);
+                                (0, d.St)(A, d.WU.RETRY, d._7.LEARN_MORE);
                         },
                     }),
                 }),
