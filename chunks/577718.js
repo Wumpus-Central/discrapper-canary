@@ -1,83 +1,49 @@
-function r(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function i(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                r(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function a(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function s(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-n.d(t, {
-    G9: () => f,
-    Im: () => d,
-    ZQ: () => l,
-    sl: () => u,
-    wJ: () => c,
-    yZ: () => o,
-});
-var o = (function (e) {
-        return (e[(e.BACKGROUND = 0)] = "BACKGROUND"), e;
-    })({}),
-    l = (function (e) {
+r.d(t, { Im: () => o }),
+    [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, r) => {
+        var o, a;
         return (
-            (e[(e.OPTION_1 = 0)] = "OPTION_1"),
-            (e[(e.OPTION_2 = 1)] = "OPTION_2"),
-            (e[(e.OPTION_3 = 2)] = "OPTION_3"),
-            (e[(e.OPTION_4 = 3)] = "OPTION_4"),
-            (e[(e.OPTION_7 = 7)] = "OPTION_7"),
-            (e[(e.OPTION_8 = 8)] = "OPTION_8"),
-            (e[(e.OPTION_9 = 9)] = "OPTION_9"),
-            (e[(e.OPTION_10 = 10)] = "OPTION_10"),
-            e
+            (o = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        o = Object.keys(r);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (o = o.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            }),
+                        )),
+                        o.forEach(function (t) {
+                            var o;
+                            (o = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: o,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[t] = o);
+                        });
+                }
+                return e;
+            })({}, e)),
+            (a = a = { [t]: r }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var o = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, o);
+                      }
+                      return r;
+                  })(Object(a)).forEach(function (e) {
+                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                  }),
+            o
         );
-    })({});
-let c = [7, 8, 9, 10],
-    u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => s(i({}, e), { [t]: n }), {}),
-    d = {
-        width: 1280,
-        height: 720,
-    },
-    f = 10485760;
+    }, {});
+let o = {
+    width: 1280,
+    height: 720,
+};
