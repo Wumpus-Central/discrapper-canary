@@ -1,5 +1,6 @@
 n.d(t, {
-    k8: () => o,
+    Pp: () => o,
+    k8: () => s,
     kQ: () => i.k,
 });
 var r = n(818083),
@@ -32,5 +33,8 @@ let a = (0, r.B)({
     ],
 });
 function o(e) {
+    return a.getCurrentConfig({ location: e }).enableObfuscation;
+}
+function s(e) {
     return a.useExperiment({ location: e }).enableObfuscation;
 }

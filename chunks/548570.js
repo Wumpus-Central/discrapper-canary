@@ -43,7 +43,7 @@ var r = n(512722),
     x = n(508569),
     L = n(183139),
     j = n(645436),
-    M = n(742151),
+    M = n(638214),
     k = n(866483),
     U = n(833508),
     G = n(981631);
@@ -588,7 +588,7 @@ class ea extends L.Z {
         (this.token = s), H.verbose("[IDENTIFY]");
         let u = {
                 token: s,
-                capabilities: (0, N.t)({ useChannelObfuscation: (0, M.n)() }),
+                capabilities: (0, N.t)({ useChannelObfuscation: (0, M.Pp)("GatewaySocket") }),
                 properties: l,
                 presence: c,
                 compress: this.compressionHandler.usesLegacyCompression(),
