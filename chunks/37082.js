@@ -59,6 +59,9 @@ class s {
     asyncGetRaw(e, t) {
         return Promise.resolve(r.getItem(e));
     }
+    getRaw(e) {
+        return r.getItem(e);
+    }
     setRaw(e, t) {
         r.setItem(e, t);
     }
@@ -83,10 +86,13 @@ class l {
         return JSON.stringify(this.storage);
     }
     asyncGetRaw(e, t) {
-        return Promise.resolve(r.getItem(e));
+        return Promise.resolve(this.getRaw(e));
+    }
+    getRaw(e) {
+        return this.storage.hasOwnProperty(e) ? this.storage[e] : null;
     }
     setRaw(e, t) {
-        r.setItem(e, t);
+        this.storage[e] = t;
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
