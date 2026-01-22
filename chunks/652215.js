@@ -2455,6 +2455,7 @@ var ty = (function (e) {
             (e.APP_STOREFRONT = "app storefront"),
             (e.APP_SUBSCRIPTIONS_MANAGEMENT = "app subscriptions management"),
             (e.CHECKOUT_RECOVERY_NAGBAR = "Checkout Recovery Nagbar"),
+            (e.SEASONAL_GIFTING_REMINDER_NAGBAR = "seasonal gifting reminder nagbar"),
             (e.E2EE_USER_VERIFY_MODAL = "E2EE User Verify Modal"),
             (e.FRIEND_ANNIVERSARIES_CHAT = "Friend Anniversaries Chat"),
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON = "Friend Anniversaries Action Button"),
