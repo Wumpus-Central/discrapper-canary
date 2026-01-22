@@ -6,8 +6,8 @@ n.d(t, {
     Nk: () => D,
     R9: () => j,
     RN: () => Z,
-    Wl: () => w,
-    XO: () => R,
+    Wl: () => R,
+    XO: () => w,
     Xn: () => W,
     bb: () => H,
     qo: () => U,
@@ -30,8 +30,8 @@ var r = n(54381),
     f = n(592125),
     p = n(323873),
     _ = n(375954),
-    m = n(594174),
-    h = n(626135),
+    h = n(594174),
+    m = n(626135),
     g = n(585483),
     E = n(358085),
     b = n(51144),
@@ -99,7 +99,7 @@ function N(e, t, n) {
 function P(e, t, n) {
     return i.useCallback(
         (r) => {
-            let i = m.default.getUser(e);
+            let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
             let a = "@".concat(b.ZP.getUserTag(i, { decoration: "never" })),
@@ -113,11 +113,11 @@ function P(e, t, n) {
         [e, t, n],
     );
 }
-function R(e, t, n, r) {
+function w(e, t, n, r) {
     let i = N("usernameProfile", n, r);
     return P(e.author.id, t.id, i);
 }
-function w(e, t, n, r) {
+function R(e, t, n, r) {
     let i = N("referencedUsernameProfile", n, r);
     return P(null == e ? void 0 : e.author.id, t.id, i);
 }
@@ -148,8 +148,8 @@ function k(e, t) {
 }
 function U(e, t, a, l) {
     let { id: c } = t,
-        { id: d, flags: m } = e,
-        g = (0, o.yE)(m, S.iLy.EPHEMERAL),
+        { id: d, flags: h } = e,
+        g = (0, o.yE)(h, S.iLy.EPHEMERAL),
         b = (0, u.bp)();
     return i.useCallback(
         (e, t) => {
@@ -166,7 +166,7 @@ function U(e, t, a, l) {
             null == i ||
                 null == o ||
                 u ||
-                (h.default.track(S.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (m.default.track(S.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: d,
                     channel: c,
                     location: "right_click",
@@ -180,7 +180,7 @@ function U(e, t, a, l) {
                             n.e("76676"),
                             n.e("37220"),
                             n.e("26503"),
-                            n.e("94207"),
+                            n.e("7150"),
                         ]).then(n.bind(n, 225138));
                         return (n) =>
                             (0, r.jsx)(
@@ -205,7 +205,7 @@ function U(e, t, a, l) {
 function G(e, t) {
     return i.useCallback(
         (n) => {
-            let r = m.default.getUser(e),
+            let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, y.Pv)(n, r, i));
         },
@@ -215,7 +215,7 @@ function G(e, t) {
 function Z(e, t, n) {
     return i.useCallback(
         (r) => {
-            let i = m.default.getUser(e),
+            let i = h.default.getUser(e),
                 a = f.Z.getChannel(t);
             null != i &&
                 null != a &&
@@ -232,7 +232,7 @@ function Z(e, t, n) {
 function F(e, t) {
     return i.useCallback(
         (n) => {
-            let r = m.default.getUser(e),
+            let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
             null != r && null != i && (n.stopPropagation(), (0, y.xS)(n, r, i.guild_id));
         },

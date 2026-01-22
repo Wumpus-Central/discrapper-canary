@@ -376,7 +376,10 @@ function M(e) {
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: A.intl.string(A.t.eCzSdd),
-                                                      iconLeft: s.BFJ,
+                                                      leadingAccessory: {
+                                                          type: "icon",
+                                                          icon: s.BFJ,
+                                                      },
                                                       action: () => v.Z.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
@@ -386,7 +389,10 @@ function M(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: A.intl.string(A.t["HOe+Hq"]),
-                                                      iconLeft: s.tBG,
+                                                      leadingAccessory: {
+                                                          type: "icon",
+                                                          icon: s.tBG,
+                                                      },
                                                       action: () => v.Z.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
